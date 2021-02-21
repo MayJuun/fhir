@@ -31,16 +31,25 @@ _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ProvenanceToJson(_$_Provenance instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'target': instance.target,
-      'recorded': instance.recorded,
-      'agent': instance.agent,
-    };
+Map<String, dynamic> _$_$_ProvenanceToJson(_$_Provenance instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  val['target'] = instance.target.map((e) => e?.toJson()).toList();
+  val['recorded'] = instance.recorded.toJson();
+  val['agent'] = instance.agent.map((e) => e?.toJson()).toList();
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -79,6 +88,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -107,10 +117,18 @@ _$_ProvenanceAgent _$_$_ProvenanceAgentFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ProvenanceAgentToJson(_$_ProvenanceAgent instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'type': instance.type,
-      'who': instance.who,
-      'onBehalfOf': instance.onBehalfOf,
-    };
+Map<String, dynamic> _$_$_ProvenanceAgentToJson(_$_ProvenanceAgent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('type', instance.type?.toJson());
+  val['who'] = instance.who.toJson();
+  writeNotNull('onBehalfOf', instance.onBehalfOf?.toJson());
+  return val;
+}

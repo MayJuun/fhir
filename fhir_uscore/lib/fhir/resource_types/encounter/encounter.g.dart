@@ -56,23 +56,35 @@ _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_EncounterToJson(_$_Encounter instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'identifier': instance.identifier,
-      'status': _$EncounterStatusEnumMap[instance.status],
-      'class': instance.class_,
-      'type': instance.type,
-      'subject': instance.subject,
-      'participant': instance.participant,
-      'period': instance.period,
-      'reasonCode': instance.reasonCode,
-      'hospitalization': instance.hospitalization,
-      'location': instance.location,
-    };
+Map<String, dynamic> _$_$_EncounterToJson(_$_Encounter instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+  val['status'] = _$EncounterStatusEnumMap[instance.status];
+  val['class'] = instance.class_.toJson();
+  val['type'] = instance.type.map((e) => e?.toJson()).toList();
+  val['subject'] = instance.subject.toJson();
+  writeNotNull(
+      'participant', instance.participant?.map((e) => e?.toJson()).toList());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull(
+      'reasonCode', instance.reasonCode?.map((e) => e?.toJson()).toList());
+  writeNotNull('hospitalization', instance.hospitalization?.toJson());
+  writeNotNull('location', instance.location?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -111,6 +123,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -157,13 +170,21 @@ _$_EncounterParticipant _$_$_EncounterParticipantFromJson(
 }
 
 Map<String, dynamic> _$_$_EncounterParticipantToJson(
-        _$_EncounterParticipant instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'type': instance.type,
-      'period': instance.period,
-      'individual': instance.individual,
-    };
+    _$_EncounterParticipant instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('type', instance.type?.map((e) => e?.toJson()).toList());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('individual', instance.individual?.toJson());
+  return val;
+}
 
 _$_EncounterHospitalization _$_$_EncounterHospitalizationFromJson(
     Map<String, dynamic> json) {
@@ -177,11 +198,19 @@ _$_EncounterHospitalization _$_$_EncounterHospitalizationFromJson(
 }
 
 Map<String, dynamic> _$_$_EncounterHospitalizationToJson(
-        _$_EncounterHospitalization instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'dischargeDisposition': instance.dischargeDisposition,
-    };
+    _$_EncounterHospitalization instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('dischargeDisposition', instance.dischargeDisposition?.toJson());
+  return val;
+}
 
 _$_EncounterLocation _$_$_EncounterLocationFromJson(Map<String, dynamic> json) {
   return _$_EncounterLocation(
@@ -191,8 +220,16 @@ _$_EncounterLocation _$_$_EncounterLocationFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_EncounterLocationToJson(
-        _$_EncounterLocation instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'location': instance.location,
-    };
+    _$_EncounterLocation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  val['location'] = instance.location.toJson();
+  return val;
+}

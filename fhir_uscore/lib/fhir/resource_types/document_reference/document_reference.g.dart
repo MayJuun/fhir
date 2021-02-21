@@ -50,27 +50,39 @@ _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
         ? null
         : DocumentReferenceContext.fromJson(
             json['context'] as Map<String, dynamic>),
+    description: json['description'] as String?,
   );
 }
 
 Map<String, dynamic> _$_$_DocumentReferenceToJson(
-        _$_DocumentReference instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'identifier': instance.identifier,
-      'status': _$DocumentReferenceStatusEnumMap[instance.status],
-      'type': instance.type,
-      'category': instance.category,
-      'subject': instance.subject,
-      'date': instance.date,
-      'author': instance.author,
-      'custodian': instance.custodian,
-      'content': instance.content,
-      'context': instance.context,
-    };
+    _$_DocumentReference instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+  val['status'] = _$DocumentReferenceStatusEnumMap[instance.status];
+  val['type'] = instance.type.toJson();
+  writeNotNull('category', instance.category?.map((e) => e?.toJson()).toList());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('author', instance.author?.map((e) => e?.toJson()).toList());
+  writeNotNull('custodian', instance.custodian?.toJson());
+  val['content'] = instance.content.map((e) => e?.toJson()).toList();
+  writeNotNull('context', instance.context?.toJson());
+  writeNotNull('description', instance.description);
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -109,6 +121,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -143,12 +156,20 @@ _$_DocumentReferenceContent _$_$_DocumentReferenceContentFromJson(
 }
 
 Map<String, dynamic> _$_$_DocumentReferenceContentToJson(
-        _$_DocumentReferenceContent instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'attachment': instance.attachment,
-      'format': instance.format,
-    };
+    _$_DocumentReferenceContent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  val['attachment'] = instance.attachment.toJson();
+  writeNotNull('format', instance.format?.toJson());
+  return val;
+}
 
 _$_DocumentReferenceContext _$_$_DocumentReferenceContextFromJson(
     Map<String, dynamic> json) {
@@ -165,9 +186,18 @@ _$_DocumentReferenceContext _$_$_DocumentReferenceContextFromJson(
 }
 
 Map<String, dynamic> _$_$_DocumentReferenceContextToJson(
-        _$_DocumentReferenceContext instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'encounter': instance.encounter,
-      'period': instance.period,
-    };
+    _$_DocumentReferenceContext instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'encounter', instance.encounter?.map((e) => e?.toJson()).toList());
+  writeNotNull('period', instance.period?.toJson());
+  return val;
+}

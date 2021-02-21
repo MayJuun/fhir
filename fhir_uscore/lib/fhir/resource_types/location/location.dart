@@ -22,10 +22,13 @@ abstract class Location with Resource implements _$Location {
     Id? id,
     Meta? meta,
     Narrative? text,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus? status,
     required String name,
     List<ContactPoint?>? telecom,
     Address? address,
+    LocationPosition? position,
+    String? description,
     Reference? managingOrganization,
   }) = _Location;
 
@@ -61,4 +64,32 @@ abstract class Location with Resource implements _$Location {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
+}
+
+@freezed
+abstract class LocationPosition implements _$LocationPosition {
+  LocationPosition._();
+
+  factory LocationPosition({
+    String? id,
+    Decimal? longitude,
+    Decimal? latitude,
+    Decimal? altitude,
+  }) = _LocationPosition;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts [Yaml String] as an argument
+  factory LocationPosition.fromYaml(dynamic yaml) => yaml is String
+      ? LocationPosition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? LocationPosition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'LocationPosition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
+      _$LocationPositionFromJson(json);
 }

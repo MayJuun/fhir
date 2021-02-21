@@ -35,17 +35,28 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_GoalToJson(_$_Goal instance) => <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'lifecycleStatus': _$GoalLifecycleStatusEnumMap[instance.lifecycleStatus],
-      'achievementStatus': instance.achievementStatus,
-      'description': instance.description,
-      'subject': instance.subject,
-      'target': instance.target,
-    };
+Map<String, dynamic> _$_$_GoalToJson(_$_Goal instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  val['lifecycleStatus'] =
+      _$GoalLifecycleStatusEnumMap[instance.lifecycleStatus];
+  writeNotNull('achievementStatus', instance.achievementStatus?.toJson());
+  val['description'] = instance.description.toJson();
+  val['subject'] = instance.subject.toJson();
+  writeNotNull('target', instance.target?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -84,6 +95,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -119,8 +131,16 @@ _$_GoalTarget _$_$_GoalTargetFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_GoalTargetToJson(_$_GoalTarget instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'dueDate': instance.dueDate,
-    };
+Map<String, dynamic> _$_$_GoalTargetToJson(_$_GoalTarget instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('dueDate', instance.dueDate?.toJson());
+  return val;
+}

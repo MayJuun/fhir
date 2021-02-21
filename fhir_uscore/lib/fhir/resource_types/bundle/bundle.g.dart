@@ -37,18 +37,28 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) => <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'type': _$BundleTypeEnumMap[instance.type],
-      'timestamp': instance.timestamp,
-      'total': instance.total,
-      'link': instance.link,
-      'entry': instance.entry,
-      'signature': instance.signature,
-    };
+Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('type', _$BundleTypeEnumMap[instance.type]);
+  writeNotNull('timestamp', instance.timestamp?.toJson());
+  writeNotNull('total', instance.total?.toJson());
+  writeNotNull('link', instance.link?.map((e) => e?.toJson()).toList());
+  writeNotNull('entry', instance.entry?.map((e) => e?.toJson()).toList());
+  writeNotNull('signature', instance.signature?.toJson());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -87,6 +97,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -134,12 +145,20 @@ _$_BundleLink _$_$_BundleLinkFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_BundleLinkToJson(_$_BundleLink instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'relation': instance.relation,
-      'url': instance.url,
-    };
+Map<String, dynamic> _$_$_BundleLinkToJson(_$_BundleLink instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('relation', instance.relation);
+  writeNotNull('url', instance.url?.toJson());
+  return val;
+}
 
 _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
   return _$_BundleEntry(
@@ -164,16 +183,24 @@ _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_BundleEntryToJson(_$_BundleEntry instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'link': instance.link,
-      'fullUrl': instance.fullUrl,
-      'resource': instance.resource,
-      'search': instance.search,
-      'request': instance.request,
-      'response': instance.response,
-    };
+Map<String, dynamic> _$_$_BundleEntryToJson(_$_BundleEntry instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('link', instance.link?.map((e) => e?.toJson()).toList());
+  writeNotNull('fullUrl', instance.fullUrl?.toJson());
+  writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull('search', instance.search?.toJson());
+  writeNotNull('request', instance.request?.toJson());
+  writeNotNull('response', instance.response?.toJson());
+  return val;
+}
 
 _$_BundleSearch _$_$_BundleSearchFromJson(Map<String, dynamic> json) {
   return _$_BundleSearch(
@@ -184,12 +211,20 @@ _$_BundleSearch _$_$_BundleSearchFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_BundleSearchToJson(_$_BundleSearch instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'mode': _$BundleSearchModeEnumMap[instance.mode],
-      'score': instance.score,
-    };
+Map<String, dynamic> _$_$_BundleSearchToJson(_$_BundleSearch instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('mode', _$BundleSearchModeEnumMap[instance.mode]);
+  writeNotNull('score', instance.score?.toJson());
+  return val;
+}
 
 const _$BundleSearchModeEnumMap = {
   BundleSearchMode.match: 'match',
@@ -213,16 +248,24 @@ _$_BundleRequest _$_$_BundleRequestFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_BundleRequestToJson(_$_BundleRequest instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'method': _$BundleRequestMethodEnumMap[instance.method],
-      'url': instance.url,
-      'ifNoneMatch': instance.ifNoneMatch,
-      'ifModifiedSince': instance.ifModifiedSince,
-      'ifMatch': instance.ifMatch,
-      'ifNoneExist': instance.ifNoneExist,
-    };
+Map<String, dynamic> _$_$_BundleRequestToJson(_$_BundleRequest instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('method', _$BundleRequestMethodEnumMap[instance.method]);
+  writeNotNull('url', instance.url?.toJson());
+  writeNotNull('ifNoneMatch', instance.ifNoneMatch);
+  writeNotNull('ifModifiedSince', instance.ifModifiedSince?.toJson());
+  writeNotNull('ifMatch', instance.ifMatch);
+  writeNotNull('ifNoneExist', instance.ifNoneExist);
+  return val;
+}
 
 const _$BundleRequestMethodEnumMap = {
   BundleRequestMethod.get_: 'GET',
@@ -250,12 +293,20 @@ _$_BundleResponse _$_$_BundleResponseFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_BundleResponseToJson(_$_BundleResponse instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'status': instance.status,
-      'location': instance.location,
-      'etag': instance.etag,
-      'lastModified': instance.lastModified,
-      'outcome': instance.outcome,
-    };
+Map<String, dynamic> _$_$_BundleResponseToJson(_$_BundleResponse instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('status', instance.status);
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('etag', instance.etag);
+  writeNotNull('lastModified', instance.lastModified?.toJson());
+  writeNotNull('outcome', instance.outcome?.toJson());
+  return val;
+}

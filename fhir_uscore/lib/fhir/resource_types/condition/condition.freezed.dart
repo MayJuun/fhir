@@ -22,11 +22,12 @@ class _$ConditionTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      ConditionClinicalStatus? clinicalStatus,
-      ConditionVerificationStatus? verificationStatus,
-      List<ConditionCategory?>? category,
+      CodeableConcept? clinicalStatus,
+      CodeableConcept? verificationStatus,
+      required List<CodeableConcept?> category,
       required CodeableConcept code,
-      required Reference subject}) {
+      required Reference subject,
+      FhirDateTime? onsetDateTime}) {
     return _Condition(
       resourceType: resourceType,
       id: id,
@@ -37,6 +38,7 @@ class _$ConditionTearOff {
       category: category,
       code: code,
       subject: subject,
+      onsetDateTime: onsetDateTime,
     );
   }
 
@@ -55,11 +57,12 @@ mixin _$Condition {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  ConditionClinicalStatus? get clinicalStatus;
-  ConditionVerificationStatus? get verificationStatus;
-  List<ConditionCategory?>? get category;
+  CodeableConcept? get clinicalStatus;
+  CodeableConcept? get verificationStatus;
+  List<CodeableConcept?> get category;
   CodeableConcept get code;
   Reference get subject;
+  FhirDateTime? get onsetDateTime;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -76,14 +79,17 @@ abstract class $ConditionCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      ConditionClinicalStatus? clinicalStatus,
-      ConditionVerificationStatus? verificationStatus,
-      List<ConditionCategory?>? category,
+      CodeableConcept? clinicalStatus,
+      CodeableConcept? verificationStatus,
+      List<CodeableConcept?> category,
       CodeableConcept code,
-      Reference subject});
+      Reference subject,
+      FhirDateTime? onsetDateTime});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
+  $CodeableConceptCopyWith<$Res>? get clinicalStatus;
+  $CodeableConceptCopyWith<$Res>? get verificationStatus;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res> get subject;
 }
@@ -107,6 +113,7 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
     Object? category = freezed,
     Object? code = freezed,
     Object? subject = freezed,
+    Object? onsetDateTime = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -117,15 +124,18 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       clinicalStatus: clinicalStatus == freezed
           ? _value.clinicalStatus
-          : clinicalStatus as ConditionClinicalStatus?,
+          : clinicalStatus as CodeableConcept?,
       verificationStatus: verificationStatus == freezed
           ? _value.verificationStatus
-          : verificationStatus as ConditionVerificationStatus?,
+          : verificationStatus as CodeableConcept?,
       category: category == freezed
           ? _value.category
-          : category as List<ConditionCategory?>?,
+          : category as List<CodeableConcept?>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
+      onsetDateTime: onsetDateTime == freezed
+          ? _value.onsetDateTime
+          : onsetDateTime as FhirDateTime?,
     ));
   }
 
@@ -148,6 +158,28 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get clinicalStatus {
+    if (_value.clinicalStatus == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.clinicalStatus!, (value) {
+      return _then(_value.copyWith(clinicalStatus: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get verificationStatus {
+    if (_value.verificationStatus == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.verificationStatus!, (value) {
+      return _then(_value.copyWith(verificationStatus: value));
     });
   }
 
@@ -178,16 +210,21 @@ abstract class _$ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      ConditionClinicalStatus? clinicalStatus,
-      ConditionVerificationStatus? verificationStatus,
-      List<ConditionCategory?>? category,
+      CodeableConcept? clinicalStatus,
+      CodeableConcept? verificationStatus,
+      List<CodeableConcept?> category,
       CodeableConcept code,
-      Reference subject});
+      Reference subject,
+      FhirDateTime? onsetDateTime});
 
   @override
   $MetaCopyWith<$Res>? get meta;
   @override
   $NarrativeCopyWith<$Res>? get text;
+  @override
+  $CodeableConceptCopyWith<$Res>? get clinicalStatus;
+  @override
+  $CodeableConceptCopyWith<$Res>? get verificationStatus;
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
@@ -214,6 +251,7 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
     Object? category = freezed,
     Object? code = freezed,
     Object? subject = freezed,
+    Object? onsetDateTime = freezed,
   }) {
     return _then(_Condition(
       resourceType: resourceType == freezed
@@ -224,15 +262,18 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       clinicalStatus: clinicalStatus == freezed
           ? _value.clinicalStatus
-          : clinicalStatus as ConditionClinicalStatus?,
+          : clinicalStatus as CodeableConcept?,
       verificationStatus: verificationStatus == freezed
           ? _value.verificationStatus
-          : verificationStatus as ConditionVerificationStatus?,
+          : verificationStatus as CodeableConcept?,
       category: category == freezed
           ? _value.category
-          : category as List<ConditionCategory?>?,
+          : category as List<CodeableConcept?>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
+      onsetDateTime: onsetDateTime == freezed
+          ? _value.onsetDateTime
+          : onsetDateTime as FhirDateTime?,
     ));
   }
 }
@@ -249,9 +290,10 @@ class _$_Condition extends _Condition {
       this.text,
       this.clinicalStatus,
       this.verificationStatus,
-      this.category,
+      required this.category,
       required this.code,
-      required this.subject})
+      required this.subject,
+      this.onsetDateTime})
       : super._();
 
   factory _$_Condition.fromJson(Map<String, dynamic> json) =>
@@ -267,19 +309,21 @@ class _$_Condition extends _Condition {
   @override
   final Narrative? text;
   @override
-  final ConditionClinicalStatus? clinicalStatus;
+  final CodeableConcept? clinicalStatus;
   @override
-  final ConditionVerificationStatus? verificationStatus;
+  final CodeableConcept? verificationStatus;
   @override
-  final List<ConditionCategory?>? category;
+  final List<CodeableConcept?> category;
   @override
   final CodeableConcept code;
   @override
   final Reference subject;
+  @override
+  final FhirDateTime? onsetDateTime;
 
   @override
   String toString() {
-    return 'Condition(resourceType: $resourceType, id: $id, meta: $meta, text: $text, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, category: $category, code: $code, subject: $subject)';
+    return 'Condition(resourceType: $resourceType, id: $id, meta: $meta, text: $text, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, category: $category, code: $code, subject: $subject, onsetDateTime: $onsetDateTime)';
   }
 
   @override
@@ -307,7 +351,11 @@ class _$_Condition extends _Condition {
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.subject, subject) ||
-                const DeepCollectionEquality().equals(other.subject, subject)));
+                const DeepCollectionEquality()
+                    .equals(other.subject, subject)) &&
+            (identical(other.onsetDateTime, onsetDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.onsetDateTime, onsetDateTime)));
   }
 
   @override
@@ -321,7 +369,8 @@ class _$_Condition extends _Condition {
       const DeepCollectionEquality().hash(verificationStatus) ^
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(subject);
+      const DeepCollectionEquality().hash(subject) ^
+      const DeepCollectionEquality().hash(onsetDateTime);
 
   @JsonKey(ignore: true)
   @override
@@ -342,11 +391,12 @@ abstract class _Condition extends Condition {
       Id? id,
       Meta? meta,
       Narrative? text,
-      ConditionClinicalStatus? clinicalStatus,
-      ConditionVerificationStatus? verificationStatus,
-      List<ConditionCategory?>? category,
+      CodeableConcept? clinicalStatus,
+      CodeableConcept? verificationStatus,
+      required List<CodeableConcept?> category,
       required CodeableConcept code,
-      required Reference subject}) = _$_Condition;
+      required Reference subject,
+      FhirDateTime? onsetDateTime}) = _$_Condition;
 
   factory _Condition.fromJson(Map<String, dynamic> json) =
       _$_Condition.fromJson;
@@ -361,15 +411,17 @@ abstract class _Condition extends Condition {
   @override
   Narrative? get text;
   @override
-  ConditionClinicalStatus? get clinicalStatus;
+  CodeableConcept? get clinicalStatus;
   @override
-  ConditionVerificationStatus? get verificationStatus;
+  CodeableConcept? get verificationStatus;
   @override
-  List<ConditionCategory?>? get category;
+  List<CodeableConcept?> get category;
   @override
   CodeableConcept get code;
   @override
   Reference get subject;
+  @override
+  FhirDateTime? get onsetDateTime;
   @override
   @JsonKey(ignore: true)
   _$ConditionCopyWith<_Condition> get copyWith;

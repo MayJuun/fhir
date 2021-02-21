@@ -24,6 +24,12 @@ abstract class Practitioner with Resource implements _$Practitioner {
     Narrative? text,
     required List<Identifier?> identifier,
     required List<HumanName?> name,
+    List<Address?>? address,
+    List<ContactPoint?>? telecom,
+    @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+        PractitionerGender? gender,
+    Date? birthDate,
+    List<PractitionerQualification?>? qualification,
   }) = _Practitioner;
 
   factory Practitioner.simple({
@@ -151,4 +157,35 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleFromJson(json);
+}
+
+@freezed
+abstract class PractitionerQualification
+    implements _$PractitionerQualification {
+  PractitionerQualification._();
+
+  factory PractitionerQualification({
+    String? id,
+    List<Identifier?>? identifier,
+    required CodeableConcept code,
+    Period? period,
+    Reference? issuer,
+  }) = _PractitionerQualification;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts [Yaml String] as an argument
+  factory PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
+      ? PractitionerQualification.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PractitionerQualification.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'PractitionerQualification cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
+      _$PractitionerQualificationFromJson(json);
 }

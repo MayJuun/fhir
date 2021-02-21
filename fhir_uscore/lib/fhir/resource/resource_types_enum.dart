@@ -21,6 +21,8 @@ enum UsCoreResourceType {
   DocumentReference,
   @JsonValue('Encounter')
   Encounter,
+  @JsonValue('Endpoint')
+  Endpoint,
   @JsonValue('Goal')
   Goal,
   @JsonValue('Immunization')

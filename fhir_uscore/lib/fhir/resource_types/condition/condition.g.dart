@@ -18,33 +18,49 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    clinicalStatus: _$enumDecodeNullable(
-        _$ConditionClinicalStatusEnumMap, json['clinicalStatus']),
-    verificationStatus: _$enumDecodeNullable(
-        _$ConditionVerificationStatusEnumMap, json['verificationStatus']),
-    category: (json['category'] as List<dynamic>?)
-        ?.map((e) => _$enumDecodeNullable(_$ConditionCategoryEnumMap, e))
+    clinicalStatus: json['clinicalStatus'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['clinicalStatus'] as Map<String, dynamic>),
+    verificationStatus: json['verificationStatus'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['verificationStatus'] as Map<String, dynamic>),
+    category: (json['category'] as List<dynamic>)
+        .map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    onsetDateTime: json['onsetDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['onsetDateTime']),
   );
 }
 
-Map<String, dynamic> _$_$_ConditionToJson(_$_Condition instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'clinicalStatus':
-          _$ConditionClinicalStatusEnumMap[instance.clinicalStatus],
-      'verificationStatus':
-          _$ConditionVerificationStatusEnumMap[instance.verificationStatus],
-      'category':
-          instance.category?.map((e) => _$ConditionCategoryEnumMap[e]).toList(),
-      'code': instance.code,
-      'subject': instance.subject,
-    };
+Map<String, dynamic> _$_$_ConditionToJson(_$_Condition instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
+  writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
+  val['category'] = instance.category.map((e) => e?.toJson()).toList();
+  val['code'] = instance.code.toJson();
+  val['subject'] = instance.subject.toJson();
+  writeNotNull('onsetDateTime', instance.onsetDateTime?.toJson());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -83,6 +99,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -96,39 +113,4 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.PractitionerRole: 'PractitionerRole',
   UsCoreResourceType.Procedure: 'Procedure',
   UsCoreResourceType.Provenance: 'Provenance',
-};
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$ConditionClinicalStatusEnumMap = {
-  ConditionClinicalStatus.active: 'Active',
-  ConditionClinicalStatus.recurrence: 'Recurrence',
-  ConditionClinicalStatus.relapse: 'Relapse',
-  ConditionClinicalStatus.inactive: 'Inactive',
-  ConditionClinicalStatus.remission: 'Remission',
-  ConditionClinicalStatus.resolved: 'Resolved',
-};
-
-const _$ConditionVerificationStatusEnumMap = {
-  ConditionVerificationStatus.unconfirmed: 'Unconfirmed',
-  ConditionVerificationStatus.provisional: 'Provisional',
-  ConditionVerificationStatus.differential: 'Differential',
-  ConditionVerificationStatus.confirmed: 'Confirmed',
-  ConditionVerificationStatus.refuted: 'Refuted',
-  ConditionVerificationStatus.entered_in_error: 'Entered in Error',
-};
-
-const _$ConditionCategoryEnumMap = {
-  ConditionCategory.problem_list_item: 'Problem List Item',
-  ConditionCategory.encounter_diagnosis: 'Encounter Diagnosis',
-  ConditionCategory.health_concern: 'Health Concern',
 };

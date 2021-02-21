@@ -21,6 +21,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
     Id? id,
     Meta? meta,
     Narrative? text,
+    String? name,
     @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus? status,
     required Reference subject,
     required List<CareTeamParticipant?> participant,

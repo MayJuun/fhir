@@ -23,9 +23,11 @@ class _$MedicationRequestTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           required MedicationRequestStatus status,
       required MedicationRequestIntent intent,
+      List<Resource?>? contained,
       Boolean? reportedBoolean,
       Reference? reportedReference,
       CodeableConcept? medicationCodeableConcept,
@@ -34,14 +36,17 @@ class _$MedicationRequestTearOff {
       Reference? encounter,
       required FhirDateTime authoredOn,
       required Reference requester,
-      List<Dosage?>? dosageInstruction}) {
+      List<Dosage?>? dosageInstruction,
+      MedicationRequestDispenseRequest? dispenseRequest}) {
     return _MedicationRequest(
       resourceType: resourceType,
       id: id,
       meta: meta,
       text: text,
+      identifier: identifier,
       status: status,
       intent: intent,
+      contained: contained,
       reportedBoolean: reportedBoolean,
       reportedReference: reportedReference,
       medicationCodeableConcept: medicationCodeableConcept,
@@ -51,6 +56,7 @@ class _$MedicationRequestTearOff {
       authoredOn: authoredOn,
       requester: requester,
       dosageInstruction: dosageInstruction,
+      dispenseRequest: dispenseRequest,
     );
   }
 
@@ -69,9 +75,11 @@ mixin _$MedicationRequest {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
+  List<Identifier?>? get identifier;
   @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
   MedicationRequestStatus get status;
   MedicationRequestIntent get intent;
+  List<Resource?>? get contained;
   Boolean? get reportedBoolean;
   Reference? get reportedReference;
   CodeableConcept? get medicationCodeableConcept;
@@ -81,6 +89,7 @@ mixin _$MedicationRequest {
   FhirDateTime get authoredOn;
   Reference get requester;
   List<Dosage?>? get dosageInstruction;
+  MedicationRequestDispenseRequest? get dispenseRequest;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -98,9 +107,11 @@ abstract class $MedicationRequestCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           MedicationRequestStatus status,
       MedicationRequestIntent intent,
+      List<Resource?>? contained,
       Boolean? reportedBoolean,
       Reference? reportedReference,
       CodeableConcept? medicationCodeableConcept,
@@ -109,7 +120,8 @@ abstract class $MedicationRequestCopyWith<$Res> {
       Reference? encounter,
       FhirDateTime authoredOn,
       Reference requester,
-      List<Dosage?>? dosageInstruction});
+      List<Dosage?>? dosageInstruction,
+      MedicationRequestDispenseRequest? dispenseRequest});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -119,6 +131,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get encounter;
   $ReferenceCopyWith<$Res> get requester;
+  $MedicationRequestDispenseRequestCopyWith<$Res>? get dispenseRequest;
 }
 
 /// @nodoc
@@ -136,8 +149,10 @@ class _$MedicationRequestCopyWithImpl<$Res>
     Object? id = freezed,
     Object? meta = freezed,
     Object? text = freezed,
+    Object? identifier = freezed,
     Object? status = freezed,
     Object? intent = freezed,
+    Object? contained = freezed,
     Object? reportedBoolean = freezed,
     Object? reportedReference = freezed,
     Object? medicationCodeableConcept = freezed,
@@ -147,6 +162,7 @@ class _$MedicationRequestCopyWithImpl<$Res>
     Object? authoredOn = freezed,
     Object? requester = freezed,
     Object? dosageInstruction = freezed,
+    Object? dispenseRequest = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -155,10 +171,16 @@ class _$MedicationRequestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       text: text == freezed ? _value.text : text as Narrative?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier?>?,
       status:
           status == freezed ? _value.status : status as MedicationRequestStatus,
       intent:
           intent == freezed ? _value.intent : intent as MedicationRequestIntent,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource?>?,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
           : reportedBoolean as Boolean?,
@@ -182,6 +204,9 @@ class _$MedicationRequestCopyWithImpl<$Res>
       dosageInstruction: dosageInstruction == freezed
           ? _value.dosageInstruction
           : dosageInstruction as List<Dosage?>?,
+      dispenseRequest: dispenseRequest == freezed
+          ? _value.dispenseRequest
+          : dispenseRequest as MedicationRequestDispenseRequest?,
     ));
   }
 
@@ -265,6 +290,18 @@ class _$MedicationRequestCopyWithImpl<$Res>
       return _then(_value.copyWith(requester: value));
     });
   }
+
+  @override
+  $MedicationRequestDispenseRequestCopyWith<$Res>? get dispenseRequest {
+    if (_value.dispenseRequest == null) {
+      return null;
+    }
+
+    return $MedicationRequestDispenseRequestCopyWith<$Res>(
+        _value.dispenseRequest!, (value) {
+      return _then(_value.copyWith(dispenseRequest: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -280,9 +317,11 @@ abstract class _$MedicationRequestCopyWith<$Res>
       Id? id,
       Meta? meta,
       Narrative? text,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           MedicationRequestStatus status,
       MedicationRequestIntent intent,
+      List<Resource?>? contained,
       Boolean? reportedBoolean,
       Reference? reportedReference,
       CodeableConcept? medicationCodeableConcept,
@@ -291,7 +330,8 @@ abstract class _$MedicationRequestCopyWith<$Res>
       Reference? encounter,
       FhirDateTime authoredOn,
       Reference requester,
-      List<Dosage?>? dosageInstruction});
+      List<Dosage?>? dosageInstruction,
+      MedicationRequestDispenseRequest? dispenseRequest});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -309,6 +349,8 @@ abstract class _$MedicationRequestCopyWith<$Res>
   $ReferenceCopyWith<$Res>? get encounter;
   @override
   $ReferenceCopyWith<$Res> get requester;
+  @override
+  $MedicationRequestDispenseRequestCopyWith<$Res>? get dispenseRequest;
 }
 
 /// @nodoc
@@ -328,8 +370,10 @@ class __$MedicationRequestCopyWithImpl<$Res>
     Object? id = freezed,
     Object? meta = freezed,
     Object? text = freezed,
+    Object? identifier = freezed,
     Object? status = freezed,
     Object? intent = freezed,
+    Object? contained = freezed,
     Object? reportedBoolean = freezed,
     Object? reportedReference = freezed,
     Object? medicationCodeableConcept = freezed,
@@ -339,6 +383,7 @@ class __$MedicationRequestCopyWithImpl<$Res>
     Object? authoredOn = freezed,
     Object? requester = freezed,
     Object? dosageInstruction = freezed,
+    Object? dispenseRequest = freezed,
   }) {
     return _then(_MedicationRequest(
       resourceType: resourceType == freezed
@@ -347,10 +392,16 @@ class __$MedicationRequestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       text: text == freezed ? _value.text : text as Narrative?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier?>?,
       status:
           status == freezed ? _value.status : status as MedicationRequestStatus,
       intent:
           intent == freezed ? _value.intent : intent as MedicationRequestIntent,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource?>?,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
           : reportedBoolean as Boolean?,
@@ -374,6 +425,9 @@ class __$MedicationRequestCopyWithImpl<$Res>
       dosageInstruction: dosageInstruction == freezed
           ? _value.dosageInstruction
           : dosageInstruction as List<Dosage?>?,
+      dispenseRequest: dispenseRequest == freezed
+          ? _value.dispenseRequest
+          : dispenseRequest as MedicationRequestDispenseRequest?,
     ));
   }
 }
@@ -388,9 +442,11 @@ class _$_MedicationRequest extends _MedicationRequest {
       this.id,
       this.meta,
       this.text,
+      this.identifier,
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           required this.status,
       required this.intent,
+      this.contained,
       this.reportedBoolean,
       this.reportedReference,
       this.medicationCodeableConcept,
@@ -399,7 +455,8 @@ class _$_MedicationRequest extends _MedicationRequest {
       this.encounter,
       required this.authoredOn,
       required this.requester,
-      this.dosageInstruction})
+      this.dosageInstruction,
+      this.dispenseRequest})
       : super._();
 
   factory _$_MedicationRequest.fromJson(Map<String, dynamic> json) =>
@@ -415,10 +472,14 @@ class _$_MedicationRequest extends _MedicationRequest {
   @override
   final Narrative? text;
   @override
+  final List<Identifier?>? identifier;
+  @override
   @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
   final MedicationRequestStatus status;
   @override
   final MedicationRequestIntent intent;
+  @override
+  final List<Resource?>? contained;
   @override
   final Boolean? reportedBoolean;
   @override
@@ -437,10 +498,12 @@ class _$_MedicationRequest extends _MedicationRequest {
   final Reference requester;
   @override
   final List<Dosage?>? dosageInstruction;
+  @override
+  final MedicationRequestDispenseRequest? dispenseRequest;
 
   @override
   String toString() {
-    return 'MedicationRequest(resourceType: $resourceType, id: $id, meta: $meta, text: $text, status: $status, intent: $intent, reportedBoolean: $reportedBoolean, reportedReference: $reportedReference, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, subject: $subject, encounter: $encounter, authoredOn: $authoredOn, requester: $requester, dosageInstruction: $dosageInstruction)';
+    return 'MedicationRequest(resourceType: $resourceType, id: $id, meta: $meta, text: $text, identifier: $identifier, status: $status, intent: $intent, contained: $contained, reportedBoolean: $reportedBoolean, reportedReference: $reportedReference, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, subject: $subject, encounter: $encounter, authoredOn: $authoredOn, requester: $requester, dosageInstruction: $dosageInstruction, dispenseRequest: $dispenseRequest)';
   }
 
   @override
@@ -456,10 +519,16 @@ class _$_MedicationRequest extends _MedicationRequest {
                 const DeepCollectionEquality().equals(other.meta, meta)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.identifier, identifier) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifier, identifier)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.intent, intent) ||
                 const DeepCollectionEquality().equals(other.intent, intent)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
             (identical(other.reportedBoolean, reportedBoolean) ||
                 const DeepCollectionEquality()
                     .equals(other.reportedBoolean, reportedBoolean)) &&
@@ -488,7 +557,10 @@ class _$_MedicationRequest extends _MedicationRequest {
                     .equals(other.requester, requester)) &&
             (identical(other.dosageInstruction, dosageInstruction) ||
                 const DeepCollectionEquality()
-                    .equals(other.dosageInstruction, dosageInstruction)));
+                    .equals(other.dosageInstruction, dosageInstruction)) &&
+            (identical(other.dispenseRequest, dispenseRequest) ||
+                const DeepCollectionEquality()
+                    .equals(other.dispenseRequest, dispenseRequest)));
   }
 
   @override
@@ -498,8 +570,10 @@ class _$_MedicationRequest extends _MedicationRequest {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(intent) ^
+      const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(reportedBoolean) ^
       const DeepCollectionEquality().hash(reportedReference) ^
       const DeepCollectionEquality().hash(medicationCodeableConcept) ^
@@ -508,7 +582,8 @@ class _$_MedicationRequest extends _MedicationRequest {
       const DeepCollectionEquality().hash(encounter) ^
       const DeepCollectionEquality().hash(authoredOn) ^
       const DeepCollectionEquality().hash(requester) ^
-      const DeepCollectionEquality().hash(dosageInstruction);
+      const DeepCollectionEquality().hash(dosageInstruction) ^
+      const DeepCollectionEquality().hash(dispenseRequest);
 
   @JsonKey(ignore: true)
   @override
@@ -524,23 +599,27 @@ class _$_MedicationRequest extends _MedicationRequest {
 abstract class _MedicationRequest extends MedicationRequest {
   _MedicationRequest._() : super._();
   factory _MedicationRequest(
-      {@JsonKey(unknownEnumValue: UsCoreResourceType.MedicationRequest)
-          UsCoreResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      Narrative? text,
-      @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
-          required MedicationRequestStatus status,
-      required MedicationRequestIntent intent,
-      Boolean? reportedBoolean,
-      Reference? reportedReference,
-      CodeableConcept? medicationCodeableConcept,
-      Reference? medicationReference,
-      required Reference subject,
-      Reference? encounter,
-      required FhirDateTime authoredOn,
-      required Reference requester,
-      List<Dosage?>? dosageInstruction}) = _$_MedicationRequest;
+          {@JsonKey(unknownEnumValue: UsCoreResourceType.MedicationRequest)
+              UsCoreResourceType resourceType,
+          Id? id,
+          Meta? meta,
+          Narrative? text,
+          List<Identifier?>? identifier,
+          @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
+              required MedicationRequestStatus status,
+          required MedicationRequestIntent intent,
+          List<Resource?>? contained,
+          Boolean? reportedBoolean,
+          Reference? reportedReference,
+          CodeableConcept? medicationCodeableConcept,
+          Reference? medicationReference,
+          required Reference subject,
+          Reference? encounter,
+          required FhirDateTime authoredOn,
+          required Reference requester,
+          List<Dosage?>? dosageInstruction,
+          MedicationRequestDispenseRequest? dispenseRequest}) =
+      _$_MedicationRequest;
 
   factory _MedicationRequest.fromJson(Map<String, dynamic> json) =
       _$_MedicationRequest.fromJson;
@@ -555,10 +634,14 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   Narrative? get text;
   @override
+  List<Identifier?>? get identifier;
+  @override
   @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
   MedicationRequestStatus get status;
   @override
   MedicationRequestIntent get intent;
+  @override
+  List<Resource?>? get contained;
   @override
   Boolean? get reportedBoolean;
   @override
@@ -578,6 +661,630 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   List<Dosage?>? get dosageInstruction;
   @override
+  MedicationRequestDispenseRequest? get dispenseRequest;
+  @override
   @JsonKey(ignore: true)
   _$MedicationRequestCopyWith<_MedicationRequest> get copyWith;
+}
+
+MedicationRequestDispenseRequest _$MedicationRequestDispenseRequestFromJson(
+    Map<String, dynamic> json) {
+  return _MedicationRequestDispenseRequest.fromJson(json);
+}
+
+/// @nodoc
+class _$MedicationRequestDispenseRequestTearOff {
+  const _$MedicationRequestDispenseRequestTearOff();
+
+  _MedicationRequestDispenseRequest call(
+      {String? id,
+      MedicationRequestInitialFill? initialFill,
+      FhirDuration? dispenseInterval,
+      Period? validityPeriod,
+      UnsignedInt? numberOfRepeatsAllowed,
+      Quantity? quantity,
+      FhirDuration? expectedSupplyDuration,
+      Reference? performer}) {
+    return _MedicationRequestDispenseRequest(
+      id: id,
+      initialFill: initialFill,
+      dispenseInterval: dispenseInterval,
+      validityPeriod: validityPeriod,
+      numberOfRepeatsAllowed: numberOfRepeatsAllowed,
+      quantity: quantity,
+      expectedSupplyDuration: expectedSupplyDuration,
+      performer: performer,
+    );
+  }
+
+  MedicationRequestDispenseRequest fromJson(Map<String, Object> json) {
+    return MedicationRequestDispenseRequest.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $MedicationRequestDispenseRequest =
+    _$MedicationRequestDispenseRequestTearOff();
+
+/// @nodoc
+mixin _$MedicationRequestDispenseRequest {
+  String? get id;
+  MedicationRequestInitialFill? get initialFill;
+  FhirDuration? get dispenseInterval;
+  Period? get validityPeriod;
+  UnsignedInt? get numberOfRepeatsAllowed;
+  Quantity? get quantity;
+  FhirDuration? get expectedSupplyDuration;
+  Reference? get performer;
+
+  Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
+  $MedicationRequestDispenseRequestCopyWith<MedicationRequestDispenseRequest>
+      get copyWith;
+}
+
+/// @nodoc
+abstract class $MedicationRequestDispenseRequestCopyWith<$Res> {
+  factory $MedicationRequestDispenseRequestCopyWith(
+          MedicationRequestDispenseRequest value,
+          $Res Function(MedicationRequestDispenseRequest) then) =
+      _$MedicationRequestDispenseRequestCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      MedicationRequestInitialFill? initialFill,
+      FhirDuration? dispenseInterval,
+      Period? validityPeriod,
+      UnsignedInt? numberOfRepeatsAllowed,
+      Quantity? quantity,
+      FhirDuration? expectedSupplyDuration,
+      Reference? performer});
+
+  $MedicationRequestInitialFillCopyWith<$Res>? get initialFill;
+  $FhirDurationCopyWith<$Res>? get dispenseInterval;
+  $PeriodCopyWith<$Res>? get validityPeriod;
+  $QuantityCopyWith<$Res>? get quantity;
+  $FhirDurationCopyWith<$Res>? get expectedSupplyDuration;
+  $ReferenceCopyWith<$Res>? get performer;
+}
+
+/// @nodoc
+class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
+    implements $MedicationRequestDispenseRequestCopyWith<$Res> {
+  _$MedicationRequestDispenseRequestCopyWithImpl(this._value, this._then);
+
+  final MedicationRequestDispenseRequest _value;
+  // ignore: unused_field
+  final $Res Function(MedicationRequestDispenseRequest) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? initialFill = freezed,
+    Object? dispenseInterval = freezed,
+    Object? validityPeriod = freezed,
+    Object? numberOfRepeatsAllowed = freezed,
+    Object? quantity = freezed,
+    Object? expectedSupplyDuration = freezed,
+    Object? performer = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String?,
+      initialFill: initialFill == freezed
+          ? _value.initialFill
+          : initialFill as MedicationRequestInitialFill?,
+      dispenseInterval: dispenseInterval == freezed
+          ? _value.dispenseInterval
+          : dispenseInterval as FhirDuration?,
+      validityPeriod: validityPeriod == freezed
+          ? _value.validityPeriod
+          : validityPeriod as Period?,
+      numberOfRepeatsAllowed: numberOfRepeatsAllowed == freezed
+          ? _value.numberOfRepeatsAllowed
+          : numberOfRepeatsAllowed as UnsignedInt?,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+      expectedSupplyDuration: expectedSupplyDuration == freezed
+          ? _value.expectedSupplyDuration
+          : expectedSupplyDuration as FhirDuration?,
+      performer:
+          performer == freezed ? _value.performer : performer as Reference?,
+    ));
+  }
+
+  @override
+  $MedicationRequestInitialFillCopyWith<$Res>? get initialFill {
+    if (_value.initialFill == null) {
+      return null;
+    }
+
+    return $MedicationRequestInitialFillCopyWith<$Res>(_value.initialFill!,
+        (value) {
+      return _then(_value.copyWith(initialFill: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get dispenseInterval {
+    if (_value.dispenseInterval == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.dispenseInterval!, (value) {
+      return _then(_value.copyWith(dispenseInterval: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get validityPeriod {
+    if (_value.validityPeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.validityPeriod!, (value) {
+      return _then(_value.copyWith(validityPeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get expectedSupplyDuration {
+    if (_value.expectedSupplyDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.expectedSupplyDuration!, (value) {
+      return _then(_value.copyWith(expectedSupplyDuration: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get performer {
+    if (_value.performer == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.performer!, (value) {
+      return _then(_value.copyWith(performer: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$MedicationRequestDispenseRequestCopyWith<$Res>
+    implements $MedicationRequestDispenseRequestCopyWith<$Res> {
+  factory _$MedicationRequestDispenseRequestCopyWith(
+          _MedicationRequestDispenseRequest value,
+          $Res Function(_MedicationRequestDispenseRequest) then) =
+      __$MedicationRequestDispenseRequestCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      MedicationRequestInitialFill? initialFill,
+      FhirDuration? dispenseInterval,
+      Period? validityPeriod,
+      UnsignedInt? numberOfRepeatsAllowed,
+      Quantity? quantity,
+      FhirDuration? expectedSupplyDuration,
+      Reference? performer});
+
+  @override
+  $MedicationRequestInitialFillCopyWith<$Res>? get initialFill;
+  @override
+  $FhirDurationCopyWith<$Res>? get dispenseInterval;
+  @override
+  $PeriodCopyWith<$Res>? get validityPeriod;
+  @override
+  $QuantityCopyWith<$Res>? get quantity;
+  @override
+  $FhirDurationCopyWith<$Res>? get expectedSupplyDuration;
+  @override
+  $ReferenceCopyWith<$Res>? get performer;
+}
+
+/// @nodoc
+class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
+    extends _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
+    implements _$MedicationRequestDispenseRequestCopyWith<$Res> {
+  __$MedicationRequestDispenseRequestCopyWithImpl(
+      _MedicationRequestDispenseRequest _value,
+      $Res Function(_MedicationRequestDispenseRequest) _then)
+      : super(_value, (v) => _then(v as _MedicationRequestDispenseRequest));
+
+  @override
+  _MedicationRequestDispenseRequest get _value =>
+      super._value as _MedicationRequestDispenseRequest;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? initialFill = freezed,
+    Object? dispenseInterval = freezed,
+    Object? validityPeriod = freezed,
+    Object? numberOfRepeatsAllowed = freezed,
+    Object? quantity = freezed,
+    Object? expectedSupplyDuration = freezed,
+    Object? performer = freezed,
+  }) {
+    return _then(_MedicationRequestDispenseRequest(
+      id: id == freezed ? _value.id : id as String?,
+      initialFill: initialFill == freezed
+          ? _value.initialFill
+          : initialFill as MedicationRequestInitialFill?,
+      dispenseInterval: dispenseInterval == freezed
+          ? _value.dispenseInterval
+          : dispenseInterval as FhirDuration?,
+      validityPeriod: validityPeriod == freezed
+          ? _value.validityPeriod
+          : validityPeriod as Period?,
+      numberOfRepeatsAllowed: numberOfRepeatsAllowed == freezed
+          ? _value.numberOfRepeatsAllowed
+          : numberOfRepeatsAllowed as UnsignedInt?,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+      expectedSupplyDuration: expectedSupplyDuration == freezed
+          ? _value.expectedSupplyDuration
+          : expectedSupplyDuration as FhirDuration?,
+      performer:
+          performer == freezed ? _value.performer : performer as Reference?,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_MedicationRequestDispenseRequest
+    extends _MedicationRequestDispenseRequest {
+  _$_MedicationRequestDispenseRequest(
+      {this.id,
+      this.initialFill,
+      this.dispenseInterval,
+      this.validityPeriod,
+      this.numberOfRepeatsAllowed,
+      this.quantity,
+      this.expectedSupplyDuration,
+      this.performer})
+      : super._();
+
+  factory _$_MedicationRequestDispenseRequest.fromJson(
+          Map<String, dynamic> json) =>
+      _$_$_MedicationRequestDispenseRequestFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  final MedicationRequestInitialFill? initialFill;
+  @override
+  final FhirDuration? dispenseInterval;
+  @override
+  final Period? validityPeriod;
+  @override
+  final UnsignedInt? numberOfRepeatsAllowed;
+  @override
+  final Quantity? quantity;
+  @override
+  final FhirDuration? expectedSupplyDuration;
+  @override
+  final Reference? performer;
+
+  @override
+  String toString() {
+    return 'MedicationRequestDispenseRequest(id: $id, initialFill: $initialFill, dispenseInterval: $dispenseInterval, validityPeriod: $validityPeriod, numberOfRepeatsAllowed: $numberOfRepeatsAllowed, quantity: $quantity, expectedSupplyDuration: $expectedSupplyDuration, performer: $performer)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _MedicationRequestDispenseRequest &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.initialFill, initialFill) ||
+                const DeepCollectionEquality()
+                    .equals(other.initialFill, initialFill)) &&
+            (identical(other.dispenseInterval, dispenseInterval) ||
+                const DeepCollectionEquality()
+                    .equals(other.dispenseInterval, dispenseInterval)) &&
+            (identical(other.validityPeriod, validityPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.validityPeriod, validityPeriod)) &&
+            (identical(other.numberOfRepeatsAllowed, numberOfRepeatsAllowed) ||
+                const DeepCollectionEquality().equals(
+                    other.numberOfRepeatsAllowed, numberOfRepeatsAllowed)) &&
+            (identical(other.quantity, quantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantity, quantity)) &&
+            (identical(other.expectedSupplyDuration, expectedSupplyDuration) ||
+                const DeepCollectionEquality().equals(
+                    other.expectedSupplyDuration, expectedSupplyDuration)) &&
+            (identical(other.performer, performer) ||
+                const DeepCollectionEquality()
+                    .equals(other.performer, performer)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(initialFill) ^
+      const DeepCollectionEquality().hash(dispenseInterval) ^
+      const DeepCollectionEquality().hash(validityPeriod) ^
+      const DeepCollectionEquality().hash(numberOfRepeatsAllowed) ^
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(expectedSupplyDuration) ^
+      const DeepCollectionEquality().hash(performer);
+
+  @JsonKey(ignore: true)
+  @override
+  _$MedicationRequestDispenseRequestCopyWith<_MedicationRequestDispenseRequest>
+      get copyWith => __$MedicationRequestDispenseRequestCopyWithImpl<
+          _MedicationRequestDispenseRequest>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_MedicationRequestDispenseRequestToJson(this);
+  }
+}
+
+abstract class _MedicationRequestDispenseRequest
+    extends MedicationRequestDispenseRequest {
+  _MedicationRequestDispenseRequest._() : super._();
+  factory _MedicationRequestDispenseRequest(
+      {String? id,
+      MedicationRequestInitialFill? initialFill,
+      FhirDuration? dispenseInterval,
+      Period? validityPeriod,
+      UnsignedInt? numberOfRepeatsAllowed,
+      Quantity? quantity,
+      FhirDuration? expectedSupplyDuration,
+      Reference? performer}) = _$_MedicationRequestDispenseRequest;
+
+  factory _MedicationRequestDispenseRequest.fromJson(
+      Map<String, dynamic> json) = _$_MedicationRequestDispenseRequest.fromJson;
+
+  @override
+  String? get id;
+  @override
+  MedicationRequestInitialFill? get initialFill;
+  @override
+  FhirDuration? get dispenseInterval;
+  @override
+  Period? get validityPeriod;
+  @override
+  UnsignedInt? get numberOfRepeatsAllowed;
+  @override
+  Quantity? get quantity;
+  @override
+  FhirDuration? get expectedSupplyDuration;
+  @override
+  Reference? get performer;
+  @override
+  @JsonKey(ignore: true)
+  _$MedicationRequestDispenseRequestCopyWith<_MedicationRequestDispenseRequest>
+      get copyWith;
+}
+
+MedicationRequestInitialFill _$MedicationRequestInitialFillFromJson(
+    Map<String, dynamic> json) {
+  return _MedicationRequestInitialFill.fromJson(json);
+}
+
+/// @nodoc
+class _$MedicationRequestInitialFillTearOff {
+  const _$MedicationRequestInitialFillTearOff();
+
+  _MedicationRequestInitialFill call(
+      {String? id, Quantity? quantity, FhirDuration? duration}) {
+    return _MedicationRequestInitialFill(
+      id: id,
+      quantity: quantity,
+      duration: duration,
+    );
+  }
+
+  MedicationRequestInitialFill fromJson(Map<String, Object> json) {
+    return MedicationRequestInitialFill.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $MedicationRequestInitialFill = _$MedicationRequestInitialFillTearOff();
+
+/// @nodoc
+mixin _$MedicationRequestInitialFill {
+  String? get id;
+  Quantity? get quantity;
+  FhirDuration? get duration;
+
+  Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
+  $MedicationRequestInitialFillCopyWith<MedicationRequestInitialFill>
+      get copyWith;
+}
+
+/// @nodoc
+abstract class $MedicationRequestInitialFillCopyWith<$Res> {
+  factory $MedicationRequestInitialFillCopyWith(
+          MedicationRequestInitialFill value,
+          $Res Function(MedicationRequestInitialFill) then) =
+      _$MedicationRequestInitialFillCopyWithImpl<$Res>;
+  $Res call({String? id, Quantity? quantity, FhirDuration? duration});
+
+  $QuantityCopyWith<$Res>? get quantity;
+  $FhirDurationCopyWith<$Res>? get duration;
+}
+
+/// @nodoc
+class _$MedicationRequestInitialFillCopyWithImpl<$Res>
+    implements $MedicationRequestInitialFillCopyWith<$Res> {
+  _$MedicationRequestInitialFillCopyWithImpl(this._value, this._then);
+
+  final MedicationRequestInitialFill _value;
+  // ignore: unused_field
+  final $Res Function(MedicationRequestInitialFill) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? quantity = freezed,
+    Object? duration = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String?,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+      duration:
+          duration == freezed ? _value.duration : duration as FhirDuration?,
+    ));
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get duration {
+    if (_value.duration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.duration!, (value) {
+      return _then(_value.copyWith(duration: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$MedicationRequestInitialFillCopyWith<$Res>
+    implements $MedicationRequestInitialFillCopyWith<$Res> {
+  factory _$MedicationRequestInitialFillCopyWith(
+          _MedicationRequestInitialFill value,
+          $Res Function(_MedicationRequestInitialFill) then) =
+      __$MedicationRequestInitialFillCopyWithImpl<$Res>;
+  @override
+  $Res call({String? id, Quantity? quantity, FhirDuration? duration});
+
+  @override
+  $QuantityCopyWith<$Res>? get quantity;
+  @override
+  $FhirDurationCopyWith<$Res>? get duration;
+}
+
+/// @nodoc
+class __$MedicationRequestInitialFillCopyWithImpl<$Res>
+    extends _$MedicationRequestInitialFillCopyWithImpl<$Res>
+    implements _$MedicationRequestInitialFillCopyWith<$Res> {
+  __$MedicationRequestInitialFillCopyWithImpl(
+      _MedicationRequestInitialFill _value,
+      $Res Function(_MedicationRequestInitialFill) _then)
+      : super(_value, (v) => _then(v as _MedicationRequestInitialFill));
+
+  @override
+  _MedicationRequestInitialFill get _value =>
+      super._value as _MedicationRequestInitialFill;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? quantity = freezed,
+    Object? duration = freezed,
+  }) {
+    return _then(_MedicationRequestInitialFill(
+      id: id == freezed ? _value.id : id as String?,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+      duration:
+          duration == freezed ? _value.duration : duration as FhirDuration?,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_MedicationRequestInitialFill extends _MedicationRequestInitialFill {
+  _$_MedicationRequestInitialFill({this.id, this.quantity, this.duration})
+      : super._();
+
+  factory _$_MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =>
+      _$_$_MedicationRequestInitialFillFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  final Quantity? quantity;
+  @override
+  final FhirDuration? duration;
+
+  @override
+  String toString() {
+    return 'MedicationRequestInitialFill(id: $id, quantity: $quantity, duration: $duration)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _MedicationRequestInitialFill &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.quantity, quantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantity, quantity)) &&
+            (identical(other.duration, duration) ||
+                const DeepCollectionEquality()
+                    .equals(other.duration, duration)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(duration);
+
+  @JsonKey(ignore: true)
+  @override
+  _$MedicationRequestInitialFillCopyWith<_MedicationRequestInitialFill>
+      get copyWith => __$MedicationRequestInitialFillCopyWithImpl<
+          _MedicationRequestInitialFill>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_MedicationRequestInitialFillToJson(this);
+  }
+}
+
+abstract class _MedicationRequestInitialFill
+    extends MedicationRequestInitialFill {
+  _MedicationRequestInitialFill._() : super._();
+  factory _MedicationRequestInitialFill(
+      {String? id,
+      Quantity? quantity,
+      FhirDuration? duration}) = _$_MedicationRequestInitialFill;
+
+  factory _MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =
+      _$_MedicationRequestInitialFill.fromJson;
+
+  @override
+  String? get id;
+  @override
+  Quantity? get quantity;
+  @override
+  FhirDuration? get duration;
+  @override
+  @JsonKey(ignore: true)
+  _$MedicationRequestInitialFillCopyWith<_MedicationRequestInitialFill>
+      get copyWith;
 }

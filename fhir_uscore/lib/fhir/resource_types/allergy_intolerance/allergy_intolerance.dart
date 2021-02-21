@@ -28,6 +28,10 @@ abstract class AllergyIntolerance
     required CodeableConcept? code,
     required Reference patient,
     List<AllergyIntoleranceReaction?>? reaction,
+    List<AllergyIntoleranceCategory?>? category,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+        AllergyIntoleranceCriticality? criticality,
+    FhirDateTime? onsetDateTime,
   }) = _AllergyIntolerance;
 
   factory AllergyIntolerance.simple({
@@ -80,6 +84,9 @@ abstract class AllergyIntoleranceReaction
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
     required List<CodeableConcept> manifestation,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+        AllergyIntoleranceReactionSeverity? severity,
+    FhirDateTime? onset,
   }) = _AllergyIntoleranceReaction;
 
   /// Produces a Yaml formatted String version of the object

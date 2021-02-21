@@ -23,7 +23,13 @@ class _$PractitionerTearOff {
       Meta? meta,
       Narrative? text,
       required List<Identifier?> identifier,
-      required List<HumanName?> name}) {
+      required List<HumanName?> name,
+      List<Address?>? address,
+      List<ContactPoint?>? telecom,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          PractitionerGender? gender,
+      Date? birthDate,
+      List<PractitionerQualification?>? qualification}) {
     return _Practitioner(
       resourceType: resourceType,
       id: id,
@@ -31,6 +37,11 @@ class _$PractitionerTearOff {
       text: text,
       identifier: identifier,
       name: name,
+      address: address,
+      telecom: telecom,
+      gender: gender,
+      birthDate: birthDate,
+      qualification: qualification,
     );
   }
 
@@ -51,6 +62,12 @@ mixin _$Practitioner {
   Narrative? get text;
   List<Identifier?> get identifier;
   List<HumanName?> get name;
+  List<Address?>? get address;
+  List<ContactPoint?>? get telecom;
+  @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+  PractitionerGender? get gender;
+  Date? get birthDate;
+  List<PractitionerQualification?>? get qualification;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -69,7 +86,13 @@ abstract class $PractitionerCopyWith<$Res> {
       Meta? meta,
       Narrative? text,
       List<Identifier?> identifier,
-      List<HumanName?> name});
+      List<HumanName?> name,
+      List<Address?>? address,
+      List<ContactPoint?>? telecom,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          PractitionerGender? gender,
+      Date? birthDate,
+      List<PractitionerQualification?>? qualification});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -91,6 +114,11 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
     Object? text = freezed,
     Object? identifier = freezed,
     Object? name = freezed,
+    Object? address = freezed,
+    Object? telecom = freezed,
+    Object? gender = freezed,
+    Object? birthDate = freezed,
+    Object? qualification = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -103,6 +131,14 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
           ? _value.identifier
           : identifier as List<Identifier?>,
       name: name == freezed ? _value.name : name as List<HumanName?>,
+      address: address == freezed ? _value.address : address as List<Address?>?,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+      gender: gender == freezed ? _value.gender : gender as PractitionerGender?,
+      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
+      qualification: qualification == freezed
+          ? _value.qualification
+          : qualification as List<PractitionerQualification?>?,
     ));
   }
 
@@ -143,7 +179,13 @@ abstract class _$PractitionerCopyWith<$Res>
       Meta? meta,
       Narrative? text,
       List<Identifier?> identifier,
-      List<HumanName?> name});
+      List<HumanName?> name,
+      List<Address?>? address,
+      List<ContactPoint?>? telecom,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          PractitionerGender? gender,
+      Date? birthDate,
+      List<PractitionerQualification?>? qualification});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -169,6 +211,11 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
     Object? text = freezed,
     Object? identifier = freezed,
     Object? name = freezed,
+    Object? address = freezed,
+    Object? telecom = freezed,
+    Object? gender = freezed,
+    Object? birthDate = freezed,
+    Object? qualification = freezed,
   }) {
     return _then(_Practitioner(
       resourceType: resourceType == freezed
@@ -181,6 +228,14 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier?>,
       name: name == freezed ? _value.name : name as List<HumanName?>,
+      address: address == freezed ? _value.address : address as List<Address?>?,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+      gender: gender == freezed ? _value.gender : gender as PractitionerGender?,
+      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
+      qualification: qualification == freezed
+          ? _value.qualification
+          : qualification as List<PractitionerQualification?>?,
     ));
   }
 }
@@ -196,7 +251,13 @@ class _$_Practitioner extends _Practitioner {
       this.meta,
       this.text,
       required this.identifier,
-      required this.name})
+      required this.name,
+      this.address,
+      this.telecom,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          this.gender,
+      this.birthDate,
+      this.qualification})
       : super._();
 
   factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
@@ -215,10 +276,21 @@ class _$_Practitioner extends _Practitioner {
   final List<Identifier?> identifier;
   @override
   final List<HumanName?> name;
+  @override
+  final List<Address?>? address;
+  @override
+  final List<ContactPoint?>? telecom;
+  @override
+  @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+  final PractitionerGender? gender;
+  @override
+  final Date? birthDate;
+  @override
+  final List<PractitionerQualification?>? qualification;
 
   @override
   String toString() {
-    return 'Practitioner(resourceType: $resourceType, id: $id, meta: $meta, text: $text, identifier: $identifier, name: $name)';
+    return 'Practitioner(resourceType: $resourceType, id: $id, meta: $meta, text: $text, identifier: $identifier, name: $name, address: $address, telecom: $telecom, gender: $gender, birthDate: $birthDate, qualification: $qualification)';
   }
 
   @override
@@ -238,7 +310,21 @@ class _$_Practitioner extends _Practitioner {
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
             (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)));
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.address, address) ||
+                const DeepCollectionEquality()
+                    .equals(other.address, address)) &&
+            (identical(other.telecom, telecom) ||
+                const DeepCollectionEquality()
+                    .equals(other.telecom, telecom)) &&
+            (identical(other.gender, gender) ||
+                const DeepCollectionEquality().equals(other.gender, gender)) &&
+            (identical(other.birthDate, birthDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.birthDate, birthDate)) &&
+            (identical(other.qualification, qualification) ||
+                const DeepCollectionEquality()
+                    .equals(other.qualification, qualification)));
   }
 
   @override
@@ -249,7 +335,12 @@ class _$_Practitioner extends _Practitioner {
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(name);
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(address) ^
+      const DeepCollectionEquality().hash(telecom) ^
+      const DeepCollectionEquality().hash(gender) ^
+      const DeepCollectionEquality().hash(birthDate) ^
+      const DeepCollectionEquality().hash(qualification);
 
   @JsonKey(ignore: true)
   @override
@@ -271,7 +362,13 @@ abstract class _Practitioner extends Practitioner {
       Meta? meta,
       Narrative? text,
       required List<Identifier?> identifier,
-      required List<HumanName?> name}) = _$_Practitioner;
+      required List<HumanName?> name,
+      List<Address?>? address,
+      List<ContactPoint?>? telecom,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          PractitionerGender? gender,
+      Date? birthDate,
+      List<PractitionerQualification?>? qualification}) = _$_Practitioner;
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
       _$_Practitioner.fromJson;
@@ -289,6 +386,17 @@ abstract class _Practitioner extends Practitioner {
   List<Identifier?> get identifier;
   @override
   List<HumanName?> get name;
+  @override
+  List<Address?>? get address;
+  @override
+  List<ContactPoint?>? get telecom;
+  @override
+  @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+  PractitionerGender? get gender;
+  @override
+  Date? get birthDate;
+  @override
+  List<PractitionerQualification?>? get qualification;
   @override
   @JsonKey(ignore: true)
   _$PractitionerCopyWith<_Practitioner> get copyWith;
@@ -709,4 +817,271 @@ abstract class _PractitionerRole extends PractitionerRole {
   @override
   @JsonKey(ignore: true)
   _$PractitionerRoleCopyWith<_PractitionerRole> get copyWith;
+}
+
+PractitionerQualification _$PractitionerQualificationFromJson(
+    Map<String, dynamic> json) {
+  return _PractitionerQualification.fromJson(json);
+}
+
+/// @nodoc
+class _$PractitionerQualificationTearOff {
+  const _$PractitionerQualificationTearOff();
+
+  _PractitionerQualification call(
+      {String? id,
+      List<Identifier?>? identifier,
+      required CodeableConcept code,
+      Period? period,
+      Reference? issuer}) {
+    return _PractitionerQualification(
+      id: id,
+      identifier: identifier,
+      code: code,
+      period: period,
+      issuer: issuer,
+    );
+  }
+
+  PractitionerQualification fromJson(Map<String, Object> json) {
+    return PractitionerQualification.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $PractitionerQualification = _$PractitionerQualificationTearOff();
+
+/// @nodoc
+mixin _$PractitionerQualification {
+  String? get id;
+  List<Identifier?>? get identifier;
+  CodeableConcept get code;
+  Period? get period;
+  Reference? get issuer;
+
+  Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
+  $PractitionerQualificationCopyWith<PractitionerQualification> get copyWith;
+}
+
+/// @nodoc
+abstract class $PractitionerQualificationCopyWith<$Res> {
+  factory $PractitionerQualificationCopyWith(PractitionerQualification value,
+          $Res Function(PractitionerQualification) then) =
+      _$PractitionerQualificationCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      List<Identifier?>? identifier,
+      CodeableConcept code,
+      Period? period,
+      Reference? issuer});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $PeriodCopyWith<$Res>? get period;
+  $ReferenceCopyWith<$Res>? get issuer;
+}
+
+/// @nodoc
+class _$PractitionerQualificationCopyWithImpl<$Res>
+    implements $PractitionerQualificationCopyWith<$Res> {
+  _$PractitionerQualificationCopyWithImpl(this._value, this._then);
+
+  final PractitionerQualification _value;
+  // ignore: unused_field
+  final $Res Function(PractitionerQualification) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? identifier = freezed,
+    Object? code = freezed,
+    Object? period = freezed,
+    Object? issuer = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier?>?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      period: period == freezed ? _value.period : period as Period?,
+      issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get issuer {
+    if (_value.issuer == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.issuer!, (value) {
+      return _then(_value.copyWith(issuer: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$PractitionerQualificationCopyWith<$Res>
+    implements $PractitionerQualificationCopyWith<$Res> {
+  factory _$PractitionerQualificationCopyWith(_PractitionerQualification value,
+          $Res Function(_PractitionerQualification) then) =
+      __$PractitionerQualificationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      List<Identifier?>? identifier,
+      CodeableConcept code,
+      Period? period,
+      Reference? issuer});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code;
+  @override
+  $PeriodCopyWith<$Res>? get period;
+  @override
+  $ReferenceCopyWith<$Res>? get issuer;
+}
+
+/// @nodoc
+class __$PractitionerQualificationCopyWithImpl<$Res>
+    extends _$PractitionerQualificationCopyWithImpl<$Res>
+    implements _$PractitionerQualificationCopyWith<$Res> {
+  __$PractitionerQualificationCopyWithImpl(_PractitionerQualification _value,
+      $Res Function(_PractitionerQualification) _then)
+      : super(_value, (v) => _then(v as _PractitionerQualification));
+
+  @override
+  _PractitionerQualification get _value =>
+      super._value as _PractitionerQualification;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? identifier = freezed,
+    Object? code = freezed,
+    Object? period = freezed,
+    Object? issuer = freezed,
+  }) {
+    return _then(_PractitionerQualification(
+      id: id == freezed ? _value.id : id as String?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier?>?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      period: period == freezed ? _value.period : period as Period?,
+      issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_PractitionerQualification extends _PractitionerQualification {
+  _$_PractitionerQualification(
+      {this.id, this.identifier, required this.code, this.period, this.issuer})
+      : super._();
+
+  factory _$_PractitionerQualification.fromJson(Map<String, dynamic> json) =>
+      _$_$_PractitionerQualificationFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  final List<Identifier?>? identifier;
+  @override
+  final CodeableConcept code;
+  @override
+  final Period? period;
+  @override
+  final Reference? issuer;
+
+  @override
+  String toString() {
+    return 'PractitionerQualification(id: $id, identifier: $identifier, code: $code, period: $period, issuer: $issuer)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _PractitionerQualification &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.identifier, identifier) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.period, period) ||
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.issuer, issuer) ||
+                const DeepCollectionEquality().equals(other.issuer, issuer)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(issuer);
+
+  @JsonKey(ignore: true)
+  @override
+  _$PractitionerQualificationCopyWith<_PractitionerQualification>
+      get copyWith =>
+          __$PractitionerQualificationCopyWithImpl<_PractitionerQualification>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_PractitionerQualificationToJson(this);
+  }
+}
+
+abstract class _PractitionerQualification extends PractitionerQualification {
+  _PractitionerQualification._() : super._();
+  factory _PractitionerQualification(
+      {String? id,
+      List<Identifier?>? identifier,
+      required CodeableConcept code,
+      Period? period,
+      Reference? issuer}) = _$_PractitionerQualification;
+
+  factory _PractitionerQualification.fromJson(Map<String, dynamic> json) =
+      _$_PractitionerQualification.fromJson;
+
+  @override
+  String? get id;
+  @override
+  List<Identifier?>? get identifier;
+  @override
+  CodeableConcept get code;
+  @override
+  Period? get period;
+  @override
+  Reference? get issuer;
+  @override
+  @JsonKey(ignore: true)
+  _$PractitionerQualificationCopyWith<_PractitionerQualification> get copyWith;
 }

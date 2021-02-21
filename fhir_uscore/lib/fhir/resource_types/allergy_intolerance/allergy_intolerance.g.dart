@@ -36,22 +36,49 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
             ? null
             : AllergyIntoleranceReaction.fromJson(e as Map<String, dynamic>))
         .toList(),
+    category: (json['category'] as List<dynamic>?)
+        ?.map(
+            (e) => _$enumDecodeNullable(_$AllergyIntoleranceCategoryEnumMap, e))
+        .toList(),
+    criticality: _$enumDecodeNullable(
+        _$AllergyIntoleranceCriticalityEnumMap, json['criticality'],
+        unknownValue: AllergyIntoleranceCriticality.unknown),
+    onsetDateTime: json['onsetDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['onsetDateTime']),
   );
 }
 
 Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
-        _$_AllergyIntolerance instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'clinicalStatus': instance.clinicalStatus,
-      'verificationStatus': instance.verificationStatus,
-      'code': instance.code,
-      'patient': instance.patient,
-      'reaction': instance.reaction,
-    };
+    _$_AllergyIntolerance instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
+  writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  val['patient'] = instance.patient.toJson();
+  writeNotNull('reaction', instance.reaction?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'category',
+      instance.category
+          ?.map((e) => _$AllergyIntoleranceCategoryEnumMap[e])
+          .toList());
+  writeNotNull('criticality',
+      _$AllergyIntoleranceCriticalityEnumMap[instance.criticality]);
+  writeNotNull('onsetDateTime', instance.onsetDateTime?.toJson());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -90,6 +117,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -105,17 +133,66 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.Provenance: 'Provenance',
 };
 
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$AllergyIntoleranceCategoryEnumMap = {
+  AllergyIntoleranceCategory.food: 'food',
+  AllergyIntoleranceCategory.medication: 'medication',
+  AllergyIntoleranceCategory.environment: 'environment',
+  AllergyIntoleranceCategory.biologic: 'biologic',
+  AllergyIntoleranceCategory.unknown: 'unknown',
+};
+
+const _$AllergyIntoleranceCriticalityEnumMap = {
+  AllergyIntoleranceCriticality.low: 'low',
+  AllergyIntoleranceCriticality.high: 'high',
+  AllergyIntoleranceCriticality.unable_to_assess: 'unable-to-assess',
+  AllergyIntoleranceCriticality.unknown: 'unknown',
+};
+
 _$_AllergyIntoleranceReaction _$_$_AllergyIntoleranceReactionFromJson(
     Map<String, dynamic> json) {
   return _$_AllergyIntoleranceReaction(
     manifestation: (json['manifestation'] as List<dynamic>)
         .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
+    severity: _$enumDecodeNullable(
+        _$AllergyIntoleranceReactionSeverityEnumMap, json['severity'],
+        unknownValue: AllergyIntoleranceReactionSeverity.unknown),
+    onset: json['onset'] == null ? null : FhirDateTime.fromJson(json['onset']),
   );
 }
 
 Map<String, dynamic> _$_$_AllergyIntoleranceReactionToJson(
-        _$_AllergyIntoleranceReaction instance) =>
-    <String, dynamic>{
-      'manifestation': instance.manifestation,
-    };
+    _$_AllergyIntoleranceReaction instance) {
+  final val = <String, dynamic>{
+    'manifestation': instance.manifestation.map((e) => e.toJson()).toList(),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('severity',
+      _$AllergyIntoleranceReactionSeverityEnumMap[instance.severity]);
+  writeNotNull('onset', instance.onset?.toJson());
+  return val;
+}
+
+const _$AllergyIntoleranceReactionSeverityEnumMap = {
+  AllergyIntoleranceReactionSeverity.mild: 'mild',
+  AllergyIntoleranceReactionSeverity.moderate: 'moderate',
+  AllergyIntoleranceReactionSeverity.severe: 'severe',
+  AllergyIntoleranceReactionSeverity.unknown: 'unknown',
+};

@@ -4,6 +4,7 @@ Future<List<String>> usCoreValidation() async {
   var dir = Directory('./test/uscore_examples');
   var string = <String>[];
   for (var file in await dir.list().toList()) {
+    print(file);
     var contents = await File(file.path).readAsString();
     var resource = Resource.fromJson(jsonDecode(contents));
     if (resource == null) {

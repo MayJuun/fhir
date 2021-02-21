@@ -15,12 +15,20 @@ _$_Narrative _$_$_NarrativeFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_NarrativeToJson(_$_Narrative instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'status': _$NarrativeStatusEnumMap[instance.status],
-      'div': instance.div,
-    };
+Map<String, dynamic> _$_$_NarrativeToJson(_$_Narrative instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('status', _$NarrativeStatusEnumMap[instance.status]);
+  val['div'] = instance.div;
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -79,14 +87,22 @@ _$_Reference _$_$_ReferenceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ReferenceToJson(_$_Reference instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'reference': instance.reference,
-      'type': instance.type,
-      'identifier': instance.identifier,
-      'display': instance.display,
-    };
+Map<String, dynamic> _$_$_ReferenceToJson(_$_Reference instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('reference', instance.reference);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('display', instance.display);
+  return val;
+}
 
 _$_Dosage _$_$_DosageFromJson(Map<String, dynamic> json) {
   return _$_Dosage(
@@ -122,18 +138,30 @@ _$_Dosage _$_$_DosageFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DosageToJson(_$_Dosage instance) => <String, dynamic>{
-      'id': instance.id,
-      'text': instance.text,
-      'additionalInstruction': instance.additionalInstruction,
-      'patientInstruction': instance.patientInstruction,
-      'timing': instance.timing,
-      'asNeededBoolean': instance.asNeededBoolean,
-      'doseAndRate': instance.doseAndRate,
-      'maxDosePerPeriod': instance.maxDosePerPeriod,
-      'maxDosePerAdministration': instance.maxDosePerAdministration,
-      'maxDosePerLifetime': instance.maxDosePerLifetime,
-    };
+Map<String, dynamic> _$_$_DosageToJson(_$_Dosage instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('text', instance.text);
+  writeNotNull('additionalInstruction',
+      instance.additionalInstruction?.map((e) => e?.toJson()).toList());
+  writeNotNull('patientInstruction', instance.patientInstruction);
+  writeNotNull('timing', instance.timing?.toJson());
+  writeNotNull('asNeededBoolean', instance.asNeededBoolean?.toJson());
+  writeNotNull(
+      'doseAndRate', instance.doseAndRate?.map((e) => e?.toJson()).toList());
+  writeNotNull('maxDosePerPeriod', instance.maxDosePerPeriod?.toJson());
+  writeNotNull(
+      'maxDosePerAdministration', instance.maxDosePerAdministration?.toJson());
+  writeNotNull('maxDosePerLifetime', instance.maxDosePerLifetime?.toJson());
+  return val;
+}
 
 _$_DosageDoseAndRate _$_$_DosageDoseAndRateFromJson(Map<String, dynamic> json) {
   return _$_DosageDoseAndRate(
@@ -160,13 +188,21 @@ _$_DosageDoseAndRate _$_$_DosageDoseAndRateFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_DosageDoseAndRateToJson(
-        _$_DosageDoseAndRate instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'type': instance.type,
-      'doseRange': instance.doseRange,
-      'doseQuantity': instance.doseQuantity,
-      'rateRatio': instance.rateRatio,
-      'rateRange': instance.rateRange,
-      'rateQuantity': instance.rateQuantity,
-    };
+    _$_DosageDoseAndRate instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('doseRange', instance.doseRange?.toJson());
+  writeNotNull('doseQuantity', instance.doseQuantity?.toJson());
+  writeNotNull('rateRatio', instance.rateRatio?.toJson());
+  writeNotNull('rateRange', instance.rateRange?.toJson());
+  writeNotNull('rateQuantity', instance.rateQuantity?.toJson());
+  return val;
+}

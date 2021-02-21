@@ -33,6 +33,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     Reference? custodian,
     required List<DocumentReferenceContent?> content,
     DocumentReferenceContext? context,
+    String? description,
   }) = _DocumentReference;
 
   factory DocumentReference.simple({

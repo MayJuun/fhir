@@ -26,18 +26,50 @@ _$_Practitioner _$_$_PractitionerFromJson(Map<String, dynamic> json) {
         .map((e) =>
             e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
         .toList(),
+    address: (json['address'] as List<dynamic>?)
+        ?.map((e) =>
+            e == null ? null : Address.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    telecom: (json['telecom'] as List<dynamic>?)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    gender: _$enumDecodeNullable(_$PractitionerGenderEnumMap, json['gender'],
+        unknownValue: PractitionerGender.unknown),
+    birthDate:
+        json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
+    qualification: (json['qualification'] as List<dynamic>?)
+        ?.map((e) => e == null
+            ? null
+            : PractitionerQualification.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
-Map<String, dynamic> _$_$_PractitionerToJson(_$_Practitioner instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'identifier': instance.identifier,
-      'name': instance.name,
-    };
+Map<String, dynamic> _$_$_PractitionerToJson(_$_Practitioner instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  val['identifier'] = instance.identifier.map((e) => e?.toJson()).toList();
+  val['name'] = instance.name.map((e) => e?.toJson()).toList();
+  writeNotNull('address', instance.address?.map((e) => e?.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  writeNotNull('gender', _$PractitionerGenderEnumMap[instance.gender]);
+  writeNotNull('birthDate', instance.birthDate?.toJson());
+  writeNotNull('qualification',
+      instance.qualification?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -76,6 +108,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -89,6 +122,24 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.PractitionerRole: 'PractitionerRole',
   UsCoreResourceType.Procedure: 'Procedure',
   UsCoreResourceType.Provenance: 'Provenance',
+};
+
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$PractitionerGenderEnumMap = {
+  PractitionerGender.male: 'male',
+  PractitionerGender.female: 'female',
+  PractitionerGender.other: 'other',
+  PractitionerGender.unknown: 'unknown',
 };
 
 _$_PractitionerRole _$_$_PractitionerRoleFromJson(Map<String, dynamic> json) {
@@ -132,18 +183,64 @@ _$_PractitionerRole _$_$_PractitionerRoleFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_PractitionerRoleToJson(
-        _$_PractitionerRole instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'practitioner': instance.practitioner,
-      'organization': instance.organization,
-      'code': instance.code,
-      'specialty': instance.specialty,
-      'location': instance.location,
-      'telecom': instance.telecom,
-      'endpoint': instance.endpoint,
-    };
+Map<String, dynamic> _$_$_PractitionerRoleToJson(_$_PractitionerRole instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  val['practitioner'] = instance.practitioner.toJson();
+  val['organization'] = instance.organization.toJson();
+  writeNotNull('code', instance.code?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'specialty', instance.specialty?.map((e) => e?.toJson()).toList());
+  writeNotNull('location', instance.location?.map((e) => e?.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  writeNotNull('endpoint', instance.endpoint?.map((e) => e?.toJson()).toList());
+  return val;
+}
+
+_$_PractitionerQualification _$_$_PractitionerQualificationFromJson(
+    Map<String, dynamic> json) {
+  return _$_PractitionerQualification(
+    id: json['id'] as String?,
+    identifier: (json['identifier'] as List<dynamic>?)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    period: json['period'] == null
+        ? null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    issuer: json['issuer'] == null
+        ? null
+        : Reference.fromJson(json['issuer'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_PractitionerQualificationToJson(
+    _$_PractitionerQualification instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+  val['code'] = instance.code.toJson();
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('issuer', instance.issuer?.toJson());
+  return val;
+}

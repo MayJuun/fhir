@@ -22,11 +22,14 @@ abstract class Procedure with Resource implements _$Procedure {
     Id? id,
     Meta? meta,
     Narrative? text,
+    List<Identifier?>? identifier,
     required ProcedureStatus status,
     required CodeableConcept code,
     required Reference subject,
     FhirDateTime? performedDateTime,
     Period? performedPeriod,
+    List<ProcedurePerformer?>? performer,
+    List<ProcedureFocalDevice?>? focalDevice,
   }) = _Procedure;
 
   /// Produces a Yaml formatted String version of the object
@@ -44,4 +47,60 @@ abstract class Procedure with Resource implements _$Procedure {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Procedure.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFromJson(json);
+}
+
+@freezed
+abstract class ProcedurePerformer implements _$ProcedurePerformer {
+  ProcedurePerformer._();
+
+  factory ProcedurePerformer({
+    String? id,
+    CodeableConcept? function,
+    required Reference actor,
+    Reference? onBehalfOf,
+  }) = _ProcedurePerformer;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts [Yaml String] as an argument
+  factory ProcedurePerformer.fromYaml(dynamic yaml) => yaml is String
+      ? ProcedurePerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProcedurePerformer.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ProcedurePerformer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
+      _$ProcedurePerformerFromJson(json);
+}
+
+@freezed
+abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
+  ProcedureFocalDevice._();
+
+  factory ProcedureFocalDevice({
+    String? id,
+    List<FhirExtension?>? modifierExtension,
+    CodeableConcept? action,
+    required Reference manipulated,
+  }) = _ProcedureFocalDevice;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts [Yaml String] as an argument
+  factory ProcedureFocalDevice.fromYaml(dynamic yaml) => yaml is String
+      ? ProcedureFocalDevice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProcedureFocalDevice.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ProcedureFocalDevice cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
+      _$ProcedureFocalDeviceFromJson(json);
 }

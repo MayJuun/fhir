@@ -24,6 +24,7 @@ abstract class Patient with Resource implements _$Patient {
     Narrative? text,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     required List<Identifier?> identifier,
+    Boolean? active,
     required List<HumanName?> name,
     List<ContactPoint?>? telecom,
     @JsonKey(unknownEnumValue: PatientGender.unknown)

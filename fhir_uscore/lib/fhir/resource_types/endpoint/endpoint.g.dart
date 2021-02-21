@@ -1,16 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'patient.dart';
+part of 'endpoint.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
-  return _$_Patient(
+_$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
+  return _$_Endpoint(
     resourceType: _$enumDecode(
         _$UsCoreResourceTypeEnumMap, json['resourceType'],
-        unknownValue: UsCoreResourceType.Patient),
+        unknownValue: UsCoreResourceType.Endpoint),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
@@ -18,41 +18,43 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
-    identifier: (json['identifier'] as List<dynamic>)
-        .map((e) =>
+    identifier: (json['identifier'] as List<dynamic>?)
+        ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    active: json['active'] == null ? null : Boolean.fromJson(json['active']),
-    name: (json['name'] as List<dynamic>)
-        .map((e) =>
-            e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    telecom: (json['telecom'] as List<dynamic>?)
+    status: _$enumDecodeNullable(_$EndpointStatusEnumMap, json['status'],
+        unknownValue: EndpointStatus.unknown),
+    connectionType:
+        Coding.fromJson(json['connectionType'] as Map<String, dynamic>),
+    name: json['name'] as String?,
+    managingOrganization: json['managingOrganization'] == null
+        ? null
+        : Reference.fromJson(
+            json['managingOrganization'] as Map<String, dynamic>),
+    contact: (json['contact'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
-    gender: _$enumDecode(_$PatientGenderEnumMap, json['gender'],
-        unknownValue: PatientGender.unknown),
-    birthDate:
-        json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
-    address: (json['address'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Address.fromJson(e as Map<String, dynamic>))
+    period: json['period'] == null
+        ? null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    payloadType: (json['payloadType'] as List<dynamic>)
+        .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
-    communication: (json['communication'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : PatientCommunication.fromJson(e as Map<String, dynamic>))
+    payloadMimeType: (json['payloadMimeType'] as List<dynamic>?)
+        ?.map((e) => e == null ? null : Code.fromJson(e))
         .toList(),
+    address: json['address'] == null ? null : FhirUrl.fromJson(json['address']),
+    header:
+        (json['header'] as List<dynamic>?)?.map((e) => e as String?).toList(),
   );
 }
 
-Map<String, dynamic> _$_$_PatientToJson(_$_Patient instance) {
+Map<String, dynamic> _$_$_EndpointToJson(_$_Endpoint instance) {
   final val = <String, dynamic>{
     'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
   };
@@ -67,16 +69,20 @@ Map<String, dynamic> _$_$_PatientToJson(_$_Patient instance) {
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
-  val['identifier'] = instance.identifier.map((e) => e?.toJson()).toList();
-  writeNotNull('active', instance.active?.toJson());
-  val['name'] = instance.name.map((e) => e?.toJson()).toList();
-  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
-  val['gender'] = _$PatientGenderEnumMap[instance.gender];
-  writeNotNull('birthDate', instance.birthDate?.toJson());
-  writeNotNull('address', instance.address?.map((e) => e?.toJson()).toList());
-  writeNotNull('communication',
-      instance.communication?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+  writeNotNull('status', _$EndpointStatusEnumMap[instance.status]);
+  val['connectionType'] = instance.connectionType.toJson();
+  writeNotNull('name', instance.name);
+  writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
+  writeNotNull('period', instance.period?.toJson());
+  val['payloadType'] = instance.payloadType.map((e) => e.toJson()).toList();
+  writeNotNull('payloadMimeType',
+      instance.payloadMimeType?.map((e) => e?.toJson()).toList());
+  writeNotNull('address', instance.address?.toJson());
+  writeNotNull('header', instance.header);
   return val;
 }
 
@@ -133,36 +139,23 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.Provenance: 'Provenance',
 };
 
-const _$PatientGenderEnumMap = {
-  PatientGender.male: 'male',
-  PatientGender.female: 'female',
-  PatientGender.other: 'other',
-  PatientGender.unknown: 'unknown',
-};
-
-_$_PatientCommunication _$_$_PatientCommunicationFromJson(
-    Map<String, dynamic> json) {
-  return _$_PatientCommunication(
-    id: json['id'] as String?,
-    language:
-        CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
-    preferred:
-        json['preferred'] == null ? null : Boolean.fromJson(json['preferred']),
-  );
-}
-
-Map<String, dynamic> _$_$_PatientCommunicationToJson(
-    _$_PatientCommunication instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
   }
-
-  writeNotNull('id', instance.id);
-  val['language'] = instance.language.toJson();
-  writeNotNull('preferred', instance.preferred?.toJson());
-  return val;
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
+
+const _$EndpointStatusEnumMap = {
+  EndpointStatus.active: 'active',
+  EndpointStatus.suspended: 'suspended',
+  EndpointStatus.error: 'error',
+  EndpointStatus.off: 'off',
+  EndpointStatus.entered_in_error: 'entered-in-error',
+  EndpointStatus.test: 'test',
+  EndpointStatus.unknown: 'unknown',
+};

@@ -24,6 +24,7 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
             : DeviceUdiCarrier.fromJson(e as Map<String, dynamic>))
         .toList(),
     distinctIdentifier: json['distinctIdentifier'] as String?,
+    manufacturer: json['manufacturer'] as String?,
     manufactureDate: json['manufactureDate'] == null
         ? null
         : FhirDateTime.fromJson(json['manufactureDate']),
@@ -32,25 +33,49 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
         : FhirDateTime.fromJson(json['expirationDate']),
     lotNumber: json['lotNumber'] as String?,
     serialNumber: json['serialNumber'] as String?,
+    status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
+        unknownValue: DeviceStatus.unknown),
+    deviceName: (json['deviceName'] as List<dynamic>?)
+        ?.map((e) => e == null
+            ? null
+            : DeviceDeviceName.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modelNumber: json['modelNumber'] as String?,
     type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
   );
 }
 
-Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) => <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'udiCarrier': instance.udiCarrier,
-      'distinctIdentifier': instance.distinctIdentifier,
-      'manufactureDate': instance.manufactureDate,
-      'expirationDate': instance.expirationDate,
-      'lotNumber': instance.lotNumber,
-      'serialNumber': instance.serialNumber,
-      'type': instance.type,
-      'patient': instance.patient,
-    };
+Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'udiCarrier', instance.udiCarrier?.map((e) => e?.toJson()).toList());
+  writeNotNull('distinctIdentifier', instance.distinctIdentifier);
+  writeNotNull('manufacturer', instance.manufacturer);
+  writeNotNull('manufactureDate', instance.manufactureDate?.toJson());
+  writeNotNull('expirationDate', instance.expirationDate?.toJson());
+  writeNotNull('lotNumber', instance.lotNumber);
+  writeNotNull('serialNumber', instance.serialNumber);
+  writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
+  writeNotNull(
+      'deviceName', instance.deviceName?.map((e) => e?.toJson()).toList());
+  writeNotNull('modelNumber', instance.modelNumber);
+  val['type'] = instance.type.toJson();
+  val['patient'] = instance.patient.toJson();
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -89,6 +114,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -104,6 +130,24 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.Provenance: 'Provenance',
 };
 
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$DeviceStatusEnumMap = {
+  DeviceStatus.active: 'active',
+  DeviceStatus.inactive: 'inactive',
+  DeviceStatus.entered_in_error: 'entered-in-error',
+  DeviceStatus.unknown: 'unknown',
+};
+
 _$_DeviceUdiCarrier _$_$_DeviceUdiCarrierFromJson(Map<String, dynamic> json) {
   return _$_DeviceUdiCarrier(
     id: json['id'] as String?,
@@ -112,14 +156,69 @@ _$_DeviceUdiCarrier _$_$_DeviceUdiCarrierFromJson(Map<String, dynamic> json) {
         ? null
         : Base64Binary.fromJson(json['carrierAIDC']),
     carrierHRF: json['carrierHRF'] as String?,
+    entryType: _$enumDecodeNullable(
+        _$DeviceUdiCarrierEntryTypeEnumMap, json['entryType'],
+        unknownValue: DeviceUdiCarrierEntryType.unknown),
   );
 }
 
-Map<String, dynamic> _$_$_DeviceUdiCarrierToJson(
-        _$_DeviceUdiCarrier instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'deviceIdentifier': instance.deviceIdentifier,
-      'carrierAIDC': instance.carrierAIDC,
-      'carrierHRF': instance.carrierHRF,
-    };
+Map<String, dynamic> _$_$_DeviceUdiCarrierToJson(_$_DeviceUdiCarrier instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('deviceIdentifier', instance.deviceIdentifier);
+  writeNotNull('carrierAIDC', instance.carrierAIDC?.toJson());
+  writeNotNull('carrierHRF', instance.carrierHRF);
+  writeNotNull(
+      'entryType', _$DeviceUdiCarrierEntryTypeEnumMap[instance.entryType]);
+  return val;
+}
+
+const _$DeviceUdiCarrierEntryTypeEnumMap = {
+  DeviceUdiCarrierEntryType.barcode: 'barcode',
+  DeviceUdiCarrierEntryType.rfid: 'rfid',
+  DeviceUdiCarrierEntryType.manual: 'manual',
+  DeviceUdiCarrierEntryType.card: 'card',
+  DeviceUdiCarrierEntryType.self_reported: 'self-reported',
+  DeviceUdiCarrierEntryType.unknown: 'unknown',
+};
+
+_$_DeviceDeviceName _$_$_DeviceDeviceNameFromJson(Map<String, dynamic> json) {
+  return _$_DeviceDeviceName(
+    id: json['id'] as String?,
+    name: json['name'] as String?,
+    type: _$enumDecodeNullable(_$DeviceDeviceNameTypeEnumMap, json['type'],
+        unknownValue: DeviceDeviceNameType.unknown),
+  );
+}
+
+Map<String, dynamic> _$_$_DeviceDeviceNameToJson(_$_DeviceDeviceName instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  writeNotNull('type', _$DeviceDeviceNameTypeEnumMap[instance.type]);
+  return val;
+}
+
+const _$DeviceDeviceNameTypeEnumMap = {
+  DeviceDeviceNameType.udi_label_name: 'udi-label-name',
+  DeviceDeviceNameType.user_friendly_name: 'user-friendly-name',
+  DeviceDeviceNameType.patient_reported_name: 'patient-reported-name',
+  DeviceDeviceNameType.manufacturer_name: 'manufacturer-name',
+  DeviceDeviceNameType.model_name: 'model-name',
+  DeviceDeviceNameType.other: 'other',
+  DeviceDeviceNameType.unknown: 'unknown',
+};

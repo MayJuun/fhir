@@ -22,11 +22,13 @@ abstract class Observation with Resource implements _$Observation {
     Id? id,
     Meta? meta,
     Narrative? text,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
         ObservationStatus? status,
     List<CodeableConcept?>? category,
     required CodeableConcept code,
     Reference? subject,
+    Reference? encounter,
     FhirDateTime? effectiveDateTime,
     Period? effectivePeriod,
     Quantity? valueQuantity,
@@ -41,6 +43,13 @@ abstract class Observation with Resource implements _$Observation {
     FhirDateTime? valueDateTime,
     Period? valuePeriod,
     CodeableConcept? dataAbsentReason,
+    List<Reference?>? hasMember,
+    List<Annotation?>? note,
+    List<ObservationReferenceRange?>? referenceRange,
+    List<ObservationComponent?>? component,
+    List<CodeableConcept?>? interpretation,
+    Reference? device,
+    Instant? issued,
   }) = _Observation;
 
   factory Observation.laboratoryResult({
@@ -195,4 +204,79 @@ abstract class Observation with Resource implements _$Observation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
+}
+
+@freezed
+abstract class ObservationReferenceRange
+    implements _$ObservationReferenceRange {
+  ObservationReferenceRange._();
+
+  factory ObservationReferenceRange({
+    String? id,
+    Quantity? low,
+    Quantity? high,
+    CodeableConcept? type,
+    List<CodeableConcept?>? appliesTo,
+    Range? age,
+    String? text,
+  }) = _ObservationReferenceRange;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts [Yaml String] as an argument
+  factory ObservationReferenceRange.fromYaml(dynamic yaml) => yaml is String
+      ? ObservationReferenceRange.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ObservationReferenceRange.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ObservationReferenceRange cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
+      _$ObservationReferenceRangeFromJson(json);
+}
+
+@freezed
+abstract class ObservationComponent implements _$ObservationComponent {
+  ObservationComponent._();
+
+  factory ObservationComponent({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    required CodeableConcept code,
+    Quantity? valueQuantity,
+    CodeableConcept? valueCodeableConcept,
+    String? valueString,
+    Boolean? valueBoolean,
+    Integer? valueInteger,
+    Range? valueRange,
+    Ratio? valueRatio,
+    SampledData? valueSampledData,
+    Time? valueTime,
+    FhirDateTime? valueDateTime,
+    Period? valuePeriod,
+    CodeableConcept? dataAbsentReason,
+    List<CodeableConcept?>? interpretation,
+    List<ObservationReferenceRange?>? referenceRange,
+  }) = _ObservationComponent;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts [Yaml String] as an argument
+  factory ObservationComponent.fromYaml(dynamic yaml) => yaml is String
+      ? ObservationComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ObservationComponent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ObservationComponent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
+      _$ObservationComponentFromJson(json);
 }

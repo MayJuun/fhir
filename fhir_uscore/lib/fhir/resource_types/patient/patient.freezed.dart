@@ -25,6 +25,7 @@ class _$PatientTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       required List<Identifier?> identifier,
+      Boolean? active,
       required List<HumanName?> name,
       List<ContactPoint?>? telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
@@ -39,6 +40,7 @@ class _$PatientTearOff {
       text: text,
       extension_: extension_,
       identifier: identifier,
+      active: active,
       name: name,
       telecom: telecom,
       gender: gender,
@@ -66,6 +68,7 @@ mixin _$Patient {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<Identifier?> get identifier;
+  Boolean? get active;
   List<HumanName?> get name;
   List<ContactPoint?>? get telecom;
   @JsonKey(unknownEnumValue: PatientGender.unknown)
@@ -92,6 +95,7 @@ abstract class $PatientCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<Identifier?> identifier,
+      Boolean? active,
       List<HumanName?> name,
       List<ContactPoint?>? telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
@@ -120,6 +124,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
     Object? text = freezed,
     Object? extension_ = freezed,
     Object? identifier = freezed,
+    Object? active = freezed,
     Object? name = freezed,
     Object? telecom = freezed,
     Object? gender = freezed,
@@ -140,6 +145,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>,
+      active: active == freezed ? _value.active : active as Boolean?,
       name: name == freezed ? _value.name : name as List<HumanName?>,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
@@ -189,6 +195,7 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<Identifier?> identifier,
+      Boolean? active,
       List<HumanName?> name,
       List<ContactPoint?>? telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
@@ -220,6 +227,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
     Object? text = freezed,
     Object? extension_ = freezed,
     Object? identifier = freezed,
+    Object? active = freezed,
     Object? name = freezed,
     Object? telecom = freezed,
     Object? gender = freezed,
@@ -240,6 +248,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>,
+      active: active == freezed ? _value.active : active as Boolean?,
       name: name == freezed ? _value.name : name as List<HumanName?>,
       telecom:
           telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
@@ -266,6 +275,7 @@ class _$_Patient extends _Patient {
       @JsonKey(name: 'extension')
           this.extension_,
       required this.identifier,
+      this.active,
       required this.name,
       this.telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
@@ -293,6 +303,8 @@ class _$_Patient extends _Patient {
   @override
   final List<Identifier?> identifier;
   @override
+  final Boolean? active;
+  @override
   final List<HumanName?> name;
   @override
   final List<ContactPoint?>? telecom;
@@ -308,7 +320,7 @@ class _$_Patient extends _Patient {
 
   @override
   String toString() {
-    return 'Patient(resourceType: $resourceType, id: $id, meta: $meta, text: $text, extension_: $extension_, identifier: $identifier, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, communication: $communication)';
+    return 'Patient(resourceType: $resourceType, id: $id, meta: $meta, text: $text, extension_: $extension_, identifier: $identifier, active: $active, name: $name, telecom: $telecom, gender: $gender, birthDate: $birthDate, address: $address, communication: $communication)';
   }
 
   @override
@@ -330,6 +342,8 @@ class _$_Patient extends _Patient {
             (identical(other.identifier, identifier) ||
                 const DeepCollectionEquality()
                     .equals(other.identifier, identifier)) &&
+            (identical(other.active, active) ||
+                const DeepCollectionEquality().equals(other.active, active)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.telecom, telecom) ||
@@ -357,6 +371,7 @@ class _$_Patient extends _Patient {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(active) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom) ^
       const DeepCollectionEquality().hash(gender) ^
@@ -386,6 +401,7 @@ abstract class _Patient extends Patient {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       required List<Identifier?> identifier,
+      Boolean? active,
       required List<HumanName?> name,
       List<ContactPoint?>? telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
@@ -410,6 +426,8 @@ abstract class _Patient extends Patient {
   List<FhirExtension?>? get extension_;
   @override
   List<Identifier?> get identifier;
+  @override
+  Boolean? get active;
   @override
   List<HumanName?> get name;
   @override

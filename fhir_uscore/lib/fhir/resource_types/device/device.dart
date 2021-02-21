@@ -7,6 +7,7 @@ import 'package:yaml/yaml.dart';
 import '../../fhir.dart';
 // import 'package:flutter/foundation.dart';
 
+part 'device.enums.dart';
 part 'device.freezed.dart';
 part 'device.g.dart';
 
@@ -23,10 +24,14 @@ abstract class Device with Resource implements _$Device {
     Narrative? text,
     List<DeviceUdiCarrier?>? udiCarrier,
     String? distinctIdentifier,
+    String? manufacturer,
     FhirDateTime? manufactureDate,
     FhirDateTime? expirationDate,
     String? lotNumber,
     String? serialNumber,
+    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus? status,
+    List<DeviceDeviceName?>? deviceName,
+    String? modelNumber,
     required CodeableConcept type,
     required Reference patient,
   }) = _Device;
@@ -81,6 +86,8 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
     String? deviceIdentifier,
     Base64Binary? carrierAIDC,
     String? carrierHRF,
+    @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+        DeviceUdiCarrierEntryType? entryType,
   }) = _DeviceUdiCarrier;
 
   /// Produces a Yaml formatted String version of the object
@@ -98,4 +105,32 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiCarrierFromJson(json);
+}
+
+@freezed
+abstract class DeviceDeviceName implements _$DeviceDeviceName {
+  DeviceDeviceName._();
+
+  factory DeviceDeviceName({
+    String? id,
+    String? name,
+    @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
+        DeviceDeviceNameType? type,
+  }) = _DeviceDeviceName;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts [Yaml String] as an argument
+  factory DeviceDeviceName.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'DeviceDeviceName cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDeviceNameFromJson(json);
 }

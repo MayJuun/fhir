@@ -32,18 +32,28 @@ _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_CarePlanToJson(_$_CarePlan instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'contained': instance.contained,
-      'status': _$CarePlanStatusEnumMap[instance.status],
-      'intent': _$CarePlanIntentEnumMap[instance.intent],
-      'category': instance.category,
-      'subject': instance.subject,
-    };
+Map<String, dynamic> _$_$_CarePlanToJson(_$_CarePlan instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  val['text'] = instance.text.toJson();
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+  val['status'] = _$CarePlanStatusEnumMap[instance.status];
+  val['intent'] = _$CarePlanIntentEnumMap[instance.intent];
+  val['category'] = instance.category.map((e) => e?.toJson()).toList();
+  val['subject'] = instance.subject.toJson();
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -82,6 +92,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',

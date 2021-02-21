@@ -22,9 +22,11 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     Id? id,
     Meta? meta,
     Narrative? text,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
         required MedicationRequestStatus status,
     required MedicationRequestIntent intent,
+    List<Resource?>? contained,
     Boolean? reportedBoolean,
     Reference? reportedReference,
     CodeableConcept? medicationCodeableConcept,
@@ -34,6 +36,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     required FhirDateTime authoredOn,
     required Reference requester,
     List<Dosage?>? dosageInstruction,
+    MedicationRequestDispenseRequest? dispenseRequest,
   }) = _MedicationRequest;
 
   factory MedicationRequest.simple({
@@ -97,4 +100,69 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationRequest.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestFromJson(json);
+}
+
+@freezed
+abstract class MedicationRequestDispenseRequest
+    implements _$MedicationRequestDispenseRequest {
+  MedicationRequestDispenseRequest._();
+
+  factory MedicationRequestDispenseRequest({
+    String? id,
+    MedicationRequestInitialFill? initialFill,
+    FhirDuration? dispenseInterval,
+    Period? validityPeriod,
+    UnsignedInt? numberOfRepeatsAllowed,
+    Quantity? quantity,
+    FhirDuration? expectedSupplyDuration,
+    Reference? performer,
+  }) = _MedicationRequestDispenseRequest;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts [Yaml String] as an argument
+  factory MedicationRequestDispenseRequest.fromYaml(dynamic yaml) => yaml
+          is String
+      ? MedicationRequestDispenseRequest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MedicationRequestDispenseRequest.fromJson(
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'MedicationRequestDispenseRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
+
+  factory MedicationRequestDispenseRequest.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicationRequestDispenseRequestFromJson(json);
+}
+
+@freezed
+abstract class MedicationRequestInitialFill
+    implements _$MedicationRequestInitialFill {
+  MedicationRequestInitialFill._();
+
+  factory MedicationRequestInitialFill({
+    String? id,
+    Quantity? quantity,
+    FhirDuration? duration,
+  }) = _MedicationRequestInitialFill;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts [Yaml String] as an argument
+  factory MedicationRequestInitialFill.fromYaml(dynamic yaml) => yaml is String
+      ? MedicationRequestInitialFill.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MedicationRequestInitialFill.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'MedicationRequestInitialFill cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =>
+      _$MedicationRequestInitialFillFromJson(json);
 }

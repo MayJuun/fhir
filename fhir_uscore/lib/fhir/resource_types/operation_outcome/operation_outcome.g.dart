@@ -29,17 +29,26 @@ _$_OperationOutcome _$_$_OperationOutcomeFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_OperationOutcomeToJson(
-        _$_OperationOutcome instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'language': instance.language,
-      'contained': instance.contained,
-      'issue': instance.issue,
-    };
+Map<String, dynamic> _$_$_OperationOutcomeToJson(_$_OperationOutcome instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+  val['issue'] = instance.issue.map((e) => e.toJson()).toList();
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -78,6 +87,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -115,16 +125,25 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
 }
 
 Map<String, dynamic> _$_$_OperationOutcomeIssueToJson(
-        _$_OperationOutcomeIssue instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'severity': _$OperationOutcomeIssueSeverityEnumMap[instance.severity],
-      'code': _$OperationOutcomeIssueCodeEnumMap[instance.code],
-      'details': instance.details,
-      'diagnostics': instance.diagnostics,
-      'location': instance.location,
-      'expression': instance.expression,
-    };
+    _$_OperationOutcomeIssue instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'severity', _$OperationOutcomeIssueSeverityEnumMap[instance.severity]);
+  writeNotNull('code', _$OperationOutcomeIssueCodeEnumMap[instance.code]);
+  writeNotNull('details', instance.details?.toJson());
+  writeNotNull('diagnostics', instance.diagnostics);
+  writeNotNull('location', instance.location);
+  writeNotNull('expression', instance.expression);
+  return val;
+}
 
 K? _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,

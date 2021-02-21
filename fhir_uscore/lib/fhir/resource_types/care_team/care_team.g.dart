@@ -18,6 +18,7 @@ _$_CareTeam _$_$_CareTeamFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    name: json['name'] as String?,
     status: _$enumDecodeNullable(_$CareTeamStatusEnumMap, json['status'],
         unknownValue: CareTeamStatus.unknown),
     subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -29,16 +30,26 @@ _$_CareTeam _$_$_CareTeamFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_CareTeamToJson(_$_CareTeam instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'status': _$CareTeamStatusEnumMap[instance.status],
-      'subject': instance.subject,
-      'participant': instance.participant,
-    };
+Map<String, dynamic> _$_$_CareTeamToJson(_$_CareTeam instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('name', instance.name);
+  writeNotNull('status', _$CareTeamStatusEnumMap[instance.status]);
+  val['subject'] = instance.subject.toJson();
+  val['participant'] = instance.participant.map((e) => e?.toJson()).toList();
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -77,6 +88,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -126,9 +138,17 @@ _$_CareTeamParticipant _$_$_CareTeamParticipantFromJson(
 }
 
 Map<String, dynamic> _$_$_CareTeamParticipantToJson(
-        _$_CareTeamParticipant instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'role': instance.role,
-      'member': instance.member,
-    };
+    _$_CareTeamParticipant instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  val['role'] = instance.role.map((e) => e?.toJson()).toList();
+  val['member'] = instance.member.toJson();
+  return val;
+}

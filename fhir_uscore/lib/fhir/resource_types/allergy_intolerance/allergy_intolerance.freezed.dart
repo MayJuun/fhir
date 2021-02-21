@@ -27,7 +27,11 @@ class _$AllergyIntoleranceTearOff {
       CodeableConcept? verificationStatus,
       required CodeableConcept? code,
       required Reference patient,
-      List<AllergyIntoleranceReaction?>? reaction}) {
+      List<AllergyIntoleranceReaction?>? reaction,
+      List<AllergyIntoleranceCategory?>? category,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality? criticality,
+      FhirDateTime? onsetDateTime}) {
     return _AllergyIntolerance(
       resourceType: resourceType,
       id: id,
@@ -38,6 +42,9 @@ class _$AllergyIntoleranceTearOff {
       code: code,
       patient: patient,
       reaction: reaction,
+      category: category,
+      criticality: criticality,
+      onsetDateTime: onsetDateTime,
     );
   }
 
@@ -61,6 +68,10 @@ mixin _$AllergyIntolerance {
   CodeableConcept? get code;
   Reference get patient;
   List<AllergyIntoleranceReaction?>? get reaction;
+  List<AllergyIntoleranceCategory?>? get category;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+  AllergyIntoleranceCriticality? get criticality;
+  FhirDateTime? get onsetDateTime;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -82,7 +93,11 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       CodeableConcept? verificationStatus,
       CodeableConcept? code,
       Reference patient,
-      List<AllergyIntoleranceReaction?>? reaction});
+      List<AllergyIntoleranceReaction?>? reaction,
+      List<AllergyIntoleranceCategory?>? category,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality? criticality,
+      FhirDateTime? onsetDateTime});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -112,6 +127,9 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
     Object? code = freezed,
     Object? patient = freezed,
     Object? reaction = freezed,
+    Object? category = freezed,
+    Object? criticality = freezed,
+    Object? onsetDateTime = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -131,6 +149,15 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       reaction: reaction == freezed
           ? _value.reaction
           : reaction as List<AllergyIntoleranceReaction?>?,
+      category: category == freezed
+          ? _value.category
+          : category as List<AllergyIntoleranceCategory?>?,
+      criticality: criticality == freezed
+          ? _value.criticality
+          : criticality as AllergyIntoleranceCriticality?,
+      onsetDateTime: onsetDateTime == freezed
+          ? _value.onsetDateTime
+          : onsetDateTime as FhirDateTime?,
     ));
   }
 
@@ -214,7 +241,11 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
       CodeableConcept? verificationStatus,
       CodeableConcept? code,
       Reference patient,
-      List<AllergyIntoleranceReaction?>? reaction});
+      List<AllergyIntoleranceReaction?>? reaction,
+      List<AllergyIntoleranceCategory?>? category,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality? criticality,
+      FhirDateTime? onsetDateTime});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -252,6 +283,9 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
     Object? code = freezed,
     Object? patient = freezed,
     Object? reaction = freezed,
+    Object? category = freezed,
+    Object? criticality = freezed,
+    Object? onsetDateTime = freezed,
   }) {
     return _then(_AllergyIntolerance(
       resourceType: resourceType == freezed
@@ -271,6 +305,15 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       reaction: reaction == freezed
           ? _value.reaction
           : reaction as List<AllergyIntoleranceReaction?>?,
+      category: category == freezed
+          ? _value.category
+          : category as List<AllergyIntoleranceCategory?>?,
+      criticality: criticality == freezed
+          ? _value.criticality
+          : criticality as AllergyIntoleranceCriticality?,
+      onsetDateTime: onsetDateTime == freezed
+          ? _value.onsetDateTime
+          : onsetDateTime as FhirDateTime?,
     ));
   }
 }
@@ -289,7 +332,11 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
       this.verificationStatus,
       required this.code,
       required this.patient,
-      this.reaction})
+      this.reaction,
+      this.category,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          this.criticality,
+      this.onsetDateTime})
       : super._();
 
   factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
@@ -314,10 +361,17 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   final Reference patient;
   @override
   final List<AllergyIntoleranceReaction?>? reaction;
+  @override
+  final List<AllergyIntoleranceCategory?>? category;
+  @override
+  @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+  final AllergyIntoleranceCriticality? criticality;
+  @override
+  final FhirDateTime? onsetDateTime;
 
   @override
   String toString() {
-    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, text: $text, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, code: $code, patient: $patient, reaction: $reaction)';
+    return 'AllergyIntolerance(resourceType: $resourceType, id: $id, meta: $meta, text: $text, clinicalStatus: $clinicalStatus, verificationStatus: $verificationStatus, code: $code, patient: $patient, reaction: $reaction, category: $category, criticality: $criticality, onsetDateTime: $onsetDateTime)';
   }
 
   @override
@@ -346,7 +400,16 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
                     .equals(other.patient, patient)) &&
             (identical(other.reaction, reaction) ||
                 const DeepCollectionEquality()
-                    .equals(other.reaction, reaction)));
+                    .equals(other.reaction, reaction)) &&
+            (identical(other.category, category) ||
+                const DeepCollectionEquality()
+                    .equals(other.category, category)) &&
+            (identical(other.criticality, criticality) ||
+                const DeepCollectionEquality()
+                    .equals(other.criticality, criticality)) &&
+            (identical(other.onsetDateTime, onsetDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.onsetDateTime, onsetDateTime)));
   }
 
   @override
@@ -360,7 +423,10 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
       const DeepCollectionEquality().hash(verificationStatus) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(reaction);
+      const DeepCollectionEquality().hash(reaction) ^
+      const DeepCollectionEquality().hash(category) ^
+      const DeepCollectionEquality().hash(criticality) ^
+      const DeepCollectionEquality().hash(onsetDateTime);
 
   @JsonKey(ignore: true)
   @override
@@ -385,7 +451,11 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       CodeableConcept? verificationStatus,
       required CodeableConcept? code,
       required Reference patient,
-      List<AllergyIntoleranceReaction?>? reaction}) = _$_AllergyIntolerance;
+      List<AllergyIntoleranceReaction?>? reaction,
+      List<AllergyIntoleranceCategory?>? category,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality? criticality,
+      FhirDateTime? onsetDateTime}) = _$_AllergyIntolerance;
 
   factory _AllergyIntolerance.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntolerance.fromJson;
@@ -410,6 +480,13 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
   List<AllergyIntoleranceReaction?>? get reaction;
   @override
+  List<AllergyIntoleranceCategory?>? get category;
+  @override
+  @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+  AllergyIntoleranceCriticality? get criticality;
+  @override
+  FhirDateTime? get onsetDateTime;
+  @override
   @JsonKey(ignore: true)
   _$AllergyIntoleranceCopyWith<_AllergyIntolerance> get copyWith;
 }
@@ -424,9 +501,14 @@ class _$AllergyIntoleranceReactionTearOff {
   const _$AllergyIntoleranceReactionTearOff();
 
   _AllergyIntoleranceReaction call(
-      {required List<CodeableConcept> manifestation}) {
+      {required List<CodeableConcept> manifestation,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          AllergyIntoleranceReactionSeverity? severity,
+      FhirDateTime? onset}) {
     return _AllergyIntoleranceReaction(
       manifestation: manifestation,
+      severity: severity,
+      onset: onset,
     );
   }
 
@@ -441,6 +523,9 @@ const $AllergyIntoleranceReaction = _$AllergyIntoleranceReactionTearOff();
 /// @nodoc
 mixin _$AllergyIntoleranceReaction {
   List<CodeableConcept> get manifestation;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+  AllergyIntoleranceReactionSeverity? get severity;
+  FhirDateTime? get onset;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -452,7 +537,11 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
   factory $AllergyIntoleranceReactionCopyWith(AllergyIntoleranceReaction value,
           $Res Function(AllergyIntoleranceReaction) then) =
       _$AllergyIntoleranceReactionCopyWithImpl<$Res>;
-  $Res call({List<CodeableConcept> manifestation});
+  $Res call(
+      {List<CodeableConcept> manifestation,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          AllergyIntoleranceReactionSeverity? severity,
+      FhirDateTime? onset});
 }
 
 /// @nodoc
@@ -467,11 +556,17 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? manifestation = freezed,
+    Object? severity = freezed,
+    Object? onset = freezed,
   }) {
     return _then(_value.copyWith(
       manifestation: manifestation == freezed
           ? _value.manifestation
           : manifestation as List<CodeableConcept>,
+      severity: severity == freezed
+          ? _value.severity
+          : severity as AllergyIntoleranceReactionSeverity?,
+      onset: onset == freezed ? _value.onset : onset as FhirDateTime?,
     ));
   }
 }
@@ -484,7 +579,11 @@ abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
           $Res Function(_AllergyIntoleranceReaction) then) =
       __$AllergyIntoleranceReactionCopyWithImpl<$Res>;
   @override
-  $Res call({List<CodeableConcept> manifestation});
+  $Res call(
+      {List<CodeableConcept> manifestation,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          AllergyIntoleranceReactionSeverity? severity,
+      FhirDateTime? onset});
 }
 
 /// @nodoc
@@ -502,11 +601,17 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? manifestation = freezed,
+    Object? severity = freezed,
+    Object? onset = freezed,
   }) {
     return _then(_AllergyIntoleranceReaction(
       manifestation: manifestation == freezed
           ? _value.manifestation
           : manifestation as List<CodeableConcept>,
+      severity: severity == freezed
+          ? _value.severity
+          : severity as AllergyIntoleranceReactionSeverity?,
+      onset: onset == freezed ? _value.onset : onset as FhirDateTime?,
     ));
   }
 }
@@ -515,17 +620,27 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
-  _$_AllergyIntoleranceReaction({required this.manifestation}) : super._();
+  _$_AllergyIntoleranceReaction(
+      {required this.manifestation,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          this.severity,
+      this.onset})
+      : super._();
 
   factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$_$_AllergyIntoleranceReactionFromJson(json);
 
   @override
   final List<CodeableConcept> manifestation;
+  @override
+  @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+  final AllergyIntoleranceReactionSeverity? severity;
+  @override
+  final FhirDateTime? onset;
 
   @override
   String toString() {
-    return 'AllergyIntoleranceReaction(manifestation: $manifestation)';
+    return 'AllergyIntoleranceReaction(manifestation: $manifestation, severity: $severity, onset: $onset)';
   }
 
   @override
@@ -534,12 +649,20 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
         (other is _AllergyIntoleranceReaction &&
             (identical(other.manifestation, manifestation) ||
                 const DeepCollectionEquality()
-                    .equals(other.manifestation, manifestation)));
+                    .equals(other.manifestation, manifestation)) &&
+            (identical(other.severity, severity) ||
+                const DeepCollectionEquality()
+                    .equals(other.severity, severity)) &&
+            (identical(other.onset, onset) ||
+                const DeepCollectionEquality().equals(other.onset, onset)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(manifestation);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(manifestation) ^
+      const DeepCollectionEquality().hash(severity) ^
+      const DeepCollectionEquality().hash(onset);
 
   @JsonKey(ignore: true)
   @override
@@ -556,14 +679,21 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
 abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
   _AllergyIntoleranceReaction._() : super._();
   factory _AllergyIntoleranceReaction(
-          {required List<CodeableConcept> manifestation}) =
-      _$_AllergyIntoleranceReaction;
+      {required List<CodeableConcept> manifestation,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          AllergyIntoleranceReactionSeverity? severity,
+      FhirDateTime? onset}) = _$_AllergyIntoleranceReaction;
 
   factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntoleranceReaction.fromJson;
 
   @override
   List<CodeableConcept> get manifestation;
+  @override
+  @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+  AllergyIntoleranceReactionSeverity? get severity;
+  @override
+  FhirDateTime? get onset;
   @override
   @JsonKey(ignore: true)
   _$AllergyIntoleranceReactionCopyWith<_AllergyIntoleranceReaction>

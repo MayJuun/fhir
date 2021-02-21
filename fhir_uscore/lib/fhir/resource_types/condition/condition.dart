@@ -22,26 +22,29 @@ abstract class Condition with Resource implements _$Condition {
     Id? id,
     Meta? meta,
     Narrative? text,
-    ConditionClinicalStatus? clinicalStatus,
-    ConditionVerificationStatus? verificationStatus,
-    List<ConditionCategory?>? category,
+    CodeableConcept? clinicalStatus,
+    CodeableConcept? verificationStatus,
+    required List<CodeableConcept?> category,
     required CodeableConcept code,
     required Reference subject,
+    FhirDateTime? onsetDateTime,
   }) = _Condition;
 
   factory Condition.simple({
     ConditionClinicalStatus? clinicalStatus,
     ConditionVerificationStatus? verificationStatus,
     required ConditionCategory conditionCategory,
-    List<ConditionCategory?>? category,
+    List<CodeableConcept?>? category,
     required CodeableConcept code,
     required Reference subject,
   }) {
-    category ??= <ConditionCategory?>[];
-    category.add(conditionCategory);
+    category ??= <CodeableConcept?>[];
+    category.add(codeableConceptFromConditionCategory[conditionCategory]);
     return Condition(
-      clinicalStatus: clinicalStatus,
-      verificationStatus: verificationStatus,
+      clinicalStatus:
+          codeableConceptFromConditionClinicalStatus[clinicalStatus],
+      verificationStatus:
+          codeableConceptFromConditionVerificationStatus[verificationStatus],
       category: category,
       code: code,
       subject: subject,
@@ -53,7 +56,11 @@ abstract class Condition with Resource implements _$Condition {
     required CodeableConcept code,
     required Reference subject,
   }) =>
-      Condition(category: [conditionCategory], code: code, subject: subject);
+      Condition(
+        category: [codeableConceptFromConditionCategory[conditionCategory]],
+        code: code,
+        subject: subject,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

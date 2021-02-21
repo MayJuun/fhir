@@ -52,25 +52,35 @@ _$_DiagnosticReport _$_$_DiagnosticReportFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_DiagnosticReportToJson(
-        _$_DiagnosticReport instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'status': _$DiagnosticReportStatusEnumMap[instance.status],
-      'category': instance.category,
-      'code': instance.code,
-      'subject': instance.subject,
-      'encounter': instance.encounter,
-      'effectiveDateTime': instance.effectiveDateTime,
-      'effectivePeriod': instance.effectivePeriod,
-      'issued': instance.issued,
-      'performer': instance.performer,
-      'result': instance.result,
-      'presentedForm': instance.presentedForm,
-    };
+Map<String, dynamic> _$_$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  val['status'] = _$DiagnosticReportStatusEnumMap[instance.status];
+  val['category'] = instance.category.map((e) => e?.toJson()).toList();
+  val['code'] = instance.code.toJson();
+  val['subject'] = instance.subject.toJson();
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
+  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
+  writeNotNull('issued', instance.issued?.toJson());
+  writeNotNull(
+      'performer', instance.performer?.map((e) => e?.toJson()).toList());
+  writeNotNull('result', instance.result?.map((e) => e?.toJson()).toList());
+  writeNotNull('presentedForm',
+      instance.presentedForm?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -109,6 +119,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',

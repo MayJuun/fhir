@@ -1,5 +1,40 @@
 part of 'allergy_intolerance.dart';
 
+enum AllergyIntoleranceCriticality {
+  @JsonValue('low')
+  low,
+  @JsonValue('high')
+  high,
+  @JsonValue('unable-to-assess')
+  unable_to_assess,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum AllergyIntoleranceCategory {
+  @JsonValue('food')
+  food,
+  @JsonValue('medication')
+  medication,
+  @JsonValue('environment')
+  environment,
+  @JsonValue('biologic')
+  biologic,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum AllergyIntoleranceReactionSeverity {
+  @JsonValue('mild')
+  mild,
+  @JsonValue('moderate')
+  moderate,
+  @JsonValue('severe')
+  severe,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum AllergyIntoleranceClinicalStatus {
   @JsonValue('Active')
   active,

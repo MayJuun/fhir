@@ -24,10 +24,15 @@ class _$DeviceTearOff {
       Narrative? text,
       List<DeviceUdiCarrier?>? udiCarrier,
       String? distinctIdentifier,
+      String? manufacturer,
       FhirDateTime? manufactureDate,
       FhirDateTime? expirationDate,
       String? lotNumber,
       String? serialNumber,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          DeviceStatus? status,
+      List<DeviceDeviceName?>? deviceName,
+      String? modelNumber,
       required CodeableConcept type,
       required Reference patient}) {
     return _Device(
@@ -37,10 +42,14 @@ class _$DeviceTearOff {
       text: text,
       udiCarrier: udiCarrier,
       distinctIdentifier: distinctIdentifier,
+      manufacturer: manufacturer,
       manufactureDate: manufactureDate,
       expirationDate: expirationDate,
       lotNumber: lotNumber,
       serialNumber: serialNumber,
+      status: status,
+      deviceName: deviceName,
+      modelNumber: modelNumber,
       type: type,
       patient: patient,
     );
@@ -63,10 +72,15 @@ mixin _$Device {
   Narrative? get text;
   List<DeviceUdiCarrier?>? get udiCarrier;
   String? get distinctIdentifier;
+  String? get manufacturer;
   FhirDateTime? get manufactureDate;
   FhirDateTime? get expirationDate;
   String? get lotNumber;
   String? get serialNumber;
+  @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+  DeviceStatus? get status;
+  List<DeviceDeviceName?>? get deviceName;
+  String? get modelNumber;
   CodeableConcept get type;
   Reference get patient;
 
@@ -87,10 +101,15 @@ abstract class $DeviceCopyWith<$Res> {
       Narrative? text,
       List<DeviceUdiCarrier?>? udiCarrier,
       String? distinctIdentifier,
+      String? manufacturer,
       FhirDateTime? manufactureDate,
       FhirDateTime? expirationDate,
       String? lotNumber,
       String? serialNumber,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          DeviceStatus? status,
+      List<DeviceDeviceName?>? deviceName,
+      String? modelNumber,
       CodeableConcept type,
       Reference patient});
 
@@ -116,10 +135,14 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
     Object? text = freezed,
     Object? udiCarrier = freezed,
     Object? distinctIdentifier = freezed,
+    Object? manufacturer = freezed,
     Object? manufactureDate = freezed,
     Object? expirationDate = freezed,
     Object? lotNumber = freezed,
     Object? serialNumber = freezed,
+    Object? status = freezed,
+    Object? deviceName = freezed,
+    Object? modelNumber = freezed,
     Object? type = freezed,
     Object? patient = freezed,
   }) {
@@ -136,6 +159,9 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
           : distinctIdentifier as String?,
+      manufacturer: manufacturer == freezed
+          ? _value.manufacturer
+          : manufacturer as String?,
       manufactureDate: manufactureDate == freezed
           ? _value.manufactureDate
           : manufactureDate as FhirDateTime?,
@@ -146,6 +172,12 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       serialNumber: serialNumber == freezed
           ? _value.serialNumber
           : serialNumber as String?,
+      status: status == freezed ? _value.status : status as DeviceStatus?,
+      deviceName: deviceName == freezed
+          ? _value.deviceName
+          : deviceName as List<DeviceDeviceName?>?,
+      modelNumber:
+          modelNumber == freezed ? _value.modelNumber : modelNumber as String?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       patient: patient == freezed ? _value.patient : patient as Reference,
     ));
@@ -201,10 +233,15 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Narrative? text,
       List<DeviceUdiCarrier?>? udiCarrier,
       String? distinctIdentifier,
+      String? manufacturer,
       FhirDateTime? manufactureDate,
       FhirDateTime? expirationDate,
       String? lotNumber,
       String? serialNumber,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          DeviceStatus? status,
+      List<DeviceDeviceName?>? deviceName,
+      String? modelNumber,
       CodeableConcept type,
       Reference patient});
 
@@ -235,10 +272,14 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
     Object? text = freezed,
     Object? udiCarrier = freezed,
     Object? distinctIdentifier = freezed,
+    Object? manufacturer = freezed,
     Object? manufactureDate = freezed,
     Object? expirationDate = freezed,
     Object? lotNumber = freezed,
     Object? serialNumber = freezed,
+    Object? status = freezed,
+    Object? deviceName = freezed,
+    Object? modelNumber = freezed,
     Object? type = freezed,
     Object? patient = freezed,
   }) {
@@ -255,6 +296,9 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
           : distinctIdentifier as String?,
+      manufacturer: manufacturer == freezed
+          ? _value.manufacturer
+          : manufacturer as String?,
       manufactureDate: manufactureDate == freezed
           ? _value.manufactureDate
           : manufactureDate as FhirDateTime?,
@@ -265,6 +309,12 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       serialNumber: serialNumber == freezed
           ? _value.serialNumber
           : serialNumber as String?,
+      status: status == freezed ? _value.status : status as DeviceStatus?,
+      deviceName: deviceName == freezed
+          ? _value.deviceName
+          : deviceName as List<DeviceDeviceName?>?,
+      modelNumber:
+          modelNumber == freezed ? _value.modelNumber : modelNumber as String?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       patient: patient == freezed ? _value.patient : patient as Reference,
     ));
@@ -283,10 +333,15 @@ class _$_Device extends _Device {
       this.text,
       this.udiCarrier,
       this.distinctIdentifier,
+      this.manufacturer,
       this.manufactureDate,
       this.expirationDate,
       this.lotNumber,
       this.serialNumber,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          this.status,
+      this.deviceName,
+      this.modelNumber,
       required this.type,
       required this.patient})
       : super._();
@@ -308,6 +363,8 @@ class _$_Device extends _Device {
   @override
   final String? distinctIdentifier;
   @override
+  final String? manufacturer;
+  @override
   final FhirDateTime? manufactureDate;
   @override
   final FhirDateTime? expirationDate;
@@ -316,13 +373,20 @@ class _$_Device extends _Device {
   @override
   final String? serialNumber;
   @override
+  @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+  final DeviceStatus? status;
+  @override
+  final List<DeviceDeviceName?>? deviceName;
+  @override
+  final String? modelNumber;
+  @override
   final CodeableConcept type;
   @override
   final Reference patient;
 
   @override
   String toString() {
-    return 'Device(resourceType: $resourceType, id: $id, meta: $meta, text: $text, udiCarrier: $udiCarrier, distinctIdentifier: $distinctIdentifier, manufactureDate: $manufactureDate, expirationDate: $expirationDate, lotNumber: $lotNumber, serialNumber: $serialNumber, type: $type, patient: $patient)';
+    return 'Device(resourceType: $resourceType, id: $id, meta: $meta, text: $text, udiCarrier: $udiCarrier, distinctIdentifier: $distinctIdentifier, manufacturer: $manufacturer, manufactureDate: $manufactureDate, expirationDate: $expirationDate, lotNumber: $lotNumber, serialNumber: $serialNumber, status: $status, deviceName: $deviceName, modelNumber: $modelNumber, type: $type, patient: $patient)';
   }
 
   @override
@@ -344,6 +408,9 @@ class _$_Device extends _Device {
             (identical(other.distinctIdentifier, distinctIdentifier) ||
                 const DeepCollectionEquality()
                     .equals(other.distinctIdentifier, distinctIdentifier)) &&
+            (identical(other.manufacturer, manufacturer) ||
+                const DeepCollectionEquality()
+                    .equals(other.manufacturer, manufacturer)) &&
             (identical(other.manufactureDate, manufactureDate) ||
                 const DeepCollectionEquality()
                     .equals(other.manufactureDate, manufactureDate)) &&
@@ -356,6 +423,14 @@ class _$_Device extends _Device {
             (identical(other.serialNumber, serialNumber) ||
                 const DeepCollectionEquality()
                     .equals(other.serialNumber, serialNumber)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.deviceName, deviceName) ||
+                const DeepCollectionEquality()
+                    .equals(other.deviceName, deviceName)) &&
+            (identical(other.modelNumber, modelNumber) ||
+                const DeepCollectionEquality()
+                    .equals(other.modelNumber, modelNumber)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.patient, patient) ||
@@ -371,10 +446,14 @@ class _$_Device extends _Device {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(udiCarrier) ^
       const DeepCollectionEquality().hash(distinctIdentifier) ^
+      const DeepCollectionEquality().hash(manufacturer) ^
       const DeepCollectionEquality().hash(manufactureDate) ^
       const DeepCollectionEquality().hash(expirationDate) ^
       const DeepCollectionEquality().hash(lotNumber) ^
       const DeepCollectionEquality().hash(serialNumber) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(deviceName) ^
+      const DeepCollectionEquality().hash(modelNumber) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(patient);
 
@@ -399,10 +478,15 @@ abstract class _Device extends Device {
       Narrative? text,
       List<DeviceUdiCarrier?>? udiCarrier,
       String? distinctIdentifier,
+      String? manufacturer,
       FhirDateTime? manufactureDate,
       FhirDateTime? expirationDate,
       String? lotNumber,
       String? serialNumber,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          DeviceStatus? status,
+      List<DeviceDeviceName?>? deviceName,
+      String? modelNumber,
       required CodeableConcept type,
       required Reference patient}) = _$_Device;
 
@@ -422,6 +506,8 @@ abstract class _Device extends Device {
   @override
   String? get distinctIdentifier;
   @override
+  String? get manufacturer;
+  @override
   FhirDateTime? get manufactureDate;
   @override
   FhirDateTime? get expirationDate;
@@ -429,6 +515,13 @@ abstract class _Device extends Device {
   String? get lotNumber;
   @override
   String? get serialNumber;
+  @override
+  @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+  DeviceStatus? get status;
+  @override
+  List<DeviceDeviceName?>? get deviceName;
+  @override
+  String? get modelNumber;
   @override
   CodeableConcept get type;
   @override
@@ -450,12 +543,15 @@ class _$DeviceUdiCarrierTearOff {
       {String? id,
       String? deviceIdentifier,
       Base64Binary? carrierAIDC,
-      String? carrierHRF}) {
+      String? carrierHRF,
+      @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+          DeviceUdiCarrierEntryType? entryType}) {
     return _DeviceUdiCarrier(
       id: id,
       deviceIdentifier: deviceIdentifier,
       carrierAIDC: carrierAIDC,
       carrierHRF: carrierHRF,
+      entryType: entryType,
     );
   }
 
@@ -473,6 +569,8 @@ mixin _$DeviceUdiCarrier {
   String? get deviceIdentifier;
   Base64Binary? get carrierAIDC;
   String? get carrierHRF;
+  @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+  DeviceUdiCarrierEntryType? get entryType;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -488,7 +586,9 @@ abstract class $DeviceUdiCarrierCopyWith<$Res> {
       {String? id,
       String? deviceIdentifier,
       Base64Binary? carrierAIDC,
-      String? carrierHRF});
+      String? carrierHRF,
+      @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+          DeviceUdiCarrierEntryType? entryType});
 }
 
 /// @nodoc
@@ -506,6 +606,7 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res>
     Object? deviceIdentifier = freezed,
     Object? carrierAIDC = freezed,
     Object? carrierHRF = freezed,
+    Object? entryType = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String?,
@@ -517,6 +618,9 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res>
           : carrierAIDC as Base64Binary?,
       carrierHRF:
           carrierHRF == freezed ? _value.carrierHRF : carrierHRF as String?,
+      entryType: entryType == freezed
+          ? _value.entryType
+          : entryType as DeviceUdiCarrierEntryType?,
     ));
   }
 }
@@ -532,7 +636,9 @@ abstract class _$DeviceUdiCarrierCopyWith<$Res>
       {String? id,
       String? deviceIdentifier,
       Base64Binary? carrierAIDC,
-      String? carrierHRF});
+      String? carrierHRF,
+      @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+          DeviceUdiCarrierEntryType? entryType});
 }
 
 /// @nodoc
@@ -552,6 +658,7 @@ class __$DeviceUdiCarrierCopyWithImpl<$Res>
     Object? deviceIdentifier = freezed,
     Object? carrierAIDC = freezed,
     Object? carrierHRF = freezed,
+    Object? entryType = freezed,
   }) {
     return _then(_DeviceUdiCarrier(
       id: id == freezed ? _value.id : id as String?,
@@ -563,6 +670,9 @@ class __$DeviceUdiCarrierCopyWithImpl<$Res>
           : carrierAIDC as Base64Binary?,
       carrierHRF:
           carrierHRF == freezed ? _value.carrierHRF : carrierHRF as String?,
+      entryType: entryType == freezed
+          ? _value.entryType
+          : entryType as DeviceUdiCarrierEntryType?,
     ));
   }
 }
@@ -572,7 +682,12 @@ class __$DeviceUdiCarrierCopyWithImpl<$Res>
 /// @nodoc
 class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
   _$_DeviceUdiCarrier(
-      {this.id, this.deviceIdentifier, this.carrierAIDC, this.carrierHRF})
+      {this.id,
+      this.deviceIdentifier,
+      this.carrierAIDC,
+      this.carrierHRF,
+      @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+          this.entryType})
       : super._();
 
   factory _$_DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
@@ -586,10 +701,13 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
   final Base64Binary? carrierAIDC;
   @override
   final String? carrierHRF;
+  @override
+  @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+  final DeviceUdiCarrierEntryType? entryType;
 
   @override
   String toString() {
-    return 'DeviceUdiCarrier(id: $id, deviceIdentifier: $deviceIdentifier, carrierAIDC: $carrierAIDC, carrierHRF: $carrierHRF)';
+    return 'DeviceUdiCarrier(id: $id, deviceIdentifier: $deviceIdentifier, carrierAIDC: $carrierAIDC, carrierHRF: $carrierHRF, entryType: $entryType)';
   }
 
   @override
@@ -606,7 +724,10 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
                     .equals(other.carrierAIDC, carrierAIDC)) &&
             (identical(other.carrierHRF, carrierHRF) ||
                 const DeepCollectionEquality()
-                    .equals(other.carrierHRF, carrierHRF)));
+                    .equals(other.carrierHRF, carrierHRF)) &&
+            (identical(other.entryType, entryType) ||
+                const DeepCollectionEquality()
+                    .equals(other.entryType, entryType)));
   }
 
   @override
@@ -615,7 +736,8 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(deviceIdentifier) ^
       const DeepCollectionEquality().hash(carrierAIDC) ^
-      const DeepCollectionEquality().hash(carrierHRF);
+      const DeepCollectionEquality().hash(carrierHRF) ^
+      const DeepCollectionEquality().hash(entryType);
 
   @JsonKey(ignore: true)
   @override
@@ -634,7 +756,9 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
       {String? id,
       String? deviceIdentifier,
       Base64Binary? carrierAIDC,
-      String? carrierHRF}) = _$_DeviceUdiCarrier;
+      String? carrierHRF,
+      @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+          DeviceUdiCarrierEntryType? entryType}) = _$_DeviceUdiCarrier;
 
   factory _DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =
       _$_DeviceUdiCarrier.fromJson;
@@ -648,6 +772,202 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   @override
   String? get carrierHRF;
   @override
+  @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+  DeviceUdiCarrierEntryType? get entryType;
+  @override
   @JsonKey(ignore: true)
   _$DeviceUdiCarrierCopyWith<_DeviceUdiCarrier> get copyWith;
+}
+
+DeviceDeviceName _$DeviceDeviceNameFromJson(Map<String, dynamic> json) {
+  return _DeviceDeviceName.fromJson(json);
+}
+
+/// @nodoc
+class _$DeviceDeviceNameTearOff {
+  const _$DeviceDeviceNameTearOff();
+
+  _DeviceDeviceName call(
+      {String? id,
+      String? name,
+      @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
+          DeviceDeviceNameType? type}) {
+    return _DeviceDeviceName(
+      id: id,
+      name: name,
+      type: type,
+    );
+  }
+
+  DeviceDeviceName fromJson(Map<String, Object> json) {
+    return DeviceDeviceName.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DeviceDeviceName = _$DeviceDeviceNameTearOff();
+
+/// @nodoc
+mixin _$DeviceDeviceName {
+  String? get id;
+  String? get name;
+  @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
+  DeviceDeviceNameType? get type;
+
+  Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
+  $DeviceDeviceNameCopyWith<DeviceDeviceName> get copyWith;
+}
+
+/// @nodoc
+abstract class $DeviceDeviceNameCopyWith<$Res> {
+  factory $DeviceDeviceNameCopyWith(
+          DeviceDeviceName value, $Res Function(DeviceDeviceName) then) =
+      _$DeviceDeviceNameCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      String? name,
+      @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
+          DeviceDeviceNameType? type});
+}
+
+/// @nodoc
+class _$DeviceDeviceNameCopyWithImpl<$Res>
+    implements $DeviceDeviceNameCopyWith<$Res> {
+  _$DeviceDeviceNameCopyWithImpl(this._value, this._then);
+
+  final DeviceDeviceName _value;
+  // ignore: unused_field
+  final $Res Function(DeviceDeviceName) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String?,
+      name: name == freezed ? _value.name : name as String?,
+      type: type == freezed ? _value.type : type as DeviceDeviceNameType?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$DeviceDeviceNameCopyWith<$Res>
+    implements $DeviceDeviceNameCopyWith<$Res> {
+  factory _$DeviceDeviceNameCopyWith(
+          _DeviceDeviceName value, $Res Function(_DeviceDeviceName) then) =
+      __$DeviceDeviceNameCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      String? name,
+      @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
+          DeviceDeviceNameType? type});
+}
+
+/// @nodoc
+class __$DeviceDeviceNameCopyWithImpl<$Res>
+    extends _$DeviceDeviceNameCopyWithImpl<$Res>
+    implements _$DeviceDeviceNameCopyWith<$Res> {
+  __$DeviceDeviceNameCopyWithImpl(
+      _DeviceDeviceName _value, $Res Function(_DeviceDeviceName) _then)
+      : super(_value, (v) => _then(v as _DeviceDeviceName));
+
+  @override
+  _DeviceDeviceName get _value => super._value as _DeviceDeviceName;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+  }) {
+    return _then(_DeviceDeviceName(
+      id: id == freezed ? _value.id : id as String?,
+      name: name == freezed ? _value.name : name as String?,
+      type: type == freezed ? _value.type : type as DeviceDeviceNameType?,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_DeviceDeviceName extends _DeviceDeviceName {
+  _$_DeviceDeviceName(
+      {this.id,
+      this.name,
+      @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown) this.type})
+      : super._();
+
+  factory _$_DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
+      _$_$_DeviceDeviceNameFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  final String? name;
+  @override
+  @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
+  final DeviceDeviceNameType? type;
+
+  @override
+  String toString() {
+    return 'DeviceDeviceName(id: $id, name: $name, type: $type)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _DeviceDeviceName &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(type);
+
+  @JsonKey(ignore: true)
+  @override
+  _$DeviceDeviceNameCopyWith<_DeviceDeviceName> get copyWith =>
+      __$DeviceDeviceNameCopyWithImpl<_DeviceDeviceName>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_DeviceDeviceNameToJson(this);
+  }
+}
+
+abstract class _DeviceDeviceName extends DeviceDeviceName {
+  _DeviceDeviceName._() : super._();
+  factory _DeviceDeviceName(
+      {String? id,
+      String? name,
+      @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
+          DeviceDeviceNameType? type}) = _$_DeviceDeviceName;
+
+  factory _DeviceDeviceName.fromJson(Map<String, dynamic> json) =
+      _$_DeviceDeviceName.fromJson;
+
+  @override
+  String? get id;
+  @override
+  String? get name;
+  @override
+  @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
+  DeviceDeviceNameType? get type;
+  @override
+  @JsonKey(ignore: true)
+  _$DeviceDeviceNameCopyWith<_DeviceDeviceName> get copyWith;
 }

@@ -33,7 +33,8 @@ class _$DocumentReferenceTearOff {
       List<Reference?>? author,
       Reference? custodian,
       required List<DocumentReferenceContent?> content,
-      DocumentReferenceContext? context}) {
+      DocumentReferenceContext? context,
+      String? description}) {
     return _DocumentReference(
       resourceType: resourceType,
       id: id,
@@ -49,6 +50,7 @@ class _$DocumentReferenceTearOff {
       custodian: custodian,
       content: content,
       context: context,
+      description: description,
     );
   }
 
@@ -78,6 +80,7 @@ mixin _$DocumentReference {
   Reference? get custodian;
   List<DocumentReferenceContent?> get content;
   DocumentReferenceContext? get context;
+  String? get description;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -105,7 +108,8 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       List<Reference?>? author,
       Reference? custodian,
       List<DocumentReferenceContent?> content,
-      DocumentReferenceContext? context});
+      DocumentReferenceContext? context,
+      String? description});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -140,6 +144,7 @@ class _$DocumentReferenceCopyWithImpl<$Res>
     Object? custodian = freezed,
     Object? content = freezed,
     Object? context = freezed,
+    Object? description = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -168,6 +173,8 @@ class _$DocumentReferenceCopyWithImpl<$Res>
       context: context == freezed
           ? _value.context
           : context as DocumentReferenceContext?,
+      description:
+          description == freezed ? _value.description : description as String?,
     ));
   }
 
@@ -257,7 +264,8 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       List<Reference?>? author,
       Reference? custodian,
       List<DocumentReferenceContent?> content,
-      DocumentReferenceContext? context});
+      DocumentReferenceContext? context,
+      String? description});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -300,6 +308,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
     Object? custodian = freezed,
     Object? content = freezed,
     Object? context = freezed,
+    Object? description = freezed,
   }) {
     return _then(_DocumentReference(
       resourceType: resourceType == freezed
@@ -328,6 +337,8 @@ class __$DocumentReferenceCopyWithImpl<$Res>
       context: context == freezed
           ? _value.context
           : context as DocumentReferenceContext?,
+      description:
+          description == freezed ? _value.description : description as String?,
     ));
   }
 }
@@ -352,7 +363,8 @@ class _$_DocumentReference extends _DocumentReference {
       this.author,
       this.custodian,
       required this.content,
-      this.context})
+      this.context,
+      this.description})
       : super._();
 
   factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
@@ -388,10 +400,12 @@ class _$_DocumentReference extends _DocumentReference {
   final List<DocumentReferenceContent?> content;
   @override
   final DocumentReferenceContext? context;
+  @override
+  final String? description;
 
   @override
   String toString() {
-    return 'DocumentReference(resourceType: $resourceType, id: $id, meta: $meta, text: $text, identifier: $identifier, status: $status, type: $type, category: $category, subject: $subject, date: $date, author: $author, custodian: $custodian, content: $content, context: $context)';
+    return 'DocumentReference(resourceType: $resourceType, id: $id, meta: $meta, text: $text, identifier: $identifier, status: $status, type: $type, category: $category, subject: $subject, date: $date, author: $author, custodian: $custodian, content: $content, context: $context, description: $description)';
   }
 
   @override
@@ -431,7 +445,11 @@ class _$_DocumentReference extends _DocumentReference {
                 const DeepCollectionEquality()
                     .equals(other.content, content)) &&
             (identical(other.context, context) ||
-                const DeepCollectionEquality().equals(other.context, context)));
+                const DeepCollectionEquality()
+                    .equals(other.context, context)) &&
+            (identical(other.description, description) ||
+                const DeepCollectionEquality()
+                    .equals(other.description, description)));
   }
 
   @override
@@ -450,7 +468,8 @@ class _$_DocumentReference extends _DocumentReference {
       const DeepCollectionEquality().hash(author) ^
       const DeepCollectionEquality().hash(custodian) ^
       const DeepCollectionEquality().hash(content) ^
-      const DeepCollectionEquality().hash(context);
+      const DeepCollectionEquality().hash(context) ^
+      const DeepCollectionEquality().hash(description);
 
   @JsonKey(ignore: true)
   @override
@@ -481,7 +500,8 @@ abstract class _DocumentReference extends DocumentReference {
       List<Reference?>? author,
       Reference? custodian,
       required List<DocumentReferenceContent?> content,
-      DocumentReferenceContext? context}) = _$_DocumentReference;
+      DocumentReferenceContext? context,
+      String? description}) = _$_DocumentReference;
 
   factory _DocumentReference.fromJson(Map<String, dynamic> json) =
       _$_DocumentReference.fromJson;
@@ -516,6 +536,8 @@ abstract class _DocumentReference extends DocumentReference {
   List<DocumentReferenceContent?> get content;
   @override
   DocumentReferenceContext? get context;
+  @override
+  String? get description;
   @override
   @JsonKey(ignore: true)
   _$DocumentReferenceCopyWith<_DocumentReference> get copyWith;

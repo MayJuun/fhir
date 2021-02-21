@@ -21,11 +21,14 @@ abstract class Organization with Resource implements _$Organization {
     Id? id,
     Meta? meta,
     Narrative? text,
+    List<Resource?>? contained,
     List<Identifier?>? identifier,
     required Boolean active,
     required String name,
+    List<CodeableConcept?>? type,
     List<ContactPoint?>? telecom,
     List<Address?>? address,
+    List<Reference?>? endpoint,
   }) = _Organization;
 
   factory Organization.simple({

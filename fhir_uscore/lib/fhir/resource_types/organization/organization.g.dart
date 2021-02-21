@@ -18,12 +18,21 @@ _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
     identifier: (json['identifier'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     active: Boolean.fromJson(json['active']),
     name: json['name'] as String,
+    type: (json['type'] as List<dynamic>?)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        .toList(),
     telecom: (json['telecom'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
@@ -32,21 +41,39 @@ _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Address.fromJson(e as Map<String, dynamic>))
         .toList(),
+    endpoint: (json['endpoint'] as List<dynamic>?)
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
-Map<String, dynamic> _$_$_OrganizationToJson(_$_Organization instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'identifier': instance.identifier,
-      'active': instance.active,
-      'name': instance.name,
-      'telecom': instance.telecom,
-      'address': instance.address,
-    };
+Map<String, dynamic> _$_$_OrganizationToJson(_$_Organization instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+  val['active'] = instance.active.toJson();
+  val['name'] = instance.name;
+  writeNotNull('type', instance.type?.map((e) => e?.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  writeNotNull('address', instance.address?.map((e) => e?.toJson()).toList());
+  writeNotNull('endpoint', instance.endpoint?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -85,6 +112,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',

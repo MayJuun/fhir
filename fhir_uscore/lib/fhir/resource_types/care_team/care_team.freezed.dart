@@ -22,6 +22,7 @@ class _$CareTeamTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
+      String? name,
       @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
           CareTeamStatus? status,
       required Reference subject,
@@ -31,6 +32,7 @@ class _$CareTeamTearOff {
       id: id,
       meta: meta,
       text: text,
+      name: name,
       status: status,
       subject: subject,
       participant: participant,
@@ -52,6 +54,7 @@ mixin _$CareTeam {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
+  String? get name;
   @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
   CareTeamStatus? get status;
   Reference get subject;
@@ -72,6 +75,7 @@ abstract class $CareTeamCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
+      String? name,
       @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
           CareTeamStatus? status,
       Reference subject,
@@ -96,6 +100,7 @@ class _$CareTeamCopyWithImpl<$Res> implements $CareTeamCopyWith<$Res> {
     Object? id = freezed,
     Object? meta = freezed,
     Object? text = freezed,
+    Object? name = freezed,
     Object? status = freezed,
     Object? subject = freezed,
     Object? participant = freezed,
@@ -107,6 +112,7 @@ class _$CareTeamCopyWithImpl<$Res> implements $CareTeamCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       text: text == freezed ? _value.text : text as Narrative?,
+      name: name == freezed ? _value.name : name as String?,
       status: status == freezed ? _value.status : status as CareTeamStatus?,
       subject: subject == freezed ? _value.subject : subject as Reference,
       participant: participant == freezed
@@ -156,6 +162,7 @@ abstract class _$CareTeamCopyWith<$Res> implements $CareTeamCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
+      String? name,
       @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
           CareTeamStatus? status,
       Reference subject,
@@ -184,6 +191,7 @@ class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
     Object? id = freezed,
     Object? meta = freezed,
     Object? text = freezed,
+    Object? name = freezed,
     Object? status = freezed,
     Object? subject = freezed,
     Object? participant = freezed,
@@ -195,6 +203,7 @@ class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       text: text == freezed ? _value.text : text as Narrative?,
+      name: name == freezed ? _value.name : name as String?,
       status: status == freezed ? _value.status : status as CareTeamStatus?,
       subject: subject == freezed ? _value.subject : subject as Reference,
       participant: participant == freezed
@@ -214,6 +223,7 @@ class _$_CareTeam extends _CareTeam {
       this.id,
       this.meta,
       this.text,
+      this.name,
       @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
           this.status,
       required this.subject,
@@ -233,6 +243,8 @@ class _$_CareTeam extends _CareTeam {
   @override
   final Narrative? text;
   @override
+  final String? name;
+  @override
   @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
   final CareTeamStatus? status;
   @override
@@ -242,7 +254,7 @@ class _$_CareTeam extends _CareTeam {
 
   @override
   String toString() {
-    return 'CareTeam(resourceType: $resourceType, id: $id, meta: $meta, text: $text, status: $status, subject: $subject, participant: $participant)';
+    return 'CareTeam(resourceType: $resourceType, id: $id, meta: $meta, text: $text, name: $name, status: $status, subject: $subject, participant: $participant)';
   }
 
   @override
@@ -258,6 +270,8 @@ class _$_CareTeam extends _CareTeam {
                 const DeepCollectionEquality().equals(other.meta, meta)) &&
             (identical(other.text, text) ||
                 const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.subject, subject) ||
@@ -275,6 +289,7 @@ class _$_CareTeam extends _CareTeam {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(participant);
@@ -298,6 +313,7 @@ abstract class _CareTeam extends CareTeam {
       Id? id,
       Meta? meta,
       Narrative? text,
+      String? name,
       @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
           CareTeamStatus? status,
       required Reference subject,
@@ -314,6 +330,8 @@ abstract class _CareTeam extends CareTeam {
   Meta? get meta;
   @override
   Narrative? get text;
+  @override
+  String? get name;
   @override
   @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
   CareTeamStatus? get status;

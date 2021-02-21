@@ -1,5 +1,16 @@
 part of 'practitioner.dart';
 
+enum PractitionerGender {
+  @JsonValue('male')
+  male,
+  @JsonValue('female')
+  female,
+  @JsonValue('other')
+  other,
+  @JsonValue('unknown')
+  unknown,
+}
+
 enum PractitionerRoleCode {
   @JsonValue('101Y00000X')
   counselor,

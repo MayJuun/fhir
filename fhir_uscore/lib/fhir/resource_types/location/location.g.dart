@@ -18,6 +18,10 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+    identifier: (json['identifier'] as List<dynamic>?)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        .toList(),
     status: _$enumDecodeNullable(_$LocationStatusEnumMap, json['status'],
         unknownValue: LocationStatus.unknown),
     name: json['name'] as String,
@@ -28,6 +32,10 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
+    position: json['position'] == null
+        ? null
+        : LocationPosition.fromJson(json['position'] as Map<String, dynamic>),
+    description: json['description'] as String?,
     managingOrganization: json['managingOrganization'] == null
         ? null
         : Reference.fromJson(
@@ -35,18 +43,31 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_LocationToJson(_$_Location instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'status': _$LocationStatusEnumMap[instance.status],
-      'name': instance.name,
-      'telecom': instance.telecom,
-      'address': instance.address,
-      'managingOrganization': instance.managingOrganization,
-    };
+Map<String, dynamic> _$_$_LocationToJson(_$_Location instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+  writeNotNull('status', _$LocationStatusEnumMap[instance.status]);
+  val['name'] = instance.name;
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  writeNotNull('address', instance.address?.toJson());
+  writeNotNull('position', instance.position?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -85,6 +106,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -117,3 +139,31 @@ const _$LocationStatusEnumMap = {
   LocationStatus.inactive: 'inactive',
   LocationStatus.unknown: 'unknown',
 };
+
+_$_LocationPosition _$_$_LocationPositionFromJson(Map<String, dynamic> json) {
+  return _$_LocationPosition(
+    id: json['id'] as String?,
+    longitude:
+        json['longitude'] == null ? null : Decimal.fromJson(json['longitude']),
+    latitude:
+        json['latitude'] == null ? null : Decimal.fromJson(json['latitude']),
+    altitude:
+        json['altitude'] == null ? null : Decimal.fromJson(json['altitude']),
+  );
+}
+
+Map<String, dynamic> _$_$_LocationPositionToJson(_$_LocationPosition instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('longitude', instance.longitude?.toJson());
+  writeNotNull('latitude', instance.latitude?.toJson());
+  writeNotNull('altitude', instance.altitude?.toJson());
+  return val;
+}

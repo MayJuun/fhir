@@ -1,39 +1,39 @@
 part of 'medication_request.dart';
 
 enum MedicationRequestStatus {
-  @JsonValue('Active')
+  @JsonValue('active')
   active,
-  @JsonValue('On Hold')
+  @JsonValue('on-hold')
   on_hold,
-  @JsonValue('Cancelled')
+  @JsonValue('cancelled')
   cancelled,
-  @JsonValue('Completed')
+  @JsonValue('completed')
   completed,
-  @JsonValue('Entered in Error')
+  @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('Stopped')
+  @JsonValue('stopped')
   stopped,
-  @JsonValue('Draft')
+  @JsonValue('draft')
   draft,
-  @JsonValue('Unknown')
+  @JsonValue('unknown')
   unknown,
 }
 
 enum MedicationRequestIntent {
-  @JsonValue('Proposal')
+  @JsonValue('proposal')
   proposal,
-  @JsonValue('Plan')
+  @JsonValue('plan')
   plan,
-  @JsonValue('Order')
+  @JsonValue('order')
   order,
-  @JsonValue('Original Order')
+  @JsonValue('original Order')
   original_order,
-  @JsonValue('Reflex Order')
+  @JsonValue('reflex Order')
   reflex_order,
-  @JsonValue('Filler Order')
+  @JsonValue('filler Order')
   filler_order,
-  @JsonValue('Instance Order')
+  @JsonValue('instance Order')
   instance_order,
-  @JsonValue('Option')
+  @JsonValue('option')
   option,
 }

@@ -43,7 +43,9 @@ Future<String> checkMapEquality(Map<String, dynamic> input,
     print('all output keys');
 
     print(output.keys);
+    throw Exception('Different Key Lengths');
   }
+
   return string;
 }
 

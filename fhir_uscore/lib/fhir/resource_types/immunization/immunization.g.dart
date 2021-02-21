@@ -34,20 +34,29 @@ _$_Immunization _$_$_ImmunizationFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ImmunizationToJson(_$_Immunization instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'status': _$ImmunizationStatusEnumMap[instance.status],
-      'statusReason': instance.statusReason,
-      'vaccineCode': instance.vaccineCode,
-      'patient': instance.patient,
-      'occurrenceDateTime': instance.occurrenceDateTime,
-      'occurrenceString': instance.occurrenceString,
-      'primarySource': instance.primarySource,
-    };
+Map<String, dynamic> _$_$_ImmunizationToJson(_$_Immunization instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  val['status'] = _$ImmunizationStatusEnumMap[instance.status];
+  writeNotNull('statusReason', instance.statusReason?.toJson());
+  val['vaccineCode'] = instance.vaccineCode.toJson();
+  val['patient'] = instance.patient.toJson();
+  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
+  writeNotNull('occurrenceString', instance.occurrenceString);
+  val['primarySource'] = instance.primarySource.toJson();
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -86,6 +95,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -102,7 +112,7 @@ const _$UsCoreResourceTypeEnumMap = {
 };
 
 const _$ImmunizationStatusEnumMap = {
-  ImmunizationStatus.completed: 'Completed',
-  ImmunizationStatus.entered_in_error: 'Entered in Error',
-  ImmunizationStatus.not_done: 'Not Done',
+  ImmunizationStatus.completed: 'completed',
+  ImmunizationStatus.entered_in_error: 'entered-in-error',
+  ImmunizationStatus.not_done: 'not-done',
 };

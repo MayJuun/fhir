@@ -8,6 +8,7 @@ export 'device/device.dart';
 export 'diagnostic_report/diagnostic_report.dart';
 export 'document_reference/document_reference.dart';
 export 'encounter/encounter.dart';
+export 'endpoint/endpoint.dart';
 export 'goal/goal.dart';
 export 'immunization/immunization.dart';
 export 'location/location.dart';

@@ -112,44 +112,61 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementToJson(
-        _$_CapabilityStatement instance) =>
-    <String, dynamic>{
-      'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
-      'id': instance.id,
-      'meta': instance.meta,
-      'text': instance.text,
-      'implicitRules': instance.implicitRules,
-      'language': instance.language,
-      'contained': instance.contained,
-      'modifierExtension': instance.modifierExtension,
-      'url': instance.url,
-      'version': instance.version,
-      'name': instance.name,
-      'title': instance.title,
-      'status': _$CapabilityStatementStatusEnumMap[instance.status],
-      'experimental': instance.experimental,
-      'date': instance.date,
-      'publisher': instance.publisher,
-      'contact': instance.contact,
-      'description': instance.description,
-      'useContext': instance.useContext,
-      'jurisdiction': instance.jurisdiction,
-      'purpose': instance.purpose,
-      'copyright': instance.copyright,
-      'kind': _$CapabilityStatementKindEnumMap[instance.kind],
-      'instantiates': instance.instantiates,
-      'imports': instance.imports,
-      'software': instance.software,
-      'implementation': instance.implementation,
-      'fhirVersion':
-          _$CapabilityStatementFhirVersionEnumMap[instance.fhirVersion],
-      'format': instance.format,
-      'patchFormat': instance.patchFormat,
-      'implementationGuide': instance.implementationGuide,
-      'rest': instance.rest,
-      'messaging': instance.messaging,
-      'document': instance.document,
-    };
+    _$_CapabilityStatement instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$UsCoreResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+  writeNotNull('url', instance.url?.toJson());
+  writeNotNull('version', instance.version);
+  writeNotNull('name', instance.name);
+  writeNotNull('title', instance.title);
+  writeNotNull('status', _$CapabilityStatementStatusEnumMap[instance.status]);
+  writeNotNull('experimental', instance.experimental?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('publisher', instance.publisher);
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
+  writeNotNull('description', instance.description?.toJson());
+  writeNotNull(
+      'useContext', instance.useContext?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'jurisdiction', instance.jurisdiction?.map((e) => e?.toJson()).toList());
+  writeNotNull('purpose', instance.purpose?.toJson());
+  writeNotNull('copyright', instance.copyright?.toJson());
+  writeNotNull('kind', _$CapabilityStatementKindEnumMap[instance.kind]);
+  writeNotNull(
+      'instantiates', instance.instantiates?.map((e) => e?.toJson()).toList());
+  writeNotNull('imports', instance.imports?.map((e) => e?.toJson()).toList());
+  writeNotNull('software', instance.software?.toJson());
+  writeNotNull('implementation', instance.implementation?.toJson());
+  writeNotNull('fhirVersion',
+      _$CapabilityStatementFhirVersionEnumMap[instance.fhirVersion]);
+  writeNotNull('format', instance.format?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'patchFormat', instance.patchFormat?.map((e) => e?.toJson()).toList());
+  writeNotNull('implementationGuide',
+      instance.implementationGuide?.map((e) => e?.toJson()).toList());
+  writeNotNull('rest', instance.rest?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'messaging', instance.messaging?.map((e) => e?.toJson()).toList());
+  writeNotNull('document', instance.document?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -188,6 +205,7 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.DiagnosticReport: 'DiagnosticReport',
   UsCoreResourceType.DocumentReference: 'DocumentReference',
   UsCoreResourceType.Encounter: 'Encounter',
+  UsCoreResourceType.Endpoint: 'Endpoint',
   UsCoreResourceType.Goal: 'Goal',
   UsCoreResourceType.Immunization: 'Immunization',
   UsCoreResourceType.Location: 'Location',
@@ -267,13 +285,21 @@ _$_CapabilityStatementSoftware _$_$_CapabilityStatementSoftwareFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementSoftwareToJson(
-        _$_CapabilityStatementSoftware instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'version': instance.version,
-      'releaseDate': instance.releaseDate,
-    };
+    _$_CapabilityStatementSoftware instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  writeNotNull('version', instance.version);
+  writeNotNull('releaseDate', instance.releaseDate?.toJson());
+  return val;
+}
 
 _$_CapabilityStatementImplementation
     _$_$_CapabilityStatementImplementationFromJson(Map<String, dynamic> json) {
@@ -288,13 +314,21 @@ _$_CapabilityStatementImplementation
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementImplementationToJson(
-        _$_CapabilityStatementImplementation instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'description': instance.description,
-      'url': instance.url,
-      'custodian': instance.custodian,
-    };
+    _$_CapabilityStatementImplementation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('description', instance.description);
+  writeNotNull('url', instance.url?.toJson());
+  writeNotNull('custodian', instance.custodian?.toJson());
+  return val;
+}
 
 _$_CapabilityStatementRest _$_$_CapabilityStatementRestFromJson(
     Map<String, dynamic> json) {
@@ -339,18 +373,30 @@ _$_CapabilityStatementRest _$_$_CapabilityStatementRestFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementRestToJson(
-        _$_CapabilityStatementRest instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'mode': _$CapabilityStatementRestModeEnumMap[instance.mode],
-      'documentation': instance.documentation,
-      'security': instance.security,
-      'resource': instance.resource,
-      'interaction': instance.interaction,
-      'searchParam': instance.searchParam,
-      'operation': instance.operation,
-      'compartment': instance.compartment,
-    };
+    _$_CapabilityStatementRest instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('mode', _$CapabilityStatementRestModeEnumMap[instance.mode]);
+  writeNotNull('documentation', instance.documentation?.toJson());
+  writeNotNull('security', instance.security?.toJson());
+  writeNotNull('resource', instance.resource?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'interaction', instance.interaction?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'searchParam', instance.searchParam?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'operation', instance.operation?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'compartment', instance.compartment?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 const _$CapabilityStatementRestModeEnumMap = {
   CapabilityStatementRestMode.client: 'client',
@@ -375,13 +421,21 @@ _$_CapabilityStatementSecurity _$_$_CapabilityStatementSecurityFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementSecurityToJson(
-        _$_CapabilityStatementSecurity instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'cors': instance.cors,
-      'service': instance.service,
-      'description': instance.description,
-    };
+    _$_CapabilityStatementSecurity instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('cors', instance.cors?.toJson());
+  writeNotNull('service', instance.service?.map((e) => e?.toJson()).toList());
+  writeNotNull('description', instance.description?.toJson());
+  return val;
+}
 
 _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
     Map<String, dynamic> json) {
@@ -450,33 +504,50 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementResourceToJson(
-        _$_CapabilityStatementResource instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'type': instance.type,
-      'profile': instance.profile,
-      'supportedProfile': instance.supportedProfile,
-      'documentation': instance.documentation,
-      'interaction': instance.interaction,
-      'versioning':
-          _$CapabilityStatementResourceVersioningEnumMap[instance.versioning],
-      'readHistory': instance.readHistory,
-      'updateCreate': instance.updateCreate,
-      'conditionalCreate': instance.conditionalCreate,
-      'conditionalRead': _$CapabilityStatementResourceConditionalReadEnumMap[
-          instance.conditionalRead],
-      'conditionalUpdate': instance.conditionalUpdate,
-      'conditionalDelete':
-          _$CapabilityStatementResourceConditionalDeleteEnumMap[
-              instance.conditionalDelete],
-      'referencePolicy': instance.referencePolicy
+    _$_CapabilityStatementResource instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('profile', instance.profile?.toJson());
+  writeNotNull('supportedProfile',
+      instance.supportedProfile?.map((e) => e?.toJson()).toList());
+  writeNotNull('documentation', instance.documentation?.toJson());
+  writeNotNull(
+      'interaction', instance.interaction?.map((e) => e?.toJson()).toList());
+  writeNotNull('versioning',
+      _$CapabilityStatementResourceVersioningEnumMap[instance.versioning]);
+  writeNotNull('readHistory', instance.readHistory?.toJson());
+  writeNotNull('updateCreate', instance.updateCreate?.toJson());
+  writeNotNull('conditionalCreate', instance.conditionalCreate?.toJson());
+  writeNotNull(
+      'conditionalRead',
+      _$CapabilityStatementResourceConditionalReadEnumMap[
+          instance.conditionalRead]);
+  writeNotNull('conditionalUpdate', instance.conditionalUpdate?.toJson());
+  writeNotNull(
+      'conditionalDelete',
+      _$CapabilityStatementResourceConditionalDeleteEnumMap[
+          instance.conditionalDelete]);
+  writeNotNull(
+      'referencePolicy',
+      instance.referencePolicy
           ?.map((e) => _$CapabilityStatementResourceReferencePolicyEnumMap[e])
-          .toList(),
-      'searchInclude': instance.searchInclude,
-      'searchRevInclude': instance.searchRevInclude,
-      'searchParam': instance.searchParam,
-      'operation': instance.operation,
-    };
+          .toList());
+  writeNotNull('searchInclude', instance.searchInclude);
+  writeNotNull('searchRevInclude', instance.searchRevInclude);
+  writeNotNull(
+      'searchParam', instance.searchParam?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'operation', instance.operation?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 const _$CapabilityStatementResourceVersioningEnumMap = {
   CapabilityStatementResourceVersioning.no_version: 'no-version',
@@ -523,12 +594,21 @@ _$_CapabilityStatementInteraction _$_$_CapabilityStatementInteractionFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementInteractionToJson(
-        _$_CapabilityStatementInteraction instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'code': _$CapabilityStatementInteractionCodeEnumMap[instance.code],
-      'documentation': instance.documentation,
-    };
+    _$_CapabilityStatementInteraction instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'code', _$CapabilityStatementInteractionCodeEnumMap[instance.code]);
+  writeNotNull('documentation', instance.documentation?.toJson());
+  return val;
+}
 
 const _$CapabilityStatementInteractionCodeEnumMap = {
   CapabilityStatementInteractionCode.read: 'read',
@@ -571,16 +651,27 @@ _$_CapabilityStatementSearchParam _$_$_CapabilityStatementSearchParamFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementSearchParamToJson(
-        _$_CapabilityStatementSearchParam instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'extension': instance.extension_,
-      'modifierExtension': instance.modifierExtension,
-      'name': instance.name,
-      'definition': instance.definition,
-      'type': _$CapabilityStatementSearchParamTypeEnumMap[instance.type],
-      'documentation': instance.documentation,
-    };
+    _$_CapabilityStatementSearchParam instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+  writeNotNull('name', instance.name);
+  writeNotNull('definition', instance.definition?.toJson());
+  writeNotNull(
+      'type', _$CapabilityStatementSearchParamTypeEnumMap[instance.type]);
+  writeNotNull('documentation', instance.documentation?.toJson());
+  return val;
+}
 
 const _$CapabilityStatementSearchParamTypeEnumMap = {
   CapabilityStatementSearchParamType.number: 'number',
@@ -608,13 +699,21 @@ _$_CapabilityStatementOperation _$_$_CapabilityStatementOperationFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementOperationToJson(
-        _$_CapabilityStatementOperation instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'definition': instance.definition,
-      'documentation': instance.documentation,
-    };
+    _$_CapabilityStatementOperation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  val['definition'] = instance.definition.toJson();
+  writeNotNull('documentation', instance.documentation?.toJson());
+  return val;
+}
 
 _$_CapabilityStatementInteraction1 _$_$_CapabilityStatementInteraction1FromJson(
     Map<String, dynamic> json) {
@@ -630,12 +729,21 @@ _$_CapabilityStatementInteraction1 _$_$_CapabilityStatementInteraction1FromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementInteraction1ToJson(
-        _$_CapabilityStatementInteraction1 instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'code': _$CapabilityStatementInteraction1CodeEnumMap[instance.code],
-      'documentation': instance.documentation,
-    };
+    _$_CapabilityStatementInteraction1 instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'code', _$CapabilityStatementInteraction1CodeEnumMap[instance.code]);
+  writeNotNull('documentation', instance.documentation?.toJson());
+  return val;
+}
 
 const _$CapabilityStatementInteraction1CodeEnumMap = {
   CapabilityStatementInteraction1Code.transaction: 'transaction',
@@ -670,14 +778,23 @@ _$_CapabilityStatementMessaging _$_$_CapabilityStatementMessagingFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementMessagingToJson(
-        _$_CapabilityStatementMessaging instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'endpoint': instance.endpoint,
-      'reliableCache': instance.reliableCache,
-      'documentation': instance.documentation,
-      'supportedMessage': instance.supportedMessage,
-    };
+    _$_CapabilityStatementMessaging instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('endpoint', instance.endpoint?.map((e) => e?.toJson()).toList());
+  writeNotNull('reliableCache', instance.reliableCache?.toJson());
+  writeNotNull('documentation', instance.documentation?.toJson());
+  writeNotNull('supportedMessage',
+      instance.supportedMessage?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 _$_CapabilityStatementEndpoint _$_$_CapabilityStatementEndpointFromJson(
     Map<String, dynamic> json) {
@@ -689,12 +806,20 @@ _$_CapabilityStatementEndpoint _$_$_CapabilityStatementEndpointFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementEndpointToJson(
-        _$_CapabilityStatementEndpoint instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'protocol': instance.protocol,
-      'address': instance.address,
-    };
+    _$_CapabilityStatementEndpoint instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  val['protocol'] = instance.protocol.toJson();
+  writeNotNull('address', instance.address?.toJson());
+  return val;
+}
 
 _$_CapabilityStatementSupportedMessage
     _$_$_CapabilityStatementSupportedMessageFromJson(
@@ -709,12 +834,21 @@ _$_CapabilityStatementSupportedMessage
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementSupportedMessageToJson(
-        _$_CapabilityStatementSupportedMessage instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'mode': _$CapabilityStatementSupportedMessageModeEnumMap[instance.mode],
-      'definition': instance.definition,
-    };
+    _$_CapabilityStatementSupportedMessage instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'mode', _$CapabilityStatementSupportedMessageModeEnumMap[instance.mode]);
+  val['definition'] = instance.definition.toJson();
+  return val;
+}
 
 const _$CapabilityStatementSupportedMessageModeEnumMap = {
   CapabilityStatementSupportedMessageMode.sender: 'sender',
@@ -737,13 +871,21 @@ _$_CapabilityStatementDocument _$_$_CapabilityStatementDocumentFromJson(
 }
 
 Map<String, dynamic> _$_$_CapabilityStatementDocumentToJson(
-        _$_CapabilityStatementDocument instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'mode': _$CapabilityStatementDocumentModeEnumMap[instance.mode],
-      'documentation': instance.documentation,
-      'profile': instance.profile,
-    };
+    _$_CapabilityStatementDocument instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('mode', _$CapabilityStatementDocumentModeEnumMap[instance.mode]);
+  writeNotNull('documentation', instance.documentation?.toJson());
+  val['profile'] = instance.profile.toJson();
+  return val;
+}
 
 const _$CapabilityStatementDocumentModeEnumMap = {
   CapabilityStatementDocumentMode.producer: 'producer',

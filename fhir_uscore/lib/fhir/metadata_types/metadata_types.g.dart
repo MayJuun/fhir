@@ -17,12 +17,20 @@ _$_ContactDetail _$_$_ContactDetailFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ContactDetailToJson(_$_ContactDetail instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'telecom': instance.telecom,
-    };
+Map<String, dynamic> _$_$_ContactDetailToJson(_$_ContactDetail instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  return val;
+}
 
 _$_UsageContext _$_$_UsageContextFromJson(Map<String, dynamic> json) {
   return _$_UsageContext(
@@ -44,15 +52,23 @@ _$_UsageContext _$_$_UsageContextFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_UsageContextToJson(_$_UsageContext instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'code': instance.code,
-      'valueCodeableConcept': instance.valueCodeableConcept,
-      'valueQuantity': instance.valueQuantity,
-      'valueRange': instance.valueRange,
-      'valueReference': instance.valueReference,
-    };
+Map<String, dynamic> _$_$_UsageContextToJson(_$_UsageContext instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  val['code'] = instance.code.toJson();
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
+  return val;
+}
 
 _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
   return _$_Meta(
@@ -77,12 +93,21 @@ _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) => <String, dynamic>{
-      'id': instance.id,
-      'versionId': instance.versionId,
-      'lastUpdated': instance.lastUpdated,
-      'source': instance.source,
-      'profile': instance.profile,
-      'security': instance.security,
-      'tag': instance.tag,
-    };
+Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('versionId', instance.versionId?.toJson());
+  writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('profile', instance.profile?.map((e) => e?.toJson()).toList());
+  writeNotNull('security', instance.security?.map((e) => e?.toJson()).toList());
+  writeNotNull('tag', instance.tag?.map((e) => e?.toJson()).toList());
+  return val;
+}

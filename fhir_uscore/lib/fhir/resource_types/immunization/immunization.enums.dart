@@ -1,11 +1,11 @@
 part of 'immunization.dart';
 
 enum ImmunizationStatus {
-  @JsonValue('Completed')
+  @JsonValue('completed')
   completed,
-  @JsonValue('Entered in Error')
+  @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('Not Done')
+  @JsonValue('not-done')
   not_done,
 }
 
