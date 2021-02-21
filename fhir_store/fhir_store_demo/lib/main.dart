@@ -77,10 +77,15 @@ class MyApp extends StatelessWidget {
             Container(
               width: Get.width * .7,
               height: Get.height * 0.07,
-              child: RaisedButton(
-                color: Colors.blue,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(Get.width * 0.05),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.blue),
+                  shape: MaterialStateProperty.all<OutlinedBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(Get.width * 0.05),
+                    ),
+                  ),
                 ),
                 onPressed: () {
                   login.call(_email.text, _password.text);
@@ -96,10 +101,15 @@ class MyApp extends StatelessWidget {
             Container(
               width: Get.width * .7,
               height: Get.height * 0.07,
-              child: RaisedButton(
-                color: Colors.blue,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(Get.width * 0.05),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.blue),
+                  shape: MaterialStateProperty.all<OutlinedBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(Get.width * 0.05),
+                    ),
+                  ),
                 ),
                 onPressed: () {
                   _uploadPatient();
@@ -115,10 +125,15 @@ class MyApp extends StatelessWidget {
             Container(
               width: Get.width * .7,
               height: Get.height * 0.07,
-              child: RaisedButton(
-                color: Colors.blue,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(Get.width * 0.05),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.blue),
+                  shape: MaterialStateProperty.all<OutlinedBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(Get.width * 0.05),
+                    ),
+                  ),
                 ),
                 onPressed: () async => await FirebaseAuth.instance.signOut(),
                 child: Row(
