@@ -12,10 +12,10 @@ Future hapiRequest(String hapiUrl) async {
     resource: _newPatient,
   );
 
-  Id newId;
+  Id? newId;
   try {
-    final response = await request1.request();
-    newId = response.id;
+    final response = await request1.request(headers: {});
+    newId = response?.id;
   } catch (e) {
     print(e);
   }
@@ -29,8 +29,8 @@ Future hapiRequest(String hapiUrl) async {
       id: newId,
     );
     try {
-      final response = await request2.request();
-      print('Uploaded patient: ${response.toJson()}');
+      final response = await request2.request(headers: {});
+      print('Uploaded patient: ${response?.toJson()}');
     } catch (e) {
       print(e);
     }

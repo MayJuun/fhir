@@ -25,45 +25,45 @@ abstract class Scopes implements _$Scopes {
 
   factory Scopes({
     /// see the clinical scopes class for details
-    List<Tuple3<Role, Stu3ResourceType, Interaction>> clinicalScopes,
+    List<Tuple3<Role, Stu3ResourceType, Interaction>>? clinicalScopes,
 
     /// permission to retrieve information about the current logged-in user
     /// almost always coupled with fhirUser
-    bool openid,
+    bool? openid,
 
     /// permission to retrieve information about the current logged-in user
     /// almost always coupled with openid
-    bool fhirUser,
+    bool? fhirUser,
 
     /// this is being deprecated but still commonly required
-    bool profile,
+    bool? profile,
 
     /// will this app require offline access? specifies the kind of token that
     /// will be returned
-    bool offlineAccess,
+    bool? offlineAccess,
 
     /// will this app require online access? specifies the kind of token that
     /// will be returned
-    bool onlineAccess,
+    bool? onlineAccess,
 
     ///if this app is going to be launched from within an EHR
-    bool ehrLaunch,
+    bool? ehrLaunch,
 
     /// if the context of this app is about a specific patient
-    bool patientLaunch,
+    bool? patientLaunch,
 
     /// if the context of this app is in regards to a specific encounter
-    bool encounterLaunch,
+    bool? encounterLaunch,
 
     /// does this request need a patient banner
-    bool needPatientBanner,
+    bool? needPatientBanner,
 
     /// I'm not actually sure what this does
-    bool smartOrchestrateLaunch,
+    bool? smartOrchestrateLaunch,
 
     /// String value describing the intent of the application launch
-    String intent,
-    List<String> additional,
+    String? intent,
+    List<String?>? additional,
   }) = _Scopes;
 
   /// creates a list of strings from the Scopes object to use in the request, it
@@ -95,14 +95,15 @@ abstract class Scopes implements _$Scopes {
       returnValue.add('launch');
     }
     if (clinicalScopes != null) {
-      for (final scope in clinicalScopes) {
-        var scopeArgument = scope.value1 == Role.patient ? 'patient' : 'user';
-        scopeArgument += ResourceUtils.resourceTypeToStringMap[scope.value2];
+      for (final scope in clinicalScopes!) {
+        var scopeArgument = scope.value1 == Role.patient ? 'patient/' : 'user/';
+        scopeArgument +=
+            ResourceUtils.resourceTypeToStringMap[scope.value2] ?? '';
         scopeArgument += scope.value3 == Interaction.any
-            ? '*'
+            ? '.*'
             : scope.value3 == Interaction.write
-                ? 'write'
-                : 'read';
+                ? '.write'
+                : '.read';
         returnValue.add(scopeArgument);
       }
     }
@@ -116,7 +117,11 @@ abstract class Scopes implements _$Scopes {
       returnValue.add('smart/orchestrate_launch');
     }
     if (additional != null) {
-      additional.forEach(returnValue.add);
+      for (final addit in additional!) {
+        if (addit != null) {
+          returnValue.add(addit);
+        }
+      }
     }
     return returnValue;
   }

@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:fhir/r5.dart';
 
 import 'fhir_client.dart';
@@ -16,16 +15,16 @@ import 'scopes.dart';
 /// will provide the client for interacting with the FHIR server
 class SmartClient extends FhirClient {
   SmartClient({
-    @required this.baseUrl,
-    @required String clientId,
-    @required FhirUri redirectUri,
+    required this.baseUrl,
+    required String clientId,
+    required FhirUri redirectUri,
     this.launch,
     this.scopes,
     this.additionalParameters,
     this.authUrl,
     this.tokenUrl,
-    String secret,
-    @Default(false) this.isLoggedIn,
+    String? secret,
+    this.isLoggedIn = false,
   }) {
     _redirectUri = redirectUri;
     _clientId = clientId;
@@ -39,33 +38,33 @@ class SmartClient extends FhirClient {
 
   /// the clientId of your app, must be pre-registered with the authorization
   /// server
-  String _clientId;
+  late String _clientId;
 
   /// the redurectUri of your app, must be pre-registered with the authorization
   /// server, need to follow the instructions from flutter_appauth
   /// https://pub.dev/packages/flutter_appauth
   /// about editing files for Android and iOS
-  FhirUri _redirectUri;
+  late FhirUri _redirectUri;
 
   /// if there are certain launch strings that need to be included
-  String launch;
+  String? launch;
 
   /// the scopes that will be included with the request
-  Scopes scopes;
+  Scopes? scopes;
 
   /// any additional parameters you'd like to pass as part of this request
-  Map<String, String> additionalParameters = <String, String>{};
+  Map<String, String>? additionalParameters = <String, String>{};
 
   /// the authorize Url from the Conformance/Capability Statement
-  FhirUri authUrl;
+  FhirUri? authUrl;
 
   /// the token Url from the Conformance/Capability Statement
-  FhirUri tokenUrl;
+  FhirUri? tokenUrl;
 
   /// this is for testing, you shouldn't store the secret in the object
-  String _secret;
+  String? _secret;
 
-  DateTime _accessTokenExpiration;
+  DateTime? _accessTokenExpiration;
 
   bool isLoggedIn;
 
@@ -83,7 +82,8 @@ class SmartClient extends FhirClient {
         await _getEndpoints;
       } catch (e) {
         throw PlatformException(
-            code: e, message: 'Failed to get Auth & Token Endpoints');
+            code: e.toString(),
+            message: 'Failed to get Auth & Token Endpoints');
       }
     } else {
       authUrl = FhirUri(authUrl);
@@ -92,7 +92,8 @@ class SmartClient extends FhirClient {
     try {
       await _tokens;
     } catch (e) {
-      throw PlatformException(code: e, message: 'Failed to get Access Token');
+      throw PlatformException(
+          code: e.toString(), message: 'Failed to get Access Token');
     }
     isLoggedIn = true;
     return unit;
@@ -112,7 +113,7 @@ class SmartClient extends FhirClient {
   @override
   Future<Map<String, String>> get authHeaders async {
     if (_accessTokenExpiration != null) {
-      if (DateTime.now().isAfter(_accessTokenExpiration)) {
+      if (DateTime.now().isAfter(_accessTokenExpiration!)) {
         await _refresh;
       }
     }
@@ -138,20 +139,21 @@ class SmartClient extends FhirClient {
         authUrl.toString(),
         tokenUrl.toString(),
       ),
-      scopes: scopes != null ? scopes.scopesList() : null,
+      scopes: scopes?.scopesList(),
     );
     request.additionalParameters = additionalParameters ?? <String, String>{};
-    request.additionalParameters['nonce'] = _nonce();
-    request.additionalParameters['aud'] = baseUrl.toString();
+    request.additionalParameters!['nonce'] = _nonce();
+    request.additionalParameters!['aud'] = baseUrl.toString();
 
     final authorization = await appAuth.authorizeAndExchangeCode(request);
 
     await secureStorage.write(
-        key: 'access_token', value: authorization.accessToken);
+        key: 'access_token', value: authorization?.accessToken ?? '');
     await secureStorage.write(
-        key: 'refresh_token', value: authorization.accessToken);
+        key: 'refresh_token', value: authorization?.accessToken ?? '');
 
-    _accessTokenExpiration = authorization.accessTokenExpirationDateTime;
+    _accessTokenExpiration =
+        authorization?.accessTokenExpirationDateTime ?? DateTime.now();
 
     return unit;
   }
@@ -167,7 +169,7 @@ class SmartClient extends FhirClient {
             ),
             refreshToken: await secureStorage.read(key: 'refresh_token'),
             grantType: 'refresh_token',
-            scopes: scopes.scopesList(),
+            scopes: scopes?.scopesList(),
             issuer: _clientId,
           )
         : TokenRequest(
@@ -180,18 +182,19 @@ class SmartClient extends FhirClient {
             ),
             refreshToken: await secureStorage.read(key: 'refresh_token'),
             grantType: 'refresh_token',
-            scopes: scopes.scopesList(),
+            scopes: scopes?.scopesList(),
             issuer: _clientId,
           );
     tokenRequest.additionalParameters =
         additionalParameters ?? <String, String>{};
-    tokenRequest.additionalParameters['nonce'] = _nonce();
+    tokenRequest.additionalParameters!['nonce'] = _nonce();
     final authorization = await appAuth.token(tokenRequest);
     await secureStorage.write(
-        key: 'access_token', value: authorization.accessToken);
+        key: 'access_token', value: authorization?.accessToken ?? '');
     await secureStorage.write(
-        key: 'refresh_token', value: authorization.accessToken);
-    _accessTokenExpiration = authorization.accessTokenExpirationDateTime;
+        key: 'refresh_token', value: authorization?.accessToken ?? '');
+    _accessTokenExpiration =
+        authorization?.accessTokenExpirationDateTime ?? DateTime.now();
     return unit;
   }
 
@@ -200,7 +203,7 @@ class SmartClient extends FhirClient {
   Future<Unit> get _getEndpoints async {
     var thisRequest = '$baseUrl/metadata?mode=full&_format=json';
 
-    var result = await get(thisRequest);
+    var result = await get(Uri.parse(thisRequest));
 
     if (_errorCodeMap.containsKey(result.statusCode)) {
       if (result.statusCode == 422) {
@@ -208,7 +211,7 @@ class SmartClient extends FhirClient {
           '_format=json',
           '_format=application/json',
         );
-        result = await get(thisRequest);
+        result = await get(Uri.parse(thisRequest));
       }
       if (_errorCodeMap.containsKey(result.statusCode)) {
         throw Exception('StatusCode: ${result.statusCode}\n${result.body}');
@@ -242,18 +245,21 @@ class SmartClient extends FhirClient {
   }
 
   /// convenience method for finding either the token or authorize endpoint
-  FhirUri _getUri(CapabilityStatement capabilityStatement, String type) {
-    if (capabilityStatement?.rest == null) {
+  FhirUri? _getUri(CapabilityStatement capabilityStatement, String type) {
+    if (capabilityStatement.rest == null) {
       return null;
-    } else if (capabilityStatement.rest[0]?.security?.extension_ == null) {
+    } else if (capabilityStatement.rest?[0]?.security?.extension_ == null) {
       return null;
-    } else if (capabilityStatement.rest[0].security.extension_[0]?.extension_ ==
+    } else if (capabilityStatement
+            .rest?[0]?.security?.extension_?[0]?.extension_ ==
         null) {
       return null;
     } else {
       final statement = capabilityStatement
-          .rest[0].security.extension_[0].extension_
-          .firstWhere((ext) => ext.url.toString() == type, orElse: () => null);
+          .rest![0]!.security!.extension_![0]!.extension_!
+          .firstWhere(
+              (ext) => (ext == null ? null : ext.url.toString()) == type,
+              orElse: () => null);
       if (statement == null) {
         return null;
       } else {
@@ -262,7 +268,7 @@ class SmartClient extends FhirClient {
     }
   }
 
-  String _nonce({int length}) {
+  String _nonce({int? length}) {
     const _chars =
         'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
     final _rnd = Random();
