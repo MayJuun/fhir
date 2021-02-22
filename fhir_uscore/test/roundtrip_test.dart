@@ -26,18 +26,18 @@ Future main() async {
         timeout: Timeout(Duration(minutes: 8)),
       );
 
-      // test(
-      //   '\n****Yaml has been Validated****',
-      //   () async {
-      //     var testList = await yamlValidation();
+      test(
+        '\n****Yaml has been Validated****',
+        () async {
+          var testList = await yamlValidation();
 
-      //     print(
-      //         'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+          print(
+              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
 
-      //     expect(testList.isEmpty, true);
-      //   },
-      //   timeout: Timeout(Duration(minutes: 25)),
-      // );
+          expect(testList.isEmpty, true);
+        },
+        timeout: Timeout(Duration(minutes: 25)),
+      );
     },
   );
 }

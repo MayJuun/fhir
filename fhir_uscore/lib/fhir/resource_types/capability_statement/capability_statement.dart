@@ -23,10 +23,11 @@ abstract class CapabilityStatement
         UsCoreResourceType resourceType,
     Id? id,
     Meta? meta,
-    Narrative? text,
     FhirUri? implicitRules,
     Code? language,
+    Narrative? text,
     List<Resource?>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     FhirUri? url,
     String? version,
@@ -81,8 +82,51 @@ abstract class CapabilityStatementSoftware
     implements _$CapabilityStatementSoftware {
   CapabilityStatementSoftware._();
 
+  /// [CapabilityStatement_Software]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [name]: Name the software is known by.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [version]: The version identifier for the software covered by this
+  ///  statement.
+  ///
+  /// [_version]: Extensions for version
+  ///
+  /// [releaseDate]: Date this version of the software was released.
+  ///
+  /// [_releaseDate]: Extensions for releaseDate
   factory CapabilityStatementSoftware({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     String? version,
     FhirDateTime? releaseDate,
@@ -111,8 +155,51 @@ abstract class CapabilityStatementImplementation
     implements _$CapabilityStatementImplementation {
   CapabilityStatementImplementation._();
 
+  /// [CapabilityStatement_Implementation]: A Capability Statement documents a
+  /// set of capabilities (behaviors) of a FHIR Server for a particular version
+  /// of FHIR that may be used as a statement of actual server functionality or
+  ///  a statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [description]: Information about the specific installation that this
+  ///  capability statement relates to.
+  ///
+  /// [_description]: Extensions for description
+  ///
+  /// [url]: An absolute base URL for the implementation.  This forms the base
+  ///  for REST interfaces as well as the mailbox and document interfaces.
+  ///
+  /// [_url]: Extensions for url
+  ///
+  /// [custodian]: The organization responsible for the management of the
+  ///  instance and oversight of the data on the server at the specified URL.
   factory CapabilityStatementImplementation({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? description,
     FhirUrl? url,
     Reference? custodian,
@@ -142,8 +229,69 @@ abstract class CapabilityStatementImplementation
 abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
   CapabilityStatementRest._();
 
+  /// [CapabilityStatement_Rest]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [mode]: Identifies whether this portion of the statement is describing the
+  ///  ability to initiate or receive restful operations.
+  ///
+  /// [_mode]: Extensions for mode
+  ///
+  /// [documentation]: Information about the system's restful capabilities that
+  ///  apply across all applications, such as security.
+  ///
+  /// [_documentation]: Extensions for documentation
+  ///
+  /// [security]: Information about security implementation from an interface
+  ///  perspective - what a client needs to know.
+  ///
+  /// [resource]: A specification of the restful capabilities of the solution
+  ///  for a specific resource type.
+  ///
+  /// [interaction]: A specification of restful operations supported by the
+  ///  system.
+  ///
+  /// [searchParam]: Search parameters that are supported for searching all
+  /// resources for implementations to support and/or make use of - either
+  /// references to ones defined in the specification, or additional ones
+  ///  defined for/by the implementation.
+  ///
+  /// [operation]: Definition of an operation or a named query together with its
+  ///  parameters and their meaning and type.
+  ///
+  /// [compartment]: An absolute URI which is a reference to the definition of a
+  /// compartment that the system supports. The reference is to a
+  ///  CompartmentDefinition resource by its canonical URL .
   factory CapabilityStatementRest({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
         CapabilityStatementRestMode? mode,
     Markdown? documentation,
@@ -177,8 +325,50 @@ abstract class CapabilityStatementSecurity
     implements _$CapabilityStatementSecurity {
   CapabilityStatementSecurity._();
 
+  /// [CapabilityStatement_Security]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [cors]: Server adds CORS headers when responding to requests - this
+  ///  enables Javascript applications to use the server.
+  ///
+  /// [_cors]: Extensions for cors
+  ///
+  /// [service]: Types of security services that are supported/required by the
+  ///  system.
+  ///
+  /// [description]: General description of how security works.
+  ///
+  /// [_description]: Extensions for description
   factory CapabilityStatementSecurity({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? cors,
     List<CodeableConcept?>? service,
     Markdown? description,
@@ -207,8 +397,128 @@ abstract class CapabilityStatementResource
     implements _$CapabilityStatementResource {
   CapabilityStatementResource._();
 
+  /// [CapabilityStatement_Resource]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: A type of resource exposed via the restful interface.
+  ///
+  /// [_type]: Extensions for type
+  ///
+  /// [profile]: A specification of the profile that describes the solution's
+  /// overall support for the resource, including any constraints on
+  /// cardinality, bindings, lengths or other limitations. See further
+  ///  discussion in [Using Profiles](profiling.html#profile-uses).
+  ///
+  /// [supportedProfile]: A list of profiles that represent different use cases
+  /// supported by the system. For a server, "supported by the system" means the
+  /// system hosts/produces a set of resources that are conformant to a
+  /// particular profile, and allows clients that use its services to search
+  /// using this profile and to find appropriate data. For a client, it means
+  /// the system will search by this profile and process data according to the
+  /// guidance implicit in the profile. See further discussion in [Using
+  ///  Profiles](profiling.html#profile-uses).
+  ///
+  /// [documentation]: Additional information about the resource type used by
+  ///  the system.
+  ///
+  /// [_documentation]: Extensions for documentation
+  ///
+  /// [interaction]: Identifies a restful operation supported by the solution.
+  ///
+  /// [versioning]: This field is set to no-version to specify that the system
+  /// does not support (server) or use (client) versioning for this resource
+  /// type. If this has some other value, the server must at least correctly
+  /// track and populate the versionId meta-property on resources. If the value
+  /// is 'versioned-update', then the server supports all the versioning
+  ///  features, including using e-tags for version integrity in the API.
+  ///
+  /// [_versioning]: Extensions for versioning
+  ///
+  /// [readHistory]: A flag for whether the server is able to return past
+  ///  versions as part of the vRead operation.
+  ///
+  /// [_readHistory]: Extensions for readHistory
+  ///
+  /// [updateCreate]: A flag to indicate that the server allows or needs to
+  /// allow the client to create new identities on the server (that is, the
+  /// client PUTs to a location where there is no existing resource). Allowing
+  /// this operation means that the server allows the client to create new
+  ///  identities on the server.
+  ///
+  /// [_updateCreate]: Extensions for updateCreate
+  ///
+  /// [conditionalCreate]: A flag that indicates that the server supports
+  ///  conditional create.
+  ///
+  /// [_conditionalCreate]: Extensions for conditionalCreate
+  ///
+  /// [conditionalRead]: A code that indicates how the server supports
+  ///  conditional read.
+  ///
+  /// [_conditionalRead]: Extensions for conditionalRead
+  ///
+  /// [conditionalUpdate]: A flag that indicates that the server supports
+  ///  conditional update.
+  ///
+  /// [_conditionalUpdate]: Extensions for conditionalUpdate
+  ///
+  /// [conditionalDelete]: A code that indicates how the server supports
+  ///  conditional delete.
+  ///
+  /// [_conditionalDelete]: Extensions for conditionalDelete
+  ///
+  /// [referencePolicy]: A set of flags that defines how references are
+  ///  supported.
+  ///
+  /// [_referencePolicy]: Extensions for referencePolicy
+  ///
+  /// [searchInclude]: A list of _include values supported by the server.
+  ///
+  /// [_searchInclude]: Extensions for searchInclude
+  ///
+  /// [searchRevInclude]: A list of _revinclude (reverse include) values
+  ///  supported by the server.
+  ///
+  /// [_searchRevInclude]: Extensions for searchRevInclude
+  ///
+  /// [searchParam]: Search parameters for implementations to support and/or
+  /// make use of - either references to ones defined in the specification, or
+  ///  additional ones defined for/by the implementation.
+  ///
+  /// [operation]: Definition of an operation or a named query together with its
+  /// parameters and their meaning and type. Consult the definition of the
+  /// operation for details about how to invoke the operation, and the
+  ///  parameters.
   factory CapabilityStatementResource({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? type,
     Canonical? profile,
     List<Canonical?>? supportedProfile,
@@ -254,8 +564,50 @@ abstract class CapabilityStatementInteraction
     implements _$CapabilityStatementInteraction {
   CapabilityStatementInteraction._();
 
+  /// [CapabilityStatement_Interaction]: A Capability Statement documents a set
+  /// of capabilities (behaviors) of a FHIR Server for a particular version of
+  /// FHIR that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [code]: Coded identifier of the operation, supported by the system
+  ///  resource.
+  ///
+  /// [_code]: Extensions for code
+  ///
+  /// [documentation]: Guidance specific to the implementation of this
+  /// operation, such as 'delete is a logical delete' or 'updates are only
+  /// allowed with version id' or 'creates permitted from pre-authorized
+  ///  certificates only'.
+  ///
+  /// [_documentation]: Extensions for documentation
   factory CapabilityStatementInteraction({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
         CapabilityStatementInteractionCode? code,
     Markdown? documentation,
@@ -286,6 +638,56 @@ abstract class CapabilityStatementSearchParam
     implements _$CapabilityStatementSearchParam {
   CapabilityStatementSearchParam._();
 
+  /// [CapabilityStatement_SearchParam]: A Capability Statement documents a set
+  /// of capabilities (behaviors) of a FHIR Server for a particular version of
+  /// FHIR that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [name]: The name of the search parameter used in the interface.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [definition]: An absolute URI that is a formal reference to where this
+  /// parameter was first defined, so that a client can be confident of the
+  /// meaning of the search parameter (a reference to
+  ///
+  /// [[[SearchParameter.url]]]). This element SHALL be populated if the search
+  /// parameter refers to a SearchParameter defined by the FHIR core
+  ///  specification or externally defined IGs.
+  ///
+  /// [type]: The type of value a search parameter refers to, and how the
+  ///  content is interpreted.
+  ///
+  /// [_type]: Extensions for type
+  ///
+  /// [documentation]: This allows documentation of any distinct behaviors about
+  ///  how the search parameter is used.  For example, text matching algorithms.
+  ///
+  /// [_documentation]: Extensions for documentation
   factory CapabilityStatementSearchParam({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
@@ -322,8 +724,60 @@ abstract class CapabilityStatementOperation
     implements _$CapabilityStatementOperation {
   CapabilityStatementOperation._();
 
+  /// [CapabilityStatement_Operation]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [name]: The name of the operation or query. For an operation, this is the
+  /// name  prefixed with $ and used in the URL. For a query, this is the name
+  ///  used in the _query parameter when the query is called.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [definition]: Where the formal definition can be found. If a server
+  /// references the base definition of an Operation (i.e. from the
+  /// specification itself such as
+  /// ```http://hl7.org/fhir/OperationDefinition/ValueSet-expand```), that means
+  /// it supports the full capabilities of the operation - e.g. both GET and
+  /// POST invocation.  If it only supports a subset, it must define its own
+  /// custom [[[OperationDefinition]]] with a 'base' of the original
+  /// OperationDefinition.  The custom definition would describe the specific
+  ///  subset of functionality supported.
+  ///
+  /// [documentation]: Documentation that describes anything special about the
+  /// operation behavior, possibly detailing different behavior for system, type
+  ///  and instance-level invocation of the operation.
+  ///
+  /// [_documentation]: Extensions for documentation
   factory CapabilityStatementOperation({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     required Canonical definition,
     Markdown? documentation,
@@ -352,8 +806,48 @@ abstract class CapabilityStatementInteraction1
     implements _$CapabilityStatementInteraction1 {
   CapabilityStatementInteraction1._();
 
+  /// [CapabilityStatement_Interaction1]: A Capability Statement documents a set
+  /// of capabilities (behaviors) of a FHIR Server for a particular version of
+  /// FHIR that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [code]: A coded identifier of the operation, supported by the system.
+  ///
+  /// [_code]: Extensions for code
+  ///
+  /// [documentation]: Guidance specific to the implementation of this
+  /// operation, such as limitations on the kind of transactions allowed, or
+  ///  information about system wide search is implemented.
+  ///
+  /// [_documentation]: Extensions for documentation
   factory CapabilityStatementInteraction1({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
         CapabilityStatementInteraction1Code? code,
     Markdown? documentation,
@@ -384,8 +878,57 @@ abstract class CapabilityStatementMessaging
     implements _$CapabilityStatementMessaging {
   CapabilityStatementMessaging._();
 
+  /// [CapabilityStatement_Messaging]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [endpoint]: An endpoint (network accessible address) to which messages
+  ///  and/or replies are to be sent.
+  ///
+  /// [reliableCache]: Length if the receiver's reliable messaging cache in
+  /// minutes (if a receiver) or how long the cache length on the receiver
+  ///  should be (if a sender).
+  ///
+  /// [_reliableCache]: Extensions for reliableCache
+  ///
+  /// [documentation]: Documentation about the system's messaging capabilities
+  /// for this endpoint not otherwise documented by the capability statement.
+  /// For example, the process for becoming an authorized messaging exchange
+  ///  partner.
+  ///
+  /// [_documentation]: Extensions for documentation
+  ///
+  /// [supportedMessage]: References to message definitions for messages this
+  ///  system can send or receive.
   factory CapabilityStatementMessaging({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     List<CapabilityStatementEndpoint?>? endpoint,
     UnsignedInt? reliableCache,
     Markdown? documentation,
@@ -415,8 +958,46 @@ abstract class CapabilityStatementEndpoint
     implements _$CapabilityStatementEndpoint {
   CapabilityStatementEndpoint._();
 
+  /// [CapabilityStatement_Endpoint]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [protocol]: A list of the messaging transport protocol(s) identifiers,
+  ///  supported by this endpoint.
+  ///
+  /// [address]: The network address of the endpoint. For solutions that do not
+  ///  use network addresses for routing, it can be just an identifier.
+  ///
+  /// [_address]: Extensions for address
   factory CapabilityStatementEndpoint({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Coding protocol,
     FhirUrl? address,
   }) = _CapabilityStatementEndpoint;
@@ -444,8 +1025,46 @@ abstract class CapabilityStatementSupportedMessage
     implements _$CapabilityStatementSupportedMessage {
   CapabilityStatementSupportedMessage._();
 
+  /// [CapabilityStatement_SupportedMessage]: A Capability Statement documents a
+  /// set of capabilities (behaviors) of a FHIR Server for a particular version
+  /// of FHIR that may be used as a statement of actual server functionality or
+  ///  a statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [mode]: The mode of this event declaration - whether application is sender
+  ///  or receiver.
+  ///
+  /// [_mode]: Extensions for mode
+  ///
+  /// [definition]: Points to a message definition that identifies the messaging
+  ///  event, message structure, allowed responses, etc.
   factory CapabilityStatementSupportedMessage({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
         CapabilityStatementSupportedMessageMode? mode,
     required Canonical definition,
@@ -476,8 +1095,52 @@ abstract class CapabilityStatementDocument
     implements _$CapabilityStatementDocument {
   CapabilityStatementDocument._();
 
+  /// [CapabilityStatement_Document]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [mode]: Mode of this document declaration - whether an application is a
+  ///  producer or consumer.
+  ///
+  /// [_mode]: Extensions for mode
+  ///
+  /// [documentation]: A description of how the application supports or uses the
+  /// specified document profile.  For example, when documents are created, what
+  ///  action is taken with consumed documents, etc.
+  ///
+  /// [_documentation]: Extensions for documentation
+  ///
+  /// [profile]: A profile on the document Bundle that constrains which
+  ///  resources are present, and their contents.
   factory CapabilityStatementDocument({
     String? id,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
         CapabilityStatementDocumentMode? mode,
     Markdown? documentation,
