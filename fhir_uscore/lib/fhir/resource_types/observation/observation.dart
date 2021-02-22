@@ -48,6 +48,7 @@ abstract class Observation with Resource implements _$Observation {
     List<ObservationReferenceRange>? referenceRange,
     List<ObservationComponent>? component,
     List<CodeableConcept>? interpretation,
+    List<CodeableConcept>? bodySite,
     Reference? device,
     Instant? issued,
   }) = _Observation;
@@ -146,6 +147,7 @@ abstract class Observation with Resource implements _$Observation {
     required double headCircumferencePercentile,
   }) =>
       Observation(
+        category: _vitalSignsCategory,
         subject: subject,
         code: CodeableConcept(
           coding: [
@@ -170,6 +172,7 @@ abstract class Observation with Resource implements _$Observation {
     required double weightForHeightPercentile,
   }) =>
       Observation(
+        category: _vitalSignsCategory,
         subject: subject,
         code: CodeableConcept(
           coding: [
@@ -188,6 +191,378 @@ abstract class Observation with Resource implements _$Observation {
           code: Code('%'),
         ),
       );
+
+  factory Observation.pulseOximetry(
+    double o2sat,
+    FhirDateTime dateTime,
+    Reference subject, {
+    double? litersPerMinute,
+    double? oxygenFlowRate,
+  }) {
+    List<ObservationComponent> obsComp = <ObservationComponent>[];
+    if (litersPerMinute != null) {
+      obsComp.add(
+        ObservationComponent(
+          code: CodeableConcept(
+            coding: [
+              Coding(
+                system: FhirUri('http://loinc.org'),
+                code: Code('3151-8'),
+                display: 'Inhaled oxygen flow rate',
+              ),
+            ],
+            text: 'Inhaled oxygen flow rate',
+          ),
+          valueQuantity: Quantity(
+            value: Decimal(litersPerMinute),
+            unit: 'liters/min',
+            system: FhirUri('http://unitsofmeasure.org'),
+            code: Code('L/min'),
+          ),
+        ),
+      );
+    }
+    if (oxygenFlowRate != null) {
+      obsComp.add(
+        ObservationComponent(
+          code: CodeableConcept(
+            coding: [
+              Coding(
+                system: FhirUri('http://loinc.org'),
+                code: Code('3150-0'),
+                display: 'Inhaled oxygen concentration',
+              ),
+            ],
+            text: 'Inhaled oxygen concentration',
+          ),
+          valueQuantity: Quantity(
+            value: Decimal(oxygenFlowRate),
+            unit: '%',
+            system: FhirUri('http://unitsofmeasure.org'),
+            code: Code('%'),
+          ),
+        ),
+      );
+    }
+
+    return Observation(
+        category: _vitalSignsCategory,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('59408-5'),
+              display: 'Oxygen saturation in Arterial blood by Pulse oximetry',
+            ),
+          ],
+        ),
+        effectiveDateTime: dateTime,
+        subject: subject,
+        valueQuantity: Quantity(
+          value: Decimal(o2sat),
+          unit: '%',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('%'),
+        ),
+        component: obsComp.isEmpty ? null : obsComp);
+  }
+
+  factory Observation.smokingStatus(
+    ObservationStatus status,
+    Reference subject,
+    Instant issued,
+    SmokingStatus smokingStatus,
+  ) {
+    return Observation(
+      status: status,
+      code: CodeableConcept(
+        coding: [
+          Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('72166-2'),
+              display: 'Tobacco smoking status'),
+        ],
+        text: 'Tobacco smoking status',
+      ),
+      subject: subject,
+      issued: issued,
+      valueCodeableConcept: codeableConceptFromSmokingStatus[smokingStatus],
+    );
+  }
+
+  factory Observation.respiratoryRate(
+    int bpm,
+    Reference subject,
+    FhirDateTime dateTime,
+  ) =>
+      Observation(
+        category: _vitalSignsCategory,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('9279-1'),
+              display: 'Respiratory rate',
+            ),
+          ],
+          text: 'Respiratory rate',
+        ),
+        subject: subject,
+        effectiveDateTime: dateTime,
+        valueQuantity: Quantity(
+          value: Decimal(bpm),
+          unit: 'breaths/min',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('/min'),
+        ),
+      );
+
+  factory Observation.heartRate(
+    int bpm,
+    Reference subject,
+    FhirDateTime dateTime,
+  ) =>
+      Observation(
+        category: _vitalSignsCategory,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('8867-4'),
+              display: 'Heart rate',
+            ),
+          ],
+          text: 'Heart rate',
+        ),
+        subject: subject,
+        effectiveDateTime: dateTime,
+        valueQuantity: Quantity(
+          value: Decimal(bpm),
+          unit: 'beats/min',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('/min'),
+        ),
+      );
+
+  factory Observation.bodyTemperature(
+    Reference subject,
+    FhirDateTime dateTime, {
+    required double tempInCelsius,
+  }) =>
+      Observation(
+        category: _vitalSignsCategory,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('8310-5'),
+              display: 'Body temperature',
+            ),
+          ],
+          text: 'Body Temperature',
+        ),
+        subject: subject,
+        effectiveDateTime: dateTime,
+        valueQuantity: Quantity(
+          value: Decimal(tempInCelsius),
+          unit: 'C',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('Cel'),
+        ),
+      );
+
+  factory Observation.bodyHeight(
+    Reference subject,
+    FhirDateTime dateTime, {
+    required double heightInCentimeters,
+  }) =>
+      Observation(
+        category: _vitalSignsCategory,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('8302-2'),
+              display: 'Body height',
+            ),
+          ],
+          text: 'Body height',
+        ),
+        subject: subject,
+        effectiveDateTime: dateTime,
+        valueQuantity: Quantity(
+          value: Decimal(heightInCentimeters),
+          unit: 'cm',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('cm'),
+        ),
+      );
+
+  factory Observation.headCircumference(
+    Reference subject,
+    FhirDateTime dateTime, {
+    required double circumferenceInCentimeters,
+  }) =>
+      Observation(
+        category: _vitalSignsCategory,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('9843-4'),
+              display: 'Head Occipital-frontal circumference',
+            ),
+          ],
+          text: 'Head Circumference',
+        ),
+        subject: subject,
+        effectiveDateTime: dateTime,
+        valueQuantity: Quantity(
+          value: Decimal(circumferenceInCentimeters),
+          unit: 'cm',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('cm'),
+        ),
+      );
+
+  factory Observation.bodyWeight(
+    Reference subject,
+    FhirDateTime dateTime, {
+    required double weightInKilograms,
+  }) =>
+      Observation(
+        category: _vitalSignsCategory,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('29463-7'),
+              display: 'Body Weight',
+            ),
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('3141-9'),
+              display: 'Body weight Measured',
+            ),
+            Coding(
+              system: FhirUri('http://snomed.info/sct'),
+              code: Code('27113001'),
+              display: 'Body Weight',
+            ),
+          ],
+          text: 'Body Weight',
+        ),
+        subject: subject,
+        effectiveDateTime: dateTime,
+        valueQuantity: Quantity(
+          value: Decimal(weightInKilograms),
+          unit: 'kg',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('kg'),
+        ),
+      );
+
+  factory Observation.bmi(
+    Reference subject,
+    FhirDateTime dateTime, {
+    required double bmi,
+  }) =>
+      Observation(
+        category: _vitalSignsCategory,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('39456-5'),
+              display: 'Body mass index (BMI) [Ratio]',
+            ),
+          ],
+          text: 'BMI',
+        ),
+        subject: subject,
+        effectiveDateTime: dateTime,
+        valueQuantity: Quantity(
+          value: Decimal(bmi),
+          unit: 'kg/m2',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('kg/m2'),
+        ),
+      );
+
+  factory Observation.bloodPressure(
+    Reference subject,
+    FhirDateTime dateTime, {
+    required double systolic,
+    double? diastolic,
+    BodySiteForBp? bodySite,
+  }) {
+    final component = <ObservationComponent>[];
+    component.add(
+      ObservationComponent(
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('8480-6'),
+              display: 'Systolic blood pressure',
+            ),
+            Coding(
+              system: FhirUri('http://snomed.info/sct'),
+              code: Code('271649006'),
+              display: 'Systolic blood pressure',
+            ),
+          ],
+        ),
+        valueQuantity: Quantity(
+          value: Decimal(systolic),
+          unit: 'mmHg',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('mm[Hg]'),
+        ),
+      ),
+    );
+    if (diastolic != null) {
+      component.add(
+        ObservationComponent(
+          code: CodeableConcept(
+            coding: [
+              Coding(
+                system: FhirUri('http://loinc.org'),
+                code: Code('8462-4'),
+                display: 'Diastolic blood pressure',
+              ),
+            ],
+          ),
+          valueQuantity: Quantity(
+            value: Decimal(diastolic),
+            unit: 'mmHg',
+            system: FhirUri('http://unitsofmeasure.org'),
+            code: Code('mm[Hg]'),
+          ),
+        ),
+      );
+    }
+
+    return Observation(
+      category: _vitalSignsCategory,
+      code: CodeableConcept(
+        coding: [
+          Coding(
+            system: FhirUri('http://loinc.org'),
+            code: Code('85354-9'),
+            display: 'Blood pressure panel with all children optional',
+          ),
+        ],
+        text: 'Blood pressure systolic & diastolic',
+      ),
+      subject: subject,
+      bodySite: bodySite == null
+          ? null
+          : [codeableConceptFromBodySiteForBp[bodySite]],
+      effectiveDateTime: dateTime,
+      component: component,
+    );
+  }
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -280,3 +655,17 @@ abstract class ObservationComponent implements _$ObservationComponent {
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
 }
+
+final _vitalSignsCategory = [
+  CodeableConcept(
+    coding: [
+      Coding(
+        system: FhirUri(
+            'http://terminology.hl7.org/CodeSystem/observation-category'),
+        code: Code('vital-signs'),
+        display: 'Vital Signs',
+      ),
+    ],
+    text: 'Vital Signs',
+  ),
+];

@@ -101,6 +101,11 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
+    bodySite: (json['bodySite'] as List<dynamic>?)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        .toList(),
     device: json['device'] == null
         ? null
         : Reference.fromJson(json['device'] as Map<String, dynamic>),
@@ -152,6 +157,7 @@ Map<String, dynamic> _$_$_ObservationToJson(_$_Observation instance) {
       'component', instance.component?.map((e) => e?.toJson()).toList());
   writeNotNull('interpretation',
       instance.interpretation?.map((e) => e?.toJson()).toList());
+  writeNotNull('bodySite', instance.bodySite?.map((e) => e?.toJson()).toList());
   writeNotNull('device', instance.device?.toJson());
   writeNotNull('issued', instance.issued?.toJson());
   return val;

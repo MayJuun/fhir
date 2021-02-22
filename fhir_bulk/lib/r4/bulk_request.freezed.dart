@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'bulk_request.dart';
 
@@ -13,12 +13,11 @@ T _$identity<T>(T value) => value;
 class _$BulkRequestTearOff {
   const _$BulkRequestTearOff();
 
-// ignore: unused_element
   _BulkPatientRequest patient(
-      {@required Uri base,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client}) {
+      {required Uri base,
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client}) {
     return _BulkPatientRequest(
       base: base,
       since: since,
@@ -27,13 +26,12 @@ class _$BulkRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _BulkGroupRequest group(
-      {@required Uri base,
-      @required Id id,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client}) {
+      {required Uri base,
+      required Id id,
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client}) {
     return _BulkGroupRequest(
       base: base,
       id: id,
@@ -43,12 +41,11 @@ class _$BulkRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _BulkSystemRequest system(
-      {@required Uri base,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client}) {
+      {required Uri base,
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client}) {
     return _BulkSystemRequest(
       base: base,
       since: since,
@@ -59,50 +56,52 @@ class _$BulkRequestTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $BulkRequest = _$BulkRequestTearOff();
 
 /// @nodoc
 mixin _$BulkRequest {
   Uri get base;
-  FhirDateTime get since;
-  List<Tuple2<R4ResourceType, Id>> get types;
-  Client get client;
+  FhirDateTime? get since;
+  List<Tuple2<R4ResourceType?, Id?>>? get types;
+  Client? get client;
 
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult patient(Uri base, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required
-        TResult group(Uri base, Id id, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required
-        TResult system(Uri base, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        patient,
+    required TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        group,
+    required TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        system,
   });
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult patient(Uri base, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    TResult group(Uri base, Id id, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    TResult system(Uri base, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        patient,
+    TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        group,
+    TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        system,
+    required TResult orElse(),
   });
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult patient(_BulkPatientRequest value),
-    @required TResult group(_BulkGroupRequest value),
-    @required TResult system(_BulkSystemRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_BulkPatientRequest value) patient,
+    required TResult Function(_BulkGroupRequest value) group,
+    required TResult Function(_BulkSystemRequest value) system,
   });
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult patient(_BulkPatientRequest value),
-    TResult group(_BulkGroupRequest value),
-    TResult system(_BulkSystemRequest value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_BulkPatientRequest value)? patient,
+    TResult Function(_BulkGroupRequest value)? group,
+    TResult Function(_BulkSystemRequest value)? system,
+    required TResult orElse(),
   });
 
   @JsonKey(ignore: true)
@@ -116,9 +115,9 @@ abstract class $BulkRequestCopyWith<$Res> {
       _$BulkRequestCopyWithImpl<$Res>;
   $Res call(
       {Uri base,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client});
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client});
 }
 
 /// @nodoc
@@ -131,18 +130,18 @@ class _$BulkRequestCopyWithImpl<$Res> implements $BulkRequestCopyWith<$Res> {
 
   @override
   $Res call({
-    Object base = freezed,
-    Object since = freezed,
-    Object types = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? since = freezed,
+    Object? types = freezed,
+    Object? client = freezed,
   }) {
     return _then(_value.copyWith(
       base: base == freezed ? _value.base : base as Uri,
-      since: since == freezed ? _value.since : since as FhirDateTime,
+      since: since == freezed ? _value.since : since as FhirDateTime?,
       types: types == freezed
           ? _value.types
-          : types as List<Tuple2<R4ResourceType, Id>>,
-      client: client == freezed ? _value.client : client as Client,
+          : types as List<Tuple2<R4ResourceType?, Id?>>?,
+      client: client == freezed ? _value.client : client as Client?,
     ));
   }
 }
@@ -156,9 +155,9 @@ abstract class _$BulkPatientRequestCopyWith<$Res>
   @override
   $Res call(
       {Uri base,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client});
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client});
 }
 
 /// @nodoc
@@ -174,18 +173,18 @@ class __$BulkPatientRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object since = freezed,
-    Object types = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? since = freezed,
+    Object? types = freezed,
+    Object? client = freezed,
   }) {
     return _then(_BulkPatientRequest(
       base: base == freezed ? _value.base : base as Uri,
-      since: since == freezed ? _value.since : since as FhirDateTime,
+      since: since == freezed ? _value.since : since as FhirDateTime?,
       types: types == freezed
           ? _value.types
-          : types as List<Tuple2<R4ResourceType, Id>>,
-      client: client == freezed ? _value.client : client as Client,
+          : types as List<Tuple2<R4ResourceType?, Id?>>?,
+      client: client == freezed ? _value.client : client as Client?,
     ));
   }
 }
@@ -193,18 +192,17 @@ class __$BulkPatientRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_BulkPatientRequest extends _BulkPatientRequest {
   _$_BulkPatientRequest(
-      {@required this.base, this.since, this.types, this.client})
-      : assert(base != null),
-        super._();
+      {required this.base, this.since, this.types, this.client})
+      : super._();
 
   @override
   final Uri base;
   @override
-  final FhirDateTime since;
+  final FhirDateTime? since;
   @override
-  final List<Tuple2<R4ResourceType, Id>> types;
+  final List<Tuple2<R4ResourceType?, Id?>>? types;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -240,35 +238,34 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult patient(Uri base, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required
-        TResult group(Uri base, Id id, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required
-        TResult system(Uri base, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        patient,
+    required TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        group,
+    required TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        system,
   }) {
-    assert(patient != null);
-    assert(group != null);
-    assert(system != null);
     return patient(base, since, types, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult patient(Uri base, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    TResult group(Uri base, Id id, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    TResult system(Uri base, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        patient,
+    TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        group,
+    TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        system,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (patient != null) {
       return patient(base, since, types, client);
     }
@@ -277,26 +274,22 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult patient(_BulkPatientRequest value),
-    @required TResult group(_BulkGroupRequest value),
-    @required TResult system(_BulkSystemRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_BulkPatientRequest value) patient,
+    required TResult Function(_BulkGroupRequest value) group,
+    required TResult Function(_BulkSystemRequest value) system,
   }) {
-    assert(patient != null);
-    assert(group != null);
-    assert(system != null);
     return patient(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult patient(_BulkPatientRequest value),
-    TResult group(_BulkGroupRequest value),
-    TResult system(_BulkSystemRequest value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_BulkPatientRequest value)? patient,
+    TResult Function(_BulkGroupRequest value)? group,
+    TResult Function(_BulkSystemRequest value)? system,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (patient != null) {
       return patient(this);
     }
@@ -307,19 +300,19 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
 abstract class _BulkPatientRequest extends BulkRequest {
   _BulkPatientRequest._() : super._();
   factory _BulkPatientRequest(
-      {@required Uri base,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client}) = _$_BulkPatientRequest;
+      {required Uri base,
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client}) = _$_BulkPatientRequest;
 
   @override
   Uri get base;
   @override
-  FhirDateTime get since;
+  FhirDateTime? get since;
   @override
-  List<Tuple2<R4ResourceType, Id>> get types;
+  List<Tuple2<R4ResourceType?, Id?>>? get types;
   @override
-  Client get client;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$BulkPatientRequestCopyWith<_BulkPatientRequest> get copyWith;
@@ -335,9 +328,9 @@ abstract class _$BulkGroupRequestCopyWith<$Res>
   $Res call(
       {Uri base,
       Id id,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client});
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client});
 }
 
 /// @nodoc
@@ -353,20 +346,20 @@ class __$BulkGroupRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object id = freezed,
-    Object since = freezed,
-    Object types = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? id = freezed,
+    Object? since = freezed,
+    Object? types = freezed,
+    Object? client = freezed,
   }) {
     return _then(_BulkGroupRequest(
       base: base == freezed ? _value.base : base as Uri,
       id: id == freezed ? _value.id : id as Id,
-      since: since == freezed ? _value.since : since as FhirDateTime,
+      since: since == freezed ? _value.since : since as FhirDateTime?,
       types: types == freezed
           ? _value.types
-          : types as List<Tuple2<R4ResourceType, Id>>,
-      client: client == freezed ? _value.client : client as Client,
+          : types as List<Tuple2<R4ResourceType?, Id?>>?,
+      client: client == freezed ? _value.client : client as Client?,
     ));
   }
 }
@@ -374,25 +367,23 @@ class __$BulkGroupRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_BulkGroupRequest extends _BulkGroupRequest {
   _$_BulkGroupRequest(
-      {@required this.base,
-      @required this.id,
+      {required this.base,
+      required this.id,
       this.since,
       this.types,
       this.client})
-      : assert(base != null),
-        assert(id != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
   @override
   final Id id;
   @override
-  final FhirDateTime since;
+  final FhirDateTime? since;
   @override
-  final List<Tuple2<R4ResourceType, Id>> types;
+  final List<Tuple2<R4ResourceType?, Id?>>? types;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -431,35 +422,34 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult patient(Uri base, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required
-        TResult group(Uri base, Id id, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required
-        TResult system(Uri base, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        patient,
+    required TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        group,
+    required TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        system,
   }) {
-    assert(patient != null);
-    assert(group != null);
-    assert(system != null);
     return group(base, id, since, types, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult patient(Uri base, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    TResult group(Uri base, Id id, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    TResult system(Uri base, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        patient,
+    TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        group,
+    TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        system,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (group != null) {
       return group(base, id, since, types, client);
     }
@@ -468,26 +458,22 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult patient(_BulkPatientRequest value),
-    @required TResult group(_BulkGroupRequest value),
-    @required TResult system(_BulkSystemRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_BulkPatientRequest value) patient,
+    required TResult Function(_BulkGroupRequest value) group,
+    required TResult Function(_BulkSystemRequest value) system,
   }) {
-    assert(patient != null);
-    assert(group != null);
-    assert(system != null);
     return group(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult patient(_BulkPatientRequest value),
-    TResult group(_BulkGroupRequest value),
-    TResult system(_BulkSystemRequest value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_BulkPatientRequest value)? patient,
+    TResult Function(_BulkGroupRequest value)? group,
+    TResult Function(_BulkSystemRequest value)? system,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (group != null) {
       return group(this);
     }
@@ -498,21 +484,21 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
 abstract class _BulkGroupRequest extends BulkRequest {
   _BulkGroupRequest._() : super._();
   factory _BulkGroupRequest(
-      {@required Uri base,
-      @required Id id,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client}) = _$_BulkGroupRequest;
+      {required Uri base,
+      required Id id,
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client}) = _$_BulkGroupRequest;
 
   @override
   Uri get base;
   Id get id;
   @override
-  FhirDateTime get since;
+  FhirDateTime? get since;
   @override
-  List<Tuple2<R4ResourceType, Id>> get types;
+  List<Tuple2<R4ResourceType?, Id?>>? get types;
   @override
-  Client get client;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$BulkGroupRequestCopyWith<_BulkGroupRequest> get copyWith;
@@ -527,9 +513,9 @@ abstract class _$BulkSystemRequestCopyWith<$Res>
   @override
   $Res call(
       {Uri base,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client});
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client});
 }
 
 /// @nodoc
@@ -545,18 +531,18 @@ class __$BulkSystemRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object since = freezed,
-    Object types = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? since = freezed,
+    Object? types = freezed,
+    Object? client = freezed,
   }) {
     return _then(_BulkSystemRequest(
       base: base == freezed ? _value.base : base as Uri,
-      since: since == freezed ? _value.since : since as FhirDateTime,
+      since: since == freezed ? _value.since : since as FhirDateTime?,
       types: types == freezed
           ? _value.types
-          : types as List<Tuple2<R4ResourceType, Id>>,
-      client: client == freezed ? _value.client : client as Client,
+          : types as List<Tuple2<R4ResourceType?, Id?>>?,
+      client: client == freezed ? _value.client : client as Client?,
     ));
   }
 }
@@ -564,18 +550,17 @@ class __$BulkSystemRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_BulkSystemRequest extends _BulkSystemRequest {
   _$_BulkSystemRequest(
-      {@required this.base, this.since, this.types, this.client})
-      : assert(base != null),
-        super._();
+      {required this.base, this.since, this.types, this.client})
+      : super._();
 
   @override
   final Uri base;
   @override
-  final FhirDateTime since;
+  final FhirDateTime? since;
   @override
-  final List<Tuple2<R4ResourceType, Id>> types;
+  final List<Tuple2<R4ResourceType?, Id?>>? types;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -611,35 +596,34 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult patient(Uri base, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required
-        TResult group(Uri base, Id id, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required
-        TResult system(Uri base, FhirDateTime since,
-            List<Tuple2<R4ResourceType, Id>> types, Client client),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        patient,
+    required TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        group,
+    required TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)
+        system,
   }) {
-    assert(patient != null);
-    assert(group != null);
-    assert(system != null);
     return system(base, since, types, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult patient(Uri base, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    TResult group(Uri base, Id id, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    TResult system(Uri base, FhirDateTime since,
-        List<Tuple2<R4ResourceType, Id>> types, Client client),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        patient,
+    TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        group,
+    TResult Function(Uri base, FhirDateTime? since,
+            List<Tuple2<R4ResourceType?, Id?>>? types, Client? client)?
+        system,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (system != null) {
       return system(base, since, types, client);
     }
@@ -648,26 +632,22 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult patient(_BulkPatientRequest value),
-    @required TResult group(_BulkGroupRequest value),
-    @required TResult system(_BulkSystemRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_BulkPatientRequest value) patient,
+    required TResult Function(_BulkGroupRequest value) group,
+    required TResult Function(_BulkSystemRequest value) system,
   }) {
-    assert(patient != null);
-    assert(group != null);
-    assert(system != null);
     return system(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult patient(_BulkPatientRequest value),
-    TResult group(_BulkGroupRequest value),
-    TResult system(_BulkSystemRequest value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_BulkPatientRequest value)? patient,
+    TResult Function(_BulkGroupRequest value)? group,
+    TResult Function(_BulkSystemRequest value)? system,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (system != null) {
       return system(this);
     }
@@ -678,19 +658,19 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
 abstract class _BulkSystemRequest extends BulkRequest {
   _BulkSystemRequest._() : super._();
   factory _BulkSystemRequest(
-      {@required Uri base,
-      FhirDateTime since,
-      List<Tuple2<R4ResourceType, Id>> types,
-      Client client}) = _$_BulkSystemRequest;
+      {required Uri base,
+      FhirDateTime? since,
+      List<Tuple2<R4ResourceType?, Id?>>? types,
+      Client? client}) = _$_BulkSystemRequest;
 
   @override
   Uri get base;
   @override
-  FhirDateTime get since;
+  FhirDateTime? get since;
   @override
-  List<Tuple2<R4ResourceType, Id>> get types;
+  List<Tuple2<R4ResourceType?, Id?>>? get types;
   @override
-  Client get client;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$BulkSystemRequestCopyWith<_BulkSystemRequest> get copyWith;

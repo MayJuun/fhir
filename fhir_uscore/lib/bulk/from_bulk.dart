@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:fhir/r5.dart';
 import 'package:mime/mime.dart';
 import 'package:archive/archive.dart';
+
+import '../uscore.dart';
 
 abstract class FhirBulk {
   static String toNdJson(List<Resource> resources) {
@@ -26,9 +27,14 @@ abstract class FhirBulk {
     return resourceList;
   }
 
-  static Future<List<Resource?>> fromFile(String path) async {
-    final file = await File(path).readAsString();
-    return fromData(file);
+  static Future<List<Resource?>> fromFile(String? path) async {
+    final resourceList = <Resource?>[];
+    if (path == null) {
+      return resourceList;
+    } else {
+      final file = await File(path).readAsString();
+      return fromData(file);
+    }
   }
 
   static Future<List<Resource?>> fromCompressedData(

@@ -15,6 +15,15 @@ enum CareTeamStatus {
   unknown,
 }
 
+final codeFromCareTeamStatus = {
+  CareTeamStatus.proposed: 'proposed',
+  CareTeamStatus.active: 'active',
+  CareTeamStatus.suspended: 'suspended',
+  CareTeamStatus.inactive: 'inactive',
+  CareTeamStatus.entered_in_error: 'entered-in-error',
+  CareTeamStatus.unknown: 'unknown',
+};
+
 enum CareTeamProviderRole {
   @JsonValue('Counselor')
   counselor,

@@ -1,10 +1,11 @@
 import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
-import 'package:fhir/r4.dart';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart';
 
+import '../uscore.dart';
 import 'from_bulk.dart';
 
 part 'bulk_request.freezed.dart';
@@ -17,7 +18,7 @@ abstract class BulkRequest with _$BulkRequest {
   factory BulkRequest.patient({
     required Uri base,
     FhirDateTime? since,
-    List<Tuple2<R4ResourceType?, Id?>>? types,
+    List<Tuple2<UsCoreResourceType?, Id?>>? types,
     Client? client,
   }) = _BulkPatientRequest;
 
@@ -26,7 +27,7 @@ abstract class BulkRequest with _$BulkRequest {
     required Uri base,
     required Id id,
     FhirDateTime? since,
-    List<Tuple2<R4ResourceType?, Id?>>? types,
+    List<Tuple2<UsCoreResourceType?, Id?>>? types,
     Client? client,
   }) = _BulkGroupRequest;
 
@@ -34,7 +35,7 @@ abstract class BulkRequest with _$BulkRequest {
   factory BulkRequest.system({
     required Uri base,
     FhirDateTime? since,
-    List<Tuple2<R4ResourceType?, Id?>>? types,
+    List<Tuple2<UsCoreResourceType?, Id?>>? types,
     Client? client,
   }) = _BulkSystemRequest;
 
@@ -46,19 +47,19 @@ abstract class BulkRequest with _$BulkRequest {
     return map(
       patient: (m) async => await _request(
         RestfulRequest.get_,
-        '$base/Patient/\$export${_parameters(since, types)}',
+        '$base/Patient/\$export${_parameters(since, types as List<Tuple2<UsCoreResourceType, Id>>)}',
         headers,
         client,
       ),
       group: (m) async => await _request(
         RestfulRequest.get_,
-        '$base/Group/${m.id}/\$export${_parameters(since, types)}',
+        '$base/Group/${m.id}/\$export${_parameters(since, types as List<Tuple2<UsCoreResourceType, Id>>)}',
         headers,
         client,
       ),
       system: (m) async => await _request(
         RestfulRequest.get_,
-        '$base/\$export${_parameters(since, types)}',
+        '$base/\$export${_parameters(since, types as List<Tuple2<UsCoreResourceType, Id>>)}',
         headers,
         client,
       ),
@@ -67,7 +68,7 @@ abstract class BulkRequest with _$BulkRequest {
 
   String _parameters(
     FhirDateTime? since,
-    List<Tuple2<R4ResourceType?, Id?>>? types,
+    List<Tuple2<UsCoreResourceType?, Id?>>? types,
   ) {
     String sinceString = '';
     String typeString = '';
