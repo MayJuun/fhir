@@ -25,9 +25,9 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
     Identifier? identifier,
@@ -45,11 +45,11 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     String? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     String? copyright,
@@ -68,9 +68,9 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     @JsonKey(name: '_content') Element? contentElement,
     Decimal? count,
     @JsonKey(name: '_count') Element? countElement,
-    List<CodeSystemFilter?>? filter,
-    List<CodeSystemProperty?>? property,
-    List<CodeSystemConcept?>? concept,
+    List<CodeSystemFilter>? filter,
+    List<CodeSystemProperty>? property,
+    List<CodeSystemConcept>? concept,
   }) = _CodeSystem;
 
   /// Produces a Yaml formatted String version of the object
@@ -98,7 +98,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
     @JsonKey(name: '_code') Element? codeElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(name: 'operator') List<String?>? operator_,
+    @JsonKey(name: 'operator') List<String>? operator_,
     @JsonKey(name: '_operator') List<Element?>? operatorElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -156,16 +156,16 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
 abstract class CodeSystemConcept implements _$CodeSystemConcept {
   CodeSystemConcept._();
   factory CodeSystemConcept({
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     String? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
-    List<CodeSystemDesignation?>? designation,
-    List<CodeSystemProperty1?>? property,
-    List<CodeSystemConcept?>? concept,
+    List<CodeSystemDesignation>? designation,
+    List<CodeSystemProperty1>? property,
+    List<CodeSystemConcept>? concept,
   }) = _CodeSystemConcept;
 
   /// Produces a Yaml formatted String version of the object
@@ -263,9 +263,9 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
     Identifier? identifier,
@@ -283,11 +283,11 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     String? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     String? copyright,
@@ -298,7 +298,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     String? targetUri,
     @JsonKey(name: '_targetUri') Element? targetUriElement,
     Reference? targetReference,
-    List<ConceptMapGroup?>? group,
+    List<ConceptMapGroup>? group,
   }) = _ConceptMap;
 
   /// Produces a Yaml formatted String version of the object
@@ -359,7 +359,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    List<ConceptMapTarget?>? target,
+    List<ConceptMapTarget>? target,
   }) = _ConceptMapElement;
 
   /// Produces a Yaml formatted String version of the object
@@ -391,8 +391,8 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
     @JsonKey(name: '_equivalence') Element? equivalenceElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-    List<ConceptMapDependsOn?>? dependsOn,
-    List<ConceptMapDependsOn?>? product,
+    List<ConceptMapDependsOn>? dependsOn,
+    List<ConceptMapDependsOn>? product,
   }) = _ConceptMapTarget;
 
   /// Produces a Yaml formatted String version of the object
@@ -488,9 +488,9 @@ abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
     Identifier? identifier,
@@ -506,12 +506,12 @@ abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
-    List<ExpansionProfileFixedVersion?>? fixedVersion,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    List<ExpansionProfileFixedVersion>? fixedVersion,
     ExpansionProfileExcludedSystem? excludedSystem,
     Boolean? includeDesignations,
     @JsonKey(name: '_includeDesignations') Element? includeDesignationsElement,
@@ -643,7 +643,7 @@ abstract class ExpansionProfileDesignation
 abstract class ExpansionProfileInclude implements _$ExpansionProfileInclude {
   ExpansionProfileInclude._();
   factory ExpansionProfileInclude({
-    List<ExpansionProfileDesignation1?>? designation,
+    List<ExpansionProfileDesignation1>? designation,
   }) = _ExpansionProfileInclude;
 
   /// Produces a Yaml formatted String version of the object
@@ -695,7 +695,7 @@ abstract class ExpansionProfileDesignation1
 abstract class ExpansionProfileExclude implements _$ExpansionProfileExclude {
   ExpansionProfileExclude._();
   factory ExpansionProfileExclude({
-    List<ExpansionProfileDesignation2?>? designation,
+    List<ExpansionProfileDesignation2>? designation,
   }) = _ExpansionProfileExclude;
 
   /// Produces a Yaml formatted String version of the object
@@ -757,9 +757,9 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     NamingSystemStatus? status,
@@ -770,14 +770,14 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     String? responsible,
     @JsonKey(name: '_responsible') Element? responsibleElement,
     CodeableConcept? type,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     String? usage,
     @JsonKey(name: '_usage') Element? usageElement,
     required List<NamingSystemUniqueId> uniqueId,
@@ -847,12 +847,12 @@ abstract class ValueSet with Resource implements _$ValueSet {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -867,11 +867,11 @@ abstract class ValueSet with Resource implements _$ValueSet {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Boolean? immutable,
     @JsonKey(name: '_immutable') Element? immutableElement,
     String? purpose,
@@ -910,7 +910,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
     required List<ValueSetInclude> include,
-    List<ValueSetInclude?>? exclude,
+    List<ValueSetInclude>? exclude,
   }) = _ValueSetCompose;
 
   /// Produces a Yaml formatted String version of the object
@@ -934,14 +934,14 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
 abstract class ValueSetInclude implements _$ValueSetInclude {
   ValueSetInclude._();
   factory ValueSetInclude({
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-    List<ValueSetConcept?>? concept,
-    List<ValueSetFilter?>? filter,
-    List<String?>? valueSet,
+    List<ValueSetConcept>? concept,
+    List<ValueSetFilter>? filter,
+    List<String>? valueSet,
     @JsonKey(name: '_valueSet') List<Element?>? valueSetElement,
   }) = _ValueSetInclude;
 
@@ -966,12 +966,12 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
 abstract class ValueSetConcept implements _$ValueSetConcept {
   ValueSetConcept._();
   factory ValueSetConcept({
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    List<ValueSetDesignation?>? designation,
+    List<ValueSetDesignation>? designation,
   }) = _ValueSetConcept;
 
   /// Produces a Yaml formatted String version of the object
@@ -1060,8 +1060,8 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
     @JsonKey(name: '_total') Element? totalElement,
     Decimal? offset,
     @JsonKey(name: '_offset') Element? offsetElement,
-    List<ValueSetParameter?>? parameter,
-    List<ValueSetContains?>? contains,
+    List<ValueSetParameter>? parameter,
+    List<ValueSetContains>? contains,
   }) = _ValueSetExpansion;
 
   /// Produces a Yaml formatted String version of the object
@@ -1134,8 +1134,8 @@ abstract class ValueSetContains implements _$ValueSetContains {
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    List<ValueSetDesignation?>? designation,
-    List<ValueSetContains?>? contains,
+    List<ValueSetDesignation>? designation,
+    List<ValueSetContains>? contains,
   }) = _ValueSetContains;
 
   /// Produces a Yaml formatted String version of the object

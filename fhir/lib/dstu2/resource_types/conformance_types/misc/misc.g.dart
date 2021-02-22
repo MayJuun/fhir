@@ -30,18 +30,13 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     url: FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
@@ -71,9 +66,8 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
         ? null
         : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
     contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ImplementationGuideContact.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            ImplementationGuideContact.fromJson(e as Map<String, dynamic>))
         .toList(),
     date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
@@ -84,9 +78,7 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
     useContext: (json['useContext'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     copyright: json['copyright'] as String?,
     copyrightElement: json['_copyright'] == null
@@ -99,21 +91,19 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     dependency: (json['dependency'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ImplementationGuideDependency.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            ImplementationGuideDependency.fromJson(e as Map<String, dynamic>))
         .toList(),
     package: (json['package'] as List<dynamic>)
         .map((e) =>
             ImplementationGuidePackage.fromJson(e as Map<String, dynamic>))
         .toList(),
     global: (json['global'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ImplementationGuideGlobal.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            ImplementationGuideGlobal.fromJson(e as Map<String, dynamic>))
         .toList(),
     binary: (json['binary'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
+        ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     page:
         ImplementationGuidePage.fromJson(json['page'] as Map<String, dynamic>),
@@ -140,11 +130,11 @@ Map<String, dynamic> _$_$_ImplementationGuideToJson(
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['url'] = instance.url.toJson();
   writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('version', instance.version);
@@ -157,23 +147,23 @@ Map<String, dynamic> _$_$_ImplementationGuideToJson(
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('_publisher', instance.publisherElement?.toJson());
-  writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
+  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull(
-      'useContext', instance.useContext?.map((e) => e?.toJson()).toList());
+      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
   writeNotNull('copyright', instance.copyright);
   writeNotNull('_copyright', instance.copyrightElement?.toJson());
   writeNotNull('fhirVersion', instance.fhirVersion?.toJson());
   writeNotNull('_fhirVersion',
       instance.fhirVersionElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
-      'dependency', instance.dependency?.map((e) => e?.toJson()).toList());
+      'dependency', instance.dependency?.map((e) => e.toJson()).toList());
   val['package'] = instance.package.map((e) => e.toJson()).toList();
-  writeNotNull('global', instance.global?.map((e) => e?.toJson()).toList());
-  writeNotNull('binary', instance.binary?.map((e) => e?.toJson()).toList());
+  writeNotNull('global', instance.global?.map((e) => e.toJson()).toList());
+  writeNotNull('binary', instance.binary?.map((e) => e.toJson()).toList());
   val['page'] = instance.page.toJson();
   return val;
 }
@@ -314,19 +304,14 @@ _$_ImplementationGuideContact _$_$_ImplementationGuideContactFromJson(
   return _$_ImplementationGuideContact(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     name: json['name'] as String?,
     telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -343,11 +328,11 @@ Map<String, dynamic> _$_$_ImplementationGuideContactToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -356,14 +341,10 @@ _$_ImplementationGuideDependency _$_$_ImplementationGuideDependencyFromJson(
   return _$_ImplementationGuideDependency(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     type: _$enumDecode(_$DependencyTypeEnumMap, json['type'],
         unknownValue: DependencyType.unknown),
@@ -386,9 +367,9 @@ Map<String, dynamic> _$_$_ImplementationGuideDependencyToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['type'] = _$DependencyTypeEnumMap[instance.type];
   val['uri'] = instance.uri.toJson();
   writeNotNull('_uri', instance.uriElement?.toJson());
@@ -407,14 +388,10 @@ _$_ImplementationGuidePackage _$_$_ImplementationGuidePackageFromJson(
   return _$_ImplementationGuidePackage(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     name: json['name'] as String,
     description: json['description'] as String?,
@@ -437,9 +414,9 @@ Map<String, dynamic> _$_$_ImplementationGuidePackageToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['name'] = instance.name;
   writeNotNull('description', instance.description);
   val['resource'] = instance.resource.map((e) => e.toJson()).toList();
@@ -451,14 +428,10 @@ _$_ImplementationGuideGlobal _$_$_ImplementationGuideGlobalFromJson(
   return _$_ImplementationGuideGlobal(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     type: Code.fromJson(json['type']),
     typeElement: json['_type'] == null
@@ -480,9 +453,9 @@ Map<String, dynamic> _$_$_ImplementationGuideGlobalToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['type'] = instance.type.toJson();
   writeNotNull('_type', instance.typeElement?.toJson());
   val['profile'] = instance.profile.toJson();
@@ -494,29 +467,23 @@ _$_ImplementationGuidePage _$_$_ImplementationGuidePageFromJson(
   return _$_ImplementationGuidePage(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     source: FhirUri.fromJson(json['source']),
     name: json['name'] as String,
     kind: _$enumDecode(_$PageKindEnumMap, json['kind'],
         unknownValue: PageKind.unknown),
-    type: (json['type'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Code.fromJson(e))
-        .toList(),
+    type:
+        (json['type'] as List<dynamic>?)?.map((e) => Code.fromJson(e)).toList(),
     package:
-        (json['package'] as List<dynamic>?)?.map((e) => e as String?).toList(),
+        (json['package'] as List<dynamic>?)?.map((e) => e as String).toList(),
     format: json['format'] == null ? null : Code.fromJson(json['format']),
     page: (json['page'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ImplementationGuidePage.fromJson(e as Map<String, dynamic>))
+        ?.map(
+            (e) => ImplementationGuidePage.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -533,16 +500,16 @@ Map<String, dynamic> _$_$_ImplementationGuidePageToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['source'] = instance.source.toJson();
   val['name'] = instance.name;
   val['kind'] = _$PageKindEnumMap[instance.kind];
-  writeNotNull('type', instance.type?.map((e) => e?.toJson()).toList());
+  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull('package', instance.package);
   writeNotNull('format', instance.format?.toJson());
-  writeNotNull('page', instance.page?.map((e) => e?.toJson()).toList());
+  writeNotNull('page', instance.page?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -563,14 +530,10 @@ _$_ImplementationGuidePackageResource
   return _$_ImplementationGuidePackageResource(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     purpose: _$enumDecode(_$ResourcePurposeEnumMap, json['purpose'],
         unknownValue: ResourcePurpose.unknown),
@@ -603,9 +566,9 @@ Map<String, dynamic> _$_$_ImplementationGuidePackageResourceToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['purpose'] = _$ResourcePurposeEnumMap[instance.purpose];
   writeNotNull('name', instance.name);
   writeNotNull('description', instance.description);
@@ -649,18 +612,13 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     url: FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
@@ -690,9 +648,7 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
     contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestScriptContact.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => TestScriptContact.fromJson(e as Map<String, dynamic>))
         .toList(),
     date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
@@ -703,9 +659,7 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
     useContext: (json['useContext'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     requirements: json['requirements'] as String?,
     copyright: json['copyright'] as String?,
@@ -719,26 +673,19 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
         ? null
         : Boolean.fromJson(json['multiserver']),
     fixture: (json['fixture'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestScriptFixture.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => TestScriptFixture.fromJson(e as Map<String, dynamic>))
         .toList(),
     profile: (json['profile'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     variable: (json['variable'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestScriptVariable.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => TestScriptVariable.fromJson(e as Map<String, dynamic>))
         .toList(),
     setup: json['setup'] == null
         ? null
         : TestScriptSetup.fromJson(json['setup'] as Map<String, dynamic>),
     test: (json['test'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestScriptTest.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => TestScriptTest.fromJson(e as Map<String, dynamic>))
         .toList(),
     teardown: json['teardown'] == null
         ? null
@@ -765,11 +712,11 @@ Map<String, dynamic> _$_$_TestScriptToJson(_$_TestScript instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['url'] = instance.url.toJson();
   writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('version', instance.version);
@@ -782,23 +729,23 @@ Map<String, dynamic> _$_$_TestScriptToJson(_$_TestScript instance) {
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('_publisher', instance.publisherElement?.toJson());
-  writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
+  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull(
-      'useContext', instance.useContext?.map((e) => e?.toJson()).toList());
+      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
   writeNotNull('requirements', instance.requirements);
   writeNotNull('copyright', instance.copyright);
   writeNotNull('_copyright', instance.copyrightElement?.toJson());
   writeNotNull('metadata', instance.metadata?.toJson());
   writeNotNull('multiserver', instance.multiserver?.toJson());
-  writeNotNull('fixture', instance.fixture?.map((e) => e?.toJson()).toList());
-  writeNotNull('profile', instance.profile?.map((e) => e?.toJson()).toList());
-  writeNotNull('variable', instance.variable?.map((e) => e?.toJson()).toList());
+  writeNotNull('fixture', instance.fixture?.map((e) => e.toJson()).toList());
+  writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
+  writeNotNull('variable', instance.variable?.map((e) => e.toJson()).toList());
   writeNotNull('setup', instance.setup?.toJson());
-  writeNotNull('test', instance.test?.map((e) => e?.toJson()).toList());
+  writeNotNull('test', instance.test?.map((e) => e.toJson()).toList());
   writeNotNull('teardown', instance.teardown?.toJson());
   return val;
 }
@@ -814,19 +761,14 @@ _$_TestScriptContact _$_$_TestScriptContactFromJson(Map<String, dynamic> json) {
   return _$_TestScriptContact(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     name: json['name'] as String?,
     telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -843,11 +785,11 @@ Map<String, dynamic> _$_$_TestScriptContactToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -857,19 +799,13 @@ _$_TestScriptMetadata _$_$_TestScriptMetadataFromJson(
   return _$_TestScriptMetadata(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     link: (json['link'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestScriptMetadataLink.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => TestScriptMetadataLink.fromJson(e as Map<String, dynamic>))
         .toList(),
     capability: (json['capability'] as List<dynamic>)
         .map((e) =>
@@ -890,10 +826,10 @@ Map<String, dynamic> _$_$_TestScriptMetadataToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('link', instance.link?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
   val['capability'] = instance.capability.map((e) => e.toJson()).toList();
   return val;
 }
@@ -903,14 +839,10 @@ _$_TestScriptMetadataLink _$_$_TestScriptMetadataLinkFromJson(
   return _$_TestScriptMetadataLink(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     url: FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
@@ -935,9 +867,9 @@ Map<String, dynamic> _$_$_TestScriptMetadataLinkToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['url'] = instance.url.toJson();
   writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('description', instance.description);
@@ -950,14 +882,10 @@ _$_TestScriptMetadataCapability _$_$_TestScriptMetadataCapabilityFromJson(
   return _$_TestScriptMetadataCapability(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     required_:
         json['required'] == null ? null : Boolean.fromJson(json['required']),
@@ -980,7 +908,7 @@ _$_TestScriptMetadataCapability _$_$_TestScriptMetadataCapabilityFromJson(
         ? null
         : Element.fromJson(json['_destination'] as Map<String, dynamic>),
     link: (json['link'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
+        ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     linkElement: (json['_link'] as List<dynamic>?)
         ?.map((e) =>
@@ -1003,9 +931,9 @@ Map<String, dynamic> _$_$_TestScriptMetadataCapabilityToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('required', instance.required_?.toJson());
   writeNotNull('_required', instance.requiredElement?.toJson());
   writeNotNull('validated', instance.validated?.toJson());
@@ -1014,7 +942,7 @@ Map<String, dynamic> _$_$_TestScriptMetadataCapabilityToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('destination', instance.destination?.toJson());
   writeNotNull('_destination', instance.destinationElement?.toJson());
-  writeNotNull('link', instance.link?.map((e) => e?.toJson()).toList());
+  writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
   writeNotNull('_link', instance.linkElement?.map((e) => e?.toJson()).toList());
   val['conformance'] = instance.conformance.toJson();
   return val;
@@ -1024,14 +952,10 @@ _$_TestScriptFixture _$_$_TestScriptFixtureFromJson(Map<String, dynamic> json) {
   return _$_TestScriptFixture(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     autocreate: json['autocreate'] == null
         ? null
@@ -1063,9 +987,9 @@ Map<String, dynamic> _$_$_TestScriptFixtureToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('autocreate', instance.autocreate?.toJson());
   writeNotNull('_autocreate', instance.autocreateElement?.toJson());
   writeNotNull('autodelete', instance.autodelete?.toJson());
@@ -1079,14 +1003,10 @@ _$_TestScriptVariable _$_$_TestScriptVariableFromJson(
   return _$_TestScriptVariable(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     name: json['name'] as String,
     nameElement: json['_name'] == null
@@ -1119,9 +1039,9 @@ Map<String, dynamic> _$_$_TestScriptVariableToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['name'] = instance.name;
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('headerField', instance.headerField);
@@ -1137,14 +1057,10 @@ _$_TestScriptSetup _$_$_TestScriptSetupFromJson(Map<String, dynamic> json) {
   return _$_TestScriptSetup(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     metadata: json['metadata'] == null
         ? null
@@ -1166,9 +1082,9 @@ Map<String, dynamic> _$_$_TestScriptSetupToJson(_$_TestScriptSetup instance) {
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('metadata', instance.metadata?.toJson());
   val['action'] = instance.action.map((e) => e.toJson()).toList();
   return val;
@@ -1179,17 +1095,13 @@ _$_TestScriptSetupAction _$_$_TestScriptSetupActionFromJson(
   return _$_TestScriptSetupAction(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String?)
+        ?.map((e) => e as String)
         .toList(),
     operation: json['operation'] == null
         ? null
@@ -1214,9 +1126,9 @@ Map<String, dynamic> _$_$_TestScriptSetupActionToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('operation', instance.operation?.toJson());
   writeNotNull('assert', instance.assert_?.toJson());
@@ -1228,17 +1140,13 @@ _$_TestScriptActionOperation _$_$_TestScriptActionOperationFromJson(
   return _$_TestScriptActionOperation(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String?)
+        ?.map((e) => e as String)
         .toList(),
     type: json['type'] == null
         ? null
@@ -1283,10 +1191,8 @@ _$_TestScriptActionOperation _$_$_TestScriptActionOperationFromJson(
         ? null
         : Element.fromJson(json['_params'] as Map<String, dynamic>),
     requestHeader: (json['requestHeader'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestScriptOperationRequestHeader.fromJson(
-                e as Map<String, dynamic>))
+        ?.map((e) => TestScriptOperationRequestHeader.fromJson(
+            e as Map<String, dynamic>))
         .toList(),
     responseId:
         json['responseId'] == null ? null : Id.fromJson(json['responseId']),
@@ -1320,9 +1226,9 @@ Map<String, dynamic> _$_$_TestScriptActionOperationToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
@@ -1342,8 +1248,8 @@ Map<String, dynamic> _$_$_TestScriptActionOperationToJson(
   writeNotNull('_encodeRequestUrl', instance.encodeRequestUrlElement?.toJson());
   writeNotNull('params', instance.params);
   writeNotNull('_params', instance.paramsElement?.toJson());
-  writeNotNull('requestHeader',
-      instance.requestHeader?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'requestHeader', instance.requestHeader?.map((e) => e.toJson()).toList());
   writeNotNull('responseId', instance.responseId?.toJson());
   writeNotNull('_responseId', instance.responseIdElement?.toJson());
   writeNotNull('sourceId', instance.sourceId?.toJson());
@@ -1383,9 +1289,7 @@ _$_TestScriptOperationRequestHeader
   return _$_TestScriptOperationRequestHeader(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: json['modifierExtension'] == null
         ? null
@@ -1414,7 +1318,7 @@ Map<String, dynamic> _$_$_TestScriptOperationRequestHeaderToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   val['field'] = instance.field;
   writeNotNull('_field', instance.fieldElement?.toJson());
@@ -1428,14 +1332,10 @@ _$_TestScriptActionAssert _$_$_TestScriptActionAssertFromJson(
   return _$_TestScriptActionAssert(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     label: json['label'] as String?,
     description: json['description'] as String?,
@@ -1533,9 +1433,9 @@ Map<String, dynamic> _$_$_TestScriptActionAssertToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('label', instance.label);
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
@@ -1623,14 +1523,10 @@ _$_TestScriptTest _$_$_TestScriptTestFromJson(Map<String, dynamic> json) {
   return _$_TestScriptTest(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     name: json['name'] as String?,
     nameElement: json['_name'] == null
@@ -1660,9 +1556,9 @@ Map<String, dynamic> _$_$_TestScriptTestToJson(_$_TestScriptTest instance) {
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('description', instance.description);
@@ -1677,14 +1573,10 @@ _$_TestScriptTeardown _$_$_TestScriptTeardownFromJson(
   return _$_TestScriptTeardown(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     action: (json['action'] as List<dynamic>)
         .map(
@@ -1705,9 +1597,9 @@ Map<String, dynamic> _$_$_TestScriptTeardownToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['action'] = instance.action.map((e) => e.toJson()).toList();
   return val;
 }
@@ -1717,17 +1609,13 @@ _$_TestScriptTeardownAction _$_$_TestScriptTeardownActionFromJson(
   return _$_TestScriptTeardownAction(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String?)
+        ?.map((e) => e as String)
         .toList(),
     operation: json['operation'] == null
         ? null
@@ -1748,9 +1636,9 @@ Map<String, dynamic> _$_$_TestScriptTeardownActionToJson(
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
   writeNotNull('operation', instance.operation?.toJson());
   return val;

@@ -22,10 +22,10 @@ abstract class Observation with Resource implements _$Observation {
     Id? id,
     Meta? meta,
     Narrative? text,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
         ObservationStatus? status,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     required CodeableConcept code,
     Reference? subject,
     Reference? encounter,
@@ -43,19 +43,19 @@ abstract class Observation with Resource implements _$Observation {
     FhirDateTime? valueDateTime,
     Period? valuePeriod,
     CodeableConcept? dataAbsentReason,
-    List<Reference?>? hasMember,
-    List<Annotation?>? note,
-    List<ObservationReferenceRange?>? referenceRange,
-    List<ObservationComponent?>? component,
-    List<CodeableConcept?>? interpretation,
-    List<CodeableConcept?>? bodySite,
+    List<Reference>? hasMember,
+    List<Annotation>? note,
+    List<ObservationReferenceRange>? referenceRange,
+    List<ObservationComponent>? component,
+    List<CodeableConcept>? interpretation,
+    List<CodeableConcept>? bodySite,
     Reference? device,
     Instant? issued,
   }) = _Observation;
 
   factory Observation.laboratoryResult({
     required ObservationStatus status,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     required CodeableConcept code,
     required Reference subject,
     FhirDateTime? effectiveDateTime,
@@ -591,7 +591,7 @@ abstract class ObservationReferenceRange
     Quantity? low,
     Quantity? high,
     CodeableConcept? type,
-    List<CodeableConcept?>? appliesTo,
+    List<CodeableConcept>? appliesTo,
     Range? age,
     String? text,
   }) = _ObservationReferenceRange;
@@ -620,8 +620,8 @@ abstract class ObservationComponent implements _$ObservationComponent {
 
   factory ObservationComponent({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
     Quantity? valueQuantity,
     CodeableConcept? valueCodeableConcept,
@@ -635,8 +635,8 @@ abstract class ObservationComponent implements _$ObservationComponent {
     FhirDateTime? valueDateTime,
     Period? valuePeriod,
     CodeableConcept? dataAbsentReason,
-    List<CodeableConcept?>? interpretation,
-    List<ObservationReferenceRange?>? referenceRange,
+    List<CodeableConcept>? interpretation,
+    List<ObservationReferenceRange>? referenceRange,
   }) = _ObservationComponent;
 
   /// Produces a Yaml formatted String version of the object

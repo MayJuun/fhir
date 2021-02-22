@@ -28,14 +28,14 @@ class _$MediaTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: MediaType.unknown)
           required MediaType type,
       CodeableConcept? subtype,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       Reference? subject,
       @JsonKey(name: 'operator')
           Reference? operator_,
@@ -109,14 +109,14 @@ mixin _$Media {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(unknownEnumValue: MediaType.unknown)
   MediaType get type;
   CodeableConcept? get subtype;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   Reference? get subject;
   @JsonKey(name: 'operator')
   Reference? get operator_;
@@ -159,14 +159,14 @@ abstract class $MediaCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: MediaType.unknown)
           MediaType type,
       CodeableConcept? subtype,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       Reference? subject,
       @JsonKey(name: 'operator')
           Reference? operator_,
@@ -262,19 +262,19 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as MediaType,
       subtype:
           subtype == freezed ? _value.subtype : subtype as CodeableConcept?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       operator_:
           operator_ == freezed ? _value.operator_ : operator_ as Reference?,
@@ -473,14 +473,14 @@ abstract class _$MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: MediaType.unknown)
           MediaType type,
       CodeableConcept? subtype,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       Reference? subject,
       @JsonKey(name: 'operator')
           Reference? operator_,
@@ -591,19 +591,19 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as MediaType,
       subtype:
           subtype == freezed ? _value.subtype : subtype as CodeableConcept?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       operator_:
           operator_ == freezed ? _value.operator_ : operator_ as Reference?,
@@ -704,19 +704,19 @@ class _$_Media extends _Media {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: MediaType.unknown)
   final MediaType type;
   @override
   final CodeableConcept? subtype;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final Reference? subject;
   @override
@@ -891,14 +891,14 @@ abstract class _Media extends Media {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: MediaType.unknown)
           required MediaType type,
       CodeableConcept? subtype,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       Reference? subject,
       @JsonKey(name: 'operator')
           Reference? operator_,
@@ -942,19 +942,19 @@ abstract class _Media extends Media {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: MediaType.unknown)
   MediaType get type;
   @override
   CodeableConcept? get subtype;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   Reference? get subject;
   @override
@@ -1444,8 +1444,8 @@ class _$BundleTearOff {
       UnsignedInt? total,
       @JsonKey(name: '_total')
           Element? totalElement,
-      List<BundleLink?>? link,
-      List<BundleEntry?>? entry,
+      List<BundleLink>? link,
+      List<BundleEntry>? entry,
       Signature? signature}) {
     return _Bundle(
       resourceType: resourceType,
@@ -1492,8 +1492,8 @@ mixin _$Bundle {
   UnsignedInt? get total;
   @JsonKey(name: '_total')
   Element? get totalElement;
-  List<BundleLink?>? get link;
-  List<BundleEntry?>? get entry;
+  List<BundleLink>? get link;
+  List<BundleEntry>? get entry;
   Signature? get signature;
 
   Map<String, dynamic> toJson();
@@ -1523,8 +1523,8 @@ abstract class $BundleCopyWith<$Res> {
       UnsignedInt? total,
       @JsonKey(name: '_total')
           Element? totalElement,
-      List<BundleLink?>? link,
-      List<BundleEntry?>? entry,
+      List<BundleLink>? link,
+      List<BundleEntry>? entry,
       Signature? signature});
 
   $MetaCopyWith<$Res>? get meta;
@@ -1583,8 +1583,8 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
       totalElement: totalElement == freezed
           ? _value.totalElement
           : totalElement as Element?,
-      link: link == freezed ? _value.link : link as List<BundleLink?>?,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry?>?,
+      link: link == freezed ? _value.link : link as List<BundleLink>?,
+      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>?,
       signature:
           signature == freezed ? _value.signature : signature as Signature?,
     ));
@@ -1680,8 +1680,8 @@ abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       UnsignedInt? total,
       @JsonKey(name: '_total')
           Element? totalElement,
-      List<BundleLink?>? link,
-      List<BundleEntry?>? entry,
+      List<BundleLink>? link,
+      List<BundleEntry>? entry,
       Signature? signature});
 
   @override
@@ -1747,8 +1747,8 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
       totalElement: totalElement == freezed
           ? _value.totalElement
           : totalElement as Element?,
-      link: link == freezed ? _value.link : link as List<BundleLink?>?,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry?>?,
+      link: link == freezed ? _value.link : link as List<BundleLink>?,
+      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>?,
       signature:
           signature == freezed ? _value.signature : signature as Signature?,
     ));
@@ -1814,9 +1814,9 @@ class _$_Bundle extends _Bundle {
   @JsonKey(name: '_total')
   final Element? totalElement;
   @override
-  final List<BundleLink?>? link;
+  final List<BundleLink>? link;
   @override
-  final List<BundleEntry?>? entry;
+  final List<BundleEntry>? entry;
   @override
   final Signature? signature;
 
@@ -1916,8 +1916,8 @@ abstract class _Bundle extends Bundle {
       UnsignedInt? total,
       @JsonKey(name: '_total')
           Element? totalElement,
-      List<BundleLink?>? link,
-      List<BundleEntry?>? entry,
+      List<BundleLink>? link,
+      List<BundleEntry>? entry,
       Signature? signature}) = _$_Bundle;
 
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
@@ -1951,9 +1951,9 @@ abstract class _Bundle extends Bundle {
   @JsonKey(name: '_total')
   Element? get totalElement;
   @override
-  List<BundleLink?>? get link;
+  List<BundleLink>? get link;
   @override
-  List<BundleEntry?>? get entry;
+  List<BundleEntry>? get entry;
   @override
   Signature? get signature;
   @override
@@ -1971,9 +1971,9 @@ class _$BundleLinkTearOff {
 
   _BundleLink call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       required String relation,
       @JsonKey(name: '_relation') Element? relationElement,
       required FhirUri url,
@@ -2002,10 +2002,10 @@ const $BundleLink = _$BundleLinkTearOff();
 mixin _$BundleLink {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   String get relation;
   @JsonKey(name: '_relation')
   Element? get relationElement;
@@ -2025,9 +2025,9 @@ abstract class $BundleLinkCopyWith<$Res> {
       _$BundleLinkCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String relation,
       @JsonKey(name: '_relation') Element? relationElement,
       FhirUri url,
@@ -2060,13 +2060,13 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       relation: relation == freezed ? _value.relation : relation as String,
       relationElement: relationElement == freezed
           ? _value.relationElement
@@ -2108,9 +2108,9 @@ abstract class _$BundleLinkCopyWith<$Res> implements $BundleLinkCopyWith<$Res> {
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String relation,
       @JsonKey(name: '_relation') Element? relationElement,
       FhirUri url,
@@ -2147,13 +2147,13 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       relation: relation == freezed ? _value.relation : relation as String,
       relationElement: relationElement == freezed
           ? _value.relationElement
@@ -2187,12 +2187,12 @@ class _$_BundleLink extends _BundleLink {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   final String relation;
   @override
@@ -2264,9 +2264,9 @@ abstract class _BundleLink extends BundleLink {
   _BundleLink._() : super._();
   factory _BundleLink(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       required String relation,
       @JsonKey(name: '_relation') Element? relationElement,
       required FhirUri url,
@@ -2279,12 +2279,12 @@ abstract class _BundleLink extends BundleLink {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   String get relation;
   @override
@@ -2310,10 +2310,10 @@ class _$BundleEntryTearOff {
 
   _BundleEntry call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      List<BundleLink?>? link,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      List<BundleLink>? link,
       FhirUri? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
       Resource? resource,
@@ -2347,11 +2347,11 @@ const $BundleEntry = _$BundleEntryTearOff();
 mixin _$BundleEntry {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
-  List<BundleLink?>? get link;
+  List<String>? get fhirComments;
+  List<BundleLink>? get link;
   FhirUri? get fullUrl;
   @JsonKey(name: '_fullUrl')
   Element? get fullUrlElement;
@@ -2372,10 +2372,10 @@ abstract class $BundleEntryCopyWith<$Res> {
       _$BundleEntryCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      List<BundleLink?>? link,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      List<BundleLink>? link,
       FhirUri? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
       Resource? resource,
@@ -2415,14 +2415,14 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
-      link: link == freezed ? _value.link : link as List<BundleLink?>?,
+          : fhirComments as List<String>?,
+      link: link == freezed ? _value.link : link as List<BundleLink>?,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri?,
       fullUrlElement: fullUrlElement == freezed
           ? _value.fullUrlElement
@@ -2491,10 +2491,10 @@ abstract class _$BundleEntryCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      List<BundleLink?>? link,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      List<BundleLink>? link,
       FhirUri? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
       Resource? resource,
@@ -2540,14 +2540,14 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
-      link: link == freezed ? _value.link : link as List<BundleLink?>?,
+          : fhirComments as List<String>?,
+      link: link == freezed ? _value.link : link as List<BundleLink>?,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri?,
       fullUrlElement: fullUrlElement == freezed
           ? _value.fullUrlElement
@@ -2588,14 +2588,14 @@ class _$_BundleEntry extends _BundleEntry {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
-  final List<BundleLink?>? link;
+  final List<BundleLink>? link;
   @override
   final FhirUri? fullUrl;
   @override
@@ -2681,10 +2681,10 @@ abstract class _BundleEntry extends BundleEntry {
   _BundleEntry._() : super._();
   factory _BundleEntry(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      List<BundleLink?>? link,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      List<BundleLink>? link,
       FhirUri? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
       Resource? resource,
@@ -2699,14 +2699,14 @@ abstract class _BundleEntry extends BundleEntry {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
-  List<BundleLink?>? get link;
+  List<BundleLink>? get link;
   @override
   FhirUri? get fullUrl;
   @override
@@ -2735,9 +2735,9 @@ class _$BundleEntrySearchTearOff {
 
   _BundleEntrySearch call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Decimal? score,
@@ -2766,10 +2766,10 @@ const $BundleEntrySearch = _$BundleEntrySearchTearOff();
 mixin _$BundleEntrySearch {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @JsonKey(unknownEnumValue: SearchMode.unknown)
   SearchMode? get mode;
   @JsonKey(name: '_mode')
@@ -2790,9 +2790,9 @@ abstract class $BundleEntrySearchCopyWith<$Res> {
       _$BundleEntrySearchCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Decimal? score,
@@ -2826,13 +2826,13 @@ class _$BundleEntrySearchCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       mode: mode == freezed ? _value.mode : mode as SearchMode?,
       modeElement:
           modeElement == freezed ? _value.modeElement : modeElement as Element?,
@@ -2875,9 +2875,9 @@ abstract class _$BundleEntrySearchCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Decimal? score,
@@ -2915,13 +2915,13 @@ class __$BundleEntrySearchCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       mode: mode == freezed ? _value.mode : mode as SearchMode?,
       modeElement:
           modeElement == freezed ? _value.modeElement : modeElement as Element?,
@@ -2955,12 +2955,12 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   @JsonKey(unknownEnumValue: SearchMode.unknown)
   final SearchMode? mode;
@@ -3032,9 +3032,9 @@ abstract class _BundleEntrySearch extends BundleEntrySearch {
   _BundleEntrySearch._() : super._();
   factory _BundleEntrySearch(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Decimal? score,
@@ -3047,12 +3047,12 @@ abstract class _BundleEntrySearch extends BundleEntrySearch {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: SearchMode.unknown)
   SearchMode? get mode;
@@ -3080,10 +3080,10 @@ class _$BundleEntryRequestTearOff {
   _BundleEntryRequest call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String?>? fhirComments,
+          List<String>? fhirComments,
       @JsonKey(unknownEnumValue: RequestMethod.unknown)
           required RequestMethod method,
       @JsonKey(name: '_method')
@@ -3135,10 +3135,10 @@ const $BundleEntryRequest = _$BundleEntryRequestTearOff();
 mixin _$BundleEntryRequest {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @JsonKey(unknownEnumValue: RequestMethod.unknown)
   RequestMethod get method;
   @JsonKey(name: '_method')
@@ -3171,9 +3171,9 @@ abstract class $BundleEntryRequestCopyWith<$Res> {
       _$BundleEntryRequestCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: RequestMethod.unknown) RequestMethod method,
       @JsonKey(name: '_method') Element? methodElement,
       FhirUri url,
@@ -3227,13 +3227,13 @@ class _$BundleEntryRequestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       method: method == freezed ? _value.method : method as RequestMethod,
       methodElement: methodElement == freezed
           ? _value.methodElement
@@ -3340,9 +3340,9 @@ abstract class _$BundleEntryRequestCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: RequestMethod.unknown) RequestMethod method,
       @JsonKey(name: '_method') Element? methodElement,
       FhirUri url,
@@ -3404,13 +3404,13 @@ class __$BundleEntryRequestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       method: method == freezed ? _value.method : method as RequestMethod,
       methodElement: methodElement == freezed
           ? _value.methodElement
@@ -3472,12 +3472,12 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   @JsonKey(unknownEnumValue: RequestMethod.unknown)
   final RequestMethod method;
@@ -3602,10 +3602,10 @@ abstract class _BundleEntryRequest extends BundleEntryRequest {
   factory _BundleEntryRequest(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String?>? fhirComments,
+          List<String>? fhirComments,
       @JsonKey(unknownEnumValue: RequestMethod.unknown)
           required RequestMethod method,
       @JsonKey(name: '_method')
@@ -3633,12 +3633,12 @@ abstract class _BundleEntryRequest extends BundleEntryRequest {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: RequestMethod.unknown)
   RequestMethod get method;
@@ -3685,9 +3685,9 @@ class _$BundleEntryResponseTearOff {
 
   _BundleEntryResponse call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       required String status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirUri? location,
@@ -3724,10 +3724,10 @@ const $BundleEntryResponse = _$BundleEntryResponseTearOff();
 mixin _$BundleEntryResponse {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   String get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -3753,9 +3753,9 @@ abstract class $BundleEntryResponseCopyWith<$Res> {
       _$BundleEntryResponseCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirUri? location,
@@ -3799,13 +3799,13 @@ class _$BundleEntryResponseCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       status: status == freezed ? _value.status : status as String,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -3880,9 +3880,9 @@ abstract class _$BundleEntryResponseCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirUri? location,
@@ -3932,13 +3932,13 @@ class __$BundleEntryResponseCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       status: status == freezed ? _value.status : status as String,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -3986,12 +3986,12 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   final String status;
   @override
@@ -4089,9 +4089,9 @@ abstract class _BundleEntryResponse extends BundleEntryResponse {
   _BundleEntryResponse._() : super._();
   factory _BundleEntryResponse(
           {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
           required String status,
           @JsonKey(name: '_status') Element? statusElement,
           FhirUri? location,
@@ -4109,12 +4109,12 @@ abstract class _BundleEntryResponse extends BundleEntryResponse {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   String get status;
   @override
@@ -4160,11 +4160,11 @@ class _$BasicTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       required CodeableConcept code,
       Reference? subject,
       Reference? author,
@@ -4213,11 +4213,11 @@ mixin _$Basic {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<Identifier?>? get identifier;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
   CodeableConcept get code;
   Reference? get subject;
   Reference? get author;
@@ -4246,11 +4246,11 @@ abstract class $BasicCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       CodeableConcept code,
       Reference? subject,
       Reference? author,
@@ -4315,16 +4315,16 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       author: author == freezed ? _value.author : author as Reference?,
@@ -4437,11 +4437,11 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       CodeableConcept code,
       Reference? subject,
       Reference? author,
@@ -4515,16 +4515,16 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       author: author == freezed ? _value.author : author as Reference?,
@@ -4588,14 +4588,14 @@ class _$_Basic extends _Basic {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final CodeableConcept code;
   @override
@@ -4711,11 +4711,11 @@ abstract class _Basic extends Basic {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       required CodeableConcept code,
       Reference? subject,
       Reference? author,
@@ -4745,14 +4745,14 @@ abstract class _Basic extends Basic {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   CodeableConcept get code;
   @override

@@ -27,14 +27,14 @@ abstract class Goal with Resource implements _$Goal {
     CodeableConcept? achievementStatus,
     required CodeableConcept description,
     required Reference subject,
-    List<GoalTarget?>? target,
+    List<GoalTarget>? target,
   }) = _Goal;
 
   factory Goal.simple({
     required GoalLifecycleStatus lifecycleStatus,
     required CodeableConcept description,
     required Reference subject,
-    List<GoalTarget?>? target,
+    List<GoalTarget>? target,
   }) =>
       Goal(
         lifecycleStatus: lifecycleStatus,

@@ -16,8 +16,8 @@ abstract class Population implements _$Population {
   Population._();
   factory Population({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Range? ageRange,
     CodeableConcept? ageCodeableConcept,
     CodeableConcept? gender,
@@ -47,13 +47,13 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
   ProductShelfLife._();
   factory ProductShelfLife({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     Quantity? periodQuantity,
     String? periodString,
     @JsonKey(name: '_periodString') Element? periodStringElement,
-    List<CodeableConcept?>? specialPrecautionsForStorage,
+    List<CodeableConcept>? specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
   /// Produces a Yaml formatted String version of the object
@@ -78,8 +78,8 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
   ProdCharacteristic._();
   factory ProdCharacteristic({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Quantity? height,
     Quantity? width,
     Quantity? depth,
@@ -88,11 +88,11 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
     Quantity? externalDiameter,
     String? shape,
     @JsonKey(name: '_shape') Element? shapeElement,
-    List<String?>? color,
+    List<String>? color,
     @JsonKey(name: '_color') List<Element?>? colorElement,
-    List<String?>? imprint,
+    List<String>? imprint,
     @JsonKey(name: '_imprint') List<Element?>? imprintElement,
-    List<Attachment?>? image,
+    List<Attachment>? image,
     CodeableConcept? scoring,
   }) = _ProdCharacteristic;
 
@@ -118,8 +118,8 @@ abstract class MarketingStatus implements _$MarketingStatus {
   MarketingStatus._();
   factory MarketingStatus({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? country,
     CodeableConcept? jurisdiction,
     required CodeableConcept status,
@@ -157,12 +157,12 @@ abstract class Citation implements _$Citation {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -177,11 +177,11 @@ abstract class Citation implements _$Citation {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -191,8 +191,8 @@ abstract class Citation implements _$Citation {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    List<Identifier?>? relatedIdentifier,
-    List<CitationSummary?>? summary,
+    List<Identifier>? relatedIdentifier,
+    List<CitationSummary>? summary,
     FhirDateTime? dateCited,
     @JsonKey(name: '_dateCited') Element? dateCitedElement,
     CitationVariantCitation? variantCitation,
@@ -201,21 +201,21 @@ abstract class Citation implements _$Citation {
     CitationPublicationInfo? publicationInfo,
     Markdown? articleTitle,
     @JsonKey(name: '_articleTitle') Element? articleTitleElement,
-    List<CitationAlternativeTitle?>? alternativeTitle,
+    List<CitationAlternativeTitle>? alternativeTitle,
     CitationPagination? pagination,
-    List<CitationArticleUrl?>? articleUrl,
+    List<CitationArticleUrl>? articleUrl,
     @JsonKey(name: 'abstract') Markdown? abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
     Markdown? abstractCopyright,
     @JsonKey(name: '_abstractCopyright') Element? abstractCopyrightElement,
-    List<CitationAlternativeAbstract?>? alternativeAbstract,
+    List<CitationAlternativeAbstract>? alternativeAbstract,
     CitationContributorship? contributorship,
     CodeableConcept? articleLanguage,
-    List<CitationAlternativeForm?>? alternativeForm,
-    List<CodeableConcept?>? classifier,
-    List<CitationKeywordList?>? keywordList,
-    List<RelatedArtifact?>? relatedArtifact,
-    List<Annotation?>? note,
+    List<CitationAlternativeForm>? alternativeForm,
+    List<CodeableConcept>? classifier,
+    List<CitationKeywordList>? keywordList,
+    List<RelatedArtifact>? relatedArtifact,
+    List<Annotation>? note,
     CitationMedlinePubMed? medlinePubMed,
   }) = _Citation;
 
@@ -241,8 +241,8 @@ abstract class CitationSummary implements _$CitationSummary {
   CitationSummary._();
   factory CitationSummary({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? style,
     Markdown? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -270,8 +270,8 @@ abstract class CitationVariantCitation implements _$CitationVariantCitation {
   CitationVariantCitation._();
   factory CitationVariantCitation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -300,9 +300,9 @@ abstract class CitationJournal implements _$CitationJournal {
   CitationJournal._();
   factory CitationJournal({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     String? country,
     @JsonKey(name: '_country') Element? countryElement,
     CitationJournalIssue? journalIssue,
@@ -332,8 +332,8 @@ abstract class CitationJournalIssue implements _$CitationJournalIssue {
   CitationJournalIssue._();
   factory CitationJournalIssue({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? citedMedium,
     String? volume,
     @JsonKey(name: '_volume') Element? volumeElement,
@@ -364,8 +364,8 @@ abstract class CitationPublicationDate implements _$CitationPublicationDate {
   CitationPublicationDate._();
   factory CitationPublicationDate({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? year,
@@ -402,8 +402,8 @@ abstract class CitationPublicationInfo implements _$CitationPublicationInfo {
   CitationPublicationInfo._();
   factory CitationPublicationInfo({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CitationPublishedIn? publishedIn,
     FhirDateTime? entryDate,
     @JsonKey(name: '_entryDate') Element? entryDateElement,
@@ -435,10 +435,10 @@ abstract class CitationPublishedIn implements _$CitationPublishedIn {
   CitationPublishedIn._();
   factory CitationPublishedIn({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Reference? publisher,
@@ -470,8 +470,8 @@ abstract class CitationAlternativeTitle implements _$CitationAlternativeTitle {
   CitationAlternativeTitle._();
   factory CitationAlternativeTitle({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     CodeableConcept? language,
     Markdown? title,
@@ -501,8 +501,8 @@ abstract class CitationPagination implements _$CitationPagination {
   CitationPagination._();
   factory CitationPagination({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? pageString,
     @JsonKey(name: '_pageString') Element? pageStringElement,
     String? firstPage,
@@ -533,8 +533,8 @@ abstract class CitationArticleUrl implements _$CitationArticleUrl {
   CitationArticleUrl._();
   factory CitationArticleUrl({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -563,8 +563,8 @@ abstract class CitationAlternativeAbstract
   CitationAlternativeAbstract._();
   factory CitationAlternativeAbstract({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     CodeableConcept? language,
     @JsonKey(name: 'abstract') Markdown? abstract_,
@@ -596,12 +596,12 @@ abstract class CitationContributorship implements _$CitationContributorship {
   CitationContributorship._();
   factory CitationContributorship({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Boolean? complete,
     @JsonKey(name: '_complete') Element? completeElement,
-    List<CitationEntry?>? entry,
-    List<CitationSummary1?>? summary,
+    List<CitationEntry>? entry,
+    List<CitationSummary1>? summary,
   }) = _CitationContributorship;
 
   /// Produces a Yaml formatted String version of the object
@@ -626,18 +626,18 @@ abstract class CitationEntry implements _$CitationEntry {
   CitationEntry._();
   factory CitationEntry({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     HumanName? name,
     String? initials,
     @JsonKey(name: '_initials') Element? initialsElement,
     String? collectiveName,
     @JsonKey(name: '_collectiveName') Element? collectiveNameElement,
-    List<Identifier?>? identifier,
-    List<CitationAffiliationInfo?>? affiliationInfo,
-    List<Address?>? address,
-    List<ContactPoint?>? telecom,
-    List<CodeableConcept?>? contribution,
+    List<Identifier>? identifier,
+    List<CitationAffiliationInfo>? affiliationInfo,
+    List<Address>? address,
+    List<ContactPoint>? telecom,
+    List<CodeableConcept>? contribution,
     Boolean? notAnAuthor,
     @JsonKey(name: '_notAnAuthor') Element? notAnAuthorElement,
     Boolean? correspondingAuthor,
@@ -668,13 +668,13 @@ abstract class CitationAffiliationInfo implements _$CitationAffiliationInfo {
   CitationAffiliationInfo._();
   factory CitationAffiliationInfo({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? affiliation,
     @JsonKey(name: '_affiliation') Element? affiliationElement,
     String? role,
     @JsonKey(name: '_role') Element? roleElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
   }) = _CitationAffiliationInfo;
 
   /// Produces a Yaml formatted String version of the object
@@ -699,8 +699,8 @@ abstract class CitationSummary1 implements _$CitationSummary1 {
   CitationSummary1._();
   factory CitationSummary1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     CodeableConcept? style,
     CodeableConcept? source,
@@ -730,8 +730,8 @@ abstract class CitationAlternativeForm implements _$CitationAlternativeForm {
   CitationAlternativeForm._();
   factory CitationAlternativeForm({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? publishingModel,
     CodeableConcept? language,
     CitationJournalIssue1? journalIssue,
@@ -761,8 +761,8 @@ abstract class CitationJournalIssue1 implements _$CitationJournalIssue1 {
   CitationJournalIssue1._();
   factory CitationJournalIssue1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? citedMedium,
     String? volume,
     @JsonKey(name: '_volume') Element? volumeElement,
@@ -793,8 +793,8 @@ abstract class CitationPublicationDate1 implements _$CitationPublicationDate1 {
   CitationPublicationDate1._();
   factory CitationPublicationDate1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? year,
@@ -832,8 +832,8 @@ abstract class CitationPagination1 implements _$CitationPagination1 {
   CitationPagination1._();
   factory CitationPagination1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? pageString,
     @JsonKey(name: '_pageString') Element? pageStringElement,
     String? firstPage,
@@ -864,8 +864,8 @@ abstract class CitationPublicationInfo1 implements _$CitationPublicationInfo1 {
   CitationPublicationInfo1._();
   factory CitationPublicationInfo1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CitationPublishedIn1? publishedIn,
     FhirDateTime? entryDate,
     @JsonKey(name: '_entryDate') Element? entryDateElement,
@@ -898,8 +898,8 @@ abstract class CitationPublishedIn1 implements _$CitationPublishedIn1 {
   CitationPublishedIn1._();
   factory CitationPublishedIn1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -932,8 +932,8 @@ abstract class CitationKeywordList implements _$CitationKeywordList {
   CitationKeywordList._();
   factory CitationKeywordList({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? owner,
     @JsonKey(name: '_owner') Element? ownerElement,
     required List<CitationKeyword> keyword,
@@ -961,8 +961,8 @@ abstract class CitationKeyword implements _$CitationKeyword {
   CitationKeyword._();
   factory CitationKeyword({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Boolean? majorTopic,
     @JsonKey(name: '_majorTopic') Element? majorTopicElement,
     String? value,
@@ -991,8 +991,8 @@ abstract class CitationMedlinePubMed implements _$CitationMedlinePubMed {
   CitationMedlinePubMed._();
   factory CitationMedlinePubMed({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? medlineState,
     CodeableConcept? owner,
     PositiveInt? pmid,
@@ -1005,9 +1005,9 @@ abstract class CitationMedlinePubMed implements _$CitationMedlinePubMed {
     @JsonKey(name: '_dateCompleted') Element? dateCompletedElement,
     Date? dateRevised,
     @JsonKey(name: '_dateRevised') Element? dateRevisedElement,
-    List<CitationPubMedPubDate?>? pubMedPubDate,
+    List<CitationPubMedPubDate>? pubMedPubDate,
     CodeableConcept? publicationState,
-    List<CitationRelatedArticle?>? relatedArticle,
+    List<CitationRelatedArticle>? relatedArticle,
   }) = _CitationMedlinePubMed;
 
   /// Produces a Yaml formatted String version of the object
@@ -1032,8 +1032,8 @@ abstract class CitationPubMedPubDate implements _$CitationPubMedPubDate {
   CitationPubMedPubDate._();
   factory CitationPubMedPubDate({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? publicationState,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -1061,12 +1061,12 @@ abstract class CitationRelatedArticle implements _$CitationRelatedArticle {
   CitationRelatedArticle._();
   factory CitationRelatedArticle({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Reference? citationReference,
     Markdown? citationMarkdown,
     @JsonKey(name: '_citationMarkdown') Element? citationMarkdownElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
   }) = _CitationRelatedArticle;
 
   /// Produces a Yaml formatted String version of the object
@@ -1098,12 +1098,12 @@ abstract class EvidenceReport implements _$EvidenceReport {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -1119,11 +1119,11 @@ abstract class EvidenceReport implements _$EvidenceReport {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -1133,18 +1133,18 @@ abstract class EvidenceReport implements _$EvidenceReport {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    List<Identifier?>? relatedIdentifier,
+    List<Identifier>? relatedIdentifier,
     Reference? citeAs,
     CodeableConcept? type,
-    List<Annotation?>? note,
-    List<RelatedArtifact?>? relatedArtifact,
+    List<Annotation>? note,
+    List<RelatedArtifact>? relatedArtifact,
     required EvidenceReportSubject subject,
-    List<ContactDetail?>? author,
-    List<ContactDetail?>? editor,
-    List<ContactDetail?>? reviewer,
-    List<ContactDetail?>? endorser,
-    List<EvidenceReportRelatesTo?>? relatesTo,
-    List<EvidenceReportSection?>? section,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<EvidenceReportRelatesTo>? relatesTo,
+    List<EvidenceReportSection>? section,
   }) = _EvidenceReport;
 
   /// Produces a Yaml formatted String version of the object
@@ -1169,10 +1169,10 @@ abstract class EvidenceReportSubject implements _$EvidenceReportSubject {
   EvidenceReportSubject._();
   factory EvidenceReportSubject({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<EvidenceReportCharacteristic?>? characteristic,
-    List<Annotation?>? note,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<EvidenceReportCharacteristic>? characteristic,
+    List<Annotation>? note,
   }) = _EvidenceReportSubject;
 
   /// Produces a Yaml formatted String version of the object
@@ -1198,8 +1198,8 @@ abstract class EvidenceReportCharacteristic
   EvidenceReportCharacteristic._();
   factory EvidenceReportCharacteristic({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
     Reference? valueReference,
     CodeableConcept? valueCodeableConcept,
@@ -1235,8 +1235,8 @@ abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
   EvidenceReportRelatesTo._();
   factory EvidenceReportRelatesTo({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
         EvidenceReportRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -1266,21 +1266,21 @@ abstract class EvidenceReportSection implements _$EvidenceReportSection {
   EvidenceReportSection._();
   factory EvidenceReportSection({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     CodeableConcept? focus,
     Reference? focusReference,
-    List<Reference?>? author,
+    List<Reference>? author,
     Narrative? text,
     Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     CodeableConcept? orderedBy,
-    List<CodeableConcept?>? entryClassifier,
-    List<Reference?>? entryReference,
+    List<CodeableConcept>? entryClassifier,
+    List<Reference>? entryReference,
     CodeableConcept? emptyReason,
-    List<EvidenceReportSection?>? section,
+    List<EvidenceReportSection>? section,
   }) = _EvidenceReportSection;
 
   /// Produces a Yaml formatted String version of the object

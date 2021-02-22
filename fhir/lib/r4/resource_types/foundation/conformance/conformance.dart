@@ -222,9 +222,9 @@ abstract class CapabilityStatement
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -242,11 +242,11 @@ abstract class CapabilityStatement
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -254,21 +254,21 @@ abstract class CapabilityStatement
     @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
         CapabilityStatementKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
-    List<Canonical?>? instantiates,
-    List<Canonical?>? imports,
+    List<Canonical>? instantiates,
+    List<Canonical>? imports,
     CapabilityStatementSoftware? software,
     CapabilityStatementImplementation? implementation,
     @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
         CapabilityStatementFhirVersion? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
-    List<Code?>? format,
+    List<Code>? format,
     @JsonKey(name: '_format') List<Element?>? formatElement,
-    List<Code?>? patchFormat,
+    List<Code>? patchFormat,
     @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
-    List<Canonical?>? implementationGuide,
-    List<CapabilityStatementRest?>? rest,
-    List<CapabilityStatementMessaging?>? messaging,
-    List<CapabilityStatementDocument?>? document,
+    List<Canonical>? implementationGuide,
+    List<CapabilityStatementRest>? rest,
+    List<CapabilityStatementMessaging>? messaging,
+    List<CapabilityStatementDocument>? document,
   }) = _CapabilityStatement;
 
   /// Produces a Yaml formatted String version of the object
@@ -336,8 +336,8 @@ abstract class CapabilityStatementSoftware
   /// [_releaseDate]: Extensions for releaseDate
   factory CapabilityStatementSoftware({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? version,
@@ -412,8 +412,8 @@ abstract class CapabilityStatementImplementation
   ///  instance and oversight of the data on the server at the specified URL.
   factory CapabilityStatementImplementation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     FhirUrl? url,
@@ -506,19 +506,19 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
   ///  CompartmentDefinition resource by its canonical URL .
   factory CapabilityStatementRest({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
         CapabilityStatementRestMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
     CapabilityStatementSecurity? security,
-    List<CapabilityStatementResource?>? resource,
-    List<CapabilityStatementInteraction1?>? interaction,
-    List<CapabilityStatementSearchParam?>? searchParam,
-    List<CapabilityStatementOperation?>? operation,
-    List<Canonical?>? compartment,
+    List<CapabilityStatementResource>? resource,
+    List<CapabilityStatementInteraction1>? interaction,
+    List<CapabilityStatementSearchParam>? searchParam,
+    List<CapabilityStatementOperation>? operation,
+    List<Canonical>? compartment,
   }) = _CapabilityStatementRest;
 
   /// Produces a Yaml formatted String version of the object
@@ -585,11 +585,11 @@ abstract class CapabilityStatementSecurity
   /// [_description]: Extensions for description
   factory CapabilityStatementSecurity({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Boolean? cors,
     @JsonKey(name: '_cors') Element? corsElement,
-    List<CodeableConcept?>? service,
+    List<CodeableConcept>? service,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
   }) = _CapabilityStatementSecurity;
@@ -737,15 +737,15 @@ abstract class CapabilityStatementResource
   ///  parameters.
   factory CapabilityStatementResource({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Canonical? profile,
-    List<Canonical?>? supportedProfile,
+    List<Canonical>? supportedProfile,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatementInteraction?>? interaction,
+    List<CapabilityStatementInteraction>? interaction,
     @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
         CapabilityStatementResourceVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
@@ -763,14 +763,14 @@ abstract class CapabilityStatementResource
     @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
         CapabilityStatementResourceConditionalDelete? conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
-    List<CapabilityStatementResourceReferencePolicy?>? referencePolicy,
+    List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
     @JsonKey(name: '_referencePolicy') List<Element?>? referencePolicyElement,
-    List<String?>? searchInclude,
+    List<String>? searchInclude,
     @JsonKey(name: '_searchInclude') List<Element?>? searchIncludeElement,
-    List<String?>? searchRevInclude,
+    List<String>? searchRevInclude,
     @JsonKey(name: '_searchRevInclude') List<Element?>? searchRevIncludeElement,
-    List<CapabilityStatementSearchParam?>? searchParam,
-    List<CapabilityStatementOperation?>? operation,
+    List<CapabilityStatementSearchParam>? searchParam,
+    List<CapabilityStatementOperation>? operation,
   }) = _CapabilityStatementResource;
 
   /// Produces a Yaml formatted String version of the object
@@ -838,8 +838,8 @@ abstract class CapabilityStatementInteraction
   /// [_documentation]: Extensions for documentation
   factory CapabilityStatementInteraction({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
         CapabilityStatementInteractionCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -924,8 +924,8 @@ abstract class CapabilityStatementSearchParam
   /// [_documentation]: Extensions for documentation
   factory CapabilityStatementSearchParam({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Canonical? definition,
@@ -1013,8 +1013,8 @@ abstract class CapabilityStatementOperation
   /// [_documentation]: Extensions for documentation
   factory CapabilityStatementOperation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     required Canonical definition,
@@ -1085,8 +1085,8 @@ abstract class CapabilityStatementInteraction1
   /// [_documentation]: Extensions for documentation
   factory CapabilityStatementInteraction1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
         CapabilityStatementInteraction1Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -1168,14 +1168,14 @@ abstract class CapabilityStatementMessaging
   ///  system can send or receive.
   factory CapabilityStatementMessaging({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<CapabilityStatementEndpoint?>? endpoint,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CapabilityStatementEndpoint>? endpoint,
     UnsignedInt? reliableCache,
     @JsonKey(name: '_reliableCache') Element? reliableCacheElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatementSupportedMessage?>? supportedMessage,
+    List<CapabilityStatementSupportedMessage>? supportedMessage,
   }) = _CapabilityStatementMessaging;
 
   /// Produces a Yaml formatted String version of the object
@@ -1239,8 +1239,8 @@ abstract class CapabilityStatementEndpoint
   /// [_address]: Extensions for address
   factory CapabilityStatementEndpoint({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Coding protocol,
     FhirUrl? address,
     @JsonKey(name: '_address') Element? addressElement,
@@ -1307,8 +1307,8 @@ abstract class CapabilityStatementSupportedMessage
   ///  event, message structure, allowed responses, etc.
   factory CapabilityStatementSupportedMessage({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
         CapabilityStatementSupportedMessageMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -1384,8 +1384,8 @@ abstract class CapabilityStatementDocument
   ///  resources are present, and their contents.
   factory CapabilityStatementDocument({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
         CapabilityStatementDocumentMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -1564,9 +1564,9 @@ abstract class CompartmentDefinition
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -1582,10 +1582,10 @@ abstract class CompartmentDefinition
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
+    List<UsageContext>? useContext,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
@@ -1593,7 +1593,7 @@ abstract class CompartmentDefinition
     @JsonKey(name: '_code') Element? codeElement,
     Boolean? search,
     @JsonKey(name: '_search') Element? searchElement,
-    List<CompartmentDefinitionResource?>? resource,
+    List<CompartmentDefinitionResource>? resource,
   }) = _CompartmentDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -1661,11 +1661,11 @@ abstract class CompartmentDefinitionResource
   /// [_documentation]: Extensions for documentation
   factory CompartmentDefinitionResource({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-    List<String?>? param,
+    List<String>? param,
     @JsonKey(name: '_param') List<Element?>? paramElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -1845,12 +1845,12 @@ abstract class ExampleScenario with Resource implements _$ExampleScenario {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -1864,17 +1864,17 @@ abstract class ExampleScenario with Resource implements _$ExampleScenario {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<ContactDetail>? contact,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
-    List<ExampleScenarioActor?>? actor,
-    List<ExampleScenarioInstance?>? instance,
-    List<ExampleScenarioProcess?>? process,
-    List<Canonical?>? workflow,
+    List<ExampleScenarioActor>? actor,
+    List<ExampleScenarioInstance>? instance,
+    List<ExampleScenarioProcess>? process,
+    List<Canonical>? workflow,
   }) = _ExampleScenario;
 
   /// Produces a Yaml formatted String version of the object
@@ -1941,8 +1941,8 @@ abstract class ExampleScenarioActor implements _$ExampleScenarioActor {
   /// [_description]: Extensions for description
   factory ExampleScenarioActor({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? actorId,
     @JsonKey(name: '_actorId') Element? actorIdElement,
     @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
@@ -2023,8 +2023,8 @@ abstract class ExampleScenarioInstance implements _$ExampleScenarioInstance {
   ///  observations contained in a bundle).
   factory ExampleScenarioInstance({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? resourceId,
     @JsonKey(name: '_resourceId') Element? resourceIdElement,
     Code? resourceType,
@@ -2033,8 +2033,8 @@ abstract class ExampleScenarioInstance implements _$ExampleScenarioInstance {
     @JsonKey(name: '_name') Element? nameElement,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<ExampleScenarioVersion?>? version,
-    List<ExampleScenarioContainedInstance?>? containedInstance,
+    List<ExampleScenarioVersion>? version,
+    List<ExampleScenarioContainedInstance>? containedInstance,
   }) = _ExampleScenarioInstance;
 
   /// Produces a Yaml formatted String version of the object
@@ -2093,8 +2093,8 @@ abstract class ExampleScenarioVersion implements _$ExampleScenarioVersion {
   /// [_description]: Extensions for description
   factory ExampleScenarioVersion({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Markdown? description,
@@ -2158,8 +2158,8 @@ abstract class ExampleScenarioContainedInstance
   /// [_versionId]: Extensions for versionId
   factory ExampleScenarioContainedInstance({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? resourceId,
     @JsonKey(name: '_resourceId') Element? resourceIdElement,
     String? versionId,
@@ -2235,8 +2235,8 @@ abstract class ExampleScenarioProcess implements _$ExampleScenarioProcess {
   /// [step]: Each step of the process.
   factory ExampleScenarioProcess({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     Markdown? description,
@@ -2245,7 +2245,7 @@ abstract class ExampleScenarioProcess implements _$ExampleScenarioProcess {
     @JsonKey(name: '_preConditions') Element? preConditionsElement,
     Markdown? postConditions,
     @JsonKey(name: '_postConditions') Element? postConditionsElement,
-    List<ExampleScenarioStep?>? step,
+    List<ExampleScenarioStep>? step,
   }) = _ExampleScenarioProcess;
 
   /// Produces a Yaml formatted String version of the object
@@ -2307,13 +2307,13 @@ abstract class ExampleScenarioStep implements _$ExampleScenarioStep {
   ///  the operations on the base step in exceptional/atypical circumstances.
   factory ExampleScenarioStep({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<ExampleScenarioProcess?>? process,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<ExampleScenarioProcess>? process,
     Boolean? pause,
     @JsonKey(name: '_pause') Element? pauseElement,
     ExampleScenarioOperation? operation,
-    List<ExampleScenarioAlternative?>? alternative,
+    List<ExampleScenarioAlternative>? alternative,
   }) = _ExampleScenarioStep;
 
   /// Produces a Yaml formatted String version of the object
@@ -2402,8 +2402,8 @@ abstract class ExampleScenarioOperation implements _$ExampleScenarioOperation {
   /// [response]: Each resource instance used by the responder.
   factory ExampleScenarioOperation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? number,
     @JsonKey(name: '_number') Element? numberElement,
     String? type,
@@ -2486,13 +2486,13 @@ abstract class ExampleScenarioAlternative
   /// [step]: What happens in each alternative option.
   factory ExampleScenarioAlternative({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<ExampleScenarioStep?>? step,
+    List<ExampleScenarioStep>? step,
   }) = _ExampleScenarioAlternative;
 
   /// Produces a Yaml formatted String version of the object
@@ -2664,9 +2664,9 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -2682,17 +2682,17 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Code? start,
     @JsonKey(name: '_start') Element? startElement,
     Canonical? profile,
-    List<GraphDefinitionLink?>? link,
+    List<GraphDefinitionLink>? link,
   }) = _GraphDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -2770,8 +2770,8 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
   /// [target]: Potential target for the link.
   factory GraphDefinitionLink({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     String? sliceName,
@@ -2782,7 +2782,7 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
     @JsonKey(name: '_max') Element? maxElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<GraphDefinitionTarget?>? target,
+    List<GraphDefinitionTarget>? target,
   }) = _GraphDefinitionLink;
 
   /// Produces a Yaml formatted String version of the object
@@ -2850,15 +2850,15 @@ abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
   /// [link]: Additional links from target resource.
   factory GraphDefinitionTarget({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? params,
     @JsonKey(name: '_params') Element? paramsElement,
     Canonical? profile,
-    List<GraphDefinitionCompartment?>? compartment,
-    List<GraphDefinitionLink?>? link,
+    List<GraphDefinitionCompartment>? compartment,
+    List<GraphDefinitionLink>? link,
   }) = _GraphDefinitionTarget;
 
   /// Produces a Yaml formatted String version of the object
@@ -2935,8 +2935,8 @@ abstract class GraphDefinitionCompartment
   /// [_description]: Extensions for description
   factory GraphDefinitionCompartment({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
         GraphDefinitionCompartmentUse? use,
     @JsonKey(name: '_use') Element? useElement,
@@ -3154,9 +3154,9 @@ abstract class ImplementationGuide
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -3174,11 +3174,11 @@ abstract class ImplementationGuide
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     Id? packageId,
@@ -3186,10 +3186,10 @@ abstract class ImplementationGuide
     @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
         ImplementationGuideLicense? license,
     @JsonKey(name: '_license') Element? licenseElement,
-    List<ImplementationGuideFhirVersion?>? fhirVersion,
+    List<ImplementationGuideFhirVersion>? fhirVersion,
     @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
-    List<ImplementationGuideDependsOn?>? dependsOn,
-    List<ImplementationGuideGlobal?>? global,
+    List<ImplementationGuideDependsOn>? dependsOn,
+    List<ImplementationGuideGlobal>? global,
     ImplementationGuideDefinition? definition,
     ImplementationGuideManifest? manifest,
   }) = _ImplementationGuide;
@@ -3260,8 +3260,8 @@ abstract class ImplementationGuideDependsOn
   /// [_version]: Extensions for version
   factory ImplementationGuideDependsOn({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Canonical uri,
     Id? packageId,
     @JsonKey(name: '_packageId') Element? packageIdElement,
@@ -3329,8 +3329,8 @@ abstract class ImplementationGuideGlobal
   /// [profile]: A reference to the profile that all instances must conform to.
   factory ImplementationGuideGlobal({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Canonical profile,
@@ -3405,13 +3405,13 @@ abstract class ImplementationGuideDefinition
   /// [template]: A template for building resources.
   factory ImplementationGuideDefinition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<ImplementationGuideGrouping?>? grouping,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<ImplementationGuideGrouping>? grouping,
     required List<ImplementationGuideResource> resource,
     ImplementationGuidePage? page,
-    List<ImplementationGuideParameter?>? parameter,
-    List<ImplementationGuideTemplate?>? template,
+    List<ImplementationGuideParameter>? parameter,
+    List<ImplementationGuideTemplate>? template,
   }) = _ImplementationGuideDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -3477,8 +3477,8 @@ abstract class ImplementationGuideGrouping
   /// [_description]: Extensions for description
   factory ImplementationGuideGrouping({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
@@ -3575,10 +3575,10 @@ abstract class ImplementationGuideResource
   /// [_groupingId]: Extensions for groupingId
   factory ImplementationGuideResource({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Reference reference,
-    List<ImplementationGuideResourceFhirVersion?>? fhirVersion,
+    List<ImplementationGuideResourceFhirVersion>? fhirVersion,
     @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -3662,8 +3662,8 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
   /// [page]: Nested Pages/Sections under this page.
   factory ImplementationGuidePage({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUrl? nameUrl,
     @JsonKey(name: '_nameUrl') Element? nameUrlElement,
     Reference? nameReference,
@@ -3672,7 +3672,7 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
     @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
         ImplementationGuidePageGeneration? generation,
     @JsonKey(name: '_generation') Element? generationElement,
-    List<ImplementationGuidePage?>? page,
+    List<ImplementationGuidePage>? page,
   }) = _ImplementationGuidePage;
 
   /// Produces a Yaml formatted String version of the object
@@ -3738,8 +3738,8 @@ abstract class ImplementationGuideParameter
   /// [_value]: Extensions for value
   factory ImplementationGuideParameter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ImplementationGuideParameterCode.unknown)
         ImplementationGuideParameterCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -3813,8 +3813,8 @@ abstract class ImplementationGuideTemplate
   /// [_scope]: Extensions for scope
   factory ImplementationGuideTemplate({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? source,
@@ -3899,15 +3899,15 @@ abstract class ImplementationGuideManifest
   /// [_other]: Extensions for other
   factory ImplementationGuideManifest({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUrl? rendering,
     @JsonKey(name: '_rendering') Element? renderingElement,
     required List<ImplementationGuideResource1> resource,
-    List<ImplementationGuidePage1?>? page,
-    List<String?>? image,
+    List<ImplementationGuidePage1>? page,
+    List<String>? image,
     @JsonKey(name: '_image') List<Element?>? imageElement,
-    List<String?>? other,
+    List<String>? other,
     @JsonKey(name: '_other') List<Element?>? otherElement,
   }) = _ImplementationGuideManifest;
 
@@ -3984,8 +3984,8 @@ abstract class ImplementationGuideResource1
   /// [_relativePath]: Extensions for relativePath
   factory ImplementationGuideResource1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Reference reference,
     Boolean? exampleBoolean,
     @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
@@ -4060,13 +4060,13 @@ abstract class ImplementationGuidePage1 implements _$ImplementationGuidePage1 {
   /// [_anchor]: Extensions for anchor
   factory ImplementationGuidePage1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    List<String?>? anchor,
+    List<String>? anchor,
     @JsonKey(name: '_anchor') List<Element?>? anchorElement,
   }) = _ImplementationGuidePage1;
 
@@ -4278,19 +4278,19 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    List<Canonical?>? replaces,
+    List<Canonical>? replaces,
     @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
         MessageDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -4300,29 +4300,29 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     Canonical? base,
-    List<Canonical?>? parent,
+    List<Canonical>? parent,
     Coding? eventCoding,
     FhirUri? eventUri,
     @JsonKey(name: '_eventUri') Element? eventUriElement,
     @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
         MessageDefinitionCategory? category,
     @JsonKey(name: '_category') Element? categoryElement,
-    List<MessageDefinitionFocus?>? focus,
+    List<MessageDefinitionFocus>? focus,
     @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
         MessageDefinitionResponseRequired? responseRequired,
     @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
-    List<MessageDefinitionAllowedResponse?>? allowedResponse,
-    List<Canonical?>? graph,
+    List<MessageDefinitionAllowedResponse>? allowedResponse,
+    List<Canonical>? graph,
   }) = _MessageDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -4395,8 +4395,8 @@ abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
   /// [_max]: Extensions for max
   factory MessageDefinitionFocus({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Canonical? profile,
@@ -4466,8 +4466,8 @@ abstract class MessageDefinitionAllowedResponse
   /// [_situation]: Extensions for situation
   factory MessageDefinitionAllowedResponse({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Canonical message,
     Markdown? situation,
     @JsonKey(name: '_situation') Element? situationElement,
@@ -4697,9 +4697,9 @@ abstract class OperationDefinition
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -4720,11 +4720,11 @@ abstract class OperationDefinition
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Boolean? affectsState,
@@ -4734,7 +4734,7 @@ abstract class OperationDefinition
     Markdown? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     Canonical? base,
-    List<Code?>? resource,
+    List<Code>? resource,
     @JsonKey(name: '_resource') List<Element?>? resourceElement,
     Boolean? system,
     @JsonKey(name: '_system') Element? systemElement,
@@ -4744,8 +4744,8 @@ abstract class OperationDefinition
     @JsonKey(name: '_instance') Element? instanceElement,
     Canonical? inputProfile,
     Canonical? outputProfile,
-    List<OperationDefinitionParameter?>? parameter,
-    List<OperationDefinitionOverload?>? overload,
+    List<OperationDefinitionParameter>? parameter,
+    List<OperationDefinitionOverload>? overload,
   }) = _OperationDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -4848,8 +4848,8 @@ abstract class OperationDefinitionParameter
   /// [part]: The parts of a nested Parameter.
   factory OperationDefinitionParameter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Code? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
@@ -4863,13 +4863,13 @@ abstract class OperationDefinitionParameter
     @JsonKey(name: '_documentation') Element? documentationElement,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
-    List<Canonical?>? targetProfile,
+    List<Canonical>? targetProfile,
     @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
         OperationDefinitionParameterSearchType? searchType,
     @JsonKey(name: '_searchType') Element? searchTypeElement,
     OperationDefinitionBinding? binding,
-    List<OperationDefinitionReferencedFrom?>? referencedFrom,
-    @JsonKey(name: 'part') List<OperationDefinitionParameter?>? part_,
+    List<OperationDefinitionReferencedFrom>? referencedFrom,
+    @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
   }) = _OperationDefinitionParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -4933,8 +4933,8 @@ abstract class OperationDefinitionBinding
   ///  value set) that identifies the set of codes to be used.
   factory OperationDefinitionBinding({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
         OperationDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
@@ -5004,8 +5004,8 @@ abstract class OperationDefinitionReferencedFrom
   /// [_sourceId]: Extensions for sourceId
   factory OperationDefinitionReferencedFrom({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? source,
     @JsonKey(name: '_source') Element? sourceElement,
     String? sourceId,
@@ -5074,9 +5074,9 @@ abstract class OperationDefinitionOverload
   /// [_comment]: Extensions for comment
   factory OperationDefinitionOverload({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<String?>? parameterName,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<String>? parameterName,
     @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -5311,9 +5311,9 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -5330,16 +5330,16 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-    List<Code?>? base,
+    List<Code>? base,
     @JsonKey(name: '_base') List<Element?>? baseElement,
     @JsonKey(unknownEnumValue: SearchParameterType.unknown)
         SearchParameterType? type,
@@ -5351,19 +5351,19 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
         SearchParameterXpathUsage? xpathUsage,
     @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
-    List<Code?>? target,
+    List<Code>? target,
     @JsonKey(name: '_target') List<Element?>? targetElement,
     Boolean? multipleOr,
     @JsonKey(name: '_multipleOr') Element? multipleOrElement,
     Boolean? multipleAnd,
     @JsonKey(name: '_multipleAnd') Element? multipleAndElement,
-    List<SearchParameterComparator?>? comparator,
+    List<SearchParameterComparator>? comparator,
     @JsonKey(name: '_comparator') List<Element?>? comparatorElement,
-    List<SearchParameterModifier?>? modifier,
+    List<SearchParameterModifier>? modifier,
     @JsonKey(name: '_modifier') List<Element?>? modifierElement,
-    List<String?>? chain,
+    List<String>? chain,
     @JsonKey(name: '_chain') List<Element?>? chainElement,
-    List<SearchParameterComponent?>? component,
+    List<SearchParameterComponent>? component,
   }) = _SearchParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -5423,8 +5423,8 @@ abstract class SearchParameterComponent implements _$SearchParameterComponent {
   /// [_expression]: Extensions for expression
   factory SearchParameterComponent({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Canonical definition,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
@@ -5667,12 +5667,12 @@ abstract class StructureDefinition
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -5688,27 +5688,27 @@ abstract class StructureDefinition
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    List<Coding?>? keyword,
+    List<Coding>? keyword,
     @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
         StructureDefinitionFhirVersion? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
-    List<StructureDefinitionMapping?>? mapping,
+    List<StructureDefinitionMapping>? mapping,
     @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
         StructureDefinitionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     @JsonKey(name: 'abstract') Boolean? abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
-    List<StructureDefinitionContext?>? context,
-    List<String?>? contextInvariant,
+    List<StructureDefinitionContext>? context,
+    List<String>? contextInvariant,
     @JsonKey(name: '_contextInvariant') List<Element?>? contextInvariantElement,
     FhirUri? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -5792,8 +5792,8 @@ abstract class StructureDefinitionMapping
   /// [_comment]: Extensions for comment
   factory StructureDefinitionMapping({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     FhirUri? uri,
@@ -5867,8 +5867,8 @@ abstract class StructureDefinitionContext
   /// [_expression]: Extensions for expression
   factory StructureDefinitionContext({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
         StructureDefinitionContextType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -5931,8 +5931,8 @@ abstract class StructureDefinitionSnapshot
   /// [element]: Captures constraints on each element within the resource.
   factory StructureDefinitionSnapshot({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
 
@@ -5991,8 +5991,8 @@ abstract class StructureDefinitionDifferential
   /// [element]: Captures constraints on each element within the resource.
   factory StructureDefinitionDifferential({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
 
@@ -6180,12 +6180,12 @@ abstract class StructureMap with Resource implements _$StructureMap {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -6201,17 +6201,17 @@ abstract class StructureMap with Resource implements _$StructureMap {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    List<StructureMapStructure?>? structure,
-    @JsonKey(name: 'import') List<Canonical?>? import_,
+    List<StructureMapStructure>? structure,
+    @JsonKey(name: 'import') List<Canonical>? import_,
     required List<StructureMapGroup> group,
   }) = _StructureMap;
 
@@ -6279,8 +6279,8 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
   /// [_documentation]: Extensions for documentation
   factory StructureMapStructure({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Canonical url,
     @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
         StructureMapStructureMode? mode,
@@ -6363,8 +6363,8 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
   /// [rule]: Transform Rule from source to target.
   factory StructureMapGroup({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(name: 'extends') Id? extends_,
@@ -6443,8 +6443,8 @@ abstract class StructureMapInput implements _$StructureMapInput {
   /// [_documentation]: Extensions for documentation
   factory StructureMapInput({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? type,
@@ -6521,14 +6521,14 @@ abstract class StructureMapRule implements _$StructureMapRule {
   /// [_documentation]: Extensions for documentation
   factory StructureMapRule({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? name,
     @JsonKey(name: '_name') Element? nameElement,
     required List<StructureMapSource> source,
-    List<StructureMapTarget?>? target,
-    List<StructureMapRule?>? rule,
-    List<StructureMapDependent?>? dependent,
+    List<StructureMapTarget>? target,
+    List<StructureMapRule>? rule,
+    List<StructureMapDependent>? dependent,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _StructureMapRule;
@@ -6817,8 +6817,8 @@ abstract class StructureMapSource implements _$StructureMapSource {
   /// [_logMessage]: Extensions for logMessage
   factory StructureMapSource({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? context,
     @JsonKey(name: '_context') Element? contextElement,
     Integer? min,
@@ -6996,8 +6996,8 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
   /// [parameter]: Parameters to the transform.
   factory StructureMapTarget({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? context,
     @JsonKey(name: '_context') Element? contextElement,
     @JsonKey(unknownEnumValue: StructureMapTargetContextType.unknown)
@@ -7007,14 +7007,14 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
     @JsonKey(name: '_element') Element? elementElement,
     Id? variable,
     @JsonKey(name: '_variable') Element? variableElement,
-    List<StructureMapTargetListMode?>? listMode,
+    List<StructureMapTargetListMode>? listMode,
     @JsonKey(name: '_listMode') List<Element?>? listModeElement,
     Id? listRuleId,
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
     @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
         StructureMapTargetTransform? transform,
     @JsonKey(name: '_transform') Element? transformElement,
-    List<StructureMapParameter?>? parameter,
+    List<StructureMapParameter>? parameter,
   }) = _StructureMapTarget;
 
   /// Produces a Yaml formatted String version of the object
@@ -7086,8 +7086,8 @@ abstract class StructureMapParameter implements _$StructureMapParameter {
   /// [_valueDecimal]: Extensions for valueDecimal
   factory StructureMapParameter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     String? valueString,
@@ -7157,11 +7157,11 @@ abstract class StructureMapDependent implements _$StructureMapDependent {
   /// [_variable]: Extensions for variable
   factory StructureMapDependent({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? name,
     @JsonKey(name: '_name') Element? nameElement,
-    List<String?>? variable,
+    List<String>? variable,
     @JsonKey(name: '_variable') List<Element?>? variableElement,
   }) = _StructureMapDependent;
 

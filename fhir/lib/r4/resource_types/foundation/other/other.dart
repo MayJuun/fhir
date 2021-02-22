@@ -98,10 +98,10 @@ abstract class Basic with Resource implements _$Basic {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     required CodeableConcept code,
     Reference? subject,
     Date? created,
@@ -275,8 +275,8 @@ abstract class Bundle with Resource implements _$Bundle {
     @JsonKey(name: '_timestamp') Element? timestampElement,
     UnsignedInt? total,
     @JsonKey(name: '_total') Element? totalElement,
-    List<BundleLink?>? link,
-    List<BundleEntry?>? entry,
+    List<BundleLink>? link,
+    List<BundleEntry>? entry,
     Signature? signature,
   }) = _Bundle;
 
@@ -336,8 +336,8 @@ abstract class BundleLink implements _$BundleLink {
   /// [_url]: Extensions for url
   factory BundleLink({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? relation,
     @JsonKey(name: '_relation') Element? relationElement,
     FhirUri? url,
@@ -419,9 +419,9 @@ abstract class BundleEntry implements _$BundleEntry {
   ///  results of an operation where when returning history.
   factory BundleEntry({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<BundleLink?>? link,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<BundleLink>? link,
     FhirUri? fullUrl,
     @JsonKey(name: '_fullUrl') Element? fullUrlElement,
     Resource? resource,
@@ -488,8 +488,8 @@ abstract class BundleSearch implements _$BundleSearch {
   /// [_score]: Extensions for score
   factory BundleSearch({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
@@ -580,8 +580,8 @@ abstract class BundleRequest implements _$BundleRequest {
   /// [_ifNoneExist]: Extensions for ifNoneExist
   factory BundleRequest({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
         BundleRequestMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
@@ -671,8 +671,8 @@ abstract class BundleResponse implements _$BundleResponse {
   ///  part of processing this entry in a batch or transaction.
   factory BundleResponse({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirUri? location,
@@ -784,9 +784,9 @@ abstract class Linkage with Resource implements _$Linkage {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     Reference? author,
@@ -849,8 +849,8 @@ abstract class LinkageItem implements _$LinkageItem {
   /// [resource]: The resource instance being linked as part of the group.
   factory LinkageItem({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference resource,
@@ -992,13 +992,13 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Coding? eventCoding,
     FhirUri? eventUri,
     @JsonKey(name: '_eventUri') Element? eventUriElement,
-    List<MessageHeaderDestination?>? destination,
+    List<MessageHeaderDestination>? destination,
     Reference? sender,
     Reference? enterer,
     Reference? author,
@@ -1006,7 +1006,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     Reference? responsible,
     CodeableConcept? reason,
     MessageHeaderResponse? response,
-    List<Reference?>? focus,
+    List<Reference>? focus,
     Canonical? definition,
   }) = _MessageHeader;
 
@@ -1077,8 +1077,8 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
   ///  isn't sufficient.
   factory MessageHeaderDestination({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Reference? target,
@@ -1161,8 +1161,8 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
   /// [_endpoint]: Extensions for endpoint
   factory MessageHeaderSource({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? software,
@@ -1238,8 +1238,8 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
   /// [details]: Full details of any issues found in the message.
   factory MessageHeaderResponse({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
@@ -1338,9 +1338,9 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
@@ -1429,8 +1429,8 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   /// [_expression]: Extensions for expression
   factory OperationOutcomeIssue({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
         OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
@@ -1440,9 +1440,9 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
     CodeableConcept? details,
     String? diagnostics,
     @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
-    List<String?>? location,
+    List<String>? location,
     @JsonKey(name: '_location') List<Element?>? locationElement,
-    List<String?>? expression,
+    List<String>? expression,
     @JsonKey(name: '_expression') List<Element?>? expressionElement,
   }) = _OperationOutcomeIssue;
 
@@ -1502,7 +1502,7 @@ abstract class Parameters with Resource implements _$Parameters {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
-    List<ParametersParameter?>? parameter,
+    List<ParametersParameter>? parameter,
   }) = _Parameters;
 
   /// Produces a Yaml formatted String version of the object
@@ -1701,8 +1701,8 @@ abstract class ParametersParameter implements _$ParametersParameter {
   /// [part]: A named part of a multi-part parameter.
   factory ParametersParameter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Base64Binary? valueBase64Binary,
@@ -1775,7 +1775,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     Dosage? valueDosage,
     Meta? valueMeta,
     Resource? resource,
-    @JsonKey(name: 'part') List<ParametersParameter?>? part_,
+    @JsonKey(name: 'part') List<ParametersParameter>? part_,
   }) = _ParametersParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -1898,13 +1898,13 @@ abstract class Subscription with Resource implements _$Subscription {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
         SubscriptionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<ContactPoint?>? contact,
+    List<ContactPoint>? contact,
     Instant? end,
     @JsonKey(name: '_end') Element? endElement,
     String? reason,
@@ -1991,8 +1991,8 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
   /// [_header]: Extensions for header
   factory SubscriptionChannel({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionChannelType.unknown)
         SubscriptionChannelType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -2000,7 +2000,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
     @JsonKey(name: '_endpoint') Element? endpointElement,
     Code? payload,
     @JsonKey(name: '_payload') Element? payloadElement,
-    List<String?>? header,
+    List<String>? header,
     @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _SubscriptionChannel;
 

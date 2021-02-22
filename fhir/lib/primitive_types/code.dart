@@ -1,9 +1,16 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 class Code {
   const Code._(this._valueString, this._valueCode, this._isValid);
+
+  /// Construct a [Code] constant at compile time
+  const Code.asConst(String code)
+      : this._valueString = code,
+        this._valueCode = code,
+        this._isValid = true;
 
   factory Code(String inValue) =>
       RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(inValue)

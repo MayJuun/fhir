@@ -22,10 +22,10 @@ class _$ObservationTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: ObservationStatus.unknown)
           ObservationStatus? status,
-      List<CodeableConcept?>? category,
+      List<CodeableConcept>? category,
       required CodeableConcept code,
       Reference? subject,
       Reference? encounter,
@@ -43,12 +43,11 @@ class _$ObservationTearOff {
       FhirDateTime? valueDateTime,
       Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
-      List<Reference?>? hasMember,
-      List<Annotation?>? note,
-      List<ObservationReferenceRange?>? referenceRange,
-      List<ObservationComponent?>? component,
-      List<CodeableConcept?>? interpretation,
-      List<CodeableConcept?>? bodySite,
+      List<Reference>? hasMember,
+      List<Annotation>? note,
+      List<ObservationReferenceRange>? referenceRange,
+      List<ObservationComponent>? component,
+      List<CodeableConcept>? interpretation,
       Reference? device,
       Instant? issued}) {
     return _Observation(
@@ -102,10 +101,10 @@ mixin _$Observation {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @JsonKey(unknownEnumValue: ObservationStatus.unknown)
   ObservationStatus? get status;
-  List<CodeableConcept?>? get category;
+  List<CodeableConcept>? get category;
   CodeableConcept get code;
   Reference? get subject;
   Reference? get encounter;
@@ -123,12 +122,11 @@ mixin _$Observation {
   FhirDateTime? get valueDateTime;
   Period? get valuePeriod;
   CodeableConcept? get dataAbsentReason;
-  List<Reference?>? get hasMember;
-  List<Annotation?>? get note;
-  List<ObservationReferenceRange?>? get referenceRange;
-  List<ObservationComponent?>? get component;
-  List<CodeableConcept?>? get interpretation;
-  List<CodeableConcept?>? get bodySite;
+  List<Reference>? get hasMember;
+  List<Annotation>? get note;
+  List<ObservationReferenceRange>? get referenceRange;
+  List<ObservationComponent>? get component;
+  List<CodeableConcept>? get interpretation;
   Reference? get device;
   Instant? get issued;
 
@@ -148,10 +146,10 @@ abstract class $ObservationCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: ObservationStatus.unknown)
           ObservationStatus? status,
-      List<CodeableConcept?>? category,
+      List<CodeableConcept>? category,
       CodeableConcept code,
       Reference? subject,
       Reference? encounter,
@@ -169,12 +167,11 @@ abstract class $ObservationCopyWith<$Res> {
       FhirDateTime? valueDateTime,
       Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
-      List<Reference?>? hasMember,
-      List<Annotation?>? note,
-      List<ObservationReferenceRange?>? referenceRange,
-      List<ObservationComponent?>? component,
-      List<CodeableConcept?>? interpretation,
-      List<CodeableConcept?>? bodySite,
+      List<Reference>? hasMember,
+      List<Annotation>? note,
+      List<ObservationReferenceRange>? referenceRange,
+      List<ObservationComponent>? component,
+      List<CodeableConcept>? interpretation,
       Reference? device,
       Instant? issued});
 
@@ -246,11 +243,11 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as ObservationStatus?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>?,
+          : category as List<CodeableConcept>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       encounter:
@@ -293,20 +290,17 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
           : dataAbsentReason as CodeableConcept?,
       hasMember: hasMember == freezed
           ? _value.hasMember
-          : hasMember as List<Reference?>?,
-      note: note == freezed ? _value.note : note as List<Annotation?>?,
+          : hasMember as List<Reference>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange?>?,
+          : referenceRange as List<ObservationReferenceRange>?,
       component: component == freezed
           ? _value.component
-          : component as List<ObservationComponent?>?,
+          : component as List<ObservationComponent>?,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<CodeableConcept?>?,
-      bodySite: bodySite == freezed
-          ? _value.bodySite
-          : bodySite as List<CodeableConcept?>?,
+          : interpretation as List<CodeableConcept>?,
       device: device == freezed ? _value.device : device as Reference?,
       issued: issued == freezed ? _value.issued : issued as Instant?,
     ));
@@ -477,10 +471,10 @@ abstract class _$ObservationCopyWith<$Res>
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: ObservationStatus.unknown)
           ObservationStatus? status,
-      List<CodeableConcept?>? category,
+      List<CodeableConcept>? category,
       CodeableConcept code,
       Reference? subject,
       Reference? encounter,
@@ -498,12 +492,11 @@ abstract class _$ObservationCopyWith<$Res>
       FhirDateTime? valueDateTime,
       Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
-      List<Reference?>? hasMember,
-      List<Annotation?>? note,
-      List<ObservationReferenceRange?>? referenceRange,
-      List<ObservationComponent?>? component,
-      List<CodeableConcept?>? interpretation,
-      List<CodeableConcept?>? bodySite,
+      List<Reference>? hasMember,
+      List<Annotation>? note,
+      List<ObservationReferenceRange>? referenceRange,
+      List<ObservationComponent>? component,
+      List<CodeableConcept>? interpretation,
       Reference? device,
       Instant? issued});
 
@@ -591,11 +584,11 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as ObservationStatus?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>?,
+          : category as List<CodeableConcept>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       encounter:
@@ -638,20 +631,17 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
           : dataAbsentReason as CodeableConcept?,
       hasMember: hasMember == freezed
           ? _value.hasMember
-          : hasMember as List<Reference?>?,
-      note: note == freezed ? _value.note : note as List<Annotation?>?,
+          : hasMember as List<Reference>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange?>?,
+          : referenceRange as List<ObservationReferenceRange>?,
       component: component == freezed
           ? _value.component
-          : component as List<ObservationComponent?>?,
+          : component as List<ObservationComponent>?,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<CodeableConcept?>?,
-      bodySite: bodySite == freezed
-          ? _value.bodySite
-          : bodySite as List<CodeableConcept?>?,
+          : interpretation as List<CodeableConcept>?,
       device: device == freezed ? _value.device : device as Reference?,
       issued: issued == freezed ? _value.issued : issued as Instant?,
     ));
@@ -712,12 +702,12 @@ class _$_Observation extends _Observation {
   @override
   final Narrative? text;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: ObservationStatus.unknown)
   final ObservationStatus? status;
   @override
-  final List<CodeableConcept?>? category;
+  final List<CodeableConcept>? category;
   @override
   final CodeableConcept code;
   @override
@@ -753,15 +743,15 @@ class _$_Observation extends _Observation {
   @override
   final CodeableConcept? dataAbsentReason;
   @override
-  final List<Reference?>? hasMember;
+  final List<Reference>? hasMember;
   @override
-  final List<Annotation?>? note;
+  final List<Annotation>? note;
   @override
-  final List<ObservationReferenceRange?>? referenceRange;
+  final List<ObservationReferenceRange>? referenceRange;
   @override
-  final List<ObservationComponent?>? component;
+  final List<ObservationComponent>? component;
   @override
-  final List<CodeableConcept?>? interpretation;
+  final List<CodeableConcept>? interpretation;
   @override
   final List<CodeableConcept?>? bodySite;
   @override
@@ -909,10 +899,10 @@ abstract class _Observation extends Observation {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: ObservationStatus.unknown)
           ObservationStatus? status,
-      List<CodeableConcept?>? category,
+      List<CodeableConcept>? category,
       required CodeableConcept code,
       Reference? subject,
       Reference? encounter,
@@ -930,12 +920,11 @@ abstract class _Observation extends Observation {
       FhirDateTime? valueDateTime,
       Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
-      List<Reference?>? hasMember,
-      List<Annotation?>? note,
-      List<ObservationReferenceRange?>? referenceRange,
-      List<ObservationComponent?>? component,
-      List<CodeableConcept?>? interpretation,
-      List<CodeableConcept?>? bodySite,
+      List<Reference>? hasMember,
+      List<Annotation>? note,
+      List<ObservationReferenceRange>? referenceRange,
+      List<ObservationComponent>? component,
+      List<CodeableConcept>? interpretation,
       Reference? device,
       Instant? issued}) = _$_Observation;
 
@@ -952,12 +941,12 @@ abstract class _Observation extends Observation {
   @override
   Narrative? get text;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: ObservationStatus.unknown)
   ObservationStatus? get status;
   @override
-  List<CodeableConcept?>? get category;
+  List<CodeableConcept>? get category;
   @override
   CodeableConcept get code;
   @override
@@ -993,15 +982,15 @@ abstract class _Observation extends Observation {
   @override
   CodeableConcept? get dataAbsentReason;
   @override
-  List<Reference?>? get hasMember;
+  List<Reference>? get hasMember;
   @override
-  List<Annotation?>? get note;
+  List<Annotation>? get note;
   @override
-  List<ObservationReferenceRange?>? get referenceRange;
+  List<ObservationReferenceRange>? get referenceRange;
   @override
-  List<ObservationComponent?>? get component;
+  List<ObservationComponent>? get component;
   @override
-  List<CodeableConcept?>? get interpretation;
+  List<CodeableConcept>? get interpretation;
   @override
   List<CodeableConcept?>? get bodySite;
   @override
@@ -1027,7 +1016,7 @@ class _$ObservationReferenceRangeTearOff {
       Quantity? low,
       Quantity? high,
       CodeableConcept? type,
-      List<CodeableConcept?>? appliesTo,
+      List<CodeableConcept>? appliesTo,
       Range? age,
       String? text}) {
     return _ObservationReferenceRange(
@@ -1055,7 +1044,7 @@ mixin _$ObservationReferenceRange {
   Quantity? get low;
   Quantity? get high;
   CodeableConcept? get type;
-  List<CodeableConcept?>? get appliesTo;
+  List<CodeableConcept>? get appliesTo;
   Range? get age;
   String? get text;
 
@@ -1074,7 +1063,7 @@ abstract class $ObservationReferenceRangeCopyWith<$Res> {
       Quantity? low,
       Quantity? high,
       CodeableConcept? type,
-      List<CodeableConcept?>? appliesTo,
+      List<CodeableConcept>? appliesTo,
       Range? age,
       String? text});
 
@@ -1110,7 +1099,7 @@ class _$ObservationReferenceRangeCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept?,
       appliesTo: appliesTo == freezed
           ? _value.appliesTo
-          : appliesTo as List<CodeableConcept?>?,
+          : appliesTo as List<CodeableConcept>?,
       age: age == freezed ? _value.age : age as Range?,
       text: text == freezed ? _value.text : text as String?,
     ));
@@ -1173,7 +1162,7 @@ abstract class _$ObservationReferenceRangeCopyWith<$Res>
       Quantity? low,
       Quantity? high,
       CodeableConcept? type,
-      List<CodeableConcept?>? appliesTo,
+      List<CodeableConcept>? appliesTo,
       Range? age,
       String? text});
 
@@ -1216,7 +1205,7 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept?,
       appliesTo: appliesTo == freezed
           ? _value.appliesTo
-          : appliesTo as List<CodeableConcept?>?,
+          : appliesTo as List<CodeableConcept>?,
       age: age == freezed ? _value.age : age as Range?,
       text: text == freezed ? _value.text : text as String?,
     ));
@@ -1249,7 +1238,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
   @override
   final CodeableConcept? type;
   @override
-  final List<CodeableConcept?>? appliesTo;
+  final List<CodeableConcept>? appliesTo;
   @override
   final Range? age;
   @override
@@ -1312,7 +1301,7 @@ abstract class _ObservationReferenceRange extends ObservationReferenceRange {
       Quantity? low,
       Quantity? high,
       CodeableConcept? type,
-      List<CodeableConcept?>? appliesTo,
+      List<CodeableConcept>? appliesTo,
       Range? age,
       String? text}) = _$_ObservationReferenceRange;
 
@@ -1328,7 +1317,7 @@ abstract class _ObservationReferenceRange extends ObservationReferenceRange {
   @override
   CodeableConcept? get type;
   @override
-  List<CodeableConcept?>? get appliesTo;
+  List<CodeableConcept>? get appliesTo;
   @override
   Range? get age;
   @override
@@ -1348,8 +1337,8 @@ class _$ObservationComponentTearOff {
 
   _ObservationComponent call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required CodeableConcept code,
       Quantity? valueQuantity,
       CodeableConcept? valueCodeableConcept,
@@ -1363,8 +1352,8 @@ class _$ObservationComponentTearOff {
       FhirDateTime? valueDateTime,
       Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
-      List<CodeableConcept?>? interpretation,
-      List<ObservationReferenceRange?>? referenceRange}) {
+      List<CodeableConcept>? interpretation,
+      List<ObservationReferenceRange>? referenceRange}) {
     return _ObservationComponent(
       id: id,
       extension_: extension_,
@@ -1399,8 +1388,8 @@ const $ObservationComponent = _$ObservationComponentTearOff();
 mixin _$ObservationComponent {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept get code;
   Quantity? get valueQuantity;
   CodeableConcept? get valueCodeableConcept;
@@ -1414,8 +1403,8 @@ mixin _$ObservationComponent {
   FhirDateTime? get valueDateTime;
   Period? get valuePeriod;
   CodeableConcept? get dataAbsentReason;
-  List<CodeableConcept?>? get interpretation;
-  List<ObservationReferenceRange?>? get referenceRange;
+  List<CodeableConcept>? get interpretation;
+  List<ObservationReferenceRange>? get referenceRange;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1429,8 +1418,8 @@ abstract class $ObservationComponentCopyWith<$Res> {
       _$ObservationComponentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       Quantity? valueQuantity,
       CodeableConcept? valueCodeableConcept,
@@ -1444,8 +1433,8 @@ abstract class $ObservationComponentCopyWith<$Res> {
       FhirDateTime? valueDateTime,
       Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
-      List<CodeableConcept?>? interpretation,
-      List<ObservationReferenceRange?>? referenceRange});
+      List<CodeableConcept>? interpretation,
+      List<ObservationReferenceRange>? referenceRange});
 
   $CodeableConceptCopyWith<$Res> get code;
   $QuantityCopyWith<$Res>? get valueQuantity;
@@ -1491,10 +1480,10 @@ class _$ObservationComponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
@@ -1528,10 +1517,10 @@ class _$ObservationComponentCopyWithImpl<$Res>
           : dataAbsentReason as CodeableConcept?,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<CodeableConcept?>?,
+          : interpretation as List<CodeableConcept>?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange?>?,
+          : referenceRange as List<ObservationReferenceRange>?,
     ));
   }
 
@@ -1630,8 +1619,8 @@ abstract class _$ObservationComponentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       Quantity? valueQuantity,
       CodeableConcept? valueCodeableConcept,
@@ -1645,8 +1634,8 @@ abstract class _$ObservationComponentCopyWith<$Res>
       FhirDateTime? valueDateTime,
       Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
-      List<CodeableConcept?>? interpretation,
-      List<ObservationReferenceRange?>? referenceRange});
+      List<CodeableConcept>? interpretation,
+      List<ObservationReferenceRange>? referenceRange});
 
   @override
   $CodeableConceptCopyWith<$Res> get code;
@@ -1702,10 +1691,10 @@ class __$ObservationComponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
@@ -1739,10 +1728,10 @@ class __$ObservationComponentCopyWithImpl<$Res>
           : dataAbsentReason as CodeableConcept?,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<CodeableConcept?>?,
+          : interpretation as List<CodeableConcept>?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange?>?,
+          : referenceRange as List<ObservationReferenceRange>?,
     ));
   }
 }
@@ -1779,9 +1768,9 @@ class _$_ObservationComponent extends _ObservationComponent {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept code;
   @override
@@ -1809,9 +1798,9 @@ class _$_ObservationComponent extends _ObservationComponent {
   @override
   final CodeableConcept? dataAbsentReason;
   @override
-  final List<CodeableConcept?>? interpretation;
+  final List<CodeableConcept>? interpretation;
   @override
-  final List<ObservationReferenceRange?>? referenceRange;
+  final List<ObservationReferenceRange>? referenceRange;
 
   @override
   String toString() {
@@ -1914,8 +1903,8 @@ abstract class _ObservationComponent extends ObservationComponent {
   _ObservationComponent._() : super._();
   factory _ObservationComponent(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           required CodeableConcept code,
           Quantity? valueQuantity,
           CodeableConcept? valueCodeableConcept,
@@ -1929,8 +1918,8 @@ abstract class _ObservationComponent extends ObservationComponent {
           FhirDateTime? valueDateTime,
           Period? valuePeriod,
           CodeableConcept? dataAbsentReason,
-          List<CodeableConcept?>? interpretation,
-          List<ObservationReferenceRange?>? referenceRange}) =
+          List<CodeableConcept>? interpretation,
+          List<ObservationReferenceRange>? referenceRange}) =
       _$_ObservationComponent;
 
   factory _ObservationComponent.fromJson(Map<String, dynamic> json) =
@@ -1940,9 +1929,9 @@ abstract class _ObservationComponent extends ObservationComponent {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept get code;
   @override
@@ -1970,9 +1959,9 @@ abstract class _ObservationComponent extends ObservationComponent {
   @override
   CodeableConcept? get dataAbsentReason;
   @override
-  List<CodeableConcept?>? get interpretation;
+  List<CodeableConcept>? get interpretation;
   @override
-  List<ObservationReferenceRange?>? get referenceRange;
+  List<ObservationReferenceRange>? get referenceRange;
   @override
   @JsonKey(ignore: true)
   _$ObservationComponentCopyWith<_ObservationComponent> get copyWith;

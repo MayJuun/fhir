@@ -25,16 +25,16 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
         AdverseEventActuality? actuality,
     @JsonKey(name: '_actuality') Element? actualityElement,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     CodeableConcept? code,
     required Reference subject,
     Reference? encounter,
@@ -46,18 +46,18 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
     @JsonKey(name: '_detected') Element? detectedElement,
     FhirDateTime? recordedDate,
     @JsonKey(name: '_recordedDate') Element? recordedDateElement,
-    List<Reference?>? resultingCondition,
+    List<Reference>? resultingCondition,
     Reference? location,
     CodeableConcept? seriousness,
     CodeableConcept? outcome,
     Reference? recorder,
-    List<AdverseEventParticipant?>? participant,
-    List<AdverseEventSuspectEntity?>? suspectEntity,
-    List<AdverseEventContributingFactor?>? contributingFactor,
-    List<AdverseEventPreventiveAction?>? preventiveAction,
-    List<AdverseEventMitigatingAction?>? mitigatingAction,
-    List<AdverseEventSupportingInfo?>? supportingInfo,
-    List<Reference?>? study,
+    List<AdverseEventParticipant>? participant,
+    List<AdverseEventSuspectEntity>? suspectEntity,
+    List<AdverseEventContributingFactor>? contributingFactor,
+    List<AdverseEventPreventiveAction>? preventiveAction,
+    List<AdverseEventMitigatingAction>? mitigatingAction,
+    List<AdverseEventSupportingInfo>? supportingInfo,
+    List<Reference>? study,
   }) = _AdverseEvent;
 
   /// Produces a Yaml formatted String version of the object
@@ -82,8 +82,8 @@ abstract class AdverseEventParticipant implements _$AdverseEventParticipant {
   AdverseEventParticipant._();
   factory AdverseEventParticipant({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
     required Reference actor,
   }) = _AdverseEventParticipant;
@@ -111,8 +111,8 @@ abstract class AdverseEventSuspectEntity
   AdverseEventSuspectEntity._();
   factory AdverseEventSuspectEntity({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? instanceCodeableConcept,
     Reference? instanceReference,
     AdverseEventCausality? causality,
@@ -141,8 +141,8 @@ abstract class AdverseEventCausality implements _$AdverseEventCausality {
   AdverseEventCausality._();
   factory AdverseEventCausality({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? assessmentMethod,
     CodeableConcept? entityRelatedness,
     Reference? author,
@@ -171,8 +171,8 @@ abstract class AdverseEventContributingFactor
   AdverseEventContributingFactor._();
   factory AdverseEventContributingFactor({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Reference? itemReference,
     CodeableConcept? itemCodeableConcept,
   }) = _AdverseEventContributingFactor;
@@ -203,8 +203,8 @@ abstract class AdverseEventPreventiveAction
   AdverseEventPreventiveAction._();
   factory AdverseEventPreventiveAction({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Reference? itemReference,
     CodeableConcept? itemCodeableConcept,
   }) = _AdverseEventPreventiveAction;
@@ -233,8 +233,8 @@ abstract class AdverseEventMitigatingAction
   AdverseEventMitigatingAction._();
   factory AdverseEventMitigatingAction({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Reference? itemReference,
     CodeableConcept? itemCodeableConcept,
   }) = _AdverseEventMitigatingAction;
@@ -263,8 +263,8 @@ abstract class AdverseEventSupportingInfo
   AdverseEventSupportingInfo._();
   factory AdverseEventSupportingInfo({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Reference? itemReference,
     CodeableConcept? itemCodeableConcept,
   }) = _AdverseEventSupportingInfo;
@@ -303,16 +303,16 @@ abstract class AllergyIntolerance
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     CodeableConcept? clinicalStatus,
     CodeableConcept? verificationStatus,
     @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
         AllergyIntoleranceType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    List<AllergyIntoleranceCategory?>? category,
+    List<AllergyIntoleranceCategory>? category,
     @JsonKey(name: '_category') List<Element?>? categoryElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
         AllergyIntoleranceCriticality? criticality,
@@ -333,8 +333,8 @@ abstract class AllergyIntolerance
     Reference? asserter,
     FhirDateTime? lastOccurrence,
     @JsonKey(name: '_lastOccurrence') Element? lastOccurrenceElement,
-    List<Annotation?>? note,
-    List<AllergyIntoleranceReaction?>? reaction,
+    List<Annotation>? note,
+    List<AllergyIntoleranceReaction>? reaction,
   }) = _AllergyIntolerance;
 
   /// Produces a Yaml formatted String version of the object
@@ -360,8 +360,8 @@ abstract class AllergyIntoleranceReaction
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? substance,
     required List<CodeableConcept> manifestation,
     String? description,
@@ -372,7 +372,7 @@ abstract class AllergyIntoleranceReaction
         AllergyIntoleranceReactionSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
-    List<Annotation?>? note,
+    List<Annotation>? note,
   }) = _AllergyIntoleranceReaction;
 
   /// Produces a Yaml formatted String version of the object
@@ -409,10 +409,10 @@ abstract class ClinicalImpression
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
@@ -427,16 +427,16 @@ abstract class ClinicalImpression
     @JsonKey(name: '_date') Element? dateElement,
     Reference? performer,
     Reference? previous,
-    List<Reference?>? problem,
-    List<FhirUri?>? protocol,
+    List<Reference>? problem,
+    List<FhirUri>? protocol,
     @JsonKey(name: '_protocol') List<Element?>? protocolElement,
     String? summary,
     @JsonKey(name: '_summary') Element? summaryElement,
-    List<ClinicalImpressionFinding?>? finding,
-    List<CodeableConcept?>? prognosisCodeableConcept,
-    List<Reference?>? prognosisReference,
-    List<Reference?>? supportingInfo,
-    List<Annotation?>? note,
+    List<ClinicalImpressionFinding>? finding,
+    List<CodeableConcept>? prognosisCodeableConcept,
+    List<Reference>? prognosisReference,
+    List<Reference>? supportingInfo,
+    List<Annotation>? note,
   }) = _ClinicalImpression;
 
   /// Produces a Yaml formatted String version of the object
@@ -462,8 +462,8 @@ abstract class ClinicalImpressionFinding
   ClinicalImpressionFinding._();
   factory ClinicalImpressionFinding({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
     String? basis,
@@ -502,16 +502,16 @@ abstract class Condition with Resource implements _$Condition {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     CodeableConcept? clinicalStatus,
     CodeableConcept? verificationStatus,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     CodeableConcept? severity,
     CodeableConcept? code,
-    List<CodeableConcept?>? bodySite,
+    List<CodeableConcept>? bodySite,
     required Reference subject,
     Reference? encounter,
     FhirDateTime? onsetDateTime,
@@ -532,9 +532,9 @@ abstract class Condition with Resource implements _$Condition {
     @JsonKey(name: '_recordedDate') Element? recordedDateElement,
     Reference? recorder,
     Reference? asserter,
-    List<ConditionStage?>? stage,
-    List<ConditionEvidence?>? evidence,
-    List<Annotation?>? note,
+    List<ConditionStage>? stage,
+    List<ConditionEvidence>? evidence,
+    List<Annotation>? note,
   }) = _Condition;
 
   /// Produces a Yaml formatted String version of the object
@@ -559,10 +559,10 @@ abstract class ConditionStage implements _$ConditionStage {
   ConditionStage._();
   factory ConditionStage({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? summary,
-    List<Reference?>? assessment,
+    List<Reference>? assessment,
     CodeableConcept? type,
   }) = _ConditionStage;
 
@@ -588,10 +588,10 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
   ConditionEvidence._();
   factory ConditionEvidence({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<CodeableConcept?>? code,
-    List<Reference?>? detail,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? code,
+    List<Reference>? detail,
   }) = _ConditionEvidence;
 
   /// Produces a Yaml formatted String version of the object
@@ -625,10 +625,10 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? code,
@@ -640,13 +640,13 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
     @JsonKey(name: '_identifiedDateTime') Element? identifiedDateTimeElement,
     Period? identifiedPeriod,
     Reference? author,
-    List<Reference?>? implicated,
-    List<DetectedIssueEvidence?>? evidence,
+    List<Reference>? implicated,
+    List<DetectedIssueEvidence>? evidence,
     String? detail,
     @JsonKey(name: '_detail') Element? detailElement,
     FhirUri? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
-    List<DetectedIssueMitigation?>? mitigation,
+    List<DetectedIssueMitigation>? mitigation,
   }) = _DetectedIssue;
 
   /// Produces a Yaml formatted String version of the object
@@ -671,10 +671,10 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
   DetectedIssueEvidence._();
   factory DetectedIssueEvidence({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<CodeableConcept?>? code,
-    List<Reference?>? detail,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? code,
+    List<Reference>? detail,
   }) = _DetectedIssueEvidence;
 
   /// Produces a Yaml formatted String version of the object
@@ -699,8 +699,8 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
   factory DetectedIssueMitigation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept action,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -740,12 +740,12 @@ abstract class FamilyMemberHistory
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
-    List<Canonical?>? instantiatesCanonical,
-    List<FhirUri?>? instantiatesUri,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Canonical>? instantiatesCanonical,
+    List<FhirUri>? instantiatesUri,
     @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
     @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
         FamilyMemberHistoryStatus? status,
@@ -777,10 +777,10 @@ abstract class FamilyMemberHistory
     @JsonKey(name: '_deceasedDate') Element? deceasedDateElement,
     String? deceasedString,
     @JsonKey(name: '_deceasedString') Element? deceasedStringElement,
-    List<CodeableReference?>? reason,
-    List<Annotation?>? note,
-    List<FamilyMemberHistoryCondition?>? condition,
-    List<FamilyMemberHistoryProcedure?>? procedure,
+    List<CodeableReference>? reason,
+    List<Annotation>? note,
+    List<FamilyMemberHistoryCondition>? condition,
+    List<FamilyMemberHistoryProcedure>? procedure,
   }) = _FamilyMemberHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -806,8 +806,8 @@ abstract class FamilyMemberHistoryCondition
   FamilyMemberHistoryCondition._();
   factory FamilyMemberHistoryCondition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
     CodeableConcept? outcome,
     Boolean? contributedToDeath,
@@ -817,7 +817,7 @@ abstract class FamilyMemberHistoryCondition
     Period? onsetPeriod,
     String? onsetString,
     @JsonKey(name: '_onsetString') Element? onsetStringElement,
-    List<Annotation?>? note,
+    List<Annotation>? note,
   }) = _FamilyMemberHistoryCondition;
 
   /// Produces a Yaml formatted String version of the object
@@ -844,8 +844,8 @@ abstract class FamilyMemberHistoryProcedure
   FamilyMemberHistoryProcedure._();
   factory FamilyMemberHistoryProcedure({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
     CodeableConcept? outcome,
     Boolean? contributedToDeath,
@@ -857,7 +857,7 @@ abstract class FamilyMemberHistoryProcedure
     @JsonKey(name: '_performedString') Element? performedStringElement,
     FhirDateTime? performedDateTime,
     @JsonKey(name: '_performedDateTime') Element? performedDateTimeElement,
-    List<Annotation?>? note,
+    List<Annotation>? note,
   }) = _FamilyMemberHistoryProcedure;
 
   /// Produces a Yaml formatted String version of the object
@@ -892,19 +892,19 @@ abstract class Procedure with Resource implements _$Procedure {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
-    List<Canonical?>? instantiatesCanonical,
-    List<FhirUri?>? instantiatesUri,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Canonical>? instantiatesCanonical,
+    List<FhirUri>? instantiatesUri,
     @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
-    List<Reference?>? basedOn,
-    List<Reference?>? partOf,
+    List<Reference>? basedOn,
+    List<Reference>? partOf,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     CodeableConcept? code,
     required Reference subject,
     Reference? encounter,
@@ -922,18 +922,18 @@ abstract class Procedure with Resource implements _$Procedure {
     Boolean? reportedBoolean,
     @JsonKey(name: '_reportedBoolean') Element? reportedBooleanElement,
     Reference? reportedReference,
-    List<ProcedurePerformer?>? performer,
+    List<ProcedurePerformer>? performer,
     Reference? location,
-    List<CodeableReference?>? reason,
-    List<CodeableConcept?>? bodySite,
+    List<CodeableReference>? reason,
+    List<CodeableConcept>? bodySite,
     CodeableConcept? outcome,
-    List<Reference?>? report,
-    List<CodeableConcept?>? complication,
-    List<Reference?>? complicationDetail,
-    List<CodeableConcept?>? followUp,
-    List<Annotation?>? note,
-    List<ProcedureFocalDevice?>? focalDevice,
-    List<CodeableReference?>? used,
+    List<Reference>? report,
+    List<CodeableConcept>? complication,
+    List<Reference>? complicationDetail,
+    List<CodeableConcept>? followUp,
+    List<Annotation>? note,
+    List<ProcedureFocalDevice>? focalDevice,
+    List<CodeableReference>? used,
   }) = _Procedure;
 
   /// Produces a Yaml formatted String version of the object
@@ -958,8 +958,8 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
   ProcedurePerformer._();
   factory ProcedurePerformer({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
     required Reference actor,
     Reference? onBehalfOf,
@@ -987,8 +987,8 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
   factory ProcedureFocalDevice({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? action,
     required Reference manipulated,
   }) = _ProcedureFocalDevice;

@@ -22,11 +22,11 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     Id? id,
     Meta? meta,
     Narrative? text,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
         required MedicationRequestStatus status,
     required MedicationRequestIntent intent,
-    List<Resource?>? contained,
+    List<Resource>? contained,
     Boolean? reportedBoolean,
     Reference? reportedReference,
     CodeableConcept? medicationCodeableConcept,
@@ -35,7 +35,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     Reference? encounter,
     required FhirDateTime authoredOn,
     required Reference requester,
-    List<Dosage?>? dosageInstruction,
+    List<Dosage>? dosageInstruction,
     MedicationRequestDispenseRequest? dispenseRequest,
   }) = _MedicationRequest;
 
@@ -50,7 +50,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     Reference? encounter,
     required FhirDateTime authoredOn,
     required Reference requester,
-    List<Dosage?>? dosageInstruction,
+    List<Dosage>? dosageInstruction,
   }) =>
       MedicationRequest(
         status: status,

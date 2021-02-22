@@ -31,9 +31,9 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     FhirDateTime? effectiveDateTime,
     Period? effectivePeriod,
     Instant? issued,
-    List<Reference?>? performer,
-    List<Reference?>? result,
-    List<Attachment?>? presentedForm,
+    List<Reference>? performer,
+    List<Reference>? result,
+    List<Attachment>? presentedForm,
   }) = _DiagnosticReport;
 
   factory DiagnosticReport.laboratoryResultsReporting({
@@ -68,7 +68,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   factory DiagnosticReport.reportAndNoteExchange({
     required DiagnosticReportStatus status,
     required DiagnosticReportCategory diagnosticReportCategory,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     required CodeableConcept code,
     required Reference subject,
     Reference? encounter,
@@ -76,7 +76,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     Period? effectivePeriod,
     Instant? issued,
     List<Reference>? performer,
-    List<Attachment?>? presentedForm,
+    List<Attachment>? presentedForm,
   }) {
     category ??= <CodeableConcept>[];
     category.add(

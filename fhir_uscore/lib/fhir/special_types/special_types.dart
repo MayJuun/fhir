@@ -73,11 +73,11 @@ abstract class Dosage implements _$Dosage {
   factory Dosage({
     String? id,
     String? text,
-    List<CodeableConcept?>? additionalInstruction,
+    List<CodeableConcept>? additionalInstruction,
     String? patientInstruction,
     Timing? timing,
     Boolean? asNeededBoolean,
-    List<DosageDoseAndRate?>? doseAndRate,
+    List<DosageDoseAndRate>? doseAndRate,
     Ratio? maxDosePerPeriod,
     Quantity? maxDosePerAdministration,
     Quantity? maxDosePerLifetime,

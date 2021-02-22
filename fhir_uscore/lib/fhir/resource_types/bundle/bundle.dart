@@ -24,8 +24,8 @@ abstract class Bundle with Resource implements _$Bundle {
     @JsonKey(unknownEnumValue: BundleType.unknown) BundleType? type,
     Instant? timestamp,
     UnsignedInt? total,
-    List<BundleLink?>? link,
-    List<BundleEntry?>? entry,
+    List<BundleLink>? link,
+    List<BundleEntry>? entry,
     Signature? signature,
   }) = _Bundle;
 
@@ -78,7 +78,7 @@ abstract class BundleEntry implements _$BundleEntry {
 
   factory BundleEntry({
     String? id,
-    List<BundleLink?>? link,
+    List<BundleLink>? link,
     FhirUri? fullUrl,
     Resource? resource,
     BundleSearch? search,

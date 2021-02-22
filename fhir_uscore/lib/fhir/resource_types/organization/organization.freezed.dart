@@ -22,14 +22,14 @@ class _$OrganizationTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource?>? contained,
-      List<Identifier?>? identifier,
+      List<Resource>? contained,
+      List<Identifier>? identifier,
       required Boolean active,
       required String name,
-      List<CodeableConcept?>? type,
-      List<ContactPoint?>? telecom,
-      List<Address?>? address,
-      List<Reference?>? endpoint}) {
+      List<CodeableConcept>? type,
+      List<ContactPoint>? telecom,
+      List<Address>? address,
+      List<Reference>? endpoint}) {
     return _Organization(
       resourceType: resourceType,
       id: id,
@@ -61,14 +61,14 @@ mixin _$Organization {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<Resource?>? get contained;
-  List<Identifier?>? get identifier;
+  List<Resource>? get contained;
+  List<Identifier>? get identifier;
   Boolean get active;
   String get name;
-  List<CodeableConcept?>? get type;
-  List<ContactPoint?>? get telecom;
-  List<Address?>? get address;
-  List<Reference?>? get endpoint;
+  List<CodeableConcept>? get type;
+  List<ContactPoint>? get telecom;
+  List<Address>? get address;
+  List<Reference>? get endpoint;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -86,14 +86,14 @@ abstract class $OrganizationCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource?>? contained,
-      List<Identifier?>? identifier,
+      List<Resource>? contained,
+      List<Identifier>? identifier,
       Boolean active,
       String name,
-      List<CodeableConcept?>? type,
-      List<ContactPoint?>? telecom,
-      List<Address?>? address,
-      List<Reference?>? endpoint});
+      List<CodeableConcept>? type,
+      List<ContactPoint>? telecom,
+      List<Address>? address,
+      List<Reference>? endpoint});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -131,18 +131,18 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       active: active == freezed ? _value.active : active as Boolean,
       name: name == freezed ? _value.name : name as String,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
-      address: address == freezed ? _value.address : address as List<Address?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+      address: address == freezed ? _value.address : address as List<Address>?,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference?>?,
+          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>?,
     ));
   }
 
@@ -182,14 +182,14 @@ abstract class _$OrganizationCopyWith<$Res>
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource?>? contained,
-      List<Identifier?>? identifier,
+      List<Resource>? contained,
+      List<Identifier>? identifier,
       Boolean active,
       String name,
-      List<CodeableConcept?>? type,
-      List<ContactPoint?>? telecom,
-      List<Address?>? address,
-      List<Reference?>? endpoint});
+      List<CodeableConcept>? type,
+      List<ContactPoint>? telecom,
+      List<Address>? address,
+      List<Reference>? endpoint});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -231,18 +231,18 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       active: active == freezed ? _value.active : active as Boolean,
       name: name == freezed ? _value.name : name as String,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
-      address: address == freezed ? _value.address : address as List<Address?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+      address: address == freezed ? _value.address : address as List<Address>?,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference?>?,
+          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>?,
     ));
   }
 }
@@ -280,21 +280,21 @@ class _$_Organization extends _Organization {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final Boolean active;
   @override
   final String name;
   @override
-  final List<CodeableConcept?>? type;
+  final List<CodeableConcept>? type;
   @override
-  final List<ContactPoint?>? telecom;
+  final List<ContactPoint>? telecom;
   @override
-  final List<Address?>? address;
+  final List<Address>? address;
   @override
-  final List<Reference?>? endpoint;
+  final List<Reference>? endpoint;
 
   @override
   String toString() {
@@ -372,14 +372,14 @@ abstract class _Organization extends Organization {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource?>? contained,
-      List<Identifier?>? identifier,
+      List<Resource>? contained,
+      List<Identifier>? identifier,
       required Boolean active,
       required String name,
-      List<CodeableConcept?>? type,
-      List<ContactPoint?>? telecom,
-      List<Address?>? address,
-      List<Reference?>? endpoint}) = _$_Organization;
+      List<CodeableConcept>? type,
+      List<ContactPoint>? telecom,
+      List<Address>? address,
+      List<Reference>? endpoint}) = _$_Organization;
 
   factory _Organization.fromJson(Map<String, dynamic> json) =
       _$_Organization.fromJson;
@@ -394,21 +394,21 @@ abstract class _Organization extends Organization {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   Boolean get active;
   @override
   String get name;
   @override
-  List<CodeableConcept?>? get type;
+  List<CodeableConcept>? get type;
   @override
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @override
-  List<Address?>? get address;
+  List<Address>? get address;
   @override
-  List<Reference?>? get endpoint;
+  List<Reference>? get endpoint;
   @override
   @JsonKey(ignore: true)
   _$OrganizationCopyWith<_Organization> get copyWith;

@@ -16,8 +16,7 @@ ContactDetail _$ContactDetailFromJson(Map<String, dynamic> json) {
 class _$ContactDetailTearOff {
   const _$ContactDetailTearOff();
 
-  _ContactDetail call(
-      {String? id, String? name, List<ContactPoint?>? telecom}) {
+  _ContactDetail call({String? id, String? name, List<ContactPoint>? telecom}) {
     return _ContactDetail(
       id: id,
       name: name,
@@ -37,7 +36,7 @@ const $ContactDetail = _$ContactDetailTearOff();
 mixin _$ContactDetail {
   String? get id;
   String? get name;
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -49,7 +48,7 @@ abstract class $ContactDetailCopyWith<$Res> {
   factory $ContactDetailCopyWith(
           ContactDetail value, $Res Function(ContactDetail) then) =
       _$ContactDetailCopyWithImpl<$Res>;
-  $Res call({String? id, String? name, List<ContactPoint?>? telecom});
+  $Res call({String? id, String? name, List<ContactPoint>? telecom});
 }
 
 /// @nodoc
@@ -71,7 +70,7 @@ class _$ContactDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       name: name == freezed ? _value.name : name as String?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
     ));
   }
 }
@@ -83,7 +82,7 @@ abstract class _$ContactDetailCopyWith<$Res>
           _ContactDetail value, $Res Function(_ContactDetail) then) =
       __$ContactDetailCopyWithImpl<$Res>;
   @override
-  $Res call({String? id, String? name, List<ContactPoint?>? telecom});
+  $Res call({String? id, String? name, List<ContactPoint>? telecom});
 }
 
 /// @nodoc
@@ -107,7 +106,7 @@ class __$ContactDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       name: name == freezed ? _value.name : name as String?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
     ));
   }
 }
@@ -126,7 +125,7 @@ class _$_ContactDetail extends _ContactDetail {
   @override
   final String? name;
   @override
-  final List<ContactPoint?>? telecom;
+  final List<ContactPoint>? telecom;
 
   @override
   String toString() {
@@ -168,7 +167,7 @@ abstract class _ContactDetail extends ContactDetail {
   factory _ContactDetail(
       {String? id,
       String? name,
-      List<ContactPoint?>? telecom}) = _$_ContactDetail;
+      List<ContactPoint>? telecom}) = _$_ContactDetail;
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
@@ -178,7 +177,7 @@ abstract class _ContactDetail extends ContactDetail {
   @override
   String? get name;
   @override
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
   _$ContactDetailCopyWith<_ContactDetail> get copyWith;
@@ -522,9 +521,9 @@ class _$MetaTearOff {
       Id? versionId,
       Instant? lastUpdated,
       FhirUri? source,
-      List<Canonical?>? profile,
-      List<Coding?>? security,
-      List<Coding?>? tag}) {
+      List<Canonical>? profile,
+      List<Coding>? security,
+      List<Coding>? tag}) {
     return _Meta(
       id: id,
       versionId: versionId,
@@ -550,9 +549,9 @@ mixin _$Meta {
   Id? get versionId;
   Instant? get lastUpdated;
   FhirUri? get source;
-  List<Canonical?>? get profile;
-  List<Coding?>? get security;
-  List<Coding?>? get tag;
+  List<Canonical>? get profile;
+  List<Coding>? get security;
+  List<Coding>? get tag;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -568,9 +567,9 @@ abstract class $MetaCopyWith<$Res> {
       Id? versionId,
       Instant? lastUpdated,
       FhirUri? source,
-      List<Canonical?>? profile,
-      List<Coding?>? security,
-      List<Coding?>? tag});
+      List<Canonical>? profile,
+      List<Coding>? security,
+      List<Coding>? tag});
 }
 
 /// @nodoc
@@ -598,10 +597,10 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant?,
       source: source == freezed ? _value.source : source as FhirUri?,
       profile:
-          profile == freezed ? _value.profile : profile as List<Canonical?>?,
+          profile == freezed ? _value.profile : profile as List<Canonical>?,
       security:
-          security == freezed ? _value.security : security as List<Coding?>?,
-      tag: tag == freezed ? _value.tag : tag as List<Coding?>?,
+          security == freezed ? _value.security : security as List<Coding>?,
+      tag: tag == freezed ? _value.tag : tag as List<Coding>?,
     ));
   }
 }
@@ -616,9 +615,9 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
       Id? versionId,
       Instant? lastUpdated,
       FhirUri? source,
-      List<Canonical?>? profile,
-      List<Coding?>? security,
-      List<Coding?>? tag});
+      List<Canonical>? profile,
+      List<Coding>? security,
+      List<Coding>? tag});
 }
 
 /// @nodoc
@@ -647,10 +646,10 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
           lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant?,
       source: source == freezed ? _value.source : source as FhirUri?,
       profile:
-          profile == freezed ? _value.profile : profile as List<Canonical?>?,
+          profile == freezed ? _value.profile : profile as List<Canonical>?,
       security:
-          security == freezed ? _value.security : security as List<Coding?>?,
-      tag: tag == freezed ? _value.tag : tag as List<Coding?>?,
+          security == freezed ? _value.security : security as List<Coding>?,
+      tag: tag == freezed ? _value.tag : tag as List<Coding>?,
     ));
   }
 }
@@ -681,11 +680,11 @@ class _$_Meta extends _Meta {
   @override
   final FhirUri? source;
   @override
-  final List<Canonical?>? profile;
+  final List<Canonical>? profile;
   @override
-  final List<Coding?>? security;
+  final List<Coding>? security;
   @override
-  final List<Coding?>? tag;
+  final List<Coding>? tag;
 
   @override
   String toString() {
@@ -745,9 +744,9 @@ abstract class _Meta extends Meta {
       Id? versionId,
       Instant? lastUpdated,
       FhirUri? source,
-      List<Canonical?>? profile,
-      List<Coding?>? security,
-      List<Coding?>? tag}) = _$_Meta;
+      List<Canonical>? profile,
+      List<Coding>? security,
+      List<Coding>? tag}) = _$_Meta;
 
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
@@ -760,11 +759,11 @@ abstract class _Meta extends Meta {
   @override
   FhirUri? get source;
   @override
-  List<Canonical?>? get profile;
+  List<Canonical>? get profile;
   @override
-  List<Coding?>? get security;
+  List<Coding>? get security;
   @override
-  List<Coding?>? get tag;
+  List<Coding>? get tag;
   @override
   @JsonKey(ignore: true)
   _$MetaCopyWith<_Meta> get copyWith;

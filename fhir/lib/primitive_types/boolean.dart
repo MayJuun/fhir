@@ -16,7 +16,7 @@ class Boolean {
             ? Boolean._(inValue, inValue.toLowerCase() == 'true', true, false)
             : Boolean._(inValue, null, false, false);
       default:
-        throw ArgumentError('Date cannot be constructed from $inValue.');
+        throw ArgumentError('Boolean cannot be constructed from $inValue.');
     }
   }
 

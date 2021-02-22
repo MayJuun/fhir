@@ -28,26 +28,20 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     url: json['url'] as String?,
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     version: json['version'] as String?,
     versionElement: json['_version'] == null
@@ -107,40 +101,29 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
     useContext: (json['useContext'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : UsageContext.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => UsageContext.fromJson(e as Map<String, dynamic>))
         .toList(),
     jurisdiction: (json['jurisdiction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     topic: (json['topic'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     contributor: (json['contributor'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Contributor.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Contributor.fromJson(e as Map<String, dynamic>))
         .toList(),
     contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
         .toList(),
     copyright: json['copyright'] as String?,
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : RelatedArtifact.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
         .toList(),
     library_: (json['library'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     disclaimer: json['disclaimer'] as String?,
     disclaimerElement: json['_disclaimer'] == null
@@ -154,9 +137,7 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
         : CodeableConcept.fromJson(
             json['compositeScoring'] as Map<String, dynamic>),
     type: (json['type'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     riskAdjustment: json['riskAdjustment'] as String?,
     riskAdjustmentElement: json['_riskAdjustment'] == null
@@ -183,7 +164,7 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
         : Element.fromJson(
             json['_improvementNotation'] as Map<String, dynamic>),
     definition: (json['definition'] as List<dynamic>?)
-        ?.map((e) => e as String?)
+        ?.map((e) => e as String)
         .toList(),
     definitionElement: (json['_definition'] as List<dynamic>?)
         ?.map((e) =>
@@ -198,13 +179,11 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_set'] as Map<String, dynamic>),
     group: (json['group'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : MeasureGroup.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => MeasureGroup.fromJson(e as Map<String, dynamic>))
         .toList(),
     supplementalData: (json['supplementalData'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : MeasureSupplementalData.fromJson(e as Map<String, dynamic>))
+        ?.map(
+            (e) => MeasureSupplementalData.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -228,15 +207,15 @@ Map<String, dynamic> _$_$_MeasureToJson(_$_Measure instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('url', instance.url);
   writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('version', instance.version);
   writeNotNull('_version', instance.versionElement?.toJson());
   writeNotNull('name', instance.name);
@@ -263,23 +242,23 @@ Map<String, dynamic> _$_$_MeasureToJson(_$_Measure instance) {
   writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
   writeNotNull(
-      'useContext', instance.useContext?.map((e) => e?.toJson()).toList());
+      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'jurisdiction', instance.jurisdiction?.map((e) => e?.toJson()).toList());
-  writeNotNull('topic', instance.topic?.map((e) => e?.toJson()).toList());
+      'jurisdiction', instance.jurisdiction?.map((e) => e.toJson()).toList());
+  writeNotNull('topic', instance.topic?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'contributor', instance.contributor?.map((e) => e?.toJson()).toList());
-  writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
+      'contributor', instance.contributor?.map((e) => e.toJson()).toList());
+  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   writeNotNull('copyright', instance.copyright);
   writeNotNull('_copyright', instance.copyrightElement?.toJson());
   writeNotNull('relatedArtifact',
-      instance.relatedArtifact?.map((e) => e?.toJson()).toList());
-  writeNotNull('library', instance.library_?.map((e) => e?.toJson()).toList());
+      instance.relatedArtifact?.map((e) => e.toJson()).toList());
+  writeNotNull('library', instance.library_?.map((e) => e.toJson()).toList());
   writeNotNull('disclaimer', instance.disclaimer);
   writeNotNull('_disclaimer', instance.disclaimerElement?.toJson());
   writeNotNull('scoring', instance.scoring?.toJson());
   writeNotNull('compositeScoring', instance.compositeScoring?.toJson());
-  writeNotNull('type', instance.type?.map((e) => e?.toJson()).toList());
+  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull('riskAdjustment', instance.riskAdjustment);
   writeNotNull('_riskAdjustment', instance.riskAdjustmentElement?.toJson());
   writeNotNull('rateAggregation', instance.rateAggregation);
@@ -300,9 +279,9 @@ Map<String, dynamic> _$_$_MeasureToJson(_$_Measure instance) {
   writeNotNull('_guidance', instance.guidanceElement?.toJson());
   writeNotNull('set', instance.set_);
   writeNotNull('_set', instance.setElement?.toJson());
-  writeNotNull('group', instance.group?.map((e) => e?.toJson()).toList());
+  writeNotNull('group', instance.group?.map((e) => e.toJson()).toList());
   writeNotNull('supplementalData',
-      instance.supplementalData?.map((e) => e?.toJson()).toList());
+      instance.supplementalData?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -482,14 +461,10 @@ _$_MeasureGroup _$_$_MeasureGroupFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
     population: (json['population'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : MeasurePopulation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => MeasurePopulation.fromJson(e as Map<String, dynamic>))
         .toList(),
     stratifier: (json['stratifier'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : MeasureStratifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => MeasureStratifier.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -510,9 +485,9 @@ Map<String, dynamic> _$_$_MeasureGroupToJson(_$_MeasureGroup instance) {
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull(
-      'population', instance.population?.map((e) => e?.toJson()).toList());
+      'population', instance.population?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'stratifier', instance.stratifier?.map((e) => e?.toJson()).toList());
+      'stratifier', instance.stratifier?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -601,9 +576,7 @@ _$_MeasureSupplementalData _$_$_MeasureSupplementalDataFromJson(
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     usage: (json['usage'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     criteria: json['criteria'] as String?,
     criteriaElement: json['_criteria'] == null
@@ -627,7 +600,7 @@ Map<String, dynamic> _$_$_MeasureSupplementalDataToJson(
   }
 
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('usage', instance.usage?.map((e) => e?.toJson()).toList());
+  writeNotNull('usage', instance.usage?.map((e) => e.toJson()).toList());
   writeNotNull('criteria', instance.criteria);
   writeNotNull('_criteria', instance.criteriaElement?.toJson());
   writeNotNull('path', instance.path);
@@ -657,18 +630,13 @@ _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: json['identifier'] == null
         ? null
@@ -695,9 +663,7 @@ _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
             json['reportingOrganization'] as Map<String, dynamic>),
     period: Period.fromJson(json['period'] as Map<String, dynamic>),
     group: (json['group'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : MeasureReportGroup.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => MeasureReportGroup.fromJson(e as Map<String, dynamic>))
         .toList(),
     evaluatedResources: json['evaluatedResources'] == null
         ? null
@@ -725,11 +691,11 @@ Map<String, dynamic> _$_$_MeasureReportToJson(_$_MeasureReport instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('status', _$MeasureReportStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
@@ -742,7 +708,7 @@ Map<String, dynamic> _$_$_MeasureReportToJson(_$_MeasureReport instance) {
   writeNotNull(
       'reportingOrganization', instance.reportingOrganization?.toJson());
   val['period'] = instance.period.toJson();
-  writeNotNull('group', instance.group?.map((e) => e?.toJson()).toList());
+  writeNotNull('group', instance.group?.map((e) => e.toJson()).toList());
   writeNotNull('evaluatedResources', instance.evaluatedResources?.toJson());
   return val;
 }
@@ -766,9 +732,8 @@ _$_MeasureReportGroup _$_$_MeasureReportGroupFromJson(
   return _$_MeasureReportGroup(
     identifier: Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     population: (json['population'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : MeasureReportPopulation.fromJson(e as Map<String, dynamic>))
+        ?.map(
+            (e) => MeasureReportPopulation.fromJson(e as Map<String, dynamic>))
         .toList(),
     measureScore: json['measureScore'] == null
         ? null
@@ -777,9 +742,8 @@ _$_MeasureReportGroup _$_$_MeasureReportGroupFromJson(
         ? null
         : Element.fromJson(json['_measureScore'] as Map<String, dynamic>),
     stratifier: (json['stratifier'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : MeasureReportStratifier.fromJson(e as Map<String, dynamic>))
+        ?.map(
+            (e) => MeasureReportStratifier.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -797,11 +761,11 @@ Map<String, dynamic> _$_$_MeasureReportGroupToJson(
   }
 
   writeNotNull(
-      'population', instance.population?.map((e) => e?.toJson()).toList());
+      'population', instance.population?.map((e) => e.toJson()).toList());
   writeNotNull('measureScore', instance.measureScore?.toJson());
   writeNotNull('_measureScore', instance.measureScoreElement?.toJson());
   writeNotNull(
-      'stratifier', instance.stratifier?.map((e) => e?.toJson()).toList());
+      'stratifier', instance.stratifier?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -849,9 +813,7 @@ _$_MeasureReportStratifier _$_$_MeasureReportStratifierFromJson(
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     stratum: (json['stratum'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : MeasureReportStratum.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => MeasureReportStratum.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -867,7 +829,7 @@ Map<String, dynamic> _$_$_MeasureReportStratifierToJson(
   }
 
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('stratum', instance.stratum?.map((e) => e?.toJson()).toList());
+  writeNotNull('stratum', instance.stratum?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -879,9 +841,8 @@ _$_MeasureReportStratum _$_$_MeasureReportStratumFromJson(
         ? null
         : Element.fromJson(json['_value'] as Map<String, dynamic>),
     population: (json['population'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : MeasureReportPopulation1.fromJson(e as Map<String, dynamic>))
+        ?.map(
+            (e) => MeasureReportPopulation1.fromJson(e as Map<String, dynamic>))
         .toList(),
     measureScore: json['measureScore'] == null
         ? null
@@ -905,7 +866,7 @@ Map<String, dynamic> _$_$_MeasureReportStratumToJson(
   writeNotNull('value', instance.value);
   writeNotNull('_value', instance.valueElement?.toJson());
   writeNotNull(
-      'population', instance.population?.map((e) => e?.toJson()).toList());
+      'population', instance.population?.map((e) => e.toJson()).toList());
   writeNotNull('measureScore', instance.measureScore?.toJson());
   writeNotNull('_measureScore', instance.measureScoreElement?.toJson());
   return val;

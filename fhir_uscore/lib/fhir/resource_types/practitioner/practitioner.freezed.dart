@@ -24,12 +24,12 @@ class _$PractitionerTearOff {
       Narrative? text,
       required List<Identifier?> identifier,
       required List<HumanName?> name,
-      List<Address?>? address,
-      List<ContactPoint?>? telecom,
+      List<Address>? address,
+      List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
           PractitionerGender? gender,
       Date? birthDate,
-      List<PractitionerQualification?>? qualification}) {
+      List<PractitionerQualification>? qualification}) {
     return _Practitioner(
       resourceType: resourceType,
       id: id,
@@ -62,12 +62,12 @@ mixin _$Practitioner {
   Narrative? get text;
   List<Identifier?> get identifier;
   List<HumanName?> get name;
-  List<Address?>? get address;
-  List<ContactPoint?>? get telecom;
+  List<Address>? get address;
+  List<ContactPoint>? get telecom;
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
   PractitionerGender? get gender;
   Date? get birthDate;
-  List<PractitionerQualification?>? get qualification;
+  List<PractitionerQualification>? get qualification;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -87,12 +87,12 @@ abstract class $PractitionerCopyWith<$Res> {
       Narrative? text,
       List<Identifier?> identifier,
       List<HumanName?> name,
-      List<Address?>? address,
-      List<ContactPoint?>? telecom,
+      List<Address>? address,
+      List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
           PractitionerGender? gender,
       Date? birthDate,
-      List<PractitionerQualification?>? qualification});
+      List<PractitionerQualification>? qualification});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -131,14 +131,14 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
           ? _value.identifier
           : identifier as List<Identifier?>,
       name: name == freezed ? _value.name : name as List<HumanName?>,
-      address: address == freezed ? _value.address : address as List<Address?>?,
+      address: address == freezed ? _value.address : address as List<Address>?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       gender: gender == freezed ? _value.gender : gender as PractitionerGender?,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as List<PractitionerQualification?>?,
+          : qualification as List<PractitionerQualification>?,
     ));
   }
 
@@ -180,12 +180,12 @@ abstract class _$PractitionerCopyWith<$Res>
       Narrative? text,
       List<Identifier?> identifier,
       List<HumanName?> name,
-      List<Address?>? address,
-      List<ContactPoint?>? telecom,
+      List<Address>? address,
+      List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
           PractitionerGender? gender,
       Date? birthDate,
-      List<PractitionerQualification?>? qualification});
+      List<PractitionerQualification>? qualification});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -228,14 +228,14 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
           ? _value.identifier
           : identifier as List<Identifier?>,
       name: name == freezed ? _value.name : name as List<HumanName?>,
-      address: address == freezed ? _value.address : address as List<Address?>?,
+      address: address == freezed ? _value.address : address as List<Address>?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       gender: gender == freezed ? _value.gender : gender as PractitionerGender?,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as List<PractitionerQualification?>?,
+          : qualification as List<PractitionerQualification>?,
     ));
   }
 }
@@ -277,16 +277,16 @@ class _$_Practitioner extends _Practitioner {
   @override
   final List<HumanName?> name;
   @override
-  final List<Address?>? address;
+  final List<Address>? address;
   @override
-  final List<ContactPoint?>? telecom;
+  final List<ContactPoint>? telecom;
   @override
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
   final PractitionerGender? gender;
   @override
   final Date? birthDate;
   @override
-  final List<PractitionerQualification?>? qualification;
+  final List<PractitionerQualification>? qualification;
 
   @override
   String toString() {
@@ -363,12 +363,12 @@ abstract class _Practitioner extends Practitioner {
       Narrative? text,
       required List<Identifier?> identifier,
       required List<HumanName?> name,
-      List<Address?>? address,
-      List<ContactPoint?>? telecom,
+      List<Address>? address,
+      List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
           PractitionerGender? gender,
       Date? birthDate,
-      List<PractitionerQualification?>? qualification}) = _$_Practitioner;
+      List<PractitionerQualification>? qualification}) = _$_Practitioner;
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
       _$_Practitioner.fromJson;
@@ -387,16 +387,16 @@ abstract class _Practitioner extends Practitioner {
   @override
   List<HumanName?> get name;
   @override
-  List<Address?>? get address;
+  List<Address>? get address;
   @override
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
   PractitionerGender? get gender;
   @override
   Date? get birthDate;
   @override
-  List<PractitionerQualification?>? get qualification;
+  List<PractitionerQualification>? get qualification;
   @override
   @JsonKey(ignore: true)
   _$PractitionerCopyWith<_Practitioner> get copyWith;
@@ -418,11 +418,11 @@ class _$PractitionerRoleTearOff {
       Narrative? text,
       required Reference practitioner,
       required Reference organization,
-      List<CodeableConcept?>? code,
-      List<CodeableConcept?>? specialty,
-      List<Reference?>? location,
-      List<ContactPoint?>? telecom,
-      List<Reference?>? endpoint}) {
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? specialty,
+      List<Reference>? location,
+      List<ContactPoint>? telecom,
+      List<Reference>? endpoint}) {
     return _PractitionerRole(
       resourceType: resourceType,
       id: id,
@@ -455,11 +455,11 @@ mixin _$PractitionerRole {
   Narrative? get text;
   Reference get practitioner;
   Reference get organization;
-  List<CodeableConcept?>? get code;
-  List<CodeableConcept?>? get specialty;
-  List<Reference?>? get location;
-  List<ContactPoint?>? get telecom;
-  List<Reference?>? get endpoint;
+  List<CodeableConcept>? get code;
+  List<CodeableConcept>? get specialty;
+  List<Reference>? get location;
+  List<ContactPoint>? get telecom;
+  List<Reference>? get endpoint;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -479,11 +479,11 @@ abstract class $PractitionerRoleCopyWith<$Res> {
       Narrative? text,
       Reference practitioner,
       Reference organization,
-      List<CodeableConcept?>? code,
-      List<CodeableConcept?>? specialty,
-      List<Reference?>? location,
-      List<ContactPoint?>? telecom,
-      List<Reference?>? endpoint});
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? specialty,
+      List<Reference>? location,
+      List<ContactPoint>? telecom,
+      List<Reference>? endpoint});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -527,16 +527,16 @@ class _$PractitionerRoleCopyWithImpl<$Res>
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
-      code: code == freezed ? _value.code : code as List<CodeableConcept?>?,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept?>?,
+          : specialty as List<CodeableConcept>?,
       location:
-          location == freezed ? _value.location : location as List<Reference?>?,
+          location == freezed ? _value.location : location as List<Reference>?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference?>?,
+          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>?,
     ));
   }
 
@@ -592,11 +592,11 @@ abstract class _$PractitionerRoleCopyWith<$Res>
       Narrative? text,
       Reference practitioner,
       Reference organization,
-      List<CodeableConcept?>? code,
-      List<CodeableConcept?>? specialty,
-      List<Reference?>? location,
-      List<ContactPoint?>? telecom,
-      List<Reference?>? endpoint});
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? specialty,
+      List<Reference>? location,
+      List<ContactPoint>? telecom,
+      List<Reference>? endpoint});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -646,16 +646,16 @@ class __$PractitionerRoleCopyWithImpl<$Res>
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
-      code: code == freezed ? _value.code : code as List<CodeableConcept?>?,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept?>?,
+          : specialty as List<CodeableConcept>?,
       location:
-          location == freezed ? _value.location : location as List<Reference?>?,
+          location == freezed ? _value.location : location as List<Reference>?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference?>?,
+          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>?,
     ));
   }
 }
@@ -696,15 +696,15 @@ class _$_PractitionerRole extends _PractitionerRole {
   @override
   final Reference organization;
   @override
-  final List<CodeableConcept?>? code;
+  final List<CodeableConcept>? code;
   @override
-  final List<CodeableConcept?>? specialty;
+  final List<CodeableConcept>? specialty;
   @override
-  final List<Reference?>? location;
+  final List<Reference>? location;
   @override
-  final List<ContactPoint?>? telecom;
+  final List<ContactPoint>? telecom;
   @override
-  final List<Reference?>? endpoint;
+  final List<Reference>? endpoint;
 
   @override
   String toString() {
@@ -782,11 +782,11 @@ abstract class _PractitionerRole extends PractitionerRole {
       Narrative? text,
       required Reference practitioner,
       required Reference organization,
-      List<CodeableConcept?>? code,
-      List<CodeableConcept?>? specialty,
-      List<Reference?>? location,
-      List<ContactPoint?>? telecom,
-      List<Reference?>? endpoint}) = _$_PractitionerRole;
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? specialty,
+      List<Reference>? location,
+      List<ContactPoint>? telecom,
+      List<Reference>? endpoint}) = _$_PractitionerRole;
 
   factory _PractitionerRole.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRole.fromJson;
@@ -805,15 +805,15 @@ abstract class _PractitionerRole extends PractitionerRole {
   @override
   Reference get organization;
   @override
-  List<CodeableConcept?>? get code;
+  List<CodeableConcept>? get code;
   @override
-  List<CodeableConcept?>? get specialty;
+  List<CodeableConcept>? get specialty;
   @override
-  List<Reference?>? get location;
+  List<Reference>? get location;
   @override
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @override
-  List<Reference?>? get endpoint;
+  List<Reference>? get endpoint;
   @override
   @JsonKey(ignore: true)
   _$PractitionerRoleCopyWith<_PractitionerRole> get copyWith;
@@ -830,7 +830,7 @@ class _$PractitionerQualificationTearOff {
 
   _PractitionerQualification call(
       {String? id,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       required CodeableConcept code,
       Period? period,
       Reference? issuer}) {
@@ -854,7 +854,7 @@ const $PractitionerQualification = _$PractitionerQualificationTearOff();
 /// @nodoc
 mixin _$PractitionerQualification {
   String? get id;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   CodeableConcept get code;
   Period? get period;
   Reference? get issuer;
@@ -871,7 +871,7 @@ abstract class $PractitionerQualificationCopyWith<$Res> {
       _$PractitionerQualificationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       CodeableConcept code,
       Period? period,
       Reference? issuer});
@@ -902,7 +902,7 @@ class _$PractitionerQualificationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       period: period == freezed ? _value.period : period as Period?,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
@@ -948,7 +948,7 @@ abstract class _$PractitionerQualificationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       CodeableConcept code,
       Period? period,
       Reference? issuer});
@@ -985,7 +985,7 @@ class __$PractitionerQualificationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       period: period == freezed ? _value.period : period as Period?,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
@@ -1007,7 +1007,7 @@ class _$_PractitionerQualification extends _PractitionerQualification {
   @override
   final String? id;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final CodeableConcept code;
   @override
@@ -1063,7 +1063,7 @@ abstract class _PractitionerQualification extends PractitionerQualification {
   _PractitionerQualification._() : super._();
   factory _PractitionerQualification(
       {String? id,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       required CodeableConcept code,
       Period? period,
       Reference? issuer}) = _$_PractitionerQualification;
@@ -1074,7 +1074,7 @@ abstract class _PractitionerQualification extends PractitionerQualification {
   @override
   String? get id;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   CodeableConcept get code;
   @override

@@ -52,8 +52,8 @@ abstract class Population implements _$Population {
   ///  specific population to which this applies.
   factory Population({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Range? ageRange,
     CodeableConcept? ageCodeableConcept,
     CodeableConcept? gender,
@@ -128,12 +128,12 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
   ///  term and the controlled term identifier shall be specified.
   factory ProductShelfLife({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     required CodeableConcept type,
     required Quantity period,
-    List<CodeableConcept?>? specialPrecautionsForStorage,
+    List<CodeableConcept>? specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
   /// Produces a Yaml formatted String version of the object
@@ -239,8 +239,8 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
   ///  be used.
   factory ProdCharacteristic({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Quantity? height,
     Quantity? width,
     Quantity? depth,
@@ -249,11 +249,11 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
     Quantity? externalDiameter,
     String? shape,
     @JsonKey(name: '_shape') Element? shapeElement,
-    List<String?>? color,
+    List<String>? color,
     @JsonKey(name: '_color') List<Element?>? colorElement,
-    List<String?>? imprint,
+    List<String>? imprint,
     @JsonKey(name: '_imprint') List<Element?>? imprintElement,
-    List<Attachment?>? image,
+    List<Attachment>? image,
     CodeableConcept? scoring,
   }) = _ProdCharacteristic;
 
@@ -339,8 +339,8 @@ abstract class MarketingStatus implements _$MarketingStatus {
   /// [_restoreDate]: Extensions for restoreDate
   factory MarketingStatus({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept country,
     CodeableConcept? jurisdiction,
     required CodeableConcept status,
@@ -434,8 +434,8 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
   /// [referenceRange]: Reference range of possible or expected values.
   factory SubstanceAmount({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Quantity? amountQuantity,
     Range? amountRange,
     String? amountString,
@@ -505,8 +505,8 @@ abstract class SubstanceAmountReferenceRange
   /// [highLimit]: Upper limit possible or expected.
   factory SubstanceAmountReferenceRange({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Quantity? lowLimit,
     Quantity? highLimit,
   }) = _SubstanceAmountReferenceRange;

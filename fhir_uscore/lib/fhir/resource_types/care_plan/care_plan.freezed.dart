@@ -22,7 +22,7 @@ class _$CarePlanTearOff {
       Id? id,
       Meta? meta,
       required Narrative text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
           required CarePlanStatus status,
       required CarePlanIntent intent,
@@ -56,7 +56,7 @@ mixin _$CarePlan {
   Id? get id;
   Meta? get meta;
   Narrative get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
   CarePlanStatus get status;
   CarePlanIntent get intent;
@@ -78,7 +78,7 @@ abstract class $CarePlanCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
           CarePlanStatus status,
       CarePlanIntent intent,
@@ -119,7 +119,7 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       status: status == freezed ? _value.status : status as CarePlanStatus,
       intent: intent == freezed ? _value.intent : intent as CarePlanIntent,
       category: category == freezed
@@ -166,7 +166,7 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
           CarePlanStatus status,
       CarePlanIntent intent,
@@ -211,7 +211,7 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       status: status == freezed ? _value.status : status as CarePlanStatus,
       intent: intent == freezed ? _value.intent : intent as CarePlanIntent,
       category: category == freezed
@@ -253,7 +253,7 @@ class _$_CarePlan extends _CarePlan {
   @override
   final Narrative text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
   final CarePlanStatus status;
@@ -328,7 +328,7 @@ abstract class _CarePlan extends CarePlan {
       Id? id,
       Meta? meta,
       required Narrative text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
           required CarePlanStatus status,
       required CarePlanIntent intent,
@@ -347,7 +347,7 @@ abstract class _CarePlan extends CarePlan {
   @override
   Narrative get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
   CarePlanStatus get status;

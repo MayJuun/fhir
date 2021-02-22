@@ -23,7 +23,7 @@ class _$OperationOutcomeTearOff {
       Meta? meta,
       Narrative? text,
       Code? language,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       required List<OperationOutcomeIssue> issue}) {
     return _OperationOutcome(
       resourceType: resourceType,
@@ -52,7 +52,7 @@ mixin _$OperationOutcome {
   Meta? get meta;
   Narrative? get text;
   Code? get language;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   List<OperationOutcomeIssue> get issue;
 
   Map<String, dynamic> toJson();
@@ -72,7 +72,7 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       Meta? meta,
       Narrative? text,
       Code? language,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       List<OperationOutcomeIssue> issue});
 
   $MetaCopyWith<$Res>? get meta;
@@ -108,7 +108,7 @@ class _$OperationOutcomeCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       issue: issue == freezed
           ? _value.issue
           : issue as List<OperationOutcomeIssue>,
@@ -152,7 +152,7 @@ abstract class _$OperationOutcomeCopyWith<$Res>
       Meta? meta,
       Narrative? text,
       Code? language,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       List<OperationOutcomeIssue> issue});
 
   @override
@@ -192,7 +192,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       issue: issue == freezed
           ? _value.issue
           : issue as List<OperationOutcomeIssue>,
@@ -230,7 +230,7 @@ class _$_OperationOutcome extends _OperationOutcome {
   @override
   final Code? language;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   final List<OperationOutcomeIssue> issue;
 
@@ -293,7 +293,7 @@ abstract class _OperationOutcome extends OperationOutcome {
       Meta? meta,
       Narrative? text,
       Code? language,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       required List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
@@ -311,7 +311,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   @override
   Code? get language;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   List<OperationOutcomeIssue> get issue;
   @override
@@ -336,8 +336,8 @@ class _$OperationOutcomeIssueTearOff {
           OperationOutcomeIssueCode? code,
       CodeableConcept? details,
       String? diagnostics,
-      List<String?>? location,
-      List<String?>? expression}) {
+      List<String>? location,
+      List<String>? expression}) {
     return _OperationOutcomeIssue(
       id: id,
       severity: severity,
@@ -366,8 +366,8 @@ mixin _$OperationOutcomeIssue {
   OperationOutcomeIssueCode? get code;
   CodeableConcept? get details;
   String? get diagnostics;
-  List<String?>? get location;
-  List<String?>? get expression;
+  List<String>? get location;
+  List<String>? get expression;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -387,8 +387,8 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
           OperationOutcomeIssueCode? code,
       CodeableConcept? details,
       String? diagnostics,
-      List<String?>? location,
-      List<String?>? expression});
+      List<String>? location,
+      List<String>? expression});
 
   $CodeableConceptCopyWith<$Res>? get details;
 }
@@ -423,10 +423,10 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
       diagnostics:
           diagnostics == freezed ? _value.diagnostics : diagnostics as String?,
       location:
-          location == freezed ? _value.location : location as List<String?>?,
+          location == freezed ? _value.location : location as List<String>?,
       expression: expression == freezed
           ? _value.expression
-          : expression as List<String?>?,
+          : expression as List<String>?,
     ));
   }
 
@@ -457,8 +457,8 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
           OperationOutcomeIssueCode? code,
       CodeableConcept? details,
       String? diagnostics,
-      List<String?>? location,
-      List<String?>? expression});
+      List<String>? location,
+      List<String>? expression});
 
   @override
   $CodeableConceptCopyWith<$Res>? get details;
@@ -496,10 +496,10 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
       diagnostics:
           diagnostics == freezed ? _value.diagnostics : diagnostics as String?,
       location:
-          location == freezed ? _value.location : location as List<String?>?,
+          location == freezed ? _value.location : location as List<String>?,
       expression: expression == freezed
           ? _value.expression
-          : expression as List<String?>?,
+          : expression as List<String>?,
     ));
   }
 }
@@ -536,9 +536,9 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   @override
   final String? diagnostics;
   @override
-  final List<String?>? location;
+  final List<String>? location;
   @override
-  final List<String?>? expression;
+  final List<String>? expression;
 
   @override
   String toString() {
@@ -603,8 +603,8 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
           OperationOutcomeIssueCode? code,
       CodeableConcept? details,
       String? diagnostics,
-      List<String?>? location,
-      List<String?>? expression}) = _$_OperationOutcomeIssue;
+      List<String>? location,
+      List<String>? expression}) = _$_OperationOutcomeIssue;
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
@@ -622,9 +622,9 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   @override
   String? get diagnostics;
   @override
-  List<String?>? get location;
+  List<String>? get location;
   @override
-  List<String?>? get expression;
+  List<String>? get expression;
   @override
   @JsonKey(ignore: true)
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;

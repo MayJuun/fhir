@@ -9,9 +9,7 @@ part of 'general_types.dart';
 _$_BackboneElement _$_$_BackboneElementFromJson(Map<String, dynamic> json) {
   return _$_BackboneElement(
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -26,7 +24,7 @@ Map<String, dynamic> _$_$_BackboneElementToJson(_$_BackboneElement instance) {
   }
 
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -229,8 +227,7 @@ const _$IdentifierUseEnumMap = {
 _$_CodeableConcept _$_$_CodeableConceptFromJson(Map<String, dynamic> json) {
   return _$_CodeableConcept(
     coding: (json['coding'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
         .toList(),
     text: json['text'] as String?,
     textElement: json['_text'] == null
@@ -248,7 +245,7 @@ Map<String, dynamic> _$_$_CodeableConceptToJson(_$_CodeableConcept instance) {
     }
   }
 
-  writeNotNull('coding', instance.coding?.map((e) => e?.toJson()).toList());
+  writeNotNull('coding', instance.coding?.map((e) => e.toJson()).toList());
   writeNotNull('text', instance.text);
   writeNotNull('_text', instance.textElement?.toJson());
   return val;
@@ -815,19 +812,19 @@ _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
     familyElement: json['_family'] == null
         ? null
         : Element.fromJson(json['_family'] as Map<String, dynamic>),
-    given: (json['given'] as List<dynamic>?)?.map((e) => e as String?).toList(),
+    given: (json['given'] as List<dynamic>?)?.map((e) => e as String).toList(),
     givenElement: (json['_given'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     prefix:
-        (json['prefix'] as List<dynamic>?)?.map((e) => e as String?).toList(),
+        (json['prefix'] as List<dynamic>?)?.map((e) => e as String).toList(),
     prefixElement: (json['_prefix'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     suffix:
-        (json['suffix'] as List<dynamic>?)?.map((e) => e as String?).toList(),
+        (json['suffix'] as List<dynamic>?)?.map((e) => e as String).toList(),
     suffixElement: (json['_suffix'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -891,7 +888,7 @@ _$_Address _$_$_AddressFromJson(Map<String, dynamic> json) {
     textElement: json['_text'] == null
         ? null
         : Element.fromJson(json['_text'] as Map<String, dynamic>),
-    line: (json['line'] as List<dynamic>?)?.map((e) => e as String?).toList(),
+    line: (json['line'] as List<dynamic>?)?.map((e) => e as String).toList(),
     lineElement: (json['_line'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1035,7 +1032,7 @@ const _$ContactPointUseEnumMap = {
 
 _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
   return _$_Timing(
-    event: (json['event'] as List<dynamic>?)?.map((e) => e as String?).toList(),
+    event: (json['event'] as List<dynamic>?)?.map((e) => e as String).toList(),
     eventElement: (json['_event'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1127,22 +1124,21 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
     periodUnitElement: json['_periodUnit'] == null
         ? null
         : Element.fromJson(json['_periodUnit'] as Map<String, dynamic>),
-    dayOfWeek: (json['dayOfWeek'] as List<dynamic>?)
-        ?.map((e) => e as String?)
-        .toList(),
+    dayOfWeek:
+        (json['dayOfWeek'] as List<dynamic>?)?.map((e) => e as String).toList(),
     dayOfWeekElement: (json['_dayOfWeek'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     timeOfDay: (json['timeOfDay'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Time.fromJson(e))
+        ?.map((e) => Time.fromJson(e))
         .toList(),
     timeOfDayElement: (json['_timeOfDay'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     when: (json['when'] as List<dynamic>?)
-        ?.map((e) => _$enumDecodeNullable(_$TimingRepeatWhenEnumMap, e))
+        ?.map((e) => _$enumDecode(_$TimingRepeatWhenEnumMap, e))
         .toList(),
     whenElement: (json['_when'] as List<dynamic>?)
         ?.map((e) =>
@@ -1193,7 +1189,7 @@ Map<String, dynamic> _$_$_TimingRepeatToJson(_$_TimingRepeat instance) {
   writeNotNull('_dayOfWeek',
       instance.dayOfWeekElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
-      'timeOfDay', instance.timeOfDay?.map((e) => e?.toJson()).toList());
+      'timeOfDay', instance.timeOfDay?.map((e) => e.toJson()).toList());
   writeNotNull('_timeOfDay',
       instance.timeOfDayElement?.map((e) => e?.toJson()).toList());
   writeNotNull(

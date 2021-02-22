@@ -28,14 +28,14 @@ class _$MeasureTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -63,12 +63,12 @@ class _$MeasureTearOff {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
@@ -85,20 +85,20 @@ class _$MeasureTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<CodeableConcept?>? topic,
-      List<ContactDetail?>? author,
-      List<ContactDetail?>? editor,
-      List<ContactDetail?>? reviewer,
-      List<ContactDetail?>? endorser,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical?>? library_,
+          List<Canonical>? library_,
       Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
-      List<CodeableConcept?>? type,
+      List<CodeableConcept>? type,
       String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
           Element? riskAdjustmentElement,
@@ -112,14 +112,14 @@ class _$MeasureTearOff {
       @JsonKey(name: '_clinicalRecommendationStatement')
           Element? clinicalRecommendationStatementElement,
       CodeableConcept? improvementNotation,
-      List<Markdown?>? definition,
+      List<Markdown>? definition,
       @JsonKey(name: '_definition')
           List<Element?>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
-      List<MeasureGroup?>? group,
-      List<MeasureSupplementalData?>? supplementalData}) {
+      List<MeasureGroup>? group,
+      List<MeasureSupplementalData>? supplementalData}) {
     return _Measure(
       resourceType: resourceType,
       id: id,
@@ -221,14 +221,14 @@ mixin _$Measure {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -256,12 +256,12 @@ mixin _$Measure {
   String? get publisher;
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   Markdown? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<UsageContext?>? get useContext;
-  List<CodeableConcept?>? get jurisdiction;
+  List<UsageContext>? get useContext;
+  List<CodeableConcept>? get jurisdiction;
   Markdown? get purpose;
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
@@ -278,20 +278,20 @@ mixin _$Measure {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   Period? get effectivePeriod;
-  List<CodeableConcept?>? get topic;
-  List<ContactDetail?>? get author;
-  List<ContactDetail?>? get editor;
-  List<ContactDetail?>? get reviewer;
-  List<ContactDetail?>? get endorser;
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<CodeableConcept>? get topic;
+  List<ContactDetail>? get author;
+  List<ContactDetail>? get editor;
+  List<ContactDetail>? get reviewer;
+  List<ContactDetail>? get endorser;
+  List<RelatedArtifact>? get relatedArtifact;
   @JsonKey(name: 'library')
-  List<Canonical?>? get library_;
+  List<Canonical>? get library_;
   Markdown? get disclaimer;
   @JsonKey(name: '_disclaimer')
   Element? get disclaimerElement;
   CodeableConcept? get scoring;
   CodeableConcept? get compositeScoring;
-  List<CodeableConcept?>? get type;
+  List<CodeableConcept>? get type;
   String? get riskAdjustment;
   @JsonKey(name: '_riskAdjustment')
   Element? get riskAdjustmentElement;
@@ -305,14 +305,14 @@ mixin _$Measure {
   @JsonKey(name: '_clinicalRecommendationStatement')
   Element? get clinicalRecommendationStatementElement;
   CodeableConcept? get improvementNotation;
-  List<Markdown?>? get definition;
+  List<Markdown>? get definition;
   @JsonKey(name: '_definition')
   List<Element?>? get definitionElement;
   Markdown? get guidance;
   @JsonKey(name: '_guidance')
   Element? get guidanceElement;
-  List<MeasureGroup?>? get group;
-  List<MeasureSupplementalData?>? get supplementalData;
+  List<MeasureGroup>? get group;
+  List<MeasureSupplementalData>? get supplementalData;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -335,14 +335,14 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -370,12 +370,12 @@ abstract class $MeasureCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
@@ -392,20 +392,20 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<CodeableConcept?>? topic,
-      List<ContactDetail?>? author,
-      List<ContactDetail?>? editor,
-      List<ContactDetail?>? reviewer,
-      List<ContactDetail?>? endorser,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical?>? library_,
+          List<Canonical>? library_,
       Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
-      List<CodeableConcept?>? type,
+      List<CodeableConcept>? type,
       String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
           Element? riskAdjustmentElement,
@@ -419,14 +419,14 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: '_clinicalRecommendationStatement')
           Element? clinicalRecommendationStatementElement,
       CodeableConcept? improvementNotation,
-      List<Markdown?>? definition,
+      List<Markdown>? definition,
       @JsonKey(name: '_definition')
           List<Element?>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
-      List<MeasureGroup?>? group,
-      List<MeasureSupplementalData?>? supplementalData});
+      List<MeasureGroup>? group,
+      List<MeasureSupplementalData>? supplementalData});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -566,19 +566,19 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -617,9 +617,8 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
           : publisherElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -628,10 +627,10 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
@@ -659,22 +658,22 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
       author:
-          author == freezed ? _value.author : author as List<ContactDetail?>?,
+          author == freezed ? _value.author : author as List<ContactDetail>?,
       editor:
-          editor == freezed ? _value.editor : editor as List<ContactDetail?>?,
+          editor == freezed ? _value.editor : editor as List<ContactDetail>?,
       reviewer: reviewer == freezed
           ? _value.reviewer
-          : reviewer as List<ContactDetail?>?,
+          : reviewer as List<ContactDetail>?,
       endorser: endorser == freezed
           ? _value.endorser
-          : endorser as List<ContactDetail?>?,
+          : endorser as List<ContactDetail>?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       library_:
-          library_ == freezed ? _value.library_ : library_ as List<Canonical?>?,
+          library_ == freezed ? _value.library_ : library_ as List<Canonical>?,
       disclaimer:
           disclaimer == freezed ? _value.disclaimer : disclaimer as Markdown?,
       disclaimerElement: disclaimerElement == freezed
@@ -685,7 +684,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       compositeScoring: compositeScoring == freezed
           ? _value.compositeScoring
           : compositeScoring as CodeableConcept?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       riskAdjustment: riskAdjustment == freezed
           ? _value.riskAdjustment
           : riskAdjustment as String?,
@@ -716,7 +715,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           : improvementNotation as CodeableConcept?,
       definition: definition == freezed
           ? _value.definition
-          : definition as List<Markdown?>?,
+          : definition as List<Markdown>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
           : definitionElement as List<Element?>?,
@@ -724,10 +723,10 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
           : guidanceElement as Element?,
-      group: group == freezed ? _value.group : group as List<MeasureGroup?>?,
+      group: group == freezed ? _value.group : group as List<MeasureGroup>?,
       supplementalData: supplementalData == freezed
           ? _value.supplementalData
-          : supplementalData as List<MeasureSupplementalData?>?,
+          : supplementalData as List<MeasureSupplementalData>?,
     ));
   }
 
@@ -1093,14 +1092,14 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -1128,12 +1127,12 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
@@ -1150,20 +1149,20 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<CodeableConcept?>? topic,
-      List<ContactDetail?>? author,
-      List<ContactDetail?>? editor,
-      List<ContactDetail?>? reviewer,
-      List<ContactDetail?>? endorser,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical?>? library_,
+          List<Canonical>? library_,
       Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
-      List<CodeableConcept?>? type,
+      List<CodeableConcept>? type,
       String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
           Element? riskAdjustmentElement,
@@ -1177,14 +1176,14 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @JsonKey(name: '_clinicalRecommendationStatement')
           Element? clinicalRecommendationStatementElement,
       CodeableConcept? improvementNotation,
-      List<Markdown?>? definition,
+      List<Markdown>? definition,
       @JsonKey(name: '_definition')
           List<Element?>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
-      List<MeasureGroup?>? group,
-      List<MeasureSupplementalData?>? supplementalData});
+      List<MeasureGroup>? group,
+      List<MeasureSupplementalData>? supplementalData});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -1356,19 +1355,19 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -1407,9 +1406,8 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
           : publisherElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -1418,10 +1416,10 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
@@ -1449,22 +1447,22 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
       author:
-          author == freezed ? _value.author : author as List<ContactDetail?>?,
+          author == freezed ? _value.author : author as List<ContactDetail>?,
       editor:
-          editor == freezed ? _value.editor : editor as List<ContactDetail?>?,
+          editor == freezed ? _value.editor : editor as List<ContactDetail>?,
       reviewer: reviewer == freezed
           ? _value.reviewer
-          : reviewer as List<ContactDetail?>?,
+          : reviewer as List<ContactDetail>?,
       endorser: endorser == freezed
           ? _value.endorser
-          : endorser as List<ContactDetail?>?,
+          : endorser as List<ContactDetail>?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       library_:
-          library_ == freezed ? _value.library_ : library_ as List<Canonical?>?,
+          library_ == freezed ? _value.library_ : library_ as List<Canonical>?,
       disclaimer:
           disclaimer == freezed ? _value.disclaimer : disclaimer as Markdown?,
       disclaimerElement: disclaimerElement == freezed
@@ -1475,7 +1473,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       compositeScoring: compositeScoring == freezed
           ? _value.compositeScoring
           : compositeScoring as CodeableConcept?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       riskAdjustment: riskAdjustment == freezed
           ? _value.riskAdjustment
           : riskAdjustment as String?,
@@ -1506,7 +1504,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           : improvementNotation as CodeableConcept?,
       definition: definition == freezed
           ? _value.definition
-          : definition as List<Markdown?>?,
+          : definition as List<Markdown>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
           : definitionElement as List<Element?>?,
@@ -1514,10 +1512,10 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
           : guidanceElement as Element?,
-      group: group == freezed ? _value.group : group as List<MeasureGroup?>?,
+      group: group == freezed ? _value.group : group as List<MeasureGroup>?,
       supplementalData: supplementalData == freezed
           ? _value.supplementalData
-          : supplementalData as List<MeasureSupplementalData?>?,
+          : supplementalData as List<MeasureSupplementalData>?,
     ));
   }
 }
@@ -1655,19 +1653,19 @@ class _$_Measure extends _Measure {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -1714,16 +1712,16 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<UsageContext?>? useContext;
+  final List<UsageContext>? useContext;
   @override
-  final List<CodeableConcept?>? jurisdiction;
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? purpose;
   @override
@@ -1752,20 +1750,20 @@ class _$_Measure extends _Measure {
   @override
   final Period? effectivePeriod;
   @override
-  final List<CodeableConcept?>? topic;
+  final List<CodeableConcept>? topic;
   @override
-  final List<ContactDetail?>? author;
+  final List<ContactDetail>? author;
   @override
-  final List<ContactDetail?>? editor;
+  final List<ContactDetail>? editor;
   @override
-  final List<ContactDetail?>? reviewer;
+  final List<ContactDetail>? reviewer;
   @override
-  final List<ContactDetail?>? endorser;
+  final List<ContactDetail>? endorser;
   @override
-  final List<RelatedArtifact?>? relatedArtifact;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  final List<Canonical?>? library_;
+  final List<Canonical>? library_;
   @override
   final Markdown? disclaimer;
   @override
@@ -1776,7 +1774,7 @@ class _$_Measure extends _Measure {
   @override
   final CodeableConcept? compositeScoring;
   @override
-  final List<CodeableConcept?>? type;
+  final List<CodeableConcept>? type;
   @override
   final String? riskAdjustment;
   @override
@@ -1800,7 +1798,7 @@ class _$_Measure extends _Measure {
   @override
   final CodeableConcept? improvementNotation;
   @override
-  final List<Markdown?>? definition;
+  final List<Markdown>? definition;
   @override
   @JsonKey(name: '_definition')
   final List<Element?>? definitionElement;
@@ -1810,9 +1808,9 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_guidance')
   final Element? guidanceElement;
   @override
-  final List<MeasureGroup?>? group;
+  final List<MeasureGroup>? group;
   @override
-  final List<MeasureSupplementalData?>? supplementalData;
+  final List<MeasureSupplementalData>? supplementalData;
 
   @override
   String toString() {
@@ -2048,14 +2046,14 @@ abstract class _Measure extends Measure {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -2083,12 +2081,12 @@ abstract class _Measure extends Measure {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
@@ -2105,20 +2103,20 @@ abstract class _Measure extends Measure {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<CodeableConcept?>? topic,
-      List<ContactDetail?>? author,
-      List<ContactDetail?>? editor,
-      List<ContactDetail?>? reviewer,
-      List<ContactDetail?>? endorser,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Canonical?>? library_,
+          List<Canonical>? library_,
       Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
-      List<CodeableConcept?>? type,
+      List<CodeableConcept>? type,
       String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
           Element? riskAdjustmentElement,
@@ -2132,14 +2130,14 @@ abstract class _Measure extends Measure {
       @JsonKey(name: '_clinicalRecommendationStatement')
           Element? clinicalRecommendationStatementElement,
       CodeableConcept? improvementNotation,
-      List<Markdown?>? definition,
+      List<Markdown>? definition,
       @JsonKey(name: '_definition')
           List<Element?>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
-      List<MeasureGroup?>? group,
-      List<MeasureSupplementalData?>? supplementalData}) = _$_Measure;
+      List<MeasureGroup>? group,
+      List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
 
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
@@ -2163,19 +2161,19 @@ abstract class _Measure extends Measure {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   String? get version;
   @override
@@ -2222,16 +2220,16 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   Markdown? get description;
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<UsageContext?>? get useContext;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction;
   @override
   Markdown? get purpose;
   @override
@@ -2260,20 +2258,20 @@ abstract class _Measure extends Measure {
   @override
   Period? get effectivePeriod;
   @override
-  List<CodeableConcept?>? get topic;
+  List<CodeableConcept>? get topic;
   @override
-  List<ContactDetail?>? get author;
+  List<ContactDetail>? get author;
   @override
-  List<ContactDetail?>? get editor;
+  List<ContactDetail>? get editor;
   @override
-  List<ContactDetail?>? get reviewer;
+  List<ContactDetail>? get reviewer;
   @override
-  List<ContactDetail?>? get endorser;
+  List<ContactDetail>? get endorser;
   @override
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<RelatedArtifact>? get relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Canonical?>? get library_;
+  List<Canonical>? get library_;
   @override
   Markdown? get disclaimer;
   @override
@@ -2284,7 +2282,7 @@ abstract class _Measure extends Measure {
   @override
   CodeableConcept? get compositeScoring;
   @override
-  List<CodeableConcept?>? get type;
+  List<CodeableConcept>? get type;
   @override
   String? get riskAdjustment;
   @override
@@ -2308,7 +2306,7 @@ abstract class _Measure extends Measure {
   @override
   CodeableConcept? get improvementNotation;
   @override
-  List<Markdown?>? get definition;
+  List<Markdown>? get definition;
   @override
   @JsonKey(name: '_definition')
   List<Element?>? get definitionElement;
@@ -2318,9 +2316,9 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_guidance')
   Element? get guidanceElement;
   @override
-  List<MeasureGroup?>? get group;
+  List<MeasureGroup>? get group;
   @override
-  List<MeasureSupplementalData?>? get supplementalData;
+  List<MeasureSupplementalData>? get supplementalData;
   @override
   @JsonKey(ignore: true)
   _$MeasureCopyWith<_Measure> get copyWith;
@@ -2336,13 +2334,13 @@ class _$MeasureGroupTearOff {
 
   _MeasureGroup call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<MeasurePopulation?>? population,
-      List<MeasureStratifier?>? stratifier}) {
+      List<MeasurePopulation>? population,
+      List<MeasureStratifier>? stratifier}) {
     return _MeasureGroup(
       id: id,
       extension_: extension_,
@@ -2367,14 +2365,14 @@ const $MeasureGroup = _$MeasureGroupTearOff();
 mixin _$MeasureGroup {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get code;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<MeasurePopulation?>? get population;
-  List<MeasureStratifier?>? get stratifier;
+  List<MeasurePopulation>? get population;
+  List<MeasureStratifier>? get stratifier;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2388,13 +2386,13 @@ abstract class $MeasureGroupCopyWith<$Res> {
       _$MeasureGroupCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<MeasurePopulation?>? population,
-      List<MeasureStratifier?>? stratifier});
+      List<MeasurePopulation>? population,
+      List<MeasureStratifier>? stratifier});
 
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -2423,10 +2421,10 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -2435,10 +2433,10 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
           : descriptionElement as Element?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasurePopulation?>?,
+          : population as List<MeasurePopulation>?,
       stratifier: stratifier == freezed
           ? _value.stratifier
-          : stratifier as List<MeasureStratifier?>?,
+          : stratifier as List<MeasureStratifier>?,
     ));
   }
 
@@ -2474,13 +2472,13 @@ abstract class _$MeasureGroupCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<MeasurePopulation?>? population,
-      List<MeasureStratifier?>? stratifier});
+      List<MeasurePopulation>? population,
+      List<MeasureStratifier>? stratifier});
 
   @override
   $CodeableConceptCopyWith<$Res>? get code;
@@ -2513,10 +2511,10 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -2525,10 +2523,10 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
           : descriptionElement as Element?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasurePopulation?>?,
+          : population as List<MeasurePopulation>?,
       stratifier: stratifier == freezed
           ? _value.stratifier
-          : stratifier as List<MeasureStratifier?>?,
+          : stratifier as List<MeasureStratifier>?,
     ));
   }
 }
@@ -2555,9 +2553,9 @@ class _$_MeasureGroup extends _MeasureGroup {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? code;
   @override
@@ -2566,9 +2564,9 @@ class _$_MeasureGroup extends _MeasureGroup {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<MeasurePopulation?>? population;
+  final List<MeasurePopulation>? population;
   @override
-  final List<MeasureStratifier?>? stratifier;
+  final List<MeasureStratifier>? stratifier;
 
   @override
   String toString() {
@@ -2630,13 +2628,13 @@ abstract class _MeasureGroup extends MeasureGroup {
   _MeasureGroup._() : super._();
   factory _MeasureGroup(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<MeasurePopulation?>? population,
-      List<MeasureStratifier?>? stratifier}) = _$_MeasureGroup;
+      List<MeasurePopulation>? population,
+      List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
 
   factory _MeasureGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureGroup.fromJson;
@@ -2645,9 +2643,9 @@ abstract class _MeasureGroup extends MeasureGroup {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get code;
   @override
@@ -2656,9 +2654,9 @@ abstract class _MeasureGroup extends MeasureGroup {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<MeasurePopulation?>? get population;
+  List<MeasurePopulation>? get population;
   @override
-  List<MeasureStratifier?>? get stratifier;
+  List<MeasureStratifier>? get stratifier;
   @override
   @JsonKey(ignore: true)
   _$MeasureGroupCopyWith<_MeasureGroup> get copyWith;
@@ -2674,8 +2672,8 @@ class _$MeasurePopulationTearOff {
 
   _MeasurePopulation call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -2703,8 +2701,8 @@ const $MeasurePopulation = _$MeasurePopulationTearOff();
 mixin _$MeasurePopulation {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get code;
   String? get description;
   @JsonKey(name: '_description')
@@ -2723,8 +2721,8 @@ abstract class $MeasurePopulationCopyWith<$Res> {
       _$MeasurePopulationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -2758,10 +2756,10 @@ class _$MeasurePopulationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -2811,8 +2809,8 @@ abstract class _$MeasurePopulationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -2851,10 +2849,10 @@ class __$MeasurePopulationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -2887,9 +2885,9 @@ class _$_MeasurePopulation extends _MeasurePopulation {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? code;
   @override
@@ -2956,8 +2954,8 @@ abstract class _MeasurePopulation extends MeasurePopulation {
   _MeasurePopulation._() : super._();
   factory _MeasurePopulation(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -2970,9 +2968,9 @@ abstract class _MeasurePopulation extends MeasurePopulation {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get code;
   @override
@@ -2997,13 +2995,13 @@ class _$MeasureStratifierTearOff {
 
   _MeasureStratifier call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Expression? criteria,
-      List<MeasureComponent?>? component}) {
+      List<MeasureComponent>? component}) {
     return _MeasureStratifier(
       id: id,
       extension_: extension_,
@@ -3028,14 +3026,14 @@ const $MeasureStratifier = _$MeasureStratifierTearOff();
 mixin _$MeasureStratifier {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get code;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   Expression? get criteria;
-  List<MeasureComponent?>? get component;
+  List<MeasureComponent>? get component;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3049,13 +3047,13 @@ abstract class $MeasureStratifierCopyWith<$Res> {
       _$MeasureStratifierCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Expression? criteria,
-      List<MeasureComponent?>? component});
+      List<MeasureComponent>? component});
 
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -3086,10 +3084,10 @@ class _$MeasureStratifierCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -3099,7 +3097,7 @@ class _$MeasureStratifierCopyWithImpl<$Res>
       criteria: criteria == freezed ? _value.criteria : criteria as Expression?,
       component: component == freezed
           ? _value.component
-          : component as List<MeasureComponent?>?,
+          : component as List<MeasureComponent>?,
     ));
   }
 
@@ -3146,13 +3144,13 @@ abstract class _$MeasureStratifierCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Expression? criteria,
-      List<MeasureComponent?>? component});
+      List<MeasureComponent>? component});
 
   @override
   $CodeableConceptCopyWith<$Res>? get code;
@@ -3188,10 +3186,10 @@ class __$MeasureStratifierCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -3201,7 +3199,7 @@ class __$MeasureStratifierCopyWithImpl<$Res>
       criteria: criteria == freezed ? _value.criteria : criteria as Expression?,
       component: component == freezed
           ? _value.component
-          : component as List<MeasureComponent?>?,
+          : component as List<MeasureComponent>?,
     ));
   }
 }
@@ -3228,9 +3226,9 @@ class _$_MeasureStratifier extends _MeasureStratifier {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? code;
   @override
@@ -3241,7 +3239,7 @@ class _$_MeasureStratifier extends _MeasureStratifier {
   @override
   final Expression? criteria;
   @override
-  final List<MeasureComponent?>? component;
+  final List<MeasureComponent>? component;
 
   @override
   String toString() {
@@ -3303,13 +3301,13 @@ abstract class _MeasureStratifier extends MeasureStratifier {
   _MeasureStratifier._() : super._();
   factory _MeasureStratifier(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Expression? criteria,
-      List<MeasureComponent?>? component}) = _$_MeasureStratifier;
+      List<MeasureComponent>? component}) = _$_MeasureStratifier;
 
   factory _MeasureStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureStratifier.fromJson;
@@ -3318,9 +3316,9 @@ abstract class _MeasureStratifier extends MeasureStratifier {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get code;
   @override
@@ -3331,7 +3329,7 @@ abstract class _MeasureStratifier extends MeasureStratifier {
   @override
   Expression? get criteria;
   @override
-  List<MeasureComponent?>? get component;
+  List<MeasureComponent>? get component;
   @override
   @JsonKey(ignore: true)
   _$MeasureStratifierCopyWith<_MeasureStratifier> get copyWith;
@@ -3347,8 +3345,8 @@ class _$MeasureComponentTearOff {
 
   _MeasureComponent call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -3376,8 +3374,8 @@ const $MeasureComponent = _$MeasureComponentTearOff();
 mixin _$MeasureComponent {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get code;
   String? get description;
   @JsonKey(name: '_description')
@@ -3396,8 +3394,8 @@ abstract class $MeasureComponentCopyWith<$Res> {
       _$MeasureComponentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -3431,10 +3429,10 @@ class _$MeasureComponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -3484,8 +3482,8 @@ abstract class _$MeasureComponentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -3524,10 +3522,10 @@ class __$MeasureComponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -3560,9 +3558,9 @@ class _$_MeasureComponent extends _MeasureComponent {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? code;
   @override
@@ -3629,8 +3627,8 @@ abstract class _MeasureComponent extends MeasureComponent {
   _MeasureComponent._() : super._();
   factory _MeasureComponent(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -3643,9 +3641,9 @@ abstract class _MeasureComponent extends MeasureComponent {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get code;
   @override
@@ -3671,10 +3669,10 @@ class _$MeasureSupplementalDataTearOff {
 
   _MeasureSupplementalData call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      List<CodeableConcept?>? usage,
+      List<CodeableConcept>? usage,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       required Expression criteria}) {
@@ -3702,10 +3700,10 @@ const $MeasureSupplementalData = _$MeasureSupplementalDataTearOff();
 mixin _$MeasureSupplementalData {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get code;
-  List<CodeableConcept?>? get usage;
+  List<CodeableConcept>? get usage;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -3723,10 +3721,10 @@ abstract class $MeasureSupplementalDataCopyWith<$Res> {
       _$MeasureSupplementalDataCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      List<CodeableConcept?>? usage,
+      List<CodeableConcept>? usage,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Expression criteria});
@@ -3760,12 +3758,12 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
-      usage: usage == freezed ? _value.usage : usage as List<CodeableConcept?>?,
+      usage: usage == freezed ? _value.usage : usage as List<CodeableConcept>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -3814,10 +3812,10 @@ abstract class _$MeasureSupplementalDataCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      List<CodeableConcept?>? usage,
+      List<CodeableConcept>? usage,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Expression criteria});
@@ -3857,12 +3855,12 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
-      usage: usage == freezed ? _value.usage : usage as List<CodeableConcept?>?,
+      usage: usage == freezed ? _value.usage : usage as List<CodeableConcept>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -3895,13 +3893,13 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? code;
   @override
-  final List<CodeableConcept?>? usage;
+  final List<CodeableConcept>? usage;
   @override
   final String? description;
   @override
@@ -3970,10 +3968,10 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
   _MeasureSupplementalData._() : super._();
   factory _MeasureSupplementalData(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      List<CodeableConcept?>? usage,
+      List<CodeableConcept>? usage,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       required Expression criteria}) = _$_MeasureSupplementalData;
@@ -3985,13 +3983,13 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get code;
   @override
-  List<CodeableConcept?>? get usage;
+  List<CodeableConcept>? get usage;
   @override
   String? get description;
   @override
@@ -4024,11 +4022,11 @@ class _$MeasureReportTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
           MeasureReportStatus? status,
       @JsonKey(name: '_status')
@@ -4045,8 +4043,8 @@ class _$MeasureReportTearOff {
       Reference? reporter,
       required Period period,
       CodeableConcept? improvementNotation,
-      List<MeasureReportGroup?>? group,
-      List<Reference?>? evaluatedResource}) {
+      List<MeasureReportGroup>? group,
+      List<Reference>? evaluatedResource}) {
     return _MeasureReport(
       resourceType: resourceType,
       id: id,
@@ -4097,11 +4095,11 @@ mixin _$MeasureReport {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<Identifier?>? get identifier;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
   @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
   MeasureReportStatus? get status;
   @JsonKey(name: '_status')
@@ -4118,8 +4116,8 @@ mixin _$MeasureReport {
   Reference? get reporter;
   Period get period;
   CodeableConcept? get improvementNotation;
-  List<MeasureReportGroup?>? get group;
-  List<Reference?>? get evaluatedResource;
+  List<MeasureReportGroup>? get group;
+  List<Reference>? get evaluatedResource;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4143,11 +4141,11 @@ abstract class $MeasureReportCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
           MeasureReportStatus? status,
       @JsonKey(name: '_status')
@@ -4164,8 +4162,8 @@ abstract class $MeasureReportCopyWith<$Res> {
       Reference? reporter,
       Period period,
       CodeableConcept? improvementNotation,
-      List<MeasureReportGroup?>? group,
-      List<Reference?>? evaluatedResource});
+      List<MeasureReportGroup>? group,
+      List<Reference>? evaluatedResource});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -4236,16 +4234,16 @@ class _$MeasureReportCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status:
           status == freezed ? _value.status : status as MeasureReportStatus?,
       statusElement: statusElement == freezed
@@ -4265,10 +4263,10 @@ class _$MeasureReportCopyWithImpl<$Res>
           ? _value.improvementNotation
           : improvementNotation as CodeableConcept?,
       group:
-          group == freezed ? _value.group : group as List<MeasureReportGroup?>?,
+          group == freezed ? _value.group : group as List<MeasureReportGroup>?,
       evaluatedResource: evaluatedResource == freezed
           ? _value.evaluatedResource
-          : evaluatedResource as List<Reference?>?,
+          : evaluatedResource as List<Reference>?,
     ));
   }
 
@@ -4409,11 +4407,11 @@ abstract class _$MeasureReportCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
           MeasureReportStatus? status,
       @JsonKey(name: '_status')
@@ -4430,8 +4428,8 @@ abstract class _$MeasureReportCopyWith<$Res>
       Reference? reporter,
       Period period,
       CodeableConcept? improvementNotation,
-      List<MeasureReportGroup?>? group,
-      List<Reference?>? evaluatedResource});
+      List<MeasureReportGroup>? group,
+      List<Reference>? evaluatedResource});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -4515,16 +4513,16 @@ class __$MeasureReportCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status:
           status == freezed ? _value.status : status as MeasureReportStatus?,
       statusElement: statusElement == freezed
@@ -4544,10 +4542,10 @@ class __$MeasureReportCopyWithImpl<$Res>
           ? _value.improvementNotation
           : improvementNotation as CodeableConcept?,
       group:
-          group == freezed ? _value.group : group as List<MeasureReportGroup?>?,
+          group == freezed ? _value.group : group as List<MeasureReportGroup>?,
       evaluatedResource: evaluatedResource == freezed
           ? _value.evaluatedResource
-          : evaluatedResource as List<Reference?>?,
+          : evaluatedResource as List<Reference>?,
     ));
   }
 }
@@ -4616,14 +4614,14 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
   final MeasureReportStatus? status;
@@ -4652,9 +4650,9 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final CodeableConcept? improvementNotation;
   @override
-  final List<MeasureReportGroup?>? group;
+  final List<MeasureReportGroup>? group;
   @override
-  final List<Reference?>? evaluatedResource;
+  final List<Reference>? evaluatedResource;
 
   @override
   String toString() {
@@ -4788,11 +4786,11 @@ abstract class _MeasureReport extends MeasureReport {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
           MeasureReportStatus? status,
       @JsonKey(name: '_status')
@@ -4809,8 +4807,8 @@ abstract class _MeasureReport extends MeasureReport {
       Reference? reporter,
       required Period period,
       CodeableConcept? improvementNotation,
-      List<MeasureReportGroup?>? group,
-      List<Reference?>? evaluatedResource}) = _$_MeasureReport;
+      List<MeasureReportGroup>? group,
+      List<Reference>? evaluatedResource}) = _$_MeasureReport;
 
   factory _MeasureReport.fromJson(Map<String, dynamic> json) =
       _$_MeasureReport.fromJson;
@@ -4835,14 +4833,14 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
   MeasureReportStatus? get status;
@@ -4871,9 +4869,9 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   CodeableConcept? get improvementNotation;
   @override
-  List<MeasureReportGroup?>? get group;
+  List<MeasureReportGroup>? get group;
   @override
-  List<Reference?>? get evaluatedResource;
+  List<Reference>? get evaluatedResource;
   @override
   @JsonKey(ignore: true)
   _$MeasureReportCopyWith<_MeasureReport> get copyWith;
@@ -4889,12 +4887,12 @@ class _$MeasureReportGroupTearOff {
 
   _MeasureReportGroup call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      List<MeasureReportPopulation?>? population,
+      List<MeasureReportPopulation>? population,
       Quantity? measureScore,
-      List<MeasureReportStratifier?>? stratifier}) {
+      List<MeasureReportStratifier>? stratifier}) {
     return _MeasureReportGroup(
       id: id,
       extension_: extension_,
@@ -4918,12 +4916,12 @@ const $MeasureReportGroup = _$MeasureReportGroupTearOff();
 mixin _$MeasureReportGroup {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get code;
-  List<MeasureReportPopulation?>? get population;
+  List<MeasureReportPopulation>? get population;
   Quantity? get measureScore;
-  List<MeasureReportStratifier?>? get stratifier;
+  List<MeasureReportStratifier>? get stratifier;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4937,12 +4935,12 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
       _$MeasureReportGroupCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      List<MeasureReportPopulation?>? population,
+      List<MeasureReportPopulation>? population,
       Quantity? measureScore,
-      List<MeasureReportStratifier?>? stratifier});
+      List<MeasureReportStratifier>? stratifier});
 
   $CodeableConceptCopyWith<$Res>? get code;
   $QuantityCopyWith<$Res>? get measureScore;
@@ -4971,20 +4969,20 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasureReportPopulation?>?,
+          : population as List<MeasureReportPopulation>?,
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Quantity?,
       stratifier: stratifier == freezed
           ? _value.stratifier
-          : stratifier as List<MeasureReportStratifier?>?,
+          : stratifier as List<MeasureReportStratifier>?,
     ));
   }
 
@@ -5020,12 +5018,12 @@ abstract class _$MeasureReportGroupCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      List<MeasureReportPopulation?>? population,
+      List<MeasureReportPopulation>? population,
       Quantity? measureScore,
-      List<MeasureReportStratifier?>? stratifier});
+      List<MeasureReportStratifier>? stratifier});
 
   @override
   $CodeableConceptCopyWith<$Res>? get code;
@@ -5058,20 +5056,20 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasureReportPopulation?>?,
+          : population as List<MeasureReportPopulation>?,
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Quantity?,
       stratifier: stratifier == freezed
           ? _value.stratifier
-          : stratifier as List<MeasureReportStratifier?>?,
+          : stratifier as List<MeasureReportStratifier>?,
     ));
   }
 }
@@ -5097,17 +5095,17 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? code;
   @override
-  final List<MeasureReportPopulation?>? population;
+  final List<MeasureReportPopulation>? population;
   @override
   final Quantity? measureScore;
   @override
-  final List<MeasureReportStratifier?>? stratifier;
+  final List<MeasureReportStratifier>? stratifier;
 
   @override
   String toString() {
@@ -5165,12 +5163,12 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   _MeasureReportGroup._() : super._();
   factory _MeasureReportGroup(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      List<MeasureReportPopulation?>? population,
+      List<MeasureReportPopulation>? population,
       Quantity? measureScore,
-      List<MeasureReportStratifier?>? stratifier}) = _$_MeasureReportGroup;
+      List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
 
   factory _MeasureReportGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportGroup.fromJson;
@@ -5179,17 +5177,17 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get code;
   @override
-  List<MeasureReportPopulation?>? get population;
+  List<MeasureReportPopulation>? get population;
   @override
   Quantity? get measureScore;
   @override
-  List<MeasureReportStratifier?>? get stratifier;
+  List<MeasureReportStratifier>? get stratifier;
   @override
   @JsonKey(ignore: true)
   _$MeasureReportGroupCopyWith<_MeasureReportGroup> get copyWith;
@@ -5206,8 +5204,8 @@ class _$MeasureReportPopulationTearOff {
 
   _MeasureReportPopulation call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       Integer? count,
       @JsonKey(name: '_count') Element? countElement,
@@ -5235,8 +5233,8 @@ const $MeasureReportPopulation = _$MeasureReportPopulationTearOff();
 mixin _$MeasureReportPopulation {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get code;
   Integer? get count;
   @JsonKey(name: '_count')
@@ -5255,8 +5253,8 @@ abstract class $MeasureReportPopulationCopyWith<$Res> {
       _$MeasureReportPopulationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       Integer? count,
       @JsonKey(name: '_count') Element? countElement,
@@ -5290,10 +5288,10 @@ class _$MeasureReportPopulationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       count: count == freezed ? _value.count : count as Integer?,
       countElement: countElement == freezed
@@ -5348,8 +5346,8 @@ abstract class _$MeasureReportPopulationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       Integer? count,
       @JsonKey(name: '_count') Element? countElement,
@@ -5389,10 +5387,10 @@ class __$MeasureReportPopulationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       count: count == freezed ? _value.count : count as Integer?,
       countElement: countElement == freezed
@@ -5426,9 +5424,9 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? code;
   @override
@@ -5495,8 +5493,8 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
   _MeasureReportPopulation._() : super._();
   factory _MeasureReportPopulation(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       Integer? count,
       @JsonKey(name: '_count') Element? countElement,
@@ -5509,9 +5507,9 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get code;
   @override
@@ -5537,10 +5535,10 @@ class _$MeasureReportStratifierTearOff {
 
   _MeasureReportStratifier call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CodeableConcept?>? code,
-      List<MeasureReportStratum?>? stratum}) {
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? code,
+      List<MeasureReportStratum>? stratum}) {
     return _MeasureReportStratifier(
       id: id,
       extension_: extension_,
@@ -5562,10 +5560,10 @@ const $MeasureReportStratifier = _$MeasureReportStratifierTearOff();
 mixin _$MeasureReportStratifier {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<CodeableConcept?>? get code;
-  List<MeasureReportStratum?>? get stratum;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<CodeableConcept>? get code;
+  List<MeasureReportStratum>? get stratum;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5579,10 +5577,10 @@ abstract class $MeasureReportStratifierCopyWith<$Res> {
       _$MeasureReportStratifierCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CodeableConcept?>? code,
-      List<MeasureReportStratum?>? stratum});
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? code,
+      List<MeasureReportStratum>? stratum});
 }
 
 /// @nodoc
@@ -5606,14 +5604,14 @@ class _$MeasureReportStratifierCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as List<CodeableConcept?>?,
+          : modifierExtension as List<FhirExtension>?,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>?,
       stratum: stratum == freezed
           ? _value.stratum
-          : stratum as List<MeasureReportStratum?>?,
+          : stratum as List<MeasureReportStratum>?,
     ));
   }
 }
@@ -5627,10 +5625,10 @@ abstract class _$MeasureReportStratifierCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CodeableConcept?>? code,
-      List<MeasureReportStratum?>? stratum});
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? code,
+      List<MeasureReportStratum>? stratum});
 }
 
 /// @nodoc
@@ -5657,14 +5655,14 @@ class __$MeasureReportStratifierCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as List<CodeableConcept?>?,
+          : modifierExtension as List<FhirExtension>?,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>?,
       stratum: stratum == freezed
           ? _value.stratum
-          : stratum as List<MeasureReportStratum?>?,
+          : stratum as List<MeasureReportStratum>?,
     ));
   }
 }
@@ -5688,13 +5686,13 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<CodeableConcept?>? code;
+  final List<CodeableConcept>? code;
   @override
-  final List<MeasureReportStratum?>? stratum;
+  final List<MeasureReportStratum>? stratum;
 
   @override
   String toString() {
@@ -5744,10 +5742,10 @@ abstract class _MeasureReportStratifier extends MeasureReportStratifier {
   _MeasureReportStratifier._() : super._();
   factory _MeasureReportStratifier(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CodeableConcept?>? code,
-      List<MeasureReportStratum?>? stratum}) = _$_MeasureReportStratifier;
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? code,
+      List<MeasureReportStratum>? stratum}) = _$_MeasureReportStratifier;
 
   factory _MeasureReportStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportStratifier.fromJson;
@@ -5756,13 +5754,13 @@ abstract class _MeasureReportStratifier extends MeasureReportStratifier {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<CodeableConcept?>? get code;
+  List<CodeableConcept>? get code;
   @override
-  List<MeasureReportStratum?>? get stratum;
+  List<MeasureReportStratum>? get stratum;
   @override
   @JsonKey(ignore: true)
   _$MeasureReportStratifierCopyWith<_MeasureReportStratifier> get copyWith;
@@ -5778,11 +5776,11 @@ class _$MeasureReportStratumTearOff {
 
   _MeasureReportStratum call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? value,
-      List<MeasureReportComponent?>? component,
-      List<MeasureReportPopulation1?>? population,
+      List<MeasureReportComponent>? component,
+      List<MeasureReportPopulation1>? population,
       Quantity? measureScore}) {
     return _MeasureReportStratum(
       id: id,
@@ -5807,11 +5805,11 @@ const $MeasureReportStratum = _$MeasureReportStratumTearOff();
 mixin _$MeasureReportStratum {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get value;
-  List<MeasureReportComponent?>? get component;
-  List<MeasureReportPopulation1?>? get population;
+  List<MeasureReportComponent>? get component;
+  List<MeasureReportPopulation1>? get population;
   Quantity? get measureScore;
 
   Map<String, dynamic> toJson();
@@ -5826,11 +5824,11 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
       _$MeasureReportStratumCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? value,
-      List<MeasureReportComponent?>? component,
-      List<MeasureReportPopulation1?>? population,
+      List<MeasureReportComponent>? component,
+      List<MeasureReportPopulation1>? population,
       Quantity? measureScore});
 
   $CodeableConceptCopyWith<$Res>? get value;
@@ -5860,17 +5858,17 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as CodeableConcept?,
       component: component == freezed
           ? _value.component
-          : component as List<MeasureReportComponent?>?,
+          : component as List<MeasureReportComponent>?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasureReportPopulation1?>?,
+          : population as List<MeasureReportPopulation1>?,
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Quantity?,
@@ -5909,11 +5907,11 @@ abstract class _$MeasureReportStratumCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? value,
-      List<MeasureReportComponent?>? component,
-      List<MeasureReportPopulation1?>? population,
+      List<MeasureReportComponent>? component,
+      List<MeasureReportPopulation1>? population,
       Quantity? measureScore});
 
   @override
@@ -5947,17 +5945,17 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as CodeableConcept?,
       component: component == freezed
           ? _value.component
-          : component as List<MeasureReportComponent?>?,
+          : component as List<MeasureReportComponent>?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasureReportPopulation1?>?,
+          : population as List<MeasureReportPopulation1>?,
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Quantity?,
@@ -5986,15 +5984,15 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? value;
   @override
-  final List<MeasureReportComponent?>? component;
+  final List<MeasureReportComponent>? component;
   @override
-  final List<MeasureReportPopulation1?>? population;
+  final List<MeasureReportPopulation1>? population;
   @override
   final Quantity? measureScore;
 
@@ -6055,11 +6053,11 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   _MeasureReportStratum._() : super._();
   factory _MeasureReportStratum(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? value,
-      List<MeasureReportComponent?>? component,
-      List<MeasureReportPopulation1?>? population,
+      List<MeasureReportComponent>? component,
+      List<MeasureReportPopulation1>? population,
       Quantity? measureScore}) = _$_MeasureReportStratum;
 
   factory _MeasureReportStratum.fromJson(Map<String, dynamic> json) =
@@ -6069,15 +6067,15 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get value;
   @override
-  List<MeasureReportComponent?>? get component;
+  List<MeasureReportComponent>? get component;
   @override
-  List<MeasureReportPopulation1?>? get population;
+  List<MeasureReportPopulation1>? get population;
   @override
   Quantity? get measureScore;
   @override
@@ -6096,8 +6094,8 @@ class _$MeasureReportComponentTearOff {
 
   _MeasureReportComponent call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required CodeableConcept code,
       required CodeableConcept value}) {
     return _MeasureReportComponent(
@@ -6121,8 +6119,8 @@ const $MeasureReportComponent = _$MeasureReportComponentTearOff();
 mixin _$MeasureReportComponent {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept get code;
   CodeableConcept get value;
 
@@ -6138,8 +6136,8 @@ abstract class $MeasureReportComponentCopyWith<$Res> {
       _$MeasureReportComponentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept value});
 
@@ -6168,10 +6166,10 @@ class _$MeasureReportComponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       value: value == freezed ? _value.value : value as CodeableConcept,
     ));
@@ -6201,8 +6199,8 @@ abstract class _$MeasureReportComponentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept value});
 
@@ -6235,10 +6233,10 @@ class __$MeasureReportComponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept,
       value: value == freezed ? _value.value : value as CodeableConcept,
     ));
@@ -6264,9 +6262,9 @@ class _$_MeasureReportComponent extends _MeasureReportComponent {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept code;
   @override
@@ -6320,8 +6318,8 @@ abstract class _MeasureReportComponent extends MeasureReportComponent {
   _MeasureReportComponent._() : super._();
   factory _MeasureReportComponent(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required CodeableConcept code,
       required CodeableConcept value}) = _$_MeasureReportComponent;
 
@@ -6332,9 +6330,9 @@ abstract class _MeasureReportComponent extends MeasureReportComponent {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept get code;
   @override
@@ -6355,8 +6353,8 @@ class _$MeasureReportPopulation1TearOff {
 
   _MeasureReportPopulation1 call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       Integer? count,
       @JsonKey(name: '_count') Element? countElement,
@@ -6384,8 +6382,8 @@ const $MeasureReportPopulation1 = _$MeasureReportPopulation1TearOff();
 mixin _$MeasureReportPopulation1 {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get code;
   Integer? get count;
   @JsonKey(name: '_count')
@@ -6404,8 +6402,8 @@ abstract class $MeasureReportPopulation1CopyWith<$Res> {
       _$MeasureReportPopulation1CopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       Integer? count,
       @JsonKey(name: '_count') Element? countElement,
@@ -6439,10 +6437,10 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       count: count == freezed ? _value.count : count as Integer?,
       countElement: countElement == freezed
@@ -6497,8 +6495,8 @@ abstract class _$MeasureReportPopulation1CopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       Integer? count,
       @JsonKey(name: '_count') Element? countElement,
@@ -6538,10 +6536,10 @@ class __$MeasureReportPopulation1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       count: count == freezed ? _value.count : count as Integer?,
       countElement: countElement == freezed
@@ -6575,9 +6573,9 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? code;
   @override
@@ -6644,8 +6642,8 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
   _MeasureReportPopulation1._() : super._();
   factory _MeasureReportPopulation1(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       Integer? count,
       @JsonKey(name: '_count') Element? countElement,
@@ -6658,9 +6656,9 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get code;
   @override
@@ -6695,10 +6693,10 @@ class _$TestReportTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       String? name,
       @JsonKey(name: '_name')
@@ -6721,9 +6719,9 @@ class _$TestReportTearOff {
       FhirDateTime? issued,
       @JsonKey(name: '_issued')
           Element? issuedElement,
-      List<TestReportParticipant?>? participant,
+      List<TestReportParticipant>? participant,
       TestReportSetup? setup,
-      List<TestReportTest?>? test,
+      List<TestReportTest>? test,
       TestReportTeardown? teardown}) {
     return _TestReport(
       resourceType: resourceType,
@@ -6779,10 +6777,10 @@ mixin _$TestReport {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Identifier? get identifier;
   String? get name;
   @JsonKey(name: '_name')
@@ -6805,9 +6803,9 @@ mixin _$TestReport {
   FhirDateTime? get issued;
   @JsonKey(name: '_issued')
   Element? get issuedElement;
-  List<TestReportParticipant?>? get participant;
+  List<TestReportParticipant>? get participant;
   TestReportSetup? get setup;
-  List<TestReportTest?>? get test;
+  List<TestReportTest>? get test;
   TestReportTeardown? get teardown;
 
   Map<String, dynamic> toJson();
@@ -6832,10 +6830,10 @@ abstract class $TestReportCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       String? name,
       @JsonKey(name: '_name')
@@ -6858,9 +6856,9 @@ abstract class $TestReportCopyWith<$Res> {
       FhirDateTime? issued,
       @JsonKey(name: '_issued')
           Element? issuedElement,
-      List<TestReportParticipant?>? participant,
+      List<TestReportParticipant>? participant,
       TestReportSetup? setup,
-      List<TestReportTest?>? test,
+      List<TestReportTest>? test,
       TestReportTeardown? teardown});
 
   $MetaCopyWith<$Res>? get meta;
@@ -6938,13 +6936,13 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       name: name == freezed ? _value.name : name as String?,
@@ -6974,9 +6972,9 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
           : issuedElement as Element?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<TestReportParticipant?>?,
+          : participant as List<TestReportParticipant>?,
       setup: setup == freezed ? _value.setup : setup as TestReportSetup?,
-      test: test == freezed ? _value.test : test as List<TestReportTest?>?,
+      test: test == freezed ? _value.test : test as List<TestReportTest>?,
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestReportTeardown?,
@@ -7152,10 +7150,10 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       String? name,
       @JsonKey(name: '_name')
@@ -7178,9 +7176,9 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       FhirDateTime? issued,
       @JsonKey(name: '_issued')
           Element? issuedElement,
-      List<TestReportParticipant?>? participant,
+      List<TestReportParticipant>? participant,
       TestReportSetup? setup,
-      List<TestReportTest?>? test,
+      List<TestReportTest>? test,
       TestReportTeardown? teardown});
 
   @override
@@ -7274,13 +7272,13 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       name: name == freezed ? _value.name : name as String?,
@@ -7310,9 +7308,9 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
           : issuedElement as Element?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<TestReportParticipant?>?,
+          : participant as List<TestReportParticipant>?,
       setup: setup == freezed ? _value.setup : setup as TestReportSetup?,
-      test: test == freezed ? _value.test : test as List<TestReportTest?>?,
+      test: test == freezed ? _value.test : test as List<TestReportTest>?,
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestReportTeardown?,
@@ -7391,12 +7389,12 @@ class _$_TestReport extends _TestReport {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -7434,11 +7432,11 @@ class _$_TestReport extends _TestReport {
   @JsonKey(name: '_issued')
   final Element? issuedElement;
   @override
-  final List<TestReportParticipant?>? participant;
+  final List<TestReportParticipant>? participant;
   @override
   final TestReportSetup? setup;
   @override
-  final List<TestReportTest?>? test;
+  final List<TestReportTest>? test;
   @override
   final TestReportTeardown? teardown;
 
@@ -7583,10 +7581,10 @@ abstract class _TestReport extends TestReport {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       String? name,
       @JsonKey(name: '_name')
@@ -7609,9 +7607,9 @@ abstract class _TestReport extends TestReport {
       FhirDateTime? issued,
       @JsonKey(name: '_issued')
           Element? issuedElement,
-      List<TestReportParticipant?>? participant,
+      List<TestReportParticipant>? participant,
       TestReportSetup? setup,
-      List<TestReportTest?>? test,
+      List<TestReportTest>? test,
       TestReportTeardown? teardown}) = _$_TestReport;
 
   factory _TestReport.fromJson(Map<String, dynamic> json) =
@@ -7637,12 +7635,12 @@ abstract class _TestReport extends TestReport {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Identifier? get identifier;
   @override
@@ -7680,11 +7678,11 @@ abstract class _TestReport extends TestReport {
   @JsonKey(name: '_issued')
   Element? get issuedElement;
   @override
-  List<TestReportParticipant?>? get participant;
+  List<TestReportParticipant>? get participant;
   @override
   TestReportSetup? get setup;
   @override
-  List<TestReportTest?>? get test;
+  List<TestReportTest>? get test;
   @override
   TestReportTeardown? get teardown;
   @override
@@ -7704,8 +7702,8 @@ class _$TestReportParticipantTearOff {
   _TestReportParticipant call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
           TestReportParticipantType? type,
       @JsonKey(name: '_type')
@@ -7741,8 +7739,8 @@ const $TestReportParticipant = _$TestReportParticipantTearOff();
 mixin _$TestReportParticipant {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
   TestReportParticipantType? get type;
   @JsonKey(name: '_type')
@@ -7767,8 +7765,8 @@ abstract class $TestReportParticipantCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
           TestReportParticipantType? type,
       @JsonKey(name: '_type')
@@ -7810,10 +7808,10 @@ class _$TestReportParticipantCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as TestReportParticipantType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -7871,8 +7869,8 @@ abstract class _$TestReportParticipantCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
           TestReportParticipantType? type,
       @JsonKey(name: '_type')
@@ -7919,10 +7917,10 @@ class __$TestReportParticipantCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as TestReportParticipantType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -7960,9 +7958,9 @@ class _$_TestReportParticipant extends _TestReportParticipant {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
   final TestReportParticipantType? type;
@@ -8045,8 +8043,8 @@ abstract class _TestReportParticipant extends TestReportParticipant {
   factory _TestReportParticipant(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
           TestReportParticipantType? type,
       @JsonKey(name: '_type')
@@ -8065,9 +8063,9 @@ abstract class _TestReportParticipant extends TestReportParticipant {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
   TestReportParticipantType? get type;
@@ -8099,8 +8097,8 @@ class _$TestReportSetupTearOff {
 
   _TestReportSetup call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<TestReportAction> action}) {
     return _TestReportSetup(
       id: id,
@@ -8122,8 +8120,8 @@ const $TestReportSetup = _$TestReportSetupTearOff();
 mixin _$TestReportSetup {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   List<TestReportAction> get action;
 
   Map<String, dynamic> toJson();
@@ -8138,8 +8136,8 @@ abstract class $TestReportSetupCopyWith<$Res> {
       _$TestReportSetupCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<TestReportAction> action});
 }
 
@@ -8163,10 +8161,10 @@ class _$TestReportSetupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action:
           action == freezed ? _value.action : action as List<TestReportAction>,
     ));
@@ -8182,8 +8180,8 @@ abstract class _$TestReportSetupCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<TestReportAction> action});
 }
 
@@ -8209,10 +8207,10 @@ class __$TestReportSetupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action:
           action == freezed ? _value.action : action as List<TestReportAction>,
     ));
@@ -8237,9 +8235,9 @@ class _$_TestReportSetup extends _TestReportSetup {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final List<TestReportAction> action;
 
@@ -8287,8 +8285,8 @@ abstract class _TestReportSetup extends TestReportSetup {
   _TestReportSetup._() : super._();
   factory _TestReportSetup(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<TestReportAction> action}) = _$_TestReportSetup;
 
   factory _TestReportSetup.fromJson(Map<String, dynamic> json) =
@@ -8298,9 +8296,9 @@ abstract class _TestReportSetup extends TestReportSetup {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   List<TestReportAction> get action;
   @override
@@ -8318,8 +8316,8 @@ class _$TestReportActionTearOff {
 
   _TestReportAction call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestReportOperation? operation,
       @JsonKey(name: 'assert') TestReportAssert? assert_}) {
     return _TestReportAction(
@@ -8343,8 +8341,8 @@ const $TestReportAction = _$TestReportActionTearOff();
 mixin _$TestReportAction {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   TestReportOperation? get operation;
   @JsonKey(name: 'assert')
   TestReportAssert? get assert_;
@@ -8361,8 +8359,8 @@ abstract class $TestReportActionCopyWith<$Res> {
       _$TestReportActionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestReportOperation? operation,
       @JsonKey(name: 'assert') TestReportAssert? assert_});
 
@@ -8391,10 +8389,10 @@ class _$TestReportActionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestReportOperation?,
@@ -8435,8 +8433,8 @@ abstract class _$TestReportActionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestReportOperation? operation,
       @JsonKey(name: 'assert') TestReportAssert? assert_});
 
@@ -8469,10 +8467,10 @@ class __$TestReportActionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestReportOperation?,
@@ -8501,9 +8499,9 @@ class _$_TestReportAction extends _TestReportAction {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final TestReportOperation? operation;
   @override
@@ -8558,8 +8556,8 @@ abstract class _TestReportAction extends TestReportAction {
   _TestReportAction._() : super._();
   factory _TestReportAction(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           TestReportOperation? operation,
           @JsonKey(name: 'assert') TestReportAssert? assert_}) =
       _$_TestReportAction;
@@ -8571,9 +8569,9 @@ abstract class _TestReportAction extends TestReportAction {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   TestReportOperation? get operation;
   @override
@@ -8595,8 +8593,8 @@ class _$TestReportOperationTearOff {
   _TestReportOperation call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
           TestReportOperationResult? result,
       @JsonKey(name: '_result')
@@ -8632,8 +8630,8 @@ const $TestReportOperation = _$TestReportOperationTearOff();
 mixin _$TestReportOperation {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
   TestReportOperationResult? get result;
   @JsonKey(name: '_result')
@@ -8658,8 +8656,8 @@ abstract class $TestReportOperationCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
           TestReportOperationResult? result,
       @JsonKey(name: '_result')
@@ -8701,10 +8699,10 @@ class _$TestReportOperationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       result: result == freezed
           ? _value.result
           : result as TestReportOperationResult?,
@@ -8766,8 +8764,8 @@ abstract class _$TestReportOperationCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
           TestReportOperationResult? result,
       @JsonKey(name: '_result')
@@ -8814,10 +8812,10 @@ class __$TestReportOperationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       result: result == freezed
           ? _value.result
           : result as TestReportOperationResult?,
@@ -8859,9 +8857,9 @@ class _$_TestReportOperation extends _TestReportOperation {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
   final TestReportOperationResult? result;
@@ -8944,8 +8942,8 @@ abstract class _TestReportOperation extends TestReportOperation {
   factory _TestReportOperation(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
           TestReportOperationResult? result,
       @JsonKey(name: '_result')
@@ -8964,9 +8962,9 @@ abstract class _TestReportOperation extends TestReportOperation {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
   TestReportOperationResult? get result;
@@ -8999,8 +8997,8 @@ class _$TestReportAssertTearOff {
   _TestReportAssert call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
           TestReportAssertResult? result,
       @JsonKey(name: '_result')
@@ -9036,8 +9034,8 @@ const $TestReportAssert = _$TestReportAssertTearOff();
 mixin _$TestReportAssert {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
   TestReportAssertResult? get result;
   @JsonKey(name: '_result')
@@ -9062,8 +9060,8 @@ abstract class $TestReportAssertCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
           TestReportAssertResult? result,
       @JsonKey(name: '_result')
@@ -9105,10 +9103,10 @@ class _$TestReportAssertCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       result:
           result == freezed ? _value.result : result as TestReportAssertResult?,
       resultElement: resultElement == freezed
@@ -9169,8 +9167,8 @@ abstract class _$TestReportAssertCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
           TestReportAssertResult? result,
       @JsonKey(name: '_result')
@@ -9217,10 +9215,10 @@ class __$TestReportAssertCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       result:
           result == freezed ? _value.result : result as TestReportAssertResult?,
       resultElement: resultElement == freezed
@@ -9261,9 +9259,9 @@ class _$_TestReportAssert extends _TestReportAssert {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
   final TestReportAssertResult? result;
@@ -9345,8 +9343,8 @@ abstract class _TestReportAssert extends TestReportAssert {
   factory _TestReportAssert(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
           TestReportAssertResult? result,
       @JsonKey(name: '_result')
@@ -9365,9 +9363,9 @@ abstract class _TestReportAssert extends TestReportAssert {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
   TestReportAssertResult? get result;
@@ -9399,8 +9397,8 @@ class _$TestReportTestTearOff {
 
   _TestReportTest call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -9430,8 +9428,8 @@ const $TestReportTest = _$TestReportTestTearOff();
 mixin _$TestReportTest {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -9452,8 +9450,8 @@ abstract class $TestReportTestCopyWith<$Res> {
       _$TestReportTestCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -9488,10 +9486,10 @@ class _$TestReportTestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -9537,8 +9535,8 @@ abstract class _$TestReportTestCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -9577,10 +9575,10 @@ class __$TestReportTestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -9617,9 +9615,9 @@ class _$_TestReportTest extends _TestReportTest {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? name;
   @override
@@ -9692,8 +9690,8 @@ abstract class _TestReportTest extends TestReportTest {
   _TestReportTest._() : super._();
   factory _TestReportTest(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -9707,9 +9705,9 @@ abstract class _TestReportTest extends TestReportTest {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -9737,8 +9735,8 @@ class _$TestReportAction1TearOff {
 
   _TestReportAction1 call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestReportOperation? operation,
       @JsonKey(name: 'assert') TestReportAssert? assert_}) {
     return _TestReportAction1(
@@ -9762,8 +9760,8 @@ const $TestReportAction1 = _$TestReportAction1TearOff();
 mixin _$TestReportAction1 {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   TestReportOperation? get operation;
   @JsonKey(name: 'assert')
   TestReportAssert? get assert_;
@@ -9780,8 +9778,8 @@ abstract class $TestReportAction1CopyWith<$Res> {
       _$TestReportAction1CopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestReportOperation? operation,
       @JsonKey(name: 'assert') TestReportAssert? assert_});
 
@@ -9810,10 +9808,10 @@ class _$TestReportAction1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestReportOperation?,
@@ -9854,8 +9852,8 @@ abstract class _$TestReportAction1CopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestReportOperation? operation,
       @JsonKey(name: 'assert') TestReportAssert? assert_});
 
@@ -9888,10 +9886,10 @@ class __$TestReportAction1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestReportOperation?,
@@ -9920,9 +9918,9 @@ class _$_TestReportAction1 extends _TestReportAction1 {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final TestReportOperation? operation;
   @override
@@ -9977,8 +9975,8 @@ abstract class _TestReportAction1 extends TestReportAction1 {
   _TestReportAction1._() : super._();
   factory _TestReportAction1(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           TestReportOperation? operation,
           @JsonKey(name: 'assert') TestReportAssert? assert_}) =
       _$_TestReportAction1;
@@ -9990,9 +9988,9 @@ abstract class _TestReportAction1 extends TestReportAction1 {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   TestReportOperation? get operation;
   @override
@@ -10013,8 +10011,8 @@ class _$TestReportTeardownTearOff {
 
   _TestReportTeardown call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<TestReportAction2> action}) {
     return _TestReportTeardown(
       id: id,
@@ -10036,8 +10034,8 @@ const $TestReportTeardown = _$TestReportTeardownTearOff();
 mixin _$TestReportTeardown {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   List<TestReportAction2> get action;
 
   Map<String, dynamic> toJson();
@@ -10052,8 +10050,8 @@ abstract class $TestReportTeardownCopyWith<$Res> {
       _$TestReportTeardownCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<TestReportAction2> action});
 }
 
@@ -10077,10 +10075,10 @@ class _$TestReportTeardownCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action:
           action == freezed ? _value.action : action as List<TestReportAction2>,
     ));
@@ -10096,8 +10094,8 @@ abstract class _$TestReportTeardownCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<TestReportAction2> action});
 }
 
@@ -10123,10 +10121,10 @@ class __$TestReportTeardownCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action:
           action == freezed ? _value.action : action as List<TestReportAction2>,
     ));
@@ -10151,9 +10149,9 @@ class _$_TestReportTeardown extends _TestReportTeardown {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final List<TestReportAction2> action;
 
@@ -10201,8 +10199,8 @@ abstract class _TestReportTeardown extends TestReportTeardown {
   _TestReportTeardown._() : super._();
   factory _TestReportTeardown(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<TestReportAction2> action}) = _$_TestReportTeardown;
 
   factory _TestReportTeardown.fromJson(Map<String, dynamic> json) =
@@ -10212,9 +10210,9 @@ abstract class _TestReportTeardown extends TestReportTeardown {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   List<TestReportAction2> get action;
   @override
@@ -10232,8 +10230,8 @@ class _$TestReportAction2TearOff {
 
   _TestReportAction2 call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required TestReportOperation operation}) {
     return _TestReportAction2(
       id: id,
@@ -10255,8 +10253,8 @@ const $TestReportAction2 = _$TestReportAction2TearOff();
 mixin _$TestReportAction2 {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   TestReportOperation get operation;
 
   Map<String, dynamic> toJson();
@@ -10271,8 +10269,8 @@ abstract class $TestReportAction2CopyWith<$Res> {
       _$TestReportAction2CopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestReportOperation operation});
 
   $TestReportOperationCopyWith<$Res> get operation;
@@ -10298,10 +10296,10 @@ class _$TestReportAction2CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestReportOperation,
@@ -10325,8 +10323,8 @@ abstract class _$TestReportAction2CopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestReportOperation operation});
 
   @override
@@ -10355,10 +10353,10 @@ class __$TestReportAction2CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestReportOperation,
@@ -10384,9 +10382,9 @@ class _$_TestReportAction2 extends _TestReportAction2 {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final TestReportOperation operation;
 
@@ -10435,8 +10433,8 @@ abstract class _TestReportAction2 extends TestReportAction2 {
   _TestReportAction2._() : super._();
   factory _TestReportAction2(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required TestReportOperation operation}) = _$_TestReportAction2;
 
   factory _TestReportAction2.fromJson(Map<String, dynamic> json) =
@@ -10446,9 +10444,9 @@ abstract class _TestReportAction2 extends TestReportAction2 {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   TestReportOperation get operation;
   @override
@@ -10476,10 +10474,10 @@ class _$TestScriptTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -10506,26 +10504,26 @@ class _$TestScriptTearOff {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<TestScriptOrigin?>? origin,
-      List<TestScriptDestination?>? destination,
+      List<TestScriptOrigin>? origin,
+      List<TestScriptDestination>? destination,
       TestScriptMetadata? metadata,
-      List<TestScriptFixture?>? fixture,
-      List<Reference?>? profile,
-      List<TestScriptVariable?>? variable,
+      List<TestScriptFixture>? fixture,
+      List<Reference>? profile,
+      List<TestScriptVariable>? variable,
       TestScriptSetup? setup,
-      List<TestScriptTest?>? test,
+      List<TestScriptTest>? test,
       TestScriptTeardown? teardown}) {
     return _TestScript(
       resourceType: resourceType,
@@ -10598,10 +10596,10 @@ mixin _$TestScript {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -10628,26 +10626,26 @@ mixin _$TestScript {
   String? get publisher;
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   Markdown? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<UsageContext?>? get useContext;
-  List<CodeableConcept?>? get jurisdiction;
+  List<UsageContext>? get useContext;
+  List<CodeableConcept>? get jurisdiction;
   Markdown? get purpose;
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
   Markdown? get copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
-  List<TestScriptOrigin?>? get origin;
-  List<TestScriptDestination?>? get destination;
+  List<TestScriptOrigin>? get origin;
+  List<TestScriptDestination>? get destination;
   TestScriptMetadata? get metadata;
-  List<TestScriptFixture?>? get fixture;
-  List<Reference?>? get profile;
-  List<TestScriptVariable?>? get variable;
+  List<TestScriptFixture>? get fixture;
+  List<Reference>? get profile;
+  List<TestScriptVariable>? get variable;
   TestScriptSetup? get setup;
-  List<TestScriptTest?>? get test;
+  List<TestScriptTest>? get test;
   TestScriptTeardown? get teardown;
 
   Map<String, dynamic> toJson();
@@ -10672,10 +10670,10 @@ abstract class $TestScriptCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -10702,26 +10700,26 @@ abstract class $TestScriptCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<TestScriptOrigin?>? origin,
-      List<TestScriptDestination?>? destination,
+      List<TestScriptOrigin>? origin,
+      List<TestScriptDestination>? destination,
       TestScriptMetadata? metadata,
-      List<TestScriptFixture?>? fixture,
-      List<Reference?>? profile,
-      List<TestScriptVariable?>? variable,
+      List<TestScriptFixture>? fixture,
+      List<Reference>? profile,
+      List<TestScriptVariable>? variable,
       TestScriptSetup? setup,
-      List<TestScriptTest?>? test,
+      List<TestScriptTest>? test,
       TestScriptTeardown? teardown});
 
   $MetaCopyWith<$Res>? get meta;
@@ -10821,13 +10819,13 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -10861,9 +10859,8 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
           : publisherElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -10872,10 +10869,10 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
@@ -10885,25 +10882,24 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
-      origin: origin == freezed
-          ? _value.origin
-          : origin as List<TestScriptOrigin?>?,
+      origin:
+          origin == freezed ? _value.origin : origin as List<TestScriptOrigin>?,
       destination: destination == freezed
           ? _value.destination
-          : destination as List<TestScriptDestination?>?,
+          : destination as List<TestScriptDestination>?,
       metadata: metadata == freezed
           ? _value.metadata
           : metadata as TestScriptMetadata?,
       fixture: fixture == freezed
           ? _value.fixture
-          : fixture as List<TestScriptFixture?>?,
+          : fixture as List<TestScriptFixture>?,
       profile:
-          profile == freezed ? _value.profile : profile as List<Reference?>?,
+          profile == freezed ? _value.profile : profile as List<Reference>?,
       variable: variable == freezed
           ? _value.variable
-          : variable as List<TestScriptVariable?>?,
+          : variable as List<TestScriptVariable>?,
       setup: setup == freezed ? _value.setup : setup as TestScriptSetup?,
-      test: test == freezed ? _value.test : test as List<TestScriptTest?>?,
+      test: test == freezed ? _value.test : test as List<TestScriptTest>?,
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestScriptTeardown?,
@@ -11138,10 +11134,10 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -11168,26 +11164,26 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<TestScriptOrigin?>? origin,
-      List<TestScriptDestination?>? destination,
+      List<TestScriptOrigin>? origin,
+      List<TestScriptDestination>? destination,
       TestScriptMetadata? metadata,
-      List<TestScriptFixture?>? fixture,
-      List<Reference?>? profile,
-      List<TestScriptVariable?>? variable,
+      List<TestScriptFixture>? fixture,
+      List<Reference>? profile,
+      List<TestScriptVariable>? variable,
       TestScriptSetup? setup,
-      List<TestScriptTest?>? test,
+      List<TestScriptTest>? test,
       TestScriptTeardown? teardown});
 
   @override
@@ -11308,13 +11304,13 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -11348,9 +11344,8 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
           : publisherElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -11359,10 +11354,10 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
@@ -11372,25 +11367,24 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
-      origin: origin == freezed
-          ? _value.origin
-          : origin as List<TestScriptOrigin?>?,
+      origin:
+          origin == freezed ? _value.origin : origin as List<TestScriptOrigin>?,
       destination: destination == freezed
           ? _value.destination
-          : destination as List<TestScriptDestination?>?,
+          : destination as List<TestScriptDestination>?,
       metadata: metadata == freezed
           ? _value.metadata
           : metadata as TestScriptMetadata?,
       fixture: fixture == freezed
           ? _value.fixture
-          : fixture as List<TestScriptFixture?>?,
+          : fixture as List<TestScriptFixture>?,
       profile:
-          profile == freezed ? _value.profile : profile as List<Reference?>?,
+          profile == freezed ? _value.profile : profile as List<Reference>?,
       variable: variable == freezed
           ? _value.variable
-          : variable as List<TestScriptVariable?>?,
+          : variable as List<TestScriptVariable>?,
       setup: setup == freezed ? _value.setup : setup as TestScriptSetup?,
-      test: test == freezed ? _value.test : test as List<TestScriptTest?>?,
+      test: test == freezed ? _value.test : test as List<TestScriptTest>?,
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestScriptTeardown?,
@@ -11490,12 +11484,12 @@ class _$_TestScript extends _TestScript {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
@@ -11540,16 +11534,16 @@ class _$_TestScript extends _TestScript {
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<UsageContext?>? useContext;
+  final List<UsageContext>? useContext;
   @override
-  final List<CodeableConcept?>? jurisdiction;
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? purpose;
   @override
@@ -11561,21 +11555,21 @@ class _$_TestScript extends _TestScript {
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final List<TestScriptOrigin?>? origin;
+  final List<TestScriptOrigin>? origin;
   @override
-  final List<TestScriptDestination?>? destination;
+  final List<TestScriptDestination>? destination;
   @override
   final TestScriptMetadata? metadata;
   @override
-  final List<TestScriptFixture?>? fixture;
+  final List<TestScriptFixture>? fixture;
   @override
-  final List<Reference?>? profile;
+  final List<Reference>? profile;
   @override
-  final List<TestScriptVariable?>? variable;
+  final List<TestScriptVariable>? variable;
   @override
   final TestScriptSetup? setup;
   @override
-  final List<TestScriptTest?>? test;
+  final List<TestScriptTest>? test;
   @override
   final TestScriptTeardown? teardown;
 
@@ -11754,10 +11748,10 @@ abstract class _TestScript extends TestScript {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -11784,26 +11778,26 @@ abstract class _TestScript extends TestScript {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<TestScriptOrigin?>? origin,
-      List<TestScriptDestination?>? destination,
+      List<TestScriptOrigin>? origin,
+      List<TestScriptDestination>? destination,
       TestScriptMetadata? metadata,
-      List<TestScriptFixture?>? fixture,
-      List<Reference?>? profile,
-      List<TestScriptVariable?>? variable,
+      List<TestScriptFixture>? fixture,
+      List<Reference>? profile,
+      List<TestScriptVariable>? variable,
       TestScriptSetup? setup,
-      List<TestScriptTest?>? test,
+      List<TestScriptTest>? test,
       TestScriptTeardown? teardown}) = _$_TestScript;
 
   factory _TestScript.fromJson(Map<String, dynamic> json) =
@@ -11829,12 +11823,12 @@ abstract class _TestScript extends TestScript {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   FhirUri? get url;
   @override
@@ -11879,16 +11873,16 @@ abstract class _TestScript extends TestScript {
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   Markdown? get description;
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<UsageContext?>? get useContext;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction;
   @override
   Markdown? get purpose;
   @override
@@ -11900,21 +11894,21 @@ abstract class _TestScript extends TestScript {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  List<TestScriptOrigin?>? get origin;
+  List<TestScriptOrigin>? get origin;
   @override
-  List<TestScriptDestination?>? get destination;
+  List<TestScriptDestination>? get destination;
   @override
   TestScriptMetadata? get metadata;
   @override
-  List<TestScriptFixture?>? get fixture;
+  List<TestScriptFixture>? get fixture;
   @override
-  List<Reference?>? get profile;
+  List<Reference>? get profile;
   @override
-  List<TestScriptVariable?>? get variable;
+  List<TestScriptVariable>? get variable;
   @override
   TestScriptSetup? get setup;
   @override
-  List<TestScriptTest?>? get test;
+  List<TestScriptTest>? get test;
   @override
   TestScriptTeardown? get teardown;
   @override
@@ -11932,8 +11926,8 @@ class _$TestScriptOriginTearOff {
 
   _TestScriptOrigin call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       required Coding profile}) {
@@ -11959,8 +11953,8 @@ const $TestScriptOrigin = _$TestScriptOriginTearOff();
 mixin _$TestScriptOrigin {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Integer? get index;
   @JsonKey(name: '_index')
   Element? get indexElement;
@@ -11978,8 +11972,8 @@ abstract class $TestScriptOriginCopyWith<$Res> {
       _$TestScriptOriginCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile});
@@ -12010,10 +12004,10 @@ class _$TestScriptOriginCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       index: index == freezed ? _value.index : index as Integer?,
       indexElement: indexElement == freezed
           ? _value.indexElement
@@ -12050,8 +12044,8 @@ abstract class _$TestScriptOriginCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile});
@@ -12086,10 +12080,10 @@ class __$TestScriptOriginCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       index: index == freezed ? _value.index : index as Integer?,
       indexElement: indexElement == freezed
           ? _value.indexElement
@@ -12119,9 +12113,9 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Integer? index;
   @override
@@ -12181,8 +12175,8 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
   _TestScriptOrigin._() : super._();
   factory _TestScriptOrigin(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       required Coding profile}) = _$_TestScriptOrigin;
@@ -12194,9 +12188,9 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Integer? get index;
   @override
@@ -12220,8 +12214,8 @@ class _$TestScriptDestinationTearOff {
 
   _TestScriptDestination call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       required Coding profile}) {
@@ -12247,8 +12241,8 @@ const $TestScriptDestination = _$TestScriptDestinationTearOff();
 mixin _$TestScriptDestination {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Integer? get index;
   @JsonKey(name: '_index')
   Element? get indexElement;
@@ -12266,8 +12260,8 @@ abstract class $TestScriptDestinationCopyWith<$Res> {
       _$TestScriptDestinationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile});
@@ -12298,10 +12292,10 @@ class _$TestScriptDestinationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       index: index == freezed ? _value.index : index as Integer?,
       indexElement: indexElement == freezed
           ? _value.indexElement
@@ -12338,8 +12332,8 @@ abstract class _$TestScriptDestinationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       Coding profile});
@@ -12374,10 +12368,10 @@ class __$TestScriptDestinationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       index: index == freezed ? _value.index : index as Integer?,
       indexElement: indexElement == freezed
           ? _value.indexElement
@@ -12407,9 +12401,9 @@ class _$_TestScriptDestination extends _TestScriptDestination {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Integer? index;
   @override
@@ -12470,8 +12464,8 @@ abstract class _TestScriptDestination extends TestScriptDestination {
   _TestScriptDestination._() : super._();
   factory _TestScriptDestination(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Integer? index,
       @JsonKey(name: '_index') Element? indexElement,
       required Coding profile}) = _$_TestScriptDestination;
@@ -12483,9 +12477,9 @@ abstract class _TestScriptDestination extends TestScriptDestination {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Integer? get index;
   @override
@@ -12508,9 +12502,9 @@ class _$TestScriptMetadataTearOff {
 
   _TestScriptMetadata call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<TestScriptLink?>? link,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<TestScriptLink>? link,
       required List<TestScriptCapability> capability}) {
     return _TestScriptMetadata(
       id: id,
@@ -12533,9 +12527,9 @@ const $TestScriptMetadata = _$TestScriptMetadataTearOff();
 mixin _$TestScriptMetadata {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<TestScriptLink?>? get link;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<TestScriptLink>? get link;
   List<TestScriptCapability> get capability;
 
   Map<String, dynamic> toJson();
@@ -12550,9 +12544,9 @@ abstract class $TestScriptMetadataCopyWith<$Res> {
       _$TestScriptMetadataCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<TestScriptLink?>? link,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<TestScriptLink>? link,
       List<TestScriptCapability> capability});
 }
 
@@ -12577,11 +12571,11 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      link: link == freezed ? _value.link : link as List<TestScriptLink?>?,
+          : modifierExtension as List<FhirExtension>?,
+      link: link == freezed ? _value.link : link as List<TestScriptLink>?,
       capability: capability == freezed
           ? _value.capability
           : capability as List<TestScriptCapability>,
@@ -12598,9 +12592,9 @@ abstract class _$TestScriptMetadataCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<TestScriptLink?>? link,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<TestScriptLink>? link,
       List<TestScriptCapability> capability});
 }
 
@@ -12627,11 +12621,11 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      link: link == freezed ? _value.link : link as List<TestScriptLink?>?,
+          : modifierExtension as List<FhirExtension>?,
+      link: link == freezed ? _value.link : link as List<TestScriptLink>?,
       capability: capability == freezed
           ? _value.capability
           : capability as List<TestScriptCapability>,
@@ -12658,11 +12652,11 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<TestScriptLink?>? link;
+  final List<TestScriptLink>? link;
   @override
   final List<TestScriptCapability> capability;
 
@@ -12714,9 +12708,9 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
   _TestScriptMetadata._() : super._();
   factory _TestScriptMetadata(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<TestScriptLink?>? link,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<TestScriptLink>? link,
       required List<TestScriptCapability> capability}) = _$_TestScriptMetadata;
 
   factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
@@ -12726,11 +12720,11 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<TestScriptLink?>? get link;
+  List<TestScriptLink>? get link;
   @override
   List<TestScriptCapability> get capability;
   @override
@@ -12748,8 +12742,8 @@ class _$TestScriptLinkTearOff {
 
   _TestScriptLink call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? description,
@@ -12777,8 +12771,8 @@ const $TestScriptLink = _$TestScriptLinkTearOff();
 mixin _$TestScriptLink {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -12798,8 +12792,8 @@ abstract class $TestScriptLinkCopyWith<$Res> {
       _$TestScriptLinkCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? description,
@@ -12832,10 +12826,10 @@ class _$TestScriptLinkCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -12879,8 +12873,8 @@ abstract class _$TestScriptLinkCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? description,
@@ -12917,10 +12911,10 @@ class __$TestScriptLinkCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -12954,9 +12948,9 @@ class _$_TestScriptLink extends _TestScriptLink {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
@@ -13024,8 +13018,8 @@ abstract class _TestScriptLink extends TestScriptLink {
   _TestScriptLink._() : super._();
   factory _TestScriptLink(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           FhirUri? url,
           @JsonKey(name: '_url') Element? urlElement,
           String? description,
@@ -13039,9 +13033,9 @@ abstract class _TestScriptLink extends TestScriptLink {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   FhirUri? get url;
   @override
@@ -13067,19 +13061,19 @@ class _$TestScriptCapabilityTearOff {
 
   _TestScriptCapability call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? validated,
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Integer?>? origin,
+      List<Integer>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri?>? link,
+      List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
       required Canonical capabilities}) {
     return _TestScriptCapability(
@@ -13114,8 +13108,8 @@ const $TestScriptCapability = _$TestScriptCapabilityTearOff();
 mixin _$TestScriptCapability {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'required')
   Boolean? get required_;
   @JsonKey(name: '_required')
@@ -13126,13 +13120,13 @@ mixin _$TestScriptCapability {
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<Integer?>? get origin;
+  List<Integer>? get origin;
   @JsonKey(name: '_origin')
   List<Element?>? get originElement;
   Integer? get destination;
   @JsonKey(name: '_destination')
   Element? get destinationElement;
-  List<FhirUri?>? get link;
+  List<FhirUri>? get link;
   @JsonKey(name: '_link')
   List<Element?>? get linkElement;
   Canonical get capabilities;
@@ -13149,19 +13143,19 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       _$TestScriptCapabilityCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? validated,
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Integer?>? origin,
+      List<Integer>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri?>? link,
+      List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
       Canonical capabilities});
 
@@ -13203,10 +13197,10 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       requiredElement: requiredElement == freezed
@@ -13222,7 +13216,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      origin: origin == freezed ? _value.origin : origin as List<Integer?>?,
+      origin: origin == freezed ? _value.origin : origin as List<Integer>?,
       originElement: originElement == freezed
           ? _value.originElement
           : originElement as List<Element?>?,
@@ -13231,7 +13225,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       destinationElement: destinationElement == freezed
           ? _value.destinationElement
           : destinationElement as Element?,
-      link: link == freezed ? _value.link : link as List<FhirUri?>?,
+      link: link == freezed ? _value.link : link as List<FhirUri>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
           : linkElement as List<Element?>?,
@@ -13295,19 +13289,19 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? validated,
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Integer?>? origin,
+      List<Integer>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri?>? link,
+      List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
       Canonical capabilities});
 
@@ -13355,10 +13349,10 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       requiredElement: requiredElement == freezed
@@ -13374,7 +13368,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      origin: origin == freezed ? _value.origin : origin as List<Integer?>?,
+      origin: origin == freezed ? _value.origin : origin as List<Integer>?,
       originElement: originElement == freezed
           ? _value.originElement
           : originElement as List<Element?>?,
@@ -13383,7 +13377,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       destinationElement: destinationElement == freezed
           ? _value.destinationElement
           : destinationElement as Element?,
-      link: link == freezed ? _value.link : link as List<FhirUri?>?,
+      link: link == freezed ? _value.link : link as List<FhirUri>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
           : linkElement as List<Element?>?,
@@ -13424,9 +13418,9 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'required')
   final Boolean? required_;
@@ -13444,7 +13438,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<Integer?>? origin;
+  final List<Integer>? origin;
   @override
   @JsonKey(name: '_origin')
   final List<Element?>? originElement;
@@ -13454,7 +13448,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   @JsonKey(name: '_destination')
   final Element? destinationElement;
   @override
-  final List<FhirUri?>? link;
+  final List<FhirUri>? link;
   @override
   @JsonKey(name: '_link')
   final List<Element?>? linkElement;
@@ -13553,19 +13547,19 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   _TestScriptCapability._() : super._();
   factory _TestScriptCapability(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? validated,
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Integer?>? origin,
+      List<Integer>? origin,
       @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri?>? link,
+      List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
       required Canonical capabilities}) = _$_TestScriptCapability;
 
@@ -13576,9 +13570,9 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'required')
   Boolean? get required_;
@@ -13596,7 +13590,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<Integer?>? get origin;
+  List<Integer>? get origin;
   @override
   @JsonKey(name: '_origin')
   List<Element?>? get originElement;
@@ -13606,7 +13600,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   @JsonKey(name: '_destination')
   Element? get destinationElement;
   @override
-  List<FhirUri?>? get link;
+  List<FhirUri>? get link;
   @override
   @JsonKey(name: '_link')
   List<Element?>? get linkElement;
@@ -13627,8 +13621,8 @@ class _$TestScriptFixtureTearOff {
 
   _TestScriptFixture call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Boolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
       Boolean? autodelete,
@@ -13658,8 +13652,8 @@ const $TestScriptFixture = _$TestScriptFixtureTearOff();
 mixin _$TestScriptFixture {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Boolean? get autocreate;
   @JsonKey(name: '_autocreate')
   Element? get autocreateElement;
@@ -13680,8 +13674,8 @@ abstract class $TestScriptFixtureCopyWith<$Res> {
       _$TestScriptFixtureCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Boolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
       Boolean? autodelete,
@@ -13717,10 +13711,10 @@ class _$TestScriptFixtureCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       autocreate:
           autocreate == freezed ? _value.autocreate : autocreate as Boolean?,
       autocreateElement: autocreateElement == freezed
@@ -13778,8 +13772,8 @@ abstract class _$TestScriptFixtureCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Boolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
       Boolean? autodelete,
@@ -13820,10 +13814,10 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       autocreate:
           autocreate == freezed ? _value.autocreate : autocreate as Boolean?,
       autocreateElement: autocreateElement == freezed
@@ -13861,9 +13855,9 @@ class _$_TestScriptFixture extends _TestScriptFixture {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Boolean? autocreate;
   @override
@@ -13938,8 +13932,8 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   _TestScriptFixture._() : super._();
   factory _TestScriptFixture(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Boolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
       Boolean? autodelete,
@@ -13953,9 +13947,9 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Boolean? get autocreate;
   @override
@@ -13983,8 +13977,8 @@ class _$TestScriptVariableTearOff {
 
   _TestScriptVariable call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? defaultValue,
@@ -14036,8 +14030,8 @@ const $TestScriptVariable = _$TestScriptVariableTearOff();
 mixin _$TestScriptVariable {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -14075,8 +14069,8 @@ abstract class $TestScriptVariableCopyWith<$Res> {
       _$TestScriptVariableCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? defaultValue,
@@ -14139,10 +14133,10 @@ class _$TestScriptVariableCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -14278,8 +14272,8 @@ abstract class _$TestScriptVariableCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? defaultValue,
@@ -14352,10 +14346,10 @@ class __$TestScriptVariableCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -14427,9 +14421,9 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? name;
   @override
@@ -14573,8 +14567,8 @@ abstract class _TestScriptVariable extends TestScriptVariable {
   _TestScriptVariable._() : super._();
   factory _TestScriptVariable(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           String? name,
           @JsonKey(name: '_name') Element? nameElement,
           String? defaultValue,
@@ -14600,9 +14594,9 @@ abstract class _TestScriptVariable extends TestScriptVariable {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -14658,8 +14652,8 @@ class _$TestScriptSetupTearOff {
 
   _TestScriptSetup call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<TestScriptAction> action}) {
     return _TestScriptSetup(
       id: id,
@@ -14681,8 +14675,8 @@ const $TestScriptSetup = _$TestScriptSetupTearOff();
 mixin _$TestScriptSetup {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   List<TestScriptAction> get action;
 
   Map<String, dynamic> toJson();
@@ -14697,8 +14691,8 @@ abstract class $TestScriptSetupCopyWith<$Res> {
       _$TestScriptSetupCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<TestScriptAction> action});
 }
 
@@ -14722,10 +14716,10 @@ class _$TestScriptSetupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action:
           action == freezed ? _value.action : action as List<TestScriptAction>,
     ));
@@ -14741,8 +14735,8 @@ abstract class _$TestScriptSetupCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<TestScriptAction> action});
 }
 
@@ -14768,10 +14762,10 @@ class __$TestScriptSetupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action:
           action == freezed ? _value.action : action as List<TestScriptAction>,
     ));
@@ -14796,9 +14790,9 @@ class _$_TestScriptSetup extends _TestScriptSetup {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final List<TestScriptAction> action;
 
@@ -14846,8 +14840,8 @@ abstract class _TestScriptSetup extends TestScriptSetup {
   _TestScriptSetup._() : super._();
   factory _TestScriptSetup(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<TestScriptAction> action}) = _$_TestScriptSetup;
 
   factory _TestScriptSetup.fromJson(Map<String, dynamic> json) =
@@ -14857,9 +14851,9 @@ abstract class _TestScriptSetup extends TestScriptSetup {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   List<TestScriptAction> get action;
   @override
@@ -14877,8 +14871,8 @@ class _$TestScriptActionTearOff {
 
   _TestScriptAction call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestScriptOperation? operation,
       @JsonKey(name: 'assert') TestScriptAssert? assert_}) {
     return _TestScriptAction(
@@ -14902,8 +14896,8 @@ const $TestScriptAction = _$TestScriptActionTearOff();
 mixin _$TestScriptAction {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   TestScriptOperation? get operation;
   @JsonKey(name: 'assert')
   TestScriptAssert? get assert_;
@@ -14920,8 +14914,8 @@ abstract class $TestScriptActionCopyWith<$Res> {
       _$TestScriptActionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestScriptOperation? operation,
       @JsonKey(name: 'assert') TestScriptAssert? assert_});
 
@@ -14950,10 +14944,10 @@ class _$TestScriptActionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptOperation?,
@@ -14994,8 +14988,8 @@ abstract class _$TestScriptActionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestScriptOperation? operation,
       @JsonKey(name: 'assert') TestScriptAssert? assert_});
 
@@ -15028,10 +15022,10 @@ class __$TestScriptActionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptOperation?,
@@ -15060,9 +15054,9 @@ class _$_TestScriptAction extends _TestScriptAction {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final TestScriptOperation? operation;
   @override
@@ -15117,8 +15111,8 @@ abstract class _TestScriptAction extends TestScriptAction {
   _TestScriptAction._() : super._();
   factory _TestScriptAction(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           TestScriptOperation? operation,
           @JsonKey(name: 'assert') TestScriptAssert? assert_}) =
       _$_TestScriptAction;
@@ -15130,9 +15124,9 @@ abstract class _TestScriptAction extends TestScriptAction {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   TestScriptOperation? get operation;
   @override
@@ -15154,8 +15148,8 @@ class _$TestScriptOperationTearOff {
   _TestScriptOperation call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
       @JsonKey(name: '_resource')
@@ -15188,7 +15182,7 @@ class _$TestScriptOperationTearOff {
       String? params,
       @JsonKey(name: '_params')
           Element? paramsElement,
-      List<TestScriptRequestHeader?>? requestHeader,
+      List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
@@ -15255,8 +15249,8 @@ const $TestScriptOperation = _$TestScriptOperationTearOff();
 mixin _$TestScriptOperation {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Coding? get type;
   Code? get resource;
   @JsonKey(name: '_resource')
@@ -15289,7 +15283,7 @@ mixin _$TestScriptOperation {
   String? get params;
   @JsonKey(name: '_params')
   Element? get paramsElement;
-  List<TestScriptRequestHeader?>? get requestHeader;
+  List<TestScriptRequestHeader>? get requestHeader;
   Id? get requestId;
   @JsonKey(name: '_requestId')
   Element? get requestIdElement;
@@ -15319,8 +15313,8 @@ abstract class $TestScriptOperationCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
       @JsonKey(name: '_resource')
@@ -15353,7 +15347,7 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       String? params,
       @JsonKey(name: '_params')
           Element? paramsElement,
-      List<TestScriptRequestHeader?>? requestHeader,
+      List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
@@ -15439,10 +15433,10 @@ class _$TestScriptOperationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as Coding?,
       resource: resource == freezed ? _value.resource : resource as Code?,
       resourceElement: resourceElement == freezed
@@ -15493,7 +15487,7 @@ class _$TestScriptOperationCopyWithImpl<$Res>
           : paramsElement as Element?,
       requestHeader: requestHeader == freezed
           ? _value.requestHeader
-          : requestHeader as List<TestScriptRequestHeader?>?,
+          : requestHeader as List<TestScriptRequestHeader>?,
       requestId: requestId == freezed ? _value.requestId : requestId as Id?,
       requestIdElement: requestIdElement == freezed
           ? _value.requestIdElement
@@ -15703,8 +15697,8 @@ abstract class _$TestScriptOperationCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
       @JsonKey(name: '_resource')
@@ -15737,7 +15731,7 @@ abstract class _$TestScriptOperationCopyWith<$Res>
       String? params,
       @JsonKey(name: '_params')
           Element? paramsElement,
-      List<TestScriptRequestHeader?>? requestHeader,
+      List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
@@ -15841,10 +15835,10 @@ class __$TestScriptOperationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as Coding?,
       resource: resource == freezed ? _value.resource : resource as Code?,
       resourceElement: resourceElement == freezed
@@ -15895,7 +15889,7 @@ class __$TestScriptOperationCopyWithImpl<$Res>
           : paramsElement as Element?,
       requestHeader: requestHeader == freezed
           ? _value.requestHeader
-          : requestHeader as List<TestScriptRequestHeader?>?,
+          : requestHeader as List<TestScriptRequestHeader>?,
       requestId: requestId == freezed ? _value.requestId : requestId as Id?,
       requestIdElement: requestIdElement == freezed
           ? _value.requestIdElement
@@ -15968,9 +15962,9 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Coding? type;
   @override
@@ -16025,7 +16019,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   @JsonKey(name: '_params')
   final Element? paramsElement;
   @override
-  final List<TestScriptRequestHeader?>? requestHeader;
+  final List<TestScriptRequestHeader>? requestHeader;
   @override
   final Id? requestId;
   @override
@@ -16195,8 +16189,8 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   factory _TestScriptOperation(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
       @JsonKey(name: '_resource')
@@ -16229,7 +16223,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       String? params,
       @JsonKey(name: '_params')
           Element? paramsElement,
-      List<TestScriptRequestHeader?>? requestHeader,
+      List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
@@ -16253,9 +16247,9 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Coding? get type;
   @override
@@ -16310,7 +16304,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   @JsonKey(name: '_params')
   Element? get paramsElement;
   @override
-  List<TestScriptRequestHeader?>? get requestHeader;
+  List<TestScriptRequestHeader>? get requestHeader;
   @override
   Id? get requestId;
   @override
@@ -16352,8 +16346,8 @@ class _$TestScriptRequestHeaderTearOff {
 
   _TestScriptRequestHeader call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? field,
       @JsonKey(name: '_field') Element? fieldElement,
       String? value,
@@ -16381,8 +16375,8 @@ const $TestScriptRequestHeader = _$TestScriptRequestHeaderTearOff();
 mixin _$TestScriptRequestHeader {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get field;
   @JsonKey(name: '_field')
   Element? get fieldElement;
@@ -16402,8 +16396,8 @@ abstract class $TestScriptRequestHeaderCopyWith<$Res> {
       _$TestScriptRequestHeaderCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? field,
       @JsonKey(name: '_field') Element? fieldElement,
       String? value,
@@ -16436,10 +16430,10 @@ class _$TestScriptRequestHeaderCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       field: field == freezed ? _value.field : field as String?,
       fieldElement: fieldElement == freezed
           ? _value.fieldElement
@@ -16483,8 +16477,8 @@ abstract class _$TestScriptRequestHeaderCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? field,
       @JsonKey(name: '_field') Element? fieldElement,
       String? value,
@@ -16522,10 +16516,10 @@ class __$TestScriptRequestHeaderCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       field: field == freezed ? _value.field : field as String?,
       fieldElement: fieldElement == freezed
           ? _value.fieldElement
@@ -16559,9 +16553,9 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? field;
   @override
@@ -16629,8 +16623,8 @@ abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
   _TestScriptRequestHeader._() : super._();
   factory _TestScriptRequestHeader(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           String? field,
           @JsonKey(name: '_field') Element? fieldElement,
           String? value,
@@ -16644,9 +16638,9 @@ abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get field;
   @override
@@ -16673,8 +16667,8 @@ class _$TestScriptAssertTearOff {
   _TestScriptAssert call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? label,
       @JsonKey(name: '_label')
           Element? labelElement,
@@ -16808,8 +16802,8 @@ const $TestScriptAssert = _$TestScriptAssertTearOff();
 mixin _$TestScriptAssert {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get label;
   @JsonKey(name: '_label')
   Element? get labelElement;
@@ -16894,8 +16888,8 @@ abstract class $TestScriptAssertCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? label,
       @JsonKey(name: '_label')
           Element? labelElement,
@@ -17054,10 +17048,10 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       label: label == freezed ? _value.label : label as String?,
       labelElement: labelElement == freezed
           ? _value.labelElement
@@ -17429,8 +17423,8 @@ abstract class _$TestScriptAssertCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? label,
       @JsonKey(name: '_label')
           Element? labelElement,
@@ -17613,10 +17607,10 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       label: label == freezed ? _value.label : label as String?,
       labelElement: labelElement == freezed
           ? _value.labelElement
@@ -17823,9 +17817,9 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? label;
   @override
@@ -18101,8 +18095,8 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   factory _TestScriptAssert(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? label,
       @JsonKey(name: '_label')
           Element? labelElement,
@@ -18181,9 +18175,9 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get label;
   @override
@@ -18313,8 +18307,8 @@ class _$TestScriptTestTearOff {
 
   _TestScriptTest call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -18344,8 +18338,8 @@ const $TestScriptTest = _$TestScriptTestTearOff();
 mixin _$TestScriptTest {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -18366,8 +18360,8 @@ abstract class $TestScriptTestCopyWith<$Res> {
       _$TestScriptTestCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -18402,10 +18396,10 @@ class _$TestScriptTestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -18451,8 +18445,8 @@ abstract class _$TestScriptTestCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -18491,10 +18485,10 @@ class __$TestScriptTestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -18531,9 +18525,9 @@ class _$_TestScriptTest extends _TestScriptTest {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? name;
   @override
@@ -18606,8 +18600,8 @@ abstract class _TestScriptTest extends TestScriptTest {
   _TestScriptTest._() : super._();
   factory _TestScriptTest(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -18621,9 +18615,9 @@ abstract class _TestScriptTest extends TestScriptTest {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -18651,8 +18645,8 @@ class _$TestScriptAction1TearOff {
 
   _TestScriptAction1 call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestScriptOperation? operation,
       @JsonKey(name: 'assert') TestScriptAssert? assert_}) {
     return _TestScriptAction1(
@@ -18676,8 +18670,8 @@ const $TestScriptAction1 = _$TestScriptAction1TearOff();
 mixin _$TestScriptAction1 {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   TestScriptOperation? get operation;
   @JsonKey(name: 'assert')
   TestScriptAssert? get assert_;
@@ -18694,8 +18688,8 @@ abstract class $TestScriptAction1CopyWith<$Res> {
       _$TestScriptAction1CopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestScriptOperation? operation,
       @JsonKey(name: 'assert') TestScriptAssert? assert_});
 
@@ -18724,10 +18718,10 @@ class _$TestScriptAction1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptOperation?,
@@ -18768,8 +18762,8 @@ abstract class _$TestScriptAction1CopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestScriptOperation? operation,
       @JsonKey(name: 'assert') TestScriptAssert? assert_});
 
@@ -18802,10 +18796,10 @@ class __$TestScriptAction1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptOperation?,
@@ -18834,9 +18828,9 @@ class _$_TestScriptAction1 extends _TestScriptAction1 {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final TestScriptOperation? operation;
   @override
@@ -18891,8 +18885,8 @@ abstract class _TestScriptAction1 extends TestScriptAction1 {
   _TestScriptAction1._() : super._();
   factory _TestScriptAction1(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           TestScriptOperation? operation,
           @JsonKey(name: 'assert') TestScriptAssert? assert_}) =
       _$_TestScriptAction1;
@@ -18904,9 +18898,9 @@ abstract class _TestScriptAction1 extends TestScriptAction1 {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   TestScriptOperation? get operation;
   @override
@@ -18927,8 +18921,8 @@ class _$TestScriptTeardownTearOff {
 
   _TestScriptTeardown call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<TestScriptAction2> action}) {
     return _TestScriptTeardown(
       id: id,
@@ -18950,8 +18944,8 @@ const $TestScriptTeardown = _$TestScriptTeardownTearOff();
 mixin _$TestScriptTeardown {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   List<TestScriptAction2> get action;
 
   Map<String, dynamic> toJson();
@@ -18966,8 +18960,8 @@ abstract class $TestScriptTeardownCopyWith<$Res> {
       _$TestScriptTeardownCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<TestScriptAction2> action});
 }
 
@@ -18991,10 +18985,10 @@ class _$TestScriptTeardownCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action:
           action == freezed ? _value.action : action as List<TestScriptAction2>,
     ));
@@ -19010,8 +19004,8 @@ abstract class _$TestScriptTeardownCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<TestScriptAction2> action});
 }
 
@@ -19037,10 +19031,10 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action:
           action == freezed ? _value.action : action as List<TestScriptAction2>,
     ));
@@ -19065,9 +19059,9 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final List<TestScriptAction2> action;
 
@@ -19115,8 +19109,8 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
   _TestScriptTeardown._() : super._();
   factory _TestScriptTeardown(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<TestScriptAction2> action}) = _$_TestScriptTeardown;
 
   factory _TestScriptTeardown.fromJson(Map<String, dynamic> json) =
@@ -19126,9 +19120,9 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   List<TestScriptAction2> get action;
   @override
@@ -19146,8 +19140,8 @@ class _$TestScriptAction2TearOff {
 
   _TestScriptAction2 call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required TestScriptOperation operation}) {
     return _TestScriptAction2(
       id: id,
@@ -19169,8 +19163,8 @@ const $TestScriptAction2 = _$TestScriptAction2TearOff();
 mixin _$TestScriptAction2 {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   TestScriptOperation get operation;
 
   Map<String, dynamic> toJson();
@@ -19185,8 +19179,8 @@ abstract class $TestScriptAction2CopyWith<$Res> {
       _$TestScriptAction2CopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestScriptOperation operation});
 
   $TestScriptOperationCopyWith<$Res> get operation;
@@ -19212,10 +19206,10 @@ class _$TestScriptAction2CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptOperation,
@@ -19239,8 +19233,8 @@ abstract class _$TestScriptAction2CopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       TestScriptOperation operation});
 
   @override
@@ -19269,10 +19263,10 @@ class __$TestScriptAction2CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptOperation,
@@ -19298,9 +19292,9 @@ class _$_TestScriptAction2 extends _TestScriptAction2 {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final TestScriptOperation operation;
 
@@ -19349,8 +19343,8 @@ abstract class _TestScriptAction2 extends TestScriptAction2 {
   _TestScriptAction2._() : super._();
   factory _TestScriptAction2(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required TestScriptOperation operation}) = _$_TestScriptAction2;
 
   factory _TestScriptAction2.fromJson(Map<String, dynamic> json) =
@@ -19360,9 +19354,9 @@ abstract class _TestScriptAction2 extends TestScriptAction2 {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   TestScriptOperation get operation;
   @override

@@ -164,9 +164,9 @@ void main() {
     expect(Id('Patient-12345').toString(), 'Patient-12345');
     expect(Id('Patient-12345').toJson(), 'Patient-12345');
     expect(Id('Patient-12345').value, 'Patient-12345');
-    final id1String =
+    const id1String =
         '1111111111222222222233333333334444444444555555555566666666667777';
-    final id2String =
+    const id2String =
         '11111111112222222222333333333344444444445555555555666666666677777';
     expect(Id(id1String).toString(), id1String);
     expect(Id(id1String).toJson(), id1String);
@@ -174,9 +174,10 @@ void main() {
     expect(Id(id2String).toString(), id2String);
     expect(Id(id2String).toJson(), id2String);
     expect(Id(id2String).value, null);
-    expect(id1String.length + 1, id2String.length);
-    expect(id1String.length, 64);
-    expect(id2String.length, 65);
+    expect(
+        Id(id1String).toString().length + 1, Id(id2String).toString().length);
+    expect(Id(id1String).toString().length, 64);
+    expect(Id(id2String).toString().length, 65);
   });
 
   test('Integer', () {

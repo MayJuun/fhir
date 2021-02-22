@@ -27,7 +27,7 @@ class _$GoalTearOff {
       CodeableConcept? achievementStatus,
       required CodeableConcept description,
       required Reference subject,
-      List<GoalTarget?>? target}) {
+      List<GoalTarget>? target}) {
     return _Goal(
       resourceType: resourceType,
       id: id,
@@ -61,7 +61,7 @@ mixin _$Goal {
   CodeableConcept? get achievementStatus;
   CodeableConcept get description;
   Reference get subject;
-  List<GoalTarget?>? get target;
+  List<GoalTarget>? get target;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -83,7 +83,7 @@ abstract class $GoalCopyWith<$Res> {
       CodeableConcept? achievementStatus,
       CodeableConcept description,
       Reference subject,
-      List<GoalTarget?>? target});
+      List<GoalTarget>? target});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -129,7 +129,7 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
           ? _value.description
           : description as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      target: target == freezed ? _value.target : target as List<GoalTarget?>?,
+      target: target == freezed ? _value.target : target as List<GoalTarget>?,
     ));
   }
 
@@ -197,7 +197,7 @@ abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
       CodeableConcept? achievementStatus,
       CodeableConcept description,
       Reference subject,
-      List<GoalTarget?>? target});
+      List<GoalTarget>? target});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -249,7 +249,7 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
           ? _value.description
           : description as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
-      target: target == freezed ? _value.target : target as List<GoalTarget?>?,
+      target: target == freezed ? _value.target : target as List<GoalTarget>?,
     ));
   }
 }
@@ -294,7 +294,7 @@ class _$_Goal extends _Goal {
   @override
   final Reference subject;
   @override
-  final List<GoalTarget?>? target;
+  final List<GoalTarget>? target;
 
   @override
   String toString() {
@@ -367,7 +367,7 @@ abstract class _Goal extends Goal {
       CodeableConcept? achievementStatus,
       required CodeableConcept description,
       required Reference subject,
-      List<GoalTarget?>? target}) = _$_Goal;
+      List<GoalTarget>? target}) = _$_Goal;
 
   factory _Goal.fromJson(Map<String, dynamic> json) = _$_Goal.fromJson;
 
@@ -390,7 +390,7 @@ abstract class _Goal extends Goal {
   @override
   Reference get subject;
   @override
-  List<GoalTarget?>? get target;
+  List<GoalTarget>? get target;
   @override
   @JsonKey(ignore: true)
   _$GoalCopyWith<_Goal> get copyWith;

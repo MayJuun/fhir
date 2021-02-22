@@ -21,14 +21,14 @@ abstract class Organization with Resource implements _$Organization {
     Id? id,
     Meta? meta,
     Narrative? text,
-    List<Resource?>? contained,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    List<Identifier>? identifier,
     required Boolean active,
     required String name,
-    List<CodeableConcept?>? type,
-    List<ContactPoint?>? telecom,
-    List<Address?>? address,
-    List<Reference?>? endpoint,
+    List<CodeableConcept>? type,
+    List<ContactPoint>? telecom,
+    List<Address>? address,
+    List<Reference>? endpoint,
   }) = _Organization;
 
   factory Organization.simple({
@@ -37,8 +37,8 @@ abstract class Organization with Resource implements _$Organization {
     required String name,
     String? npi,
     String? clia,
-    List<ContactPoint?>? telecom,
-    List<Address?>? address,
+    List<ContactPoint>? telecom,
+    List<Address>? address,
   }) {
     identifier ??= <Identifier>[];
     if (npi != null) {

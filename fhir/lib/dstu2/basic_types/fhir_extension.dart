@@ -15,10 +15,10 @@ abstract class FhirExtension with _$FhirExtension {
   FhirExtension._();
   factory FhirExtension({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required FhirUri url,
     @JsonKey(name: '_url') Element? urlElement,
-    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Integer? valueInteger,

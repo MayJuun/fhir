@@ -21,7 +21,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
     Id? id,
     Meta? meta,
     required Narrative text,
-    List<Resource?>? contained,
+    List<Resource>? contained,
     @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
         required CarePlanStatus status,
     required CarePlanIntent intent,
@@ -35,7 +35,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
         required CarePlanStatus status,
     required CarePlanIntent intent,
     required Reference subject,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
   }) {
     category ??= <CodeableConcept>[];
     category.add(CodeableConcept(coding: [

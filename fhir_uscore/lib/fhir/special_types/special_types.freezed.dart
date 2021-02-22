@@ -440,11 +440,11 @@ class _$DosageTearOff {
   _Dosage call(
       {String? id,
       String? text,
-      List<CodeableConcept?>? additionalInstruction,
+      List<CodeableConcept>? additionalInstruction,
       String? patientInstruction,
       Timing? timing,
       Boolean? asNeededBoolean,
-      List<DosageDoseAndRate?>? doseAndRate,
+      List<DosageDoseAndRate>? doseAndRate,
       Ratio? maxDosePerPeriod,
       Quantity? maxDosePerAdministration,
       Quantity? maxDosePerLifetime}) {
@@ -474,11 +474,11 @@ const $Dosage = _$DosageTearOff();
 mixin _$Dosage {
   String? get id;
   String? get text;
-  List<CodeableConcept?>? get additionalInstruction;
+  List<CodeableConcept>? get additionalInstruction;
   String? get patientInstruction;
   Timing? get timing;
   Boolean? get asNeededBoolean;
-  List<DosageDoseAndRate?>? get doseAndRate;
+  List<DosageDoseAndRate>? get doseAndRate;
   Ratio? get maxDosePerPeriod;
   Quantity? get maxDosePerAdministration;
   Quantity? get maxDosePerLifetime;
@@ -495,11 +495,11 @@ abstract class $DosageCopyWith<$Res> {
   $Res call(
       {String? id,
       String? text,
-      List<CodeableConcept?>? additionalInstruction,
+      List<CodeableConcept>? additionalInstruction,
       String? patientInstruction,
       Timing? timing,
       Boolean? asNeededBoolean,
-      List<DosageDoseAndRate?>? doseAndRate,
+      List<DosageDoseAndRate>? doseAndRate,
       Ratio? maxDosePerPeriod,
       Quantity? maxDosePerAdministration,
       Quantity? maxDosePerLifetime});
@@ -536,7 +536,7 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
       text: text == freezed ? _value.text : text as String?,
       additionalInstruction: additionalInstruction == freezed
           ? _value.additionalInstruction
-          : additionalInstruction as List<CodeableConcept?>?,
+          : additionalInstruction as List<CodeableConcept>?,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
           : patientInstruction as String?,
@@ -546,7 +546,7 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
           : asNeededBoolean as Boolean?,
       doseAndRate: doseAndRate == freezed
           ? _value.doseAndRate
-          : doseAndRate as List<DosageDoseAndRate?>?,
+          : doseAndRate as List<DosageDoseAndRate>?,
       maxDosePerPeriod: maxDosePerPeriod == freezed
           ? _value.maxDosePerPeriod
           : maxDosePerPeriod as Ratio?,
@@ -612,11 +612,11 @@ abstract class _$DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
   $Res call(
       {String? id,
       String? text,
-      List<CodeableConcept?>? additionalInstruction,
+      List<CodeableConcept>? additionalInstruction,
       String? patientInstruction,
       Timing? timing,
       Boolean? asNeededBoolean,
-      List<DosageDoseAndRate?>? doseAndRate,
+      List<DosageDoseAndRate>? doseAndRate,
       Ratio? maxDosePerPeriod,
       Quantity? maxDosePerAdministration,
       Quantity? maxDosePerLifetime});
@@ -658,7 +658,7 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as String?,
       additionalInstruction: additionalInstruction == freezed
           ? _value.additionalInstruction
-          : additionalInstruction as List<CodeableConcept?>?,
+          : additionalInstruction as List<CodeableConcept>?,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
           : patientInstruction as String?,
@@ -668,7 +668,7 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
           : asNeededBoolean as Boolean?,
       doseAndRate: doseAndRate == freezed
           ? _value.doseAndRate
-          : doseAndRate as List<DosageDoseAndRate?>?,
+          : doseAndRate as List<DosageDoseAndRate>?,
       maxDosePerPeriod: maxDosePerPeriod == freezed
           ? _value.maxDosePerPeriod
           : maxDosePerPeriod as Ratio?,
@@ -707,7 +707,7 @@ class _$_Dosage extends _Dosage {
   @override
   final String? text;
   @override
-  final List<CodeableConcept?>? additionalInstruction;
+  final List<CodeableConcept>? additionalInstruction;
   @override
   final String? patientInstruction;
   @override
@@ -715,7 +715,7 @@ class _$_Dosage extends _Dosage {
   @override
   final Boolean? asNeededBoolean;
   @override
-  final List<DosageDoseAndRate?>? doseAndRate;
+  final List<DosageDoseAndRate>? doseAndRate;
   @override
   final Ratio? maxDosePerPeriod;
   @override
@@ -793,11 +793,11 @@ abstract class _Dosage extends Dosage {
   factory _Dosage(
       {String? id,
       String? text,
-      List<CodeableConcept?>? additionalInstruction,
+      List<CodeableConcept>? additionalInstruction,
       String? patientInstruction,
       Timing? timing,
       Boolean? asNeededBoolean,
-      List<DosageDoseAndRate?>? doseAndRate,
+      List<DosageDoseAndRate>? doseAndRate,
       Ratio? maxDosePerPeriod,
       Quantity? maxDosePerAdministration,
       Quantity? maxDosePerLifetime}) = _$_Dosage;
@@ -809,7 +809,7 @@ abstract class _Dosage extends Dosage {
   @override
   String? get text;
   @override
-  List<CodeableConcept?>? get additionalInstruction;
+  List<CodeableConcept>? get additionalInstruction;
   @override
   String? get patientInstruction;
   @override
@@ -817,7 +817,7 @@ abstract class _Dosage extends Dosage {
   @override
   Boolean? get asNeededBoolean;
   @override
-  List<DosageDoseAndRate?>? get doseAndRate;
+  List<DosageDoseAndRate>? get doseAndRate;
   @override
   Ratio? get maxDosePerPeriod;
   @override

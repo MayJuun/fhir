@@ -23,7 +23,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     Meta? meta,
     Narrative? text,
     Code? language,
-    List<Resource?>? contained,
+    List<Resource>? contained,
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
@@ -56,8 +56,8 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
         OperationOutcomeIssueCode? code,
     CodeableConcept? details,
     String? diagnostics,
-    List<String?>? location,
-    List<String?>? expression,
+    List<String>? location,
+    List<String>? expression,
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object

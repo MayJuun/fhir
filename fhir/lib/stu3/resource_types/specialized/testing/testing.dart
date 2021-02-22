@@ -25,9 +25,9 @@ abstract class TestReport with Resource implements _$TestReport {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -42,9 +42,9 @@ abstract class TestReport with Resource implements _$TestReport {
     @JsonKey(name: '_tester') Element? testerElement,
     String? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
-    List<TestReportParticipant?>? participant,
+    List<TestReportParticipant>? participant,
     TestReportSetup? setup,
-    List<TestReportTest?>? test,
+    List<TestReportTest>? test,
     TestReportTeardown? teardown,
   }) = _TestReport;
 
@@ -316,9 +316,9 @@ abstract class TestScript with Resource implements _$TestScript {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
     Identifier? identifier,
@@ -336,25 +336,25 @@ abstract class TestScript with Resource implements _$TestScript {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     String? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    List<TestScriptOrigin?>? origin,
-    List<TestScriptDestination?>? destination,
+    List<TestScriptOrigin>? origin,
+    List<TestScriptDestination>? destination,
     TestScriptMetadata? metadata,
-    List<TestScriptFixture?>? fixture,
-    List<Reference?>? profile,
-    List<TestScriptVariable?>? variable,
-    List<TestScriptRule?>? rule,
-    List<TestScriptRuleset?>? ruleset,
+    List<TestScriptFixture>? fixture,
+    List<Reference>? profile,
+    List<TestScriptVariable>? variable,
+    List<TestScriptRule>? rule,
+    List<TestScriptRuleset>? ruleset,
     TestScriptSetup? setup,
-    List<TestScriptTest?>? test,
+    List<TestScriptTest>? test,
     TestScriptTeardown? teardown,
   }) = _TestScript;
 
@@ -431,7 +431,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
 abstract class TestScriptMetadata implements _$TestScriptMetadata {
   TestScriptMetadata._();
   factory TestScriptMetadata({
-    List<TestScriptLink?>? link,
+    List<TestScriptLink>? link,
     required List<TestScriptCapability> capability,
   }) = _TestScriptMetadata;
 
@@ -489,11 +489,11 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
     @JsonKey(name: '_validated') Element? validatedElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Decimal?>? origin,
+    List<Decimal>? origin,
     @JsonKey(name: '_origin') List<Element?>? originElement,
     Decimal? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
-    List<String?>? link,
+    List<String>? link,
     @JsonKey(name: '_link') List<Element?>? linkElement,
     required Reference capabilities,
   }) = _TestScriptCapability;
@@ -587,7 +587,7 @@ abstract class TestScriptRule implements _$TestScriptRule {
   TestScriptRule._();
   factory TestScriptRule({
     required Reference resource,
-    List<TestScriptParam?>? param,
+    List<TestScriptParam>? param,
   }) = _TestScriptRule;
 
   /// Produces a Yaml formatted String version of the object
@@ -665,7 +665,7 @@ abstract class TestScriptRule1 implements _$TestScriptRule1 {
   factory TestScriptRule1({
     Id? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
-    List<TestScriptParam1?>? param,
+    List<TestScriptParam1>? param,
   }) = _TestScriptRule1;
 
   /// Produces a Yaml formatted String version of the object
@@ -784,7 +784,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
     @JsonKey(name: '_origin') Element? originElement,
     String? params,
     @JsonKey(name: '_params') Element? paramsElement,
-    List<TestScriptRequestHeader?>? requestHeader,
+    List<TestScriptRequestHeader>? requestHeader,
     Id? requestId,
     @JsonKey(name: '_requestId') Element? requestIdElement,
     Id? responseId,
@@ -917,7 +917,7 @@ abstract class TestScriptRule2 implements _$TestScriptRule2 {
   factory TestScriptRule2({
     Id? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
-    List<TestScriptParam2?>? param,
+    List<TestScriptParam2>? param,
   }) = _TestScriptRule2;
 
   /// Produces a Yaml formatted String version of the object
@@ -970,7 +970,7 @@ abstract class TestScriptRuleset1 implements _$TestScriptRuleset1 {
   factory TestScriptRuleset1({
     Id? rulesetId,
     @JsonKey(name: '_rulesetId') Element? rulesetIdElement,
-    List<TestScriptRule3?>? rule,
+    List<TestScriptRule3>? rule,
   }) = _TestScriptRuleset1;
 
   /// Produces a Yaml formatted String version of the object
@@ -996,7 +996,7 @@ abstract class TestScriptRule3 implements _$TestScriptRule3 {
   factory TestScriptRule3({
     Id? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
-    List<TestScriptParam3?>? param,
+    List<TestScriptParam3>? param,
   }) = _TestScriptRule3;
 
   /// Produces a Yaml formatted String version of the object

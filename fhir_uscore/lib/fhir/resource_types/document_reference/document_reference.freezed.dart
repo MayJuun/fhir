@@ -23,14 +23,14 @@ class _$DocumentReferenceTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
           required DocumentReferenceStatus status,
       required CodeableConcept type,
-      List<CodeableConcept?>? category,
+      List<CodeableConcept>? category,
       Reference? subject,
       Instant? date,
-      List<Reference?>? author,
+      List<Reference>? author,
       Reference? custodian,
       required List<DocumentReferenceContent?> content,
       DocumentReferenceContext? context,
@@ -69,14 +69,14 @@ mixin _$DocumentReference {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
   DocumentReferenceStatus get status;
   CodeableConcept get type;
-  List<CodeableConcept?>? get category;
+  List<CodeableConcept>? get category;
   Reference? get subject;
   Instant? get date;
-  List<Reference?>? get author;
+  List<Reference>? get author;
   Reference? get custodian;
   List<DocumentReferenceContent?> get content;
   DocumentReferenceContext? get context;
@@ -98,14 +98,14 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
           DocumentReferenceStatus status,
       CodeableConcept type,
-      List<CodeableConcept?>? category,
+      List<CodeableConcept>? category,
       Reference? subject,
       Instant? date,
-      List<Reference?>? author,
+      List<Reference>? author,
       Reference? custodian,
       List<DocumentReferenceContent?> content,
       DocumentReferenceContext? context,
@@ -155,16 +155,16 @@ class _$DocumentReferenceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status:
           status == freezed ? _value.status : status as DocumentReferenceStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>?,
+          : category as List<CodeableConcept>?,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       date: date == freezed ? _value.date : date as Instant?,
-      author: author == freezed ? _value.author : author as List<Reference?>?,
+      author: author == freezed ? _value.author : author as List<Reference>?,
       custodian:
           custodian == freezed ? _value.custodian : custodian as Reference?,
       content: content == freezed
@@ -254,14 +254,14 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
           DocumentReferenceStatus status,
       CodeableConcept type,
-      List<CodeableConcept?>? category,
+      List<CodeableConcept>? category,
       Reference? subject,
       Instant? date,
-      List<Reference?>? author,
+      List<Reference>? author,
       Reference? custodian,
       List<DocumentReferenceContent?> content,
       DocumentReferenceContext? context,
@@ -319,16 +319,16 @@ class __$DocumentReferenceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status:
           status == freezed ? _value.status : status as DocumentReferenceStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>?,
+          : category as List<CodeableConcept>?,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       date: date == freezed ? _value.date : date as Instant?,
-      author: author == freezed ? _value.author : author as List<Reference?>?,
+      author: author == freezed ? _value.author : author as List<Reference>?,
       custodian:
           custodian == freezed ? _value.custodian : custodian as Reference?,
       content: content == freezed
@@ -380,20 +380,20 @@ class _$_DocumentReference extends _DocumentReference {
   @override
   final Narrative? text;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
   final DocumentReferenceStatus status;
   @override
   final CodeableConcept type;
   @override
-  final List<CodeableConcept?>? category;
+  final List<CodeableConcept>? category;
   @override
   final Reference? subject;
   @override
   final Instant? date;
   @override
-  final List<Reference?>? author;
+  final List<Reference>? author;
   @override
   final Reference? custodian;
   @override
@@ -490,14 +490,14 @@ abstract class _DocumentReference extends DocumentReference {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
           required DocumentReferenceStatus status,
       required CodeableConcept type,
-      List<CodeableConcept?>? category,
+      List<CodeableConcept>? category,
       Reference? subject,
       Instant? date,
-      List<Reference?>? author,
+      List<Reference>? author,
       Reference? custodian,
       required List<DocumentReferenceContent?> content,
       DocumentReferenceContext? context,
@@ -516,20 +516,20 @@ abstract class _DocumentReference extends DocumentReference {
   @override
   Narrative? get text;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
   DocumentReferenceStatus get status;
   @override
   CodeableConcept get type;
   @override
-  List<CodeableConcept?>? get category;
+  List<CodeableConcept>? get category;
   @override
   Reference? get subject;
   @override
   Instant? get date;
   @override
-  List<Reference?>? get author;
+  List<Reference>? get author;
   @override
   Reference? get custodian;
   @override
@@ -760,7 +760,7 @@ class _$DocumentReferenceContextTearOff {
   const _$DocumentReferenceContextTearOff();
 
   _DocumentReferenceContext call(
-      {String? id, List<Reference?>? encounter, Period? period}) {
+      {String? id, List<Reference>? encounter, Period? period}) {
     return _DocumentReferenceContext(
       id: id,
       encounter: encounter,
@@ -779,7 +779,7 @@ const $DocumentReferenceContext = _$DocumentReferenceContextTearOff();
 /// @nodoc
 mixin _$DocumentReferenceContext {
   String? get id;
-  List<Reference?>? get encounter;
+  List<Reference>? get encounter;
   Period? get period;
 
   Map<String, dynamic> toJson();
@@ -792,7 +792,7 @@ abstract class $DocumentReferenceContextCopyWith<$Res> {
   factory $DocumentReferenceContextCopyWith(DocumentReferenceContext value,
           $Res Function(DocumentReferenceContext) then) =
       _$DocumentReferenceContextCopyWithImpl<$Res>;
-  $Res call({String? id, List<Reference?>? encounter, Period? period});
+  $Res call({String? id, List<Reference>? encounter, Period? period});
 
   $PeriodCopyWith<$Res>? get period;
 }
@@ -816,7 +816,7 @@ class _$DocumentReferenceContextCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       encounter: encounter == freezed
           ? _value.encounter
-          : encounter as List<Reference?>?,
+          : encounter as List<Reference>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -840,7 +840,7 @@ abstract class _$DocumentReferenceContextCopyWith<$Res>
           $Res Function(_DocumentReferenceContext) then) =
       __$DocumentReferenceContextCopyWithImpl<$Res>;
   @override
-  $Res call({String? id, List<Reference?>? encounter, Period? period});
+  $Res call({String? id, List<Reference>? encounter, Period? period});
 
   @override
   $PeriodCopyWith<$Res>? get period;
@@ -868,7 +868,7 @@ class __$DocumentReferenceContextCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       encounter: encounter == freezed
           ? _value.encounter
-          : encounter as List<Reference?>?,
+          : encounter as List<Reference>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -887,7 +887,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   @override
   final String? id;
   @override
-  final List<Reference?>? encounter;
+  final List<Reference>? encounter;
   @override
   final Period? period;
 
@@ -932,7 +932,7 @@ abstract class _DocumentReferenceContext extends DocumentReferenceContext {
   _DocumentReferenceContext._() : super._();
   factory _DocumentReferenceContext(
       {String? id,
-      List<Reference?>? encounter,
+      List<Reference>? encounter,
       Period? period}) = _$_DocumentReferenceContext;
 
   factory _DocumentReferenceContext.fromJson(Map<String, dynamic> json) =
@@ -941,7 +941,7 @@ abstract class _DocumentReferenceContext extends DocumentReferenceContext {
   @override
   String? get id;
   @override
-  List<Reference?>? get encounter;
+  List<Reference>? get encounter;
   @override
   Period? get period;
   @override

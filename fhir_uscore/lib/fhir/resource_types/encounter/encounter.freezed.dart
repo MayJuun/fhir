@@ -22,18 +22,18 @@ class _$EncounterTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
           required EncounterStatus status,
       @JsonKey(name: 'class')
           required Coding class_,
       required List<CodeableConcept?> type,
       required Reference subject,
-      List<EncounterParticipant?>? participant,
+      List<EncounterParticipant>? participant,
       Period? period,
-      List<CodeableConcept?>? reasonCode,
+      List<CodeableConcept>? reasonCode,
       EncounterHospitalization? hospitalization,
-      List<EncounterLocation?>? location}) {
+      List<EncounterLocation>? location}) {
     return _Encounter(
       resourceType: resourceType,
       id: id,
@@ -67,18 +67,18 @@ mixin _$Encounter {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @JsonKey(unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
   @JsonKey(name: 'class')
   Coding get class_;
   List<CodeableConcept?> get type;
   Reference get subject;
-  List<EncounterParticipant?>? get participant;
+  List<EncounterParticipant>? get participant;
   Period? get period;
-  List<CodeableConcept?>? get reasonCode;
+  List<CodeableConcept>? get reasonCode;
   EncounterHospitalization? get hospitalization;
-  List<EncounterLocation?>? get location;
+  List<EncounterLocation>? get location;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -95,18 +95,18 @@ abstract class $EncounterCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
       @JsonKey(name: 'class')
           Coding class_,
       List<CodeableConcept?> type,
       Reference subject,
-      List<EncounterParticipant?>? participant,
+      List<EncounterParticipant>? participant,
       Period? period,
-      List<CodeableConcept?>? reasonCode,
+      List<CodeableConcept>? reasonCode,
       EncounterHospitalization? hospitalization,
-      List<EncounterLocation?>? location});
+      List<EncounterLocation>? location});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -150,24 +150,24 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as EncounterStatus,
       class_: class_ == freezed ? _value.class_ : class_ as Coding,
       type: type == freezed ? _value.type : type as List<CodeableConcept?>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<EncounterParticipant?>?,
+          : participant as List<EncounterParticipant>?,
       period: period == freezed ? _value.period : period as Period?,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<CodeableConcept?>?,
+          : reasonCode as List<CodeableConcept>?,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
           : hospitalization as EncounterHospitalization?,
       location: location == freezed
           ? _value.location
-          : location as List<EncounterLocation?>?,
+          : location as List<EncounterLocation>?,
     ));
   }
 
@@ -243,18 +243,18 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
       @JsonKey(name: 'class')
           Coding class_,
       List<CodeableConcept?> type,
       Reference subject,
-      List<EncounterParticipant?>? participant,
+      List<EncounterParticipant>? participant,
       Period? period,
-      List<CodeableConcept?>? reasonCode,
+      List<CodeableConcept>? reasonCode,
       EncounterHospitalization? hospitalization,
-      List<EncounterLocation?>? location});
+      List<EncounterLocation>? location});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -305,24 +305,24 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as EncounterStatus,
       class_: class_ == freezed ? _value.class_ : class_ as Coding,
       type: type == freezed ? _value.type : type as List<CodeableConcept?>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<EncounterParticipant?>?,
+          : participant as List<EncounterParticipant>?,
       period: period == freezed ? _value.period : period as Period?,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<CodeableConcept?>?,
+          : reasonCode as List<CodeableConcept>?,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
           : hospitalization as EncounterHospitalization?,
       location: location == freezed
           ? _value.location
-          : location as List<EncounterLocation?>?,
+          : location as List<EncounterLocation>?,
     ));
   }
 }
@@ -364,7 +364,7 @@ class _$_Encounter extends _Encounter {
   @override
   final Narrative? text;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: EncounterStatus.unknown)
   final EncounterStatus status;
@@ -376,15 +376,15 @@ class _$_Encounter extends _Encounter {
   @override
   final Reference subject;
   @override
-  final List<EncounterParticipant?>? participant;
+  final List<EncounterParticipant>? participant;
   @override
   final Period? period;
   @override
-  final List<CodeableConcept?>? reasonCode;
+  final List<CodeableConcept>? reasonCode;
   @override
   final EncounterHospitalization? hospitalization;
   @override
-  final List<EncounterLocation?>? location;
+  final List<EncounterLocation>? location;
 
   @override
   String toString() {
@@ -469,18 +469,18 @@ abstract class _Encounter extends Encounter {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
           required EncounterStatus status,
       @JsonKey(name: 'class')
           required Coding class_,
       required List<CodeableConcept?> type,
       required Reference subject,
-      List<EncounterParticipant?>? participant,
+      List<EncounterParticipant>? participant,
       Period? period,
-      List<CodeableConcept?>? reasonCode,
+      List<CodeableConcept>? reasonCode,
       EncounterHospitalization? hospitalization,
-      List<EncounterLocation?>? location}) = _$_Encounter;
+      List<EncounterLocation>? location}) = _$_Encounter;
 
   factory _Encounter.fromJson(Map<String, dynamic> json) =
       _$_Encounter.fromJson;
@@ -495,7 +495,7 @@ abstract class _Encounter extends Encounter {
   @override
   Narrative? get text;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
@@ -507,15 +507,15 @@ abstract class _Encounter extends Encounter {
   @override
   Reference get subject;
   @override
-  List<EncounterParticipant?>? get participant;
+  List<EncounterParticipant>? get participant;
   @override
   Period? get period;
   @override
-  List<CodeableConcept?>? get reasonCode;
+  List<CodeableConcept>? get reasonCode;
   @override
   EncounterHospitalization? get hospitalization;
   @override
-  List<EncounterLocation?>? get location;
+  List<EncounterLocation>? get location;
   @override
   @JsonKey(ignore: true)
   _$EncounterCopyWith<_Encounter> get copyWith;
@@ -531,7 +531,7 @@ class _$EncounterParticipantTearOff {
 
   _EncounterParticipant call(
       {String? id,
-      List<CodeableConcept?>? type,
+      List<CodeableConcept>? type,
       Period? period,
       Reference? individual}) {
     return _EncounterParticipant(
@@ -553,7 +553,7 @@ const $EncounterParticipant = _$EncounterParticipantTearOff();
 /// @nodoc
 mixin _$EncounterParticipant {
   String? get id;
-  List<CodeableConcept?>? get type;
+  List<CodeableConcept>? get type;
   Period? get period;
   Reference? get individual;
 
@@ -569,7 +569,7 @@ abstract class $EncounterParticipantCopyWith<$Res> {
       _$EncounterParticipantCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      List<CodeableConcept?>? type,
+      List<CodeableConcept>? type,
       Period? period,
       Reference? individual});
 
@@ -595,7 +595,7 @@ class _$EncounterParticipantCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       period: period == freezed ? _value.period : period as Period?,
       individual:
           individual == freezed ? _value.individual : individual as Reference?,
@@ -634,7 +634,7 @@ abstract class _$EncounterParticipantCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      List<CodeableConcept?>? type,
+      List<CodeableConcept>? type,
       Period? period,
       Reference? individual});
 
@@ -664,7 +664,7 @@ class __$EncounterParticipantCopyWithImpl<$Res>
   }) {
     return _then(_EncounterParticipant(
       id: id == freezed ? _value.id : id as String?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       period: period == freezed ? _value.period : period as Period?,
       individual:
           individual == freezed ? _value.individual : individual as Reference?,
@@ -685,7 +685,7 @@ class _$_EncounterParticipant extends _EncounterParticipant {
   @override
   final String? id;
   @override
-  final List<CodeableConcept?>? type;
+  final List<CodeableConcept>? type;
   @override
   final Period? period;
   @override
@@ -735,7 +735,7 @@ abstract class _EncounterParticipant extends EncounterParticipant {
   _EncounterParticipant._() : super._();
   factory _EncounterParticipant(
       {String? id,
-      List<CodeableConcept?>? type,
+      List<CodeableConcept>? type,
       Period? period,
       Reference? individual}) = _$_EncounterParticipant;
 
@@ -745,7 +745,7 @@ abstract class _EncounterParticipant extends EncounterParticipant {
   @override
   String? get id;
   @override
-  List<CodeableConcept?>? get type;
+  List<CodeableConcept>? get type;
   @override
   Period? get period;
   @override

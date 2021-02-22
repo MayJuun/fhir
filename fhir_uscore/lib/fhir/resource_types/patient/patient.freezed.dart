@@ -23,16 +23,16 @@ class _$PatientTearOff {
       Meta? meta,
       Narrative? text,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       required List<Identifier?> identifier,
       Boolean? active,
       required List<HumanName?> name,
-      List<ContactPoint?>? telecom,
+      List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
           required PatientGender gender,
       Date? birthDate,
-      List<Address?>? address,
-      List<PatientCommunication?>? communication}) {
+      List<Address>? address,
+      List<PatientCommunication>? communication}) {
     return _Patient(
       resourceType: resourceType,
       id: id,
@@ -66,16 +66,16 @@ mixin _$Patient {
   Meta? get meta;
   Narrative? get text;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   List<Identifier?> get identifier;
   Boolean? get active;
   List<HumanName?> get name;
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @JsonKey(unknownEnumValue: PatientGender.unknown)
   PatientGender get gender;
   Date? get birthDate;
-  List<Address?>? get address;
-  List<PatientCommunication?>? get communication;
+  List<Address>? get address;
+  List<PatientCommunication>? get communication;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -93,16 +93,16 @@ abstract class $PatientCopyWith<$Res> {
       Meta? meta,
       Narrative? text,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       List<Identifier?> identifier,
       Boolean? active,
       List<HumanName?> name,
-      List<ContactPoint?>? telecom,
+      List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
           PatientGender gender,
       Date? birthDate,
-      List<Address?>? address,
-      List<PatientCommunication?>? communication});
+      List<Address>? address,
+      List<PatientCommunication>? communication});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -141,20 +141,20 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>,
       active: active == freezed ? _value.active : active as Boolean?,
       name: name == freezed ? _value.name : name as List<HumanName?>,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       gender: gender == freezed ? _value.gender : gender as PatientGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
-      address: address == freezed ? _value.address : address as List<Address?>?,
+      address: address == freezed ? _value.address : address as List<Address>?,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<PatientCommunication?>?,
+          : communication as List<PatientCommunication>?,
     ));
   }
 
@@ -193,16 +193,16 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       Meta? meta,
       Narrative? text,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       List<Identifier?> identifier,
       Boolean? active,
       List<HumanName?> name,
-      List<ContactPoint?>? telecom,
+      List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
           PatientGender gender,
       Date? birthDate,
-      List<Address?>? address,
-      List<PatientCommunication?>? communication});
+      List<Address>? address,
+      List<PatientCommunication>? communication});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -244,20 +244,20 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>,
       active: active == freezed ? _value.active : active as Boolean?,
       name: name == freezed ? _value.name : name as List<HumanName?>,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       gender: gender == freezed ? _value.gender : gender as PatientGender,
       birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
-      address: address == freezed ? _value.address : address as List<Address?>?,
+      address: address == freezed ? _value.address : address as List<Address>?,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<PatientCommunication?>?,
+          : communication as List<PatientCommunication>?,
     ));
   }
 }
@@ -299,7 +299,7 @@ class _$_Patient extends _Patient {
   final Narrative? text;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final List<Identifier?> identifier;
   @override
@@ -307,16 +307,16 @@ class _$_Patient extends _Patient {
   @override
   final List<HumanName?> name;
   @override
-  final List<ContactPoint?>? telecom;
+  final List<ContactPoint>? telecom;
   @override
   @JsonKey(unknownEnumValue: PatientGender.unknown)
   final PatientGender gender;
   @override
   final Date? birthDate;
   @override
-  final List<Address?>? address;
+  final List<Address>? address;
   @override
-  final List<PatientCommunication?>? communication;
+  final List<PatientCommunication>? communication;
 
   @override
   String toString() {
@@ -399,16 +399,16 @@ abstract class _Patient extends Patient {
       Meta? meta,
       Narrative? text,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       required List<Identifier?> identifier,
       Boolean? active,
       required List<HumanName?> name,
-      List<ContactPoint?>? telecom,
+      List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
           required PatientGender gender,
       Date? birthDate,
-      List<Address?>? address,
-      List<PatientCommunication?>? communication}) = _$_Patient;
+      List<Address>? address,
+      List<PatientCommunication>? communication}) = _$_Patient;
 
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
@@ -423,7 +423,7 @@ abstract class _Patient extends Patient {
   Narrative? get text;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   List<Identifier?> get identifier;
   @override
@@ -431,16 +431,16 @@ abstract class _Patient extends Patient {
   @override
   List<HumanName?> get name;
   @override
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(unknownEnumValue: PatientGender.unknown)
   PatientGender get gender;
   @override
   Date? get birthDate;
   @override
-  List<Address?>? get address;
+  List<Address>? get address;
   @override
-  List<PatientCommunication?>? get communication;
+  List<PatientCommunication>? get communication;
   @override
   @JsonKey(ignore: true)
   _$PatientCopyWith<_Patient> get copyWith;

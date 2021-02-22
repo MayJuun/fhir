@@ -17,7 +17,7 @@ abstract class ContactDetail implements _$ContactDetail {
   factory ContactDetail({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    List<ContactPoint?>? telecom,
+    List<ContactPoint>? telecom,
   }) = _ContactDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -45,7 +45,7 @@ abstract class Contributor implements _$Contributor {
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
   }) = _Contributor;
 
   /// Produces a Yaml formatted String version of the object
@@ -131,12 +131,12 @@ abstract class DataRequirement implements _$DataRequirement {
   factory DataRequirement({
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
-    List<String?>? profile,
+    List<String>? profile,
     @JsonKey(name: '_profile') List<Element?>? profileElement,
-    List<String?>? mustSupport,
+    List<String>? mustSupport,
     @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-    List<DataRequirementCodeFilter?>? codeFilter,
-    List<DataRequirementDateFilter?>? dateFilter,
+    List<DataRequirementCodeFilter>? codeFilter,
+    List<DataRequirementDateFilter>? dateFilter,
   }) = _DataRequirement;
 
   /// Produces a Yaml formatted String version of the object
@@ -166,10 +166,10 @@ abstract class DataRequirementCodeFilter
     String? valueSetString,
     @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
     Reference? valueSetReference,
-    List<Code?>? valueCode,
+    List<Code>? valueCode,
     @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
-    List<Coding?>? valueCoding,
-    List<CodeableConcept?>? valueCodeableConcept,
+    List<Coding>? valueCoding,
+    List<CodeableConcept>? valueCodeableConcept,
   }) = _DataRequirementCodeFilter;
 
   /// Produces a Yaml formatted String version of the object

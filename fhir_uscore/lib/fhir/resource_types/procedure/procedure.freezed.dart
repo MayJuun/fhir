@@ -22,14 +22,14 @@ class _$ProcedureTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       required ProcedureStatus status,
       required CodeableConcept code,
       required Reference subject,
       FhirDateTime? performedDateTime,
       Period? performedPeriod,
-      List<ProcedurePerformer?>? performer,
-      List<ProcedureFocalDevice?>? focalDevice}) {
+      List<ProcedurePerformer>? performer,
+      List<ProcedureFocalDevice>? focalDevice}) {
     return _Procedure(
       resourceType: resourceType,
       id: id,
@@ -61,14 +61,14 @@ mixin _$Procedure {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   ProcedureStatus get status;
   CodeableConcept get code;
   Reference get subject;
   FhirDateTime? get performedDateTime;
   Period? get performedPeriod;
-  List<ProcedurePerformer?>? get performer;
-  List<ProcedureFocalDevice?>? get focalDevice;
+  List<ProcedurePerformer>? get performer;
+  List<ProcedureFocalDevice>? get focalDevice;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -85,14 +85,14 @@ abstract class $ProcedureCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       ProcedureStatus status,
       CodeableConcept code,
       Reference subject,
       FhirDateTime? performedDateTime,
       Period? performedPeriod,
-      List<ProcedurePerformer?>? performer,
-      List<ProcedureFocalDevice?>? focalDevice});
+      List<ProcedurePerformer>? performer,
+      List<ProcedureFocalDevice>? focalDevice});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -133,7 +133,7 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as ProcedureStatus,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
@@ -145,10 +145,10 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
           : performedPeriod as Period?,
       performer: performer == freezed
           ? _value.performer
-          : performer as List<ProcedurePerformer?>?,
+          : performer as List<ProcedurePerformer>?,
       focalDevice: focalDevice == freezed
           ? _value.focalDevice
-          : focalDevice as List<ProcedureFocalDevice?>?,
+          : focalDevice as List<ProcedureFocalDevice>?,
     ));
   }
 
@@ -212,14 +212,14 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       ProcedureStatus status,
       CodeableConcept code,
       Reference subject,
       FhirDateTime? performedDateTime,
       Period? performedPeriod,
-      List<ProcedurePerformer?>? performer,
-      List<ProcedureFocalDevice?>? focalDevice});
+      List<ProcedurePerformer>? performer,
+      List<ProcedureFocalDevice>? focalDevice});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -266,7 +266,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as ProcedureStatus,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
@@ -278,10 +278,10 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
           : performedPeriod as Period?,
       performer: performer == freezed
           ? _value.performer
-          : performer as List<ProcedurePerformer?>?,
+          : performer as List<ProcedurePerformer>?,
       focalDevice: focalDevice == freezed
           ? _value.focalDevice
-          : focalDevice as List<ProcedureFocalDevice?>?,
+          : focalDevice as List<ProcedureFocalDevice>?,
     ));
   }
 }
@@ -319,7 +319,7 @@ class _$_Procedure extends _Procedure {
   @override
   final Narrative? text;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final ProcedureStatus status;
   @override
@@ -331,9 +331,9 @@ class _$_Procedure extends _Procedure {
   @override
   final Period? performedPeriod;
   @override
-  final List<ProcedurePerformer?>? performer;
+  final List<ProcedurePerformer>? performer;
   @override
-  final List<ProcedureFocalDevice?>? focalDevice;
+  final List<ProcedureFocalDevice>? focalDevice;
 
   @override
   String toString() {
@@ -412,14 +412,14 @@ abstract class _Procedure extends Procedure {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       required ProcedureStatus status,
       required CodeableConcept code,
       required Reference subject,
       FhirDateTime? performedDateTime,
       Period? performedPeriod,
-      List<ProcedurePerformer?>? performer,
-      List<ProcedureFocalDevice?>? focalDevice}) = _$_Procedure;
+      List<ProcedurePerformer>? performer,
+      List<ProcedureFocalDevice>? focalDevice}) = _$_Procedure;
 
   factory _Procedure.fromJson(Map<String, dynamic> json) =
       _$_Procedure.fromJson;
@@ -434,7 +434,7 @@ abstract class _Procedure extends Procedure {
   @override
   Narrative? get text;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   ProcedureStatus get status;
   @override
@@ -446,9 +446,9 @@ abstract class _Procedure extends Procedure {
   @override
   Period? get performedPeriod;
   @override
-  List<ProcedurePerformer?>? get performer;
+  List<ProcedurePerformer>? get performer;
   @override
-  List<ProcedureFocalDevice?>? get focalDevice;
+  List<ProcedureFocalDevice>? get focalDevice;
   @override
   @JsonKey(ignore: true)
   _$ProcedureCopyWith<_Procedure> get copyWith;
@@ -711,7 +711,7 @@ class _$ProcedureFocalDeviceTearOff {
 
   _ProcedureFocalDevice call(
       {String? id,
-      List<FhirExtension?>? modifierExtension,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? action,
       required Reference manipulated}) {
     return _ProcedureFocalDevice(
@@ -733,7 +733,7 @@ const $ProcedureFocalDevice = _$ProcedureFocalDeviceTearOff();
 /// @nodoc
 mixin _$ProcedureFocalDevice {
   String? get id;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept? get action;
   Reference get manipulated;
 
@@ -749,7 +749,7 @@ abstract class $ProcedureFocalDeviceCopyWith<$Res> {
       _$ProcedureFocalDeviceCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      List<FhirExtension?>? modifierExtension,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? action,
       Reference manipulated});
 
@@ -777,7 +777,7 @@ class _$ProcedureFocalDeviceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action: action == freezed ? _value.action : action as CodeableConcept?,
       manipulated: manipulated == freezed
           ? _value.manipulated
@@ -813,7 +813,7 @@ abstract class _$ProcedureFocalDeviceCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      List<FhirExtension?>? modifierExtension,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? action,
       Reference manipulated});
 
@@ -845,7 +845,7 @@ class __$ProcedureFocalDeviceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       action: action == freezed ? _value.action : action as CodeableConcept?,
       manipulated: manipulated == freezed
           ? _value.manipulated
@@ -868,7 +868,7 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
   @override
   final String? id;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? action;
   @override
@@ -919,7 +919,7 @@ abstract class _ProcedureFocalDevice extends ProcedureFocalDevice {
   _ProcedureFocalDevice._() : super._();
   factory _ProcedureFocalDevice(
       {String? id,
-      List<FhirExtension?>? modifierExtension,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept? action,
       required Reference manipulated}) = _$_ProcedureFocalDevice;
 
@@ -929,7 +929,7 @@ abstract class _ProcedureFocalDevice extends ProcedureFocalDevice {
   @override
   String? get id;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept? get action;
   @override

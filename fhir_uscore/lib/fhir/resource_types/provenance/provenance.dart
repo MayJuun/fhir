@@ -29,7 +29,7 @@ abstract class Provenance with Resource implements _$Provenance {
 
   factory Provenance.simple({
     required Reference provenanceTarget,
-    List<Reference?>? target,
+    List<Reference>? target,
     required Instant recorded,
     required List<ProvenanceAgent?> agent,
   }) {

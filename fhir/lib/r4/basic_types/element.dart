@@ -27,7 +27,7 @@ abstract class Element with _$Element {
   ///  definition of the extension.
   factory Element({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _Element;
 
   /// Produces a Yaml formatted String version of the object

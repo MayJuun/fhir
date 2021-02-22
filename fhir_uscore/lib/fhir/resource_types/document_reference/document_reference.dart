@@ -22,14 +22,14 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     Id? id,
     Meta? meta,
     Narrative? text,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
         required DocumentReferenceStatus status,
     required CodeableConcept type,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     Reference? subject,
     Instant? date,
-    List<Reference?>? author,
+    List<Reference>? author,
     Reference? custodian,
     required List<DocumentReferenceContent?> content,
     DocumentReferenceContext? context,
@@ -40,13 +40,13 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     List<Identifier>? identifier,
     required DocumentReferenceStatus status,
     required CodeableConcept type,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     required Reference subject,
     Instant? date,
     List<Reference>? author,
     Reference? custodian,
     required Attachment documentReferenceContentAttachment,
-    List<DocumentReferenceContent?>? content,
+    List<DocumentReferenceContent>? content,
     DocumentReferenceContext? context,
   }) {
     category ??= <CodeableConcept>[];
@@ -145,7 +145,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
 
   factory DocumentReferenceContext({
     String? id,
-    List<Reference?>? encounter,
+    List<Reference>? encounter,
     Period? period,
   }) = _DocumentReferenceContext;
 

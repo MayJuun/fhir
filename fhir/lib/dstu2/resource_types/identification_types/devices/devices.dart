@@ -25,12 +25,12 @@ abstract class Device with Resource implements _$Device {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     required CodeableConcept type,
-    List<Annotation?>? note,
+    List<Annotation>? note,
     @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? manufacturer,
@@ -47,7 +47,7 @@ abstract class Device with Resource implements _$Device {
     Reference? owner,
     Reference? location,
     Reference? patient,
-    List<ContactPoint?>? contact,
+    List<ContactPoint>? contact,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
   }) = _Device;
@@ -81,19 +81,19 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
     FhirUri? implicitRules,
     Code? language,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
     required Identifier identifier,
     required Instant lastSystemChange,
     Reference? source,
     Reference? parent,
-    List<CodeableConcept?>? operationalStatus,
+    List<CodeableConcept>? operationalStatus,
     CodeableConcept? parameterGroup,
     @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
         DeviceComponentMeasurementPrinciple? measurementPrinciple,
-    List<DeviceComponentProductionSpecification?>? productionSpecification,
+    List<DeviceComponentProductionSpecification>? productionSpecification,
     CodeableConcept? languageCode,
   }) = _DeviceComponent;
 
@@ -120,8 +120,8 @@ abstract class DeviceComponentProductionSpecification
   DeviceComponentProductionSpecification._();
   factory DeviceComponentProductionSpecification({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? specType,
     Identifier? componentId,
     String? productionSpec,
@@ -161,9 +161,9 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
     required Identifier identifier,
     CodeableConcept? unit,
@@ -179,7 +179,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
         required DeviceMetricCategory category,
     @JsonKey(name: '_category') Element? categoryElement,
     Timing? measurementPeriod,
-    List<DeviceMetricCalibration?>? calibration,
+    List<DeviceMetricCalibration>? calibration,
   }) = _DeviceMetric;
 
   /// Produces a Yaml formatted String version of the object
@@ -204,8 +204,8 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
   factory DeviceMetricCalibration({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType? type,
     @JsonKey(name: '_type') Element? typeElement,
     @JsonKey(unknownEnumValue: CalibrationState.unknown)

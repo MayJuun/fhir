@@ -18,7 +18,7 @@ class _$AnnotationTearOff {
 
   _Annotation call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Reference? authorReference,
       String? authorString,
       FhirDateTime? time,
@@ -45,7 +45,7 @@ const $Annotation = _$AnnotationTearOff();
 mixin _$Annotation {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Reference? get authorReference;
   String? get authorString;
   FhirDateTime? get time;
@@ -63,7 +63,7 @@ abstract class $AnnotationCopyWith<$Res> {
       _$AnnotationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Reference? authorReference,
       String? authorString,
       FhirDateTime? time,
@@ -93,7 +93,7 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       authorReference: authorReference == freezed
           ? _value.authorReference
           : authorReference as Reference?,
@@ -125,7 +125,7 @@ abstract class _$AnnotationCopyWith<$Res> implements $AnnotationCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Reference? authorReference,
       String? authorString,
       FhirDateTime? time,
@@ -158,7 +158,7 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       authorReference: authorReference == freezed
           ? _value.authorReference
           : authorReference as Reference?,
@@ -191,7 +191,7 @@ class _$_Annotation extends _Annotation {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Reference? authorReference;
   @override
@@ -252,7 +252,7 @@ abstract class _Annotation extends Annotation {
   _Annotation._() : super._();
   factory _Annotation(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Reference? authorReference,
       String? authorString,
       FhirDateTime? time,
@@ -265,7 +265,7 @@ abstract class _Annotation extends Annotation {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Reference? get authorReference;
   @override
@@ -289,7 +289,7 @@ class _$AttachmentTearOff {
 
   _Attachment call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? contentType,
       Code? language,
       Base64Binary? data,
@@ -324,7 +324,7 @@ const $Attachment = _$AttachmentTearOff();
 mixin _$Attachment {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Code? get contentType;
   Code? get language;
   Base64Binary? get data;
@@ -346,7 +346,7 @@ abstract class $AttachmentCopyWith<$Res> {
       _$AttachmentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? contentType,
       Code? language,
       Base64Binary? data,
@@ -382,7 +382,7 @@ class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code?,
       language: language == freezed ? _value.language : language as Code?,
@@ -405,7 +405,7 @@ abstract class _$AttachmentCopyWith<$Res> implements $AttachmentCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? contentType,
       Code? language,
       Base64Binary? data,
@@ -443,7 +443,7 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       contentType:
           contentType == freezed ? _value.contentType : contentType as Code?,
       language: language == freezed ? _value.language : language as Code?,
@@ -482,7 +482,7 @@ class _$_Attachment extends _Attachment {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Code? contentType;
   @override
@@ -564,7 +564,7 @@ abstract class _Attachment extends Attachment {
   _Attachment._() : super._();
   factory _Attachment(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? contentType,
       Code? language,
       Base64Binary? data,
@@ -581,7 +581,7 @@ abstract class _Attachment extends Attachment {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Code? get contentType;
   @override
@@ -613,7 +613,7 @@ class _$IdentifierTearOff {
 
   _Identifier call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
       CodeableConcept? type,
       FhirUri? system,
@@ -644,7 +644,7 @@ const $Identifier = _$IdentifierTearOff();
 mixin _$Identifier {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @JsonKey(unknownEnumValue: IdentifierUse.unknown)
   IdentifierUse? get use;
   CodeableConcept? get type;
@@ -665,7 +665,7 @@ abstract class $IdentifierCopyWith<$Res> {
       _$IdentifierCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
       CodeableConcept? type,
       FhirUri? system,
@@ -701,7 +701,7 @@ class _$IdentifierCopyWithImpl<$Res> implements $IdentifierCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       use: use == freezed ? _value.use : use as IdentifierUse?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       system: system == freezed ? _value.system : system as FhirUri?,
@@ -753,7 +753,7 @@ abstract class _$IdentifierCopyWith<$Res> implements $IdentifierCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
       CodeableConcept? type,
       FhirUri? system,
@@ -794,7 +794,7 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       use: use == freezed ? _value.use : use as IdentifierUse?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       system: system == freezed ? _value.system : system as FhirUri?,
@@ -827,7 +827,7 @@ class _$_Identifier extends _Identifier {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: IdentifierUse.unknown)
   final IdentifierUse? use;
@@ -898,7 +898,7 @@ abstract class _Identifier extends Identifier {
   _Identifier._() : super._();
   factory _Identifier(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
       CodeableConcept? type,
       FhirUri? system,
@@ -913,7 +913,7 @@ abstract class _Identifier extends Identifier {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: IdentifierUse.unknown)
   IdentifierUse? get use;
@@ -942,8 +942,8 @@ class _$CodeableConceptTearOff {
 
   _CodeableConcept call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<Coding?>? coding,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<Coding>? coding,
       String? text}) {
     return _CodeableConcept(
       id: id,
@@ -965,8 +965,8 @@ const $CodeableConcept = _$CodeableConceptTearOff();
 mixin _$CodeableConcept {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<Coding?>? get coding;
+  List<FhirExtension>? get extension_;
+  List<Coding>? get coding;
   String? get text;
 
   Map<String, dynamic> toJson();
@@ -981,8 +981,8 @@ abstract class $CodeableConceptCopyWith<$Res> {
       _$CodeableConceptCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<Coding?>? coding,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<Coding>? coding,
       String? text});
 }
 
@@ -1006,8 +1006,8 @@ class _$CodeableConceptCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
-      coding: coding == freezed ? _value.coding : coding as List<Coding?>?,
+          : extension_ as List<FhirExtension>?,
+      coding: coding == freezed ? _value.coding : coding as List<Coding>?,
       text: text == freezed ? _value.text : text as String?,
     ));
   }
@@ -1022,8 +1022,8 @@ abstract class _$CodeableConceptCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<Coding?>? coding,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<Coding>? coding,
       String? text});
 }
 
@@ -1049,8 +1049,8 @@ class __$CodeableConceptCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
-      coding: coding == freezed ? _value.coding : coding as List<Coding?>?,
+          : extension_ as List<FhirExtension>?,
+      coding: coding == freezed ? _value.coding : coding as List<Coding>?,
       text: text == freezed ? _value.text : text as String?,
     ));
   }
@@ -1074,9 +1074,9 @@ class _$_CodeableConcept extends _CodeableConcept {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<Coding?>? coding;
+  final List<Coding>? coding;
   @override
   final String? text;
 
@@ -1123,8 +1123,8 @@ abstract class _CodeableConcept extends CodeableConcept {
   _CodeableConcept._() : super._();
   factory _CodeableConcept(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<Coding?>? coding,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<Coding>? coding,
       String? text}) = _$_CodeableConcept;
 
   factory _CodeableConcept.fromJson(Map<String, dynamic> json) =
@@ -1134,9 +1134,9 @@ abstract class _CodeableConcept extends CodeableConcept {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<Coding?>? get coding;
+  List<Coding>? get coding;
   @override
   String? get text;
   @override
@@ -1154,7 +1154,7 @@ class _$CodingTearOff {
 
   _Coding call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? system,
       String? version,
       Code? code,
@@ -1183,7 +1183,7 @@ const $Coding = _$CodingTearOff();
 mixin _$Coding {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   FhirUri? get system;
   String? get version;
   Code? get code;
@@ -1201,7 +1201,7 @@ abstract class $CodingCopyWith<$Res> {
       _$CodingCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? system,
       String? version,
       Code? code,
@@ -1231,7 +1231,7 @@ class _$CodingCopyWithImpl<$Res> implements $CodingCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       system: system == freezed ? _value.system : system as FhirUri?,
       version: version == freezed ? _value.version : version as String?,
       code: code == freezed ? _value.code : code as Code?,
@@ -1250,7 +1250,7 @@ abstract class _$CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? system,
       String? version,
       Code? code,
@@ -1281,7 +1281,7 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       system: system == freezed ? _value.system : system as FhirUri?,
       version: version == freezed ? _value.version : version as String?,
       code: code == freezed ? _value.code : code as Code?,
@@ -1314,7 +1314,7 @@ class _$_Coding extends _Coding {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final FhirUri? system;
   @override
@@ -1381,7 +1381,7 @@ abstract class _Coding extends Coding {
   _Coding._() : super._();
   factory _Coding(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? system,
       String? version,
       Code? code,
@@ -1394,7 +1394,7 @@ abstract class _Coding extends Coding {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   FhirUri? get system;
   @override
@@ -1421,7 +1421,7 @@ class _$QuantityTearOff {
   _Quantity call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
           QuantityComparator? comparator,
@@ -1451,7 +1451,7 @@ const $Quantity = _$QuantityTearOff();
 mixin _$Quantity {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Decimal? get value;
   @JsonKey(unknownEnumValue: QuantityComparator.unknown)
   QuantityComparator? get comparator;
@@ -1471,7 +1471,7 @@ abstract class $QuantityCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
           QuantityComparator? comparator,
@@ -1502,7 +1502,7 @@ class _$QuantityCopyWithImpl<$Res> implements $QuantityCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -1522,7 +1522,7 @@ abstract class _$QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
           QuantityComparator? comparator,
@@ -1554,7 +1554,7 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -1587,7 +1587,7 @@ class _$_Quantity extends _Quantity {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Decimal? value;
   @override
@@ -1654,7 +1654,7 @@ abstract class _Quantity extends Quantity {
   factory _Quantity(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
           QuantityComparator? comparator,
@@ -1668,7 +1668,7 @@ abstract class _Quantity extends Quantity {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Decimal? get value;
   @override
@@ -1696,7 +1696,7 @@ class _$FhirDurationTearOff {
   _FhirDuration call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: DurationComparator.unknown)
           DurationComparator? comparator,
@@ -1726,7 +1726,7 @@ const $FhirDuration = _$FhirDurationTearOff();
 mixin _$FhirDuration {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Decimal? get value;
   @JsonKey(unknownEnumValue: DurationComparator.unknown)
   DurationComparator? get comparator;
@@ -1747,7 +1747,7 @@ abstract class $FhirDurationCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: DurationComparator.unknown)
           DurationComparator? comparator,
@@ -1778,7 +1778,7 @@ class _$FhirDurationCopyWithImpl<$Res> implements $FhirDurationCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -1800,7 +1800,7 @@ abstract class _$FhirDurationCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: DurationComparator.unknown)
           DurationComparator? comparator,
@@ -1833,7 +1833,7 @@ class __$FhirDurationCopyWithImpl<$Res> extends _$FhirDurationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -1866,7 +1866,7 @@ class _$_FhirDuration extends _FhirDuration {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Decimal? value;
   @override
@@ -1933,7 +1933,7 @@ abstract class _FhirDuration extends FhirDuration {
   factory _FhirDuration(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: DurationComparator.unknown)
           DurationComparator? comparator,
@@ -1948,7 +1948,7 @@ abstract class _FhirDuration extends FhirDuration {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Decimal? get value;
   @override
@@ -1976,7 +1976,7 @@ class _$DistanceTearOff {
   _Distance call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: DistanceComparator.unknown)
           DistanceComparator? comparator,
@@ -2006,7 +2006,7 @@ const $Distance = _$DistanceTearOff();
 mixin _$Distance {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Decimal? get value;
   @JsonKey(unknownEnumValue: DistanceComparator.unknown)
   DistanceComparator? get comparator;
@@ -2026,7 +2026,7 @@ abstract class $DistanceCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: DistanceComparator.unknown)
           DistanceComparator? comparator,
@@ -2057,7 +2057,7 @@ class _$DistanceCopyWithImpl<$Res> implements $DistanceCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -2077,7 +2077,7 @@ abstract class _$DistanceCopyWith<$Res> implements $DistanceCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: DistanceComparator.unknown)
           DistanceComparator? comparator,
@@ -2109,7 +2109,7 @@ class __$DistanceCopyWithImpl<$Res> extends _$DistanceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -2142,7 +2142,7 @@ class _$_Distance extends _Distance {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Decimal? value;
   @override
@@ -2209,7 +2209,7 @@ abstract class _Distance extends Distance {
   factory _Distance(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: DistanceComparator.unknown)
           DistanceComparator? comparator,
@@ -2223,7 +2223,7 @@ abstract class _Distance extends Distance {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Decimal? get value;
   @override
@@ -2251,7 +2251,7 @@ class _$CountTearOff {
   _Count call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: CountComparator.unknown)
           CountComparator? comparator,
@@ -2281,7 +2281,7 @@ const $Count = _$CountTearOff();
 mixin _$Count {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Decimal? get value;
   @JsonKey(unknownEnumValue: CountComparator.unknown)
   CountComparator? get comparator;
@@ -2301,7 +2301,7 @@ abstract class $CountCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: CountComparator.unknown)
           CountComparator? comparator,
@@ -2332,7 +2332,7 @@ class _$CountCopyWithImpl<$Res> implements $CountCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -2352,7 +2352,7 @@ abstract class _$CountCopyWith<$Res> implements $CountCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: CountComparator.unknown)
           CountComparator? comparator,
@@ -2384,7 +2384,7 @@ class __$CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -2417,7 +2417,7 @@ class _$_Count extends _Count {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Decimal? value;
   @override
@@ -2484,7 +2484,7 @@ abstract class _Count extends Count {
   factory _Count(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: CountComparator.unknown)
           CountComparator? comparator,
@@ -2498,7 +2498,7 @@ abstract class _Count extends Count {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Decimal? get value;
   @override
@@ -2525,7 +2525,7 @@ class _$MoneyTearOff {
 
   _Money call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Decimal? value,
       Code? currency}) {
     return _Money(
@@ -2548,7 +2548,7 @@ const $Money = _$MoneyTearOff();
 mixin _$Money {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Decimal? get value;
   Code? get currency;
 
@@ -2563,7 +2563,7 @@ abstract class $MoneyCopyWith<$Res> {
       _$MoneyCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Decimal? value,
       Code? currency});
 }
@@ -2587,7 +2587,7 @@ class _$MoneyCopyWithImpl<$Res> implements $MoneyCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       currency: currency == freezed ? _value.currency : currency as Code?,
     ));
@@ -2601,7 +2601,7 @@ abstract class _$MoneyCopyWith<$Res> implements $MoneyCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Decimal? value,
       Code? currency});
 }
@@ -2626,7 +2626,7 @@ class __$MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       currency: currency == freezed ? _value.currency : currency as Code?,
     ));
@@ -2651,7 +2651,7 @@ class _$_Money extends _Money {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Decimal? value;
   @override
@@ -2701,7 +2701,7 @@ abstract class _Money extends Money {
   _Money._() : super._();
   factory _Money(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Decimal? value,
       Code? currency}) = _$_Money;
 
@@ -2711,7 +2711,7 @@ abstract class _Money extends Money {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Decimal? get value;
   @override
@@ -2732,7 +2732,7 @@ class _$AgeTearOff {
   _Age call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: AgeComparator.unknown)
           AgeComparator? comparator,
@@ -2762,7 +2762,7 @@ const $Age = _$AgeTearOff();
 mixin _$Age {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Decimal? get value;
   @JsonKey(unknownEnumValue: AgeComparator.unknown)
   AgeComparator? get comparator;
@@ -2782,7 +2782,7 @@ abstract class $AgeCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: AgeComparator.unknown)
           AgeComparator? comparator,
@@ -2813,7 +2813,7 @@ class _$AgeCopyWithImpl<$Res> implements $AgeCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -2833,7 +2833,7 @@ abstract class _$AgeCopyWith<$Res> implements $AgeCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: AgeComparator.unknown)
           AgeComparator? comparator,
@@ -2865,7 +2865,7 @@ class __$AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       value: value == freezed ? _value.value : value as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
@@ -2897,7 +2897,7 @@ class _$_Age extends _Age {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Decimal? value;
   @override
@@ -2964,7 +2964,7 @@ abstract class _Age extends Age {
   factory _Age(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(unknownEnumValue: AgeComparator.unknown)
           AgeComparator? comparator,
@@ -2978,7 +2978,7 @@ abstract class _Age extends Age {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Decimal? get value;
   @override
@@ -3005,7 +3005,7 @@ class _$RangeTearOff {
 
   _Range call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? low,
       Quantity? high}) {
     return _Range(
@@ -3028,7 +3028,7 @@ const $Range = _$RangeTearOff();
 mixin _$Range {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Quantity? get low;
   Quantity? get high;
 
@@ -3043,7 +3043,7 @@ abstract class $RangeCopyWith<$Res> {
       _$RangeCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? low,
       Quantity? high});
 
@@ -3070,7 +3070,7 @@ class _$RangeCopyWithImpl<$Res> implements $RangeCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       low: low == freezed ? _value.low : low as Quantity?,
       high: high == freezed ? _value.high : high as Quantity?,
     ));
@@ -3106,7 +3106,7 @@ abstract class _$RangeCopyWith<$Res> implements $RangeCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? low,
       Quantity? high});
 
@@ -3136,7 +3136,7 @@ class __$RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       low: low == freezed ? _value.low : low as Quantity?,
       high: high == freezed ? _value.high : high as Quantity?,
     ));
@@ -3161,7 +3161,7 @@ class _$_Range extends _Range {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Quantity? low;
   @override
@@ -3210,7 +3210,7 @@ abstract class _Range extends Range {
   _Range._() : super._();
   factory _Range(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? low,
       Quantity? high}) = _$_Range;
 
@@ -3220,7 +3220,7 @@ abstract class _Range extends Range {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Quantity? get low;
   @override
@@ -3240,7 +3240,7 @@ class _$PeriodTearOff {
 
   _Period call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirDateTime? start,
       FhirDateTime? end}) {
     return _Period(
@@ -3263,7 +3263,7 @@ const $Period = _$PeriodTearOff();
 mixin _$Period {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   FhirDateTime? get start;
   FhirDateTime? get end;
 
@@ -3278,7 +3278,7 @@ abstract class $PeriodCopyWith<$Res> {
       _$PeriodCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirDateTime? start,
       FhirDateTime? end});
 }
@@ -3302,7 +3302,7 @@ class _$PeriodCopyWithImpl<$Res> implements $PeriodCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       start: start == freezed ? _value.start : start as FhirDateTime?,
       end: end == freezed ? _value.end : end as FhirDateTime?,
     ));
@@ -3316,7 +3316,7 @@ abstract class _$PeriodCopyWith<$Res> implements $PeriodCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirDateTime? start,
       FhirDateTime? end});
 }
@@ -3341,7 +3341,7 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       start: start == freezed ? _value.start : start as FhirDateTime?,
       end: end == freezed ? _value.end : end as FhirDateTime?,
     ));
@@ -3366,7 +3366,7 @@ class _$_Period extends _Period {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final FhirDateTime? start;
   @override
@@ -3415,7 +3415,7 @@ abstract class _Period extends Period {
   _Period._() : super._();
   factory _Period(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirDateTime? start,
       FhirDateTime? end}) = _$_Period;
 
@@ -3425,7 +3425,7 @@ abstract class _Period extends Period {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   FhirDateTime? get start;
   @override
@@ -3445,7 +3445,7 @@ class _$RatioTearOff {
 
   _Ratio call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? numerator,
       Quantity? denominator}) {
     return _Ratio(
@@ -3468,7 +3468,7 @@ const $Ratio = _$RatioTearOff();
 mixin _$Ratio {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Quantity? get numerator;
   Quantity? get denominator;
 
@@ -3483,7 +3483,7 @@ abstract class $RatioCopyWith<$Res> {
       _$RatioCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? numerator,
       Quantity? denominator});
 
@@ -3510,7 +3510,7 @@ class _$RatioCopyWithImpl<$Res> implements $RatioCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       numerator:
           numerator == freezed ? _value.numerator : numerator as Quantity?,
       denominator: denominator == freezed
@@ -3549,7 +3549,7 @@ abstract class _$RatioCopyWith<$Res> implements $RatioCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? numerator,
       Quantity? denominator});
 
@@ -3579,7 +3579,7 @@ class __$RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       numerator:
           numerator == freezed ? _value.numerator : numerator as Quantity?,
       denominator: denominator == freezed
@@ -3607,7 +3607,7 @@ class _$_Ratio extends _Ratio {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Quantity? numerator;
   @override
@@ -3658,7 +3658,7 @@ abstract class _Ratio extends Ratio {
   _Ratio._() : super._();
   factory _Ratio(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? numerator,
       Quantity? denominator}) = _$_Ratio;
 
@@ -3668,7 +3668,7 @@ abstract class _Ratio extends Ratio {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Quantity? get numerator;
   @override
@@ -3688,7 +3688,7 @@ class _$SampledDataTearOff {
 
   _SampledData call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       required Quantity origin,
       Decimal? period,
       Decimal? factor,
@@ -3721,7 +3721,7 @@ const $SampledData = _$SampledDataTearOff();
 mixin _$SampledData {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Quantity get origin;
   Decimal? get period;
   Decimal? get factor;
@@ -3742,7 +3742,7 @@ abstract class $SampledDataCopyWith<$Res> {
       _$SampledDataCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity origin,
       Decimal? period,
       Decimal? factor,
@@ -3778,7 +3778,7 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       origin: origin == freezed ? _value.origin : origin as Quantity,
       period: period == freezed ? _value.period : period as Decimal?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -3810,7 +3810,7 @@ abstract class _$SampledDataCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity origin,
       Decimal? period,
       Decimal? factor,
@@ -3849,7 +3849,7 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       origin: origin == freezed ? _value.origin : origin as Quantity,
       period: period == freezed ? _value.period : period as Decimal?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -3888,7 +3888,7 @@ class _$_SampledData extends _SampledData {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Quantity origin;
   @override
@@ -3965,7 +3965,7 @@ abstract class _SampledData extends SampledData {
   _SampledData._() : super._();
   factory _SampledData(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       required Quantity origin,
       Decimal? period,
       Decimal? factor,
@@ -3981,7 +3981,7 @@ abstract class _SampledData extends SampledData {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Quantity get origin;
   @override
@@ -4011,7 +4011,7 @@ class _$SignatureTearOff {
 
   _Signature call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       required List<Coding> type,
       Instant? when,
       required Reference who,
@@ -4044,7 +4044,7 @@ const $Signature = _$SignatureTearOff();
 mixin _$Signature {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   List<Coding> get type;
   Instant? get when;
   Reference get who;
@@ -4064,7 +4064,7 @@ abstract class $SignatureCopyWith<$Res> {
       _$SignatureCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<Coding> type,
       Instant? when,
       Reference who,
@@ -4101,7 +4101,7 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant?,
       who: who == freezed ? _value.who : who as Reference,
@@ -4141,7 +4141,7 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<Coding> type,
       Instant? when,
       Reference who,
@@ -4181,7 +4181,7 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant?,
       who: who == freezed ? _value.who : who as Reference,
@@ -4218,7 +4218,7 @@ class _$_Signature extends _Signature {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final List<Coding> type;
   @override
@@ -4295,7 +4295,7 @@ abstract class _Signature extends Signature {
   _Signature._() : super._();
   factory _Signature(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       required List<Coding> type,
       Instant? when,
       required Reference who,
@@ -4311,7 +4311,7 @@ abstract class _Signature extends Signature {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   List<Coding> get type;
   @override
@@ -4341,13 +4341,13 @@ class _$HumanNameTearOff {
 
   _HumanName call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
       String? text,
       String? family,
-      List<String?>? given,
-      List<String?>? prefix,
-      List<String?>? suffix,
+      List<String>? given,
+      List<String>? prefix,
+      List<String>? suffix,
       Period? period}) {
     return _HumanName(
       id: id,
@@ -4374,14 +4374,14 @@ const $HumanName = _$HumanNameTearOff();
 mixin _$HumanName {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   HumanNameUse? get use;
   String? get text;
   String? get family;
-  List<String?>? get given;
-  List<String?>? get prefix;
-  List<String?>? get suffix;
+  List<String>? get given;
+  List<String>? get prefix;
+  List<String>? get suffix;
   Period? get period;
 
   Map<String, dynamic> toJson();
@@ -4395,13 +4395,13 @@ abstract class $HumanNameCopyWith<$Res> {
       _$HumanNameCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
       String? text,
       String? family,
-      List<String?>? given,
-      List<String?>? prefix,
-      List<String?>? suffix,
+      List<String>? given,
+      List<String>? prefix,
+      List<String>? suffix,
       Period? period});
 
   $PeriodCopyWith<$Res>? get period;
@@ -4431,13 +4431,13 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       use: use == freezed ? _value.use : use as HumanNameUse?,
       text: text == freezed ? _value.text : text as String?,
       family: family == freezed ? _value.family : family as String?,
-      given: given == freezed ? _value.given : given as List<String?>?,
-      prefix: prefix == freezed ? _value.prefix : prefix as List<String?>?,
-      suffix: suffix == freezed ? _value.suffix : suffix as List<String?>?,
+      given: given == freezed ? _value.given : given as List<String>?,
+      prefix: prefix == freezed ? _value.prefix : prefix as List<String>?,
+      suffix: suffix == freezed ? _value.suffix : suffix as List<String>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -4462,13 +4462,13 @@ abstract class _$HumanNameCopyWith<$Res> implements $HumanNameCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
       String? text,
       String? family,
-      List<String?>? given,
-      List<String?>? prefix,
-      List<String?>? suffix,
+      List<String>? given,
+      List<String>? prefix,
+      List<String>? suffix,
       Period? period});
 
   @override
@@ -4500,13 +4500,13 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       use: use == freezed ? _value.use : use as HumanNameUse?,
       text: text == freezed ? _value.text : text as String?,
       family: family == freezed ? _value.family : family as String?,
-      given: given == freezed ? _value.given : given as List<String?>?,
-      prefix: prefix == freezed ? _value.prefix : prefix as List<String?>?,
-      suffix: suffix == freezed ? _value.suffix : suffix as List<String?>?,
+      given: given == freezed ? _value.given : given as List<String>?,
+      prefix: prefix == freezed ? _value.prefix : prefix as List<String>?,
+      suffix: suffix == freezed ? _value.suffix : suffix as List<String>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -4535,7 +4535,7 @@ class _$_HumanName extends _HumanName {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   final HumanNameUse? use;
@@ -4544,11 +4544,11 @@ class _$_HumanName extends _HumanName {
   @override
   final String? family;
   @override
-  final List<String?>? given;
+  final List<String>? given;
   @override
-  final List<String?>? prefix;
+  final List<String>? prefix;
   @override
-  final List<String?>? suffix;
+  final List<String>? suffix;
   @override
   final Period? period;
 
@@ -4610,13 +4610,13 @@ abstract class _HumanName extends HumanName {
   _HumanName._() : super._();
   factory _HumanName(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
       String? text,
       String? family,
-      List<String?>? given,
-      List<String?>? prefix,
-      List<String?>? suffix,
+      List<String>? given,
+      List<String>? prefix,
+      List<String>? suffix,
       Period? period}) = _$_HumanName;
 
   factory _HumanName.fromJson(Map<String, dynamic> json) =
@@ -4626,7 +4626,7 @@ abstract class _HumanName extends HumanName {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: HumanNameUse.unknown)
   HumanNameUse? get use;
@@ -4635,11 +4635,11 @@ abstract class _HumanName extends HumanName {
   @override
   String? get family;
   @override
-  List<String?>? get given;
+  List<String>? get given;
   @override
-  List<String?>? get prefix;
+  List<String>? get prefix;
   @override
-  List<String?>? get suffix;
+  List<String>? get suffix;
   @override
   Period? get period;
   @override
@@ -4657,11 +4657,11 @@ class _$AddressTearOff {
 
   _Address call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType? type,
       String? text,
-      List<String?>? line,
+      List<String>? line,
       String? city,
       String? district,
       String? state,
@@ -4696,13 +4696,13 @@ const $Address = _$AddressTearOff();
 mixin _$Address {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   AddressUse? get use;
   @JsonKey(unknownEnumValue: AddressType.unknown)
   AddressType? get type;
   String? get text;
-  List<String?>? get line;
+  List<String>? get line;
   String? get city;
   String? get district;
   String? get state;
@@ -4721,11 +4721,11 @@ abstract class $AddressCopyWith<$Res> {
       _$AddressCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType? type,
       String? text,
-      List<String?>? line,
+      List<String>? line,
       String? city,
       String? district,
       String? state,
@@ -4763,11 +4763,11 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       use: use == freezed ? _value.use : use as AddressUse?,
       type: type == freezed ? _value.type : type as AddressType?,
       text: text == freezed ? _value.text : text as String?,
-      line: line == freezed ? _value.line : line as List<String?>?,
+      line: line == freezed ? _value.line : line as List<String>?,
       city: city == freezed ? _value.city : city as String?,
       district: district == freezed ? _value.district : district as String?,
       state: state == freezed ? _value.state : state as String?,
@@ -4797,11 +4797,11 @@ abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType? type,
       String? text,
-      List<String?>? line,
+      List<String>? line,
       String? city,
       String? district,
       String? state,
@@ -4841,11 +4841,11 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       use: use == freezed ? _value.use : use as AddressUse?,
       type: type == freezed ? _value.type : type as AddressType?,
       text: text == freezed ? _value.text : text as String?,
-      line: line == freezed ? _value.line : line as List<String?>?,
+      line: line == freezed ? _value.line : line as List<String>?,
       city: city == freezed ? _value.city : city as String?,
       district: district == freezed ? _value.district : district as String?,
       state: state == freezed ? _value.state : state as String?,
@@ -4883,7 +4883,7 @@ class _$_Address extends _Address {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   final AddressUse? use;
@@ -4893,7 +4893,7 @@ class _$_Address extends _Address {
   @override
   final String? text;
   @override
-  final List<String?>? line;
+  final List<String>? line;
   @override
   final String? city;
   @override
@@ -4977,11 +4977,11 @@ abstract class _Address extends Address {
   _Address._() : super._();
   factory _Address(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
       @JsonKey(unknownEnumValue: AddressType.unknown) AddressType? type,
       String? text,
-      List<String?>? line,
+      List<String>? line,
       String? city,
       String? district,
       String? state,
@@ -4995,7 +4995,7 @@ abstract class _Address extends Address {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: AddressUse.unknown)
   AddressUse? get use;
@@ -5005,7 +5005,7 @@ abstract class _Address extends Address {
   @override
   String? get text;
   @override
-  List<String?>? get line;
+  List<String>? get line;
   @override
   String? get city;
   @override
@@ -5034,7 +5034,7 @@ class _$ContactPointTearOff {
   _ContactPoint call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem? system,
       String? value,
@@ -5065,7 +5065,7 @@ const $ContactPoint = _$ContactPointTearOff();
 mixin _$ContactPoint {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   ContactPointSystem? get system;
   String? get value;
@@ -5087,7 +5087,7 @@ abstract class $ContactPointCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem? system,
       String? value,
@@ -5121,7 +5121,7 @@ class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       system: system == freezed ? _value.system : system as ContactPointSystem?,
       value: value == freezed ? _value.value : value as String?,
       use: use == freezed ? _value.use : use as ContactPointUse?,
@@ -5152,7 +5152,7 @@ abstract class _$ContactPointCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem? system,
       String? value,
@@ -5189,7 +5189,7 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       system: system == freezed ? _value.system : system as ContactPointSystem?,
       value: value == freezed ? _value.value : value as String?,
       use: use == freezed ? _value.use : use as ContactPointUse?,
@@ -5220,7 +5220,7 @@ class _$_ContactPoint extends _ContactPoint {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   final ContactPointSystem? system;
@@ -5287,7 +5287,7 @@ abstract class _ContactPoint extends ContactPoint {
   factory _ContactPoint(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
           ContactPointSystem? system,
       String? value,
@@ -5303,7 +5303,7 @@ abstract class _ContactPoint extends ContactPoint {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
   ContactPointSystem? get system;
@@ -5331,9 +5331,9 @@ class _$TimingTearOff {
 
   _Timing call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<FhirDateTime?>? event,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<FhirDateTime>? event,
       TimingRepeat? repeat,
       CodeableConcept? code}) {
     return _Timing(
@@ -5358,9 +5358,9 @@ const $Timing = _$TimingTearOff();
 mixin _$Timing {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<FhirDateTime?>? get event;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<FhirDateTime>? get event;
   TimingRepeat? get repeat;
   CodeableConcept? get code;
 
@@ -5375,9 +5375,9 @@ abstract class $TimingCopyWith<$Res> {
       _$TimingCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<FhirDateTime?>? event,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<FhirDateTime>? event,
       TimingRepeat? repeat,
       CodeableConcept? code});
 
@@ -5406,11 +5406,11 @@ class _$TimingCopyWithImpl<$Res> implements $TimingCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      event: event == freezed ? _value.event : event as List<FhirDateTime?>?,
+          : modifierExtension as List<FhirExtension>?,
+      event: event == freezed ? _value.event : event as List<FhirDateTime>?,
       repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
     ));
@@ -5446,9 +5446,9 @@ abstract class _$TimingCopyWith<$Res> implements $TimingCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<FhirDateTime?>? event,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<FhirDateTime>? event,
       TimingRepeat? repeat,
       CodeableConcept? code});
 
@@ -5480,11 +5480,11 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      event: event == freezed ? _value.event : event as List<FhirDateTime?>?,
+          : modifierExtension as List<FhirExtension>?,
+      event: event == freezed ? _value.event : event as List<FhirDateTime>?,
       repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
     ));
@@ -5511,11 +5511,11 @@ class _$_Timing extends _Timing {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<FhirDateTime?>? event;
+  final List<FhirDateTime>? event;
   @override
   final TimingRepeat? repeat;
   @override
@@ -5571,9 +5571,9 @@ abstract class _Timing extends Timing {
   _Timing._() : super._();
   factory _Timing(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<FhirDateTime?>? event,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<FhirDateTime>? event,
       TimingRepeat? repeat,
       CodeableConcept? code}) = _$_Timing;
 
@@ -5583,11 +5583,11 @@ abstract class _Timing extends Timing {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<FhirDateTime?>? get event;
+  List<FhirDateTime>? get event;
   @override
   TimingRepeat? get repeat;
   @override
@@ -5608,8 +5608,8 @@ class _$TimingRepeatTearOff {
   _TimingRepeat call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
@@ -5625,9 +5625,9 @@ class _$TimingRepeatTearOff {
       Decimal? periodMax,
       @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
           TimingRepeatPeriodUnit? periodUnit,
-      List<Code?>? dayOfWeek,
-      List<Time?>? timeOfDay,
-      List<TimingRepeatWhen?>? when,
+      List<Code>? dayOfWeek,
+      List<Time>? timeOfDay,
+      List<TimingRepeatWhen>? when,
       UnsignedInt? offset}) {
     return _TimingRepeat(
       id: id,
@@ -5665,8 +5665,8 @@ const $TimingRepeat = _$TimingRepeatTearOff();
 mixin _$TimingRepeat {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   FhirDuration? get boundsDuration;
   Range? get boundsRange;
   Period? get boundsPeriod;
@@ -5682,9 +5682,9 @@ mixin _$TimingRepeat {
   Decimal? get periodMax;
   @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
   TimingRepeatPeriodUnit? get periodUnit;
-  List<Code?>? get dayOfWeek;
-  List<Time?>? get timeOfDay;
-  List<TimingRepeatWhen?>? get when;
+  List<Code>? get dayOfWeek;
+  List<Time>? get timeOfDay;
+  List<TimingRepeatWhen>? get when;
   UnsignedInt? get offset;
 
   Map<String, dynamic> toJson();
@@ -5700,8 +5700,8 @@ abstract class $TimingRepeatCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
@@ -5717,9 +5717,9 @@ abstract class $TimingRepeatCopyWith<$Res> {
       Decimal? periodMax,
       @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
           TimingRepeatPeriodUnit? periodUnit,
-      List<Code?>? dayOfWeek,
-      List<Time?>? timeOfDay,
-      List<TimingRepeatWhen?>? when,
+      List<Code>? dayOfWeek,
+      List<Time>? timeOfDay,
+      List<TimingRepeatWhen>? when,
       UnsignedInt? offset});
 
   $FhirDurationCopyWith<$Res>? get boundsDuration;
@@ -5762,10 +5762,10 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       boundsDuration: boundsDuration == freezed
           ? _value.boundsDuration
           : boundsDuration as FhirDuration?,
@@ -5795,10 +5795,10 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
           ? _value.periodUnit
           : periodUnit as TimingRepeatPeriodUnit?,
       dayOfWeek:
-          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code?>?,
+          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code>?,
       timeOfDay:
-          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time?>?,
-      when: when == freezed ? _value.when : when as List<TimingRepeatWhen?>?,
+          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>?,
+      when: when == freezed ? _value.when : when as List<TimingRepeatWhen>?,
       offset: offset == freezed ? _value.offset : offset as UnsignedInt?,
     ));
   }
@@ -5847,8 +5847,8 @@ abstract class _$TimingRepeatCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
@@ -5864,9 +5864,9 @@ abstract class _$TimingRepeatCopyWith<$Res>
       Decimal? periodMax,
       @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
           TimingRepeatPeriodUnit? periodUnit,
-      List<Code?>? dayOfWeek,
-      List<Time?>? timeOfDay,
-      List<TimingRepeatWhen?>? when,
+      List<Code>? dayOfWeek,
+      List<Time>? timeOfDay,
+      List<TimingRepeatWhen>? when,
       UnsignedInt? offset});
 
   @override
@@ -5914,10 +5914,10 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       boundsDuration: boundsDuration == freezed
           ? _value.boundsDuration
           : boundsDuration as FhirDuration?,
@@ -5947,10 +5947,10 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
           ? _value.periodUnit
           : periodUnit as TimingRepeatPeriodUnit?,
       dayOfWeek:
-          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code?>?,
+          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code>?,
       timeOfDay:
-          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time?>?,
-      when: when == freezed ? _value.when : when as List<TimingRepeatWhen?>?,
+          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>?,
+      when: when == freezed ? _value.when : when as List<TimingRepeatWhen>?,
       offset: offset == freezed ? _value.offset : offset as UnsignedInt?,
     ));
   }
@@ -5993,9 +5993,9 @@ class _$_TimingRepeat extends _TimingRepeat {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirDuration? boundsDuration;
   @override
@@ -6025,11 +6025,11 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
   final TimingRepeatPeriodUnit? periodUnit;
   @override
-  final List<Code?>? dayOfWeek;
+  final List<Code>? dayOfWeek;
   @override
-  final List<Time?>? timeOfDay;
+  final List<Time>? timeOfDay;
   @override
-  final List<TimingRepeatWhen?>? when;
+  final List<TimingRepeatWhen>? when;
   @override
   final UnsignedInt? offset;
 
@@ -6139,8 +6139,8 @@ abstract class _TimingRepeat extends TimingRepeat {
   factory _TimingRepeat(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirDuration? boundsDuration,
       Range? boundsRange,
       Period? boundsPeriod,
@@ -6156,9 +6156,9 @@ abstract class _TimingRepeat extends TimingRepeat {
       Decimal? periodMax,
       @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
           TimingRepeatPeriodUnit? periodUnit,
-      List<Code?>? dayOfWeek,
-      List<Time?>? timeOfDay,
-      List<TimingRepeatWhen?>? when,
+      List<Code>? dayOfWeek,
+      List<Time>? timeOfDay,
+      List<TimingRepeatWhen>? when,
       UnsignedInt? offset}) = _$_TimingRepeat;
 
   factory _TimingRepeat.fromJson(Map<String, dynamic> json) =
@@ -6168,9 +6168,9 @@ abstract class _TimingRepeat extends TimingRepeat {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   FhirDuration? get boundsDuration;
   @override
@@ -6200,11 +6200,11 @@ abstract class _TimingRepeat extends TimingRepeat {
   @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
   TimingRepeatPeriodUnit? get periodUnit;
   @override
-  List<Code?>? get dayOfWeek;
+  List<Code>? get dayOfWeek;
   @override
-  List<Time?>? get timeOfDay;
+  List<Time>? get timeOfDay;
   @override
-  List<TimingRepeatWhen?>? get when;
+  List<TimingRepeatWhen>? get when;
   @override
   UnsignedInt? get offset;
   @override

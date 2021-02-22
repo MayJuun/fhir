@@ -38,26 +38,26 @@ class _$CapabilityStatementTearOff {
       Boolean? experimental,
       FhirDateTime? date,
       String? publisher,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       Markdown? copyright,
       @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
           CapabilityStatementKind? kind,
-      List<Canonical?>? instantiates,
-      List<Canonical?>? imports,
+      List<Canonical>? instantiates,
+      List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
       @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
           CapabilityStatementFhirVersion? fhirVersion,
-      List<Code?>? format,
-      List<Code?>? patchFormat,
-      List<Canonical?>? implementationGuide,
-      List<CapabilityStatementRest?>? rest,
-      List<CapabilityStatementMessaging?>? messaging,
-      List<CapabilityStatementDocument?>? document}) {
+      List<Code>? format,
+      List<Code>? patchFormat,
+      List<Canonical>? implementationGuide,
+      List<CapabilityStatementRest>? rest,
+      List<CapabilityStatementMessaging>? messaging,
+      List<CapabilityStatementDocument>? document}) {
     return _CapabilityStatement(
       resourceType: resourceType,
       id: id,
@@ -113,11 +113,8 @@ mixin _$CapabilityStatement {
   Meta? get meta;
   FhirUri? get implicitRules;
   Code? get language;
-  Narrative? get text;
-  List<Resource?>? get contained;
-  @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<Resource>? get contained;
+  List<FhirExtension>? get modifierExtension;
   FhirUri? get url;
   String? get version;
   String? get name;
@@ -127,26 +124,26 @@ mixin _$CapabilityStatement {
   Boolean? get experimental;
   FhirDateTime? get date;
   String? get publisher;
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   Markdown? get description;
-  List<UsageContext?>? get useContext;
-  List<CodeableConcept?>? get jurisdiction;
+  List<UsageContext>? get useContext;
+  List<CodeableConcept>? get jurisdiction;
   Markdown? get purpose;
   Markdown? get copyright;
   @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
   CapabilityStatementKind? get kind;
-  List<Canonical?>? get instantiates;
-  List<Canonical?>? get imports;
+  List<Canonical>? get instantiates;
+  List<Canonical>? get imports;
   CapabilityStatementSoftware? get software;
   CapabilityStatementImplementation? get implementation;
   @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
   CapabilityStatementFhirVersion? get fhirVersion;
-  List<Code?>? get format;
-  List<Code?>? get patchFormat;
-  List<Canonical?>? get implementationGuide;
-  List<CapabilityStatementRest?>? get rest;
-  List<CapabilityStatementMessaging?>? get messaging;
-  List<CapabilityStatementDocument?>? get document;
+  List<Code>? get format;
+  List<Code>? get patchFormat;
+  List<Canonical>? get implementationGuide;
+  List<CapabilityStatementRest>? get rest;
+  List<CapabilityStatementMessaging>? get messaging;
+  List<CapabilityStatementDocument>? get document;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -179,26 +176,26 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       Boolean? experimental,
       FhirDateTime? date,
       String? publisher,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       Markdown? copyright,
       @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
           CapabilityStatementKind? kind,
-      List<Canonical?>? instantiates,
-      List<Canonical?>? imports,
+      List<Canonical>? instantiates,
+      List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
       @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
           CapabilityStatementFhirVersion? fhirVersion,
-      List<Code?>? format,
-      List<Code?>? patchFormat,
-      List<Canonical?>? implementationGuide,
-      List<CapabilityStatementRest?>? rest,
-      List<CapabilityStatementMessaging?>? messaging,
-      List<CapabilityStatementDocument?>? document});
+      List<Code>? format,
+      List<Code>? patchFormat,
+      List<Canonical>? implementationGuide,
+      List<CapabilityStatementRest>? rest,
+      List<CapabilityStatementMessaging>? messaging,
+      List<CapabilityStatementDocument>? document});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -266,13 +263,10 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : contained as List<Resource>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       version: version == freezed ? _value.version : version as String?,
       name: name == freezed ? _value.name : name as String?,
@@ -285,27 +279,26 @@ class _$CapabilityStatementCopyWithImpl<$Res>
           : experimental as Boolean?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       publisher: publisher == freezed ? _value.publisher : publisher as String?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown?,
       kind: kind == freezed ? _value.kind : kind as CapabilityStatementKind?,
       instantiates: instantiates == freezed
           ? _value.instantiates
-          : instantiates as List<Canonical?>?,
+          : instantiates as List<Canonical>?,
       imports:
-          imports == freezed ? _value.imports : imports as List<Canonical?>?,
+          imports == freezed ? _value.imports : imports as List<Canonical>?,
       software: software == freezed
           ? _value.software
           : software as CapabilityStatementSoftware?,
@@ -315,22 +308,22 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
           : fhirVersion as CapabilityStatementFhirVersion?,
-      format: format == freezed ? _value.format : format as List<Code?>?,
+      format: format == freezed ? _value.format : format as List<Code>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
-          : patchFormat as List<Code?>?,
+          : patchFormat as List<Code>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
-          : implementationGuide as List<Canonical?>?,
+          : implementationGuide as List<Canonical>?,
       rest: rest == freezed
           ? _value.rest
-          : rest as List<CapabilityStatementRest?>?,
+          : rest as List<CapabilityStatementRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<CapabilityStatementMessaging?>?,
+          : messaging as List<CapabilityStatementMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<CapabilityStatementDocument?>?,
+          : document as List<CapabilityStatementDocument>?,
     ));
   }
 
@@ -395,11 +388,8 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
-      Narrative? text,
-      List<Resource?>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      List<Resource>? contained,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       String? version,
       String? name,
@@ -409,26 +399,26 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       Boolean? experimental,
       FhirDateTime? date,
       String? publisher,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       Markdown? copyright,
       @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
           CapabilityStatementKind? kind,
-      List<Canonical?>? instantiates,
-      List<Canonical?>? imports,
+      List<Canonical>? instantiates,
+      List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
       @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
           CapabilityStatementFhirVersion? fhirVersion,
-      List<Code?>? format,
-      List<Code?>? patchFormat,
-      List<Canonical?>? implementationGuide,
-      List<CapabilityStatementRest?>? rest,
-      List<CapabilityStatementMessaging?>? messaging,
-      List<CapabilityStatementDocument?>? document});
+      List<Code>? format,
+      List<Code>? patchFormat,
+      List<Canonical>? implementationGuide,
+      List<CapabilityStatementRest>? rest,
+      List<CapabilityStatementMessaging>? messaging,
+      List<CapabilityStatementDocument>? document});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -502,13 +492,10 @@ class __$CapabilityStatementCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : contained as List<Resource>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       version: version == freezed ? _value.version : version as String?,
       name: name == freezed ? _value.name : name as String?,
@@ -521,27 +508,26 @@ class __$CapabilityStatementCopyWithImpl<$Res>
           : experimental as Boolean?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       publisher: publisher == freezed ? _value.publisher : publisher as String?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown?,
       kind: kind == freezed ? _value.kind : kind as CapabilityStatementKind?,
       instantiates: instantiates == freezed
           ? _value.instantiates
-          : instantiates as List<Canonical?>?,
+          : instantiates as List<Canonical>?,
       imports:
-          imports == freezed ? _value.imports : imports as List<Canonical?>?,
+          imports == freezed ? _value.imports : imports as List<Canonical>?,
       software: software == freezed
           ? _value.software
           : software as CapabilityStatementSoftware?,
@@ -551,22 +537,22 @@ class __$CapabilityStatementCopyWithImpl<$Res>
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
           : fhirVersion as CapabilityStatementFhirVersion?,
-      format: format == freezed ? _value.format : format as List<Code?>?,
+      format: format == freezed ? _value.format : format as List<Code>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
-          : patchFormat as List<Code?>?,
+          : patchFormat as List<Code>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
-          : implementationGuide as List<Canonical?>?,
+          : implementationGuide as List<Canonical>?,
       rest: rest == freezed
           ? _value.rest
-          : rest as List<CapabilityStatementRest?>?,
+          : rest as List<CapabilityStatementRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<CapabilityStatementMessaging?>?,
+          : messaging as List<CapabilityStatementMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<CapabilityStatementDocument?>?,
+          : document as List<CapabilityStatementDocument>?,
     ));
   }
 }
@@ -633,14 +619,9 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   final Code? language;
   @override
-  final Narrative? text;
+  final List<Resource>? contained;
   @override
-  final List<Resource?>? contained;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
-  @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
@@ -659,13 +640,13 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   final String? publisher;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
-  final List<UsageContext?>? useContext;
+  final List<UsageContext>? useContext;
   @override
-  final List<CodeableConcept?>? jurisdiction;
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? purpose;
   @override
@@ -674,9 +655,9 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
   final CapabilityStatementKind? kind;
   @override
-  final List<Canonical?>? instantiates;
+  final List<Canonical>? instantiates;
   @override
-  final List<Canonical?>? imports;
+  final List<Canonical>? imports;
   @override
   final CapabilityStatementSoftware? software;
   @override
@@ -685,17 +666,17 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
   final CapabilityStatementFhirVersion? fhirVersion;
   @override
-  final List<Code?>? format;
+  final List<Code>? format;
   @override
-  final List<Code?>? patchFormat;
+  final List<Code>? patchFormat;
   @override
-  final List<Canonical?>? implementationGuide;
+  final List<Canonical>? implementationGuide;
   @override
-  final List<CapabilityStatementRest?>? rest;
+  final List<CapabilityStatementRest>? rest;
   @override
-  final List<CapabilityStatementMessaging?>? messaging;
+  final List<CapabilityStatementMessaging>? messaging;
   @override
-  final List<CapabilityStatementDocument?>? document;
+  final List<CapabilityStatementDocument>? document;
 
   @override
   String toString() {
@@ -846,11 +827,8 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
-      Narrative? text,
-      List<Resource?>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      List<Resource>? contained,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       String? version,
       String? name,
@@ -860,26 +838,26 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       Boolean? experimental,
       FhirDateTime? date,
       String? publisher,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       Markdown? copyright,
       @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
           CapabilityStatementKind? kind,
-      List<Canonical?>? instantiates,
-      List<Canonical?>? imports,
+      List<Canonical>? instantiates,
+      List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
       @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
           CapabilityStatementFhirVersion? fhirVersion,
-      List<Code?>? format,
-      List<Code?>? patchFormat,
-      List<Canonical?>? implementationGuide,
-      List<CapabilityStatementRest?>? rest,
-      List<CapabilityStatementMessaging?>? messaging,
-      List<CapabilityStatementDocument?>? document}) = _$_CapabilityStatement;
+      List<Code>? format,
+      List<Code>? patchFormat,
+      List<Canonical>? implementationGuide,
+      List<CapabilityStatementRest>? rest,
+      List<CapabilityStatementMessaging>? messaging,
+      List<CapabilityStatementDocument>? document}) = _$_CapabilityStatement;
 
   factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatement.fromJson;
@@ -896,14 +874,9 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @override
   Code? get language;
   @override
-  Narrative? get text;
+  List<Resource>? get contained;
   @override
-  List<Resource?>? get contained;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   FhirUri? get url;
   @override
@@ -922,13 +895,13 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @override
   String? get publisher;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   Markdown? get description;
   @override
-  List<UsageContext?>? get useContext;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction;
   @override
   Markdown? get purpose;
   @override
@@ -937,9 +910,9 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
   CapabilityStatementKind? get kind;
   @override
-  List<Canonical?>? get instantiates;
+  List<Canonical>? get instantiates;
   @override
-  List<Canonical?>? get imports;
+  List<Canonical>? get imports;
   @override
   CapabilityStatementSoftware? get software;
   @override
@@ -948,17 +921,17 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
   CapabilityStatementFhirVersion? get fhirVersion;
   @override
-  List<Code?>? get format;
+  List<Code>? get format;
   @override
-  List<Code?>? get patchFormat;
+  List<Code>? get patchFormat;
   @override
-  List<Canonical?>? get implementationGuide;
+  List<Canonical>? get implementationGuide;
   @override
-  List<CapabilityStatementRest?>? get rest;
+  List<CapabilityStatementRest>? get rest;
   @override
-  List<CapabilityStatementMessaging?>? get messaging;
+  List<CapabilityStatementMessaging>? get messaging;
   @override
-  List<CapabilityStatementDocument?>? get document;
+  List<CapabilityStatementDocument>? get document;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith;
@@ -1539,11 +1512,11 @@ class _$CapabilityStatementRestTearOff {
           CapabilityStatementRestMode? mode,
       Markdown? documentation,
       CapabilityStatementSecurity? security,
-      List<CapabilityStatementResource?>? resource,
-      List<CapabilityStatementInteraction1?>? interaction,
-      List<CapabilityStatementSearchParam?>? searchParam,
-      List<CapabilityStatementOperation?>? operation,
-      List<Canonical?>? compartment}) {
+      List<CapabilityStatementResource>? resource,
+      List<CapabilityStatementInteraction1>? interaction,
+      List<CapabilityStatementSearchParam>? searchParam,
+      List<CapabilityStatementOperation>? operation,
+      List<Canonical>? compartment}) {
     return _CapabilityStatementRest(
       id: id,
       extension_: extension_,
@@ -1577,11 +1550,11 @@ mixin _$CapabilityStatementRest {
   CapabilityStatementRestMode? get mode;
   Markdown? get documentation;
   CapabilityStatementSecurity? get security;
-  List<CapabilityStatementResource?>? get resource;
-  List<CapabilityStatementInteraction1?>? get interaction;
-  List<CapabilityStatementSearchParam?>? get searchParam;
-  List<CapabilityStatementOperation?>? get operation;
-  List<Canonical?>? get compartment;
+  List<CapabilityStatementResource>? get resource;
+  List<CapabilityStatementInteraction1>? get interaction;
+  List<CapabilityStatementSearchParam>? get searchParam;
+  List<CapabilityStatementOperation>? get operation;
+  List<Canonical>? get compartment;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1602,11 +1575,11 @@ abstract class $CapabilityStatementRestCopyWith<$Res> {
           CapabilityStatementRestMode? mode,
       Markdown? documentation,
       CapabilityStatementSecurity? security,
-      List<CapabilityStatementResource?>? resource,
-      List<CapabilityStatementInteraction1?>? interaction,
-      List<CapabilityStatementSearchParam?>? searchParam,
-      List<CapabilityStatementOperation?>? operation,
-      List<Canonical?>? compartment});
+      List<CapabilityStatementResource>? resource,
+      List<CapabilityStatementInteraction1>? interaction,
+      List<CapabilityStatementSearchParam>? searchParam,
+      List<CapabilityStatementOperation>? operation,
+      List<Canonical>? compartment});
 
   $CapabilityStatementSecurityCopyWith<$Res>? get security;
 }
@@ -1652,19 +1625,19 @@ class _$CapabilityStatementRestCopyWithImpl<$Res>
           : security as CapabilityStatementSecurity?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CapabilityStatementResource?>?,
+          : resource as List<CapabilityStatementResource>?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction1?>?,
+          : interaction as List<CapabilityStatementInteraction1>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam?>?,
+          : searchParam as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation?>?,
+          : operation as List<CapabilityStatementOperation>?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<Canonical?>?,
+          : compartment as List<Canonical>?,
     ));
   }
 
@@ -1697,11 +1670,11 @@ abstract class _$CapabilityStatementRestCopyWith<$Res>
           CapabilityStatementRestMode? mode,
       Markdown? documentation,
       CapabilityStatementSecurity? security,
-      List<CapabilityStatementResource?>? resource,
-      List<CapabilityStatementInteraction1?>? interaction,
-      List<CapabilityStatementSearchParam?>? searchParam,
-      List<CapabilityStatementOperation?>? operation,
-      List<Canonical?>? compartment});
+      List<CapabilityStatementResource>? resource,
+      List<CapabilityStatementInteraction1>? interaction,
+      List<CapabilityStatementSearchParam>? searchParam,
+      List<CapabilityStatementOperation>? operation,
+      List<Canonical>? compartment});
 
   @override
   $CapabilityStatementSecurityCopyWith<$Res>? get security;
@@ -1751,19 +1724,19 @@ class __$CapabilityStatementRestCopyWithImpl<$Res>
           : security as CapabilityStatementSecurity?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CapabilityStatementResource?>?,
+          : resource as List<CapabilityStatementResource>?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction1?>?,
+          : interaction as List<CapabilityStatementInteraction1>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam?>?,
+          : searchParam as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation?>?,
+          : operation as List<CapabilityStatementOperation>?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<Canonical?>?,
+          : compartment as List<Canonical>?,
     ));
   }
 }
@@ -1804,15 +1777,15 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   @override
   final CapabilityStatementSecurity? security;
   @override
-  final List<CapabilityStatementResource?>? resource;
+  final List<CapabilityStatementResource>? resource;
   @override
-  final List<CapabilityStatementInteraction1?>? interaction;
+  final List<CapabilityStatementInteraction1>? interaction;
   @override
-  final List<CapabilityStatementSearchParam?>? searchParam;
+  final List<CapabilityStatementSearchParam>? searchParam;
   @override
-  final List<CapabilityStatementOperation?>? operation;
+  final List<CapabilityStatementOperation>? operation;
   @override
-  final List<Canonical?>? compartment;
+  final List<Canonical>? compartment;
 
   @override
   String toString() {
@@ -1894,11 +1867,11 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
           CapabilityStatementRestMode? mode,
       Markdown? documentation,
       CapabilityStatementSecurity? security,
-      List<CapabilityStatementResource?>? resource,
-      List<CapabilityStatementInteraction1?>? interaction,
-      List<CapabilityStatementSearchParam?>? searchParam,
-      List<CapabilityStatementOperation?>? operation,
-      List<Canonical?>? compartment}) = _$_CapabilityStatementRest;
+      List<CapabilityStatementResource>? resource,
+      List<CapabilityStatementInteraction1>? interaction,
+      List<CapabilityStatementSearchParam>? searchParam,
+      List<CapabilityStatementOperation>? operation,
+      List<Canonical>? compartment}) = _$_CapabilityStatementRest;
 
   factory _CapabilityStatementRest.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementRest.fromJson;
@@ -1918,15 +1891,15 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
   @override
   CapabilityStatementSecurity? get security;
   @override
-  List<CapabilityStatementResource?>? get resource;
+  List<CapabilityStatementResource>? get resource;
   @override
-  List<CapabilityStatementInteraction1?>? get interaction;
+  List<CapabilityStatementInteraction1>? get interaction;
   @override
-  List<CapabilityStatementSearchParam?>? get searchParam;
+  List<CapabilityStatementSearchParam>? get searchParam;
   @override
-  List<CapabilityStatementOperation?>? get operation;
+  List<CapabilityStatementOperation>? get operation;
   @override
-  List<Canonical?>? get compartment;
+  List<Canonical>? get compartment;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementRestCopyWith<_CapabilityStatementRest> get copyWith;
@@ -1946,7 +1919,7 @@ class _$CapabilityStatementSecurityTearOff {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Boolean? cors,
-      List<CodeableConcept?>? service,
+      List<CodeableConcept>? service,
       Markdown? description}) {
     return _CapabilityStatementSecurity(
       id: id,
@@ -1973,7 +1946,7 @@ mixin _$CapabilityStatementSecurity {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   Boolean? get cors;
-  List<CodeableConcept?>? get service;
+  List<CodeableConcept>? get service;
   Markdown? get description;
 
   Map<String, dynamic> toJson();
@@ -1993,7 +1966,7 @@ abstract class $CapabilityStatementSecurityCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Boolean? cors,
-      List<CodeableConcept?>? service,
+      List<CodeableConcept>? service,
       Markdown? description});
 }
 
@@ -2026,7 +1999,7 @@ class _$CapabilityStatementSecurityCopyWithImpl<$Res>
       cors: cors == freezed ? _value.cors : cors as Boolean?,
       service: service == freezed
           ? _value.service
-          : service as List<CodeableConcept?>?,
+          : service as List<CodeableConcept>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -2047,7 +2020,7 @@ abstract class _$CapabilityStatementSecurityCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Boolean? cors,
-      List<CodeableConcept?>? service,
+      List<CodeableConcept>? service,
       Markdown? description});
 }
 
@@ -2084,7 +2057,7 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
       cors: cors == freezed ? _value.cors : cors as Boolean?,
       service: service == freezed
           ? _value.service
-          : service as List<CodeableConcept?>?,
+          : service as List<CodeableConcept>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -2118,7 +2091,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
   @override
   final Boolean? cors;
   @override
-  final List<CodeableConcept?>? service;
+  final List<CodeableConcept>? service;
   @override
   final Markdown? description;
 
@@ -2179,7 +2152,7 @@ abstract class _CapabilityStatementSecurity
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Boolean? cors,
-      List<CodeableConcept?>? service,
+      List<CodeableConcept>? service,
       Markdown? description}) = _$_CapabilityStatementSecurity;
 
   factory _CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =
@@ -2195,7 +2168,7 @@ abstract class _CapabilityStatementSecurity
   @override
   Boolean? get cors;
   @override
-  List<CodeableConcept?>? get service;
+  List<CodeableConcept>? get service;
   @override
   Markdown? get description;
   @override
@@ -2213,31 +2186,33 @@ CapabilityStatementResource _$CapabilityStatementResourceFromJson(
 class _$CapabilityStatementResourceTearOff {
   const _$CapabilityStatementResourceTearOff();
 
-  _CapabilityStatementResource call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      Code? type,
-      Canonical? profile,
-      List<Canonical?>? supportedProfile,
-      Markdown? documentation,
-      List<CapabilityStatementInteraction?>? interaction,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-          CapabilityStatementResourceVersioning? versioning,
-      Boolean? readHistory,
-      Boolean? updateCreate,
-      Boolean? conditionalCreate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-          CapabilityStatementResourceConditionalRead? conditionalRead,
-      Boolean? conditionalUpdate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-          CapabilityStatementResourceConditionalDelete? conditionalDelete,
-      List<CapabilityStatementResourceReferencePolicy?>? referencePolicy,
-      List<String?>? searchInclude,
-      List<String?>? searchRevInclude,
-      List<CapabilityStatementSearchParam?>? searchParam,
-      List<CapabilityStatementOperation?>? operation}) {
+  _CapabilityStatementResource
+      call(
+          {String? id,
+          Code? type,
+          Canonical? profile,
+          List<Canonical>? supportedProfile,
+          Markdown? documentation,
+          List<CapabilityStatementInteraction>? interaction,
+          @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+              CapabilityStatementResourceVersioning? versioning,
+          Boolean? readHistory,
+          Boolean? updateCreate,
+          Boolean? conditionalCreate,
+          @JsonKey(
+              unknownEnumValue:
+                  CapabilityStatementResourceConditionalRead.unknown)
+              CapabilityStatementResourceConditionalRead? conditionalRead,
+          Boolean? conditionalUpdate,
+          @JsonKey(
+              unknownEnumValue:
+                  CapabilityStatementResourceConditionalDelete.unknown)
+              CapabilityStatementResourceConditionalDelete? conditionalDelete,
+          List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
+          List<String>? searchInclude,
+          List<String>? searchRevInclude,
+          List<CapabilityStatementSearchParam>? searchParam,
+          List<CapabilityStatementOperation>? operation}) {
     return _CapabilityStatementResource(
       id: id,
       extension_: extension_,
@@ -2278,9 +2253,9 @@ mixin _$CapabilityStatementResource {
   List<FhirExtension?>? get modifierExtension;
   Code? get type;
   Canonical? get profile;
-  List<Canonical?>? get supportedProfile;
+  List<Canonical>? get supportedProfile;
   Markdown? get documentation;
-  List<CapabilityStatementInteraction?>? get interaction;
+  List<CapabilityStatementInteraction>? get interaction;
   @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
   CapabilityStatementResourceVersioning? get versioning;
   Boolean? get readHistory;
@@ -2292,11 +2267,11 @@ mixin _$CapabilityStatementResource {
   @JsonKey(
       unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
   CapabilityStatementResourceConditionalDelete? get conditionalDelete;
-  List<CapabilityStatementResourceReferencePolicy?>? get referencePolicy;
-  List<String?>? get searchInclude;
-  List<String?>? get searchRevInclude;
-  List<CapabilityStatementSearchParam?>? get searchParam;
-  List<CapabilityStatementOperation?>? get operation;
+  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy;
+  List<String>? get searchInclude;
+  List<String>? get searchRevInclude;
+  List<CapabilityStatementSearchParam>? get searchParam;
+  List<CapabilityStatementOperation>? get operation;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2310,31 +2285,33 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
           CapabilityStatementResource value,
           $Res Function(CapabilityStatementResource) then) =
       _$CapabilityStatementResourceCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      Code? type,
-      Canonical? profile,
-      List<Canonical?>? supportedProfile,
-      Markdown? documentation,
-      List<CapabilityStatementInteraction?>? interaction,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-          CapabilityStatementResourceVersioning? versioning,
-      Boolean? readHistory,
-      Boolean? updateCreate,
-      Boolean? conditionalCreate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-          CapabilityStatementResourceConditionalRead? conditionalRead,
-      Boolean? conditionalUpdate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-          CapabilityStatementResourceConditionalDelete? conditionalDelete,
-      List<CapabilityStatementResourceReferencePolicy?>? referencePolicy,
-      List<String?>? searchInclude,
-      List<String?>? searchRevInclude,
-      List<CapabilityStatementSearchParam?>? searchParam,
-      List<CapabilityStatementOperation?>? operation});
+  $Res
+      call(
+          {String? id,
+          Code? type,
+          Canonical? profile,
+          List<Canonical>? supportedProfile,
+          Markdown? documentation,
+          List<CapabilityStatementInteraction>? interaction,
+          @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+              CapabilityStatementResourceVersioning? versioning,
+          Boolean? readHistory,
+          Boolean? updateCreate,
+          Boolean? conditionalCreate,
+          @JsonKey(
+              unknownEnumValue:
+                  CapabilityStatementResourceConditionalRead.unknown)
+              CapabilityStatementResourceConditionalRead? conditionalRead,
+          Boolean? conditionalUpdate,
+          @JsonKey(
+              unknownEnumValue:
+                  CapabilityStatementResourceConditionalDelete.unknown)
+              CapabilityStatementResourceConditionalDelete? conditionalDelete,
+          List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
+          List<String>? searchInclude,
+          List<String>? searchRevInclude,
+          List<CapabilityStatementSearchParam>? searchParam,
+          List<CapabilityStatementOperation>? operation});
 }
 
 /// @nodoc
@@ -2381,13 +2358,13 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
       profile: profile == freezed ? _value.profile : profile as Canonical?,
       supportedProfile: supportedProfile == freezed
           ? _value.supportedProfile
-          : supportedProfile as List<Canonical?>?,
+          : supportedProfile as List<Canonical>?,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction?>?,
+          : interaction as List<CapabilityStatementInteraction>?,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as CapabilityStatementResourceVersioning?,
@@ -2411,19 +2388,19 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
           : referencePolicy
-              as List<CapabilityStatementResourceReferencePolicy?>?,
+              as List<CapabilityStatementResourceReferencePolicy>?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as List<String?>?,
+          : searchInclude as List<String>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as List<String?>?,
+          : searchRevInclude as List<String>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam?>?,
+          : searchParam as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation?>?,
+          : operation as List<CapabilityStatementOperation>?,
     ));
   }
 }
@@ -2436,31 +2413,33 @@ abstract class _$CapabilityStatementResourceCopyWith<$Res>
           $Res Function(_CapabilityStatementResource) then) =
       __$CapabilityStatementResourceCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      Code? type,
-      Canonical? profile,
-      List<Canonical?>? supportedProfile,
-      Markdown? documentation,
-      List<CapabilityStatementInteraction?>? interaction,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-          CapabilityStatementResourceVersioning? versioning,
-      Boolean? readHistory,
-      Boolean? updateCreate,
-      Boolean? conditionalCreate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-          CapabilityStatementResourceConditionalRead? conditionalRead,
-      Boolean? conditionalUpdate,
-      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-          CapabilityStatementResourceConditionalDelete? conditionalDelete,
-      List<CapabilityStatementResourceReferencePolicy?>? referencePolicy,
-      List<String?>? searchInclude,
-      List<String?>? searchRevInclude,
-      List<CapabilityStatementSearchParam?>? searchParam,
-      List<CapabilityStatementOperation?>? operation});
+  $Res
+      call(
+          {String? id,
+          Code? type,
+          Canonical? profile,
+          List<Canonical>? supportedProfile,
+          Markdown? documentation,
+          List<CapabilityStatementInteraction>? interaction,
+          @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+              CapabilityStatementResourceVersioning? versioning,
+          Boolean? readHistory,
+          Boolean? updateCreate,
+          Boolean? conditionalCreate,
+          @JsonKey(
+              unknownEnumValue:
+                  CapabilityStatementResourceConditionalRead.unknown)
+              CapabilityStatementResourceConditionalRead? conditionalRead,
+          Boolean? conditionalUpdate,
+          @JsonKey(
+              unknownEnumValue:
+                  CapabilityStatementResourceConditionalDelete.unknown)
+              CapabilityStatementResourceConditionalDelete? conditionalDelete,
+          List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
+          List<String>? searchInclude,
+          List<String>? searchRevInclude,
+          List<CapabilityStatementSearchParam>? searchParam,
+          List<CapabilityStatementOperation>? operation});
 }
 
 /// @nodoc
@@ -2511,13 +2490,13 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
       profile: profile == freezed ? _value.profile : profile as Canonical?,
       supportedProfile: supportedProfile == freezed
           ? _value.supportedProfile
-          : supportedProfile as List<Canonical?>?,
+          : supportedProfile as List<Canonical>?,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction?>?,
+          : interaction as List<CapabilityStatementInteraction>?,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as CapabilityStatementResourceVersioning?,
@@ -2541,19 +2520,19 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
           : referencePolicy
-              as List<CapabilityStatementResourceReferencePolicy?>?,
+              as List<CapabilityStatementResourceReferencePolicy>?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as List<String?>?,
+          : searchInclude as List<String>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as List<String?>?,
+          : searchRevInclude as List<String>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam?>?,
+          : searchParam as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation?>?,
+          : operation as List<CapabilityStatementOperation>?,
     ));
   }
 }
@@ -2604,11 +2583,11 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   @override
   final Canonical? profile;
   @override
-  final List<Canonical?>? supportedProfile;
+  final List<Canonical>? supportedProfile;
   @override
   final Markdown? documentation;
   @override
-  final List<CapabilityStatementInteraction?>? interaction;
+  final List<CapabilityStatementInteraction>? interaction;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
   final CapabilityStatementResourceVersioning? versioning;
@@ -2628,15 +2607,15 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
       unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
   final CapabilityStatementResourceConditionalDelete? conditionalDelete;
   @override
-  final List<CapabilityStatementResourceReferencePolicy?>? referencePolicy;
+  final List<CapabilityStatementResourceReferencePolicy>? referencePolicy;
   @override
-  final List<String?>? searchInclude;
+  final List<String>? searchInclude;
   @override
-  final List<String?>? searchRevInclude;
+  final List<String>? searchRevInclude;
   @override
-  final List<CapabilityStatementSearchParam?>? searchParam;
+  final List<CapabilityStatementSearchParam>? searchParam;
   @override
-  final List<CapabilityStatementOperation?>? operation;
+  final List<CapabilityStatementOperation>? operation;
 
   @override
   String toString() {
@@ -2753,9 +2732,9 @@ abstract class _CapabilityStatementResource
       List<FhirExtension?>? modifierExtension,
       Code? type,
       Canonical? profile,
-      List<Canonical?>? supportedProfile,
+      List<Canonical>? supportedProfile,
       Markdown? documentation,
-      List<CapabilityStatementInteraction?>? interaction,
+      List<CapabilityStatementInteraction>? interaction,
       @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
           CapabilityStatementResourceVersioning? versioning,
       Boolean? readHistory,
@@ -2766,11 +2745,11 @@ abstract class _CapabilityStatementResource
       Boolean? conditionalUpdate,
       @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
           CapabilityStatementResourceConditionalDelete? conditionalDelete,
-      List<CapabilityStatementResourceReferencePolicy?>? referencePolicy,
-      List<String?>? searchInclude,
-      List<String?>? searchRevInclude,
-      List<CapabilityStatementSearchParam?>? searchParam,
-      List<CapabilityStatementOperation?>? operation}) = _$_CapabilityStatementResource;
+      List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
+      List<String>? searchInclude,
+      List<String>? searchRevInclude,
+      List<CapabilityStatementSearchParam>? searchParam,
+      List<CapabilityStatementOperation>? operation}) = _$_CapabilityStatementResource;
 
   factory _CapabilityStatementResource.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementResource.fromJson;
@@ -2787,11 +2766,11 @@ abstract class _CapabilityStatementResource
   @override
   Canonical? get profile;
   @override
-  List<Canonical?>? get supportedProfile;
+  List<Canonical>? get supportedProfile;
   @override
   Markdown? get documentation;
   @override
-  List<CapabilityStatementInteraction?>? get interaction;
+  List<CapabilityStatementInteraction>? get interaction;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
   CapabilityStatementResourceVersioning? get versioning;
@@ -2811,15 +2790,15 @@ abstract class _CapabilityStatementResource
       unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
   CapabilityStatementResourceConditionalDelete? get conditionalDelete;
   @override
-  List<CapabilityStatementResourceReferencePolicy?>? get referencePolicy;
+  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy;
   @override
-  List<String?>? get searchInclude;
+  List<String>? get searchInclude;
   @override
-  List<String?>? get searchRevInclude;
+  List<String>? get searchRevInclude;
   @override
-  List<CapabilityStatementSearchParam?>? get searchParam;
+  List<CapabilityStatementSearchParam>? get searchParam;
   @override
-  List<CapabilityStatementOperation?>? get operation;
+  List<CapabilityStatementOperation>? get operation;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementResourceCopyWith<_CapabilityStatementResource>
@@ -3107,8 +3086,8 @@ class _$CapabilityStatementSearchParamTearOff {
   _CapabilityStatementSearchParam call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       Canonical? definition,
       @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
@@ -3138,8 +3117,8 @@ const $CapabilityStatementSearchParam =
 mixin _$CapabilityStatementSearchParam {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get name;
   Canonical? get definition;
   @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
@@ -3161,8 +3140,8 @@ abstract class $CapabilityStatementSearchParamCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       Canonical? definition,
       @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
@@ -3193,10 +3172,10 @@ class _$CapabilityStatementSearchParamCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       definition:
           definition == freezed ? _value.definition : definition as Canonical?,
@@ -3221,8 +3200,8 @@ abstract class _$CapabilityStatementSearchParamCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       Canonical? definition,
       @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
@@ -3257,10 +3236,10 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       definition:
           definition == freezed ? _value.definition : definition as Canonical?,
@@ -3299,9 +3278,9 @@ class _$_CapabilityStatementSearchParam
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? name;
   @override
@@ -3370,8 +3349,8 @@ abstract class _CapabilityStatementSearchParam
   factory _CapabilityStatementSearchParam(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       Canonical? definition,
       @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
@@ -3385,9 +3364,9 @@ abstract class _CapabilityStatementSearchParam
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -3953,12 +3932,10 @@ class _$CapabilityStatementMessagingTearOff {
 
   _CapabilityStatementMessaging call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CapabilityStatementEndpoint?>? endpoint,
+      List<CapabilityStatementEndpoint>? endpoint,
       UnsignedInt? reliableCache,
       Markdown? documentation,
-      List<CapabilityStatementSupportedMessage?>? supportedMessage}) {
+      List<CapabilityStatementSupportedMessage>? supportedMessage}) {
     return _CapabilityStatementMessaging(
       id: id,
       extension_: extension_,
@@ -3981,13 +3958,10 @@ const $CapabilityStatementMessaging = _$CapabilityStatementMessagingTearOff();
 /// @nodoc
 mixin _$CapabilityStatementMessaging {
   String? get id;
-  @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<CapabilityStatementEndpoint?>? get endpoint;
+  List<CapabilityStatementEndpoint>? get endpoint;
   UnsignedInt? get reliableCache;
   Markdown? get documentation;
-  List<CapabilityStatementSupportedMessage?>? get supportedMessage;
+  List<CapabilityStatementSupportedMessage>? get supportedMessage;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4003,12 +3977,10 @@ abstract class $CapabilityStatementMessagingCopyWith<$Res> {
       _$CapabilityStatementMessagingCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CapabilityStatementEndpoint?>? endpoint,
+      List<CapabilityStatementEndpoint>? endpoint,
       UnsignedInt? reliableCache,
       Markdown? documentation,
-      List<CapabilityStatementSupportedMessage?>? supportedMessage});
+      List<CapabilityStatementSupportedMessage>? supportedMessage});
 }
 
 /// @nodoc
@@ -4040,7 +4012,7 @@ class _$CapabilityStatementMessagingCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<CapabilityStatementEndpoint?>?,
+          : endpoint as List<CapabilityStatementEndpoint>?,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
           : reliableCache as UnsignedInt?,
@@ -4049,7 +4021,7 @@ class _$CapabilityStatementMessagingCopyWithImpl<$Res>
           : documentation as Markdown?,
       supportedMessage: supportedMessage == freezed
           ? _value.supportedMessage
-          : supportedMessage as List<CapabilityStatementSupportedMessage?>?,
+          : supportedMessage as List<CapabilityStatementSupportedMessage>?,
     ));
   }
 }
@@ -4064,12 +4036,10 @@ abstract class _$CapabilityStatementMessagingCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CapabilityStatementEndpoint?>? endpoint,
+      List<CapabilityStatementEndpoint>? endpoint,
       UnsignedInt? reliableCache,
       Markdown? documentation,
-      List<CapabilityStatementSupportedMessage?>? supportedMessage});
+      List<CapabilityStatementSupportedMessage>? supportedMessage});
 }
 
 /// @nodoc
@@ -4105,7 +4075,7 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<CapabilityStatementEndpoint?>?,
+          : endpoint as List<CapabilityStatementEndpoint>?,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
           : reliableCache as UnsignedInt?,
@@ -4114,7 +4084,7 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
           : documentation as Markdown?,
       supportedMessage: supportedMessage == freezed
           ? _value.supportedMessage
-          : supportedMessage as List<CapabilityStatementSupportedMessage?>?,
+          : supportedMessage as List<CapabilityStatementSupportedMessage>?,
     ));
   }
 }
@@ -4139,18 +4109,13 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
   @override
   final String? id;
   @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
-  @override
-  final List<FhirExtension?>? modifierExtension;
-  @override
-  final List<CapabilityStatementEndpoint?>? endpoint;
+  final List<CapabilityStatementEndpoint>? endpoint;
   @override
   final UnsignedInt? reliableCache;
   @override
   final Markdown? documentation;
   @override
-  final List<CapabilityStatementSupportedMessage?>? supportedMessage;
+  final List<CapabilityStatementSupportedMessage>? supportedMessage;
 
   @override
   String toString() {
@@ -4211,12 +4176,10 @@ abstract class _CapabilityStatementMessaging
   _CapabilityStatementMessaging._() : super._();
   factory _CapabilityStatementMessaging(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
-          List<CapabilityStatementEndpoint?>? endpoint,
+          List<CapabilityStatementEndpoint>? endpoint,
           UnsignedInt? reliableCache,
           Markdown? documentation,
-          List<CapabilityStatementSupportedMessage?>? supportedMessage}) =
+          List<CapabilityStatementSupportedMessage>? supportedMessage}) =
       _$_CapabilityStatementMessaging;
 
   factory _CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =
@@ -4225,18 +4188,13 @@ abstract class _CapabilityStatementMessaging
   @override
   String? get id;
   @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  @override
-  List<FhirExtension?>? get modifierExtension;
-  @override
-  List<CapabilityStatementEndpoint?>? get endpoint;
+  List<CapabilityStatementEndpoint>? get endpoint;
   @override
   UnsignedInt? get reliableCache;
   @override
   Markdown? get documentation;
   @override
-  List<CapabilityStatementSupportedMessage?>? get supportedMessage;
+  List<CapabilityStatementSupportedMessage>? get supportedMessage;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementMessagingCopyWith<_CapabilityStatementMessaging>

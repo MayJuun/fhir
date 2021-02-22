@@ -16,7 +16,7 @@ abstract class Narrative implements _$Narrative {
   Narrative._();
   factory Narrative({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required String div,
@@ -44,7 +44,7 @@ abstract class CodeableReference implements _$CodeableReference {
   CodeableReference._();
   factory CodeableReference({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     CodeableConcept? concept,
     Reference? reference,
   }) = _CodeableReference;
@@ -71,7 +71,7 @@ abstract class Reference implements _$Reference {
   Reference._();
   factory Reference({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     FhirUri? type,
@@ -103,18 +103,18 @@ abstract class Statistic implements _$Statistic {
   Statistic._();
   factory Statistic({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation?>? note,
+    List<Annotation>? note,
     CodeableConcept? statisticType,
     Quantity? quantity,
     Integer? numberOfEvents,
     @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
     StatisticSampleSize? sampleSize,
-    List<StatisticAttributeEstimate?>? attributeEstimate,
-    List<StatisticModelCharacteristic?>? modelCharacteristic,
+    List<StatisticAttributeEstimate>? attributeEstimate,
+    List<StatisticModelCharacteristic>? modelCharacteristic,
   }) = _Statistic;
 
   /// Produces a Yaml formatted String version of the object
@@ -139,11 +139,11 @@ abstract class StatisticSampleSize implements _$StatisticSampleSize {
   StatisticSampleSize._();
   factory StatisticSampleSize({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation?>? note,
+    List<Annotation>? note,
     Integer? numberOfStudies,
     @JsonKey(name: '_numberOfStudies') Element? numberOfStudiesElement,
     Integer? numberOfParticipants,
@@ -176,17 +176,17 @@ abstract class StatisticAttributeEstimate
   StatisticAttributeEstimate._();
   factory StatisticAttributeEstimate({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation?>? note,
+    List<Annotation>? note,
     CodeableConcept? type,
     Quantity? quantity,
     Decimal? level,
     @JsonKey(name: '_level') Element? levelElement,
     Range? range,
-    List<StatisticAttributeEstimate1?>? attributeEstimate,
+    List<StatisticAttributeEstimate1>? attributeEstimate,
   }) = _StatisticAttributeEstimate;
 
   /// Produces a Yaml formatted String version of the object
@@ -213,11 +213,11 @@ abstract class StatisticAttributeEstimate1
   StatisticAttributeEstimate1._();
   factory StatisticAttributeEstimate1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation?>? note,
+    List<Annotation>? note,
     CodeableConcept? type,
     Quantity? quantity,
     Decimal? level,
@@ -249,15 +249,15 @@ abstract class StatisticModelCharacteristic
   StatisticModelCharacteristic._();
   factory StatisticModelCharacteristic({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
     CodeableConcept? valueCodeableConcept,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Quantity? valueQuantity,
     Range? valueRange,
-    List<StatisticVariable?>? variable,
+    List<StatisticVariable>? variable,
   }) = _StatisticModelCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
@@ -283,14 +283,14 @@ abstract class StatisticVariable implements _$StatisticVariable {
   StatisticVariable._();
   factory StatisticVariable({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Reference variableDefinition,
     Code? handling,
     @JsonKey(name: '_handling') Element? handlingElement,
-    List<CodeableConcept?>? valueCategory,
-    List<Quantity?>? valueQuantity,
-    List<Range?>? valueRange,
+    List<CodeableConcept>? valueCategory,
+    List<Quantity>? valueQuantity,
+    List<Range>? valueRange,
   }) = _StatisticVariable;
 
   /// Produces a Yaml formatted String version of the object
@@ -315,11 +315,11 @@ abstract class OrderedDistribution implements _$OrderedDistribution {
   OrderedDistribution._();
   factory OrderedDistribution({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation?>? note,
+    List<Annotation>? note,
     Integer? numberOfIntervals,
     @JsonKey(name: '_numberOfIntervals') Element? numberOfIntervalsElement,
     Quantity? bottomOfFirstInterval,
@@ -350,11 +350,11 @@ abstract class OrderedDistributionInterval
   OrderedDistributionInterval._();
   factory OrderedDistributionInterval({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Integer? rankOrder,
     @JsonKey(name: '_rankOrder') Element? rankOrderElement,
-    List<Statistic?>? intervalStatistic,
+    List<Statistic>? intervalStatistic,
   }) = _OrderedDistributionInterval;
 
   /// Produces a Yaml formatted String version of the object
@@ -380,16 +380,16 @@ abstract class Meta implements _$Meta {
   Meta._();
   factory Meta({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Id? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Instant? lastUpdated,
     @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
     FhirUri? source,
     @JsonKey(name: '_source') Element? sourceElement,
-    List<Canonical?>? profile,
-    List<Coding?>? security,
-    List<Coding?>? tag,
+    List<Canonical>? profile,
+    List<Coding>? security,
+    List<Coding>? tag,
   }) = _Meta;
 
   /// Produces a Yaml formatted String version of the object
@@ -413,13 +413,13 @@ abstract class Dosage implements _$Dosage {
   Dosage._();
   factory Dosage({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Integer? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-    List<CodeableConcept?>? additionalInstruction,
+    List<CodeableConcept>? additionalInstruction,
     String? patientInstruction,
     @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
     Timing? timing,
@@ -429,7 +429,7 @@ abstract class Dosage implements _$Dosage {
     CodeableConcept? site,
     CodeableConcept? route,
     CodeableConcept? method,
-    List<DosageDoseAndRate?>? doseAndRate,
+    List<DosageDoseAndRate>? doseAndRate,
     Ratio? maxDosePerPeriod,
     Quantity? maxDosePerAdministration,
     Quantity? maxDosePerLifetime,
@@ -456,8 +456,8 @@ abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
   DosageDoseAndRate._();
   factory DosageDoseAndRate({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     Range? doseRange,
     Quantity? doseQuantity,
@@ -488,11 +488,11 @@ abstract class ElementDefinition implements _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    List<ElementDefinitionRepresentation?>? representation,
+    List<ElementDefinitionRepresentation>? representation,
     @JsonKey(name: '_representation') List<Element?>? representationElement,
     String? sliceName,
     @JsonKey(name: '_sliceName') Element? sliceNameElement,
@@ -500,7 +500,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_sliceIsConstraining') Element? sliceIsConstrainingElement,
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
-    List<Coding?>? code,
+    List<Coding>? code,
     ElementDefinitionSlicing? slicing,
     String? short,
     @JsonKey(name: '_short') Element? shortElement,
@@ -510,7 +510,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_comment') Element? commentElement,
     Markdown? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
-    List<String?>? alias,
+    List<String>? alias,
     @JsonKey(name: '_alias') List<Element?>? aliasElement,
     UnsignedInt? min,
     @JsonKey(name: '_min') Element? minElement,
@@ -519,7 +519,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     ElementDefinitionBase? base,
     FhirUri? contentReference,
     @JsonKey(name: '_contentReference') Element? contentReferenceElement,
-    List<ElementDefinitionType?>? type,
+    List<ElementDefinitionType>? type,
     Base64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
         Element? defaultValueBase64BinaryElement,
@@ -744,7 +744,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     UsageContext? patternUsageContext,
     Dosage? patternDosage,
     Meta? patternMeta,
-    List<ElementDefinitionExample?>? example,
+    List<ElementDefinitionExample>? example,
     Date? minValueDate,
     @JsonKey(name: '_minValueDate') Element? minValueDateElement,
     FhirDateTime? minValueDateTime,
@@ -785,9 +785,9 @@ abstract class ElementDefinition implements _$ElementDefinition {
     Quantity? maxValueQuantity,
     Integer? maxLength,
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
-    List<Id?>? condition,
+    List<Id>? condition,
     @JsonKey(name: '_condition') List<Element?>? conditionElement,
-    List<ElementDefinitionConstraint?>? constraint,
+    List<ElementDefinitionConstraint>? constraint,
     Boolean? mustSupport,
     @JsonKey(name: '_mustSupport') Element? mustSupportElement,
     Boolean? isModifier,
@@ -797,7 +797,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     Boolean? isSummary,
     @JsonKey(name: '_isSummary') Element? isSummaryElement,
     ElementDefinitionBinding? binding,
-    List<ElementDefinitionMapping?>? mapping,
+    List<ElementDefinitionMapping>? mapping,
   }) = _ElementDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -822,9 +822,9 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<ElementDefinitionDiscriminator?>? discriminator,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<ElementDefinitionDiscriminator>? discriminator,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Boolean? ordered,
@@ -858,8 +858,8 @@ abstract class ElementDefinitionDiscriminator
   ElementDefinitionDiscriminator._();
   factory ElementDefinitionDiscriminator({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
         ElementDefinitionDiscriminatorType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -892,8 +892,8 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
   ElementDefinitionBase._();
   factory ElementDefinitionBase({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     UnsignedInt? min,
@@ -924,13 +924,13 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? code,
     @JsonKey(name: '_code') Element? codeElement,
-    List<Canonical?>? profile,
-    List<Canonical?>? targetProfile,
-    List<ElementDefinitionTypeAggregation?>? aggregation,
+    List<Canonical>? profile,
+    List<Canonical>? targetProfile,
+    List<ElementDefinitionTypeAggregation>? aggregation,
     @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
     @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
         ElementDefinitionTypeVersioning? versioning,
@@ -959,8 +959,8 @@ abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
   ElementDefinitionExample._();
   factory ElementDefinitionExample({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
     Base64Binary? valueBase64Binary,
@@ -1060,8 +1060,8 @@ abstract class ElementDefinitionConstraint
   ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? key,
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
@@ -1101,8 +1101,8 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
         ElementDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
@@ -1134,8 +1134,8 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     Code? language,

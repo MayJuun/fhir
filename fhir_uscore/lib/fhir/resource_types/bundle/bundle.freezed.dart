@@ -26,8 +26,8 @@ class _$BundleTearOff {
           BundleType? type,
       Instant? timestamp,
       UnsignedInt? total,
-      List<BundleLink?>? link,
-      List<BundleEntry?>? entry,
+      List<BundleLink>? link,
+      List<BundleEntry>? entry,
       Signature? signature}) {
     return _Bundle(
       resourceType: resourceType,
@@ -62,8 +62,8 @@ mixin _$Bundle {
   BundleType? get type;
   Instant? get timestamp;
   UnsignedInt? get total;
-  List<BundleLink?>? get link;
-  List<BundleEntry?>? get entry;
+  List<BundleLink>? get link;
+  List<BundleEntry>? get entry;
   Signature? get signature;
 
   Map<String, dynamic> toJson();
@@ -85,8 +85,8 @@ abstract class $BundleCopyWith<$Res> {
           BundleType? type,
       Instant? timestamp,
       UnsignedInt? total,
-      List<BundleLink?>? link,
-      List<BundleEntry?>? entry,
+      List<BundleLink>? link,
+      List<BundleEntry>? entry,
       Signature? signature});
 
   $MetaCopyWith<$Res>? get meta;
@@ -126,8 +126,8 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
       timestamp:
           timestamp == freezed ? _value.timestamp : timestamp as Instant?,
       total: total == freezed ? _value.total : total as UnsignedInt?,
-      link: link == freezed ? _value.link : link as List<BundleLink?>?,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry?>?,
+      link: link == freezed ? _value.link : link as List<BundleLink>?,
+      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>?,
       signature:
           signature == freezed ? _value.signature : signature as Signature?,
     ));
@@ -182,8 +182,8 @@ abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
           BundleType? type,
       Instant? timestamp,
       UnsignedInt? total,
-      List<BundleLink?>? link,
-      List<BundleEntry?>? entry,
+      List<BundleLink>? link,
+      List<BundleEntry>? entry,
       Signature? signature});
 
   @override
@@ -227,8 +227,8 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
       timestamp:
           timestamp == freezed ? _value.timestamp : timestamp as Instant?,
       total: total == freezed ? _value.total : total as UnsignedInt?,
-      link: link == freezed ? _value.link : link as List<BundleLink?>?,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry?>?,
+      link: link == freezed ? _value.link : link as List<BundleLink>?,
+      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>?,
       signature:
           signature == freezed ? _value.signature : signature as Signature?,
     ));
@@ -274,9 +274,9 @@ class _$_Bundle extends _Bundle {
   @override
   final UnsignedInt? total;
   @override
-  final List<BundleLink?>? link;
+  final List<BundleLink>? link;
   @override
-  final List<BundleEntry?>? entry;
+  final List<BundleEntry>? entry;
   @override
   final Signature? signature;
 
@@ -351,8 +351,8 @@ abstract class _Bundle extends Bundle {
           BundleType? type,
       Instant? timestamp,
       UnsignedInt? total,
-      List<BundleLink?>? link,
-      List<BundleEntry?>? entry,
+      List<BundleLink>? link,
+      List<BundleEntry>? entry,
       Signature? signature}) = _$_Bundle;
 
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
@@ -374,9 +374,9 @@ abstract class _Bundle extends Bundle {
   @override
   UnsignedInt? get total;
   @override
-  List<BundleLink?>? get link;
+  List<BundleLink>? get link;
   @override
-  List<BundleEntry?>? get entry;
+  List<BundleEntry>? get entry;
   @override
   Signature? get signature;
   @override
@@ -563,7 +563,7 @@ class _$BundleEntryTearOff {
 
   _BundleEntry call(
       {String? id,
-      List<BundleLink?>? link,
+      List<BundleLink>? link,
       FhirUri? fullUrl,
       Resource? resource,
       BundleSearch? search,
@@ -591,7 +591,7 @@ const $BundleEntry = _$BundleEntryTearOff();
 /// @nodoc
 mixin _$BundleEntry {
   String? get id;
-  List<BundleLink?>? get link;
+  List<BundleLink>? get link;
   FhirUri? get fullUrl;
   Resource? get resource;
   BundleSearch? get search;
@@ -610,7 +610,7 @@ abstract class $BundleEntryCopyWith<$Res> {
       _$BundleEntryCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      List<BundleLink?>? link,
+      List<BundleLink>? link,
       FhirUri? fullUrl,
       Resource? resource,
       BundleSearch? search,
@@ -642,7 +642,7 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String?,
-      link: link == freezed ? _value.link : link as List<BundleLink?>?,
+      link: link == freezed ? _value.link : link as List<BundleLink>?,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri?,
       resource: resource == freezed ? _value.resource : resource as Resource?,
       search: search == freezed ? _value.search : search as BundleSearch?,
@@ -695,7 +695,7 @@ abstract class _$BundleEntryCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      List<BundleLink?>? link,
+      List<BundleLink>? link,
       FhirUri? fullUrl,
       Resource? resource,
       BundleSearch? search,
@@ -732,7 +732,7 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
   }) {
     return _then(_BundleEntry(
       id: id == freezed ? _value.id : id as String?,
-      link: link == freezed ? _value.link : link as List<BundleLink?>?,
+      link: link == freezed ? _value.link : link as List<BundleLink>?,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri?,
       resource: resource == freezed ? _value.resource : resource as Resource?,
       search: search == freezed ? _value.search : search as BundleSearch?,
@@ -763,7 +763,7 @@ class _$_BundleEntry extends _BundleEntry {
   @override
   final String? id;
   @override
-  final List<BundleLink?>? link;
+  final List<BundleLink>? link;
   @override
   final FhirUri? fullUrl;
   @override
@@ -830,7 +830,7 @@ abstract class _BundleEntry extends BundleEntry {
   _BundleEntry._() : super._();
   factory _BundleEntry(
       {String? id,
-      List<BundleLink?>? link,
+      List<BundleLink>? link,
       FhirUri? fullUrl,
       Resource? resource,
       BundleSearch? search,
@@ -843,7 +843,7 @@ abstract class _BundleEntry extends BundleEntry {
   @override
   String? get id;
   @override
-  List<BundleLink?>? get link;
+  List<BundleLink>? get link;
   @override
   FhirUri? get fullUrl;
   @override
