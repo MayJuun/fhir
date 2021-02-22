@@ -48,6 +48,7 @@ class _$ObservationTearOff {
       List<ObservationReferenceRange?>? referenceRange,
       List<ObservationComponent?>? component,
       List<CodeableConcept?>? interpretation,
+      List<CodeableConcept?>? bodySite,
       Reference? device,
       Instant? issued}) {
     return _Observation(
@@ -80,6 +81,7 @@ class _$ObservationTearOff {
       referenceRange: referenceRange,
       component: component,
       interpretation: interpretation,
+      bodySite: bodySite,
       device: device,
       issued: issued,
     );
@@ -126,6 +128,7 @@ mixin _$Observation {
   List<ObservationReferenceRange?>? get referenceRange;
   List<ObservationComponent?>? get component;
   List<CodeableConcept?>? get interpretation;
+  List<CodeableConcept?>? get bodySite;
   Reference? get device;
   Instant? get issued;
 
@@ -171,6 +174,7 @@ abstract class $ObservationCopyWith<$Res> {
       List<ObservationReferenceRange?>? referenceRange,
       List<ObservationComponent?>? component,
       List<CodeableConcept?>? interpretation,
+      List<CodeableConcept?>? bodySite,
       Reference? device,
       Instant? issued});
 
@@ -229,6 +233,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
     Object? referenceRange = freezed,
     Object? component = freezed,
     Object? interpretation = freezed,
+    Object? bodySite = freezed,
     Object? device = freezed,
     Object? issued = freezed,
   }) {
@@ -299,6 +304,9 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
       interpretation: interpretation == freezed
           ? _value.interpretation
           : interpretation as List<CodeableConcept?>?,
+      bodySite: bodySite == freezed
+          ? _value.bodySite
+          : bodySite as List<CodeableConcept?>?,
       device: device == freezed ? _value.device : device as Reference?,
       issued: issued == freezed ? _value.issued : issued as Instant?,
     ));
@@ -495,6 +503,7 @@ abstract class _$ObservationCopyWith<$Res>
       List<ObservationReferenceRange?>? referenceRange,
       List<ObservationComponent?>? component,
       List<CodeableConcept?>? interpretation,
+      List<CodeableConcept?>? bodySite,
       Reference? device,
       Instant? issued});
 
@@ -569,6 +578,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
     Object? referenceRange = freezed,
     Object? component = freezed,
     Object? interpretation = freezed,
+    Object? bodySite = freezed,
     Object? device = freezed,
     Object? issued = freezed,
   }) {
@@ -639,6 +649,9 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
       interpretation: interpretation == freezed
           ? _value.interpretation
           : interpretation as List<CodeableConcept?>?,
+      bodySite: bodySite == freezed
+          ? _value.bodySite
+          : bodySite as List<CodeableConcept?>?,
       device: device == freezed ? _value.device : device as Reference?,
       issued: issued == freezed ? _value.issued : issued as Instant?,
     ));
@@ -681,6 +694,7 @@ class _$_Observation extends _Observation {
       this.referenceRange,
       this.component,
       this.interpretation,
+      this.bodySite,
       this.device,
       this.issued})
       : super._();
@@ -749,13 +763,15 @@ class _$_Observation extends _Observation {
   @override
   final List<CodeableConcept?>? interpretation;
   @override
+  final List<CodeableConcept?>? bodySite;
+  @override
   final Reference? device;
   @override
   final Instant? issued;
 
   @override
   String toString() {
-    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, text: $text, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueBoolean: $valueBoolean, valueInteger: $valueInteger, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueTime: $valueTime, valueDateTime: $valueDateTime, valuePeriod: $valuePeriod, dataAbsentReason: $dataAbsentReason, hasMember: $hasMember, note: $note, referenceRange: $referenceRange, component: $component, interpretation: $interpretation, device: $device, issued: $issued)';
+    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, text: $text, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectivePeriod: $effectivePeriod, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueBoolean: $valueBoolean, valueInteger: $valueInteger, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueTime: $valueTime, valueDateTime: $valueDateTime, valuePeriod: $valuePeriod, dataAbsentReason: $dataAbsentReason, hasMember: $hasMember, note: $note, referenceRange: $referenceRange, component: $component, interpretation: $interpretation, bodySite: $bodySite, device: $device, issued: $issued)';
   }
 
   @override
@@ -833,6 +849,7 @@ class _$_Observation extends _Observation {
             (identical(other.referenceRange, referenceRange) || const DeepCollectionEquality().equals(other.referenceRange, referenceRange)) &&
             (identical(other.component, component) || const DeepCollectionEquality().equals(other.component, component)) &&
             (identical(other.interpretation, interpretation) || const DeepCollectionEquality().equals(other.interpretation, interpretation)) &&
+            (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
             (identical(other.device, device) || const DeepCollectionEquality().equals(other.device, device)) &&
             (identical(other.issued, issued) || const DeepCollectionEquality().equals(other.issued, issued)));
   }
@@ -869,6 +886,7 @@ class _$_Observation extends _Observation {
       const DeepCollectionEquality().hash(referenceRange) ^
       const DeepCollectionEquality().hash(component) ^
       const DeepCollectionEquality().hash(interpretation) ^
+      const DeepCollectionEquality().hash(bodySite) ^
       const DeepCollectionEquality().hash(device) ^
       const DeepCollectionEquality().hash(issued);
 
@@ -917,6 +935,7 @@ abstract class _Observation extends Observation {
       List<ObservationReferenceRange?>? referenceRange,
       List<ObservationComponent?>? component,
       List<CodeableConcept?>? interpretation,
+      List<CodeableConcept?>? bodySite,
       Reference? device,
       Instant? issued}) = _$_Observation;
 
@@ -983,6 +1002,8 @@ abstract class _Observation extends Observation {
   List<ObservationComponent?>? get component;
   @override
   List<CodeableConcept?>? get interpretation;
+  @override
+  List<CodeableConcept?>? get bodySite;
   @override
   Reference? get device;
   @override

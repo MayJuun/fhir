@@ -48,6 +48,7 @@ abstract class Observation with Resource implements _$Observation {
     List<ObservationReferenceRange?>? referenceRange,
     List<ObservationComponent?>? component,
     List<CodeableConcept?>? interpretation,
+    List<CodeableConcept?>? bodySite,
     Reference? device,
     Instant? issued,
   }) = _Observation;
@@ -487,6 +488,81 @@ abstract class Observation with Resource implements _$Observation {
           code: Code('kg/m2'),
         ),
       );
+
+  factory Observation.bloodPressure(
+    Reference subject,
+    FhirDateTime dateTime, {
+    required double systolic,
+    double? diastolic,
+    BodySiteForBp? bodySite,
+  }) {
+    final component = <ObservationComponent>[];
+    component.add(
+      ObservationComponent(
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('8480-6'),
+              display: 'Systolic blood pressure',
+            ),
+            Coding(
+              system: FhirUri('http://snomed.info/sct'),
+              code: Code('271649006'),
+              display: 'Systolic blood pressure',
+            ),
+          ],
+        ),
+        valueQuantity: Quantity(
+          value: Decimal(systolic),
+          unit: 'mmHg',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('mm[Hg]'),
+        ),
+      ),
+    );
+    if (diastolic != null) {
+      component.add(
+        ObservationComponent(
+          code: CodeableConcept(
+            coding: [
+              Coding(
+                system: FhirUri('http://loinc.org'),
+                code: Code('8462-4'),
+                display: 'Diastolic blood pressure',
+              ),
+            ],
+          ),
+          valueQuantity: Quantity(
+            value: Decimal(diastolic),
+            unit: 'mmHg',
+            system: FhirUri('http://unitsofmeasure.org'),
+            code: Code('mm[Hg]'),
+          ),
+        ),
+      );
+    }
+
+    return Observation(
+      category: _vitalSignsCategory,
+      code: CodeableConcept(
+        coding: [
+          Coding(
+            system: FhirUri('http://loinc.org'),
+            code: Code('85354-9'),
+            display: 'Blood pressure panel with all children optional',
+          ),
+        ],
+        text: 'Blood pressure systolic & diastolic',
+      ),
+      subject: subject,
+      bodySite: bodySite == null
+          ? null
+          : [codeableConceptFromBodySiteForBp[bodySite]],
+      effectiveDateTime: dateTime,
+      component: component,
+    );
+  }
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
