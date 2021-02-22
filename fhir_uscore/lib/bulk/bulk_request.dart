@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 
@@ -113,7 +112,7 @@ abstract class BulkRequest with _$BulkRequest {
       Response resultWithTime;
       while (retryAfter > 0) {
         if (currentLocation == null) {
-          throw HttpException('"content-location" was null for bulk request');
+          throw Exception('"content-location" was null for bulk request');
         } else {
           resultWithTime =
               await client.get(Uri.parse(currentLocation), headers: headers);
