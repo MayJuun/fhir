@@ -23,7 +23,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     Meta? meta,
     Narrative? text,
     Code? language,
-    List<Resource>? contained,
+    List<Resource?>? contained,
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 

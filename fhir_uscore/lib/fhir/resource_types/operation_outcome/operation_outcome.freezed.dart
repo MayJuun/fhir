@@ -23,7 +23,7 @@ class _$OperationOutcomeTearOff {
       Meta? meta,
       Narrative? text,
       Code? language,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       required List<OperationOutcomeIssue> issue}) {
     return _OperationOutcome(
       resourceType: resourceType,
@@ -52,7 +52,7 @@ mixin _$OperationOutcome {
   Meta? get meta;
   Narrative? get text;
   Code? get language;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   List<OperationOutcomeIssue> get issue;
 
   Map<String, dynamic> toJson();
@@ -72,7 +72,7 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       Meta? meta,
       Narrative? text,
       Code? language,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       List<OperationOutcomeIssue> issue});
 
   $MetaCopyWith<$Res>? get meta;
@@ -108,7 +108,7 @@ class _$OperationOutcomeCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       issue: issue == freezed
           ? _value.issue
           : issue as List<OperationOutcomeIssue>,
@@ -152,7 +152,7 @@ abstract class _$OperationOutcomeCopyWith<$Res>
       Meta? meta,
       Narrative? text,
       Code? language,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       List<OperationOutcomeIssue> issue});
 
   @override
@@ -192,7 +192,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
       language: language == freezed ? _value.language : language as Code?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       issue: issue == freezed
           ? _value.issue
           : issue as List<OperationOutcomeIssue>,
@@ -230,7 +230,7 @@ class _$_OperationOutcome extends _OperationOutcome {
   @override
   final Code? language;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   final List<OperationOutcomeIssue> issue;
 
@@ -293,7 +293,7 @@ abstract class _OperationOutcome extends OperationOutcome {
       Meta? meta,
       Narrative? text,
       Code? language,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       required List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
@@ -311,7 +311,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   @override
   Code? get language;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   List<OperationOutcomeIssue> get issue;
   @override

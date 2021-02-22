@@ -19,8 +19,7 @@ _$_MedicationRequest _$_$_MedicationRequestFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: _$enumDecode(_$MedicationRequestStatusEnumMap, json['status'],
         unknownValue: MedicationRequestStatus.unknown),
@@ -50,8 +49,7 @@ _$_MedicationRequest _$_$_MedicationRequestFromJson(Map<String, dynamic> json) {
     authoredOn: FhirDateTime.fromJson(json['authoredOn']),
     requester: Reference.fromJson(json['requester'] as Map<String, dynamic>),
     dosageInstruction: (json['dosageInstruction'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Dosage.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Dosage.fromJson(e as Map<String, dynamic>))
         .toList(),
     dispenseRequest: json['dispenseRequest'] == null
         ? null
@@ -76,7 +74,7 @@ Map<String, dynamic> _$_$_MedicationRequestToJson(
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   val['status'] = _$MedicationRequestStatusEnumMap[instance.status];
   val['intent'] = _$MedicationRequestIntentEnumMap[instance.intent];
   writeNotNull(
@@ -91,7 +89,7 @@ Map<String, dynamic> _$_$_MedicationRequestToJson(
   val['authoredOn'] = instance.authoredOn.toJson();
   val['requester'] = instance.requester.toJson();
   writeNotNull('dosageInstruction',
-      instance.dosageInstruction?.map((e) => e?.toJson()).toList());
+      instance.dosageInstruction?.map((e) => e.toJson()).toList());
   writeNotNull('dispenseRequest', instance.dispenseRequest?.toJson());
   return val;
 }

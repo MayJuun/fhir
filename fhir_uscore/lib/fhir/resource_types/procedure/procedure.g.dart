@@ -19,8 +19,7 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: _$enumDecode(_$ProcedureStatusEnumMap, json['status']),
     code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -32,14 +31,10 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
         ? null
         : Period.fromJson(json['performedPeriod'] as Map<String, dynamic>),
     performer: (json['performer'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ProcedurePerformer.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ProcedurePerformer.fromJson(e as Map<String, dynamic>))
         .toList(),
     focalDevice: (json['focalDevice'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ProcedureFocalDevice.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ProcedureFocalDevice.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -59,16 +54,16 @@ Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) {
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   val['status'] = _$ProcedureStatusEnumMap[instance.status];
   val['code'] = instance.code.toJson();
   val['subject'] = instance.subject.toJson();
   writeNotNull('performedDateTime', instance.performedDateTime?.toJson());
   writeNotNull('performedPeriod', instance.performedPeriod?.toJson());
   writeNotNull(
-      'performer', instance.performer?.map((e) => e?.toJson()).toList());
+      'performer', instance.performer?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'focalDevice', instance.focalDevice?.map((e) => e?.toJson()).toList());
+      'focalDevice', instance.focalDevice?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -172,9 +167,7 @@ _$_ProcedureFocalDevice _$_$_ProcedureFocalDeviceFromJson(
   return _$_ProcedureFocalDevice(
     id: json['id'] as String?,
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     action: json['action'] == null
         ? null
@@ -196,7 +189,7 @@ Map<String, dynamic> _$_$_ProcedureFocalDeviceToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('action', instance.action?.toJson());
   val['manipulated'] = instance.manipulated.toJson();
   return val;

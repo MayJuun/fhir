@@ -558,7 +558,7 @@ abstract class Observation with Resource implements _$Observation {
       subject: subject,
       bodySite: bodySite == null
           ? null
-          : [codeableConceptFromBodySiteForBp[bodySite]],
+          : [codeableConceptFromBodySiteForBp[bodySite]!],
       effectiveDateTime: dateTime,
       component: component,
     );

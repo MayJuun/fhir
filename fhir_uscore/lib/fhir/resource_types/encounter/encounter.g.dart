@@ -19,8 +19,7 @@ _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: _$enumDecode(_$EncounterStatusEnumMap, json['status'],
         unknownValue: EncounterStatus.unknown),
@@ -32,26 +31,20 @@ _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
         .toList(),
     subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     participant: (json['participant'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : EncounterParticipant.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => EncounterParticipant.fromJson(e as Map<String, dynamic>))
         .toList(),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
     reasonCode: (json['reasonCode'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     hospitalization: json['hospitalization'] == null
         ? null
         : EncounterHospitalization.fromJson(
             json['hospitalization'] as Map<String, dynamic>),
     location: (json['location'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : EncounterLocation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => EncounterLocation.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -71,18 +64,18 @@ Map<String, dynamic> _$_$_EncounterToJson(_$_Encounter instance) {
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   val['status'] = _$EncounterStatusEnumMap[instance.status];
   val['class'] = instance.class_.toJson();
   val['type'] = instance.type.map((e) => e?.toJson()).toList();
   val['subject'] = instance.subject.toJson();
   writeNotNull(
-      'participant', instance.participant?.map((e) => e?.toJson()).toList());
+      'participant', instance.participant?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull(
-      'reasonCode', instance.reasonCode?.map((e) => e?.toJson()).toList());
+      'reasonCode', instance.reasonCode?.map((e) => e.toJson()).toList());
   writeNotNull('hospitalization', instance.hospitalization?.toJson());
-  writeNotNull('location', instance.location?.map((e) => e?.toJson()).toList());
+  writeNotNull('location', instance.location?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -156,9 +149,7 @@ _$_EncounterParticipant _$_$_EncounterParticipantFromJson(
   return _$_EncounterParticipant(
     id: json['id'] as String?,
     type: (json['type'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     period: json['period'] == null
         ? null
@@ -180,7 +171,7 @@ Map<String, dynamic> _$_$_EncounterParticipantToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('type', instance.type?.map((e) => e?.toJson()).toList());
+  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('individual', instance.individual?.toJson());
   return val;

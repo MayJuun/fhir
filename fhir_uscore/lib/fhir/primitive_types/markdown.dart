@@ -23,7 +23,7 @@ class Markdown {
   final bool _isValid;
 
   bool get isValid => _isValid;
-  int get hashMarkdown => _valueString.hashCode;
+  int get hashCode => _valueString.hashCode;
   String? get value => _valueMarkdown;
 
   String toString() => _valueString;

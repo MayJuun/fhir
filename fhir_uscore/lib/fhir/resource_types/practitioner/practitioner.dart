@@ -115,12 +115,12 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
   }) {
     if (practitionerRoleCode != null) {
       code ??= <CodeableConcept>[];
-      code.add(codeableConceptFromPractitionerRoleCode[practitionerRoleCode]);
+      code.add(codeableConceptFromPractitionerRoleCode[practitionerRoleCode]!);
     }
     if (practitionerRoleSpecialty != null) {
       specialty ??= <CodeableConcept>[];
       specialty.add(codeableConceptFromPractitionerRoleSpecialty[
-          practitionerRoleSpecialty]);
+          practitionerRoleSpecialty]!);
     }
     return PractitionerRole(
       practitioner: practitioner,

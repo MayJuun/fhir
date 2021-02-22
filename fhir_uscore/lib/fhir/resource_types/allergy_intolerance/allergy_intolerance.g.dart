@@ -32,13 +32,11 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
     reaction: (json['reaction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AllergyIntoleranceReaction.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            AllergyIntoleranceReaction.fromJson(e as Map<String, dynamic>))
         .toList(),
     category: (json['category'] as List<dynamic>?)
-        ?.map(
-            (e) => _$enumDecodeNullable(_$AllergyIntoleranceCategoryEnumMap, e))
+        ?.map((e) => _$enumDecode(_$AllergyIntoleranceCategoryEnumMap, e))
         .toList(),
     criticality: _$enumDecodeNullable(
         _$AllergyIntoleranceCriticalityEnumMap, json['criticality'],
@@ -68,7 +66,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
   writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
   writeNotNull('code', instance.code?.toJson());
   val['patient'] = instance.patient.toJson();
-  writeNotNull('reaction', instance.reaction?.map((e) => e?.toJson()).toList());
+  writeNotNull('reaction', instance.reaction?.map((e) => e.toJson()).toList());
   writeNotNull(
       'category',
       instance.category
@@ -133,6 +131,14 @@ const _$UsCoreResourceTypeEnumMap = {
   UsCoreResourceType.Provenance: 'Provenance',
 };
 
+const _$AllergyIntoleranceCategoryEnumMap = {
+  AllergyIntoleranceCategory.food: 'food',
+  AllergyIntoleranceCategory.medication: 'medication',
+  AllergyIntoleranceCategory.environment: 'environment',
+  AllergyIntoleranceCategory.biologic: 'biologic',
+  AllergyIntoleranceCategory.unknown: 'unknown',
+};
+
 K? _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,
   dynamic source, {
@@ -143,14 +149,6 @@ K? _$enumDecodeNullable<K, V>(
   }
   return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
-
-const _$AllergyIntoleranceCategoryEnumMap = {
-  AllergyIntoleranceCategory.food: 'food',
-  AllergyIntoleranceCategory.medication: 'medication',
-  AllergyIntoleranceCategory.environment: 'environment',
-  AllergyIntoleranceCategory.biologic: 'biologic',
-  AllergyIntoleranceCategory.unknown: 'unknown',
-};
 
 const _$AllergyIntoleranceCriticalityEnumMap = {
   AllergyIntoleranceCriticality.low: 'low',

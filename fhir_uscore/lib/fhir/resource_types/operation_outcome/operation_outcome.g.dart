@@ -117,9 +117,9 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
         : CodeableConcept.fromJson(json['details'] as Map<String, dynamic>),
     diagnostics: json['diagnostics'] as String?,
     location:
-        (json['location'] as List<dynamic>?)?.map((e) => e as String?).toList(),
+        (json['location'] as List<dynamic>?)?.map((e) => e as String).toList(),
     expression: (json['expression'] as List<dynamic>?)
-        ?.map((e) => e as String?)
+        ?.map((e) => e as String)
         .toList(),
   );
 }

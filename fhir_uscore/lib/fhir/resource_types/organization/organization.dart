@@ -21,7 +21,7 @@ abstract class Organization with Resource implements _$Organization {
     Id? id,
     Meta? meta,
     Narrative? text,
-    List<Resource>? contained,
+    List<Resource?>? contained,
     List<Identifier>? identifier,
     required Boolean active,
     required String name,

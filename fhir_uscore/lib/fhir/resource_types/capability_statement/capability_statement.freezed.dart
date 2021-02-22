@@ -24,11 +24,11 @@ class _$CapabilityStatementTearOff {
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
-      Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Narrative? text,
       FhirUri? url,
       String? version,
       String? name,
@@ -64,10 +64,10 @@ class _$CapabilityStatementTearOff {
       meta: meta,
       implicitRules: implicitRules,
       language: language,
-      text: text,
       contained: contained,
       extension_: extension_,
       modifierExtension: modifierExtension,
+      text: text,
       url: url,
       version: version,
       name: name,
@@ -113,8 +113,11 @@ mixin _$CapabilityStatement {
   Meta? get meta;
   FhirUri? get implicitRules;
   Code? get language;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
+  Narrative? get text;
   FhirUri? get url;
   String? get version;
   String? get name;
@@ -162,11 +165,11 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
-      Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Narrative? text,
       FhirUri? url,
       String? version,
       String? name,
@@ -219,10 +222,10 @@ class _$CapabilityStatementCopyWithImpl<$Res>
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
-    Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? text = freezed,
     Object? url = freezed,
     Object? version = freezed,
     Object? name = freezed,
@@ -260,13 +263,16 @@ class _$CapabilityStatementCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules as FhirUri?,
       language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>?,
+      text: text == freezed ? _value.text : text as Narrative?,
       url: url == freezed ? _value.url : url as FhirUri?,
       version: version == freezed ? _value.version : version as String?,
       name: name == freezed ? _value.name : name as String?,
@@ -388,8 +394,11 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
-      List<Resource>? contained,
+      List<Resource?>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      Narrative? text,
       FhirUri? url,
       String? version,
       String? name,
@@ -448,10 +457,10 @@ class __$CapabilityStatementCopyWithImpl<$Res>
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
-    Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
+    Object? text = freezed,
     Object? url = freezed,
     Object? version = freezed,
     Object? name = freezed,
@@ -489,13 +498,16 @@ class __$CapabilityStatementCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules as FhirUri?,
       language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>?,
+      text: text == freezed ? _value.text : text as Narrative?,
       url: url == freezed ? _value.url : url as FhirUri?,
       version: version == freezed ? _value.version : version as String?,
       name: name == freezed ? _value.name : name as String?,
@@ -568,11 +580,11 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       this.meta,
       this.implicitRules,
       this.language,
-      this.text,
       this.contained,
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
+      this.text,
       this.url,
       this.version,
       this.name,
@@ -619,9 +631,14 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   final Code? language;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
   @override
   final List<FhirExtension>? modifierExtension;
+  @override
+  final Narrative? text;
   @override
   final FhirUri? url;
   @override
@@ -680,7 +697,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   @override
   String toString() {
-    return 'CapabilityStatement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, kind: $kind, instantiates: $instantiates, imports: $imports, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, format: $format, patchFormat: $patchFormat, implementationGuide: $implementationGuide, rest: $rest, messaging: $messaging, document: $document)';
+    return 'CapabilityStatement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, text: $text, url: $url, version: $version, name: $name, title: $title, status: $status, experimental: $experimental, date: $date, publisher: $publisher, contact: $contact, description: $description, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, copyright: $copyright, kind: $kind, instantiates: $instantiates, imports: $imports, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, format: $format, patchFormat: $patchFormat, implementationGuide: $implementationGuide, rest: $rest, messaging: $messaging, document: $document)';
   }
 
   @override
@@ -700,8 +717,6 @@ class _$_CapabilityStatement extends _CapabilityStatement {
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.contained, contained) ||
                 const DeepCollectionEquality()
                     .equals(other.contained, contained)) &&
@@ -711,6 +726,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.version, version) ||
@@ -775,10 +792,10 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
       const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(name) ^
@@ -827,8 +844,11 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
-      List<Resource>? contained,
+      List<Resource?>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
+      Narrative? text,
       FhirUri? url,
       String? version,
       String? name,
@@ -874,9 +894,14 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @override
   Code? get language;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
   @override
   List<FhirExtension>? get modifierExtension;
+  @override
+  Narrative? get text;
   @override
   FhirUri? get url;
   @override
@@ -2186,33 +2211,31 @@ CapabilityStatementResource _$CapabilityStatementResourceFromJson(
 class _$CapabilityStatementResourceTearOff {
   const _$CapabilityStatementResourceTearOff();
 
-  _CapabilityStatementResource
-      call(
-          {String? id,
-          Code? type,
-          Canonical? profile,
-          List<Canonical>? supportedProfile,
-          Markdown? documentation,
-          List<CapabilityStatementInteraction>? interaction,
-          @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-              CapabilityStatementResourceVersioning? versioning,
-          Boolean? readHistory,
-          Boolean? updateCreate,
-          Boolean? conditionalCreate,
-          @JsonKey(
-              unknownEnumValue:
-                  CapabilityStatementResourceConditionalRead.unknown)
-              CapabilityStatementResourceConditionalRead? conditionalRead,
-          Boolean? conditionalUpdate,
-          @JsonKey(
-              unknownEnumValue:
-                  CapabilityStatementResourceConditionalDelete.unknown)
-              CapabilityStatementResourceConditionalDelete? conditionalDelete,
-          List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
-          List<String>? searchInclude,
-          List<String>? searchRevInclude,
-          List<CapabilityStatementSearchParam>? searchParam,
-          List<CapabilityStatementOperation>? operation}) {
+  _CapabilityStatementResource call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      Code? type,
+      Canonical? profile,
+      List<Canonical>? supportedProfile,
+      Markdown? documentation,
+      List<CapabilityStatementInteraction>? interaction,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+          CapabilityStatementResourceVersioning? versioning,
+      Boolean? readHistory,
+      Boolean? updateCreate,
+      Boolean? conditionalCreate,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+          CapabilityStatementResourceConditionalRead? conditionalRead,
+      Boolean? conditionalUpdate,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+          CapabilityStatementResourceConditionalDelete? conditionalDelete,
+      List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
+      List<String>? searchInclude,
+      List<String>? searchRevInclude,
+      List<CapabilityStatementSearchParam>? searchParam,
+      List<CapabilityStatementOperation>? operation}) {
     return _CapabilityStatementResource(
       id: id,
       extension_: extension_,
@@ -2285,33 +2308,31 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
           CapabilityStatementResource value,
           $Res Function(CapabilityStatementResource) then) =
       _$CapabilityStatementResourceCopyWithImpl<$Res>;
-  $Res
-      call(
-          {String? id,
-          Code? type,
-          Canonical? profile,
-          List<Canonical>? supportedProfile,
-          Markdown? documentation,
-          List<CapabilityStatementInteraction>? interaction,
-          @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-              CapabilityStatementResourceVersioning? versioning,
-          Boolean? readHistory,
-          Boolean? updateCreate,
-          Boolean? conditionalCreate,
-          @JsonKey(
-              unknownEnumValue:
-                  CapabilityStatementResourceConditionalRead.unknown)
-              CapabilityStatementResourceConditionalRead? conditionalRead,
-          Boolean? conditionalUpdate,
-          @JsonKey(
-              unknownEnumValue:
-                  CapabilityStatementResourceConditionalDelete.unknown)
-              CapabilityStatementResourceConditionalDelete? conditionalDelete,
-          List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
-          List<String>? searchInclude,
-          List<String>? searchRevInclude,
-          List<CapabilityStatementSearchParam>? searchParam,
-          List<CapabilityStatementOperation>? operation});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      Code? type,
+      Canonical? profile,
+      List<Canonical>? supportedProfile,
+      Markdown? documentation,
+      List<CapabilityStatementInteraction>? interaction,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+          CapabilityStatementResourceVersioning? versioning,
+      Boolean? readHistory,
+      Boolean? updateCreate,
+      Boolean? conditionalCreate,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+          CapabilityStatementResourceConditionalRead? conditionalRead,
+      Boolean? conditionalUpdate,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+          CapabilityStatementResourceConditionalDelete? conditionalDelete,
+      List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
+      List<String>? searchInclude,
+      List<String>? searchRevInclude,
+      List<CapabilityStatementSearchParam>? searchParam,
+      List<CapabilityStatementOperation>? operation});
 }
 
 /// @nodoc
@@ -2413,33 +2434,31 @@ abstract class _$CapabilityStatementResourceCopyWith<$Res>
           $Res Function(_CapabilityStatementResource) then) =
       __$CapabilityStatementResourceCopyWithImpl<$Res>;
   @override
-  $Res
-      call(
-          {String? id,
-          Code? type,
-          Canonical? profile,
-          List<Canonical>? supportedProfile,
-          Markdown? documentation,
-          List<CapabilityStatementInteraction>? interaction,
-          @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-              CapabilityStatementResourceVersioning? versioning,
-          Boolean? readHistory,
-          Boolean? updateCreate,
-          Boolean? conditionalCreate,
-          @JsonKey(
-              unknownEnumValue:
-                  CapabilityStatementResourceConditionalRead.unknown)
-              CapabilityStatementResourceConditionalRead? conditionalRead,
-          Boolean? conditionalUpdate,
-          @JsonKey(
-              unknownEnumValue:
-                  CapabilityStatementResourceConditionalDelete.unknown)
-              CapabilityStatementResourceConditionalDelete? conditionalDelete,
-          List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
-          List<String>? searchInclude,
-          List<String>? searchRevInclude,
-          List<CapabilityStatementSearchParam>? searchParam,
-          List<CapabilityStatementOperation>? operation});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      Code? type,
+      Canonical? profile,
+      List<Canonical>? supportedProfile,
+      Markdown? documentation,
+      List<CapabilityStatementInteraction>? interaction,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+          CapabilityStatementResourceVersioning? versioning,
+      Boolean? readHistory,
+      Boolean? updateCreate,
+      Boolean? conditionalCreate,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+          CapabilityStatementResourceConditionalRead? conditionalRead,
+      Boolean? conditionalUpdate,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+          CapabilityStatementResourceConditionalDelete? conditionalDelete,
+      List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
+      List<String>? searchInclude,
+      List<String>? searchRevInclude,
+      List<CapabilityStatementSearchParam>? searchParam,
+      List<CapabilityStatementOperation>? operation});
 }
 
 /// @nodoc
@@ -3932,6 +3951,8 @@ class _$CapabilityStatementMessagingTearOff {
 
   _CapabilityStatementMessaging call(
       {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<CapabilityStatementEndpoint>? endpoint,
       UnsignedInt? reliableCache,
       Markdown? documentation,
@@ -3958,6 +3979,9 @@ const $CapabilityStatementMessaging = _$CapabilityStatementMessagingTearOff();
 /// @nodoc
 mixin _$CapabilityStatementMessaging {
   String? get id;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   List<CapabilityStatementEndpoint>? get endpoint;
   UnsignedInt? get reliableCache;
   Markdown? get documentation;
@@ -3977,6 +4001,8 @@ abstract class $CapabilityStatementMessagingCopyWith<$Res> {
       _$CapabilityStatementMessagingCopyWithImpl<$Res>;
   $Res call(
       {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<CapabilityStatementEndpoint>? endpoint,
       UnsignedInt? reliableCache,
       Markdown? documentation,
@@ -4006,10 +4032,10 @@ class _$CapabilityStatementMessagingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint as List<CapabilityStatementEndpoint>?,
@@ -4036,6 +4062,8 @@ abstract class _$CapabilityStatementMessagingCopyWith<$Res>
   @override
   $Res call(
       {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<CapabilityStatementEndpoint>? endpoint,
       UnsignedInt? reliableCache,
       Markdown? documentation,
@@ -4069,10 +4097,10 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint as List<CapabilityStatementEndpoint>?,
@@ -4108,6 +4136,11 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
 
   @override
   final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
   @override
   final List<CapabilityStatementEndpoint>? endpoint;
   @override
@@ -4176,6 +4209,8 @@ abstract class _CapabilityStatementMessaging
   _CapabilityStatementMessaging._() : super._();
   factory _CapabilityStatementMessaging(
           {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           List<CapabilityStatementEndpoint>? endpoint,
           UnsignedInt? reliableCache,
           Markdown? documentation,
@@ -4187,6 +4222,11 @@ abstract class _CapabilityStatementMessaging
 
   @override
   String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
   @override
   List<CapabilityStatementEndpoint>? get endpoint;
   @override

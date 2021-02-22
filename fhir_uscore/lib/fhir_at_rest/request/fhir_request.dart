@@ -282,11 +282,11 @@ abstract class FhirRequest with _$FhirRequest {
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry!) {
-            if (entry?.request == null) {
+            if (entry.request == null) {
               return _operationOutcome(
                   'Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
-            } else if (entry?.request?.method == null) {
+            } else if (entry.request?.method == null) {
               return _operationOutcome(
                   'Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');
@@ -309,11 +309,11 @@ abstract class FhirRequest with _$FhirRequest {
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry!) {
-            if (entry?.request == null) {
+            if (entry.request == null) {
               return _operationOutcome(
                   'Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
-            } else if (entry?.request?.method == null) {
+            } else if (entry.request?.method == null) {
               return _operationOutcome(
                   'Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');

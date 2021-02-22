@@ -11,8 +11,7 @@ _$_ContactDetail _$_$_ContactDetailFromJson(Map<String, dynamic> json) {
     id: json['id'] as String?,
     name: json['name'] as String?,
     telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -28,7 +27,7 @@ Map<String, dynamic> _$_$_ContactDetailToJson(_$_ContactDetail instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
-  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -80,15 +79,13 @@ _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
         : Instant.fromJson(json['lastUpdated']),
     source: json['source'] == null ? null : FhirUri.fromJson(json['source']),
     profile: (json['profile'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e))
+        ?.map((e) => Canonical.fromJson(e))
         .toList(),
     security: (json['security'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
         .toList(),
     tag: (json['tag'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -106,8 +103,8 @@ Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
   writeNotNull('versionId', instance.versionId?.toJson());
   writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
   writeNotNull('source', instance.source?.toJson());
-  writeNotNull('profile', instance.profile?.map((e) => e?.toJson()).toList());
-  writeNotNull('security', instance.security?.map((e) => e?.toJson()).toList());
-  writeNotNull('tag', instance.tag?.map((e) => e?.toJson()).toList());
+  writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
+  writeNotNull('security', instance.security?.map((e) => e.toJson()).toList());
+  writeNotNull('tag', instance.tag?.map((e) => e.toJson()).toList());
   return val;
 }

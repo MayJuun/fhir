@@ -24,7 +24,7 @@ class Oid {
   final bool _isValid;
 
   bool get isValid => _isValid;
-  int get hashOid => _valueString.hashCode;
+  int get hashCode => _valueString.hashCode;
   String? get value => _valueOid;
 
   String toString() => _valueString;

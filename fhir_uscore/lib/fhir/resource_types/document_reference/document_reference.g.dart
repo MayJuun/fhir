@@ -19,24 +19,20 @@ _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: _$enumDecode(_$DocumentReferenceStatusEnumMap, json['status'],
         unknownValue: DocumentReferenceStatus.unknown),
     type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     category: (json['category'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
     date: json['date'] == null ? null : Instant.fromJson(json['date']),
     author: (json['author'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     custodian: json['custodian'] == null
         ? null
@@ -70,13 +66,13 @@ Map<String, dynamic> _$_$_DocumentReferenceToJson(
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   val['status'] = _$DocumentReferenceStatusEnumMap[instance.status];
   val['type'] = instance.type.toJson();
-  writeNotNull('category', instance.category?.map((e) => e?.toJson()).toList());
+  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('date', instance.date?.toJson());
-  writeNotNull('author', instance.author?.map((e) => e?.toJson()).toList());
+  writeNotNull('author', instance.author?.map((e) => e.toJson()).toList());
   writeNotNull('custodian', instance.custodian?.toJson());
   val['content'] = instance.content.map((e) => e?.toJson()).toList();
   writeNotNull('context', instance.context?.toJson());
@@ -176,8 +172,7 @@ _$_DocumentReferenceContext _$_$_DocumentReferenceContextFromJson(
   return _$_DocumentReferenceContext(
     id: json['id'] as String?,
     encounter: (json['encounter'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     period: json['period'] == null
         ? null
@@ -197,7 +192,7 @@ Map<String, dynamic> _$_$_DocumentReferenceContextToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'encounter', instance.encounter?.map((e) => e?.toJson()).toList());
+      'encounter', instance.encounter?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }

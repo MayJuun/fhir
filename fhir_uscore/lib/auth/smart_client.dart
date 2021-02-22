@@ -248,22 +248,21 @@ class SmartClient extends FhirClient {
   FhirUri? _getUri(CapabilityStatement capabilityStatement, String type) {
     if (capabilityStatement.rest == null) {
       return null;
-    } else if (capabilityStatement.rest?[0]?.security?.extension_ == null) {
+    } else if (capabilityStatement.rest?[0].security?.extension_ == null) {
       return null;
     } else if (capabilityStatement
-            .rest?[0]?.security?.extension_?[0]?.extension_ ==
+            .rest?[0].security?.extension_?[0]?.extension_ ==
         null) {
       return null;
     } else {
-      final statement = capabilityStatement
-          .rest![0]!.security!.extension_![0]!.extension_!
-          .firstWhere(
-              (ext) => (ext == null ? null : ext.url.toString()) == type,
-              orElse: () => null);
-      if (statement == null) {
-        return null;
-      } else {
+      try {
+        final statement = capabilityStatement
+            .rest![0].security!.extension_![0]!.extension_!
+            .firstWhere(
+                (ext) => (ext.url == null ? null : ext.url.toString()) == type);
         return statement.valueUri;
+      } catch (e) {
+        throw Exception(e.toString());
       }
     }
   }

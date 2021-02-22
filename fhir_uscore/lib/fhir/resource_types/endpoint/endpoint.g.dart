@@ -19,12 +19,10 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: _$enumDecodeNullable(_$EndpointStatusEnumMap, json['status'],
         unknownValue: EndpointStatus.unknown),
@@ -36,8 +34,7 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(
             json['managingOrganization'] as Map<String, dynamic>),
     contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
     period: json['period'] == null
         ? null
@@ -46,11 +43,11 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
         .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     payloadMimeType: (json['payloadMimeType'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Code.fromJson(e))
+        ?.map((e) => Code.fromJson(e))
         .toList(),
     address: json['address'] == null ? null : FhirUrl.fromJson(json['address']),
     header:
-        (json['header'] as List<dynamic>?)?.map((e) => e as String?).toList(),
+        (json['header'] as List<dynamic>?)?.map((e) => e as String).toList(),
   );
 }
 
@@ -69,18 +66,18 @@ Map<String, dynamic> _$_$_EndpointToJson(_$_Endpoint instance) {
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', _$EndpointStatusEnumMap[instance.status]);
   val['connectionType'] = instance.connectionType.toJson();
   writeNotNull('name', instance.name);
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
-  writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
+  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
   val['payloadType'] = instance.payloadType.map((e) => e.toJson()).toList();
   writeNotNull('payloadMimeType',
-      instance.payloadMimeType?.map((e) => e?.toJson()).toList());
+      instance.payloadMimeType?.map((e) => e.toJson()).toList());
   writeNotNull('address', instance.address?.toJson());
   writeNotNull('header', instance.header);
   return val;

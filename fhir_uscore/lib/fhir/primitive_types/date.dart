@@ -65,7 +65,7 @@ class Date {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Date
-          ? o == value
+          ? o.value == value
           : o is DateTime
               ? o == _valueDateTime
               : o is String

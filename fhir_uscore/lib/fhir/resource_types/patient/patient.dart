@@ -66,13 +66,13 @@ abstract class Patient with Resource implements _$Patient {
               'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race'));
       if (usCoreRace != null) {
         for (final race in usCoreRace) {
-          raceExtension.extension_!.add(extensionFromRace[race]);
+          raceExtension.extension_!.add(extensionFromRace[race]!);
         }
       }
       if (usCoreDetailedRace != null) {
         for (final detailedRace in usCoreDetailedRace) {
           raceExtension.extension_!
-              .add(extensionFromDetailedRace[detailedRace]);
+              .add(extensionFromDetailedRace[detailedRace]!);
         }
       }
       if (usCoreRaceText != null) {
@@ -90,12 +90,12 @@ abstract class Patient with Resource implements _$Patient {
               'http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity'));
       if (usCoreEthnicity != null) {
         ethnicityExtension.extension_!
-            .add(extensionFromEthnicity[usCoreEthnicity]);
+            .add(extensionFromEthnicity[usCoreEthnicity]!);
       }
       if (usCoreDetailedEthnicity != null) {
         for (final detailedEthnicity in usCoreDetailedEthnicity) {
           ethnicityExtension.extension_!
-              .add(extensionFromDetailedEthnicity[detailedEthnicity]);
+              .add(extensionFromDetailedEthnicity[detailedEthnicity]!);
         }
       }
       if (usCoreEthnicityText != null) {

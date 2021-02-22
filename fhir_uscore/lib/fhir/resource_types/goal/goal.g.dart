@@ -29,8 +29,7 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
         CodeableConcept.fromJson(json['description'] as Map<String, dynamic>),
     subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     target: (json['target'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : GoalTarget.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => GoalTarget.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -54,7 +53,7 @@ Map<String, dynamic> _$_$_GoalToJson(_$_Goal instance) {
   writeNotNull('achievementStatus', instance.achievementStatus?.toJson());
   val['description'] = instance.description.toJson();
   val['subject'] = instance.subject.toJson();
-  writeNotNull('target', instance.target?.map((e) => e?.toJson()).toList());
+  writeNotNull('target', instance.target?.map((e) => e.toJson()).toList());
   return val;
 }
 

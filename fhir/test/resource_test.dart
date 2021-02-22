@@ -8,7 +8,7 @@ void main() {
       HumanName(given: ['Jason', 'Grey'])
     ]);
 
-    expect(pat1.name?[0]?.family, 'Faulkenberry');
-    expect(pat1.name?[1]?.given?[1], 'Grey');
+    expect(pat1.name?[0].family, 'Faulkenberry');
+    expect(pat1.name?[1].given?[1], 'Grey');
   });
 }

@@ -80,7 +80,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   }) {
     category ??= <CodeableConcept>[];
     category.add(
-        codeableConceptFromDiagnosticReportCategory[diagnosticReportCategory]);
+        codeableConceptFromDiagnosticReportCategory[diagnosticReportCategory]!);
     return DiagnosticReport(
       status: status,
       category: category,

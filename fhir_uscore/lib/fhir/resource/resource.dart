@@ -8,6 +8,7 @@ import '../fhir.dart';
 
 // import 'package:flutter/foundation.dart';
 
+part 'resource.g.dart';
 part 'resource_from_json.dart';
 // part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
@@ -34,7 +35,7 @@ class Resource {
   String toYaml() => json2yaml(toJson());
 
   /// Returns a Resource, accepts [Yaml String] as an argument
-  static Resource? fromYaml(dynamic yaml) => yaml is String
+  static Resource fromYaml(dynamic yaml) => yaml is String
       ? Resource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Resource.fromJson(jsonDecode(jsonEncode(yaml)))
@@ -59,7 +60,7 @@ class Resource {
 
   /// Acts like a constructor, returns a [Resource], accepts a
   /// [Map<String, Dyamic] as an argument
-  static Resource? fromJson(Map<String, dynamic> json) =>
+  static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);
 
   /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds

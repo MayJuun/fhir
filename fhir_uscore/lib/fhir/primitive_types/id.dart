@@ -24,7 +24,7 @@ class Id {
   final bool _isValid;
 
   bool get isValid => _isValid;
-  int get hashId => _valueString.hashCode;
+  int get hashCode => _valueString.hashCode;
   String? get value => _valueId;
 
   String toString() => _valueString;

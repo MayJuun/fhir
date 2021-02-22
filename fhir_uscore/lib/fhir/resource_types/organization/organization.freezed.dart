@@ -22,7 +22,7 @@ class _$OrganizationTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       List<Identifier>? identifier,
       required Boolean active,
       required String name,
@@ -61,7 +61,7 @@ mixin _$Organization {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   List<Identifier>? get identifier;
   Boolean get active;
   String get name;
@@ -86,7 +86,7 @@ abstract class $OrganizationCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       List<Identifier>? identifier,
       Boolean active,
       String name,
@@ -131,7 +131,7 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>?,
@@ -182,7 +182,7 @@ abstract class _$OrganizationCopyWith<$Res>
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       List<Identifier>? identifier,
       Boolean active,
       String name,
@@ -231,7 +231,7 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier>?,
@@ -280,7 +280,7 @@ class _$_Organization extends _Organization {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   final List<Identifier>? identifier;
   @override
@@ -372,7 +372,7 @@ abstract class _Organization extends Organization {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       List<Identifier>? identifier,
       required Boolean active,
       required String name,
@@ -394,7 +394,7 @@ abstract class _Organization extends Organization {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   List<Identifier>? get identifier;
   @override

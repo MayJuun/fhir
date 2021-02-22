@@ -19,9 +19,7 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: (json['identifier'] as List<dynamic>)
         .map((e) =>
@@ -33,21 +31,17 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
             e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
         .toList(),
     telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
     gender: _$enumDecode(_$PatientGenderEnumMap, json['gender'],
         unknownValue: PatientGender.unknown),
     birthDate:
         json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
     address: (json['address'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Address.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Address.fromJson(e as Map<String, dynamic>))
         .toList(),
     communication: (json['communication'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : PatientCommunication.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => PatientCommunication.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -67,16 +61,16 @@ Map<String, dynamic> _$_$_PatientToJson(_$_Patient instance) {
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   val['identifier'] = instance.identifier.map((e) => e?.toJson()).toList();
   writeNotNull('active', instance.active?.toJson());
   val['name'] = instance.name.map((e) => e?.toJson()).toList();
-  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
   val['gender'] = _$PatientGenderEnumMap[instance.gender];
   writeNotNull('birthDate', instance.birthDate?.toJson());
-  writeNotNull('address', instance.address?.map((e) => e?.toJson()).toList());
-  writeNotNull('communication',
-      instance.communication?.map((e) => e?.toJson()).toList());
+  writeNotNull('address', instance.address?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'communication', instance.communication?.map((e) => e.toJson()).toList());
   return val;
 }
 

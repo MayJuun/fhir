@@ -77,7 +77,7 @@ Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
 
     /// checks if the two items are both of the same type, then passes the two
   } else if (input.runtimeType == output.runtimeType) {
-    String returnValue = await checkEquality(input, output, file);
+    String returnValue = checkEquality(input, output, file);
     if (returnValue != '') {
       print(file);
     }
@@ -87,7 +87,7 @@ Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
     /// results in a map thinking an int is a decimal or vice versa, even
     /// thought the value is the same, this just checks to see if that's true
   } else if (input is num && output is num) {
-    return await checkEquality(input.toDouble(), output.toDouble(), file);
+    return checkEquality(input.toDouble(), output.toDouble(), file);
   } else {
     print('*******************Different runtimeTypes***********************');
     print(file.toString());

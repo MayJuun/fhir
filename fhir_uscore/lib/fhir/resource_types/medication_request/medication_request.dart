@@ -26,7 +26,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
         required MedicationRequestStatus status,
     required MedicationRequestIntent intent,
-    List<Resource>? contained,
+    List<Resource?>? contained,
     Boolean? reportedBoolean,
     Reference? reportedReference,
     CodeableConcept? medicationCodeableConcept,

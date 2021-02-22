@@ -25,7 +25,7 @@ class Time {
   final bool _isValid;
 
   bool get isValid => _isValid;
-  int get hashTime => _valueString.hashCode;
+  int get hashCode => _valueString.hashCode;
   String? get value => _valueTime;
 
   String toString() => _valueString;

@@ -38,16 +38,13 @@ _$_DiagnosticReport _$_$_DiagnosticReportFromJson(Map<String, dynamic> json) {
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
     issued: json['issued'] == null ? null : Instant.fromJson(json['issued']),
     performer: (json['performer'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     result: (json['result'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     presentedForm: (json['presentedForm'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -75,10 +72,10 @@ Map<String, dynamic> _$_$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
   writeNotNull('issued', instance.issued?.toJson());
   writeNotNull(
-      'performer', instance.performer?.map((e) => e?.toJson()).toList());
-  writeNotNull('result', instance.result?.map((e) => e?.toJson()).toList());
-  writeNotNull('presentedForm',
-      instance.presentedForm?.map((e) => e?.toJson()).toList());
+      'performer', instance.performer?.map((e) => e.toJson()).toList());
+  writeNotNull('result', instance.result?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'presentedForm', instance.presentedForm?.map((e) => e.toJson()).toList());
   return val;
 }
 

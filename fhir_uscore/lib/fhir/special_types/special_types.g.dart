@@ -109,9 +109,7 @@ _$_Dosage _$_$_DosageFromJson(Map<String, dynamic> json) {
     id: json['id'] as String?,
     text: json['text'] as String?,
     additionalInstruction: (json['additionalInstruction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     patientInstruction: json['patientInstruction'] as String?,
     timing: json['timing'] == null
@@ -121,9 +119,7 @@ _$_Dosage _$_$_DosageFromJson(Map<String, dynamic> json) {
         ? null
         : Boolean.fromJson(json['asNeededBoolean']),
     doseAndRate: (json['doseAndRate'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : DosageDoseAndRate.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => DosageDoseAndRate.fromJson(e as Map<String, dynamic>))
         .toList(),
     maxDosePerPeriod: json['maxDosePerPeriod'] == null
         ? null
@@ -150,12 +146,12 @@ Map<String, dynamic> _$_$_DosageToJson(_$_Dosage instance) {
   writeNotNull('id', instance.id);
   writeNotNull('text', instance.text);
   writeNotNull('additionalInstruction',
-      instance.additionalInstruction?.map((e) => e?.toJson()).toList());
+      instance.additionalInstruction?.map((e) => e.toJson()).toList());
   writeNotNull('patientInstruction', instance.patientInstruction);
   writeNotNull('timing', instance.timing?.toJson());
   writeNotNull('asNeededBoolean', instance.asNeededBoolean?.toJson());
   writeNotNull(
-      'doseAndRate', instance.doseAndRate?.map((e) => e?.toJson()).toList());
+      'doseAndRate', instance.doseAndRate?.map((e) => e.toJson()).toList());
   writeNotNull('maxDosePerPeriod', instance.maxDosePerPeriod?.toJson());
   writeNotNull(
       'maxDosePerAdministration', instance.maxDosePerAdministration?.toJson());

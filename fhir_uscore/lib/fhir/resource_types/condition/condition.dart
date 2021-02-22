@@ -38,8 +38,8 @@ abstract class Condition with Resource implements _$Condition {
     required CodeableConcept code,
     required Reference subject,
   }) {
-    category ??= <CodeableConcept?>[];
-    category.add(codeableConceptFromConditionCategory[conditionCategory]);
+    category ??= <CodeableConcept>[];
+    category.add(codeableConceptFromConditionCategory[conditionCategory]!);
     return Condition(
       clinicalStatus:
           codeableConceptFromConditionClinicalStatus[clinicalStatus],

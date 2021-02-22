@@ -49,7 +49,7 @@ abstract class Encounter with Resource implements _$Encounter {
     List<EncounterLocation>? location,
   }) {
     type ??= <CodeableConcept>[];
-    type.add(codeableConceptFromEncounterType[encounterType]);
+    type.add(codeableConceptFromEncounterType[encounterType]!);
     return Encounter(
       identifier: identifier,
       status: status,

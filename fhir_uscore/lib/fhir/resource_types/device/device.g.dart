@@ -19,9 +19,7 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     udiCarrier: (json['udiCarrier'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : DeviceUdiCarrier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => DeviceUdiCarrier.fromJson(e as Map<String, dynamic>))
         .toList(),
     distinctIdentifier: json['distinctIdentifier'] as String?,
     manufacturer: json['manufacturer'] as String?,
@@ -36,9 +34,7 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
         unknownValue: DeviceStatus.unknown),
     deviceName: (json['deviceName'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : DeviceDeviceName.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => DeviceDeviceName.fromJson(e as Map<String, dynamic>))
         .toList(),
     modelNumber: json['modelNumber'] as String?,
     type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -61,7 +57,7 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'udiCarrier', instance.udiCarrier?.map((e) => e?.toJson()).toList());
+      'udiCarrier', instance.udiCarrier?.map((e) => e.toJson()).toList());
   writeNotNull('distinctIdentifier', instance.distinctIdentifier);
   writeNotNull('manufacturer', instance.manufacturer);
   writeNotNull('manufactureDate', instance.manufactureDate?.toJson());
@@ -70,7 +66,7 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
   writeNotNull('serialNumber', instance.serialNumber);
   writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
   writeNotNull(
-      'deviceName', instance.deviceName?.map((e) => e?.toJson()).toList());
+      'deviceName', instance.deviceName?.map((e) => e.toJson()).toList());
   writeNotNull('modelNumber', instance.modelNumber);
   val['type'] = instance.type.toJson();
   val['patient'] = instance.patient.toJson();

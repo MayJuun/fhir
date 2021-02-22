@@ -25,7 +25,7 @@ abstract class CapabilityStatement
     Meta? meta,
     FhirUri? implicitRules,
     Code? language,
-    List<Resource>? contained,
+    List<Resource?>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Narrative? text,

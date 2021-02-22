@@ -24,12 +24,10 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
         json['timestamp'] == null ? null : Instant.fromJson(json['timestamp']),
     total: json['total'] == null ? null : UnsignedInt.fromJson(json['total']),
     link: (json['link'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => BundleLink.fromJson(e as Map<String, dynamic>))
         .toList(),
     entry: (json['entry'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : BundleEntry.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => BundleEntry.fromJson(e as Map<String, dynamic>))
         .toList(),
     signature: json['signature'] == null
         ? null
@@ -54,8 +52,8 @@ Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) {
   writeNotNull('type', _$BundleTypeEnumMap[instance.type]);
   writeNotNull('timestamp', instance.timestamp?.toJson());
   writeNotNull('total', instance.total?.toJson());
-  writeNotNull('link', instance.link?.map((e) => e?.toJson()).toList());
-  writeNotNull('entry', instance.entry?.map((e) => e?.toJson()).toList());
+  writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
+  writeNotNull('entry', instance.entry?.map((e) => e.toJson()).toList());
   writeNotNull('signature', instance.signature?.toJson());
   return val;
 }
@@ -164,8 +162,7 @@ _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
   return _$_BundleEntry(
     id: json['id'] as String?,
     link: (json['link'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => BundleLink.fromJson(e as Map<String, dynamic>))
         .toList(),
     fullUrl: json['fullUrl'] == null ? null : FhirUri.fromJson(json['fullUrl']),
     resource: json['resource'] == null
@@ -193,7 +190,7 @@ Map<String, dynamic> _$_$_BundleEntryToJson(_$_BundleEntry instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('link', instance.link?.map((e) => e?.toJson()).toList());
+  writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
   writeNotNull('fullUrl', instance.fullUrl?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
   writeNotNull('search', instance.search?.toJson());

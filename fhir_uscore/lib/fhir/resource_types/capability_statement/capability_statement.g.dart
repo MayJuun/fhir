@@ -20,23 +20,19 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
         ? null
         : FhirUri.fromJson(json['implicitRules']),
     language: json['language'] == null ? null : Code.fromJson(json['language']),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
+    text: json['text'] == null
+        ? null
+        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     version: json['version'] as String?,
     name: json['name'] as String?,
@@ -50,21 +46,16 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     publisher: json['publisher'] as String?,
     contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
         .toList(),
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description']),
     useContext: (json['useContext'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : UsageContext.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => UsageContext.fromJson(e as Map<String, dynamic>))
         .toList(),
     jurisdiction: (json['jurisdiction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     purpose:
         json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
@@ -73,10 +64,10 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     kind: _$enumDecodeNullable(_$CapabilityStatementKindEnumMap, json['kind'],
         unknownValue: CapabilityStatementKind.unknown),
     instantiates: (json['instantiates'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e))
+        ?.map((e) => Canonical.fromJson(e))
         .toList(),
     imports: (json['imports'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e))
+        ?.map((e) => Canonical.fromJson(e))
         .toList(),
     software: json['software'] == null
         ? null
@@ -90,28 +81,25 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
         _$CapabilityStatementFhirVersionEnumMap, json['fhirVersion'],
         unknownValue: CapabilityStatementFhirVersion.unknown),
     format: (json['format'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Code.fromJson(e))
+        ?.map((e) => Code.fromJson(e))
         .toList(),
     patchFormat: (json['patchFormat'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Code.fromJson(e))
+        ?.map((e) => Code.fromJson(e))
         .toList(),
     implementationGuide: (json['implementationGuide'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e))
+        ?.map((e) => Canonical.fromJson(e))
         .toList(),
     rest: (json['rest'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementRest.fromJson(e as Map<String, dynamic>))
+        ?.map(
+            (e) => CapabilityStatementRest.fromJson(e as Map<String, dynamic>))
         .toList(),
     messaging: (json['messaging'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementMessaging.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementMessaging.fromJson(e as Map<String, dynamic>))
         .toList(),
     document: (json['document'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementDocument.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementDocument.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -132,13 +120,13 @@ Map<String, dynamic> _$_$_CapabilityStatementToJson(
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('text', instance.text?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
@@ -147,31 +135,31 @@ Map<String, dynamic> _$_$_CapabilityStatementToJson(
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
-  writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
+  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description?.toJson());
   writeNotNull(
-      'useContext', instance.useContext?.map((e) => e?.toJson()).toList());
+      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'jurisdiction', instance.jurisdiction?.map((e) => e?.toJson()).toList());
+      'jurisdiction', instance.jurisdiction?.map((e) => e.toJson()).toList());
   writeNotNull('purpose', instance.purpose?.toJson());
   writeNotNull('copyright', instance.copyright?.toJson());
   writeNotNull('kind', _$CapabilityStatementKindEnumMap[instance.kind]);
   writeNotNull(
-      'instantiates', instance.instantiates?.map((e) => e?.toJson()).toList());
-  writeNotNull('imports', instance.imports?.map((e) => e?.toJson()).toList());
+      'instantiates', instance.instantiates?.map((e) => e.toJson()).toList());
+  writeNotNull('imports', instance.imports?.map((e) => e.toJson()).toList());
   writeNotNull('software', instance.software?.toJson());
   writeNotNull('implementation', instance.implementation?.toJson());
   writeNotNull('fhirVersion',
       _$CapabilityStatementFhirVersionEnumMap[instance.fhirVersion]);
-  writeNotNull('format', instance.format?.map((e) => e?.toJson()).toList());
+  writeNotNull('format', instance.format?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'patchFormat', instance.patchFormat?.map((e) => e?.toJson()).toList());
+      'patchFormat', instance.patchFormat?.map((e) => e.toJson()).toList());
   writeNotNull('implementationGuide',
-      instance.implementationGuide?.map((e) => e?.toJson()).toList());
-  writeNotNull('rest', instance.rest?.map((e) => e?.toJson()).toList());
+      instance.implementationGuide?.map((e) => e.toJson()).toList());
+  writeNotNull('rest', instance.rest?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'messaging', instance.messaging?.map((e) => e?.toJson()).toList());
-  writeNotNull('document', instance.document?.map((e) => e?.toJson()).toList());
+      'messaging', instance.messaging?.map((e) => e.toJson()).toList());
+  writeNotNull('document', instance.document?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -390,29 +378,23 @@ _$_CapabilityStatementRest _$_$_CapabilityStatementRestFromJson(
         : CapabilityStatementSecurity.fromJson(
             json['security'] as Map<String, dynamic>),
     resource: (json['resource'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementResource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementResource.fromJson(e as Map<String, dynamic>))
         .toList(),
     interaction: (json['interaction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementInteraction1.fromJson(
-                e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementInteraction1.fromJson(e as Map<String, dynamic>))
         .toList(),
     searchParam: (json['searchParam'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementSearchParam.fromJson(
-                e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementSearchParam.fromJson(e as Map<String, dynamic>))
         .toList(),
     operation: (json['operation'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementOperation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementOperation.fromJson(e as Map<String, dynamic>))
         .toList(),
     compartment: (json['compartment'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e))
+        ?.map((e) => Canonical.fromJson(e))
         .toList(),
   );
 }
@@ -435,15 +417,15 @@ Map<String, dynamic> _$_$_CapabilityStatementRestToJson(
   writeNotNull('mode', _$CapabilityStatementRestModeEnumMap[instance.mode]);
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull('security', instance.security?.toJson());
-  writeNotNull('resource', instance.resource?.map((e) => e?.toJson()).toList());
+  writeNotNull('resource', instance.resource?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'interaction', instance.interaction?.map((e) => e?.toJson()).toList());
+      'interaction', instance.interaction?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'searchParam', instance.searchParam?.map((e) => e?.toJson()).toList());
+      'searchParam', instance.searchParam?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'operation', instance.operation?.map((e) => e?.toJson()).toList());
+      'operation', instance.operation?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'compartment', instance.compartment?.map((e) => e?.toJson()).toList());
+      'compartment', instance.compartment?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -469,9 +451,7 @@ _$_CapabilityStatementSecurity _$_$_CapabilityStatementSecurityFromJson(
         .toList(),
     cors: json['cors'] == null ? null : Boolean.fromJson(json['cors']),
     service: (json['service'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     description: json['description'] == null
         ? null
@@ -495,7 +475,7 @@ Map<String, dynamic> _$_$_CapabilityStatementSecurityToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('cors', instance.cors?.toJson());
-  writeNotNull('service', instance.service?.map((e) => e?.toJson()).toList());
+  writeNotNull('service', instance.service?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description?.toJson());
   return val;
 }
@@ -518,16 +498,14 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
     profile:
         json['profile'] == null ? null : Canonical.fromJson(json['profile']),
     supportedProfile: (json['supportedProfile'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e))
+        ?.map((e) => Canonical.fromJson(e))
         .toList(),
     documentation: json['documentation'] == null
         ? null
         : Markdown.fromJson(json['documentation']),
     interaction: (json['interaction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementInteraction.fromJson(
-                e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementInteraction.fromJson(e as Map<String, dynamic>))
         .toList(),
     versioning: _$enumDecodeNullable(
         _$CapabilityStatementResourceVersioningEnumMap, json['versioning'],
@@ -553,25 +531,22 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
         json['conditionalDelete'],
         unknownValue: CapabilityStatementResourceConditionalDelete.unknown),
     referencePolicy: (json['referencePolicy'] as List<dynamic>?)
-        ?.map((e) => _$enumDecodeNullable(
+        ?.map((e) => _$enumDecode(
             _$CapabilityStatementResourceReferencePolicyEnumMap, e))
         .toList(),
     searchInclude: (json['searchInclude'] as List<dynamic>?)
-        ?.map((e) => e as String?)
+        ?.map((e) => e as String)
         .toList(),
     searchRevInclude: (json['searchRevInclude'] as List<dynamic>?)
-        ?.map((e) => e as String?)
+        ?.map((e) => e as String)
         .toList(),
     searchParam: (json['searchParam'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementSearchParam.fromJson(
-                e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementSearchParam.fromJson(e as Map<String, dynamic>))
         .toList(),
     operation: (json['operation'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementOperation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementOperation.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -594,10 +569,10 @@ Map<String, dynamic> _$_$_CapabilityStatementResourceToJson(
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
   writeNotNull('supportedProfile',
-      instance.supportedProfile?.map((e) => e?.toJson()).toList());
+      instance.supportedProfile?.map((e) => e.toJson()).toList());
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull(
-      'interaction', instance.interaction?.map((e) => e?.toJson()).toList());
+      'interaction', instance.interaction?.map((e) => e.toJson()).toList());
   writeNotNull('versioning',
       _$CapabilityStatementResourceVersioningEnumMap[instance.versioning]);
   writeNotNull('readHistory', instance.readHistory?.toJson());
@@ -620,9 +595,9 @@ Map<String, dynamic> _$_$_CapabilityStatementResourceToJson(
   writeNotNull('searchInclude', instance.searchInclude);
   writeNotNull('searchRevInclude', instance.searchRevInclude);
   writeNotNull(
-      'searchParam', instance.searchParam?.map((e) => e?.toJson()).toList());
+      'searchParam', instance.searchParam?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'operation', instance.operation?.map((e) => e?.toJson()).toList());
+      'operation', instance.operation?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -719,14 +694,10 @@ _$_CapabilityStatementSearchParam _$_$_CapabilityStatementSearchParamFromJson(
   return _$_CapabilityStatementSearchParam(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     name: json['name'] as String?,
     definition: json['definition'] == null
@@ -753,9 +724,9 @@ Map<String, dynamic> _$_$_CapabilityStatementSearchParamToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name);
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull(
@@ -877,19 +848,14 @@ _$_CapabilityStatementMessaging _$_$_CapabilityStatementMessagingFromJson(
   return _$_CapabilityStatementMessaging(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     endpoint: (json['endpoint'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementEndpoint.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            CapabilityStatementEndpoint.fromJson(e as Map<String, dynamic>))
         .toList(),
     reliableCache: json['reliableCache'] == null
         ? null
@@ -898,10 +864,8 @@ _$_CapabilityStatementMessaging _$_$_CapabilityStatementMessagingFromJson(
         ? null
         : Markdown.fromJson(json['documentation']),
     supportedMessage: (json['supportedMessage'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementSupportedMessage.fromJson(
-                e as Map<String, dynamic>))
+        ?.map((e) => CapabilityStatementSupportedMessage.fromJson(
+            e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -918,14 +882,14 @@ Map<String, dynamic> _$_$_CapabilityStatementMessagingToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('endpoint', instance.endpoint?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('endpoint', instance.endpoint?.map((e) => e.toJson()).toList());
   writeNotNull('reliableCache', instance.reliableCache?.toJson());
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull('supportedMessage',
-      instance.supportedMessage?.map((e) => e?.toJson()).toList());
+      instance.supportedMessage?.map((e) => e.toJson()).toList());
   return val;
 }
 

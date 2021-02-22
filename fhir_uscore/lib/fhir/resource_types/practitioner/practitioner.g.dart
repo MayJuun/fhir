@@ -27,21 +27,18 @@ _$_Practitioner _$_$_PractitionerFromJson(Map<String, dynamic> json) {
             e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
         .toList(),
     address: (json['address'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Address.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Address.fromJson(e as Map<String, dynamic>))
         .toList(),
     telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
     gender: _$enumDecodeNullable(_$PractitionerGenderEnumMap, json['gender'],
         unknownValue: PractitionerGender.unknown),
     birthDate:
         json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
     qualification: (json['qualification'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : PractitionerQualification.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            PractitionerQualification.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -62,12 +59,12 @@ Map<String, dynamic> _$_$_PractitionerToJson(_$_Practitioner instance) {
   writeNotNull('text', instance.text?.toJson());
   val['identifier'] = instance.identifier.map((e) => e?.toJson()).toList();
   val['name'] = instance.name.map((e) => e?.toJson()).toList();
-  writeNotNull('address', instance.address?.map((e) => e?.toJson()).toList());
-  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
+  writeNotNull('address', instance.address?.map((e) => e.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
   writeNotNull('gender', _$PractitionerGenderEnumMap[instance.gender]);
   writeNotNull('birthDate', instance.birthDate?.toJson());
-  writeNotNull('qualification',
-      instance.qualification?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'qualification', instance.qualification?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -159,26 +156,19 @@ _$_PractitionerRole _$_$_PractitionerRoleFromJson(Map<String, dynamic> json) {
     organization:
         Reference.fromJson(json['organization'] as Map<String, dynamic>),
     code: (json['code'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     specialty: (json['specialty'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     location: (json['location'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
     endpoint: (json['endpoint'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -199,12 +189,12 @@ Map<String, dynamic> _$_$_PractitionerRoleToJson(_$_PractitionerRole instance) {
   writeNotNull('text', instance.text?.toJson());
   val['practitioner'] = instance.practitioner.toJson();
   val['organization'] = instance.organization.toJson();
-  writeNotNull('code', instance.code?.map((e) => e?.toJson()).toList());
+  writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'specialty', instance.specialty?.map((e) => e?.toJson()).toList());
-  writeNotNull('location', instance.location?.map((e) => e?.toJson()).toList());
-  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
-  writeNotNull('endpoint', instance.endpoint?.map((e) => e?.toJson()).toList());
+      'specialty', instance.specialty?.map((e) => e.toJson()).toList());
+  writeNotNull('location', instance.location?.map((e) => e.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
+  writeNotNull('endpoint', instance.endpoint?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -213,8 +203,7 @@ _$_PractitionerQualification _$_$_PractitionerQualificationFromJson(
   return _$_PractitionerQualification(
     id: json['id'] as String?,
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     period: json['period'] == null
@@ -238,7 +227,7 @@ Map<String, dynamic> _$_$_PractitionerQualificationToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('issuer', instance.issuer?.toJson());

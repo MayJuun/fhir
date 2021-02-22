@@ -27,7 +27,7 @@ class _$MedicationRequestTearOff {
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           required MedicationRequestStatus status,
       required MedicationRequestIntent intent,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       Boolean? reportedBoolean,
       Reference? reportedReference,
       CodeableConcept? medicationCodeableConcept,
@@ -79,7 +79,7 @@ mixin _$MedicationRequest {
   @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
   MedicationRequestStatus get status;
   MedicationRequestIntent get intent;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   Boolean? get reportedBoolean;
   Reference? get reportedReference;
   CodeableConcept? get medicationCodeableConcept;
@@ -111,7 +111,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           MedicationRequestStatus status,
       MedicationRequestIntent intent,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       Boolean? reportedBoolean,
       Reference? reportedReference,
       CodeableConcept? medicationCodeableConcept,
@@ -180,7 +180,7 @@ class _$MedicationRequestCopyWithImpl<$Res>
           intent == freezed ? _value.intent : intent as MedicationRequestIntent,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
           : reportedBoolean as Boolean?,
@@ -321,7 +321,7 @@ abstract class _$MedicationRequestCopyWith<$Res>
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           MedicationRequestStatus status,
       MedicationRequestIntent intent,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       Boolean? reportedBoolean,
       Reference? reportedReference,
       CodeableConcept? medicationCodeableConcept,
@@ -401,7 +401,7 @@ class __$MedicationRequestCopyWithImpl<$Res>
           intent == freezed ? _value.intent : intent as MedicationRequestIntent,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
           : reportedBoolean as Boolean?,
@@ -479,7 +479,7 @@ class _$_MedicationRequest extends _MedicationRequest {
   @override
   final MedicationRequestIntent intent;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   final Boolean? reportedBoolean;
   @override
@@ -608,7 +608,7 @@ abstract class _MedicationRequest extends MedicationRequest {
           @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
               required MedicationRequestStatus status,
           required MedicationRequestIntent intent,
-          List<Resource>? contained,
+          List<Resource?>? contained,
           Boolean? reportedBoolean,
           Reference? reportedReference,
           CodeableConcept? medicationCodeableConcept,
@@ -641,7 +641,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   MedicationRequestIntent get intent;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   Boolean? get reportedBoolean;
   @override

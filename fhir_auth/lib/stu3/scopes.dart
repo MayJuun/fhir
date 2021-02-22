@@ -117,11 +117,7 @@ abstract class Scopes implements _$Scopes {
       returnValue.add('smart/orchestrate_launch');
     }
     if (additional != null) {
-      for (final addit in additional!) {
-        if (addit != null) {
-          returnValue.add(addit);
-        }
-      }
+      additional!.forEach(returnValue.add);
     }
     return returnValue;
   }
