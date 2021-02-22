@@ -43,6 +43,13 @@ enum AllergyIntoleranceClinicalStatus {
   @JsonValue('Resolved')
   resolved,
 }
+
+final codeFromAllergyIntoleranceClinicalStatus = {
+  AllergyIntoleranceClinicalStatus.active: 'active',
+  AllergyIntoleranceClinicalStatus.inactive: 'inactive',
+  AllergyIntoleranceClinicalStatus.resolved: 'resolved',
+};
+
 final codeableConceptFromAllergyIntoleranceClinicalStatus = {
   AllergyIntoleranceClinicalStatus.active: CodeableConcept(coding: [
     Coding(
