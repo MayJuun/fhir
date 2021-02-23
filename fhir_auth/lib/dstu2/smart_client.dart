@@ -1,12 +1,13 @@
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:collection/collection.dart';
 import 'package:dartz/dartz.dart';
+import 'package:fhir/dstu2.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
-import 'package:flutter_appauth/flutter_appauth.dart';
-import 'package:fhir/dstu2.dart';
 
 import 'fhir_client.dart';
 import 'scopes.dart';
@@ -252,24 +253,15 @@ class SmartClient extends FhirClient {
 
   /// convenience method for finding either the token or authorize endpoint
   FhirUri? _getUri(CapabilityStatement capabilityStatement, String type) {
-    if (capabilityStatement.rest == null) {
-      return null;
-    } else if (capabilityStatement.rest?[0].security?.extension_ == null) {
-      return null;
-    } else if (capabilityStatement
-            .rest?[0].security?.extension_?[0].extension_ ==
-        null) {
-      return null;
-    } else {
-      try {
-        final statement = capabilityStatement
-            .rest![0].security!.extension_![0].extension_!
-            .firstWhere((ext) => (ext.url.toString()) == type);
-        return statement.valueUri;
-      } catch (e) {
-        throw Exception(e.toString());
-      }
-    }
+    return capabilityStatement.rest
+        ?.firstWhereOrNull((_) => true)
+        ?.security
+        ?.extension_
+        ?.firstWhereOrNull((_) => true)
+        ?.extension_
+        ?.firstWhereOrNull(
+            (ext) => (ext.url == null ? null : ext.url.toString()) == type)
+        ?.valueUri;
   }
 
   String _nonce({int? length}) {
