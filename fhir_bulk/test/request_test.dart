@@ -92,7 +92,8 @@ void main() {
             Tuple2(R4ResourceType.AllergyIntolerance, null),
             Tuple2(R4ResourceType.Device, null),
           ]);
-      final response = await request.request(headers: {'test': 'header'});
+      final response = await request.request(headers: {});
+
       var fileString = '';
       for (final res in response) {
         fileString += json.encode(res?.toJson());

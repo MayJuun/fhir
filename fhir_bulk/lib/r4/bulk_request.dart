@@ -95,6 +95,7 @@ abstract class BulkRequest with _$BulkRequest {
   ) async {
     client ??= Client();
     List<Resource?> returnList = <Resource?>[];
+    String? currentLocation;
 
     if (kTestMode) {
       return _operationOutcome(uri);
@@ -106,30 +107,44 @@ abstract class BulkRequest with _$BulkRequest {
       if (_errorCodes.keys.contains(resultWithLocation.statusCode)) {
         return _failedHttp(resultWithLocation.statusCode, resultWithLocation);
       }
-      final currentLocation = resultWithLocation.headers['content-location'];
-      int retryAfter = 1;
-      Response resultWithTime;
-      while (retryAfter > 0) {
-        if (currentLocation == null) {
-          throw Exception('"content-location" was null for bulk request');
-        } else {
-          resultWithTime =
+      currentLocation = resultWithLocation.headers['content-location'];
+    } catch (e) {
+      return _operationOutcome('Failed to initiate a Bulk request',
+          diagnostics: 'Exception: $e');
+    }
+
+    int retryAfter = 1;
+    Response responseLinks = Response('{}', 422);
+    while (retryAfter > 0) {
+      if (currentLocation == null) {
+        throw Exception('"content-location" was null for bulk request');
+      } else {
+        try {
+          responseLinks =
               await client.get(Uri.parse(currentLocation), headers: headers);
           retryAfter =
-              int.tryParse(resultWithTime.headers['retry-after'] as String) ??
-                  -1;
+              int.tryParse(responseLinks.headers['retry-after'] ?? '-1') ?? -1;
+        } catch (e) {
+          return _operationOutcome('Failed to wait for a Bulk request',
+              diagnostics: 'Exception: $e');
+        }
+        if (retryAfter > 0) {
           await Future.delayed(Duration(seconds: retryAfter));
         }
-        final responseBody = jsonDecode(resultWithTime.body)['output'];
-        for (final resource in responseBody) {
-          final ndjsonList =
-              await client.get(resource['url'], headers: headers);
-          returnList.addAll(FhirBulk.fromData(ndjsonList.body));
-        }
       }
-    } catch (e) {
-      return _operationOutcome('Failed to complete a Bulk request',
-          diagnostics: 'Exception: $e');
+    }
+
+    final resourceLinks = jsonDecode(responseLinks.body)['output'] ?? [];
+
+    for (final link in resourceLinks) {
+      try {
+        final ndjsonList =
+            await client.get(Uri.parse(link['url']), headers: headers);
+        returnList.addAll(FhirBulk.fromData(ndjsonList.body));
+      } catch (e) {
+        return _operationOutcome('Failed to download from ${link['url']}',
+            diagnostics: 'Exception: $e');
+      }
     }
     return returnList;
   }
