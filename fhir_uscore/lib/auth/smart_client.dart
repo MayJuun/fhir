@@ -1,11 +1,12 @@
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:collection/collection.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
-import 'package:flutter_appauth/flutter_appauth.dart';
 
 import '../uscore.dart';
 import 'fhir_client.dart';
@@ -64,7 +65,7 @@ class SmartClient extends FhirClient {
   /// this is for testing, you shouldn't store the secret in the object
   String? _secret;
 
-  DateTime? _accessTokenExpiration;
+  DateTime? _accessTokenExpiration = DateTime.now();
 
   bool isLoggedIn;
 
@@ -89,6 +90,7 @@ class SmartClient extends FhirClient {
       authUrl = FhirUri(authUrl);
       tokenUrl = FhirUri(tokenUrl);
     }
+
     try {
       await _tokens;
     } catch (e) {
@@ -150,7 +152,7 @@ class SmartClient extends FhirClient {
     await secureStorage.write(
         key: 'access_token', value: authorization?.accessToken ?? '');
     await secureStorage.write(
-        key: 'refresh_token', value: authorization?.accessToken ?? '');
+        key: 'refresh_token', value: authorization?.refreshToken ?? '');
 
     _accessTokenExpiration =
         authorization?.accessTokenExpirationDateTime ?? DateTime.now();
@@ -159,43 +161,48 @@ class SmartClient extends FhirClient {
   }
 
   Future<Unit> get _refresh async {
-    final tokenRequest = _secret == null
-        ? TokenRequest(
-            _clientId,
-            _redirectUri.toString(),
-            serviceConfiguration: AuthorizationServiceConfiguration(
-              authUrl.toString(),
-              tokenUrl.toString(),
-            ),
-            refreshToken: await secureStorage.read(key: 'refresh_token'),
-            grantType: 'refresh_token',
-            scopes: scopes?.scopesList(),
-            issuer: _clientId,
-          )
-        : TokenRequest(
-            _clientId,
-            _redirectUri.toString(),
-            clientSecret: _secret,
-            serviceConfiguration: AuthorizationServiceConfiguration(
-              authUrl.toString(),
-              tokenUrl.toString(),
-            ),
-            refreshToken: await secureStorage.read(key: 'refresh_token'),
-            grantType: 'refresh_token',
-            scopes: scopes?.scopesList(),
-            issuer: _clientId,
-          );
-    tokenRequest.additionalParameters =
-        additionalParameters ?? <String, String>{};
-    tokenRequest.additionalParameters!['nonce'] = _nonce();
-    final authorization = await appAuth.token(tokenRequest);
-    await secureStorage.write(
-        key: 'access_token', value: authorization?.accessToken ?? '');
-    await secureStorage.write(
-        key: 'refresh_token', value: authorization?.accessToken ?? '');
-    _accessTokenExpiration =
-        authorization?.accessTokenExpirationDateTime ?? DateTime.now();
-    return unit;
+    final refreshToken = await secureStorage.read(key: 'refresh_token');
+    if (refreshToken == '') {
+      return await _tokens;
+    } else {
+      final tokenRequest = _secret == null
+          ? TokenRequest(
+              _clientId,
+              _redirectUri.toString(),
+              serviceConfiguration: AuthorizationServiceConfiguration(
+                authUrl.toString(),
+                tokenUrl.toString(),
+              ),
+              refreshToken: refreshToken,
+              grantType: 'refresh_token',
+              scopes: scopes?.scopesList(),
+              issuer: _clientId,
+            )
+          : TokenRequest(
+              _clientId,
+              _redirectUri.toString(),
+              clientSecret: _secret,
+              serviceConfiguration: AuthorizationServiceConfiguration(
+                authUrl.toString(),
+                tokenUrl.toString(),
+              ),
+              refreshToken: await secureStorage.read(key: 'refresh_token'),
+              grantType: 'refresh_token',
+              scopes: scopes?.scopesList(),
+              issuer: _clientId,
+            );
+      tokenRequest.additionalParameters =
+          additionalParameters ?? <String, String>{};
+      tokenRequest.additionalParameters!['nonce'] = _nonce();
+      final authorization = await appAuth.token(tokenRequest);
+      await secureStorage.write(
+          key: 'access_token', value: authorization?.accessToken ?? '');
+      await secureStorage.write(
+          key: 'refresh_token', value: authorization?.accessToken ?? '');
+      _accessTokenExpiration =
+          authorization?.accessTokenExpirationDateTime ?? DateTime.now();
+      return unit;
+    }
   }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
@@ -246,25 +253,15 @@ class SmartClient extends FhirClient {
 
   /// convenience method for finding either the token or authorize endpoint
   FhirUri? _getUri(CapabilityStatement capabilityStatement, String type) {
-    if (capabilityStatement.rest == null) {
-      return null;
-    } else if (capabilityStatement.rest?[0].security?.extension_ == null) {
-      return null;
-    } else if (capabilityStatement
-            .rest?[0].security?.extension_?[0]?.extension_ ==
-        null) {
-      return null;
-    } else {
-      try {
-        final statement = capabilityStatement
-            .rest![0].security!.extension_![0]!.extension_!
-            .firstWhere(
-                (ext) => (ext.url == null ? null : ext.url.toString()) == type);
-        return statement.valueUri;
-      } catch (e) {
-        throw Exception(e.toString());
-      }
-    }
+    return capabilityStatement.rest
+        ?.firstWhereOrNull((_) => true)
+        ?.security
+        ?.extension_
+        ?.firstWhereOrNull((_) => true)
+        ?.extension_
+        ?.firstWhereOrNull(
+            (ext) => (ext.url == null ? null : ext.url.toString()) == type)
+        ?.valueUri;
   }
 
   String _nonce({int? length}) {

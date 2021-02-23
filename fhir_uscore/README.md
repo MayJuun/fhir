@@ -1,24 +1,7 @@
 ## US Core
 
-Someone recently mentioned that I should try and incorporate the US Core IG into this package, so I've attempted to do so. US Core is generally a subset of the full FHIR spec (except for patient). That means, if you have already have a resource, you can pass it into a FHIR resource just like you would normally do. For thos resources that are included in the US Core spec, I've added new constructors to the classes. This way you may define, as you normally would:
-```
-final allergyIntolerance = AllergyIntolerance();
-```
-OR you may call:
-```
-final allergyIntolerance = AllergyIntolerance.usCore();
-```
-OR:
-```
-final allergyIntolerance = AllergyIntolerance.usCoreMinimum();
-```
-This will still create a patient object that can be used like any other. However, when initially constructing it, the available parameters to pass in are only those that are included in the US Core IG.
+Someone recently mentioned that I should try and incorporate the US Core IG into this package, so I've attempted to do so. US Core is generally a subset of the full FHIR spec. So I've trimmed down my full [fhir package](https://pub.dev/packages/fhir/versions/0.3.0-nullsafety.0) to include just the fields that UsCore includes, along with constructors for all of the resources they [mention specifically](https://pub.dev/packages/fhir/versions/0.3.0-nullsafety.0) (including head circumference, BMI, etc). 
 
-ToDo:
-US Core Practitioner Profile
-US Core PractitionerRole Profile
-US Core Procedure Profile
-US Core Provenance Profile
-US Core Pulse Oximetry Profile
-US Core Smoking Status Observation Profile
-In addition US Core uses the Vital Signs Profile from the FHIR Specification.
+Most of the functionality is like all of the other packages, I've just slimmed it down to all fit in one. So this should have the UsCore FHIR resources, SMART on FHIR Launch, bulk fhir downloads, and RESTful requests.
+
+FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7.

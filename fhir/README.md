@@ -55,13 +55,8 @@ var newPatient = Patient(
 ```
 If you're instead trying to get data from a server (currently I haven't implemented SMART on FHIR so it would need to be an open server, [HAPI](https://hapi.fhir.org/) for instance - make sure you choose the right version you're interested in), a very simple example of querying and then printing the result:
 ```
-import 'dart:convert';
-
-import 'package:fhir/r4.dart';
-import 'package:http/http.dart';
-
 Future main() async {
-  var server = 'http://hapi.fhir.org/baseR4';
+  var server = 'https://hapi.fhir.org/baseR4';
   var headers = {'Content-type': 'application/json'};
   var desiredResource = 'Patient';
   var response = await get('$server/$desiredResource', headers: headers);

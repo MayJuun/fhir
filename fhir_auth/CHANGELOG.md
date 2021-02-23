@@ -1,3 +1,8 @@
+## [0.3.0-nullsafety.0]
+* Null safety!
+* Should be completely ready for null safety
+* Same functionality as before, just a little stricter now
+
 ## [0.2.1]
 * Updated dependencies
 * Added documentation

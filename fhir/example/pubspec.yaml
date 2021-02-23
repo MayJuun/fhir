@@ -9,4 +9,4 @@ environment:
 
 dependencies:
   fhir:
-    path: ..
+    path: ../../fhir

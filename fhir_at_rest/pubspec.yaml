@@ -9,8 +9,7 @@ environment:
   sdk: '>=2.12.0-0 <3.0.0'
 
 dependencies:
-  fhir: 
-    path: ../fhir
+  fhir: ^0.3.0-nullsafety.0
   freezed_annotation: ^0.13.0-nullsafety.0
   http: ^0.13.0
 

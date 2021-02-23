@@ -10,10 +10,7 @@ environment:
 dependencies:
   archive: ^3.0.0
   dartz: ^0.10.0-nullsafety.1
-
-  fhir: 
-    path: ../fhir  
-
+  fhir: ^0.3.0-nullsafety.0
   freezed_annotation: ^0.13.0-nullsafety.0
   http: ^0.13.0
   mime: ^1.0.0
