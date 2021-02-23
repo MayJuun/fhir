@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
                   onPressed: () async => await aidbox()),
               ElevatedButton(
                   child: const Text('Azure', style: TextStyle(fontSize: 44)),
-                  // need to authorize app online before logging in via app
                   onPressed: () async => await azure()),
               ElevatedButton(
                   child:

@@ -47,8 +47,6 @@ Future smartRequest({
     resource: _newPatient,
   );
 
-  print(await client.authHeaders);
-
   Id? newId;
   try {
     final response = await request1.request(headers: await client.authHeaders);

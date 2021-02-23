@@ -15,6 +15,7 @@ Future hapiRequest(String hapiUrl) async {
   Id? newId;
   try {
     final response = await request1.request(headers: {});
+    print(response);
     newId = response?.id;
   } catch (e) {
     print(e);

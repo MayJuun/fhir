@@ -29,7 +29,7 @@ import 'package:sembast/sembast.dart';
 ///
 /// // ...your database is ready to use
 /// ```
-SembastCodec getEncryptSembastCodecAES({@required String password}) =>
+SembastCodec getEncryptSembastCodecAES({required String password}) =>
     SembastCodec(
         signature: _encryptCodecSignature,
         codec: _EncryptCodec(_generateEncryptPassword(password)));
@@ -45,8 +45,8 @@ Uint8List _generateEncryptPassword(String password) {
 
 /// AES-256 based Codec
 class _EncryptCodec extends Codec<dynamic, String> {
-  _EncryptEncoder _encoder;
-  _EncryptDecoder _decoder;
+  late _EncryptEncoder _encoder;
+  late _EncryptDecoder _decoder;
 
   _EncryptCodec(Uint8List passwordBytes) {
     var encrypter = AES((Key(passwordBytes)), mode: AESMode.cbc);
