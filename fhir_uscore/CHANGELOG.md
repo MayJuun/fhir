@@ -1,3 +1,8 @@
+## [0.3.0-nullsafety.1]
+* Need to clean it up
+* Added documentation
+* Made sure dependencies updated
+
 ## [0.3.0-nullsafety.0]
 * Yeah, I'm going to go ahead and start with 0.3.0 because it keeps it in line with all of the other packages
 * Should be completely ready for null safety

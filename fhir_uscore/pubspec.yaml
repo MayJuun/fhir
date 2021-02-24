@@ -1,6 +1,6 @@
 name: fhir_uscore
-description: FHIR library profile for UsCore based on R4.
-version: 0.3.0-nullsafety.0
+description: FHIR library profile for UsCore based on R4. This combines parts of the base fhir package, fhir_auth, fhir_bulk, and fhir_at_rest into a single package that follows UsCore requirements.
+version: 0.3.0-nullsafety.1
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir
 

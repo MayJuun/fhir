@@ -1,3 +1,10 @@
+## [0.3.0-nullsafety.2]
+* Updated SDK requirements
+
+## [0.3.0-nullsafety.1]
+* Trying to get more points
+* Added documentation, need to pass static analysis, etc.
+
 ## [0.3.0-nullsafety.0]
 * Null safety!
 * Should be completely ready for null safety
