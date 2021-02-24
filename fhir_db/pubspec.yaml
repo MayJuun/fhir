@@ -9,12 +9,11 @@ environment:
   flutter: ">=1.17.0 <2.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
   crypto: ^2.1.5
   encrypt: ^4.1.0
-  fhir: 
-    path: ../fhir
+  fhir: ^0.3.0-nullsafety.0
+  flutter:
+    sdk: flutter
   meta: ^1.3.0
   path: ^1.8.0
   path_provider: ^2.0.0

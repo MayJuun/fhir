@@ -116,9 +116,9 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: "../../fhir"
-      relative: true
-    source: path
+      name: fhir
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.3.0-nullsafety.0"
   fhir_db:
     dependency: "direct main"
