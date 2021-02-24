@@ -9,7 +9,7 @@ environment:
   flutter: ">=1.17.0 <2.0.0"
 
 dependencies:
-  crypto: ^2.1.5
+  crypto: ^3.0.0
   encrypt: ^4.1.0
   fhir: ^0.3.0-nullsafety.0
   flutter:

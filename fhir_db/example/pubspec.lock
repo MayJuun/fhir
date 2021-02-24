@@ -22,13 +22,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.6.0"
-  asn1lib:
-    dependency: transitive
-    description:
-      name: asn1lib
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.8.1"
   async:
     dependency: transitive
     description:
@@ -64,13 +57,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.0"
-  clock:
-    dependency: transitive
-    description:
-      name: clock
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
   collection:
     dependency: transitive
     description:
@@ -98,14 +84,7 @@ packages:
       name: crypto
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.5"
-  encrypt:
-    dependency: transitive
-    description:
-      name: encrypt
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.1.0"
+    version: "3.0.0"
   ffi:
     dependency: transitive
     description:
@@ -314,13 +293,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
-  pointycastle:
-    dependency: transitive
-    description:
-      name: pointycastle
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.1"
   pool:
     dependency: transitive
     description:

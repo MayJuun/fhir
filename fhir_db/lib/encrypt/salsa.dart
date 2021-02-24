@@ -4,7 +4,6 @@ import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart';
 import 'package:encrypt/encrypt.dart';
-import 'package:meta/meta.dart';
 import 'package:sembast/sembast.dart';
 
 /// Create a codec to use to open a database with encrypted stored data.
@@ -21,12 +20,12 @@ import 'package:sembast/sembast.dart';
 /// The usage is then
 ///
 /// ```dart
-/// // Initialize the encryption codec with a user password
+/// Initialize the encryption codec with a user password
 /// var codec = getEncryptSembastCodec(password: '[your_user_password]');
-/// // Open the database with the codec
+/// Open the database with the codec
 /// Database db = await factory.openDatabase(dbPath, codec: codec);
 ///
-/// // ...your database is ready to use
+/// ...your database is ready to use
 /// ```
 SembastCodec getEncryptSembastCodecSalsa20({required String password}) =>
     SembastCodec(
