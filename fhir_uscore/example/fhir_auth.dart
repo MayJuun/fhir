@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:fhir_uscore/uscore.dart';
 
-Future smartRequest({
+Future fhirAuth({
   String? url,
   required String clientId,
   String? secret,

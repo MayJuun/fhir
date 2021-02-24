@@ -1,6 +1,6 @@
 import 'package:fhir_uscore/uscore.dart';
 
-Future<void> main() async {
+Future<void> fhirAtRest() async {
   var request = FhirRequest.read(
     base: Uri.parse('http://hapi.fhir.org/baseUsCore'),
     type: UsCoreResourceType.Patient,

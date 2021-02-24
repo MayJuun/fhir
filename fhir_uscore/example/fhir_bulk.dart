@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:dartz/dartz.dart';
 import 'package:fhir_uscore/uscore.dart';
 
-Future<void> main() async {
+Future<void> fhirBulk() async {
   await compressTest();
   await requestTest();
 }

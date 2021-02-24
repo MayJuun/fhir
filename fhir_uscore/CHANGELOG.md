@@ -1,3 +1,6 @@
+## [0.3.0-nullsafety.2]
+* Give me my fucking pub points!
+
 ## [0.3.0-nullsafety.1]
 * Need to clean it up
 * Added documentation

@@ -1,6 +1,6 @@
 import 'package:fhir_uscore/uscore.dart';
 
-void main() {
+void fhir() {
   final patient = Patient(
     identifier: [
       Identifier(
