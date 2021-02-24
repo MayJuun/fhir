@@ -1,3 +1,7 @@
+## [0.3.0-nullsafety.5]
+* Fucking finally
+* Static analysis can kiss my ass
+
 ## [0.3.0-nullsafety.4]
 * Didn't like my Flutter SDK
 * Passes all testing/reviews on my computer, but not on pub.dev
