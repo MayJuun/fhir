@@ -32,9 +32,6 @@ abstract class Procedure with Resource implements _$Procedure {
     List<ProcedureFocalDevice>? focalDevice,
   }) = _Procedure;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Procedure.fromYaml(dynamic yaml) => yaml is String
       ? Procedure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -47,6 +44,10 @@ abstract class Procedure with Resource implements _$Procedure {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Procedure.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -60,9 +61,6 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
     Reference? onBehalfOf,
   }) = _ProcedurePerformer;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory ProcedurePerformer.fromYaml(dynamic yaml) => yaml is String
       ? ProcedurePerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -75,6 +73,9 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
       _$ProcedurePerformerFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -88,9 +89,6 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
     required Reference manipulated,
   }) = _ProcedureFocalDevice;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory ProcedureFocalDevice.fromYaml(dynamic yaml) => yaml is String
       ? ProcedureFocalDevice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -103,4 +101,7 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFocalDeviceFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

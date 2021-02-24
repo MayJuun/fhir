@@ -16,27 +16,27 @@ Future main() async {
       test(
         '\n****Json has been Validated****',
         () async {
-          var testList = await jsonValidation();
+          final testList = await jsonValidation();
 
           print(
               'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
 
           expect(testList.isEmpty, true);
         },
-        timeout: Timeout(Duration(minutes: 8)),
+        timeout: const Timeout(Duration(minutes: 8)),
       );
 
       test(
         '\n****Yaml has been Validated****',
         () async {
-          var testList = await yamlValidation();
+          final testList = await yamlValidation();
 
           print(
               'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
 
           expect(testList.isEmpty, true);
         },
-        timeout: Timeout(Duration(minutes: 25)),
+        timeout: const Timeout(Duration(minutes: 25)),
       );
     },
   );

@@ -38,9 +38,6 @@ abstract class Provenance with Resource implements _$Provenance {
     return Provenance(target: target, recorded: recorded, agent: agent);
   }
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
       ? Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -53,6 +50,10 @@ abstract class Provenance with Resource implements _$Provenance {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -76,9 +77,6 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
               : codeableConceptFromProvenanceAgentParticipantType[
                   participantType]);
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
       ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -91,4 +89,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

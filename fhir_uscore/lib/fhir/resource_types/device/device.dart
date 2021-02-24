@@ -61,9 +61,6 @@ abstract class Device with Resource implements _$Device {
   }) =>
       Device(type: type, patient: patient);
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Device.fromYaml(dynamic yaml) => yaml is String
       ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -75,6 +72,10 @@ abstract class Device with Resource implements _$Device {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -90,9 +91,6 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
         DeviceUdiCarrierEntryType? entryType,
   }) = _DeviceUdiCarrier;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceUdiCarrier.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUdiCarrier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -105,6 +103,9 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiCarrierFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -118,9 +119,6 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
         DeviceDeviceNameType? type,
   }) = _DeviceDeviceName;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceDeviceName.fromYaml(dynamic yaml) => yaml is String
       ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -133,4 +131,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
       _$DeviceDeviceNameFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

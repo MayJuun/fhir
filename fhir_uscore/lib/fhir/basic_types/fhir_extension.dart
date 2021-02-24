@@ -63,9 +63,6 @@ abstract class FhirExtension implements _$FhirExtension {
     Dosage? valueDosage,
   }) = _FhirExtension;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory FhirExtension.fromYaml(dynamic yaml) => yaml is String
       ? FhirExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -78,4 +75,7 @@ abstract class FhirExtension implements _$FhirExtension {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$FhirExtensionFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

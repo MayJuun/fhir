@@ -55,9 +55,6 @@ abstract class CareTeam with Resource implements _$CareTeam {
         member: member,
       );
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CareTeam.fromYaml(dynamic yaml) => yaml is String
       ? CareTeam.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -70,6 +67,10 @@ abstract class CareTeam with Resource implements _$CareTeam {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CareTeam.fromJson(Map<String, dynamic> json) =>
       _$CareTeamFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -80,9 +81,6 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
     required List<CodeableConcept?> role,
     required Reference member,
   }) = _CareTeamParticipant;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CareTeamParticipant.fromYaml(dynamic yaml) => yaml is String
@@ -96,4 +94,7 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CareTeamParticipant.fromJson(Map<String, dynamic> json) =>
       _$CareTeamParticipantFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

@@ -25,13 +25,16 @@ class Time {
   final bool _isValid;
 
   bool get isValid => _isValid;
+  @override
   int get hashCode => _valueString.hashCode;
   String? get value => _valueTime;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Time

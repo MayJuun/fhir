@@ -1,3 +1,6 @@
+## [0.3.0-nullsafety.3]
+* Static annoyances fixed
+
 ## [0.3.0-nullsafety.2]
 * Give me my fucking pub points!
 

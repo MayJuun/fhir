@@ -65,9 +65,6 @@ abstract class Practitioner with Resource implements _$Practitioner {
     );
   }
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Practitioner.fromYaml(dynamic yaml) => yaml is String
       ? Practitioner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -80,6 +77,10 @@ abstract class Practitioner with Resource implements _$Practitioner {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
       _$PractitionerFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -142,9 +143,6 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
         organization: organization,
       );
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory PractitionerRole.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerRole.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -157,6 +155,10 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -172,9 +174,6 @@ abstract class PractitionerQualification
     Reference? issuer,
   }) = _PractitionerQualification;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerQualification.fromJson(
@@ -188,4 +187,7 @@ abstract class PractitionerQualification
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$PractitionerQualificationFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

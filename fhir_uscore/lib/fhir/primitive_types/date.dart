@@ -57,11 +57,13 @@ class Date {
   final Exception? _parseError;
 
   bool get isValid => _isValid;
+  @override
   int get hashCode => _valueString.hashCode;
   DateTime? get value => _valueDateTime;
   Exception? get parseError => _parseError;
   DatePrecision get precision => _precision;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Date
@@ -72,6 +74,7 @@ class Date {
                   ? o == _valueString
                   : false;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;
@@ -91,7 +94,9 @@ class Date {
         if (_dateYYYYMMDDExp.hasMatch(value)) {
           return DateTime.parse(value);
         } else {
-          throw FormatException();
+          throw FormatException(
+              'FormatException: "$value" is not a DateTime, as defined by: '
+              'https://www.hl7.org/fhir/datatypes.html#date');
         }
       } on FormatException {
         throw FormatException(
@@ -105,8 +110,8 @@ class Date {
     if (_dateYYYYExp.hasMatch(value)) {
       return DateTime(int.parse(value));
     } else if (_dateYYYYMMExp.hasMatch(value)) {
-      var year = int.parse(value.split('-')[0]);
-      var month = int.parse(value.split('-')[1]);
+      final year = int.parse(value.split('-')[0]);
+      final month = int.parse(value.split('-')[1]);
       return DateTime(year, month);
     } else {
       throw FormatException(

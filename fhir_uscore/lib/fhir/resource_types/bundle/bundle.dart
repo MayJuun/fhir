@@ -29,9 +29,6 @@ abstract class Bundle with Resource implements _$Bundle {
     Signature? signature,
   }) = _Bundle;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
       ? Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -43,6 +40,10 @@ abstract class Bundle with Resource implements _$Bundle {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -54,9 +55,6 @@ abstract class BundleLink implements _$BundleLink {
     String? relation,
     FhirUri? url,
   }) = _BundleLink;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
@@ -70,6 +68,9 @@ abstract class BundleLink implements _$BundleLink {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleLink.fromJson(Map<String, dynamic> json) =>
       _$BundleLinkFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -86,9 +87,6 @@ abstract class BundleEntry implements _$BundleEntry {
     BundleResponse? response,
   }) = _BundleEntry;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
       ? BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -101,6 +99,9 @@ abstract class BundleEntry implements _$BundleEntry {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -112,9 +113,6 @@ abstract class BundleSearch implements _$BundleSearch {
     @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
     Decimal? score,
   }) = _BundleSearch;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleSearch.fromYaml(dynamic yaml) => yaml is String
@@ -128,6 +126,9 @@ abstract class BundleSearch implements _$BundleSearch {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleSearch.fromJson(Map<String, dynamic> json) =>
       _$BundleSearchFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -145,9 +146,6 @@ abstract class BundleRequest implements _$BundleRequest {
     String? ifNoneExist,
   }) = _BundleRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleRequest.fromYaml(dynamic yaml) => yaml is String
       ? BundleRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -160,6 +158,9 @@ abstract class BundleRequest implements _$BundleRequest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleRequest.fromJson(Map<String, dynamic> json) =>
       _$BundleRequestFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -175,9 +176,6 @@ abstract class BundleResponse implements _$BundleResponse {
     Resource? outcome,
   }) = _BundleResponse;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleResponse.fromYaml(dynamic yaml) => yaml is String
       ? BundleResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -190,4 +188,7 @@ abstract class BundleResponse implements _$BundleResponse {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleResponse.fromJson(Map<String, dynamic> json) =>
       _$BundleResponseFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

@@ -61,9 +61,6 @@ abstract class CapabilityStatement
     List<CapabilityStatementDocument>? document,
   }) = _CapabilityStatement;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -76,6 +73,10 @@ abstract class CapabilityStatement
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -133,9 +134,6 @@ abstract class CapabilityStatementSoftware
     FhirDateTime? releaseDate,
   }) = _CapabilityStatementSoftware;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementSoftware.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementSoftware.fromJson(
@@ -149,6 +147,9 @@ abstract class CapabilityStatementSoftware
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSoftwareFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -206,9 +207,6 @@ abstract class CapabilityStatementImplementation
     Reference? custodian,
   }) = _CapabilityStatementImplementation;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementImplementation.fromYaml(dynamic yaml) => yaml
           is String
@@ -224,6 +222,9 @@ abstract class CapabilityStatementImplementation
   factory CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatementImplementationFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -304,9 +305,6 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
     List<Canonical>? compartment,
   }) = _CapabilityStatementRest;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementRest.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementRest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -319,6 +317,9 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementRestFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -375,9 +376,6 @@ abstract class CapabilityStatementSecurity
     Markdown? description,
   }) = _CapabilityStatementSecurity;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementSecurity.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementSecurity.fromJson(
@@ -391,6 +389,9 @@ abstract class CapabilityStatementSecurity
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSecurityFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -542,9 +543,6 @@ abstract class CapabilityStatementResource
     List<CapabilityStatementOperation>? operation,
   }) = _CapabilityStatementResource;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementResource.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementResource.fromJson(
@@ -558,6 +556,9 @@ abstract class CapabilityStatementResource
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementResourceFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -614,9 +615,6 @@ abstract class CapabilityStatementInteraction
     Markdown? documentation,
   }) = _CapabilityStatementInteraction;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementInteraction.fromYaml(dynamic yaml) => yaml
           is String
@@ -632,6 +630,9 @@ abstract class CapabilityStatementInteraction
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteractionFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -700,9 +701,6 @@ abstract class CapabilityStatementSearchParam
     Markdown? documentation,
   }) = _CapabilityStatementSearchParam;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementSearchParam.fromYaml(dynamic yaml) => yaml
           is String
@@ -718,6 +716,9 @@ abstract class CapabilityStatementSearchParam
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSearchParamFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -784,9 +785,6 @@ abstract class CapabilityStatementOperation
     Markdown? documentation,
   }) = _CapabilityStatementOperation;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementOperation.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementOperation.fromJson(
@@ -800,6 +798,9 @@ abstract class CapabilityStatementOperation
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementOperationFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -854,9 +855,6 @@ abstract class CapabilityStatementInteraction1
     Markdown? documentation,
   }) = _CapabilityStatementInteraction1;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementInteraction1.fromYaml(dynamic yaml) => yaml
           is String
@@ -872,6 +870,9 @@ abstract class CapabilityStatementInteraction1
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteraction1FromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -936,9 +937,6 @@ abstract class CapabilityStatementMessaging
     List<CapabilityStatementSupportedMessage>? supportedMessage,
   }) = _CapabilityStatementMessaging;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementMessaging.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementMessaging.fromJson(
@@ -952,6 +950,9 @@ abstract class CapabilityStatementMessaging
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementMessagingFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -1003,9 +1004,6 @@ abstract class CapabilityStatementEndpoint
     FhirUrl? address,
   }) = _CapabilityStatementEndpoint;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementEndpoint.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementEndpoint.fromJson(
@@ -1019,6 +1017,9 @@ abstract class CapabilityStatementEndpoint
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEndpointFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -1071,9 +1072,6 @@ abstract class CapabilityStatementSupportedMessage
     required Canonical definition,
   }) = _CapabilityStatementSupportedMessage;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementSupportedMessage.fromYaml(dynamic yaml) => yaml
           is String
@@ -1089,6 +1087,9 @@ abstract class CapabilityStatementSupportedMessage
   factory CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatementSupportedMessageFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -1148,9 +1149,6 @@ abstract class CapabilityStatementDocument
     required Canonical profile,
   }) = _CapabilityStatementDocument;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementDocument.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementDocument.fromJson(
@@ -1164,4 +1162,7 @@ abstract class CapabilityStatementDocument
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementDocumentFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

@@ -94,9 +94,6 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     );
   }
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory DocumentReference.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -109,6 +106,10 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -120,9 +121,6 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
     required Attachment attachment,
     Coding? format,
   }) = _DocumentReferenceContent;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory DocumentReferenceContent.fromYaml(dynamic yaml) => yaml is String
@@ -137,6 +135,9 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -148,9 +149,6 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
     List<Reference>? encounter,
     Period? period,
   }) = _DocumentReferenceContext;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory DocumentReferenceContext.fromYaml(dynamic yaml) => yaml is String
@@ -165,4 +163,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

@@ -78,9 +78,6 @@ abstract class Encounter with Resource implements _$Encounter {
         subject: subject,
       );
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Encounter.fromYaml(dynamic yaml) => yaml is String
       ? Encounter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -93,6 +90,10 @@ abstract class Encounter with Resource implements _$Encounter {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Encounter.fromJson(Map<String, dynamic> json) =>
       _$EncounterFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -106,9 +107,6 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
     Reference? individual,
   }) = _EncounterParticipant;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory EncounterParticipant.fromYaml(dynamic yaml) => yaml is String
       ? EncounterParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -121,6 +119,9 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
       _$EncounterParticipantFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -131,9 +132,6 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
     String? id,
     CodeableConcept? dischargeDisposition,
   }) = _EncounterHospitalization;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory EncounterHospitalization.fromYaml(dynamic yaml) => yaml is String
@@ -148,6 +146,9 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
       _$EncounterHospitalizationFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -158,9 +159,6 @@ abstract class EncounterLocation implements _$EncounterLocation {
     String? id,
     required Reference location,
   }) = _EncounterLocation;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory EncounterLocation.fromYaml(dynamic yaml) => yaml is String
@@ -174,4 +172,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
       _$EncounterLocationFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

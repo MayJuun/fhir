@@ -79,7 +79,7 @@ Future<void> requestTest() async {
 
   request = BulkRequest.patient(
       base: Uri.parse('http://hapi.fhir.org/baseUsCore'),
-      types: [
+      types: const [
         Tuple2(UsCoreResourceType.AllergyIntolerance, null),
         Tuple2(UsCoreResourceType.Medication, null),
         Tuple2(UsCoreResourceType.Immunization, null),
@@ -116,7 +116,7 @@ Future<void> requestTest() async {
   request = BulkRequest.patient(
       base: Uri.parse(
           'https://bulk-data.smarthealthit.org/eyJlcnIiOiIiLCJwYWdlIjoxMDAwLCJkdXIiOjEwLCJ0bHQiOjE1LCJtIjoxLCJzdHUiOjQsImRlbCI6MH0/fhir'),
-      types: [
+      types: const  [
         Tuple2(UsCoreResourceType.AllergyIntolerance, null),
         Tuple2(UsCoreResourceType.Device, null),
       ]);

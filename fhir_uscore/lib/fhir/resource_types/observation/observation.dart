@@ -200,7 +200,7 @@ abstract class Observation with Resource implements _$Observation {
     double? litersPerMinute,
     double? oxygenFlowRate,
   }) {
-    List<ObservationComponent> obsComp = <ObservationComponent>[];
+    final List<ObservationComponent> obsComp = <ObservationComponent>[];
     if (litersPerMinute != null) {
       obsComp.add(
         ObservationComponent(
@@ -565,9 +565,6 @@ abstract class Observation with Resource implements _$Observation {
     );
   }
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Observation.fromYaml(dynamic yaml) => yaml is String
       ? Observation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -580,6 +577,10 @@ abstract class Observation with Resource implements _$Observation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -597,9 +598,6 @@ abstract class ObservationReferenceRange
     String? text,
   }) = _ObservationReferenceRange;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory ObservationReferenceRange.fromYaml(dynamic yaml) => yaml is String
       ? ObservationReferenceRange.fromJson(
@@ -613,6 +611,9 @@ abstract class ObservationReferenceRange
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$ObservationReferenceRangeFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -640,9 +641,6 @@ abstract class ObservationComponent implements _$ObservationComponent {
     List<ObservationReferenceRange>? referenceRange,
   }) = _ObservationComponent;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory ObservationComponent.fromYaml(dynamic yaml) => yaml is String
       ? ObservationComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -655,6 +653,9 @@ abstract class ObservationComponent implements _$ObservationComponent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 final _vitalSignsCategory = [
