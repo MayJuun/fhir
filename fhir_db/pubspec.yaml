@@ -6,7 +6,7 @@ repository: https://github.com/MayJuun/fhir/tree/main/fhir_db
 
 environment:
   sdk: '>=2.12.0-0 <3.0.0'
-  flutter: ">=1.17.0 <2.0.0"
+  flutter: ">=1.17.0"
 
 dependencies:
   crypto: ^3.0.0
