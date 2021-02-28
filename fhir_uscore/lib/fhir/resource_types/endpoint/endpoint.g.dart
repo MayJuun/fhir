@@ -1,3 +1,4 @@
+// ignore_for_file: non_constant_identifier_names
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'endpoint.dart';

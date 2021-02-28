@@ -61,9 +61,6 @@ abstract class AllergyIntolerance
         patient: patient,
       );
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory AllergyIntolerance.fromYaml(dynamic yaml) => yaml is String
       ? AllergyIntolerance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -76,6 +73,10 @@ abstract class AllergyIntolerance
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -88,9 +89,6 @@ abstract class AllergyIntoleranceReaction
         AllergyIntoleranceReactionSeverity? severity,
     FhirDateTime? onset,
   }) = _AllergyIntoleranceReaction;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory AllergyIntoleranceReaction.fromYaml(dynamic yaml) => yaml is String
@@ -105,4 +103,7 @@ abstract class AllergyIntoleranceReaction
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceReactionFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

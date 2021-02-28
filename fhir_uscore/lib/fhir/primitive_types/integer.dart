@@ -32,13 +32,16 @@ class Integer {
   final bool _isString;
 
   bool get isValid => _isValid;
+  @override
   int get hashCode => _valueString.hashCode;
   int? get value => _valueInteger;
 
+  @override
   String toString() => _valueString;
   dynamic toJson() => _isValid && !_isString ? _valueInteger : _valueString;
   dynamic toYaml() => _isValid && !_isString ? _valueInteger : _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Integer

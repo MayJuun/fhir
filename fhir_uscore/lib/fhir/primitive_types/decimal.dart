@@ -40,9 +40,11 @@ class Decimal {
   final bool _isString;
 
   bool get isValid => _isValid;
+  @override
   int get hashCode => _valueString.hashCode;
   double? get value => _valueDecimal;
 
+  @override
   String toString() => _valueString;
   dynamic toJson() => _isInt
       ? _valueDecimal?.toInt()
@@ -55,6 +57,7 @@ class Decimal {
           ? _valueDecimal
           : _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Decimal

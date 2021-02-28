@@ -1,3 +1,4 @@
+// ignore_for_file: non_constant_identifier_names
 import 'dart:convert';
 
 import 'package:fhir_yaml/fhir_yaml.dart';
@@ -56,7 +57,7 @@ abstract class Patient with Resource implements _$Patient {
     identifier.add(patientIdentifier);
     name ??= <HumanName>[];
     name.add(patientName);
-    var extension_ = <FhirExtension>[];
+    final extension_ = <FhirExtension>[];
     if (usCoreRace != null ||
         usCoreDetailedRace != null ||
         usCoreRaceText != null) {
@@ -128,9 +129,6 @@ abstract class Patient with Resource implements _$Patient {
       Patient(
           identifier: [patientIdentifier], name: [patientName], gender: gender);
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Patient.fromYaml(dynamic yaml) => yaml is String
       ? Patient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -143,6 +141,10 @@ abstract class Patient with Resource implements _$Patient {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -154,9 +156,6 @@ abstract class PatientCommunication implements _$PatientCommunication {
     required CodeableConcept language,
     Boolean? preferred,
   }) = _PatientCommunication;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory PatientCommunication.fromYaml(dynamic yaml) => yaml is String
@@ -170,4 +169,7 @@ abstract class PatientCommunication implements _$PatientCommunication {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$PatientCommunicationFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

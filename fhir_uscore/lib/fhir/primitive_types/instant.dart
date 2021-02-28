@@ -43,10 +43,12 @@ class Instant {
   final Exception? _parseError;
 
   bool get isValid => _isValid;
+  @override
   int get hashCode => _valueString.hashCode;
   DateTime? get value => _valueDateTime;
   Exception? get parseError => _parseError;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Instant
@@ -57,6 +59,7 @@ class Instant {
                   ? o == _valueString
                   : false;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;
@@ -70,7 +73,9 @@ class Instant {
       if (_instantExp.hasMatch(value)) {
         return DateTime.parse(value);
       } else {
-        throw FormatException();
+        throw FormatException(
+            'FormatException: "$value" is not an Instant, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#instant');
       }
     } on FormatException {
       throw FormatException(

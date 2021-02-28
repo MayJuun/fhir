@@ -54,9 +54,6 @@ abstract class Goal with Resource implements _$Goal {
         subject: subject,
       );
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Goal.fromYaml(dynamic yaml) => yaml is String
       ? Goal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -68,6 +65,10 @@ abstract class Goal with Resource implements _$Goal {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -78,9 +79,6 @@ abstract class GoalTarget implements _$GoalTarget {
     String? id,
     Date? dueDate,
   }) = _GoalTarget;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory GoalTarget.fromYaml(dynamic yaml) => yaml is String
@@ -94,4 +92,7 @@ abstract class GoalTarget implements _$GoalTarget {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GoalTarget.fromJson(Map<String, dynamic> json) =>
       _$GoalTargetFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

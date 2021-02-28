@@ -35,13 +35,16 @@ class Boolean {
   final bool _isTrueBoolean;
 
   bool get isValid => _isValid;
+  @override
   int get hashCode => _valueString.hashCode;
   bool? get value => _valueBoolean;
 
+  @override
   String toString() => _valueString;
   dynamic toJson() => _isTrueBoolean ? _valueBoolean : _valueString;
   dynamic toYaml() => _isTrueBoolean ? _valueBoolean : _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Boolean

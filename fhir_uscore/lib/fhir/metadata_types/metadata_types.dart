@@ -20,9 +20,6 @@ abstract class ContactDetail implements _$ContactDetail {
     List<ContactPoint>? telecom,
   }) = _ContactDetail;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory ContactDetail.fromYaml(dynamic yaml) => yaml is String
       ? ContactDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -35,6 +32,9 @@ abstract class ContactDetail implements _$ContactDetail {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContactDetail.fromJson(Map<String, dynamic> json) =>
       _$ContactDetailFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -50,9 +50,6 @@ abstract class UsageContext implements _$UsageContext {
     Reference? valueReference,
   }) = _UsageContext;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory UsageContext.fromYaml(dynamic yaml) => yaml is String
       ? UsageContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -65,6 +62,9 @@ abstract class UsageContext implements _$UsageContext {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory UsageContext.fromJson(Map<String, dynamic> json) =>
       _$UsageContextFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -81,9 +81,6 @@ abstract class Meta with _$Meta {
     List<Coding>? tag,
   }) = _Meta;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory Meta.fromYaml(dynamic yaml) => yaml is String
       ? Meta.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -95,4 +92,7 @@ abstract class Meta with _$Meta {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

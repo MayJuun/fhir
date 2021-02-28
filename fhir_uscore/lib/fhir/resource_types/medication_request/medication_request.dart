@@ -85,9 +85,6 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
         requester: requester,
       );
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory MedicationRequest.fromYaml(dynamic yaml) => yaml is String
       ? MedicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -100,6 +97,10 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationRequest.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -118,9 +119,6 @@ abstract class MedicationRequestDispenseRequest
     Reference? performer,
   }) = _MedicationRequestDispenseRequest;
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
   /// Factory constructor that accepts [Yaml String] as an argument
   factory MedicationRequestDispenseRequest.fromYaml(dynamic yaml) => yaml
           is String
@@ -136,6 +134,9 @@ abstract class MedicationRequestDispenseRequest
   factory MedicationRequestDispenseRequest.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationRequestDispenseRequestFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }
 
 @freezed
@@ -148,9 +149,6 @@ abstract class MedicationRequestInitialFill
     Quantity? quantity,
     FhirDuration? duration,
   }) = _MedicationRequestInitialFill;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
   factory MedicationRequestInitialFill.fromYaml(dynamic yaml) => yaml is String
@@ -165,4 +163,7 @@ abstract class MedicationRequestInitialFill
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestInitialFillFromJson(json);
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
 }

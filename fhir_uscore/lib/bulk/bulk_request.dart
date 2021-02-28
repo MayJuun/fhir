@@ -95,7 +95,7 @@ abstract class BulkRequest with _$BulkRequest {
     Client? client,
   ) async {
     client ??= Client();
-    List<Resource?> returnList = <Resource?>[];
+    final List<Resource?> returnList = <Resource?>[];
     String? currentLocation;
 
     if (kTestMode) {

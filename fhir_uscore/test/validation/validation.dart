@@ -6,13 +6,13 @@ import 'package:fhir_uscore/uscore.dart';
 part 'uscore_validation.dart';
 
 Future<List<String>> jsonValidation() async {
-  var tested = <String>[];
+  final tested = <String>[];
   tested.addAll(await usCoreValidation());
   return tested;
 }
 
 Future<List<String>> yamlValidation() async {
-  var tested = <String>[];
+  final tested = <String>[];
   tested.addAll(await usCoreValidationYaml());
   return tested;
 }
@@ -29,12 +29,12 @@ Future<String> checkMapEquality(Map<String, dynamic> input,
     print('*****************Different Length Keys***************************');
     print(file);
     print('individual input keys');
-    for (var k in input.keys) {
+    for (final k in input.keys) {
       print(k);
       print(input[k]);
     }
     print('individual output keys');
-    for (var k in output.keys) {
+    for (final k in output.keys) {
       print(k);
       print(output[k]);
     }
@@ -77,7 +77,7 @@ Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
 
     /// checks if the two items are both of the same type, then passes the two
   } else if (input.runtimeType == output.runtimeType) {
-    String returnValue = checkEquality(input, output, file);
+    final returnValue = checkEquality(input, output, file);
     if (returnValue != '') {
       print(file);
     }
@@ -124,7 +124,9 @@ String checkEquality(dynamic input, dynamic output, String file) {
   /// supposed to be case insensitive), but the resulting string may be
   /// different than the input despite being functionally equivalent
   if (Uri.tryParse(input) != null && Uri.tryParse(output) != null) {
-    if (Uri.parse(input) == Uri.parse(output)) return '';
+    if (Uri.parse(input) == Uri.parse(output)) {
+      return '';
+    }
   }
 
   return '$file\ninput: $input :: output:$output';
