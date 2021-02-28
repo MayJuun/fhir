@@ -178,9 +178,10 @@ class ResourceDao {
         }
       }
     }
+
     final List<Resource> resourceList = [];
     for (final type in typeList) {
-      if (ResourceUtils.resourceTypeFromStringMap[type] != null) {
+      if (ResourceUtils.resourceTypeToStringMap[type] != null) {
         _setStoreType(ResourceUtils.resourceTypeToStringMap[type]!);
         final finder = Finder(sortOrders: [SortOrder('id')]);
         resourceList.addAll(await _search(password, finder));
