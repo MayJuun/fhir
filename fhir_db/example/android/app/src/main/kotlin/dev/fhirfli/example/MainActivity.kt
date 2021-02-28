@@ -1,4 +1,4 @@
-package com.example.fhir_db_test
+package dev.fhirfli.example
 
 import io.flutter.embedding.android.FlutterActivity
 

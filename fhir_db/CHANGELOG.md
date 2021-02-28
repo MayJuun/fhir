@@ -1,3 +1,9 @@
+## [0.3.0-nullsafety.0]
+* Null safety!
+* Should be completely ready for null safety
+* Finally got around to updating this package
+* Should generally work the same as previously, you'll just need to follow null safety requirements
+
 ## [0.2.4]
 * Updated Dependencies for base FHIR package new Date functionality
 
