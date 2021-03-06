@@ -744,6 +744,7 @@ abstract class Location with Resource implements _$Location {
     List<Reference> endpoint,
   }) = _Location;
 
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
@@ -1028,6 +1029,7 @@ abstract class Organization with Resource implements _$Organization {
     List<OrganizationContact> contact,
     List<Reference> endpoint,
   }) = _Organization;
+
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

@@ -481,19 +481,6 @@ abstract class Patient with Resource implements _$Patient {
   }) = _Patient;
 
   factory Patient.usCore({
-    @Default(R4ResourceType.Patient)
-    @JsonKey(unknownEnumValue: R4ResourceType.Patient)
-        R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
     List<PatientUsCoreRace> usCoreRace,
     List<PatientUsCoreDetailedRace> usCoreDetailedRace,
     FhirExtension usCoreRaceText,
@@ -501,36 +488,24 @@ abstract class Patient with Resource implements _$Patient {
     List<PatientUsCoreDetailedEthnicity> usCoreDetailedEthnicity,
     FhirExtension usCoreEthnicityText,
     PatientUsCoreBirthSex usCoreBirthSex,
+    @required Identifier patientIdentifier,
     List<Identifier> identifier,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
+    @required HumanName patientName,
     List<HumanName> name,
     List<ContactPoint> telecom,
-    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
+    @required PatientGender gender,
     Date birthDate,
-    @JsonKey(name: '_birthDate') Element birthDateElement,
-    Boolean deceasedBoolean,
-    @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
-    FhirDateTime deceasedDateTime,
-    @JsonKey(name: '_deceasedDateTime') Element deceasedDateTimeElement,
     List<Address> address,
-    CodeableConcept maritalStatus,
-    Boolean multipleBirthBoolean,
-    @JsonKey(name: '_multipleBirthBoolean') Element multipleBirthBooleanElement,
-    Integer multipleBirthInteger,
-    @JsonKey(name: '_multipleBirthInteger') Element multipleBirthIntegerElement,
-    List<Attachment> photo,
-    List<PatientContact> contact,
     List<PatientCommunication> communication,
-    List<Reference> generalPractitioner,
-    Reference managingOrganization,
-    List<PatientLink> link,
   }) {
+    identifier ??= <Identifier>[];
+    identifier.add(patientIdentifier);
+    name ??= <HumanName>[];
+    name.add(patientName);
+    var extension_ = <FhirExtension>[];
     if (usCoreRace != null ||
         usCoreDetailedRace != null ||
         usCoreRaceText != null) {
-      extension_ ??= <FhirExtension>[];
       final raceExtension = FhirExtension(
           extension_: <FhirExtension>[],
           url: FhirUri(
@@ -581,77 +556,26 @@ abstract class Patient with Resource implements _$Patient {
     }
 
     return Patient(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
       extension_: extension_,
-      modifierExtension: modifierExtension,
       identifier: identifier,
-      active: active,
-      activeElement: activeElement,
       name: name,
       telecom: telecom,
       gender: gender,
-      genderElement: genderElement,
       birthDate: birthDate,
-      birthDateElement: birthDateElement,
-      deceasedBoolean: deceasedBoolean,
-      deceasedBooleanElement: deceasedBooleanElement,
-      deceasedDateTime: deceasedDateTime,
-      deceasedDateTimeElement: deceasedDateTimeElement,
       address: address,
-      maritalStatus: maritalStatus,
-      multipleBirthBoolean: multipleBirthBoolean,
-      multipleBirthBooleanElement: multipleBirthBooleanElement,
-      multipleBirthInteger: multipleBirthInteger,
-      multipleBirthIntegerElement: multipleBirthIntegerElement,
-      photo: photo,
-      contact: contact,
       communication: communication,
-      generalPractitioner: generalPractitioner,
-      managingOrganization: managingOrganization,
-      link: link,
     );
   }
 
   factory Patient.usCoreMinimum({
-    List<PatientUsCoreRace> usCoreRace,
-    List<PatientUsCoreDetailedRace> usCoreDetailedRace,
-    FhirExtension usCoreRaceText,
-    PatientUsCoreEthnicity usCoreEthnicity,
-    List<PatientUsCoreDetailedEthnicity> usCoreDetailedEthnicity,
-    FhirExtension usCoreEthnicityText,
-    PatientUsCoreBirthSex usCoreBirthSex,
-    List<Identifier> identifier,
-    List<HumanName> name,
-    List<ContactPoint> telecom,
-    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
-    Date birthDate,
-    List<Address> address,
-    List<PatientCommunication> communication,
+    @required Identifier patientIdentifier,
+    @required HumanName patientName,
+    @required PatientGender gender,
   }) =>
       Patient.usCore(
-        usCoreRace: usCoreRace,
-        usCoreDetailedRace: usCoreDetailedRace,
-        usCoreRaceText: usCoreRaceText,
-        usCoreEthnicity: usCoreEthnicity,
-        usCoreDetailedEthnicity: usCoreDetailedEthnicity,
-        usCoreEthnicityText: usCoreEthnicityText,
-        usCoreBirthSex: usCoreBirthSex,
-        identifier: identifier,
-        name: name,
-        telecom: telecom,
-        gender: gender,
-        birthDate: birthDate,
-        address: address,
-        communication: communication,
-      );
+          patientIdentifier: patientIdentifier,
+          patientName: patientName,
+          gender: gender);
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

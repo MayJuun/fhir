@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'diagnostics.enums.dart';
+part 'diagnostics.uscore.dart';
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
@@ -316,6 +317,97 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     List<CodeableConcept> conclusionCode,
     List<Attachment> presentedForm,
   }) = _DiagnosticReport;
+
+  factory DiagnosticReport.usCore({
+    @required DiagnosticReportStatus status,
+    @required List<CodeableConcept> category,
+    @required CodeableConcept code,
+    @required Reference subject,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
+    Instant issued,
+    Reference encounter,
+    List<Reference> performer,
+    List<Attachment> presentedForm,
+    List<Reference> result,
+  }) {
+    return DiagnosticReport(
+      status: status,
+      category: category,
+      code: code,
+      subject: subject,
+      encounter: encounter,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
+      issued: issued,
+      performer: performer,
+      presentedForm: presentedForm,
+      result: result,
+    );
+  }
+
+  factory DiagnosticReport.usCoreLaboratoryResultsReporting({
+    @required DiagnosticReportStatus status,
+    @required CodeableConcept code,
+    @required Reference subject,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
+    @required Instant issued,
+    List<Reference> performer,
+    List<Reference> result,
+  }) {
+    List<CodeableConcept> category = [
+      CodeableConcept(
+        coding: [
+          Coding(
+            system: FhirUri('http://terminology.hl7.org/CodeSystem/v2-0074'),
+            code: Code('LAB'),
+          ),
+        ],
+      ),
+    ];
+    return DiagnosticReport.usCore(
+      status: status,
+      category: category,
+      code: code,
+      subject: subject,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
+      issued: issued,
+      performer: performer,
+      result: result,
+    );
+  }
+
+  factory DiagnosticReport.usCoreReportAndNoteExchange({
+    @required DiagnosticReportStatus status,
+    @required CodeableConcept diagnosticReportCategory,
+    List<CodeableConcept> category,
+    @required CodeableConcept code,
+    @required Reference subject,
+    Reference encounter,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
+    Instant issued,
+    List<Reference> performer,
+    List<Attachment> presentedForm,
+  }) {
+    category ??= <CodeableConcept>[];
+    category.add(
+        codeableConceptFromDiagnosticReportCategory[diagnosticReportCategory]);
+    return DiagnosticReport.usCore(
+      status: status,
+      category: category,
+      code: code,
+      subject: subject,
+      encounter: encounter,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
+      issued: issued,
+      performer: performer,
+      presentedForm: presentedForm,
+    );
+  }
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -2282,6 +2374,95 @@ abstract class Observation with Resource implements _$Observation {
     List<Reference> derivedFrom,
     List<ObservationComponent> component,
   }) = _Observation;
+
+  factory Observation.usCore({
+    @required ObservationStatus status,
+    List<CodeableConcept> category,
+    @required CodeableConcept code,
+    @required Reference subject,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
+    Quantity valueQuantity,
+    CodeableConcept valueCodeableConcept,
+    String valueString,
+    Boolean valueBoolean,
+    Integer valueInteger,
+    Range valueRange,
+    Ratio valueRatio,
+    SampledData valueSampledData,
+    Time valueTime,
+    FhirDateTime valueDateTime,
+    Period valuePeriod,
+    ObservationDataAbsentReason observationDataAbsentReason,
+  }) {
+    category ??= <CodeableConcept>[];
+    category.add(
+      CodeableConcept(
+        coding: [
+          Coding(
+            system: FhirUri(
+                'http://terminology.hl7.org/CodeSystem/observation-category'),
+            code: Code('laboratory'),
+            display: 'Laboratory',
+          ),
+        ],
+        text: 'Laboratory',
+      ),
+    );
+
+    return Observation(
+      status: status,
+      code: code,
+      subject: subject,
+      category: category,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
+      valueQuantity: valueQuantity,
+      valueCodeableConcept: valueCodeableConcept,
+      valueString: valueString,
+      valueBoolean: valueBoolean,
+      valueInteger: valueInteger,
+      valueRange: valueRange,
+      valueRatio: valueRatio,
+      valueSampledData: valueSampledData,
+      valueTime: valueTime,
+      valueDateTime: valueDateTime,
+      valuePeriod: valuePeriod,
+      dataAbsentReason: codeableConceptFromObservationDataAbsentReason[
+          observationDataAbsentReason],
+    );
+  }
+
+  factory Observation.usCoreMinimum({
+    @required ObservationStatus status,
+    @required CodeableConcept code,
+    @required Reference subject,
+  }) =>
+      Observation.usCore(status: status, code: code, subject: subject);
+
+  factory Observation.usCorePediatricBmiForAge({
+    @required Reference subject,
+    @required double bmiPercentForAge,
+  }) =>
+      Observation(
+        subject: subject,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('59576-9'),
+              display: 'Body mass index (BMI) [Percentile] Per age and sex',
+            ),
+          ],
+          text: 'BMI',
+        ),
+        valueQuantity: Quantity(
+          value: Decimal(bmiPercentForAge),
+          unit: '%',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('%'),
+        ),
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

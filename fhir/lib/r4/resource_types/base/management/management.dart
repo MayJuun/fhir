@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'management.enums.dart';
+part 'management.uscore.dart';
 part 'management.freezed.dart';
 part 'management.g.dart';
 
@@ -190,6 +191,48 @@ abstract class Encounter with Resource implements _$Encounter {
     Reference serviceProvider,
     Reference partOf,
   }) = _Encounter;
+
+  factory Encounter.usCore({
+    List<Identifier> identifier,
+    @required EncounterStatus status,
+    @required Coding class_,
+    @required EncounterType encounterType,
+    List<CodeableConcept> type,
+    @required Reference subject,
+    List<EncounterParticipant> participant,
+    Period period,
+    List<CodeableConcept> reasonCode,
+    EncounterHospitalization hospitalization,
+    List<EncounterLocation> location,
+  }) {
+    type ??= <CodeableConcept>[];
+    type.add(codeableConceptFromEncounterType[encounterType]);
+    return Encounter(
+      identifier: identifier,
+      status: status,
+      class_: class_,
+      type: type,
+      subject: subject,
+      participant: participant,
+      period: period,
+      reasonCode: reasonCode,
+      hospitalization: hospitalization,
+      location: location,
+    );
+  }
+
+  factory Encounter.usCoreMinimum({
+    @required EncounterStatus status,
+    @required Coding class_,
+    @required EncounterType encounterType,
+    @required Reference subject,
+  }) =>
+      Encounter.usCore(
+        status: status,
+        class_: class_,
+        encounterType: encounterType,
+        subject: subject,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

@@ -1,37 +1,18 @@
-import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
-import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
-import 'package:fhir_auth/r4/smart_client.dart';
+import 'package:fhir_at_rest/r4.dart';
 
 import 'new_patient.dart';
 
-Future smartRequest({
+Future gcsRequest({
   String url,
   String clientId,
-  String secret,
-  String authUrl,
-  String tokenUrl,
-  FhirUri fhirCallback,
+  List<String> scopes,
 }) async {
-  final client = SmartClient(
+  final client = GcsClient(
     baseUrl: FhirUri(url),
     clientId: clientId,
-    redirectUri: fhirCallback,
-    scopes: Scopes(
-      clinicalScopes: [
-        const Tuple3(
-          Role.patient,
-          R4ResourceType.Patient,
-          Interaction.any,
-        ),
-      ],
-      openid: true,
-      offlineAccess: true,
-    ),
-    secret: secret,
-    authUrl: authUrl == null ? null : FhirUri(authUrl),
-    tokenUrl: tokenUrl == null ? null : FhirUri(tokenUrl),
+    scopes: scopes,
   );
 
   try {

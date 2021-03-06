@@ -1011,6 +1011,19 @@ abstract class Goal with Resource implements _$Goal {
     List<Reference> outcomeReference,
   }) = _Goal;
 
+  factory Goal.usCore({
+    @required GoalLifecycleStatus lifecycleStatus,
+    @required CodeableConcept description,
+    @required Reference subject,
+    List<GoalTarget> target,
+  }) =>
+      Goal(
+        lifecycleStatus: lifecycleStatus,
+        description: description,
+        subject: subject,
+        target: target,
+      );
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 

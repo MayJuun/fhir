@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'medications.freezed.dart';
+part 'medications.uscore.dart';
 part 'medications.g.dart';
 
 @freezed
@@ -217,6 +218,25 @@ abstract class Immunization with Resource implements _$Immunization {
     List<ImmunizationReaction> reaction,
     List<ImmunizationProtocolApplied> protocolApplied,
   }) = _Immunization;
+
+  factory Immunization.usCore({
+    @required ImmunizationStatus status,
+    ImmunizationStatusReason statusReason,
+    @required ImmunizationVaccineCode vaccineCode,
+    @required Reference patient,
+    FhirDateTime occurrenceDateTime,
+    String occurrenceString,
+    @required Boolean primarySource,
+  }) =>
+      Immunization(
+        status: codeFromImmunizationStatus[status],
+        statusReason: codeableConceptFromImmunizationStatusReason[statusReason],
+        vaccineCode: codeableConceptFromImmunizationVaccineCode[vaccineCode],
+        patient: patient,
+        occurrenceDateTime: occurrenceDateTime,
+        occurrenceString: occurrenceString,
+        primarySource: primarySource,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -1131,6 +1151,9 @@ abstract class Medication with Resource implements _$Medication {
     List<MedicationIngredient> ingredient,
     MedicationBatch batch,
   }) = _Medication;
+
+  factory Medication.usCore({@required CodeableConcept code}) =>
+      Medication(code: code);
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -3510,6 +3533,52 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     List<Reference> detectedIssue,
     List<Reference> eventHistory,
   }) = _MedicationRequest;
+
+  factory MedicationRequest.usCore({
+    @required MedicationRequestStatus status,
+    @required MedicationRequestIntent intent,
+    Boolean reportedBoolean,
+    Reference reportedReference,
+    CodeableConcept medicationCodeableConcept,
+    Reference medicationReference,
+    @required Reference subject,
+    Reference encounter,
+    @required FhirDateTime authoredOn,
+    @required Reference requester,
+    List<Dosage> dosageInstruction,
+  }) =>
+      MedicationRequest(
+        status: codeFromMedicationRequestStatus[status],
+        intent: codeFromMedicationRequestIntent[intent],
+        reportedBoolean: reportedBoolean,
+        reportedReference: reportedReference,
+        medicationCodeableConcept: medicationCodeableConcept,
+        medicationReference: medicationReference,
+        subject: subject,
+        encounter: encounter,
+        authoredOn: authoredOn,
+        requester: requester,
+        dosageInstruction: dosageInstruction,
+      );
+
+  factory MedicationRequest.usCoreMinimum({
+    @required MedicationRequestStatus status,
+    @required MedicationRequestIntent intent,
+    CodeableConcept medicationCodeableConcept,
+    Reference medicationReference,
+    @required Reference subject,
+    @required FhirDateTime authoredOn,
+    @required Reference requester,
+  }) =>
+      MedicationRequest.usCore(
+        status: status,
+        intent: intent,
+        medicationCodeableConcept: medicationCodeableConcept,
+        medicationReference: medicationReference,
+        subject: subject,
+        authoredOn: authoredOn,
+        requester: requester,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

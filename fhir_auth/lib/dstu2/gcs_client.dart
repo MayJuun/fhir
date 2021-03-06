@@ -1,8 +1,7 @@
-import 'dart:io';
-
 import 'package:dartz/dartz.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 import 'fhir_client.dart';
@@ -21,7 +20,8 @@ class GcsClient extends FhirClient {
     try {
       await googleSignIn.signIn();
     } catch (e) {
-      throw HttpException(e);
+      throw PlatformException(
+          code: e, message: 'Exception raised from GoogleAuth.signIn()');
     }
     isLoggedIn = true;
     return unit;
@@ -39,7 +39,8 @@ class GcsClient extends FhirClient {
     try {
       await googleSignIn.signOut();
     } catch (e) {
-      throw HttpException(e);
+      throw PlatformException(
+          code: e, message: 'Exception raised from GoogleAuth.signIn()');
     }
     isLoggedIn = false;
     return unit;

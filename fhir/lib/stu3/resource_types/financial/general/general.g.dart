@@ -1789,28 +1789,28 @@ _$_ExplanationOfBenefitItem _$_$_ExplanationOfBenefitItemFromJson(
         ? null
         : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
     careTeamLinkId: (json['careTeamLinkId'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e))
+        ?.map((e) => e == null ? null : PositiveInt.fromJson(e))
         ?.toList(),
     careTeamLinkIdElement: (json['_careTeamLinkId'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     diagnosisLinkId: (json['diagnosisLinkId'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e))
+        ?.map((e) => e == null ? null : PositiveInt.fromJson(e))
         ?.toList(),
     diagnosisLinkIdElement: (json['_diagnosisLinkId'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     procedureLinkId: (json['procedureLinkId'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e))
+        ?.map((e) => e == null ? null : PositiveInt.fromJson(e))
         ?.toList(),
     procedureLinkIdElement: (json['_procedureLinkId'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     informationLinkId: (json['informationLinkId'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e))
+        ?.map((e) => e == null ? null : PositiveInt.fromJson(e))
         ?.toList(),
     informationLinkIdElement: (json['_informationLinkId'] as List)
         ?.map((e) =>

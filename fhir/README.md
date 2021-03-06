@@ -93,20 +93,6 @@ final allergyIntolerance = AllergyIntolerance.usCoreMinimum();
 This will still create a patient object that can be used like any other. However, when initially constructing it, the available parameters to pass in are only those that are included in the US Core IG.
 
 ToDo:
-US Core DiagnosticReport Profile for Laboratory Results Reporting
-US Core DiagnosticReport Profile for Report and Note exchange
-US Core DocumentReference Profile
-US Core Encounter Profile
-US Core Goal Profile
-US Core Immunization Profile
-US Core Implantable Device Profile
-US Core Laboratory Result Observation Profile
-US Core Location Profile
-US Core Medication Profile
-US Core MedicationRequest Profile
-US Core Organization Profile
-US Core Patient Profile
-US Core Pediatric BMI for Age Observation Profile
 US Core Pediatric Head Occipital-frontal Circumference Percentile Profile
 US Core Pediatric Weight for Height Observation Profile
 US Core Practitioner Profile
@@ -205,6 +191,6 @@ Missing "part 'resource.g.dart';".
 
 The full resource lists I've decided it's not worth upkeeping since HL7 does that already.
 ## [Resource Index Dstu2](https://www.hl7.org/fhir/DSTU2/resourcelist.html)
-## [Resource Index Stu3](http://hl7.org/fhir/stu3/resourcelist.html)
+## [Resource Index Stu3](https://hl7.org/fhir/stu3/resourcelist.html)
 ## [Resource Index R4](https://www.hl7.org/fhir/resourcelist.html)
-## [Resource Index R5 Preview #3](http://hl7.org/fhir/2020Sep/resourcelist.html)
+## [Resource Index R5 Preview #3](https://hl7.org/fhir/2020Sep/resourcelist.html)
