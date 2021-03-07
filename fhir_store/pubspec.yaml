@@ -1,7 +1,8 @@
 name: fhir_store
 description: A new Flutter project.
 version: 0.0.1
-homepage: https://github.com/MayJuun/fhir/tree/main/fhir_store
+homepage: https://www.fhirfli.dev/
+repository: https://github.com/MayJuun/fhir/tree/main/fhir_store
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
