@@ -11088,16 +11088,16 @@ class _$ExplanationOfBenefitItemTearOff {
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<Id>? careTeamLinkId,
+      List<PositiveInt>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
           List<Element?>? careTeamLinkIdElement,
-      List<Id>? diagnosisLinkId,
+      List<PositiveInt>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
           List<Element?>? diagnosisLinkIdElement,
-      List<Id>? procedureLinkId,
+      List<PositiveInt>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
           List<Element?>? procedureLinkIdElement,
-      List<Id>? informationLinkId,
+      List<PositiveInt>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
           List<Element>? informationLinkIdElement,
       CodeableConcept? revenue,
@@ -11178,16 +11178,16 @@ mixin _$ExplanationOfBenefitItem {
   Decimal? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
-  List<Id>? get careTeamLinkId;
+  List<PositiveInt>? get careTeamLinkId;
   @JsonKey(name: '_careTeamLinkId')
   List<Element?>? get careTeamLinkIdElement;
-  List<Id>? get diagnosisLinkId;
+  List<PositiveInt>? get diagnosisLinkId;
   @JsonKey(name: '_diagnosisLinkId')
   List<Element?>? get diagnosisLinkIdElement;
-  List<Id>? get procedureLinkId;
+  List<PositiveInt>? get procedureLinkId;
   @JsonKey(name: '_procedureLinkId')
   List<Element?>? get procedureLinkIdElement;
-  List<Id>? get informationLinkId;
+  List<PositiveInt>? get informationLinkId;
   @JsonKey(name: '_informationLinkId')
   List<Element>? get informationLinkIdElement;
   CodeableConcept? get revenue;
@@ -11232,16 +11232,16 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<Id>? careTeamLinkId,
+      List<PositiveInt>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
           List<Element?>? careTeamLinkIdElement,
-      List<Id>? diagnosisLinkId,
+      List<PositiveInt>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
           List<Element?>? diagnosisLinkIdElement,
-      List<Id>? procedureLinkId,
+      List<PositiveInt>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
           List<Element?>? procedureLinkIdElement,
-      List<Id>? informationLinkId,
+      List<PositiveInt>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
           List<Element>? informationLinkIdElement,
       CodeableConcept? revenue,
@@ -11341,25 +11341,25 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
           : sequenceElement as Element?,
       careTeamLinkId: careTeamLinkId == freezed
           ? _value.careTeamLinkId
-          : careTeamLinkId as List<Id>?,
+          : careTeamLinkId as List<PositiveInt>?,
       careTeamLinkIdElement: careTeamLinkIdElement == freezed
           ? _value.careTeamLinkIdElement
           : careTeamLinkIdElement as List<Element?>?,
       diagnosisLinkId: diagnosisLinkId == freezed
           ? _value.diagnosisLinkId
-          : diagnosisLinkId as List<Id>?,
+          : diagnosisLinkId as List<PositiveInt>?,
       diagnosisLinkIdElement: diagnosisLinkIdElement == freezed
           ? _value.diagnosisLinkIdElement
           : diagnosisLinkIdElement as List<Element?>?,
       procedureLinkId: procedureLinkId == freezed
           ? _value.procedureLinkId
-          : procedureLinkId as List<Id>?,
+          : procedureLinkId as List<PositiveInt>?,
       procedureLinkIdElement: procedureLinkIdElement == freezed
           ? _value.procedureLinkIdElement
           : procedureLinkIdElement as List<Element?>?,
       informationLinkId: informationLinkId == freezed
           ? _value.informationLinkId
-          : informationLinkId as List<Id>?,
+          : informationLinkId as List<PositiveInt>?,
       informationLinkIdElement: informationLinkIdElement == freezed
           ? _value.informationLinkIdElement
           : informationLinkIdElement as List<Element>?,
@@ -11590,16 +11590,16 @@ abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<Id>? careTeamLinkId,
+      List<PositiveInt>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
           List<Element?>? careTeamLinkIdElement,
-      List<Id>? diagnosisLinkId,
+      List<PositiveInt>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
           List<Element?>? diagnosisLinkIdElement,
-      List<Id>? procedureLinkId,
+      List<PositiveInt>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
           List<Element?>? procedureLinkIdElement,
-      List<Id>? informationLinkId,
+      List<PositiveInt>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
           List<Element>? informationLinkIdElement,
       CodeableConcept? revenue,
@@ -11716,25 +11716,25 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
           : sequenceElement as Element?,
       careTeamLinkId: careTeamLinkId == freezed
           ? _value.careTeamLinkId
-          : careTeamLinkId as List<Id>?,
+          : careTeamLinkId as List<PositiveInt>?,
       careTeamLinkIdElement: careTeamLinkIdElement == freezed
           ? _value.careTeamLinkIdElement
           : careTeamLinkIdElement as List<Element?>?,
       diagnosisLinkId: diagnosisLinkId == freezed
           ? _value.diagnosisLinkId
-          : diagnosisLinkId as List<Id>?,
+          : diagnosisLinkId as List<PositiveInt>?,
       diagnosisLinkIdElement: diagnosisLinkIdElement == freezed
           ? _value.diagnosisLinkIdElement
           : diagnosisLinkIdElement as List<Element?>?,
       procedureLinkId: procedureLinkId == freezed
           ? _value.procedureLinkId
-          : procedureLinkId as List<Id>?,
+          : procedureLinkId as List<PositiveInt>?,
       procedureLinkIdElement: procedureLinkIdElement == freezed
           ? _value.procedureLinkIdElement
           : procedureLinkIdElement as List<Element?>?,
       informationLinkId: informationLinkId == freezed
           ? _value.informationLinkId
-          : informationLinkId as List<Id>?,
+          : informationLinkId as List<PositiveInt>?,
       informationLinkIdElement: informationLinkIdElement == freezed
           ? _value.informationLinkIdElement
           : informationLinkIdElement as List<Element>?,
@@ -11849,22 +11849,22 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final List<Id>? careTeamLinkId;
+  final List<PositiveInt>? careTeamLinkId;
   @override
   @JsonKey(name: '_careTeamLinkId')
   final List<Element?>? careTeamLinkIdElement;
   @override
-  final List<Id>? diagnosisLinkId;
+  final List<PositiveInt>? diagnosisLinkId;
   @override
   @JsonKey(name: '_diagnosisLinkId')
   final List<Element?>? diagnosisLinkIdElement;
   @override
-  final List<Id>? procedureLinkId;
+  final List<PositiveInt>? procedureLinkId;
   @override
   @JsonKey(name: '_procedureLinkId')
   final List<Element?>? procedureLinkIdElement;
   @override
-  final List<Id>? informationLinkId;
+  final List<PositiveInt>? informationLinkId;
   @override
   @JsonKey(name: '_informationLinkId')
   final List<Element>? informationLinkIdElement;
@@ -12059,16 +12059,16 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<Id>? careTeamLinkId,
+      List<PositiveInt>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
           List<Element?>? careTeamLinkIdElement,
-      List<Id>? diagnosisLinkId,
+      List<PositiveInt>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
           List<Element?>? diagnosisLinkIdElement,
-      List<Id>? procedureLinkId,
+      List<PositiveInt>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
           List<Element?>? procedureLinkIdElement,
-      List<Id>? informationLinkId,
+      List<PositiveInt>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
           List<Element>? informationLinkIdElement,
       CodeableConcept? revenue,
@@ -12108,22 +12108,22 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  List<Id>? get careTeamLinkId;
+  List<PositiveInt>? get careTeamLinkId;
   @override
   @JsonKey(name: '_careTeamLinkId')
   List<Element?>? get careTeamLinkIdElement;
   @override
-  List<Id>? get diagnosisLinkId;
+  List<PositiveInt>? get diagnosisLinkId;
   @override
   @JsonKey(name: '_diagnosisLinkId')
   List<Element?>? get diagnosisLinkIdElement;
   @override
-  List<Id>? get procedureLinkId;
+  List<PositiveInt>? get procedureLinkId;
   @override
   @JsonKey(name: '_procedureLinkId')
   List<Element?>? get procedureLinkIdElement;
   @override
-  List<Id>? get informationLinkId;
+  List<PositiveInt>? get informationLinkId;
   @override
   @JsonKey(name: '_informationLinkId')
   List<Element>? get informationLinkIdElement;

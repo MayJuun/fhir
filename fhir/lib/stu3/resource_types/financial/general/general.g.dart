@@ -1672,28 +1672,28 @@ _$_ExplanationOfBenefitItem _$_$_ExplanationOfBenefitItemFromJson(
         ? null
         : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
     careTeamLinkId: (json['careTeamLinkId'] as List<dynamic>?)
-        ?.map((e) => Id.fromJson(e))
+        ?.map((e) => PositiveInt.fromJson(e))
         .toList(),
     careTeamLinkIdElement: (json['_careTeamLinkId'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     diagnosisLinkId: (json['diagnosisLinkId'] as List<dynamic>?)
-        ?.map((e) => Id.fromJson(e))
+        ?.map((e) => PositiveInt.fromJson(e))
         .toList(),
     diagnosisLinkIdElement: (json['_diagnosisLinkId'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     procedureLinkId: (json['procedureLinkId'] as List<dynamic>?)
-        ?.map((e) => Id.fromJson(e))
+        ?.map((e) => PositiveInt.fromJson(e))
         .toList(),
     procedureLinkIdElement: (json['_procedureLinkId'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     informationLinkId: (json['informationLinkId'] as List<dynamic>?)
-        ?.map((e) => Id.fromJson(e))
+        ?.map((e) => PositiveInt.fromJson(e))
         .toList(),
     informationLinkIdElement: (json['_informationLinkId'] as List<dynamic>?)
         ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
