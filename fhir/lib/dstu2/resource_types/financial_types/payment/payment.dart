@@ -18,27 +18,27 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
     @Default(Dstu2ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Coding ruleset,
-    Coding originalRuleset,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference target,
-    Reference provider,
-    Reference organization,
-    Reference request,
-    Reference response,
-    @JsonKey(required: true) @required Coding paymentStatus,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Coding? ruleset,
+    Coding? originalRuleset,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? target,
+    Reference? provider,
+    Reference? organization,
+    Reference? request,
+    Reference? response,
+    required Coding paymentStatus,
   }) = _PaymentNotice;
 
   /// Produces a Yaml formatted String version of the object
@@ -49,7 +49,9 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
       ? PaymentNotice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PaymentNotice.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PaymentNotice cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
@@ -65,35 +67,35 @@ abstract class PaymentReconciliation
     @Default(Dstu2ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Reference request,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Reference? request,
     @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-        PaymentReconciliationOutcome outcome,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    String disposition,
-    @JsonKey(name: '_disposition') Element dispositionElement,
-    Coding ruleset,
-    Coding originalRuleset,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Period period,
-    Reference organization,
-    Reference requestProvider,
-    Reference requestOrganization,
-    List<PaymentReconciliationDetail> detail,
-    Coding form,
-    @JsonKey(required: true) @required Quantity total,
-    List<PaymentReconciliationNote> note,
+        PaymentReconciliationOutcome? outcome,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
+    String? disposition,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
+    Coding? ruleset,
+    Coding? originalRuleset,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Period? period,
+    Reference? organization,
+    Reference? requestProvider,
+    Reference? requestOrganization,
+    List<PaymentReconciliationDetail>? detail,
+    Coding? form,
+    required Quantity total,
+    List<PaymentReconciliationNote>? note,
   }) = _PaymentReconciliation;
 
   /// Produces a Yaml formatted String version of the object
@@ -104,7 +106,9 @@ abstract class PaymentReconciliation
       ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PaymentReconciliation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
@@ -115,17 +119,17 @@ abstract class PaymentReconciliation
 abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
   factory PaymentReconciliationDetail({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Coding type,
-    Reference request,
-    Reference responce,
-    Reference submitter,
-    Reference payee,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    Quantity amount,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Coding type,
+    Reference? request,
+    Reference? responce,
+    Reference? submitter,
+    Reference? payee,
+    Date? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    Quantity? amount,
   }) = _PaymentReconciliationDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -137,7 +141,9 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PaymentReconciliationDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PaymentReconciliationDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
@@ -148,13 +154,13 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
   PaymentReconciliationNote._();
   factory PaymentReconciliationNote({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Coding type,
-    @JsonKey(name: '_type') Element typeElement,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Coding? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? text,
+    @JsonKey(name: '_text') Element? textElement,
   }) = _PaymentReconciliationNote;
 
   /// Produces a Yaml formatted String version of the object
@@ -166,7 +172,9 @@ abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PaymentReconciliationNote.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PaymentReconciliationNote cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>

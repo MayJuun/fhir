@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'workflow.dart';
 
@@ -16,65 +16,63 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 class _$AppointmentTearOff {
   const _$AppointmentTearOff();
 
-// ignore: unused_element
   _Appointment call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           R4ResourceType resourceType = R4ResourceType.Appointment,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus status,
+          AppointmentStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept cancelationReason,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      CodeableConcept appointmentType,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
-      UnsignedInt priority,
+          Element? statusElement,
+      CodeableConcept? cancelationReason,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      CodeableConcept? appointmentType,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      UnsignedInt? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      String description,
+          Element? priorityElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      List<Reference> supportingInformation,
-      Instant start,
+          Element? descriptionElement,
+      List<Reference>? supportingInformation,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      PositiveInt minutesDuration,
+          Element? endElement,
+      PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
-          Element minutesDurationElement,
-      List<Reference> slot,
-      FhirDateTime created,
+          Element? minutesDurationElement,
+      List<Reference>? slot,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      String comment,
+          Element? createdElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
-      String patientInstruction,
+          Element? commentElement,
+      String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
-          Element patientInstructionElement,
-      List<Reference> basedOn,
-      @required
-          List<AppointmentParticipant> participant,
-      List<Period> requestedPeriod}) {
+          Element? patientInstructionElement,
+      List<Reference>? basedOn,
+      required List<AppointmentParticipant> participant,
+      List<Period>? requestedPeriod}) {
     return _Appointment(
       resourceType: resourceType,
       id: id,
@@ -121,74 +119,72 @@ class _$AppointmentTearOff {
     );
   }
 
-// ignore: unused_element
   Appointment fromJson(Map<String, Object> json) {
     return Appointment.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Appointment = _$AppointmentTearOff();
 
 /// @nodoc
 mixin _$Appointment {
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
   R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
   @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-  AppointmentStatus get status;
+  AppointmentStatus? get status;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  CodeableConcept get cancelationReason;
-  List<CodeableConcept> get serviceCategory;
-  List<CodeableConcept> get serviceType;
-  List<CodeableConcept> get specialty;
-  CodeableConcept get appointmentType;
-  List<CodeableConcept> get reasonCode;
-  List<Reference> get reasonReference;
-  UnsignedInt get priority;
+  Element? get statusElement;
+  CodeableConcept? get cancelationReason;
+  List<CodeableConcept>? get serviceCategory;
+  List<CodeableConcept>? get serviceType;
+  List<CodeableConcept>? get specialty;
+  CodeableConcept? get appointmentType;
+  List<CodeableConcept>? get reasonCode;
+  List<Reference>? get reasonReference;
+  UnsignedInt? get priority;
   @JsonKey(name: '_priority')
-  Element get priorityElement;
-  String get description;
+  Element? get priorityElement;
+  String? get description;
   @JsonKey(name: '_description')
-  Element get descriptionElement;
-  List<Reference> get supportingInformation;
-  Instant get start;
+  Element? get descriptionElement;
+  List<Reference>? get supportingInformation;
+  Instant? get start;
   @JsonKey(name: '_start')
-  Element get startElement;
-  Instant get end;
+  Element? get startElement;
+  Instant? get end;
   @JsonKey(name: '_end')
-  Element get endElement;
-  PositiveInt get minutesDuration;
+  Element? get endElement;
+  PositiveInt? get minutesDuration;
   @JsonKey(name: '_minutesDuration')
-  Element get minutesDurationElement;
-  List<Reference> get slot;
-  FhirDateTime get created;
+  Element? get minutesDurationElement;
+  List<Reference>? get slot;
+  FhirDateTime? get created;
   @JsonKey(name: '_created')
-  Element get createdElement;
-  String get comment;
+  Element? get createdElement;
+  String? get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
-  String get patientInstruction;
+  Element? get commentElement;
+  String? get patientInstruction;
   @JsonKey(name: '_patientInstruction')
-  Element get patientInstructionElement;
-  List<Reference> get basedOn;
+  Element? get patientInstructionElement;
+  List<Reference>? get basedOn;
   List<AppointmentParticipant> get participant;
-  List<Period> get requestedPeriod;
+  List<Period>? get requestedPeriod;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -203,76 +199,76 @@ abstract class $AppointmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus status,
+          AppointmentStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept cancelationReason,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      CodeableConcept appointmentType,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
-      UnsignedInt priority,
+          Element? statusElement,
+      CodeableConcept? cancelationReason,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      CodeableConcept? appointmentType,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      UnsignedInt? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      String description,
+          Element? priorityElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      List<Reference> supportingInformation,
-      Instant start,
+          Element? descriptionElement,
+      List<Reference>? supportingInformation,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      PositiveInt minutesDuration,
+          Element? endElement,
+      PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
-          Element minutesDurationElement,
-      List<Reference> slot,
-      FhirDateTime created,
+          Element? minutesDurationElement,
+      List<Reference>? slot,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      String comment,
+          Element? createdElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
-      String patientInstruction,
+          Element? commentElement,
+      String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
-          Element patientInstructionElement,
-      List<Reference> basedOn,
+          Element? patientInstructionElement,
+      List<Reference>? basedOn,
       List<AppointmentParticipant> participant,
-      List<Period> requestedPeriod});
+      List<Period>? requestedPeriod});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get statusElement;
-  $CodeableConceptCopyWith<$Res> get cancelationReason;
-  $CodeableConceptCopyWith<$Res> get appointmentType;
-  $ElementCopyWith<$Res> get priorityElement;
-  $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get startElement;
-  $ElementCopyWith<$Res> get endElement;
-  $ElementCopyWith<$Res> get minutesDurationElement;
-  $ElementCopyWith<$Res> get createdElement;
-  $ElementCopyWith<$Res> get commentElement;
-  $ElementCopyWith<$Res> get patientInstructionElement;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $CodeableConceptCopyWith<$Res>? get cancelationReason;
+  $CodeableConceptCopyWith<$Res>? get appointmentType;
+  $ElementCopyWith<$Res>? get priorityElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ElementCopyWith<$Res>? get startElement;
+  $ElementCopyWith<$Res>? get endElement;
+  $ElementCopyWith<$Res>? get minutesDurationElement;
+  $ElementCopyWith<$Res>? get createdElement;
+  $ElementCopyWith<$Res>? get commentElement;
+  $ElementCopyWith<$Res>? get patientInstructionElement;
 }
 
 /// @nodoc
@@ -285,298 +281,316 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object cancelationReason = freezed,
-    Object serviceCategory = freezed,
-    Object serviceType = freezed,
-    Object specialty = freezed,
-    Object appointmentType = freezed,
-    Object reasonCode = freezed,
-    Object reasonReference = freezed,
-    Object priority = freezed,
-    Object priorityElement = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object supportingInformation = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object minutesDuration = freezed,
-    Object minutesDurationElement = freezed,
-    Object slot = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
-    Object patientInstruction = freezed,
-    Object patientInstructionElement = freezed,
-    Object basedOn = freezed,
-    Object participant = freezed,
-    Object requestedPeriod = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? cancelationReason = freezed,
+    Object? serviceCategory = freezed,
+    Object? serviceType = freezed,
+    Object? specialty = freezed,
+    Object? appointmentType = freezed,
+    Object? reasonCode = freezed,
+    Object? reasonReference = freezed,
+    Object? priority = freezed,
+    Object? priorityElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? supportingInformation = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? minutesDuration = freezed,
+    Object? minutesDurationElement = freezed,
+    Object? slot = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
+    Object? patientInstruction = freezed,
+    Object? patientInstructionElement = freezed,
+    Object? basedOn = freezed,
+    Object? participant = freezed,
+    Object? requestedPeriod = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as AppointmentStatus,
+          : identifier as List<Identifier>?,
+      status: status == freezed ? _value.status : status as AppointmentStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement as Element?,
       cancelationReason: cancelationReason == freezed
           ? _value.cancelationReason
-          : cancelationReason as CodeableConcept,
+          : cancelationReason as CodeableConcept?,
       serviceCategory: serviceCategory == freezed
           ? _value.serviceCategory
-          : serviceCategory as List<CodeableConcept>,
+          : serviceCategory as List<CodeableConcept>?,
       serviceType: serviceType == freezed
           ? _value.serviceType
-          : serviceType as List<CodeableConcept>,
+          : serviceType as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept>,
+          : specialty as List<CodeableConcept>?,
       appointmentType: appointmentType == freezed
           ? _value.appointmentType
-          : appointmentType as CodeableConcept,
+          : appointmentType as CodeableConcept?,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<CodeableConcept>,
+          : reasonCode as List<CodeableConcept>?,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
-          : reasonReference as List<Reference>,
-      priority: priority == freezed ? _value.priority : priority as UnsignedInt,
+          : reasonReference as List<Reference>?,
+      priority:
+          priority == freezed ? _value.priority : priority as UnsignedInt?,
       priorityElement: priorityElement == freezed
           ? _value.priorityElement
-          : priorityElement as Element,
+          : priorityElement as Element?,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element,
+          : descriptionElement as Element?,
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
-          : supportingInformation as List<Reference>,
-      start: start == freezed ? _value.start : start as Instant,
+          : supportingInformation as List<Reference>?,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       minutesDuration: minutesDuration == freezed
           ? _value.minutesDuration
-          : minutesDuration as PositiveInt,
+          : minutesDuration as PositiveInt?,
       minutesDurationElement: minutesDurationElement == freezed
           ? _value.minutesDurationElement
-          : minutesDurationElement as Element,
-      slot: slot == freezed ? _value.slot : slot as List<Reference>,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : minutesDurationElement as Element?,
+      slot: slot == freezed ? _value.slot : slot as List<Reference>?,
+      created: created == freezed ? _value.created : created as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : createdElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
-          : patientInstruction as String,
+          : patientInstruction as String?,
       patientInstructionElement: patientInstructionElement == freezed
           ? _value.patientInstructionElement
-          : patientInstructionElement as Element,
-      basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
+          : patientInstructionElement as Element?,
+      basedOn:
+          basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       participant: participant == freezed
           ? _value.participant
           : participant as List<AppointmentParticipant>,
       requestedPeriod: requestedPeriod == freezed
           ? _value.requestedPeriod
-          : requestedPeriod as List<Period>,
+          : requestedPeriod as List<Period>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get cancelationReason {
+  $CodeableConceptCopyWith<$Res>? get cancelationReason {
     if (_value.cancelationReason == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.cancelationReason, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.cancelationReason!, (value) {
       return _then(_value.copyWith(cancelationReason: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get appointmentType {
+  $CodeableConceptCopyWith<$Res>? get appointmentType {
     if (_value.appointmentType == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.appointmentType, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.appointmentType!, (value) {
       return _then(_value.copyWith(appointmentType: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get priorityElement {
+  $ElementCopyWith<$Res>? get priorityElement {
     if (_value.priorityElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.priorityElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.priorityElement!, (value) {
       return _then(_value.copyWith(priorityElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get descriptionElement {
+  $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
       return _then(_value.copyWith(descriptionElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get startElement {
+  $ElementCopyWith<$Res>? get startElement {
     if (_value.startElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.startElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.startElement!, (value) {
       return _then(_value.copyWith(startElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endElement {
+  $ElementCopyWith<$Res>? get endElement {
     if (_value.endElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endElement!, (value) {
       return _then(_value.copyWith(endElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get minutesDurationElement {
+  $ElementCopyWith<$Res>? get minutesDurationElement {
     if (_value.minutesDurationElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.minutesDurationElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.minutesDurationElement!, (value) {
       return _then(_value.copyWith(minutesDurationElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get createdElement {
+  $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
       return _then(_value.copyWith(createdElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
+  $ElementCopyWith<$Res>? get commentElement {
     if (_value.commentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
       return _then(_value.copyWith(commentElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get patientInstructionElement {
+  $ElementCopyWith<$Res>? get patientInstructionElement {
     if (_value.patientInstructionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.patientInstructionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.patientInstructionElement!, (value) {
       return _then(_value.copyWith(patientInstructionElement: value));
     });
   }
@@ -592,91 +606,91 @@ abstract class _$AppointmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus status,
+          AppointmentStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept cancelationReason,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      CodeableConcept appointmentType,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
-      UnsignedInt priority,
+          Element? statusElement,
+      CodeableConcept? cancelationReason,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      CodeableConcept? appointmentType,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      UnsignedInt? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      String description,
+          Element? priorityElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      List<Reference> supportingInformation,
-      Instant start,
+          Element? descriptionElement,
+      List<Reference>? supportingInformation,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      PositiveInt minutesDuration,
+          Element? endElement,
+      PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
-          Element minutesDurationElement,
-      List<Reference> slot,
-      FhirDateTime created,
+          Element? minutesDurationElement,
+      List<Reference>? slot,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      String comment,
+          Element? createdElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
-      String patientInstruction,
+          Element? commentElement,
+      String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
-          Element patientInstructionElement,
-      List<Reference> basedOn,
+          Element? patientInstructionElement,
+      List<Reference>? basedOn,
       List<AppointmentParticipant> participant,
-      List<Period> requestedPeriod});
+      List<Period>? requestedPeriod});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res> get cancelationReason;
+  $CodeableConceptCopyWith<$Res>? get cancelationReason;
   @override
-  $CodeableConceptCopyWith<$Res> get appointmentType;
+  $CodeableConceptCopyWith<$Res>? get appointmentType;
   @override
-  $ElementCopyWith<$Res> get priorityElement;
+  $ElementCopyWith<$Res>? get priorityElement;
   @override
-  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $ElementCopyWith<$Res> get startElement;
+  $ElementCopyWith<$Res>? get startElement;
   @override
-  $ElementCopyWith<$Res> get endElement;
+  $ElementCopyWith<$Res>? get endElement;
   @override
-  $ElementCopyWith<$Res> get minutesDurationElement;
+  $ElementCopyWith<$Res>? get minutesDurationElement;
   @override
-  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res>? get createdElement;
   @override
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get commentElement;
   @override
-  $ElementCopyWith<$Res> get patientInstructionElement;
+  $ElementCopyWith<$Res>? get patientInstructionElement;
 }
 
 /// @nodoc
@@ -691,149 +705,152 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object cancelationReason = freezed,
-    Object serviceCategory = freezed,
-    Object serviceType = freezed,
-    Object specialty = freezed,
-    Object appointmentType = freezed,
-    Object reasonCode = freezed,
-    Object reasonReference = freezed,
-    Object priority = freezed,
-    Object priorityElement = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object supportingInformation = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object minutesDuration = freezed,
-    Object minutesDurationElement = freezed,
-    Object slot = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
-    Object patientInstruction = freezed,
-    Object patientInstructionElement = freezed,
-    Object basedOn = freezed,
-    Object participant = freezed,
-    Object requestedPeriod = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? cancelationReason = freezed,
+    Object? serviceCategory = freezed,
+    Object? serviceType = freezed,
+    Object? specialty = freezed,
+    Object? appointmentType = freezed,
+    Object? reasonCode = freezed,
+    Object? reasonReference = freezed,
+    Object? priority = freezed,
+    Object? priorityElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? supportingInformation = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? minutesDuration = freezed,
+    Object? minutesDurationElement = freezed,
+    Object? slot = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
+    Object? patientInstruction = freezed,
+    Object? patientInstructionElement = freezed,
+    Object? basedOn = freezed,
+    Object? participant = freezed,
+    Object? requestedPeriod = freezed,
   }) {
     return _then(_Appointment(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as AppointmentStatus,
+          : identifier as List<Identifier>?,
+      status: status == freezed ? _value.status : status as AppointmentStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement as Element?,
       cancelationReason: cancelationReason == freezed
           ? _value.cancelationReason
-          : cancelationReason as CodeableConcept,
+          : cancelationReason as CodeableConcept?,
       serviceCategory: serviceCategory == freezed
           ? _value.serviceCategory
-          : serviceCategory as List<CodeableConcept>,
+          : serviceCategory as List<CodeableConcept>?,
       serviceType: serviceType == freezed
           ? _value.serviceType
-          : serviceType as List<CodeableConcept>,
+          : serviceType as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept>,
+          : specialty as List<CodeableConcept>?,
       appointmentType: appointmentType == freezed
           ? _value.appointmentType
-          : appointmentType as CodeableConcept,
+          : appointmentType as CodeableConcept?,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<CodeableConcept>,
+          : reasonCode as List<CodeableConcept>?,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
-          : reasonReference as List<Reference>,
-      priority: priority == freezed ? _value.priority : priority as UnsignedInt,
+          : reasonReference as List<Reference>?,
+      priority:
+          priority == freezed ? _value.priority : priority as UnsignedInt?,
       priorityElement: priorityElement == freezed
           ? _value.priorityElement
-          : priorityElement as Element,
+          : priorityElement as Element?,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element,
+          : descriptionElement as Element?,
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
-          : supportingInformation as List<Reference>,
-      start: start == freezed ? _value.start : start as Instant,
+          : supportingInformation as List<Reference>?,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       minutesDuration: minutesDuration == freezed
           ? _value.minutesDuration
-          : minutesDuration as PositiveInt,
+          : minutesDuration as PositiveInt?,
       minutesDurationElement: minutesDurationElement == freezed
           ? _value.minutesDurationElement
-          : minutesDurationElement as Element,
-      slot: slot == freezed ? _value.slot : slot as List<Reference>,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : minutesDurationElement as Element?,
+      slot: slot == freezed ? _value.slot : slot as List<Reference>?,
+      created: created == freezed ? _value.created : created as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : createdElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
-          : patientInstruction as String,
+          : patientInstruction as String?,
       patientInstructionElement: patientInstructionElement == freezed
           ? _value.patientInstructionElement
-          : patientInstructionElement as Element,
-      basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
+          : patientInstructionElement as Element?,
+      basedOn:
+          basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       participant: participant == freezed
           ? _value.participant
           : participant as List<AppointmentParticipant>,
       requestedPeriod: requestedPeriod == freezed
           ? _value.requestedPeriod
-          : requestedPeriod as List<Period>,
+          : requestedPeriod as List<Period>?,
     ));
   }
 }
@@ -897,12 +914,9 @@ class _$_Appointment extends _Appointment {
       @JsonKey(name: '_patientInstruction')
           this.patientInstructionElement,
       this.basedOn,
-      @required
-          this.participant,
+      required this.participant,
       this.requestedPeriod})
-      : assert(resourceType != null),
-        assert(participant != null),
-        super._();
+      : super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentFromJson(json);
@@ -911,100 +925,100 @@ class _$_Appointment extends _Appointment {
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-  final AppointmentStatus status;
+  final AppointmentStatus? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final CodeableConcept cancelationReason;
+  final CodeableConcept? cancelationReason;
   @override
-  final List<CodeableConcept> serviceCategory;
+  final List<CodeableConcept>? serviceCategory;
   @override
-  final List<CodeableConcept> serviceType;
+  final List<CodeableConcept>? serviceType;
   @override
-  final List<CodeableConcept> specialty;
+  final List<CodeableConcept>? specialty;
   @override
-  final CodeableConcept appointmentType;
+  final CodeableConcept? appointmentType;
   @override
-  final List<CodeableConcept> reasonCode;
+  final List<CodeableConcept>? reasonCode;
   @override
-  final List<Reference> reasonReference;
+  final List<Reference>? reasonReference;
   @override
-  final UnsignedInt priority;
+  final UnsignedInt? priority;
   @override
   @JsonKey(name: '_priority')
-  final Element priorityElement;
+  final Element? priorityElement;
   @override
-  final String description;
+  final String? description;
   @override
   @JsonKey(name: '_description')
-  final Element descriptionElement;
+  final Element? descriptionElement;
   @override
-  final List<Reference> supportingInformation;
+  final List<Reference>? supportingInformation;
   @override
-  final Instant start;
+  final Instant? start;
   @override
   @JsonKey(name: '_start')
-  final Element startElement;
+  final Element? startElement;
   @override
-  final Instant end;
+  final Instant? end;
   @override
   @JsonKey(name: '_end')
-  final Element endElement;
+  final Element? endElement;
   @override
-  final PositiveInt minutesDuration;
+  final PositiveInt? minutesDuration;
   @override
   @JsonKey(name: '_minutesDuration')
-  final Element minutesDurationElement;
+  final Element? minutesDurationElement;
   @override
-  final List<Reference> slot;
+  final List<Reference>? slot;
   @override
-  final FhirDateTime created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
-  final Element createdElement;
+  final Element? createdElement;
   @override
-  final String comment;
+  final String? comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final Element? commentElement;
   @override
-  final String patientInstruction;
+  final String? patientInstruction;
   @override
   @JsonKey(name: '_patientInstruction')
-  final Element patientInstructionElement;
+  final Element? patientInstructionElement;
   @override
-  final List<Reference> basedOn;
+  final List<Reference>? basedOn;
   @override
   final List<AppointmentParticipant> participant;
   @override
-  final List<Period> requestedPeriod;
+  final List<Period>? requestedPeriod;
 
   @override
   String toString() {
@@ -1164,61 +1178,60 @@ abstract class _Appointment extends Appointment {
   factory _Appointment(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus status,
+          AppointmentStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept cancelationReason,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      CodeableConcept appointmentType,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
-      UnsignedInt priority,
+          Element? statusElement,
+      CodeableConcept? cancelationReason,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      CodeableConcept? appointmentType,
+      List<CodeableConcept>? reasonCode,
+      List<Reference>? reasonReference,
+      UnsignedInt? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      String description,
+          Element? priorityElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      List<Reference> supportingInformation,
-      Instant start,
+          Element? descriptionElement,
+      List<Reference>? supportingInformation,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      PositiveInt minutesDuration,
+          Element? endElement,
+      PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
-          Element minutesDurationElement,
-      List<Reference> slot,
-      FhirDateTime created,
+          Element? minutesDurationElement,
+      List<Reference>? slot,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      String comment,
+          Element? createdElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
-      String patientInstruction,
+          Element? commentElement,
+      String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
-          Element patientInstructionElement,
-      List<Reference> basedOn,
-      @required
-          List<AppointmentParticipant> participant,
-      List<Period> requestedPeriod}) = _$_Appointment;
+          Element? patientInstructionElement,
+      List<Reference>? basedOn,
+      required List<AppointmentParticipant> participant,
+      List<Period>? requestedPeriod}) = _$_Appointment;
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
@@ -1227,100 +1240,100 @@ abstract class _Appointment extends Appointment {
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
   R4ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-  AppointmentStatus get status;
+  AppointmentStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement;
   @override
-  CodeableConcept get cancelationReason;
+  CodeableConcept? get cancelationReason;
   @override
-  List<CodeableConcept> get serviceCategory;
+  List<CodeableConcept>? get serviceCategory;
   @override
-  List<CodeableConcept> get serviceType;
+  List<CodeableConcept>? get serviceType;
   @override
-  List<CodeableConcept> get specialty;
+  List<CodeableConcept>? get specialty;
   @override
-  CodeableConcept get appointmentType;
+  CodeableConcept? get appointmentType;
   @override
-  List<CodeableConcept> get reasonCode;
+  List<CodeableConcept>? get reasonCode;
   @override
-  List<Reference> get reasonReference;
+  List<Reference>? get reasonReference;
   @override
-  UnsignedInt get priority;
+  UnsignedInt? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element get priorityElement;
+  Element? get priorityElement;
   @override
-  String get description;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element get descriptionElement;
+  Element? get descriptionElement;
   @override
-  List<Reference> get supportingInformation;
+  List<Reference>? get supportingInformation;
   @override
-  Instant get start;
+  Instant? get start;
   @override
   @JsonKey(name: '_start')
-  Element get startElement;
+  Element? get startElement;
   @override
-  Instant get end;
+  Instant? get end;
   @override
   @JsonKey(name: '_end')
-  Element get endElement;
+  Element? get endElement;
   @override
-  PositiveInt get minutesDuration;
+  PositiveInt? get minutesDuration;
   @override
   @JsonKey(name: '_minutesDuration')
-  Element get minutesDurationElement;
+  Element? get minutesDurationElement;
   @override
-  List<Reference> get slot;
+  List<Reference>? get slot;
   @override
-  FhirDateTime get created;
+  FhirDateTime? get created;
   @override
   @JsonKey(name: '_created')
-  Element get createdElement;
+  Element? get createdElement;
   @override
-  String get comment;
+  String? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
   @override
-  String get patientInstruction;
+  String? get patientInstruction;
   @override
   @JsonKey(name: '_patientInstruction')
-  Element get patientInstructionElement;
+  Element? get patientInstructionElement;
   @override
-  List<Reference> get basedOn;
+  List<Reference>? get basedOn;
   @override
   List<AppointmentParticipant> get participant;
   @override
-  List<Period> get requestedPeriod;
+  List<Period>? get requestedPeriod;
   @override
   @JsonKey(ignore: true)
   _$AppointmentCopyWith<_Appointment> get copyWith;
@@ -1335,30 +1348,29 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
 class _$AppointmentParticipantTearOff {
   const _$AppointmentParticipantTearOff();
 
-// ignore: unused_element
   _AppointmentParticipant call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
-      Reference actor,
-      @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-          AppointmentParticipantRequired required,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      Reference? actor,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired? required_,
       @JsonKey(name: '_required')
-          Element requiredElement,
+          Element? requiredElement,
       @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-          AppointmentParticipantStatus status,
+          AppointmentParticipantStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Period period}) {
+          Element? statusElement,
+      Period? period}) {
     return _AppointmentParticipant(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       type: type,
       actor: actor,
-      required: required,
+      required_: required_,
       requiredElement: requiredElement,
       status: status,
       statusElement: statusElement,
@@ -1366,33 +1378,33 @@ class _$AppointmentParticipantTearOff {
     );
   }
 
-// ignore: unused_element
   AppointmentParticipant fromJson(Map<String, Object> json) {
     return AppointmentParticipant.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AppointmentParticipant = _$AppointmentParticipantTearOff();
 
 /// @nodoc
 mixin _$AppointmentParticipant {
-  String get id;
+  String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<CodeableConcept> get type;
-  Reference get actor;
-  @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-  AppointmentParticipantRequired get required;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<CodeableConcept>? get type;
+  Reference? get actor;
+  @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown)
+  AppointmentParticipantRequired? get required_;
   @JsonKey(name: '_required')
-  Element get requiredElement;
+  Element? get requiredElement;
   @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-  AppointmentParticipantStatus get status;
+  AppointmentParticipantStatus? get status;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  Period get period;
+  Element? get statusElement;
+  Period? get period;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1405,26 +1417,26 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
           $Res Function(AppointmentParticipant) then) =
       _$AppointmentParticipantCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
-      Reference actor,
-      @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-          AppointmentParticipantRequired required,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      Reference? actor,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired? required_,
       @JsonKey(name: '_required')
-          Element requiredElement,
+          Element? requiredElement,
       @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-          AppointmentParticipantStatus status,
+          AppointmentParticipantStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Period period});
+          Element? statusElement,
+      Period? period});
 
-  $ReferenceCopyWith<$Res> get actor;
-  $ElementCopyWith<$Res> get requiredElement;
-  $ElementCopyWith<$Res> get statusElement;
-  $PeriodCopyWith<$Res> get period;
+  $ReferenceCopyWith<$Res>? get actor;
+  $ElementCopyWith<$Res>? get requiredElement;
+  $ElementCopyWith<$Res>? get statusElement;
+  $PeriodCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -1438,79 +1450,83 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object actor = freezed,
-    Object required = freezed,
-    Object requiredElement = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object period = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? actor = freezed,
+    Object? required_ = freezed,
+    Object? requiredElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? period = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
-      actor: actor == freezed ? _value.actor : actor as Reference,
-      required: required == freezed
-          ? _value.required
-          : required as AppointmentParticipantRequired,
+          : modifierExtension as List<FhirExtension>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      actor: actor == freezed ? _value.actor : actor as Reference?,
+      required_: required_ == freezed
+          ? _value.required_
+          : required_ as AppointmentParticipantRequired?,
       requiredElement: requiredElement == freezed
           ? _value.requiredElement
-          : requiredElement as Element,
+          : requiredElement as Element?,
       status: status == freezed
           ? _value.status
-          : status as AppointmentParticipantStatus,
+          : status as AppointmentParticipantStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      period: period == freezed ? _value.period : period as Period,
+          : statusElement as Element?,
+      period: period == freezed ? _value.period : period as Period?,
     ));
   }
 
   @override
-  $ReferenceCopyWith<$Res> get actor {
+  $ReferenceCopyWith<$Res>? get actor {
     if (_value.actor == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.actor!, (value) {
       return _then(_value.copyWith(actor: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get requiredElement {
+  $ElementCopyWith<$Res>? get requiredElement {
     if (_value.requiredElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.requiredElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.requiredElement!, (value) {
       return _then(_value.copyWith(requiredElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get period {
+  $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -1524,30 +1540,30 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
       __$AppointmentParticipantCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
-      Reference actor,
-      @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-          AppointmentParticipantRequired required,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      Reference? actor,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired? required_,
       @JsonKey(name: '_required')
-          Element requiredElement,
+          Element? requiredElement,
       @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-          AppointmentParticipantStatus status,
+          AppointmentParticipantStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Period period});
+          Element? statusElement,
+      Period? period});
 
   @override
-  $ReferenceCopyWith<$Res> get actor;
+  $ReferenceCopyWith<$Res>? get actor;
   @override
-  $ElementCopyWith<$Res> get requiredElement;
+  $ElementCopyWith<$Res>? get requiredElement;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $PeriodCopyWith<$Res> get period;
+  $PeriodCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -1563,40 +1579,40 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object actor = freezed,
-    Object required = freezed,
-    Object requiredElement = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object period = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? actor = freezed,
+    Object? required_ = freezed,
+    Object? requiredElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? period = freezed,
   }) {
     return _then(_AppointmentParticipant(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
-      actor: actor == freezed ? _value.actor : actor as Reference,
-      required: required == freezed
-          ? _value.required
-          : required as AppointmentParticipantRequired,
+          : modifierExtension as List<FhirExtension>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      actor: actor == freezed ? _value.actor : actor as Reference?,
+      required_: required_ == freezed
+          ? _value.required_
+          : required_ as AppointmentParticipantRequired?,
       requiredElement: requiredElement == freezed
           ? _value.requiredElement
-          : requiredElement as Element,
+          : requiredElement as Element?,
       status: status == freezed
           ? _value.status
-          : status as AppointmentParticipantStatus,
+          : status as AppointmentParticipantStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      period: period == freezed ? _value.period : period as Period,
+          : statusElement as Element?,
+      period: period == freezed ? _value.period : period as Period?,
     ));
   }
 }
@@ -1612,8 +1628,8 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       this.modifierExtension,
       this.type,
       this.actor,
-      @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-          this.required,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          this.required_,
       @JsonKey(name: '_required')
           this.requiredElement,
       @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
@@ -1627,34 +1643,36 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       _$_$_AppointmentParticipantFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<CodeableConcept> type;
+  final List<CodeableConcept>? type;
   @override
-  final Reference actor;
+  final Reference? actor;
   @override
-  @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-  final AppointmentParticipantRequired required;
+  @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown)
+  final AppointmentParticipantRequired? required_;
   @override
   @JsonKey(name: '_required')
-  final Element requiredElement;
+  final Element? requiredElement;
   @override
   @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-  final AppointmentParticipantStatus status;
+  final AppointmentParticipantStatus? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final Period period;
+  final Period? period;
 
   @override
   String toString() {
-    return 'AppointmentParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, actor: $actor, required: $required, requiredElement: $requiredElement, status: $status, statusElement: $statusElement, period: $period)';
+    return 'AppointmentParticipant(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, actor: $actor, required_: $required_, requiredElement: $requiredElement, status: $status, statusElement: $statusElement, period: $period)';
   }
 
   @override
@@ -1673,9 +1691,9 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.actor, actor) ||
                 const DeepCollectionEquality().equals(other.actor, actor)) &&
-            (identical(other.required, required) ||
+            (identical(other.required_, required_) ||
                 const DeepCollectionEquality()
-                    .equals(other.required, required)) &&
+                    .equals(other.required_, required_)) &&
             (identical(other.requiredElement, requiredElement) ||
                 const DeepCollectionEquality()
                     .equals(other.requiredElement, requiredElement)) &&
@@ -1696,7 +1714,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(actor) ^
-      const DeepCollectionEquality().hash(required) ^
+      const DeepCollectionEquality().hash(required_) ^
       const DeepCollectionEquality().hash(requiredElement) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusElement) ^
@@ -1717,50 +1735,52 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 abstract class _AppointmentParticipant extends AppointmentParticipant {
   _AppointmentParticipant._() : super._();
   factory _AppointmentParticipant(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
-      Reference actor,
-      @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-          AppointmentParticipantRequired required,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      Reference? actor,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired? required_,
       @JsonKey(name: '_required')
-          Element requiredElement,
+          Element? requiredElement,
       @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-          AppointmentParticipantStatus status,
+          AppointmentParticipantStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Period period}) = _$_AppointmentParticipant;
+          Element? statusElement,
+      Period? period}) = _$_AppointmentParticipant;
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
       _$_AppointmentParticipant.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<CodeableConcept> get type;
+  List<CodeableConcept>? get type;
   @override
-  Reference get actor;
+  Reference? get actor;
   @override
-  @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-  AppointmentParticipantRequired get required;
+  @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown)
+  AppointmentParticipantRequired? get required_;
   @override
   @JsonKey(name: '_required')
-  Element get requiredElement;
+  Element? get requiredElement;
   @override
   @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-  AppointmentParticipantStatus get status;
+  AppointmentParticipantStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement;
   @override
-  Period get period;
+  Period? get period;
   @override
   @JsonKey(ignore: true)
   _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith;
@@ -1774,40 +1794,38 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 class _$AppointmentResponseTearOff {
   const _$AppointmentResponseTearOff();
 
-// ignore: unused_element
   _AppointmentResponse call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           R4ResourceType resourceType = R4ResourceType.AppointmentResponse,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @required
-          Reference appointment,
-      Instant start,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      required Reference appointment,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<CodeableConcept> participantType,
-      Reference actor,
-      Code participantStatus,
+          Element? endElement,
+      List<CodeableConcept>? participantType,
+      Reference? actor,
+      Code? participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
-      String comment,
+          Element? participantStatusElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) {
+          Element? commentElement}) {
     return _AppointmentResponse(
       resourceType: resourceType,
       id: id,
@@ -1835,49 +1853,47 @@ class _$AppointmentResponseTearOff {
     );
   }
 
-// ignore: unused_element
   AppointmentResponse fromJson(Map<String, Object> json) {
     return AppointmentResponse.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AppointmentResponse = _$AppointmentResponseTearOff();
 
 /// @nodoc
 mixin _$AppointmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
   R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
   Reference get appointment;
-  Instant get start;
+  Instant? get start;
   @JsonKey(name: '_start')
-  Element get startElement;
-  Instant get end;
+  Element? get startElement;
+  Instant? get end;
   @JsonKey(name: '_end')
-  Element get endElement;
-  List<CodeableConcept> get participantType;
-  Reference get actor;
-  Code get participantStatus;
+  Element? get endElement;
+  List<CodeableConcept>? get participantType;
+  Reference? get actor;
+  Code? get participantStatus;
   @JsonKey(name: '_participantStatus')
-  Element get participantStatusElement;
-  String get comment;
+  Element? get participantStatusElement;
+  String? get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1892,46 +1908,46 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       Reference appointment,
-      Instant start,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<CodeableConcept> participantType,
-      Reference actor,
-      Code participantStatus,
+          Element? endElement,
+      List<CodeableConcept>? participantType,
+      Reference? actor,
+      Code? participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
-      String comment,
+          Element? participantStatusElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
   $ReferenceCopyWith<$Res> get appointment;
-  $ElementCopyWith<$Res> get startElement;
-  $ElementCopyWith<$Res> get endElement;
-  $ReferenceCopyWith<$Res> get actor;
-  $ElementCopyWith<$Res> get participantStatusElement;
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get startElement;
+  $ElementCopyWith<$Res>? get endElement;
+  $ReferenceCopyWith<$Res>? get actor;
+  $ElementCopyWith<$Res>? get participantStatusElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -1945,181 +1961,188 @@ class _$AppointmentResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object appointment = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object participantType = freezed,
-    Object actor = freezed,
-    Object participantStatus = freezed,
-    Object participantStatusElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? appointment = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? participantType = freezed,
+    Object? actor = freezed,
+    Object? participantStatus = freezed,
+    Object? participantStatusElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference,
-      start: start == freezed ? _value.start : start as Instant,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       participantType: participantType == freezed
           ? _value.participantType
-          : participantType as List<CodeableConcept>,
-      actor: actor == freezed ? _value.actor : actor as Reference,
+          : participantType as List<CodeableConcept>?,
+      actor: actor == freezed ? _value.actor : actor as Reference?,
       participantStatus: participantStatus == freezed
           ? _value.participantStatus
-          : participantStatus as Code,
+          : participantStatus as Code?,
       participantStatusElement: participantStatusElement == freezed
           ? _value.participantStatusElement
-          : participantStatusElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : participantStatusElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get appointment {
-    if (_value.appointment == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.appointment, (value) {
       return _then(_value.copyWith(appointment: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get startElement {
+  $ElementCopyWith<$Res>? get startElement {
     if (_value.startElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.startElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.startElement!, (value) {
       return _then(_value.copyWith(startElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endElement {
+  $ElementCopyWith<$Res>? get endElement {
     if (_value.endElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endElement!, (value) {
       return _then(_value.copyWith(endElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get actor {
+  $ReferenceCopyWith<$Res>? get actor {
     if (_value.actor == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.actor!, (value) {
       return _then(_value.copyWith(actor: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get participantStatusElement {
+  $ElementCopyWith<$Res>? get participantStatusElement {
     if (_value.participantStatusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.participantStatusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.participantStatusElement!, (value) {
       return _then(_value.copyWith(participantStatusElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
+  $ElementCopyWith<$Res>? get commentElement {
     if (_value.commentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
       return _then(_value.copyWith(commentElement: value));
     });
   }
@@ -2135,56 +2158,56 @@ abstract class _$AppointmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       Reference appointment,
-      Instant start,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<CodeableConcept> participantType,
-      Reference actor,
-      Code participantStatus,
+          Element? endElement,
+      List<CodeableConcept>? participantType,
+      Reference? actor,
+      Code? participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
-      String comment,
+          Element? participantStatusElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
   $ReferenceCopyWith<$Res> get appointment;
   @override
-  $ElementCopyWith<$Res> get startElement;
+  $ElementCopyWith<$Res>? get startElement;
   @override
-  $ElementCopyWith<$Res> get endElement;
+  $ElementCopyWith<$Res>? get endElement;
   @override
-  $ReferenceCopyWith<$Res> get actor;
+  $ReferenceCopyWith<$Res>? get actor;
   @override
-  $ElementCopyWith<$Res> get participantStatusElement;
+  $ElementCopyWith<$Res>? get participantStatusElement;
   @override
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -2200,82 +2223,83 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object appointment = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object participantType = freezed,
-    Object actor = freezed,
-    Object participantStatus = freezed,
-    Object participantStatusElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? appointment = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? participantType = freezed,
+    Object? actor = freezed,
+    Object? participantStatus = freezed,
+    Object? participantStatusElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_AppointmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference,
-      start: start == freezed ? _value.start : start as Instant,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       participantType: participantType == freezed
           ? _value.participantType
-          : participantType as List<CodeableConcept>,
-      actor: actor == freezed ? _value.actor : actor as Reference,
+          : participantType as List<CodeableConcept>?,
+      actor: actor == freezed ? _value.actor : actor as Reference?,
       participantStatus: participantStatus == freezed
           ? _value.participantStatus
-          : participantStatus as Code,
+          : participantStatus as Code?,
       participantStatusElement: participantStatusElement == freezed
           ? _value.participantStatusElement
-          : participantStatusElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : participantStatusElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 }
@@ -2301,8 +2325,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required
-          this.appointment,
+      required this.appointment,
       this.start,
       @JsonKey(name: '_start')
           this.startElement,
@@ -2317,9 +2340,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null),
-        assert(appointment != null),
-        super._();
+      : super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentResponseFromJson(json);
@@ -2328,56 +2349,56 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
   final Reference appointment;
   @override
-  final Instant start;
+  final Instant? start;
   @override
   @JsonKey(name: '_start')
-  final Element startElement;
+  final Element? startElement;
   @override
-  final Instant end;
+  final Instant? end;
   @override
   @JsonKey(name: '_end')
-  final Element endElement;
+  final Element? endElement;
   @override
-  final List<CodeableConcept> participantType;
+  final List<CodeableConcept>? participantType;
   @override
-  final Reference actor;
+  final Reference? actor;
   @override
-  final Code participantStatus;
+  final Code? participantStatus;
   @override
   @JsonKey(name: '_participantStatus')
-  final Element participantStatusElement;
+  final Element? participantStatusElement;
   @override
-  final String comment;
+  final String? comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final Element? commentElement;
 
   @override
   String toString() {
@@ -2499,36 +2520,35 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @required
-          Reference appointment,
-      Instant start,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      required Reference appointment,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<CodeableConcept> participantType,
-      Reference actor,
-      Code participantStatus,
+          Element? endElement,
+      List<CodeableConcept>? participantType,
+      Reference? actor,
+      Code? participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
-      String comment,
+          Element? participantStatusElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) = _$_AppointmentResponse;
+          Element? commentElement}) = _$_AppointmentResponse;
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
@@ -2537,56 +2557,56 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
   R4ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier;
   @override
   Reference get appointment;
   @override
-  Instant get start;
+  Instant? get start;
   @override
   @JsonKey(name: '_start')
-  Element get startElement;
+  Element? get startElement;
   @override
-  Instant get end;
+  Instant? get end;
   @override
   @JsonKey(name: '_end')
-  Element get endElement;
+  Element? get endElement;
   @override
-  List<CodeableConcept> get participantType;
+  List<CodeableConcept>? get participantType;
   @override
-  Reference get actor;
+  Reference? get actor;
   @override
-  Code get participantStatus;
+  Code? get participantStatus;
   @override
   @JsonKey(name: '_participantStatus')
-  Element get participantStatusElement;
+  Element? get participantStatusElement;
   @override
-  String get comment;
+  String? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
   @override
   @JsonKey(ignore: true)
   _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith;
@@ -2600,36 +2620,34 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 class _$ScheduleTearOff {
   const _$ScheduleTearOff();
 
-// ignore: unused_element
   _Schedule call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           R4ResourceType resourceType = R4ResourceType.Schedule,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Boolean active,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Boolean? active,
       @JsonKey(name: '_active')
-          Element activeElement,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      @required
-          List<Reference> actor,
-      Period planningHorizon,
-      String comment,
+          Element? activeElement,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      required List<Reference> actor,
+      Period? planningHorizon,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) {
+          Element? commentElement}) {
     return _Schedule(
       resourceType: resourceType,
       id: id,
@@ -2655,45 +2673,43 @@ class _$ScheduleTearOff {
     );
   }
 
-// ignore: unused_element
   Schedule fromJson(Map<String, Object> json) {
     return Schedule.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Schedule = _$ScheduleTearOff();
 
 /// @nodoc
 mixin _$Schedule {
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
   R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Boolean get active;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
+  Boolean? get active;
   @JsonKey(name: '_active')
-  Element get activeElement;
-  List<CodeableConcept> get serviceCategory;
-  List<CodeableConcept> get serviceType;
-  List<CodeableConcept> get specialty;
+  Element? get activeElement;
+  List<CodeableConcept>? get serviceCategory;
+  List<CodeableConcept>? get serviceType;
+  List<CodeableConcept>? get specialty;
   List<Reference> get actor;
-  Period get planningHorizon;
-  String get comment;
+  Period? get planningHorizon;
+  String? get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2707,39 +2723,39 @@ abstract class $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Boolean active,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Boolean? active,
       @JsonKey(name: '_active')
-          Element activeElement,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
+          Element? activeElement,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
       List<Reference> actor,
-      Period planningHorizon,
-      String comment,
+      Period? planningHorizon,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get activeElement;
-  $PeriodCopyWith<$Res> get planningHorizon;
-  $ElementCopyWith<$Res> get commentElement;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get activeElement;
+  $PeriodCopyWith<$Res>? get planningHorizon;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -2752,146 +2768,154 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object active = freezed,
-    Object activeElement = freezed,
-    Object serviceCategory = freezed,
-    Object serviceType = freezed,
-    Object specialty = freezed,
-    Object actor = freezed,
-    Object planningHorizon = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? active = freezed,
+    Object? activeElement = freezed,
+    Object? serviceCategory = freezed,
+    Object? serviceType = freezed,
+    Object? specialty = freezed,
+    Object? actor = freezed,
+    Object? planningHorizon = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      active: active == freezed ? _value.active : active as Boolean,
+          : identifier as List<Identifier>?,
+      active: active == freezed ? _value.active : active as Boolean?,
       activeElement: activeElement == freezed
           ? _value.activeElement
-          : activeElement as Element,
+          : activeElement as Element?,
       serviceCategory: serviceCategory == freezed
           ? _value.serviceCategory
-          : serviceCategory as List<CodeableConcept>,
+          : serviceCategory as List<CodeableConcept>?,
       serviceType: serviceType == freezed
           ? _value.serviceType
-          : serviceType as List<CodeableConcept>,
+          : serviceType as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept>,
+          : specialty as List<CodeableConcept>?,
       actor: actor == freezed ? _value.actor : actor as List<Reference>,
       planningHorizon: planningHorizon == freezed
           ? _value.planningHorizon
-          : planningHorizon as Period,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : planningHorizon as Period?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get activeElement {
+  $ElementCopyWith<$Res>? get activeElement {
     if (_value.activeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.activeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.activeElement!, (value) {
       return _then(_value.copyWith(activeElement: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get planningHorizon {
+  $PeriodCopyWith<$Res>? get planningHorizon {
     if (_value.planningHorizon == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.planningHorizon, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.planningHorizon!, (value) {
       return _then(_value.copyWith(planningHorizon: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
+  $ElementCopyWith<$Res>? get commentElement {
     if (_value.commentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
       return _then(_value.copyWith(commentElement: value));
     });
   }
@@ -2905,46 +2929,46 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Boolean active,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Boolean? active,
       @JsonKey(name: '_active')
-          Element activeElement,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
+          Element? activeElement,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
       List<Reference> actor,
-      Period planningHorizon,
-      String comment,
+      Period? planningHorizon,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get activeElement;
+  $ElementCopyWith<$Res>? get activeElement;
   @override
-  $PeriodCopyWith<$Res> get planningHorizon;
+  $PeriodCopyWith<$Res>? get planningHorizon;
   @override
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -2958,77 +2982,78 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object active = freezed,
-    Object activeElement = freezed,
-    Object serviceCategory = freezed,
-    Object serviceType = freezed,
-    Object specialty = freezed,
-    Object actor = freezed,
-    Object planningHorizon = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? active = freezed,
+    Object? activeElement = freezed,
+    Object? serviceCategory = freezed,
+    Object? serviceType = freezed,
+    Object? specialty = freezed,
+    Object? actor = freezed,
+    Object? planningHorizon = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_Schedule(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      active: active == freezed ? _value.active : active as Boolean,
+          : identifier as List<Identifier>?,
+      active: active == freezed ? _value.active : active as Boolean?,
       activeElement: activeElement == freezed
           ? _value.activeElement
-          : activeElement as Element,
+          : activeElement as Element?,
       serviceCategory: serviceCategory == freezed
           ? _value.serviceCategory
-          : serviceCategory as List<CodeableConcept>,
+          : serviceCategory as List<CodeableConcept>?,
       serviceType: serviceType == freezed
           ? _value.serviceType
-          : serviceType as List<CodeableConcept>,
+          : serviceType as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept>,
+          : specialty as List<CodeableConcept>?,
       actor: actor == freezed ? _value.actor : actor as List<Reference>,
       planningHorizon: planningHorizon == freezed
           ? _value.planningHorizon
-          : planningHorizon as Period,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : planningHorizon as Period?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 }
@@ -3060,15 +3085,12 @@ class _$_Schedule extends _Schedule {
       this.serviceCategory,
       this.serviceType,
       this.specialty,
-      @required
-          this.actor,
+      required this.actor,
       this.planningHorizon,
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null),
-        assert(actor != null),
-        super._();
+      : super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$_$_ScheduleFromJson(json);
@@ -3077,50 +3099,50 @@ class _$_Schedule extends _Schedule {
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Boolean active;
+  final Boolean? active;
   @override
   @JsonKey(name: '_active')
-  final Element activeElement;
+  final Element? activeElement;
   @override
-  final List<CodeableConcept> serviceCategory;
+  final List<CodeableConcept>? serviceCategory;
   @override
-  final List<CodeableConcept> serviceType;
+  final List<CodeableConcept>? serviceType;
   @override
-  final List<CodeableConcept> specialty;
+  final List<CodeableConcept>? specialty;
   @override
   final List<Reference> actor;
   @override
-  final Period planningHorizon;
+  final Period? planningHorizon;
   @override
-  final String comment;
+  final String? comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final Element? commentElement;
 
   @override
   String toString() {
@@ -3232,32 +3254,31 @@ abstract class _Schedule extends Schedule {
   factory _Schedule(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Boolean active,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Boolean? active,
       @JsonKey(name: '_active')
-          Element activeElement,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      @required
-          List<Reference> actor,
-      Period planningHorizon,
-      String comment,
+          Element? activeElement,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      required List<Reference> actor,
+      Period? planningHorizon,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) = _$_Schedule;
+          Element? commentElement}) = _$_Schedule;
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
@@ -3265,50 +3286,50 @@ abstract class _Schedule extends Schedule {
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
   R4ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier;
   @override
-  Boolean get active;
+  Boolean? get active;
   @override
   @JsonKey(name: '_active')
-  Element get activeElement;
+  Element? get activeElement;
   @override
-  List<CodeableConcept> get serviceCategory;
+  List<CodeableConcept>? get serviceCategory;
   @override
-  List<CodeableConcept> get serviceType;
+  List<CodeableConcept>? get serviceType;
   @override
-  List<CodeableConcept> get specialty;
+  List<CodeableConcept>? get specialty;
   @override
   List<Reference> get actor;
   @override
-  Period get planningHorizon;
+  Period? get planningHorizon;
   @override
-  String get comment;
+  String? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
   @override
   @JsonKey(ignore: true)
   _$ScheduleCopyWith<_Schedule> get copyWith;
@@ -3322,46 +3343,44 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 class _$SlotTearOff {
   const _$SlotTearOff();
 
-// ignore: unused_element
   _Slot call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           R4ResourceType resourceType = R4ResourceType.Slot,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      CodeableConcept appointmentType,
-      @required
-          Reference schedule,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      CodeableConcept? appointmentType,
+      required Reference schedule,
       @JsonKey(unknownEnumValue: SlotStatus.unknown)
-          SlotStatus status,
+          SlotStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Instant start,
+          Element? statusElement,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      Boolean overbooked,
+          Element? endElement,
+      Boolean? overbooked,
       @JsonKey(name: '_overbooked')
-          Element overbookedElement,
-      String comment,
+          Element? overbookedElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) {
+          Element? commentElement}) {
     return _Slot(
       resourceType: resourceType,
       id: id,
@@ -3393,55 +3412,53 @@ class _$SlotTearOff {
     );
   }
 
-// ignore: unused_element
   Slot fromJson(Map<String, Object> json) {
     return Slot.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Slot = _$SlotTearOff();
 
 /// @nodoc
 mixin _$Slot {
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
   R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  List<CodeableConcept> get serviceCategory;
-  List<CodeableConcept> get serviceType;
-  List<CodeableConcept> get specialty;
-  CodeableConcept get appointmentType;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
+  List<CodeableConcept>? get serviceCategory;
+  List<CodeableConcept>? get serviceType;
+  List<CodeableConcept>? get specialty;
+  CodeableConcept? get appointmentType;
   Reference get schedule;
   @JsonKey(unknownEnumValue: SlotStatus.unknown)
-  SlotStatus get status;
+  SlotStatus? get status;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  Instant get start;
+  Element? get statusElement;
+  Instant? get start;
   @JsonKey(name: '_start')
-  Element get startElement;
-  Instant get end;
+  Element? get startElement;
+  Instant? get end;
   @JsonKey(name: '_end')
-  Element get endElement;
-  Boolean get overbooked;
+  Element? get endElement;
+  Boolean? get overbooked;
   @JsonKey(name: '_overbooked')
-  Element get overbookedElement;
-  String get comment;
+  Element? get overbookedElement;
+  String? get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3455,53 +3472,53 @@ abstract class $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      CodeableConcept appointmentType,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      CodeableConcept? appointmentType,
       Reference schedule,
       @JsonKey(unknownEnumValue: SlotStatus.unknown)
-          SlotStatus status,
+          SlotStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Instant start,
+          Element? statusElement,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      Boolean overbooked,
+          Element? endElement,
+      Boolean? overbooked,
       @JsonKey(name: '_overbooked')
-          Element overbookedElement,
-      String comment,
+          Element? overbookedElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $CodeableConceptCopyWith<$Res> get appointmentType;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $CodeableConceptCopyWith<$Res>? get appointmentType;
   $ReferenceCopyWith<$Res> get schedule;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get startElement;
-  $ElementCopyWith<$Res> get endElement;
-  $ElementCopyWith<$Res> get overbookedElement;
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get startElement;
+  $ElementCopyWith<$Res>? get endElement;
+  $ElementCopyWith<$Res>? get overbookedElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -3514,204 +3531,212 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object serviceCategory = freezed,
-    Object serviceType = freezed,
-    Object specialty = freezed,
-    Object appointmentType = freezed,
-    Object schedule = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object overbooked = freezed,
-    Object overbookedElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? serviceCategory = freezed,
+    Object? serviceType = freezed,
+    Object? specialty = freezed,
+    Object? appointmentType = freezed,
+    Object? schedule = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? overbooked = freezed,
+    Object? overbookedElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       serviceCategory: serviceCategory == freezed
           ? _value.serviceCategory
-          : serviceCategory as List<CodeableConcept>,
+          : serviceCategory as List<CodeableConcept>?,
       serviceType: serviceType == freezed
           ? _value.serviceType
-          : serviceType as List<CodeableConcept>,
+          : serviceType as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept>,
+          : specialty as List<CodeableConcept>?,
       appointmentType: appointmentType == freezed
           ? _value.appointmentType
-          : appointmentType as CodeableConcept,
+          : appointmentType as CodeableConcept?,
       schedule: schedule == freezed ? _value.schedule : schedule as Reference,
-      status: status == freezed ? _value.status : status as SlotStatus,
+      status: status == freezed ? _value.status : status as SlotStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      start: start == freezed ? _value.start : start as Instant,
+          : statusElement as Element?,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       overbooked:
-          overbooked == freezed ? _value.overbooked : overbooked as Boolean,
+          overbooked == freezed ? _value.overbooked : overbooked as Boolean?,
       overbookedElement: overbookedElement == freezed
           ? _value.overbookedElement
-          : overbookedElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : overbookedElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get appointmentType {
+  $CodeableConceptCopyWith<$Res>? get appointmentType {
     if (_value.appointmentType == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.appointmentType, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.appointmentType!, (value) {
       return _then(_value.copyWith(appointmentType: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get schedule {
-    if (_value.schedule == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.schedule, (value) {
       return _then(_value.copyWith(schedule: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get startElement {
+  $ElementCopyWith<$Res>? get startElement {
     if (_value.startElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.startElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.startElement!, (value) {
       return _then(_value.copyWith(startElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endElement {
+  $ElementCopyWith<$Res>? get endElement {
     if (_value.endElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endElement!, (value) {
       return _then(_value.copyWith(endElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get overbookedElement {
+  $ElementCopyWith<$Res>? get overbookedElement {
     if (_value.overbookedElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.overbookedElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.overbookedElement!, (value) {
       return _then(_value.copyWith(overbookedElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
+  $ElementCopyWith<$Res>? get commentElement {
     if (_value.commentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
       return _then(_value.copyWith(commentElement: value));
     });
   }
@@ -3725,64 +3750,64 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      CodeableConcept appointmentType,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      CodeableConcept? appointmentType,
       Reference schedule,
       @JsonKey(unknownEnumValue: SlotStatus.unknown)
-          SlotStatus status,
+          SlotStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Instant start,
+          Element? statusElement,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      Boolean overbooked,
+          Element? endElement,
+      Boolean? overbooked,
       @JsonKey(name: '_overbooked')
-          Element overbookedElement,
-      String comment,
+          Element? overbookedElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $CodeableConceptCopyWith<$Res> get appointmentType;
+  $CodeableConceptCopyWith<$Res>? get appointmentType;
   @override
   $ReferenceCopyWith<$Res> get schedule;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ElementCopyWith<$Res> get startElement;
+  $ElementCopyWith<$Res>? get startElement;
   @override
-  $ElementCopyWith<$Res> get endElement;
+  $ElementCopyWith<$Res>? get endElement;
   @override
-  $ElementCopyWith<$Res> get overbookedElement;
+  $ElementCopyWith<$Res>? get overbookedElement;
   @override
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -3796,95 +3821,96 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object serviceCategory = freezed,
-    Object serviceType = freezed,
-    Object specialty = freezed,
-    Object appointmentType = freezed,
-    Object schedule = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object overbooked = freezed,
-    Object overbookedElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? serviceCategory = freezed,
+    Object? serviceType = freezed,
+    Object? specialty = freezed,
+    Object? appointmentType = freezed,
+    Object? schedule = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? overbooked = freezed,
+    Object? overbookedElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_Slot(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       serviceCategory: serviceCategory == freezed
           ? _value.serviceCategory
-          : serviceCategory as List<CodeableConcept>,
+          : serviceCategory as List<CodeableConcept>?,
       serviceType: serviceType == freezed
           ? _value.serviceType
-          : serviceType as List<CodeableConcept>,
+          : serviceType as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept>,
+          : specialty as List<CodeableConcept>?,
       appointmentType: appointmentType == freezed
           ? _value.appointmentType
-          : appointmentType as CodeableConcept,
+          : appointmentType as CodeableConcept?,
       schedule: schedule == freezed ? _value.schedule : schedule as Reference,
-      status: status == freezed ? _value.status : status as SlotStatus,
+      status: status == freezed ? _value.status : status as SlotStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      start: start == freezed ? _value.start : start as Instant,
+          : statusElement as Element?,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       overbooked:
-          overbooked == freezed ? _value.overbooked : overbooked as Boolean,
+          overbooked == freezed ? _value.overbooked : overbooked as Boolean?,
       overbookedElement: overbookedElement == freezed
           ? _value.overbookedElement
-          : overbookedElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : overbookedElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 }
@@ -3914,8 +3940,7 @@ class _$_Slot extends _Slot {
       this.serviceType,
       this.specialty,
       this.appointmentType,
-      @required
-          this.schedule,
+      required this.schedule,
       @JsonKey(unknownEnumValue: SlotStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
@@ -3932,9 +3957,7 @@ class _$_Slot extends _Slot {
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null),
-        assert(schedule != null),
-        super._();
+      : super._();
 
   factory _$_Slot.fromJson(Map<String, dynamic> json) =>
       _$_$_SlotFromJson(json);
@@ -3943,66 +3966,66 @@ class _$_Slot extends _Slot {
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final List<CodeableConcept> serviceCategory;
+  final List<CodeableConcept>? serviceCategory;
   @override
-  final List<CodeableConcept> serviceType;
+  final List<CodeableConcept>? serviceType;
   @override
-  final List<CodeableConcept> specialty;
+  final List<CodeableConcept>? specialty;
   @override
-  final CodeableConcept appointmentType;
+  final CodeableConcept? appointmentType;
   @override
   final Reference schedule;
   @override
   @JsonKey(unknownEnumValue: SlotStatus.unknown)
-  final SlotStatus status;
+  final SlotStatus? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final Instant start;
+  final Instant? start;
   @override
   @JsonKey(name: '_start')
-  final Element startElement;
+  final Element? startElement;
   @override
-  final Instant end;
+  final Instant? end;
   @override
   @JsonKey(name: '_end')
-  final Element endElement;
+  final Element? endElement;
   @override
-  final Boolean overbooked;
+  final Boolean? overbooked;
   @override
   @JsonKey(name: '_overbooked')
-  final Element overbookedElement;
+  final Element? overbookedElement;
   @override
-  final String comment;
+  final String? comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final Element? commentElement;
 
   @override
   String toString() {
@@ -4132,42 +4155,41 @@ abstract class _Slot extends Slot {
   factory _Slot(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<CodeableConcept> serviceCategory,
-      List<CodeableConcept> serviceType,
-      List<CodeableConcept> specialty,
-      CodeableConcept appointmentType,
-      @required
-          Reference schedule,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<CodeableConcept>? serviceCategory,
+      List<CodeableConcept>? serviceType,
+      List<CodeableConcept>? specialty,
+      CodeableConcept? appointmentType,
+      required Reference schedule,
       @JsonKey(unknownEnumValue: SlotStatus.unknown)
-          SlotStatus status,
+          SlotStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Instant start,
+          Element? statusElement,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      Boolean overbooked,
+          Element? endElement,
+      Boolean? overbooked,
       @JsonKey(name: '_overbooked')
-          Element overbookedElement,
-      String comment,
+          Element? overbookedElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) = _$_Slot;
+          Element? commentElement}) = _$_Slot;
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
@@ -4175,66 +4197,66 @@ abstract class _Slot extends Slot {
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
   R4ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier;
   @override
-  List<CodeableConcept> get serviceCategory;
+  List<CodeableConcept>? get serviceCategory;
   @override
-  List<CodeableConcept> get serviceType;
+  List<CodeableConcept>? get serviceType;
   @override
-  List<CodeableConcept> get specialty;
+  List<CodeableConcept>? get specialty;
   @override
-  CodeableConcept get appointmentType;
+  CodeableConcept? get appointmentType;
   @override
   Reference get schedule;
   @override
   @JsonKey(unknownEnumValue: SlotStatus.unknown)
-  SlotStatus get status;
+  SlotStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement;
   @override
-  Instant get start;
+  Instant? get start;
   @override
   @JsonKey(name: '_start')
-  Element get startElement;
+  Element? get startElement;
   @override
-  Instant get end;
+  Instant? get end;
   @override
   @JsonKey(name: '_end')
-  Element get endElement;
+  Element? get endElement;
   @override
-  Boolean get overbooked;
+  Boolean? get overbooked;
   @override
   @JsonKey(name: '_overbooked')
-  Element get overbookedElement;
+  Element? get overbookedElement;
   @override
-  String get comment;
+  String? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
   @override
   @JsonKey(ignore: true)
   _$SlotCopyWith<_Slot> get copyWith;
@@ -4248,71 +4270,70 @@ Task _$TaskFromJson(Map<String, dynamic> json) {
 class _$TaskTearOff {
   const _$TaskTearOff();
 
-// ignore: unused_element
   _Task call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           R4ResourceType resourceType = R4ResourceType.Task,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Canonical instantiatesCanonical,
-      FhirUri instantiatesUri,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Canonical? instantiatesCanonical,
+      FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
-      List<Reference> basedOn,
-      Identifier groupIdentifier,
-      List<Reference> partOf,
+          Element? instantiatesUriElement,
+      List<Reference>? basedOn,
+      Identifier? groupIdentifier,
+      List<Reference>? partOf,
       @JsonKey(unknownEnumValue: TaskStatus.unknown)
-          TaskStatus status,
+          TaskStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept statusReason,
-      CodeableConcept businessStatus,
+          Element? statusElement,
+      CodeableConcept? statusReason,
+      CodeableConcept? businessStatus,
       @JsonKey(unknownEnumValue: TaskIntent.unknown)
-          TaskIntent intent,
+          TaskIntent? intent,
       @JsonKey(name: '_intent')
-          Element intentElement,
-      Code priority,
+          Element? intentElement,
+      Code? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      CodeableConcept code,
-      String description,
+          Element? priorityElement,
+      CodeableConcept? code,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      Reference focus,
+          Element? descriptionElement,
+      Reference? focus,
       @JsonKey(name: 'for')
-          Reference for_,
-      Reference encounter,
-      Period executionPeriod,
-      FhirDateTime authoredOn,
+          Reference? for_,
+      Reference? encounter,
+      Period? executionPeriod,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
-          Element authoredOnElement,
-      FhirDateTime lastModified,
+          Element? authoredOnElement,
+      FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified')
-          Element lastModifiedElement,
-      Reference requester,
-      List<CodeableConcept> performerType,
-      Reference owner,
-      Reference location,
-      CodeableConcept reasonCode,
-      Reference reasonReference,
-      List<Reference> insurance,
-      List<Annotation> note,
-      List<Reference> relevantHistory,
-      TaskRestriction restriction,
-      List<TaskInput> input,
-      List<TaskOutput> output}) {
+          Element? lastModifiedElement,
+      Reference? requester,
+      List<CodeableConcept>? performerType,
+      Reference? owner,
+      Reference? location,
+      CodeableConcept? reasonCode,
+      Reference? reasonReference,
+      List<Reference>? insurance,
+      List<Annotation>? note,
+      List<Reference>? relevantHistory,
+      TaskRestriction? restriction,
+      List<TaskInput>? input,
+      List<TaskOutput>? output}) {
     return _Task(
       resourceType: resourceType,
       id: id,
@@ -4366,81 +4387,79 @@ class _$TaskTearOff {
     );
   }
 
-// ignore: unused_element
   Task fromJson(Map<String, Object> json) {
     return Task.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Task = _$TaskTearOff();
 
 /// @nodoc
 mixin _$Task {
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
   R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Canonical get instantiatesCanonical;
-  FhirUri get instantiatesUri;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
+  Canonical? get instantiatesCanonical;
+  FhirUri? get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
-  List<Reference> get basedOn;
-  Identifier get groupIdentifier;
-  List<Reference> get partOf;
+  Element? get instantiatesUriElement;
+  List<Reference>? get basedOn;
+  Identifier? get groupIdentifier;
+  List<Reference>? get partOf;
   @JsonKey(unknownEnumValue: TaskStatus.unknown)
-  TaskStatus get status;
+  TaskStatus? get status;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  CodeableConcept get statusReason;
-  CodeableConcept get businessStatus;
+  Element? get statusElement;
+  CodeableConcept? get statusReason;
+  CodeableConcept? get businessStatus;
   @JsonKey(unknownEnumValue: TaskIntent.unknown)
-  TaskIntent get intent;
+  TaskIntent? get intent;
   @JsonKey(name: '_intent')
-  Element get intentElement;
-  Code get priority;
+  Element? get intentElement;
+  Code? get priority;
   @JsonKey(name: '_priority')
-  Element get priorityElement;
-  CodeableConcept get code;
-  String get description;
+  Element? get priorityElement;
+  CodeableConcept? get code;
+  String? get description;
   @JsonKey(name: '_description')
-  Element get descriptionElement;
-  Reference get focus;
+  Element? get descriptionElement;
+  Reference? get focus;
   @JsonKey(name: 'for')
-  Reference get for_;
-  Reference get encounter;
-  Period get executionPeriod;
-  FhirDateTime get authoredOn;
+  Reference? get for_;
+  Reference? get encounter;
+  Period? get executionPeriod;
+  FhirDateTime? get authoredOn;
   @JsonKey(name: '_authoredOn')
-  Element get authoredOnElement;
-  FhirDateTime get lastModified;
+  Element? get authoredOnElement;
+  FhirDateTime? get lastModified;
   @JsonKey(name: '_lastModified')
-  Element get lastModifiedElement;
-  Reference get requester;
-  List<CodeableConcept> get performerType;
-  Reference get owner;
-  Reference get location;
-  CodeableConcept get reasonCode;
-  Reference get reasonReference;
-  List<Reference> get insurance;
-  List<Annotation> get note;
-  List<Reference> get relevantHistory;
-  TaskRestriction get restriction;
-  List<TaskInput> get input;
-  List<TaskOutput> get output;
+  Element? get lastModifiedElement;
+  Reference? get requester;
+  List<CodeableConcept>? get performerType;
+  Reference? get owner;
+  Reference? get location;
+  CodeableConcept? get reasonCode;
+  Reference? get reasonReference;
+  List<Reference>? get insurance;
+  List<Annotation>? get note;
+  List<Reference>? get relevantHistory;
+  TaskRestriction? get restriction;
+  List<TaskInput>? get input;
+  List<TaskOutput>? get output;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4454,93 +4473,93 @@ abstract class $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Canonical instantiatesCanonical,
-      FhirUri instantiatesUri,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Canonical? instantiatesCanonical,
+      FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
-      List<Reference> basedOn,
-      Identifier groupIdentifier,
-      List<Reference> partOf,
+          Element? instantiatesUriElement,
+      List<Reference>? basedOn,
+      Identifier? groupIdentifier,
+      List<Reference>? partOf,
       @JsonKey(unknownEnumValue: TaskStatus.unknown)
-          TaskStatus status,
+          TaskStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept statusReason,
-      CodeableConcept businessStatus,
+          Element? statusElement,
+      CodeableConcept? statusReason,
+      CodeableConcept? businessStatus,
       @JsonKey(unknownEnumValue: TaskIntent.unknown)
-          TaskIntent intent,
+          TaskIntent? intent,
       @JsonKey(name: '_intent')
-          Element intentElement,
-      Code priority,
+          Element? intentElement,
+      Code? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      CodeableConcept code,
-      String description,
+          Element? priorityElement,
+      CodeableConcept? code,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      Reference focus,
+          Element? descriptionElement,
+      Reference? focus,
       @JsonKey(name: 'for')
-          Reference for_,
-      Reference encounter,
-      Period executionPeriod,
-      FhirDateTime authoredOn,
+          Reference? for_,
+      Reference? encounter,
+      Period? executionPeriod,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
-          Element authoredOnElement,
-      FhirDateTime lastModified,
+          Element? authoredOnElement,
+      FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified')
-          Element lastModifiedElement,
-      Reference requester,
-      List<CodeableConcept> performerType,
-      Reference owner,
-      Reference location,
-      CodeableConcept reasonCode,
-      Reference reasonReference,
-      List<Reference> insurance,
-      List<Annotation> note,
-      List<Reference> relevantHistory,
-      TaskRestriction restriction,
-      List<TaskInput> input,
-      List<TaskOutput> output});
+          Element? lastModifiedElement,
+      Reference? requester,
+      List<CodeableConcept>? performerType,
+      Reference? owner,
+      Reference? location,
+      CodeableConcept? reasonCode,
+      Reference? reasonReference,
+      List<Reference>? insurance,
+      List<Annotation>? note,
+      List<Reference>? relevantHistory,
+      TaskRestriction? restriction,
+      List<TaskInput>? input,
+      List<TaskOutput>? output});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get instantiatesUriElement;
-  $IdentifierCopyWith<$Res> get groupIdentifier;
-  $ElementCopyWith<$Res> get statusElement;
-  $CodeableConceptCopyWith<$Res> get statusReason;
-  $CodeableConceptCopyWith<$Res> get businessStatus;
-  $ElementCopyWith<$Res> get intentElement;
-  $ElementCopyWith<$Res> get priorityElement;
-  $CodeableConceptCopyWith<$Res> get code;
-  $ElementCopyWith<$Res> get descriptionElement;
-  $ReferenceCopyWith<$Res> get focus;
-  $ReferenceCopyWith<$Res> get for_;
-  $ReferenceCopyWith<$Res> get encounter;
-  $PeriodCopyWith<$Res> get executionPeriod;
-  $ElementCopyWith<$Res> get authoredOnElement;
-  $ElementCopyWith<$Res> get lastModifiedElement;
-  $ReferenceCopyWith<$Res> get requester;
-  $ReferenceCopyWith<$Res> get owner;
-  $ReferenceCopyWith<$Res> get location;
-  $CodeableConceptCopyWith<$Res> get reasonCode;
-  $ReferenceCopyWith<$Res> get reasonReference;
-  $TaskRestrictionCopyWith<$Res> get restriction;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get instantiatesUriElement;
+  $IdentifierCopyWith<$Res>? get groupIdentifier;
+  $ElementCopyWith<$Res>? get statusElement;
+  $CodeableConceptCopyWith<$Res>? get statusReason;
+  $CodeableConceptCopyWith<$Res>? get businessStatus;
+  $ElementCopyWith<$Res>? get intentElement;
+  $ElementCopyWith<$Res>? get priorityElement;
+  $CodeableConceptCopyWith<$Res>? get code;
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ReferenceCopyWith<$Res>? get focus;
+  $ReferenceCopyWith<$Res>? get for_;
+  $ReferenceCopyWith<$Res>? get encounter;
+  $PeriodCopyWith<$Res>? get executionPeriod;
+  $ElementCopyWith<$Res>? get authoredOnElement;
+  $ElementCopyWith<$Res>? get lastModifiedElement;
+  $ReferenceCopyWith<$Res>? get requester;
+  $ReferenceCopyWith<$Res>? get owner;
+  $ReferenceCopyWith<$Res>? get location;
+  $CodeableConceptCopyWith<$Res>? get reasonCode;
+  $ReferenceCopyWith<$Res>? get reasonReference;
+  $TaskRestrictionCopyWith<$Res>? get restriction;
 }
 
 /// @nodoc
@@ -4553,415 +4572,442 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object instantiatesCanonical = freezed,
-    Object instantiatesUri = freezed,
-    Object instantiatesUriElement = freezed,
-    Object basedOn = freezed,
-    Object groupIdentifier = freezed,
-    Object partOf = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object statusReason = freezed,
-    Object businessStatus = freezed,
-    Object intent = freezed,
-    Object intentElement = freezed,
-    Object priority = freezed,
-    Object priorityElement = freezed,
-    Object code = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object focus = freezed,
-    Object for_ = freezed,
-    Object encounter = freezed,
-    Object executionPeriod = freezed,
-    Object authoredOn = freezed,
-    Object authoredOnElement = freezed,
-    Object lastModified = freezed,
-    Object lastModifiedElement = freezed,
-    Object requester = freezed,
-    Object performerType = freezed,
-    Object owner = freezed,
-    Object location = freezed,
-    Object reasonCode = freezed,
-    Object reasonReference = freezed,
-    Object insurance = freezed,
-    Object note = freezed,
-    Object relevantHistory = freezed,
-    Object restriction = freezed,
-    Object input = freezed,
-    Object output = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? instantiatesCanonical = freezed,
+    Object? instantiatesUri = freezed,
+    Object? instantiatesUriElement = freezed,
+    Object? basedOn = freezed,
+    Object? groupIdentifier = freezed,
+    Object? partOf = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? statusReason = freezed,
+    Object? businessStatus = freezed,
+    Object? intent = freezed,
+    Object? intentElement = freezed,
+    Object? priority = freezed,
+    Object? priorityElement = freezed,
+    Object? code = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? focus = freezed,
+    Object? for_ = freezed,
+    Object? encounter = freezed,
+    Object? executionPeriod = freezed,
+    Object? authoredOn = freezed,
+    Object? authoredOnElement = freezed,
+    Object? lastModified = freezed,
+    Object? lastModifiedElement = freezed,
+    Object? requester = freezed,
+    Object? performerType = freezed,
+    Object? owner = freezed,
+    Object? location = freezed,
+    Object? reasonCode = freezed,
+    Object? reasonReference = freezed,
+    Object? insurance = freezed,
+    Object? note = freezed,
+    Object? relevantHistory = freezed,
+    Object? restriction = freezed,
+    Object? input = freezed,
+    Object? output = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
-          : instantiatesCanonical as Canonical,
+          : instantiatesCanonical as Canonical?,
       instantiatesUri: instantiatesUri == freezed
           ? _value.instantiatesUri
-          : instantiatesUri as FhirUri,
+          : instantiatesUri as FhirUri?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
-      basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
+          : instantiatesUriElement as Element?,
+      basedOn:
+          basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       groupIdentifier: groupIdentifier == freezed
           ? _value.groupIdentifier
-          : groupIdentifier as Identifier,
-      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as TaskStatus,
+          : groupIdentifier as Identifier?,
+      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
+      status: status == freezed ? _value.status : status as TaskStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement as Element?,
       statusReason: statusReason == freezed
           ? _value.statusReason
-          : statusReason as CodeableConcept,
+          : statusReason as CodeableConcept?,
       businessStatus: businessStatus == freezed
           ? _value.businessStatus
-          : businessStatus as CodeableConcept,
-      intent: intent == freezed ? _value.intent : intent as TaskIntent,
+          : businessStatus as CodeableConcept?,
+      intent: intent == freezed ? _value.intent : intent as TaskIntent?,
       intentElement: intentElement == freezed
           ? _value.intentElement
-          : intentElement as Element,
-      priority: priority == freezed ? _value.priority : priority as Code,
+          : intentElement as Element?,
+      priority: priority == freezed ? _value.priority : priority as Code?,
       priorityElement: priorityElement == freezed
           ? _value.priorityElement
-          : priorityElement as Element,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : priorityElement as Element?,
+      code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element,
-      focus: focus == freezed ? _value.focus : focus as Reference,
-      for_: for_ == freezed ? _value.for_ : for_ as Reference,
+          : descriptionElement as Element?,
+      focus: focus == freezed ? _value.focus : focus as Reference?,
+      for_: for_ == freezed ? _value.for_ : for_ as Reference?,
       encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference,
+          encounter == freezed ? _value.encounter : encounter as Reference?,
       executionPeriod: executionPeriod == freezed
           ? _value.executionPeriod
-          : executionPeriod as Period,
+          : executionPeriod as Period?,
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
-          : authoredOn as FhirDateTime,
+          : authoredOn as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
-          : authoredOnElement as Element,
+          : authoredOnElement as Element?,
       lastModified: lastModified == freezed
           ? _value.lastModified
-          : lastModified as FhirDateTime,
+          : lastModified as FhirDateTime?,
       lastModifiedElement: lastModifiedElement == freezed
           ? _value.lastModifiedElement
-          : lastModifiedElement as Element,
+          : lastModifiedElement as Element?,
       requester:
-          requester == freezed ? _value.requester : requester as Reference,
+          requester == freezed ? _value.requester : requester as Reference?,
       performerType: performerType == freezed
           ? _value.performerType
-          : performerType as List<CodeableConcept>,
-      owner: owner == freezed ? _value.owner : owner as Reference,
-      location: location == freezed ? _value.location : location as Reference,
+          : performerType as List<CodeableConcept>?,
+      owner: owner == freezed ? _value.owner : owner as Reference?,
+      location: location == freezed ? _value.location : location as Reference?,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as CodeableConcept,
+          : reasonCode as CodeableConcept?,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
-          : reasonReference as Reference,
+          : reasonReference as Reference?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<Reference>,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+          : insurance as List<Reference>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
       relevantHistory: relevantHistory == freezed
           ? _value.relevantHistory
-          : relevantHistory as List<Reference>,
+          : relevantHistory as List<Reference>?,
       restriction: restriction == freezed
           ? _value.restriction
-          : restriction as TaskRestriction,
-      input: input == freezed ? _value.input : input as List<TaskInput>,
-      output: output == freezed ? _value.output : output as List<TaskOutput>,
+          : restriction as TaskRestriction?,
+      input: input == freezed ? _value.input : input as List<TaskInput>?,
+      output: output == freezed ? _value.output : output as List<TaskOutput>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get instantiatesUriElement {
+  $ElementCopyWith<$Res>? get instantiatesUriElement {
     if (_value.instantiatesUriElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.instantiatesUriElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.instantiatesUriElement!, (value) {
       return _then(_value.copyWith(instantiatesUriElement: value));
     });
   }
 
   @override
-  $IdentifierCopyWith<$Res> get groupIdentifier {
+  $IdentifierCopyWith<$Res>? get groupIdentifier {
     if (_value.groupIdentifier == null) {
       return null;
     }
-    return $IdentifierCopyWith<$Res>(_value.groupIdentifier, (value) {
+
+    return $IdentifierCopyWith<$Res>(_value.groupIdentifier!, (value) {
       return _then(_value.copyWith(groupIdentifier: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get statusReason {
+  $CodeableConceptCopyWith<$Res>? get statusReason {
     if (_value.statusReason == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.statusReason, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.statusReason!, (value) {
       return _then(_value.copyWith(statusReason: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get businessStatus {
+  $CodeableConceptCopyWith<$Res>? get businessStatus {
     if (_value.businessStatus == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.businessStatus, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.businessStatus!, (value) {
       return _then(_value.copyWith(businessStatus: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get intentElement {
+  $ElementCopyWith<$Res>? get intentElement {
     if (_value.intentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.intentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.intentElement!, (value) {
       return _then(_value.copyWith(intentElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get priorityElement {
+  $ElementCopyWith<$Res>? get priorityElement {
     if (_value.priorityElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.priorityElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.priorityElement!, (value) {
       return _then(_value.copyWith(priorityElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get code {
+  $CodeableConceptCopyWith<$Res>? get code {
     if (_value.code == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get descriptionElement {
+  $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
       return _then(_value.copyWith(descriptionElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get focus {
+  $ReferenceCopyWith<$Res>? get focus {
     if (_value.focus == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.focus, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.focus!, (value) {
       return _then(_value.copyWith(focus: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get for_ {
+  $ReferenceCopyWith<$Res>? get for_ {
     if (_value.for_ == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.for_, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.for_!, (value) {
       return _then(_value.copyWith(for_: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get encounter {
+  $ReferenceCopyWith<$Res>? get encounter {
     if (_value.encounter == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.encounter, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.encounter!, (value) {
       return _then(_value.copyWith(encounter: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get executionPeriod {
+  $PeriodCopyWith<$Res>? get executionPeriod {
     if (_value.executionPeriod == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.executionPeriod, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.executionPeriod!, (value) {
       return _then(_value.copyWith(executionPeriod: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get authoredOnElement {
+  $ElementCopyWith<$Res>? get authoredOnElement {
     if (_value.authoredOnElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.authoredOnElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.authoredOnElement!, (value) {
       return _then(_value.copyWith(authoredOnElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get lastModifiedElement {
+  $ElementCopyWith<$Res>? get lastModifiedElement {
     if (_value.lastModifiedElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.lastModifiedElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.lastModifiedElement!, (value) {
       return _then(_value.copyWith(lastModifiedElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get requester {
+  $ReferenceCopyWith<$Res>? get requester {
     if (_value.requester == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.requester, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.requester!, (value) {
       return _then(_value.copyWith(requester: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get owner {
+  $ReferenceCopyWith<$Res>? get owner {
     if (_value.owner == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.owner, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.owner!, (value) {
       return _then(_value.copyWith(owner: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get location {
+  $ReferenceCopyWith<$Res>? get location {
     if (_value.location == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.location, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.location!, (value) {
       return _then(_value.copyWith(location: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get reasonCode {
+  $CodeableConceptCopyWith<$Res>? get reasonCode {
     if (_value.reasonCode == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.reasonCode, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.reasonCode!, (value) {
       return _then(_value.copyWith(reasonCode: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get reasonReference {
+  $ReferenceCopyWith<$Res>? get reasonReference {
     if (_value.reasonReference == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.reasonReference, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.reasonReference!, (value) {
       return _then(_value.copyWith(reasonReference: value));
     });
   }
 
   @override
-  $TaskRestrictionCopyWith<$Res> get restriction {
+  $TaskRestrictionCopyWith<$Res>? get restriction {
     if (_value.restriction == null) {
       return null;
     }
-    return $TaskRestrictionCopyWith<$Res>(_value.restriction, (value) {
+
+    return $TaskRestrictionCopyWith<$Res>(_value.restriction!, (value) {
       return _then(_value.copyWith(restriction: value));
     });
   }
@@ -4975,118 +5021,118 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Canonical instantiatesCanonical,
-      FhirUri instantiatesUri,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Canonical? instantiatesCanonical,
+      FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
-      List<Reference> basedOn,
-      Identifier groupIdentifier,
-      List<Reference> partOf,
+          Element? instantiatesUriElement,
+      List<Reference>? basedOn,
+      Identifier? groupIdentifier,
+      List<Reference>? partOf,
       @JsonKey(unknownEnumValue: TaskStatus.unknown)
-          TaskStatus status,
+          TaskStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept statusReason,
-      CodeableConcept businessStatus,
+          Element? statusElement,
+      CodeableConcept? statusReason,
+      CodeableConcept? businessStatus,
       @JsonKey(unknownEnumValue: TaskIntent.unknown)
-          TaskIntent intent,
+          TaskIntent? intent,
       @JsonKey(name: '_intent')
-          Element intentElement,
-      Code priority,
+          Element? intentElement,
+      Code? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      CodeableConcept code,
-      String description,
+          Element? priorityElement,
+      CodeableConcept? code,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      Reference focus,
+          Element? descriptionElement,
+      Reference? focus,
       @JsonKey(name: 'for')
-          Reference for_,
-      Reference encounter,
-      Period executionPeriod,
-      FhirDateTime authoredOn,
+          Reference? for_,
+      Reference? encounter,
+      Period? executionPeriod,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
-          Element authoredOnElement,
-      FhirDateTime lastModified,
+          Element? authoredOnElement,
+      FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified')
-          Element lastModifiedElement,
-      Reference requester,
-      List<CodeableConcept> performerType,
-      Reference owner,
-      Reference location,
-      CodeableConcept reasonCode,
-      Reference reasonReference,
-      List<Reference> insurance,
-      List<Annotation> note,
-      List<Reference> relevantHistory,
-      TaskRestriction restriction,
-      List<TaskInput> input,
-      List<TaskOutput> output});
+          Element? lastModifiedElement,
+      Reference? requester,
+      List<CodeableConcept>? performerType,
+      Reference? owner,
+      Reference? location,
+      CodeableConcept? reasonCode,
+      Reference? reasonReference,
+      List<Reference>? insurance,
+      List<Annotation>? note,
+      List<Reference>? relevantHistory,
+      TaskRestriction? restriction,
+      List<TaskInput>? input,
+      List<TaskOutput>? output});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get instantiatesUriElement;
+  $ElementCopyWith<$Res>? get instantiatesUriElement;
   @override
-  $IdentifierCopyWith<$Res> get groupIdentifier;
+  $IdentifierCopyWith<$Res>? get groupIdentifier;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res> get statusReason;
+  $CodeableConceptCopyWith<$Res>? get statusReason;
   @override
-  $CodeableConceptCopyWith<$Res> get businessStatus;
+  $CodeableConceptCopyWith<$Res>? get businessStatus;
   @override
-  $ElementCopyWith<$Res> get intentElement;
+  $ElementCopyWith<$Res>? get intentElement;
   @override
-  $ElementCopyWith<$Res> get priorityElement;
+  $ElementCopyWith<$Res>? get priorityElement;
   @override
-  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res>? get code;
   @override
-  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $ReferenceCopyWith<$Res> get focus;
+  $ReferenceCopyWith<$Res>? get focus;
   @override
-  $ReferenceCopyWith<$Res> get for_;
+  $ReferenceCopyWith<$Res>? get for_;
   @override
-  $ReferenceCopyWith<$Res> get encounter;
+  $ReferenceCopyWith<$Res>? get encounter;
   @override
-  $PeriodCopyWith<$Res> get executionPeriod;
+  $PeriodCopyWith<$Res>? get executionPeriod;
   @override
-  $ElementCopyWith<$Res> get authoredOnElement;
+  $ElementCopyWith<$Res>? get authoredOnElement;
   @override
-  $ElementCopyWith<$Res> get lastModifiedElement;
+  $ElementCopyWith<$Res>? get lastModifiedElement;
   @override
-  $ReferenceCopyWith<$Res> get requester;
+  $ReferenceCopyWith<$Res>? get requester;
   @override
-  $ReferenceCopyWith<$Res> get owner;
+  $ReferenceCopyWith<$Res>? get owner;
   @override
-  $ReferenceCopyWith<$Res> get location;
+  $ReferenceCopyWith<$Res>? get location;
   @override
-  $CodeableConceptCopyWith<$Res> get reasonCode;
+  $CodeableConceptCopyWith<$Res>? get reasonCode;
   @override
-  $ReferenceCopyWith<$Res> get reasonReference;
+  $ReferenceCopyWith<$Res>? get reasonReference;
   @override
-  $TaskRestrictionCopyWith<$Res> get restriction;
+  $TaskRestrictionCopyWith<$Res>? get restriction;
 }
 
 /// @nodoc
@@ -5100,166 +5146,168 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object instantiatesCanonical = freezed,
-    Object instantiatesUri = freezed,
-    Object instantiatesUriElement = freezed,
-    Object basedOn = freezed,
-    Object groupIdentifier = freezed,
-    Object partOf = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object statusReason = freezed,
-    Object businessStatus = freezed,
-    Object intent = freezed,
-    Object intentElement = freezed,
-    Object priority = freezed,
-    Object priorityElement = freezed,
-    Object code = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object focus = freezed,
-    Object for_ = freezed,
-    Object encounter = freezed,
-    Object executionPeriod = freezed,
-    Object authoredOn = freezed,
-    Object authoredOnElement = freezed,
-    Object lastModified = freezed,
-    Object lastModifiedElement = freezed,
-    Object requester = freezed,
-    Object performerType = freezed,
-    Object owner = freezed,
-    Object location = freezed,
-    Object reasonCode = freezed,
-    Object reasonReference = freezed,
-    Object insurance = freezed,
-    Object note = freezed,
-    Object relevantHistory = freezed,
-    Object restriction = freezed,
-    Object input = freezed,
-    Object output = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? instantiatesCanonical = freezed,
+    Object? instantiatesUri = freezed,
+    Object? instantiatesUriElement = freezed,
+    Object? basedOn = freezed,
+    Object? groupIdentifier = freezed,
+    Object? partOf = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? statusReason = freezed,
+    Object? businessStatus = freezed,
+    Object? intent = freezed,
+    Object? intentElement = freezed,
+    Object? priority = freezed,
+    Object? priorityElement = freezed,
+    Object? code = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? focus = freezed,
+    Object? for_ = freezed,
+    Object? encounter = freezed,
+    Object? executionPeriod = freezed,
+    Object? authoredOn = freezed,
+    Object? authoredOnElement = freezed,
+    Object? lastModified = freezed,
+    Object? lastModifiedElement = freezed,
+    Object? requester = freezed,
+    Object? performerType = freezed,
+    Object? owner = freezed,
+    Object? location = freezed,
+    Object? reasonCode = freezed,
+    Object? reasonReference = freezed,
+    Object? insurance = freezed,
+    Object? note = freezed,
+    Object? relevantHistory = freezed,
+    Object? restriction = freezed,
+    Object? input = freezed,
+    Object? output = freezed,
   }) {
     return _then(_Task(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
-          : instantiatesCanonical as Canonical,
+          : instantiatesCanonical as Canonical?,
       instantiatesUri: instantiatesUri == freezed
           ? _value.instantiatesUri
-          : instantiatesUri as FhirUri,
+          : instantiatesUri as FhirUri?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as Element,
-      basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
+          : instantiatesUriElement as Element?,
+      basedOn:
+          basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       groupIdentifier: groupIdentifier == freezed
           ? _value.groupIdentifier
-          : groupIdentifier as Identifier,
-      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
-      status: status == freezed ? _value.status : status as TaskStatus,
+          : groupIdentifier as Identifier?,
+      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
+      status: status == freezed ? _value.status : status as TaskStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement as Element?,
       statusReason: statusReason == freezed
           ? _value.statusReason
-          : statusReason as CodeableConcept,
+          : statusReason as CodeableConcept?,
       businessStatus: businessStatus == freezed
           ? _value.businessStatus
-          : businessStatus as CodeableConcept,
-      intent: intent == freezed ? _value.intent : intent as TaskIntent,
+          : businessStatus as CodeableConcept?,
+      intent: intent == freezed ? _value.intent : intent as TaskIntent?,
       intentElement: intentElement == freezed
           ? _value.intentElement
-          : intentElement as Element,
-      priority: priority == freezed ? _value.priority : priority as Code,
+          : intentElement as Element?,
+      priority: priority == freezed ? _value.priority : priority as Code?,
       priorityElement: priorityElement == freezed
           ? _value.priorityElement
-          : priorityElement as Element,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : priorityElement as Element?,
+      code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element,
-      focus: focus == freezed ? _value.focus : focus as Reference,
-      for_: for_ == freezed ? _value.for_ : for_ as Reference,
+          : descriptionElement as Element?,
+      focus: focus == freezed ? _value.focus : focus as Reference?,
+      for_: for_ == freezed ? _value.for_ : for_ as Reference?,
       encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference,
+          encounter == freezed ? _value.encounter : encounter as Reference?,
       executionPeriod: executionPeriod == freezed
           ? _value.executionPeriod
-          : executionPeriod as Period,
+          : executionPeriod as Period?,
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
-          : authoredOn as FhirDateTime,
+          : authoredOn as FhirDateTime?,
       authoredOnElement: authoredOnElement == freezed
           ? _value.authoredOnElement
-          : authoredOnElement as Element,
+          : authoredOnElement as Element?,
       lastModified: lastModified == freezed
           ? _value.lastModified
-          : lastModified as FhirDateTime,
+          : lastModified as FhirDateTime?,
       lastModifiedElement: lastModifiedElement == freezed
           ? _value.lastModifiedElement
-          : lastModifiedElement as Element,
+          : lastModifiedElement as Element?,
       requester:
-          requester == freezed ? _value.requester : requester as Reference,
+          requester == freezed ? _value.requester : requester as Reference?,
       performerType: performerType == freezed
           ? _value.performerType
-          : performerType as List<CodeableConcept>,
-      owner: owner == freezed ? _value.owner : owner as Reference,
-      location: location == freezed ? _value.location : location as Reference,
+          : performerType as List<CodeableConcept>?,
+      owner: owner == freezed ? _value.owner : owner as Reference?,
+      location: location == freezed ? _value.location : location as Reference?,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as CodeableConcept,
+          : reasonCode as CodeableConcept?,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
-          : reasonReference as Reference,
+          : reasonReference as Reference?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<Reference>,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+          : insurance as List<Reference>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
       relevantHistory: relevantHistory == freezed
           ? _value.relevantHistory
-          : relevantHistory as List<Reference>,
+          : relevantHistory as List<Reference>?,
       restriction: restriction == freezed
           ? _value.restriction
-          : restriction as TaskRestriction,
-      input: input == freezed ? _value.input : input as List<TaskInput>,
-      output: output == freezed ? _value.output : output as List<TaskOutput>,
+          : restriction as TaskRestriction?,
+      input: input == freezed ? _value.input : input as List<TaskInput>?,
+      output: output == freezed ? _value.output : output as List<TaskOutput>?,
     ));
   }
 }
@@ -5332,8 +5380,7 @@ class _$_Task extends _Task {
       this.restriction,
       this.input,
       this.output})
-      : assert(resourceType != null),
-        super._();
+      : super._();
 
   factory _$_Task.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskFromJson(json);
@@ -5342,114 +5389,114 @@ class _$_Task extends _Task {
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Canonical instantiatesCanonical;
+  final Canonical? instantiatesCanonical;
   @override
-  final FhirUri instantiatesUri;
+  final FhirUri? instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final Element instantiatesUriElement;
+  final Element? instantiatesUriElement;
   @override
-  final List<Reference> basedOn;
+  final List<Reference>? basedOn;
   @override
-  final Identifier groupIdentifier;
+  final Identifier? groupIdentifier;
   @override
-  final List<Reference> partOf;
+  final List<Reference>? partOf;
   @override
   @JsonKey(unknownEnumValue: TaskStatus.unknown)
-  final TaskStatus status;
+  final TaskStatus? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final CodeableConcept statusReason;
+  final CodeableConcept? statusReason;
   @override
-  final CodeableConcept businessStatus;
+  final CodeableConcept? businessStatus;
   @override
   @JsonKey(unknownEnumValue: TaskIntent.unknown)
-  final TaskIntent intent;
+  final TaskIntent? intent;
   @override
   @JsonKey(name: '_intent')
-  final Element intentElement;
+  final Element? intentElement;
   @override
-  final Code priority;
+  final Code? priority;
   @override
   @JsonKey(name: '_priority')
-  final Element priorityElement;
+  final Element? priorityElement;
   @override
-  final CodeableConcept code;
+  final CodeableConcept? code;
   @override
-  final String description;
+  final String? description;
   @override
   @JsonKey(name: '_description')
-  final Element descriptionElement;
+  final Element? descriptionElement;
   @override
-  final Reference focus;
+  final Reference? focus;
   @override
   @JsonKey(name: 'for')
-  final Reference for_;
+  final Reference? for_;
   @override
-  final Reference encounter;
+  final Reference? encounter;
   @override
-  final Period executionPeriod;
+  final Period? executionPeriod;
   @override
-  final FhirDateTime authoredOn;
+  final FhirDateTime? authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
-  final Element authoredOnElement;
+  final Element? authoredOnElement;
   @override
-  final FhirDateTime lastModified;
+  final FhirDateTime? lastModified;
   @override
   @JsonKey(name: '_lastModified')
-  final Element lastModifiedElement;
+  final Element? lastModifiedElement;
   @override
-  final Reference requester;
+  final Reference? requester;
   @override
-  final List<CodeableConcept> performerType;
+  final List<CodeableConcept>? performerType;
   @override
-  final Reference owner;
+  final Reference? owner;
   @override
-  final Reference location;
+  final Reference? location;
   @override
-  final CodeableConcept reasonCode;
+  final CodeableConcept? reasonCode;
   @override
-  final Reference reasonReference;
+  final Reference? reasonReference;
   @override
-  final List<Reference> insurance;
+  final List<Reference>? insurance;
   @override
-  final List<Annotation> note;
+  final List<Annotation>? note;
   @override
-  final List<Reference> relevantHistory;
+  final List<Reference>? relevantHistory;
   @override
-  final TaskRestriction restriction;
+  final TaskRestriction? restriction;
   @override
-  final List<TaskInput> input;
+  final List<TaskInput>? input;
   @override
-  final List<TaskOutput> output;
+  final List<TaskOutput>? output;
 
   @override
   String toString() {
@@ -5622,67 +5669,67 @@ abstract class _Task extends Task {
   factory _Task(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Canonical instantiatesCanonical,
-      FhirUri instantiatesUri,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Canonical? instantiatesCanonical,
+      FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          Element instantiatesUriElement,
-      List<Reference> basedOn,
-      Identifier groupIdentifier,
-      List<Reference> partOf,
+          Element? instantiatesUriElement,
+      List<Reference>? basedOn,
+      Identifier? groupIdentifier,
+      List<Reference>? partOf,
       @JsonKey(unknownEnumValue: TaskStatus.unknown)
-          TaskStatus status,
+          TaskStatus? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept statusReason,
-      CodeableConcept businessStatus,
+          Element? statusElement,
+      CodeableConcept? statusReason,
+      CodeableConcept? businessStatus,
       @JsonKey(unknownEnumValue: TaskIntent.unknown)
-          TaskIntent intent,
+          TaskIntent? intent,
       @JsonKey(name: '_intent')
-          Element intentElement,
-      Code priority,
+          Element? intentElement,
+      Code? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      CodeableConcept code,
-      String description,
+          Element? priorityElement,
+      CodeableConcept? code,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      Reference focus,
+          Element? descriptionElement,
+      Reference? focus,
       @JsonKey(name: 'for')
-          Reference for_,
-      Reference encounter,
-      Period executionPeriod,
-      FhirDateTime authoredOn,
+          Reference? for_,
+      Reference? encounter,
+      Period? executionPeriod,
+      FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
-          Element authoredOnElement,
-      FhirDateTime lastModified,
+          Element? authoredOnElement,
+      FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified')
-          Element lastModifiedElement,
-      Reference requester,
-      List<CodeableConcept> performerType,
-      Reference owner,
-      Reference location,
-      CodeableConcept reasonCode,
-      Reference reasonReference,
-      List<Reference> insurance,
-      List<Annotation> note,
-      List<Reference> relevantHistory,
-      TaskRestriction restriction,
-      List<TaskInput> input,
-      List<TaskOutput> output}) = _$_Task;
+          Element? lastModifiedElement,
+      Reference? requester,
+      List<CodeableConcept>? performerType,
+      Reference? owner,
+      Reference? location,
+      CodeableConcept? reasonCode,
+      Reference? reasonReference,
+      List<Reference>? insurance,
+      List<Annotation>? note,
+      List<Reference>? relevantHistory,
+      TaskRestriction? restriction,
+      List<TaskInput>? input,
+      List<TaskOutput>? output}) = _$_Task;
 
   factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
 
@@ -5690,114 +5737,114 @@ abstract class _Task extends Task {
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
   R4ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier;
   @override
-  Canonical get instantiatesCanonical;
+  Canonical? get instantiatesCanonical;
   @override
-  FhirUri get instantiatesUri;
+  FhirUri? get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  Element get instantiatesUriElement;
+  Element? get instantiatesUriElement;
   @override
-  List<Reference> get basedOn;
+  List<Reference>? get basedOn;
   @override
-  Identifier get groupIdentifier;
+  Identifier? get groupIdentifier;
   @override
-  List<Reference> get partOf;
+  List<Reference>? get partOf;
   @override
   @JsonKey(unknownEnumValue: TaskStatus.unknown)
-  TaskStatus get status;
+  TaskStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement;
   @override
-  CodeableConcept get statusReason;
+  CodeableConcept? get statusReason;
   @override
-  CodeableConcept get businessStatus;
+  CodeableConcept? get businessStatus;
   @override
   @JsonKey(unknownEnumValue: TaskIntent.unknown)
-  TaskIntent get intent;
+  TaskIntent? get intent;
   @override
   @JsonKey(name: '_intent')
-  Element get intentElement;
+  Element? get intentElement;
   @override
-  Code get priority;
+  Code? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element get priorityElement;
+  Element? get priorityElement;
   @override
-  CodeableConcept get code;
+  CodeableConcept? get code;
   @override
-  String get description;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element get descriptionElement;
+  Element? get descriptionElement;
   @override
-  Reference get focus;
+  Reference? get focus;
   @override
   @JsonKey(name: 'for')
-  Reference get for_;
+  Reference? get for_;
   @override
-  Reference get encounter;
+  Reference? get encounter;
   @override
-  Period get executionPeriod;
+  Period? get executionPeriod;
   @override
-  FhirDateTime get authoredOn;
+  FhirDateTime? get authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
-  Element get authoredOnElement;
+  Element? get authoredOnElement;
   @override
-  FhirDateTime get lastModified;
+  FhirDateTime? get lastModified;
   @override
   @JsonKey(name: '_lastModified')
-  Element get lastModifiedElement;
+  Element? get lastModifiedElement;
   @override
-  Reference get requester;
+  Reference? get requester;
   @override
-  List<CodeableConcept> get performerType;
+  List<CodeableConcept>? get performerType;
   @override
-  Reference get owner;
+  Reference? get owner;
   @override
-  Reference get location;
+  Reference? get location;
   @override
-  CodeableConcept get reasonCode;
+  CodeableConcept? get reasonCode;
   @override
-  Reference get reasonReference;
+  Reference? get reasonReference;
   @override
-  List<Reference> get insurance;
+  List<Reference>? get insurance;
   @override
-  List<Annotation> get note;
+  List<Annotation>? get note;
   @override
-  List<Reference> get relevantHistory;
+  List<Reference>? get relevantHistory;
   @override
-  TaskRestriction get restriction;
+  TaskRestriction? get restriction;
   @override
-  List<TaskInput> get input;
+  List<TaskInput>? get input;
   @override
-  List<TaskOutput> get output;
+  List<TaskOutput>? get output;
   @override
   @JsonKey(ignore: true)
   _$TaskCopyWith<_Task> get copyWith;
@@ -5811,15 +5858,14 @@ TaskRestriction _$TaskRestrictionFromJson(Map<String, dynamic> json) {
 class _$TaskRestrictionTearOff {
   const _$TaskRestrictionTearOff();
 
-// ignore: unused_element
   _TaskRestriction call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      PositiveInt repetitions,
-      @JsonKey(name: '_repetitions') Element repetitionsElement,
-      Period period,
-      List<Reference> recipient}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      PositiveInt? repetitions,
+      @JsonKey(name: '_repetitions') Element? repetitionsElement,
+      Period? period,
+      List<Reference>? recipient}) {
     return _TaskRestriction(
       id: id,
       extension_: extension_,
@@ -5831,27 +5877,25 @@ class _$TaskRestrictionTearOff {
     );
   }
 
-// ignore: unused_element
   TaskRestriction fromJson(Map<String, Object> json) {
     return TaskRestriction.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TaskRestriction = _$TaskRestrictionTearOff();
 
 /// @nodoc
 mixin _$TaskRestriction {
-  String get id;
+  String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  PositiveInt get repetitions;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  PositiveInt? get repetitions;
   @JsonKey(name: '_repetitions')
-  Element get repetitionsElement;
-  Period get period;
-  List<Reference> get recipient;
+  Element? get repetitionsElement;
+  Period? get period;
+  List<Reference>? get recipient;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5864,16 +5908,16 @@ abstract class $TaskRestrictionCopyWith<$Res> {
           TaskRestriction value, $Res Function(TaskRestriction) then) =
       _$TaskRestrictionCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      PositiveInt repetitions,
-      @JsonKey(name: '_repetitions') Element repetitionsElement,
-      Period period,
-      List<Reference> recipient});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      PositiveInt? repetitions,
+      @JsonKey(name: '_repetitions') Element? repetitionsElement,
+      Period? period,
+      List<Reference>? recipient});
 
-  $ElementCopyWith<$Res> get repetitionsElement;
-  $PeriodCopyWith<$Res> get period;
+  $ElementCopyWith<$Res>? get repetitionsElement;
+  $PeriodCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -5887,51 +5931,53 @@ class _$TaskRestrictionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object repetitions = freezed,
-    Object repetitionsElement = freezed,
-    Object period = freezed,
-    Object recipient = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? repetitions = freezed,
+    Object? repetitionsElement = freezed,
+    Object? period = freezed,
+    Object? recipient = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       repetitions: repetitions == freezed
           ? _value.repetitions
-          : repetitions as PositiveInt,
+          : repetitions as PositiveInt?,
       repetitionsElement: repetitionsElement == freezed
           ? _value.repetitionsElement
-          : repetitionsElement as Element,
-      period: period == freezed ? _value.period : period as Period,
+          : repetitionsElement as Element?,
+      period: period == freezed ? _value.period : period as Period?,
       recipient: recipient == freezed
           ? _value.recipient
-          : recipient as List<Reference>,
+          : recipient as List<Reference>?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get repetitionsElement {
+  $ElementCopyWith<$Res>? get repetitionsElement {
     if (_value.repetitionsElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.repetitionsElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.repetitionsElement!, (value) {
       return _then(_value.copyWith(repetitionsElement: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get period {
+  $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -5945,18 +5991,18 @@ abstract class _$TaskRestrictionCopyWith<$Res>
       __$TaskRestrictionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      PositiveInt repetitions,
-      @JsonKey(name: '_repetitions') Element repetitionsElement,
-      Period period,
-      List<Reference> recipient});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      PositiveInt? repetitions,
+      @JsonKey(name: '_repetitions') Element? repetitionsElement,
+      Period? period,
+      List<Reference>? recipient});
 
   @override
-  $ElementCopyWith<$Res> get repetitionsElement;
+  $ElementCopyWith<$Res>? get repetitionsElement;
   @override
-  $PeriodCopyWith<$Res> get period;
+  $PeriodCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -5972,32 +6018,32 @@ class __$TaskRestrictionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object repetitions = freezed,
-    Object repetitionsElement = freezed,
-    Object period = freezed,
-    Object recipient = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? repetitions = freezed,
+    Object? repetitionsElement = freezed,
+    Object? period = freezed,
+    Object? recipient = freezed,
   }) {
     return _then(_TaskRestriction(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       repetitions: repetitions == freezed
           ? _value.repetitions
-          : repetitions as PositiveInt,
+          : repetitions as PositiveInt?,
       repetitionsElement: repetitionsElement == freezed
           ? _value.repetitionsElement
-          : repetitionsElement as Element,
-      period: period == freezed ? _value.period : period as Period,
+          : repetitionsElement as Element?,
+      period: period == freezed ? _value.period : period as Period?,
       recipient: recipient == freezed
           ? _value.recipient
-          : recipient as List<Reference>,
+          : recipient as List<Reference>?,
     ));
   }
 }
@@ -6020,21 +6066,21 @@ class _$_TaskRestriction extends _TaskRestriction {
       _$_$_TaskRestrictionFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final PositiveInt repetitions;
+  final PositiveInt? repetitions;
   @override
   @JsonKey(name: '_repetitions')
-  final Element repetitionsElement;
+  final Element? repetitionsElement;
   @override
-  final Period period;
+  final Period? period;
   @override
-  final List<Reference> recipient;
+  final List<Reference>? recipient;
 
   @override
   String toString() {
@@ -6091,33 +6137,33 @@ class _$_TaskRestriction extends _TaskRestriction {
 abstract class _TaskRestriction extends TaskRestriction {
   _TaskRestriction._() : super._();
   factory _TaskRestriction(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      PositiveInt repetitions,
-      @JsonKey(name: '_repetitions') Element repetitionsElement,
-      Period period,
-      List<Reference> recipient}) = _$_TaskRestriction;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      PositiveInt? repetitions,
+      @JsonKey(name: '_repetitions') Element? repetitionsElement,
+      Period? period,
+      List<Reference>? recipient}) = _$_TaskRestriction;
 
   factory _TaskRestriction.fromJson(Map<String, dynamic> json) =
       _$_TaskRestriction.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get repetitions;
+  PositiveInt? get repetitions;
   @override
   @JsonKey(name: '_repetitions')
-  Element get repetitionsElement;
+  Element? get repetitionsElement;
   @override
-  Period get period;
+  Period? get period;
   @override
-  List<Reference> get recipient;
+  List<Reference>? get recipient;
   @override
   @JsonKey(ignore: true)
   _$TaskRestrictionCopyWith<_TaskRestriction> get copyWith;
@@ -6131,81 +6177,80 @@ TaskInput _$TaskInputFromJson(Map<String, dynamic> json) {
 class _$TaskInputTearOff {
   const _$TaskInputTearOff();
 
-// ignore: unused_element
   _TaskInput call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Canonical valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Markdown valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Oid valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      PositiveInt valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      UnsignedInt valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      FhirUrl valueUrl,
-      @JsonKey(name: '_valueUrl') Element valueUrlElement,
-      Uuid valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      FhirDuration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      FhirDuration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta}) {
     return _TaskInput(
       id: id,
       extension_: extension_,
@@ -6283,111 +6328,109 @@ class _$TaskInputTearOff {
     );
   }
 
-// ignore: unused_element
   TaskInput fromJson(Map<String, Object> json) {
     return TaskInput.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TaskInput = _$TaskInputTearOff();
 
 /// @nodoc
 mixin _$TaskInput {
-  String get id;
+  String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept get type;
-  Base64Binary get valueBase64Binary;
+  Base64Binary? get valueBase64Binary;
   @JsonKey(name: '_valueBase64Binary')
-  Element get valueBase64BinaryElement;
-  Boolean get valueBoolean;
+  Element? get valueBase64BinaryElement;
+  Boolean? get valueBoolean;
   @JsonKey(name: '_valueBoolean')
-  Element get valueBooleanElement;
-  Canonical get valueCanonical;
+  Element? get valueBooleanElement;
+  Canonical? get valueCanonical;
   @JsonKey(name: '_valueCanonical')
-  Element get valueCanonicalElement;
-  Code get valueCode;
+  Element? get valueCanonicalElement;
+  Code? get valueCode;
   @JsonKey(name: '_valueCode')
-  Element get valueCodeElement;
-  Date get valueDate;
+  Element? get valueCodeElement;
+  Date? get valueDate;
   @JsonKey(name: '_valueDate')
-  Element get valueDateElement;
-  FhirDateTime get valueDateTime;
+  Element? get valueDateElement;
+  FhirDateTime? get valueDateTime;
   @JsonKey(name: '_valueDateTime')
-  Element get valueDateTimeElement;
-  Decimal get valueDecimal;
+  Element? get valueDateTimeElement;
+  Decimal? get valueDecimal;
   @JsonKey(name: '_valueDecimal')
-  Element get valueDecimalElement;
-  Id get valueId;
+  Element? get valueDecimalElement;
+  Id? get valueId;
   @JsonKey(name: '_valueId')
-  Element get valueIdElement;
-  Instant get valueInstant;
+  Element? get valueIdElement;
+  Instant? get valueInstant;
   @JsonKey(name: '_valueInstant')
-  Element get valueInstantElement;
-  Integer get valueInteger;
+  Element? get valueInstantElement;
+  Integer? get valueInteger;
   @JsonKey(name: '_valueInteger')
-  Element get valueIntegerElement;
-  Markdown get valueMarkdown;
+  Element? get valueIntegerElement;
+  Markdown? get valueMarkdown;
   @JsonKey(name: '_valueMarkdown')
-  Element get valueMarkdownElement;
-  Oid get valueOid;
+  Element? get valueMarkdownElement;
+  Oid? get valueOid;
   @JsonKey(name: '_valueOid')
-  Element get valueOidElement;
-  PositiveInt get valuePositiveInt;
+  Element? get valueOidElement;
+  PositiveInt? get valuePositiveInt;
   @JsonKey(name: '_valuePositiveInt')
-  Element get valuePositiveIntElement;
-  String get valueString;
+  Element? get valuePositiveIntElement;
+  String? get valueString;
   @JsonKey(name: '_valueString')
-  Element get valueStringElement;
-  Time get valueTime;
+  Element? get valueStringElement;
+  Time? get valueTime;
   @JsonKey(name: '_valueTime')
-  Element get valueTimeElement;
-  UnsignedInt get valueUnsignedInt;
+  Element? get valueTimeElement;
+  UnsignedInt? get valueUnsignedInt;
   @JsonKey(name: '_valueUnsignedInt')
-  Element get valueUnsignedIntElement;
-  FhirUri get valueUri;
+  Element? get valueUnsignedIntElement;
+  FhirUri? get valueUri;
   @JsonKey(name: '_valueUri')
-  Element get valueUriElement;
-  FhirUrl get valueUrl;
+  Element? get valueUriElement;
+  FhirUrl? get valueUrl;
   @JsonKey(name: '_valueUrl')
-  Element get valueUrlElement;
-  Uuid get valueUuid;
+  Element? get valueUrlElement;
+  Uuid? get valueUuid;
   @JsonKey(name: '_valueUuid')
-  Element get valueUuidElement;
-  Address get valueAddress;
-  Age get valueAge;
-  Annotation get valueAnnotation;
-  Attachment get valueAttachment;
-  CodeableConcept get valueCodeableConcept;
-  Coding get valueCoding;
-  ContactPoint get valueContactPoint;
-  Count get valueCount;
-  Distance get valueDistance;
-  FhirDuration get valueDuration;
-  HumanName get valueHumanName;
-  Identifier get valueIdentifier;
-  Money get valueMoney;
-  Period get valuePeriod;
-  Quantity get valueQuantity;
-  Range get valueRange;
-  Ratio get valueRatio;
-  Reference get valueReference;
-  SampledData get valueSampledData;
-  Signature get valueSignature;
-  Timing get valueTiming;
-  ContactDetail get valueContactDetail;
-  Contributor get valueContributor;
-  DataRequirement get valueDataRequirement;
-  Expression get valueExpression;
-  ParameterDefinition get valueParameterDefinition;
-  RelatedArtifact get valueRelatedArtifact;
-  TriggerDefinition get valueTriggerDefinition;
-  UsageContext get valueUsageContext;
-  Dosage get valueDosage;
-  Meta get valueMeta;
+  Element? get valueUuidElement;
+  Address? get valueAddress;
+  Age? get valueAge;
+  Annotation? get valueAnnotation;
+  Attachment? get valueAttachment;
+  CodeableConcept? get valueCodeableConcept;
+  Coding? get valueCoding;
+  ContactPoint? get valueContactPoint;
+  Count? get valueCount;
+  Distance? get valueDistance;
+  FhirDuration? get valueDuration;
+  HumanName? get valueHumanName;
+  Identifier? get valueIdentifier;
+  Money? get valueMoney;
+  Period? get valuePeriod;
+  Quantity? get valueQuantity;
+  Range? get valueRange;
+  Ratio? get valueRatio;
+  Reference? get valueReference;
+  SampledData? get valueSampledData;
+  Signature? get valueSignature;
+  Timing? get valueTiming;
+  ContactDetail? get valueContactDetail;
+  Contributor? get valueContributor;
+  DataRequirement? get valueDataRequirement;
+  Expression? get valueExpression;
+  ParameterDefinition? get valueParameterDefinition;
+  RelatedArtifact? get valueRelatedArtifact;
+  TriggerDefinition? get valueTriggerDefinition;
+  UsageContext? get valueUsageContext;
+  Dosage? get valueDosage;
+  Meta? get valueMeta;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6399,131 +6442,131 @@ abstract class $TaskInputCopyWith<$Res> {
   factory $TaskInputCopyWith(TaskInput value, $Res Function(TaskInput) then) =
       _$TaskInputCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Canonical valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Markdown valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Oid valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      PositiveInt valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      UnsignedInt valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      FhirUrl valueUrl,
-      @JsonKey(name: '_valueUrl') Element valueUrlElement,
-      Uuid valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      FhirDuration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta});
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      FhirDuration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta});
 
   $CodeableConceptCopyWith<$Res> get type;
-  $ElementCopyWith<$Res> get valueBase64BinaryElement;
-  $ElementCopyWith<$Res> get valueBooleanElement;
-  $ElementCopyWith<$Res> get valueCanonicalElement;
-  $ElementCopyWith<$Res> get valueCodeElement;
-  $ElementCopyWith<$Res> get valueDateElement;
-  $ElementCopyWith<$Res> get valueDateTimeElement;
-  $ElementCopyWith<$Res> get valueDecimalElement;
-  $ElementCopyWith<$Res> get valueIdElement;
-  $ElementCopyWith<$Res> get valueInstantElement;
-  $ElementCopyWith<$Res> get valueIntegerElement;
-  $ElementCopyWith<$Res> get valueMarkdownElement;
-  $ElementCopyWith<$Res> get valueOidElement;
-  $ElementCopyWith<$Res> get valuePositiveIntElement;
-  $ElementCopyWith<$Res> get valueStringElement;
-  $ElementCopyWith<$Res> get valueTimeElement;
-  $ElementCopyWith<$Res> get valueUnsignedIntElement;
-  $ElementCopyWith<$Res> get valueUriElement;
-  $ElementCopyWith<$Res> get valueUrlElement;
-  $ElementCopyWith<$Res> get valueUuidElement;
-  $AddressCopyWith<$Res> get valueAddress;
-  $AgeCopyWith<$Res> get valueAge;
-  $AnnotationCopyWith<$Res> get valueAnnotation;
-  $AttachmentCopyWith<$Res> get valueAttachment;
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
-  $CodingCopyWith<$Res> get valueCoding;
-  $ContactPointCopyWith<$Res> get valueContactPoint;
-  $CountCopyWith<$Res> get valueCount;
-  $DistanceCopyWith<$Res> get valueDistance;
-  $FhirDurationCopyWith<$Res> get valueDuration;
-  $HumanNameCopyWith<$Res> get valueHumanName;
-  $IdentifierCopyWith<$Res> get valueIdentifier;
-  $MoneyCopyWith<$Res> get valueMoney;
-  $PeriodCopyWith<$Res> get valuePeriod;
-  $QuantityCopyWith<$Res> get valueQuantity;
-  $RangeCopyWith<$Res> get valueRange;
-  $RatioCopyWith<$Res> get valueRatio;
-  $ReferenceCopyWith<$Res> get valueReference;
-  $SampledDataCopyWith<$Res> get valueSampledData;
-  $SignatureCopyWith<$Res> get valueSignature;
-  $TimingCopyWith<$Res> get valueTiming;
-  $ContactDetailCopyWith<$Res> get valueContactDetail;
-  $ContributorCopyWith<$Res> get valueContributor;
-  $DataRequirementCopyWith<$Res> get valueDataRequirement;
-  $ExpressionCopyWith<$Res> get valueExpression;
-  $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition;
-  $RelatedArtifactCopyWith<$Res> get valueRelatedArtifact;
-  $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition;
-  $UsageContextCopyWith<$Res> get valueUsageContext;
-  $DosageCopyWith<$Res> get valueDosage;
-  $MetaCopyWith<$Res> get valueMeta;
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
+  $ElementCopyWith<$Res>? get valueCodeElement;
+  $ElementCopyWith<$Res>? get valueDateElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueIdElement;
+  $ElementCopyWith<$Res>? get valueInstantElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueMarkdownElement;
+  $ElementCopyWith<$Res>? get valueOidElement;
+  $ElementCopyWith<$Res>? get valuePositiveIntElement;
+  $ElementCopyWith<$Res>? get valueStringElement;
+  $ElementCopyWith<$Res>? get valueTimeElement;
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement;
+  $ElementCopyWith<$Res>? get valueUriElement;
+  $ElementCopyWith<$Res>? get valueUrlElement;
+  $ElementCopyWith<$Res>? get valueUuidElement;
+  $AddressCopyWith<$Res>? get valueAddress;
+  $AgeCopyWith<$Res>? get valueAge;
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
+  $AttachmentCopyWith<$Res>? get valueAttachment;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $CodingCopyWith<$Res>? get valueCoding;
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
+  $CountCopyWith<$Res>? get valueCount;
+  $DistanceCopyWith<$Res>? get valueDistance;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
+  $HumanNameCopyWith<$Res>? get valueHumanName;
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
+  $MoneyCopyWith<$Res>? get valueMoney;
+  $PeriodCopyWith<$Res>? get valuePeriod;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $RatioCopyWith<$Res>? get valueRatio;
+  $ReferenceCopyWith<$Res>? get valueReference;
+  $SampledDataCopyWith<$Res>? get valueSampledData;
+  $SignatureCopyWith<$Res>? get valueSignature;
+  $TimingCopyWith<$Res>? get valueTiming;
+  $ContactDetailCopyWith<$Res>? get valueContactDetail;
+  $ContributorCopyWith<$Res>? get valueContributor;
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement;
+  $ExpressionCopyWith<$Res>? get valueExpression;
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
+  $UsageContextCopyWith<$Res>? get valueUsageContext;
+  $DosageCopyWith<$Res>? get valueDosage;
+  $MetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -6536,778 +6579,828 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object valueBase64Binary = freezed,
-    Object valueBase64BinaryElement = freezed,
-    Object valueBoolean = freezed,
-    Object valueBooleanElement = freezed,
-    Object valueCanonical = freezed,
-    Object valueCanonicalElement = freezed,
-    Object valueCode = freezed,
-    Object valueCodeElement = freezed,
-    Object valueDate = freezed,
-    Object valueDateElement = freezed,
-    Object valueDateTime = freezed,
-    Object valueDateTimeElement = freezed,
-    Object valueDecimal = freezed,
-    Object valueDecimalElement = freezed,
-    Object valueId = freezed,
-    Object valueIdElement = freezed,
-    Object valueInstant = freezed,
-    Object valueInstantElement = freezed,
-    Object valueInteger = freezed,
-    Object valueIntegerElement = freezed,
-    Object valueMarkdown = freezed,
-    Object valueMarkdownElement = freezed,
-    Object valueOid = freezed,
-    Object valueOidElement = freezed,
-    Object valuePositiveInt = freezed,
-    Object valuePositiveIntElement = freezed,
-    Object valueString = freezed,
-    Object valueStringElement = freezed,
-    Object valueTime = freezed,
-    Object valueTimeElement = freezed,
-    Object valueUnsignedInt = freezed,
-    Object valueUnsignedIntElement = freezed,
-    Object valueUri = freezed,
-    Object valueUriElement = freezed,
-    Object valueUrl = freezed,
-    Object valueUrlElement = freezed,
-    Object valueUuid = freezed,
-    Object valueUuidElement = freezed,
-    Object valueAddress = freezed,
-    Object valueAge = freezed,
-    Object valueAnnotation = freezed,
-    Object valueAttachment = freezed,
-    Object valueCodeableConcept = freezed,
-    Object valueCoding = freezed,
-    Object valueContactPoint = freezed,
-    Object valueCount = freezed,
-    Object valueDistance = freezed,
-    Object valueDuration = freezed,
-    Object valueHumanName = freezed,
-    Object valueIdentifier = freezed,
-    Object valueMoney = freezed,
-    Object valuePeriod = freezed,
-    Object valueQuantity = freezed,
-    Object valueRange = freezed,
-    Object valueRatio = freezed,
-    Object valueReference = freezed,
-    Object valueSampledData = freezed,
-    Object valueSignature = freezed,
-    Object valueTiming = freezed,
-    Object valueContactDetail = freezed,
-    Object valueContributor = freezed,
-    Object valueDataRequirement = freezed,
-    Object valueExpression = freezed,
-    Object valueParameterDefinition = freezed,
-    Object valueRelatedArtifact = freezed,
-    Object valueTriggerDefinition = freezed,
-    Object valueUsageContext = freezed,
-    Object valueDosage = freezed,
-    Object valueMeta = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueMarkdown = freezed,
+    Object? valueMarkdownElement = freezed,
+    Object? valueOid = freezed,
+    Object? valueOidElement = freezed,
+    Object? valuePositiveInt = freezed,
+    Object? valuePositiveIntElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueTime = freezed,
+    Object? valueTimeElement = freezed,
+    Object? valueUnsignedInt = freezed,
+    Object? valueUnsignedIntElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueUuid = freezed,
+    Object? valueUuidElement = freezed,
+    Object? valueAddress = freezed,
+    Object? valueAge = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueCoding = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueCount = freezed,
+    Object? valueDistance = freezed,
+    Object? valueDuration = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueMoney = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueReference = freezed,
+    Object? valueSampledData = freezed,
+    Object? valueSignature = freezed,
+    Object? valueTiming = freezed,
+    Object? valueContactDetail = freezed,
+    Object? valueContributor = freezed,
+    Object? valueDataRequirement = freezed,
+    Object? valueExpression = freezed,
+    Object? valueParameterDefinition = freezed,
+    Object? valueRelatedArtifact = freezed,
+    Object? valueTriggerDefinition = freezed,
+    Object? valueUsageContext = freezed,
+    Object? valueDosage = freezed,
+    Object? valueMeta = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
-          : valueBase64Binary as Base64Binary,
+          : valueBase64Binary as Base64Binary?,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
-          : valueBase64BinaryElement as Element,
+          : valueBase64BinaryElement as Element?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean,
+          : valueBoolean as Boolean?,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
-          : valueBooleanElement as Element,
+          : valueBooleanElement as Element?,
       valueCanonical: valueCanonical == freezed
           ? _value.valueCanonical
-          : valueCanonical as Canonical,
+          : valueCanonical as Canonical?,
       valueCanonicalElement: valueCanonicalElement == freezed
           ? _value.valueCanonicalElement
-          : valueCanonicalElement as Element,
-      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+          : valueCanonicalElement as Element?,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as Element,
-      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
+          : valueCodeElement as Element?,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date?,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
-          : valueDateElement as Element,
+          : valueDateElement as Element?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
+          : valueDateTime as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
-          : valueDateTimeElement as Element,
+          : valueDateTimeElement as Element?,
       valueDecimal: valueDecimal == freezed
           ? _value.valueDecimal
-          : valueDecimal as Decimal,
+          : valueDecimal as Decimal?,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
-          : valueDecimalElement as Element,
-      valueId: valueId == freezed ? _value.valueId : valueId as Id,
+          : valueDecimalElement as Element?,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id?,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
-          : valueIdElement as Element,
+          : valueIdElement as Element?,
       valueInstant: valueInstant == freezed
           ? _value.valueInstant
-          : valueInstant as Instant,
+          : valueInstant as Instant?,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
-          : valueInstantElement as Element,
+          : valueInstantElement as Element?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer,
+          : valueInteger as Integer?,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
-          : valueIntegerElement as Element,
+          : valueIntegerElement as Element?,
       valueMarkdown: valueMarkdown == freezed
           ? _value.valueMarkdown
-          : valueMarkdown as Markdown,
+          : valueMarkdown as Markdown?,
       valueMarkdownElement: valueMarkdownElement == freezed
           ? _value.valueMarkdownElement
-          : valueMarkdownElement as Element,
-      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
+          : valueMarkdownElement as Element?,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid?,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
-          : valueOidElement as Element,
+          : valueOidElement as Element?,
       valuePositiveInt: valuePositiveInt == freezed
           ? _value.valuePositiveInt
-          : valuePositiveInt as PositiveInt,
+          : valuePositiveInt as PositiveInt?,
       valuePositiveIntElement: valuePositiveIntElement == freezed
           ? _value.valuePositiveIntElement
-          : valuePositiveIntElement as Element,
+          : valuePositiveIntElement as Element?,
       valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
+          valueString == freezed ? _value.valueString : valueString as String?,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
-          : valueStringElement as Element,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
+          : valueStringElement as Element?,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time?,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
-          : valueTimeElement as Element,
+          : valueTimeElement as Element?,
       valueUnsignedInt: valueUnsignedInt == freezed
           ? _value.valueUnsignedInt
-          : valueUnsignedInt as UnsignedInt,
+          : valueUnsignedInt as UnsignedInt?,
       valueUnsignedIntElement: valueUnsignedIntElement == freezed
           ? _value.valueUnsignedIntElement
-          : valueUnsignedIntElement as Element,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
+          : valueUnsignedIntElement as Element?,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri?,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
-          : valueUriElement as Element,
-      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl,
+          : valueUriElement as Element?,
+      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl?,
       valueUrlElement: valueUrlElement == freezed
           ? _value.valueUrlElement
-          : valueUrlElement as Element,
-      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid,
+          : valueUrlElement as Element?,
+      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid?,
       valueUuidElement: valueUuidElement == freezed
           ? _value.valueUuidElement
-          : valueUuidElement as Element,
+          : valueUuidElement as Element?,
       valueAddress: valueAddress == freezed
           ? _value.valueAddress
-          : valueAddress as Address,
-      valueAge: valueAge == freezed ? _value.valueAge : valueAge as Age,
+          : valueAddress as Address?,
+      valueAge: valueAge == freezed ? _value.valueAge : valueAge as Age?,
       valueAnnotation: valueAnnotation == freezed
           ? _value.valueAnnotation
-          : valueAnnotation as Annotation,
+          : valueAnnotation as Annotation?,
       valueAttachment: valueAttachment == freezed
           ? _value.valueAttachment
-          : valueAttachment as Attachment,
+          : valueAttachment as Attachment?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept,
+          : valueCodeableConcept as CodeableConcept?,
       valueCoding:
-          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding?,
       valueContactPoint: valueContactPoint == freezed
           ? _value.valueContactPoint
-          : valueContactPoint as ContactPoint,
+          : valueContactPoint as ContactPoint?,
       valueCount:
-          valueCount == freezed ? _value.valueCount : valueCount as Count,
+          valueCount == freezed ? _value.valueCount : valueCount as Count?,
       valueDistance: valueDistance == freezed
           ? _value.valueDistance
-          : valueDistance as Distance,
+          : valueDistance as Distance?,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as FhirDuration,
+          : valueDuration as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
-          : valueHumanName as HumanName,
+          : valueHumanName as HumanName?,
       valueIdentifier: valueIdentifier == freezed
           ? _value.valueIdentifier
-          : valueIdentifier as Identifier,
+          : valueIdentifier as Identifier?,
       valueMoney:
-          valueMoney == freezed ? _value.valueMoney : valueMoney as Money,
+          valueMoney == freezed ? _value.valueMoney : valueMoney as Money?,
       valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
+          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
+          : valueQuantity as Quantity?,
       valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range,
+          valueRange == freezed ? _value.valueRange : valueRange as Range?,
       valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio,
+          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio?,
       valueReference: valueReference == freezed
           ? _value.valueReference
-          : valueReference as Reference,
+          : valueReference as Reference?,
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
-          : valueSampledData as SampledData,
+          : valueSampledData as SampledData?,
       valueSignature: valueSignature == freezed
           ? _value.valueSignature
-          : valueSignature as Signature,
+          : valueSignature as Signature?,
       valueTiming:
-          valueTiming == freezed ? _value.valueTiming : valueTiming as Timing,
+          valueTiming == freezed ? _value.valueTiming : valueTiming as Timing?,
       valueContactDetail: valueContactDetail == freezed
           ? _value.valueContactDetail
-          : valueContactDetail as ContactDetail,
+          : valueContactDetail as ContactDetail?,
       valueContributor: valueContributor == freezed
           ? _value.valueContributor
-          : valueContributor as Contributor,
+          : valueContributor as Contributor?,
       valueDataRequirement: valueDataRequirement == freezed
           ? _value.valueDataRequirement
-          : valueDataRequirement as DataRequirement,
+          : valueDataRequirement as DataRequirement?,
       valueExpression: valueExpression == freezed
           ? _value.valueExpression
-          : valueExpression as Expression,
+          : valueExpression as Expression?,
       valueParameterDefinition: valueParameterDefinition == freezed
           ? _value.valueParameterDefinition
-          : valueParameterDefinition as ParameterDefinition,
+          : valueParameterDefinition as ParameterDefinition?,
       valueRelatedArtifact: valueRelatedArtifact == freezed
           ? _value.valueRelatedArtifact
-          : valueRelatedArtifact as RelatedArtifact,
+          : valueRelatedArtifact as RelatedArtifact?,
       valueTriggerDefinition: valueTriggerDefinition == freezed
           ? _value.valueTriggerDefinition
-          : valueTriggerDefinition as TriggerDefinition,
+          : valueTriggerDefinition as TriggerDefinition?,
       valueUsageContext: valueUsageContext == freezed
           ? _value.valueUsageContext
-          : valueUsageContext as UsageContext,
+          : valueUsageContext as UsageContext?,
       valueDosage:
-          valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
-      valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
+          valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage?,
+      valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta?,
     ));
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueBase64BinaryElement {
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement {
     if (_value.valueBase64BinaryElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement!, (value) {
       return _then(_value.copyWith(valueBase64BinaryElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueBooleanElement {
+  $ElementCopyWith<$Res>? get valueBooleanElement {
     if (_value.valueBooleanElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
       return _then(_value.copyWith(valueBooleanElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueCanonicalElement {
+  $ElementCopyWith<$Res>? get valueCanonicalElement {
     if (_value.valueCanonicalElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueCanonicalElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueCanonicalElement!, (value) {
       return _then(_value.copyWith(valueCanonicalElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueCodeElement {
+  $ElementCopyWith<$Res>? get valueCodeElement {
     if (_value.valueCodeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueCodeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueCodeElement!, (value) {
       return _then(_value.copyWith(valueCodeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDateElement {
+  $ElementCopyWith<$Res>? get valueDateElement {
     if (_value.valueDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDateElement!, (value) {
       return _then(_value.copyWith(valueDateElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDateTimeElement {
+  $ElementCopyWith<$Res>? get valueDateTimeElement {
     if (_value.valueDateTimeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDateTimeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement!, (value) {
       return _then(_value.copyWith(valueDateTimeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDecimalElement {
+  $ElementCopyWith<$Res>? get valueDecimalElement {
     if (_value.valueDecimalElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDecimalElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement!, (value) {
       return _then(_value.copyWith(valueDecimalElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueIdElement {
+  $ElementCopyWith<$Res>? get valueIdElement {
     if (_value.valueIdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueIdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueIdElement!, (value) {
       return _then(_value.copyWith(valueIdElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueInstantElement {
+  $ElementCopyWith<$Res>? get valueInstantElement {
     if (_value.valueInstantElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueInstantElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueInstantElement!, (value) {
       return _then(_value.copyWith(valueInstantElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueIntegerElement {
+  $ElementCopyWith<$Res>? get valueIntegerElement {
     if (_value.valueIntegerElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueIntegerElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement!, (value) {
       return _then(_value.copyWith(valueIntegerElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueMarkdownElement {
+  $ElementCopyWith<$Res>? get valueMarkdownElement {
     if (_value.valueMarkdownElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueMarkdownElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueMarkdownElement!, (value) {
       return _then(_value.copyWith(valueMarkdownElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueOidElement {
+  $ElementCopyWith<$Res>? get valueOidElement {
     if (_value.valueOidElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueOidElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueOidElement!, (value) {
       return _then(_value.copyWith(valueOidElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valuePositiveIntElement {
+  $ElementCopyWith<$Res>? get valuePositiveIntElement {
     if (_value.valuePositiveIntElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valuePositiveIntElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valuePositiveIntElement!, (value) {
       return _then(_value.copyWith(valuePositiveIntElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueStringElement {
+  $ElementCopyWith<$Res>? get valueStringElement {
     if (_value.valueStringElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
       return _then(_value.copyWith(valueStringElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueTimeElement {
+  $ElementCopyWith<$Res>? get valueTimeElement {
     if (_value.valueTimeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueTimeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueTimeElement!, (value) {
       return _then(_value.copyWith(valueTimeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueUnsignedIntElement {
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement {
     if (_value.valueUnsignedIntElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueUnsignedIntElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueUnsignedIntElement!, (value) {
       return _then(_value.copyWith(valueUnsignedIntElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueUriElement {
+  $ElementCopyWith<$Res>? get valueUriElement {
     if (_value.valueUriElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueUriElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueUriElement!, (value) {
       return _then(_value.copyWith(valueUriElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueUrlElement {
+  $ElementCopyWith<$Res>? get valueUrlElement {
     if (_value.valueUrlElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueUrlElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueUrlElement!, (value) {
       return _then(_value.copyWith(valueUrlElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueUuidElement {
+  $ElementCopyWith<$Res>? get valueUuidElement {
     if (_value.valueUuidElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueUuidElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueUuidElement!, (value) {
       return _then(_value.copyWith(valueUuidElement: value));
     });
   }
 
   @override
-  $AddressCopyWith<$Res> get valueAddress {
+  $AddressCopyWith<$Res>? get valueAddress {
     if (_value.valueAddress == null) {
       return null;
     }
-    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
+
+    return $AddressCopyWith<$Res>(_value.valueAddress!, (value) {
       return _then(_value.copyWith(valueAddress: value));
     });
   }
 
   @override
-  $AgeCopyWith<$Res> get valueAge {
+  $AgeCopyWith<$Res>? get valueAge {
     if (_value.valueAge == null) {
       return null;
     }
-    return $AgeCopyWith<$Res>(_value.valueAge, (value) {
+
+    return $AgeCopyWith<$Res>(_value.valueAge!, (value) {
       return _then(_value.copyWith(valueAge: value));
     });
   }
 
   @override
-  $AnnotationCopyWith<$Res> get valueAnnotation {
+  $AnnotationCopyWith<$Res>? get valueAnnotation {
     if (_value.valueAnnotation == null) {
       return null;
     }
-    return $AnnotationCopyWith<$Res>(_value.valueAnnotation, (value) {
+
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation!, (value) {
       return _then(_value.copyWith(valueAnnotation: value));
     });
   }
 
   @override
-  $AttachmentCopyWith<$Res> get valueAttachment {
+  $AttachmentCopyWith<$Res>? get valueAttachment {
     if (_value.valueAttachment == null) {
       return null;
     }
-    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment!, (value) {
       return _then(_value.copyWith(valueAttachment: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
     if (_value.valueCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
       return _then(_value.copyWith(valueCodeableConcept: value));
     });
   }
 
   @override
-  $CodingCopyWith<$Res> get valueCoding {
+  $CodingCopyWith<$Res>? get valueCoding {
     if (_value.valueCoding == null) {
       return null;
     }
-    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+
+    return $CodingCopyWith<$Res>(_value.valueCoding!, (value) {
       return _then(_value.copyWith(valueCoding: value));
     });
   }
 
   @override
-  $ContactPointCopyWith<$Res> get valueContactPoint {
+  $ContactPointCopyWith<$Res>? get valueContactPoint {
     if (_value.valueContactPoint == null) {
       return null;
     }
-    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint!, (value) {
       return _then(_value.copyWith(valueContactPoint: value));
     });
   }
 
   @override
-  $CountCopyWith<$Res> get valueCount {
+  $CountCopyWith<$Res>? get valueCount {
     if (_value.valueCount == null) {
       return null;
     }
-    return $CountCopyWith<$Res>(_value.valueCount, (value) {
+
+    return $CountCopyWith<$Res>(_value.valueCount!, (value) {
       return _then(_value.copyWith(valueCount: value));
     });
   }
 
   @override
-  $DistanceCopyWith<$Res> get valueDistance {
+  $DistanceCopyWith<$Res>? get valueDistance {
     if (_value.valueDistance == null) {
       return null;
     }
-    return $DistanceCopyWith<$Res>(_value.valueDistance, (value) {
+
+    return $DistanceCopyWith<$Res>(_value.valueDistance!, (value) {
       return _then(_value.copyWith(valueDistance: value));
     });
   }
 
   @override
-  $FhirDurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res>? get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
+
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
 
   @override
-  $HumanNameCopyWith<$Res> get valueHumanName {
+  $HumanNameCopyWith<$Res>? get valueHumanName {
     if (_value.valueHumanName == null) {
       return null;
     }
-    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName!, (value) {
       return _then(_value.copyWith(valueHumanName: value));
     });
   }
 
   @override
-  $IdentifierCopyWith<$Res> get valueIdentifier {
+  $IdentifierCopyWith<$Res>? get valueIdentifier {
     if (_value.valueIdentifier == null) {
       return null;
     }
-    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier!, (value) {
       return _then(_value.copyWith(valueIdentifier: value));
     });
   }
 
   @override
-  $MoneyCopyWith<$Res> get valueMoney {
+  $MoneyCopyWith<$Res>? get valueMoney {
     if (_value.valueMoney == null) {
       return null;
     }
-    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+
+    return $MoneyCopyWith<$Res>(_value.valueMoney!, (value) {
       return _then(_value.copyWith(valueMoney: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get valuePeriod {
+  $PeriodCopyWith<$Res>? get valuePeriod {
     if (_value.valuePeriod == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.valuePeriod!, (value) {
       return _then(_value.copyWith(valuePeriod: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get valueQuantity {
+  $QuantityCopyWith<$Res>? get valueQuantity {
     if (_value.valueQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
       return _then(_value.copyWith(valueQuantity: value));
     });
   }
 
   @override
-  $RangeCopyWith<$Res> get valueRange {
+  $RangeCopyWith<$Res>? get valueRange {
     if (_value.valueRange == null) {
       return null;
     }
-    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
       return _then(_value.copyWith(valueRange: value));
     });
   }
 
   @override
-  $RatioCopyWith<$Res> get valueRatio {
+  $RatioCopyWith<$Res>? get valueRatio {
     if (_value.valueRatio == null) {
       return null;
     }
-    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+
+    return $RatioCopyWith<$Res>(_value.valueRatio!, (value) {
       return _then(_value.copyWith(valueRatio: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get valueReference {
+  $ReferenceCopyWith<$Res>? get valueReference {
     if (_value.valueReference == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.valueReference, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
       return _then(_value.copyWith(valueReference: value));
     });
   }
 
   @override
-  $SampledDataCopyWith<$Res> get valueSampledData {
+  $SampledDataCopyWith<$Res>? get valueSampledData {
     if (_value.valueSampledData == null) {
       return null;
     }
-    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData!, (value) {
       return _then(_value.copyWith(valueSampledData: value));
     });
   }
 
   @override
-  $SignatureCopyWith<$Res> get valueSignature {
+  $SignatureCopyWith<$Res>? get valueSignature {
     if (_value.valueSignature == null) {
       return null;
     }
-    return $SignatureCopyWith<$Res>(_value.valueSignature, (value) {
+
+    return $SignatureCopyWith<$Res>(_value.valueSignature!, (value) {
       return _then(_value.copyWith(valueSignature: value));
     });
   }
 
   @override
-  $TimingCopyWith<$Res> get valueTiming {
+  $TimingCopyWith<$Res>? get valueTiming {
     if (_value.valueTiming == null) {
       return null;
     }
-    return $TimingCopyWith<$Res>(_value.valueTiming, (value) {
+
+    return $TimingCopyWith<$Res>(_value.valueTiming!, (value) {
       return _then(_value.copyWith(valueTiming: value));
     });
   }
 
   @override
-  $ContactDetailCopyWith<$Res> get valueContactDetail {
+  $ContactDetailCopyWith<$Res>? get valueContactDetail {
     if (_value.valueContactDetail == null) {
       return null;
     }
-    return $ContactDetailCopyWith<$Res>(_value.valueContactDetail, (value) {
+
+    return $ContactDetailCopyWith<$Res>(_value.valueContactDetail!, (value) {
       return _then(_value.copyWith(valueContactDetail: value));
     });
   }
 
   @override
-  $ContributorCopyWith<$Res> get valueContributor {
+  $ContributorCopyWith<$Res>? get valueContributor {
     if (_value.valueContributor == null) {
       return null;
     }
-    return $ContributorCopyWith<$Res>(_value.valueContributor, (value) {
+
+    return $ContributorCopyWith<$Res>(_value.valueContributor!, (value) {
       return _then(_value.copyWith(valueContributor: value));
     });
   }
 
   @override
-  $DataRequirementCopyWith<$Res> get valueDataRequirement {
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement {
     if (_value.valueDataRequirement == null) {
       return null;
     }
-    return $DataRequirementCopyWith<$Res>(_value.valueDataRequirement, (value) {
+
+    return $DataRequirementCopyWith<$Res>(_value.valueDataRequirement!,
+        (value) {
       return _then(_value.copyWith(valueDataRequirement: value));
     });
   }
 
   @override
-  $ExpressionCopyWith<$Res> get valueExpression {
+  $ExpressionCopyWith<$Res>? get valueExpression {
     if (_value.valueExpression == null) {
       return null;
     }
-    return $ExpressionCopyWith<$Res>(_value.valueExpression, (value) {
+
+    return $ExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
       return _then(_value.copyWith(valueExpression: value));
     });
   }
 
   @override
-  $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition {
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition {
     if (_value.valueParameterDefinition == null) {
       return null;
     }
-    return $ParameterDefinitionCopyWith<$Res>(_value.valueParameterDefinition,
+
+    return $ParameterDefinitionCopyWith<$Res>(_value.valueParameterDefinition!,
         (value) {
       return _then(_value.copyWith(valueParameterDefinition: value));
     });
   }
 
   @override
-  $RelatedArtifactCopyWith<$Res> get valueRelatedArtifact {
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact {
     if (_value.valueRelatedArtifact == null) {
       return null;
     }
-    return $RelatedArtifactCopyWith<$Res>(_value.valueRelatedArtifact, (value) {
+
+    return $RelatedArtifactCopyWith<$Res>(_value.valueRelatedArtifact!,
+        (value) {
       return _then(_value.copyWith(valueRelatedArtifact: value));
     });
   }
 
   @override
-  $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition {
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition {
     if (_value.valueTriggerDefinition == null) {
       return null;
     }
-    return $TriggerDefinitionCopyWith<$Res>(_value.valueTriggerDefinition,
+
+    return $TriggerDefinitionCopyWith<$Res>(_value.valueTriggerDefinition!,
         (value) {
       return _then(_value.copyWith(valueTriggerDefinition: value));
     });
   }
 
   @override
-  $UsageContextCopyWith<$Res> get valueUsageContext {
+  $UsageContextCopyWith<$Res>? get valueUsageContext {
     if (_value.valueUsageContext == null) {
       return null;
     }
-    return $UsageContextCopyWith<$Res>(_value.valueUsageContext, (value) {
+
+    return $UsageContextCopyWith<$Res>(_value.valueUsageContext!, (value) {
       return _then(_value.copyWith(valueUsageContext: value));
     });
   }
 
   @override
-  $DosageCopyWith<$Res> get valueDosage {
+  $DosageCopyWith<$Res>? get valueDosage {
     if (_value.valueDosage == null) {
       return null;
     }
-    return $DosageCopyWith<$Res>(_value.valueDosage, (value) {
+
+    return $DosageCopyWith<$Res>(_value.valueDosage!, (value) {
       return _then(_value.copyWith(valueDosage: value));
     });
   }
 
   @override
-  $MetaCopyWith<$Res> get valueMeta {
+  $MetaCopyWith<$Res>? get valueMeta {
     if (_value.valueMeta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.valueMeta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
       return _then(_value.copyWith(valueMeta: value));
     });
   }
@@ -7320,182 +7413,182 @@ abstract class _$TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       __$TaskInputCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Canonical valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Markdown valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Oid valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      PositiveInt valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      UnsignedInt valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      FhirUrl valueUrl,
-      @JsonKey(name: '_valueUrl') Element valueUrlElement,
-      Uuid valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      FhirDuration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta});
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      FhirDuration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
   @override
-  $ElementCopyWith<$Res> get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
   @override
-  $ElementCopyWith<$Res> get valueCanonicalElement;
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
   @override
-  $ElementCopyWith<$Res> get valueCodeElement;
+  $ElementCopyWith<$Res>? get valueCodeElement;
   @override
-  $ElementCopyWith<$Res> get valueDateElement;
+  $ElementCopyWith<$Res>? get valueDateElement;
   @override
-  $ElementCopyWith<$Res> get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
   @override
-  $ElementCopyWith<$Res> get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
   @override
-  $ElementCopyWith<$Res> get valueIdElement;
+  $ElementCopyWith<$Res>? get valueIdElement;
   @override
-  $ElementCopyWith<$Res> get valueInstantElement;
+  $ElementCopyWith<$Res>? get valueInstantElement;
   @override
-  $ElementCopyWith<$Res> get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
   @override
-  $ElementCopyWith<$Res> get valueMarkdownElement;
+  $ElementCopyWith<$Res>? get valueMarkdownElement;
   @override
-  $ElementCopyWith<$Res> get valueOidElement;
+  $ElementCopyWith<$Res>? get valueOidElement;
   @override
-  $ElementCopyWith<$Res> get valuePositiveIntElement;
+  $ElementCopyWith<$Res>? get valuePositiveIntElement;
   @override
-  $ElementCopyWith<$Res> get valueStringElement;
+  $ElementCopyWith<$Res>? get valueStringElement;
   @override
-  $ElementCopyWith<$Res> get valueTimeElement;
+  $ElementCopyWith<$Res>? get valueTimeElement;
   @override
-  $ElementCopyWith<$Res> get valueUnsignedIntElement;
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement;
   @override
-  $ElementCopyWith<$Res> get valueUriElement;
+  $ElementCopyWith<$Res>? get valueUriElement;
   @override
-  $ElementCopyWith<$Res> get valueUrlElement;
+  $ElementCopyWith<$Res>? get valueUrlElement;
   @override
-  $ElementCopyWith<$Res> get valueUuidElement;
+  $ElementCopyWith<$Res>? get valueUuidElement;
   @override
-  $AddressCopyWith<$Res> get valueAddress;
+  $AddressCopyWith<$Res>? get valueAddress;
   @override
-  $AgeCopyWith<$Res> get valueAge;
+  $AgeCopyWith<$Res>? get valueAge;
   @override
-  $AnnotationCopyWith<$Res> get valueAnnotation;
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
   @override
-  $AttachmentCopyWith<$Res> get valueAttachment;
+  $AttachmentCopyWith<$Res>? get valueAttachment;
   @override
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
-  $CodingCopyWith<$Res> get valueCoding;
+  $CodingCopyWith<$Res>? get valueCoding;
   @override
-  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
   @override
-  $CountCopyWith<$Res> get valueCount;
+  $CountCopyWith<$Res>? get valueCount;
   @override
-  $DistanceCopyWith<$Res> get valueDistance;
+  $DistanceCopyWith<$Res>? get valueDistance;
   @override
-  $FhirDurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   @override
-  $HumanNameCopyWith<$Res> get valueHumanName;
+  $HumanNameCopyWith<$Res>? get valueHumanName;
   @override
-  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
   @override
-  $MoneyCopyWith<$Res> get valueMoney;
+  $MoneyCopyWith<$Res>? get valueMoney;
   @override
-  $PeriodCopyWith<$Res> get valuePeriod;
+  $PeriodCopyWith<$Res>? get valuePeriod;
   @override
-  $QuantityCopyWith<$Res> get valueQuantity;
+  $QuantityCopyWith<$Res>? get valueQuantity;
   @override
-  $RangeCopyWith<$Res> get valueRange;
+  $RangeCopyWith<$Res>? get valueRange;
   @override
-  $RatioCopyWith<$Res> get valueRatio;
+  $RatioCopyWith<$Res>? get valueRatio;
   @override
-  $ReferenceCopyWith<$Res> get valueReference;
+  $ReferenceCopyWith<$Res>? get valueReference;
   @override
-  $SampledDataCopyWith<$Res> get valueSampledData;
+  $SampledDataCopyWith<$Res>? get valueSampledData;
   @override
-  $SignatureCopyWith<$Res> get valueSignature;
+  $SignatureCopyWith<$Res>? get valueSignature;
   @override
-  $TimingCopyWith<$Res> get valueTiming;
+  $TimingCopyWith<$Res>? get valueTiming;
   @override
-  $ContactDetailCopyWith<$Res> get valueContactDetail;
+  $ContactDetailCopyWith<$Res>? get valueContactDetail;
   @override
-  $ContributorCopyWith<$Res> get valueContributor;
+  $ContributorCopyWith<$Res>? get valueContributor;
   @override
-  $DataRequirementCopyWith<$Res> get valueDataRequirement;
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement;
   @override
-  $ExpressionCopyWith<$Res> get valueExpression;
+  $ExpressionCopyWith<$Res>? get valueExpression;
   @override
-  $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition;
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   @override
-  $RelatedArtifactCopyWith<$Res> get valueRelatedArtifact;
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
   @override
-  $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition;
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
   @override
-  $UsageContextCopyWith<$Res> get valueUsageContext;
+  $UsageContextCopyWith<$Res>? get valueUsageContext;
   @override
-  $DosageCopyWith<$Res> get valueDosage;
+  $DosageCopyWith<$Res>? get valueDosage;
   @override
-  $MetaCopyWith<$Res> get valueMeta;
+  $MetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -7509,267 +7602,267 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object valueBase64Binary = freezed,
-    Object valueBase64BinaryElement = freezed,
-    Object valueBoolean = freezed,
-    Object valueBooleanElement = freezed,
-    Object valueCanonical = freezed,
-    Object valueCanonicalElement = freezed,
-    Object valueCode = freezed,
-    Object valueCodeElement = freezed,
-    Object valueDate = freezed,
-    Object valueDateElement = freezed,
-    Object valueDateTime = freezed,
-    Object valueDateTimeElement = freezed,
-    Object valueDecimal = freezed,
-    Object valueDecimalElement = freezed,
-    Object valueId = freezed,
-    Object valueIdElement = freezed,
-    Object valueInstant = freezed,
-    Object valueInstantElement = freezed,
-    Object valueInteger = freezed,
-    Object valueIntegerElement = freezed,
-    Object valueMarkdown = freezed,
-    Object valueMarkdownElement = freezed,
-    Object valueOid = freezed,
-    Object valueOidElement = freezed,
-    Object valuePositiveInt = freezed,
-    Object valuePositiveIntElement = freezed,
-    Object valueString = freezed,
-    Object valueStringElement = freezed,
-    Object valueTime = freezed,
-    Object valueTimeElement = freezed,
-    Object valueUnsignedInt = freezed,
-    Object valueUnsignedIntElement = freezed,
-    Object valueUri = freezed,
-    Object valueUriElement = freezed,
-    Object valueUrl = freezed,
-    Object valueUrlElement = freezed,
-    Object valueUuid = freezed,
-    Object valueUuidElement = freezed,
-    Object valueAddress = freezed,
-    Object valueAge = freezed,
-    Object valueAnnotation = freezed,
-    Object valueAttachment = freezed,
-    Object valueCodeableConcept = freezed,
-    Object valueCoding = freezed,
-    Object valueContactPoint = freezed,
-    Object valueCount = freezed,
-    Object valueDistance = freezed,
-    Object valueDuration = freezed,
-    Object valueHumanName = freezed,
-    Object valueIdentifier = freezed,
-    Object valueMoney = freezed,
-    Object valuePeriod = freezed,
-    Object valueQuantity = freezed,
-    Object valueRange = freezed,
-    Object valueRatio = freezed,
-    Object valueReference = freezed,
-    Object valueSampledData = freezed,
-    Object valueSignature = freezed,
-    Object valueTiming = freezed,
-    Object valueContactDetail = freezed,
-    Object valueContributor = freezed,
-    Object valueDataRequirement = freezed,
-    Object valueExpression = freezed,
-    Object valueParameterDefinition = freezed,
-    Object valueRelatedArtifact = freezed,
-    Object valueTriggerDefinition = freezed,
-    Object valueUsageContext = freezed,
-    Object valueDosage = freezed,
-    Object valueMeta = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueMarkdown = freezed,
+    Object? valueMarkdownElement = freezed,
+    Object? valueOid = freezed,
+    Object? valueOidElement = freezed,
+    Object? valuePositiveInt = freezed,
+    Object? valuePositiveIntElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueTime = freezed,
+    Object? valueTimeElement = freezed,
+    Object? valueUnsignedInt = freezed,
+    Object? valueUnsignedIntElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueUuid = freezed,
+    Object? valueUuidElement = freezed,
+    Object? valueAddress = freezed,
+    Object? valueAge = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueCoding = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueCount = freezed,
+    Object? valueDistance = freezed,
+    Object? valueDuration = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueMoney = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueReference = freezed,
+    Object? valueSampledData = freezed,
+    Object? valueSignature = freezed,
+    Object? valueTiming = freezed,
+    Object? valueContactDetail = freezed,
+    Object? valueContributor = freezed,
+    Object? valueDataRequirement = freezed,
+    Object? valueExpression = freezed,
+    Object? valueParameterDefinition = freezed,
+    Object? valueRelatedArtifact = freezed,
+    Object? valueTriggerDefinition = freezed,
+    Object? valueUsageContext = freezed,
+    Object? valueDosage = freezed,
+    Object? valueMeta = freezed,
   }) {
     return _then(_TaskInput(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
-          : valueBase64Binary as Base64Binary,
+          : valueBase64Binary as Base64Binary?,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
-          : valueBase64BinaryElement as Element,
+          : valueBase64BinaryElement as Element?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean,
+          : valueBoolean as Boolean?,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
-          : valueBooleanElement as Element,
+          : valueBooleanElement as Element?,
       valueCanonical: valueCanonical == freezed
           ? _value.valueCanonical
-          : valueCanonical as Canonical,
+          : valueCanonical as Canonical?,
       valueCanonicalElement: valueCanonicalElement == freezed
           ? _value.valueCanonicalElement
-          : valueCanonicalElement as Element,
-      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+          : valueCanonicalElement as Element?,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as Element,
-      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
+          : valueCodeElement as Element?,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date?,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
-          : valueDateElement as Element,
+          : valueDateElement as Element?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
+          : valueDateTime as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
-          : valueDateTimeElement as Element,
+          : valueDateTimeElement as Element?,
       valueDecimal: valueDecimal == freezed
           ? _value.valueDecimal
-          : valueDecimal as Decimal,
+          : valueDecimal as Decimal?,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
-          : valueDecimalElement as Element,
-      valueId: valueId == freezed ? _value.valueId : valueId as Id,
+          : valueDecimalElement as Element?,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id?,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
-          : valueIdElement as Element,
+          : valueIdElement as Element?,
       valueInstant: valueInstant == freezed
           ? _value.valueInstant
-          : valueInstant as Instant,
+          : valueInstant as Instant?,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
-          : valueInstantElement as Element,
+          : valueInstantElement as Element?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer,
+          : valueInteger as Integer?,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
-          : valueIntegerElement as Element,
+          : valueIntegerElement as Element?,
       valueMarkdown: valueMarkdown == freezed
           ? _value.valueMarkdown
-          : valueMarkdown as Markdown,
+          : valueMarkdown as Markdown?,
       valueMarkdownElement: valueMarkdownElement == freezed
           ? _value.valueMarkdownElement
-          : valueMarkdownElement as Element,
-      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
+          : valueMarkdownElement as Element?,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid?,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
-          : valueOidElement as Element,
+          : valueOidElement as Element?,
       valuePositiveInt: valuePositiveInt == freezed
           ? _value.valuePositiveInt
-          : valuePositiveInt as PositiveInt,
+          : valuePositiveInt as PositiveInt?,
       valuePositiveIntElement: valuePositiveIntElement == freezed
           ? _value.valuePositiveIntElement
-          : valuePositiveIntElement as Element,
+          : valuePositiveIntElement as Element?,
       valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
+          valueString == freezed ? _value.valueString : valueString as String?,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
-          : valueStringElement as Element,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
+          : valueStringElement as Element?,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time?,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
-          : valueTimeElement as Element,
+          : valueTimeElement as Element?,
       valueUnsignedInt: valueUnsignedInt == freezed
           ? _value.valueUnsignedInt
-          : valueUnsignedInt as UnsignedInt,
+          : valueUnsignedInt as UnsignedInt?,
       valueUnsignedIntElement: valueUnsignedIntElement == freezed
           ? _value.valueUnsignedIntElement
-          : valueUnsignedIntElement as Element,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
+          : valueUnsignedIntElement as Element?,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri?,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
-          : valueUriElement as Element,
-      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl,
+          : valueUriElement as Element?,
+      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl?,
       valueUrlElement: valueUrlElement == freezed
           ? _value.valueUrlElement
-          : valueUrlElement as Element,
-      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid,
+          : valueUrlElement as Element?,
+      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid?,
       valueUuidElement: valueUuidElement == freezed
           ? _value.valueUuidElement
-          : valueUuidElement as Element,
+          : valueUuidElement as Element?,
       valueAddress: valueAddress == freezed
           ? _value.valueAddress
-          : valueAddress as Address,
-      valueAge: valueAge == freezed ? _value.valueAge : valueAge as Age,
+          : valueAddress as Address?,
+      valueAge: valueAge == freezed ? _value.valueAge : valueAge as Age?,
       valueAnnotation: valueAnnotation == freezed
           ? _value.valueAnnotation
-          : valueAnnotation as Annotation,
+          : valueAnnotation as Annotation?,
       valueAttachment: valueAttachment == freezed
           ? _value.valueAttachment
-          : valueAttachment as Attachment,
+          : valueAttachment as Attachment?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept,
+          : valueCodeableConcept as CodeableConcept?,
       valueCoding:
-          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding?,
       valueContactPoint: valueContactPoint == freezed
           ? _value.valueContactPoint
-          : valueContactPoint as ContactPoint,
+          : valueContactPoint as ContactPoint?,
       valueCount:
-          valueCount == freezed ? _value.valueCount : valueCount as Count,
+          valueCount == freezed ? _value.valueCount : valueCount as Count?,
       valueDistance: valueDistance == freezed
           ? _value.valueDistance
-          : valueDistance as Distance,
+          : valueDistance as Distance?,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as FhirDuration,
+          : valueDuration as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
-          : valueHumanName as HumanName,
+          : valueHumanName as HumanName?,
       valueIdentifier: valueIdentifier == freezed
           ? _value.valueIdentifier
-          : valueIdentifier as Identifier,
+          : valueIdentifier as Identifier?,
       valueMoney:
-          valueMoney == freezed ? _value.valueMoney : valueMoney as Money,
+          valueMoney == freezed ? _value.valueMoney : valueMoney as Money?,
       valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
+          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
+          : valueQuantity as Quantity?,
       valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range,
+          valueRange == freezed ? _value.valueRange : valueRange as Range?,
       valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio,
+          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio?,
       valueReference: valueReference == freezed
           ? _value.valueReference
-          : valueReference as Reference,
+          : valueReference as Reference?,
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
-          : valueSampledData as SampledData,
+          : valueSampledData as SampledData?,
       valueSignature: valueSignature == freezed
           ? _value.valueSignature
-          : valueSignature as Signature,
+          : valueSignature as Signature?,
       valueTiming:
-          valueTiming == freezed ? _value.valueTiming : valueTiming as Timing,
+          valueTiming == freezed ? _value.valueTiming : valueTiming as Timing?,
       valueContactDetail: valueContactDetail == freezed
           ? _value.valueContactDetail
-          : valueContactDetail as ContactDetail,
+          : valueContactDetail as ContactDetail?,
       valueContributor: valueContributor == freezed
           ? _value.valueContributor
-          : valueContributor as Contributor,
+          : valueContributor as Contributor?,
       valueDataRequirement: valueDataRequirement == freezed
           ? _value.valueDataRequirement
-          : valueDataRequirement as DataRequirement,
+          : valueDataRequirement as DataRequirement?,
       valueExpression: valueExpression == freezed
           ? _value.valueExpression
-          : valueExpression as Expression,
+          : valueExpression as Expression?,
       valueParameterDefinition: valueParameterDefinition == freezed
           ? _value.valueParameterDefinition
-          : valueParameterDefinition as ParameterDefinition,
+          : valueParameterDefinition as ParameterDefinition?,
       valueRelatedArtifact: valueRelatedArtifact == freezed
           ? _value.valueRelatedArtifact
-          : valueRelatedArtifact as RelatedArtifact,
+          : valueRelatedArtifact as RelatedArtifact?,
       valueTriggerDefinition: valueTriggerDefinition == freezed
           ? _value.valueTriggerDefinition
-          : valueTriggerDefinition as TriggerDefinition,
+          : valueTriggerDefinition as TriggerDefinition?,
       valueUsageContext: valueUsageContext == freezed
           ? _value.valueUsageContext
-          : valueUsageContext as UsageContext,
+          : valueUsageContext as UsageContext?,
       valueDosage:
-          valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
-      valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
+          valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage?,
+      valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta?,
     ));
   }
 }
@@ -7782,7 +7875,7 @@ class _$_TaskInput extends _TaskInput {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.type,
+      required this.type,
       this.valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
       this.valueBoolean,
@@ -7852,178 +7945,177 @@ class _$_TaskInput extends _TaskInput {
       this.valueUsageContext,
       this.valueDosage,
       this.valueMeta})
-      : assert(type != null),
-        super._();
+      : super._();
 
   factory _$_TaskInput.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskInputFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
-  final Base64Binary valueBase64Binary;
+  final Base64Binary? valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  final Element valueBase64BinaryElement;
+  final Element? valueBase64BinaryElement;
   @override
-  final Boolean valueBoolean;
+  final Boolean? valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
-  final Element valueBooleanElement;
+  final Element? valueBooleanElement;
   @override
-  final Canonical valueCanonical;
+  final Canonical? valueCanonical;
   @override
   @JsonKey(name: '_valueCanonical')
-  final Element valueCanonicalElement;
+  final Element? valueCanonicalElement;
   @override
-  final Code valueCode;
+  final Code? valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  final Element valueCodeElement;
+  final Element? valueCodeElement;
   @override
-  final Date valueDate;
+  final Date? valueDate;
   @override
   @JsonKey(name: '_valueDate')
-  final Element valueDateElement;
+  final Element? valueDateElement;
   @override
-  final FhirDateTime valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
-  final Element valueDateTimeElement;
+  final Element? valueDateTimeElement;
   @override
-  final Decimal valueDecimal;
+  final Decimal? valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
-  final Element valueDecimalElement;
+  final Element? valueDecimalElement;
   @override
-  final Id valueId;
+  final Id? valueId;
   @override
   @JsonKey(name: '_valueId')
-  final Element valueIdElement;
+  final Element? valueIdElement;
   @override
-  final Instant valueInstant;
+  final Instant? valueInstant;
   @override
   @JsonKey(name: '_valueInstant')
-  final Element valueInstantElement;
+  final Element? valueInstantElement;
   @override
-  final Integer valueInteger;
+  final Integer? valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
-  final Element valueIntegerElement;
+  final Element? valueIntegerElement;
   @override
-  final Markdown valueMarkdown;
+  final Markdown? valueMarkdown;
   @override
   @JsonKey(name: '_valueMarkdown')
-  final Element valueMarkdownElement;
+  final Element? valueMarkdownElement;
   @override
-  final Oid valueOid;
+  final Oid? valueOid;
   @override
   @JsonKey(name: '_valueOid')
-  final Element valueOidElement;
+  final Element? valueOidElement;
   @override
-  final PositiveInt valuePositiveInt;
+  final PositiveInt? valuePositiveInt;
   @override
   @JsonKey(name: '_valuePositiveInt')
-  final Element valuePositiveIntElement;
+  final Element? valuePositiveIntElement;
   @override
-  final String valueString;
+  final String? valueString;
   @override
   @JsonKey(name: '_valueString')
-  final Element valueStringElement;
+  final Element? valueStringElement;
   @override
-  final Time valueTime;
+  final Time? valueTime;
   @override
   @JsonKey(name: '_valueTime')
-  final Element valueTimeElement;
+  final Element? valueTimeElement;
   @override
-  final UnsignedInt valueUnsignedInt;
+  final UnsignedInt? valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
-  final Element valueUnsignedIntElement;
+  final Element? valueUnsignedIntElement;
   @override
-  final FhirUri valueUri;
+  final FhirUri? valueUri;
   @override
   @JsonKey(name: '_valueUri')
-  final Element valueUriElement;
+  final Element? valueUriElement;
   @override
-  final FhirUrl valueUrl;
+  final FhirUrl? valueUrl;
   @override
   @JsonKey(name: '_valueUrl')
-  final Element valueUrlElement;
+  final Element? valueUrlElement;
   @override
-  final Uuid valueUuid;
+  final Uuid? valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
-  final Element valueUuidElement;
+  final Element? valueUuidElement;
   @override
-  final Address valueAddress;
+  final Address? valueAddress;
   @override
-  final Age valueAge;
+  final Age? valueAge;
   @override
-  final Annotation valueAnnotation;
+  final Annotation? valueAnnotation;
   @override
-  final Attachment valueAttachment;
+  final Attachment? valueAttachment;
   @override
-  final CodeableConcept valueCodeableConcept;
+  final CodeableConcept? valueCodeableConcept;
   @override
-  final Coding valueCoding;
+  final Coding? valueCoding;
   @override
-  final ContactPoint valueContactPoint;
+  final ContactPoint? valueContactPoint;
   @override
-  final Count valueCount;
+  final Count? valueCount;
   @override
-  final Distance valueDistance;
+  final Distance? valueDistance;
   @override
-  final FhirDuration valueDuration;
+  final FhirDuration? valueDuration;
   @override
-  final HumanName valueHumanName;
+  final HumanName? valueHumanName;
   @override
-  final Identifier valueIdentifier;
+  final Identifier? valueIdentifier;
   @override
-  final Money valueMoney;
+  final Money? valueMoney;
   @override
-  final Period valuePeriod;
+  final Period? valuePeriod;
   @override
-  final Quantity valueQuantity;
+  final Quantity? valueQuantity;
   @override
-  final Range valueRange;
+  final Range? valueRange;
   @override
-  final Ratio valueRatio;
+  final Ratio? valueRatio;
   @override
-  final Reference valueReference;
+  final Reference? valueReference;
   @override
-  final SampledData valueSampledData;
+  final SampledData? valueSampledData;
   @override
-  final Signature valueSignature;
+  final Signature? valueSignature;
   @override
-  final Timing valueTiming;
+  final Timing? valueTiming;
   @override
-  final ContactDetail valueContactDetail;
+  final ContactDetail? valueContactDetail;
   @override
-  final Contributor valueContributor;
+  final Contributor? valueContributor;
   @override
-  final DataRequirement valueDataRequirement;
+  final DataRequirement? valueDataRequirement;
   @override
-  final Expression valueExpression;
+  final Expression? valueExpression;
   @override
-  final ParameterDefinition valueParameterDefinition;
+  final ParameterDefinition? valueParameterDefinition;
   @override
-  final RelatedArtifact valueRelatedArtifact;
+  final RelatedArtifact? valueRelatedArtifact;
   @override
-  final TriggerDefinition valueTriggerDefinition;
+  final TriggerDefinition? valueTriggerDefinition;
   @override
-  final UsageContext valueUsageContext;
+  final UsageContext? valueUsageContext;
   @override
-  final Dosage valueDosage;
+  final Dosage? valueDosage;
   @override
-  final Meta valueMeta;
+  final Meta? valueMeta;
 
   @override
   String toString() {
@@ -8233,249 +8325,249 @@ class _$_TaskInput extends _TaskInput {
 abstract class _TaskInput extends TaskInput {
   _TaskInput._() : super._();
   factory _TaskInput(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Canonical valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Markdown valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Oid valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      PositiveInt valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      UnsignedInt valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      FhirUrl valueUrl,
-      @JsonKey(name: '_valueUrl') Element valueUrlElement,
-      Uuid valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      FhirDuration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta}) = _$_TaskInput;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      FhirDuration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta}) = _$_TaskInput;
 
   factory _TaskInput.fromJson(Map<String, dynamic> json) =
       _$_TaskInput.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept get type;
   @override
-  Base64Binary get valueBase64Binary;
+  Base64Binary? get valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  Element get valueBase64BinaryElement;
+  Element? get valueBase64BinaryElement;
   @override
-  Boolean get valueBoolean;
+  Boolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element get valueBooleanElement;
+  Element? get valueBooleanElement;
   @override
-  Canonical get valueCanonical;
+  Canonical? get valueCanonical;
   @override
   @JsonKey(name: '_valueCanonical')
-  Element get valueCanonicalElement;
+  Element? get valueCanonicalElement;
   @override
-  Code get valueCode;
+  Code? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  Element get valueCodeElement;
+  Element? get valueCodeElement;
   @override
-  Date get valueDate;
+  Date? get valueDate;
   @override
   @JsonKey(name: '_valueDate')
-  Element get valueDateElement;
+  Element? get valueDateElement;
   @override
-  FhirDateTime get valueDateTime;
+  FhirDateTime? get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element get valueDateTimeElement;
+  Element? get valueDateTimeElement;
   @override
-  Decimal get valueDecimal;
+  Decimal? get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element get valueDecimalElement;
+  Element? get valueDecimalElement;
   @override
-  Id get valueId;
+  Id? get valueId;
   @override
   @JsonKey(name: '_valueId')
-  Element get valueIdElement;
+  Element? get valueIdElement;
   @override
-  Instant get valueInstant;
+  Instant? get valueInstant;
   @override
   @JsonKey(name: '_valueInstant')
-  Element get valueInstantElement;
+  Element? get valueInstantElement;
   @override
-  Integer get valueInteger;
+  Integer? get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
-  Element get valueIntegerElement;
+  Element? get valueIntegerElement;
   @override
-  Markdown get valueMarkdown;
+  Markdown? get valueMarkdown;
   @override
   @JsonKey(name: '_valueMarkdown')
-  Element get valueMarkdownElement;
+  Element? get valueMarkdownElement;
   @override
-  Oid get valueOid;
+  Oid? get valueOid;
   @override
   @JsonKey(name: '_valueOid')
-  Element get valueOidElement;
+  Element? get valueOidElement;
   @override
-  PositiveInt get valuePositiveInt;
+  PositiveInt? get valuePositiveInt;
   @override
   @JsonKey(name: '_valuePositiveInt')
-  Element get valuePositiveIntElement;
+  Element? get valuePositiveIntElement;
   @override
-  String get valueString;
+  String? get valueString;
   @override
   @JsonKey(name: '_valueString')
-  Element get valueStringElement;
+  Element? get valueStringElement;
   @override
-  Time get valueTime;
+  Time? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
-  Element get valueTimeElement;
+  Element? get valueTimeElement;
   @override
-  UnsignedInt get valueUnsignedInt;
+  UnsignedInt? get valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
-  Element get valueUnsignedIntElement;
+  Element? get valueUnsignedIntElement;
   @override
-  FhirUri get valueUri;
+  FhirUri? get valueUri;
   @override
   @JsonKey(name: '_valueUri')
-  Element get valueUriElement;
+  Element? get valueUriElement;
   @override
-  FhirUrl get valueUrl;
+  FhirUrl? get valueUrl;
   @override
   @JsonKey(name: '_valueUrl')
-  Element get valueUrlElement;
+  Element? get valueUrlElement;
   @override
-  Uuid get valueUuid;
+  Uuid? get valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
-  Element get valueUuidElement;
+  Element? get valueUuidElement;
   @override
-  Address get valueAddress;
+  Address? get valueAddress;
   @override
-  Age get valueAge;
+  Age? get valueAge;
   @override
-  Annotation get valueAnnotation;
+  Annotation? get valueAnnotation;
   @override
-  Attachment get valueAttachment;
+  Attachment? get valueAttachment;
   @override
-  CodeableConcept get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept;
   @override
-  Coding get valueCoding;
+  Coding? get valueCoding;
   @override
-  ContactPoint get valueContactPoint;
+  ContactPoint? get valueContactPoint;
   @override
-  Count get valueCount;
+  Count? get valueCount;
   @override
-  Distance get valueDistance;
+  Distance? get valueDistance;
   @override
-  FhirDuration get valueDuration;
+  FhirDuration? get valueDuration;
   @override
-  HumanName get valueHumanName;
+  HumanName? get valueHumanName;
   @override
-  Identifier get valueIdentifier;
+  Identifier? get valueIdentifier;
   @override
-  Money get valueMoney;
+  Money? get valueMoney;
   @override
-  Period get valuePeriod;
+  Period? get valuePeriod;
   @override
-  Quantity get valueQuantity;
+  Quantity? get valueQuantity;
   @override
-  Range get valueRange;
+  Range? get valueRange;
   @override
-  Ratio get valueRatio;
+  Ratio? get valueRatio;
   @override
-  Reference get valueReference;
+  Reference? get valueReference;
   @override
-  SampledData get valueSampledData;
+  SampledData? get valueSampledData;
   @override
-  Signature get valueSignature;
+  Signature? get valueSignature;
   @override
-  Timing get valueTiming;
+  Timing? get valueTiming;
   @override
-  ContactDetail get valueContactDetail;
+  ContactDetail? get valueContactDetail;
   @override
-  Contributor get valueContributor;
+  Contributor? get valueContributor;
   @override
-  DataRequirement get valueDataRequirement;
+  DataRequirement? get valueDataRequirement;
   @override
-  Expression get valueExpression;
+  Expression? get valueExpression;
   @override
-  ParameterDefinition get valueParameterDefinition;
+  ParameterDefinition? get valueParameterDefinition;
   @override
-  RelatedArtifact get valueRelatedArtifact;
+  RelatedArtifact? get valueRelatedArtifact;
   @override
-  TriggerDefinition get valueTriggerDefinition;
+  TriggerDefinition? get valueTriggerDefinition;
   @override
-  UsageContext get valueUsageContext;
+  UsageContext? get valueUsageContext;
   @override
-  Dosage get valueDosage;
+  Dosage? get valueDosage;
   @override
-  Meta get valueMeta;
+  Meta? get valueMeta;
   @override
   @JsonKey(ignore: true)
   _$TaskInputCopyWith<_TaskInput> get copyWith;
@@ -8489,81 +8581,80 @@ TaskOutput _$TaskOutputFromJson(Map<String, dynamic> json) {
 class _$TaskOutputTearOff {
   const _$TaskOutputTearOff();
 
-// ignore: unused_element
   _TaskOutput call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Canonical valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Markdown valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Oid valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      PositiveInt valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      UnsignedInt valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      FhirUrl valueUrl,
-      @JsonKey(name: '_valueUrl') Element valueUrlElement,
-      Uuid valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      FhirDuration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      FhirDuration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta}) {
     return _TaskOutput(
       id: id,
       extension_: extension_,
@@ -8641,111 +8732,109 @@ class _$TaskOutputTearOff {
     );
   }
 
-// ignore: unused_element
   TaskOutput fromJson(Map<String, Object> json) {
     return TaskOutput.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TaskOutput = _$TaskOutputTearOff();
 
 /// @nodoc
 mixin _$TaskOutput {
-  String get id;
+  String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept get type;
-  Base64Binary get valueBase64Binary;
+  Base64Binary? get valueBase64Binary;
   @JsonKey(name: '_valueBase64Binary')
-  Element get valueBase64BinaryElement;
-  Boolean get valueBoolean;
+  Element? get valueBase64BinaryElement;
+  Boolean? get valueBoolean;
   @JsonKey(name: '_valueBoolean')
-  Element get valueBooleanElement;
-  Canonical get valueCanonical;
+  Element? get valueBooleanElement;
+  Canonical? get valueCanonical;
   @JsonKey(name: '_valueCanonical')
-  Element get valueCanonicalElement;
-  Code get valueCode;
+  Element? get valueCanonicalElement;
+  Code? get valueCode;
   @JsonKey(name: '_valueCode')
-  Element get valueCodeElement;
-  Date get valueDate;
+  Element? get valueCodeElement;
+  Date? get valueDate;
   @JsonKey(name: '_valueDate')
-  Element get valueDateElement;
-  FhirDateTime get valueDateTime;
+  Element? get valueDateElement;
+  FhirDateTime? get valueDateTime;
   @JsonKey(name: '_valueDateTime')
-  Element get valueDateTimeElement;
-  Decimal get valueDecimal;
+  Element? get valueDateTimeElement;
+  Decimal? get valueDecimal;
   @JsonKey(name: '_valueDecimal')
-  Element get valueDecimalElement;
-  Id get valueId;
+  Element? get valueDecimalElement;
+  Id? get valueId;
   @JsonKey(name: '_valueId')
-  Element get valueIdElement;
-  Instant get valueInstant;
+  Element? get valueIdElement;
+  Instant? get valueInstant;
   @JsonKey(name: '_valueInstant')
-  Element get valueInstantElement;
-  Integer get valueInteger;
+  Element? get valueInstantElement;
+  Integer? get valueInteger;
   @JsonKey(name: '_valueInteger')
-  Element get valueIntegerElement;
-  Markdown get valueMarkdown;
+  Element? get valueIntegerElement;
+  Markdown? get valueMarkdown;
   @JsonKey(name: '_valueMarkdown')
-  Element get valueMarkdownElement;
-  Oid get valueOid;
+  Element? get valueMarkdownElement;
+  Oid? get valueOid;
   @JsonKey(name: '_valueOid')
-  Element get valueOidElement;
-  PositiveInt get valuePositiveInt;
+  Element? get valueOidElement;
+  PositiveInt? get valuePositiveInt;
   @JsonKey(name: '_valuePositiveInt')
-  Element get valuePositiveIntElement;
-  String get valueString;
+  Element? get valuePositiveIntElement;
+  String? get valueString;
   @JsonKey(name: '_valueString')
-  Element get valueStringElement;
-  Time get valueTime;
+  Element? get valueStringElement;
+  Time? get valueTime;
   @JsonKey(name: '_valueTime')
-  Element get valueTimeElement;
-  UnsignedInt get valueUnsignedInt;
+  Element? get valueTimeElement;
+  UnsignedInt? get valueUnsignedInt;
   @JsonKey(name: '_valueUnsignedInt')
-  Element get valueUnsignedIntElement;
-  FhirUri get valueUri;
+  Element? get valueUnsignedIntElement;
+  FhirUri? get valueUri;
   @JsonKey(name: '_valueUri')
-  Element get valueUriElement;
-  FhirUrl get valueUrl;
+  Element? get valueUriElement;
+  FhirUrl? get valueUrl;
   @JsonKey(name: '_valueUrl')
-  Element get valueUrlElement;
-  Uuid get valueUuid;
+  Element? get valueUrlElement;
+  Uuid? get valueUuid;
   @JsonKey(name: '_valueUuid')
-  Element get valueUuidElement;
-  Address get valueAddress;
-  Age get valueAge;
-  Annotation get valueAnnotation;
-  Attachment get valueAttachment;
-  CodeableConcept get valueCodeableConcept;
-  Coding get valueCoding;
-  ContactPoint get valueContactPoint;
-  Count get valueCount;
-  Distance get valueDistance;
-  FhirDuration get valueDuration;
-  HumanName get valueHumanName;
-  Identifier get valueIdentifier;
-  Money get valueMoney;
-  Period get valuePeriod;
-  Quantity get valueQuantity;
-  Range get valueRange;
-  Ratio get valueRatio;
-  Reference get valueReference;
-  SampledData get valueSampledData;
-  Signature get valueSignature;
-  Timing get valueTiming;
-  ContactDetail get valueContactDetail;
-  Contributor get valueContributor;
-  DataRequirement get valueDataRequirement;
-  Expression get valueExpression;
-  ParameterDefinition get valueParameterDefinition;
-  RelatedArtifact get valueRelatedArtifact;
-  TriggerDefinition get valueTriggerDefinition;
-  UsageContext get valueUsageContext;
-  Dosage get valueDosage;
-  Meta get valueMeta;
+  Element? get valueUuidElement;
+  Address? get valueAddress;
+  Age? get valueAge;
+  Annotation? get valueAnnotation;
+  Attachment? get valueAttachment;
+  CodeableConcept? get valueCodeableConcept;
+  Coding? get valueCoding;
+  ContactPoint? get valueContactPoint;
+  Count? get valueCount;
+  Distance? get valueDistance;
+  FhirDuration? get valueDuration;
+  HumanName? get valueHumanName;
+  Identifier? get valueIdentifier;
+  Money? get valueMoney;
+  Period? get valuePeriod;
+  Quantity? get valueQuantity;
+  Range? get valueRange;
+  Ratio? get valueRatio;
+  Reference? get valueReference;
+  SampledData? get valueSampledData;
+  Signature? get valueSignature;
+  Timing? get valueTiming;
+  ContactDetail? get valueContactDetail;
+  Contributor? get valueContributor;
+  DataRequirement? get valueDataRequirement;
+  Expression? get valueExpression;
+  ParameterDefinition? get valueParameterDefinition;
+  RelatedArtifact? get valueRelatedArtifact;
+  TriggerDefinition? get valueTriggerDefinition;
+  UsageContext? get valueUsageContext;
+  Dosage? get valueDosage;
+  Meta? get valueMeta;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -8758,131 +8847,131 @@ abstract class $TaskOutputCopyWith<$Res> {
           TaskOutput value, $Res Function(TaskOutput) then) =
       _$TaskOutputCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Canonical valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Markdown valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Oid valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      PositiveInt valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      UnsignedInt valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      FhirUrl valueUrl,
-      @JsonKey(name: '_valueUrl') Element valueUrlElement,
-      Uuid valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      FhirDuration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta});
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      FhirDuration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta});
 
   $CodeableConceptCopyWith<$Res> get type;
-  $ElementCopyWith<$Res> get valueBase64BinaryElement;
-  $ElementCopyWith<$Res> get valueBooleanElement;
-  $ElementCopyWith<$Res> get valueCanonicalElement;
-  $ElementCopyWith<$Res> get valueCodeElement;
-  $ElementCopyWith<$Res> get valueDateElement;
-  $ElementCopyWith<$Res> get valueDateTimeElement;
-  $ElementCopyWith<$Res> get valueDecimalElement;
-  $ElementCopyWith<$Res> get valueIdElement;
-  $ElementCopyWith<$Res> get valueInstantElement;
-  $ElementCopyWith<$Res> get valueIntegerElement;
-  $ElementCopyWith<$Res> get valueMarkdownElement;
-  $ElementCopyWith<$Res> get valueOidElement;
-  $ElementCopyWith<$Res> get valuePositiveIntElement;
-  $ElementCopyWith<$Res> get valueStringElement;
-  $ElementCopyWith<$Res> get valueTimeElement;
-  $ElementCopyWith<$Res> get valueUnsignedIntElement;
-  $ElementCopyWith<$Res> get valueUriElement;
-  $ElementCopyWith<$Res> get valueUrlElement;
-  $ElementCopyWith<$Res> get valueUuidElement;
-  $AddressCopyWith<$Res> get valueAddress;
-  $AgeCopyWith<$Res> get valueAge;
-  $AnnotationCopyWith<$Res> get valueAnnotation;
-  $AttachmentCopyWith<$Res> get valueAttachment;
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
-  $CodingCopyWith<$Res> get valueCoding;
-  $ContactPointCopyWith<$Res> get valueContactPoint;
-  $CountCopyWith<$Res> get valueCount;
-  $DistanceCopyWith<$Res> get valueDistance;
-  $FhirDurationCopyWith<$Res> get valueDuration;
-  $HumanNameCopyWith<$Res> get valueHumanName;
-  $IdentifierCopyWith<$Res> get valueIdentifier;
-  $MoneyCopyWith<$Res> get valueMoney;
-  $PeriodCopyWith<$Res> get valuePeriod;
-  $QuantityCopyWith<$Res> get valueQuantity;
-  $RangeCopyWith<$Res> get valueRange;
-  $RatioCopyWith<$Res> get valueRatio;
-  $ReferenceCopyWith<$Res> get valueReference;
-  $SampledDataCopyWith<$Res> get valueSampledData;
-  $SignatureCopyWith<$Res> get valueSignature;
-  $TimingCopyWith<$Res> get valueTiming;
-  $ContactDetailCopyWith<$Res> get valueContactDetail;
-  $ContributorCopyWith<$Res> get valueContributor;
-  $DataRequirementCopyWith<$Res> get valueDataRequirement;
-  $ExpressionCopyWith<$Res> get valueExpression;
-  $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition;
-  $RelatedArtifactCopyWith<$Res> get valueRelatedArtifact;
-  $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition;
-  $UsageContextCopyWith<$Res> get valueUsageContext;
-  $DosageCopyWith<$Res> get valueDosage;
-  $MetaCopyWith<$Res> get valueMeta;
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
+  $ElementCopyWith<$Res>? get valueCodeElement;
+  $ElementCopyWith<$Res>? get valueDateElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueIdElement;
+  $ElementCopyWith<$Res>? get valueInstantElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueMarkdownElement;
+  $ElementCopyWith<$Res>? get valueOidElement;
+  $ElementCopyWith<$Res>? get valuePositiveIntElement;
+  $ElementCopyWith<$Res>? get valueStringElement;
+  $ElementCopyWith<$Res>? get valueTimeElement;
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement;
+  $ElementCopyWith<$Res>? get valueUriElement;
+  $ElementCopyWith<$Res>? get valueUrlElement;
+  $ElementCopyWith<$Res>? get valueUuidElement;
+  $AddressCopyWith<$Res>? get valueAddress;
+  $AgeCopyWith<$Res>? get valueAge;
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
+  $AttachmentCopyWith<$Res>? get valueAttachment;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $CodingCopyWith<$Res>? get valueCoding;
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
+  $CountCopyWith<$Res>? get valueCount;
+  $DistanceCopyWith<$Res>? get valueDistance;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
+  $HumanNameCopyWith<$Res>? get valueHumanName;
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
+  $MoneyCopyWith<$Res>? get valueMoney;
+  $PeriodCopyWith<$Res>? get valuePeriod;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $RatioCopyWith<$Res>? get valueRatio;
+  $ReferenceCopyWith<$Res>? get valueReference;
+  $SampledDataCopyWith<$Res>? get valueSampledData;
+  $SignatureCopyWith<$Res>? get valueSignature;
+  $TimingCopyWith<$Res>? get valueTiming;
+  $ContactDetailCopyWith<$Res>? get valueContactDetail;
+  $ContributorCopyWith<$Res>? get valueContributor;
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement;
+  $ExpressionCopyWith<$Res>? get valueExpression;
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
+  $UsageContextCopyWith<$Res>? get valueUsageContext;
+  $DosageCopyWith<$Res>? get valueDosage;
+  $MetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -8895,778 +8984,828 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object valueBase64Binary = freezed,
-    Object valueBase64BinaryElement = freezed,
-    Object valueBoolean = freezed,
-    Object valueBooleanElement = freezed,
-    Object valueCanonical = freezed,
-    Object valueCanonicalElement = freezed,
-    Object valueCode = freezed,
-    Object valueCodeElement = freezed,
-    Object valueDate = freezed,
-    Object valueDateElement = freezed,
-    Object valueDateTime = freezed,
-    Object valueDateTimeElement = freezed,
-    Object valueDecimal = freezed,
-    Object valueDecimalElement = freezed,
-    Object valueId = freezed,
-    Object valueIdElement = freezed,
-    Object valueInstant = freezed,
-    Object valueInstantElement = freezed,
-    Object valueInteger = freezed,
-    Object valueIntegerElement = freezed,
-    Object valueMarkdown = freezed,
-    Object valueMarkdownElement = freezed,
-    Object valueOid = freezed,
-    Object valueOidElement = freezed,
-    Object valuePositiveInt = freezed,
-    Object valuePositiveIntElement = freezed,
-    Object valueString = freezed,
-    Object valueStringElement = freezed,
-    Object valueTime = freezed,
-    Object valueTimeElement = freezed,
-    Object valueUnsignedInt = freezed,
-    Object valueUnsignedIntElement = freezed,
-    Object valueUri = freezed,
-    Object valueUriElement = freezed,
-    Object valueUrl = freezed,
-    Object valueUrlElement = freezed,
-    Object valueUuid = freezed,
-    Object valueUuidElement = freezed,
-    Object valueAddress = freezed,
-    Object valueAge = freezed,
-    Object valueAnnotation = freezed,
-    Object valueAttachment = freezed,
-    Object valueCodeableConcept = freezed,
-    Object valueCoding = freezed,
-    Object valueContactPoint = freezed,
-    Object valueCount = freezed,
-    Object valueDistance = freezed,
-    Object valueDuration = freezed,
-    Object valueHumanName = freezed,
-    Object valueIdentifier = freezed,
-    Object valueMoney = freezed,
-    Object valuePeriod = freezed,
-    Object valueQuantity = freezed,
-    Object valueRange = freezed,
-    Object valueRatio = freezed,
-    Object valueReference = freezed,
-    Object valueSampledData = freezed,
-    Object valueSignature = freezed,
-    Object valueTiming = freezed,
-    Object valueContactDetail = freezed,
-    Object valueContributor = freezed,
-    Object valueDataRequirement = freezed,
-    Object valueExpression = freezed,
-    Object valueParameterDefinition = freezed,
-    Object valueRelatedArtifact = freezed,
-    Object valueTriggerDefinition = freezed,
-    Object valueUsageContext = freezed,
-    Object valueDosage = freezed,
-    Object valueMeta = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueMarkdown = freezed,
+    Object? valueMarkdownElement = freezed,
+    Object? valueOid = freezed,
+    Object? valueOidElement = freezed,
+    Object? valuePositiveInt = freezed,
+    Object? valuePositiveIntElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueTime = freezed,
+    Object? valueTimeElement = freezed,
+    Object? valueUnsignedInt = freezed,
+    Object? valueUnsignedIntElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueUuid = freezed,
+    Object? valueUuidElement = freezed,
+    Object? valueAddress = freezed,
+    Object? valueAge = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueCoding = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueCount = freezed,
+    Object? valueDistance = freezed,
+    Object? valueDuration = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueMoney = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueReference = freezed,
+    Object? valueSampledData = freezed,
+    Object? valueSignature = freezed,
+    Object? valueTiming = freezed,
+    Object? valueContactDetail = freezed,
+    Object? valueContributor = freezed,
+    Object? valueDataRequirement = freezed,
+    Object? valueExpression = freezed,
+    Object? valueParameterDefinition = freezed,
+    Object? valueRelatedArtifact = freezed,
+    Object? valueTriggerDefinition = freezed,
+    Object? valueUsageContext = freezed,
+    Object? valueDosage = freezed,
+    Object? valueMeta = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
-          : valueBase64Binary as Base64Binary,
+          : valueBase64Binary as Base64Binary?,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
-          : valueBase64BinaryElement as Element,
+          : valueBase64BinaryElement as Element?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean,
+          : valueBoolean as Boolean?,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
-          : valueBooleanElement as Element,
+          : valueBooleanElement as Element?,
       valueCanonical: valueCanonical == freezed
           ? _value.valueCanonical
-          : valueCanonical as Canonical,
+          : valueCanonical as Canonical?,
       valueCanonicalElement: valueCanonicalElement == freezed
           ? _value.valueCanonicalElement
-          : valueCanonicalElement as Element,
-      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+          : valueCanonicalElement as Element?,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as Element,
-      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
+          : valueCodeElement as Element?,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date?,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
-          : valueDateElement as Element,
+          : valueDateElement as Element?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
+          : valueDateTime as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
-          : valueDateTimeElement as Element,
+          : valueDateTimeElement as Element?,
       valueDecimal: valueDecimal == freezed
           ? _value.valueDecimal
-          : valueDecimal as Decimal,
+          : valueDecimal as Decimal?,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
-          : valueDecimalElement as Element,
-      valueId: valueId == freezed ? _value.valueId : valueId as Id,
+          : valueDecimalElement as Element?,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id?,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
-          : valueIdElement as Element,
+          : valueIdElement as Element?,
       valueInstant: valueInstant == freezed
           ? _value.valueInstant
-          : valueInstant as Instant,
+          : valueInstant as Instant?,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
-          : valueInstantElement as Element,
+          : valueInstantElement as Element?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer,
+          : valueInteger as Integer?,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
-          : valueIntegerElement as Element,
+          : valueIntegerElement as Element?,
       valueMarkdown: valueMarkdown == freezed
           ? _value.valueMarkdown
-          : valueMarkdown as Markdown,
+          : valueMarkdown as Markdown?,
       valueMarkdownElement: valueMarkdownElement == freezed
           ? _value.valueMarkdownElement
-          : valueMarkdownElement as Element,
-      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
+          : valueMarkdownElement as Element?,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid?,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
-          : valueOidElement as Element,
+          : valueOidElement as Element?,
       valuePositiveInt: valuePositiveInt == freezed
           ? _value.valuePositiveInt
-          : valuePositiveInt as PositiveInt,
+          : valuePositiveInt as PositiveInt?,
       valuePositiveIntElement: valuePositiveIntElement == freezed
           ? _value.valuePositiveIntElement
-          : valuePositiveIntElement as Element,
+          : valuePositiveIntElement as Element?,
       valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
+          valueString == freezed ? _value.valueString : valueString as String?,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
-          : valueStringElement as Element,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
+          : valueStringElement as Element?,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time?,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
-          : valueTimeElement as Element,
+          : valueTimeElement as Element?,
       valueUnsignedInt: valueUnsignedInt == freezed
           ? _value.valueUnsignedInt
-          : valueUnsignedInt as UnsignedInt,
+          : valueUnsignedInt as UnsignedInt?,
       valueUnsignedIntElement: valueUnsignedIntElement == freezed
           ? _value.valueUnsignedIntElement
-          : valueUnsignedIntElement as Element,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
+          : valueUnsignedIntElement as Element?,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri?,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
-          : valueUriElement as Element,
-      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl,
+          : valueUriElement as Element?,
+      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl?,
       valueUrlElement: valueUrlElement == freezed
           ? _value.valueUrlElement
-          : valueUrlElement as Element,
-      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid,
+          : valueUrlElement as Element?,
+      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid?,
       valueUuidElement: valueUuidElement == freezed
           ? _value.valueUuidElement
-          : valueUuidElement as Element,
+          : valueUuidElement as Element?,
       valueAddress: valueAddress == freezed
           ? _value.valueAddress
-          : valueAddress as Address,
-      valueAge: valueAge == freezed ? _value.valueAge : valueAge as Age,
+          : valueAddress as Address?,
+      valueAge: valueAge == freezed ? _value.valueAge : valueAge as Age?,
       valueAnnotation: valueAnnotation == freezed
           ? _value.valueAnnotation
-          : valueAnnotation as Annotation,
+          : valueAnnotation as Annotation?,
       valueAttachment: valueAttachment == freezed
           ? _value.valueAttachment
-          : valueAttachment as Attachment,
+          : valueAttachment as Attachment?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept,
+          : valueCodeableConcept as CodeableConcept?,
       valueCoding:
-          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding?,
       valueContactPoint: valueContactPoint == freezed
           ? _value.valueContactPoint
-          : valueContactPoint as ContactPoint,
+          : valueContactPoint as ContactPoint?,
       valueCount:
-          valueCount == freezed ? _value.valueCount : valueCount as Count,
+          valueCount == freezed ? _value.valueCount : valueCount as Count?,
       valueDistance: valueDistance == freezed
           ? _value.valueDistance
-          : valueDistance as Distance,
+          : valueDistance as Distance?,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as FhirDuration,
+          : valueDuration as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
-          : valueHumanName as HumanName,
+          : valueHumanName as HumanName?,
       valueIdentifier: valueIdentifier == freezed
           ? _value.valueIdentifier
-          : valueIdentifier as Identifier,
+          : valueIdentifier as Identifier?,
       valueMoney:
-          valueMoney == freezed ? _value.valueMoney : valueMoney as Money,
+          valueMoney == freezed ? _value.valueMoney : valueMoney as Money?,
       valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
+          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
+          : valueQuantity as Quantity?,
       valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range,
+          valueRange == freezed ? _value.valueRange : valueRange as Range?,
       valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio,
+          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio?,
       valueReference: valueReference == freezed
           ? _value.valueReference
-          : valueReference as Reference,
+          : valueReference as Reference?,
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
-          : valueSampledData as SampledData,
+          : valueSampledData as SampledData?,
       valueSignature: valueSignature == freezed
           ? _value.valueSignature
-          : valueSignature as Signature,
+          : valueSignature as Signature?,
       valueTiming:
-          valueTiming == freezed ? _value.valueTiming : valueTiming as Timing,
+          valueTiming == freezed ? _value.valueTiming : valueTiming as Timing?,
       valueContactDetail: valueContactDetail == freezed
           ? _value.valueContactDetail
-          : valueContactDetail as ContactDetail,
+          : valueContactDetail as ContactDetail?,
       valueContributor: valueContributor == freezed
           ? _value.valueContributor
-          : valueContributor as Contributor,
+          : valueContributor as Contributor?,
       valueDataRequirement: valueDataRequirement == freezed
           ? _value.valueDataRequirement
-          : valueDataRequirement as DataRequirement,
+          : valueDataRequirement as DataRequirement?,
       valueExpression: valueExpression == freezed
           ? _value.valueExpression
-          : valueExpression as Expression,
+          : valueExpression as Expression?,
       valueParameterDefinition: valueParameterDefinition == freezed
           ? _value.valueParameterDefinition
-          : valueParameterDefinition as ParameterDefinition,
+          : valueParameterDefinition as ParameterDefinition?,
       valueRelatedArtifact: valueRelatedArtifact == freezed
           ? _value.valueRelatedArtifact
-          : valueRelatedArtifact as RelatedArtifact,
+          : valueRelatedArtifact as RelatedArtifact?,
       valueTriggerDefinition: valueTriggerDefinition == freezed
           ? _value.valueTriggerDefinition
-          : valueTriggerDefinition as TriggerDefinition,
+          : valueTriggerDefinition as TriggerDefinition?,
       valueUsageContext: valueUsageContext == freezed
           ? _value.valueUsageContext
-          : valueUsageContext as UsageContext,
+          : valueUsageContext as UsageContext?,
       valueDosage:
-          valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
-      valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
+          valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage?,
+      valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta?,
     ));
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueBase64BinaryElement {
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement {
     if (_value.valueBase64BinaryElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement!, (value) {
       return _then(_value.copyWith(valueBase64BinaryElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueBooleanElement {
+  $ElementCopyWith<$Res>? get valueBooleanElement {
     if (_value.valueBooleanElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
       return _then(_value.copyWith(valueBooleanElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueCanonicalElement {
+  $ElementCopyWith<$Res>? get valueCanonicalElement {
     if (_value.valueCanonicalElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueCanonicalElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueCanonicalElement!, (value) {
       return _then(_value.copyWith(valueCanonicalElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueCodeElement {
+  $ElementCopyWith<$Res>? get valueCodeElement {
     if (_value.valueCodeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueCodeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueCodeElement!, (value) {
       return _then(_value.copyWith(valueCodeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDateElement {
+  $ElementCopyWith<$Res>? get valueDateElement {
     if (_value.valueDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDateElement!, (value) {
       return _then(_value.copyWith(valueDateElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDateTimeElement {
+  $ElementCopyWith<$Res>? get valueDateTimeElement {
     if (_value.valueDateTimeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDateTimeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement!, (value) {
       return _then(_value.copyWith(valueDateTimeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDecimalElement {
+  $ElementCopyWith<$Res>? get valueDecimalElement {
     if (_value.valueDecimalElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDecimalElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement!, (value) {
       return _then(_value.copyWith(valueDecimalElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueIdElement {
+  $ElementCopyWith<$Res>? get valueIdElement {
     if (_value.valueIdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueIdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueIdElement!, (value) {
       return _then(_value.copyWith(valueIdElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueInstantElement {
+  $ElementCopyWith<$Res>? get valueInstantElement {
     if (_value.valueInstantElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueInstantElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueInstantElement!, (value) {
       return _then(_value.copyWith(valueInstantElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueIntegerElement {
+  $ElementCopyWith<$Res>? get valueIntegerElement {
     if (_value.valueIntegerElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueIntegerElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement!, (value) {
       return _then(_value.copyWith(valueIntegerElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueMarkdownElement {
+  $ElementCopyWith<$Res>? get valueMarkdownElement {
     if (_value.valueMarkdownElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueMarkdownElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueMarkdownElement!, (value) {
       return _then(_value.copyWith(valueMarkdownElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueOidElement {
+  $ElementCopyWith<$Res>? get valueOidElement {
     if (_value.valueOidElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueOidElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueOidElement!, (value) {
       return _then(_value.copyWith(valueOidElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valuePositiveIntElement {
+  $ElementCopyWith<$Res>? get valuePositiveIntElement {
     if (_value.valuePositiveIntElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valuePositiveIntElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valuePositiveIntElement!, (value) {
       return _then(_value.copyWith(valuePositiveIntElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueStringElement {
+  $ElementCopyWith<$Res>? get valueStringElement {
     if (_value.valueStringElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
       return _then(_value.copyWith(valueStringElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueTimeElement {
+  $ElementCopyWith<$Res>? get valueTimeElement {
     if (_value.valueTimeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueTimeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueTimeElement!, (value) {
       return _then(_value.copyWith(valueTimeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueUnsignedIntElement {
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement {
     if (_value.valueUnsignedIntElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueUnsignedIntElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueUnsignedIntElement!, (value) {
       return _then(_value.copyWith(valueUnsignedIntElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueUriElement {
+  $ElementCopyWith<$Res>? get valueUriElement {
     if (_value.valueUriElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueUriElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueUriElement!, (value) {
       return _then(_value.copyWith(valueUriElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueUrlElement {
+  $ElementCopyWith<$Res>? get valueUrlElement {
     if (_value.valueUrlElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueUrlElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueUrlElement!, (value) {
       return _then(_value.copyWith(valueUrlElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueUuidElement {
+  $ElementCopyWith<$Res>? get valueUuidElement {
     if (_value.valueUuidElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueUuidElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueUuidElement!, (value) {
       return _then(_value.copyWith(valueUuidElement: value));
     });
   }
 
   @override
-  $AddressCopyWith<$Res> get valueAddress {
+  $AddressCopyWith<$Res>? get valueAddress {
     if (_value.valueAddress == null) {
       return null;
     }
-    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
+
+    return $AddressCopyWith<$Res>(_value.valueAddress!, (value) {
       return _then(_value.copyWith(valueAddress: value));
     });
   }
 
   @override
-  $AgeCopyWith<$Res> get valueAge {
+  $AgeCopyWith<$Res>? get valueAge {
     if (_value.valueAge == null) {
       return null;
     }
-    return $AgeCopyWith<$Res>(_value.valueAge, (value) {
+
+    return $AgeCopyWith<$Res>(_value.valueAge!, (value) {
       return _then(_value.copyWith(valueAge: value));
     });
   }
 
   @override
-  $AnnotationCopyWith<$Res> get valueAnnotation {
+  $AnnotationCopyWith<$Res>? get valueAnnotation {
     if (_value.valueAnnotation == null) {
       return null;
     }
-    return $AnnotationCopyWith<$Res>(_value.valueAnnotation, (value) {
+
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation!, (value) {
       return _then(_value.copyWith(valueAnnotation: value));
     });
   }
 
   @override
-  $AttachmentCopyWith<$Res> get valueAttachment {
+  $AttachmentCopyWith<$Res>? get valueAttachment {
     if (_value.valueAttachment == null) {
       return null;
     }
-    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment!, (value) {
       return _then(_value.copyWith(valueAttachment: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
     if (_value.valueCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
       return _then(_value.copyWith(valueCodeableConcept: value));
     });
   }
 
   @override
-  $CodingCopyWith<$Res> get valueCoding {
+  $CodingCopyWith<$Res>? get valueCoding {
     if (_value.valueCoding == null) {
       return null;
     }
-    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+
+    return $CodingCopyWith<$Res>(_value.valueCoding!, (value) {
       return _then(_value.copyWith(valueCoding: value));
     });
   }
 
   @override
-  $ContactPointCopyWith<$Res> get valueContactPoint {
+  $ContactPointCopyWith<$Res>? get valueContactPoint {
     if (_value.valueContactPoint == null) {
       return null;
     }
-    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint!, (value) {
       return _then(_value.copyWith(valueContactPoint: value));
     });
   }
 
   @override
-  $CountCopyWith<$Res> get valueCount {
+  $CountCopyWith<$Res>? get valueCount {
     if (_value.valueCount == null) {
       return null;
     }
-    return $CountCopyWith<$Res>(_value.valueCount, (value) {
+
+    return $CountCopyWith<$Res>(_value.valueCount!, (value) {
       return _then(_value.copyWith(valueCount: value));
     });
   }
 
   @override
-  $DistanceCopyWith<$Res> get valueDistance {
+  $DistanceCopyWith<$Res>? get valueDistance {
     if (_value.valueDistance == null) {
       return null;
     }
-    return $DistanceCopyWith<$Res>(_value.valueDistance, (value) {
+
+    return $DistanceCopyWith<$Res>(_value.valueDistance!, (value) {
       return _then(_value.copyWith(valueDistance: value));
     });
   }
 
   @override
-  $FhirDurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res>? get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
+
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
 
   @override
-  $HumanNameCopyWith<$Res> get valueHumanName {
+  $HumanNameCopyWith<$Res>? get valueHumanName {
     if (_value.valueHumanName == null) {
       return null;
     }
-    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName!, (value) {
       return _then(_value.copyWith(valueHumanName: value));
     });
   }
 
   @override
-  $IdentifierCopyWith<$Res> get valueIdentifier {
+  $IdentifierCopyWith<$Res>? get valueIdentifier {
     if (_value.valueIdentifier == null) {
       return null;
     }
-    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier!, (value) {
       return _then(_value.copyWith(valueIdentifier: value));
     });
   }
 
   @override
-  $MoneyCopyWith<$Res> get valueMoney {
+  $MoneyCopyWith<$Res>? get valueMoney {
     if (_value.valueMoney == null) {
       return null;
     }
-    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+
+    return $MoneyCopyWith<$Res>(_value.valueMoney!, (value) {
       return _then(_value.copyWith(valueMoney: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get valuePeriod {
+  $PeriodCopyWith<$Res>? get valuePeriod {
     if (_value.valuePeriod == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.valuePeriod!, (value) {
       return _then(_value.copyWith(valuePeriod: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get valueQuantity {
+  $QuantityCopyWith<$Res>? get valueQuantity {
     if (_value.valueQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
       return _then(_value.copyWith(valueQuantity: value));
     });
   }
 
   @override
-  $RangeCopyWith<$Res> get valueRange {
+  $RangeCopyWith<$Res>? get valueRange {
     if (_value.valueRange == null) {
       return null;
     }
-    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
       return _then(_value.copyWith(valueRange: value));
     });
   }
 
   @override
-  $RatioCopyWith<$Res> get valueRatio {
+  $RatioCopyWith<$Res>? get valueRatio {
     if (_value.valueRatio == null) {
       return null;
     }
-    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+
+    return $RatioCopyWith<$Res>(_value.valueRatio!, (value) {
       return _then(_value.copyWith(valueRatio: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get valueReference {
+  $ReferenceCopyWith<$Res>? get valueReference {
     if (_value.valueReference == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.valueReference, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
       return _then(_value.copyWith(valueReference: value));
     });
   }
 
   @override
-  $SampledDataCopyWith<$Res> get valueSampledData {
+  $SampledDataCopyWith<$Res>? get valueSampledData {
     if (_value.valueSampledData == null) {
       return null;
     }
-    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData!, (value) {
       return _then(_value.copyWith(valueSampledData: value));
     });
   }
 
   @override
-  $SignatureCopyWith<$Res> get valueSignature {
+  $SignatureCopyWith<$Res>? get valueSignature {
     if (_value.valueSignature == null) {
       return null;
     }
-    return $SignatureCopyWith<$Res>(_value.valueSignature, (value) {
+
+    return $SignatureCopyWith<$Res>(_value.valueSignature!, (value) {
       return _then(_value.copyWith(valueSignature: value));
     });
   }
 
   @override
-  $TimingCopyWith<$Res> get valueTiming {
+  $TimingCopyWith<$Res>? get valueTiming {
     if (_value.valueTiming == null) {
       return null;
     }
-    return $TimingCopyWith<$Res>(_value.valueTiming, (value) {
+
+    return $TimingCopyWith<$Res>(_value.valueTiming!, (value) {
       return _then(_value.copyWith(valueTiming: value));
     });
   }
 
   @override
-  $ContactDetailCopyWith<$Res> get valueContactDetail {
+  $ContactDetailCopyWith<$Res>? get valueContactDetail {
     if (_value.valueContactDetail == null) {
       return null;
     }
-    return $ContactDetailCopyWith<$Res>(_value.valueContactDetail, (value) {
+
+    return $ContactDetailCopyWith<$Res>(_value.valueContactDetail!, (value) {
       return _then(_value.copyWith(valueContactDetail: value));
     });
   }
 
   @override
-  $ContributorCopyWith<$Res> get valueContributor {
+  $ContributorCopyWith<$Res>? get valueContributor {
     if (_value.valueContributor == null) {
       return null;
     }
-    return $ContributorCopyWith<$Res>(_value.valueContributor, (value) {
+
+    return $ContributorCopyWith<$Res>(_value.valueContributor!, (value) {
       return _then(_value.copyWith(valueContributor: value));
     });
   }
 
   @override
-  $DataRequirementCopyWith<$Res> get valueDataRequirement {
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement {
     if (_value.valueDataRequirement == null) {
       return null;
     }
-    return $DataRequirementCopyWith<$Res>(_value.valueDataRequirement, (value) {
+
+    return $DataRequirementCopyWith<$Res>(_value.valueDataRequirement!,
+        (value) {
       return _then(_value.copyWith(valueDataRequirement: value));
     });
   }
 
   @override
-  $ExpressionCopyWith<$Res> get valueExpression {
+  $ExpressionCopyWith<$Res>? get valueExpression {
     if (_value.valueExpression == null) {
       return null;
     }
-    return $ExpressionCopyWith<$Res>(_value.valueExpression, (value) {
+
+    return $ExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
       return _then(_value.copyWith(valueExpression: value));
     });
   }
 
   @override
-  $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition {
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition {
     if (_value.valueParameterDefinition == null) {
       return null;
     }
-    return $ParameterDefinitionCopyWith<$Res>(_value.valueParameterDefinition,
+
+    return $ParameterDefinitionCopyWith<$Res>(_value.valueParameterDefinition!,
         (value) {
       return _then(_value.copyWith(valueParameterDefinition: value));
     });
   }
 
   @override
-  $RelatedArtifactCopyWith<$Res> get valueRelatedArtifact {
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact {
     if (_value.valueRelatedArtifact == null) {
       return null;
     }
-    return $RelatedArtifactCopyWith<$Res>(_value.valueRelatedArtifact, (value) {
+
+    return $RelatedArtifactCopyWith<$Res>(_value.valueRelatedArtifact!,
+        (value) {
       return _then(_value.copyWith(valueRelatedArtifact: value));
     });
   }
 
   @override
-  $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition {
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition {
     if (_value.valueTriggerDefinition == null) {
       return null;
     }
-    return $TriggerDefinitionCopyWith<$Res>(_value.valueTriggerDefinition,
+
+    return $TriggerDefinitionCopyWith<$Res>(_value.valueTriggerDefinition!,
         (value) {
       return _then(_value.copyWith(valueTriggerDefinition: value));
     });
   }
 
   @override
-  $UsageContextCopyWith<$Res> get valueUsageContext {
+  $UsageContextCopyWith<$Res>? get valueUsageContext {
     if (_value.valueUsageContext == null) {
       return null;
     }
-    return $UsageContextCopyWith<$Res>(_value.valueUsageContext, (value) {
+
+    return $UsageContextCopyWith<$Res>(_value.valueUsageContext!, (value) {
       return _then(_value.copyWith(valueUsageContext: value));
     });
   }
 
   @override
-  $DosageCopyWith<$Res> get valueDosage {
+  $DosageCopyWith<$Res>? get valueDosage {
     if (_value.valueDosage == null) {
       return null;
     }
-    return $DosageCopyWith<$Res>(_value.valueDosage, (value) {
+
+    return $DosageCopyWith<$Res>(_value.valueDosage!, (value) {
       return _then(_value.copyWith(valueDosage: value));
     });
   }
 
   @override
-  $MetaCopyWith<$Res> get valueMeta {
+  $MetaCopyWith<$Res>? get valueMeta {
     if (_value.valueMeta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.valueMeta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
       return _then(_value.copyWith(valueMeta: value));
     });
   }
@@ -9679,182 +9818,182 @@ abstract class _$TaskOutputCopyWith<$Res> implements $TaskOutputCopyWith<$Res> {
       __$TaskOutputCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Canonical valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Markdown valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Oid valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      PositiveInt valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      UnsignedInt valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      FhirUrl valueUrl,
-      @JsonKey(name: '_valueUrl') Element valueUrlElement,
-      Uuid valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      FhirDuration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta});
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      FhirDuration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
   @override
-  $ElementCopyWith<$Res> get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
   @override
-  $ElementCopyWith<$Res> get valueCanonicalElement;
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
   @override
-  $ElementCopyWith<$Res> get valueCodeElement;
+  $ElementCopyWith<$Res>? get valueCodeElement;
   @override
-  $ElementCopyWith<$Res> get valueDateElement;
+  $ElementCopyWith<$Res>? get valueDateElement;
   @override
-  $ElementCopyWith<$Res> get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
   @override
-  $ElementCopyWith<$Res> get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
   @override
-  $ElementCopyWith<$Res> get valueIdElement;
+  $ElementCopyWith<$Res>? get valueIdElement;
   @override
-  $ElementCopyWith<$Res> get valueInstantElement;
+  $ElementCopyWith<$Res>? get valueInstantElement;
   @override
-  $ElementCopyWith<$Res> get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
   @override
-  $ElementCopyWith<$Res> get valueMarkdownElement;
+  $ElementCopyWith<$Res>? get valueMarkdownElement;
   @override
-  $ElementCopyWith<$Res> get valueOidElement;
+  $ElementCopyWith<$Res>? get valueOidElement;
   @override
-  $ElementCopyWith<$Res> get valuePositiveIntElement;
+  $ElementCopyWith<$Res>? get valuePositiveIntElement;
   @override
-  $ElementCopyWith<$Res> get valueStringElement;
+  $ElementCopyWith<$Res>? get valueStringElement;
   @override
-  $ElementCopyWith<$Res> get valueTimeElement;
+  $ElementCopyWith<$Res>? get valueTimeElement;
   @override
-  $ElementCopyWith<$Res> get valueUnsignedIntElement;
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement;
   @override
-  $ElementCopyWith<$Res> get valueUriElement;
+  $ElementCopyWith<$Res>? get valueUriElement;
   @override
-  $ElementCopyWith<$Res> get valueUrlElement;
+  $ElementCopyWith<$Res>? get valueUrlElement;
   @override
-  $ElementCopyWith<$Res> get valueUuidElement;
+  $ElementCopyWith<$Res>? get valueUuidElement;
   @override
-  $AddressCopyWith<$Res> get valueAddress;
+  $AddressCopyWith<$Res>? get valueAddress;
   @override
-  $AgeCopyWith<$Res> get valueAge;
+  $AgeCopyWith<$Res>? get valueAge;
   @override
-  $AnnotationCopyWith<$Res> get valueAnnotation;
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
   @override
-  $AttachmentCopyWith<$Res> get valueAttachment;
+  $AttachmentCopyWith<$Res>? get valueAttachment;
   @override
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
-  $CodingCopyWith<$Res> get valueCoding;
+  $CodingCopyWith<$Res>? get valueCoding;
   @override
-  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
   @override
-  $CountCopyWith<$Res> get valueCount;
+  $CountCopyWith<$Res>? get valueCount;
   @override
-  $DistanceCopyWith<$Res> get valueDistance;
+  $DistanceCopyWith<$Res>? get valueDistance;
   @override
-  $FhirDurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   @override
-  $HumanNameCopyWith<$Res> get valueHumanName;
+  $HumanNameCopyWith<$Res>? get valueHumanName;
   @override
-  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
   @override
-  $MoneyCopyWith<$Res> get valueMoney;
+  $MoneyCopyWith<$Res>? get valueMoney;
   @override
-  $PeriodCopyWith<$Res> get valuePeriod;
+  $PeriodCopyWith<$Res>? get valuePeriod;
   @override
-  $QuantityCopyWith<$Res> get valueQuantity;
+  $QuantityCopyWith<$Res>? get valueQuantity;
   @override
-  $RangeCopyWith<$Res> get valueRange;
+  $RangeCopyWith<$Res>? get valueRange;
   @override
-  $RatioCopyWith<$Res> get valueRatio;
+  $RatioCopyWith<$Res>? get valueRatio;
   @override
-  $ReferenceCopyWith<$Res> get valueReference;
+  $ReferenceCopyWith<$Res>? get valueReference;
   @override
-  $SampledDataCopyWith<$Res> get valueSampledData;
+  $SampledDataCopyWith<$Res>? get valueSampledData;
   @override
-  $SignatureCopyWith<$Res> get valueSignature;
+  $SignatureCopyWith<$Res>? get valueSignature;
   @override
-  $TimingCopyWith<$Res> get valueTiming;
+  $TimingCopyWith<$Res>? get valueTiming;
   @override
-  $ContactDetailCopyWith<$Res> get valueContactDetail;
+  $ContactDetailCopyWith<$Res>? get valueContactDetail;
   @override
-  $ContributorCopyWith<$Res> get valueContributor;
+  $ContributorCopyWith<$Res>? get valueContributor;
   @override
-  $DataRequirementCopyWith<$Res> get valueDataRequirement;
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement;
   @override
-  $ExpressionCopyWith<$Res> get valueExpression;
+  $ExpressionCopyWith<$Res>? get valueExpression;
   @override
-  $ParameterDefinitionCopyWith<$Res> get valueParameterDefinition;
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   @override
-  $RelatedArtifactCopyWith<$Res> get valueRelatedArtifact;
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
   @override
-  $TriggerDefinitionCopyWith<$Res> get valueTriggerDefinition;
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
   @override
-  $UsageContextCopyWith<$Res> get valueUsageContext;
+  $UsageContextCopyWith<$Res>? get valueUsageContext;
   @override
-  $DosageCopyWith<$Res> get valueDosage;
+  $DosageCopyWith<$Res>? get valueDosage;
   @override
-  $MetaCopyWith<$Res> get valueMeta;
+  $MetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -9869,267 +10008,267 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object valueBase64Binary = freezed,
-    Object valueBase64BinaryElement = freezed,
-    Object valueBoolean = freezed,
-    Object valueBooleanElement = freezed,
-    Object valueCanonical = freezed,
-    Object valueCanonicalElement = freezed,
-    Object valueCode = freezed,
-    Object valueCodeElement = freezed,
-    Object valueDate = freezed,
-    Object valueDateElement = freezed,
-    Object valueDateTime = freezed,
-    Object valueDateTimeElement = freezed,
-    Object valueDecimal = freezed,
-    Object valueDecimalElement = freezed,
-    Object valueId = freezed,
-    Object valueIdElement = freezed,
-    Object valueInstant = freezed,
-    Object valueInstantElement = freezed,
-    Object valueInteger = freezed,
-    Object valueIntegerElement = freezed,
-    Object valueMarkdown = freezed,
-    Object valueMarkdownElement = freezed,
-    Object valueOid = freezed,
-    Object valueOidElement = freezed,
-    Object valuePositiveInt = freezed,
-    Object valuePositiveIntElement = freezed,
-    Object valueString = freezed,
-    Object valueStringElement = freezed,
-    Object valueTime = freezed,
-    Object valueTimeElement = freezed,
-    Object valueUnsignedInt = freezed,
-    Object valueUnsignedIntElement = freezed,
-    Object valueUri = freezed,
-    Object valueUriElement = freezed,
-    Object valueUrl = freezed,
-    Object valueUrlElement = freezed,
-    Object valueUuid = freezed,
-    Object valueUuidElement = freezed,
-    Object valueAddress = freezed,
-    Object valueAge = freezed,
-    Object valueAnnotation = freezed,
-    Object valueAttachment = freezed,
-    Object valueCodeableConcept = freezed,
-    Object valueCoding = freezed,
-    Object valueContactPoint = freezed,
-    Object valueCount = freezed,
-    Object valueDistance = freezed,
-    Object valueDuration = freezed,
-    Object valueHumanName = freezed,
-    Object valueIdentifier = freezed,
-    Object valueMoney = freezed,
-    Object valuePeriod = freezed,
-    Object valueQuantity = freezed,
-    Object valueRange = freezed,
-    Object valueRatio = freezed,
-    Object valueReference = freezed,
-    Object valueSampledData = freezed,
-    Object valueSignature = freezed,
-    Object valueTiming = freezed,
-    Object valueContactDetail = freezed,
-    Object valueContributor = freezed,
-    Object valueDataRequirement = freezed,
-    Object valueExpression = freezed,
-    Object valueParameterDefinition = freezed,
-    Object valueRelatedArtifact = freezed,
-    Object valueTriggerDefinition = freezed,
-    Object valueUsageContext = freezed,
-    Object valueDosage = freezed,
-    Object valueMeta = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueMarkdown = freezed,
+    Object? valueMarkdownElement = freezed,
+    Object? valueOid = freezed,
+    Object? valueOidElement = freezed,
+    Object? valuePositiveInt = freezed,
+    Object? valuePositiveIntElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueTime = freezed,
+    Object? valueTimeElement = freezed,
+    Object? valueUnsignedInt = freezed,
+    Object? valueUnsignedIntElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueUuid = freezed,
+    Object? valueUuidElement = freezed,
+    Object? valueAddress = freezed,
+    Object? valueAge = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueCoding = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueCount = freezed,
+    Object? valueDistance = freezed,
+    Object? valueDuration = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueMoney = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueReference = freezed,
+    Object? valueSampledData = freezed,
+    Object? valueSignature = freezed,
+    Object? valueTiming = freezed,
+    Object? valueContactDetail = freezed,
+    Object? valueContributor = freezed,
+    Object? valueDataRequirement = freezed,
+    Object? valueExpression = freezed,
+    Object? valueParameterDefinition = freezed,
+    Object? valueRelatedArtifact = freezed,
+    Object? valueTriggerDefinition = freezed,
+    Object? valueUsageContext = freezed,
+    Object? valueDosage = freezed,
+    Object? valueMeta = freezed,
   }) {
     return _then(_TaskOutput(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
-          : valueBase64Binary as Base64Binary,
+          : valueBase64Binary as Base64Binary?,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
-          : valueBase64BinaryElement as Element,
+          : valueBase64BinaryElement as Element?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean,
+          : valueBoolean as Boolean?,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
-          : valueBooleanElement as Element,
+          : valueBooleanElement as Element?,
       valueCanonical: valueCanonical == freezed
           ? _value.valueCanonical
-          : valueCanonical as Canonical,
+          : valueCanonical as Canonical?,
       valueCanonicalElement: valueCanonicalElement == freezed
           ? _value.valueCanonicalElement
-          : valueCanonicalElement as Element,
-      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+          : valueCanonicalElement as Element?,
+      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as Element,
-      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
+          : valueCodeElement as Element?,
+      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date?,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
-          : valueDateElement as Element,
+          : valueDateElement as Element?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
+          : valueDateTime as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
-          : valueDateTimeElement as Element,
+          : valueDateTimeElement as Element?,
       valueDecimal: valueDecimal == freezed
           ? _value.valueDecimal
-          : valueDecimal as Decimal,
+          : valueDecimal as Decimal?,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
-          : valueDecimalElement as Element,
-      valueId: valueId == freezed ? _value.valueId : valueId as Id,
+          : valueDecimalElement as Element?,
+      valueId: valueId == freezed ? _value.valueId : valueId as Id?,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
-          : valueIdElement as Element,
+          : valueIdElement as Element?,
       valueInstant: valueInstant == freezed
           ? _value.valueInstant
-          : valueInstant as Instant,
+          : valueInstant as Instant?,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
-          : valueInstantElement as Element,
+          : valueInstantElement as Element?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer,
+          : valueInteger as Integer?,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
-          : valueIntegerElement as Element,
+          : valueIntegerElement as Element?,
       valueMarkdown: valueMarkdown == freezed
           ? _value.valueMarkdown
-          : valueMarkdown as Markdown,
+          : valueMarkdown as Markdown?,
       valueMarkdownElement: valueMarkdownElement == freezed
           ? _value.valueMarkdownElement
-          : valueMarkdownElement as Element,
-      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid,
+          : valueMarkdownElement as Element?,
+      valueOid: valueOid == freezed ? _value.valueOid : valueOid as Oid?,
       valueOidElement: valueOidElement == freezed
           ? _value.valueOidElement
-          : valueOidElement as Element,
+          : valueOidElement as Element?,
       valuePositiveInt: valuePositiveInt == freezed
           ? _value.valuePositiveInt
-          : valuePositiveInt as PositiveInt,
+          : valuePositiveInt as PositiveInt?,
       valuePositiveIntElement: valuePositiveIntElement == freezed
           ? _value.valuePositiveIntElement
-          : valuePositiveIntElement as Element,
+          : valuePositiveIntElement as Element?,
       valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
+          valueString == freezed ? _value.valueString : valueString as String?,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
-          : valueStringElement as Element,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time,
+          : valueStringElement as Element?,
+      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time?,
       valueTimeElement: valueTimeElement == freezed
           ? _value.valueTimeElement
-          : valueTimeElement as Element,
+          : valueTimeElement as Element?,
       valueUnsignedInt: valueUnsignedInt == freezed
           ? _value.valueUnsignedInt
-          : valueUnsignedInt as UnsignedInt,
+          : valueUnsignedInt as UnsignedInt?,
       valueUnsignedIntElement: valueUnsignedIntElement == freezed
           ? _value.valueUnsignedIntElement
-          : valueUnsignedIntElement as Element,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
+          : valueUnsignedIntElement as Element?,
+      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri?,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
-          : valueUriElement as Element,
-      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl,
+          : valueUriElement as Element?,
+      valueUrl: valueUrl == freezed ? _value.valueUrl : valueUrl as FhirUrl?,
       valueUrlElement: valueUrlElement == freezed
           ? _value.valueUrlElement
-          : valueUrlElement as Element,
-      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid,
+          : valueUrlElement as Element?,
+      valueUuid: valueUuid == freezed ? _value.valueUuid : valueUuid as Uuid?,
       valueUuidElement: valueUuidElement == freezed
           ? _value.valueUuidElement
-          : valueUuidElement as Element,
+          : valueUuidElement as Element?,
       valueAddress: valueAddress == freezed
           ? _value.valueAddress
-          : valueAddress as Address,
-      valueAge: valueAge == freezed ? _value.valueAge : valueAge as Age,
+          : valueAddress as Address?,
+      valueAge: valueAge == freezed ? _value.valueAge : valueAge as Age?,
       valueAnnotation: valueAnnotation == freezed
           ? _value.valueAnnotation
-          : valueAnnotation as Annotation,
+          : valueAnnotation as Annotation?,
       valueAttachment: valueAttachment == freezed
           ? _value.valueAttachment
-          : valueAttachment as Attachment,
+          : valueAttachment as Attachment?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept,
+          : valueCodeableConcept as CodeableConcept?,
       valueCoding:
-          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding?,
       valueContactPoint: valueContactPoint == freezed
           ? _value.valueContactPoint
-          : valueContactPoint as ContactPoint,
+          : valueContactPoint as ContactPoint?,
       valueCount:
-          valueCount == freezed ? _value.valueCount : valueCount as Count,
+          valueCount == freezed ? _value.valueCount : valueCount as Count?,
       valueDistance: valueDistance == freezed
           ? _value.valueDistance
-          : valueDistance as Distance,
+          : valueDistance as Distance?,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as FhirDuration,
+          : valueDuration as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
-          : valueHumanName as HumanName,
+          : valueHumanName as HumanName?,
       valueIdentifier: valueIdentifier == freezed
           ? _value.valueIdentifier
-          : valueIdentifier as Identifier,
+          : valueIdentifier as Identifier?,
       valueMoney:
-          valueMoney == freezed ? _value.valueMoney : valueMoney as Money,
+          valueMoney == freezed ? _value.valueMoney : valueMoney as Money?,
       valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
+          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
+          : valueQuantity as Quantity?,
       valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range,
+          valueRange == freezed ? _value.valueRange : valueRange as Range?,
       valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio,
+          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio?,
       valueReference: valueReference == freezed
           ? _value.valueReference
-          : valueReference as Reference,
+          : valueReference as Reference?,
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
-          : valueSampledData as SampledData,
+          : valueSampledData as SampledData?,
       valueSignature: valueSignature == freezed
           ? _value.valueSignature
-          : valueSignature as Signature,
+          : valueSignature as Signature?,
       valueTiming:
-          valueTiming == freezed ? _value.valueTiming : valueTiming as Timing,
+          valueTiming == freezed ? _value.valueTiming : valueTiming as Timing?,
       valueContactDetail: valueContactDetail == freezed
           ? _value.valueContactDetail
-          : valueContactDetail as ContactDetail,
+          : valueContactDetail as ContactDetail?,
       valueContributor: valueContributor == freezed
           ? _value.valueContributor
-          : valueContributor as Contributor,
+          : valueContributor as Contributor?,
       valueDataRequirement: valueDataRequirement == freezed
           ? _value.valueDataRequirement
-          : valueDataRequirement as DataRequirement,
+          : valueDataRequirement as DataRequirement?,
       valueExpression: valueExpression == freezed
           ? _value.valueExpression
-          : valueExpression as Expression,
+          : valueExpression as Expression?,
       valueParameterDefinition: valueParameterDefinition == freezed
           ? _value.valueParameterDefinition
-          : valueParameterDefinition as ParameterDefinition,
+          : valueParameterDefinition as ParameterDefinition?,
       valueRelatedArtifact: valueRelatedArtifact == freezed
           ? _value.valueRelatedArtifact
-          : valueRelatedArtifact as RelatedArtifact,
+          : valueRelatedArtifact as RelatedArtifact?,
       valueTriggerDefinition: valueTriggerDefinition == freezed
           ? _value.valueTriggerDefinition
-          : valueTriggerDefinition as TriggerDefinition,
+          : valueTriggerDefinition as TriggerDefinition?,
       valueUsageContext: valueUsageContext == freezed
           ? _value.valueUsageContext
-          : valueUsageContext as UsageContext,
+          : valueUsageContext as UsageContext?,
       valueDosage:
-          valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
-      valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
+          valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage?,
+      valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta?,
     ));
   }
 }
@@ -10142,7 +10281,7 @@ class _$_TaskOutput extends _TaskOutput {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.type,
+      required this.type,
       this.valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
       this.valueBoolean,
@@ -10212,178 +10351,177 @@ class _$_TaskOutput extends _TaskOutput {
       this.valueUsageContext,
       this.valueDosage,
       this.valueMeta})
-      : assert(type != null),
-        super._();
+      : super._();
 
   factory _$_TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskOutputFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
-  final Base64Binary valueBase64Binary;
+  final Base64Binary? valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  final Element valueBase64BinaryElement;
+  final Element? valueBase64BinaryElement;
   @override
-  final Boolean valueBoolean;
+  final Boolean? valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
-  final Element valueBooleanElement;
+  final Element? valueBooleanElement;
   @override
-  final Canonical valueCanonical;
+  final Canonical? valueCanonical;
   @override
   @JsonKey(name: '_valueCanonical')
-  final Element valueCanonicalElement;
+  final Element? valueCanonicalElement;
   @override
-  final Code valueCode;
+  final Code? valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  final Element valueCodeElement;
+  final Element? valueCodeElement;
   @override
-  final Date valueDate;
+  final Date? valueDate;
   @override
   @JsonKey(name: '_valueDate')
-  final Element valueDateElement;
+  final Element? valueDateElement;
   @override
-  final FhirDateTime valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
-  final Element valueDateTimeElement;
+  final Element? valueDateTimeElement;
   @override
-  final Decimal valueDecimal;
+  final Decimal? valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
-  final Element valueDecimalElement;
+  final Element? valueDecimalElement;
   @override
-  final Id valueId;
+  final Id? valueId;
   @override
   @JsonKey(name: '_valueId')
-  final Element valueIdElement;
+  final Element? valueIdElement;
   @override
-  final Instant valueInstant;
+  final Instant? valueInstant;
   @override
   @JsonKey(name: '_valueInstant')
-  final Element valueInstantElement;
+  final Element? valueInstantElement;
   @override
-  final Integer valueInteger;
+  final Integer? valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
-  final Element valueIntegerElement;
+  final Element? valueIntegerElement;
   @override
-  final Markdown valueMarkdown;
+  final Markdown? valueMarkdown;
   @override
   @JsonKey(name: '_valueMarkdown')
-  final Element valueMarkdownElement;
+  final Element? valueMarkdownElement;
   @override
-  final Oid valueOid;
+  final Oid? valueOid;
   @override
   @JsonKey(name: '_valueOid')
-  final Element valueOidElement;
+  final Element? valueOidElement;
   @override
-  final PositiveInt valuePositiveInt;
+  final PositiveInt? valuePositiveInt;
   @override
   @JsonKey(name: '_valuePositiveInt')
-  final Element valuePositiveIntElement;
+  final Element? valuePositiveIntElement;
   @override
-  final String valueString;
+  final String? valueString;
   @override
   @JsonKey(name: '_valueString')
-  final Element valueStringElement;
+  final Element? valueStringElement;
   @override
-  final Time valueTime;
+  final Time? valueTime;
   @override
   @JsonKey(name: '_valueTime')
-  final Element valueTimeElement;
+  final Element? valueTimeElement;
   @override
-  final UnsignedInt valueUnsignedInt;
+  final UnsignedInt? valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
-  final Element valueUnsignedIntElement;
+  final Element? valueUnsignedIntElement;
   @override
-  final FhirUri valueUri;
+  final FhirUri? valueUri;
   @override
   @JsonKey(name: '_valueUri')
-  final Element valueUriElement;
+  final Element? valueUriElement;
   @override
-  final FhirUrl valueUrl;
+  final FhirUrl? valueUrl;
   @override
   @JsonKey(name: '_valueUrl')
-  final Element valueUrlElement;
+  final Element? valueUrlElement;
   @override
-  final Uuid valueUuid;
+  final Uuid? valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
-  final Element valueUuidElement;
+  final Element? valueUuidElement;
   @override
-  final Address valueAddress;
+  final Address? valueAddress;
   @override
-  final Age valueAge;
+  final Age? valueAge;
   @override
-  final Annotation valueAnnotation;
+  final Annotation? valueAnnotation;
   @override
-  final Attachment valueAttachment;
+  final Attachment? valueAttachment;
   @override
-  final CodeableConcept valueCodeableConcept;
+  final CodeableConcept? valueCodeableConcept;
   @override
-  final Coding valueCoding;
+  final Coding? valueCoding;
   @override
-  final ContactPoint valueContactPoint;
+  final ContactPoint? valueContactPoint;
   @override
-  final Count valueCount;
+  final Count? valueCount;
   @override
-  final Distance valueDistance;
+  final Distance? valueDistance;
   @override
-  final FhirDuration valueDuration;
+  final FhirDuration? valueDuration;
   @override
-  final HumanName valueHumanName;
+  final HumanName? valueHumanName;
   @override
-  final Identifier valueIdentifier;
+  final Identifier? valueIdentifier;
   @override
-  final Money valueMoney;
+  final Money? valueMoney;
   @override
-  final Period valuePeriod;
+  final Period? valuePeriod;
   @override
-  final Quantity valueQuantity;
+  final Quantity? valueQuantity;
   @override
-  final Range valueRange;
+  final Range? valueRange;
   @override
-  final Ratio valueRatio;
+  final Ratio? valueRatio;
   @override
-  final Reference valueReference;
+  final Reference? valueReference;
   @override
-  final SampledData valueSampledData;
+  final SampledData? valueSampledData;
   @override
-  final Signature valueSignature;
+  final Signature? valueSignature;
   @override
-  final Timing valueTiming;
+  final Timing? valueTiming;
   @override
-  final ContactDetail valueContactDetail;
+  final ContactDetail? valueContactDetail;
   @override
-  final Contributor valueContributor;
+  final Contributor? valueContributor;
   @override
-  final DataRequirement valueDataRequirement;
+  final DataRequirement? valueDataRequirement;
   @override
-  final Expression valueExpression;
+  final Expression? valueExpression;
   @override
-  final ParameterDefinition valueParameterDefinition;
+  final ParameterDefinition? valueParameterDefinition;
   @override
-  final RelatedArtifact valueRelatedArtifact;
+  final RelatedArtifact? valueRelatedArtifact;
   @override
-  final TriggerDefinition valueTriggerDefinition;
+  final TriggerDefinition? valueTriggerDefinition;
   @override
-  final UsageContext valueUsageContext;
+  final UsageContext? valueUsageContext;
   @override
-  final Dosage valueDosage;
+  final Dosage? valueDosage;
   @override
-  final Meta valueMeta;
+  final Meta? valueMeta;
 
   @override
   String toString() {
@@ -10593,249 +10731,249 @@ class _$_TaskOutput extends _TaskOutput {
 abstract class _TaskOutput extends TaskOutput {
   _TaskOutput._() : super._();
   factory _TaskOutput(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Canonical valueCanonical,
-      @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      Id valueId,
-      @JsonKey(name: '_valueId') Element valueIdElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Markdown valueMarkdown,
-      @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-      Oid valueOid,
-      @JsonKey(name: '_valueOid') Element valueOidElement,
-      PositiveInt valuePositiveInt,
-      @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      Time valueTime,
-      @JsonKey(name: '_valueTime') Element valueTimeElement,
-      UnsignedInt valueUnsignedInt,
-      @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      FhirUrl valueUrl,
-      @JsonKey(name: '_valueUrl') Element valueUrlElement,
-      Uuid valueUuid,
-      @JsonKey(name: '_valueUuid') Element valueUuidElement,
-      Address valueAddress,
-      Age valueAge,
-      Annotation valueAnnotation,
-      Attachment valueAttachment,
-      CodeableConcept valueCodeableConcept,
-      Coding valueCoding,
-      ContactPoint valueContactPoint,
-      Count valueCount,
-      Distance valueDistance,
-      FhirDuration valueDuration,
-      HumanName valueHumanName,
-      Identifier valueIdentifier,
-      Money valueMoney,
-      Period valuePeriod,
-      Quantity valueQuantity,
-      Range valueRange,
-      Ratio valueRatio,
-      Reference valueReference,
-      SampledData valueSampledData,
-      Signature valueSignature,
-      Timing valueTiming,
-      ContactDetail valueContactDetail,
-      Contributor valueContributor,
-      DataRequirement valueDataRequirement,
-      Expression valueExpression,
-      ParameterDefinition valueParameterDefinition,
-      RelatedArtifact valueRelatedArtifact,
-      TriggerDefinition valueTriggerDefinition,
-      UsageContext valueUsageContext,
-      Dosage valueDosage,
-      Meta valueMeta}) = _$_TaskOutput;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      FhirDuration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta}) = _$_TaskOutput;
 
   factory _TaskOutput.fromJson(Map<String, dynamic> json) =
       _$_TaskOutput.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept get type;
   @override
-  Base64Binary get valueBase64Binary;
+  Base64Binary? get valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  Element get valueBase64BinaryElement;
+  Element? get valueBase64BinaryElement;
   @override
-  Boolean get valueBoolean;
+  Boolean? get valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element get valueBooleanElement;
+  Element? get valueBooleanElement;
   @override
-  Canonical get valueCanonical;
+  Canonical? get valueCanonical;
   @override
   @JsonKey(name: '_valueCanonical')
-  Element get valueCanonicalElement;
+  Element? get valueCanonicalElement;
   @override
-  Code get valueCode;
+  Code? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  Element get valueCodeElement;
+  Element? get valueCodeElement;
   @override
-  Date get valueDate;
+  Date? get valueDate;
   @override
   @JsonKey(name: '_valueDate')
-  Element get valueDateElement;
+  Element? get valueDateElement;
   @override
-  FhirDateTime get valueDateTime;
+  FhirDateTime? get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element get valueDateTimeElement;
+  Element? get valueDateTimeElement;
   @override
-  Decimal get valueDecimal;
+  Decimal? get valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element get valueDecimalElement;
+  Element? get valueDecimalElement;
   @override
-  Id get valueId;
+  Id? get valueId;
   @override
   @JsonKey(name: '_valueId')
-  Element get valueIdElement;
+  Element? get valueIdElement;
   @override
-  Instant get valueInstant;
+  Instant? get valueInstant;
   @override
   @JsonKey(name: '_valueInstant')
-  Element get valueInstantElement;
+  Element? get valueInstantElement;
   @override
-  Integer get valueInteger;
+  Integer? get valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
-  Element get valueIntegerElement;
+  Element? get valueIntegerElement;
   @override
-  Markdown get valueMarkdown;
+  Markdown? get valueMarkdown;
   @override
   @JsonKey(name: '_valueMarkdown')
-  Element get valueMarkdownElement;
+  Element? get valueMarkdownElement;
   @override
-  Oid get valueOid;
+  Oid? get valueOid;
   @override
   @JsonKey(name: '_valueOid')
-  Element get valueOidElement;
+  Element? get valueOidElement;
   @override
-  PositiveInt get valuePositiveInt;
+  PositiveInt? get valuePositiveInt;
   @override
   @JsonKey(name: '_valuePositiveInt')
-  Element get valuePositiveIntElement;
+  Element? get valuePositiveIntElement;
   @override
-  String get valueString;
+  String? get valueString;
   @override
   @JsonKey(name: '_valueString')
-  Element get valueStringElement;
+  Element? get valueStringElement;
   @override
-  Time get valueTime;
+  Time? get valueTime;
   @override
   @JsonKey(name: '_valueTime')
-  Element get valueTimeElement;
+  Element? get valueTimeElement;
   @override
-  UnsignedInt get valueUnsignedInt;
+  UnsignedInt? get valueUnsignedInt;
   @override
   @JsonKey(name: '_valueUnsignedInt')
-  Element get valueUnsignedIntElement;
+  Element? get valueUnsignedIntElement;
   @override
-  FhirUri get valueUri;
+  FhirUri? get valueUri;
   @override
   @JsonKey(name: '_valueUri')
-  Element get valueUriElement;
+  Element? get valueUriElement;
   @override
-  FhirUrl get valueUrl;
+  FhirUrl? get valueUrl;
   @override
   @JsonKey(name: '_valueUrl')
-  Element get valueUrlElement;
+  Element? get valueUrlElement;
   @override
-  Uuid get valueUuid;
+  Uuid? get valueUuid;
   @override
   @JsonKey(name: '_valueUuid')
-  Element get valueUuidElement;
+  Element? get valueUuidElement;
   @override
-  Address get valueAddress;
+  Address? get valueAddress;
   @override
-  Age get valueAge;
+  Age? get valueAge;
   @override
-  Annotation get valueAnnotation;
+  Annotation? get valueAnnotation;
   @override
-  Attachment get valueAttachment;
+  Attachment? get valueAttachment;
   @override
-  CodeableConcept get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept;
   @override
-  Coding get valueCoding;
+  Coding? get valueCoding;
   @override
-  ContactPoint get valueContactPoint;
+  ContactPoint? get valueContactPoint;
   @override
-  Count get valueCount;
+  Count? get valueCount;
   @override
-  Distance get valueDistance;
+  Distance? get valueDistance;
   @override
-  FhirDuration get valueDuration;
+  FhirDuration? get valueDuration;
   @override
-  HumanName get valueHumanName;
+  HumanName? get valueHumanName;
   @override
-  Identifier get valueIdentifier;
+  Identifier? get valueIdentifier;
   @override
-  Money get valueMoney;
+  Money? get valueMoney;
   @override
-  Period get valuePeriod;
+  Period? get valuePeriod;
   @override
-  Quantity get valueQuantity;
+  Quantity? get valueQuantity;
   @override
-  Range get valueRange;
+  Range? get valueRange;
   @override
-  Ratio get valueRatio;
+  Ratio? get valueRatio;
   @override
-  Reference get valueReference;
+  Reference? get valueReference;
   @override
-  SampledData get valueSampledData;
+  SampledData? get valueSampledData;
   @override
-  Signature get valueSignature;
+  Signature? get valueSignature;
   @override
-  Timing get valueTiming;
+  Timing? get valueTiming;
   @override
-  ContactDetail get valueContactDetail;
+  ContactDetail? get valueContactDetail;
   @override
-  Contributor get valueContributor;
+  Contributor? get valueContributor;
   @override
-  DataRequirement get valueDataRequirement;
+  DataRequirement? get valueDataRequirement;
   @override
-  Expression get valueExpression;
+  Expression? get valueExpression;
   @override
-  ParameterDefinition get valueParameterDefinition;
+  ParameterDefinition? get valueParameterDefinition;
   @override
-  RelatedArtifact get valueRelatedArtifact;
+  RelatedArtifact? get valueRelatedArtifact;
   @override
-  TriggerDefinition get valueTriggerDefinition;
+  TriggerDefinition? get valueTriggerDefinition;
   @override
-  UsageContext get valueUsageContext;
+  UsageContext? get valueUsageContext;
   @override
-  Dosage get valueDosage;
+  Dosage? get valueDosage;
   @override
-  Meta get valueMeta;
+  Meta? get valueMeta;
   @override
   @JsonKey(ignore: true)
   _$TaskOutputCopyWith<_TaskOutput> get copyWith;
@@ -10849,47 +10987,46 @@ VerificationResult _$VerificationResultFromJson(Map<String, dynamic> json) {
 class _$VerificationResultTearOff {
   const _$VerificationResultTearOff();
 
-// ignore: unused_element
   _VerificationResult call(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
           R4ResourceType resourceType = R4ResourceType.VerificationResult,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Reference> target,
-      List<String> targetLocation,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Reference>? target,
+      List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element> targetLocationElement,
-      CodeableConcept need,
-      Code status,
+          List<Element?>? targetLocationElement,
+      CodeableConcept? need,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      FhirDateTime statusDate,
+          Element? statusElement,
+      FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate')
-          Element statusDateElement,
-      CodeableConcept validationType,
-      List<CodeableConcept> validationProcess,
-      Timing frequency,
-      FhirDateTime lastPerformed,
+          Element? statusDateElement,
+      CodeableConcept? validationType,
+      List<CodeableConcept>? validationProcess,
+      Timing? frequency,
+      FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
-          Element lastPerformedElement,
-      Date nextScheduled,
+          Element? lastPerformedElement,
+      Date? nextScheduled,
       @JsonKey(name: '_nextScheduled')
-          Element nextScheduledElement,
-      CodeableConcept failureAction,
-      List<VerificationResultPrimarySource> primarySource,
-      VerificationResultAttestation attestation,
-      List<VerificationResultValidator> validator}) {
+          Element? nextScheduledElement,
+      CodeableConcept? failureAction,
+      List<VerificationResultPrimarySource>? primarySource,
+      VerificationResultAttestation? attestation,
+      List<VerificationResultValidator>? validator}) {
     return _VerificationResult(
       resourceType: resourceType,
       id: id,
@@ -10924,57 +11061,55 @@ class _$VerificationResultTearOff {
     );
   }
 
-// ignore: unused_element
   VerificationResult fromJson(Map<String, Object> json) {
     return VerificationResult.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $VerificationResult = _$VerificationResultTearOff();
 
 /// @nodoc
 mixin _$VerificationResult {
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
   R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Reference> get target;
-  List<String> get targetLocation;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Reference>? get target;
+  List<String>? get targetLocation;
   @JsonKey(name: '_targetLocation')
-  List<Element> get targetLocationElement;
-  CodeableConcept get need;
-  Code get status;
+  List<Element?>? get targetLocationElement;
+  CodeableConcept? get need;
+  Code? get status;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  FhirDateTime get statusDate;
+  Element? get statusElement;
+  FhirDateTime? get statusDate;
   @JsonKey(name: '_statusDate')
-  Element get statusDateElement;
-  CodeableConcept get validationType;
-  List<CodeableConcept> get validationProcess;
-  Timing get frequency;
-  FhirDateTime get lastPerformed;
+  Element? get statusDateElement;
+  CodeableConcept? get validationType;
+  List<CodeableConcept>? get validationProcess;
+  Timing? get frequency;
+  FhirDateTime? get lastPerformed;
   @JsonKey(name: '_lastPerformed')
-  Element get lastPerformedElement;
-  Date get nextScheduled;
+  Element? get lastPerformedElement;
+  Date? get nextScheduled;
   @JsonKey(name: '_nextScheduled')
-  Element get nextScheduledElement;
-  CodeableConcept get failureAction;
-  List<VerificationResultPrimarySource> get primarySource;
-  VerificationResultAttestation get attestation;
-  List<VerificationResultValidator> get validator;
+  Element? get nextScheduledElement;
+  CodeableConcept? get failureAction;
+  List<VerificationResultPrimarySource>? get primarySource;
+  VerificationResultAttestation? get attestation;
+  List<VerificationResultValidator>? get validator;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -10989,57 +11124,57 @@ abstract class $VerificationResultCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Reference> target,
-      List<String> targetLocation,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Reference>? target,
+      List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element> targetLocationElement,
-      CodeableConcept need,
-      Code status,
+          List<Element?>? targetLocationElement,
+      CodeableConcept? need,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      FhirDateTime statusDate,
+          Element? statusElement,
+      FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate')
-          Element statusDateElement,
-      CodeableConcept validationType,
-      List<CodeableConcept> validationProcess,
-      Timing frequency,
-      FhirDateTime lastPerformed,
+          Element? statusDateElement,
+      CodeableConcept? validationType,
+      List<CodeableConcept>? validationProcess,
+      Timing? frequency,
+      FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
-          Element lastPerformedElement,
-      Date nextScheduled,
+          Element? lastPerformedElement,
+      Date? nextScheduled,
       @JsonKey(name: '_nextScheduled')
-          Element nextScheduledElement,
-      CodeableConcept failureAction,
-      List<VerificationResultPrimarySource> primarySource,
-      VerificationResultAttestation attestation,
-      List<VerificationResultValidator> validator});
+          Element? nextScheduledElement,
+      CodeableConcept? failureAction,
+      List<VerificationResultPrimarySource>? primarySource,
+      VerificationResultAttestation? attestation,
+      List<VerificationResultValidator>? validator});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $CodeableConceptCopyWith<$Res> get need;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get statusDateElement;
-  $CodeableConceptCopyWith<$Res> get validationType;
-  $TimingCopyWith<$Res> get frequency;
-  $ElementCopyWith<$Res> get lastPerformedElement;
-  $ElementCopyWith<$Res> get nextScheduledElement;
-  $CodeableConceptCopyWith<$Res> get failureAction;
-  $VerificationResultAttestationCopyWith<$Res> get attestation;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $CodeableConceptCopyWith<$Res>? get need;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get statusDateElement;
+  $CodeableConceptCopyWith<$Res>? get validationType;
+  $TimingCopyWith<$Res>? get frequency;
+  $ElementCopyWith<$Res>? get lastPerformedElement;
+  $ElementCopyWith<$Res>? get nextScheduledElement;
+  $CodeableConceptCopyWith<$Res>? get failureAction;
+  $VerificationResultAttestationCopyWith<$Res>? get attestation;
 }
 
 /// @nodoc
@@ -11053,240 +11188,254 @@ class _$VerificationResultCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object target = freezed,
-    Object targetLocation = freezed,
-    Object targetLocationElement = freezed,
-    Object need = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object statusDate = freezed,
-    Object statusDateElement = freezed,
-    Object validationType = freezed,
-    Object validationProcess = freezed,
-    Object frequency = freezed,
-    Object lastPerformed = freezed,
-    Object lastPerformedElement = freezed,
-    Object nextScheduled = freezed,
-    Object nextScheduledElement = freezed,
-    Object failureAction = freezed,
-    Object primarySource = freezed,
-    Object attestation = freezed,
-    Object validator = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? target = freezed,
+    Object? targetLocation = freezed,
+    Object? targetLocationElement = freezed,
+    Object? need = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? statusDate = freezed,
+    Object? statusDateElement = freezed,
+    Object? validationType = freezed,
+    Object? validationProcess = freezed,
+    Object? frequency = freezed,
+    Object? lastPerformed = freezed,
+    Object? lastPerformedElement = freezed,
+    Object? nextScheduled = freezed,
+    Object? nextScheduledElement = freezed,
+    Object? failureAction = freezed,
+    Object? primarySource = freezed,
+    Object? attestation = freezed,
+    Object? validator = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      target: target == freezed ? _value.target : target as List<Reference>,
+          : modifierExtension as List<FhirExtension>?,
+      target: target == freezed ? _value.target : target as List<Reference>?,
       targetLocation: targetLocation == freezed
           ? _value.targetLocation
-          : targetLocation as List<String>,
+          : targetLocation as List<String>?,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as List<Element>,
-      need: need == freezed ? _value.need : need as CodeableConcept,
-      status: status == freezed ? _value.status : status as Code,
+          : targetLocationElement as List<Element?>?,
+      need: need == freezed ? _value.need : need as CodeableConcept?,
+      status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement as Element?,
       statusDate: statusDate == freezed
           ? _value.statusDate
-          : statusDate as FhirDateTime,
+          : statusDate as FhirDateTime?,
       statusDateElement: statusDateElement == freezed
           ? _value.statusDateElement
-          : statusDateElement as Element,
+          : statusDateElement as Element?,
       validationType: validationType == freezed
           ? _value.validationType
-          : validationType as CodeableConcept,
+          : validationType as CodeableConcept?,
       validationProcess: validationProcess == freezed
           ? _value.validationProcess
-          : validationProcess as List<CodeableConcept>,
-      frequency: frequency == freezed ? _value.frequency : frequency as Timing,
+          : validationProcess as List<CodeableConcept>?,
+      frequency: frequency == freezed ? _value.frequency : frequency as Timing?,
       lastPerformed: lastPerformed == freezed
           ? _value.lastPerformed
-          : lastPerformed as FhirDateTime,
+          : lastPerformed as FhirDateTime?,
       lastPerformedElement: lastPerformedElement == freezed
           ? _value.lastPerformedElement
-          : lastPerformedElement as Element,
+          : lastPerformedElement as Element?,
       nextScheduled: nextScheduled == freezed
           ? _value.nextScheduled
-          : nextScheduled as Date,
+          : nextScheduled as Date?,
       nextScheduledElement: nextScheduledElement == freezed
           ? _value.nextScheduledElement
-          : nextScheduledElement as Element,
+          : nextScheduledElement as Element?,
       failureAction: failureAction == freezed
           ? _value.failureAction
-          : failureAction as CodeableConcept,
+          : failureAction as CodeableConcept?,
       primarySource: primarySource == freezed
           ? _value.primarySource
-          : primarySource as List<VerificationResultPrimarySource>,
+          : primarySource as List<VerificationResultPrimarySource>?,
       attestation: attestation == freezed
           ? _value.attestation
-          : attestation as VerificationResultAttestation,
+          : attestation as VerificationResultAttestation?,
       validator: validator == freezed
           ? _value.validator
-          : validator as List<VerificationResultValidator>,
+          : validator as List<VerificationResultValidator>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get need {
+  $CodeableConceptCopyWith<$Res>? get need {
     if (_value.need == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.need, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.need!, (value) {
       return _then(_value.copyWith(need: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusDateElement {
+  $ElementCopyWith<$Res>? get statusDateElement {
     if (_value.statusDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusDateElement!, (value) {
       return _then(_value.copyWith(statusDateElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get validationType {
+  $CodeableConceptCopyWith<$Res>? get validationType {
     if (_value.validationType == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.validationType, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.validationType!, (value) {
       return _then(_value.copyWith(validationType: value));
     });
   }
 
   @override
-  $TimingCopyWith<$Res> get frequency {
+  $TimingCopyWith<$Res>? get frequency {
     if (_value.frequency == null) {
       return null;
     }
-    return $TimingCopyWith<$Res>(_value.frequency, (value) {
+
+    return $TimingCopyWith<$Res>(_value.frequency!, (value) {
       return _then(_value.copyWith(frequency: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get lastPerformedElement {
+  $ElementCopyWith<$Res>? get lastPerformedElement {
     if (_value.lastPerformedElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.lastPerformedElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.lastPerformedElement!, (value) {
       return _then(_value.copyWith(lastPerformedElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get nextScheduledElement {
+  $ElementCopyWith<$Res>? get nextScheduledElement {
     if (_value.nextScheduledElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nextScheduledElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.nextScheduledElement!, (value) {
       return _then(_value.copyWith(nextScheduledElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get failureAction {
+  $CodeableConceptCopyWith<$Res>? get failureAction {
     if (_value.failureAction == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.failureAction, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.failureAction!, (value) {
       return _then(_value.copyWith(failureAction: value));
     });
   }
 
   @override
-  $VerificationResultAttestationCopyWith<$Res> get attestation {
+  $VerificationResultAttestationCopyWith<$Res>? get attestation {
     if (_value.attestation == null) {
       return null;
     }
-    return $VerificationResultAttestationCopyWith<$Res>(_value.attestation,
+
+    return $VerificationResultAttestationCopyWith<$Res>(_value.attestation!,
         (value) {
       return _then(_value.copyWith(attestation: value));
     });
@@ -11303,70 +11452,70 @@ abstract class _$VerificationResultCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Reference> target,
-      List<String> targetLocation,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Reference>? target,
+      List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element> targetLocationElement,
-      CodeableConcept need,
-      Code status,
+          List<Element?>? targetLocationElement,
+      CodeableConcept? need,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      FhirDateTime statusDate,
+          Element? statusElement,
+      FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate')
-          Element statusDateElement,
-      CodeableConcept validationType,
-      List<CodeableConcept> validationProcess,
-      Timing frequency,
-      FhirDateTime lastPerformed,
+          Element? statusDateElement,
+      CodeableConcept? validationType,
+      List<CodeableConcept>? validationProcess,
+      Timing? frequency,
+      FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
-          Element lastPerformedElement,
-      Date nextScheduled,
+          Element? lastPerformedElement,
+      Date? nextScheduled,
       @JsonKey(name: '_nextScheduled')
-          Element nextScheduledElement,
-      CodeableConcept failureAction,
-      List<VerificationResultPrimarySource> primarySource,
-      VerificationResultAttestation attestation,
-      List<VerificationResultValidator> validator});
+          Element? nextScheduledElement,
+      CodeableConcept? failureAction,
+      List<VerificationResultPrimarySource>? primarySource,
+      VerificationResultAttestation? attestation,
+      List<VerificationResultValidator>? validator});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $CodeableConceptCopyWith<$Res> get need;
+  $CodeableConceptCopyWith<$Res>? get need;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ElementCopyWith<$Res> get statusDateElement;
+  $ElementCopyWith<$Res>? get statusDateElement;
   @override
-  $CodeableConceptCopyWith<$Res> get validationType;
+  $CodeableConceptCopyWith<$Res>? get validationType;
   @override
-  $TimingCopyWith<$Res> get frequency;
+  $TimingCopyWith<$Res>? get frequency;
   @override
-  $ElementCopyWith<$Res> get lastPerformedElement;
+  $ElementCopyWith<$Res>? get lastPerformedElement;
   @override
-  $ElementCopyWith<$Res> get nextScheduledElement;
+  $ElementCopyWith<$Res>? get nextScheduledElement;
   @override
-  $CodeableConceptCopyWith<$Res> get failureAction;
+  $CodeableConceptCopyWith<$Res>? get failureAction;
   @override
-  $VerificationResultAttestationCopyWith<$Res> get attestation;
+  $VerificationResultAttestationCopyWith<$Res>? get attestation;
 }
 
 /// @nodoc
@@ -11382,111 +11531,112 @@ class __$VerificationResultCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object target = freezed,
-    Object targetLocation = freezed,
-    Object targetLocationElement = freezed,
-    Object need = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object statusDate = freezed,
-    Object statusDateElement = freezed,
-    Object validationType = freezed,
-    Object validationProcess = freezed,
-    Object frequency = freezed,
-    Object lastPerformed = freezed,
-    Object lastPerformedElement = freezed,
-    Object nextScheduled = freezed,
-    Object nextScheduledElement = freezed,
-    Object failureAction = freezed,
-    Object primarySource = freezed,
-    Object attestation = freezed,
-    Object validator = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? target = freezed,
+    Object? targetLocation = freezed,
+    Object? targetLocationElement = freezed,
+    Object? need = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? statusDate = freezed,
+    Object? statusDateElement = freezed,
+    Object? validationType = freezed,
+    Object? validationProcess = freezed,
+    Object? frequency = freezed,
+    Object? lastPerformed = freezed,
+    Object? lastPerformedElement = freezed,
+    Object? nextScheduled = freezed,
+    Object? nextScheduledElement = freezed,
+    Object? failureAction = freezed,
+    Object? primarySource = freezed,
+    Object? attestation = freezed,
+    Object? validator = freezed,
   }) {
     return _then(_VerificationResult(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      target: target == freezed ? _value.target : target as List<Reference>,
+          : modifierExtension as List<FhirExtension>?,
+      target: target == freezed ? _value.target : target as List<Reference>?,
       targetLocation: targetLocation == freezed
           ? _value.targetLocation
-          : targetLocation as List<String>,
+          : targetLocation as List<String>?,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as List<Element>,
-      need: need == freezed ? _value.need : need as CodeableConcept,
-      status: status == freezed ? _value.status : status as Code,
+          : targetLocationElement as List<Element?>?,
+      need: need == freezed ? _value.need : need as CodeableConcept?,
+      status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement as Element?,
       statusDate: statusDate == freezed
           ? _value.statusDate
-          : statusDate as FhirDateTime,
+          : statusDate as FhirDateTime?,
       statusDateElement: statusDateElement == freezed
           ? _value.statusDateElement
-          : statusDateElement as Element,
+          : statusDateElement as Element?,
       validationType: validationType == freezed
           ? _value.validationType
-          : validationType as CodeableConcept,
+          : validationType as CodeableConcept?,
       validationProcess: validationProcess == freezed
           ? _value.validationProcess
-          : validationProcess as List<CodeableConcept>,
-      frequency: frequency == freezed ? _value.frequency : frequency as Timing,
+          : validationProcess as List<CodeableConcept>?,
+      frequency: frequency == freezed ? _value.frequency : frequency as Timing?,
       lastPerformed: lastPerformed == freezed
           ? _value.lastPerformed
-          : lastPerformed as FhirDateTime,
+          : lastPerformed as FhirDateTime?,
       lastPerformedElement: lastPerformedElement == freezed
           ? _value.lastPerformedElement
-          : lastPerformedElement as Element,
+          : lastPerformedElement as Element?,
       nextScheduled: nextScheduled == freezed
           ? _value.nextScheduled
-          : nextScheduled as Date,
+          : nextScheduled as Date?,
       nextScheduledElement: nextScheduledElement == freezed
           ? _value.nextScheduledElement
-          : nextScheduledElement as Element,
+          : nextScheduledElement as Element?,
       failureAction: failureAction == freezed
           ? _value.failureAction
-          : failureAction as CodeableConcept,
+          : failureAction as CodeableConcept?,
       primarySource: primarySource == freezed
           ? _value.primarySource
-          : primarySource as List<VerificationResultPrimarySource>,
+          : primarySource as List<VerificationResultPrimarySource>?,
       attestation: attestation == freezed
           ? _value.attestation
-          : attestation as VerificationResultAttestation,
+          : attestation as VerificationResultAttestation?,
       validator: validator == freezed
           ? _value.validator
-          : validator as List<VerificationResultValidator>,
+          : validator as List<VerificationResultValidator>?,
     ));
   }
 }
@@ -11535,8 +11685,7 @@ class _$_VerificationResult extends _VerificationResult {
       this.primarySource,
       this.attestation,
       this.validator})
-      : assert(resourceType != null),
-        super._();
+      : super._();
 
   factory _$_VerificationResult.fromJson(Map<String, dynamic> json) =>
       _$_$_VerificationResultFromJson(json);
@@ -11545,71 +11694,71 @@ class _$_VerificationResult extends _VerificationResult {
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Reference> target;
+  final List<Reference>? target;
   @override
-  final List<String> targetLocation;
+  final List<String>? targetLocation;
   @override
   @JsonKey(name: '_targetLocation')
-  final List<Element> targetLocationElement;
+  final List<Element?>? targetLocationElement;
   @override
-  final CodeableConcept need;
+  final CodeableConcept? need;
   @override
-  final Code status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final FhirDateTime statusDate;
+  final FhirDateTime? statusDate;
   @override
   @JsonKey(name: '_statusDate')
-  final Element statusDateElement;
+  final Element? statusDateElement;
   @override
-  final CodeableConcept validationType;
+  final CodeableConcept? validationType;
   @override
-  final List<CodeableConcept> validationProcess;
+  final List<CodeableConcept>? validationProcess;
   @override
-  final Timing frequency;
+  final Timing? frequency;
   @override
-  final FhirDateTime lastPerformed;
+  final FhirDateTime? lastPerformed;
   @override
   @JsonKey(name: '_lastPerformed')
-  final Element lastPerformedElement;
+  final Element? lastPerformedElement;
   @override
-  final Date nextScheduled;
+  final Date? nextScheduled;
   @override
   @JsonKey(name: '_nextScheduled')
-  final Element nextScheduledElement;
+  final Element? nextScheduledElement;
   @override
-  final CodeableConcept failureAction;
+  final CodeableConcept? failureAction;
   @override
-  final List<VerificationResultPrimarySource> primarySource;
+  final List<VerificationResultPrimarySource>? primarySource;
   @override
-  final VerificationResultAttestation attestation;
+  final VerificationResultAttestation? attestation;
   @override
-  final List<VerificationResultValidator> validator;
+  final List<VerificationResultValidator>? validator;
 
   @override
   String toString() {
@@ -11744,43 +11893,43 @@ abstract class _VerificationResult extends VerificationResult {
   factory _VerificationResult(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Reference> target,
-      List<String> targetLocation,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Reference>? target,
+      List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element> targetLocationElement,
-      CodeableConcept need,
-      Code status,
+          List<Element?>? targetLocationElement,
+      CodeableConcept? need,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      FhirDateTime statusDate,
+          Element? statusElement,
+      FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate')
-          Element statusDateElement,
-      CodeableConcept validationType,
-      List<CodeableConcept> validationProcess,
-      Timing frequency,
-      FhirDateTime lastPerformed,
+          Element? statusDateElement,
+      CodeableConcept? validationType,
+      List<CodeableConcept>? validationProcess,
+      Timing? frequency,
+      FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
-          Element lastPerformedElement,
-      Date nextScheduled,
+          Element? lastPerformedElement,
+      Date? nextScheduled,
       @JsonKey(name: '_nextScheduled')
-          Element nextScheduledElement,
-      CodeableConcept failureAction,
-      List<VerificationResultPrimarySource> primarySource,
-      VerificationResultAttestation attestation,
-      List<VerificationResultValidator> validator}) = _$_VerificationResult;
+          Element? nextScheduledElement,
+      CodeableConcept? failureAction,
+      List<VerificationResultPrimarySource>? primarySource,
+      VerificationResultAttestation? attestation,
+      List<VerificationResultValidator>? validator}) = _$_VerificationResult;
 
   factory _VerificationResult.fromJson(Map<String, dynamic> json) =
       _$_VerificationResult.fromJson;
@@ -11789,71 +11938,71 @@ abstract class _VerificationResult extends VerificationResult {
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
   R4ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Reference> get target;
+  List<Reference>? get target;
   @override
-  List<String> get targetLocation;
+  List<String>? get targetLocation;
   @override
   @JsonKey(name: '_targetLocation')
-  List<Element> get targetLocationElement;
+  List<Element?>? get targetLocationElement;
   @override
-  CodeableConcept get need;
+  CodeableConcept? get need;
   @override
-  Code get status;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement;
   @override
-  FhirDateTime get statusDate;
+  FhirDateTime? get statusDate;
   @override
   @JsonKey(name: '_statusDate')
-  Element get statusDateElement;
+  Element? get statusDateElement;
   @override
-  CodeableConcept get validationType;
+  CodeableConcept? get validationType;
   @override
-  List<CodeableConcept> get validationProcess;
+  List<CodeableConcept>? get validationProcess;
   @override
-  Timing get frequency;
+  Timing? get frequency;
   @override
-  FhirDateTime get lastPerformed;
+  FhirDateTime? get lastPerformed;
   @override
   @JsonKey(name: '_lastPerformed')
-  Element get lastPerformedElement;
+  Element? get lastPerformedElement;
   @override
-  Date get nextScheduled;
+  Date? get nextScheduled;
   @override
   @JsonKey(name: '_nextScheduled')
-  Element get nextScheduledElement;
+  Element? get nextScheduledElement;
   @override
-  CodeableConcept get failureAction;
+  CodeableConcept? get failureAction;
   @override
-  List<VerificationResultPrimarySource> get primarySource;
+  List<VerificationResultPrimarySource>? get primarySource;
   @override
-  VerificationResultAttestation get attestation;
+  VerificationResultAttestation? get attestation;
   @override
-  List<VerificationResultValidator> get validator;
+  List<VerificationResultValidator>? get validator;
   @override
   @JsonKey(ignore: true)
   _$VerificationResultCopyWith<_VerificationResult> get copyWith;
@@ -11868,19 +12017,18 @@ VerificationResultPrimarySource _$VerificationResultPrimarySourceFromJson(
 class _$VerificationResultPrimarySourceTearOff {
   const _$VerificationResultPrimarySourceTearOff();
 
-// ignore: unused_element
   _VerificationResultPrimarySource call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Reference who,
-      List<CodeableConcept> type,
-      List<CodeableConcept> communicationMethod,
-      CodeableConcept validationStatus,
-      FhirDateTime validationDate,
-      @JsonKey(name: '_validationDate') Element validationDateElement,
-      CodeableConcept canPushUpdates,
-      List<CodeableConcept> pushTypeAvailable}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? who,
+      List<CodeableConcept>? type,
+      List<CodeableConcept>? communicationMethod,
+      CodeableConcept? validationStatus,
+      FhirDateTime? validationDate,
+      @JsonKey(name: '_validationDate') Element? validationDateElement,
+      CodeableConcept? canPushUpdates,
+      List<CodeableConcept>? pushTypeAvailable}) {
     return _VerificationResultPrimarySource(
       id: id,
       extension_: extension_,
@@ -11896,32 +12044,30 @@ class _$VerificationResultPrimarySourceTearOff {
     );
   }
 
-// ignore: unused_element
   VerificationResultPrimarySource fromJson(Map<String, Object> json) {
     return VerificationResultPrimarySource.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $VerificationResultPrimarySource =
     _$VerificationResultPrimarySourceTearOff();
 
 /// @nodoc
 mixin _$VerificationResultPrimarySource {
-  String get id;
+  String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Reference get who;
-  List<CodeableConcept> get type;
-  List<CodeableConcept> get communicationMethod;
-  CodeableConcept get validationStatus;
-  FhirDateTime get validationDate;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  Reference? get who;
+  List<CodeableConcept>? get type;
+  List<CodeableConcept>? get communicationMethod;
+  CodeableConcept? get validationStatus;
+  FhirDateTime? get validationDate;
   @JsonKey(name: '_validationDate')
-  Element get validationDateElement;
-  CodeableConcept get canPushUpdates;
-  List<CodeableConcept> get pushTypeAvailable;
+  Element? get validationDateElement;
+  CodeableConcept? get canPushUpdates;
+  List<CodeableConcept>? get pushTypeAvailable;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -11936,22 +12082,22 @@ abstract class $VerificationResultPrimarySourceCopyWith<$Res> {
           $Res Function(VerificationResultPrimarySource) then) =
       _$VerificationResultPrimarySourceCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Reference who,
-      List<CodeableConcept> type,
-      List<CodeableConcept> communicationMethod,
-      CodeableConcept validationStatus,
-      FhirDateTime validationDate,
-      @JsonKey(name: '_validationDate') Element validationDateElement,
-      CodeableConcept canPushUpdates,
-      List<CodeableConcept> pushTypeAvailable});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? who,
+      List<CodeableConcept>? type,
+      List<CodeableConcept>? communicationMethod,
+      CodeableConcept? validationStatus,
+      FhirDateTime? validationDate,
+      @JsonKey(name: '_validationDate') Element? validationDateElement,
+      CodeableConcept? canPushUpdates,
+      List<CodeableConcept>? pushTypeAvailable});
 
-  $ReferenceCopyWith<$Res> get who;
-  $CodeableConceptCopyWith<$Res> get validationStatus;
-  $ElementCopyWith<$Res> get validationDateElement;
-  $CodeableConceptCopyWith<$Res> get canPushUpdates;
+  $ReferenceCopyWith<$Res>? get who;
+  $CodeableConceptCopyWith<$Res>? get validationStatus;
+  $ElementCopyWith<$Res>? get validationDateElement;
+  $CodeableConceptCopyWith<$Res>? get canPushUpdates;
 }
 
 /// @nodoc
@@ -11965,85 +12111,89 @@ class _$VerificationResultPrimarySourceCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object who = freezed,
-    Object type = freezed,
-    Object communicationMethod = freezed,
-    Object validationStatus = freezed,
-    Object validationDate = freezed,
-    Object validationDateElement = freezed,
-    Object canPushUpdates = freezed,
-    Object pushTypeAvailable = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? who = freezed,
+    Object? type = freezed,
+    Object? communicationMethod = freezed,
+    Object? validationStatus = freezed,
+    Object? validationDate = freezed,
+    Object? validationDateElement = freezed,
+    Object? canPushUpdates = freezed,
+    Object? pushTypeAvailable = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      who: who == freezed ? _value.who : who as Reference,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+          : modifierExtension as List<FhirExtension>?,
+      who: who == freezed ? _value.who : who as Reference?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       communicationMethod: communicationMethod == freezed
           ? _value.communicationMethod
-          : communicationMethod as List<CodeableConcept>,
+          : communicationMethod as List<CodeableConcept>?,
       validationStatus: validationStatus == freezed
           ? _value.validationStatus
-          : validationStatus as CodeableConcept,
+          : validationStatus as CodeableConcept?,
       validationDate: validationDate == freezed
           ? _value.validationDate
-          : validationDate as FhirDateTime,
+          : validationDate as FhirDateTime?,
       validationDateElement: validationDateElement == freezed
           ? _value.validationDateElement
-          : validationDateElement as Element,
+          : validationDateElement as Element?,
       canPushUpdates: canPushUpdates == freezed
           ? _value.canPushUpdates
-          : canPushUpdates as CodeableConcept,
+          : canPushUpdates as CodeableConcept?,
       pushTypeAvailable: pushTypeAvailable == freezed
           ? _value.pushTypeAvailable
-          : pushTypeAvailable as List<CodeableConcept>,
+          : pushTypeAvailable as List<CodeableConcept>?,
     ));
   }
 
   @override
-  $ReferenceCopyWith<$Res> get who {
+  $ReferenceCopyWith<$Res>? get who {
     if (_value.who == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.who, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.who!, (value) {
       return _then(_value.copyWith(who: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get validationStatus {
+  $CodeableConceptCopyWith<$Res>? get validationStatus {
     if (_value.validationStatus == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.validationStatus, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.validationStatus!, (value) {
       return _then(_value.copyWith(validationStatus: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get validationDateElement {
+  $ElementCopyWith<$Res>? get validationDateElement {
     if (_value.validationDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.validationDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.validationDateElement!, (value) {
       return _then(_value.copyWith(validationDateElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get canPushUpdates {
+  $CodeableConceptCopyWith<$Res>? get canPushUpdates {
     if (_value.canPushUpdates == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.canPushUpdates, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.canPushUpdates!, (value) {
       return _then(_value.copyWith(canPushUpdates: value));
     });
   }
@@ -12058,26 +12208,26 @@ abstract class _$VerificationResultPrimarySourceCopyWith<$Res>
       __$VerificationResultPrimarySourceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Reference who,
-      List<CodeableConcept> type,
-      List<CodeableConcept> communicationMethod,
-      CodeableConcept validationStatus,
-      FhirDateTime validationDate,
-      @JsonKey(name: '_validationDate') Element validationDateElement,
-      CodeableConcept canPushUpdates,
-      List<CodeableConcept> pushTypeAvailable});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? who,
+      List<CodeableConcept>? type,
+      List<CodeableConcept>? communicationMethod,
+      CodeableConcept? validationStatus,
+      FhirDateTime? validationDate,
+      @JsonKey(name: '_validationDate') Element? validationDateElement,
+      CodeableConcept? canPushUpdates,
+      List<CodeableConcept>? pushTypeAvailable});
 
   @override
-  $ReferenceCopyWith<$Res> get who;
+  $ReferenceCopyWith<$Res>? get who;
   @override
-  $CodeableConceptCopyWith<$Res> get validationStatus;
+  $CodeableConceptCopyWith<$Res>? get validationStatus;
   @override
-  $ElementCopyWith<$Res> get validationDateElement;
+  $ElementCopyWith<$Res>? get validationDateElement;
   @override
-  $CodeableConceptCopyWith<$Res> get canPushUpdates;
+  $CodeableConceptCopyWith<$Res>? get canPushUpdates;
 }
 
 /// @nodoc
@@ -12095,46 +12245,46 @@ class __$VerificationResultPrimarySourceCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object who = freezed,
-    Object type = freezed,
-    Object communicationMethod = freezed,
-    Object validationStatus = freezed,
-    Object validationDate = freezed,
-    Object validationDateElement = freezed,
-    Object canPushUpdates = freezed,
-    Object pushTypeAvailable = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? who = freezed,
+    Object? type = freezed,
+    Object? communicationMethod = freezed,
+    Object? validationStatus = freezed,
+    Object? validationDate = freezed,
+    Object? validationDateElement = freezed,
+    Object? canPushUpdates = freezed,
+    Object? pushTypeAvailable = freezed,
   }) {
     return _then(_VerificationResultPrimarySource(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      who: who == freezed ? _value.who : who as Reference,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+          : modifierExtension as List<FhirExtension>?,
+      who: who == freezed ? _value.who : who as Reference?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       communicationMethod: communicationMethod == freezed
           ? _value.communicationMethod
-          : communicationMethod as List<CodeableConcept>,
+          : communicationMethod as List<CodeableConcept>?,
       validationStatus: validationStatus == freezed
           ? _value.validationStatus
-          : validationStatus as CodeableConcept,
+          : validationStatus as CodeableConcept?,
       validationDate: validationDate == freezed
           ? _value.validationDate
-          : validationDate as FhirDateTime,
+          : validationDate as FhirDateTime?,
       validationDateElement: validationDateElement == freezed
           ? _value.validationDateElement
-          : validationDateElement as Element,
+          : validationDateElement as Element?,
       canPushUpdates: canPushUpdates == freezed
           ? _value.canPushUpdates
-          : canPushUpdates as CodeableConcept,
+          : canPushUpdates as CodeableConcept?,
       pushTypeAvailable: pushTypeAvailable == freezed
           ? _value.pushTypeAvailable
-          : pushTypeAvailable as List<CodeableConcept>,
+          : pushTypeAvailable as List<CodeableConcept>?,
     ));
   }
 }
@@ -12163,29 +12313,29 @@ class _$_VerificationResultPrimarySource
       _$_$_VerificationResultPrimarySourceFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final Reference who;
+  final Reference? who;
   @override
-  final List<CodeableConcept> type;
+  final List<CodeableConcept>? type;
   @override
-  final List<CodeableConcept> communicationMethod;
+  final List<CodeableConcept>? communicationMethod;
   @override
-  final CodeableConcept validationStatus;
+  final CodeableConcept? validationStatus;
   @override
-  final FhirDateTime validationDate;
+  final FhirDateTime? validationDate;
   @override
   @JsonKey(name: '_validationDate')
-  final Element validationDateElement;
+  final Element? validationDateElement;
   @override
-  final CodeableConcept canPushUpdates;
+  final CodeableConcept? canPushUpdates;
   @override
-  final List<CodeableConcept> pushTypeAvailable;
+  final List<CodeableConcept>? pushTypeAvailable;
 
   @override
   String toString() {
@@ -12259,46 +12409,46 @@ abstract class _VerificationResultPrimarySource
     extends VerificationResultPrimarySource {
   _VerificationResultPrimarySource._() : super._();
   factory _VerificationResultPrimarySource(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          Reference who,
-          List<CodeableConcept> type,
-          List<CodeableConcept> communicationMethod,
-          CodeableConcept validationStatus,
-          FhirDateTime validationDate,
-          @JsonKey(name: '_validationDate') Element validationDateElement,
-          CodeableConcept canPushUpdates,
-          List<CodeableConcept> pushTypeAvailable}) =
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Reference? who,
+          List<CodeableConcept>? type,
+          List<CodeableConcept>? communicationMethod,
+          CodeableConcept? validationStatus,
+          FhirDateTime? validationDate,
+          @JsonKey(name: '_validationDate') Element? validationDateElement,
+          CodeableConcept? canPushUpdates,
+          List<CodeableConcept>? pushTypeAvailable}) =
       _$_VerificationResultPrimarySource;
 
   factory _VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =
       _$_VerificationResultPrimarySource.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Reference get who;
+  Reference? get who;
   @override
-  List<CodeableConcept> get type;
+  List<CodeableConcept>? get type;
   @override
-  List<CodeableConcept> get communicationMethod;
+  List<CodeableConcept>? get communicationMethod;
   @override
-  CodeableConcept get validationStatus;
+  CodeableConcept? get validationStatus;
   @override
-  FhirDateTime get validationDate;
+  FhirDateTime? get validationDate;
   @override
   @JsonKey(name: '_validationDate')
-  Element get validationDateElement;
+  Element? get validationDateElement;
   @override
-  CodeableConcept get canPushUpdates;
+  CodeableConcept? get canPushUpdates;
   @override
-  List<CodeableConcept> get pushTypeAvailable;
+  List<CodeableConcept>? get pushTypeAvailable;
   @override
   @JsonKey(ignore: true)
   _$VerificationResultPrimarySourceCopyWith<_VerificationResultPrimarySource>
@@ -12314,26 +12464,25 @@ VerificationResultAttestation _$VerificationResultAttestationFromJson(
 class _$VerificationResultAttestationTearOff {
   const _$VerificationResultAttestationTearOff();
 
-// ignore: unused_element
   _VerificationResultAttestation call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Reference who,
-      Reference onBehalfOf,
-      CodeableConcept communicationMethod,
-      Date date,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? who,
+      Reference? onBehalfOf,
+      CodeableConcept? communicationMethod,
+      Date? date,
       @JsonKey(name: '_date')
-          Element dateElement,
-      String sourceIdentityCertificate,
+          Element? dateElement,
+      String? sourceIdentityCertificate,
       @JsonKey(name: '_sourceIdentityCertificate')
-          Element sourceIdentityCertificateElement,
-      String proxyIdentityCertificate,
+          Element? sourceIdentityCertificateElement,
+      String? proxyIdentityCertificate,
       @JsonKey(name: '_proxyIdentityCertificate')
-          Element proxyIdentityCertificateElement,
-      Signature proxySignature,
-      Signature sourceSignature}) {
+          Element? proxyIdentityCertificateElement,
+      Signature? proxySignature,
+      Signature? sourceSignature}) {
     return _VerificationResultAttestation(
       id: id,
       extension_: extension_,
@@ -12352,36 +12501,34 @@ class _$VerificationResultAttestationTearOff {
     );
   }
 
-// ignore: unused_element
   VerificationResultAttestation fromJson(Map<String, Object> json) {
     return VerificationResultAttestation.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $VerificationResultAttestation = _$VerificationResultAttestationTearOff();
 
 /// @nodoc
 mixin _$VerificationResultAttestation {
-  String get id;
+  String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Reference get who;
-  Reference get onBehalfOf;
-  CodeableConcept get communicationMethod;
-  Date get date;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  Reference? get who;
+  Reference? get onBehalfOf;
+  CodeableConcept? get communicationMethod;
+  Date? get date;
   @JsonKey(name: '_date')
-  Element get dateElement;
-  String get sourceIdentityCertificate;
+  Element? get dateElement;
+  String? get sourceIdentityCertificate;
   @JsonKey(name: '_sourceIdentityCertificate')
-  Element get sourceIdentityCertificateElement;
-  String get proxyIdentityCertificate;
+  Element? get sourceIdentityCertificateElement;
+  String? get proxyIdentityCertificate;
   @JsonKey(name: '_proxyIdentityCertificate')
-  Element get proxyIdentityCertificateElement;
-  Signature get proxySignature;
-  Signature get sourceSignature;
+  Element? get proxyIdentityCertificateElement;
+  Signature? get proxySignature;
+  Signature? get sourceSignature;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -12396,33 +12543,33 @@ abstract class $VerificationResultAttestationCopyWith<$Res> {
           $Res Function(VerificationResultAttestation) then) =
       _$VerificationResultAttestationCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Reference who,
-      Reference onBehalfOf,
-      CodeableConcept communicationMethod,
-      Date date,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? who,
+      Reference? onBehalfOf,
+      CodeableConcept? communicationMethod,
+      Date? date,
       @JsonKey(name: '_date')
-          Element dateElement,
-      String sourceIdentityCertificate,
+          Element? dateElement,
+      String? sourceIdentityCertificate,
       @JsonKey(name: '_sourceIdentityCertificate')
-          Element sourceIdentityCertificateElement,
-      String proxyIdentityCertificate,
+          Element? sourceIdentityCertificateElement,
+      String? proxyIdentityCertificate,
       @JsonKey(name: '_proxyIdentityCertificate')
-          Element proxyIdentityCertificateElement,
-      Signature proxySignature,
-      Signature sourceSignature});
+          Element? proxyIdentityCertificateElement,
+      Signature? proxySignature,
+      Signature? sourceSignature});
 
-  $ReferenceCopyWith<$Res> get who;
-  $ReferenceCopyWith<$Res> get onBehalfOf;
-  $CodeableConceptCopyWith<$Res> get communicationMethod;
-  $ElementCopyWith<$Res> get dateElement;
-  $ElementCopyWith<$Res> get sourceIdentityCertificateElement;
-  $ElementCopyWith<$Res> get proxyIdentityCertificateElement;
-  $SignatureCopyWith<$Res> get proxySignature;
-  $SignatureCopyWith<$Res> get sourceSignature;
+  $ReferenceCopyWith<$Res>? get who;
+  $ReferenceCopyWith<$Res>? get onBehalfOf;
+  $CodeableConceptCopyWith<$Res>? get communicationMethod;
+  $ElementCopyWith<$Res>? get dateElement;
+  $ElementCopyWith<$Res>? get sourceIdentityCertificateElement;
+  $ElementCopyWith<$Res>? get proxyIdentityCertificateElement;
+  $SignatureCopyWith<$Res>? get proxySignature;
+  $SignatureCopyWith<$Res>? get sourceSignature;
 }
 
 /// @nodoc
@@ -12436,139 +12583,147 @@ class _$VerificationResultAttestationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object who = freezed,
-    Object onBehalfOf = freezed,
-    Object communicationMethod = freezed,
-    Object date = freezed,
-    Object dateElement = freezed,
-    Object sourceIdentityCertificate = freezed,
-    Object sourceIdentityCertificateElement = freezed,
-    Object proxyIdentityCertificate = freezed,
-    Object proxyIdentityCertificateElement = freezed,
-    Object proxySignature = freezed,
-    Object sourceSignature = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? who = freezed,
+    Object? onBehalfOf = freezed,
+    Object? communicationMethod = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? sourceIdentityCertificate = freezed,
+    Object? sourceIdentityCertificateElement = freezed,
+    Object? proxyIdentityCertificate = freezed,
+    Object? proxyIdentityCertificateElement = freezed,
+    Object? proxySignature = freezed,
+    Object? sourceSignature = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      who: who == freezed ? _value.who : who as Reference,
+          : modifierExtension as List<FhirExtension>?,
+      who: who == freezed ? _value.who : who as Reference?,
       onBehalfOf:
-          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference,
+          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
       communicationMethod: communicationMethod == freezed
           ? _value.communicationMethod
-          : communicationMethod as CodeableConcept,
-      date: date == freezed ? _value.date : date as Date,
+          : communicationMethod as CodeableConcept?,
+      date: date == freezed ? _value.date : date as Date?,
       dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
+          dateElement == freezed ? _value.dateElement : dateElement as Element?,
       sourceIdentityCertificate: sourceIdentityCertificate == freezed
           ? _value.sourceIdentityCertificate
-          : sourceIdentityCertificate as String,
+          : sourceIdentityCertificate as String?,
       sourceIdentityCertificateElement:
           sourceIdentityCertificateElement == freezed
               ? _value.sourceIdentityCertificateElement
-              : sourceIdentityCertificateElement as Element,
+              : sourceIdentityCertificateElement as Element?,
       proxyIdentityCertificate: proxyIdentityCertificate == freezed
           ? _value.proxyIdentityCertificate
-          : proxyIdentityCertificate as String,
+          : proxyIdentityCertificate as String?,
       proxyIdentityCertificateElement:
           proxyIdentityCertificateElement == freezed
               ? _value.proxyIdentityCertificateElement
-              : proxyIdentityCertificateElement as Element,
+              : proxyIdentityCertificateElement as Element?,
       proxySignature: proxySignature == freezed
           ? _value.proxySignature
-          : proxySignature as Signature,
+          : proxySignature as Signature?,
       sourceSignature: sourceSignature == freezed
           ? _value.sourceSignature
-          : sourceSignature as Signature,
+          : sourceSignature as Signature?,
     ));
   }
 
   @override
-  $ReferenceCopyWith<$Res> get who {
+  $ReferenceCopyWith<$Res>? get who {
     if (_value.who == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.who, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.who!, (value) {
       return _then(_value.copyWith(who: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get onBehalfOf {
+  $ReferenceCopyWith<$Res>? get onBehalfOf {
     if (_value.onBehalfOf == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.onBehalfOf, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.onBehalfOf!, (value) {
       return _then(_value.copyWith(onBehalfOf: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get communicationMethod {
+  $CodeableConceptCopyWith<$Res>? get communicationMethod {
     if (_value.communicationMethod == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.communicationMethod, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.communicationMethod!, (value) {
       return _then(_value.copyWith(communicationMethod: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get dateElement {
+  $ElementCopyWith<$Res>? get dateElement {
     if (_value.dateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
       return _then(_value.copyWith(dateElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get sourceIdentityCertificateElement {
+  $ElementCopyWith<$Res>? get sourceIdentityCertificateElement {
     if (_value.sourceIdentityCertificateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.sourceIdentityCertificateElement,
+
+    return $ElementCopyWith<$Res>(_value.sourceIdentityCertificateElement!,
         (value) {
       return _then(_value.copyWith(sourceIdentityCertificateElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get proxyIdentityCertificateElement {
+  $ElementCopyWith<$Res>? get proxyIdentityCertificateElement {
     if (_value.proxyIdentityCertificateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.proxyIdentityCertificateElement,
+
+    return $ElementCopyWith<$Res>(_value.proxyIdentityCertificateElement!,
         (value) {
       return _then(_value.copyWith(proxyIdentityCertificateElement: value));
     });
   }
 
   @override
-  $SignatureCopyWith<$Res> get proxySignature {
+  $SignatureCopyWith<$Res>? get proxySignature {
     if (_value.proxySignature == null) {
       return null;
     }
-    return $SignatureCopyWith<$Res>(_value.proxySignature, (value) {
+
+    return $SignatureCopyWith<$Res>(_value.proxySignature!, (value) {
       return _then(_value.copyWith(proxySignature: value));
     });
   }
 
   @override
-  $SignatureCopyWith<$Res> get sourceSignature {
+  $SignatureCopyWith<$Res>? get sourceSignature {
     if (_value.sourceSignature == null) {
       return null;
     }
-    return $SignatureCopyWith<$Res>(_value.sourceSignature, (value) {
+
+    return $SignatureCopyWith<$Res>(_value.sourceSignature!, (value) {
       return _then(_value.copyWith(sourceSignature: value));
     });
   }
@@ -12583,41 +12738,41 @@ abstract class _$VerificationResultAttestationCopyWith<$Res>
       __$VerificationResultAttestationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Reference who,
-      Reference onBehalfOf,
-      CodeableConcept communicationMethod,
-      Date date,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? who,
+      Reference? onBehalfOf,
+      CodeableConcept? communicationMethod,
+      Date? date,
       @JsonKey(name: '_date')
-          Element dateElement,
-      String sourceIdentityCertificate,
+          Element? dateElement,
+      String? sourceIdentityCertificate,
       @JsonKey(name: '_sourceIdentityCertificate')
-          Element sourceIdentityCertificateElement,
-      String proxyIdentityCertificate,
+          Element? sourceIdentityCertificateElement,
+      String? proxyIdentityCertificate,
       @JsonKey(name: '_proxyIdentityCertificate')
-          Element proxyIdentityCertificateElement,
-      Signature proxySignature,
-      Signature sourceSignature});
+          Element? proxyIdentityCertificateElement,
+      Signature? proxySignature,
+      Signature? sourceSignature});
 
   @override
-  $ReferenceCopyWith<$Res> get who;
+  $ReferenceCopyWith<$Res>? get who;
   @override
-  $ReferenceCopyWith<$Res> get onBehalfOf;
+  $ReferenceCopyWith<$Res>? get onBehalfOf;
   @override
-  $CodeableConceptCopyWith<$Res> get communicationMethod;
+  $CodeableConceptCopyWith<$Res>? get communicationMethod;
   @override
-  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res>? get dateElement;
   @override
-  $ElementCopyWith<$Res> get sourceIdentityCertificateElement;
+  $ElementCopyWith<$Res>? get sourceIdentityCertificateElement;
   @override
-  $ElementCopyWith<$Res> get proxyIdentityCertificateElement;
+  $ElementCopyWith<$Res>? get proxyIdentityCertificateElement;
   @override
-  $SignatureCopyWith<$Res> get proxySignature;
+  $SignatureCopyWith<$Res>? get proxySignature;
   @override
-  $SignatureCopyWith<$Res> get sourceSignature;
+  $SignatureCopyWith<$Res>? get sourceSignature;
 }
 
 /// @nodoc
@@ -12635,58 +12790,58 @@ class __$VerificationResultAttestationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object who = freezed,
-    Object onBehalfOf = freezed,
-    Object communicationMethod = freezed,
-    Object date = freezed,
-    Object dateElement = freezed,
-    Object sourceIdentityCertificate = freezed,
-    Object sourceIdentityCertificateElement = freezed,
-    Object proxyIdentityCertificate = freezed,
-    Object proxyIdentityCertificateElement = freezed,
-    Object proxySignature = freezed,
-    Object sourceSignature = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? who = freezed,
+    Object? onBehalfOf = freezed,
+    Object? communicationMethod = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? sourceIdentityCertificate = freezed,
+    Object? sourceIdentityCertificateElement = freezed,
+    Object? proxyIdentityCertificate = freezed,
+    Object? proxyIdentityCertificateElement = freezed,
+    Object? proxySignature = freezed,
+    Object? sourceSignature = freezed,
   }) {
     return _then(_VerificationResultAttestation(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      who: who == freezed ? _value.who : who as Reference,
+          : modifierExtension as List<FhirExtension>?,
+      who: who == freezed ? _value.who : who as Reference?,
       onBehalfOf:
-          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference,
+          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
       communicationMethod: communicationMethod == freezed
           ? _value.communicationMethod
-          : communicationMethod as CodeableConcept,
-      date: date == freezed ? _value.date : date as Date,
+          : communicationMethod as CodeableConcept?,
+      date: date == freezed ? _value.date : date as Date?,
       dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
+          dateElement == freezed ? _value.dateElement : dateElement as Element?,
       sourceIdentityCertificate: sourceIdentityCertificate == freezed
           ? _value.sourceIdentityCertificate
-          : sourceIdentityCertificate as String,
+          : sourceIdentityCertificate as String?,
       sourceIdentityCertificateElement:
           sourceIdentityCertificateElement == freezed
               ? _value.sourceIdentityCertificateElement
-              : sourceIdentityCertificateElement as Element,
+              : sourceIdentityCertificateElement as Element?,
       proxyIdentityCertificate: proxyIdentityCertificate == freezed
           ? _value.proxyIdentityCertificate
-          : proxyIdentityCertificate as String,
+          : proxyIdentityCertificate as String?,
       proxyIdentityCertificateElement:
           proxyIdentityCertificateElement == freezed
               ? _value.proxyIdentityCertificateElement
-              : proxyIdentityCertificateElement as Element,
+              : proxyIdentityCertificateElement as Element?,
       proxySignature: proxySignature == freezed
           ? _value.proxySignature
-          : proxySignature as Signature,
+          : proxySignature as Signature?,
       sourceSignature: sourceSignature == freezed
           ? _value.sourceSignature
-          : sourceSignature as Signature,
+          : sourceSignature as Signature?,
     ));
   }
 }
@@ -12721,37 +12876,37 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
       _$_$_VerificationResultAttestationFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final Reference who;
+  final Reference? who;
   @override
-  final Reference onBehalfOf;
+  final Reference? onBehalfOf;
   @override
-  final CodeableConcept communicationMethod;
+  final CodeableConcept? communicationMethod;
   @override
-  final Date date;
+  final Date? date;
   @override
   @JsonKey(name: '_date')
-  final Element dateElement;
+  final Element? dateElement;
   @override
-  final String sourceIdentityCertificate;
+  final String? sourceIdentityCertificate;
   @override
   @JsonKey(name: '_sourceIdentityCertificate')
-  final Element sourceIdentityCertificateElement;
+  final Element? sourceIdentityCertificateElement;
   @override
-  final String proxyIdentityCertificate;
+  final String? proxyIdentityCertificate;
   @override
   @JsonKey(name: '_proxyIdentityCertificate')
-  final Element proxyIdentityCertificateElement;
+  final Element? proxyIdentityCertificateElement;
   @override
-  final Signature proxySignature;
+  final Signature? proxySignature;
   @override
-  final Signature sourceSignature;
+  final Signature? sourceSignature;
 
   @override
   String toString() {
@@ -12842,60 +12997,60 @@ abstract class _VerificationResultAttestation
     extends VerificationResultAttestation {
   _VerificationResultAttestation._() : super._();
   factory _VerificationResultAttestation(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Reference who,
-      Reference onBehalfOf,
-      CodeableConcept communicationMethod,
-      Date date,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? who,
+      Reference? onBehalfOf,
+      CodeableConcept? communicationMethod,
+      Date? date,
       @JsonKey(name: '_date')
-          Element dateElement,
-      String sourceIdentityCertificate,
+          Element? dateElement,
+      String? sourceIdentityCertificate,
       @JsonKey(name: '_sourceIdentityCertificate')
-          Element sourceIdentityCertificateElement,
-      String proxyIdentityCertificate,
+          Element? sourceIdentityCertificateElement,
+      String? proxyIdentityCertificate,
       @JsonKey(name: '_proxyIdentityCertificate')
-          Element proxyIdentityCertificateElement,
-      Signature proxySignature,
-      Signature sourceSignature}) = _$_VerificationResultAttestation;
+          Element? proxyIdentityCertificateElement,
+      Signature? proxySignature,
+      Signature? sourceSignature}) = _$_VerificationResultAttestation;
 
   factory _VerificationResultAttestation.fromJson(Map<String, dynamic> json) =
       _$_VerificationResultAttestation.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Reference get who;
+  Reference? get who;
   @override
-  Reference get onBehalfOf;
+  Reference? get onBehalfOf;
   @override
-  CodeableConcept get communicationMethod;
+  CodeableConcept? get communicationMethod;
   @override
-  Date get date;
+  Date? get date;
   @override
   @JsonKey(name: '_date')
-  Element get dateElement;
+  Element? get dateElement;
   @override
-  String get sourceIdentityCertificate;
+  String? get sourceIdentityCertificate;
   @override
   @JsonKey(name: '_sourceIdentityCertificate')
-  Element get sourceIdentityCertificateElement;
+  Element? get sourceIdentityCertificateElement;
   @override
-  String get proxyIdentityCertificate;
+  String? get proxyIdentityCertificate;
   @override
   @JsonKey(name: '_proxyIdentityCertificate')
-  Element get proxyIdentityCertificateElement;
+  Element? get proxyIdentityCertificateElement;
   @override
-  Signature get proxySignature;
+  Signature? get proxySignature;
   @override
-  Signature get sourceSignature;
+  Signature? get sourceSignature;
   @override
   @JsonKey(ignore: true)
   _$VerificationResultAttestationCopyWith<_VerificationResultAttestation>
@@ -12911,15 +13066,16 @@ VerificationResultValidator _$VerificationResultValidatorFromJson(
 class _$VerificationResultValidatorTearOff {
   const _$VerificationResultValidatorTearOff();
 
-// ignore: unused_element
   _VerificationResultValidator call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required Reference organization,
-      String identityCertificate,
-      @JsonKey(name: '_identityCertificate') Element identityCertificateElement,
-      Signature attestationSignature}) {
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Reference organization,
+      String? identityCertificate,
+      @JsonKey(name: '_identityCertificate')
+          Element? identityCertificateElement,
+      Signature? attestationSignature}) {
     return _VerificationResultValidator(
       id: id,
       extension_: extension_,
@@ -12931,27 +13087,25 @@ class _$VerificationResultValidatorTearOff {
     );
   }
 
-// ignore: unused_element
   VerificationResultValidator fromJson(Map<String, Object> json) {
     return VerificationResultValidator.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $VerificationResultValidator = _$VerificationResultValidatorTearOff();
 
 /// @nodoc
 mixin _$VerificationResultValidator {
-  String get id;
+  String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Reference get organization;
-  String get identityCertificate;
+  String? get identityCertificate;
   @JsonKey(name: '_identityCertificate')
-  Element get identityCertificateElement;
-  Signature get attestationSignature;
+  Element? get identityCertificateElement;
+  Signature? get attestationSignature;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -12966,17 +13120,19 @@ abstract class $VerificationResultValidatorCopyWith<$Res> {
           $Res Function(VerificationResultValidator) then) =
       _$VerificationResultValidatorCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Reference organization,
-      String identityCertificate,
-      @JsonKey(name: '_identityCertificate') Element identityCertificateElement,
-      Signature attestationSignature});
+      String? identityCertificate,
+      @JsonKey(name: '_identityCertificate')
+          Element? identityCertificateElement,
+      Signature? attestationSignature});
 
   $ReferenceCopyWith<$Res> get organization;
-  $ElementCopyWith<$Res> get identityCertificateElement;
-  $SignatureCopyWith<$Res> get attestationSignature;
+  $ElementCopyWith<$Res>? get identityCertificateElement;
+  $SignatureCopyWith<$Res>? get attestationSignature;
 }
 
 /// @nodoc
@@ -12990,63 +13146,62 @@ class _$VerificationResultValidatorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object organization = freezed,
-    Object identityCertificate = freezed,
-    Object identityCertificateElement = freezed,
-    Object attestationSignature = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? organization = freezed,
+    Object? identityCertificate = freezed,
+    Object? identityCertificateElement = freezed,
+    Object? attestationSignature = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
       identityCertificate: identityCertificate == freezed
           ? _value.identityCertificate
-          : identityCertificate as String,
+          : identityCertificate as String?,
       identityCertificateElement: identityCertificateElement == freezed
           ? _value.identityCertificateElement
-          : identityCertificateElement as Element,
+          : identityCertificateElement as Element?,
       attestationSignature: attestationSignature == freezed
           ? _value.attestationSignature
-          : attestationSignature as Signature,
+          : attestationSignature as Signature?,
     ));
   }
 
   @override
   $ReferenceCopyWith<$Res> get organization {
-    if (_value.organization == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.organization, (value) {
       return _then(_value.copyWith(organization: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get identityCertificateElement {
+  $ElementCopyWith<$Res>? get identityCertificateElement {
     if (_value.identityCertificateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.identityCertificateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.identityCertificateElement!, (value) {
       return _then(_value.copyWith(identityCertificateElement: value));
     });
   }
 
   @override
-  $SignatureCopyWith<$Res> get attestationSignature {
+  $SignatureCopyWith<$Res>? get attestationSignature {
     if (_value.attestationSignature == null) {
       return null;
     }
-    return $SignatureCopyWith<$Res>(_value.attestationSignature, (value) {
+
+    return $SignatureCopyWith<$Res>(_value.attestationSignature!, (value) {
       return _then(_value.copyWith(attestationSignature: value));
     });
   }
@@ -13061,20 +13216,22 @@ abstract class _$VerificationResultValidatorCopyWith<$Res>
       __$VerificationResultValidatorCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Reference organization,
-      String identityCertificate,
-      @JsonKey(name: '_identityCertificate') Element identityCertificateElement,
-      Signature attestationSignature});
+      String? identityCertificate,
+      @JsonKey(name: '_identityCertificate')
+          Element? identityCertificateElement,
+      Signature? attestationSignature});
 
   @override
   $ReferenceCopyWith<$Res> get organization;
   @override
-  $ElementCopyWith<$Res> get identityCertificateElement;
+  $ElementCopyWith<$Res>? get identityCertificateElement;
   @override
-  $SignatureCopyWith<$Res> get attestationSignature;
+  $SignatureCopyWith<$Res>? get attestationSignature;
 }
 
 /// @nodoc
@@ -13092,34 +13249,34 @@ class __$VerificationResultValidatorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object organization = freezed,
-    Object identityCertificate = freezed,
-    Object identityCertificateElement = freezed,
-    Object attestationSignature = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? organization = freezed,
+    Object? identityCertificate = freezed,
+    Object? identityCertificateElement = freezed,
+    Object? attestationSignature = freezed,
   }) {
     return _then(_VerificationResultValidator(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       organization: organization == freezed
           ? _value.organization
           : organization as Reference,
       identityCertificate: identityCertificate == freezed
           ? _value.identityCertificate
-          : identityCertificate as String,
+          : identityCertificate as String?,
       identityCertificateElement: identityCertificateElement == freezed
           ? _value.identityCertificateElement
-          : identityCertificateElement as Element,
+          : identityCertificateElement as Element?,
       attestationSignature: attestationSignature == freezed
           ? _value.attestationSignature
-          : attestationSignature as Signature,
+          : attestationSignature as Signature?,
     ));
   }
 }
@@ -13132,32 +13289,31 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.organization,
+      required this.organization,
       this.identityCertificate,
       @JsonKey(name: '_identityCertificate') this.identityCertificateElement,
       this.attestationSignature})
-      : assert(organization != null),
-        super._();
+      : super._();
 
   factory _$_VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
       _$_$_VerificationResultValidatorFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Reference organization;
   @override
-  final String identityCertificate;
+  final String? identityCertificate;
   @override
   @JsonKey(name: '_identityCertificate')
-  final Element identityCertificateElement;
+  final Element? identityCertificateElement;
   @override
-  final Signature attestationSignature;
+  final Signature? attestationSignature;
 
   @override
   String toString() {
@@ -13219,33 +13375,35 @@ abstract class _VerificationResultValidator
     extends VerificationResultValidator {
   _VerificationResultValidator._() : super._();
   factory _VerificationResultValidator(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required Reference organization,
-      String identityCertificate,
-      @JsonKey(name: '_identityCertificate') Element identityCertificateElement,
-      Signature attestationSignature}) = _$_VerificationResultValidator;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Reference organization,
+      String? identityCertificate,
+      @JsonKey(name: '_identityCertificate')
+          Element? identityCertificateElement,
+      Signature? attestationSignature}) = _$_VerificationResultValidator;
 
   factory _VerificationResultValidator.fromJson(Map<String, dynamic> json) =
       _$_VerificationResultValidator.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Reference get organization;
   @override
-  String get identityCertificate;
+  String? get identityCertificate;
   @override
   @JsonKey(name: '_identityCertificate')
-  Element get identityCertificateElement;
+  Element? get identityCertificateElement;
   @override
-  Signature get attestationSignature;
+  Signature? get attestationSignature;
   @override
   @JsonKey(ignore: true)
   _$VerificationResultValidatorCopyWith<_VerificationResultValidator>

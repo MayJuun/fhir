@@ -13,7 +13,7 @@ class FhirDateTime {
   const FhirDateTime._(this._valueString, this._valueDateTime, this._isValid,
       this._precision, this._parseError);
 
-  factory FhirDateTime(inValue) {
+  factory FhirDateTime(dynamic inValue) {
     assert(inValue != null);
 
     switch (inValue.runtimeType.toString()) {
@@ -29,7 +29,6 @@ class FhirDateTime {
           return FhirDateTime._(
               inValue, null, false, DateTimePrecision.INVALID, e);
         }
-        break;
       default:
         throw ArgumentError(
             'FhirDateTime cannot be constructed from $inValue.');
@@ -38,8 +37,6 @@ class FhirDateTime {
 
   factory FhirDateTime.fromDateTime(DateTime dateTime,
       [DateTimePrecision precision = DateTimePrecision.FULL]) {
-    assert(dateTime != null && precision != null);
-
     final dateString = dateTime.toIso8601String();
     final len = [4, 7, 10, dateString.length][precision.index];
 
@@ -53,18 +50,19 @@ class FhirDateTime {
       ? FhirDateTime.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? FhirDateTime.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
-  final DateTime _valueDateTime;
+  final DateTime? _valueDateTime;
   final bool _isValid;
   final DateTimePrecision _precision;
-  final Exception _parseError;
+  final Exception? _parseError;
 
   bool get isValid => _isValid;
   int get hashCode => _valueString.hashCode;
-  DateTime get value => _valueDateTime;
-  Exception get parseError => _parseError;
+  DateTime? get value => _valueDateTime;
+  Exception? get parseError => _parseError;
   DateTimePrecision get precision => _precision;
 
   bool operator ==(Object o) => identical(this, o)
@@ -108,8 +106,6 @@ class FhirDateTime {
   }
 
   static DateTime _parsePartialDateTime(String value) {
-    assert(value != null);
-
     if (_dateTimeYYYYExp.hasMatch(value)) {
       return DateTime(int.parse(value));
     } else if (_dateTimeYYYYMMExp.hasMatch(value)) {
@@ -124,8 +120,6 @@ class FhirDateTime {
   }
 
   static DateTimePrecision _getPrecision(String value) {
-    assert(value != null);
-
     switch (value.length) {
       case 4:
         return DateTimePrecision.YYYY;

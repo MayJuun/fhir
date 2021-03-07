@@ -18,46 +18,46 @@ abstract class Claim with Resource implements _$Claim {
     @Default(R5ResourceType.Claim)
     @JsonKey(unknownEnumValue: R5ResourceType.Claim)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    @required CodeableConcept type,
-    CodeableConcept subType,
-    @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse use,
-    @JsonKey(name: '_use') Element useElement,
-    @required Reference patient,
-    Period billablePeriod,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference enterer,
-    Reference insurer,
-    @required Reference provider,
-    @required CodeableConcept priority,
-    CodeableConcept fundsReserve,
-    List<ClaimRelated> related,
-    Reference prescription,
-    Reference originalPrescription,
-    ClaimPayee payee,
-    Reference referral,
-    Reference facility,
-    List<ClaimCareTeam> careTeam,
-    List<ClaimSupportingInfo> supportingInfo,
-    List<ClaimDiagnosis> diagnosis,
-    List<ClaimProcedure> procedure,
-    @required List<ClaimInsurance> insurance,
-    ClaimAccident accident,
-    List<ClaimItem> item,
-    Money total,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    required CodeableConcept type,
+    CodeableConcept? subType,
+    @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse? use,
+    @JsonKey(name: '_use') Element? useElement,
+    required Reference patient,
+    Period? billablePeriod,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? enterer,
+    Reference? insurer,
+    required Reference provider,
+    required CodeableConcept priority,
+    CodeableConcept? fundsReserve,
+    List<ClaimRelated>? related,
+    Reference? prescription,
+    Reference? originalPrescription,
+    ClaimPayee? payee,
+    Reference? referral,
+    Reference? facility,
+    List<ClaimCareTeam>? careTeam,
+    List<ClaimSupportingInfo>? supportingInfo,
+    List<ClaimDiagnosis>? diagnosis,
+    List<ClaimProcedure>? procedure,
+    required List<ClaimInsurance> insurance,
+    ClaimAccident? accident,
+    List<ClaimItem>? item,
+    Money? total,
   }) = _Claim;
 
   /// Produces a Yaml formatted String version of the object
@@ -68,7 +68,9 @@ abstract class Claim with Resource implements _$Claim {
       ? Claim.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Claim.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Claim cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
@@ -78,12 +80,12 @@ abstract class Claim with Resource implements _$Claim {
 abstract class ClaimRelated implements _$ClaimRelated {
   ClaimRelated._();
   factory ClaimRelated({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference claim,
-    CodeableConcept relationship,
-    Identifier reference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? claim,
+    CodeableConcept? relationship,
+    Identifier? reference,
   }) = _ClaimRelated;
 
   /// Produces a Yaml formatted String version of the object
@@ -94,7 +96,9 @@ abstract class ClaimRelated implements _$ClaimRelated {
       ? ClaimRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimRelated.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimRelated cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimRelated.fromJson(Map<String, dynamic> json) =>
@@ -105,11 +109,11 @@ abstract class ClaimRelated implements _$ClaimRelated {
 abstract class ClaimPayee implements _$ClaimPayee {
   ClaimPayee._();
   factory ClaimPayee({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    Reference party,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    Reference? party,
   }) = _ClaimPayee;
 
   /// Produces a Yaml formatted String version of the object
@@ -120,7 +124,9 @@ abstract class ClaimPayee implements _$ClaimPayee {
       ? ClaimPayee.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimPayee.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimPayee cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
@@ -131,16 +137,16 @@ abstract class ClaimPayee implements _$ClaimPayee {
 abstract class ClaimCareTeam implements _$ClaimCareTeam {
   ClaimCareTeam._();
   factory ClaimCareTeam({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @required Reference provider,
-    Boolean responsible,
-    @JsonKey(name: '_responsible') Element responsibleElement,
-    CodeableConcept role,
-    CodeableConcept qualification,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    required Reference provider,
+    Boolean? responsible,
+    @JsonKey(name: '_responsible') Element? responsibleElement,
+    CodeableConcept? role,
+    CodeableConcept? qualification,
   }) = _ClaimCareTeam;
 
   /// Produces a Yaml formatted String version of the object
@@ -151,7 +157,9 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
       ? ClaimCareTeam.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimCareTeam.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimCareTeam cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
@@ -162,24 +170,24 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
 abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
   ClaimSupportingInfo._();
   factory ClaimSupportingInfo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @required CodeableConcept category,
-    CodeableConcept code,
-    Date timingDate,
-    @JsonKey(name: '_timingDate') Element timingDateElement,
-    Period timingPeriod,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    Quantity valueQuantity,
-    Attachment valueAttachment,
-    Reference valueReference,
-    CodeableConcept reason,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    required CodeableConcept category,
+    CodeableConcept? code,
+    Date? timingDate,
+    @JsonKey(name: '_timingDate') Element? timingDateElement,
+    Period? timingPeriod,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    String? valueString,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
+    Quantity? valueQuantity,
+    Attachment? valueAttachment,
+    Reference? valueReference,
+    CodeableConcept? reason,
   }) = _ClaimSupportingInfo;
 
   /// Produces a Yaml formatted String version of the object
@@ -190,7 +198,9 @@ abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
       ? ClaimSupportingInfo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimSupportingInfo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimSupportingInfo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimSupportingInfo.fromJson(Map<String, dynamic> json) =>
@@ -201,16 +211,16 @@ abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
 abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
   ClaimDiagnosis._();
   factory ClaimDiagnosis({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    CodeableConcept diagnosisCodeableConcept,
-    Reference diagnosisReference,
-    List<CodeableConcept> type,
-    CodeableConcept onAdmission,
-    CodeableConcept packageCode,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    CodeableConcept? diagnosisCodeableConcept,
+    Reference? diagnosisReference,
+    List<CodeableConcept>? type,
+    CodeableConcept? onAdmission,
+    CodeableConcept? packageCode,
   }) = _ClaimDiagnosis;
 
   /// Produces a Yaml formatted String version of the object
@@ -221,7 +231,9 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
       ? ClaimDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimDiagnosis cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
@@ -232,17 +244,17 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
 abstract class ClaimProcedure implements _$ClaimProcedure {
   ClaimProcedure._();
   factory ClaimProcedure({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    List<CodeableConcept> type,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    CodeableConcept procedureCodeableConcept,
-    Reference procedureReference,
-    List<Reference> udi,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    List<CodeableConcept>? type,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    CodeableConcept? procedureCodeableConcept,
+    Reference? procedureReference,
+    List<Reference>? udi,
   }) = _ClaimProcedure;
 
   /// Produces a Yaml formatted String version of the object
@@ -253,7 +265,9 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
       ? ClaimProcedure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimProcedure.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimProcedure cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
@@ -264,20 +278,20 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
 abstract class ClaimInsurance implements _$ClaimInsurance {
   ClaimInsurance._();
   factory ClaimInsurance({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    Boolean focal,
-    @JsonKey(name: '_focal') Element focalElement,
-    Identifier identifier,
-    @required Reference coverage,
-    String businessArrangement,
-    @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
-    List<String> preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement,
-    Reference claimResponse,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    Boolean? focal,
+    @JsonKey(name: '_focal') Element? focalElement,
+    Identifier? identifier,
+    required Reference coverage,
+    String? businessArrangement,
+    @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
+    List<String>? preAuthRef,
+    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
+    Reference? claimResponse,
   }) = _ClaimInsurance;
 
   /// Produces a Yaml formatted String version of the object
@@ -288,7 +302,9 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
       ? ClaimInsurance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimInsurance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimInsurance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
@@ -299,14 +315,14 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
 abstract class ClaimAccident implements _$ClaimAccident {
   ClaimAccident._();
   factory ClaimAccident({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    CodeableConcept type,
-    Address locationAddress,
-    Reference locationReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Date? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    CodeableConcept? type,
+    Address? locationAddress,
+    Reference? locationReference,
   }) = _ClaimAccident;
 
   /// Produces a Yaml formatted String version of the object
@@ -317,7 +333,9 @@ abstract class ClaimAccident implements _$ClaimAccident {
       ? ClaimAccident.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimAccident.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimAccident cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimAccident.fromJson(Map<String, dynamic> json) =>
@@ -328,41 +346,43 @@ abstract class ClaimAccident implements _$ClaimAccident {
 abstract class ClaimItem implements _$ClaimItem {
   ClaimItem._();
   factory ClaimItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    List<PositiveInt> careTeamSequence,
-    @JsonKey(name: '_careTeamSequence') List<Element> careTeamSequenceElement,
-    List<PositiveInt> diagnosisSequence,
-    @JsonKey(name: '_diagnosisSequence') List<Element> diagnosisSequenceElement,
-    List<PositiveInt> procedureSequence,
-    @JsonKey(name: '_procedureSequence') List<Element> procedureSequenceElement,
-    List<PositiveInt> informationSequence,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    List<PositiveInt>? careTeamSequence,
+    @JsonKey(name: '_careTeamSequence') List<Element?>? careTeamSequenceElement,
+    List<PositiveInt>? diagnosisSequence,
+    @JsonKey(name: '_diagnosisSequence')
+        List<Element>? diagnosisSequenceElement,
+    List<PositiveInt>? procedureSequence,
+    @JsonKey(name: '_procedureSequence')
+        List<Element>? procedureSequenceElement,
+    List<PositiveInt>? informationSequence,
     @JsonKey(name: '_informationSequence')
-        List<Element> informationSequenceElement,
-    CodeableConcept revenue,
-    CodeableConcept category,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    List<CodeableConcept> programCode,
-    Date servicedDate,
-    @JsonKey(name: '_servicedDate') Element servicedDateElement,
-    Period servicedPeriod,
-    CodeableConcept locationCodeableConcept,
-    Address locationAddress,
-    Reference locationReference,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<Reference> udi,
-    CodeableConcept bodySite,
-    List<CodeableConcept> subSite,
-    List<Reference> encounter,
-    List<ClaimDetail> detail,
+        List<Element>? informationSequenceElement,
+    CodeableConcept? revenue,
+    CodeableConcept? category,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
+    Date? servicedDate,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
+    Period? servicedPeriod,
+    CodeableConcept? locationCodeableConcept,
+    Address? locationAddress,
+    Reference? locationReference,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<Reference>? udi,
+    CodeableConcept? bodySite,
+    List<CodeableConcept>? subSite,
+    List<Reference>? encounter,
+    List<ClaimDetail>? detail,
   }) = _ClaimItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -373,7 +393,9 @@ abstract class ClaimItem implements _$ClaimItem {
       ? ClaimItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimItem.fromJson(Map<String, dynamic> json) =>
@@ -384,23 +406,23 @@ abstract class ClaimItem implements _$ClaimItem {
 abstract class ClaimDetail implements _$ClaimDetail {
   ClaimDetail._();
   factory ClaimDetail({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    CodeableConcept revenue,
-    CodeableConcept category,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    List<CodeableConcept> programCode,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<Reference> udi,
-    List<ClaimSubDetail> subDetail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    CodeableConcept? revenue,
+    CodeableConcept? category,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<Reference>? udi,
+    List<ClaimSubDetail>? subDetail,
   }) = _ClaimDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -411,7 +433,9 @@ abstract class ClaimDetail implements _$ClaimDetail {
       ? ClaimDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
@@ -422,22 +446,22 @@ abstract class ClaimDetail implements _$ClaimDetail {
 abstract class ClaimSubDetail implements _$ClaimSubDetail {
   ClaimSubDetail._();
   factory ClaimSubDetail({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    CodeableConcept revenue,
-    CodeableConcept category,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    List<CodeableConcept> programCode,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<Reference> udi,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    CodeableConcept? revenue,
+    CodeableConcept? category,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<Reference>? udi,
   }) = _ClaimSubDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -448,7 +472,9 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
       ? ClaimSubDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimSubDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
@@ -462,49 +488,49 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     @Default(R5ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    @required CodeableConcept type,
-    CodeableConcept subType,
-    Code use,
-    @JsonKey(name: '_use') Element useElement,
-    @required Reference patient,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    @required Reference insurer,
-    Reference requestor,
-    Reference request,
-    Code outcome,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    String disposition,
-    @JsonKey(name: '_disposition') Element dispositionElement,
-    String preAuthRef,
-    @JsonKey(name: '_preAuthRef') Element preAuthRefElement,
-    Period preAuthPeriod,
-    CodeableConcept payeeType,
-    List<ClaimResponseItem> item,
-    List<ClaimResponseAddItem> addItem,
-    List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseTotal> total,
-    ClaimResponsePayment payment,
-    CodeableConcept fundsReserve,
-    CodeableConcept formCode,
-    Attachment form,
-    List<ClaimResponseProcessNote> processNote,
-    List<Reference> communicationRequest,
-    List<ClaimResponseInsurance> insurance,
-    List<ClaimResponseError> error,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    required CodeableConcept type,
+    CodeableConcept? subType,
+    Code? use,
+    @JsonKey(name: '_use') Element? useElement,
+    required Reference patient,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    required Reference insurer,
+    Reference? requestor,
+    Reference? request,
+    Code? outcome,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
+    String? disposition,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
+    String? preAuthRef,
+    @JsonKey(name: '_preAuthRef') Element? preAuthRefElement,
+    Period? preAuthPeriod,
+    CodeableConcept? payeeType,
+    List<ClaimResponseItem>? item,
+    List<ClaimResponseAddItem>? addItem,
+    List<ClaimResponseAdjudication>? adjudication,
+    List<ClaimResponseTotal>? total,
+    ClaimResponsePayment? payment,
+    CodeableConcept? fundsReserve,
+    CodeableConcept? formCode,
+    Attachment? form,
+    List<ClaimResponseProcessNote>? processNote,
+    List<Reference>? communicationRequest,
+    List<ClaimResponseInsurance>? insurance,
+    List<ClaimResponseError>? error,
   }) = _ClaimResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -515,7 +541,9 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
       ? ClaimResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
@@ -526,15 +554,15 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
 abstract class ClaimResponseItem implements _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt itemSequence,
-    @JsonKey(name: '_itemSequence') Element itemSequenceElement,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    @required List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseDetail> detail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? itemSequence,
+    @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    required List<ClaimResponseAdjudication> adjudication,
+    List<ClaimResponseDetail>? detail,
   }) = _ClaimResponseItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -545,7 +573,9 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
       ? ClaimResponseItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -557,14 +587,14 @@ abstract class ClaimResponseAdjudication
     implements _$ClaimResponseAdjudication {
   ClaimResponseAdjudication._();
   factory ClaimResponseAdjudication({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept category,
-    CodeableConcept reason,
-    Money amount,
-    Decimal value,
-    @JsonKey(name: '_value') Element valueElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept category,
+    CodeableConcept? reason,
+    Money? amount,
+    Decimal? value,
+    @JsonKey(name: '_value') Element? valueElement,
   }) = _ClaimResponseAdjudication;
 
   /// Produces a Yaml formatted String version of the object
@@ -576,7 +606,9 @@ abstract class ClaimResponseAdjudication
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseAdjudication.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseAdjudication cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
@@ -587,15 +619,15 @@ abstract class ClaimResponseAdjudication
 abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
   ClaimResponseDetail._();
   factory ClaimResponseDetail({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt detailSequence,
-    @JsonKey(name: '_detailSequence') Element detailSequenceElement,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    @required List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseSubDetail> subDetail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? detailSequence,
+    @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    required List<ClaimResponseAdjudication> adjudication,
+    List<ClaimResponseSubDetail>? subDetail,
   }) = _ClaimResponseDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -606,7 +638,9 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
       ? ClaimResponseDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
@@ -617,14 +651,14 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
 abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
   ClaimResponseSubDetail._();
   factory ClaimResponseSubDetail({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt subDetailSequence,
-    @JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    List<ClaimResponseAdjudication> adjudication,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? subDetailSequence,
+    @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ClaimResponseAdjudication>? adjudication,
   }) = _ClaimResponseSubDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -635,7 +669,9 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
       ? ClaimResponseSubDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseSubDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
@@ -646,36 +682,37 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
 abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<PositiveInt> itemSequence,
-    @JsonKey(name: '_itemSequence') List<Element> itemSequenceElement,
-    List<PositiveInt> detailSequence,
-    @JsonKey(name: '_detailSequence') List<Element> detailSequenceElement,
-    List<PositiveInt> subdetailSequence,
-    @JsonKey(name: '_subdetailSequence') List<Element> subdetailSequenceElement,
-    List<Reference> provider,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    List<CodeableConcept> programCode,
-    Date servicedDate,
-    @JsonKey(name: '_servicedDate') Element servicedDateElement,
-    Period servicedPeriod,
-    CodeableConcept locationCodeableConcept,
-    Address locationAddress,
-    Reference locationReference,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    CodeableConcept bodySite,
-    List<CodeableConcept> subSite,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    @required List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseDetail1> detail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<PositiveInt>? itemSequence,
+    @JsonKey(name: '_itemSequence') List<Element?>? itemSequenceElement,
+    List<PositiveInt>? detailSequence,
+    @JsonKey(name: '_detailSequence') List<Element?>? detailSequenceElement,
+    List<PositiveInt>? subdetailSequence,
+    @JsonKey(name: '_subdetailSequence')
+        List<Element>? subdetailSequenceElement,
+    List<Reference>? provider,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
+    Date? servicedDate,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
+    Period? servicedPeriod,
+    CodeableConcept? locationCodeableConcept,
+    Address? locationAddress,
+    Reference? locationReference,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    CodeableConcept? bodySite,
+    List<CodeableConcept>? subSite,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    required List<ClaimResponseAdjudication> adjudication,
+    List<ClaimResponseDetail1>? detail,
   }) = _ClaimResponseAddItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -686,7 +723,9 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
       ? ClaimResponseAddItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseAddItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseAddItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
@@ -697,20 +736,20 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
 abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
   ClaimResponseDetail1._();
   factory ClaimResponseDetail1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    @required List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseSubDetail1> subDetail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    required List<ClaimResponseAdjudication> adjudication,
+    List<ClaimResponseSubDetail1>? subDetail,
   }) = _ClaimResponseDetail1;
 
   /// Produces a Yaml formatted String version of the object
@@ -721,7 +760,9 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
       ? ClaimResponseDetail1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseDetail1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseDetail1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
@@ -732,19 +773,19 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
 abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
   ClaimResponseSubDetail1._();
   factory ClaimResponseSubDetail1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    @required List<ClaimResponseAdjudication> adjudication,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    required List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseSubDetail1;
 
   /// Produces a Yaml formatted String version of the object
@@ -755,7 +796,9 @@ abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
       ? ClaimResponseSubDetail1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseSubDetail1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseSubDetail1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =>
@@ -766,11 +809,11 @@ abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
 abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
   ClaimResponseTotal._();
   factory ClaimResponseTotal({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept category,
-    @required Money amount,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept category,
+    required Money amount,
   }) = _ClaimResponseTotal;
 
   /// Produces a Yaml formatted String version of the object
@@ -781,7 +824,9 @@ abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
       ? ClaimResponseTotal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseTotal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseTotal cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseTotal.fromJson(Map<String, dynamic> json) =>
@@ -792,16 +837,16 @@ abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
 abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
   ClaimResponsePayment._();
   factory ClaimResponsePayment({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    Money adjustment,
-    CodeableConcept adjustmentReason,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    @required Money amount,
-    Identifier identifier,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    Money? adjustment,
+    CodeableConcept? adjustmentReason,
+    Date? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    required Money amount,
+    Identifier? identifier,
   }) = _ClaimResponsePayment;
 
   /// Produces a Yaml formatted String version of the object
@@ -812,7 +857,9 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
       ? ClaimResponsePayment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponsePayment.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponsePayment cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
@@ -823,17 +870,17 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
 abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
   ClaimResponseProcessNote._();
   factory ClaimResponseProcessNote({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt number,
-    @JsonKey(name: '_number') Element numberElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? number,
+    @JsonKey(name: '_number') Element? numberElement,
     @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-        ClaimResponseProcessNoteType type,
-    @JsonKey(name: '_type') Element typeElement,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
-    CodeableConcept language,
+        ClaimResponseProcessNoteType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? text,
+    @JsonKey(name: '_text') Element? textElement,
+    CodeableConcept? language,
   }) = _ClaimResponseProcessNote;
 
   /// Produces a Yaml formatted String version of the object
@@ -845,7 +892,9 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseProcessNote.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseProcessNote cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
@@ -856,17 +905,17 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
 abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
   ClaimResponseInsurance._();
   factory ClaimResponseInsurance({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    Boolean focal,
-    @JsonKey(name: '_focal') Element focalElement,
-    @required Reference coverage,
-    String businessArrangement,
-    @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
-    Reference claimResponse,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    Boolean? focal,
+    @JsonKey(name: '_focal') Element? focalElement,
+    required Reference coverage,
+    String? businessArrangement,
+    @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
+    Reference? claimResponse,
   }) = _ClaimResponseInsurance;
 
   /// Produces a Yaml formatted String version of the object
@@ -877,7 +926,9 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
       ? ClaimResponseInsurance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseInsurance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseInsurance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
@@ -888,16 +939,16 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
 abstract class ClaimResponseError implements _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt itemSequence,
-    @JsonKey(name: '_itemSequence') Element itemSequenceElement,
-    PositiveInt detailSequence,
-    @JsonKey(name: '_detailSequence') Element detailSequenceElement,
-    PositiveInt subDetailSequence,
-    @JsonKey(name: '_subDetailSequence') Element subDetailSequenceElement,
-    @required CodeableConcept code,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? itemSequence,
+    @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
+    PositiveInt? detailSequence,
+    @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
+    PositiveInt? subDetailSequence,
+    @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
+    required CodeableConcept code,
   }) = _ClaimResponseError;
 
   /// Produces a Yaml formatted String version of the object
@@ -908,7 +959,9 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
       ? ClaimResponseError.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseError.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseError cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
@@ -922,36 +975,36 @@ abstract class Invoice with Resource implements _$Invoice {
     @Default(R5ResourceType.Invoice)
     @JsonKey(unknownEnumValue: R5ResourceType.Invoice)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: InvoiceStatus.unknown) InvoiceStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    String cancelledReason,
-    @JsonKey(name: '_cancelledReason') Element cancelledReasonElement,
-    CodeableConcept type,
-    Reference subject,
-    Reference recipient,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    List<InvoiceParticipant> participant,
-    Reference issuer,
-    Reference account,
-    List<InvoiceLineItem> lineItem,
-    List<InvoicePriceComponent> totalPriceComponent,
-    Money totalNet,
-    Money totalGross,
-    Markdown paymentTerms,
-    @JsonKey(name: '_paymentTerms') Element paymentTermsElement,
-    List<Annotation> note,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    @JsonKey(unknownEnumValue: InvoiceStatus.unknown) InvoiceStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    String? cancelledReason,
+    @JsonKey(name: '_cancelledReason') Element? cancelledReasonElement,
+    CodeableConcept? type,
+    Reference? subject,
+    Reference? recipient,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    List<InvoiceParticipant>? participant,
+    Reference? issuer,
+    Reference? account,
+    List<InvoiceLineItem>? lineItem,
+    List<InvoicePriceComponent>? totalPriceComponent,
+    Money? totalNet,
+    Money? totalGross,
+    Markdown? paymentTerms,
+    @JsonKey(name: '_paymentTerms') Element? paymentTermsElement,
+    List<Annotation>? note,
   }) = _Invoice;
 
   /// Produces a Yaml formatted String version of the object
@@ -962,7 +1015,9 @@ abstract class Invoice with Resource implements _$Invoice {
       ? Invoice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Invoice.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Invoice cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Invoice.fromJson(Map<String, dynamic> json) =>
@@ -973,11 +1028,11 @@ abstract class Invoice with Resource implements _$Invoice {
 abstract class InvoiceParticipant implements _$InvoiceParticipant {
   InvoiceParticipant._();
   factory InvoiceParticipant({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept role,
-    @required Reference actor,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? role,
+    required Reference actor,
   }) = _InvoiceParticipant;
 
   /// Produces a Yaml formatted String version of the object
@@ -988,7 +1043,9 @@ abstract class InvoiceParticipant implements _$InvoiceParticipant {
       ? InvoiceParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InvoiceParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InvoiceParticipant cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InvoiceParticipant.fromJson(Map<String, dynamic> json) =>
@@ -999,14 +1056,14 @@ abstract class InvoiceParticipant implements _$InvoiceParticipant {
 abstract class InvoiceLineItem implements _$InvoiceLineItem {
   InvoiceLineItem._();
   factory InvoiceLineItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    Reference chargeItemReference,
-    CodeableConcept chargeItemCodeableConcept,
-    List<InvoicePriceComponent> priceComponent,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    Reference? chargeItemReference,
+    CodeableConcept? chargeItemCodeableConcept,
+    List<InvoicePriceComponent>? priceComponent,
   }) = _InvoiceLineItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -1017,7 +1074,9 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
       ? InvoiceLineItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InvoiceLineItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InvoiceLineItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InvoiceLineItem.fromJson(Map<String, dynamic> json) =>
@@ -1028,16 +1087,16 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
 abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
   InvoicePriceComponent._();
   factory InvoicePriceComponent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-        InvoicePriceComponentType type,
-    @JsonKey(name: '_type') Element typeElement,
-    CodeableConcept code,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money amount,
+        InvoicePriceComponentType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    CodeableConcept? code,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? amount,
   }) = _InvoicePriceComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -1048,7 +1107,9 @@ abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
       ? InvoicePriceComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InvoicePriceComponent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InvoicePriceComponent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InvoicePriceComponent.fromJson(Map<String, dynamic> json) =>

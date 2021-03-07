@@ -1,16 +1,26 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 class PositiveInt {
-  const PositiveInt._(this._value);
+  const PositiveInt._(
+      this._valueString, this._valuePositiveInt, this._isValid, this._isString);
 
-  factory PositiveInt(dynamic value) {
-    assert(value != null);
-    return PositiveInt._(
-      _validatePositiveInt(value),
-    );
+  factory PositiveInt(dynamic inValue) {
+    assert(inValue != null);
+    if (inValue is int) {
+      return inValue > 0
+          ? PositiveInt._(inValue.toString(), inValue, true, false)
+          : PositiveInt._(inValue.toString(), null, false, false);
+    } else if (inValue is String) {
+      final tempPositiveInt = int.tryParse(inValue);
+      return tempPositiveInt == null
+          ? PositiveInt._(inValue, null, false, true)
+          : tempPositiveInt > 0
+              ? PositiveInt._(inValue, tempPositiveInt, true, true)
+              : PositiveInt._(inValue, null, false, true);
+    }
+    throw ArgumentError('PositiveInt cannot be constructed from $inValue.');
   }
 
   factory PositiveInt.fromJson(dynamic json) => PositiveInt(json);
@@ -19,34 +29,27 @@ class PositiveInt {
       ? PositiveInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PositiveInt.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, int> _value;
-  dynamic get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
+  final String _valueString;
+  final int? _valuePositiveInt;
+  final bool _isValid;
+  final bool _isString;
 
-  String toString() => value.toString();
-  dynamic toJson() => value;
-  dynamic toYaml() => value;
+  bool get isValid => _isValid;
+  int get hashCode => _valueString.hashCode;
+  int? get value => _valuePositiveInt;
+
+  String toString() => _valueString;
+  dynamic toJson() => _isValid && !_isString ? _valuePositiveInt : _valueString;
+  dynamic toYaml() => _isValid && !_isString ? _valuePositiveInt : _valueString;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is PositiveInt || o is int
-          ? o == value
+      : o is PositiveInt
+          ? o.value == _valuePositiveInt
           : o is String
-              ? o == value.toString()
+              ? o == _valueString
               : false;
-
-  int get hashCode => value.hashCode;
-}
-
-Either<String, int> _validatePositiveInt(dynamic value) {
-  var val = int.tryParse(value.toString());
-  return val != null
-      ? val > 0
-          ? right(val)
-          : left('FormatError: "$value" is not a PositiveInt, as defined by: '
-              'https://www.hl7.org/fhir/datatypes.html#positiveInt')
-      : left('FormatError: "$value" is not a PositiveInt, as defined by: '
-          'https://www.hl7.org/fhir/datatypes.html#positiveInt');
 }

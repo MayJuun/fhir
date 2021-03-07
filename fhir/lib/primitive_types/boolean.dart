@@ -1,16 +1,23 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 class Boolean {
-  const Boolean._(this._value);
+  const Boolean._(this._valueString, this._valueBoolean, this._isValid,
+      this._isTrueBoolean);
 
-  factory Boolean(dynamic value) {
-    assert(value != null);
-    return Boolean._(
-      _validateBoolean(value),
-    );
+  factory Boolean(dynamic inValue) {
+    assert(inValue != null);
+    switch (inValue.runtimeType.toString()) {
+      case 'bool':
+        return Boolean._(inValue.toString(), inValue, true, true);
+      case 'String':
+        return ['true', 'false'].contains(inValue.toLowerCase())
+            ? Boolean._(inValue, inValue.toLowerCase() == 'true', true, false)
+            : Boolean._(inValue, null, false, false);
+      default:
+        throw ArgumentError('Boolean cannot be constructed from $inValue.');
+    }
   }
 
   factory Boolean.fromJson(dynamic json) => Boolean(json);
@@ -19,29 +26,29 @@ class Boolean {
       ? Boolean.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Boolean.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, bool> _value;
-  dynamic get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => true;
+  final String _valueString;
+  final bool? _valueBoolean;
+  final bool _isValid;
+  final bool _isTrueBoolean;
 
-  String toString() => value.toString();
-  dynamic toJson() => value;
-  dynamic toYaml() => value;
+  bool get isValid => _isValid;
+  int get hashCode => _valueString.hashCode;
+  bool? get value => _valueBoolean;
+
+  String toString() => _valueString;
+  dynamic toJson() => _isTrueBoolean ? _valueBoolean : _valueString;
+  dynamic toYaml() => _isTrueBoolean ? _valueBoolean : _valueString;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Boolean || o is bool
-          ? o == value
-          : o is String
-              ? o == value.toString()
-              : false;
-
-  int get hashCode => value.hashCode;
+      : o is Boolean
+          ? o.value == _valueBoolean
+          : o is bool
+              ? o == _valueBoolean
+              : o is String
+                  ? o == _valueString
+                  : false;
 }
-
-Either<String, bool> _validateBoolean(dynamic value) =>
-    ['true', 'false'].contains(value.toString().toLowerCase())
-        ? right(value.toString().toLowerCase() == 'true')
-        : left('FormatError: "$value" is not a bool, as defined by:'
-            ' https://www.hl7.org/fhir/datatypes.html#boolean');

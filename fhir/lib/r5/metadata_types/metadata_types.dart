@@ -15,11 +15,11 @@ part 'metadata_types.g.dart';
 abstract class ContactDetail implements _$ContactDetail {
   ContactDetail._();
   factory ContactDetail({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    List<ContactPoint> telecom,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    List<ContactPoint>? telecom,
   }) = _ContactDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -30,7 +30,9 @@ abstract class ContactDetail implements _$ContactDetail {
       ? ContactDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContactDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContactDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContactDetail.fromJson(Map<String, dynamic> json) =>
@@ -41,13 +43,13 @@ abstract class ContactDetail implements _$ContactDetail {
 abstract class Contributor implements _$Contributor {
   Contributor._();
   factory Contributor({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
-    @JsonKey(name: '_type') Element typeElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    List<ContactDetail> contact,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    List<ContactDetail>? contact,
   }) = _Contributor;
 
   /// Produces a Yaml formatted String version of the object
@@ -58,7 +60,9 @@ abstract class Contributor implements _$Contributor {
       ? Contributor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Contributor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Contributor cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Contributor.fromJson(Map<String, dynamic> json) =>
@@ -69,20 +73,20 @@ abstract class Contributor implements _$Contributor {
 abstract class DataRequirement implements _$DataRequirement {
   DataRequirement._();
   factory DataRequirement({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    Code type,
-    @JsonKey(name: '_type') Element typeElement,
-    List<Canonical> profile,
-    CodeableConcept subjectCodeableConcept,
-    Reference subjectReference,
-    List<String> mustSupport,
-    @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
-    List<DataRequirementCodeFilter> codeFilter,
-    List<DataRequirementDateFilter> dateFilter,
-    PositiveInt limit,
-    @JsonKey(name: '_limit') Element limitElement,
-    List<DataRequirementSort> sort,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    List<Canonical>? profile,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    List<String>? mustSupport,
+    @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+    List<DataRequirementCodeFilter>? codeFilter,
+    List<DataRequirementDateFilter>? dateFilter,
+    PositiveInt? limit,
+    @JsonKey(name: '_limit') Element? limitElement,
+    List<DataRequirementSort>? sort,
   }) = _DataRequirement;
 
   /// Produces a Yaml formatted String version of the object
@@ -93,7 +97,9 @@ abstract class DataRequirement implements _$DataRequirement {
       ? DataRequirement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DataRequirement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DataRequirement cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataRequirement.fromJson(Map<String, dynamic> json) =>
@@ -105,15 +111,15 @@ abstract class DataRequirementCodeFilter
     implements _$DataRequirementCodeFilter {
   DataRequirementCodeFilter._();
   factory DataRequirementCodeFilter({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
-    String searchParam,
-    @JsonKey(name: '_searchParam') Element searchParamElement,
-    Canonical valueSet,
-    List<Coding> code,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
+    String? searchParam,
+    @JsonKey(name: '_searchParam') Element? searchParamElement,
+    Canonical? valueSet,
+    List<Coding>? code,
   }) = _DataRequirementCodeFilter;
 
   /// Produces a Yaml formatted String version of the object
@@ -125,7 +131,9 @@ abstract class DataRequirementCodeFilter
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DataRequirementCodeFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DataRequirementCodeFilter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
@@ -137,17 +145,17 @@ abstract class DataRequirementDateFilter
     implements _$DataRequirementDateFilter {
   DataRequirementDateFilter._();
   factory DataRequirementDateFilter({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
-    String searchParam,
-    @JsonKey(name: '_searchParam') Element searchParamElement,
-    FhirDateTime valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    Period valuePeriod,
-    FhirDuration valueDuration,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
+    String? searchParam,
+    @JsonKey(name: '_searchParam') Element? searchParamElement,
+    FhirDateTime? valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    Period? valuePeriod,
+    FhirDuration? valueDuration,
   }) = _DataRequirementDateFilter;
 
   /// Produces a Yaml formatted String version of the object
@@ -159,7 +167,9 @@ abstract class DataRequirementDateFilter
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DataRequirementDateFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DataRequirementDateFilter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
@@ -170,14 +180,14 @@ abstract class DataRequirementDateFilter
 abstract class DataRequirementSort implements _$DataRequirementSort {
   DataRequirementSort._();
   factory DataRequirementSort({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
     @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-        DataRequirementSortDirection direction,
-    @JsonKey(name: '_direction') Element directionElement,
+        DataRequirementSortDirection? direction,
+    @JsonKey(name: '_direction') Element? directionElement,
   }) = _DataRequirementSort;
 
   /// Produces a Yaml formatted String version of the object
@@ -188,7 +198,9 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
       ? DataRequirementSort.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DataRequirementSort.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DataRequirementSort cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataRequirementSort.fromJson(Map<String, dynamic> json) =>
@@ -199,21 +211,21 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
 abstract class ParameterDefinition implements _$ParameterDefinition {
   ParameterDefinition._();
   factory ParameterDefinition({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    Code name,
-    @JsonKey(name: '_name') Element nameElement,
-    Code use,
-    @JsonKey(name: '_use') Element useElement,
-    Integer min,
-    @JsonKey(name: '_min') Element minElement,
-    String max,
-    @JsonKey(name: '_max') Element maxElement,
-    String documentation,
-    @JsonKey(name: '_documentation') Element documentationElement,
-    Code type,
-    @JsonKey(name: '_type') Element typeElement,
-    Canonical profile,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    Code? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Code? use,
+    @JsonKey(name: '_use') Element? useElement,
+    Integer? min,
+    @JsonKey(name: '_min') Element? minElement,
+    String? max,
+    @JsonKey(name: '_max') Element? maxElement,
+    String? documentation,
+    @JsonKey(name: '_documentation') Element? documentationElement,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Canonical? profile,
   }) = _ParameterDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -224,7 +236,9 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
       ? ParameterDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ParameterDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ParameterDefinition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ParameterDefinition.fromJson(Map<String, dynamic> json) =>
@@ -235,21 +249,21 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
 abstract class RelatedArtifact implements _$RelatedArtifact {
   RelatedArtifact._();
   factory RelatedArtifact({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-        RelatedArtifactType type,
-    @JsonKey(name: '_type') Element typeElement,
-    String label,
-    @JsonKey(name: '_label') Element labelElement,
-    String display,
-    @JsonKey(name: '_display') Element displayElement,
-    Markdown citation,
-    @JsonKey(name: '_citation') Element citationElement,
-    FhirUrl url,
-    @JsonKey(name: '_url') Element urlElement,
-    Attachment document,
-    Canonical resource,
+        RelatedArtifactType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? label,
+    @JsonKey(name: '_label') Element? labelElement,
+    String? display,
+    @JsonKey(name: '_display') Element? displayElement,
+    Markdown? citation,
+    @JsonKey(name: '_citation') Element? citationElement,
+    FhirUrl? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    Attachment? document,
+    Canonical? resource,
   }) = _RelatedArtifact;
 
   /// Produces a Yaml formatted String version of the object
@@ -260,7 +274,9 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
       ? RelatedArtifact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? RelatedArtifact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'RelatedArtifact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RelatedArtifact.fromJson(Map<String, dynamic> json) =>
@@ -271,21 +287,21 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
 abstract class TriggerDefinition implements _$TriggerDefinition {
   TriggerDefinition._();
   factory TriggerDefinition({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-        TriggerDefinitionType type,
-    @JsonKey(name: '_type') Element typeElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    Timing timingTiming,
-    Reference timingReference,
-    Date timingDate,
-    @JsonKey(name: '_timingDate') Element timingDateElement,
-    FhirDateTime timingDateTime,
-    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-    List<DataRequirement> data,
-    Expression condition,
+        TriggerDefinitionType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Timing? timingTiming,
+    Reference? timingReference,
+    Date? timingDate,
+    @JsonKey(name: '_timingDate') Element? timingDateElement,
+    FhirDateTime? timingDateTime,
+    @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
+    List<DataRequirement>? data,
+    Expression? condition,
   }) = _TriggerDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -296,7 +312,9 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
       ? TriggerDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TriggerDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TriggerDefinition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TriggerDefinition.fromJson(Map<String, dynamic> json) =>
@@ -307,13 +325,13 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
 abstract class UsageContext implements _$UsageContext {
   UsageContext._();
   factory UsageContext({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @required Coding code,
-    CodeableConcept valueCodeableConcept,
-    Quantity valueQuantity,
-    Range valueRange,
-    Reference valueReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    required Coding code,
+    CodeableConcept? valueCodeableConcept,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Reference? valueReference,
   }) = _UsageContext;
 
   /// Produces a Yaml formatted String version of the object
@@ -324,7 +342,9 @@ abstract class UsageContext implements _$UsageContext {
       ? UsageContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? UsageContext.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'UsageContext cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory UsageContext.fromJson(Map<String, dynamic> json) =>
@@ -335,18 +355,18 @@ abstract class UsageContext implements _$UsageContext {
 abstract class Expression implements _$Expression {
   Expression._();
   factory Expression({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    Id name,
-    @JsonKey(name: '_name') Element nameElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    String expression,
-    @JsonKey(name: '_expression') Element expressionElement,
-    FhirUri reference,
-    @JsonKey(name: '_reference') Element referenceElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    Id? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    String? expression,
+    @JsonKey(name: '_expression') Element? expressionElement,
+    FhirUri? reference,
+    @JsonKey(name: '_reference') Element? referenceElement,
   }) = _Expression;
 
   /// Produces a Yaml formatted String version of the object
@@ -357,7 +377,9 @@ abstract class Expression implements _$Expression {
       ? Expression.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Expression.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Expression cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Expression.fromJson(Map<String, dynamic> json) =>

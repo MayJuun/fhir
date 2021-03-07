@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'scopes.dart';
 
@@ -13,21 +13,20 @@ T _$identity<T>(T value) => value;
 class _$ScopesTearOff {
   const _$ScopesTearOff();
 
-// ignore: unused_element
   _Scopes call(
-      {List<Tuple3<Role, Stu3ResourceType, Interaction>> clinicalScopes,
-      bool openid,
-      bool fhirUser,
-      bool profile,
-      bool offlineAccess,
-      bool onlineAccess,
-      bool ehrLaunch,
-      bool patientLaunch,
-      bool encounterLaunch,
-      bool needPatientBanner,
-      bool smartOrchestrateLaunch,
-      String intent,
-      List<String> additional}) {
+      {List<Tuple3<Role, Stu3ResourceType, Interaction>>? clinicalScopes,
+      bool? openid,
+      bool? fhirUser,
+      bool? profile,
+      bool? offlineAccess,
+      bool? onlineAccess,
+      bool? ehrLaunch,
+      bool? patientLaunch,
+      bool? encounterLaunch,
+      bool? needPatientBanner,
+      bool? smartOrchestrateLaunch,
+      String? intent,
+      List<String>? additional}) {
     return _Scopes(
       clinicalScopes: clinicalScopes,
       openid: openid,
@@ -47,51 +46,50 @@ class _$ScopesTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Scopes = _$ScopesTearOff();
 
 /// @nodoc
 mixin _$Scopes {
   /// see the clinical scopes class for details
-  List<Tuple3<Role, Stu3ResourceType, Interaction>> get clinicalScopes;
+  List<Tuple3<Role, Stu3ResourceType, Interaction>>? get clinicalScopes;
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
-  bool get openid;
+  bool? get openid;
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with openid
-  bool get fhirUser;
+  bool? get fhirUser;
 
   /// this is being deprecated but still commonly required
-  bool get profile;
+  bool? get profile;
 
   /// will this app require offline access? specifies the kind of token that
   /// will be returned
-  bool get offlineAccess;
+  bool? get offlineAccess;
 
   /// will this app require online access? specifies the kind of token that
   /// will be returned
-  bool get onlineAccess;
+  bool? get onlineAccess;
 
   ///if this app is going to be launched from within an EHR
-  bool get ehrLaunch;
+  bool? get ehrLaunch;
 
   /// if the context of this app is about a specific patient
-  bool get patientLaunch;
+  bool? get patientLaunch;
 
   /// if the context of this app is in regards to a specific encounter
-  bool get encounterLaunch;
+  bool? get encounterLaunch;
 
   /// does this request need a patient banner
-  bool get needPatientBanner;
+  bool? get needPatientBanner;
 
   /// I'm not actually sure what this does
-  bool get smartOrchestrateLaunch;
+  bool? get smartOrchestrateLaunch;
 
   /// String value describing the intent of the application launch
-  String get intent;
-  List<String> get additional;
+  String? get intent;
+  List<String>? get additional;
 
   @JsonKey(ignore: true)
   $ScopesCopyWith<Scopes> get copyWith;
@@ -102,19 +100,19 @@ abstract class $ScopesCopyWith<$Res> {
   factory $ScopesCopyWith(Scopes value, $Res Function(Scopes) then) =
       _$ScopesCopyWithImpl<$Res>;
   $Res call(
-      {List<Tuple3<Role, Stu3ResourceType, Interaction>> clinicalScopes,
-      bool openid,
-      bool fhirUser,
-      bool profile,
-      bool offlineAccess,
-      bool onlineAccess,
-      bool ehrLaunch,
-      bool patientLaunch,
-      bool encounterLaunch,
-      bool needPatientBanner,
-      bool smartOrchestrateLaunch,
-      String intent,
-      List<String> additional});
+      {List<Tuple3<Role, Stu3ResourceType, Interaction>>? clinicalScopes,
+      bool? openid,
+      bool? fhirUser,
+      bool? profile,
+      bool? offlineAccess,
+      bool? onlineAccess,
+      bool? ehrLaunch,
+      bool? patientLaunch,
+      bool? encounterLaunch,
+      bool? needPatientBanner,
+      bool? smartOrchestrateLaunch,
+      String? intent,
+      List<String>? additional});
 }
 
 /// @nodoc
@@ -127,49 +125,50 @@ class _$ScopesCopyWithImpl<$Res> implements $ScopesCopyWith<$Res> {
 
   @override
   $Res call({
-    Object clinicalScopes = freezed,
-    Object openid = freezed,
-    Object fhirUser = freezed,
-    Object profile = freezed,
-    Object offlineAccess = freezed,
-    Object onlineAccess = freezed,
-    Object ehrLaunch = freezed,
-    Object patientLaunch = freezed,
-    Object encounterLaunch = freezed,
-    Object needPatientBanner = freezed,
-    Object smartOrchestrateLaunch = freezed,
-    Object intent = freezed,
-    Object additional = freezed,
+    Object? clinicalScopes = freezed,
+    Object? openid = freezed,
+    Object? fhirUser = freezed,
+    Object? profile = freezed,
+    Object? offlineAccess = freezed,
+    Object? onlineAccess = freezed,
+    Object? ehrLaunch = freezed,
+    Object? patientLaunch = freezed,
+    Object? encounterLaunch = freezed,
+    Object? needPatientBanner = freezed,
+    Object? smartOrchestrateLaunch = freezed,
+    Object? intent = freezed,
+    Object? additional = freezed,
   }) {
     return _then(_value.copyWith(
       clinicalScopes: clinicalScopes == freezed
           ? _value.clinicalScopes
-          : clinicalScopes as List<Tuple3<Role, Stu3ResourceType, Interaction>>,
-      openid: openid == freezed ? _value.openid : openid as bool,
-      fhirUser: fhirUser == freezed ? _value.fhirUser : fhirUser as bool,
-      profile: profile == freezed ? _value.profile : profile as bool,
+          : clinicalScopes
+              as List<Tuple3<Role, Stu3ResourceType, Interaction>>?,
+      openid: openid == freezed ? _value.openid : openid as bool?,
+      fhirUser: fhirUser == freezed ? _value.fhirUser : fhirUser as bool?,
+      profile: profile == freezed ? _value.profile : profile as bool?,
       offlineAccess: offlineAccess == freezed
           ? _value.offlineAccess
-          : offlineAccess as bool,
+          : offlineAccess as bool?,
       onlineAccess:
-          onlineAccess == freezed ? _value.onlineAccess : onlineAccess as bool,
-      ehrLaunch: ehrLaunch == freezed ? _value.ehrLaunch : ehrLaunch as bool,
+          onlineAccess == freezed ? _value.onlineAccess : onlineAccess as bool?,
+      ehrLaunch: ehrLaunch == freezed ? _value.ehrLaunch : ehrLaunch as bool?,
       patientLaunch: patientLaunch == freezed
           ? _value.patientLaunch
-          : patientLaunch as bool,
+          : patientLaunch as bool?,
       encounterLaunch: encounterLaunch == freezed
           ? _value.encounterLaunch
-          : encounterLaunch as bool,
+          : encounterLaunch as bool?,
       needPatientBanner: needPatientBanner == freezed
           ? _value.needPatientBanner
-          : needPatientBanner as bool,
+          : needPatientBanner as bool?,
       smartOrchestrateLaunch: smartOrchestrateLaunch == freezed
           ? _value.smartOrchestrateLaunch
-          : smartOrchestrateLaunch as bool,
-      intent: intent == freezed ? _value.intent : intent as String,
+          : smartOrchestrateLaunch as bool?,
+      intent: intent == freezed ? _value.intent : intent as String?,
       additional: additional == freezed
           ? _value.additional
-          : additional as List<String>,
+          : additional as List<String>?,
     ));
   }
 }
@@ -180,19 +179,19 @@ abstract class _$ScopesCopyWith<$Res> implements $ScopesCopyWith<$Res> {
       __$ScopesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<Tuple3<Role, Stu3ResourceType, Interaction>> clinicalScopes,
-      bool openid,
-      bool fhirUser,
-      bool profile,
-      bool offlineAccess,
-      bool onlineAccess,
-      bool ehrLaunch,
-      bool patientLaunch,
-      bool encounterLaunch,
-      bool needPatientBanner,
-      bool smartOrchestrateLaunch,
-      String intent,
-      List<String> additional});
+      {List<Tuple3<Role, Stu3ResourceType, Interaction>>? clinicalScopes,
+      bool? openid,
+      bool? fhirUser,
+      bool? profile,
+      bool? offlineAccess,
+      bool? onlineAccess,
+      bool? ehrLaunch,
+      bool? patientLaunch,
+      bool? encounterLaunch,
+      bool? needPatientBanner,
+      bool? smartOrchestrateLaunch,
+      String? intent,
+      List<String>? additional});
 }
 
 /// @nodoc
@@ -206,49 +205,50 @@ class __$ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object clinicalScopes = freezed,
-    Object openid = freezed,
-    Object fhirUser = freezed,
-    Object profile = freezed,
-    Object offlineAccess = freezed,
-    Object onlineAccess = freezed,
-    Object ehrLaunch = freezed,
-    Object patientLaunch = freezed,
-    Object encounterLaunch = freezed,
-    Object needPatientBanner = freezed,
-    Object smartOrchestrateLaunch = freezed,
-    Object intent = freezed,
-    Object additional = freezed,
+    Object? clinicalScopes = freezed,
+    Object? openid = freezed,
+    Object? fhirUser = freezed,
+    Object? profile = freezed,
+    Object? offlineAccess = freezed,
+    Object? onlineAccess = freezed,
+    Object? ehrLaunch = freezed,
+    Object? patientLaunch = freezed,
+    Object? encounterLaunch = freezed,
+    Object? needPatientBanner = freezed,
+    Object? smartOrchestrateLaunch = freezed,
+    Object? intent = freezed,
+    Object? additional = freezed,
   }) {
     return _then(_Scopes(
       clinicalScopes: clinicalScopes == freezed
           ? _value.clinicalScopes
-          : clinicalScopes as List<Tuple3<Role, Stu3ResourceType, Interaction>>,
-      openid: openid == freezed ? _value.openid : openid as bool,
-      fhirUser: fhirUser == freezed ? _value.fhirUser : fhirUser as bool,
-      profile: profile == freezed ? _value.profile : profile as bool,
+          : clinicalScopes
+              as List<Tuple3<Role, Stu3ResourceType, Interaction>>?,
+      openid: openid == freezed ? _value.openid : openid as bool?,
+      fhirUser: fhirUser == freezed ? _value.fhirUser : fhirUser as bool?,
+      profile: profile == freezed ? _value.profile : profile as bool?,
       offlineAccess: offlineAccess == freezed
           ? _value.offlineAccess
-          : offlineAccess as bool,
+          : offlineAccess as bool?,
       onlineAccess:
-          onlineAccess == freezed ? _value.onlineAccess : onlineAccess as bool,
-      ehrLaunch: ehrLaunch == freezed ? _value.ehrLaunch : ehrLaunch as bool,
+          onlineAccess == freezed ? _value.onlineAccess : onlineAccess as bool?,
+      ehrLaunch: ehrLaunch == freezed ? _value.ehrLaunch : ehrLaunch as bool?,
       patientLaunch: patientLaunch == freezed
           ? _value.patientLaunch
-          : patientLaunch as bool,
+          : patientLaunch as bool?,
       encounterLaunch: encounterLaunch == freezed
           ? _value.encounterLaunch
-          : encounterLaunch as bool,
+          : encounterLaunch as bool?,
       needPatientBanner: needPatientBanner == freezed
           ? _value.needPatientBanner
-          : needPatientBanner as bool,
+          : needPatientBanner as bool?,
       smartOrchestrateLaunch: smartOrchestrateLaunch == freezed
           ? _value.smartOrchestrateLaunch
-          : smartOrchestrateLaunch as bool,
-      intent: intent == freezed ? _value.intent : intent as String,
+          : smartOrchestrateLaunch as bool?,
+      intent: intent == freezed ? _value.intent : intent as String?,
       additional: additional == freezed
           ? _value.additional
-          : additional as List<String>,
+          : additional as List<String>?,
     ));
   }
 }
@@ -274,57 +274,57 @@ class _$_Scopes extends _Scopes {
   @override
 
   /// see the clinical scopes class for details
-  final List<Tuple3<Role, Stu3ResourceType, Interaction>> clinicalScopes;
+  final List<Tuple3<Role, Stu3ResourceType, Interaction>>? clinicalScopes;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
-  final bool openid;
+  final bool? openid;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with openid
-  final bool fhirUser;
+  final bool? fhirUser;
   @override
 
   /// this is being deprecated but still commonly required
-  final bool profile;
+  final bool? profile;
   @override
 
   /// will this app require offline access? specifies the kind of token that
   /// will be returned
-  final bool offlineAccess;
+  final bool? offlineAccess;
   @override
 
   /// will this app require online access? specifies the kind of token that
   /// will be returned
-  final bool onlineAccess;
+  final bool? onlineAccess;
   @override
 
   ///if this app is going to be launched from within an EHR
-  final bool ehrLaunch;
+  final bool? ehrLaunch;
   @override
 
   /// if the context of this app is about a specific patient
-  final bool patientLaunch;
+  final bool? patientLaunch;
   @override
 
   /// if the context of this app is in regards to a specific encounter
-  final bool encounterLaunch;
+  final bool? encounterLaunch;
   @override
 
   /// does this request need a patient banner
-  final bool needPatientBanner;
+  final bool? needPatientBanner;
   @override
 
   /// I'm not actually sure what this does
-  final bool smartOrchestrateLaunch;
+  final bool? smartOrchestrateLaunch;
   @override
 
   /// String value describing the intent of the application launch
-  final String intent;
+  final String? intent;
   @override
-  final List<String> additional;
+  final List<String>? additional;
 
   @override
   String toString() {
@@ -400,74 +400,74 @@ class _$_Scopes extends _Scopes {
 abstract class _Scopes extends Scopes {
   _Scopes._() : super._();
   factory _Scopes(
-      {List<Tuple3<Role, Stu3ResourceType, Interaction>> clinicalScopes,
-      bool openid,
-      bool fhirUser,
-      bool profile,
-      bool offlineAccess,
-      bool onlineAccess,
-      bool ehrLaunch,
-      bool patientLaunch,
-      bool encounterLaunch,
-      bool needPatientBanner,
-      bool smartOrchestrateLaunch,
-      String intent,
-      List<String> additional}) = _$_Scopes;
+      {List<Tuple3<Role, Stu3ResourceType, Interaction>>? clinicalScopes,
+      bool? openid,
+      bool? fhirUser,
+      bool? profile,
+      bool? offlineAccess,
+      bool? onlineAccess,
+      bool? ehrLaunch,
+      bool? patientLaunch,
+      bool? encounterLaunch,
+      bool? needPatientBanner,
+      bool? smartOrchestrateLaunch,
+      String? intent,
+      List<String>? additional}) = _$_Scopes;
 
   @override
 
   /// see the clinical scopes class for details
-  List<Tuple3<Role, Stu3ResourceType, Interaction>> get clinicalScopes;
+  List<Tuple3<Role, Stu3ResourceType, Interaction>>? get clinicalScopes;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
-  bool get openid;
+  bool? get openid;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with openid
-  bool get fhirUser;
+  bool? get fhirUser;
   @override
 
   /// this is being deprecated but still commonly required
-  bool get profile;
+  bool? get profile;
   @override
 
   /// will this app require offline access? specifies the kind of token that
   /// will be returned
-  bool get offlineAccess;
+  bool? get offlineAccess;
   @override
 
   /// will this app require online access? specifies the kind of token that
   /// will be returned
-  bool get onlineAccess;
+  bool? get onlineAccess;
   @override
 
   ///if this app is going to be launched from within an EHR
-  bool get ehrLaunch;
+  bool? get ehrLaunch;
   @override
 
   /// if the context of this app is about a specific patient
-  bool get patientLaunch;
+  bool? get patientLaunch;
   @override
 
   /// if the context of this app is in regards to a specific encounter
-  bool get encounterLaunch;
+  bool? get encounterLaunch;
   @override
 
   /// does this request need a patient banner
-  bool get needPatientBanner;
+  bool? get needPatientBanner;
   @override
 
   /// I'm not actually sure what this does
-  bool get smartOrchestrateLaunch;
+  bool? get smartOrchestrateLaunch;
   @override
 
   /// String value describing the intent of the application launch
-  String get intent;
+  String? get intent;
   @override
-  List<String> get additional;
+  List<String>? get additional;
   @override
   @JsonKey(ignore: true)
   _$ScopesCopyWith<_Scopes> get copyWith;

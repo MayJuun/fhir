@@ -18,30 +18,30 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     @Default(Stu3ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
         Stu3ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Coding type,
-    List<Coding> subtype,
-    AuditEventAction action,
-    @JsonKey(name: '_action') Element actionElement,
-    String recorded,
-    @JsonKey(name: '_recorded') Element recordedElement,
-    AuditEventOutcome outcome,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    String outcomeDesc,
-    @JsonKey(name: '_outcomeDesc') Element outcomeDescElement,
-    List<CodeableConcept> purposeOfEvent,
-    @required List<AuditEventAgent> agent,
-    @required AuditEventSource source,
-    List<AuditEventEntity> entity,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Coding type,
+    List<Coding>? subtype,
+    AuditEventAction? action,
+    @JsonKey(name: '_action') Element? actionElement,
+    String? recorded,
+    @JsonKey(name: '_recorded') Element? recordedElement,
+    AuditEventOutcome? outcome,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
+    String? outcomeDesc,
+    @JsonKey(name: '_outcomeDesc') Element? outcomeDescElement,
+    List<CodeableConcept>? purposeOfEvent,
+    required List<AuditEventAgent> agent,
+    required AuditEventSource source,
+    List<AuditEventEntity>? entity,
   }) = _AuditEvent;
 
   /// Produces a Yaml formatted String version of the object
@@ -52,7 +52,9 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
       ? AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEvent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEvent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
@@ -63,21 +65,21 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
 abstract class AuditEventAgent implements _$AuditEventAgent {
   AuditEventAgent._();
   factory AuditEventAgent({
-    List<CodeableConcept> role,
-    Reference reference,
-    Identifier userId,
-    String altId,
-    @JsonKey(name: '_altId') Element altIdElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    Boolean requestor,
-    @JsonKey(name: '_requestor') Element requestorElement,
-    Reference location,
-    List<String> policy,
-    @JsonKey(name: '_policy') List<Element> policyElement,
-    Coding media,
-    AuditEventNetwork network,
-    List<CodeableConcept> purposeOfUse,
+    List<CodeableConcept>? role,
+    Reference? reference,
+    Identifier? userId,
+    String? altId,
+    @JsonKey(name: '_altId') Element? altIdElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Boolean? requestor,
+    @JsonKey(name: '_requestor') Element? requestorElement,
+    Reference? location,
+    List<String>? policy,
+    @JsonKey(name: '_policy') List<Element?>? policyElement,
+    Coding? media,
+    AuditEventNetwork? network,
+    List<CodeableConcept>? purposeOfUse,
   }) = _AuditEventAgent;
 
   /// Produces a Yaml formatted String version of the object
@@ -88,7 +90,9 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
       ? AuditEventAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventAgent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventAgent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
@@ -99,10 +103,10 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
 abstract class AuditEventNetwork implements _$AuditEventNetwork {
   AuditEventNetwork._();
   factory AuditEventNetwork({
-    String address,
-    @JsonKey(name: '_address') Element addressElement,
-    AuditEventNetworkType type,
-    @JsonKey(name: '_type') Element typeElement,
+    String? address,
+    @JsonKey(name: '_address') Element? addressElement,
+    AuditEventNetworkType? type,
+    @JsonKey(name: '_type') Element? typeElement,
   }) = _AuditEventNetwork;
 
   /// Produces a Yaml formatted String version of the object
@@ -113,7 +117,9 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
       ? AuditEventNetwork.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventNetwork.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventNetwork cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
@@ -124,10 +130,10 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
 abstract class AuditEventSource implements _$AuditEventSource {
   AuditEventSource._();
   factory AuditEventSource({
-    String site,
-    @JsonKey(name: '_site') Element siteElement,
-    @required Identifier identifier,
-    List<Coding> type,
+    String? site,
+    @JsonKey(name: '_site') Element? siteElement,
+    required Identifier identifier,
+    List<Coding>? type,
   }) = _AuditEventSource;
 
   /// Produces a Yaml formatted String version of the object
@@ -138,7 +144,9 @@ abstract class AuditEventSource implements _$AuditEventSource {
       ? AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventSource.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventSource cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
@@ -149,19 +157,19 @@ abstract class AuditEventSource implements _$AuditEventSource {
 abstract class AuditEventEntity implements _$AuditEventEntity {
   AuditEventEntity._();
   factory AuditEventEntity({
-    Identifier identifier,
-    Reference reference,
-    Coding type,
-    Coding role,
-    Coding lifecycle,
-    List<Coding> securityLabel,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    String query,
-    @JsonKey(name: '_query') Element queryElement,
-    List<AuditEventDetail> detail,
+    Identifier? identifier,
+    Reference? reference,
+    Coding? type,
+    Coding? role,
+    Coding? lifecycle,
+    List<Coding>? securityLabel,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    String? query,
+    @JsonKey(name: '_query') Element? queryElement,
+    List<AuditEventDetail>? detail,
   }) = _AuditEventEntity;
 
   /// Produces a Yaml formatted String version of the object
@@ -172,7 +180,9 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
       ? AuditEventEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventEntity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventEntity cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
@@ -183,10 +193,10 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
 abstract class AuditEventDetail implements _$AuditEventDetail {
   AuditEventDetail._();
   factory AuditEventDetail({
-    String type,
-    @JsonKey(name: '_type') Element typeElement,
-    String value,
-    @JsonKey(name: '_value') Element valueElement,
+    String? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
   }) = _AuditEventDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -197,7 +207,9 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
       ? AuditEventDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
@@ -211,39 +223,39 @@ abstract class Consent with Resource implements _$Consent {
     @Default(Stu3ResourceType.Consent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
         Stu3ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    ConsentStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<CodeableConcept> category,
-    @required Reference patient,
-    Period period,
-    FhirDateTime dateTime,
-    @JsonKey(name: '_dateTime') Element dateTimeElement,
-    List<Reference> consentingParty,
-    List<ConsentActor> actor,
-    List<CodeableConcept> action,
-    List<Reference> organization,
-    Attachment sourceAttachment,
-    Identifier sourceIdentifier,
-    Reference sourceReference,
-    List<ConsentPolicy> policy,
-    String policyRule,
-    @JsonKey(name: '_policyRule') Element policyRuleElement,
-    List<Coding> securityLabel,
-    List<Coding> purpose,
-    Period dataPeriod,
-    List<ConsentData> data,
-    List<ConsentExcept> except,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    ConsentStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CodeableConcept>? category,
+    required Reference patient,
+    Period? period,
+    FhirDateTime? dateTime,
+    @JsonKey(name: '_dateTime') Element? dateTimeElement,
+    List<Reference>? consentingParty,
+    List<ConsentActor>? actor,
+    List<CodeableConcept>? action,
+    List<Reference>? organization,
+    Attachment? sourceAttachment,
+    Identifier? sourceIdentifier,
+    Reference? sourceReference,
+    List<ConsentPolicy>? policy,
+    String? policyRule,
+    @JsonKey(name: '_policyRule') Element? policyRuleElement,
+    List<Coding>? securityLabel,
+    List<Coding>? purpose,
+    Period? dataPeriod,
+    List<ConsentData>? data,
+    List<ConsentExcept>? except,
   }) = _Consent;
 
   /// Produces a Yaml formatted String version of the object
@@ -254,7 +266,9 @@ abstract class Consent with Resource implements _$Consent {
       ? Consent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Consent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Consent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Consent.fromJson(Map<String, dynamic> json) =>
@@ -265,8 +279,8 @@ abstract class Consent with Resource implements _$Consent {
 abstract class ConsentActor implements _$ConsentActor {
   ConsentActor._();
   factory ConsentActor({
-    @required CodeableConcept role,
-    @required Reference reference,
+    required CodeableConcept role,
+    required Reference reference,
   }) = _ConsentActor;
 
   /// Produces a Yaml formatted String version of the object
@@ -277,7 +291,9 @@ abstract class ConsentActor implements _$ConsentActor {
       ? ConsentActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentActor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentActor cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentActor.fromJson(Map<String, dynamic> json) =>
@@ -288,10 +304,10 @@ abstract class ConsentActor implements _$ConsentActor {
 abstract class ConsentPolicy implements _$ConsentPolicy {
   ConsentPolicy._();
   factory ConsentPolicy({
-    String authority,
-    @JsonKey(name: '_authority') Element authorityElement,
-    String uri,
-    @JsonKey(name: '_uri') Element uriElement,
+    String? authority,
+    @JsonKey(name: '_authority') Element? authorityElement,
+    String? uri,
+    @JsonKey(name: '_uri') Element? uriElement,
   }) = _ConsentPolicy;
 
   /// Produces a Yaml formatted String version of the object
@@ -302,7 +318,9 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
       ? ConsentPolicy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentPolicy.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentPolicy cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
@@ -313,9 +331,9 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
 abstract class ConsentData implements _$ConsentData {
   ConsentData._();
   factory ConsentData({
-    ConsentDataMeaning meaning,
-    @JsonKey(name: '_meaning') Element meaningElement,
-    @required Reference reference,
+    ConsentDataMeaning? meaning,
+    @JsonKey(name: '_meaning') Element? meaningElement,
+    required Reference reference,
   }) = _ConsentData;
 
   /// Produces a Yaml formatted String version of the object
@@ -326,7 +344,9 @@ abstract class ConsentData implements _$ConsentData {
       ? ConsentData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentData.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentData cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentData.fromJson(Map<String, dynamic> json) =>
@@ -337,17 +357,17 @@ abstract class ConsentData implements _$ConsentData {
 abstract class ConsentExcept implements _$ConsentExcept {
   ConsentExcept._();
   factory ConsentExcept({
-    ConsentExceptType type,
-    @JsonKey(name: '_type') Element typeElement,
-    Period period,
-    List<ConsentActor1> actor,
-    List<CodeableConcept> action,
-    List<Coding> securityLabel,
-    List<Coding> purpose,
-    @JsonKey(name: 'class') List<Coding> class_,
-    List<Coding> code,
-    Period dataPeriod,
-    List<ConsentData1> data,
+    ConsentExceptType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Period? period,
+    List<ConsentActor1>? actor,
+    List<CodeableConcept>? action,
+    List<Coding>? securityLabel,
+    List<Coding>? purpose,
+    @JsonKey(name: 'class') List<Coding>? class_,
+    List<Coding>? code,
+    Period? dataPeriod,
+    List<ConsentData1>? data,
   }) = _ConsentExcept;
 
   /// Produces a Yaml formatted String version of the object
@@ -358,7 +378,9 @@ abstract class ConsentExcept implements _$ConsentExcept {
       ? ConsentExcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentExcept.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentExcept cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentExcept.fromJson(Map<String, dynamic> json) =>
@@ -369,8 +391,8 @@ abstract class ConsentExcept implements _$ConsentExcept {
 abstract class ConsentActor1 implements _$ConsentActor1 {
   ConsentActor1._();
   factory ConsentActor1({
-    @required CodeableConcept role,
-    @required Reference reference,
+    required CodeableConcept role,
+    required Reference reference,
   }) = _ConsentActor1;
 
   /// Produces a Yaml formatted String version of the object
@@ -381,7 +403,9 @@ abstract class ConsentActor1 implements _$ConsentActor1 {
       ? ConsentActor1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentActor1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentActor1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentActor1.fromJson(Map<String, dynamic> json) =>
@@ -392,9 +416,9 @@ abstract class ConsentActor1 implements _$ConsentActor1 {
 abstract class ConsentData1 implements _$ConsentData1 {
   ConsentData1._();
   factory ConsentData1({
-    ConsentData1Meaning meaning,
-    @JsonKey(name: '_meaning') Element meaningElement,
-    @required Reference reference,
+    ConsentData1Meaning? meaning,
+    @JsonKey(name: '_meaning') Element? meaningElement,
+    required Reference reference,
   }) = _ConsentData1;
 
   /// Produces a Yaml formatted String version of the object
@@ -405,7 +429,9 @@ abstract class ConsentData1 implements _$ConsentData1 {
       ? ConsentData1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentData1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentData1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentData1.fromJson(Map<String, dynamic> json) =>
@@ -419,28 +445,28 @@ abstract class Provenance with Resource implements _$Provenance {
     @Default(Stu3ResourceType.Provenance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
         Stu3ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required List<Reference> target,
-    Period period,
-    String recorded,
-    @JsonKey(name: '_recorded') Element recordedElement,
-    List<String> policy,
-    @JsonKey(name: '_policy') List<Element> policyElement,
-    Reference location,
-    List<Coding> reason,
-    Coding activity,
-    @required List<ProvenanceAgent> agent,
-    List<ProvenanceEntity> entity,
-    List<Signature> signature,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required List<Reference> target,
+    Period? period,
+    String? recorded,
+    @JsonKey(name: '_recorded') Element? recordedElement,
+    List<String>? policy,
+    @JsonKey(name: '_policy') List<Element?>? policyElement,
+    Reference? location,
+    List<Coding>? reason,
+    Coding? activity,
+    required List<ProvenanceAgent> agent,
+    List<ProvenanceEntity>? entity,
+    List<Signature>? signature,
   }) = _Provenance;
 
   /// Produces a Yaml formatted String version of the object
@@ -451,7 +477,9 @@ abstract class Provenance with Resource implements _$Provenance {
       ? Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Provenance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Provenance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Provenance.fromJson(Map<String, dynamic> json) =>
@@ -462,14 +490,14 @@ abstract class Provenance with Resource implements _$Provenance {
 abstract class ProvenanceAgent implements _$ProvenanceAgent {
   ProvenanceAgent._();
   factory ProvenanceAgent({
-    List<CodeableConcept> role,
-    String whoUri,
-    @JsonKey(name: '_whoUri') Element whoUriElement,
-    Reference whoReference,
-    String onBehalfOfUri,
-    @JsonKey(name: '_onBehalfOfUri') Element onBehalfOfUriElement,
-    Reference onBehalfOfReference,
-    CodeableConcept relatedAgentType,
+    List<CodeableConcept>? role,
+    String? whoUri,
+    @JsonKey(name: '_whoUri') Element? whoUriElement,
+    Reference? whoReference,
+    String? onBehalfOfUri,
+    @JsonKey(name: '_onBehalfOfUri') Element? onBehalfOfUriElement,
+    Reference? onBehalfOfReference,
+    CodeableConcept? relatedAgentType,
   }) = _ProvenanceAgent;
 
   /// Produces a Yaml formatted String version of the object
@@ -480,7 +508,9 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
       ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProvenanceAgent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
@@ -491,13 +521,13 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
 abstract class ProvenanceEntity implements _$ProvenanceEntity {
   ProvenanceEntity._();
   factory ProvenanceEntity({
-    ProvenanceEntityRole role,
-    @JsonKey(name: '_role') Element roleElement,
-    String whatUri,
-    @JsonKey(name: '_whatUri') Element whatUriElement,
-    Reference whatReference,
-    Identifier whatIdentifier,
-    List<ProvenanceAgent> agent,
+    ProvenanceEntityRole? role,
+    @JsonKey(name: '_role') Element? roleElement,
+    String? whatUri,
+    @JsonKey(name: '_whatUri') Element? whatUriElement,
+    Reference? whatReference,
+    Identifier? whatIdentifier,
+    List<ProvenanceAgent>? agent,
   }) = _ProvenanceEntity;
 
   /// Produces a Yaml formatted String version of the object
@@ -508,7 +538,9 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
       ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProvenanceEntity cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>

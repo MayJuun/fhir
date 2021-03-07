@@ -8,8 +8,7 @@ part of 'other.dart';
 
 _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
   return _$_Basic(
-    resourceType: _$enumDecodeNullable(
-        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.Basic),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
@@ -28,31 +27,23 @@ _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    identifier: (json['identifier'] as List<dynamic>?)
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    created: json['created'] as String,
+    created: json['created'] as String?,
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -63,7 +54,9 @@ _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -71,8 +64,6 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
     }
   }
 
-  writeNotNull(
-      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -81,14 +72,14 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('code', instance.code?.toJson());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  val['code'] = instance.code.toJson();
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('created', instance.created);
   writeNotNull('_created', instance.createdElement?.toJson());
@@ -96,36 +87,30 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
   return val;
 }
 
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
+K _$enumDecode<K, V>(
+  Map<K, V> enumValues,
+  Object? source, {
+  K? unknownValue,
 }) {
   if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
+    throw ArgumentError(
+      'A value must be provided. Supported values: '
+      '${enumValues.values.join(', ')}',
+    );
   }
 
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+  return enumValues.entries.singleWhere(
+    (e) => e.value == source,
+    orElse: () {
+      if (unknownValue == null) {
+        throw ArgumentError(
+          '`$source` is not one of the supported values: '
+          '${enumValues.values.join(', ')}',
+        );
+      }
+      return MapEntry(unknownValue, enumValues.values.first);
+    },
+  ).key;
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -250,8 +235,7 @@ const _$Stu3ResourceTypeEnumMap = {
 
 _$_Binary _$_$_BinaryFromJson(Map<String, dynamic> json) {
   return _$_Binary(
-    resourceType: _$enumDecodeNullable(
-        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.Binary),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
@@ -270,28 +254,23 @@ _$_Binary _$_$_BinaryFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    contentType: json['contentType'] as String,
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    contentType: json['contentType'] as String?,
     contentTypeElement: json['_contentType'] == null
         ? null
         : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
     securityContext: json['securityContext'] == null
         ? null
         : Reference.fromJson(json['securityContext'] as Map<String, dynamic>),
-    content: json['content'] as String,
+    content: json['content'] as String?,
     contentElement: json['_content'] == null
         ? null
         : Element.fromJson(json['_content'] as Map<String, dynamic>),
@@ -299,7 +278,9 @@ _$_Binary _$_$_BinaryFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -307,8 +288,6 @@ Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
     }
   }
 
-  writeNotNull(
-      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -317,11 +296,11 @@ Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('contentType', instance.contentType);
   writeNotNull('_contentType', instance.contentTypeElement?.toJson());
   writeNotNull('securityContext', instance.securityContext?.toJson());
@@ -332,8 +311,7 @@ Map<String, dynamic> _$_$_BinaryToJson(_$_Binary instance) {
 
 _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
   return _$_Bundle(
-    resourceType: _$enumDecodeNullable(
-        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.Bundle),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
@@ -352,20 +330,15 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -377,14 +350,12 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
     totalElement: json['_total'] == null
         ? null
         : Element.fromJson(json['_total'] as Map<String, dynamic>),
-    link: (json['link'] as List)
-        ?.map((e) =>
-            e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    entry: (json['entry'] as List)
-        ?.map((e) =>
-            e == null ? null : BundleEntry.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    link: (json['link'] as List<dynamic>?)
+        ?.map((e) => BundleLink.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    entry: (json['entry'] as List<dynamic>?)
+        ?.map((e) => BundleEntry.fromJson(e as Map<String, dynamic>))
+        .toList(),
     signature: json['signature'] == null
         ? null
         : Signature.fromJson(json['signature'] as Map<String, dynamic>),
@@ -392,7 +363,9 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -400,8 +373,6 @@ Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) {
     }
   }
 
-  writeNotNull(
-      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -410,20 +381,31 @@ Map<String, dynamic> _$_$_BundleToJson(_$_Bundle instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('type', _$BundleTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('total', instance.total?.toJson());
   writeNotNull('_total', instance.totalElement?.toJson());
-  writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
-  writeNotNull('entry', instance.entry?.map((e) => e?.toJson())?.toList());
+  writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
+  writeNotNull('entry', instance.entry?.map((e) => e.toJson()).toList());
   writeNotNull('signature', instance.signature?.toJson());
   return val;
+}
+
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$BundleTypeEnumMap = {
@@ -441,11 +423,11 @@ const _$BundleTypeEnumMap = {
 
 _$_BundleLink _$_$_BundleLinkFromJson(Map<String, dynamic> json) {
   return _$_BundleLink(
-    relation: json['relation'] as String,
+    relation: json['relation'] as String?,
     relationElement: json['_relation'] == null
         ? null
         : Element.fromJson(json['_relation'] as Map<String, dynamic>),
-    url: json['url'] as String,
+    url: json['url'] as String?,
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -470,11 +452,10 @@ Map<String, dynamic> _$_$_BundleLinkToJson(_$_BundleLink instance) {
 
 _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
   return _$_BundleEntry(
-    link: (json['link'] as List)
-        ?.map((e) =>
-            e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    fullUrl: json['fullUrl'] as String,
+    link: (json['link'] as List<dynamic>?)
+        ?.map((e) => BundleLink.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    fullUrl: json['fullUrl'] as String?,
     fullUrlElement: json['_fullUrl'] == null
         ? null
         : Element.fromJson(json['_fullUrl'] as Map<String, dynamic>),
@@ -502,7 +483,7 @@ Map<String, dynamic> _$_$_BundleEntryToJson(_$_BundleEntry instance) {
     }
   }
 
-  writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
+  writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
   writeNotNull('fullUrl', instance.fullUrl);
   writeNotNull('_fullUrl', instance.fullUrlElement?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
@@ -554,23 +535,23 @@ _$_BundleRequest _$_$_BundleRequestFromJson(Map<String, dynamic> json) {
     methodElement: json['_method'] == null
         ? null
         : Element.fromJson(json['_method'] as Map<String, dynamic>),
-    url: json['url'] as String,
+    url: json['url'] as String?,
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
-    ifNoneMatch: json['ifNoneMatch'] as String,
+    ifNoneMatch: json['ifNoneMatch'] as String?,
     ifNoneMatchElement: json['_ifNoneMatch'] == null
         ? null
         : Element.fromJson(json['_ifNoneMatch'] as Map<String, dynamic>),
-    ifModifiedSince: json['ifModifiedSince'] as String,
+    ifModifiedSince: json['ifModifiedSince'] as String?,
     ifModifiedSinceElement: json['_ifModifiedSince'] == null
         ? null
         : Element.fromJson(json['_ifModifiedSince'] as Map<String, dynamic>),
-    ifMatch: json['ifMatch'] as String,
+    ifMatch: json['ifMatch'] as String?,
     ifMatchElement: json['_ifMatch'] == null
         ? null
         : Element.fromJson(json['_ifMatch'] as Map<String, dynamic>),
-    ifNoneExist: json['ifNoneExist'] as String,
+    ifNoneExist: json['ifNoneExist'] as String?,
     ifNoneExistElement: json['_ifNoneExist'] == null
         ? null
         : Element.fromJson(json['_ifNoneExist'] as Map<String, dynamic>),
@@ -611,19 +592,19 @@ const _$BundleRequestMethodEnumMap = {
 
 _$_BundleResponse _$_$_BundleResponseFromJson(Map<String, dynamic> json) {
   return _$_BundleResponse(
-    status: json['status'] as String,
+    status: json['status'] as String?,
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    location: json['location'] as String,
+    location: json['location'] as String?,
     locationElement: json['_location'] == null
         ? null
         : Element.fromJson(json['_location'] as Map<String, dynamic>),
-    etag: json['etag'] as String,
+    etag: json['etag'] as String?,
     etagElement: json['_etag'] == null
         ? null
         : Element.fromJson(json['_etag'] as Map<String, dynamic>),
-    lastModified: json['lastModified'] as String,
+    lastModified: json['lastModified'] as String?,
     lastModifiedElement: json['_lastModified'] == null
         ? null
         : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
@@ -656,8 +637,7 @@ Map<String, dynamic> _$_$_BundleResponseToJson(_$_BundleResponse instance) {
 
 _$_Linkage _$_$_LinkageFromJson(Map<String, dynamic> json) {
   return _$_Linkage(
-    resourceType: _$enumDecodeNullable(
-        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.Linkage),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
@@ -676,20 +656,15 @@ _$_Linkage _$_$_LinkageFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
     active: json['active'] == null ? null : Boolean.fromJson(json['active']),
     activeElement: json['_active'] == null
         ? null
@@ -697,15 +672,16 @@ _$_Linkage _$_$_LinkageFromJson(Map<String, dynamic> json) {
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
-    item: (json['item'] as List)
-        ?.map((e) =>
-            e == null ? null : LinkageItem.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    item: (json['item'] as List<dynamic>)
+        .map((e) => LinkageItem.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
 Map<String, dynamic> _$_$_LinkageToJson(_$_Linkage instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -713,8 +689,6 @@ Map<String, dynamic> _$_$_LinkageToJson(_$_Linkage instance) {
     }
   }
 
-  writeNotNull(
-      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -723,15 +697,15 @@ Map<String, dynamic> _$_$_LinkageToJson(_$_Linkage instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('active', instance.active?.toJson());
   writeNotNull('_active', instance.activeElement?.toJson());
   writeNotNull('author', instance.author?.toJson());
-  writeNotNull('item', instance.item?.map((e) => e?.toJson())?.toList());
+  val['item'] = instance.item.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -741,9 +715,7 @@ _$_LinkageItem _$_$_LinkageItemFromJson(Map<String, dynamic> json) {
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    resource: json['resource'] == null
-        ? null
-        : Reference.fromJson(json['resource'] as Map<String, dynamic>),
+    resource: Reference.fromJson(json['resource'] as Map<String, dynamic>),
   );
 }
 
@@ -758,7 +730,7 @@ Map<String, dynamic> _$_$_LinkageItemToJson(_$_LinkageItem instance) {
 
   writeNotNull('type', _$LinkageItemTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('resource', instance.resource?.toJson());
+  val['resource'] = instance.resource.toJson();
   return val;
 }
 
@@ -771,8 +743,7 @@ const _$LinkageItemTypeEnumMap = {
 
 _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
   return _$_Media(
-    resourceType: _$enumDecodeNullable(
-        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.Media),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
@@ -791,28 +762,21 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    basedOn: (json['basedOn'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    identifier: (json['identifier'] as List<dynamic>?)
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    basedOn: (json['basedOn'] as List<dynamic>?)
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+        .toList(),
     type: _$enumDecodeNullable(_$MediaTypeEnumMap, json['type']),
     typeElement: json['_type'] == null
         ? null
@@ -841,11 +805,9 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     operator_: json['operator'] == null
         ? null
         : Reference.fromJson(json['operator'] as Map<String, dynamic>),
-    reasonCode: (json['reasonCode'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    reasonCode: (json['reasonCode'] as List<dynamic>?)
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+        .toList(),
     bodySite: json['bodySite'] == null
         ? null
         : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
@@ -869,18 +831,17 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     durationElement: json['_duration'] == null
         ? null
         : Element.fromJson(json['_duration'] as Map<String, dynamic>),
-    content: json['content'] == null
-        ? null
-        : Attachment.fromJson(json['content'] as Map<String, dynamic>),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    content: Attachment.fromJson(json['content'] as Map<String, dynamic>),
+    note: (json['note'] as List<dynamic>?)
+        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
 Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -888,8 +849,6 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
     }
   }
 
-  writeNotNull(
-      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -898,14 +857,14 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('type', _$MediaTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('subtype', instance.subtype?.toJson());
@@ -918,7 +877,7 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
   writeNotNull('operator', instance.operator_?.toJson());
   writeNotNull(
-      'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
+      'reasonCode', instance.reasonCode?.map((e) => e.toJson()).toList());
   writeNotNull('bodySite', instance.bodySite?.toJson());
   writeNotNull('device', instance.device?.toJson());
   writeNotNull('height', instance.height?.toJson());
@@ -929,8 +888,8 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   writeNotNull('_frames', instance.framesElement?.toJson());
   writeNotNull('duration', instance.duration?.toJson());
   writeNotNull('_duration', instance.durationElement?.toJson());
-  writeNotNull('content', instance.content?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
+  val['content'] = instance.content.toJson();
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -943,8 +902,7 @@ const _$MediaTypeEnumMap = {
 
 _$_MessageHeader _$_$_MessageHeaderFromJson(Map<String, dynamic> json) {
   return _$_MessageHeader(
-    resourceType: _$enumDecodeNullable(
-        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.MessageHeader),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
@@ -963,35 +921,27 @@ _$_MessageHeader _$_$_MessageHeaderFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    event: json['event'] == null
-        ? null
-        : Coding.fromJson(json['event'] as Map<String, dynamic>),
-    destination: (json['destination'] as List)
-        ?.map((e) => e == null
-            ? null
-            : MessageHeaderDestination.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    event: Coding.fromJson(json['event'] as Map<String, dynamic>),
+    destination: (json['destination'] as List<dynamic>?)
+        ?.map(
+            (e) => MessageHeaderDestination.fromJson(e as Map<String, dynamic>))
+        .toList(),
     receiver: json['receiver'] == null
         ? null
         : Reference.fromJson(json['receiver'] as Map<String, dynamic>),
     sender: json['sender'] == null
         ? null
         : Reference.fromJson(json['sender'] as Map<String, dynamic>),
-    timestamp: json['timestamp'] as String,
+    timestamp: json['timestamp'] as String?,
     timestampElement: json['_timestamp'] == null
         ? null
         : Element.fromJson(json['_timestamp'] as Map<String, dynamic>),
@@ -1001,9 +951,8 @@ _$_MessageHeader _$_$_MessageHeaderFromJson(Map<String, dynamic> json) {
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
-    source: json['source'] == null
-        ? null
-        : MessageHeaderSource.fromJson(json['source'] as Map<String, dynamic>),
+    source:
+        MessageHeaderSource.fromJson(json['source'] as Map<String, dynamic>),
     responsible: json['responsible'] == null
         ? null
         : Reference.fromJson(json['responsible'] as Map<String, dynamic>),
@@ -1014,15 +963,16 @@ _$_MessageHeader _$_$_MessageHeaderFromJson(Map<String, dynamic> json) {
         ? null
         : MessageHeaderResponse.fromJson(
             json['response'] as Map<String, dynamic>),
-    focus: (json['focus'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    focus: (json['focus'] as List<dynamic>?)
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
 Map<String, dynamic> _$_$_MessageHeaderToJson(_$_MessageHeader instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1030,8 +980,6 @@ Map<String, dynamic> _$_$_MessageHeaderToJson(_$_MessageHeader instance) {
     }
   }
 
-  writeNotNull(
-      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1040,39 +988,39 @@ Map<String, dynamic> _$_$_MessageHeaderToJson(_$_MessageHeader instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('event', instance.event?.toJson());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['event'] = instance.event.toJson();
   writeNotNull(
-      'destination', instance.destination?.map((e) => e?.toJson())?.toList());
+      'destination', instance.destination?.map((e) => e.toJson()).toList());
   writeNotNull('receiver', instance.receiver?.toJson());
   writeNotNull('sender', instance.sender?.toJson());
   writeNotNull('timestamp', instance.timestamp);
   writeNotNull('_timestamp', instance.timestampElement?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
   writeNotNull('author', instance.author?.toJson());
-  writeNotNull('source', instance.source?.toJson());
+  val['source'] = instance.source.toJson();
   writeNotNull('responsible', instance.responsible?.toJson());
   writeNotNull('reason', instance.reason?.toJson());
   writeNotNull('response', instance.response?.toJson());
-  writeNotNull('focus', instance.focus?.map((e) => e?.toJson())?.toList());
+  writeNotNull('focus', instance.focus?.map((e) => e.toJson()).toList());
   return val;
 }
 
 _$_MessageHeaderDestination _$_$_MessageHeaderDestinationFromJson(
     Map<String, dynamic> json) {
   return _$_MessageHeaderDestination(
-    name: json['name'] as String,
+    name: json['name'] as String?,
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
-    endpoint: json['endpoint'] as String,
+    endpoint: json['endpoint'] as String?,
     endpointElement: json['_endpoint'] == null
         ? null
         : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
@@ -1100,22 +1048,22 @@ Map<String, dynamic> _$_$_MessageHeaderDestinationToJson(
 _$_MessageHeaderSource _$_$_MessageHeaderSourceFromJson(
     Map<String, dynamic> json) {
   return _$_MessageHeaderSource(
-    name: json['name'] as String,
+    name: json['name'] as String?,
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    software: json['software'] as String,
+    software: json['software'] as String?,
     softwareElement: json['_software'] == null
         ? null
         : Element.fromJson(json['_software'] as Map<String, dynamic>),
-    version: json['version'] as String,
+    version: json['version'] as String?,
     versionElement: json['_version'] == null
         ? null
         : Element.fromJson(json['_version'] as Map<String, dynamic>),
     contact: json['contact'] == null
         ? null
         : ContactPoint.fromJson(json['contact'] as Map<String, dynamic>),
-    endpoint: json['endpoint'] as String,
+    endpoint: json['endpoint'] as String?,
     endpointElement: json['_endpoint'] == null
         ? null
         : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
@@ -1190,8 +1138,7 @@ const _$MessageHeaderResponseCodeEnumMap = {
 
 _$_OperationOutcome _$_$_OperationOutcomeFromJson(Map<String, dynamic> json) {
   return _$_OperationOutcome(
-    resourceType: _$enumDecodeNullable(
-        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.OperationOutcome),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
@@ -1210,30 +1157,25 @@ _$_OperationOutcome _$_$_OperationOutcomeFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    issue: (json['issue'] as List)
-        ?.map((e) => e == null
-            ? null
-            : OperationOutcomeIssue.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    issue: (json['issue'] as List<dynamic>)
+        .map((e) => OperationOutcomeIssue.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
 Map<String, dynamic> _$_$_OperationOutcomeToJson(_$_OperationOutcome instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1241,8 +1183,6 @@ Map<String, dynamic> _$_$_OperationOutcomeToJson(_$_OperationOutcome instance) {
     }
   }
 
-  writeNotNull(
-      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1251,12 +1191,12 @@ Map<String, dynamic> _$_$_OperationOutcomeToJson(_$_OperationOutcome instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('issue', instance.issue?.map((e) => e?.toJson())?.toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['issue'] = instance.issue.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -1276,20 +1216,23 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
     details: json['details'] == null
         ? null
         : CodeableConcept.fromJson(json['details'] as Map<String, dynamic>),
-    diagnostics: json['diagnostics'] as String,
+    diagnostics: json['diagnostics'] as String?,
     diagnosticsElement: json['_diagnostics'] == null
         ? null
         : Element.fromJson(json['_diagnostics'] as Map<String, dynamic>),
-    location: (json['location'] as List)?.map((e) => e as String)?.toList(),
-    locationElement: (json['_location'] as List)
+    location:
+        (json['location'] as List<dynamic>?)?.map((e) => e as String).toList(),
+    locationElement: (json['_location'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    expression: (json['expression'] as List)?.map((e) => e as String)?.toList(),
-    expressionElement: (json['_expression'] as List)
+        .toList(),
+    expression: (json['expression'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
+    expressionElement: (json['_expression'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
   );
 }
 
@@ -1313,10 +1256,10 @@ Map<String, dynamic> _$_$_OperationOutcomeIssueToJson(
   writeNotNull('_diagnostics', instance.diagnosticsElement?.toJson());
   writeNotNull('location', instance.location);
   writeNotNull(
-      '_location', instance.locationElement?.map((e) => e?.toJson())?.toList());
+      '_location', instance.locationElement?.map((e) => e?.toJson()).toList());
   writeNotNull('expression', instance.expression);
   writeNotNull('_expression',
-      instance.expressionElement?.map((e) => e?.toJson())?.toList());
+      instance.expressionElement?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -1362,8 +1305,7 @@ const _$OperationOutcomeIssueCodeEnumMap = {
 
 _$_Parameters _$_$_ParametersFromJson(Map<String, dynamic> json) {
   return _$_Parameters(
-    resourceType: _$enumDecodeNullable(
-        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.Parameters),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
@@ -1382,30 +1324,25 @@ _$_Parameters _$_$_ParametersFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    parameter: (json['parameter'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ParametersParameter.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    parameter: (json['parameter'] as List<dynamic>?)
+        ?.map((e) => ParametersParameter.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
 Map<String, dynamic> _$_$_ParametersToJson(_$_Parameters instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1413,8 +1350,6 @@ Map<String, dynamic> _$_$_ParametersToJson(_$_Parameters instance) {
     }
   }
 
-  writeNotNull(
-      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1423,20 +1358,20 @@ Map<String, dynamic> _$_$_ParametersToJson(_$_Parameters instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'parameter', instance.parameter?.map((e) => e?.toJson())?.toList());
+      'parameter', instance.parameter?.map((e) => e.toJson()).toList());
   return val;
 }
 
 _$_ParametersParameter _$_$_ParametersParameterFromJson(
     Map<String, dynamic> json) {
   return _$_ParametersParameter(
-    name: json['name'] as String,
+    name: json['name'] as String?,
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
@@ -1458,19 +1393,19 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
     valueDecimalElement: json['_valueDecimal'] == null
         ? null
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
-    valueBase64Binary: json['valueBase64Binary'] as String,
+    valueBase64Binary: json['valueBase64Binary'] as String?,
     valueBase64BinaryElement: json['_valueBase64Binary'] == null
         ? null
         : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
-    valueInstant: json['valueInstant'] as String,
+    valueInstant: json['valueInstant'] as String?,
     valueInstantElement: json['_valueInstant'] == null
         ? null
         : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
-    valueString: json['valueString'] as String,
+    valueString: json['valueString'] as String?,
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-    valueUri: json['valueUri'] as String,
+    valueUri: json['valueUri'] as String?,
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
@@ -1520,7 +1455,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
     valuePositiveIntElement: json['_valuePositiveInt'] == null
         ? null
         : Element.fromJson(json['_valuePositiveInt'] as Map<String, dynamic>),
-    valueMarkdown: json['valueMarkdown'] as String,
+    valueMarkdown: json['valueMarkdown'] as String?,
     valueMarkdownElement: json['_valueMarkdown'] == null
         ? null
         : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),
@@ -1649,11 +1584,9 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
     resource: json['resource'] == null
         ? null
         : Resource.fromJson(json['resource'] as Map<String, dynamic>),
-    part_: (json['part'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ParametersParameter.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    part_: (json['part'] as List<dynamic>?)
+        ?.map((e) => ParametersParameter.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
@@ -1744,14 +1677,13 @@ Map<String, dynamic> _$_$_ParametersParameterToJson(
   writeNotNull(
       'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
-  writeNotNull('part', instance.part_?.map((e) => e?.toJson())?.toList());
+  writeNotNull('part', instance.part_?.map((e) => e.toJson()).toList());
   return val;
 }
 
 _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
   return _$_Subscription(
-    resourceType: _$enumDecodeNullable(
-        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.Subscription),
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
@@ -1770,56 +1702,50 @@ _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    extension_: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contained: (json['contained'] as List<dynamic>?)
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
     status: _$enumDecodeNullable(_$SubscriptionStatusEnumMap, json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    contact: (json['contact'] as List)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    end: json['end'] as String,
+    contact: (json['contact'] as List<dynamic>?)
+        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    end: json['end'] as String?,
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
-    reason: json['reason'] as String,
+    reason: json['reason'] as String?,
     reasonElement: json['_reason'] == null
         ? null
         : Element.fromJson(json['_reason'] as Map<String, dynamic>),
-    criteria: json['criteria'] as String,
+    criteria: json['criteria'] as String?,
     criteriaElement: json['_criteria'] == null
         ? null
         : Element.fromJson(json['_criteria'] as Map<String, dynamic>),
-    error: json['error'] as String,
+    error: json['error'] as String?,
     errorElement: json['_error'] == null
         ? null
         : Element.fromJson(json['_error'] as Map<String, dynamic>),
-    channel: json['channel'] == null
-        ? null
-        : SubscriptionChannel.fromJson(json['channel'] as Map<String, dynamic>),
-    tag: (json['tag'] as List)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    channel:
+        SubscriptionChannel.fromJson(json['channel'] as Map<String, dynamic>),
+    tag: (json['tag'] as List<dynamic>?)
+        ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
 Map<String, dynamic> _$_$_SubscriptionToJson(_$_Subscription instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1827,8 +1753,6 @@ Map<String, dynamic> _$_$_SubscriptionToJson(_$_Subscription instance) {
     }
   }
 
-  writeNotNull(
-      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1837,14 +1761,14 @@ Map<String, dynamic> _$_$_SubscriptionToJson(_$_Subscription instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson())?.toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson())?.toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('status', _$SubscriptionStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
+  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   writeNotNull('end', instance.end);
   writeNotNull('_end', instance.endElement?.toJson());
   writeNotNull('reason', instance.reason);
@@ -1853,8 +1777,8 @@ Map<String, dynamic> _$_$_SubscriptionToJson(_$_Subscription instance) {
   writeNotNull('_criteria', instance.criteriaElement?.toJson());
   writeNotNull('error', instance.error);
   writeNotNull('_error', instance.errorElement?.toJson());
-  writeNotNull('channel', instance.channel?.toJson());
-  writeNotNull('tag', instance.tag?.map((e) => e?.toJson())?.toList());
+  val['channel'] = instance.channel.toJson();
+  writeNotNull('tag', instance.tag?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1873,19 +1797,20 @@ _$_SubscriptionChannel _$_$_SubscriptionChannelFromJson(
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    endpoint: json['endpoint'] as String,
+    endpoint: json['endpoint'] as String?,
     endpointElement: json['_endpoint'] == null
         ? null
         : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
-    payload: json['payload'] as String,
+    payload: json['payload'] as String?,
     payloadElement: json['_payload'] == null
         ? null
         : Element.fromJson(json['_payload'] as Map<String, dynamic>),
-    header: (json['header'] as List)?.map((e) => e as String)?.toList(),
-    headerElement: (json['_header'] as List)
+    header:
+        (json['header'] as List<dynamic>?)?.map((e) => e as String).toList(),
+    headerElement: (json['_header'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        .toList(),
   );
 }
 
@@ -1907,7 +1832,7 @@ Map<String, dynamic> _$_$_SubscriptionChannelToJson(
   writeNotNull('_payload', instance.payloadElement?.toJson());
   writeNotNull('header', instance.header);
   writeNotNull(
-      '_header', instance.headerElement?.map((e) => e?.toJson())?.toList());
+      '_header', instance.headerElement?.map((e) => e?.toJson()).toList());
   return val;
 }
 

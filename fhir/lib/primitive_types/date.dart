@@ -27,7 +27,6 @@ class Date {
         } on FormatException catch (e) {
           return Date._(inValue, null, false, DatePrecision.INVALID, e);
         }
-        break;
       default:
         throw ArgumentError('Date cannot be constructed from $inValue.');
     }
@@ -35,8 +34,6 @@ class Date {
 
   factory Date.fromDateTime(DateTime dateTime,
       [DatePrecision precision = DatePrecision.YYYYMMDD]) {
-    assert(dateTime != null && precision != null);
-
     final dateString = dateTime.toIso8601String();
     final len = [4, 7, 10][precision.index];
 
@@ -50,18 +47,19 @@ class Date {
       ? Date.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Date.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
-  final DateTime _valueDateTime;
+  final DateTime? _valueDateTime;
   final bool _isValid;
   final DatePrecision _precision;
-  final Exception _parseError;
+  final Exception? _parseError;
 
   bool get isValid => _isValid;
   int get hashCode => _valueString.hashCode;
-  DateTime get value => _valueDateTime;
-  Exception get parseError => _parseError;
+  DateTime? get value => _valueDateTime;
+  Exception? get parseError => _parseError;
   DatePrecision get precision => _precision;
 
   bool operator ==(Object o) => identical(this, o)
@@ -104,8 +102,6 @@ class Date {
   }
 
   static DateTime _parsePartialDate(String value) {
-    assert(value != null);
-
     if (_dateYYYYExp.hasMatch(value)) {
       return DateTime(int.parse(value));
     } else if (_dateYYYYMMExp.hasMatch(value)) {
@@ -120,8 +116,6 @@ class Date {
   }
 
   static DatePrecision _getPrecision(String value) {
-    assert(value != null);
-
     switch (value.length) {
       case 4:
         return DatePrecision.YYYY;

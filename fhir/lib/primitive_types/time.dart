@@ -1,17 +1,15 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 class Time {
-  const Time._(this._value);
+  const Time._(this._valueString, this._valueTime, this._isValid);
 
-  factory Time(String value) {
-    assert(value != null);
-    return Time._(
-      _validateTime(value),
-    );
-  }
+  factory Time(String inValue) =>
+      RegExp(r'^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$')
+              .hasMatch(inValue)
+          ? Time._(inValue, inValue, true)
+          : Time._(inValue, null, false);
 
   factory Time.fromJson(dynamic json) => Time(json);
 
@@ -19,28 +17,26 @@ class Time {
       ? Time.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Time.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, String> _value;
-  String get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
+  final String _valueString;
+  final String? _valueTime;
+  final bool _isValid;
 
-  String toString() => value;
-  String toJson() => value;
-  String toYaml() => value;
+  bool get isValid => _isValid;
+  int get hashTime => _valueString.hashCode;
+  String? get value => _valueTime;
+
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Time || o is String
-          ? o == value
-          : false;
-
-  int get hashCode => value.hashCode;
+      : o is Time
+          ? o.value == _valueTime
+          : o is String
+              ? o == _valueString
+              : false;
 }
-
-Either<String, String> _validateTime(String value) =>
-    RegExp(r'^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$')
-            .hasMatch(value)
-        ? right(value)
-        : left('FormatError: "$value" is not a Time, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#time');

@@ -91,22 +91,22 @@ abstract class Basic with Resource implements _$Basic {
     @Default(R4ResourceType.Basic)
     @JsonKey(unknownEnumValue: R4ResourceType.Basic)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @required CodeableConcept code,
-    Reference subject,
-    Date created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference author,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    required CodeableConcept code,
+    Reference? subject,
+    Date? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? author,
   }) = _Basic;
 
   /// Produces a Yaml formatted String version of the object
@@ -117,7 +117,9 @@ abstract class Basic with Resource implements _$Basic {
       ? Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Basic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Basic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
@@ -175,17 +177,17 @@ abstract class Binary with Resource implements _$Binary {
     @Default(R4ResourceType.Binary)
     @JsonKey(unknownEnumValue: R4ResourceType.Binary)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Code contentType,
-    @JsonKey(name: '_contentType') Element contentTypeElement,
-    Reference securityContext,
-    Base64Binary data,
-    @JsonKey(name: '_data') Element dataElement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Code? contentType,
+    @JsonKey(name: '_contentType') Element? contentTypeElement,
+    Reference? securityContext,
+    Base64Binary? data,
+    @JsonKey(name: '_data') Element? dataElement,
   }) = _Binary;
 
   /// Produces a Yaml formatted String version of the object
@@ -196,7 +198,9 @@ abstract class Binary with Resource implements _$Binary {
       ? Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Binary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Binary cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
@@ -258,22 +262,22 @@ abstract class Bundle with Resource implements _$Bundle {
     @Default(R4ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Identifier identifier,
-    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType type,
-    @JsonKey(name: '_type') Element typeElement,
-    Instant timestamp,
-    @JsonKey(name: '_timestamp') Element timestampElement,
-    UnsignedInt total,
-    @JsonKey(name: '_total') Element totalElement,
-    List<BundleLink> link,
-    List<BundleEntry> entry,
-    Signature signature,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Identifier? identifier,
+    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Instant? timestamp,
+    @JsonKey(name: '_timestamp') Element? timestampElement,
+    UnsignedInt? total,
+    @JsonKey(name: '_total') Element? totalElement,
+    List<BundleLink>? link,
+    List<BundleEntry>? entry,
+    Signature? signature,
   }) = _Bundle;
 
   /// Produces a Yaml formatted String version of the object
@@ -284,7 +288,9 @@ abstract class Bundle with Resource implements _$Bundle {
       ? Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Bundle.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Bundle cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
@@ -329,13 +335,13 @@ abstract class BundleLink implements _$BundleLink {
   ///
   /// [_url]: Extensions for url
   factory BundleLink({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String relation,
-    @JsonKey(name: '_relation') Element relationElement,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? relation,
+    @JsonKey(name: '_relation') Element? relationElement,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
   }) = _BundleLink;
 
   /// Produces a Yaml formatted String version of the object
@@ -346,7 +352,9 @@ abstract class BundleLink implements _$BundleLink {
       ? BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? BundleLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'BundleLink cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleLink.fromJson(Map<String, dynamic> json) =>
@@ -410,16 +418,16 @@ abstract class BundleEntry implements _$BundleEntry {
   /// 'request' entry in the batch or transaction being responded to or what the
   ///  results of an operation where when returning history.
   factory BundleEntry({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<BundleLink> link,
-    FhirUri fullUrl,
-    @JsonKey(name: '_fullUrl') Element fullUrlElement,
-    Resource resource,
-    BundleSearch search,
-    BundleRequest request,
-    BundleResponse response,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<BundleLink>? link,
+    FhirUri? fullUrl,
+    @JsonKey(name: '_fullUrl') Element? fullUrlElement,
+    Resource? resource,
+    BundleSearch? search,
+    BundleRequest? request,
+    BundleResponse? response,
   }) = _BundleEntry;
 
   /// Produces a Yaml formatted String version of the object
@@ -430,7 +438,9 @@ abstract class BundleEntry implements _$BundleEntry {
       ? BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? BundleEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'BundleEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
@@ -477,13 +487,13 @@ abstract class BundleSearch implements _$BundleSearch {
   ///
   /// [_score]: Extensions for score
   factory BundleSearch({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    Decimal score,
-    @JsonKey(name: '_score') Element scoreElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    Decimal? score,
+    @JsonKey(name: '_score') Element? scoreElement,
   }) = _BundleSearch;
 
   /// Produces a Yaml formatted String version of the object
@@ -494,7 +504,9 @@ abstract class BundleSearch implements _$BundleSearch {
       ? BundleSearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? BundleSearch.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'BundleSearch cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleSearch.fromJson(Map<String, dynamic> json) =>
@@ -567,22 +579,22 @@ abstract class BundleRequest implements _$BundleRequest {
   ///
   /// [_ifNoneExist]: Extensions for ifNoneExist
   factory BundleRequest({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
-        BundleRequestMethod method,
-    @JsonKey(name: '_method') Element methodElement,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    String ifNoneMatch,
-    @JsonKey(name: '_ifNoneMatch') Element ifNoneMatchElement,
-    Instant ifModifiedSince,
-    @JsonKey(name: '_ifModifiedSince') Element ifModifiedSinceElement,
-    String ifMatch,
-    @JsonKey(name: '_ifMatch') Element ifMatchElement,
-    String ifNoneExist,
-    @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
+        BundleRequestMethod? method,
+    @JsonKey(name: '_method') Element? methodElement,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    String? ifNoneMatch,
+    @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
+    Instant? ifModifiedSince,
+    @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
+    String? ifMatch,
+    @JsonKey(name: '_ifMatch') Element? ifMatchElement,
+    String? ifNoneExist,
+    @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement,
   }) = _BundleRequest;
 
   /// Produces a Yaml formatted String version of the object
@@ -593,7 +605,9 @@ abstract class BundleRequest implements _$BundleRequest {
       ? BundleRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? BundleRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'BundleRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleRequest.fromJson(Map<String, dynamic> json) =>
@@ -656,18 +670,18 @@ abstract class BundleResponse implements _$BundleResponse {
   /// [outcome]: An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
   factory BundleResponse({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String status,
-    @JsonKey(name: '_status') Element statusElement,
-    FhirUri location,
-    @JsonKey(name: '_location') Element locationElement,
-    String etag,
-    @JsonKey(name: '_etag') Element etagElement,
-    Instant lastModified,
-    @JsonKey(name: '_lastModified') Element lastModifiedElement,
-    Resource outcome,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirUri? location,
+    @JsonKey(name: '_location') Element? locationElement,
+    String? etag,
+    @JsonKey(name: '_etag') Element? etagElement,
+    Instant? lastModified,
+    @JsonKey(name: '_lastModified') Element? lastModifiedElement,
+    Resource? outcome,
   }) = _BundleResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -678,7 +692,9 @@ abstract class BundleResponse implements _$BundleResponse {
       ? BundleResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? BundleResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'BundleResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleResponse.fromJson(Map<String, dynamic> json) =>
@@ -761,20 +777,20 @@ abstract class Linkage with Resource implements _$Linkage {
     @Default(R4ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    Reference author,
-    @required List<LinkageItem> item,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    Reference? author,
+    required List<LinkageItem> item,
   }) = _Linkage;
 
   /// Produces a Yaml formatted String version of the object
@@ -785,7 +801,9 @@ abstract class Linkage with Resource implements _$Linkage {
       ? Linkage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Linkage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Linkage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Linkage.fromJson(Map<String, dynamic> json) =>
@@ -830,12 +848,12 @@ abstract class LinkageItem implements _$LinkageItem {
   ///
   /// [resource]: The resource instance being linked as part of the group.
   factory LinkageItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType type,
-    @JsonKey(name: '_type') Element typeElement,
-    @required Reference resource,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    required Reference resource,
   }) = _LinkageItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -846,7 +864,9 @@ abstract class LinkageItem implements _$LinkageItem {
       ? LinkageItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? LinkageItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'LinkageItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory LinkageItem.fromJson(Map<String, dynamic> json) =>
@@ -965,29 +985,29 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     @Default(R4ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Coding eventCoding,
-    FhirUri eventUri,
-    @JsonKey(name: '_eventUri') Element eventUriElement,
-    List<MessageHeaderDestination> destination,
-    Reference sender,
-    Reference enterer,
-    Reference author,
-    @required MessageHeaderSource source,
-    Reference responsible,
-    CodeableConcept reason,
-    MessageHeaderResponse response,
-    List<Reference> focus,
-    Canonical definition,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Coding? eventCoding,
+    FhirUri? eventUri,
+    @JsonKey(name: '_eventUri') Element? eventUriElement,
+    List<MessageHeaderDestination>? destination,
+    Reference? sender,
+    Reference? enterer,
+    Reference? author,
+    required MessageHeaderSource source,
+    Reference? responsible,
+    CodeableConcept? reason,
+    MessageHeaderResponse? response,
+    List<Reference>? focus,
+    Canonical? definition,
   }) = _MessageHeader;
 
   /// Produces a Yaml formatted String version of the object
@@ -998,7 +1018,9 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
       ? MessageHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MessageHeader.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MessageHeader cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
@@ -1054,15 +1076,15 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
   /// particular person or department when routing to a specific application
   ///  isn't sufficient.
   factory MessageHeaderDestination({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    Reference target,
-    FhirUrl endpoint,
-    @JsonKey(name: '_endpoint') Element endpointElement,
-    Reference receiver,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Reference? target,
+    FhirUrl? endpoint,
+    @JsonKey(name: '_endpoint') Element? endpointElement,
+    Reference? receiver,
   }) = _MessageHeaderDestination;
 
   /// Produces a Yaml formatted String version of the object
@@ -1074,7 +1096,9 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MessageHeaderDestination.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MessageHeaderDestination cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
@@ -1136,18 +1160,18 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
   ///
   /// [_endpoint]: Extensions for endpoint
   factory MessageHeaderSource({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String software,
-    @JsonKey(name: '_software') Element softwareElement,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    ContactPoint contact,
-    FhirUrl endpoint,
-    @JsonKey(name: '_endpoint') Element endpointElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? software,
+    @JsonKey(name: '_software') Element? softwareElement,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    ContactPoint? contact,
+    FhirUrl? endpoint,
+    @JsonKey(name: '_endpoint') Element? endpointElement,
   }) = _MessageHeaderSource;
 
   /// Produces a Yaml formatted String version of the object
@@ -1158,7 +1182,9 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
       ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MessageHeaderSource cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
@@ -1211,15 +1237,15 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
   ///
   /// [details]: Full details of any issues found in the message.
   factory MessageHeaderResponse({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Id identifier,
-    @JsonKey(name: '_identifier') Element identifierElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Id? identifier,
+    @JsonKey(name: '_identifier') Element? identifierElement,
     @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
-        MessageHeaderResponseCode code,
-    @JsonKey(name: '_code') Element codeElement,
-    Reference details,
+        MessageHeaderResponseCode? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    Reference? details,
   }) = _MessageHeaderResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -1230,7 +1256,9 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
       ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MessageHeaderResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
@@ -1303,17 +1331,17 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     @Default(R4ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required List<OperationOutcomeIssue> issue,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
   /// Produces a Yaml formatted String version of the object
@@ -1324,7 +1352,9 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
       ? OperationOutcome.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? OperationOutcome.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'OperationOutcome cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
@@ -1398,22 +1428,22 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   ///
   /// [_expression]: Extensions for expression
   factory OperationOutcomeIssue({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
-        OperationOutcomeIssueSeverity severity,
-    @JsonKey(name: '_severity') Element severityElement,
+        OperationOutcomeIssueSeverity? severity,
+    @JsonKey(name: '_severity') Element? severityElement,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
-        OperationOutcomeIssueCode code,
-    @JsonKey(name: '_code') Element codeElement,
-    CodeableConcept details,
-    String diagnostics,
-    @JsonKey(name: '_diagnostics') Element diagnosticsElement,
-    List<String> location,
-    @JsonKey(name: '_location') List<Element> locationElement,
-    List<String> expression,
-    @JsonKey(name: '_expression') List<Element> expressionElement,
+        OperationOutcomeIssueCode? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    CodeableConcept? details,
+    String? diagnostics,
+    @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
+    List<String>? location,
+    @JsonKey(name: '_location') List<Element?>? locationElement,
+    List<String>? expression,
+    @JsonKey(name: '_expression') List<Element?>? expressionElement,
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object
@@ -1424,7 +1454,9 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
       ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'OperationOutcomeIssue cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
@@ -1464,13 +1496,13 @@ abstract class Parameters with Resource implements _$Parameters {
     @Default(R4ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    List<ParametersParameter> parameter,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    List<ParametersParameter>? parameter,
   }) = _Parameters;
 
   /// Produces a Yaml formatted String version of the object
@@ -1481,7 +1513,9 @@ abstract class Parameters with Resource implements _$Parameters {
       ? Parameters.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Parameters.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Parameters cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Parameters.fromJson(Map<String, dynamic> json) =>
@@ -1666,82 +1700,82 @@ abstract class ParametersParameter implements _$ParametersParameter {
   ///
   /// [part]: A named part of a multi-part parameter.
   factory ParametersParameter({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    Base64Binary valueBase64Binary,
-    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    Canonical valueCanonical,
-    @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-    Code valueCode,
-    @JsonKey(name: '_valueCode') Element valueCodeElement,
-    Date valueDate,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    FhirDateTime valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    Decimal valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    Id valueId,
-    @JsonKey(name: '_valueId') Element valueIdElement,
-    Instant valueInstant,
-    @JsonKey(name: '_valueInstant') Element valueInstantElement,
-    Integer valueInteger,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    Markdown valueMarkdown,
-    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-    Oid valueOid,
-    @JsonKey(name: '_valueOid') Element valueOidElement,
-    PositiveInt valuePositiveInt,
-    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    Time valueTime,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    UnsignedInt valueUnsignedInt,
-    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-    FhirUri valueUri,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-    FhirUrl valueUrl,
-    @JsonKey(name: '_valueUrl') Element valueUrlElement,
-    Uuid valueUuid,
-    @JsonKey(name: '_valueUuid') Element valueUuidElement,
-    Address valueAddress,
-    Age valueAge,
-    Annotation valueAnnotation,
-    Attachment valueAttachment,
-    CodeableConcept valueCodeableConcept,
-    Coding valueCoding,
-    ContactPoint valueContactPoint,
-    Count valueCount,
-    Distance valueDistance,
-    FhirDuration valueDuration,
-    HumanName valueHumanName,
-    Identifier valueIdentifier,
-    Money valueMoney,
-    Period valuePeriod,
-    Quantity valueQuantity,
-    Range valueRange,
-    Ratio valueRatio,
-    Reference valueReference,
-    SampledData valueSampledData,
-    Signature valueSignature,
-    Timing valueTiming,
-    ContactDetail valueContactDetail,
-    Contributor valueContributor,
-    DataRequirement valueDataRequirement,
-    Expression valueExpression,
-    ParameterDefinition valueParameterDefinition,
-    RelatedArtifact valueRelatedArtifact,
-    TriggerDefinition valueTriggerDefinition,
-    UsageContext valueUsageContext,
-    Dosage valueDosage,
-    Meta valueMeta,
-    Resource resource,
-    @JsonKey(name: 'part') List<ParametersParameter> part_,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Base64Binary? valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Canonical? valueCanonical,
+    @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+    Code? valueCode,
+    @JsonKey(name: '_valueCode') Element? valueCodeElement,
+    Date? valueDate,
+    @JsonKey(name: '_valueDate') Element? valueDateElement,
+    FhirDateTime? valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    Decimal? valueDecimal,
+    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+    Id? valueId,
+    @JsonKey(name: '_valueId') Element? valueIdElement,
+    Instant? valueInstant,
+    @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+    Integer? valueInteger,
+    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+    Markdown? valueMarkdown,
+    @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+    Oid? valueOid,
+    @JsonKey(name: '_valueOid') Element? valueOidElement,
+    PositiveInt? valuePositiveInt,
+    @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+    String? valueString,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
+    Time? valueTime,
+    @JsonKey(name: '_valueTime') Element? valueTimeElement,
+    UnsignedInt? valueUnsignedInt,
+    @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+    FhirUri? valueUri,
+    @JsonKey(name: '_valueUri') Element? valueUriElement,
+    FhirUrl? valueUrl,
+    @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+    Uuid? valueUuid,
+    @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+    Address? valueAddress,
+    Age? valueAge,
+    Annotation? valueAnnotation,
+    Attachment? valueAttachment,
+    CodeableConcept? valueCodeableConcept,
+    Coding? valueCoding,
+    ContactPoint? valueContactPoint,
+    Count? valueCount,
+    Distance? valueDistance,
+    FhirDuration? valueDuration,
+    HumanName? valueHumanName,
+    Identifier? valueIdentifier,
+    Money? valueMoney,
+    Period? valuePeriod,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Ratio? valueRatio,
+    Reference? valueReference,
+    SampledData? valueSampledData,
+    Signature? valueSignature,
+    Timing? valueTiming,
+    ContactDetail? valueContactDetail,
+    Contributor? valueContributor,
+    DataRequirement? valueDataRequirement,
+    Expression? valueExpression,
+    ParameterDefinition? valueParameterDefinition,
+    RelatedArtifact? valueRelatedArtifact,
+    TriggerDefinition? valueTriggerDefinition,
+    UsageContext? valueUsageContext,
+    Dosage? valueDosage,
+    Meta? valueMeta,
+    Resource? resource,
+    @JsonKey(name: 'part') List<ParametersParameter>? part_,
   }) = _ParametersParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -1752,7 +1786,9 @@ abstract class ParametersParameter implements _$ParametersParameter {
       ? ParametersParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ParametersParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ParametersParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
@@ -1855,29 +1891,29 @@ abstract class Subscription with Resource implements _$Subscription {
     @Default(R4ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-        SubscriptionStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<ContactPoint> contact,
-    Instant end,
-    @JsonKey(name: '_end') Element endElement,
-    String reason,
-    @JsonKey(name: '_reason') Element reasonElement,
-    String criteria,
-    @JsonKey(name: '_criteria') Element criteriaElement,
-    String error,
-    @JsonKey(name: '_error') Element errorElement,
-    @required SubscriptionChannel channel,
+        SubscriptionStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<ContactPoint>? contact,
+    Instant? end,
+    @JsonKey(name: '_end') Element? endElement,
+    String? reason,
+    @JsonKey(name: '_reason') Element? reasonElement,
+    String? criteria,
+    @JsonKey(name: '_criteria') Element? criteriaElement,
+    String? error,
+    @JsonKey(name: '_error') Element? errorElement,
+    required SubscriptionChannel channel,
   }) = _Subscription;
 
   /// Produces a Yaml formatted String version of the object
@@ -1888,7 +1924,9 @@ abstract class Subscription with Resource implements _$Subscription {
       ? Subscription.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Subscription.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Subscription cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Subscription.fromJson(Map<String, dynamic> json) =>
@@ -1952,18 +1990,18 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
   ///
   /// [_header]: Extensions for header
   factory SubscriptionChannel({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionChannelType.unknown)
-        SubscriptionChannelType type,
-    @JsonKey(name: '_type') Element typeElement,
-    FhirUrl endpoint,
-    @JsonKey(name: '_endpoint') Element endpointElement,
-    Code payload,
-    @JsonKey(name: '_payload') Element payloadElement,
-    List<String> header,
-    @JsonKey(name: '_header') List<Element> headerElement,
+        SubscriptionChannelType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    FhirUrl? endpoint,
+    @JsonKey(name: '_endpoint') Element? endpointElement,
+    Code? payload,
+    @JsonKey(name: '_payload') Element? payloadElement,
+    List<String>? header,
+    @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _SubscriptionChannel;
 
   /// Produces a Yaml formatted String version of the object
@@ -1974,7 +2012,9 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
       ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SubscriptionChannel cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>

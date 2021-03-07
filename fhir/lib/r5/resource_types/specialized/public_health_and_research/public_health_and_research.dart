@@ -18,44 +18,44 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
     @Default(R5ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    List<Reference> protocol,
-    List<Reference> partOf,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    List<Reference>? protocol,
+    List<Reference>? partOf,
     @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-        ResearchStudyStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept primaryPurposeType,
-    CodeableConcept phase,
-    List<CodeableConcept> category,
-    List<CodeableConcept> focus,
-    List<CodeableConcept> condition,
-    List<ContactDetail> contact,
-    List<RelatedArtifact> relatedArtifact,
-    List<CodeableConcept> keyword,
-    List<CodeableConcept> location,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<Reference> enrollment,
-    Period period,
-    Reference sponsor,
-    Reference principalInvestigator,
-    List<Reference> site,
-    CodeableConcept reasonStopped,
-    List<Annotation> note,
-    List<ResearchStudyArm> arm,
-    List<ResearchStudyObjective> objective,
+        ResearchStudyStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? primaryPurposeType,
+    CodeableConcept? phase,
+    List<CodeableConcept>? category,
+    List<CodeableConcept>? focus,
+    List<CodeableConcept>? condition,
+    List<ContactDetail>? contact,
+    List<RelatedArtifact>? relatedArtifact,
+    List<CodeableConcept>? keyword,
+    List<CodeableConcept>? location,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Reference>? enrollment,
+    Period? period,
+    Reference? sponsor,
+    Reference? principalInvestigator,
+    List<Reference>? site,
+    CodeableConcept? reasonStopped,
+    List<Annotation>? note,
+    List<ResearchStudyArm>? arm,
+    List<ResearchStudyObjective>? objective,
   }) = _ResearchStudy;
 
   /// Produces a Yaml formatted String version of the object
@@ -66,7 +66,9 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
       ? ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchStudy.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchStudy cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
@@ -77,14 +79,14 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
 abstract class ResearchStudyArm implements _$ResearchStudyArm {
   ResearchStudyArm._();
   factory ResearchStudyArm({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    CodeableConcept type,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    CodeableConcept? type,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
   }) = _ResearchStudyArm;
 
   /// Produces a Yaml formatted String version of the object
@@ -95,7 +97,9 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
       ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchStudyArm cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
@@ -106,12 +110,12 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
 abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
   ResearchStudyObjective._();
   factory ResearchStudyObjective({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    CodeableConcept type,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    CodeableConcept? type,
   }) = _ResearchStudyObjective;
 
   /// Produces a Yaml formatted String version of the object
@@ -122,7 +126,9 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
       ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchStudyObjective cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
@@ -136,29 +142,29 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
     @Default(R5ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-        ResearchSubjectStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<ResearchSubjectProgress> progress,
-    Period period,
-    @required Reference study,
-    @required Reference individual,
-    String assignedArm,
-    @JsonKey(name: '_assignedArm') Element assignedArmElement,
-    String actualArm,
-    @JsonKey(name: '_actualArm') Element actualArmElement,
-    Reference consent,
+        ResearchSubjectStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<ResearchSubjectProgress>? progress,
+    Period? period,
+    required Reference study,
+    required Reference individual,
+    String? assignedArm,
+    @JsonKey(name: '_assignedArm') Element? assignedArmElement,
+    String? actualArm,
+    @JsonKey(name: '_actualArm') Element? actualArmElement,
+    Reference? consent,
   }) = _ResearchSubject;
 
   /// Produces a Yaml formatted String version of the object
@@ -169,7 +175,9 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
       ? ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchSubject.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchSubject cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
@@ -180,15 +188,15 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
 abstract class ResearchSubjectProgress implements _$ResearchSubjectProgress {
   ResearchSubjectProgress._();
   factory ResearchSubjectProgress({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    CodeableConcept state,
-    CodeableConcept milestone,
-    CodeableConcept reason,
-    FhirDateTime startDate,
-    @JsonKey(name: '_startDate') Element startDateElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    CodeableConcept? state,
+    CodeableConcept? milestone,
+    CodeableConcept? reason,
+    FhirDateTime? startDate,
+    @JsonKey(name: '_startDate') Element? startDateElement,
   }) = _ResearchSubjectProgress;
 
   /// Produces a Yaml formatted String version of the object
@@ -199,7 +207,9 @@ abstract class ResearchSubjectProgress implements _$ResearchSubjectProgress {
       ? ResearchSubjectProgress.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchSubjectProgress.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchSubjectProgress cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>

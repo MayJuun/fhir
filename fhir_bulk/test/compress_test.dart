@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:fhir/r4.dart';
 import 'package:fhir_bulk/r4.dart';
 import 'package:test/test.dart';
 
@@ -13,7 +14,7 @@ void main() {
       final resources = await FhirBulk.fromFile('./test/ndjson/Account.ndjson');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource.toJson())}';
+        stringList += '\n${json.encode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, account);
@@ -24,7 +25,7 @@ void main() {
           await FhirBulk.fromFile('./test/ndjson/MedicationRequest.ndjson');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource.toJson())}';
+        stringList += '\n${json.encode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, medicationRequest);
@@ -37,7 +38,7 @@ void main() {
           await FhirBulk.fromCompressedFile('./test/ndjson/account.zip');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource.toJson())}';
+        stringList += '\n${json.encode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, account);
@@ -48,7 +49,7 @@ void main() {
           './test/ndjson/medicationRequest.zip');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource.toJson())}';
+        stringList += '\n${json.encode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, medicationRequest);
@@ -59,7 +60,7 @@ void main() {
           './test/ndjson/accountMedRequest.zip');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource.toJson())}';
+        stringList += '\n${json.encode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, accountMedRequest);
@@ -70,7 +71,7 @@ void main() {
           await FhirBulk.fromCompressedFile('./test/ndjson/Account.ndjson.gz');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource.toJson())}';
+        stringList += '\n${json.encode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, account);
@@ -81,7 +82,7 @@ void main() {
           './test/ndjson/MedicationRequest.ndjson.gz');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource.toJson())}';
+        stringList += '\n${json.encode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, medicationRequest);
@@ -92,7 +93,7 @@ void main() {
           await FhirBulk.fromCompressedFile('./test/ndjson/tarGzip.tar.gz');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource.toJson())}';
+        stringList += '\n${json.encode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, medRequestAccount);
@@ -102,13 +103,25 @@ void main() {
   group('Creating Bulk FHIR String', () {
     test('To Accounts ndjson', () async {
       final resources = await FhirBulk.fromData(account);
-      final bulkString = FhirBulk.toNdJson(resources);
+      final List<Resource> resourceList = <Resource>[];
+      for (var resource in resources) {
+        if (resource != null) {
+          resourceList.add(resource);
+        }
+      }
+      final bulkString = FhirBulk.toNdJson(resourceList);
       expect(bulkString, account);
     });
 
     test('To MedicationRequest ndjson', () async {
       final resources = await FhirBulk.fromData(medicationRequest);
-      final bulkString = FhirBulk.toNdJson(resources);
+      final List<Resource> resourceList = <Resource>[];
+      for (var resource in resources) {
+        if (resource != null) {
+          resourceList.add(resource);
+        }
+      }
+      final bulkString = FhirBulk.toNdJson(resourceList);
       expect(bulkString, medicationRequest);
     });
   });

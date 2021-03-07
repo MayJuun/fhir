@@ -16,7 +16,7 @@ Future<List<String>> jsonValidation() async {
   tested.addAll(await dstu2Validation());
   tested.addAll(await stu3Validation());
   tested.addAll(await r4Validation());
-  // tested.addAll(await r5Validation());
+//  tested.addAll(await r5Validation());
 
   return tested;
 }
@@ -122,7 +122,7 @@ String checkEquality(dynamic input, dynamic output, String file) {
   else if (DateTime.tryParse(input) != null &&
       DateTime.tryParse(output) != null) {
     /// if they're dates and they mean the same dateTime return empty string
-    if (DateTime.tryParse(input).isAtSameMomentAs(DateTime.tryParse(output)))
+    if (DateTime.parse(input).isAtSameMomentAs(DateTime.parse(output)))
       return '';
   }
 

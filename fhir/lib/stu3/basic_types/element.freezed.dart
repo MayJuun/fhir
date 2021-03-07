@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'element.dart';
 
@@ -16,30 +16,28 @@ Element _$ElementFromJson(Map<String, dynamic> json) {
 class _$ElementTearOff {
   const _$ElementTearOff();
 
-// ignore: unused_element
   _Element call(
-      {String id, @JsonKey(name: 'extension') List<FhirExtension> extension_}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_}) {
     return _Element(
       id: id,
       extension_: extension_,
     );
   }
 
-// ignore: unused_element
   Element fromJson(Map<String, Object> json) {
     return Element.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Element = _$ElementTearOff();
 
 /// @nodoc
 mixin _$Element {
-  String get id;
+  String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -51,7 +49,8 @@ abstract class $ElementCopyWith<$Res> {
   factory $ElementCopyWith(Element value, $Res Function(Element) then) =
       _$ElementCopyWithImpl<$Res>;
   $Res call(
-      {String id, @JsonKey(name: 'extension') List<FhirExtension> extension_});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_});
 }
 
 /// @nodoc
@@ -64,14 +63,14 @@ class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
     ));
   }
 }
@@ -82,7 +81,8 @@ abstract class _$ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
       __$ElementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id, @JsonKey(name: 'extension') List<FhirExtension> extension_});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_});
 }
 
 /// @nodoc
@@ -96,14 +96,14 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
   }) {
     return _then(_Element(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
     ));
   }
 }
@@ -119,10 +119,10 @@ class _$_Element extends _Element {
       _$_$_ElementFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
 
   @override
   String toString() {
@@ -160,16 +160,17 @@ class _$_Element extends _Element {
 abstract class _Element extends Element {
   _Element._() : super._();
   factory _Element(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_}) = _$_Element;
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_}) =
+      _$_Element;
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(ignore: true)
   _$ElementCopyWith<_Element> get copyWith;

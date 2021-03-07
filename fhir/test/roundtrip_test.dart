@@ -1,83 +1,42 @@
 import 'package:test/test.dart';
 
-import 'expected_json.dart';
-import 'expected_yaml.dart';
 import 'validation/validation.dart';
 
 Future main() async {
   group(
-    'Runs through all tests for all versions of FHIR (except R5 as the online '
-    'examples, json schema, and online description do not currently all match), '
-    'does deep comparison of the map produced with the map that was input, field '
-    'by field. It then reverses them and runs through the same algorithm. Any '
-    'files with errors are printed out in the debug console',
+    'Runs through all examples provided. Each example resource is a Json file,'
+    'we read in that file as a Resource, convert it back to a map, and then '
+    'do a deep comparison of the input map with the output map to test for any '
+    'inconsistencies. For Yaml it is read as a map, converted to Yaml, then a'
+    'resource is created from that Yaml string, and finally back to a map, '
+    'where the same comparisons are done as above. It then reverses them and '
+    'and performs a deep comparison of the output to the input. Any files with '
+    'errors are printed out in the debug console',
     () {
       test(
-        '\n****Json has been Validated****'
-        '\nThere are some expected errors, these have been saved in '
-        'expected_json.dart, and compared to the output of the test\n\n',
+        '\n****Json has been Validated****',
         () async {
           var testList = await jsonValidation();
-          var tempList = <String>[];
 
-          for (final i in testList) {
-            tempList.add(i.toString());
-          }
-          testList.clear();
-          testList.addAll(tempList);
+          print(
+              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
 
-          var expectList = expectedJson.toList();
-          tempList.clear();
-          for (final i in expectList) {
-            tempList.add(i.toString());
-          }
-          expectList.clear();
-          expectList.addAll(tempList);
-
-          var compareList = tempList;
-
-          compareList.forEach((file) {
-            testList.remove(file);
-            expectList.remove(file);
-          });
-
-          expect(testList, expectList);
+          expect(testList.isEmpty, true);
         },
-        timeout: Timeout(Duration(minutes: 10)),
+        timeout: Timeout(Duration(minutes: 8)),
       );
 
       test(
-        '\n****Yaml has been Validated****'
-        '\nThere are some expected errors, these have been saved in '
-        'expected_yaml.dart, and compared to the output of the test\n\n',
+        '\n****Yaml has been Validated****',
         () async {
           var testList = await yamlValidation();
-          var tempList = <String>[];
 
-          for (final i in testList) {
-            tempList.add(i.toString());
-          }
-          testList.clear();
-          testList.addAll(tempList);
+          print(
+              'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
 
-          var expectList = expectedYaml.toList();
-          tempList.clear();
-          for (final i in expectList) {
-            tempList.add(i.toString());
-          }
-          expectList.clear();
-          expectList.addAll(tempList);
-
-          var compareList = tempList;
-
-          compareList.forEach((file) {
-            testList.remove(file);
-            expectList.remove(file);
-          });
-
-          expect(testList, expectList);
+          expect(testList.isEmpty, true);
         },
-        timeout: Timeout(Duration(minutes: 10)),
+        timeout: Timeout(Duration(minutes: 25)),
       );
     },
   );

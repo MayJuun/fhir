@@ -1,3 +1,26 @@
+## [0.3.0-nullsafety.5]
+* Fucking finally
+* Static analysis can kiss my ass
+
+## [0.3.0-nullsafety.4]
+* Didn't like my Flutter SDK
+* Passes all testing/reviews on my computer, but not on pub.dev
+
+## [0.3.0-nullsafety.3]
+* Keeps giving me shit about pub points
+
+## [0.3.0-nullsafety.2]
+* Updated SDK requirements
+
+## [0.3.0-nullsafety.1]
+* Trying to get more points
+* Added documentation, need to pass static analysis, etc.
+
+## [0.3.0-nullsafety.0]
+* Null safety!
+* Should be completely ready for null safety
+* Same functionality as before, just a little stricter now
+
 ## [0.2.1]
 * Updated dependencies
 * Added documentation

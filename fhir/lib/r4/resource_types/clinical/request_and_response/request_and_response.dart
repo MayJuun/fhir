@@ -157,44 +157,44 @@ abstract class Communication with Resource implements _$Communication {
     @Default(R4ResourceType.Communication)
     @JsonKey(unknownEnumValue: R4ResourceType.Communication)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Canonical> instantiatesCanonical,
-    List<FhirUri> instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
-    List<Reference> basedOn,
-    List<Reference> partOf,
-    List<Reference> inResponseTo,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept statusReason,
-    List<CodeableConcept> category,
-    Code priority,
-    @JsonKey(name: '_priority') Element priorityElement,
-    List<CodeableConcept> medium,
-    Reference subject,
-    CodeableConcept topic,
-    List<Reference> about,
-    Reference encounter,
-    FhirDateTime sent,
-    @JsonKey(name: '_sent') Element sentElement,
-    FhirDateTime received,
-    @JsonKey(name: '_received') Element receivedElement,
-    List<Reference> recipient,
-    Reference sender,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<CommunicationPayload> payload,
-    List<Annotation> note,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Canonical>? instantiatesCanonical,
+    List<FhirUri>? instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    List<Reference>? basedOn,
+    List<Reference>? partOf,
+    List<Reference>? inResponseTo,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? statusReason,
+    List<CodeableConcept>? category,
+    Code? priority,
+    @JsonKey(name: '_priority') Element? priorityElement,
+    List<CodeableConcept>? medium,
+    Reference? subject,
+    CodeableConcept? topic,
+    List<Reference>? about,
+    Reference? encounter,
+    FhirDateTime? sent,
+    @JsonKey(name: '_sent') Element? sentElement,
+    FhirDateTime? received,
+    @JsonKey(name: '_received') Element? receivedElement,
+    List<Reference>? recipient,
+    Reference? sender,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<CommunicationPayload>? payload,
+    List<Annotation>? note,
   }) = _Communication;
 
   /// Produces a Yaml formatted String version of the object
@@ -205,7 +205,9 @@ abstract class Communication with Resource implements _$Communication {
       ? Communication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Communication.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Communication cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Communication.fromJson(Map<String, dynamic> json) =>
@@ -255,13 +257,13 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
   /// [contentReference]: A communicated content (or for multi-part
   ///  communications, one portion of the communication).
   factory CommunicationPayload({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String contentString,
-    @JsonKey(name: '_contentString') Element contentStringElement,
-    Attachment contentAttachment,
-    Reference contentReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? contentString,
+    @JsonKey(name: '_contentString') Element? contentStringElement,
+    Attachment? contentAttachment,
+    Reference? contentReference,
   }) = _CommunicationPayload;
 
   /// Produces a Yaml formatted String version of the object
@@ -272,7 +274,9 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
       ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CommunicationPayload cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
@@ -425,44 +429,44 @@ abstract class CommunicationRequest
     @Default(R4ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Reference> basedOn,
-    List<Reference> replaces,
-    Identifier groupIdentifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept statusReason,
-    List<CodeableConcept> category,
-    Code priority,
-    @JsonKey(name: '_priority') Element priorityElement,
-    Boolean doNotPerform,
-    @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
-    List<CodeableConcept> medium,
-    Reference subject,
-    List<Reference> about,
-    Reference encounter,
-    List<CommunicationRequestPayload> payload,
-    FhirDateTime occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    Period occurrencePeriod,
-    FhirDateTime authoredOn,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
-    Reference requester,
-    List<Reference> recipient,
-    Reference sender,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<Annotation> note,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Reference>? basedOn,
+    List<Reference>? replaces,
+    Identifier? groupIdentifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? statusReason,
+    List<CodeableConcept>? category,
+    Code? priority,
+    @JsonKey(name: '_priority') Element? priorityElement,
+    Boolean? doNotPerform,
+    @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
+    List<CodeableConcept>? medium,
+    Reference? subject,
+    List<Reference>? about,
+    Reference? encounter,
+    List<CommunicationRequestPayload>? payload,
+    FhirDateTime? occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+    Period? occurrencePeriod,
+    FhirDateTime? authoredOn,
+    @JsonKey(name: '_authoredOn') Element? authoredOnElement,
+    Reference? requester,
+    List<Reference>? recipient,
+    Reference? sender,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<Annotation>? note,
   }) = _CommunicationRequest;
 
   /// Produces a Yaml formatted String version of the object
@@ -473,7 +477,9 @@ abstract class CommunicationRequest
       ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CommunicationRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
@@ -525,13 +531,13 @@ abstract class CommunicationRequestPayload
   /// [contentReference]: The communicated content (or for multi-part
   ///  communications, one portion of the communication).
   factory CommunicationRequestPayload({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String contentString,
-    @JsonKey(name: '_contentString') Element contentStringElement,
-    Attachment contentAttachment,
-    Reference contentReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? contentString,
+    @JsonKey(name: '_contentString') Element? contentStringElement,
+    Attachment? contentAttachment,
+    Reference? contentReference,
   }) = _CommunicationRequestPayload;
 
   /// Produces a Yaml formatted String version of the object
@@ -543,7 +549,9 @@ abstract class CommunicationRequestPayload
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CommunicationRequestPayload.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CommunicationRequestPayload cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
@@ -708,49 +716,49 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
     @Default(R4ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Canonical> instantiatesCanonical,
-    List<FhirUri> instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
-    List<Reference> basedOn,
-    List<Reference> priorRequest,
-    Identifier groupIdentifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    Code intent,
-    @JsonKey(name: '_intent') Element intentElement,
-    Code priority,
-    @JsonKey(name: '_priority') Element priorityElement,
-    Reference codeReference,
-    CodeableConcept codeCodeableConcept,
-    List<DeviceRequestParameter> parameter,
-    @required Reference subject,
-    Reference encounter,
-    FhirDateTime occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    Period occurrencePeriod,
-    Timing occurrenceTiming,
-    FhirDateTime authoredOn,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
-    Reference requester,
-    CodeableConcept performerType,
-    Reference performer,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<Reference> insurance,
-    List<Reference> supportingInfo,
-    List<Annotation> note,
-    List<Reference> relevantHistory,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Canonical>? instantiatesCanonical,
+    List<FhirUri>? instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    List<Reference>? basedOn,
+    List<Reference>? priorRequest,
+    Identifier? groupIdentifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Code? intent,
+    @JsonKey(name: '_intent') Element? intentElement,
+    Code? priority,
+    @JsonKey(name: '_priority') Element? priorityElement,
+    Reference? codeReference,
+    CodeableConcept? codeCodeableConcept,
+    List<DeviceRequestParameter>? parameter,
+    required Reference subject,
+    Reference? encounter,
+    FhirDateTime? occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+    Period? occurrencePeriod,
+    Timing? occurrenceTiming,
+    FhirDateTime? authoredOn,
+    @JsonKey(name: '_authoredOn') Element? authoredOnElement,
+    Reference? requester,
+    CodeableConcept? performerType,
+    Reference? performer,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<Reference>? insurance,
+    List<Reference>? supportingInfo,
+    List<Annotation>? note,
+    List<Reference>? relevantHistory,
   }) = _DeviceRequest;
 
   /// Produces a Yaml formatted String version of the object
@@ -761,7 +769,9 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
       ? DeviceRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
@@ -812,15 +822,15 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
   ///
   /// [_valueBoolean]: Extensions for valueBoolean
   factory DeviceRequestParameter({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    CodeableConcept valueCodeableConcept,
-    Quantity valueQuantity,
-    Range valueRange,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    CodeableConcept? valueCodeableConcept,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
   }) = _DeviceRequestParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -831,7 +841,9 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
       ? DeviceRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceRequestParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceRequestParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceRequestParameter.fromJson(Map<String, dynamic> json) =>
@@ -950,35 +962,35 @@ abstract class DeviceUseStatement
     @Default(R4ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Reference> basedOn,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Reference>? basedOn,
     @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-        DeviceUseStatementStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    @required Reference subject,
-    List<Reference> derivedFrom,
-    Timing timingTiming,
-    Period timingPeriod,
-    FhirDateTime timingDateTime,
-    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-    FhirDateTime recordedOn,
-    @JsonKey(name: '_recordedOn') Element recordedOnElement,
-    Reference source,
-    @required Reference device,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    CodeableConcept bodySite,
-    List<Annotation> note,
+        DeviceUseStatementStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    required Reference subject,
+    List<Reference>? derivedFrom,
+    Timing? timingTiming,
+    Period? timingPeriod,
+    FhirDateTime? timingDateTime,
+    @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
+    FhirDateTime? recordedOn,
+    @JsonKey(name: '_recordedOn') Element? recordedOnElement,
+    Reference? source,
+    required Reference device,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    CodeableConcept? bodySite,
+    List<Annotation>? note,
   }) = _DeviceUseStatement;
 
   /// Produces a Yaml formatted String version of the object
@@ -989,7 +1001,9 @@ abstract class DeviceUseStatement
       ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceUseStatement cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
@@ -1137,38 +1151,38 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     @Default(R4ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier requestIdentifier,
-    List<Identifier> identifier,
-    FhirUri moduleUri,
-    @JsonKey(name: '_moduleUri') Element moduleUriElement,
-    Canonical moduleCanonical,
-    @JsonKey(name: '_moduleCanonical') Element moduleCanonicalElement,
-    CodeableConcept moduleCodeableConcept,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? requestIdentifier,
+    List<Identifier>? identifier,
+    FhirUri? moduleUri,
+    @JsonKey(name: '_moduleUri') Element? moduleUriElement,
+    Canonical? moduleCanonical,
+    @JsonKey(name: '_moduleCanonical') Element? moduleCanonicalElement,
+    CodeableConcept? moduleCodeableConcept,
     @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-        GuidanceResponseStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Reference subject,
-    Reference encounter,
-    FhirDateTime occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    Reference performer,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<Annotation> note,
-    List<Reference> evaluationMessage,
-    Reference outputParameters,
-    Reference result,
-    List<DataRequirement> dataRequirement,
+        GuidanceResponseStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Reference? subject,
+    Reference? encounter,
+    FhirDateTime? occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+    Reference? performer,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<Annotation>? note,
+    List<Reference>? evaluationMessage,
+    Reference? outputParameters,
+    Reference? result,
+    List<DataRequirement>? dataRequirement,
   }) = _GuidanceResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -1179,7 +1193,9 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
       ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'GuidanceResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
@@ -1286,32 +1302,32 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     @Default(R4ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Reference> basedOn,
-    List<Reference> partOf,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Reference>? basedOn,
+    List<Reference>? partOf,
     @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-        SupplyDeliveryStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Reference patient,
-    CodeableConcept type,
-    SupplyDeliverySuppliedItem suppliedItem,
-    FhirDateTime occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    Period occurrencePeriod,
-    Timing occurrenceTiming,
-    Reference supplier,
-    Reference destination,
-    List<Reference> receiver,
+        SupplyDeliveryStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Reference? patient,
+    CodeableConcept? type,
+    SupplyDeliverySuppliedItem? suppliedItem,
+    FhirDateTime? occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+    Period? occurrencePeriod,
+    Timing? occurrenceTiming,
+    Reference? supplier,
+    Reference? destination,
+    List<Reference>? receiver,
   }) = _SupplyDelivery;
 
   /// Produces a Yaml formatted String version of the object
@@ -1322,7 +1338,9 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
       ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SupplyDelivery cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
@@ -1371,12 +1389,12 @@ abstract class SupplyDeliverySuppliedItem
   /// dispensed. This is either a link to a resource representing the details of
   ///  the item or a code that identifies the item from a known list.
   factory SupplyDeliverySuppliedItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity quantity,
-    CodeableConcept itemCodeableConcept,
-    Reference itemReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? quantity,
+    CodeableConcept? itemCodeableConcept,
+    Reference? itemReference,
   }) = _SupplyDeliverySuppliedItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -1388,7 +1406,9 @@ abstract class SupplyDeliverySuppliedItem
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SupplyDeliverySuppliedItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SupplyDeliverySuppliedItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
@@ -1511,39 +1531,39 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     @Default(R4ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-        SupplyRequestStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept category,
-    Code priority,
-    @JsonKey(name: '_priority') Element priorityElement,
-    CodeableConcept itemCodeableConcept,
-    Reference itemReference,
-    @required Quantity quantity,
-    List<SupplyRequestParameter> parameter,
-    FhirDateTime occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    Period occurrencePeriod,
-    Timing occurrenceTiming,
-    FhirDateTime authoredOn,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
-    Reference requester,
-    List<Reference> supplier,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    Reference deliverFrom,
-    Reference deliverTo,
+        SupplyRequestStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? category,
+    Code? priority,
+    @JsonKey(name: '_priority') Element? priorityElement,
+    CodeableConcept? itemCodeableConcept,
+    Reference? itemReference,
+    required Quantity quantity,
+    List<SupplyRequestParameter>? parameter,
+    FhirDateTime? occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+    Period? occurrencePeriod,
+    Timing? occurrenceTiming,
+    FhirDateTime? authoredOn,
+    @JsonKey(name: '_authoredOn') Element? authoredOnElement,
+    Reference? requester,
+    List<Reference>? supplier,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    Reference? deliverFrom,
+    Reference? deliverTo,
   }) = _SupplyRequest;
 
   /// Produces a Yaml formatted String version of the object
@@ -1554,7 +1574,9 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
       ? SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SupplyRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SupplyRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
@@ -1604,15 +1626,15 @@ abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
   ///
   /// [_valueBoolean]: Extensions for valueBoolean
   factory SupplyRequestParameter({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    CodeableConcept valueCodeableConcept,
-    Quantity valueQuantity,
-    Range valueRange,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    CodeableConcept? valueCodeableConcept,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
   }) = _SupplyRequestParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -1623,7 +1645,9 @@ abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
       ? SupplyRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SupplyRequestParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SupplyRequestParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyRequestParameter.fromJson(Map<String, dynamic> json) =>

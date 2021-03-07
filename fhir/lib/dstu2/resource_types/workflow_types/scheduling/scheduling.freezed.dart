@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'scheduling.dart';
 
@@ -16,53 +16,49 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 class _$AppointmentTearOff {
   const _$AppointmentTearOff();
 
-// ignore: unused_element
   _Appointment call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType = Dstu2ResourceType.Appointment,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @required
-      @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          required AppointmentStatus status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept type,
-      CodeableConcept reason,
-      UnsignedInt priority,
+          Element? statusElement,
+      CodeableConcept? type,
+      CodeableConcept? reason,
+      UnsignedInt? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      String description,
+          Element? priorityElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      Instant start,
+          Element? descriptionElement,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      PositiveInt minutesDuration,
+          Element? endElement,
+      PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
-          Element minutesDurationElement,
-      List<Reference> slot,
-      String comment,
+          Element? minutesDurationElement,
+      List<Reference>? slot,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
-      @required
-      @JsonKey(required: true)
-          List<AppointmentParticipant> participant}) {
+          Element? commentElement,
+      required List<AppointmentParticipant> participant}) {
     return _Appointment(
       resourceType: resourceType,
       id: id,
@@ -97,60 +93,57 @@ class _$AppointmentTearOff {
     );
   }
 
-// ignore: unused_element
   Appointment fromJson(Map<String, Object> json) {
     return Appointment.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Appointment = _$AppointmentTearOff();
 
 /// @nodoc
 mixin _$Appointment {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   Dstu2ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
+  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
   AppointmentStatus get status;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  CodeableConcept get type;
-  CodeableConcept get reason;
-  UnsignedInt get priority;
+  Element? get statusElement;
+  CodeableConcept? get type;
+  CodeableConcept? get reason;
+  UnsignedInt? get priority;
   @JsonKey(name: '_priority')
-  Element get priorityElement;
-  String get description;
+  Element? get priorityElement;
+  String? get description;
   @JsonKey(name: '_description')
-  Element get descriptionElement;
-  Instant get start;
+  Element? get descriptionElement;
+  Instant? get start;
   @JsonKey(name: '_start')
-  Element get startElement;
-  Instant get end;
+  Element? get startElement;
+  Instant? get end;
   @JsonKey(name: '_end')
-  Element get endElement;
-  PositiveInt get minutesDuration;
+  Element? get endElement;
+  PositiveInt? get minutesDuration;
   @JsonKey(name: '_minutesDuration')
-  Element get minutesDurationElement;
-  List<Reference> get slot;
-  String get comment;
+  Element? get minutesDurationElement;
+  List<Reference>? get slot;
+  String? get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
-  @JsonKey(required: true)
+  Element? get commentElement;
   List<AppointmentParticipant> get participant;
 
   Map<String, dynamic> toJson();
@@ -166,61 +159,60 @@ abstract class $AppointmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
           AppointmentStatus status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept type,
-      CodeableConcept reason,
-      UnsignedInt priority,
+          Element? statusElement,
+      CodeableConcept? type,
+      CodeableConcept? reason,
+      UnsignedInt? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      String description,
+          Element? priorityElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      Instant start,
+          Element? descriptionElement,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      PositiveInt minutesDuration,
+          Element? endElement,
+      PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
-          Element minutesDurationElement,
-      List<Reference> slot,
-      String comment,
+          Element? minutesDurationElement,
+      List<Reference>? slot,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
-      @JsonKey(required: true)
-          List<AppointmentParticipant> participant});
+          Element? commentElement,
+      List<AppointmentParticipant> participant});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get statusElement;
-  $CodeableConceptCopyWith<$Res> get type;
-  $CodeableConceptCopyWith<$Res> get reason;
-  $ElementCopyWith<$Res> get priorityElement;
-  $ElementCopyWith<$Res> get descriptionElement;
-  $ElementCopyWith<$Res> get startElement;
-  $ElementCopyWith<$Res> get endElement;
-  $ElementCopyWith<$Res> get minutesDurationElement;
-  $ElementCopyWith<$Res> get commentElement;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res>? get reason;
+  $ElementCopyWith<$Res>? get priorityElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ElementCopyWith<$Res>? get startElement;
+  $ElementCopyWith<$Res>? get endElement;
+  $ElementCopyWith<$Res>? get minutesDurationElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -233,98 +225,100 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object type = freezed,
-    Object reason = freezed,
-    Object priority = freezed,
-    Object priorityElement = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object minutesDuration = freezed,
-    Object minutesDurationElement = freezed,
-    Object slot = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
-    Object participant = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? type = freezed,
+    Object? reason = freezed,
+    Object? priority = freezed,
+    Object? priorityElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? minutesDuration = freezed,
+    Object? minutesDurationElement = freezed,
+    Object? slot = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
+    Object? participant = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as AppointmentStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
-      priority: priority == freezed ? _value.priority : priority as UnsignedInt,
+          : statusElement as Element?,
+      type: type == freezed ? _value.type : type as CodeableConcept?,
+      reason: reason == freezed ? _value.reason : reason as CodeableConcept?,
+      priority:
+          priority == freezed ? _value.priority : priority as UnsignedInt?,
       priorityElement: priorityElement == freezed
           ? _value.priorityElement
-          : priorityElement as Element,
+          : priorityElement as Element?,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element,
-      start: start == freezed ? _value.start : start as Instant,
+          : descriptionElement as Element?,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       minutesDuration: minutesDuration == freezed
           ? _value.minutesDuration
-          : minutesDuration as PositiveInt,
+          : minutesDuration as PositiveInt?,
       minutesDurationElement: minutesDurationElement == freezed
           ? _value.minutesDurationElement
-          : minutesDurationElement as Element,
-      slot: slot == freezed ? _value.slot : slot as List<Reference>,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : minutesDurationElement as Element?,
+      slot: slot == freezed ? _value.slot : slot as List<Reference>?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
       participant: participant == freezed
           ? _value.participant
           : participant as List<AppointmentParticipant>,
@@ -332,131 +326,144 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get type {
+  $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get reason {
+  $CodeableConceptCopyWith<$Res>? get reason {
     if (_value.reason == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.reason!, (value) {
       return _then(_value.copyWith(reason: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get priorityElement {
+  $ElementCopyWith<$Res>? get priorityElement {
     if (_value.priorityElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.priorityElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.priorityElement!, (value) {
       return _then(_value.copyWith(priorityElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get descriptionElement {
+  $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
       return _then(_value.copyWith(descriptionElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get startElement {
+  $ElementCopyWith<$Res>? get startElement {
     if (_value.startElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.startElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.startElement!, (value) {
       return _then(_value.copyWith(startElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endElement {
+  $ElementCopyWith<$Res>? get endElement {
     if (_value.endElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endElement!, (value) {
       return _then(_value.copyWith(endElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get minutesDurationElement {
+  $ElementCopyWith<$Res>? get minutesDurationElement {
     if (_value.minutesDurationElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.minutesDurationElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.minutesDurationElement!, (value) {
       return _then(_value.copyWith(minutesDurationElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
+  $ElementCopyWith<$Res>? get commentElement {
     if (_value.commentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
       return _then(_value.copyWith(commentElement: value));
     });
   }
@@ -472,74 +479,73 @@ abstract class _$AppointmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
           AppointmentStatus status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept type,
-      CodeableConcept reason,
-      UnsignedInt priority,
+          Element? statusElement,
+      CodeableConcept? type,
+      CodeableConcept? reason,
+      UnsignedInt? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      String description,
+          Element? priorityElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      Instant start,
+          Element? descriptionElement,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      PositiveInt minutesDuration,
+          Element? endElement,
+      PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
-          Element minutesDurationElement,
-      List<Reference> slot,
-      String comment,
+          Element? minutesDurationElement,
+      List<Reference>? slot,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
-      @JsonKey(required: true)
-          List<AppointmentParticipant> participant});
+          Element? commentElement,
+      List<AppointmentParticipant> participant});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res>? get type;
   @override
-  $CodeableConceptCopyWith<$Res> get reason;
+  $CodeableConceptCopyWith<$Res>? get reason;
   @override
-  $ElementCopyWith<$Res> get priorityElement;
+  $ElementCopyWith<$Res>? get priorityElement;
   @override
-  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $ElementCopyWith<$Res> get startElement;
+  $ElementCopyWith<$Res>? get startElement;
   @override
-  $ElementCopyWith<$Res> get endElement;
+  $ElementCopyWith<$Res>? get endElement;
   @override
-  $ElementCopyWith<$Res> get minutesDurationElement;
+  $ElementCopyWith<$Res>? get minutesDurationElement;
   @override
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -554,98 +560,100 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object type = freezed,
-    Object reason = freezed,
-    Object priority = freezed,
-    Object priorityElement = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object minutesDuration = freezed,
-    Object minutesDurationElement = freezed,
-    Object slot = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
-    Object participant = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? type = freezed,
+    Object? reason = freezed,
+    Object? priority = freezed,
+    Object? priorityElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? minutesDuration = freezed,
+    Object? minutesDurationElement = freezed,
+    Object? slot = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
+    Object? participant = freezed,
   }) {
     return _then(_Appointment(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as AppointmentStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
-      priority: priority == freezed ? _value.priority : priority as UnsignedInt,
+          : statusElement as Element?,
+      type: type == freezed ? _value.type : type as CodeableConcept?,
+      reason: reason == freezed ? _value.reason : reason as CodeableConcept?,
+      priority:
+          priority == freezed ? _value.priority : priority as UnsignedInt?,
       priorityElement: priorityElement == freezed
           ? _value.priorityElement
-          : priorityElement as Element,
+          : priorityElement as Element?,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element,
-      start: start == freezed ? _value.start : start as Instant,
+          : descriptionElement as Element?,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       minutesDuration: minutesDuration == freezed
           ? _value.minutesDuration
-          : minutesDuration as PositiveInt,
+          : minutesDuration as PositiveInt?,
       minutesDurationElement: minutesDurationElement == freezed
           ? _value.minutesDurationElement
-          : minutesDurationElement as Element,
-      slot: slot == freezed ? _value.slot : slot as List<Reference>,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : minutesDurationElement as Element?,
+      slot: slot == freezed ? _value.slot : slot as List<Reference>?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
       participant: participant == freezed
           ? _value.participant
           : participant as List<AppointmentParticipant>,
@@ -674,9 +682,8 @@ class _$_Appointment extends _Appointment {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required
-      @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
-          this.status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          required this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.type,
@@ -700,13 +707,8 @@ class _$_Appointment extends _Appointment {
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement,
-      @required
-      @JsonKey(required: true)
-          this.participant})
-      : assert(resourceType != null),
-        assert(status != null),
-        assert(participant != null),
-        super._();
+      required this.participant})
+      : super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentFromJson(json);
@@ -715,74 +717,73 @@ class _$_Appointment extends _Appointment {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   final Dstu2ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
+  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
   final AppointmentStatus status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final CodeableConcept type;
+  final CodeableConcept? type;
   @override
-  final CodeableConcept reason;
+  final CodeableConcept? reason;
   @override
-  final UnsignedInt priority;
+  final UnsignedInt? priority;
   @override
   @JsonKey(name: '_priority')
-  final Element priorityElement;
+  final Element? priorityElement;
   @override
-  final String description;
+  final String? description;
   @override
   @JsonKey(name: '_description')
-  final Element descriptionElement;
+  final Element? descriptionElement;
   @override
-  final Instant start;
+  final Instant? start;
   @override
   @JsonKey(name: '_start')
-  final Element startElement;
+  final Element? startElement;
   @override
-  final Instant end;
+  final Instant? end;
   @override
   @JsonKey(name: '_end')
-  final Element endElement;
+  final Element? endElement;
   @override
-  final PositiveInt minutesDuration;
+  final PositiveInt? minutesDuration;
   @override
   @JsonKey(name: '_minutesDuration')
-  final Element minutesDurationElement;
+  final Element? minutesDurationElement;
   @override
-  final List<Reference> slot;
+  final List<Reference>? slot;
   @override
-  final String comment;
+  final String? comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final Element? commentElement;
   @override
-  @JsonKey(required: true)
   final List<AppointmentParticipant> participant;
 
   @override
@@ -919,49 +920,46 @@ abstract class _Appointment extends Appointment {
   factory _Appointment(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @required
-      @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          required AppointmentStatus status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept type,
-      CodeableConcept reason,
-      UnsignedInt priority,
+          Element? statusElement,
+      CodeableConcept? type,
+      CodeableConcept? reason,
+      UnsignedInt? priority,
       @JsonKey(name: '_priority')
-          Element priorityElement,
-      String description,
+          Element? priorityElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      Instant start,
+          Element? descriptionElement,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      PositiveInt minutesDuration,
+          Element? endElement,
+      PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
-          Element minutesDurationElement,
-      List<Reference> slot,
-      String comment,
+          Element? minutesDurationElement,
+      List<Reference>? slot,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement,
-      @required
-      @JsonKey(required: true)
-          List<AppointmentParticipant> participant}) = _$_Appointment;
+          Element? commentElement,
+      required List<AppointmentParticipant> participant}) = _$_Appointment;
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
@@ -970,74 +968,73 @@ abstract class _Appointment extends Appointment {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   Dstu2ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier;
   @override
-  @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
+  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
   AppointmentStatus get status;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement;
   @override
-  CodeableConcept get type;
+  CodeableConcept? get type;
   @override
-  CodeableConcept get reason;
+  CodeableConcept? get reason;
   @override
-  UnsignedInt get priority;
+  UnsignedInt? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element get priorityElement;
+  Element? get priorityElement;
   @override
-  String get description;
+  String? get description;
   @override
   @JsonKey(name: '_description')
-  Element get descriptionElement;
+  Element? get descriptionElement;
   @override
-  Instant get start;
+  Instant? get start;
   @override
   @JsonKey(name: '_start')
-  Element get startElement;
+  Element? get startElement;
   @override
-  Instant get end;
+  Instant? get end;
   @override
   @JsonKey(name: '_end')
-  Element get endElement;
+  Element? get endElement;
   @override
-  PositiveInt get minutesDuration;
+  PositiveInt? get minutesDuration;
   @override
   @JsonKey(name: '_minutesDuration')
-  Element get minutesDurationElement;
+  Element? get minutesDurationElement;
   @override
-  List<Reference> get slot;
+  List<Reference>? get slot;
   @override
-  String get comment;
+  String? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
   @override
-  @JsonKey(required: true)
   List<AppointmentParticipant> get participant;
   @override
   @JsonKey(ignore: true)
@@ -1053,23 +1050,21 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
 class _$AppointmentParticipantTearOff {
   const _$AppointmentParticipantTearOff();
 
-// ignore: unused_element
   _AppointmentParticipant call(
-      {Id id,
+      {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
-      Reference actor,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      Reference? actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          ParticipantRequired required_,
+          ParticipantRequired? required_,
       @JsonKey(name: '_required')
-          Element requiredElement,
-      @required
-      @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
-          ParticipantStatus status,
+          Element? requiredElement,
+      @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
+          required ParticipantStatus status,
       @JsonKey(name: '_status')
-          Element statusElement}) {
+          Element? statusElement}) {
     return _AppointmentParticipant(
       id: id,
       extension_: extension_,
@@ -1083,32 +1078,30 @@ class _$AppointmentParticipantTearOff {
     );
   }
 
-// ignore: unused_element
   AppointmentParticipant fromJson(Map<String, Object> json) {
     return AppointmentParticipant.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AppointmentParticipant = _$AppointmentParticipantTearOff();
 
 /// @nodoc
 mixin _$AppointmentParticipant {
-  Id get id;
+  Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<CodeableConcept> get type;
-  Reference get actor;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<CodeableConcept>? get type;
+  Reference? get actor;
   @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-  ParticipantRequired get required_;
+  ParticipantRequired? get required_;
   @JsonKey(name: '_required')
-  Element get requiredElement;
-  @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
+  Element? get requiredElement;
+  @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
   ParticipantStatus get status;
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1121,24 +1114,24 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
           $Res Function(AppointmentParticipant) then) =
       _$AppointmentParticipantCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
+      {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
-      Reference actor,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      Reference? actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          ParticipantRequired required_,
+          ParticipantRequired? required_,
       @JsonKey(name: '_required')
-          Element requiredElement,
-      @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
+          Element? requiredElement,
+      @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
           ParticipantStatus status,
       @JsonKey(name: '_status')
-          Element statusElement});
+          Element? statusElement});
 
-  $ReferenceCopyWith<$Res> get actor;
-  $ElementCopyWith<$Res> get requiredElement;
-  $ElementCopyWith<$Res> get statusElement;
+  $ReferenceCopyWith<$Res>? get actor;
+  $ElementCopyWith<$Res>? get requiredElement;
+  $ElementCopyWith<$Res>? get statusElement;
 }
 
 /// @nodoc
@@ -1152,65 +1145,68 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object actor = freezed,
-    Object required_ = freezed,
-    Object requiredElement = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? actor = freezed,
+    Object? required_ = freezed,
+    Object? requiredElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
-      actor: actor == freezed ? _value.actor : actor as Reference,
+          : modifierExtension as List<FhirExtension>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      actor: actor == freezed ? _value.actor : actor as Reference?,
       required_: required_ == freezed
           ? _value.required_
-          : required_ as ParticipantRequired,
+          : required_ as ParticipantRequired?,
       requiredElement: requiredElement == freezed
           ? _value.requiredElement
-          : requiredElement as Element,
+          : requiredElement as Element?,
       status: status == freezed ? _value.status : status as ParticipantStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement as Element?,
     ));
   }
 
   @override
-  $ReferenceCopyWith<$Res> get actor {
+  $ReferenceCopyWith<$Res>? get actor {
     if (_value.actor == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.actor!, (value) {
       return _then(_value.copyWith(actor: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get requiredElement {
+  $ElementCopyWith<$Res>? get requiredElement {
     if (_value.requiredElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.requiredElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.requiredElement!, (value) {
       return _then(_value.copyWith(requiredElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
@@ -1224,27 +1220,27 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
       __$AppointmentParticipantCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
+      {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
-      Reference actor,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      Reference? actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          ParticipantRequired required_,
+          ParticipantRequired? required_,
       @JsonKey(name: '_required')
-          Element requiredElement,
-      @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
+          Element? requiredElement,
+      @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
           ParticipantStatus status,
       @JsonKey(name: '_status')
-          Element statusElement});
+          Element? statusElement});
 
   @override
-  $ReferenceCopyWith<$Res> get actor;
+  $ReferenceCopyWith<$Res>? get actor;
   @override
-  $ElementCopyWith<$Res> get requiredElement;
+  $ElementCopyWith<$Res>? get requiredElement;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
 }
 
 /// @nodoc
@@ -1260,36 +1256,36 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object actor = freezed,
-    Object required_ = freezed,
-    Object requiredElement = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? actor = freezed,
+    Object? required_ = freezed,
+    Object? requiredElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
   }) {
     return _then(_AppointmentParticipant(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
-      actor: actor == freezed ? _value.actor : actor as Reference,
+          : modifierExtension as List<FhirExtension>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      actor: actor == freezed ? _value.actor : actor as Reference?,
       required_: required_ == freezed
           ? _value.required_
-          : required_ as ParticipantRequired,
+          : required_ as ParticipantRequired?,
       requiredElement: requiredElement == freezed
           ? _value.requiredElement
-          : requiredElement as Element,
+          : requiredElement as Element?,
       status: status == freezed ? _value.status : status as ParticipantStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement as Element?,
     ));
   }
 }
@@ -1309,40 +1305,38 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
           this.required_,
       @JsonKey(name: '_required')
           this.requiredElement,
-      @required
-      @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
-          this.status,
+      @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
+          required this.status,
       @JsonKey(name: '_status')
           this.statusElement})
-      : assert(status != null),
-        super._();
+      : super._();
 
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentParticipantFromJson(json);
 
   @override
-  final Id id;
+  final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<CodeableConcept> type;
+  final List<CodeableConcept>? type;
   @override
-  final Reference actor;
+  final Reference? actor;
   @override
   @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-  final ParticipantRequired required_;
+  final ParticipantRequired? required_;
   @override
   @JsonKey(name: '_required')
-  final Element requiredElement;
+  final Element? requiredElement;
   @override
-  @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
+  @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
   final ParticipantStatus status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
 
   @override
   String toString() {
@@ -1406,48 +1400,47 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 abstract class _AppointmentParticipant extends AppointmentParticipant {
   _AppointmentParticipant._() : super._();
   factory _AppointmentParticipant(
-      {Id id,
+      {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
-      Reference actor,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? type,
+      Reference? actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          ParticipantRequired required_,
+          ParticipantRequired? required_,
       @JsonKey(name: '_required')
-          Element requiredElement,
-      @required
-      @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
-          ParticipantStatus status,
+          Element? requiredElement,
+      @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
+          required ParticipantStatus status,
       @JsonKey(name: '_status')
-          Element statusElement}) = _$_AppointmentParticipant;
+          Element? statusElement}) = _$_AppointmentParticipant;
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
       _$_AppointmentParticipant.fromJson;
 
   @override
-  Id get id;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<CodeableConcept> get type;
+  List<CodeableConcept>? get type;
   @override
-  Reference get actor;
+  Reference? get actor;
   @override
   @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-  ParticipantRequired get required_;
+  ParticipantRequired? get required_;
   @override
   @JsonKey(name: '_required')
-  Element get requiredElement;
+  Element? get requiredElement;
   @override
-  @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
+  @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
   ParticipantStatus get status;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement;
   @override
   @JsonKey(ignore: true)
   _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith;
@@ -1461,44 +1454,40 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 class _$AppointmentResponseTearOff {
   const _$AppointmentResponseTearOff();
 
-// ignore: unused_element
   _AppointmentResponse call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType
               resourceType = Dstu2ResourceType.AppointmentResponse,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @required
-      @JsonKey(required: true)
-          Reference appointment,
-      Instant start,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      required Reference appointment,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<CodeableConcept> participantType,
-      Reference actor,
-      @required
+          Element? endElement,
+      List<CodeableConcept>? participantType,
+      Reference? actor,
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-          AppointmentResponseParticipantStatus participantStatus,
+          required AppointmentResponseParticipantStatus participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
-      String comment,
+          Element? participantStatusElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) {
+          Element? commentElement}) {
     return _AppointmentResponse(
       resourceType: resourceType,
       id: id,
@@ -1526,53 +1515,50 @@ class _$AppointmentResponseTearOff {
     );
   }
 
-// ignore: unused_element
   AppointmentResponse fromJson(Map<String, Object> json) {
     return AppointmentResponse.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AppointmentResponse = _$AppointmentResponseTearOff();
 
 /// @nodoc
 mixin _$AppointmentResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   Dstu2ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  @JsonKey(required: true)
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
   Reference get appointment;
-  Instant get start;
+  Instant? get start;
   @JsonKey(name: '_start')
-  Element get startElement;
-  Instant get end;
+  Element? get startElement;
+  Instant? get end;
   @JsonKey(name: '_end')
-  Element get endElement;
-  List<CodeableConcept> get participantType;
-  Reference get actor;
+  Element? get endElement;
+  List<CodeableConcept>? get participantType;
+  Reference? get actor;
   @JsonKey(
       required: true,
       unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
   AppointmentResponseParticipantStatus get participantStatus;
   @JsonKey(name: '_participantStatus')
-  Element get participantStatusElement;
-  String get comment;
+  Element? get participantStatusElement;
+  String? get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1587,48 +1573,47 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @JsonKey(required: true)
-          Reference appointment,
-      Instant start,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference appointment,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<CodeableConcept> participantType,
-      Reference actor,
+          Element? endElement,
+      List<CodeableConcept>? participantType,
+      Reference? actor,
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
           AppointmentResponseParticipantStatus participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
-      String comment,
+          Element? participantStatusElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
   $ReferenceCopyWith<$Res> get appointment;
-  $ElementCopyWith<$Res> get startElement;
-  $ElementCopyWith<$Res> get endElement;
-  $ReferenceCopyWith<$Res> get actor;
-  $ElementCopyWith<$Res> get participantStatusElement;
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get startElement;
+  $ElementCopyWith<$Res>? get endElement;
+  $ReferenceCopyWith<$Res>? get actor;
+  $ElementCopyWith<$Res>? get participantStatusElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -1642,181 +1627,188 @@ class _$AppointmentResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object appointment = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object participantType = freezed,
-    Object actor = freezed,
-    Object participantStatus = freezed,
-    Object participantStatusElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? appointment = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? participantType = freezed,
+    Object? actor = freezed,
+    Object? participantStatus = freezed,
+    Object? participantStatusElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference,
-      start: start == freezed ? _value.start : start as Instant,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       participantType: participantType == freezed
           ? _value.participantType
-          : participantType as List<CodeableConcept>,
-      actor: actor == freezed ? _value.actor : actor as Reference,
+          : participantType as List<CodeableConcept>?,
+      actor: actor == freezed ? _value.actor : actor as Reference?,
       participantStatus: participantStatus == freezed
           ? _value.participantStatus
           : participantStatus as AppointmentResponseParticipantStatus,
       participantStatusElement: participantStatusElement == freezed
           ? _value.participantStatusElement
-          : participantStatusElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : participantStatusElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get appointment {
-    if (_value.appointment == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.appointment, (value) {
       return _then(_value.copyWith(appointment: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get startElement {
+  $ElementCopyWith<$Res>? get startElement {
     if (_value.startElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.startElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.startElement!, (value) {
       return _then(_value.copyWith(startElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endElement {
+  $ElementCopyWith<$Res>? get endElement {
     if (_value.endElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endElement!, (value) {
       return _then(_value.copyWith(endElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get actor {
+  $ReferenceCopyWith<$Res>? get actor {
     if (_value.actor == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.actor!, (value) {
       return _then(_value.copyWith(actor: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get participantStatusElement {
+  $ElementCopyWith<$Res>? get participantStatusElement {
     if (_value.participantStatusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.participantStatusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.participantStatusElement!, (value) {
       return _then(_value.copyWith(participantStatusElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
+  $ElementCopyWith<$Res>? get commentElement {
     if (_value.commentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
       return _then(_value.copyWith(commentElement: value));
     });
   }
@@ -1832,58 +1824,57 @@ abstract class _$AppointmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @JsonKey(required: true)
-          Reference appointment,
-      Instant start,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference appointment,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<CodeableConcept> participantType,
-      Reference actor,
+          Element? endElement,
+      List<CodeableConcept>? participantType,
+      Reference? actor,
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
           AppointmentResponseParticipantStatus participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
-      String comment,
+          Element? participantStatusElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
   $ReferenceCopyWith<$Res> get appointment;
   @override
-  $ElementCopyWith<$Res> get startElement;
+  $ElementCopyWith<$Res>? get startElement;
   @override
-  $ElementCopyWith<$Res> get endElement;
+  $ElementCopyWith<$Res>? get endElement;
   @override
-  $ReferenceCopyWith<$Res> get actor;
+  $ReferenceCopyWith<$Res>? get actor;
   @override
-  $ElementCopyWith<$Res> get participantStatusElement;
+  $ElementCopyWith<$Res>? get participantStatusElement;
   @override
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -1899,82 +1890,83 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object appointment = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object participantType = freezed,
-    Object actor = freezed,
-    Object participantStatus = freezed,
-    Object participantStatusElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? appointment = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? participantType = freezed,
+    Object? actor = freezed,
+    Object? participantStatus = freezed,
+    Object? participantStatusElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_AppointmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<Identifier>?,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference,
-      start: start == freezed ? _value.start : start as Instant,
+      start: start == freezed ? _value.start : start as Instant?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
-      end: end == freezed ? _value.end : end as Instant,
+          : startElement as Element?,
+      end: end == freezed ? _value.end : end as Instant?,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       participantType: participantType == freezed
           ? _value.participantType
-          : participantType as List<CodeableConcept>,
-      actor: actor == freezed ? _value.actor : actor as Reference,
+          : participantType as List<CodeableConcept>?,
+      actor: actor == freezed ? _value.actor : actor as Reference?,
       participantStatus: participantStatus == freezed
           ? _value.participantStatus
           : participantStatus as AppointmentResponseParticipantStatus,
       participantStatusElement: participantStatusElement == freezed
           ? _value.participantStatusElement
-          : participantStatusElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : participantStatusElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 }
@@ -2000,9 +1992,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required
-      @JsonKey(required: true)
-          this.appointment,
+      required this.appointment,
       this.start,
       @JsonKey(name: '_start')
           this.startElement,
@@ -2011,18 +2001,14 @@ class _$_AppointmentResponse extends _AppointmentResponse {
           this.endElement,
       this.participantType,
       this.actor,
-      @required
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-          this.participantStatus,
+          required this.participantStatus,
       @JsonKey(name: '_participantStatus')
           this.participantStatusElement,
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null),
-        assert(appointment != null),
-        assert(participantStatus != null),
-        super._();
+      : super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentResponseFromJson(json);
@@ -2031,47 +2017,46 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   final Dstu2ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  @JsonKey(required: true)
   final Reference appointment;
   @override
-  final Instant start;
+  final Instant? start;
   @override
   @JsonKey(name: '_start')
-  final Element startElement;
+  final Element? startElement;
   @override
-  final Instant end;
+  final Instant? end;
   @override
   @JsonKey(name: '_end')
-  final Element endElement;
+  final Element? endElement;
   @override
-  final List<CodeableConcept> participantType;
+  final List<CodeableConcept>? participantType;
   @override
-  final Reference actor;
+  final Reference? actor;
   @override
   @JsonKey(
       required: true,
@@ -2079,12 +2064,12 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   final AppointmentResponseParticipantStatus participantStatus;
   @override
   @JsonKey(name: '_participantStatus')
-  final Element participantStatusElement;
+  final Element? participantStatusElement;
   @override
-  final String comment;
+  final String? comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final Element? commentElement;
 
   @override
   String toString() {
@@ -2206,39 +2191,36 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      @required
-      @JsonKey(required: true)
-          Reference appointment,
-      Instant start,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      required Reference appointment,
+      Instant? start,
       @JsonKey(name: '_start')
-          Element startElement,
-      Instant end,
+          Element? startElement,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<CodeableConcept> participantType,
-      Reference actor,
-      @required
+          Element? endElement,
+      List<CodeableConcept>? participantType,
+      Reference? actor,
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-          AppointmentResponseParticipantStatus participantStatus,
+          required AppointmentResponseParticipantStatus participantStatus,
       @JsonKey(name: '_participantStatus')
-          Element participantStatusElement,
-      String comment,
+          Element? participantStatusElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) = _$_AppointmentResponse;
+          Element? commentElement}) = _$_AppointmentResponse;
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
@@ -2247,47 +2229,46 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   Dstu2ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier;
   @override
-  @JsonKey(required: true)
   Reference get appointment;
   @override
-  Instant get start;
+  Instant? get start;
   @override
   @JsonKey(name: '_start')
-  Element get startElement;
+  Element? get startElement;
   @override
-  Instant get end;
+  Instant? get end;
   @override
   @JsonKey(name: '_end')
-  Element get endElement;
+  Element? get endElement;
   @override
-  List<CodeableConcept> get participantType;
+  List<CodeableConcept>? get participantType;
   @override
-  Reference get actor;
+  Reference? get actor;
   @override
   @JsonKey(
       required: true,
@@ -2295,12 +2276,12 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   AppointmentResponseParticipantStatus get participantStatus;
   @override
   @JsonKey(name: '_participantStatus')
-  Element get participantStatusElement;
+  Element? get participantStatusElement;
   @override
-  String get comment;
+  String? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
   @override
   @JsonKey(ignore: true)
   _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith;
@@ -2314,32 +2295,29 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 class _$ScheduleTearOff {
   const _$ScheduleTearOff();
 
-// ignore: unused_element
   _Schedule call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType = Dstu2ResourceType.Schedule,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<CodeableConcept> type,
-      @required
-      @JsonKey(required: true)
-          Reference actor,
-      Period planningHorizon,
-      String comment,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<CodeableConcept>? type,
+      required Reference actor,
+      Period? planningHorizon,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) {
+          Element? commentElement}) {
     return _Schedule(
       resourceType: resourceType,
       id: id,
@@ -2361,41 +2339,38 @@ class _$ScheduleTearOff {
     );
   }
 
-// ignore: unused_element
   Schedule fromJson(Map<String, Object> json) {
     return Schedule.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Schedule = _$ScheduleTearOff();
 
 /// @nodoc
 mixin _$Schedule {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   Dstu2ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  List<CodeableConcept> get type;
-  @JsonKey(required: true)
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
+  List<CodeableConcept>? get type;
   Reference get actor;
-  Period get planningHorizon;
-  String get comment;
+  Period? get planningHorizon;
+  String? get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2409,35 +2384,34 @@ abstract class $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<CodeableConcept> type,
-      @JsonKey(required: true)
-          Reference actor,
-      Period planningHorizon,
-      String comment,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<CodeableConcept>? type,
+      Reference actor,
+      Period? planningHorizon,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
   $ReferenceCopyWith<$Res> get actor;
-  $PeriodCopyWith<$Res> get planningHorizon;
-  $ElementCopyWith<$Res> get commentElement;
+  $PeriodCopyWith<$Res>? get planningHorizon;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -2450,130 +2424,134 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object type = freezed,
-    Object actor = freezed,
-    Object planningHorizon = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? type = freezed,
+    Object? actor = freezed,
+    Object? planningHorizon = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+          : identifier as List<Identifier>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       actor: actor == freezed ? _value.actor : actor as Reference,
       planningHorizon: planningHorizon == freezed
           ? _value.planningHorizon
-          : planningHorizon as Period,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : planningHorizon as Period?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get actor {
-    if (_value.actor == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.actor, (value) {
       return _then(_value.copyWith(actor: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get planningHorizon {
+  $PeriodCopyWith<$Res>? get planningHorizon {
     if (_value.planningHorizon == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.planningHorizon, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.planningHorizon!, (value) {
       return _then(_value.copyWith(planningHorizon: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
+  $ElementCopyWith<$Res>? get commentElement {
     if (_value.commentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
       return _then(_value.copyWith(commentElement: value));
     });
   }
@@ -2587,42 +2565,41 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<CodeableConcept> type,
-      @JsonKey(required: true)
-          Reference actor,
-      Period planningHorizon,
-      String comment,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<CodeableConcept>? type,
+      Reference actor,
+      Period? planningHorizon,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
   $ReferenceCopyWith<$Res> get actor;
   @override
-  $PeriodCopyWith<$Res> get planningHorizon;
+  $PeriodCopyWith<$Res>? get planningHorizon;
   @override
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -2636,61 +2613,62 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object type = freezed,
-    Object actor = freezed,
-    Object planningHorizon = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? type = freezed,
+    Object? actor = freezed,
+    Object? planningHorizon = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_Schedule(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+          : identifier as List<Identifier>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       actor: actor == freezed ? _value.actor : actor as Reference,
       planningHorizon: planningHorizon == freezed
           ? _value.planningHorizon
-          : planningHorizon as Period,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : planningHorizon as Period?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 }
@@ -2717,16 +2695,12 @@ class _$_Schedule extends _Schedule {
       this.modifierExtension,
       this.identifier,
       this.type,
-      @required
-      @JsonKey(required: true)
-          this.actor,
+      required this.actor,
       this.planningHorizon,
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null),
-        assert(actor != null),
-        super._();
+      : super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$_$_ScheduleFromJson(json);
@@ -2735,42 +2709,41 @@ class _$_Schedule extends _Schedule {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   final Dstu2ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final List<CodeableConcept> type;
+  final List<CodeableConcept>? type;
   @override
-  @JsonKey(required: true)
   final Reference actor;
   @override
-  final Period planningHorizon;
+  final Period? planningHorizon;
   @override
-  final String comment;
+  final String? comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final Element? commentElement;
 
   @override
   String toString() {
@@ -2866,28 +2839,26 @@ abstract class _Schedule extends Schedule {
   factory _Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      List<CodeableConcept> type,
-      @required
-      @JsonKey(required: true)
-          Reference actor,
-      Period planningHorizon,
-      String comment,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      List<CodeableConcept>? type,
+      required Reference actor,
+      Period? planningHorizon,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) = _$_Schedule;
+          Element? commentElement}) = _$_Schedule;
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
@@ -2895,42 +2866,41 @@ abstract class _Schedule extends Schedule {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   Dstu2ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier;
   @override
-  List<CodeableConcept> get type;
+  List<CodeableConcept>? get type;
   @override
-  @JsonKey(required: true)
   Reference get actor;
   @override
-  Period get planningHorizon;
+  Period? get planningHorizon;
   @override
-  String get comment;
+  String? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
   @override
   @JsonKey(ignore: true)
   _$ScheduleCopyWith<_Schedule> get copyWith;
@@ -2944,47 +2914,39 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 class _$SlotTearOff {
   const _$SlotTearOff();
 
-// ignore: unused_element
   _Slot call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType = Dstu2ResourceType.Slot,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      CodeableConcept type,
-      @required
-      @JsonKey(required: true)
-          Reference schedule,
-      @required
-      @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
-          SlotFreeBusyType freeBusyType,
-      @required
-      @JsonKey(required: true)
-          Instant start,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? type,
+      required Reference schedule,
+      @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
+          required SlotFreeBusyType freeBusyType,
+      required Instant start,
       @JsonKey(name: '_start')
-          Element startElement,
-      @required
-      @JsonKey(required: true)
-          Instant end,
+          Element? startElement,
+      required Instant end,
       @JsonKey(name: '_end')
-          Element endElement,
-      Boolean overbooked,
+          Element? endElement,
+      Boolean? overbooked,
       @JsonKey(name: '_overbooked')
-          Element overbookedElement,
-      String comment,
+          Element? overbookedElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) {
+          Element? commentElement}) {
     return _Slot(
       resourceType: resourceType,
       id: id,
@@ -3012,53 +2974,48 @@ class _$SlotTearOff {
     );
   }
 
-// ignore: unused_element
   Slot fromJson(Map<String, Object> json) {
     return Slot.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Slot = _$SlotTearOff();
 
 /// @nodoc
 mixin _$Slot {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   Dstu2ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Id? get id;
+  Meta? get meta;
+  FhirUri? get implicitRules;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement;
+  Code? get language;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  CodeableConcept get type;
-  @JsonKey(required: true)
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
+  CodeableConcept? get type;
   Reference get schedule;
-  @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
+  @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
   SlotFreeBusyType get freeBusyType;
-  @JsonKey(required: true)
   Instant get start;
   @JsonKey(name: '_start')
-  Element get startElement;
-  @JsonKey(required: true)
+  Element? get startElement;
   Instant get end;
   @JsonKey(name: '_end')
-  Element get endElement;
-  Boolean get overbooked;
+  Element? get endElement;
+  Boolean? get overbooked;
   @JsonKey(name: '_overbooked')
-  Element get overbookedElement;
-  String get comment;
+  Element? get overbookedElement;
+  String? get comment;
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3072,50 +3029,47 @@ abstract class $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      CodeableConcept type,
-      @JsonKey(required: true)
-          Reference schedule,
-      @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? type,
+      Reference schedule,
+      @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
           SlotFreeBusyType freeBusyType,
-      @JsonKey(required: true)
-          Instant start,
+      Instant start,
       @JsonKey(name: '_start')
-          Element startElement,
-      @JsonKey(required: true)
-          Instant end,
+          Element? startElement,
+      Instant end,
       @JsonKey(name: '_end')
-          Element endElement,
-      Boolean overbooked,
+          Element? endElement,
+      Boolean? overbooked,
       @JsonKey(name: '_overbooked')
-          Element overbookedElement,
-      String comment,
+          Element? overbookedElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $CodeableConceptCopyWith<$Res> get type;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $CodeableConceptCopyWith<$Res>? get type;
   $ReferenceCopyWith<$Res> get schedule;
-  $ElementCopyWith<$Res> get startElement;
-  $ElementCopyWith<$Res> get endElement;
-  $ElementCopyWith<$Res> get overbookedElement;
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get startElement;
+  $ElementCopyWith<$Res>? get endElement;
+  $ElementCopyWith<$Res>? get overbookedElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -3128,59 +3082,60 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object type = freezed,
-    Object schedule = freezed,
-    Object freeBusyType = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object overbooked = freezed,
-    Object overbookedElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? type = freezed,
+    Object? schedule = freezed,
+    Object? freeBusyType = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? overbooked = freezed,
+    Object? overbookedElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : identifier as List<Identifier>?,
+      type: type == freezed ? _value.type : type as CodeableConcept?,
       schedule: schedule == freezed ? _value.schedule : schedule as Reference,
       freeBusyType: freeBusyType == freezed
           ? _value.freeBusyType
@@ -3188,118 +3143,124 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
       start: start == freezed ? _value.start : start as Instant,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
+          : startElement as Element?,
       end: end == freezed ? _value.end : end as Instant,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       overbooked:
-          overbooked == freezed ? _value.overbooked : overbooked as Boolean,
+          overbooked == freezed ? _value.overbooked : overbooked as Boolean?,
       overbookedElement: overbookedElement == freezed
           ? _value.overbookedElement
-          : overbookedElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : overbookedElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get type {
+  $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get schedule {
-    if (_value.schedule == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.schedule, (value) {
       return _then(_value.copyWith(schedule: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get startElement {
+  $ElementCopyWith<$Res>? get startElement {
     if (_value.startElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.startElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.startElement!, (value) {
       return _then(_value.copyWith(startElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endElement {
+  $ElementCopyWith<$Res>? get endElement {
     if (_value.endElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endElement!, (value) {
       return _then(_value.copyWith(endElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get overbookedElement {
+  $ElementCopyWith<$Res>? get overbookedElement {
     if (_value.overbookedElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.overbookedElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.overbookedElement!, (value) {
       return _then(_value.copyWith(overbookedElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get commentElement {
+  $ElementCopyWith<$Res>? get commentElement {
     if (_value.commentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.commentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
       return _then(_value.copyWith(commentElement: value));
     });
   }
@@ -3313,60 +3274,57 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      CodeableConcept type,
-      @JsonKey(required: true)
-          Reference schedule,
-      @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? type,
+      Reference schedule,
+      @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
           SlotFreeBusyType freeBusyType,
-      @JsonKey(required: true)
-          Instant start,
+      Instant start,
       @JsonKey(name: '_start')
-          Element startElement,
-      @JsonKey(required: true)
-          Instant end,
+          Element? startElement,
+      Instant end,
       @JsonKey(name: '_end')
-          Element endElement,
-      Boolean overbooked,
+          Element? endElement,
+      Boolean? overbooked,
       @JsonKey(name: '_overbooked')
-          Element overbookedElement,
-      String comment,
+          Element? overbookedElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement});
+          Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res>? get type;
   @override
   $ReferenceCopyWith<$Res> get schedule;
   @override
-  $ElementCopyWith<$Res> get startElement;
+  $ElementCopyWith<$Res>? get startElement;
   @override
-  $ElementCopyWith<$Res> get endElement;
+  $ElementCopyWith<$Res>? get endElement;
   @override
-  $ElementCopyWith<$Res> get overbookedElement;
+  $ElementCopyWith<$Res>? get overbookedElement;
   @override
-  $ElementCopyWith<$Res> get commentElement;
+  $ElementCopyWith<$Res>? get commentElement;
 }
 
 /// @nodoc
@@ -3380,59 +3338,60 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object type = freezed,
-    Object schedule = freezed,
-    Object freeBusyType = freezed,
-    Object start = freezed,
-    Object startElement = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object overbooked = freezed,
-    Object overbookedElement = freezed,
-    Object comment = freezed,
-    Object commentElement = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? type = freezed,
+    Object? schedule = freezed,
+    Object? freeBusyType = freezed,
+    Object? start = freezed,
+    Object? startElement = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? overbooked = freezed,
+    Object? overbookedElement = freezed,
+    Object? comment = freezed,
+    Object? commentElement = freezed,
   }) {
     return _then(_Slot(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+      id: id == freezed ? _value.id : id as Id?,
+      meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement as Element?,
+      language: language == freezed ? _value.language : language as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement as Element?,
+      text: text == freezed ? _value.text : text as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : identifier as List<Identifier>?,
+      type: type == freezed ? _value.type : type as CodeableConcept?,
       schedule: schedule == freezed ? _value.schedule : schedule as Reference,
       freeBusyType: freeBusyType == freezed
           ? _value.freeBusyType
@@ -3440,19 +3399,19 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
       start: start == freezed ? _value.start : start as Instant,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element,
+          : startElement as Element?,
       end: end == freezed ? _value.end : end as Instant,
       endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
+          endElement == freezed ? _value.endElement : endElement as Element?,
       overbooked:
-          overbooked == freezed ? _value.overbooked : overbooked as Boolean,
+          overbooked == freezed ? _value.overbooked : overbooked as Boolean?,
       overbookedElement: overbookedElement == freezed
           ? _value.overbookedElement
-          : overbookedElement as Element,
-      comment: comment == freezed ? _value.comment : comment as String,
+          : overbookedElement as Element?,
+      comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element,
+          : commentElement as Element?,
     ));
   }
 }
@@ -3479,20 +3438,13 @@ class _$_Slot extends _Slot {
       this.modifierExtension,
       this.identifier,
       this.type,
-      @required
-      @JsonKey(required: true)
-          this.schedule,
-      @required
-      @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
-          this.freeBusyType,
-      @required
-      @JsonKey(required: true)
-          this.start,
+      required this.schedule,
+      @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
+          required this.freeBusyType,
+      required this.start,
       @JsonKey(name: '_start')
           this.startElement,
-      @required
-      @JsonKey(required: true)
-          this.end,
+      required this.end,
       @JsonKey(name: '_end')
           this.endElement,
       this.overbooked,
@@ -3501,12 +3453,7 @@ class _$_Slot extends _Slot {
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : assert(resourceType != null),
-        assert(schedule != null),
-        assert(freeBusyType != null),
-        assert(start != null),
-        assert(end != null),
-        super._();
+      : super._();
 
   factory _$_Slot.fromJson(Map<String, dynamic> json) =>
       _$_$_SlotFromJson(json);
@@ -3515,60 +3462,57 @@ class _$_Slot extends _Slot {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   final Dstu2ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final CodeableConcept type;
+  final CodeableConcept? type;
   @override
-  @JsonKey(required: true)
   final Reference schedule;
   @override
-  @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
+  @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
   final SlotFreeBusyType freeBusyType;
   @override
-  @JsonKey(required: true)
   final Instant start;
   @override
   @JsonKey(name: '_start')
-  final Element startElement;
+  final Element? startElement;
   @override
-  @JsonKey(required: true)
   final Instant end;
   @override
   @JsonKey(name: '_end')
-  final Element endElement;
+  final Element? endElement;
   @override
-  final Boolean overbooked;
+  final Boolean? overbooked;
   @override
   @JsonKey(name: '_overbooked')
-  final Element overbookedElement;
+  final Element? overbookedElement;
   @override
-  final String comment;
+  final String? comment;
   @override
   @JsonKey(name: '_comment')
-  final Element commentElement;
+  final Element? commentElement;
 
   @override
   String toString() {
@@ -3687,43 +3631,36 @@ abstract class _Slot extends Slot {
   factory _Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      CodeableConcept type,
-      @required
-      @JsonKey(required: true)
-          Reference schedule,
-      @required
-      @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
-          SlotFreeBusyType freeBusyType,
-      @required
-      @JsonKey(required: true)
-          Instant start,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      CodeableConcept? type,
+      required Reference schedule,
+      @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
+          required SlotFreeBusyType freeBusyType,
+      required Instant start,
       @JsonKey(name: '_start')
-          Element startElement,
-      @required
-      @JsonKey(required: true)
-          Instant end,
+          Element? startElement,
+      required Instant end,
       @JsonKey(name: '_end')
-          Element endElement,
-      Boolean overbooked,
+          Element? endElement,
+      Boolean? overbooked,
       @JsonKey(name: '_overbooked')
-          Element overbookedElement,
-      String comment,
+          Element? overbookedElement,
+      String? comment,
       @JsonKey(name: '_comment')
-          Element commentElement}) = _$_Slot;
+          Element? commentElement}) = _$_Slot;
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
@@ -3731,60 +3668,57 @@ abstract class _Slot extends Slot {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   Dstu2ResourceType get resourceType;
   @override
-  Id get id;
+  Id? get id;
   @override
-  Meta get meta;
+  Meta? get meta;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement;
   @override
-  Code get language;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement;
   @override
-  Narrative get text;
+  Narrative? get text;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier;
   @override
-  CodeableConcept get type;
+  CodeableConcept? get type;
   @override
-  @JsonKey(required: true)
   Reference get schedule;
   @override
-  @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
+  @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
   SlotFreeBusyType get freeBusyType;
   @override
-  @JsonKey(required: true)
   Instant get start;
   @override
   @JsonKey(name: '_start')
-  Element get startElement;
+  Element? get startElement;
   @override
-  @JsonKey(required: true)
   Instant get end;
   @override
   @JsonKey(name: '_end')
-  Element get endElement;
+  Element? get endElement;
   @override
-  Boolean get overbooked;
+  Boolean? get overbooked;
   @override
   @JsonKey(name: '_overbooked')
-  Element get overbookedElement;
+  Element? get overbookedElement;
   @override
-  String get comment;
+  String? get comment;
   @override
   @JsonKey(name: '_comment')
-  Element get commentElement;
+  Element? get commentElement;
   @override
   @JsonKey(ignore: true)
   _$SlotCopyWith<_Slot> get copyWith;

@@ -1,3 +1,11 @@
+## [0.3.0-nullsafety.1]
+* Added web support
+
+## [0.3.0-nullsafety.0]
+* Null safety!
+* Should be completely ready for null safety
+* Should generally work the same as previously, you'll just need to follow null safety requirements
+
 ## [0.2.1]
 * added documentation
 

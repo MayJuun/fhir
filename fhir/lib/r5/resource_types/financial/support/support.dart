@@ -18,38 +18,38 @@ abstract class Coverage with Resource implements _$Coverage {
     @Default(R5ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept type,
-    Reference policyHolder,
-    Reference subscriber,
-    Identifier subscriberId,
-    @required Reference beneficiary,
-    String dependent,
-    @JsonKey(name: '_dependent') Element dependentElement,
-    CodeableConcept relationship,
-    Period period,
-    @required List<Reference> payor,
-    @JsonKey(name: 'class') List<CoverageClass> class_,
-    PositiveInt order,
-    @JsonKey(name: '_order') Element orderElement,
-    String network,
-    @JsonKey(name: '_network') Element networkElement,
-    List<CoverageCostToBeneficiary> costToBeneficiary,
-    Boolean subrogation,
-    @JsonKey(name: '_subrogation') Element subrogationElement,
-    List<Reference> contract,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? type,
+    Reference? policyHolder,
+    Reference? subscriber,
+    Identifier? subscriberId,
+    required Reference beneficiary,
+    String? dependent,
+    @JsonKey(name: '_dependent') Element? dependentElement,
+    CodeableConcept? relationship,
+    Period? period,
+    required List<Reference> payor,
+    @JsonKey(name: 'class') List<CoverageClass>? class_,
+    PositiveInt? order,
+    @JsonKey(name: '_order') Element? orderElement,
+    String? network,
+    @JsonKey(name: '_network') Element? networkElement,
+    List<CoverageCostToBeneficiary>? costToBeneficiary,
+    Boolean? subrogation,
+    @JsonKey(name: '_subrogation') Element? subrogationElement,
+    List<Reference>? contract,
   }) = _Coverage;
 
   /// Produces a Yaml formatted String version of the object
@@ -60,7 +60,9 @@ abstract class Coverage with Resource implements _$Coverage {
       ? Coverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Coverage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Coverage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Coverage.fromJson(Map<String, dynamic> json) =>
@@ -71,14 +73,14 @@ abstract class Coverage with Resource implements _$Coverage {
 abstract class CoverageClass implements _$CoverageClass {
   CoverageClass._();
   factory CoverageClass({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    String value,
-    @JsonKey(name: '_value') Element valueElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
   }) = _CoverageClass;
 
   /// Produces a Yaml formatted String version of the object
@@ -89,7 +91,9 @@ abstract class CoverageClass implements _$CoverageClass {
       ? CoverageClass.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CoverageClass.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CoverageClass cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageClass.fromJson(Map<String, dynamic> json) =>
@@ -101,13 +105,13 @@ abstract class CoverageCostToBeneficiary
     implements _$CoverageCostToBeneficiary {
   CoverageCostToBeneficiary._();
   factory CoverageCostToBeneficiary({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    Quantity valueQuantity,
-    Money valueMoney,
-    List<CoverageException> exception,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    Quantity? valueQuantity,
+    Money? valueMoney,
+    List<CoverageException>? exception,
   }) = _CoverageCostToBeneficiary;
 
   /// Produces a Yaml formatted String version of the object
@@ -119,7 +123,9 @@ abstract class CoverageCostToBeneficiary
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CoverageCostToBeneficiary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CoverageCostToBeneficiary cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
@@ -130,11 +136,11 @@ abstract class CoverageCostToBeneficiary
 abstract class CoverageException implements _$CoverageException {
   CoverageException._();
   factory CoverageException({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    Period period,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    Period? period,
   }) = _CoverageException;
 
   /// Produces a Yaml formatted String version of the object
@@ -145,7 +151,9 @@ abstract class CoverageException implements _$CoverageException {
       ? CoverageException.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CoverageException.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CoverageException cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageException.fromJson(Map<String, dynamic> json) =>
@@ -161,35 +169,35 @@ abstract class CoverageEligibilityRequest
     @Default(R5ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept priority,
-    List<CoverageEligibilityRequestPurpose> purpose,
-    @JsonKey(name: '_purpose') List<Element> purposeElement,
-    @required Reference patient,
-    Date servicedDate,
-    @JsonKey(name: '_servicedDate') Element servicedDateElement,
-    Period servicedPeriod,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference enterer,
-    Reference provider,
-    @required Reference insurer,
-    Reference facility,
-    List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
-    List<CoverageEligibilityRequestInsurance> insurance,
-    List<CoverageEligibilityRequestItem> item,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? priority,
+    List<CoverageEligibilityRequestPurpose>? purpose,
+    @JsonKey(name: '_purpose') List<Element?>? purposeElement,
+    required Reference patient,
+    Date? servicedDate,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
+    Period? servicedPeriod,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? enterer,
+    Reference? provider,
+    required Reference insurer,
+    Reference? facility,
+    List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
+    List<CoverageEligibilityRequestInsurance>? insurance,
+    List<CoverageEligibilityRequestItem>? item,
   }) = _CoverageEligibilityRequest;
 
   /// Produces a Yaml formatted String version of the object
@@ -201,7 +209,9 @@ abstract class CoverageEligibilityRequest
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CoverageEligibilityRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CoverageEligibilityRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
@@ -213,28 +223,30 @@ abstract class CoverageEligibilityRequestSupportingInfo
     implements _$CoverageEligibilityRequestSupportingInfo {
   CoverageEligibilityRequestSupportingInfo._();
   factory CoverageEligibilityRequestSupportingInfo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @required Reference information,
-    Boolean appliesToAll,
-    @JsonKey(name: '_appliesToAll') Element appliesToAllElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    required Reference information,
+    Boolean? appliesToAll,
+    @JsonKey(name: '_appliesToAll') Element? appliesToAllElement,
   }) = _CoverageEligibilityRequestSupportingInfo;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityRequestSupportingInfo.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityRequestSupportingInfo.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityRequestSupportingInfo.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityRequestSupportingInfo.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityRequestSupportingInfo.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityRequestSupportingInfo cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
@@ -246,28 +258,30 @@ abstract class CoverageEligibilityRequestInsurance
     implements _$CoverageEligibilityRequestInsurance {
   CoverageEligibilityRequestInsurance._();
   factory CoverageEligibilityRequestInsurance({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean focal,
-    @JsonKey(name: '_focal') Element focalElement,
-    @required Reference coverage,
-    String businessArrangement,
-    @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? focal,
+    @JsonKey(name: '_focal') Element? focalElement,
+    required Reference coverage,
+    String? businessArrangement,
+    @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
   }) = _CoverageEligibilityRequestInsurance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityRequestInsurance.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityRequestInsurance.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityRequestInsurance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityRequestInsurance.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityRequestInsurance.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityRequestInsurance cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =>
@@ -279,35 +293,37 @@ abstract class CoverageEligibilityRequestItem
     implements _$CoverageEligibilityRequestItem {
   CoverageEligibilityRequestItem._();
   factory CoverageEligibilityRequestItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<PositiveInt> supportingInfoSequence,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<PositiveInt>? supportingInfoSequence,
     @JsonKey(name: '_supportingInfoSequence')
-        List<Element> supportingInfoSequenceElement,
-    CodeableConcept category,
-    CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    Reference provider,
-    Quantity quantity,
-    Money unitPrice,
-    Reference facility,
-    List<CoverageEligibilityRequestDiagnosis> diagnosis,
-    List<Reference> detail,
+        List<Element>? supportingInfoSequenceElement,
+    CodeableConcept? category,
+    CodeableConcept? productOrService,
+    List<CodeableConcept>? modifier,
+    Reference? provider,
+    Quantity? quantity,
+    Money? unitPrice,
+    Reference? facility,
+    List<CoverageEligibilityRequestDiagnosis>? diagnosis,
+    List<Reference>? detail,
   }) = _CoverageEligibilityRequestItem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityRequestItem.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityRequestItem.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityRequestItem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityRequestItem.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityRequestItem.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityRequestItem cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =>
@@ -319,25 +335,27 @@ abstract class CoverageEligibilityRequestDiagnosis
     implements _$CoverageEligibilityRequestDiagnosis {
   CoverageEligibilityRequestDiagnosis._();
   factory CoverageEligibilityRequestDiagnosis({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept diagnosisCodeableConcept,
-    Reference diagnosisReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? diagnosisCodeableConcept,
+    Reference? diagnosisReference,
   }) = _CoverageEligibilityRequestDiagnosis;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityRequestDiagnosis.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityRequestDiagnosis.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityRequestDiagnosis.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityRequestDiagnosis.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityRequestDiagnosis.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityRequestDiagnosis cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =>
@@ -353,40 +371,40 @@ abstract class CoverageEligibilityResponse
     @Default(R5ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<CoverageEligibilityResponsePurpose> purpose,
-    @JsonKey(name: '_purpose') List<Element> purposeElement,
-    @required Reference patient,
-    Date servicedDate,
-    @JsonKey(name: '_servicedDate') Element servicedDateElement,
-    Period servicedPeriod,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference requestor,
-    @required Reference request,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CoverageEligibilityResponsePurpose>? purpose,
+    @JsonKey(name: '_purpose') List<Element?>? purposeElement,
+    required Reference patient,
+    Date? servicedDate,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
+    Period? servicedPeriod,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? requestor,
+    required Reference request,
     @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-        CoverageEligibilityResponseOutcome outcome,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    String disposition,
-    @JsonKey(name: '_disposition') Element dispositionElement,
-    @required Reference insurer,
-    List<CoverageEligibilityResponseInsurance> insurance,
-    String preAuthRef,
-    @JsonKey(name: '_preAuthRef') Element preAuthRefElement,
-    CodeableConcept form,
-    List<CoverageEligibilityResponseError> error,
+        CoverageEligibilityResponseOutcome? outcome,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
+    String? disposition,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
+    required Reference insurer,
+    List<CoverageEligibilityResponseInsurance>? insurance,
+    String? preAuthRef,
+    @JsonKey(name: '_preAuthRef') Element? preAuthRefElement,
+    CodeableConcept? form,
+    List<CoverageEligibilityResponseError>? error,
   }) = _CoverageEligibilityResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -398,7 +416,9 @@ abstract class CoverageEligibilityResponse
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CoverageEligibilityResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CoverageEligibilityResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
@@ -410,28 +430,30 @@ abstract class CoverageEligibilityResponseInsurance
     implements _$CoverageEligibilityResponseInsurance {
   CoverageEligibilityResponseInsurance._();
   factory CoverageEligibilityResponseInsurance({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference coverage,
-    Boolean inforce,
-    @JsonKey(name: '_inforce') Element inforceElement,
-    Period benefitPeriod,
-    List<CoverageEligibilityResponseItem> item,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference coverage,
+    Boolean? inforce,
+    @JsonKey(name: '_inforce') Element? inforceElement,
+    Period? benefitPeriod,
+    List<CoverageEligibilityResponseItem>? item,
   }) = _CoverageEligibilityResponseInsurance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityResponseInsurance.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityResponseInsurance.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityResponseInsurance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityResponseInsurance.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityResponseInsurance.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityResponseInsurance cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =>
@@ -443,43 +465,45 @@ abstract class CoverageEligibilityResponseItem
     implements _$CoverageEligibilityResponseItem {
   CoverageEligibilityResponseItem._();
   factory CoverageEligibilityResponseItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept category,
-    CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    Reference provider,
-    Boolean excluded,
-    @JsonKey(name: '_excluded') Element excludedElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    CodeableConcept network,
-    CodeableConcept unit,
-    CodeableConcept term,
-    List<CoverageEligibilityResponseBenefit> benefit,
-    Boolean authorizationRequired,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? category,
+    CodeableConcept? productOrService,
+    List<CodeableConcept>? modifier,
+    Reference? provider,
+    Boolean? excluded,
+    @JsonKey(name: '_excluded') Element? excludedElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    CodeableConcept? network,
+    CodeableConcept? unit,
+    CodeableConcept? term,
+    List<CoverageEligibilityResponseBenefit>? benefit,
+    Boolean? authorizationRequired,
     @JsonKey(name: '_authorizationRequired')
-        Element authorizationRequiredElement,
-    List<CodeableConcept> authorizationSupporting,
-    FhirUri authorizationUrl,
-    @JsonKey(name: '_authorizationUrl') Element authorizationUrlElement,
+        Element? authorizationRequiredElement,
+    List<CodeableConcept>? authorizationSupporting,
+    FhirUri? authorizationUrl,
+    @JsonKey(name: '_authorizationUrl') Element? authorizationUrlElement,
   }) = _CoverageEligibilityResponseItem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityResponseItem.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityResponseItem.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityResponseItem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityResponseItem.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityResponseItem.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityResponseItem cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -491,34 +515,36 @@ abstract class CoverageEligibilityResponseBenefit
     implements _$CoverageEligibilityResponseBenefit {
   CoverageEligibilityResponseBenefit._();
   factory CoverageEligibilityResponseBenefit({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    UnsignedInt allowedUnsignedInt,
-    @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
-    String allowedString,
-    @JsonKey(name: '_allowedString') Element allowedStringElement,
-    Money allowedMoney,
-    UnsignedInt usedUnsignedInt,
-    @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
-    String usedString,
-    @JsonKey(name: '_usedString') Element usedStringElement,
-    Money usedMoney,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    UnsignedInt? allowedUnsignedInt,
+    @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
+    String? allowedString,
+    @JsonKey(name: '_allowedString') Element? allowedStringElement,
+    Money? allowedMoney,
+    UnsignedInt? usedUnsignedInt,
+    @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
+    String? usedString,
+    @JsonKey(name: '_usedString') Element? usedStringElement,
+    Money? usedMoney,
   }) = _CoverageEligibilityResponseBenefit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityResponseBenefit.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityResponseBenefit.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityResponseBenefit.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityResponseBenefit.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityResponseBenefit.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityResponseBenefit cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =>
@@ -530,24 +556,26 @@ abstract class CoverageEligibilityResponseError
     implements _$CoverageEligibilityResponseError {
   CoverageEligibilityResponseError._();
   factory CoverageEligibilityResponseError({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept code,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept code,
   }) = _CoverageEligibilityResponseError;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityResponseError.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityResponseError.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityResponseError.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityResponseError.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityResponseError.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityResponseError cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityResponseError.fromJson(
           Map<String, dynamic> json) =>
@@ -561,25 +589,25 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     @Default(R5ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference insurer,
-    Reference provider,
-    Reference candidate,
-    Reference coverage,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? insurer,
+    Reference? provider,
+    Reference? candidate,
+    Reference? coverage,
   }) = _EnrollmentRequest;
 
   /// Produces a Yaml formatted String version of the object
@@ -590,7 +618,9 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
       ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EnrollmentRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
@@ -606,29 +636,29 @@ abstract class EnrollmentResponse
     @Default(R5ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
         R5ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    Reference request,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Reference? request,
     @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-        EnrollmentResponseOutcome outcome,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    String disposition,
-    @JsonKey(name: '_disposition') Element dispositionElement,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference organization,
-    Reference requestProvider,
+        EnrollmentResponseOutcome? outcome,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
+    String? disposition,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? organization,
+    Reference? requestProvider,
   }) = _EnrollmentResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -639,7 +669,9 @@ abstract class EnrollmentResponse
       ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EnrollmentResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>

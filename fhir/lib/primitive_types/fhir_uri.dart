@@ -1,16 +1,19 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 class FhirUri {
-  const FhirUri._(this._value);
+  const FhirUri._(this._valueString, this._valueUri, this._isValid);
 
-  factory FhirUri(dynamic value) {
-    assert(value != null);
-    return FhirUri._(
-      _validateFhirUri(value),
-    );
+  factory FhirUri(dynamic inValue) {
+    assert(inValue != null);
+    if (inValue is Uri) {
+      return FhirUri._(inValue.toString(), inValue, true);
+    } else if (inValue is String) {
+      final tempUri = Uri.tryParse(inValue);
+      return FhirUri._(inValue, tempUri, tempUri == null);
+    }
+    throw ArgumentError('FhirUri cannot be constructed from $inValue.');
   }
 
   factory FhirUri.fromJson(dynamic json) => FhirUri(json);
@@ -19,30 +22,28 @@ class FhirUri {
       ? FhirUri.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? FhirUri.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, Uri> _value;
-  dynamic get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
-  Uri get uri => Uri.tryParse(value);
+  final String _valueString;
+  final Uri? _valueUri;
+  final bool _isValid;
 
-  String toString() => value.toString();
-  String toJson() => value.toString();
-  String toYaml() => value.toString();
+  bool get isValid => _isValid;
+  int get hashCode => _valueString.hashCode;
+  Uri? get value => _valueUri;
+
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is FhirUri || o is Uri
-          ? o == value
-          : o is String
-              ? o == value.toString()
-              : false;
-
-  int get hashCode => value.hashCode;
+      : o is FhirUri
+          ? o.value == _valueUri
+          : o is Uri
+              ? o == _valueUri
+              : o is String
+                  ? o == _valueString
+                  : false;
 }
-
-Either<String, Uri> _validateFhirUri(String value) =>
-    Uri.tryParse(value) != null
-        ? right(Uri.parse(value))
-        : left('FormatError: "$value" is not a Uri, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#uri');

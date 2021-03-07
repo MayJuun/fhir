@@ -8,7 +8,6 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'summary.enums.dart';
-part 'summary.uscore.dart';
 part 'summary.freezed.dart';
 part 'summary.g.dart';
 
@@ -147,41 +146,41 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
     @Default(R4ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
     @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
-        AdverseEventActuality actuality,
-    @JsonKey(name: '_actuality') Element actualityElement,
-    List<CodeableConcept> category,
-    CodeableConcept event,
-    @required Reference subject,
-    Reference encounter,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    FhirDateTime detected,
-    @JsonKey(name: '_detected') Element detectedElement,
-    FhirDateTime recordedDate,
-    @JsonKey(name: '_recordedDate') Element recordedDateElement,
-    List<Reference> resultingCondition,
-    Reference location,
-    CodeableConcept seriousness,
-    CodeableConcept severity,
-    CodeableConcept outcome,
-    Reference recorder,
-    List<Reference> contributor,
-    List<AdverseEventSuspectEntity> suspectEntity,
-    List<Reference> subjectMedicalHistory,
-    List<Reference> referenceDocument,
-    List<Reference> study,
+        AdverseEventActuality? actuality,
+    @JsonKey(name: '_actuality') Element? actualityElement,
+    List<CodeableConcept>? category,
+    CodeableConcept? event,
+    required Reference subject,
+    Reference? encounter,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    FhirDateTime? detected,
+    @JsonKey(name: '_detected') Element? detectedElement,
+    FhirDateTime? recordedDate,
+    @JsonKey(name: '_recordedDate') Element? recordedDateElement,
+    List<Reference>? resultingCondition,
+    Reference? location,
+    CodeableConcept? seriousness,
+    CodeableConcept? severity,
+    CodeableConcept? outcome,
+    Reference? recorder,
+    List<Reference>? contributor,
+    List<AdverseEventSuspectEntity>? suspectEntity,
+    List<Reference>? subjectMedicalHistory,
+    List<Reference>? referenceDocument,
+    List<Reference>? study,
   }) = _AdverseEvent;
 
   /// Produces a Yaml formatted String version of the object
@@ -192,7 +191,9 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
       ? AdverseEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AdverseEvent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AdverseEvent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdverseEvent.fromJson(Map<String, dynamic> json) =>
@@ -240,11 +241,11 @@ abstract class AdverseEventSuspectEntity
   ///
   /// [causality]: Information on the possible cause of the event.
   factory AdverseEventSuspectEntity({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference instance,
-    List<AdverseEventCausality> causality,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference instance,
+    List<AdverseEventCausality>? causality,
   }) = _AdverseEventSuspectEntity;
 
   /// Produces a Yaml formatted String version of the object
@@ -256,7 +257,9 @@ abstract class AdverseEventSuspectEntity
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AdverseEventSuspectEntity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AdverseEventSuspectEntity cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
@@ -308,14 +311,14 @@ abstract class AdverseEventCausality implements _$AdverseEventCausality {
   ///
   /// [method]: ProbabilityScale | Bayesian | Checklist.
   factory AdverseEventCausality({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept assessment,
-    String productRelatedness,
-    @JsonKey(name: '_productRelatedness') Element productRelatednessElement,
-    Reference author,
-    CodeableConcept method,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? assessment,
+    String? productRelatedness,
+    @JsonKey(name: '_productRelatedness') Element? productRelatednessElement,
+    Reference? author,
+    CodeableConcept? method,
   }) = _AdverseEventCausality;
 
   /// Produces a Yaml formatted String version of the object
@@ -326,7 +329,9 @@ abstract class AdverseEventCausality implements _$AdverseEventCausality {
       ? AdverseEventCausality.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AdverseEventCausality.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AdverseEventCausality cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdverseEventCausality.fromJson(Map<String, dynamic> json) =>
@@ -486,148 +491,46 @@ abstract class AllergyIntolerance
     @Default(R4ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    CodeableConcept clinicalStatus,
-    CodeableConcept verificationStatus,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    CodeableConcept? clinicalStatus,
+    CodeableConcept? verificationStatus,
     @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
-        AllergyIntoleranceType type,
-    @JsonKey(name: '_type') Element typeElement,
-    List<AllergyIntoleranceCategory> category,
-    @JsonKey(name: '_category') List<Element> categoryElement,
+        AllergyIntoleranceType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    List<AllergyIntoleranceCategory>? category,
+    @JsonKey(name: '_category') List<Element?>? categoryElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-        AllergyIntoleranceCriticality criticality,
-    @JsonKey(name: '_criticality') Element criticalityElement,
-    CodeableConcept code,
-    @required Reference patient,
-    Reference encounter,
-    FhirDateTime onsetDateTime,
-    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
-    Age onsetAge,
-    Period onsetPeriod,
-    Range onsetRange,
-    String onsetString,
-    @JsonKey(name: '_onsetString') Element onsetStringElement,
-    FhirDateTime recordedDate,
-    @JsonKey(name: '_recordedDate') Element recordedDateElement,
-    Reference recorder,
-    Reference asserter,
-    FhirDateTime lastOccurrence,
-    @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
-    List<Annotation> note,
-    List<AllergyIntoleranceReaction> reaction,
+        AllergyIntoleranceCriticality? criticality,
+    @JsonKey(name: '_criticality') Element? criticalityElement,
+    CodeableConcept? code,
+    required Reference patient,
+    Reference? encounter,
+    FhirDateTime? onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
+    Age? onsetAge,
+    Period? onsetPeriod,
+    Range? onsetRange,
+    String? onsetString,
+    @JsonKey(name: '_onsetString') Element? onsetStringElement,
+    FhirDateTime? recordedDate,
+    @JsonKey(name: '_recordedDate') Element? recordedDateElement,
+    Reference? recorder,
+    Reference? asserter,
+    FhirDateTime? lastOccurrence,
+    @JsonKey(name: '_lastOccurrence') Element? lastOccurrenceElement,
+    List<Annotation>? note,
+    List<AllergyIntoleranceReaction>? reaction,
   }) = _AllergyIntolerance;
-
-  factory AllergyIntolerance.usCore({
-    AllergyIntoleranceClinicalStatus clinicalStatus,
-    AllergyIntoleranceVerificationStatus verificationStatus,
-    @required AllergyIntoleranceIdentity identity,
-    @required Reference patient,
-    List<AllergyIntoleranceReaction> reaction,
-    @Default(R4ResourceType.AllergyIntolerance)
-    @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
-        R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
-        AllergyIntoleranceType type,
-    @JsonKey(name: '_type') Element typeElement,
-    List<AllergyIntoleranceCategory> category,
-    @JsonKey(name: '_category') List<Element> categoryElement,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-        AllergyIntoleranceCriticality criticality,
-    @JsonKey(name: '_criticality') Element criticalityElement,
-    Reference encounter,
-    FhirDateTime onsetDateTime,
-    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
-    Age onsetAge,
-    Period onsetPeriod,
-    Range onsetRange,
-    String onsetString,
-    @JsonKey(name: '_onsetString') Element onsetStringElement,
-    FhirDateTime recordedDate,
-    @JsonKey(name: '_recordedDate') Element recordedDateElement,
-    Reference recorder,
-    Reference asserter,
-    FhirDateTime lastOccurrence,
-    @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
-    List<Annotation> note,
-  }) =>
-      AllergyIntolerance(
-        clinicalStatus:
-            codeableConceptFromAllergyIntoleranceClinicalStatus[clinicalStatus],
-        verificationStatus:
-            codeableConceptFromVerificationStatus[verificationStatus],
-        code: codeableConceptFromAllergyIntoleranceIdentity[identity],
-        patient: patient,
-        reaction: reaction,
-        resourceType: resourceType,
-        id: id,
-        meta: meta,
-        implicitRules: implicitRules,
-        implicitRulesElement: implicitRulesElement,
-        language: language,
-        languageElement: languageElement,
-        text: text,
-        contained: contained,
-        extension_: extension_,
-        modifierExtension: modifierExtension,
-        identifier: identifier,
-        type: type,
-        typeElement: typeElement,
-        category: category,
-        categoryElement: categoryElement,
-        criticality: criticality,
-        criticalityElement: criticalityElement,
-        encounter: encounter,
-        onsetDateTime: onsetDateTime,
-        onsetDateTimeElement: onsetDateTimeElement,
-        onsetAge: onsetAge,
-        onsetPeriod: onsetPeriod,
-        onsetRange: onsetRange,
-        onsetString: onsetString,
-        onsetStringElement: onsetStringElement,
-        recordedDate: recordedDate,
-        recordedDateElement: recordedDateElement,
-        recorder: recorder,
-        asserter: asserter,
-        lastOccurrence: lastOccurrence,
-        lastOccurrenceElement: lastOccurrenceElement,
-        note: note,
-      );
-
-  factory AllergyIntolerance.usCoreMinimum({
-    AllergyIntoleranceClinicalStatus clinicalStatus,
-    AllergyIntoleranceVerificationStatus verificationStatus,
-    @required AllergyIntoleranceIdentity identity,
-    @required Reference patient,
-    List<AllergyIntoleranceReaction> reaction,
-  }) =>
-      AllergyIntolerance.usCore(
-        clinicalStatus: clinicalStatus,
-        verificationStatus: verificationStatus,
-        identity: identity,
-        patient: patient,
-        reaction: reaction,
-      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -637,7 +540,9 @@ abstract class AllergyIntolerance
       ? AllergyIntolerance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AllergyIntolerance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AllergyIntolerance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
@@ -712,26 +617,21 @@ abstract class AllergyIntoleranceReaction
   /// [note]: Additional text about the adverse reaction event not captured in
   ///  other fields.
   factory AllergyIntoleranceReaction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept substance,
-    @required List<CodeableConcept> manifestation,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    FhirDateTime onset,
-    @JsonKey(name: '_onset') Element onsetElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? substance,
+    required List<CodeableConcept> manifestation,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    FhirDateTime? onset,
+    @JsonKey(name: '_onset') Element? onsetElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
-        AllergyIntoleranceReactionSeverity severity,
-    @JsonKey(name: '_severity') Element severityElement,
-    CodeableConcept exposureRoute,
-    List<Annotation> note,
+        AllergyIntoleranceReactionSeverity? severity,
+    @JsonKey(name: '_severity') Element? severityElement,
+    CodeableConcept? exposureRoute,
+    List<Annotation>? note,
   }) = _AllergyIntoleranceReaction;
-
-  factory AllergyIntoleranceReaction.usCoreMinimum({
-    @required List<CodeableConcept> manifestation,
-  }) =>
-      AllergyIntoleranceReaction(manifestation: manifestation);
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -742,7 +642,9 @@ abstract class AllergyIntoleranceReaction
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AllergyIntoleranceReaction.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AllergyIntoleranceReaction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
@@ -894,43 +796,43 @@ abstract class ClinicalImpression
     @Default(R4ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept statusReason,
-    CodeableConcept code,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @required Reference subject,
-    Reference encounter,
-    FhirDateTime effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
-    Period effectivePeriod,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    Reference assessor,
-    Reference previous,
-    List<Reference> problem,
-    List<ClinicalImpressionInvestigation> investigation,
-    List<FhirUri> protocol,
-    @JsonKey(name: '_protocol') List<Element> protocolElement,
-    String summary,
-    @JsonKey(name: '_summary') Element summaryElement,
-    List<ClinicalImpressionFinding> finding,
-    List<CodeableConcept> prognosisCodeableConcept,
-    List<Reference> prognosisReference,
-    List<Reference> supportingInfo,
-    List<Annotation> note,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? statusReason,
+    CodeableConcept? code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required Reference subject,
+    Reference? encounter,
+    FhirDateTime? effectiveDateTime,
+    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
+    Period? effectivePeriod,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    Reference? assessor,
+    Reference? previous,
+    List<Reference>? problem,
+    List<ClinicalImpressionInvestigation>? investigation,
+    List<FhirUri>? protocol,
+    @JsonKey(name: '_protocol') List<Element?>? protocolElement,
+    String? summary,
+    @JsonKey(name: '_summary') Element? summaryElement,
+    List<ClinicalImpressionFinding>? finding,
+    List<CodeableConcept>? prognosisCodeableConcept,
+    List<Reference>? prognosisReference,
+    List<Reference>? supportingInfo,
+    List<Annotation>? note,
   }) = _ClinicalImpression;
 
   /// Produces a Yaml formatted String version of the object
@@ -941,7 +843,9 @@ abstract class ClinicalImpression
       ? ClinicalImpression.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClinicalImpression.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClinicalImpression cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
@@ -993,25 +897,27 @@ abstract class ClinicalImpressionInvestigation
   ///
   /// [item]: A record of a specific investigation that was undertaken.
   factory ClinicalImpressionInvestigation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept code,
-    List<Reference> item,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept code,
+    List<Reference>? item,
   }) = _ClinicalImpressionInvestigation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory ClinicalImpressionInvestigation.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ClinicalImpressionInvestigation.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ClinicalImpressionInvestigation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ClinicalImpressionInvestigation.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ClinicalImpressionInvestigation.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ClinicalImpressionInvestigation cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =>
@@ -1066,13 +972,13 @@ abstract class ClinicalImpressionFinding
   ///
   /// [_basis]: Extensions for basis
   factory ClinicalImpressionFinding({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept itemCodeableConcept,
-    Reference itemReference,
-    String basis,
-    @JsonKey(name: '_basis') Element basisElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? itemCodeableConcept,
+    Reference? itemReference,
+    String? basis,
+    @JsonKey(name: '_basis') Element? basisElement,
   }) = _ClinicalImpressionFinding;
 
   /// Produces a Yaml formatted String version of the object
@@ -1084,7 +990,9 @@ abstract class ClinicalImpressionFinding
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClinicalImpressionFinding.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClinicalImpressionFinding cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
@@ -1248,157 +1156,47 @@ abstract class Condition with Resource implements _$Condition {
     @Default(R4ResourceType.Condition)
     @JsonKey(unknownEnumValue: R4ResourceType.Condition)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    CodeableConcept clinicalStatus,
-    CodeableConcept verificationStatus,
-    List<CodeableConcept> category,
-    CodeableConcept severity,
-    CodeableConcept code,
-    List<CodeableConcept> bodySite,
-    @required Reference subject,
-    Reference encounter,
-    FhirDateTime onsetDateTime,
-    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
-    Age onsetAge,
-    Period onsetPeriod,
-    Range onsetRange,
-    String onsetString,
-    @JsonKey(name: '_onsetString') Element onsetStringElement,
-    FhirDateTime abatementDateTime,
-    @JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
-    Age abatementAge,
-    Period abatementPeriod,
-    Range abatementRange,
-    String abatementString,
-    @JsonKey(name: '_abatementString') Element abatementStringElement,
-    FhirDateTime recordedDate,
-    @JsonKey(name: '_recordedDate') Element recordedDateElement,
-    Reference recorder,
-    Reference asserter,
-    List<ConditionStage> stage,
-    List<ConditionEvidence> evidence,
-    List<Annotation> note,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    CodeableConcept? clinicalStatus,
+    CodeableConcept? verificationStatus,
+    List<CodeableConcept>? category,
+    CodeableConcept? severity,
+    CodeableConcept? code,
+    List<CodeableConcept>? bodySite,
+    required Reference subject,
+    Reference? encounter,
+    FhirDateTime? onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
+    Age? onsetAge,
+    Period? onsetPeriod,
+    Range? onsetRange,
+    String? onsetString,
+    @JsonKey(name: '_onsetString') Element? onsetStringElement,
+    FhirDateTime? abatementDateTime,
+    @JsonKey(name: '_abatementDateTime') Element? abatementDateTimeElement,
+    Age? abatementAge,
+    Period? abatementPeriod,
+    Range? abatementRange,
+    String? abatementString,
+    @JsonKey(name: '_abatementString') Element? abatementStringElement,
+    FhirDateTime? recordedDate,
+    @JsonKey(name: '_recordedDate') Element? recordedDateElement,
+    Reference? recorder,
+    Reference? asserter,
+    List<ConditionStage>? stage,
+    List<ConditionEvidence>? evidence,
+    List<Annotation>? note,
   }) = _Condition;
-
-  factory Condition.usCore({
-    ConditionClinicalStatus clinicalStatus,
-    ConditionVerificationStatus verificationStatus,
-    @required ConditionCategory conditionCategory,
-    @required CodeableConcept code,
-    @required Reference subject,
-    @Default(R4ResourceType.Condition)
-    @JsonKey(unknownEnumValue: R4ResourceType.Condition)
-        R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<CodeableConcept> category,
-    CodeableConcept severity,
-    List<CodeableConcept> bodySite,
-    Reference encounter,
-    FhirDateTime onsetDateTime,
-    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
-    Age onsetAge,
-    Period onsetPeriod,
-    Range onsetRange,
-    String onsetString,
-    @JsonKey(name: '_onsetString') Element onsetStringElement,
-    FhirDateTime abatementDateTime,
-    @JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
-    Age abatementAge,
-    Period abatementPeriod,
-    Range abatementRange,
-    String abatementString,
-    @JsonKey(name: '_abatementString') Element abatementStringElement,
-    FhirDateTime recordedDate,
-    @JsonKey(name: '_recordedDate') Element recordedDateElement,
-    Reference recorder,
-    Reference asserter,
-    List<ConditionStage> stage,
-    List<ConditionEvidence> evidence,
-    List<Annotation> note,
-  }) {
-    category ??= <CodeableConcept>[];
-    category.add(codeableConceptFromConditionCategory[category]);
-    return Condition(
-      clinicalStatus:
-          codeableConceptFromConditionClinicalStatus[clinicalStatus],
-      verificationStatus:
-          codeableConceptFromVerificationStatus[verificationStatus],
-      category: category,
-      code: code,
-      subject: subject,
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      severity: severity,
-      bodySite: bodySite,
-      encounter: encounter,
-      onsetDateTime: onsetDateTime,
-      onsetDateTimeElement: onsetDateTimeElement,
-      onsetAge: onsetAge,
-      onsetPeriod: onsetPeriod,
-      onsetRange: onsetRange,
-      onsetString: onsetString,
-      onsetStringElement: onsetStringElement,
-      abatementDateTime: abatementDateTime,
-      abatementDateTimeElement: abatementDateTimeElement,
-      abatementAge: abatementAge,
-      abatementPeriod: abatementPeriod,
-      abatementRange: abatementRange,
-      abatementString: abatementString,
-      abatementStringElement: abatementStringElement,
-      recordedDate: recordedDate,
-      recordedDateElement: recordedDateElement,
-      recorder: recorder,
-      asserter: asserter,
-      stage: stage,
-      evidence: evidence,
-      note: note,
-    );
-  }
-
-  factory Condition.usCoreMinimum({
-    ConditionClinicalStatus clinicalStatus,
-    ConditionVerificationStatus verificationStatus,
-    @required ConditionCategory conditionCategory,
-    @required CodeableConcept code,
-    @required Reference subject,
-  }) =>
-      Condition.usCore(
-        clinicalStatus: clinicalStatus,
-        verificationStatus: verificationStatus,
-        conditionCategory: conditionCategory,
-        code: code,
-        subject: subject,
-      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -1408,7 +1206,9 @@ abstract class Condition with Resource implements _$Condition {
       ? Condition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Condition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Condition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Condition.fromJson(Map<String, dynamic> json) =>
@@ -1455,12 +1255,12 @@ abstract class ConditionStage implements _$ConditionStage {
   ///
   /// [type]: The kind of staging, such as pathological or clinical staging.
   factory ConditionStage({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept summary,
-    List<Reference> assessment,
-    CodeableConcept type,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? summary,
+    List<Reference>? assessment,
+    CodeableConcept? type,
   }) = _ConditionStage;
 
   /// Produces a Yaml formatted String version of the object
@@ -1471,7 +1271,9 @@ abstract class ConditionStage implements _$ConditionStage {
       ? ConditionStage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConditionStage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConditionStage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionStage.fromJson(Map<String, dynamic> json) =>
@@ -1516,11 +1318,11 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
   /// [detail]: Links to other relevant information, including pathology
   ///  reports.
   factory ConditionEvidence({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> code,
-    List<Reference> detail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? code,
+    List<Reference>? detail,
   }) = _ConditionEvidence;
 
   /// Produces a Yaml formatted String version of the object
@@ -1531,7 +1333,9 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
       ? ConditionEvidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConditionEvidence.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConditionEvidence cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
@@ -1653,35 +1457,35 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
     @Default(R4ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept code,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? code,
     @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
-        DetectedIssueSeverity severity,
-    @JsonKey(name: '_severity') Element severityElement,
-    Reference patient,
-    FhirDateTime identifiedDateTime,
-    @JsonKey(name: '_identifiedDateTime') Element identifiedDateTimeElement,
-    Period identifiedPeriod,
-    Reference author,
-    List<Reference> implicated,
-    List<DetectedIssueEvidence> evidence,
-    String detail,
-    @JsonKey(name: '_detail') Element detailElement,
-    FhirUri reference,
-    @JsonKey(name: '_reference') Element referenceElement,
-    List<DetectedIssueMitigation> mitigation,
+        DetectedIssueSeverity? severity,
+    @JsonKey(name: '_severity') Element? severityElement,
+    Reference? patient,
+    FhirDateTime? identifiedDateTime,
+    @JsonKey(name: '_identifiedDateTime') Element? identifiedDateTimeElement,
+    Period? identifiedPeriod,
+    Reference? author,
+    List<Reference>? implicated,
+    List<DetectedIssueEvidence>? evidence,
+    String? detail,
+    @JsonKey(name: '_detail') Element? detailElement,
+    FhirUri? reference,
+    @JsonKey(name: '_reference') Element? referenceElement,
+    List<DetectedIssueMitigation>? mitigation,
   }) = _DetectedIssue;
 
   /// Produces a Yaml formatted String version of the object
@@ -1692,7 +1496,9 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
       ? DetectedIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DetectedIssue.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DetectedIssue cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
@@ -1737,11 +1543,11 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
   /// [detail]: Links to resources that constitute evidence for the detected
   ///  issue such as a GuidanceResponse or MeasureReport.
   factory DetectedIssueEvidence({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> code,
-    List<Reference> detail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? code,
+    List<Reference>? detail,
   }) = _DetectedIssueEvidence;
 
   /// Produces a Yaml formatted String version of the object
@@ -1752,7 +1558,9 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
       ? DetectedIssueEvidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DetectedIssueEvidence.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DetectedIssueEvidence cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssueEvidence.fromJson(Map<String, dynamic> json) =>
@@ -1803,13 +1611,13 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
   /// [author]: Identifies the practitioner who determined the mitigation and
   ///  takes responsibility for the mitigation step occurring.
   factory DetectedIssueMitigation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept action,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    Reference author,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept action,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    Reference? author,
   }) = _DetectedIssueMitigation;
 
   /// Produces a Yaml formatted String version of the object
@@ -1820,7 +1628,9 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
       ? DetectedIssueMitigation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DetectedIssueMitigation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DetectedIssueMitigation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
@@ -1993,54 +1803,54 @@ abstract class FamilyMemberHistory
     @Default(R4ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Canonical> instantiatesCanonical,
-    List<FhirUri> instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Canonical>? instantiatesCanonical,
+    List<FhirUri>? instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
     @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
-        FamilyMemberHistoryStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept dataAbsentReason,
-    @required Reference patient,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    @required CodeableConcept relationship,
-    CodeableConcept sex,
-    Period bornPeriod,
-    Date bornDate,
-    @JsonKey(name: '_bornDate') Element bornDateElement,
-    String bornString,
-    @JsonKey(name: '_bornString') Element bornStringElement,
-    Age ageAge,
-    Range ageRange,
-    String ageString,
-    @JsonKey(name: '_ageString') Element ageStringElement,
-    Boolean estimatedAge,
-    @JsonKey(name: '_estimatedAge') Element estimatedAgeElement,
-    Boolean deceasedBoolean,
-    @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
-    Age deceasedAge,
-    Range deceasedRange,
-    Date deceasedDate,
-    @JsonKey(name: '_deceasedDate') Element deceasedDateElement,
-    String deceasedString,
-    @JsonKey(name: '_deceasedString') Element deceasedStringElement,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<Annotation> note,
-    List<FamilyMemberHistoryCondition> condition,
+        FamilyMemberHistoryStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? dataAbsentReason,
+    required Reference patient,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    required CodeableConcept relationship,
+    CodeableConcept? sex,
+    Period? bornPeriod,
+    Date? bornDate,
+    @JsonKey(name: '_bornDate') Element? bornDateElement,
+    String? bornString,
+    @JsonKey(name: '_bornString') Element? bornStringElement,
+    Age? ageAge,
+    Range? ageRange,
+    String? ageString,
+    @JsonKey(name: '_ageString') Element? ageStringElement,
+    Boolean? estimatedAge,
+    @JsonKey(name: '_estimatedAge') Element? estimatedAgeElement,
+    Boolean? deceasedBoolean,
+    @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
+    Age? deceasedAge,
+    Range? deceasedRange,
+    Date? deceasedDate,
+    @JsonKey(name: '_deceasedDate') Element? deceasedDateElement,
+    String? deceasedString,
+    @JsonKey(name: '_deceasedString') Element? deceasedStringElement,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<Annotation>? note,
+    List<FamilyMemberHistoryCondition>? condition,
   }) = _FamilyMemberHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -2051,7 +1861,9 @@ abstract class FamilyMemberHistory
       ? FamilyMemberHistory.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? FamilyMemberHistory.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'FamilyMemberHistory cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
@@ -2126,19 +1938,19 @@ abstract class FamilyMemberHistoryCondition
   /// [note]: An area where general notes can be placed about this specific
   ///  condition.
   factory FamilyMemberHistoryCondition({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept code,
-    CodeableConcept outcome,
-    Boolean contributedToDeath,
-    @JsonKey(name: '_contributedToDeath') Element contributedToDeathElement,
-    Age onsetAge,
-    Range onsetRange,
-    Period onsetPeriod,
-    String onsetString,
-    @JsonKey(name: '_onsetString') Element onsetStringElement,
-    List<Annotation> note,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept code,
+    CodeableConcept? outcome,
+    Boolean? contributedToDeath,
+    @JsonKey(name: '_contributedToDeath') Element? contributedToDeathElement,
+    Age? onsetAge,
+    Range? onsetRange,
+    Period? onsetPeriod,
+    String? onsetString,
+    @JsonKey(name: '_onsetString') Element? onsetStringElement,
+    List<Annotation>? note,
   }) = _FamilyMemberHistoryCondition;
 
   /// Produces a Yaml formatted String version of the object
@@ -2150,7 +1962,9 @@ abstract class FamilyMemberHistoryCondition
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? FamilyMemberHistoryCondition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'FamilyMemberHistoryCondition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
@@ -2341,52 +2155,52 @@ abstract class Procedure with Resource implements _$Procedure {
     @Default(R4ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<Canonical> instantiatesCanonical,
-    List<FhirUri> instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
-    List<Reference> basedOn,
-    List<Reference> partOf,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept statusReason,
-    CodeableConcept category,
-    CodeableConcept code,
-    @required Reference subject,
-    Reference encounter,
-    FhirDateTime performedDateTime,
-    @JsonKey(name: '_performedDateTime') Element performedDateTimeElement,
-    Period performedPeriod,
-    String performedString,
-    @JsonKey(name: '_performedString') Element performedStringElement,
-    Age performedAge,
-    Range performedRange,
-    Reference recorder,
-    Reference asserter,
-    List<ProcedurePerformer> performer,
-    Reference location,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<CodeableConcept> bodySite,
-    CodeableConcept outcome,
-    List<Reference> report,
-    List<CodeableConcept> complication,
-    List<Reference> complicationDetail,
-    List<CodeableConcept> followUp,
-    List<Annotation> note,
-    List<ProcedureFocalDevice> focalDevice,
-    List<Reference> usedReference,
-    List<CodeableConcept> usedCode,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Canonical>? instantiatesCanonical,
+    List<FhirUri>? instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    List<Reference>? basedOn,
+    List<Reference>? partOf,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? statusReason,
+    CodeableConcept? category,
+    CodeableConcept? code,
+    required Reference subject,
+    Reference? encounter,
+    FhirDateTime? performedDateTime,
+    @JsonKey(name: '_performedDateTime') Element? performedDateTimeElement,
+    Period? performedPeriod,
+    String? performedString,
+    @JsonKey(name: '_performedString') Element? performedStringElement,
+    Age? performedAge,
+    Range? performedRange,
+    Reference? recorder,
+    Reference? asserter,
+    List<ProcedurePerformer>? performer,
+    Reference? location,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<CodeableConcept>? bodySite,
+    CodeableConcept? outcome,
+    List<Reference>? report,
+    List<CodeableConcept>? complication,
+    List<Reference>? complicationDetail,
+    List<CodeableConcept>? followUp,
+    List<Annotation>? note,
+    List<ProcedureFocalDevice>? focalDevice,
+    List<Reference>? usedReference,
+    List<CodeableConcept>? usedCode,
   }) = _Procedure;
 
   /// Produces a Yaml formatted String version of the object
@@ -2397,7 +2211,9 @@ abstract class Procedure with Resource implements _$Procedure {
       ? Procedure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Procedure.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Procedure cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Procedure.fromJson(Map<String, dynamic> json) =>
@@ -2444,12 +2260,12 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
   /// [onBehalfOf]: The organization the device or practitioner was acting on
   ///  behalf of.
   factory ProcedurePerformer({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept function,
-    @required Reference actor,
-    Reference onBehalfOf,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? function,
+    required Reference actor,
+    Reference? onBehalfOf,
   }) = _ProcedurePerformer;
 
   /// Produces a Yaml formatted String version of the object
@@ -2460,7 +2276,9 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
       ? ProcedurePerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProcedurePerformer.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProcedurePerformer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
@@ -2505,11 +2323,11 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
   /// [manipulated]: The device that was manipulated (changed) during the
   ///  procedure.
   factory ProcedureFocalDevice({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept action,
-    @required Reference manipulated,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? action,
+    required Reference manipulated,
   }) = _ProcedureFocalDevice;
 
   /// Produces a Yaml formatted String version of the object
@@ -2520,7 +2338,9 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
       ? ProcedureFocalDevice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProcedureFocalDevice.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProcedureFocalDevice cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>

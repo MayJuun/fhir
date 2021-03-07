@@ -14,9 +14,9 @@ part 'element.g.dart';
 abstract class Element with _$Element {
   Element._();
   factory Element({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
   }) = _Element;
 
   /// Produces a Yaml formatted String version of the object
@@ -27,7 +27,9 @@ abstract class Element with _$Element {
       ? Element.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Element.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Element cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Element.fromJson(Map<String, dynamic> json) =>

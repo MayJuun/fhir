@@ -51,14 +51,14 @@ abstract class Population implements _$Population {
   /// [physiologicalCondition]: The existing physiological conditions of the
   ///  specific population to which this applies.
   factory Population({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Range ageRange,
-    CodeableConcept ageCodeableConcept,
-    CodeableConcept gender,
-    CodeableConcept race,
-    CodeableConcept physiologicalCondition,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Range? ageRange,
+    CodeableConcept? ageCodeableConcept,
+    CodeableConcept? gender,
+    CodeableConcept? race,
+    CodeableConcept? physiologicalCondition,
   }) = _Population;
 
   /// Produces a Yaml formatted String version of the object
@@ -69,7 +69,9 @@ abstract class Population implements _$Population {
       ? Population.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Population.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Population cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Population.fromJson(Map<String, dynamic> json) =>
@@ -125,13 +127,13 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
   /// can be specified using an appropriate controlled vocabulary The controlled
   ///  term and the controlled term identifier shall be specified.
   factory ProductShelfLife({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    @required CodeableConcept type,
-    @required Quantity period,
-    List<CodeableConcept> specialPrecautionsForStorage,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    required CodeableConcept type,
+    required Quantity period,
+    List<CodeableConcept>? specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
   /// Produces a Yaml formatted String version of the object
@@ -142,7 +144,9 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
       ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProductShelfLife cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
@@ -234,23 +238,23 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   factory ProdCharacteristic({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity height,
-    Quantity width,
-    Quantity depth,
-    Quantity weight,
-    Quantity nominalVolume,
-    Quantity externalDiameter,
-    String shape,
-    @JsonKey(name: '_shape') Element shapeElement,
-    List<String> color,
-    @JsonKey(name: '_color') List<Element> colorElement,
-    List<String> imprint,
-    @JsonKey(name: '_imprint') List<Element> imprintElement,
-    List<Attachment> image,
-    CodeableConcept scoring,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? height,
+    Quantity? width,
+    Quantity? depth,
+    Quantity? weight,
+    Quantity? nominalVolume,
+    Quantity? externalDiameter,
+    String? shape,
+    @JsonKey(name: '_shape') Element? shapeElement,
+    List<String>? color,
+    @JsonKey(name: '_color') List<Element?>? colorElement,
+    List<String>? imprint,
+    @JsonKey(name: '_imprint') List<Element?>? imprintElement,
+    List<Attachment>? image,
+    CodeableConcept? scoring,
   }) = _ProdCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
@@ -261,7 +265,9 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
       ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProdCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -332,15 +338,15 @@ abstract class MarketingStatus implements _$MarketingStatus {
   ///
   /// [_restoreDate]: Extensions for restoreDate
   factory MarketingStatus({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept country,
-    CodeableConcept jurisdiction,
-    @required CodeableConcept status,
-    @required Period dateRange,
-    FhirDateTime restoreDate,
-    @JsonKey(name: '_restoreDate') Element restoreDateElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept country,
+    CodeableConcept? jurisdiction,
+    required CodeableConcept status,
+    required Period dateRange,
+    FhirDateTime? restoreDate,
+    @JsonKey(name: '_restoreDate') Element? restoreDateElement,
   }) = _MarketingStatus;
 
   /// Produces a Yaml formatted String version of the object
@@ -351,7 +357,9 @@ abstract class MarketingStatus implements _$MarketingStatus {
       ? MarketingStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MarketingStatus.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MarketingStatus cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
@@ -425,17 +433,17 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
   ///
   /// [referenceRange]: Reference range of possible or expected values.
   factory SubstanceAmount({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity amountQuantity,
-    Range amountRange,
-    String amountString,
-    @JsonKey(name: '_amountString') Element amountStringElement,
-    CodeableConcept amountType,
-    String amountText,
-    @JsonKey(name: '_amountText') Element amountTextElement,
-    SubstanceAmountReferenceRange referenceRange,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? amountQuantity,
+    Range? amountRange,
+    String? amountString,
+    @JsonKey(name: '_amountString') Element? amountStringElement,
+    CodeableConcept? amountType,
+    String? amountText,
+    @JsonKey(name: '_amountText') Element? amountTextElement,
+    SubstanceAmountReferenceRange? referenceRange,
   }) = _SubstanceAmount;
 
   /// Produces a Yaml formatted String version of the object
@@ -446,7 +454,9 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
       ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SubstanceAmount cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceAmount.fromJson(Map<String, dynamic> json) =>
@@ -494,11 +504,11 @@ abstract class SubstanceAmountReferenceRange
   ///
   /// [highLimit]: Upper limit possible or expected.
   factory SubstanceAmountReferenceRange({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity lowLimit,
-    Quantity highLimit,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? lowLimit,
+    Quantity? highLimit,
   }) = _SubstanceAmountReferenceRange;
 
   /// Produces a Yaml formatted String version of the object
@@ -510,7 +520,9 @@ abstract class SubstanceAmountReferenceRange
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SubstanceAmountReferenceRange.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SubstanceAmountReferenceRange cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceAmountReferenceRange.fromJson(Map<String, dynamic> json) =>

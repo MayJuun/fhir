@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'metadata_types.dart';
 
@@ -16,11 +16,10 @@ ContactDetail _$ContactDetailFromJson(Map<String, dynamic> json) {
 class _$ContactDetailTearOff {
   const _$ContactDetailTearOff();
 
-// ignore: unused_element
   _ContactDetail call(
-      {String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<ContactPoint> telecom}) {
+      {String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactPoint>? telecom}) {
     return _ContactDetail(
       name: name,
       nameElement: nameElement,
@@ -28,22 +27,20 @@ class _$ContactDetailTearOff {
     );
   }
 
-// ignore: unused_element
   ContactDetail fromJson(Map<String, Object> json) {
     return ContactDetail.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ContactDetail = _$ContactDetailTearOff();
 
 /// @nodoc
 mixin _$ContactDetail {
-  String get name;
+  String? get name;
   @JsonKey(name: '_name')
-  Element get nameElement;
-  List<ContactPoint> get telecom;
+  Element? get nameElement;
+  List<ContactPoint>? get telecom;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -56,11 +53,11 @@ abstract class $ContactDetailCopyWith<$Res> {
           ContactDetail value, $Res Function(ContactDetail) then) =
       _$ContactDetailCopyWithImpl<$Res>;
   $Res call(
-      {String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<ContactPoint> telecom});
+      {String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactPoint>? telecom});
 
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get nameElement;
 }
 
 /// @nodoc
@@ -74,25 +71,26 @@ class _$ContactDetailCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object telecom = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
+      name: name == freezed ? _value.name : name as String?,
       nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
+          nameElement == freezed ? _value.nameElement : nameElement as Element?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get nameElement {
+  $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
       return _then(_value.copyWith(nameElement: value));
     });
   }
@@ -106,12 +104,12 @@ abstract class _$ContactDetailCopyWith<$Res>
       __$ContactDetailCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<ContactPoint> telecom});
+      {String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactPoint>? telecom});
 
   @override
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get nameElement;
 }
 
 /// @nodoc
@@ -127,16 +125,16 @@ class __$ContactDetailCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object telecom = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? telecom = freezed,
   }) {
     return _then(_ContactDetail(
-      name: name == freezed ? _value.name : name as String,
+      name: name == freezed ? _value.name : name as String?,
       nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
+          nameElement == freezed ? _value.nameElement : nameElement as Element?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
     ));
   }
 }
@@ -153,12 +151,12 @@ class _$_ContactDetail extends _ContactDetail {
       _$_$_ContactDetailFromJson(json);
 
   @override
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: '_name')
-  final Element nameElement;
+  final Element? nameElement;
   @override
-  final List<ContactPoint> telecom;
+  final List<ContactPoint>? telecom;
 
   @override
   String toString() {
@@ -199,20 +197,20 @@ class _$_ContactDetail extends _ContactDetail {
 abstract class _ContactDetail extends ContactDetail {
   _ContactDetail._() : super._();
   factory _ContactDetail(
-      {String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<ContactPoint> telecom}) = _$_ContactDetail;
+      {String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactPoint>? telecom}) = _$_ContactDetail;
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
 
   @override
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element get nameElement;
+  Element? get nameElement;
   @override
-  List<ContactPoint> get telecom;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
   _$ContactDetailCopyWith<_ContactDetail> get copyWith;
@@ -226,13 +224,12 @@ Contributor _$ContributorFromJson(Map<String, dynamic> json) {
 class _$ContributorTearOff {
   const _$ContributorTearOff();
 
-// ignore: unused_element
   _Contributor call(
-      {ContributorType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<ContactDetail> contact}) {
+      {ContributorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactDetail>? contact}) {
     return _Contributor(
       type: type,
       typeElement: typeElement,
@@ -242,25 +239,23 @@ class _$ContributorTearOff {
     );
   }
 
-// ignore: unused_element
   Contributor fromJson(Map<String, Object> json) {
     return Contributor.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Contributor = _$ContributorTearOff();
 
 /// @nodoc
 mixin _$Contributor {
-  ContributorType get type;
+  ContributorType? get type;
   @JsonKey(name: '_type')
-  Element get typeElement;
-  String get name;
+  Element? get typeElement;
+  String? get name;
   @JsonKey(name: '_name')
-  Element get nameElement;
-  List<ContactDetail> get contact;
+  Element? get nameElement;
+  List<ContactDetail>? get contact;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -273,14 +268,14 @@ abstract class $ContributorCopyWith<$Res> {
           Contributor value, $Res Function(Contributor) then) =
       _$ContributorCopyWithImpl<$Res>;
   $Res call(
-      {ContributorType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<ContactDetail> contact});
+      {ContributorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactDetail>? contact});
 
-  $ElementCopyWith<$Res> get typeElement;
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get typeElement;
+  $ElementCopyWith<$Res>? get nameElement;
 }
 
 /// @nodoc
@@ -293,40 +288,42 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
 
   @override
   $Res call({
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object contact = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? contact = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed ? _value.type : type as ContributorType,
+      type: type == freezed ? _value.type : type as ContributorType?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      name: name == freezed ? _value.name : name as String,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      name: name == freezed ? _value.name : name as String?,
       nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
+          nameElement == freezed ? _value.nameElement : nameElement as Element?,
       contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>,
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get typeElement {
+  $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
       return _then(_value.copyWith(typeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get nameElement {
+  $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
       return _then(_value.copyWith(nameElement: value));
     });
   }
@@ -340,16 +337,16 @@ abstract class _$ContributorCopyWith<$Res>
       __$ContributorCopyWithImpl<$Res>;
   @override
   $Res call(
-      {ContributorType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<ContactDetail> contact});
+      {ContributorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactDetail>? contact});
 
   @override
-  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res>? get typeElement;
   @override
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get nameElement;
 }
 
 /// @nodoc
@@ -364,21 +361,21 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object contact = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? contact = freezed,
   }) {
     return _then(_Contributor(
-      type: type == freezed ? _value.type : type as ContributorType,
+      type: type == freezed ? _value.type : type as ContributorType?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      name: name == freezed ? _value.name : name as String,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      name: name == freezed ? _value.name : name as String?,
       nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
+          nameElement == freezed ? _value.nameElement : nameElement as Element?,
       contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>,
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
     ));
   }
 }
@@ -399,17 +396,17 @@ class _$_Contributor extends _Contributor {
       _$_$_ContributorFromJson(json);
 
   @override
-  final ContributorType type;
+  final ContributorType? type;
   @override
   @JsonKey(name: '_type')
-  final Element typeElement;
+  final Element? typeElement;
   @override
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: '_name')
-  final Element nameElement;
+  final Element? nameElement;
   @override
-  final List<ContactDetail> contact;
+  final List<ContactDetail>? contact;
 
   @override
   String toString() {
@@ -457,27 +454,27 @@ class _$_Contributor extends _Contributor {
 abstract class _Contributor extends Contributor {
   _Contributor._() : super._();
   factory _Contributor(
-      {ContributorType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      List<ContactDetail> contact}) = _$_Contributor;
+      {ContributorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactDetail>? contact}) = _$_Contributor;
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
       _$_Contributor.fromJson;
 
   @override
-  ContributorType get type;
+  ContributorType? get type;
   @override
   @JsonKey(name: '_type')
-  Element get typeElement;
+  Element? get typeElement;
   @override
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element get nameElement;
+  Element? get nameElement;
   @override
-  List<ContactDetail> get contact;
+  List<ContactDetail>? get contact;
   @override
   @JsonKey(ignore: true)
   _$ContributorCopyWith<_Contributor> get copyWith;
@@ -491,18 +488,17 @@ RelatedArtifact _$RelatedArtifactFromJson(Map<String, dynamic> json) {
 class _$RelatedArtifactTearOff {
   const _$RelatedArtifactTearOff();
 
-// ignore: unused_element
   _RelatedArtifact call(
-      {RelatedArtifactType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String display,
-      @JsonKey(name: '_display') Element displayElement,
-      String citation,
-      @JsonKey(name: '_citation') Element citationElement,
-      String url,
-      @JsonKey(name: '_url') Element urlElement,
-      Attachment document,
-      Reference resource}) {
+      {RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      String? citation,
+      @JsonKey(name: '_citation') Element? citationElement,
+      String? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      Attachment? document,
+      Reference? resource}) {
     return _RelatedArtifact(
       type: type,
       typeElement: typeElement,
@@ -517,32 +513,30 @@ class _$RelatedArtifactTearOff {
     );
   }
 
-// ignore: unused_element
   RelatedArtifact fromJson(Map<String, Object> json) {
     return RelatedArtifact.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $RelatedArtifact = _$RelatedArtifactTearOff();
 
 /// @nodoc
 mixin _$RelatedArtifact {
-  RelatedArtifactType get type;
+  RelatedArtifactType? get type;
   @JsonKey(name: '_type')
-  Element get typeElement;
-  String get display;
+  Element? get typeElement;
+  String? get display;
   @JsonKey(name: '_display')
-  Element get displayElement;
-  String get citation;
+  Element? get displayElement;
+  String? get citation;
   @JsonKey(name: '_citation')
-  Element get citationElement;
-  String get url;
+  Element? get citationElement;
+  String? get url;
   @JsonKey(name: '_url')
-  Element get urlElement;
-  Attachment get document;
-  Reference get resource;
+  Element? get urlElement;
+  Attachment? get document;
+  Reference? get resource;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -555,23 +549,23 @@ abstract class $RelatedArtifactCopyWith<$Res> {
           RelatedArtifact value, $Res Function(RelatedArtifact) then) =
       _$RelatedArtifactCopyWithImpl<$Res>;
   $Res call(
-      {RelatedArtifactType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String display,
-      @JsonKey(name: '_display') Element displayElement,
-      String citation,
-      @JsonKey(name: '_citation') Element citationElement,
-      String url,
-      @JsonKey(name: '_url') Element urlElement,
-      Attachment document,
-      Reference resource});
+      {RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      String? citation,
+      @JsonKey(name: '_citation') Element? citationElement,
+      String? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      Attachment? document,
+      Reference? resource});
 
-  $ElementCopyWith<$Res> get typeElement;
-  $ElementCopyWith<$Res> get displayElement;
-  $ElementCopyWith<$Res> get citationElement;
-  $ElementCopyWith<$Res> get urlElement;
-  $AttachmentCopyWith<$Res> get document;
-  $ReferenceCopyWith<$Res> get resource;
+  $ElementCopyWith<$Res>? get typeElement;
+  $ElementCopyWith<$Res>? get displayElement;
+  $ElementCopyWith<$Res>? get citationElement;
+  $ElementCopyWith<$Res>? get urlElement;
+  $AttachmentCopyWith<$Res>? get document;
+  $ReferenceCopyWith<$Res>? get resource;
 }
 
 /// @nodoc
@@ -585,93 +579,99 @@ class _$RelatedArtifactCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object display = freezed,
-    Object displayElement = freezed,
-    Object citation = freezed,
-    Object citationElement = freezed,
-    Object url = freezed,
-    Object urlElement = freezed,
-    Object document = freezed,
-    Object resource = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? citation = freezed,
+    Object? citationElement = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? document = freezed,
+    Object? resource = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed ? _value.type : type as RelatedArtifactType,
+      type: type == freezed ? _value.type : type as RelatedArtifactType?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      display: display == freezed ? _value.display : display as String,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      display: display == freezed ? _value.display : display as String?,
       displayElement: displayElement == freezed
           ? _value.displayElement
-          : displayElement as Element,
-      citation: citation == freezed ? _value.citation : citation as String,
+          : displayElement as Element?,
+      citation: citation == freezed ? _value.citation : citation as String?,
       citationElement: citationElement == freezed
           ? _value.citationElement
-          : citationElement as Element,
-      url: url == freezed ? _value.url : url as String,
+          : citationElement as Element?,
+      url: url == freezed ? _value.url : url as String?,
       urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      document: document == freezed ? _value.document : document as Attachment,
-      resource: resource == freezed ? _value.resource : resource as Reference,
+          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+      document: document == freezed ? _value.document : document as Attachment?,
+      resource: resource == freezed ? _value.resource : resource as Reference?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get typeElement {
+  $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
       return _then(_value.copyWith(typeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get displayElement {
+  $ElementCopyWith<$Res>? get displayElement {
     if (_value.displayElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.displayElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.displayElement!, (value) {
       return _then(_value.copyWith(displayElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get citationElement {
+  $ElementCopyWith<$Res>? get citationElement {
     if (_value.citationElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.citationElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.citationElement!, (value) {
       return _then(_value.copyWith(citationElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get urlElement {
+  $ElementCopyWith<$Res>? get urlElement {
     if (_value.urlElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.urlElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
       return _then(_value.copyWith(urlElement: value));
     });
   }
 
   @override
-  $AttachmentCopyWith<$Res> get document {
+  $AttachmentCopyWith<$Res>? get document {
     if (_value.document == null) {
       return null;
     }
-    return $AttachmentCopyWith<$Res>(_value.document, (value) {
+
+    return $AttachmentCopyWith<$Res>(_value.document!, (value) {
       return _then(_value.copyWith(document: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get resource {
+  $ReferenceCopyWith<$Res>? get resource {
     if (_value.resource == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.resource, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.resource!, (value) {
       return _then(_value.copyWith(resource: value));
     });
   }
@@ -685,29 +685,29 @@ abstract class _$RelatedArtifactCopyWith<$Res>
       __$RelatedArtifactCopyWithImpl<$Res>;
   @override
   $Res call(
-      {RelatedArtifactType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String display,
-      @JsonKey(name: '_display') Element displayElement,
-      String citation,
-      @JsonKey(name: '_citation') Element citationElement,
-      String url,
-      @JsonKey(name: '_url') Element urlElement,
-      Attachment document,
-      Reference resource});
+      {RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      String? citation,
+      @JsonKey(name: '_citation') Element? citationElement,
+      String? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      Attachment? document,
+      Reference? resource});
 
   @override
-  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res>? get typeElement;
   @override
-  $ElementCopyWith<$Res> get displayElement;
+  $ElementCopyWith<$Res>? get displayElement;
   @override
-  $ElementCopyWith<$Res> get citationElement;
+  $ElementCopyWith<$Res>? get citationElement;
   @override
-  $ElementCopyWith<$Res> get urlElement;
+  $ElementCopyWith<$Res>? get urlElement;
   @override
-  $AttachmentCopyWith<$Res> get document;
+  $AttachmentCopyWith<$Res>? get document;
   @override
-  $ReferenceCopyWith<$Res> get resource;
+  $ReferenceCopyWith<$Res>? get resource;
 }
 
 /// @nodoc
@@ -723,34 +723,34 @@ class __$RelatedArtifactCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object display = freezed,
-    Object displayElement = freezed,
-    Object citation = freezed,
-    Object citationElement = freezed,
-    Object url = freezed,
-    Object urlElement = freezed,
-    Object document = freezed,
-    Object resource = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? display = freezed,
+    Object? displayElement = freezed,
+    Object? citation = freezed,
+    Object? citationElement = freezed,
+    Object? url = freezed,
+    Object? urlElement = freezed,
+    Object? document = freezed,
+    Object? resource = freezed,
   }) {
     return _then(_RelatedArtifact(
-      type: type == freezed ? _value.type : type as RelatedArtifactType,
+      type: type == freezed ? _value.type : type as RelatedArtifactType?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      display: display == freezed ? _value.display : display as String,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      display: display == freezed ? _value.display : display as String?,
       displayElement: displayElement == freezed
           ? _value.displayElement
-          : displayElement as Element,
-      citation: citation == freezed ? _value.citation : citation as String,
+          : displayElement as Element?,
+      citation: citation == freezed ? _value.citation : citation as String?,
       citationElement: citationElement == freezed
           ? _value.citationElement
-          : citationElement as Element,
-      url: url == freezed ? _value.url : url as String,
+          : citationElement as Element?,
+      url: url == freezed ? _value.url : url as String?,
       urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element,
-      document: document == freezed ? _value.document : document as Attachment,
-      resource: resource == freezed ? _value.resource : resource as Reference,
+          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+      document: document == freezed ? _value.document : document as Attachment?,
+      resource: resource == freezed ? _value.resource : resource as Reference?,
     ));
   }
 }
@@ -776,29 +776,29 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       _$_$_RelatedArtifactFromJson(json);
 
   @override
-  final RelatedArtifactType type;
+  final RelatedArtifactType? type;
   @override
   @JsonKey(name: '_type')
-  final Element typeElement;
+  final Element? typeElement;
   @override
-  final String display;
+  final String? display;
   @override
   @JsonKey(name: '_display')
-  final Element displayElement;
+  final Element? displayElement;
   @override
-  final String citation;
+  final String? citation;
   @override
   @JsonKey(name: '_citation')
-  final Element citationElement;
+  final Element? citationElement;
   @override
-  final String url;
+  final String? url;
   @override
   @JsonKey(name: '_url')
-  final Element urlElement;
+  final Element? urlElement;
   @override
-  final Attachment document;
+  final Attachment? document;
   @override
-  final Reference resource;
+  final Reference? resource;
 
   @override
   String toString() {
@@ -867,44 +867,44 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 abstract class _RelatedArtifact extends RelatedArtifact {
   _RelatedArtifact._() : super._();
   factory _RelatedArtifact(
-      {RelatedArtifactType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String display,
-      @JsonKey(name: '_display') Element displayElement,
-      String citation,
-      @JsonKey(name: '_citation') Element citationElement,
-      String url,
-      @JsonKey(name: '_url') Element urlElement,
-      Attachment document,
-      Reference resource}) = _$_RelatedArtifact;
+      {RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? display,
+      @JsonKey(name: '_display') Element? displayElement,
+      String? citation,
+      @JsonKey(name: '_citation') Element? citationElement,
+      String? url,
+      @JsonKey(name: '_url') Element? urlElement,
+      Attachment? document,
+      Reference? resource}) = _$_RelatedArtifact;
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
       _$_RelatedArtifact.fromJson;
 
   @override
-  RelatedArtifactType get type;
+  RelatedArtifactType? get type;
   @override
   @JsonKey(name: '_type')
-  Element get typeElement;
+  Element? get typeElement;
   @override
-  String get display;
+  String? get display;
   @override
   @JsonKey(name: '_display')
-  Element get displayElement;
+  Element? get displayElement;
   @override
-  String get citation;
+  String? get citation;
   @override
   @JsonKey(name: '_citation')
-  Element get citationElement;
+  Element? get citationElement;
   @override
-  String get url;
+  String? get url;
   @override
   @JsonKey(name: '_url')
-  Element get urlElement;
+  Element? get urlElement;
   @override
-  Attachment get document;
+  Attachment? get document;
   @override
-  Reference get resource;
+  Reference? get resource;
   @override
   @JsonKey(ignore: true)
   _$RelatedArtifactCopyWith<_RelatedArtifact> get copyWith;
@@ -918,12 +918,11 @@ UsageContext _$UsageContextFromJson(Map<String, dynamic> json) {
 class _$UsageContextTearOff {
   const _$UsageContextTearOff();
 
-// ignore: unused_element
   _UsageContext call(
-      {@required Coding code,
-      CodeableConcept valueCodeableConcept,
-      Quantity valueQuantity,
-      Range valueRange}) {
+      {required Coding code,
+      CodeableConcept? valueCodeableConcept,
+      Quantity? valueQuantity,
+      Range? valueRange}) {
     return _UsageContext(
       code: code,
       valueCodeableConcept: valueCodeableConcept,
@@ -932,22 +931,20 @@ class _$UsageContextTearOff {
     );
   }
 
-// ignore: unused_element
   UsageContext fromJson(Map<String, Object> json) {
     return UsageContext.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UsageContext = _$UsageContextTearOff();
 
 /// @nodoc
 mixin _$UsageContext {
   Coding get code;
-  CodeableConcept get valueCodeableConcept;
-  Quantity get valueQuantity;
-  Range get valueRange;
+  CodeableConcept? get valueCodeableConcept;
+  Quantity? get valueQuantity;
+  Range? get valueRange;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -961,14 +958,14 @@ abstract class $UsageContextCopyWith<$Res> {
       _$UsageContextCopyWithImpl<$Res>;
   $Res call(
       {Coding code,
-      CodeableConcept valueCodeableConcept,
-      Quantity valueQuantity,
-      Range valueRange});
+      CodeableConcept? valueCodeableConcept,
+      Quantity? valueQuantity,
+      Range? valueRange});
 
   $CodingCopyWith<$Res> get code;
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
-  $QuantityCopyWith<$Res> get valueQuantity;
-  $RangeCopyWith<$Res> get valueRange;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
 }
 
 /// @nodoc
@@ -981,60 +978,61 @@ class _$UsageContextCopyWithImpl<$Res> implements $UsageContextCopyWith<$Res> {
 
   @override
   $Res call({
-    Object code = freezed,
-    Object valueCodeableConcept = freezed,
-    Object valueQuantity = freezed,
-    Object valueRange = freezed,
+    Object? code = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
   }) {
     return _then(_value.copyWith(
       code: code == freezed ? _value.code : code as Coding,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept,
+          : valueCodeableConcept as CodeableConcept?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
+          : valueQuantity as Quantity?,
       valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range,
+          valueRange == freezed ? _value.valueRange : valueRange as Range?,
     ));
   }
 
   @override
   $CodingCopyWith<$Res> get code {
-    if (_value.code == null) {
-      return null;
-    }
     return $CodingCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
     if (_value.valueCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
       return _then(_value.copyWith(valueCodeableConcept: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get valueQuantity {
+  $QuantityCopyWith<$Res>? get valueQuantity {
     if (_value.valueQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
       return _then(_value.copyWith(valueQuantity: value));
     });
   }
 
   @override
-  $RangeCopyWith<$Res> get valueRange {
+  $RangeCopyWith<$Res>? get valueRange {
     if (_value.valueRange == null) {
       return null;
     }
-    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
       return _then(_value.copyWith(valueRange: value));
     });
   }
@@ -1049,18 +1047,18 @@ abstract class _$UsageContextCopyWith<$Res>
   @override
   $Res call(
       {Coding code,
-      CodeableConcept valueCodeableConcept,
-      Quantity valueQuantity,
-      Range valueRange});
+      CodeableConcept? valueCodeableConcept,
+      Quantity? valueQuantity,
+      Range? valueRange});
 
   @override
   $CodingCopyWith<$Res> get code;
   @override
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
-  $QuantityCopyWith<$Res> get valueQuantity;
+  $QuantityCopyWith<$Res>? get valueQuantity;
   @override
-  $RangeCopyWith<$Res> get valueRange;
+  $RangeCopyWith<$Res>? get valueRange;
 }
 
 /// @nodoc
@@ -1075,21 +1073,21 @@ class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object code = freezed,
-    Object valueCodeableConcept = freezed,
-    Object valueQuantity = freezed,
-    Object valueRange = freezed,
+    Object? code = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
   }) {
     return _then(_UsageContext(
       code: code == freezed ? _value.code : code as Coding,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept,
+          : valueCodeableConcept as CodeableConcept?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
+          : valueQuantity as Quantity?,
       valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range,
+          valueRange == freezed ? _value.valueRange : valueRange as Range?,
     ));
   }
 }
@@ -1099,12 +1097,11 @@ class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
 /// @nodoc
 class _$_UsageContext extends _UsageContext {
   _$_UsageContext(
-      {@required this.code,
+      {required this.code,
       this.valueCodeableConcept,
       this.valueQuantity,
       this.valueRange})
-      : assert(code != null),
-        super._();
+      : super._();
 
   factory _$_UsageContext.fromJson(Map<String, dynamic> json) =>
       _$_$_UsageContextFromJson(json);
@@ -1112,11 +1109,11 @@ class _$_UsageContext extends _UsageContext {
   @override
   final Coding code;
   @override
-  final CodeableConcept valueCodeableConcept;
+  final CodeableConcept? valueCodeableConcept;
   @override
-  final Quantity valueQuantity;
+  final Quantity? valueQuantity;
   @override
-  final Range valueRange;
+  final Range? valueRange;
 
   @override
   String toString() {
@@ -1162,10 +1159,10 @@ class _$_UsageContext extends _UsageContext {
 abstract class _UsageContext extends UsageContext {
   _UsageContext._() : super._();
   factory _UsageContext(
-      {@required Coding code,
-      CodeableConcept valueCodeableConcept,
-      Quantity valueQuantity,
-      Range valueRange}) = _$_UsageContext;
+      {required Coding code,
+      CodeableConcept? valueCodeableConcept,
+      Quantity? valueQuantity,
+      Range? valueRange}) = _$_UsageContext;
 
   factory _UsageContext.fromJson(Map<String, dynamic> json) =
       _$_UsageContext.fromJson;
@@ -1173,11 +1170,11 @@ abstract class _UsageContext extends UsageContext {
   @override
   Coding get code;
   @override
-  CodeableConcept get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept;
   @override
-  Quantity get valueQuantity;
+  Quantity? get valueQuantity;
   @override
-  Range get valueRange;
+  Range? get valueRange;
   @override
   @JsonKey(ignore: true)
   _$UsageContextCopyWith<_UsageContext> get copyWith;
@@ -1191,16 +1188,15 @@ DataRequirement _$DataRequirementFromJson(Map<String, dynamic> json) {
 class _$DataRequirementTearOff {
   const _$DataRequirementTearOff();
 
-// ignore: unused_element
   _DataRequirement call(
-      {String type,
-      @JsonKey(name: '_type') Element typeElement,
-      List<String> profile,
-      @JsonKey(name: '_profile') List<Element> profileElement,
-      List<String> mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
-      List<DataRequirementCodeFilter> codeFilter,
-      List<DataRequirementDateFilter> dateFilter}) {
+      {String? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      List<String>? profile,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter}) {
     return _DataRequirement(
       type: type,
       typeElement: typeElement,
@@ -1213,29 +1209,27 @@ class _$DataRequirementTearOff {
     );
   }
 
-// ignore: unused_element
   DataRequirement fromJson(Map<String, Object> json) {
     return DataRequirement.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DataRequirement = _$DataRequirementTearOff();
 
 /// @nodoc
 mixin _$DataRequirement {
-  String get type;
+  String? get type;
   @JsonKey(name: '_type')
-  Element get typeElement;
-  List<String> get profile;
+  Element? get typeElement;
+  List<String>? get profile;
   @JsonKey(name: '_profile')
-  List<Element> get profileElement;
-  List<String> get mustSupport;
+  List<Element?>? get profileElement;
+  List<String>? get mustSupport;
   @JsonKey(name: '_mustSupport')
-  List<Element> get mustSupportElement;
-  List<DataRequirementCodeFilter> get codeFilter;
-  List<DataRequirementDateFilter> get dateFilter;
+  List<Element?>? get mustSupportElement;
+  List<DataRequirementCodeFilter>? get codeFilter;
+  List<DataRequirementDateFilter>? get dateFilter;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1248,16 +1242,16 @@ abstract class $DataRequirementCopyWith<$Res> {
           DataRequirement value, $Res Function(DataRequirement) then) =
       _$DataRequirementCopyWithImpl<$Res>;
   $Res call(
-      {String type,
-      @JsonKey(name: '_type') Element typeElement,
-      List<String> profile,
-      @JsonKey(name: '_profile') List<Element> profileElement,
-      List<String> mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
-      List<DataRequirementCodeFilter> codeFilter,
-      List<DataRequirementDateFilter> dateFilter});
+      {String? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      List<String>? profile,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter});
 
-  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res>? get typeElement;
 }
 
 /// @nodoc
@@ -1271,44 +1265,45 @@ class _$DataRequirementCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object profile = freezed,
-    Object profileElement = freezed,
-    Object mustSupport = freezed,
-    Object mustSupportElement = freezed,
-    Object codeFilter = freezed,
-    Object dateFilter = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? profile = freezed,
+    Object? profileElement = freezed,
+    Object? mustSupport = freezed,
+    Object? mustSupportElement = freezed,
+    Object? codeFilter = freezed,
+    Object? dateFilter = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed ? _value.type : type as String,
+      type: type == freezed ? _value.type : type as String?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      profile: profile == freezed ? _value.profile : profile as List<String>,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      profile: profile == freezed ? _value.profile : profile as List<String>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element>,
+          : profileElement as List<Element?>?,
       mustSupport: mustSupport == freezed
           ? _value.mustSupport
-          : mustSupport as List<String>,
+          : mustSupport as List<String>?,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as List<Element>,
+          : mustSupportElement as List<Element?>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
-          : codeFilter as List<DataRequirementCodeFilter>,
+          : codeFilter as List<DataRequirementCodeFilter>?,
       dateFilter: dateFilter == freezed
           ? _value.dateFilter
-          : dateFilter as List<DataRequirementDateFilter>,
+          : dateFilter as List<DataRequirementDateFilter>?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get typeElement {
+  $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
       return _then(_value.copyWith(typeElement: value));
     });
   }
@@ -1322,17 +1317,17 @@ abstract class _$DataRequirementCopyWith<$Res>
       __$DataRequirementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String type,
-      @JsonKey(name: '_type') Element typeElement,
-      List<String> profile,
-      @JsonKey(name: '_profile') List<Element> profileElement,
-      List<String> mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
-      List<DataRequirementCodeFilter> codeFilter,
-      List<DataRequirementDateFilter> dateFilter});
+      {String? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      List<String>? profile,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter});
 
   @override
-  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res>? get typeElement;
 }
 
 /// @nodoc
@@ -1348,35 +1343,35 @@ class __$DataRequirementCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object profile = freezed,
-    Object profileElement = freezed,
-    Object mustSupport = freezed,
-    Object mustSupportElement = freezed,
-    Object codeFilter = freezed,
-    Object dateFilter = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? profile = freezed,
+    Object? profileElement = freezed,
+    Object? mustSupport = freezed,
+    Object? mustSupportElement = freezed,
+    Object? codeFilter = freezed,
+    Object? dateFilter = freezed,
   }) {
     return _then(_DataRequirement(
-      type: type == freezed ? _value.type : type as String,
+      type: type == freezed ? _value.type : type as String?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      profile: profile == freezed ? _value.profile : profile as List<String>,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      profile: profile == freezed ? _value.profile : profile as List<String>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element>,
+          : profileElement as List<Element?>?,
       mustSupport: mustSupport == freezed
           ? _value.mustSupport
-          : mustSupport as List<String>,
+          : mustSupport as List<String>?,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as List<Element>,
+          : mustSupportElement as List<Element?>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
-          : codeFilter as List<DataRequirementCodeFilter>,
+          : codeFilter as List<DataRequirementCodeFilter>?,
       dateFilter: dateFilter == freezed
           ? _value.dateFilter
-          : dateFilter as List<DataRequirementDateFilter>,
+          : dateFilter as List<DataRequirementDateFilter>?,
     ));
   }
 }
@@ -1400,24 +1395,24 @@ class _$_DataRequirement extends _DataRequirement {
       _$_$_DataRequirementFromJson(json);
 
   @override
-  final String type;
+  final String? type;
   @override
   @JsonKey(name: '_type')
-  final Element typeElement;
+  final Element? typeElement;
   @override
-  final List<String> profile;
+  final List<String>? profile;
   @override
   @JsonKey(name: '_profile')
-  final List<Element> profileElement;
+  final List<Element?>? profileElement;
   @override
-  final List<String> mustSupport;
+  final List<String>? mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  final List<Element> mustSupportElement;
+  final List<Element?>? mustSupportElement;
   @override
-  final List<DataRequirementCodeFilter> codeFilter;
+  final List<DataRequirementCodeFilter>? codeFilter;
   @override
-  final List<DataRequirementDateFilter> dateFilter;
+  final List<DataRequirementDateFilter>? dateFilter;
 
   @override
   String toString() {
@@ -1479,37 +1474,37 @@ class _$_DataRequirement extends _DataRequirement {
 abstract class _DataRequirement extends DataRequirement {
   _DataRequirement._() : super._();
   factory _DataRequirement(
-      {String type,
-      @JsonKey(name: '_type') Element typeElement,
-      List<String> profile,
-      @JsonKey(name: '_profile') List<Element> profileElement,
-      List<String> mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
-      List<DataRequirementCodeFilter> codeFilter,
-      List<DataRequirementDateFilter> dateFilter}) = _$_DataRequirement;
+      {String? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      List<String>? profile,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter}) = _$_DataRequirement;
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
       _$_DataRequirement.fromJson;
 
   @override
-  String get type;
+  String? get type;
   @override
   @JsonKey(name: '_type')
-  Element get typeElement;
+  Element? get typeElement;
   @override
-  List<String> get profile;
+  List<String>? get profile;
   @override
   @JsonKey(name: '_profile')
-  List<Element> get profileElement;
+  List<Element?>? get profileElement;
   @override
-  List<String> get mustSupport;
+  List<String>? get mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  List<Element> get mustSupportElement;
+  List<Element?>? get mustSupportElement;
   @override
-  List<DataRequirementCodeFilter> get codeFilter;
+  List<DataRequirementCodeFilter>? get codeFilter;
   @override
-  List<DataRequirementDateFilter> get dateFilter;
+  List<DataRequirementDateFilter>? get dateFilter;
   @override
   @JsonKey(ignore: true)
   _$DataRequirementCopyWith<_DataRequirement> get copyWith;
@@ -1524,17 +1519,16 @@ DataRequirementCodeFilter _$DataRequirementCodeFilterFromJson(
 class _$DataRequirementCodeFilterTearOff {
   const _$DataRequirementCodeFilterTearOff();
 
-// ignore: unused_element
   _DataRequirementCodeFilter call(
-      {String path,
-      @JsonKey(name: '_path') Element pathElement,
-      String valueSetString,
-      @JsonKey(name: '_valueSetString') Element valueSetStringElement,
-      Reference valueSetReference,
-      List<Code> valueCode,
-      @JsonKey(name: '_valueCode') List<Element> valueCodeElement,
-      List<Coding> valueCoding,
-      List<CodeableConcept> valueCodeableConcept}) {
+      {String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      String? valueSetString,
+      @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
+      Reference? valueSetReference,
+      List<Code>? valueCode,
+      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
+      List<Coding>? valueCoding,
+      List<CodeableConcept>? valueCodeableConcept}) {
     return _DataRequirementCodeFilter(
       path: path,
       pathElement: pathElement,
@@ -1548,30 +1542,28 @@ class _$DataRequirementCodeFilterTearOff {
     );
   }
 
-// ignore: unused_element
   DataRequirementCodeFilter fromJson(Map<String, Object> json) {
     return DataRequirementCodeFilter.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DataRequirementCodeFilter = _$DataRequirementCodeFilterTearOff();
 
 /// @nodoc
 mixin _$DataRequirementCodeFilter {
-  String get path;
+  String? get path;
   @JsonKey(name: '_path')
-  Element get pathElement;
-  String get valueSetString;
+  Element? get pathElement;
+  String? get valueSetString;
   @JsonKey(name: '_valueSetString')
-  Element get valueSetStringElement;
-  Reference get valueSetReference;
-  List<Code> get valueCode;
+  Element? get valueSetStringElement;
+  Reference? get valueSetReference;
+  List<Code>? get valueCode;
   @JsonKey(name: '_valueCode')
-  List<Element> get valueCodeElement;
-  List<Coding> get valueCoding;
-  List<CodeableConcept> get valueCodeableConcept;
+  List<Element?>? get valueCodeElement;
+  List<Coding>? get valueCoding;
+  List<CodeableConcept>? get valueCodeableConcept;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1584,19 +1576,19 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
           $Res Function(DataRequirementCodeFilter) then) =
       _$DataRequirementCodeFilterCopyWithImpl<$Res>;
   $Res call(
-      {String path,
-      @JsonKey(name: '_path') Element pathElement,
-      String valueSetString,
-      @JsonKey(name: '_valueSetString') Element valueSetStringElement,
-      Reference valueSetReference,
-      List<Code> valueCode,
-      @JsonKey(name: '_valueCode') List<Element> valueCodeElement,
-      List<Coding> valueCoding,
-      List<CodeableConcept> valueCodeableConcept});
+      {String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      String? valueSetString,
+      @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
+      Reference? valueSetReference,
+      List<Code>? valueCode,
+      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
+      List<Coding>? valueCoding,
+      List<CodeableConcept>? valueCodeableConcept});
 
-  $ElementCopyWith<$Res> get pathElement;
-  $ElementCopyWith<$Res> get valueSetStringElement;
-  $ReferenceCopyWith<$Res> get valueSetReference;
+  $ElementCopyWith<$Res>? get pathElement;
+  $ElementCopyWith<$Res>? get valueSetStringElement;
+  $ReferenceCopyWith<$Res>? get valueSetReference;
 }
 
 /// @nodoc
@@ -1610,69 +1602,72 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object path = freezed,
-    Object pathElement = freezed,
-    Object valueSetString = freezed,
-    Object valueSetStringElement = freezed,
-    Object valueSetReference = freezed,
-    Object valueCode = freezed,
-    Object valueCodeElement = freezed,
-    Object valueCoding = freezed,
-    Object valueCodeableConcept = freezed,
+    Object? path = freezed,
+    Object? pathElement = freezed,
+    Object? valueSetString = freezed,
+    Object? valueSetStringElement = freezed,
+    Object? valueSetReference = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueCoding = freezed,
+    Object? valueCodeableConcept = freezed,
   }) {
     return _then(_value.copyWith(
-      path: path == freezed ? _value.path : path as String,
+      path: path == freezed ? _value.path : path as String?,
       pathElement:
-          pathElement == freezed ? _value.pathElement : pathElement as Element,
+          pathElement == freezed ? _value.pathElement : pathElement as Element?,
       valueSetString: valueSetString == freezed
           ? _value.valueSetString
-          : valueSetString as String,
+          : valueSetString as String?,
       valueSetStringElement: valueSetStringElement == freezed
           ? _value.valueSetStringElement
-          : valueSetStringElement as Element,
+          : valueSetStringElement as Element?,
       valueSetReference: valueSetReference == freezed
           ? _value.valueSetReference
-          : valueSetReference as Reference,
+          : valueSetReference as Reference?,
       valueCode:
-          valueCode == freezed ? _value.valueCode : valueCode as List<Code>,
+          valueCode == freezed ? _value.valueCode : valueCode as List<Code>?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as List<Element>,
+          : valueCodeElement as List<Element?>?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
-          : valueCoding as List<Coding>,
+          : valueCoding as List<Coding>?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as List<CodeableConcept>,
+          : valueCodeableConcept as List<CodeableConcept>?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get pathElement {
+  $ElementCopyWith<$Res>? get pathElement {
     if (_value.pathElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.pathElement!, (value) {
       return _then(_value.copyWith(pathElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueSetStringElement {
+  $ElementCopyWith<$Res>? get valueSetStringElement {
     if (_value.valueSetStringElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueSetStringElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueSetStringElement!, (value) {
       return _then(_value.copyWith(valueSetStringElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get valueSetReference {
+  $ReferenceCopyWith<$Res>? get valueSetReference {
     if (_value.valueSetReference == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.valueSetReference, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.valueSetReference!, (value) {
       return _then(_value.copyWith(valueSetReference: value));
     });
   }
@@ -1686,22 +1681,22 @@ abstract class _$DataRequirementCodeFilterCopyWith<$Res>
       __$DataRequirementCodeFilterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String path,
-      @JsonKey(name: '_path') Element pathElement,
-      String valueSetString,
-      @JsonKey(name: '_valueSetString') Element valueSetStringElement,
-      Reference valueSetReference,
-      List<Code> valueCode,
-      @JsonKey(name: '_valueCode') List<Element> valueCodeElement,
-      List<Coding> valueCoding,
-      List<CodeableConcept> valueCodeableConcept});
+      {String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      String? valueSetString,
+      @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
+      Reference? valueSetReference,
+      List<Code>? valueCode,
+      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
+      List<Coding>? valueCoding,
+      List<CodeableConcept>? valueCodeableConcept});
 
   @override
-  $ElementCopyWith<$Res> get pathElement;
+  $ElementCopyWith<$Res>? get pathElement;
   @override
-  $ElementCopyWith<$Res> get valueSetStringElement;
+  $ElementCopyWith<$Res>? get valueSetStringElement;
   @override
-  $ReferenceCopyWith<$Res> get valueSetReference;
+  $ReferenceCopyWith<$Res>? get valueSetReference;
 }
 
 /// @nodoc
@@ -1718,40 +1713,40 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object path = freezed,
-    Object pathElement = freezed,
-    Object valueSetString = freezed,
-    Object valueSetStringElement = freezed,
-    Object valueSetReference = freezed,
-    Object valueCode = freezed,
-    Object valueCodeElement = freezed,
-    Object valueCoding = freezed,
-    Object valueCodeableConcept = freezed,
+    Object? path = freezed,
+    Object? pathElement = freezed,
+    Object? valueSetString = freezed,
+    Object? valueSetStringElement = freezed,
+    Object? valueSetReference = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueCoding = freezed,
+    Object? valueCodeableConcept = freezed,
   }) {
     return _then(_DataRequirementCodeFilter(
-      path: path == freezed ? _value.path : path as String,
+      path: path == freezed ? _value.path : path as String?,
       pathElement:
-          pathElement == freezed ? _value.pathElement : pathElement as Element,
+          pathElement == freezed ? _value.pathElement : pathElement as Element?,
       valueSetString: valueSetString == freezed
           ? _value.valueSetString
-          : valueSetString as String,
+          : valueSetString as String?,
       valueSetStringElement: valueSetStringElement == freezed
           ? _value.valueSetStringElement
-          : valueSetStringElement as Element,
+          : valueSetStringElement as Element?,
       valueSetReference: valueSetReference == freezed
           ? _value.valueSetReference
-          : valueSetReference as Reference,
+          : valueSetReference as Reference?,
       valueCode:
-          valueCode == freezed ? _value.valueCode : valueCode as List<Code>,
+          valueCode == freezed ? _value.valueCode : valueCode as List<Code>?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as List<Element>,
+          : valueCodeElement as List<Element?>?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
-          : valueCoding as List<Coding>,
+          : valueCoding as List<Coding>?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as List<CodeableConcept>,
+          : valueCodeableConcept as List<CodeableConcept>?,
     ));
   }
 }
@@ -1776,26 +1771,26 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
       _$_$_DataRequirementCodeFilterFromJson(json);
 
   @override
-  final String path;
+  final String? path;
   @override
   @JsonKey(name: '_path')
-  final Element pathElement;
+  final Element? pathElement;
   @override
-  final String valueSetString;
+  final String? valueSetString;
   @override
   @JsonKey(name: '_valueSetString')
-  final Element valueSetStringElement;
+  final Element? valueSetStringElement;
   @override
-  final Reference valueSetReference;
+  final Reference? valueSetReference;
   @override
-  final List<Code> valueCode;
+  final List<Code>? valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  final List<Element> valueCodeElement;
+  final List<Element?>? valueCodeElement;
   @override
-  final List<Coding> valueCoding;
+  final List<Coding>? valueCoding;
   @override
-  final List<CodeableConcept> valueCodeableConcept;
+  final List<CodeableConcept>? valueCodeableConcept;
 
   @override
   String toString() {
@@ -1863,41 +1858,41 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
 abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   _DataRequirementCodeFilter._() : super._();
   factory _DataRequirementCodeFilter(
-          {String path,
-          @JsonKey(name: '_path') Element pathElement,
-          String valueSetString,
-          @JsonKey(name: '_valueSetString') Element valueSetStringElement,
-          Reference valueSetReference,
-          List<Code> valueCode,
-          @JsonKey(name: '_valueCode') List<Element> valueCodeElement,
-          List<Coding> valueCoding,
-          List<CodeableConcept> valueCodeableConcept}) =
+          {String? path,
+          @JsonKey(name: '_path') Element? pathElement,
+          String? valueSetString,
+          @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
+          Reference? valueSetReference,
+          List<Code>? valueCode,
+          @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
+          List<Coding>? valueCoding,
+          List<CodeableConcept>? valueCodeableConcept}) =
       _$_DataRequirementCodeFilter;
 
   factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementCodeFilter.fromJson;
 
   @override
-  String get path;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element get pathElement;
+  Element? get pathElement;
   @override
-  String get valueSetString;
+  String? get valueSetString;
   @override
   @JsonKey(name: '_valueSetString')
-  Element get valueSetStringElement;
+  Element? get valueSetStringElement;
   @override
-  Reference get valueSetReference;
+  Reference? get valueSetReference;
   @override
-  List<Code> get valueCode;
+  List<Code>? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  List<Element> get valueCodeElement;
+  List<Element?>? get valueCodeElement;
   @override
-  List<Coding> get valueCoding;
+  List<Coding>? get valueCoding;
   @override
-  List<CodeableConcept> get valueCodeableConcept;
+  List<CodeableConcept>? get valueCodeableConcept;
   @override
   @JsonKey(ignore: true)
   _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter> get copyWith;
@@ -1912,14 +1907,13 @@ DataRequirementDateFilter _$DataRequirementDateFilterFromJson(
 class _$DataRequirementDateFilterTearOff {
   const _$DataRequirementDateFilterTearOff();
 
-// ignore: unused_element
   _DataRequirementDateFilter call(
-      {String path,
-      @JsonKey(name: '_path') Element pathElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Period valuePeriod,
-      FhirDuration valueDuration}) {
+      {String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Period? valuePeriod,
+      FhirDuration? valueDuration}) {
     return _DataRequirementDateFilter(
       path: path,
       pathElement: pathElement,
@@ -1930,26 +1924,24 @@ class _$DataRequirementDateFilterTearOff {
     );
   }
 
-// ignore: unused_element
   DataRequirementDateFilter fromJson(Map<String, Object> json) {
     return DataRequirementDateFilter.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DataRequirementDateFilter = _$DataRequirementDateFilterTearOff();
 
 /// @nodoc
 mixin _$DataRequirementDateFilter {
-  String get path;
+  String? get path;
   @JsonKey(name: '_path')
-  Element get pathElement;
-  FhirDateTime get valueDateTime;
+  Element? get pathElement;
+  FhirDateTime? get valueDateTime;
   @JsonKey(name: '_valueDateTime')
-  Element get valueDateTimeElement;
-  Period get valuePeriod;
-  FhirDuration get valueDuration;
+  Element? get valueDateTimeElement;
+  Period? get valuePeriod;
+  FhirDuration? get valueDuration;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1962,17 +1954,17 @@ abstract class $DataRequirementDateFilterCopyWith<$Res> {
           $Res Function(DataRequirementDateFilter) then) =
       _$DataRequirementDateFilterCopyWithImpl<$Res>;
   $Res call(
-      {String path,
-      @JsonKey(name: '_path') Element pathElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Period valuePeriod,
-      FhirDuration valueDuration});
+      {String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Period? valuePeriod,
+      FhirDuration? valueDuration});
 
-  $ElementCopyWith<$Res> get pathElement;
-  $ElementCopyWith<$Res> get valueDateTimeElement;
-  $PeriodCopyWith<$Res> get valuePeriod;
-  $FhirDurationCopyWith<$Res> get valueDuration;
+  $ElementCopyWith<$Res>? get pathElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  $PeriodCopyWith<$Res>? get valuePeriod;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
 }
 
 /// @nodoc
@@ -1986,67 +1978,71 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object path = freezed,
-    Object pathElement = freezed,
-    Object valueDateTime = freezed,
-    Object valueDateTimeElement = freezed,
-    Object valuePeriod = freezed,
-    Object valueDuration = freezed,
+    Object? path = freezed,
+    Object? pathElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueDuration = freezed,
   }) {
     return _then(_value.copyWith(
-      path: path == freezed ? _value.path : path as String,
+      path: path == freezed ? _value.path : path as String?,
       pathElement:
-          pathElement == freezed ? _value.pathElement : pathElement as Element,
+          pathElement == freezed ? _value.pathElement : pathElement as Element?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
+          : valueDateTime as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
-          : valueDateTimeElement as Element,
+          : valueDateTimeElement as Element?,
       valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
+          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as FhirDuration,
+          : valueDuration as FhirDuration?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get pathElement {
+  $ElementCopyWith<$Res>? get pathElement {
     if (_value.pathElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.pathElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.pathElement!, (value) {
       return _then(_value.copyWith(pathElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDateTimeElement {
+  $ElementCopyWith<$Res>? get valueDateTimeElement {
     if (_value.valueDateTimeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDateTimeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement!, (value) {
       return _then(_value.copyWith(valueDateTimeElement: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get valuePeriod {
+  $PeriodCopyWith<$Res>? get valuePeriod {
     if (_value.valuePeriod == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.valuePeriod!, (value) {
       return _then(_value.copyWith(valuePeriod: value));
     });
   }
 
   @override
-  $FhirDurationCopyWith<$Res> get valueDuration {
+  $FhirDurationCopyWith<$Res>? get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
-    return $FhirDurationCopyWith<$Res>(_value.valueDuration, (value) {
+
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
       return _then(_value.copyWith(valueDuration: value));
     });
   }
@@ -2060,21 +2056,21 @@ abstract class _$DataRequirementDateFilterCopyWith<$Res>
       __$DataRequirementDateFilterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String path,
-      @JsonKey(name: '_path') Element pathElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Period valuePeriod,
-      FhirDuration valueDuration});
+      {String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Period? valuePeriod,
+      FhirDuration? valueDuration});
 
   @override
-  $ElementCopyWith<$Res> get pathElement;
+  $ElementCopyWith<$Res>? get pathElement;
   @override
-  $ElementCopyWith<$Res> get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
   @override
-  $PeriodCopyWith<$Res> get valuePeriod;
+  $PeriodCopyWith<$Res>? get valuePeriod;
   @override
-  $FhirDurationCopyWith<$Res> get valueDuration;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
 }
 
 /// @nodoc
@@ -2091,28 +2087,28 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object path = freezed,
-    Object pathElement = freezed,
-    Object valueDateTime = freezed,
-    Object valueDateTimeElement = freezed,
-    Object valuePeriod = freezed,
-    Object valueDuration = freezed,
+    Object? path = freezed,
+    Object? pathElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueDuration = freezed,
   }) {
     return _then(_DataRequirementDateFilter(
-      path: path == freezed ? _value.path : path as String,
+      path: path == freezed ? _value.path : path as String?,
       pathElement:
-          pathElement == freezed ? _value.pathElement : pathElement as Element,
+          pathElement == freezed ? _value.pathElement : pathElement as Element?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
+          : valueDateTime as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
-          : valueDateTimeElement as Element,
+          : valueDateTimeElement as Element?,
       valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
+          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
-          : valueDuration as FhirDuration,
+          : valueDuration as FhirDuration?,
     ));
   }
 }
@@ -2134,19 +2130,19 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
       _$_$_DataRequirementDateFilterFromJson(json);
 
   @override
-  final String path;
+  final String? path;
   @override
   @JsonKey(name: '_path')
-  final Element pathElement;
+  final Element? pathElement;
   @override
-  final FhirDateTime valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
-  final Element valueDateTimeElement;
+  final Element? valueDateTimeElement;
   @override
-  final Period valuePeriod;
+  final Period? valuePeriod;
   @override
-  final FhirDuration valueDuration;
+  final FhirDuration? valueDuration;
 
   @override
   String toString() {
@@ -2202,30 +2198,30 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
 abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   _DataRequirementDateFilter._() : super._();
   factory _DataRequirementDateFilter(
-      {String path,
-      @JsonKey(name: '_path') Element pathElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Period valuePeriod,
-      FhirDuration valueDuration}) = _$_DataRequirementDateFilter;
+      {String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Period? valuePeriod,
+      FhirDuration? valueDuration}) = _$_DataRequirementDateFilter;
 
   factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementDateFilter.fromJson;
 
   @override
-  String get path;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element get pathElement;
+  Element? get pathElement;
   @override
-  FhirDateTime get valueDateTime;
+  FhirDateTime? get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element get valueDateTimeElement;
+  Element? get valueDateTimeElement;
   @override
-  Period get valuePeriod;
+  Period? get valuePeriod;
   @override
-  FhirDuration get valueDuration;
+  FhirDuration? get valueDuration;
   @override
   @JsonKey(ignore: true)
   _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter> get copyWith;
@@ -2239,21 +2235,20 @@ ParameterDefinition _$ParameterDefinitionFromJson(Map<String, dynamic> json) {
 class _$ParameterDefinitionTearOff {
   const _$ParameterDefinitionTearOff();
 
-// ignore: unused_element
   _ParameterDefinition call(
-      {String name,
-      @JsonKey(name: '_name') Element nameElement,
-      String use,
-      @JsonKey(name: '_use') Element useElement,
-      Decimal min,
-      @JsonKey(name: '_min') Element minElement,
-      String max,
-      @JsonKey(name: '_max') Element maxElement,
-      String documentation,
-      @JsonKey(name: '_documentation') Element documentationElement,
-      String type,
-      @JsonKey(name: '_type') Element typeElement,
-      Reference profile}) {
+      {String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? use,
+      @JsonKey(name: '_use') Element? useElement,
+      Decimal? min,
+      @JsonKey(name: '_min') Element? minElement,
+      String? max,
+      @JsonKey(name: '_max') Element? maxElement,
+      String? documentation,
+      @JsonKey(name: '_documentation') Element? documentationElement,
+      String? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      Reference? profile}) {
     return _ParameterDefinition(
       name: name,
       nameElement: nameElement,
@@ -2271,37 +2266,35 @@ class _$ParameterDefinitionTearOff {
     );
   }
 
-// ignore: unused_element
   ParameterDefinition fromJson(Map<String, Object> json) {
     return ParameterDefinition.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ParameterDefinition = _$ParameterDefinitionTearOff();
 
 /// @nodoc
 mixin _$ParameterDefinition {
-  String get name;
+  String? get name;
   @JsonKey(name: '_name')
-  Element get nameElement;
-  String get use;
+  Element? get nameElement;
+  String? get use;
   @JsonKey(name: '_use')
-  Element get useElement;
-  Decimal get min;
+  Element? get useElement;
+  Decimal? get min;
   @JsonKey(name: '_min')
-  Element get minElement;
-  String get max;
+  Element? get minElement;
+  String? get max;
   @JsonKey(name: '_max')
-  Element get maxElement;
-  String get documentation;
+  Element? get maxElement;
+  String? get documentation;
   @JsonKey(name: '_documentation')
-  Element get documentationElement;
-  String get type;
+  Element? get documentationElement;
+  String? get type;
   @JsonKey(name: '_type')
-  Element get typeElement;
-  Reference get profile;
+  Element? get typeElement;
+  Reference? get profile;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2314,27 +2307,27 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
           ParameterDefinition value, $Res Function(ParameterDefinition) then) =
       _$ParameterDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {String name,
-      @JsonKey(name: '_name') Element nameElement,
-      String use,
-      @JsonKey(name: '_use') Element useElement,
-      Decimal min,
-      @JsonKey(name: '_min') Element minElement,
-      String max,
-      @JsonKey(name: '_max') Element maxElement,
-      String documentation,
-      @JsonKey(name: '_documentation') Element documentationElement,
-      String type,
-      @JsonKey(name: '_type') Element typeElement,
-      Reference profile});
+      {String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? use,
+      @JsonKey(name: '_use') Element? useElement,
+      Decimal? min,
+      @JsonKey(name: '_min') Element? minElement,
+      String? max,
+      @JsonKey(name: '_max') Element? maxElement,
+      String? documentation,
+      @JsonKey(name: '_documentation') Element? documentationElement,
+      String? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      Reference? profile});
 
-  $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get useElement;
-  $ElementCopyWith<$Res> get minElement;
-  $ElementCopyWith<$Res> get maxElement;
-  $ElementCopyWith<$Res> get documentationElement;
-  $ElementCopyWith<$Res> get typeElement;
-  $ReferenceCopyWith<$Res> get profile;
+  $ElementCopyWith<$Res>? get nameElement;
+  $ElementCopyWith<$Res>? get useElement;
+  $ElementCopyWith<$Res>? get minElement;
+  $ElementCopyWith<$Res>? get maxElement;
+  $ElementCopyWith<$Res>? get documentationElement;
+  $ElementCopyWith<$Res>? get typeElement;
+  $ReferenceCopyWith<$Res>? get profile;
 }
 
 /// @nodoc
@@ -2348,112 +2341,119 @@ class _$ParameterDefinitionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object use = freezed,
-    Object useElement = freezed,
-    Object min = freezed,
-    Object minElement = freezed,
-    Object max = freezed,
-    Object maxElement = freezed,
-    Object documentation = freezed,
-    Object documentationElement = freezed,
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object profile = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? use = freezed,
+    Object? useElement = freezed,
+    Object? min = freezed,
+    Object? minElement = freezed,
+    Object? max = freezed,
+    Object? maxElement = freezed,
+    Object? documentation = freezed,
+    Object? documentationElement = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? profile = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
+      name: name == freezed ? _value.name : name as String?,
       nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      use: use == freezed ? _value.use : use as String,
+          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+      use: use == freezed ? _value.use : use as String?,
       useElement:
-          useElement == freezed ? _value.useElement : useElement as Element,
-      min: min == freezed ? _value.min : min as Decimal,
+          useElement == freezed ? _value.useElement : useElement as Element?,
+      min: min == freezed ? _value.min : min as Decimal?,
       minElement:
-          minElement == freezed ? _value.minElement : minElement as Element,
-      max: max == freezed ? _value.max : max as String,
+          minElement == freezed ? _value.minElement : minElement as Element?,
+      max: max == freezed ? _value.max : max as String?,
       maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element,
+          maxElement == freezed ? _value.maxElement : maxElement as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String,
+          : documentation as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element,
-      type: type == freezed ? _value.type : type as String,
+          : documentationElement as Element?,
+      type: type == freezed ? _value.type : type as String?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      profile: profile == freezed ? _value.profile : profile as Reference,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      profile: profile == freezed ? _value.profile : profile as Reference?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get nameElement {
+  $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
       return _then(_value.copyWith(nameElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get useElement {
+  $ElementCopyWith<$Res>? get useElement {
     if (_value.useElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.useElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.useElement!, (value) {
       return _then(_value.copyWith(useElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get minElement {
+  $ElementCopyWith<$Res>? get minElement {
     if (_value.minElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.minElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.minElement!, (value) {
       return _then(_value.copyWith(minElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get maxElement {
+  $ElementCopyWith<$Res>? get maxElement {
     if (_value.maxElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.maxElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.maxElement!, (value) {
       return _then(_value.copyWith(maxElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get documentationElement {
+  $ElementCopyWith<$Res>? get documentationElement {
     if (_value.documentationElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.documentationElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.documentationElement!, (value) {
       return _then(_value.copyWith(documentationElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get typeElement {
+  $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
       return _then(_value.copyWith(typeElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get profile {
+  $ReferenceCopyWith<$Res>? get profile {
     if (_value.profile == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.profile, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.profile!, (value) {
       return _then(_value.copyWith(profile: value));
     });
   }
@@ -2467,34 +2467,34 @@ abstract class _$ParameterDefinitionCopyWith<$Res>
       __$ParameterDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String name,
-      @JsonKey(name: '_name') Element nameElement,
-      String use,
-      @JsonKey(name: '_use') Element useElement,
-      Decimal min,
-      @JsonKey(name: '_min') Element minElement,
-      String max,
-      @JsonKey(name: '_max') Element maxElement,
-      String documentation,
-      @JsonKey(name: '_documentation') Element documentationElement,
-      String type,
-      @JsonKey(name: '_type') Element typeElement,
-      Reference profile});
+      {String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? use,
+      @JsonKey(name: '_use') Element? useElement,
+      Decimal? min,
+      @JsonKey(name: '_min') Element? minElement,
+      String? max,
+      @JsonKey(name: '_max') Element? maxElement,
+      String? documentation,
+      @JsonKey(name: '_documentation') Element? documentationElement,
+      String? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      Reference? profile});
 
   @override
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get nameElement;
   @override
-  $ElementCopyWith<$Res> get useElement;
+  $ElementCopyWith<$Res>? get useElement;
   @override
-  $ElementCopyWith<$Res> get minElement;
+  $ElementCopyWith<$Res>? get minElement;
   @override
-  $ElementCopyWith<$Res> get maxElement;
+  $ElementCopyWith<$Res>? get maxElement;
   @override
-  $ElementCopyWith<$Res> get documentationElement;
+  $ElementCopyWith<$Res>? get documentationElement;
   @override
-  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res>? get typeElement;
   @override
-  $ReferenceCopyWith<$Res> get profile;
+  $ReferenceCopyWith<$Res>? get profile;
 }
 
 /// @nodoc
@@ -2510,43 +2510,43 @@ class __$ParameterDefinitionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object use = freezed,
-    Object useElement = freezed,
-    Object min = freezed,
-    Object minElement = freezed,
-    Object max = freezed,
-    Object maxElement = freezed,
-    Object documentation = freezed,
-    Object documentationElement = freezed,
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object profile = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? use = freezed,
+    Object? useElement = freezed,
+    Object? min = freezed,
+    Object? minElement = freezed,
+    Object? max = freezed,
+    Object? maxElement = freezed,
+    Object? documentation = freezed,
+    Object? documentationElement = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? profile = freezed,
   }) {
     return _then(_ParameterDefinition(
-      name: name == freezed ? _value.name : name as String,
+      name: name == freezed ? _value.name : name as String?,
       nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      use: use == freezed ? _value.use : use as String,
+          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+      use: use == freezed ? _value.use : use as String?,
       useElement:
-          useElement == freezed ? _value.useElement : useElement as Element,
-      min: min == freezed ? _value.min : min as Decimal,
+          useElement == freezed ? _value.useElement : useElement as Element?,
+      min: min == freezed ? _value.min : min as Decimal?,
       minElement:
-          minElement == freezed ? _value.minElement : minElement as Element,
-      max: max == freezed ? _value.max : max as String,
+          minElement == freezed ? _value.minElement : minElement as Element?,
+      max: max == freezed ? _value.max : max as String?,
       maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element,
+          maxElement == freezed ? _value.maxElement : maxElement as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String,
+          : documentation as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element,
-      type: type == freezed ? _value.type : type as String,
+          : documentationElement as Element?,
+      type: type == freezed ? _value.type : type as String?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      profile: profile == freezed ? _value.profile : profile as Reference,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      profile: profile == freezed ? _value.profile : profile as Reference?,
     ));
   }
 }
@@ -2575,37 +2575,37 @@ class _$_ParameterDefinition extends _ParameterDefinition {
       _$_$_ParameterDefinitionFromJson(json);
 
   @override
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: '_name')
-  final Element nameElement;
+  final Element? nameElement;
   @override
-  final String use;
+  final String? use;
   @override
   @JsonKey(name: '_use')
-  final Element useElement;
+  final Element? useElement;
   @override
-  final Decimal min;
+  final Decimal? min;
   @override
   @JsonKey(name: '_min')
-  final Element minElement;
+  final Element? minElement;
   @override
-  final String max;
+  final String? max;
   @override
   @JsonKey(name: '_max')
-  final Element maxElement;
+  final Element? maxElement;
   @override
-  final String documentation;
+  final String? documentation;
   @override
   @JsonKey(name: '_documentation')
-  final Element documentationElement;
+  final Element? documentationElement;
   @override
-  final String type;
+  final String? type;
   @override
   @JsonKey(name: '_type')
-  final Element typeElement;
+  final Element? typeElement;
   @override
-  final Reference profile;
+  final Reference? profile;
 
   @override
   String toString() {
@@ -2683,55 +2683,55 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 abstract class _ParameterDefinition extends ParameterDefinition {
   _ParameterDefinition._() : super._();
   factory _ParameterDefinition(
-      {String name,
-      @JsonKey(name: '_name') Element nameElement,
-      String use,
-      @JsonKey(name: '_use') Element useElement,
-      Decimal min,
-      @JsonKey(name: '_min') Element minElement,
-      String max,
-      @JsonKey(name: '_max') Element maxElement,
-      String documentation,
-      @JsonKey(name: '_documentation') Element documentationElement,
-      String type,
-      @JsonKey(name: '_type') Element typeElement,
-      Reference profile}) = _$_ParameterDefinition;
+      {String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? use,
+      @JsonKey(name: '_use') Element? useElement,
+      Decimal? min,
+      @JsonKey(name: '_min') Element? minElement,
+      String? max,
+      @JsonKey(name: '_max') Element? maxElement,
+      String? documentation,
+      @JsonKey(name: '_documentation') Element? documentationElement,
+      String? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      Reference? profile}) = _$_ParameterDefinition;
 
   factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
       _$_ParameterDefinition.fromJson;
 
   @override
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element get nameElement;
+  Element? get nameElement;
   @override
-  String get use;
+  String? get use;
   @override
   @JsonKey(name: '_use')
-  Element get useElement;
+  Element? get useElement;
   @override
-  Decimal get min;
+  Decimal? get min;
   @override
   @JsonKey(name: '_min')
-  Element get minElement;
+  Element? get minElement;
   @override
-  String get max;
+  String? get max;
   @override
   @JsonKey(name: '_max')
-  Element get maxElement;
+  Element? get maxElement;
   @override
-  String get documentation;
+  String? get documentation;
   @override
   @JsonKey(name: '_documentation')
-  Element get documentationElement;
+  Element? get documentationElement;
   @override
-  String get type;
+  String? get type;
   @override
   @JsonKey(name: '_type')
-  Element get typeElement;
+  Element? get typeElement;
   @override
-  Reference get profile;
+  Reference? get profile;
   @override
   @JsonKey(ignore: true)
   _$ParameterDefinitionCopyWith<_ParameterDefinition> get copyWith;
@@ -2745,19 +2745,22 @@ TriggerDefinition _$TriggerDefinitionFromJson(Map<String, dynamic> json) {
 class _$TriggerDefinitionTearOff {
   const _$TriggerDefinitionTearOff();
 
-// ignore: unused_element
   _TriggerDefinition call(
-      {TriggerDefinitionType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String eventName,
-      @JsonKey(name: '_eventName') Element eventNameElement,
-      Timing eventTimingTiming,
-      Reference eventTimingReference,
-      Date eventTimingDate,
-      @JsonKey(name: '_eventTimingDate') Element eventTimingDateElement,
-      FhirDateTime eventTimingDateTime,
-      @JsonKey(name: '_eventTimingDateTime') Element eventTimingDateTimeElement,
-      DataRequirement eventData}) {
+      {TriggerDefinitionType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      String? eventName,
+      @JsonKey(name: '_eventName')
+          Element? eventNameElement,
+      Timing? eventTimingTiming,
+      Reference? eventTimingReference,
+      Date? eventTimingDate,
+      @JsonKey(name: '_eventTimingDate')
+          Element? eventTimingDateElement,
+      FhirDateTime? eventTimingDateTime,
+      @JsonKey(name: '_eventTimingDateTime')
+          Element? eventTimingDateTimeElement,
+      DataRequirement? eventData}) {
     return _TriggerDefinition(
       type: type,
       typeElement: typeElement,
@@ -2773,33 +2776,31 @@ class _$TriggerDefinitionTearOff {
     );
   }
 
-// ignore: unused_element
   TriggerDefinition fromJson(Map<String, Object> json) {
     return TriggerDefinition.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TriggerDefinition = _$TriggerDefinitionTearOff();
 
 /// @nodoc
 mixin _$TriggerDefinition {
-  TriggerDefinitionType get type;
+  TriggerDefinitionType? get type;
   @JsonKey(name: '_type')
-  Element get typeElement;
-  String get eventName;
+  Element? get typeElement;
+  String? get eventName;
   @JsonKey(name: '_eventName')
-  Element get eventNameElement;
-  Timing get eventTimingTiming;
-  Reference get eventTimingReference;
-  Date get eventTimingDate;
+  Element? get eventNameElement;
+  Timing? get eventTimingTiming;
+  Reference? get eventTimingReference;
+  Date? get eventTimingDate;
   @JsonKey(name: '_eventTimingDate')
-  Element get eventTimingDateElement;
-  FhirDateTime get eventTimingDateTime;
+  Element? get eventTimingDateElement;
+  FhirDateTime? get eventTimingDateTime;
   @JsonKey(name: '_eventTimingDateTime')
-  Element get eventTimingDateTimeElement;
-  DataRequirement get eventData;
+  Element? get eventTimingDateTimeElement;
+  DataRequirement? get eventData;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2812,25 +2813,29 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
           TriggerDefinition value, $Res Function(TriggerDefinition) then) =
       _$TriggerDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {TriggerDefinitionType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String eventName,
-      @JsonKey(name: '_eventName') Element eventNameElement,
-      Timing eventTimingTiming,
-      Reference eventTimingReference,
-      Date eventTimingDate,
-      @JsonKey(name: '_eventTimingDate') Element eventTimingDateElement,
-      FhirDateTime eventTimingDateTime,
-      @JsonKey(name: '_eventTimingDateTime') Element eventTimingDateTimeElement,
-      DataRequirement eventData});
+      {TriggerDefinitionType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      String? eventName,
+      @JsonKey(name: '_eventName')
+          Element? eventNameElement,
+      Timing? eventTimingTiming,
+      Reference? eventTimingReference,
+      Date? eventTimingDate,
+      @JsonKey(name: '_eventTimingDate')
+          Element? eventTimingDateElement,
+      FhirDateTime? eventTimingDateTime,
+      @JsonKey(name: '_eventTimingDateTime')
+          Element? eventTimingDateTimeElement,
+      DataRequirement? eventData});
 
-  $ElementCopyWith<$Res> get typeElement;
-  $ElementCopyWith<$Res> get eventNameElement;
-  $TimingCopyWith<$Res> get eventTimingTiming;
-  $ReferenceCopyWith<$Res> get eventTimingReference;
-  $ElementCopyWith<$Res> get eventTimingDateElement;
-  $ElementCopyWith<$Res> get eventTimingDateTimeElement;
-  $DataRequirementCopyWith<$Res> get eventData;
+  $ElementCopyWith<$Res>? get typeElement;
+  $ElementCopyWith<$Res>? get eventNameElement;
+  $TimingCopyWith<$Res>? get eventTimingTiming;
+  $ReferenceCopyWith<$Res>? get eventTimingReference;
+  $ElementCopyWith<$Res>? get eventTimingDateElement;
+  $ElementCopyWith<$Res>? get eventTimingDateTimeElement;
+  $DataRequirementCopyWith<$Res>? get eventData;
 }
 
 /// @nodoc
@@ -2844,116 +2849,123 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object eventName = freezed,
-    Object eventNameElement = freezed,
-    Object eventTimingTiming = freezed,
-    Object eventTimingReference = freezed,
-    Object eventTimingDate = freezed,
-    Object eventTimingDateElement = freezed,
-    Object eventTimingDateTime = freezed,
-    Object eventTimingDateTimeElement = freezed,
-    Object eventData = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? eventName = freezed,
+    Object? eventNameElement = freezed,
+    Object? eventTimingTiming = freezed,
+    Object? eventTimingReference = freezed,
+    Object? eventTimingDate = freezed,
+    Object? eventTimingDateElement = freezed,
+    Object? eventTimingDateTime = freezed,
+    Object? eventTimingDateTimeElement = freezed,
+    Object? eventData = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed ? _value.type : type as TriggerDefinitionType,
+      type: type == freezed ? _value.type : type as TriggerDefinitionType?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      eventName: eventName == freezed ? _value.eventName : eventName as String,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      eventName: eventName == freezed ? _value.eventName : eventName as String?,
       eventNameElement: eventNameElement == freezed
           ? _value.eventNameElement
-          : eventNameElement as Element,
+          : eventNameElement as Element?,
       eventTimingTiming: eventTimingTiming == freezed
           ? _value.eventTimingTiming
-          : eventTimingTiming as Timing,
+          : eventTimingTiming as Timing?,
       eventTimingReference: eventTimingReference == freezed
           ? _value.eventTimingReference
-          : eventTimingReference as Reference,
+          : eventTimingReference as Reference?,
       eventTimingDate: eventTimingDate == freezed
           ? _value.eventTimingDate
-          : eventTimingDate as Date,
+          : eventTimingDate as Date?,
       eventTimingDateElement: eventTimingDateElement == freezed
           ? _value.eventTimingDateElement
-          : eventTimingDateElement as Element,
+          : eventTimingDateElement as Element?,
       eventTimingDateTime: eventTimingDateTime == freezed
           ? _value.eventTimingDateTime
-          : eventTimingDateTime as FhirDateTime,
+          : eventTimingDateTime as FhirDateTime?,
       eventTimingDateTimeElement: eventTimingDateTimeElement == freezed
           ? _value.eventTimingDateTimeElement
-          : eventTimingDateTimeElement as Element,
+          : eventTimingDateTimeElement as Element?,
       eventData: eventData == freezed
           ? _value.eventData
-          : eventData as DataRequirement,
+          : eventData as DataRequirement?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get typeElement {
+  $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
       return _then(_value.copyWith(typeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get eventNameElement {
+  $ElementCopyWith<$Res>? get eventNameElement {
     if (_value.eventNameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.eventNameElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.eventNameElement!, (value) {
       return _then(_value.copyWith(eventNameElement: value));
     });
   }
 
   @override
-  $TimingCopyWith<$Res> get eventTimingTiming {
+  $TimingCopyWith<$Res>? get eventTimingTiming {
     if (_value.eventTimingTiming == null) {
       return null;
     }
-    return $TimingCopyWith<$Res>(_value.eventTimingTiming, (value) {
+
+    return $TimingCopyWith<$Res>(_value.eventTimingTiming!, (value) {
       return _then(_value.copyWith(eventTimingTiming: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get eventTimingReference {
+  $ReferenceCopyWith<$Res>? get eventTimingReference {
     if (_value.eventTimingReference == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.eventTimingReference, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.eventTimingReference!, (value) {
       return _then(_value.copyWith(eventTimingReference: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get eventTimingDateElement {
+  $ElementCopyWith<$Res>? get eventTimingDateElement {
     if (_value.eventTimingDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.eventTimingDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.eventTimingDateElement!, (value) {
       return _then(_value.copyWith(eventTimingDateElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get eventTimingDateTimeElement {
+  $ElementCopyWith<$Res>? get eventTimingDateTimeElement {
     if (_value.eventTimingDateTimeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.eventTimingDateTimeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.eventTimingDateTimeElement!, (value) {
       return _then(_value.copyWith(eventTimingDateTimeElement: value));
     });
   }
 
   @override
-  $DataRequirementCopyWith<$Res> get eventData {
+  $DataRequirementCopyWith<$Res>? get eventData {
     if (_value.eventData == null) {
       return null;
     }
-    return $DataRequirementCopyWith<$Res>(_value.eventData, (value) {
+
+    return $DataRequirementCopyWith<$Res>(_value.eventData!, (value) {
       return _then(_value.copyWith(eventData: value));
     });
   }
@@ -2967,32 +2979,36 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
       __$TriggerDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {TriggerDefinitionType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String eventName,
-      @JsonKey(name: '_eventName') Element eventNameElement,
-      Timing eventTimingTiming,
-      Reference eventTimingReference,
-      Date eventTimingDate,
-      @JsonKey(name: '_eventTimingDate') Element eventTimingDateElement,
-      FhirDateTime eventTimingDateTime,
-      @JsonKey(name: '_eventTimingDateTime') Element eventTimingDateTimeElement,
-      DataRequirement eventData});
+      {TriggerDefinitionType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      String? eventName,
+      @JsonKey(name: '_eventName')
+          Element? eventNameElement,
+      Timing? eventTimingTiming,
+      Reference? eventTimingReference,
+      Date? eventTimingDate,
+      @JsonKey(name: '_eventTimingDate')
+          Element? eventTimingDateElement,
+      FhirDateTime? eventTimingDateTime,
+      @JsonKey(name: '_eventTimingDateTime')
+          Element? eventTimingDateTimeElement,
+      DataRequirement? eventData});
 
   @override
-  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res>? get typeElement;
   @override
-  $ElementCopyWith<$Res> get eventNameElement;
+  $ElementCopyWith<$Res>? get eventNameElement;
   @override
-  $TimingCopyWith<$Res> get eventTimingTiming;
+  $TimingCopyWith<$Res>? get eventTimingTiming;
   @override
-  $ReferenceCopyWith<$Res> get eventTimingReference;
+  $ReferenceCopyWith<$Res>? get eventTimingReference;
   @override
-  $ElementCopyWith<$Res> get eventTimingDateElement;
+  $ElementCopyWith<$Res>? get eventTimingDateElement;
   @override
-  $ElementCopyWith<$Res> get eventTimingDateTimeElement;
+  $ElementCopyWith<$Res>? get eventTimingDateTimeElement;
   @override
-  $DataRequirementCopyWith<$Res> get eventData;
+  $DataRequirementCopyWith<$Res>? get eventData;
 }
 
 /// @nodoc
@@ -3008,47 +3024,47 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object eventName = freezed,
-    Object eventNameElement = freezed,
-    Object eventTimingTiming = freezed,
-    Object eventTimingReference = freezed,
-    Object eventTimingDate = freezed,
-    Object eventTimingDateElement = freezed,
-    Object eventTimingDateTime = freezed,
-    Object eventTimingDateTimeElement = freezed,
-    Object eventData = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? eventName = freezed,
+    Object? eventNameElement = freezed,
+    Object? eventTimingTiming = freezed,
+    Object? eventTimingReference = freezed,
+    Object? eventTimingDate = freezed,
+    Object? eventTimingDateElement = freezed,
+    Object? eventTimingDateTime = freezed,
+    Object? eventTimingDateTimeElement = freezed,
+    Object? eventData = freezed,
   }) {
     return _then(_TriggerDefinition(
-      type: type == freezed ? _value.type : type as TriggerDefinitionType,
+      type: type == freezed ? _value.type : type as TriggerDefinitionType?,
       typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      eventName: eventName == freezed ? _value.eventName : eventName as String,
+          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+      eventName: eventName == freezed ? _value.eventName : eventName as String?,
       eventNameElement: eventNameElement == freezed
           ? _value.eventNameElement
-          : eventNameElement as Element,
+          : eventNameElement as Element?,
       eventTimingTiming: eventTimingTiming == freezed
           ? _value.eventTimingTiming
-          : eventTimingTiming as Timing,
+          : eventTimingTiming as Timing?,
       eventTimingReference: eventTimingReference == freezed
           ? _value.eventTimingReference
-          : eventTimingReference as Reference,
+          : eventTimingReference as Reference?,
       eventTimingDate: eventTimingDate == freezed
           ? _value.eventTimingDate
-          : eventTimingDate as Date,
+          : eventTimingDate as Date?,
       eventTimingDateElement: eventTimingDateElement == freezed
           ? _value.eventTimingDateElement
-          : eventTimingDateElement as Element,
+          : eventTimingDateElement as Element?,
       eventTimingDateTime: eventTimingDateTime == freezed
           ? _value.eventTimingDateTime
-          : eventTimingDateTime as FhirDateTime,
+          : eventTimingDateTime as FhirDateTime?,
       eventTimingDateTimeElement: eventTimingDateTimeElement == freezed
           ? _value.eventTimingDateTimeElement
-          : eventTimingDateTimeElement as Element,
+          : eventTimingDateTimeElement as Element?,
       eventData: eventData == freezed
           ? _value.eventData
-          : eventData as DataRequirement,
+          : eventData as DataRequirement?,
     ));
   }
 }
@@ -3075,31 +3091,31 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       _$_$_TriggerDefinitionFromJson(json);
 
   @override
-  final TriggerDefinitionType type;
+  final TriggerDefinitionType? type;
   @override
   @JsonKey(name: '_type')
-  final Element typeElement;
+  final Element? typeElement;
   @override
-  final String eventName;
+  final String? eventName;
   @override
   @JsonKey(name: '_eventName')
-  final Element eventNameElement;
+  final Element? eventNameElement;
   @override
-  final Timing eventTimingTiming;
+  final Timing? eventTimingTiming;
   @override
-  final Reference eventTimingReference;
+  final Reference? eventTimingReference;
   @override
-  final Date eventTimingDate;
+  final Date? eventTimingDate;
   @override
   @JsonKey(name: '_eventTimingDate')
-  final Element eventTimingDateElement;
+  final Element? eventTimingDateElement;
   @override
-  final FhirDateTime eventTimingDateTime;
+  final FhirDateTime? eventTimingDateTime;
   @override
   @JsonKey(name: '_eventTimingDateTime')
-  final Element eventTimingDateTimeElement;
+  final Element? eventTimingDateTimeElement;
   @override
-  final DataRequirement eventData;
+  final DataRequirement? eventData;
 
   @override
   String toString() {
@@ -3175,47 +3191,51 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 abstract class _TriggerDefinition extends TriggerDefinition {
   _TriggerDefinition._() : super._();
   factory _TriggerDefinition(
-      {TriggerDefinitionType type,
-      @JsonKey(name: '_type') Element typeElement,
-      String eventName,
-      @JsonKey(name: '_eventName') Element eventNameElement,
-      Timing eventTimingTiming,
-      Reference eventTimingReference,
-      Date eventTimingDate,
-      @JsonKey(name: '_eventTimingDate') Element eventTimingDateElement,
-      FhirDateTime eventTimingDateTime,
-      @JsonKey(name: '_eventTimingDateTime') Element eventTimingDateTimeElement,
-      DataRequirement eventData}) = _$_TriggerDefinition;
+      {TriggerDefinitionType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      String? eventName,
+      @JsonKey(name: '_eventName')
+          Element? eventNameElement,
+      Timing? eventTimingTiming,
+      Reference? eventTimingReference,
+      Date? eventTimingDate,
+      @JsonKey(name: '_eventTimingDate')
+          Element? eventTimingDateElement,
+      FhirDateTime? eventTimingDateTime,
+      @JsonKey(name: '_eventTimingDateTime')
+          Element? eventTimingDateTimeElement,
+      DataRequirement? eventData}) = _$_TriggerDefinition;
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
       _$_TriggerDefinition.fromJson;
 
   @override
-  TriggerDefinitionType get type;
+  TriggerDefinitionType? get type;
   @override
   @JsonKey(name: '_type')
-  Element get typeElement;
+  Element? get typeElement;
   @override
-  String get eventName;
+  String? get eventName;
   @override
   @JsonKey(name: '_eventName')
-  Element get eventNameElement;
+  Element? get eventNameElement;
   @override
-  Timing get eventTimingTiming;
+  Timing? get eventTimingTiming;
   @override
-  Reference get eventTimingReference;
+  Reference? get eventTimingReference;
   @override
-  Date get eventTimingDate;
+  Date? get eventTimingDate;
   @override
   @JsonKey(name: '_eventTimingDate')
-  Element get eventTimingDateElement;
+  Element? get eventTimingDateElement;
   @override
-  FhirDateTime get eventTimingDateTime;
+  FhirDateTime? get eventTimingDateTime;
   @override
   @JsonKey(name: '_eventTimingDateTime')
-  Element get eventTimingDateTimeElement;
+  Element? get eventTimingDateTimeElement;
   @override
-  DataRequirement get eventData;
+  DataRequirement? get eventData;
   @override
   @JsonKey(ignore: true)
   _$TriggerDefinitionCopyWith<_TriggerDefinition> get copyWith;

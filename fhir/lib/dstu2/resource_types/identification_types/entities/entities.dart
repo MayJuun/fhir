@@ -18,32 +18,32 @@ abstract class Location with Resource implements _$Location {
     @Default(Dstu2ResourceType.Location)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    CodeableConcept type,
-    List<ContactPoint> telecom,
-    Address address,
-    CodeableConcept physicalType,
-    LocationPosition position,
-    Reference managingOrganization,
-    Reference partOf,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode? mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    CodeableConcept? type,
+    List<ContactPoint>? telecom,
+    Address? address,
+    CodeableConcept? physicalType,
+    LocationPosition? position,
+    Reference? managingOrganization,
+    Reference? partOf,
   }) = _Location;
 
   /// Produces a Yaml formatted String version of the object
@@ -54,7 +54,9 @@ abstract class Location with Resource implements _$Location {
       ? Location.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Location.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Location cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Location.fromJson(Map<String, dynamic> json) =>
@@ -65,15 +67,15 @@ abstract class Location with Resource implements _$Location {
 abstract class LocationPosition with _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Decimal longitude,
-    @JsonKey(name: '_longitude') Element longitudeElement,
-    @JsonKey(required: true) @required Decimal latitude,
-    @JsonKey(name: '_latitude') Element latitudeElement,
-    Decimal altitude,
-    @JsonKey(name: '_altitude') Element altitudeElement,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Decimal longitude,
+    @JsonKey(name: '_longitude') Element? longitudeElement,
+    required Decimal latitude,
+    @JsonKey(name: '_latitude') Element? latitudeElement,
+    Decimal? altitude,
+    @JsonKey(name: '_altitude') Element? altitudeElement,
   }) = _LocationPosition;
 
   /// Produces a Yaml formatted String version of the object
@@ -84,7 +86,9 @@ abstract class LocationPosition with _$LocationPosition {
       ? LocationPosition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? LocationPosition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'LocationPosition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory LocationPosition.fromJson(Map<String, dynamic> json) =>
@@ -98,23 +102,23 @@ abstract class Substance with Resource implements _$Substance {
     @Default(Dstu2ResourceType.Substance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<CodeableConcept> category,
-    @JsonKey(required: true) @required CodeableConcept code,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<SubstanceInstance> instance,
-    List<SubstanceIngredient> ingredient,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<CodeableConcept>? category,
+    required CodeableConcept code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<SubstanceInstance>? instance,
+    List<SubstanceIngredient>? ingredient,
   }) = _Substance;
 
   /// Produces a Yaml formatted String version of the object
@@ -125,7 +129,9 @@ abstract class Substance with Resource implements _$Substance {
       ? Substance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Substance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Substance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Substance.fromJson(Map<String, dynamic> json) =>
@@ -136,13 +142,13 @@ abstract class Substance with Resource implements _$Substance {
 abstract class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    FhirDateTime expiry,
-    @JsonKey(name: '_expiry') Element expiryElement,
-    Quantity quantity,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    FhirDateTime? expiry,
+    @JsonKey(name: '_expiry') Element? expiryElement,
+    Quantity? quantity,
   }) = _SubstanceInstance;
 
   /// Produces a Yaml formatted String version of the object
@@ -153,7 +159,9 @@ abstract class SubstanceInstance with _$SubstanceInstance {
       ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SubstanceInstance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
@@ -164,11 +172,11 @@ abstract class SubstanceInstance with _$SubstanceInstance {
 abstract class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Ratio quantity,
-    @JsonKey(required: true) @required Reference substance,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Ratio? quantity,
+    required Reference substance,
   }) = _SubstanceIngredient;
 
   /// Produces a Yaml formatted String version of the object
@@ -179,7 +187,9 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
       ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SubstanceIngredient cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
@@ -193,29 +203,29 @@ abstract class Person with Resource implements _$Person {
     @Default(Dstu2ResourceType.Person)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<HumanName> name,
-    List<ContactPoint> telecom,
-    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Date birthDate,
-    @JsonKey(name: '_birthDate') Element birthDateElement,
-    List<Address> address,
-    Attachment photo,
-    Reference managingOrganization,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    List<PersonLink> link,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<HumanName>? name,
+    List<ContactPoint>? telecom,
+    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Date? birthDate,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
+    List<Address>? address,
+    Attachment? photo,
+    Reference? managingOrganization,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    List<PersonLink>? link,
   }) = _Person;
 
   /// Produces a Yaml formatted String version of the object
@@ -226,7 +236,9 @@ abstract class Person with Resource implements _$Person {
       ? Person.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Person.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Person cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
@@ -236,12 +248,12 @@ abstract class Person with Resource implements _$Person {
 abstract class PersonLink with _$PersonLink {
   PersonLink._();
   factory PersonLink({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Reference target,
-    @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance assurance,
-    @JsonKey(name: '_assurance') Element assuranceElement,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference target,
+    @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance? assurance,
+    @JsonKey(name: '_assurance') Element? assuranceElement,
   }) = _PersonLink;
 
   /// Produces a Yaml formatted String version of the object
@@ -252,7 +264,9 @@ abstract class PersonLink with _$PersonLink {
       ? PersonLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PersonLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PersonLink cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
@@ -266,36 +280,36 @@ abstract class Contract with Resource implements _$Contract {
     @Default(Dstu2ResourceType.Contract)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    FhirDateTime issued,
-    @JsonKey(name: '_issued') Element issuedElement,
-    Period applies,
-    List<Reference> subject,
-    List<Reference> authority,
-    List<Reference> domain,
-    CodeableConcept type,
-    List<CodeableConcept> subType,
-    List<CodeableConcept> action,
-    List<CodeableConcept> actionReason,
-    List<ContractActor> actor,
-    List<ContractValuedItem> valuedItem,
-    List<ContractSigner> signer,
-    List<ContractTerm> term,
-    Attachment bindingAttachment,
-    Reference bindingReference,
-    List<ContractFriendly> friendly,
-    List<ContractLegal> legal,
-    List<ContractRule> rule,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    FhirDateTime? issued,
+    @JsonKey(name: '_issued') Element? issuedElement,
+    Period? applies,
+    List<Reference>? subject,
+    List<Reference>? authority,
+    List<Reference>? domain,
+    CodeableConcept? type,
+    List<CodeableConcept>? subType,
+    List<CodeableConcept>? action,
+    List<CodeableConcept>? actionReason,
+    List<ContractActor>? actor,
+    List<ContractValuedItem>? valuedItem,
+    List<ContractSigner>? signer,
+    List<ContractTerm>? term,
+    Attachment? bindingAttachment,
+    Reference? bindingReference,
+    List<ContractFriendly>? friendly,
+    List<ContractLegal>? legal,
+    List<ContractRule>? rule,
   }) = _Contract;
 
   /// Produces a Yaml formatted String version of the object
@@ -306,7 +320,9 @@ abstract class Contract with Resource implements _$Contract {
       ? Contract.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Contract.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Contract cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Contract.fromJson(Map<String, dynamic> json) =>
@@ -317,11 +333,11 @@ abstract class Contract with Resource implements _$Contract {
 abstract class ContractActor with _$ContractActor {
   ContractActor._();
   factory ContractActor({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Reference entity,
-    List<CodeableConcept> role,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference entity,
+    List<CodeableConcept>? role,
   }) = _ContractActor;
 
   /// Produces a Yaml formatted String version of the object
@@ -332,7 +348,9 @@ abstract class ContractActor with _$ContractActor {
       ? ContractActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractActor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractActor cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractActor.fromJson(Map<String, dynamic> json) =>
@@ -343,22 +361,22 @@ abstract class ContractActor with _$ContractActor {
 abstract class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept entityCodeableConcept,
-    Reference entityReference,
-    Identifier identifier,
-    FhirDateTime effectiveTime,
-    @JsonKey(name: '_effectiveTime') Element effectiveTimeElement,
-    Quantity quantity,
-    Quantity unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Decimal points,
-    @JsonKey(name: '_points') Element pointsElement,
-    Quantity net,
-    List<Element> securityLabelNumberElement,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? entityCodeableConcept,
+    Reference? entityReference,
+    Identifier? identifier,
+    FhirDateTime? effectiveTime,
+    @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
+    Quantity? quantity,
+    Quantity? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Decimal? points,
+    @JsonKey(name: '_points') Element? pointsElement,
+    Quantity? net,
+    List<Element>? securityLabelNumberElement,
   }) = _ContractValuedItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -369,7 +387,9 @@ abstract class ContractValuedItem with _$ContractValuedItem {
       ? ContractValuedItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractValuedItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractValuedItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
@@ -380,12 +400,12 @@ abstract class ContractValuedItem with _$ContractValuedItem {
 abstract class ContractSigner with _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Coding type,
-    @JsonKey(required: true) @required Reference party,
-    @JsonKey(required: true) @required String signature,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Coding type,
+    required Reference party,
+    required String signature,
   }) = _ContractSigner;
 
   /// Produces a Yaml formatted String version of the object
@@ -396,7 +416,9 @@ abstract class ContractSigner with _$ContractSigner {
       ? ContractSigner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractSigner.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractSigner cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractSigner.fromJson(Map<String, dynamic> json) =>
@@ -407,23 +429,23 @@ abstract class ContractSigner with _$ContractSigner {
 abstract class ContractTerm with _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    FhirDateTime issued,
-    @JsonKey(name: '_issued') Element issuedElement,
-    Period applies,
-    CodeableConcept type,
-    CodeableConcept subType,
-    Reference subject,
-    List<CodeableConcept> action,
-    List<CodeableConcept> actionReason,
-    List<ContractTermActor> actor,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
-    List<ContractValuedItem> valuedItem,
-    List<ContractTerm> group,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    FhirDateTime? issued,
+    @JsonKey(name: '_issued') Element? issuedElement,
+    Period? applies,
+    CodeableConcept? type,
+    CodeableConcept? subType,
+    Reference? subject,
+    List<CodeableConcept>? action,
+    List<CodeableConcept>? actionReason,
+    List<ContractTermActor>? actor,
+    String? text,
+    @JsonKey(name: '_text') Element? textElement,
+    List<ContractValuedItem>? valuedItem,
+    List<ContractTerm>? group,
   }) = _ContractTerm;
 
   /// Produces a Yaml formatted String version of the object
@@ -434,7 +456,9 @@ abstract class ContractTerm with _$ContractTerm {
       ? ContractTerm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractTerm.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractTerm cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractTerm.fromJson(Map<String, dynamic> json) =>
@@ -445,11 +469,11 @@ abstract class ContractTerm with _$ContractTerm {
 abstract class ContractTermActor with _$ContractTermActor {
   ContractTermActor._();
   factory ContractTermActor({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Reference entity,
-    List<CodeableConcept> role,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference entity,
+    List<CodeableConcept>? role,
   }) = _ContractTermActor;
 
   /// Produces a Yaml formatted String version of the object
@@ -460,7 +484,9 @@ abstract class ContractTermActor with _$ContractTermActor {
       ? ContractTermActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractTermActor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractTermActor cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractTermActor.fromJson(Map<String, dynamic> json) =>
@@ -471,11 +497,11 @@ abstract class ContractTermActor with _$ContractTermActor {
 abstract class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Attachment contentAttachment,
-    Reference contactReference,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Attachment? contentAttachment,
+    Reference? contactReference,
   }) = _ContractFriendly;
 
   /// Produces a Yaml formatted String version of the object
@@ -486,7 +512,9 @@ abstract class ContractFriendly with _$ContractFriendly {
       ? ContractFriendly.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractFriendly.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractFriendly cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
@@ -497,11 +525,11 @@ abstract class ContractFriendly with _$ContractFriendly {
 abstract class ContractLegal with _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Attachment contentAttachment,
-    Reference content,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Attachment? contentAttachment,
+    Reference? content,
   }) = _ContractLegal;
 
   /// Produces a Yaml formatted String version of the object
@@ -512,7 +540,9 @@ abstract class ContractLegal with _$ContractLegal {
       ? ContractLegal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractLegal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractLegal cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractLegal.fromJson(Map<String, dynamic> json) =>
@@ -523,11 +553,11 @@ abstract class ContractLegal with _$ContractLegal {
 abstract class ContractRule with _$ContractRule {
   ContractRule._();
   factory ContractRule({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Attachment contentAttachment,
-    Reference contentReference,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Attachment? contentAttachment,
+    Reference? contentReference,
   }) = _ContractRule;
 
   /// Produces a Yaml formatted String version of the object
@@ -538,7 +568,9 @@ abstract class ContractRule with _$ContractRule {
       ? ContractRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractRule.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractRule cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractRule.fromJson(Map<String, dynamic> json) =>

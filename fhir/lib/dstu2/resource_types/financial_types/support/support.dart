@@ -18,33 +18,33 @@ abstract class Coverage with Resource implements _$Coverage {
     @Default(Dstu2ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference issuer,
-    Identifier bin,
-    Period period,
-    Coding type,
-    Identifier subscriberId,
-    @JsonKey(name: '_subscriberId') Element subscriberIdElement,
-    List<Identifier> identifier,
-    String group,
-    String plan,
-    String subPlan,
-    PositiveInt dependent,
-    @JsonKey(name: '_dependent') Element dependentElement,
-    PositiveInt sequence,
-    Reference subscriber,
-    Identifier network,
-    @JsonKey(name: '_network') Element networkElement,
-    List<Reference> contract,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? issuer,
+    Identifier? bin,
+    Period? period,
+    Coding? type,
+    Identifier? subscriberId,
+    @JsonKey(name: '_subscriberId') Element? subscriberIdElement,
+    List<Identifier>? identifier,
+    String? group,
+    String? plan,
+    String? subPlan,
+    PositiveInt? dependent,
+    @JsonKey(name: '_dependent') Element? dependentElement,
+    PositiveInt? sequence,
+    Reference? subscriber,
+    Identifier? network,
+    @JsonKey(name: '_network') Element? networkElement,
+    List<Reference>? contract,
   }) = _Coverage;
 
   /// Produces a Yaml formatted String version of the object
@@ -55,7 +55,9 @@ abstract class Coverage with Resource implements _$Coverage {
       ? Coverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Coverage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Coverage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Coverage.fromJson(Map<String, dynamic> json) =>
@@ -71,24 +73,24 @@ abstract class EligibilityRequest
     @Default(Dstu2ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Coding ruleset,
-    Coding originalRuleset,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference target,
-    Reference provider,
-    Reference organization,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Coding? ruleset,
+    Coding? originalRuleset,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? target,
+    Reference? provider,
+    Reference? organization,
   }) = _EligibilityRequest;
 
   /// Produces a Yaml formatted String version of the object
@@ -99,7 +101,9 @@ abstract class EligibilityRequest
       ? EligibilityRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EligibilityRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EligibilityRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
@@ -115,30 +119,30 @@ abstract class EligibilityResponse
     @Default(Dstu2ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Reference request,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Reference? request,
     @JsonKey(unknownEnumValue: EligibilityResponseOutcome.unknown)
-        EligibilityResponseOutcome outcome,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    String disposition,
-    @JsonKey(name: '_disposition') Element dispositionElement,
-    Coding ruleset,
-    Coding originalRuleset,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference organization,
-    Reference requestProvider,
-    Reference requestOrganization,
+        EligibilityResponseOutcome? outcome,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
+    String? disposition,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
+    Coding? ruleset,
+    Coding? originalRuleset,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? organization,
+    Reference? requestProvider,
+    Reference? requestOrganization,
   }) = _EligibilityResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -149,7 +153,9 @@ abstract class EligibilityResponse
       ? EligibilityResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EligibilityResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EligibilityResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
@@ -163,27 +169,27 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     @Default(Dstu2ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Coding ruleset,
-    Coding originalRuleset,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference target,
-    Reference provider,
-    Reference organization,
-    @JsonKey(required: true) @required Reference subject,
-    @JsonKey(required: true) @required Reference coverage,
-    @JsonKey(required: true) @required Coding relationship,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Coding? ruleset,
+    Coding? originalRuleset,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? target,
+    Reference? provider,
+    Reference? organization,
+    required Reference subject,
+    required Reference coverage,
+    required Coding relationship,
   }) = _EnrollmentRequest;
 
   /// Produces a Yaml formatted String version of the object
@@ -194,7 +200,9 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
       ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EnrollmentRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
@@ -210,30 +218,30 @@ abstract class EnrollmentResponse
     @Default(Dstu2ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Reference request,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Reference? request,
     @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-        EnrollmentResponseOutcome outcome,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    String disposition,
-    @JsonKey(name: '_disposition') Element dispositionElement,
-    Coding ruleset,
-    Coding originalRuleset,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference organization,
-    Reference requestProvider,
-    Reference requestOrganization,
+        EnrollmentResponseOutcome? outcome,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
+    String? disposition,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
+    Coding? ruleset,
+    Coding? originalRuleset,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? organization,
+    Reference? requestProvider,
+    Reference? requestOrganization,
   }) = _EnrollmentResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -244,7 +252,9 @@ abstract class EnrollmentResponse
       ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EnrollmentResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>

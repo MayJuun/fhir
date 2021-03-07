@@ -15,42 +15,42 @@ class FhirDb {
   FhirDb._();
   static final FhirDb _db = FhirDb._();
   static FhirDb get instance => _db;
-  Completer<Database> _dbOpenCompleter;
+  Completer<Database>? _dbOpenCompleter;
   final _dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
 
-  Future updatePassword(String oldPw, String newPw) async =>
+  Future updatePassword(String? oldPw, String? newPw) async =>
       await _updatePw(oldPw, newPw);
 
-  Future<Database> database(String pw) async {
+  Future<Database> database(String? pw) async {
     if (_dbOpenCompleter == null) {
       _dbOpenCompleter = Completer();
       _openDatabase(pw);
     }
-    return _dbOpenCompleter.future;
+    return _dbOpenCompleter!.future;
   }
 
-  Future _openDatabase(String pw) async {
+  Future _openDatabase(String? pw) async {
     final database = await _getDb('fhir.db', pw);
-    _dbOpenCompleter.complete(database);
+    _dbOpenCompleter!.complete(database);
   }
 
-  Future<Database> _getDb(String path, String pw) async {
+  Future<Database> _getDb(String path, String? pw) async {
     final _appDocDir = await getApplicationDocumentsDirectory();
 
     final dbPath = join(_appDocDir.path, path);
 
-    final codec = _codec(pw);
+    final codec = pw == null ? null : _codec(pw);
 
     return codec == null
         ? await _dbFactory.openDatabase(dbPath)
         : await _dbFactory.openDatabase(dbPath, codec: codec);
   }
 
-  SembastCodec _codec(String pw) =>
+  SembastCodec? _codec(String? pw) =>
       pw == null || pw == '' ? null : getEncryptSembastCodecAES(password: pw);
   // getEncryptSembastCodecSalsa20(password: pw);
 
-  Future _updatePw(String oldPw, String newPw) async {
+  Future _updatePw(String? oldPw, String? newPw) async {
     final _appDocDir = await getApplicationDocumentsDirectory();
     var db = await _getDb('fhir.db', oldPw);
     final exportMap = await exportDatabase(db);
@@ -71,6 +71,6 @@ class FhirDb {
 
     _dbOpenCompleter = null;
     _dbOpenCompleter = Completer();
-    _dbOpenCompleter.complete(db);
+    _dbOpenCompleter!.complete(db);
   }
 }

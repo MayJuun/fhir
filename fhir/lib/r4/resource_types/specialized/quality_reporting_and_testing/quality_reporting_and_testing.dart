@@ -281,81 +281,81 @@ abstract class Measure with Resource implements _$Measure {
     @Default(R4ResourceType.Measure)
     @JsonKey(unknownEnumValue: R4ResourceType.Measure)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    List<Identifier> identifier,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    String subtitle,
-    @JsonKey(name: '_subtitle') Element subtitleElement,
-    @JsonKey(unknownEnumValue: MeasureStatus.unknown) MeasureStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Boolean experimental,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    CodeableConcept subjectCodeableConcept,
-    Reference subjectReference,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    String publisher,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    List<ContactDetail> contact,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    String usage,
-    @JsonKey(name: '_usage') Element usageElement,
-    Markdown copyright,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    Date approvalDate,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    Date lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-    Period effectivePeriod,
-    List<CodeableConcept> topic,
-    List<ContactDetail> author,
-    List<ContactDetail> editor,
-    List<ContactDetail> reviewer,
-    List<ContactDetail> endorser,
-    List<RelatedArtifact> relatedArtifact,
-    @JsonKey(name: 'library') List<Canonical> library_,
-    Markdown disclaimer,
-    @JsonKey(name: '_disclaimer') Element disclaimerElement,
-    CodeableConcept scoring,
-    CodeableConcept compositeScoring,
-    List<CodeableConcept> type,
-    String riskAdjustment,
-    @JsonKey(name: '_riskAdjustment') Element riskAdjustmentElement,
-    String rateAggregation,
-    @JsonKey(name: '_rateAggregation') Element rateAggregationElement,
-    Markdown rationale,
-    @JsonKey(name: '_rationale') Element rationaleElement,
-    Markdown clinicalRecommendationStatement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    @JsonKey(unknownEnumValue: MeasureStatus.unknown) MeasureStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    @JsonKey(name: 'library') List<Canonical>? library_,
+    Markdown? disclaimer,
+    @JsonKey(name: '_disclaimer') Element? disclaimerElement,
+    CodeableConcept? scoring,
+    CodeableConcept? compositeScoring,
+    List<CodeableConcept>? type,
+    String? riskAdjustment,
+    @JsonKey(name: '_riskAdjustment') Element? riskAdjustmentElement,
+    String? rateAggregation,
+    @JsonKey(name: '_rateAggregation') Element? rateAggregationElement,
+    Markdown? rationale,
+    @JsonKey(name: '_rationale') Element? rationaleElement,
+    Markdown? clinicalRecommendationStatement,
     @JsonKey(name: '_clinicalRecommendationStatement')
-        Element clinicalRecommendationStatementElement,
-    CodeableConcept improvementNotation,
-    List<Markdown> definition,
-    @JsonKey(name: '_definition') List<Element> definitionElement,
-    Markdown guidance,
-    @JsonKey(name: '_guidance') Element guidanceElement,
-    List<MeasureGroup> group,
-    List<MeasureSupplementalData> supplementalData,
+        Element? clinicalRecommendationStatementElement,
+    CodeableConcept? improvementNotation,
+    List<Markdown>? definition,
+    @JsonKey(name: '_definition') List<Element?>? definitionElement,
+    Markdown? guidance,
+    @JsonKey(name: '_guidance') Element? guidanceElement,
+    List<MeasureGroup>? group,
+    List<MeasureSupplementalData>? supplementalData,
   }) = _Measure;
 
   /// Produces a Yaml formatted String version of the object
@@ -366,7 +366,9 @@ abstract class Measure with Resource implements _$Measure {
       ? Measure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Measure.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Measure cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Measure.fromJson(Map<String, dynamic> json) =>
@@ -419,14 +421,14 @@ abstract class MeasureGroup implements _$MeasureGroup {
   /// either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
   factory MeasureGroup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<MeasurePopulation> population,
-    List<MeasureStratifier> stratifier,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<MeasurePopulation>? population,
+    List<MeasureStratifier>? stratifier,
   }) = _MeasureGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -437,7 +439,9 @@ abstract class MeasureGroup implements _$MeasureGroup {
       ? MeasureGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureGroup.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureGroup cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
@@ -484,13 +488,13 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
   /// [criteria]: An expression that specifies the criteria for the population,
   ///  typically the name of an expression in a library.
   factory MeasurePopulation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @required Expression criteria,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required Expression criteria,
   }) = _MeasurePopulation;
 
   /// Produces a Yaml formatted String version of the object
@@ -501,7 +505,9 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
       ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasurePopulation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
@@ -556,14 +562,14 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
   /// report, specified as either the name of a valid CQL expression defined
   ///  within a referenced library or a valid FHIR Resource Path.
   factory MeasureStratifier({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    Expression criteria,
-    List<MeasureComponent> component,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    Expression? criteria,
+    List<MeasureComponent>? component,
   }) = _MeasureStratifier;
 
   /// Produces a Yaml formatted String version of the object
@@ -574,7 +580,9 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
       ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureStratifier cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
@@ -627,13 +635,13 @@ abstract class MeasureComponent implements _$MeasureComponent {
   /// within a referenced library, but it may also be a path to a stratifier
   ///  element.
   factory MeasureComponent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @required Expression criteria,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required Expression criteria,
   }) = _MeasureComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -644,7 +652,9 @@ abstract class MeasureComponent implements _$MeasureComponent {
       ? MeasureComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureComponent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureComponent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureComponent.fromJson(Map<String, dynamic> json) =>
@@ -702,14 +712,14 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
   /// also be a path to a specific data element. The criteria defines the data
   ///  to be returned for this element.
   factory MeasureSupplementalData({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    List<CodeableConcept> usage,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @required Expression criteria,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    List<CodeableConcept>? usage,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required Expression criteria,
   }) = _MeasureSupplementalData;
 
   /// Produces a Yaml formatted String version of the object
@@ -720,7 +730,9 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
       ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureSupplementalData cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
@@ -834,32 +846,32 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     @Default(R4ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-        MeasureReportStatus status,
-    @JsonKey(name: '_status') Element statusElement,
+        MeasureReportStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
     @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-        MeasureReportType type,
-    @JsonKey(name: '_type') Element typeElement,
-    @required Canonical measure,
-    Reference subject,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    Reference reporter,
-    @required Period period,
-    CodeableConcept improvementNotation,
-    List<MeasureReportGroup> group,
-    List<Reference> evaluatedResource,
+        MeasureReportType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    required Canonical measure,
+    Reference? subject,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    Reference? reporter,
+    required Period period,
+    CodeableConcept? improvementNotation,
+    List<MeasureReportGroup>? group,
+    List<Reference>? evaluatedResource,
   }) = _MeasureReport;
 
   /// Produces a Yaml formatted String version of the object
@@ -870,7 +882,9 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
       ? MeasureReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureReport.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureReport cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReport.fromJson(Map<String, dynamic> json) =>
@@ -922,13 +936,13 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
   /// [stratifier]: When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
   factory MeasureReportGroup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    List<MeasureReportPopulation> population,
-    Quantity measureScore,
-    List<MeasureReportStratifier> stratifier,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    List<MeasureReportPopulation>? population,
+    Quantity? measureScore,
+    List<MeasureReportStratifier>? stratifier,
   }) = _MeasureReportGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -939,7 +953,9 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
       ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureReportGroup cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
@@ -987,13 +1003,13 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
   /// [subjectResults]: This element refers to a List of subject level
   ///  MeasureReport resources, one for each subject in this population.
   factory MeasureReportPopulation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    Integer count,
-    @JsonKey(name: '_count') Element countElement,
-    Reference subjectResults,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    Integer? count,
+    @JsonKey(name: '_count') Element? countElement,
+    Reference? subjectResults,
   }) = _MeasureReportPopulation;
 
   /// Produces a Yaml formatted String version of the object
@@ -1004,7 +1020,9 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
       ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureReportPopulation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
@@ -1050,11 +1068,11 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
   /// the stratifier. For example, when stratifying on administrative gender,
   ///  there will be four strata, one for each possible gender value.
   factory MeasureReportStratifier({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> code,
-    List<MeasureReportStratum> stratum,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? code,
+    List<MeasureReportStratum>? stratum,
   }) = _MeasureReportStratifier;
 
   /// Produces a Yaml formatted String version of the object
@@ -1065,7 +1083,9 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
       ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureReportStratifier cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
@@ -1117,13 +1137,13 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
   /// appropriate for the measure type and scoring method, and based on only the
   ///  members of this stratum.
   factory MeasureReportStratum({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept value,
-    List<MeasureReportComponent> component,
-    List<MeasureReportPopulation1> population,
-    Quantity measureScore,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? value,
+    List<MeasureReportComponent>? component,
+    List<MeasureReportPopulation1>? population,
+    Quantity? measureScore,
   }) = _MeasureReportStratum;
 
   /// Produces a Yaml formatted String version of the object
@@ -1134,7 +1154,9 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
       ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureReportStratum cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
@@ -1177,11 +1199,11 @@ abstract class MeasureReportComponent implements _$MeasureReportComponent {
   ///
   /// [value]: The stratum component value.
   factory MeasureReportComponent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept code,
-    @required CodeableConcept value,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept code,
+    required CodeableConcept value,
   }) = _MeasureReportComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -1192,7 +1214,9 @@ abstract class MeasureReportComponent implements _$MeasureReportComponent {
       ? MeasureReportComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureReportComponent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureReportComponent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportComponent.fromJson(Map<String, dynamic> json) =>
@@ -1241,13 +1265,13 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
   /// MeasureReport resources, one for each subject in this population in this
   ///  stratum.
   factory MeasureReportPopulation1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept code,
-    Integer count,
-    @JsonKey(name: '_count') Element countElement,
-    Reference subjectResults,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? code,
+    Integer? count,
+    @JsonKey(name: '_count') Element? countElement,
+    Reference? subjectResults,
   }) = _MeasureReportPopulation1;
 
   /// Produces a Yaml formatted String version of the object
@@ -1259,7 +1283,9 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MeasureReportPopulation1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MeasureReportPopulation1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
@@ -1375,36 +1401,36 @@ abstract class TestReport with Resource implements _$TestReport {
     @Default(R4ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-        TestReportStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    @required Reference testScript,
+        TestReportStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    required Reference testScript,
     @JsonKey(unknownEnumValue: TestReportResult.unknown)
-        TestReportResult result,
-    @JsonKey(name: '_result') Element resultElement,
-    Decimal score,
-    @JsonKey(name: '_score') Element scoreElement,
-    String tester,
-    @JsonKey(name: '_tester') Element testerElement,
-    FhirDateTime issued,
-    @JsonKey(name: '_issued') Element issuedElement,
-    List<TestReportParticipant> participant,
-    TestReportSetup setup,
-    List<TestReportTest> test,
-    TestReportTeardown teardown,
+        TestReportResult? result,
+    @JsonKey(name: '_result') Element? resultElement,
+    Decimal? score,
+    @JsonKey(name: '_score') Element? scoreElement,
+    String? tester,
+    @JsonKey(name: '_tester') Element? testerElement,
+    FhirDateTime? issued,
+    @JsonKey(name: '_issued') Element? issuedElement,
+    List<TestReportParticipant>? participant,
+    TestReportSetup? setup,
+    List<TestReportTest>? test,
+    TestReportTeardown? teardown,
   }) = _TestReport;
 
   /// Produces a Yaml formatted String version of the object
@@ -1415,7 +1441,9 @@ abstract class TestReport with Resource implements _$TestReport {
       ? TestReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReport.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReport cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReport.fromJson(Map<String, dynamic> json) =>
@@ -1465,16 +1493,16 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
   ///
   /// [_display]: Extensions for display
   factory TestReportParticipant({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-        TestReportParticipantType type,
-    @JsonKey(name: '_type') Element typeElement,
-    FhirUri uri,
-    @JsonKey(name: '_uri') Element uriElement,
-    String display,
-    @JsonKey(name: '_display') Element displayElement,
+        TestReportParticipantType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    FhirUri? uri,
+    @JsonKey(name: '_uri') Element? uriElement,
+    String? display,
+    @JsonKey(name: '_display') Element? displayElement,
   }) = _TestReportParticipant;
 
   /// Produces a Yaml formatted String version of the object
@@ -1485,7 +1513,9 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
       ? TestReportParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReportParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReportParticipant cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
@@ -1525,10 +1555,10 @@ abstract class TestReportSetup implements _$TestReportSetup {
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestReportSetup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required List<TestReportAction> action,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required List<TestReportAction> action,
   }) = _TestReportSetup;
 
   /// Produces a Yaml formatted String version of the object
@@ -1539,7 +1569,9 @@ abstract class TestReportSetup implements _$TestReportSetup {
       ? TestReportSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReportSetup.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReportSetup cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
@@ -1582,11 +1614,11 @@ abstract class TestReportAction implements _$TestReportAction {
   /// [assert]: The results of the assertion performed on the previous
   ///  operations.
   factory TestReportAction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    TestReportOperation operation,
-    @JsonKey(name: 'assert') TestReportAssert assert_,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    TestReportOperation? operation,
+    @JsonKey(name: 'assert') TestReportAssert? assert_,
   }) = _TestReportAction;
 
   /// Produces a Yaml formatted String version of the object
@@ -1597,7 +1629,9 @@ abstract class TestReportAction implements _$TestReportAction {
       ? TestReportAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReportAction.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReportAction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAction.fromJson(Map<String, dynamic> json) =>
@@ -1647,16 +1681,16 @@ abstract class TestReportOperation implements _$TestReportOperation {
   ///
   /// [_detail]: Extensions for detail
   factory TestReportOperation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-        TestReportOperationResult result,
-    @JsonKey(name: '_result') Element resultElement,
-    Markdown message,
-    @JsonKey(name: '_message') Element messageElement,
-    FhirUri detail,
-    @JsonKey(name: '_detail') Element detailElement,
+        TestReportOperationResult? result,
+    @JsonKey(name: '_result') Element? resultElement,
+    Markdown? message,
+    @JsonKey(name: '_message') Element? messageElement,
+    FhirUri? detail,
+    @JsonKey(name: '_detail') Element? detailElement,
   }) = _TestReportOperation;
 
   /// Produces a Yaml formatted String version of the object
@@ -1667,7 +1701,9 @@ abstract class TestReportOperation implements _$TestReportOperation {
       ? TestReportOperation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReportOperation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReportOperation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
@@ -1717,16 +1753,16 @@ abstract class TestReportAssert implements _$TestReportAssert {
   ///
   /// [_detail]: Extensions for detail
   factory TestReportAssert({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-        TestReportAssertResult result,
-    @JsonKey(name: '_result') Element resultElement,
-    Markdown message,
-    @JsonKey(name: '_message') Element messageElement,
-    String detail,
-    @JsonKey(name: '_detail') Element detailElement,
+        TestReportAssertResult? result,
+    @JsonKey(name: '_result') Element? resultElement,
+    Markdown? message,
+    @JsonKey(name: '_message') Element? messageElement,
+    String? detail,
+    @JsonKey(name: '_detail') Element? detailElement,
   }) = _TestReportAssert;
 
   /// Produces a Yaml formatted String version of the object
@@ -1737,7 +1773,9 @@ abstract class TestReportAssert implements _$TestReportAssert {
       ? TestReportAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReportAssert.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReportAssert cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
@@ -1787,14 +1825,14 @@ abstract class TestReportTest implements _$TestReportTest {
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestReportTest({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @required List<TestReportAction1> action,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required List<TestReportAction1> action,
   }) = _TestReportTest;
 
   /// Produces a Yaml formatted String version of the object
@@ -1805,7 +1843,9 @@ abstract class TestReportTest implements _$TestReportTest {
       ? TestReportTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReportTest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReportTest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportTest.fromJson(Map<String, dynamic> json) =>
@@ -1848,11 +1888,11 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
   /// [assert]: The results of the assertion performed on the previous
   ///  operations.
   factory TestReportAction1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    TestReportOperation operation,
-    @JsonKey(name: 'assert') TestReportAssert assert_,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    TestReportOperation? operation,
+    @JsonKey(name: 'assert') TestReportAssert? assert_,
   }) = _TestReportAction1;
 
   /// Produces a Yaml formatted String version of the object
@@ -1863,7 +1903,9 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
       ? TestReportAction1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReportAction1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReportAction1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
@@ -1903,10 +1945,10 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
   ///
   /// [action]: The teardown action will only contain an operation.
   factory TestReportTeardown({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required List<TestReportAction2> action,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required List<TestReportAction2> action,
   }) = _TestReportTeardown;
 
   /// Produces a Yaml formatted String version of the object
@@ -1917,7 +1959,9 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
       ? TestReportTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReportTeardown.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReportTeardown cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
@@ -1957,10 +2001,10 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
   ///
   /// [operation]: An operation would involve a REST request to a server.
   factory TestReportAction2({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required TestReportOperation operation,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required TestReportOperation operation,
   }) = _TestReportAction2;
 
   /// Produces a Yaml formatted String version of the object
@@ -1971,7 +2015,9 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
       ? TestReportAction2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestReportAction2.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestReportAction2 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
@@ -2150,52 +2196,52 @@ abstract class TestScript with Resource implements _$TestScript {
     @Default(R4ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    Identifier identifier,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    Identifier? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-        TestScriptStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Boolean experimental,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    String publisher,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    List<ContactDetail> contact,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    Markdown copyright,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    List<TestScriptOrigin> origin,
-    List<TestScriptDestination> destination,
-    TestScriptMetadata metadata,
-    List<TestScriptFixture> fixture,
-    List<Reference> profile,
-    List<TestScriptVariable> variable,
-    TestScriptSetup setup,
-    List<TestScriptTest> test,
-    TestScriptTeardown teardown,
+        TestScriptStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    List<TestScriptOrigin>? origin,
+    List<TestScriptDestination>? destination,
+    TestScriptMetadata? metadata,
+    List<TestScriptFixture>? fixture,
+    List<Reference>? profile,
+    List<TestScriptVariable>? variable,
+    TestScriptSetup? setup,
+    List<TestScriptTest>? test,
+    TestScriptTeardown? teardown,
   }) = _TestScript;
 
   /// Produces a Yaml formatted String version of the object
@@ -2206,7 +2252,9 @@ abstract class TestScript with Resource implements _$TestScript {
       ? TestScript.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScript.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScript cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScript.fromJson(Map<String, dynamic> json) =>
@@ -2252,12 +2300,12 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
   ///
   /// [profile]: The type of origin profile the test system supports.
   factory TestScriptOrigin({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Integer index,
-    @JsonKey(name: '_index') Element indexElement,
-    @required Coding profile,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Integer? index,
+    @JsonKey(name: '_index') Element? indexElement,
+    required Coding profile,
   }) = _TestScriptOrigin;
 
   /// Produces a Yaml formatted String version of the object
@@ -2268,7 +2316,9 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
       ? TestScriptOrigin.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptOrigin.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptOrigin cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
@@ -2314,12 +2364,12 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
   ///
   /// [profile]: The type of destination profile the test system supports.
   factory TestScriptDestination({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Integer index,
-    @JsonKey(name: '_index') Element indexElement,
-    @required Coding profile,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Integer? index,
+    @JsonKey(name: '_index') Element? indexElement,
+    required Coding profile,
   }) = _TestScriptDestination;
 
   /// Produces a Yaml formatted String version of the object
@@ -2330,7 +2380,9 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
       ? TestScriptDestination.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptDestination.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptDestination cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
@@ -2374,11 +2426,11 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
   /// [capability]: Capabilities that must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
   factory TestScriptMetadata({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<TestScriptLink> link,
-    @required List<TestScriptCapability> capability,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<TestScriptLink>? link,
+    required List<TestScriptCapability> capability,
   }) = _TestScriptMetadata;
 
   /// Produces a Yaml formatted String version of the object
@@ -2389,7 +2441,9 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
       ? TestScriptMetadata.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptMetadata.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptMetadata cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
@@ -2437,13 +2491,13 @@ abstract class TestScriptLink implements _$TestScriptLink {
   ///
   /// [_description]: Extensions for description
   factory TestScriptLink({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
   }) = _TestScriptLink;
 
   /// Produces a Yaml formatted String version of the object
@@ -2454,7 +2508,9 @@ abstract class TestScriptLink implements _$TestScriptLink {
       ? TestScriptLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptLink cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
@@ -2526,22 +2582,22 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
   factory TestScriptCapability({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'required') Boolean required_,
-    @JsonKey(name: '_required') Element requiredElement,
-    Boolean validated,
-    @JsonKey(name: '_validated') Element validatedElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<Integer> origin,
-    @JsonKey(name: '_origin') List<Element> originElement,
-    Integer destination,
-    @JsonKey(name: '_destination') Element destinationElement,
-    List<FhirUri> link,
-    @JsonKey(name: '_link') List<Element> linkElement,
-    @required Canonical capabilities,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'required') Boolean? required_,
+    @JsonKey(name: '_required') Element? requiredElement,
+    Boolean? validated,
+    @JsonKey(name: '_validated') Element? validatedElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Integer>? origin,
+    @JsonKey(name: '_origin') List<Element?>? originElement,
+    Integer? destination,
+    @JsonKey(name: '_destination') Element? destinationElement,
+    List<FhirUri>? link,
+    @JsonKey(name: '_link') List<Element?>? linkElement,
+    required Canonical capabilities,
   }) = _TestScriptCapability;
 
   /// Produces a Yaml formatted String version of the object
@@ -2552,7 +2608,9 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
       ? TestScriptCapability.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptCapability.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptCapability cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
@@ -2608,14 +2666,14 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
   /// [resource]: Reference to the resource (containing the contents of the
   ///  resource needed for operations).
   factory TestScriptFixture({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean autocreate,
-    @JsonKey(name: '_autocreate') Element autocreateElement,
-    Boolean autodelete,
-    @JsonKey(name: '_autodelete') Element autodeleteElement,
-    Reference resource,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? autocreate,
+    @JsonKey(name: '_autocreate') Element? autocreateElement,
+    Boolean? autodelete,
+    @JsonKey(name: '_autodelete') Element? autodeleteElement,
+    Reference? resource,
   }) = _TestScriptFixture;
 
   /// Produces a Yaml formatted String version of the object
@@ -2626,7 +2684,9 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
       ? TestScriptFixture.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptFixture.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptFixture cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
@@ -2706,25 +2766,25 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
   ///
   /// [_sourceId]: Extensions for sourceId
   factory TestScriptVariable({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String defaultValue,
-    @JsonKey(name: '_defaultValue') Element defaultValueElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    String expression,
-    @JsonKey(name: '_expression') Element expressionElement,
-    String headerField,
-    @JsonKey(name: '_headerField') Element headerFieldElement,
-    String hint,
-    @JsonKey(name: '_hint') Element hintElement,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
-    Id sourceId,
-    @JsonKey(name: '_sourceId') Element sourceIdElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? defaultValue,
+    @JsonKey(name: '_defaultValue') Element? defaultValueElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    String? expression,
+    @JsonKey(name: '_expression') Element? expressionElement,
+    String? headerField,
+    @JsonKey(name: '_headerField') Element? headerFieldElement,
+    String? hint,
+    @JsonKey(name: '_hint') Element? hintElement,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
+    Id? sourceId,
+    @JsonKey(name: '_sourceId') Element? sourceIdElement,
   }) = _TestScriptVariable;
 
   /// Produces a Yaml formatted String version of the object
@@ -2735,7 +2795,9 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
       ? TestScriptVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptVariable.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptVariable cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
@@ -2776,10 +2838,10 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestScriptSetup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required List<TestScriptAction> action,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required List<TestScriptAction> action,
   }) = _TestScriptSetup;
 
   /// Produces a Yaml formatted String version of the object
@@ -2790,7 +2852,9 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
       ? TestScriptSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptSetup.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptSetup cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
@@ -2834,11 +2898,11 @@ abstract class TestScriptAction implements _$TestScriptAction {
   /// [assert]: Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
   factory TestScriptAction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    TestScriptOperation operation,
-    @JsonKey(name: 'assert') TestScriptAssert assert_,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    TestScriptOperation? operation,
+    @JsonKey(name: 'assert') TestScriptAssert? assert_,
   }) = _TestScriptAction;
 
   /// Produces a Yaml formatted String version of the object
@@ -2849,7 +2913,9 @@ abstract class TestScriptAction implements _$TestScriptAction {
       ? TestScriptAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptAction.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptAction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
@@ -2966,42 +3032,42 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
   ///
   /// [_url]: Extensions for url
   factory TestScriptOperation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Coding type,
-    Code resource,
-    @JsonKey(name: '_resource') Element resourceElement,
-    String label,
-    @JsonKey(name: '_label') Element labelElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    Code accept,
-    @JsonKey(name: '_accept') Element acceptElement,
-    Code contentType,
-    @JsonKey(name: '_contentType') Element contentTypeElement,
-    Integer destination,
-    @JsonKey(name: '_destination') Element destinationElement,
-    Boolean encodeRequestUrl,
-    @JsonKey(name: '_encodeRequestUrl') Element encodeRequestUrlElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Coding? type,
+    Code? resource,
+    @JsonKey(name: '_resource') Element? resourceElement,
+    String? label,
+    @JsonKey(name: '_label') Element? labelElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    Code? accept,
+    @JsonKey(name: '_accept') Element? acceptElement,
+    Code? contentType,
+    @JsonKey(name: '_contentType') Element? contentTypeElement,
+    Integer? destination,
+    @JsonKey(name: '_destination') Element? destinationElement,
+    Boolean? encodeRequestUrl,
+    @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
     @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-        TestScriptOperationMethod method,
-    @JsonKey(name: '_method') Element methodElement,
-    Integer origin,
-    @JsonKey(name: '_origin') Element originElement,
-    String params,
-    @JsonKey(name: '_params') Element paramsElement,
-    List<TestScriptRequestHeader> requestHeader,
-    Id requestId,
-    @JsonKey(name: '_requestId') Element requestIdElement,
-    Id responseId,
-    @JsonKey(name: '_responseId') Element responseIdElement,
-    Id sourceId,
-    @JsonKey(name: '_sourceId') Element sourceIdElement,
-    Id targetId,
-    @JsonKey(name: '_targetId') Element targetIdElement,
-    String url,
-    @JsonKey(name: '_url') Element urlElement,
+        TestScriptOperationMethod? method,
+    @JsonKey(name: '_method') Element? methodElement,
+    Integer? origin,
+    @JsonKey(name: '_origin') Element? originElement,
+    String? params,
+    @JsonKey(name: '_params') Element? paramsElement,
+    List<TestScriptRequestHeader>? requestHeader,
+    Id? requestId,
+    @JsonKey(name: '_requestId') Element? requestIdElement,
+    Id? responseId,
+    @JsonKey(name: '_responseId') Element? responseIdElement,
+    Id? sourceId,
+    @JsonKey(name: '_sourceId') Element? sourceIdElement,
+    Id? targetId,
+    @JsonKey(name: '_targetId') Element? targetIdElement,
+    String? url,
+    @JsonKey(name: '_url') Element? urlElement,
   }) = _TestScriptOperation;
 
   /// Produces a Yaml formatted String version of the object
@@ -3012,7 +3078,9 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
       ? TestScriptOperation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptOperation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptOperation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
@@ -3059,13 +3127,13 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
   ///
   /// [_value]: Extensions for value
   factory TestScriptRequestHeader({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String field,
-    @JsonKey(name: '_field') Element fieldElement,
-    String value,
-    @JsonKey(name: '_value') Element valueElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? field,
+    @JsonKey(name: '_field') Element? fieldElement,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
   }) = _TestScriptRequestHeader;
 
   /// Produces a Yaml formatted String version of the object
@@ -3076,7 +3144,9 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
       ? TestScriptRequestHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptRequestHeader.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptRequestHeader cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
@@ -3226,58 +3296,58 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
   ///
   /// [_warningOnly]: Extensions for warningOnly
   factory TestScriptAssert({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String label,
-    @JsonKey(name: '_label') Element labelElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? label,
+    @JsonKey(name: '_label') Element? labelElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
     @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-        TestScriptAssertDirection direction,
-    @JsonKey(name: '_direction') Element directionElement,
-    String compareToSourceId,
-    @JsonKey(name: '_compareToSourceId') Element compareToSourceIdElement,
-    String compareToSourceExpression,
+        TestScriptAssertDirection? direction,
+    @JsonKey(name: '_direction') Element? directionElement,
+    String? compareToSourceId,
+    @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
+    String? compareToSourceExpression,
     @JsonKey(name: '_compareToSourceExpression')
-        Element compareToSourceExpressionElement,
-    String compareToSourcePath,
-    @JsonKey(name: '_compareToSourcePath') Element compareToSourcePathElement,
-    Code contentType,
-    @JsonKey(name: '_contentType') Element contentTypeElement,
-    String expression,
-    @JsonKey(name: '_expression') Element expressionElement,
-    String headerField,
-    @JsonKey(name: '_headerField') Element headerFieldElement,
-    String minimumId,
-    @JsonKey(name: '_minimumId') Element minimumIdElement,
-    Boolean navigationLinks,
-    @JsonKey(name: '_navigationLinks') Element navigationLinksElement,
+        Element? compareToSourceExpressionElement,
+    String? compareToSourcePath,
+    @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
+    Code? contentType,
+    @JsonKey(name: '_contentType') Element? contentTypeElement,
+    String? expression,
+    @JsonKey(name: '_expression') Element? expressionElement,
+    String? headerField,
+    @JsonKey(name: '_headerField') Element? headerFieldElement,
+    String? minimumId,
+    @JsonKey(name: '_minimumId') Element? minimumIdElement,
+    Boolean? navigationLinks,
+    @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
     @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-        TestScriptAssertOperator operator_,
-    @JsonKey(name: '_operator') Element operatorElement,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
+        TestScriptAssertOperator? operator_,
+    @JsonKey(name: '_operator') Element? operatorElement,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
     @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-        TestScriptAssertRequestMethod requestMethod,
-    @JsonKey(name: '_requestMethod') Element requestMethodElement,
-    String requestURL,
-    @JsonKey(name: '_requestURL') Element requestURLElement,
-    Code resource,
-    @JsonKey(name: '_resource') Element resourceElement,
+        TestScriptAssertRequestMethod? requestMethod,
+    @JsonKey(name: '_requestMethod') Element? requestMethodElement,
+    String? requestURL,
+    @JsonKey(name: '_requestURL') Element? requestURLElement,
+    Code? resource,
+    @JsonKey(name: '_resource') Element? resourceElement,
     @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-        TestScriptAssertResponse response,
-    @JsonKey(name: '_response') Element responseElement,
-    String responseCode,
-    @JsonKey(name: '_responseCode') Element responseCodeElement,
-    Id sourceId,
-    @JsonKey(name: '_sourceId') Element sourceIdElement,
-    Id validateProfileId,
-    @JsonKey(name: '_validateProfileId') Element validateProfileIdElement,
-    String value,
-    @JsonKey(name: '_value') Element valueElement,
-    Boolean warningOnly,
-    @JsonKey(name: '_warningOnly') Element warningOnlyElement,
+        TestScriptAssertResponse? response,
+    @JsonKey(name: '_response') Element? responseElement,
+    String? responseCode,
+    @JsonKey(name: '_responseCode') Element? responseCodeElement,
+    Id? sourceId,
+    @JsonKey(name: '_sourceId') Element? sourceIdElement,
+    Id? validateProfileId,
+    @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
+    Boolean? warningOnly,
+    @JsonKey(name: '_warningOnly') Element? warningOnlyElement,
   }) = _TestScriptAssert;
 
   /// Produces a Yaml formatted String version of the object
@@ -3288,7 +3358,9 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
       ? TestScriptAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptAssert.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptAssert cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
@@ -3339,14 +3411,14 @@ abstract class TestScriptTest implements _$TestScriptTest {
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestScriptTest({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @required List<TestScriptAction1> action,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required List<TestScriptAction1> action,
   }) = _TestScriptTest;
 
   /// Produces a Yaml formatted String version of the object
@@ -3357,7 +3429,9 @@ abstract class TestScriptTest implements _$TestScriptTest {
       ? TestScriptTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptTest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptTest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
@@ -3401,11 +3475,11 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
   /// [assert]: Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
   factory TestScriptAction1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    TestScriptOperation operation,
-    @JsonKey(name: 'assert') TestScriptAssert assert_,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    TestScriptOperation? operation,
+    @JsonKey(name: 'assert') TestScriptAssert? assert_,
   }) = _TestScriptAction1;
 
   /// Produces a Yaml formatted String version of the object
@@ -3416,7 +3490,9 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
       ? TestScriptAction1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptAction1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptAction1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
@@ -3457,10 +3533,10 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
   ///
   /// [action]: The teardown action will only contain an operation.
   factory TestScriptTeardown({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required List<TestScriptAction2> action,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required List<TestScriptAction2> action,
   }) = _TestScriptTeardown;
 
   /// Produces a Yaml formatted String version of the object
@@ -3471,7 +3547,9 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
       ? TestScriptTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptTeardown.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptTeardown cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
@@ -3512,10 +3590,10 @@ abstract class TestScriptAction2 implements _$TestScriptAction2 {
   ///
   /// [operation]: An operation would involve a REST request to a server.
   factory TestScriptAction2({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required TestScriptOperation operation,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required TestScriptOperation operation,
   }) = _TestScriptAction2;
 
   /// Produces a Yaml formatted String version of the object
@@ -3526,7 +3604,9 @@ abstract class TestScriptAction2 implements _$TestScriptAction2 {
       ? TestScriptAction2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TestScriptAction2.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TestScriptAction2 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>

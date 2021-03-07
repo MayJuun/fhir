@@ -76,7 +76,7 @@ Future<void> requestTest() async {
 
   var request =
       BulkRequest.patient(base: Uri.parse('http://hapi.fhir.org/baseR4'));
-  var response = await request.request();
+  var response = await request.request(headers: {'test': 'header'});
 
   request = BulkRequest.patient(
       base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -85,7 +85,7 @@ Future<void> requestTest() async {
         Tuple2(R4ResourceType.Medication, null),
         Tuple2(R4ResourceType.Immunization, null),
       ]);
-  response = await request.request();
+  response = await request.request(headers: {'test': 'header'});
 
   request = BulkRequest.patient(
       base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -93,7 +93,7 @@ Future<void> requestTest() async {
         Tuple2(R4ResourceType.Practitioner, Id('abcdef')),
         Tuple2(R4ResourceType.Organization, Id('ghijkl')),
       ]);
-  response = await request.request();
+  response = await request.request(headers: {'test': 'header'});
 
   request = BulkRequest.patient(
       base: Uri.parse('http://hapi.fhir.org/baseR4'),
@@ -102,16 +102,16 @@ Future<void> requestTest() async {
         Tuple2(R4ResourceType.Practitioner, Id('abcdef')),
         Tuple2(R4ResourceType.Organization, Id('ghijkl')),
       ]);
-  response = await request.request();
+  response = await request.request(headers: {'test': 'header'});
 
   request = BulkRequest.group(
     base: Uri.parse('http://hapi.fhir.org/baseR4'),
     id: Id('12345'),
   );
-  response = await request.request();
+  response = await request.request(headers: {'test': 'header'});
 
   request = BulkRequest.system(base: Uri.parse('http://hapi.fhir.org/baseR4'));
-  response = await request.request();
+  response = await request.request(headers: {'test': 'header'});
 
   request = BulkRequest.patient(
       base: Uri.parse(
@@ -120,7 +120,7 @@ Future<void> requestTest() async {
         Tuple2(R4ResourceType.AllergyIntolerance, null),
         Tuple2(R4ResourceType.Device, null),
       ]);
-  response = await request.request();
+  response = await request.request(headers: {'test': 'header'});
   var fileString = '';
   for (final res in response) {
     fileString += json.encode(res.toJson());

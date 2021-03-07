@@ -16,22 +16,21 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              RaisedButton(
+              ElevatedButton(
                   child: const Text('Aidbox', style: TextStyle(fontSize: 44)),
                   // need to authorize app online before logging in via app
                   onPressed: () async => await aidbox()),
-              RaisedButton(
+              ElevatedButton(
                   child: const Text('Azure', style: TextStyle(fontSize: 44)),
-                  // need to authorize app online before logging in via app
                   onPressed: () async => await azure()),
-              RaisedButton(
+              ElevatedButton(
                   child:
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await gcs()),
-              RaisedButton(
+              ElevatedButton(
                   child: const Text('Hapi', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await hapi()),
-              RaisedButton(
+              ElevatedButton(
                   child: const Text('Mihin', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await mihin()),
             ],

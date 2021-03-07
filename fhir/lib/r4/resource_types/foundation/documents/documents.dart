@@ -8,7 +8,6 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'documents.enums.dart';
-part 'documents.uscore.dart';
 part 'documents.freezed.dart';
 part 'documents.g.dart';
 
@@ -117,34 +116,34 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
     @Default(R4ResourceType.CatalogEntry)
     @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    CodeableConcept type,
-    Boolean orderable,
-    @JsonKey(name: '_orderable') Element orderableElement,
-    @required Reference referencedItem,
-    List<Identifier> additionalIdentifier,
-    List<CodeableConcept> classification,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    CodeableConcept? type,
+    Boolean? orderable,
+    @JsonKey(name: '_orderable') Element? orderableElement,
+    required Reference referencedItem,
+    List<Identifier>? additionalIdentifier,
+    List<CodeableConcept>? classification,
     @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
-        CatalogEntryStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Period validityPeriod,
-    FhirDateTime validTo,
-    @JsonKey(name: '_validTo') Element validToElement,
-    FhirDateTime lastUpdated,
-    @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
-    List<CodeableConcept> additionalCharacteristic,
-    List<CodeableConcept> additionalClassification,
-    List<CatalogEntryRelatedEntry> relatedEntry,
+        CatalogEntryStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Period? validityPeriod,
+    FhirDateTime? validTo,
+    @JsonKey(name: '_validTo') Element? validToElement,
+    FhirDateTime? lastUpdated,
+    @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
+    List<CodeableConcept>? additionalCharacteristic,
+    List<CodeableConcept>? additionalClassification,
+    List<CatalogEntryRelatedEntry>? relatedEntry,
   }) = _CatalogEntry;
 
   /// Produces a Yaml formatted String version of the object
@@ -155,7 +154,9 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
       ? CatalogEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CatalogEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CatalogEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CatalogEntry.fromJson(Map<String, dynamic> json) =>
@@ -200,13 +201,13 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
   ///
   /// [item]: The reference to the related item.
   factory CatalogEntryRelatedEntry({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
-        CatalogEntryRelatedEntryRelationtype relationtype,
-    @JsonKey(name: '_relationtype') Element relationtypeElement,
-    @required Reference item,
+        CatalogEntryRelatedEntryRelationtype? relationtype,
+    @JsonKey(name: '_relationtype') Element? relationtypeElement,
+    required Reference item,
   }) = _CatalogEntryRelatedEntry;
 
   /// Produces a Yaml formatted String version of the object
@@ -218,7 +219,9 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CatalogEntryRelatedEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CatalogEntryRelatedEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =>
@@ -352,36 +355,36 @@ abstract class Composition with Resource implements _$Composition {
     @Default(R4ResourceType.Composition)
     @JsonKey(unknownEnumValue: R4ResourceType.Composition)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
     @JsonKey(unknownEnumValue: CompositionStatus.unknown)
-        CompositionStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    @required CodeableConcept type,
-    List<CodeableConcept> category,
-    Reference subject,
-    Reference encounter,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    @required List<Reference> author,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    Code confidentiality,
-    @JsonKey(name: '_confidentiality') Element confidentialityElement,
-    List<CompositionAttester> attester,
-    Reference custodian,
-    List<CompositionRelatesTo> relatesTo,
-    List<CompositionEvent> event,
-    List<CompositionSection> section,
+        CompositionStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    required CodeableConcept type,
+    List<CodeableConcept>? category,
+    Reference? subject,
+    Reference? encounter,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    required List<Reference> author,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    Code? confidentiality,
+    @JsonKey(name: '_confidentiality') Element? confidentialityElement,
+    List<CompositionAttester>? attester,
+    Reference? custodian,
+    List<CompositionRelatesTo>? relatesTo,
+    List<CompositionEvent>? event,
+    List<CompositionSection>? section,
   }) = _Composition;
 
   /// Produces a Yaml formatted String version of the object
@@ -392,7 +395,9 @@ abstract class Composition with Resource implements _$Composition {
       ? Composition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Composition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Composition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Composition.fromJson(Map<String, dynamic> json) =>
@@ -448,15 +453,15 @@ abstract class CompositionAttester implements _$CompositionAttester {
   ///
   /// [party]: Who attested the composition in the specified way.
   factory CompositionAttester({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
-        CompositionAttesterMode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    FhirDateTime time,
-    @JsonKey(name: '_time') Element timeElement,
-    Reference party,
+        CompositionAttesterMode? mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    FhirDateTime? time,
+    @JsonKey(name: '_time') Element? timeElement,
+    Reference? party,
   }) = _CompositionAttester;
 
   /// Produces a Yaml formatted String version of the object
@@ -467,7 +472,9 @@ abstract class CompositionAttester implements _$CompositionAttester {
       ? CompositionAttester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CompositionAttester.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CompositionAttester cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
@@ -522,13 +529,13 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
   ///
   /// [targetReference]: The target composition/document of this relationship.
   factory CompositionRelatesTo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Code code,
-    @JsonKey(name: '_code') Element codeElement,
-    Identifier targetIdentifier,
-    Reference targetReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    Identifier? targetIdentifier,
+    Reference? targetReference,
   }) = _CompositionRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
@@ -539,7 +546,9 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
       ? CompositionRelatesTo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CompositionRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CompositionRelatesTo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
@@ -599,12 +608,12 @@ abstract class CompositionEvent implements _$CompositionEvent {
   /// documented. For example, this could be used to document such a colonoscopy
   ///  or an appendectomy.
   factory CompositionEvent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> code,
-    Period period,
-    List<Reference> detail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? code,
+    Period? period,
+    List<Reference>? detail,
   }) = _CompositionEvent;
 
   /// Produces a Yaml formatted String version of the object
@@ -615,7 +624,9 @@ abstract class CompositionEvent implements _$CompositionEvent {
       ? CompositionEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CompositionEvent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CompositionEvent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
@@ -707,21 +718,21 @@ abstract class CompositionSection implements _$CompositionSection {
   ///
   /// [section]: A nested sub-section within this section.
   factory CompositionSection({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    CodeableConcept code,
-    List<Reference> author,
-    Reference focus,
-    Narrative text,
-    Code mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    CodeableConcept orderedBy,
-    List<Reference> entry,
-    CodeableConcept emptyReason,
-    List<CompositionSection> section,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    CodeableConcept? code,
+    List<Reference>? author,
+    Reference? focus,
+    Narrative? text,
+    Code? mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    CodeableConcept? orderedBy,
+    List<Reference>? entry,
+    CodeableConcept? emptyReason,
+    List<CompositionSection>? section,
   }) = _CompositionSection;
 
   /// Produces a Yaml formatted String version of the object
@@ -732,7 +743,9 @@ abstract class CompositionSection implements _$CompositionSection {
       ? CompositionSection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CompositionSection.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CompositionSection cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionSection.fromJson(Map<String, dynamic> json) =>
@@ -850,33 +863,33 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     @Default(R4ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier masterIdentifier,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? masterIdentifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-        DocumentManifestStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept type,
-    Reference subject,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    List<Reference> author,
-    List<Reference> recipient,
-    FhirUri source,
-    @JsonKey(name: '_source') Element sourceElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @required List<Reference> content,
-    List<DocumentManifestRelated> related,
+        DocumentManifestStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? type,
+    Reference? subject,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    List<Reference>? author,
+    List<Reference>? recipient,
+    FhirUri? source,
+    @JsonKey(name: '_source') Element? sourceElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required List<Reference> content,
+    List<DocumentManifestRelated>? related,
   }) = _DocumentManifest;
 
   /// Produces a Yaml formatted String version of the object
@@ -887,7 +900,9 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
       ? DocumentManifest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DocumentManifest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DocumentManifest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
@@ -931,11 +946,11 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
   /// [ref]: Related Resource to this DocumentManifest. For example, Order,
   ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
   factory DocumentManifestRelated({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    Reference ref,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    Reference? ref,
   }) = _DocumentManifestRelated;
 
   /// Produces a Yaml formatted String version of the object
@@ -946,7 +961,9 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
       ? DocumentManifestRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DocumentManifestRelated.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DocumentManifestRelated cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
@@ -1081,93 +1098,38 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     @Default(R4ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier masterIdentifier,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? masterIdentifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-        DocumentReferenceStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Code docStatus,
-    @JsonKey(name: '_docStatus') Element docStatusElement,
-    CodeableConcept type,
-    List<CodeableConcept> category,
-    Reference subject,
-    Instant date,
-    @JsonKey(name: '_date') Element dateElement,
-    List<Reference> author,
-    Reference authenticator,
-    Reference custodian,
-    List<DocumentReferenceRelatesTo> relatesTo,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<CodeableConcept> securityLabel,
-    @required List<DocumentReferenceContent> content,
-    DocumentReferenceContext context,
+        DocumentReferenceStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Code? docStatus,
+    @JsonKey(name: '_docStatus') Element? docStatusElement,
+    CodeableConcept? type,
+    List<CodeableConcept>? category,
+    Reference? subject,
+    Instant? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    List<Reference>? author,
+    Reference? authenticator,
+    Reference? custodian,
+    List<DocumentReferenceRelatesTo>? relatesTo,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<CodeableConcept>? securityLabel,
+    required List<DocumentReferenceContent> content,
+    DocumentReferenceContext? context,
   }) = _DocumentReference;
-
-  factory DocumentReference.usCore({
-    List<Identifier> identifier,
-    @required DocumentReferenceStatus status,
-    @required CodeableConcept type,
-    @required List<CodeableConcept> category,
-    @required Reference subject,
-    Instant date,
-    List<Reference> author,
-    Reference custodian,
-    @required List<DocumentReferenceContent> content,
-    DocumentReferenceContext context,
-  }) =>
-      DocumentReference(
-        identifier: identifier,
-        status: status,
-        type: type,
-        category: category,
-        subject: subject,
-        date: date,
-        author: author,
-        custodian: custodian,
-        content: content,
-        context: context,
-      );
-
-  factory DocumentReference.usCoreMinimum({
-    @required DocumentReferenceStatus status,
-    @required DocumentReferenceType documentReferenceType,
-    List<CodeableConcept> category,
-    @required Reference subject,
-    @required List<DocumentReferenceContent> content,
-  }) {
-    category ??= <CodeableConcept>[];
-    category.add(
-      CodeableConcept(
-        coding: [
-          Coding(
-            system: FhirUri(
-                'http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category'),
-            code: Code('clinical-note'),
-            display: 'Clinical Note',
-          ),
-        ],
-        text: 'Clinical Note',
-      ),
-    );
-    return DocumentReference.usCore(
-      status: status,
-      type: codeableConceptFromDocumentReferenceType[documentReferenceType],
-      category: category,
-      subject: subject,
-      content: content,
-    );
-  }
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -1177,7 +1139,9 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
       ? DocumentReference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DocumentReference.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DocumentReference cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
@@ -1227,13 +1191,13 @@ abstract class DocumentReferenceRelatesTo
   ///
   /// [target]: The target document of this relationship.
   factory DocumentReferenceRelatesTo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
-        DocumentReferenceRelatesToCode code,
-    @JsonKey(name: '_code') Element codeElement,
-    @required Reference target,
+        DocumentReferenceRelatesToCode? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    required Reference target,
   }) = _DocumentReferenceRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
@@ -1245,7 +1209,9 @@ abstract class DocumentReferenceRelatesTo
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DocumentReferenceRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DocumentReferenceRelatesTo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
@@ -1294,11 +1260,11 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
   /// that the document conforms to beyond the base format indicated in the
   ///  mimeType.
   factory DocumentReferenceContent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Attachment attachment,
-    Coding format,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Attachment attachment,
+    Coding? format,
   }) = _DocumentReferenceContent;
 
   /// Produces a Yaml formatted String version of the object
@@ -1310,7 +1276,9 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DocumentReferenceContent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DocumentReferenceContent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
@@ -1376,16 +1344,16 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
   /// [related]: Related identifiers or resources associated with the
   ///  DocumentReference.
   factory DocumentReferenceContext({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Reference> encounter,
-    List<CodeableConcept> event,
-    Period period,
-    CodeableConcept facilityType,
-    CodeableConcept practiceSetting,
-    Reference sourcePatientInfo,
-    List<Reference> related,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Reference>? encounter,
+    List<CodeableConcept>? event,
+    Period? period,
+    CodeableConcept? facilityType,
+    CodeableConcept? practiceSetting,
+    Reference? sourcePatientInfo,
+    List<Reference>? related,
   }) = _DocumentReferenceContext;
 
   /// Produces a Yaml formatted String version of the object
@@ -1397,7 +1365,9 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DocumentReferenceContext.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DocumentReferenceContext cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>

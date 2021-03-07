@@ -55,13 +55,8 @@ var newPatient = Patient(
 ```
 If you're instead trying to get data from a server (currently I haven't implemented SMART on FHIR so it would need to be an open server, [HAPI](https://hapi.fhir.org/) for instance - make sure you choose the right version you're interested in), a very simple example of querying and then printing the result:
 ```
-import 'dart:convert';
-
-import 'package:fhir/r4.dart';
-import 'package:http/http.dart';
-
 Future main() async {
-  var server = 'http://hapi.fhir.org/baseR4';
+  var server = 'https://hapi.fhir.org/baseR4';
   var headers = {'Content-type': 'application/json'};
   var desiredResource = 'Patient';
   var response = await get('$server/$desiredResource', headers: headers);
@@ -75,33 +70,6 @@ All of the FHIR resources are immutable classes using the [freezed package](http
     HumanName(family: 'NewLastName', given: ['SameFirstName'])
   ]);
 ```
-
-## US Core
-
-Someone recently mentioned that I should try and incorporate the US Core IG into this package, so I've attempted to do so. US Core is generally a subset of the full FHIR spec (except for patient). That means, if you have already have a resource, you can pass it into a FHIR resource just like you would normally do. For thos resources that are included in the US Core spec, I've added new constructors to the classes. This way you may define, as you normally would:
-```
-final allergyIntolerance = AllergyIntolerance();
-```
-OR you may call:
-```
-final allergyIntolerance = AllergyIntolerance.usCore();
-```
-OR:
-```
-final allergyIntolerance = AllergyIntolerance.usCoreMinimum();
-```
-This will still create a patient object that can be used like any other. However, when initially constructing it, the available parameters to pass in are only those that are included in the US Core IG.
-
-ToDo:
-US Core Pediatric Head Occipital-frontal Circumference Percentile Profile
-US Core Pediatric Weight for Height Observation Profile
-US Core Practitioner Profile
-US Core PractitionerRole Profile
-US Core Procedure Profile
-US Core Provenance Profile
-US Core Pulse Oximetry Profile
-US Core Smoking Status Observation Profile
-In addition US Core uses the Vital Signs Profile from the FHIR Specification.
 
 ## Primitive Values
 Primitive values are [these](https://www.hl7.org/fhir/datatypes.html), things like instant, string, integer, etc. Howevever, because FHIR has some definitions of how they define some of these values that differ from Dart, I've made all of them (except String) and primitiveObject. This has a couple of useful things (and one or two annoying ones). In order to make something like an integer, you have to write it like this: ```Integer(128)``` or ```Integer('128)```. Yes, a little annoying, but it prevents inappropriate formatting, especially for things like dates that are a lot trickier. You can, however, check equality without this. For instance, ```Integer(128) == 128``` will evaluate to true. 
