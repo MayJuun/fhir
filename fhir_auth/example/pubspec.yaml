@@ -7,8 +7,10 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
-  fhir: ^0.3.0-nullsafety.0
-  fhir_at_rest: ^0.3.0-nullsafety.0
+  fhir: 
+    path: ../../fhir
+  fhir_at_rest: 
+    path: ../../fhir_at_rest
   fhir_auth:
     path: ../../fhir_auth
   flutter:

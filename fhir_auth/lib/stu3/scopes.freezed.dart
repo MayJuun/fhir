@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'scopes.dart';
 
@@ -8,6 +8,9 @@ part of 'scopes.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 class _$ScopesTearOff {
@@ -51,48 +54,49 @@ const $Scopes = _$ScopesTearOff();
 /// @nodoc
 mixin _$Scopes {
   /// see the clinical scopes class for details
-  List<Tuple3<Role, Stu3ResourceType, Interaction>>? get clinicalScopes;
+  List<Tuple3<Role, Stu3ResourceType, Interaction>>? get clinicalScopes =>
+      throw _privateConstructorUsedError;
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
-  bool? get openid;
+  bool? get openid => throw _privateConstructorUsedError;
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with openid
-  bool? get fhirUser;
+  bool? get fhirUser => throw _privateConstructorUsedError;
 
   /// this is being deprecated but still commonly required
-  bool? get profile;
+  bool? get profile => throw _privateConstructorUsedError;
 
   /// will this app require offline access? specifies the kind of token that
   /// will be returned
-  bool? get offlineAccess;
+  bool? get offlineAccess => throw _privateConstructorUsedError;
 
   /// will this app require online access? specifies the kind of token that
   /// will be returned
-  bool? get onlineAccess;
+  bool? get onlineAccess => throw _privateConstructorUsedError;
 
   ///if this app is going to be launched from within an EHR
-  bool? get ehrLaunch;
+  bool? get ehrLaunch => throw _privateConstructorUsedError;
 
   /// if the context of this app is about a specific patient
-  bool? get patientLaunch;
+  bool? get patientLaunch => throw _privateConstructorUsedError;
 
   /// if the context of this app is in regards to a specific encounter
-  bool? get encounterLaunch;
+  bool? get encounterLaunch => throw _privateConstructorUsedError;
 
   /// does this request need a patient banner
-  bool? get needPatientBanner;
+  bool? get needPatientBanner => throw _privateConstructorUsedError;
 
   /// I'm not actually sure what this does
-  bool? get smartOrchestrateLaunch;
+  bool? get smartOrchestrateLaunch => throw _privateConstructorUsedError;
 
   /// String value describing the intent of the application launch
-  String? get intent;
-  List<String>? get additional;
+  String? get intent => throw _privateConstructorUsedError;
+  List<String>? get additional => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ScopesCopyWith<Scopes> get copyWith;
+  $ScopesCopyWith<Scopes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -142,33 +146,56 @@ class _$ScopesCopyWithImpl<$Res> implements $ScopesCopyWith<$Res> {
     return _then(_value.copyWith(
       clinicalScopes: clinicalScopes == freezed
           ? _value.clinicalScopes
-          : clinicalScopes
+          : clinicalScopes // ignore: cast_nullable_to_non_nullable
               as List<Tuple3<Role, Stu3ResourceType, Interaction>>?,
-      openid: openid == freezed ? _value.openid : openid as bool?,
-      fhirUser: fhirUser == freezed ? _value.fhirUser : fhirUser as bool?,
-      profile: profile == freezed ? _value.profile : profile as bool?,
+      openid: openid == freezed
+          ? _value.openid
+          : openid // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      fhirUser: fhirUser == freezed
+          ? _value.fhirUser
+          : fhirUser // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as bool?,
       offlineAccess: offlineAccess == freezed
           ? _value.offlineAccess
-          : offlineAccess as bool?,
-      onlineAccess:
-          onlineAccess == freezed ? _value.onlineAccess : onlineAccess as bool?,
-      ehrLaunch: ehrLaunch == freezed ? _value.ehrLaunch : ehrLaunch as bool?,
+          : offlineAccess // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      onlineAccess: onlineAccess == freezed
+          ? _value.onlineAccess
+          : onlineAccess // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      ehrLaunch: ehrLaunch == freezed
+          ? _value.ehrLaunch
+          : ehrLaunch // ignore: cast_nullable_to_non_nullable
+              as bool?,
       patientLaunch: patientLaunch == freezed
           ? _value.patientLaunch
-          : patientLaunch as bool?,
+          : patientLaunch // ignore: cast_nullable_to_non_nullable
+              as bool?,
       encounterLaunch: encounterLaunch == freezed
           ? _value.encounterLaunch
-          : encounterLaunch as bool?,
+          : encounterLaunch // ignore: cast_nullable_to_non_nullable
+              as bool?,
       needPatientBanner: needPatientBanner == freezed
           ? _value.needPatientBanner
-          : needPatientBanner as bool?,
+          : needPatientBanner // ignore: cast_nullable_to_non_nullable
+              as bool?,
       smartOrchestrateLaunch: smartOrchestrateLaunch == freezed
           ? _value.smartOrchestrateLaunch
-          : smartOrchestrateLaunch as bool?,
-      intent: intent == freezed ? _value.intent : intent as String?,
+          : smartOrchestrateLaunch // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as String?,
       additional: additional == freezed
           ? _value.additional
-          : additional as List<String>?,
+          : additional // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -222,33 +249,56 @@ class __$ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
     return _then(_Scopes(
       clinicalScopes: clinicalScopes == freezed
           ? _value.clinicalScopes
-          : clinicalScopes
+          : clinicalScopes // ignore: cast_nullable_to_non_nullable
               as List<Tuple3<Role, Stu3ResourceType, Interaction>>?,
-      openid: openid == freezed ? _value.openid : openid as bool?,
-      fhirUser: fhirUser == freezed ? _value.fhirUser : fhirUser as bool?,
-      profile: profile == freezed ? _value.profile : profile as bool?,
+      openid: openid == freezed
+          ? _value.openid
+          : openid // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      fhirUser: fhirUser == freezed
+          ? _value.fhirUser
+          : fhirUser // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as bool?,
       offlineAccess: offlineAccess == freezed
           ? _value.offlineAccess
-          : offlineAccess as bool?,
-      onlineAccess:
-          onlineAccess == freezed ? _value.onlineAccess : onlineAccess as bool?,
-      ehrLaunch: ehrLaunch == freezed ? _value.ehrLaunch : ehrLaunch as bool?,
+          : offlineAccess // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      onlineAccess: onlineAccess == freezed
+          ? _value.onlineAccess
+          : onlineAccess // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      ehrLaunch: ehrLaunch == freezed
+          ? _value.ehrLaunch
+          : ehrLaunch // ignore: cast_nullable_to_non_nullable
+              as bool?,
       patientLaunch: patientLaunch == freezed
           ? _value.patientLaunch
-          : patientLaunch as bool?,
+          : patientLaunch // ignore: cast_nullable_to_non_nullable
+              as bool?,
       encounterLaunch: encounterLaunch == freezed
           ? _value.encounterLaunch
-          : encounterLaunch as bool?,
+          : encounterLaunch // ignore: cast_nullable_to_non_nullable
+              as bool?,
       needPatientBanner: needPatientBanner == freezed
           ? _value.needPatientBanner
-          : needPatientBanner as bool?,
+          : needPatientBanner // ignore: cast_nullable_to_non_nullable
+              as bool?,
       smartOrchestrateLaunch: smartOrchestrateLaunch == freezed
           ? _value.smartOrchestrateLaunch
-          : smartOrchestrateLaunch as bool?,
-      intent: intent == freezed ? _value.intent : intent as String?,
+          : smartOrchestrateLaunch // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as String?,
       additional: additional == freezed
           ? _value.additional
-          : additional as List<String>?,
+          : additional // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -398,7 +448,6 @@ class _$_Scopes extends _Scopes {
 }
 
 abstract class _Scopes extends Scopes {
-  _Scopes._() : super._();
   factory _Scopes(
       {List<Tuple3<Role, Stu3ResourceType, Interaction>>? clinicalScopes,
       bool? openid,
@@ -413,62 +462,64 @@ abstract class _Scopes extends Scopes {
       bool? smartOrchestrateLaunch,
       String? intent,
       List<String>? additional}) = _$_Scopes;
+  _Scopes._() : super._();
 
   @override
 
   /// see the clinical scopes class for details
-  List<Tuple3<Role, Stu3ResourceType, Interaction>>? get clinicalScopes;
+  List<Tuple3<Role, Stu3ResourceType, Interaction>>? get clinicalScopes =>
+      throw _privateConstructorUsedError;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
-  bool? get openid;
+  bool? get openid => throw _privateConstructorUsedError;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with openid
-  bool? get fhirUser;
+  bool? get fhirUser => throw _privateConstructorUsedError;
   @override
 
   /// this is being deprecated but still commonly required
-  bool? get profile;
+  bool? get profile => throw _privateConstructorUsedError;
   @override
 
   /// will this app require offline access? specifies the kind of token that
   /// will be returned
-  bool? get offlineAccess;
+  bool? get offlineAccess => throw _privateConstructorUsedError;
   @override
 
   /// will this app require online access? specifies the kind of token that
   /// will be returned
-  bool? get onlineAccess;
+  bool? get onlineAccess => throw _privateConstructorUsedError;
   @override
 
   ///if this app is going to be launched from within an EHR
-  bool? get ehrLaunch;
+  bool? get ehrLaunch => throw _privateConstructorUsedError;
   @override
 
   /// if the context of this app is about a specific patient
-  bool? get patientLaunch;
+  bool? get patientLaunch => throw _privateConstructorUsedError;
   @override
 
   /// if the context of this app is in regards to a specific encounter
-  bool? get encounterLaunch;
+  bool? get encounterLaunch => throw _privateConstructorUsedError;
   @override
 
   /// does this request need a patient banner
-  bool? get needPatientBanner;
+  bool? get needPatientBanner => throw _privateConstructorUsedError;
   @override
 
   /// I'm not actually sure what this does
-  bool? get smartOrchestrateLaunch;
+  bool? get smartOrchestrateLaunch => throw _privateConstructorUsedError;
   @override
 
   /// String value describing the intent of the application launch
-  String? get intent;
+  String? get intent => throw _privateConstructorUsedError;
   @override
-  List<String>? get additional;
+  List<String>? get additional => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ScopesCopyWith<_Scopes> get copyWith;
+  _$ScopesCopyWith<_Scopes> get copyWith => throw _privateConstructorUsedError;
 }
