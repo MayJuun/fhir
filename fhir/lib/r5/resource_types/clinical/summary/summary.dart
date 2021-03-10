@@ -12,7 +12,7 @@ part 'summary.freezed.dart';
 part 'summary.g.dart';
 
 @freezed
-abstract class AdverseEvent with Resource implements _$AdverseEvent {
+class AdverseEvent with Resource, _$AdverseEvent {
   AdverseEvent._();
   factory AdverseEvent({
     @Default(R5ResourceType.AdverseEvent)
@@ -78,7 +78,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
 }
 
 @freezed
-abstract class AdverseEventParticipant implements _$AdverseEventParticipant {
+class AdverseEventParticipant with _$AdverseEventParticipant {
   AdverseEventParticipant._();
   factory AdverseEventParticipant({
     String? id,
@@ -106,8 +106,7 @@ abstract class AdverseEventParticipant implements _$AdverseEventParticipant {
 }
 
 @freezed
-abstract class AdverseEventSuspectEntity
-    implements _$AdverseEventSuspectEntity {
+class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   AdverseEventSuspectEntity._();
   factory AdverseEventSuspectEntity({
     String? id,
@@ -137,7 +136,7 @@ abstract class AdverseEventSuspectEntity
 }
 
 @freezed
-abstract class AdverseEventCausality implements _$AdverseEventCausality {
+class AdverseEventCausality with _$AdverseEventCausality {
   AdverseEventCausality._();
   factory AdverseEventCausality({
     String? id,
@@ -166,8 +165,7 @@ abstract class AdverseEventCausality implements _$AdverseEventCausality {
 }
 
 @freezed
-abstract class AdverseEventContributingFactor
-    implements _$AdverseEventContributingFactor {
+class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
   AdverseEventContributingFactor._();
   factory AdverseEventContributingFactor({
     String? id,
@@ -198,8 +196,7 @@ abstract class AdverseEventContributingFactor
 }
 
 @freezed
-abstract class AdverseEventPreventiveAction
-    implements _$AdverseEventPreventiveAction {
+class AdverseEventPreventiveAction with _$AdverseEventPreventiveAction {
   AdverseEventPreventiveAction._();
   factory AdverseEventPreventiveAction({
     String? id,
@@ -228,8 +225,7 @@ abstract class AdverseEventPreventiveAction
 }
 
 @freezed
-abstract class AdverseEventMitigatingAction
-    implements _$AdverseEventMitigatingAction {
+class AdverseEventMitigatingAction with _$AdverseEventMitigatingAction {
   AdverseEventMitigatingAction._();
   factory AdverseEventMitigatingAction({
     String? id,
@@ -258,8 +254,7 @@ abstract class AdverseEventMitigatingAction
 }
 
 @freezed
-abstract class AdverseEventSupportingInfo
-    implements _$AdverseEventSupportingInfo {
+class AdverseEventSupportingInfo with _$AdverseEventSupportingInfo {
   AdverseEventSupportingInfo._();
   factory AdverseEventSupportingInfo({
     String? id,
@@ -288,9 +283,7 @@ abstract class AdverseEventSupportingInfo
 }
 
 @freezed
-abstract class AllergyIntolerance
-    with Resource
-    implements _$AllergyIntolerance {
+class AllergyIntolerance with Resource, _$AllergyIntolerance {
   AllergyIntolerance._();
   factory AllergyIntolerance({
     @Default(R5ResourceType.AllergyIntolerance)
@@ -355,8 +348,7 @@ abstract class AllergyIntolerance
 }
 
 @freezed
-abstract class AllergyIntoleranceReaction
-    implements _$AllergyIntoleranceReaction {
+class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
     String? id,
@@ -394,9 +386,7 @@ abstract class AllergyIntoleranceReaction
 }
 
 @freezed
-abstract class ClinicalImpression
-    with Resource
-    implements _$ClinicalImpression {
+class ClinicalImpression with Resource, _$ClinicalImpression {
   ClinicalImpression._();
   factory ClinicalImpression({
     @Default(R5ResourceType.ClinicalImpression)
@@ -457,8 +447,7 @@ abstract class ClinicalImpression
 }
 
 @freezed
-abstract class ClinicalImpressionFinding
-    implements _$ClinicalImpressionFinding {
+class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
   factory ClinicalImpressionFinding({
     String? id,
@@ -489,7 +478,7 @@ abstract class ClinicalImpressionFinding
 }
 
 @freezed
-abstract class Condition with Resource implements _$Condition {
+class Condition with Resource, _$Condition {
   Condition._();
   factory Condition({
     @Default(R5ResourceType.Condition)
@@ -555,7 +544,7 @@ abstract class Condition with Resource implements _$Condition {
 }
 
 @freezed
-abstract class ConditionStage implements _$ConditionStage {
+class ConditionStage with _$ConditionStage {
   ConditionStage._();
   factory ConditionStage({
     String? id,
@@ -584,7 +573,7 @@ abstract class ConditionStage implements _$ConditionStage {
 }
 
 @freezed
-abstract class ConditionEvidence implements _$ConditionEvidence {
+class ConditionEvidence with _$ConditionEvidence {
   ConditionEvidence._();
   factory ConditionEvidence({
     String? id,
@@ -612,7 +601,7 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
 }
 
 @freezed
-abstract class DetectedIssue with Resource implements _$DetectedIssue {
+class DetectedIssue with Resource, _$DetectedIssue {
   DetectedIssue._();
   factory DetectedIssue({
     @Default(R5ResourceType.DetectedIssue)
@@ -667,7 +656,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
 }
 
 @freezed
-abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
+class DetectedIssueEvidence with _$DetectedIssueEvidence {
   DetectedIssueEvidence._();
   factory DetectedIssueEvidence({
     String? id,
@@ -695,7 +684,7 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
 }
 
 @freezed
-abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
+class DetectedIssueMitigation with _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
   factory DetectedIssueMitigation({
     String? id,
@@ -725,9 +714,7 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
 }
 
 @freezed
-abstract class FamilyMemberHistory
-    with Resource
-    implements _$FamilyMemberHistory {
+class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   FamilyMemberHistory._();
   factory FamilyMemberHistory({
     @Default(R5ResourceType.FamilyMemberHistory)
@@ -801,8 +788,7 @@ abstract class FamilyMemberHistory
 }
 
 @freezed
-abstract class FamilyMemberHistoryCondition
-    implements _$FamilyMemberHistoryCondition {
+class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
   factory FamilyMemberHistoryCondition({
     String? id,
@@ -839,8 +825,7 @@ abstract class FamilyMemberHistoryCondition
 }
 
 @freezed
-abstract class FamilyMemberHistoryProcedure
-    implements _$FamilyMemberHistoryProcedure {
+class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
   FamilyMemberHistoryProcedure._();
   factory FamilyMemberHistoryProcedure({
     String? id,
@@ -879,7 +864,7 @@ abstract class FamilyMemberHistoryProcedure
 }
 
 @freezed
-abstract class Procedure with Resource implements _$Procedure {
+class Procedure with Resource, _$Procedure {
   Procedure._();
   factory Procedure({
     @Default(R5ResourceType.Procedure)
@@ -954,7 +939,7 @@ abstract class Procedure with Resource implements _$Procedure {
 }
 
 @freezed
-abstract class ProcedurePerformer implements _$ProcedurePerformer {
+class ProcedurePerformer with _$ProcedurePerformer {
   ProcedurePerformer._();
   factory ProcedurePerformer({
     String? id,
@@ -983,7 +968,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
 }
 
 @freezed
-abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
+class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
   factory ProcedureFocalDevice({
     String? id,

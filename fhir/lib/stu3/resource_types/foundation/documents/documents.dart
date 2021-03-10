@@ -12,7 +12,7 @@ part 'documents.freezed.dart';
 part 'documents.g.dart';
 
 @freezed
-abstract class Composition with Resource implements _$Composition {
+class Composition with Resource, _$Composition {
   Composition._();
   factory Composition({
     @Default(Stu3ResourceType.Composition)
@@ -67,7 +67,7 @@ abstract class Composition with Resource implements _$Composition {
 }
 
 @freezed
-abstract class CompositionAttester implements _$CompositionAttester {
+class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
   factory CompositionAttester({
     List<CompositionAttesterMode>? mode,
@@ -95,7 +95,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
 }
 
 @freezed
-abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
+class CompositionRelatesTo with _$CompositionRelatesTo {
   CompositionRelatesTo._();
   factory CompositionRelatesTo({
     Code? code,
@@ -122,7 +122,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
 }
 
 @freezed
-abstract class CompositionEvent implements _$CompositionEvent {
+class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
   factory CompositionEvent({
     List<CodeableConcept>? code,
@@ -148,7 +148,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
 }
 
 @freezed
-abstract class CompositionSection implements _$CompositionSection {
+class CompositionSection with _$CompositionSection {
   CompositionSection._();
   factory CompositionSection({
     String? title,
@@ -181,7 +181,7 @@ abstract class CompositionSection implements _$CompositionSection {
 }
 
 @freezed
-abstract class DocumentManifest with Resource implements _$DocumentManifest {
+class DocumentManifest with Resource, _$DocumentManifest {
   DocumentManifest._();
   factory DocumentManifest({
     @Default(Stu3ResourceType.DocumentManifest)
@@ -233,7 +233,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
 }
 
 @freezed
-abstract class DocumentManifestContent implements _$DocumentManifestContent {
+class DocumentManifestContent with _$DocumentManifestContent {
   DocumentManifestContent._();
   factory DocumentManifestContent({
     Attachment? pAttachment,
@@ -258,7 +258,7 @@ abstract class DocumentManifestContent implements _$DocumentManifestContent {
 }
 
 @freezed
-abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
+class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
   factory DocumentManifestRelated({
     Identifier? identifier,
@@ -283,7 +283,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
 }
 
 @freezed
-abstract class DocumentReference with Resource implements _$DocumentReference {
+class DocumentReference with Resource, _$DocumentReference {
   DocumentReference._();
   factory DocumentReference({
     @Default(Stu3ResourceType.DocumentReference)
@@ -341,8 +341,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
 }
 
 @freezed
-abstract class DocumentReferenceRelatesTo
-    implements _$DocumentReferenceRelatesTo {
+class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
   factory DocumentReferenceRelatesTo({
     DocumentReferenceRelatesToCode? code,
@@ -369,7 +368,7 @@ abstract class DocumentReferenceRelatesTo
 }
 
 @freezed
-abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
+class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
   factory DocumentReferenceContent({
     required Attachment attachment,
@@ -395,7 +394,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
 }
 
 @freezed
-abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
+class DocumentReferenceContext with _$DocumentReferenceContext {
   DocumentReferenceContext._();
   factory DocumentReferenceContext({
     Reference? encounter,
@@ -426,7 +425,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
 }
 
 @freezed
-abstract class DocumentReferenceRelated implements _$DocumentReferenceRelated {
+class DocumentReferenceRelated with _$DocumentReferenceRelated {
   DocumentReferenceRelated._();
   factory DocumentReferenceRelated({
     Identifier? identifier,

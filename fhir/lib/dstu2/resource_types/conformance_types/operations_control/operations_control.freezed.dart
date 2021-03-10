@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'operations_control.dart';
 
@@ -8,6 +8,10 @@ part of 'operations_control.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Conformance _$ConformanceFromJson(Map<String, dynamic> json) {
   return _Conformance.fromJson(json);
 }
@@ -106,50 +110,55 @@ const $Conformance = _$ConformanceTearOff();
 /// @nodoc
 mixin _$Conformance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-  Dstu2ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
-  Code? get language;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  String? get version;
-  String? get name;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-  ConformanceStatus? get status;
-  Boolean? get experimental;
-  String? get publisher;
-  List<ConformanceContact>? get contact;
-  FhirDateTime get date;
-  String? get description;
-  String? get requirements;
-  String? get copyright;
+  ConformanceStatus? get status => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
+  List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
+  FhirDateTime get date => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get requirements => throw _privateConstructorUsedError;
+  String? get copyright => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-  ConformanceKind get kind;
-  ConformanceSoftware? get software;
-  ConformanceImplementation? get implementation;
-  Id get fhirVersion;
+  ConformanceKind get kind => throw _privateConstructorUsedError;
+  ConformanceSoftware? get software => throw _privateConstructorUsedError;
+  ConformanceImplementation? get implementation =>
+      throw _privateConstructorUsedError;
+  Id get fhirVersion => throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement;
+  Element? get fhirVersionElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-  ConformanceAcceptUnknown get acceptUnknown;
+  ConformanceAcceptUnknown get acceptUnknown =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_acceptUnknown')
-  Element? get acceptUnknownElement;
-  List<ConformanceFormat> get format;
-  List<Reference>? get profile;
-  List<ConformanceRest>? get rest;
-  List<ConformanceMessaging>? get messaging;
-  List<ConformanceDocument>? get document;
+  Element? get acceptUnknownElement => throw _privateConstructorUsedError;
+  List<ConformanceFormat> get format => throw _privateConstructorUsedError;
+  List<Reference>? get profile => throw _privateConstructorUsedError;
+  List<ConformanceRest>? get rest => throw _privateConstructorUsedError;
+  List<ConformanceMessaging>? get messaging =>
+      throw _privateConstructorUsedError;
+  List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceCopyWith<Conformance> get copyWith;
+  $ConformanceCopyWith<Conformance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -256,72 +265,136 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
-      name: name == freezed ? _value.name : name as String?,
-      status: status == freezed ? _value.status : status as ConformanceStatus?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ConformanceStatus?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<ConformanceContact>?,
-      date: date == freezed ? _value.date : date as FhirDateTime,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceContact>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       requirements: requirements == freezed
           ? _value.requirements
-          : requirements as String?,
-      copyright: copyright == freezed ? _value.copyright : copyright as String?,
-      kind: kind == freezed ? _value.kind : kind as ConformanceKind,
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as ConformanceKind,
       software: software == freezed
           ? _value.software
-          : software as ConformanceSoftware?,
+          : software // ignore: cast_nullable_to_non_nullable
+              as ConformanceSoftware?,
       implementation: implementation == freezed
           ? _value.implementation
-          : implementation as ConformanceImplementation?,
-      fhirVersion:
-          fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id,
+          : implementation // ignore: cast_nullable_to_non_nullable
+              as ConformanceImplementation?,
+      fhirVersion: fhirVersion == freezed
+          ? _value.fhirVersion
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as Id,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as Element?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       acceptUnknown: acceptUnknown == freezed
           ? _value.acceptUnknown
-          : acceptUnknown as ConformanceAcceptUnknown,
+          : acceptUnknown // ignore: cast_nullable_to_non_nullable
+              as ConformanceAcceptUnknown,
       acceptUnknownElement: acceptUnknownElement == freezed
           ? _value.acceptUnknownElement
-          : acceptUnknownElement as Element?,
-      format:
-          format == freezed ? _value.format : format as List<ConformanceFormat>,
-      profile:
-          profile == freezed ? _value.profile : profile as List<Reference>?,
-      rest: rest == freezed ? _value.rest : rest as List<ConformanceRest>?,
+          : acceptUnknownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceFormat>,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      rest: rest == freezed
+          ? _value.rest
+          : rest // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<ConformanceMessaging>?,
+          : messaging // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<ConformanceDocument>?,
+          : document // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceDocument>?,
     ));
   }
 
@@ -519,72 +592,136 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
     return _then(_Conformance(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
-      name: name == freezed ? _value.name : name as String?,
-      status: status == freezed ? _value.status : status as ConformanceStatus?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ConformanceStatus?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<ConformanceContact>?,
-      date: date == freezed ? _value.date : date as FhirDateTime,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceContact>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       requirements: requirements == freezed
           ? _value.requirements
-          : requirements as String?,
-      copyright: copyright == freezed ? _value.copyright : copyright as String?,
-      kind: kind == freezed ? _value.kind : kind as ConformanceKind,
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as ConformanceKind,
       software: software == freezed
           ? _value.software
-          : software as ConformanceSoftware?,
+          : software // ignore: cast_nullable_to_non_nullable
+              as ConformanceSoftware?,
       implementation: implementation == freezed
           ? _value.implementation
-          : implementation as ConformanceImplementation?,
-      fhirVersion:
-          fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id,
+          : implementation // ignore: cast_nullable_to_non_nullable
+              as ConformanceImplementation?,
+      fhirVersion: fhirVersion == freezed
+          ? _value.fhirVersion
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as Id,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as Element?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       acceptUnknown: acceptUnknown == freezed
           ? _value.acceptUnknown
-          : acceptUnknown as ConformanceAcceptUnknown,
+          : acceptUnknown // ignore: cast_nullable_to_non_nullable
+              as ConformanceAcceptUnknown,
       acceptUnknownElement: acceptUnknownElement == freezed
           ? _value.acceptUnknownElement
-          : acceptUnknownElement as Element?,
-      format:
-          format == freezed ? _value.format : format as List<ConformanceFormat>,
-      profile:
-          profile == freezed ? _value.profile : profile as List<Reference>?,
-      rest: rest == freezed ? _value.rest : rest as List<ConformanceRest>?,
+          : acceptUnknownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceFormat>,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      rest: rest == freezed
+          ? _value.rest
+          : rest // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<ConformanceMessaging>?,
+          : messaging // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<ConformanceDocument>?,
+          : document // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceDocument>?,
     ));
   }
 }
@@ -851,7 +988,6 @@ class _$_Conformance extends _Conformance {
 }
 
 abstract class _Conformance extends Conformance {
-  _Conformance._() : super._();
   factory _Conformance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           Dstu2ResourceType resourceType,
@@ -894,87 +1030,93 @@ abstract class _Conformance extends Conformance {
       List<ConformanceRest>? rest,
       List<ConformanceMessaging>? messaging,
       List<ConformanceDocument>? document}) = _$_Conformance;
+  _Conformance._() : super._();
 
   factory _Conformance.fromJson(Map<String, dynamic> json) =
       _$_Conformance.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-  ConformanceStatus? get status;
+  ConformanceStatus? get status => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
-  List<ConformanceContact>? get contact;
+  List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get date;
+  FhirDateTime get date => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String? get requirements;
+  String? get requirements => throw _privateConstructorUsedError;
   @override
-  String? get copyright;
+  String? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-  ConformanceKind get kind;
+  ConformanceKind get kind => throw _privateConstructorUsedError;
   @override
-  ConformanceSoftware? get software;
+  ConformanceSoftware? get software => throw _privateConstructorUsedError;
   @override
-  ConformanceImplementation? get implementation;
+  ConformanceImplementation? get implementation =>
+      throw _privateConstructorUsedError;
   @override
-  Id get fhirVersion;
+  Id get fhirVersion => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement;
+  Element? get fhirVersionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-  ConformanceAcceptUnknown get acceptUnknown;
+  ConformanceAcceptUnknown get acceptUnknown =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_acceptUnknown')
-  Element? get acceptUnknownElement;
+  Element? get acceptUnknownElement => throw _privateConstructorUsedError;
   @override
-  List<ConformanceFormat> get format;
+  List<ConformanceFormat> get format => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get profile;
+  List<Reference>? get profile => throw _privateConstructorUsedError;
   @override
-  List<ConformanceRest>? get rest;
+  List<ConformanceRest>? get rest => throw _privateConstructorUsedError;
   @override
-  List<ConformanceMessaging>? get messaging;
+  List<ConformanceMessaging>? get messaging =>
+      throw _privateConstructorUsedError;
   @override
-  List<ConformanceDocument>? get document;
+  List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceCopyWith<_Conformance> get copyWith;
+  _$ConformanceCopyWith<_Conformance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
@@ -1076,50 +1218,55 @@ const $CapabilityStatement = _$CapabilityStatementTearOff();
 /// @nodoc
 mixin _$CapabilityStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-  Dstu2ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
-  Code? get language;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  String? get version;
-  String? get name;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-  ConformanceStatus? get status;
-  Boolean? get experimental;
-  String? get publisher;
-  List<ConformanceContact>? get contact;
-  FhirDateTime get date;
-  String? get description;
-  String? get requirements;
-  String? get copyright;
+  ConformanceStatus? get status => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
+  List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
+  FhirDateTime get date => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get requirements => throw _privateConstructorUsedError;
+  String? get copyright => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-  ConformanceKind get kind;
-  ConformanceSoftware? get software;
-  ConformanceImplementation? get implementation;
-  Id get fhirVersion;
+  ConformanceKind get kind => throw _privateConstructorUsedError;
+  ConformanceSoftware? get software => throw _privateConstructorUsedError;
+  ConformanceImplementation? get implementation =>
+      throw _privateConstructorUsedError;
+  Id get fhirVersion => throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement;
+  Element? get fhirVersionElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-  ConformanceAcceptUnknown get acceptUnknown;
+  ConformanceAcceptUnknown get acceptUnknown =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_acceptUnknown')
-  Element? get acceptUnknownElement;
-  List<ConformanceFormat> get format;
-  List<Reference>? get profile;
-  List<ConformanceRest>? get rest;
-  List<ConformanceMessaging>? get messaging;
-  List<ConformanceDocument>? get document;
+  Element? get acceptUnknownElement => throw _privateConstructorUsedError;
+  List<ConformanceFormat> get format => throw _privateConstructorUsedError;
+  List<Reference>? get profile => throw _privateConstructorUsedError;
+  List<ConformanceRest>? get rest => throw _privateConstructorUsedError;
+  List<ConformanceMessaging>? get messaging =>
+      throw _privateConstructorUsedError;
+  List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CapabilityStatementCopyWith<CapabilityStatement> get copyWith;
+  $CapabilityStatementCopyWith<CapabilityStatement> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1227,72 +1374,136 @@ class _$CapabilityStatementCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
-      name: name == freezed ? _value.name : name as String?,
-      status: status == freezed ? _value.status : status as ConformanceStatus?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ConformanceStatus?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<ConformanceContact>?,
-      date: date == freezed ? _value.date : date as FhirDateTime,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceContact>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       requirements: requirements == freezed
           ? _value.requirements
-          : requirements as String?,
-      copyright: copyright == freezed ? _value.copyright : copyright as String?,
-      kind: kind == freezed ? _value.kind : kind as ConformanceKind,
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as ConformanceKind,
       software: software == freezed
           ? _value.software
-          : software as ConformanceSoftware?,
+          : software // ignore: cast_nullable_to_non_nullable
+              as ConformanceSoftware?,
       implementation: implementation == freezed
           ? _value.implementation
-          : implementation as ConformanceImplementation?,
-      fhirVersion:
-          fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id,
+          : implementation // ignore: cast_nullable_to_non_nullable
+              as ConformanceImplementation?,
+      fhirVersion: fhirVersion == freezed
+          ? _value.fhirVersion
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as Id,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as Element?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       acceptUnknown: acceptUnknown == freezed
           ? _value.acceptUnknown
-          : acceptUnknown as ConformanceAcceptUnknown,
+          : acceptUnknown // ignore: cast_nullable_to_non_nullable
+              as ConformanceAcceptUnknown,
       acceptUnknownElement: acceptUnknownElement == freezed
           ? _value.acceptUnknownElement
-          : acceptUnknownElement as Element?,
-      format:
-          format == freezed ? _value.format : format as List<ConformanceFormat>,
-      profile:
-          profile == freezed ? _value.profile : profile as List<Reference>?,
-      rest: rest == freezed ? _value.rest : rest as List<ConformanceRest>?,
+          : acceptUnknownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceFormat>,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      rest: rest == freezed
+          ? _value.rest
+          : rest // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<ConformanceMessaging>?,
+          : messaging // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<ConformanceDocument>?,
+          : document // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceDocument>?,
     ));
   }
 
@@ -1491,72 +1702,136 @@ class __$CapabilityStatementCopyWithImpl<$Res>
     return _then(_CapabilityStatement(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
-      name: name == freezed ? _value.name : name as String?,
-      status: status == freezed ? _value.status : status as ConformanceStatus?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ConformanceStatus?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<ConformanceContact>?,
-      date: date == freezed ? _value.date : date as FhirDateTime,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceContact>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       requirements: requirements == freezed
           ? _value.requirements
-          : requirements as String?,
-      copyright: copyright == freezed ? _value.copyright : copyright as String?,
-      kind: kind == freezed ? _value.kind : kind as ConformanceKind,
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as String?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as ConformanceKind,
       software: software == freezed
           ? _value.software
-          : software as ConformanceSoftware?,
+          : software // ignore: cast_nullable_to_non_nullable
+              as ConformanceSoftware?,
       implementation: implementation == freezed
           ? _value.implementation
-          : implementation as ConformanceImplementation?,
-      fhirVersion:
-          fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id,
+          : implementation // ignore: cast_nullable_to_non_nullable
+              as ConformanceImplementation?,
+      fhirVersion: fhirVersion == freezed
+          ? _value.fhirVersion
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as Id,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as Element?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       acceptUnknown: acceptUnknown == freezed
           ? _value.acceptUnknown
-          : acceptUnknown as ConformanceAcceptUnknown,
+          : acceptUnknown // ignore: cast_nullable_to_non_nullable
+              as ConformanceAcceptUnknown,
       acceptUnknownElement: acceptUnknownElement == freezed
           ? _value.acceptUnknownElement
-          : acceptUnknownElement as Element?,
-      format:
-          format == freezed ? _value.format : format as List<ConformanceFormat>,
-      profile:
-          profile == freezed ? _value.profile : profile as List<Reference>?,
-      rest: rest == freezed ? _value.rest : rest as List<ConformanceRest>?,
+          : acceptUnknownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceFormat>,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      rest: rest == freezed
+          ? _value.rest
+          : rest // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<ConformanceMessaging>?,
+          : messaging // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<ConformanceDocument>?,
+          : document // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceDocument>?,
     ));
   }
 }
@@ -1824,7 +2099,6 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 }
 
 abstract class _CapabilityStatement extends CapabilityStatement {
-  _CapabilityStatement._() : super._();
   factory _CapabilityStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           Dstu2ResourceType resourceType,
@@ -1867,87 +2141,93 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       List<ConformanceRest>? rest,
       List<ConformanceMessaging>? messaging,
       List<ConformanceDocument>? document}) = _$_CapabilityStatement;
+  _CapabilityStatement._() : super._();
 
   factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatement.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-  ConformanceStatus? get status;
+  ConformanceStatus? get status => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
-  List<ConformanceContact>? get contact;
+  List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get date;
+  FhirDateTime get date => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String? get requirements;
+  String? get requirements => throw _privateConstructorUsedError;
   @override
-  String? get copyright;
+  String? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-  ConformanceKind get kind;
+  ConformanceKind get kind => throw _privateConstructorUsedError;
   @override
-  ConformanceSoftware? get software;
+  ConformanceSoftware? get software => throw _privateConstructorUsedError;
   @override
-  ConformanceImplementation? get implementation;
+  ConformanceImplementation? get implementation =>
+      throw _privateConstructorUsedError;
   @override
-  Id get fhirVersion;
+  Id get fhirVersion => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement;
+  Element? get fhirVersionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-  ConformanceAcceptUnknown get acceptUnknown;
+  ConformanceAcceptUnknown get acceptUnknown =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_acceptUnknown')
-  Element? get acceptUnknownElement;
+  Element? get acceptUnknownElement => throw _privateConstructorUsedError;
   @override
-  List<ConformanceFormat> get format;
+  List<ConformanceFormat> get format => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get profile;
+  List<Reference>? get profile => throw _privateConstructorUsedError;
   @override
-  List<ConformanceRest>? get rest;
+  List<ConformanceRest>? get rest => throw _privateConstructorUsedError;
   @override
-  List<ConformanceMessaging>? get messaging;
+  List<ConformanceMessaging>? get messaging =>
+      throw _privateConstructorUsedError;
   @override
-  List<ConformanceDocument>? get document;
+  List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith;
+  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ConformanceContact _$ConformanceContactFromJson(Map<String, dynamic> json) {
@@ -1983,16 +2263,18 @@ const $ConformanceContact = _$ConformanceContactTearOff();
 
 /// @nodoc
 mixin _$ConformanceContact {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
-  List<ContactPoint>? get telecom;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceContactCopyWith<ConformanceContact> get copyWith;
+  $ConformanceContactCopyWith<ConformanceContact> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2026,16 +2308,26 @@ class _$ConformanceContactCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
     ));
   }
 }
@@ -2075,16 +2367,26 @@ class __$ConformanceContactCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_ConformanceContact(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
     ));
   }
 }
@@ -2160,31 +2462,33 @@ class _$_ConformanceContact extends _ConformanceContact {
 }
 
 abstract class _ConformanceContact extends ConformanceContact {
-  _ConformanceContact._() : super._();
   factory _ConformanceContact(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
       List<ContactPoint>? telecom}) = _$_ConformanceContact;
+  _ConformanceContact._() : super._();
 
   factory _ConformanceContact.fromJson(Map<String, dynamic> json) =
       _$_ConformanceContact.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceContactCopyWith<_ConformanceContact> get copyWith;
+  _$ConformanceContactCopyWith<_ConformanceContact> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ConformanceSoftware _$ConformanceSoftwareFromJson(Map<String, dynamic> json) {
@@ -2222,17 +2526,19 @@ const $ConformanceSoftware = _$ConformanceSoftwareTearOff();
 
 /// @nodoc
 mixin _$ConformanceSoftware {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String get name;
-  String? get version;
-  FhirDateTime? get releaseDate;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceSoftwareCopyWith<ConformanceSoftware> get copyWith;
+  $ConformanceSoftwareCopyWith<ConformanceSoftware> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2268,18 +2574,30 @@ class _$ConformanceSoftwareCopyWithImpl<$Res>
     Object? releaseDate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
-          : releaseDate as FhirDateTime?,
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -2321,18 +2639,30 @@ class __$ConformanceSoftwareCopyWithImpl<$Res>
     Object? releaseDate = freezed,
   }) {
     return _then(_ConformanceSoftware(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
-          : releaseDate as FhirDateTime?,
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -2417,7 +2747,6 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
 }
 
 abstract class _ConformanceSoftware extends ConformanceSoftware {
-  _ConformanceSoftware._() : super._();
   factory _ConformanceSoftware(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2425,26 +2754,29 @@ abstract class _ConformanceSoftware extends ConformanceSoftware {
       required String name,
       String? version,
       FhirDateTime? releaseDate}) = _$_ConformanceSoftware;
+  _ConformanceSoftware._() : super._();
 
   factory _ConformanceSoftware.fromJson(Map<String, dynamic> json) =
       _$_ConformanceSoftware.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get releaseDate;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceSoftwareCopyWith<_ConformanceSoftware> get copyWith;
+  _$ConformanceSoftwareCopyWith<_ConformanceSoftware> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ConformanceImplementation _$ConformanceImplementationFromJson(
@@ -2481,16 +2813,18 @@ const $ConformanceImplementation = _$ConformanceImplementationTearOff();
 
 /// @nodoc
 mixin _$ConformanceImplementation {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String get description;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceImplementationCopyWith<ConformanceImplementation> get copyWith;
+  $ConformanceImplementationCopyWith<ConformanceImplementation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2524,16 +2858,26 @@ class _$ConformanceImplementationCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      description:
-          description == freezed ? _value.description : description as String,
-      url: url == freezed ? _value.url : url as FhirUri?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
     ));
   }
 }
@@ -2574,16 +2918,26 @@ class __$ConformanceImplementationCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_ConformanceImplementation(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      description:
-          description == freezed ? _value.description : description as String,
-      url: url == freezed ? _value.url : url as FhirUri?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
     ));
   }
 }
@@ -2662,31 +3016,33 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
 }
 
 abstract class _ConformanceImplementation extends ConformanceImplementation {
-  _ConformanceImplementation._() : super._();
   factory _ConformanceImplementation(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       required String description,
       FhirUri? url}) = _$_ConformanceImplementation;
+  _ConformanceImplementation._() : super._();
 
   factory _ConformanceImplementation.fromJson(Map<String, dynamic> json) =
       _$_ConformanceImplementation.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String get description;
+  String get description => throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceImplementationCopyWith<_ConformanceImplementation> get copyWith;
+  _$ConformanceImplementationCopyWith<_ConformanceImplementation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceRest _$ConformanceRestFromJson(Map<String, dynamic> json) {
@@ -2745,29 +3101,36 @@ const $ConformanceRest = _$ConformanceRestTearOff();
 
 /// @nodoc
 mixin _$ConformanceRest {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: RestMode.unknown)
-  RestMode get mode;
+  RestMode get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
-  Element? get modeElement;
-  String? get documentation;
-  ConformanceRestSecurity? get security;
-  List<ConformanceRestResource> get resource;
-  List<ConformanceRestInteraction>? get interaction;
+  Element? get modeElement => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
+  ConformanceRestSecurity? get security => throw _privateConstructorUsedError;
+  List<ConformanceRestResource> get resource =>
+      throw _privateConstructorUsedError;
+  List<ConformanceRestInteraction>? get interaction =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-  RestTransactionMode? get transactionMode;
-  List<ConformanceResourceSearchParam>? get searchParam;
-  List<ConformanceRestOperation>? get operation;
-  List<FhirUri>? get compartment;
+  RestTransactionMode? get transactionMode =>
+      throw _privateConstructorUsedError;
+  List<ConformanceResourceSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
+  List<ConformanceRestOperation>? get operation =>
+      throw _privateConstructorUsedError;
+  List<FhirUri>? get compartment => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceRestCopyWith<ConformanceRest> get copyWith;
+  $ConformanceRestCopyWith<ConformanceRest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2827,43 +3190,62 @@ class _$ConformanceRestCopyWithImpl<$Res>
     Object? compartment = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      mode: mode == freezed ? _value.mode : mode as RestMode,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as RestMode,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       security: security == freezed
           ? _value.security
-          : security as ConformanceRestSecurity?,
+          : security // ignore: cast_nullable_to_non_nullable
+              as ConformanceRestSecurity?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<ConformanceRestResource>,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRestResource>,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<ConformanceRestInteraction>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRestInteraction>?,
       transactionMode: transactionMode == freezed
           ? _value.transactionMode
-          : transactionMode as RestTransactionMode?,
+          : transactionMode // ignore: cast_nullable_to_non_nullable
+              as RestTransactionMode?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<ConformanceResourceSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceResourceSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<ConformanceRestOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRestOperation>?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<FhirUri>?,
+          : compartment // ignore: cast_nullable_to_non_nullable
+              as List<FhirUri>?,
     ));
   }
 
@@ -2953,43 +3335,62 @@ class __$ConformanceRestCopyWithImpl<$Res>
     Object? compartment = freezed,
   }) {
     return _then(_ConformanceRest(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      mode: mode == freezed ? _value.mode : mode as RestMode,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as RestMode,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       security: security == freezed
           ? _value.security
-          : security as ConformanceRestSecurity?,
+          : security // ignore: cast_nullable_to_non_nullable
+              as ConformanceRestSecurity?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<ConformanceRestResource>,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRestResource>,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<ConformanceRestInteraction>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRestInteraction>?,
       transactionMode: transactionMode == freezed
           ? _value.transactionMode
-          : transactionMode as RestTransactionMode?,
+          : transactionMode // ignore: cast_nullable_to_non_nullable
+              as RestTransactionMode?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<ConformanceResourceSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceResourceSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<ConformanceRestOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceRestOperation>?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<FhirUri>?,
+          : compartment // ignore: cast_nullable_to_non_nullable
+              as List<FhirUri>?,
     ));
   }
 }
@@ -3138,7 +3539,6 @@ class _$_ConformanceRest extends _ConformanceRest {
 }
 
 abstract class _ConformanceRest extends ConformanceRest {
-  _ConformanceRest._() : super._();
   factory _ConformanceRest(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -3159,46 +3559,54 @@ abstract class _ConformanceRest extends ConformanceRest {
       List<ConformanceResourceSearchParam>? searchParam,
       List<ConformanceRestOperation>? operation,
       List<FhirUri>? compartment}) = _$_ConformanceRest;
+  _ConformanceRest._() : super._();
 
   factory _ConformanceRest.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRest.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: RestMode.unknown)
-  RestMode get mode;
+  RestMode get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
-  ConformanceRestSecurity? get security;
+  ConformanceRestSecurity? get security => throw _privateConstructorUsedError;
   @override
-  List<ConformanceRestResource> get resource;
+  List<ConformanceRestResource> get resource =>
+      throw _privateConstructorUsedError;
   @override
-  List<ConformanceRestInteraction>? get interaction;
+  List<ConformanceRestInteraction>? get interaction =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-  RestTransactionMode? get transactionMode;
+  RestTransactionMode? get transactionMode =>
+      throw _privateConstructorUsedError;
   @override
-  List<ConformanceResourceSearchParam>? get searchParam;
+  List<ConformanceResourceSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
   @override
-  List<ConformanceRestOperation>? get operation;
+  List<ConformanceRestOperation>? get operation =>
+      throw _privateConstructorUsedError;
   @override
-  List<FhirUri>? get compartment;
+  List<FhirUri>? get compartment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceRestCopyWith<_ConformanceRest> get copyWith;
+  _$ConformanceRestCopyWith<_ConformanceRest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ConformanceMessaging _$ConformanceMessagingFromJson(Map<String, dynamic> json) {
@@ -3240,20 +3648,24 @@ const $ConformanceMessaging = _$ConformanceMessagingTearOff();
 
 /// @nodoc
 mixin _$ConformanceMessaging {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
-  List<ConformanceMessagingEndpoint>? get endpoint;
-  UnsignedInt? get reliableCache;
-  String? get documentation;
-  List<ConformanceMessagingEvent> get event;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<ConformanceMessagingEndpoint>? get endpoint =>
+      throw _privateConstructorUsedError;
+  UnsignedInt? get reliableCache => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
+  List<ConformanceMessagingEvent> get event =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceMessagingCopyWith<ConformanceMessaging> get copyWith;
+  $ConformanceMessagingCopyWith<ConformanceMessaging> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3293,28 +3705,38 @@ class _$ConformanceMessagingCopyWithImpl<$Res>
     Object? event = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<ConformanceMessagingEndpoint>?,
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceMessagingEndpoint>?,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
-          : reliableCache as UnsignedInt?,
+          : reliableCache // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       event: event == freezed
           ? _value.event
-          : event as List<ConformanceMessagingEvent>,
+          : event // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceMessagingEvent>,
     ));
   }
 }
@@ -3360,28 +3782,38 @@ class __$ConformanceMessagingCopyWithImpl<$Res>
     Object? event = freezed,
   }) {
     return _then(_ConformanceMessaging(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<ConformanceMessagingEndpoint>?,
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceMessagingEndpoint>?,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
-          : reliableCache as UnsignedInt?,
+          : reliableCache // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       event: event == freezed
           ? _value.event
-          : event as List<ConformanceMessagingEvent>,
+          : event // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceMessagingEvent>,
     ));
   }
 }
@@ -3481,7 +3913,6 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
 }
 
 abstract class _ConformanceMessaging extends ConformanceMessaging {
-  _ConformanceMessaging._() : super._();
   factory _ConformanceMessaging(
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3492,31 +3923,36 @@ abstract class _ConformanceMessaging extends ConformanceMessaging {
           String? documentation,
           required List<ConformanceMessagingEvent> event}) =
       _$_ConformanceMessaging;
+  _ConformanceMessaging._() : super._();
 
   factory _ConformanceMessaging.fromJson(Map<String, dynamic> json) =
       _$_ConformanceMessaging.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  List<ConformanceMessagingEndpoint>? get endpoint;
+  List<ConformanceMessagingEndpoint>? get endpoint =>
+      throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get reliableCache;
+  UnsignedInt? get reliableCache => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
-  List<ConformanceMessagingEvent> get event;
+  List<ConformanceMessagingEvent> get event =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceMessagingCopyWith<_ConformanceMessaging> get copyWith;
+  _$ConformanceMessagingCopyWith<_ConformanceMessaging> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ConformanceDocument _$ConformanceDocumentFromJson(Map<String, dynamic> json) {
@@ -3559,20 +3995,22 @@ const $ConformanceDocument = _$ConformanceDocumentTearOff();
 
 /// @nodoc
 mixin _$ConformanceDocument {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: DocumentMode.unknown)
-  DocumentMode get mode;
-  String? get documentation;
-  Reference get profile;
+  DocumentMode get mode => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
+  Reference get profile => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceDocumentCopyWith<ConformanceDocument> get copyWith;
+  $ConformanceDocumentCopyWith<ConformanceDocument> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3612,21 +4050,34 @@ class _$ConformanceDocumentCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      mode: mode == freezed ? _value.mode : mode as DocumentMode,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as DocumentMode,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
-      profile: profile == freezed ? _value.profile : profile as Reference,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 
@@ -3680,21 +4131,34 @@ class __$ConformanceDocumentCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_ConformanceDocument(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      mode: mode == freezed ? _value.mode : mode as DocumentMode,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as DocumentMode,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
-      profile: profile == freezed ? _value.profile : profile as Reference,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 }
@@ -3787,7 +4251,6 @@ class _$_ConformanceDocument extends _ConformanceDocument {
 }
 
 abstract class _ConformanceDocument extends ConformanceDocument {
-  _ConformanceDocument._() : super._();
   factory _ConformanceDocument(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -3799,30 +4262,33 @@ abstract class _ConformanceDocument extends ConformanceDocument {
           required DocumentMode mode,
       String? documentation,
       required Reference profile}) = _$_ConformanceDocument;
+  _ConformanceDocument._() : super._();
 
   factory _ConformanceDocument.fromJson(Map<String, dynamic> json) =
       _$_ConformanceDocument.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DocumentMode.unknown)
-  DocumentMode get mode;
+  DocumentMode get mode => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
-  Reference get profile;
+  Reference get profile => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceDocumentCopyWith<_ConformanceDocument> get copyWith;
+  _$ConformanceDocumentCopyWith<_ConformanceDocument> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ConformanceRestSecurity _$ConformanceRestSecurityFromJson(
@@ -3865,20 +4331,23 @@ const $ConformanceRestSecurity = _$ConformanceRestSecurityTearOff();
 
 /// @nodoc
 mixin _$ConformanceRestSecurity {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Boolean? get cors;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Boolean? get cors => throw _privateConstructorUsedError;
   @JsonKey(name: '_cors')
-  Element? get corsElement;
-  List<CodeableConcept>? get service;
-  String? get description;
-  List<ConformanceSecurityCertificate>? get certificate;
+  Element? get corsElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get service => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  List<ConformanceSecurityCertificate>? get certificate =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceRestSecurityCopyWith<ConformanceRestSecurity> get copyWith;
+  $ConformanceRestSecurityCopyWith<ConformanceRestSecurity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3920,24 +4389,38 @@ class _$ConformanceRestSecurityCopyWithImpl<$Res>
     Object? certificate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      cors: cors == freezed ? _value.cors : cors as Boolean?,
-      corsElement:
-          corsElement == freezed ? _value.corsElement : corsElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      cors: cors == freezed
+          ? _value.cors
+          : cors // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      corsElement: corsElement == freezed
+          ? _value.corsElement
+          : corsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       service: service == freezed
           ? _value.service
-          : service as List<CodeableConcept>?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : service // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       certificate: certificate == freezed
           ? _value.certificate
-          : certificate as List<ConformanceSecurityCertificate>?,
+          : certificate // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceSecurityCertificate>?,
     ));
   }
 
@@ -3998,24 +4481,38 @@ class __$ConformanceRestSecurityCopyWithImpl<$Res>
     Object? certificate = freezed,
   }) {
     return _then(_ConformanceRestSecurity(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      cors: cors == freezed ? _value.cors : cors as Boolean?,
-      corsElement:
-          corsElement == freezed ? _value.corsElement : corsElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      cors: cors == freezed
+          ? _value.cors
+          : cors // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      corsElement: corsElement == freezed
+          ? _value.corsElement
+          : corsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       service: service == freezed
           ? _value.service
-          : service as List<CodeableConcept>?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : service // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       certificate: certificate == freezed
           ? _value.certificate
-          : certificate as List<ConformanceSecurityCertificate>?,
+          : certificate // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceSecurityCertificate>?,
     ));
   }
 }
@@ -4115,7 +4612,6 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
 }
 
 abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
-  _ConformanceRestSecurity._() : super._();
   factory _ConformanceRestSecurity(
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4126,31 +4622,35 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
           String? description,
           List<ConformanceSecurityCertificate>? certificate}) =
       _$_ConformanceRestSecurity;
+  _ConformanceRestSecurity._() : super._();
 
   factory _ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestSecurity.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get cors;
+  Boolean? get cors => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_cors')
-  Element? get corsElement;
+  Element? get corsElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get service;
+  List<CodeableConcept>? get service => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  List<ConformanceSecurityCertificate>? get certificate;
+  List<ConformanceSecurityCertificate>? get certificate =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceRestSecurityCopyWith<_ConformanceRestSecurity> get copyWith;
+  _$ConformanceRestSecurityCopyWith<_ConformanceRestSecurity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ConformanceRestResource _$ConformanceRestResourceFromJson(
@@ -4226,39 +4726,44 @@ const $ConformanceRestResource = _$ConformanceRestResourceTearOff();
 
 /// @nodoc
 mixin _$ConformanceRestResource {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
-  Code get type;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  Code get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  Reference? get profile;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  Reference? get profile => throw _privateConstructorUsedError;
   @JsonKey(required: true)
-  List<ConformanceResourceInteraction> get interaction;
+  List<ConformanceResourceInteraction> get interaction =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-  ResourceVersioning? get versioning;
-  Boolean? get readHistory;
-  Boolean? get updateCreate;
+  ResourceVersioning? get versioning => throw _privateConstructorUsedError;
+  Boolean? get readHistory => throw _privateConstructorUsedError;
+  Boolean? get updateCreate => throw _privateConstructorUsedError;
   @JsonKey(name: '_updateCreate')
-  Element? get updateCreateElement;
-  Boolean? get conditionalCreate;
+  Element? get updateCreateElement => throw _privateConstructorUsedError;
+  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalCreate')
-  Element? get conditionalCreateElement;
-  Boolean? get conditionalUpdate;
+  Element? get conditionalCreateElement => throw _privateConstructorUsedError;
+  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-  ResourceConditionalDelete? get conditionalDelete;
+  ResourceConditionalDelete? get conditionalDelete =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalDelete')
-  Element? get conditionalDeleteElement;
-  List<String>? get searchInclude;
-  List<String>? get searchRevInclude;
-  List<ConformanceResourceSearchParam>? get searchParam;
+  Element? get conditionalDeleteElement => throw _privateConstructorUsedError;
+  List<String>? get searchInclude => throw _privateConstructorUsedError;
+  List<String>? get searchRevInclude => throw _privateConstructorUsedError;
+  List<ConformanceResourceSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceRestResourceCopyWith<ConformanceRestResource> get copyWith;
+  $ConformanceRestResourceCopyWith<ConformanceRestResource> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4337,58 +4842,86 @@ class _$ConformanceRestResourceCopyWithImpl<$Res>
     Object? searchParam = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      type: type == freezed ? _value.type : type as Code,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Reference?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<ConformanceResourceInteraction>,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceResourceInteraction>,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as ResourceVersioning?,
-      readHistory:
-          readHistory == freezed ? _value.readHistory : readHistory as Boolean?,
+          : versioning // ignore: cast_nullable_to_non_nullable
+              as ResourceVersioning?,
+      readHistory: readHistory == freezed
+          ? _value.readHistory
+          : readHistory // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       updateCreate: updateCreate == freezed
           ? _value.updateCreate
-          : updateCreate as Boolean?,
+          : updateCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       updateCreateElement: updateCreateElement == freezed
           ? _value.updateCreateElement
-          : updateCreateElement as Element?,
+          : updateCreateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalCreate: conditionalCreate == freezed
           ? _value.conditionalCreate
-          : conditionalCreate as Boolean?,
+          : conditionalCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalCreateElement: conditionalCreateElement == freezed
           ? _value.conditionalCreateElement
-          : conditionalCreateElement as Element?,
+          : conditionalCreateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalUpdate: conditionalUpdate == freezed
           ? _value.conditionalUpdate
-          : conditionalUpdate as Boolean?,
+          : conditionalUpdate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
-          : conditionalDelete as ResourceConditionalDelete?,
+          : conditionalDelete // ignore: cast_nullable_to_non_nullable
+              as ResourceConditionalDelete?,
       conditionalDeleteElement: conditionalDeleteElement == freezed
           ? _value.conditionalDeleteElement
-          : conditionalDeleteElement as Element?,
+          : conditionalDeleteElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as List<String>?,
+          : searchInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as List<String>?,
+          : searchRevInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<ConformanceResourceSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceResourceSearchParam>?,
     ));
   }
 
@@ -4534,58 +5067,86 @@ class __$ConformanceRestResourceCopyWithImpl<$Res>
     Object? searchParam = freezed,
   }) {
     return _then(_ConformanceRestResource(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      type: type == freezed ? _value.type : type as Code,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Reference?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<ConformanceResourceInteraction>,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceResourceInteraction>,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as ResourceVersioning?,
-      readHistory:
-          readHistory == freezed ? _value.readHistory : readHistory as Boolean?,
+          : versioning // ignore: cast_nullable_to_non_nullable
+              as ResourceVersioning?,
+      readHistory: readHistory == freezed
+          ? _value.readHistory
+          : readHistory // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       updateCreate: updateCreate == freezed
           ? _value.updateCreate
-          : updateCreate as Boolean?,
+          : updateCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       updateCreateElement: updateCreateElement == freezed
           ? _value.updateCreateElement
-          : updateCreateElement as Element?,
+          : updateCreateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalCreate: conditionalCreate == freezed
           ? _value.conditionalCreate
-          : conditionalCreate as Boolean?,
+          : conditionalCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalCreateElement: conditionalCreateElement == freezed
           ? _value.conditionalCreateElement
-          : conditionalCreateElement as Element?,
+          : conditionalCreateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalUpdate: conditionalUpdate == freezed
           ? _value.conditionalUpdate
-          : conditionalUpdate as Boolean?,
+          : conditionalUpdate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
-          : conditionalDelete as ResourceConditionalDelete?,
+          : conditionalDelete // ignore: cast_nullable_to_non_nullable
+              as ResourceConditionalDelete?,
       conditionalDeleteElement: conditionalDeleteElement == freezed
           ? _value.conditionalDeleteElement
-          : conditionalDeleteElement as Element?,
+          : conditionalDeleteElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as List<String>?,
+          : searchInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as List<String>?,
+          : searchRevInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<ConformanceResourceSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<ConformanceResourceSearchParam>?,
     ));
   }
 }
@@ -4787,7 +5348,6 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
 }
 
 abstract class _ConformanceRestResource extends ConformanceRestResource {
-  _ConformanceRestResource._() : super._();
   factory _ConformanceRestResource(
           {Id? id,
           @JsonKey(name: 'extension')
@@ -4819,62 +5379,68 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
           List<String>? searchRevInclude,
           List<ConformanceResourceSearchParam>? searchParam}) =
       _$_ConformanceRestResource;
+  _ConformanceRestResource._() : super._();
 
   factory _ConformanceRestResource.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestResource.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  Code get type;
+  Code get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Reference? get profile;
+  Reference? get profile => throw _privateConstructorUsedError;
   @override
   @JsonKey(required: true)
-  List<ConformanceResourceInteraction> get interaction;
+  List<ConformanceResourceInteraction> get interaction =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-  ResourceVersioning? get versioning;
+  ResourceVersioning? get versioning => throw _privateConstructorUsedError;
   @override
-  Boolean? get readHistory;
+  Boolean? get readHistory => throw _privateConstructorUsedError;
   @override
-  Boolean? get updateCreate;
+  Boolean? get updateCreate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_updateCreate')
-  Element? get updateCreateElement;
+  Element? get updateCreateElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get conditionalCreate;
+  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_conditionalCreate')
-  Element? get conditionalCreateElement;
+  Element? get conditionalCreateElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get conditionalUpdate;
+  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-  ResourceConditionalDelete? get conditionalDelete;
+  ResourceConditionalDelete? get conditionalDelete =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_conditionalDelete')
-  Element? get conditionalDeleteElement;
+  Element? get conditionalDeleteElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get searchInclude;
+  List<String>? get searchInclude => throw _privateConstructorUsedError;
   @override
-  List<String>? get searchRevInclude;
+  List<String>? get searchRevInclude => throw _privateConstructorUsedError;
   @override
-  List<ConformanceResourceSearchParam>? get searchParam;
+  List<ConformanceResourceSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceRestResourceCopyWith<_ConformanceRestResource> get copyWith;
+  _$ConformanceRestResourceCopyWith<_ConformanceRestResource> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ConformanceResourceInteraction _$ConformanceResourceInteractionFromJson(
@@ -4914,18 +5480,19 @@ const $ConformanceResourceInteraction =
 
 /// @nodoc
 mixin _$ConformanceResourceInteraction {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-  ResourceInteractionCode get code;
-  String? get documentation;
+  ResourceInteractionCode get code => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ConformanceResourceInteractionCopyWith<ConformanceResourceInteraction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4962,17 +5529,26 @@ class _$ConformanceResourceInteractionCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as ResourceInteractionCode,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as ResourceInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -5017,17 +5593,26 @@ class __$ConformanceResourceInteractionCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_ConformanceResourceInteraction(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as ResourceInteractionCode,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as ResourceInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -5111,7 +5696,6 @@ class _$_ConformanceResourceInteraction
 
 abstract class _ConformanceResourceInteraction
     extends ConformanceResourceInteraction {
-  _ConformanceResourceInteraction._() : super._();
   factory _ConformanceResourceInteraction(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -5120,26 +5704,28 @@ abstract class _ConformanceResourceInteraction
       @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
           required ResourceInteractionCode code,
       String? documentation}) = _$_ConformanceResourceInteraction;
+  _ConformanceResourceInteraction._() : super._();
 
   factory _ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =
       _$_ConformanceResourceInteraction.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-  ResourceInteractionCode get code;
+  ResourceInteractionCode get code => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ConformanceResourceInteractionCopyWith<_ConformanceResourceInteraction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceRestOperation _$ConformanceRestOperationFromJson(
@@ -5178,18 +5764,20 @@ const $ConformanceRestOperation = _$ConformanceRestOperationTearOff();
 
 /// @nodoc
 mixin _$ConformanceRestOperation {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
-  String get name;
-  Reference get definition;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  Reference get definition => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceRestOperationCopyWith<ConformanceRestOperation> get copyWith;
+  $ConformanceRestOperationCopyWith<ConformanceRestOperation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5227,19 +5815,30 @@ class _$ConformanceRestOperationCopyWithImpl<$Res>
     Object? definition = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      name: name == freezed ? _value.name : name as String,
-      definition:
-          definition == freezed ? _value.definition : definition as Reference,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 
@@ -5292,19 +5891,30 @@ class __$ConformanceRestOperationCopyWithImpl<$Res>
     Object? definition = freezed,
   }) {
     return _then(_ConformanceRestOperation(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      name: name == freezed ? _value.name : name as String,
-      definition:
-          definition == freezed ? _value.definition : definition as Reference,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 }
@@ -5390,7 +6000,6 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
 }
 
 abstract class _ConformanceRestOperation extends ConformanceRestOperation {
-  _ConformanceRestOperation._() : super._();
   factory _ConformanceRestOperation(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5398,27 +6007,30 @@ abstract class _ConformanceRestOperation extends ConformanceRestOperation {
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       required String name,
       required Reference definition}) = _$_ConformanceRestOperation;
+  _ConformanceRestOperation._() : super._();
 
   factory _ConformanceRestOperation.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestOperation.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  Reference get definition;
+  Reference get definition => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceRestOperationCopyWith<_ConformanceRestOperation> get copyWith;
+  _$ConformanceRestOperationCopyWith<_ConformanceRestOperation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ConformanceMessagingEndpoint _$ConformanceMessagingEndpointFromJson(
@@ -5457,19 +6069,20 @@ const $ConformanceMessagingEndpoint = _$ConformanceMessagingEndpointTearOff();
 
 /// @nodoc
 mixin _$ConformanceMessagingEndpoint {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Coding get protocol;
-  FhirUri get address;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Coding get protocol => throw _privateConstructorUsedError;
+  FhirUri get address => throw _privateConstructorUsedError;
   @JsonKey(name: '_address')
-  Element? get addressElement;
+  Element? get addressElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ConformanceMessagingEndpointCopyWith<ConformanceMessagingEndpoint>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5509,18 +6122,30 @@ class _$ConformanceMessagingEndpointCopyWithImpl<$Res>
     Object? addressElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      protocol: protocol == freezed ? _value.protocol : protocol as Coding,
-      address: address == freezed ? _value.address : address as FhirUri,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      protocol: protocol == freezed
+          ? _value.protocol
+          : protocol // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
       addressElement: addressElement == freezed
           ? _value.addressElement
-          : addressElement as Element?,
+          : addressElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -5588,18 +6213,30 @@ class __$ConformanceMessagingEndpointCopyWithImpl<$Res>
     Object? addressElement = freezed,
   }) {
     return _then(_ConformanceMessagingEndpoint(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      protocol: protocol == freezed ? _value.protocol : protocol as Coding,
-      address: address == freezed ? _value.address : address as FhirUri,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      protocol: protocol == freezed
+          ? _value.protocol
+          : protocol // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
       addressElement: addressElement == freezed
           ? _value.addressElement
-          : addressElement as Element?,
+          : addressElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -5687,7 +6324,6 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
 
 abstract class _ConformanceMessagingEndpoint
     extends ConformanceMessagingEndpoint {
-  _ConformanceMessagingEndpoint._() : super._();
   factory _ConformanceMessagingEndpoint(
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5696,28 +6332,30 @@ abstract class _ConformanceMessagingEndpoint
           required FhirUri address,
           @JsonKey(name: '_address') Element? addressElement}) =
       _$_ConformanceMessagingEndpoint;
+  _ConformanceMessagingEndpoint._() : super._();
 
   factory _ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =
       _$_ConformanceMessagingEndpoint.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Coding get protocol;
+  Coding get protocol => throw _privateConstructorUsedError;
   @override
-  FhirUri get address;
+  FhirUri get address => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_address')
-  Element? get addressElement;
+  Element? get addressElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ConformanceMessagingEndpointCopyWith<_ConformanceMessagingEndpoint>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceMessagingEvent _$ConformanceMessagingEventFromJson(
@@ -5766,25 +6404,27 @@ const $ConformanceMessagingEvent = _$ConformanceMessagingEventTearOff();
 
 /// @nodoc
 mixin _$ConformanceMessagingEvent {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Coding get code;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Coding get code => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: EventCategory.unknown)
-  EventCategory? get category;
+  EventCategory? get category => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: EventMode.unknown)
-  EventMode get mode;
+  EventMode get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
-  Element? get modeElement;
-  Code get focus;
-  Reference get request;
-  Reference get response;
-  String? get documentation;
+  Element? get modeElement => throw _privateConstructorUsedError;
+  Code get focus => throw _privateConstructorUsedError;
+  Reference get request => throw _privateConstructorUsedError;
+  Reference get response => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceMessagingEventCopyWith<ConformanceMessagingEvent> get copyWith;
+  $ConformanceMessagingEventCopyWith<ConformanceMessagingEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5835,25 +6475,50 @@ class _$ConformanceMessagingEventCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as Coding,
-      category:
-          category == freezed ? _value.category : category as EventCategory?,
-      mode: mode == freezed ? _value.mode : mode as EventMode,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
-      focus: focus == freezed ? _value.focus : focus as Code,
-      request: request == freezed ? _value.request : request as Reference,
-      response: response == freezed ? _value.response : response as Reference,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as EventCategory?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as EventMode,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as Code,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      response: response == freezed
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as Reference,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -5947,25 +6612,50 @@ class __$ConformanceMessagingEventCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_ConformanceMessagingEvent(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as Coding,
-      category:
-          category == freezed ? _value.category : category as EventCategory?,
-      mode: mode == freezed ? _value.mode : mode as EventMode,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
-      focus: focus == freezed ? _value.focus : focus as Code,
-      request: request == freezed ? _value.request : request as Reference,
-      response: response == freezed ? _value.response : response as Reference,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as EventCategory?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as EventMode,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as Code,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      response: response == freezed
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as Reference,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -6087,7 +6777,6 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
 }
 
 abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
-  _ConformanceMessagingEvent._() : super._();
   factory _ConformanceMessagingEvent(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6100,39 +6789,42 @@ abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
       required Reference request,
       required Reference response,
       String? documentation}) = _$_ConformanceMessagingEvent;
+  _ConformanceMessagingEvent._() : super._();
 
   factory _ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =
       _$_ConformanceMessagingEvent.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Coding get code;
+  Coding get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: EventCategory.unknown)
-  EventCategory? get category;
+  EventCategory? get category => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: EventMode.unknown)
-  EventMode get mode;
+  EventMode get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  Code get focus;
+  Code get focus => throw _privateConstructorUsedError;
   @override
-  Reference get request;
+  Reference get request => throw _privateConstructorUsedError;
   @override
-  Reference get response;
+  Reference get response => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceMessagingEventCopyWith<_ConformanceMessagingEvent> get copyWith;
+  _$ConformanceMessagingEventCopyWith<_ConformanceMessagingEvent>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceSecurityCertificate _$ConformanceSecurityCertificateFromJson(
@@ -6172,19 +6864,20 @@ const $ConformanceSecurityCertificate =
 
 /// @nodoc
 mixin _$ConformanceSecurityCertificate {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Code? get type;
-  Base64Binary? get blob;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
+  Base64Binary? get blob => throw _privateConstructorUsedError;
   @JsonKey(name: '_blob')
-  Element? get blobElement;
+  Element? get blobElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ConformanceSecurityCertificateCopyWith<ConformanceSecurityCertificate>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6223,17 +6916,30 @@ class _$ConformanceSecurityCertificateCopyWithImpl<$Res>
     Object? blobElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as Code?,
-      blob: blob == freezed ? _value.blob : blob as Base64Binary?,
-      blobElement:
-          blobElement == freezed ? _value.blobElement : blobElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      blob: blob == freezed
+          ? _value.blob
+          : blob // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      blobElement: blobElement == freezed
+          ? _value.blobElement
+          : blobElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -6292,17 +6998,30 @@ class __$ConformanceSecurityCertificateCopyWithImpl<$Res>
     Object? blobElement = freezed,
   }) {
     return _then(_ConformanceSecurityCertificate(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as Code?,
-      blob: blob == freezed ? _value.blob : blob as Base64Binary?,
-      blobElement:
-          blobElement == freezed ? _value.blobElement : blobElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      blob: blob == freezed
+          ? _value.blob
+          : blob // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      blobElement: blobElement == freezed
+          ? _value.blobElement
+          : blobElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -6390,7 +7109,6 @@ class _$_ConformanceSecurityCertificate
 
 abstract class _ConformanceSecurityCertificate
     extends ConformanceSecurityCertificate {
-  _ConformanceSecurityCertificate._() : super._();
   factory _ConformanceSecurityCertificate(
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6399,28 +7117,30 @@ abstract class _ConformanceSecurityCertificate
           Base64Binary? blob,
           @JsonKey(name: '_blob') Element? blobElement}) =
       _$_ConformanceSecurityCertificate;
+  _ConformanceSecurityCertificate._() : super._();
 
   factory _ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json) =
       _$_ConformanceSecurityCertificate.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get type;
+  Code? get type => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get blob;
+  Base64Binary? get blob => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_blob')
-  Element? get blobElement;
+  Element? get blobElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ConformanceSecurityCertificateCopyWith<_ConformanceSecurityCertificate>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceRestInteraction _$ConformanceRestInteractionFromJson(
@@ -6459,17 +7179,19 @@ const $ConformanceRestInteraction = _$ConformanceRestInteractionTearOff();
 
 /// @nodoc
 mixin _$ConformanceRestInteraction {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-  RestInteractionCode get code;
-  String? get documentation;
+  RestInteractionCode get code => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConformanceRestInteractionCopyWith<ConformanceRestInteraction> get copyWith;
+  $ConformanceRestInteractionCopyWith<ConformanceRestInteraction>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6505,17 +7227,26 @@ class _$ConformanceRestInteractionCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as RestInteractionCode,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as RestInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -6559,17 +7290,26 @@ class __$ConformanceRestInteractionCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_ConformanceRestInteraction(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as RestInteractionCode,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as RestInteractionCode,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -6650,7 +7390,6 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
 }
 
 abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
-  _ConformanceRestInteraction._() : super._();
   factory _ConformanceRestInteraction(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -6659,26 +7398,28 @@ abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
       @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
           required RestInteractionCode code,
       String? documentation}) = _$_ConformanceRestInteraction;
+  _ConformanceRestInteraction._() : super._();
 
   factory _ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestInteraction.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-  RestInteractionCode get code;
+  RestInteractionCode get code => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ConformanceRestInteractionCopyWith<_ConformanceRestInteraction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceResourceSearchParam _$ConformanceResourceSearchParamFromJson(
@@ -6731,25 +7472,26 @@ const $ConformanceResourceSearchParam =
 
 /// @nodoc
 mixin _$ConformanceResourceSearchParam {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
-  String get name;
-  FhirUri? get definition;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  FhirUri? get definition => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchParamType.unknown)
-  SearchParamType get type;
-  String? get documentation;
-  List<Code>? get target;
-  List<SearchParamModifier>? get modifier;
-  List<String>? get chain;
+  SearchParamType get type => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
+  List<Code>? get target => throw _privateConstructorUsedError;
+  List<SearchParamModifier>? get modifier => throw _privateConstructorUsedError;
+  List<String>? get chain => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ConformanceResourceSearchParamCopyWith<ConformanceResourceSearchParam>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6796,28 +7538,50 @@ class _$ConformanceResourceSearchParamCopyWithImpl<$Res>
     Object? chain = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      name: name == freezed ? _value.name : name as String,
-      definition:
-          definition == freezed ? _value.definition : definition as FhirUri?,
-      type: type == freezed ? _value.type : type as SearchParamType,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SearchParamType,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
-      target: target == freezed ? _value.target : target as List<Code>?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<SearchParamModifier>?,
-      chain: chain == freezed ? _value.chain : chain as List<String>?,
+          : modifier // ignore: cast_nullable_to_non_nullable
+              as List<SearchParamModifier>?,
+      chain: chain == freezed
+          ? _value.chain
+          : chain // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -6872,28 +7636,50 @@ class __$ConformanceResourceSearchParamCopyWithImpl<$Res>
     Object? chain = freezed,
   }) {
     return _then(_ConformanceResourceSearchParam(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      name: name == freezed ? _value.name : name as String,
-      definition:
-          definition == freezed ? _value.definition : definition as FhirUri?,
-      type: type == freezed ? _value.type : type as SearchParamType,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SearchParamType,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
-      target: target == freezed ? _value.target : target as List<Code>?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<SearchParamModifier>?,
-      chain: chain == freezed ? _value.chain : chain as List<String>?,
+          : modifier // ignore: cast_nullable_to_non_nullable
+              as List<SearchParamModifier>?,
+      chain: chain == freezed
+          ? _value.chain
+          : chain // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -7015,7 +7801,6 @@ class _$_ConformanceResourceSearchParam
 
 abstract class _ConformanceResourceSearchParam
     extends ConformanceResourceSearchParam {
-  _ConformanceResourceSearchParam._() : super._();
   factory _ConformanceResourceSearchParam(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -7031,39 +7816,41 @@ abstract class _ConformanceResourceSearchParam
       List<Code>? target,
       List<SearchParamModifier>? modifier,
       List<String>? chain}) = _$_ConformanceResourceSearchParam;
+  _ConformanceResourceSearchParam._() : super._();
 
   factory _ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =
       _$_ConformanceResourceSearchParam.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  FhirUri? get definition;
+  FhirUri? get definition => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SearchParamType.unknown)
-  SearchParamType get type;
+  SearchParamType get type => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
-  List<Code>? get target;
+  List<Code>? get target => throw _privateConstructorUsedError;
   @override
-  List<SearchParamModifier>? get modifier;
+  List<SearchParamModifier>? get modifier => throw _privateConstructorUsedError;
   @override
-  List<String>? get chain;
+  List<String>? get chain => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ConformanceResourceSearchParamCopyWith<_ConformanceResourceSearchParam>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
@@ -7151,41 +7938,45 @@ const $OperationDefinition = _$OperationDefinitionTearOff();
 /// @nodoc
 mixin _$OperationDefinition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-  Dstu2ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
-  Code? get language;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
-  String? get version;
-  String get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-  OperationDefinitionStatus get status;
+  OperationDefinitionStatus get status => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-  OperationDefinitionKind get kind;
-  Boolean? get experimental;
-  String? get publisher;
-  List<OperationDefinitionContact>? get contact;
-  FhirDateTime? get date;
-  String? get description;
-  String? get requirements;
-  Boolean? get idempotent;
-  Code get code;
-  String? get notes;
-  Reference? get base;
-  Boolean get system;
-  List<Code>? get type;
-  Boolean get instance;
-  List<OperationDefinitionParameter>? get parameter;
+  OperationDefinitionKind get kind => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
+  List<OperationDefinitionContact>? get contact =>
+      throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get requirements => throw _privateConstructorUsedError;
+  Boolean? get idempotent => throw _privateConstructorUsedError;
+  Code get code => throw _privateConstructorUsedError;
+  String? get notes => throw _privateConstructorUsedError;
+  Reference? get base => throw _privateConstructorUsedError;
+  Boolean get system => throw _privateConstructorUsedError;
+  List<Code>? get type => throw _privateConstructorUsedError;
+  Boolean get instance => throw _privateConstructorUsedError;
+  List<OperationDefinitionParameter>? get parameter =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OperationDefinitionCopyWith<OperationDefinition> get copyWith;
+  $OperationDefinitionCopyWith<OperationDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7275,54 +8066,116 @@ class _$OperationDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      version: version == freezed ? _value.version : version as String?,
-      name: name == freezed ? _value.name : name as String,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       status: status == freezed
           ? _value.status
-          : status as OperationDefinitionStatus,
-      kind: kind == freezed ? _value.kind : kind as OperationDefinitionKind,
+          : status // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionStatus,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionKind,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<OperationDefinitionContact>?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionContact>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       requirements: requirements == freezed
           ? _value.requirements
-          : requirements as String?,
-      idempotent:
-          idempotent == freezed ? _value.idempotent : idempotent as Boolean?,
-      code: code == freezed ? _value.code : code as Code,
-      notes: notes == freezed ? _value.notes : notes as String?,
-      base: base == freezed ? _value.base : base as Reference?,
-      system: system == freezed ? _value.system : system as Boolean,
-      type: type == freezed ? _value.type : type as List<Code>?,
-      instance: instance == freezed ? _value.instance : instance as Boolean,
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as String?,
+      idempotent: idempotent == freezed
+          ? _value.idempotent
+          : idempotent // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code,
+      notes: notes == freezed
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as Boolean,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
+      instance: instance == freezed
+          ? _value.instance
+          : instance // ignore: cast_nullable_to_non_nullable
+              as Boolean,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<OperationDefinitionParameter>?,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionParameter>?,
     ));
   }
 
@@ -7454,54 +8307,116 @@ class __$OperationDefinitionCopyWithImpl<$Res>
     return _then(_OperationDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      version: version == freezed ? _value.version : version as String?,
-      name: name == freezed ? _value.name : name as String,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       status: status == freezed
           ? _value.status
-          : status as OperationDefinitionStatus,
-      kind: kind == freezed ? _value.kind : kind as OperationDefinitionKind,
+          : status // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionStatus,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionKind,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<OperationDefinitionContact>?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionContact>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       requirements: requirements == freezed
           ? _value.requirements
-          : requirements as String?,
-      idempotent:
-          idempotent == freezed ? _value.idempotent : idempotent as Boolean?,
-      code: code == freezed ? _value.code : code as Code,
-      notes: notes == freezed ? _value.notes : notes as String?,
-      base: base == freezed ? _value.base : base as Reference?,
-      system: system == freezed ? _value.system : system as Boolean,
-      type: type == freezed ? _value.type : type as List<Code>?,
-      instance: instance == freezed ? _value.instance : instance as Boolean,
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as String?,
+      idempotent: idempotent == freezed
+          ? _value.idempotent
+          : idempotent // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code,
+      notes: notes == freezed
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as Boolean,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
+      instance: instance == freezed
+          ? _value.instance
+          : instance // ignore: cast_nullable_to_non_nullable
+              as Boolean,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<OperationDefinitionParameter>?,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionParameter>?,
     ));
   }
 }
@@ -7736,7 +8651,6 @@ class _$_OperationDefinition extends _OperationDefinition {
 }
 
 abstract class _OperationDefinition extends OperationDefinition {
-  _OperationDefinition._() : super._();
   factory _OperationDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           Dstu2ResourceType resourceType,
@@ -7770,73 +8684,78 @@ abstract class _OperationDefinition extends OperationDefinition {
       List<Code>? type,
       required Boolean instance,
       List<OperationDefinitionParameter>? parameter}) = _$_OperationDefinition;
+  _OperationDefinition._() : super._();
 
   factory _OperationDefinition.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-  OperationDefinitionStatus get status;
+  OperationDefinitionStatus get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-  OperationDefinitionKind get kind;
+  OperationDefinitionKind get kind => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
-  List<OperationDefinitionContact>? get contact;
+  List<OperationDefinitionContact>? get contact =>
+      throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String? get requirements;
+  String? get requirements => throw _privateConstructorUsedError;
   @override
-  Boolean? get idempotent;
+  Boolean? get idempotent => throw _privateConstructorUsedError;
   @override
-  Code get code;
+  Code get code => throw _privateConstructorUsedError;
   @override
-  String? get notes;
+  String? get notes => throw _privateConstructorUsedError;
   @override
-  Reference? get base;
+  Reference? get base => throw _privateConstructorUsedError;
   @override
-  Boolean get system;
+  Boolean get system => throw _privateConstructorUsedError;
   @override
-  List<Code>? get type;
+  List<Code>? get type => throw _privateConstructorUsedError;
   @override
-  Boolean get instance;
+  Boolean get instance => throw _privateConstructorUsedError;
   @override
-  List<OperationDefinitionParameter>? get parameter;
+  List<OperationDefinitionParameter>? get parameter =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith;
+  _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 OperationDefinitionContact _$OperationDefinitionContactFromJson(
@@ -7873,16 +8792,18 @@ const $OperationDefinitionContact = _$OperationDefinitionContactTearOff();
 
 /// @nodoc
 mixin _$OperationDefinitionContact {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
-  List<ContactPoint>? get telecom;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OperationDefinitionContactCopyWith<OperationDefinitionContact> get copyWith;
+  $OperationDefinitionContactCopyWith<OperationDefinitionContact>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7916,16 +8837,26 @@ class _$OperationDefinitionContactCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
     ));
   }
 }
@@ -7967,16 +8898,26 @@ class __$OperationDefinitionContactCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_OperationDefinitionContact(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
     ));
   }
 }
@@ -8053,32 +8994,33 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
 }
 
 abstract class _OperationDefinitionContact extends OperationDefinitionContact {
-  _OperationDefinitionContact._() : super._();
   factory _OperationDefinitionContact(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
       List<ContactPoint>? telecom}) = _$_OperationDefinitionContact;
+  _OperationDefinitionContact._() : super._();
 
   factory _OperationDefinitionContact.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionContact.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OperationDefinitionContactCopyWith<_OperationDefinitionContact>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
@@ -8135,28 +9077,31 @@ const $OperationDefinitionParameter = _$OperationDefinitionParameterTearOff();
 
 /// @nodoc
 mixin _$OperationDefinitionParameter {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
-  Code get name;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  Code get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ParameterUse.unknown)
-  ParameterUse get use;
-  Integer get min;
-  String get max;
-  String? get documentation;
-  Code? get type;
-  Reference? get profile;
-  OperationDefinitionParameterBinding? get binding;
+  ParameterUse get use => throw _privateConstructorUsedError;
+  Integer get min => throw _privateConstructorUsedError;
+  String get max => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
+  Reference? get profile => throw _privateConstructorUsedError;
+  OperationDefinitionParameterBinding? get binding =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'part')
-  List<OperationDefinitionParameter>? get part_;
+  List<OperationDefinitionParameter>? get part_ =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $OperationDefinitionParameterCopyWith<OperationDefinitionParameter>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8210,31 +9155,58 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
     Object? part_ = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      name: name == freezed ? _value.name : name as Code,
-      use: use == freezed ? _value.use : use as ParameterUse,
-      min: min == freezed ? _value.min : min as Integer,
-      max: max == freezed ? _value.max : max as String,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Code,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as ParameterUse,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as Integer,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
-      type: type == freezed ? _value.type : type as Code?,
-      profile: profile == freezed ? _value.profile : profile as Reference?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       binding: binding == freezed
           ? _value.binding
-          : binding as OperationDefinitionParameterBinding?,
+          : binding // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionParameterBinding?,
       part_: part_ == freezed
           ? _value.part_
-          : part_ as List<OperationDefinitionParameter>?,
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionParameter>?,
     ));
   }
 
@@ -8321,31 +9293,58 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
     Object? part_ = freezed,
   }) {
     return _then(_OperationDefinitionParameter(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      name: name == freezed ? _value.name : name as Code,
-      use: use == freezed ? _value.use : use as ParameterUse,
-      min: min == freezed ? _value.min : min as Integer,
-      max: max == freezed ? _value.max : max as String,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Code,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as ParameterUse,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as Integer,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
-      type: type == freezed ? _value.type : type as Code?,
-      profile: profile == freezed ? _value.profile : profile as Reference?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       binding: binding == freezed
           ? _value.binding
-          : binding as OperationDefinitionParameterBinding?,
+          : binding // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionParameterBinding?,
       part_: part_ == freezed
           ? _value.part_
-          : part_ as List<OperationDefinitionParameter>?,
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionParameter>?,
     ));
   }
 }
@@ -8478,7 +9477,6 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 
 abstract class _OperationDefinitionParameter
     extends OperationDefinitionParameter {
-  _OperationDefinitionParameter._() : super._();
   factory _OperationDefinitionParameter(
           {Id? id,
           @JsonKey(name: 'extension')
@@ -8498,44 +9496,48 @@ abstract class _OperationDefinitionParameter
           @JsonKey(name: 'part')
               List<OperationDefinitionParameter>? part_}) =
       _$_OperationDefinitionParameter;
+  _OperationDefinitionParameter._() : super._();
 
   factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionParameter.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  Code get name;
+  Code get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ParameterUse.unknown)
-  ParameterUse get use;
+  ParameterUse get use => throw _privateConstructorUsedError;
   @override
-  Integer get min;
+  Integer get min => throw _privateConstructorUsedError;
   @override
-  String get max;
+  String get max => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
-  Code? get type;
+  Code? get type => throw _privateConstructorUsedError;
   @override
-  Reference? get profile;
+  Reference? get profile => throw _privateConstructorUsedError;
   @override
-  OperationDefinitionParameterBinding? get binding;
+  OperationDefinitionParameterBinding? get binding =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'part')
-  List<OperationDefinitionParameter>? get part_;
+  List<OperationDefinitionParameter>? get part_ =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 OperationDefinitionParameterBinding
@@ -8580,22 +9582,25 @@ const $OperationDefinitionParameterBinding =
 
 /// @nodoc
 mixin _$OperationDefinitionParameterBinding {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(
       required: true,
       unknownEnumValue: OperationDefinitionBindingStrength.unknown)
   @JsonKey(required: true)
-  OperationDefinitionBindingStrength get strength;
-  FhirUri? get valueSetUri;
-  Reference? get valueSetReference;
+  OperationDefinitionBindingStrength get strength =>
+      throw _privateConstructorUsedError;
+  FhirUri? get valueSetUri => throw _privateConstructorUsedError;
+  Reference? get valueSetReference => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $OperationDefinitionParameterBindingCopyWith<
-      OperationDefinitionParameterBinding> get copyWith;
+          OperationDefinitionParameterBinding>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8639,21 +9644,30 @@ class _$OperationDefinitionParameterBindingCopyWithImpl<$Res>
     Object? valueSetReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       strength: strength == freezed
           ? _value.strength
-          : strength as OperationDefinitionBindingStrength,
-      valueSetUri:
-          valueSetUri == freezed ? _value.valueSetUri : valueSetUri as FhirUri?,
+          : strength // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionBindingStrength,
+      valueSetUri: valueSetUri == freezed
+          ? _value.valueSetUri
+          : valueSetUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       valueSetReference: valueSetReference == freezed
           ? _value.valueSetReference
-          : valueSetReference as Reference?,
+          : valueSetReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -8717,21 +9731,30 @@ class __$OperationDefinitionParameterBindingCopyWithImpl<$Res>
     Object? valueSetReference = freezed,
   }) {
     return _then(_OperationDefinitionParameterBinding(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       strength: strength == freezed
           ? _value.strength
-          : strength as OperationDefinitionBindingStrength,
-      valueSetUri:
-          valueSetUri == freezed ? _value.valueSetUri : valueSetUri as FhirUri?,
+          : strength // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionBindingStrength,
+      valueSetUri: valueSetUri == freezed
+          ? _value.valueSetUri
+          : valueSetUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       valueSetReference: valueSetReference == freezed
           ? _value.valueSetReference
-          : valueSetReference as Reference?,
+          : valueSetReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -8830,7 +9853,6 @@ class _$_OperationDefinitionParameterBinding
 
 abstract class _OperationDefinitionParameterBinding
     extends OperationDefinitionParameterBinding {
-  _OperationDefinitionParameterBinding._() : super._();
   factory _OperationDefinitionParameterBinding(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -8843,32 +9865,36 @@ abstract class _OperationDefinitionParameterBinding
           required OperationDefinitionBindingStrength strength,
       FhirUri? valueSetUri,
       Reference? valueSetReference}) = _$_OperationDefinitionParameterBinding;
+  _OperationDefinitionParameterBinding._() : super._();
 
   factory _OperationDefinitionParameterBinding.fromJson(
           Map<String, dynamic> json) =
       _$_OperationDefinitionParameterBinding.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(
       required: true,
       unknownEnumValue: OperationDefinitionBindingStrength.unknown)
   @JsonKey(required: true)
-  OperationDefinitionBindingStrength get strength;
+  OperationDefinitionBindingStrength get strength =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get valueSetUri;
+  FhirUri? get valueSetUri => throw _privateConstructorUsedError;
   @override
-  Reference? get valueSetReference;
+  Reference? get valueSetReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OperationDefinitionParameterBindingCopyWith<
-      _OperationDefinitionParameterBinding> get copyWith;
+          _OperationDefinitionParameterBinding>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
@@ -8951,40 +9977,44 @@ const $SearchParameter = _$SearchParameterTearOff();
 /// @nodoc
 mixin _$SearchParameter {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-  Dstu2ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
-  Code? get language;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri get url;
-  String get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri get url => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-  SearchParameterStatus? get status;
-  Boolean? get experimental;
-  String? get publisher;
-  List<SearchParameterContact>? get contact;
-  FhirDateTime? get date;
-  String? get requirements;
+  SearchParameterStatus? get status => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
+  List<SearchParameterContact>? get contact =>
+      throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  String? get requirements => throw _privateConstructorUsedError;
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement;
-  Code get code;
-  Code? get base;
+  Element? get requirementsElement => throw _privateConstructorUsedError;
+  Code get code => throw _privateConstructorUsedError;
+  Code? get base => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-  SearchParameterType get type;
-  String? get description;
-  String? get xpath;
+  SearchParameterType get type => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get xpath => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-  SearchParameterXpathUsage? get xpathUsage;
-  List<Code>? get target;
+  SearchParameterXpathUsage? get xpathUsage =>
+      throw _privateConstructorUsedError;
+  List<Code>? get target => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SearchParameterCopyWith<SearchParameter> get copyWith;
+  $SearchParameterCopyWith<SearchParameter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -9070,51 +10100,104 @@ class _$SearchParameterCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri,
-      name: name == freezed ? _value.name : name as String,
-      status:
-          status == freezed ? _value.status : status as SearchParameterStatus?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as SearchParameterStatus?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<SearchParameterContact>?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<SearchParameterContact>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       requirements: requirements == freezed
           ? _value.requirements
-          : requirements as String?,
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as String?,
       requirementsElement: requirementsElement == freezed
           ? _value.requirementsElement
-          : requirementsElement as Element?,
-      code: code == freezed ? _value.code : code as Code,
-      base: base == freezed ? _value.base : base as Code?,
-      type: type == freezed ? _value.type : type as SearchParameterType,
-      description:
-          description == freezed ? _value.description : description as String?,
-      xpath: xpath == freezed ? _value.xpath : xpath as String?,
+          : requirementsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SearchParameterType,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      xpath: xpath == freezed
+          ? _value.xpath
+          : xpath // ignore: cast_nullable_to_non_nullable
+              as String?,
       xpathUsage: xpathUsage == freezed
           ? _value.xpathUsage
-          : xpathUsage as SearchParameterXpathUsage?,
-      target: target == freezed ? _value.target : target as List<Code>?,
+          : xpathUsage // ignore: cast_nullable_to_non_nullable
+              as SearchParameterXpathUsage?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
     ));
   }
 
@@ -9242,51 +10325,104 @@ class __$SearchParameterCopyWithImpl<$Res>
     return _then(_SearchParameter(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri,
-      name: name == freezed ? _value.name : name as String,
-      status:
-          status == freezed ? _value.status : status as SearchParameterStatus?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as SearchParameterStatus?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<SearchParameterContact>?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<SearchParameterContact>?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       requirements: requirements == freezed
           ? _value.requirements
-          : requirements as String?,
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as String?,
       requirementsElement: requirementsElement == freezed
           ? _value.requirementsElement
-          : requirementsElement as Element?,
-      code: code == freezed ? _value.code : code as Code,
-      base: base == freezed ? _value.base : base as Code?,
-      type: type == freezed ? _value.type : type as SearchParameterType,
-      description:
-          description == freezed ? _value.description : description as String?,
-      xpath: xpath == freezed ? _value.xpath : xpath as String?,
+          : requirementsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SearchParameterType,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      xpath: xpath == freezed
+          ? _value.xpath
+          : xpath // ignore: cast_nullable_to_non_nullable
+              as String?,
       xpathUsage: xpathUsage == freezed
           ? _value.xpathUsage
-          : xpathUsage as SearchParameterXpathUsage?,
-      target: target == freezed ? _value.target : target as List<Code>?,
+          : xpathUsage // ignore: cast_nullable_to_non_nullable
+              as SearchParameterXpathUsage?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
     ));
   }
 }
@@ -9504,7 +10640,6 @@ class _$_SearchParameter extends _SearchParameter {
 }
 
 abstract class _SearchParameter extends SearchParameter {
-  _SearchParameter._() : super._();
   factory _SearchParameter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           Dstu2ResourceType resourceType,
@@ -9537,69 +10672,74 @@ abstract class _SearchParameter extends SearchParameter {
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           SearchParameterXpathUsage? xpathUsage,
       List<Code>? target}) = _$_SearchParameter;
+  _SearchParameter._() : super._();
 
   factory _SearchParameter.fromJson(Map<String, dynamic> json) =
       _$_SearchParameter.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri get url;
+  FhirUri get url => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-  SearchParameterStatus? get status;
+  SearchParameterStatus? get status => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
-  List<SearchParameterContact>? get contact;
+  List<SearchParameterContact>? get contact =>
+      throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
-  String? get requirements;
+  String? get requirements => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement;
+  Element? get requirementsElement => throw _privateConstructorUsedError;
   @override
-  Code get code;
+  Code get code => throw _privateConstructorUsedError;
   @override
-  Code? get base;
+  Code? get base => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-  SearchParameterType get type;
+  SearchParameterType get type => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String? get xpath;
+  String? get xpath => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-  SearchParameterXpathUsage? get xpathUsage;
+  SearchParameterXpathUsage? get xpathUsage =>
+      throw _privateConstructorUsedError;
   @override
-  List<Code>? get target;
+  List<Code>? get target => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SearchParameterCopyWith<_SearchParameter> get copyWith;
+  _$SearchParameterCopyWith<_SearchParameter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SearchParameterContact _$SearchParameterContactFromJson(
@@ -9636,16 +10776,18 @@ const $SearchParameterContact = _$SearchParameterContactTearOff();
 
 /// @nodoc
 mixin _$SearchParameterContact {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
-  List<ContactPoint>? get telecom;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SearchParameterContactCopyWith<SearchParameterContact> get copyWith;
+  $SearchParameterContactCopyWith<SearchParameterContact> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -9679,16 +10821,26 @@ class _$SearchParameterContactCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
     ));
   }
 }
@@ -9728,16 +10880,26 @@ class __$SearchParameterContactCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_SearchParameterContact(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
     ));
   }
 }
@@ -9814,29 +10976,31 @@ class _$_SearchParameterContact extends _SearchParameterContact {
 }
 
 abstract class _SearchParameterContact extends SearchParameterContact {
-  _SearchParameterContact._() : super._();
   factory _SearchParameterContact(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
       List<ContactPoint>? telecom}) = _$_SearchParameterContact;
+  _SearchParameterContact._() : super._();
 
   factory _SearchParameterContact.fromJson(Map<String, dynamic> json) =
       _$_SearchParameterContact.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SearchParameterContactCopyWith<_SearchParameterContact> get copyWith;
+  _$SearchParameterContactCopyWith<_SearchParameterContact> get copyWith =>
+      throw _privateConstructorUsedError;
 }

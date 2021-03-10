@@ -12,7 +12,7 @@ part 'clinical_decision_support.freezed.dart';
 part 'clinical_decision_support.g.dart';
 
 @freezed
-abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
+class GuidanceResponse with Resource, _$GuidanceResponse {
   GuidanceResponse._();
   factory GuidanceResponse({
     @Default(Stu3ResourceType.GuidanceResponse)

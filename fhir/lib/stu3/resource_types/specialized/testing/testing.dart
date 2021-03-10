@@ -12,7 +12,7 @@ part 'testing.freezed.dart';
 part 'testing.g.dart';
 
 @freezed
-abstract class TestReport with Resource implements _$TestReport {
+class TestReport with Resource, _$TestReport {
   TestReport._();
   factory TestReport({
     @Default(Stu3ResourceType.TestReport)
@@ -66,7 +66,7 @@ abstract class TestReport with Resource implements _$TestReport {
 }
 
 @freezed
-abstract class TestReportParticipant implements _$TestReportParticipant {
+class TestReportParticipant with _$TestReportParticipant {
   TestReportParticipant._();
   factory TestReportParticipant({
     TestReportParticipantType? type,
@@ -95,7 +95,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
 }
 
 @freezed
-abstract class TestReportSetup implements _$TestReportSetup {
+class TestReportSetup with _$TestReportSetup {
   TestReportSetup._();
   factory TestReportSetup({
     required List<TestReportAction> action,
@@ -119,7 +119,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
 }
 
 @freezed
-abstract class TestReportAction implements _$TestReportAction {
+class TestReportAction with _$TestReportAction {
   TestReportAction._();
   factory TestReportAction({
     TestReportOperation? operation,
@@ -144,7 +144,7 @@ abstract class TestReportAction implements _$TestReportAction {
 }
 
 @freezed
-abstract class TestReportOperation implements _$TestReportOperation {
+class TestReportOperation with _$TestReportOperation {
   TestReportOperation._();
   factory TestReportOperation({
     TestReportOperationResult? result,
@@ -173,7 +173,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
 }
 
 @freezed
-abstract class TestReportAssert implements _$TestReportAssert {
+class TestReportAssert with _$TestReportAssert {
   TestReportAssert._();
   factory TestReportAssert({
     TestReportAssertResult? result,
@@ -202,7 +202,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
 }
 
 @freezed
-abstract class TestReportTest implements _$TestReportTest {
+class TestReportTest with _$TestReportTest {
   TestReportTest._();
   factory TestReportTest({
     String? name,
@@ -230,7 +230,7 @@ abstract class TestReportTest implements _$TestReportTest {
 }
 
 @freezed
-abstract class TestReportAction1 implements _$TestReportAction1 {
+class TestReportAction1 with _$TestReportAction1 {
   TestReportAction1._();
   factory TestReportAction1({
     TestReportOperation? operation,
@@ -255,7 +255,7 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
 }
 
 @freezed
-abstract class TestReportTeardown implements _$TestReportTeardown {
+class TestReportTeardown with _$TestReportTeardown {
   TestReportTeardown._();
   factory TestReportTeardown({
     required List<TestReportAction2> action,
@@ -279,7 +279,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
 }
 
 @freezed
-abstract class TestReportAction2 implements _$TestReportAction2 {
+class TestReportAction2 with _$TestReportAction2 {
   TestReportAction2._();
   factory TestReportAction2({
     required TestReportOperation operation,
@@ -303,7 +303,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
 }
 
 @freezed
-abstract class TestScript with Resource implements _$TestScript {
+class TestScript with Resource, _$TestScript {
   TestScript._();
   factory TestScript({
     @Default(Stu3ResourceType.TestScript)
@@ -376,7 +376,7 @@ abstract class TestScript with Resource implements _$TestScript {
 }
 
 @freezed
-abstract class TestScriptOrigin implements _$TestScriptOrigin {
+class TestScriptOrigin with _$TestScriptOrigin {
   TestScriptOrigin._();
   factory TestScriptOrigin({
     Decimal? index,
@@ -402,7 +402,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
 }
 
 @freezed
-abstract class TestScriptDestination implements _$TestScriptDestination {
+class TestScriptDestination with _$TestScriptDestination {
   TestScriptDestination._();
   factory TestScriptDestination({
     Decimal? index,
@@ -428,7 +428,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
 }
 
 @freezed
-abstract class TestScriptMetadata implements _$TestScriptMetadata {
+class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
   factory TestScriptMetadata({
     List<TestScriptLink>? link,
@@ -453,7 +453,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
 }
 
 @freezed
-abstract class TestScriptLink implements _$TestScriptLink {
+class TestScriptLink with _$TestScriptLink {
   TestScriptLink._();
   factory TestScriptLink({
     String? url,
@@ -480,7 +480,7 @@ abstract class TestScriptLink implements _$TestScriptLink {
 }
 
 @freezed
-abstract class TestScriptCapability implements _$TestScriptCapability {
+class TestScriptCapability with _$TestScriptCapability {
   TestScriptCapability._();
   factory TestScriptCapability({
     @JsonKey(name: 'required') Boolean? required_,
@@ -516,7 +516,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
 }
 
 @freezed
-abstract class TestScriptFixture implements _$TestScriptFixture {
+class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
   factory TestScriptFixture({
     Boolean? autocreate,
@@ -544,7 +544,7 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
 }
 
 @freezed
-abstract class TestScriptVariable implements _$TestScriptVariable {
+class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
   factory TestScriptVariable({
     String? name,
@@ -583,7 +583,7 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
 }
 
 @freezed
-abstract class TestScriptRule implements _$TestScriptRule {
+class TestScriptRule with _$TestScriptRule {
   TestScriptRule._();
   factory TestScriptRule({
     required Reference resource,
@@ -608,7 +608,7 @@ abstract class TestScriptRule implements _$TestScriptRule {
 }
 
 @freezed
-abstract class TestScriptParam implements _$TestScriptParam {
+class TestScriptParam with _$TestScriptParam {
   TestScriptParam._();
   factory TestScriptParam({
     String? name,
@@ -635,7 +635,7 @@ abstract class TestScriptParam implements _$TestScriptParam {
 }
 
 @freezed
-abstract class TestScriptRuleset implements _$TestScriptRuleset {
+class TestScriptRuleset with _$TestScriptRuleset {
   TestScriptRuleset._();
   factory TestScriptRuleset({
     required Reference resource,
@@ -660,7 +660,7 @@ abstract class TestScriptRuleset implements _$TestScriptRuleset {
 }
 
 @freezed
-abstract class TestScriptRule1 implements _$TestScriptRule1 {
+class TestScriptRule1 with _$TestScriptRule1 {
   TestScriptRule1._();
   factory TestScriptRule1({
     Id? ruleId,
@@ -686,7 +686,7 @@ abstract class TestScriptRule1 implements _$TestScriptRule1 {
 }
 
 @freezed
-abstract class TestScriptParam1 implements _$TestScriptParam1 {
+class TestScriptParam1 with _$TestScriptParam1 {
   TestScriptParam1._();
   factory TestScriptParam1({
     String? name,
@@ -713,7 +713,7 @@ abstract class TestScriptParam1 implements _$TestScriptParam1 {
 }
 
 @freezed
-abstract class TestScriptSetup implements _$TestScriptSetup {
+class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
   factory TestScriptSetup({
     required List<TestScriptAction> action,
@@ -737,7 +737,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
 }
 
 @freezed
-abstract class TestScriptAction implements _$TestScriptAction {
+class TestScriptAction with _$TestScriptAction {
   TestScriptAction._();
   factory TestScriptAction({
     TestScriptOperation? operation,
@@ -762,7 +762,7 @@ abstract class TestScriptAction implements _$TestScriptAction {
 }
 
 @freezed
-abstract class TestScriptOperation implements _$TestScriptOperation {
+class TestScriptOperation with _$TestScriptOperation {
   TestScriptOperation._();
   factory TestScriptOperation({
     Coding? type,
@@ -815,7 +815,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
 }
 
 @freezed
-abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
+class TestScriptRequestHeader with _$TestScriptRequestHeader {
   TestScriptRequestHeader._();
   factory TestScriptRequestHeader({
     String? field,
@@ -842,7 +842,7 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
 }
 
 @freezed
-abstract class TestScriptAssert implements _$TestScriptAssert {
+class TestScriptAssert with _$TestScriptAssert {
   TestScriptAssert._();
   factory TestScriptAssert({
     String? label,
@@ -912,7 +912,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
 }
 
 @freezed
-abstract class TestScriptRule2 implements _$TestScriptRule2 {
+class TestScriptRule2 with _$TestScriptRule2 {
   TestScriptRule2._();
   factory TestScriptRule2({
     Id? ruleId,
@@ -938,7 +938,7 @@ abstract class TestScriptRule2 implements _$TestScriptRule2 {
 }
 
 @freezed
-abstract class TestScriptParam2 implements _$TestScriptParam2 {
+class TestScriptParam2 with _$TestScriptParam2 {
   TestScriptParam2._();
   factory TestScriptParam2({
     String? name,
@@ -965,7 +965,7 @@ abstract class TestScriptParam2 implements _$TestScriptParam2 {
 }
 
 @freezed
-abstract class TestScriptRuleset1 implements _$TestScriptRuleset1 {
+class TestScriptRuleset1 with _$TestScriptRuleset1 {
   TestScriptRuleset1._();
   factory TestScriptRuleset1({
     Id? rulesetId,
@@ -991,7 +991,7 @@ abstract class TestScriptRuleset1 implements _$TestScriptRuleset1 {
 }
 
 @freezed
-abstract class TestScriptRule3 implements _$TestScriptRule3 {
+class TestScriptRule3 with _$TestScriptRule3 {
   TestScriptRule3._();
   factory TestScriptRule3({
     Id? ruleId,
@@ -1017,7 +1017,7 @@ abstract class TestScriptRule3 implements _$TestScriptRule3 {
 }
 
 @freezed
-abstract class TestScriptParam3 implements _$TestScriptParam3 {
+class TestScriptParam3 with _$TestScriptParam3 {
   TestScriptParam3._();
   factory TestScriptParam3({
     String? name,
@@ -1044,7 +1044,7 @@ abstract class TestScriptParam3 implements _$TestScriptParam3 {
 }
 
 @freezed
-abstract class TestScriptTest implements _$TestScriptTest {
+class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
   factory TestScriptTest({
     String? name,
@@ -1072,7 +1072,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
 }
 
 @freezed
-abstract class TestScriptAction1 implements _$TestScriptAction1 {
+class TestScriptAction1 with _$TestScriptAction1 {
   TestScriptAction1._();
   factory TestScriptAction1({
     TestScriptOperation? operation,
@@ -1097,7 +1097,7 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
 }
 
 @freezed
-abstract class TestScriptTeardown implements _$TestScriptTeardown {
+class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
   factory TestScriptTeardown({
     required List<TestScriptAction2> action,
@@ -1121,7 +1121,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
 }
 
 @freezed
-abstract class TestScriptAction2 implements _$TestScriptAction2 {
+class TestScriptAction2 with _$TestScriptAction2 {
   TestScriptAction2._();
   factory TestScriptAction2({
     required TestScriptOperation operation,

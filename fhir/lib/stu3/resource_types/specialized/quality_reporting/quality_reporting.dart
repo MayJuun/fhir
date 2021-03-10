@@ -12,7 +12,7 @@ part 'quality_reporting.freezed.dart';
 part 'quality_reporting.g.dart';
 
 @freezed
-abstract class Measure with Resource implements _$Measure {
+class Measure with Resource, _$Measure {
   Measure._();
   factory Measure({
     @Default(Stu3ResourceType.Measure)
@@ -109,7 +109,7 @@ abstract class Measure with Resource implements _$Measure {
 }
 
 @freezed
-abstract class MeasureGroup implements _$MeasureGroup {
+class MeasureGroup with _$MeasureGroup {
   MeasureGroup._();
   factory MeasureGroup({
     required Identifier identifier,
@@ -139,7 +139,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
 }
 
 @freezed
-abstract class MeasurePopulation implements _$MeasurePopulation {
+class MeasurePopulation with _$MeasurePopulation {
   MeasurePopulation._();
   factory MeasurePopulation({
     Identifier? identifier,
@@ -170,7 +170,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
 }
 
 @freezed
-abstract class MeasureStratifier implements _$MeasureStratifier {
+class MeasureStratifier with _$MeasureStratifier {
   MeasureStratifier._();
   factory MeasureStratifier({
     Identifier? identifier,
@@ -198,7 +198,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
 }
 
 @freezed
-abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
+class MeasureSupplementalData with _$MeasureSupplementalData {
   MeasureSupplementalData._();
   factory MeasureSupplementalData({
     Identifier? identifier,
@@ -227,7 +227,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
 }
 
 @freezed
-abstract class MeasureReport with Resource implements _$MeasureReport {
+class MeasureReport with Resource, _$MeasureReport {
   MeasureReport._();
   factory MeasureReport({
     @Default(Stu3ResourceType.MeasureReport)
@@ -276,7 +276,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
 }
 
 @freezed
-abstract class MeasureReportGroup implements _$MeasureReportGroup {
+class MeasureReportGroup with _$MeasureReportGroup {
   MeasureReportGroup._();
   factory MeasureReportGroup({
     required Identifier identifier,
@@ -304,7 +304,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
 }
 
 @freezed
-abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
+class MeasureReportPopulation with _$MeasureReportPopulation {
   MeasureReportPopulation._();
   factory MeasureReportPopulation({
     Identifier? identifier,
@@ -332,7 +332,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
 }
 
 @freezed
-abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
+class MeasureReportStratifier with _$MeasureReportStratifier {
   MeasureReportStratifier._();
   factory MeasureReportStratifier({
     Identifier? identifier,
@@ -357,7 +357,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
 }
 
 @freezed
-abstract class MeasureReportStratum implements _$MeasureReportStratum {
+class MeasureReportStratum with _$MeasureReportStratum {
   MeasureReportStratum._();
   factory MeasureReportStratum({
     String? value,
@@ -385,7 +385,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
 }
 
 @freezed
-abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
+class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   MeasureReportPopulation1._();
   factory MeasureReportPopulation1({
     Identifier? identifier,

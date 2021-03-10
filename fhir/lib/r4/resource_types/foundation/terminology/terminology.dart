@@ -12,7 +12,7 @@ part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
 @freezed
-abstract class CodeSystem with Resource implements _$CodeSystem {
+class CodeSystem with Resource, _$CodeSystem {
   CodeSystem._();
 
   /// [CodeSystem]: The CodeSystem resource is used to declare the existence of
@@ -285,7 +285,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
 }
 
 @freezed
-abstract class CodeSystemFilter implements _$CodeSystemFilter {
+class CodeSystemFilter with _$CodeSystemFilter {
   CodeSystemFilter._();
 
   /// [CodeSystem_Filter]: The CodeSystem resource is used to declare the
@@ -364,7 +364,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
 }
 
 @freezed
-abstract class CodeSystemProperty implements _$CodeSystemProperty {
+class CodeSystemProperty with _$CodeSystemProperty {
   CodeSystemProperty._();
 
   /// [CodeSystem_Property]: The CodeSystem resource is used to declare the
@@ -450,7 +450,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
 }
 
 @freezed
-abstract class CodeSystemConcept implements _$CodeSystemConcept {
+class CodeSystemConcept with _$CodeSystemConcept {
   CodeSystemConcept._();
 
   /// [CodeSystem_Concept]: The CodeSystem resource is used to declare the
@@ -540,7 +540,7 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
 }
 
 @freezed
-abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
+class CodeSystemDesignation with _$CodeSystemDesignation {
   CodeSystemDesignation._();
 
   /// [CodeSystem_Designation]: The CodeSystem resource is used to declare the
@@ -609,7 +609,7 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
 }
 
 @freezed
-abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
+class CodeSystemProperty1 with _$CodeSystemProperty1 {
   CodeSystemProperty1._();
 
   /// [CodeSystem_Property1]: The CodeSystem resource is used to declare the
@@ -708,7 +708,7 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
 }
 
 @freezed
-abstract class ConceptMap with Resource implements _$ConceptMap {
+class ConceptMap with Resource, _$ConceptMap {
   ConceptMap._();
 
   /// [ConceptMap]: A statement of relationships from one set of concepts to one
@@ -949,7 +949,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
 }
 
 @freezed
-abstract class ConceptMapGroup implements _$ConceptMapGroup {
+class ConceptMapGroup with _$ConceptMapGroup {
   ConceptMapGroup._();
 
   /// [ConceptMap_Group]: A statement of relationships from one set of concepts
@@ -1041,7 +1041,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
 }
 
 @freezed
-abstract class ConceptMapElement implements _$ConceptMapElement {
+class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
 
   /// [ConceptMap_Element]: A statement of relationships from one set of
@@ -1111,7 +1111,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
 }
 
 @freezed
-abstract class ConceptMapTarget implements _$ConceptMapTarget {
+class ConceptMapTarget with _$ConceptMapTarget {
   ConceptMapTarget._();
 
   /// [ConceptMap_Target]: A statement of relationships from one set of concepts
@@ -1207,7 +1207,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
 }
 
 @freezed
-abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
+class ConceptMapDependsOn with _$ConceptMapDependsOn {
   ConceptMapDependsOn._();
 
   /// [ConceptMap_DependsOn]: A statement of relationships from one set of
@@ -1289,7 +1289,7 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
 }
 
 @freezed
-abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
+class ConceptMapUnmapped with _$ConceptMapUnmapped {
   ConceptMapUnmapped._();
 
   /// [ConceptMap_Unmapped]: A statement of relationships from one set of
@@ -1374,7 +1374,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
 }
 
 @freezed
-abstract class NamingSystem with Resource implements _$NamingSystem {
+class NamingSystem with Resource, _$NamingSystem {
   NamingSystem._();
 
   /// [NamingSystem]: A curated namespace that issues unique symbols within that
@@ -1552,7 +1552,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
 }
 
 @freezed
-abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
+class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
 
   /// [NamingSystem_UniqueId]: A curated namespace that issues unique symbols
@@ -1640,9 +1640,7 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
 }
 
 @freezed
-abstract class TerminologyCapabilities
-    with Resource
-    implements _$TerminologyCapabilities {
+class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   TerminologyCapabilities._();
 
   /// [TerminologyCapabilities]: A TerminologyCapabilities resource documents a
@@ -1895,8 +1893,7 @@ abstract class TerminologyCapabilities
 }
 
 @freezed
-abstract class TerminologyCapabilitiesSoftware
-    implements _$TerminologyCapabilitiesSoftware {
+class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   TerminologyCapabilitiesSoftware._();
 
   /// [TerminologyCapabilities_Software]: A TerminologyCapabilities resource
@@ -1968,8 +1965,8 @@ abstract class TerminologyCapabilitiesSoftware
 }
 
 @freezed
-abstract class TerminologyCapabilitiesImplementation
-    implements _$TerminologyCapabilitiesImplementation {
+class TerminologyCapabilitiesImplementation
+    with _$TerminologyCapabilitiesImplementation {
   TerminologyCapabilitiesImplementation._();
 
   /// [TerminologyCapabilities_Implementation]: A TerminologyCapabilities
@@ -2040,8 +2037,8 @@ abstract class TerminologyCapabilitiesImplementation
 }
 
 @freezed
-abstract class TerminologyCapabilitiesCodeSystem
-    implements _$TerminologyCapabilitiesCodeSystem {
+class TerminologyCapabilitiesCodeSystem
+    with _$TerminologyCapabilitiesCodeSystem {
   TerminologyCapabilitiesCodeSystem._();
 
   /// [TerminologyCapabilities_CodeSystem]: A TerminologyCapabilities resource
@@ -2113,8 +2110,7 @@ abstract class TerminologyCapabilitiesCodeSystem
 }
 
 @freezed
-abstract class TerminologyCapabilitiesVersion
-    implements _$TerminologyCapabilitiesVersion {
+class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   TerminologyCapabilitiesVersion._();
 
   /// [TerminologyCapabilities_Version]: A TerminologyCapabilities resource
@@ -2207,8 +2203,7 @@ abstract class TerminologyCapabilitiesVersion
 }
 
 @freezed
-abstract class TerminologyCapabilitiesFilter
-    implements _$TerminologyCapabilitiesFilter {
+class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   TerminologyCapabilitiesFilter._();
 
   /// [TerminologyCapabilities_Filter]: A TerminologyCapabilities resource
@@ -2276,8 +2271,7 @@ abstract class TerminologyCapabilitiesFilter
 }
 
 @freezed
-abstract class TerminologyCapabilitiesExpansion
-    implements _$TerminologyCapabilitiesExpansion {
+class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   TerminologyCapabilitiesExpansion._();
 
   /// [TerminologyCapabilities_Expansion]: A TerminologyCapabilities resource
@@ -2362,8 +2356,7 @@ abstract class TerminologyCapabilitiesExpansion
 }
 
 @freezed
-abstract class TerminologyCapabilitiesParameter
-    implements _$TerminologyCapabilitiesParameter {
+class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   TerminologyCapabilitiesParameter._();
 
   /// [TerminologyCapabilities_Parameter]: A TerminologyCapabilities resource
@@ -2433,8 +2426,8 @@ abstract class TerminologyCapabilitiesParameter
 }
 
 @freezed
-abstract class TerminologyCapabilitiesValidateCode
-    implements _$TerminologyCapabilitiesValidateCode {
+class TerminologyCapabilitiesValidateCode
+    with _$TerminologyCapabilitiesValidateCode {
   TerminologyCapabilitiesValidateCode._();
 
   /// [TerminologyCapabilities_ValidateCode]: A TerminologyCapabilities resource
@@ -2498,8 +2491,8 @@ abstract class TerminologyCapabilitiesValidateCode
 }
 
 @freezed
-abstract class TerminologyCapabilitiesTranslation
-    implements _$TerminologyCapabilitiesTranslation {
+class TerminologyCapabilitiesTranslation
+    with _$TerminologyCapabilitiesTranslation {
   TerminologyCapabilitiesTranslation._();
 
   /// [TerminologyCapabilities_Translation]: A TerminologyCapabilities resource
@@ -2563,8 +2556,7 @@ abstract class TerminologyCapabilitiesTranslation
 }
 
 @freezed
-abstract class TerminologyCapabilitiesClosure
-    implements _$TerminologyCapabilitiesClosure {
+class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   TerminologyCapabilitiesClosure._();
 
   /// [TerminologyCapabilities_Closure]: A TerminologyCapabilities resource
@@ -2628,7 +2620,7 @@ abstract class TerminologyCapabilitiesClosure
 }
 
 @freezed
-abstract class ValueSet with Resource implements _$ValueSet {
+class ValueSet with Resource, _$ValueSet {
   ValueSet._();
 
   /// [ValueSet]: A ValueSet resource instance specifies a set of codes drawn
@@ -2854,7 +2846,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
 }
 
 @freezed
-abstract class ValueSetCompose implements _$ValueSetCompose {
+class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
 
   /// [ValueSet_Compose]: A ValueSet resource instance specifies a set of codes
@@ -2937,7 +2929,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
 }
 
 @freezed
-abstract class ValueSetInclude implements _$ValueSetInclude {
+class ValueSetInclude with _$ValueSetInclude {
   ValueSetInclude._();
 
   /// [ValueSet_Include]: A ValueSet resource instance specifies a set of codes
@@ -3021,7 +3013,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
 }
 
 @freezed
-abstract class ValueSetConcept implements _$ValueSetConcept {
+class ValueSetConcept with _$ValueSetConcept {
   ValueSetConcept._();
 
   /// [ValueSet_Concept]: A ValueSet resource instance specifies a set of codes
@@ -3095,7 +3087,7 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
 }
 
 @freezed
-abstract class ValueSetDesignation implements _$ValueSetDesignation {
+class ValueSetDesignation with _$ValueSetDesignation {
   ValueSetDesignation._();
 
   /// [ValueSet_Designation]: A ValueSet resource instance specifies a set of
@@ -3165,7 +3157,7 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
 }
 
 @freezed
-abstract class ValueSetFilter implements _$ValueSetFilter {
+class ValueSetFilter with _$ValueSetFilter {
   ValueSetFilter._();
 
   /// [ValueSet_Filter]: A ValueSet resource instance specifies a set of codes
@@ -3244,7 +3236,7 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
 }
 
 @freezed
-abstract class ValueSetExpansion implements _$ValueSetExpansion {
+class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
 
   /// [ValueSet_Expansion]: A ValueSet resource instance specifies a set of
@@ -3342,7 +3334,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
 }
 
 @freezed
-abstract class ValueSetParameter implements _$ValueSetParameter {
+class ValueSetParameter with _$ValueSetParameter {
   ValueSetParameter._();
 
   /// [ValueSet_Parameter]: A ValueSet resource instance specifies a set of
@@ -3447,7 +3439,7 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
 }
 
 @freezed
-abstract class ValueSetContains implements _$ValueSetContains {
+class ValueSetContains with _$ValueSetContains {
   ValueSetContains._();
 
   /// [ValueSet_Contains]: A ValueSet resource instance specifies a set of codes

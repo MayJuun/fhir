@@ -12,7 +12,7 @@ part 'management.freezed.dart';
 part 'management.g.dart';
 
 @freezed
-abstract class Encounter with Resource implements _$Encounter {
+class Encounter with Resource, _$Encounter {
   Encounter._();
   factory Encounter({
     @Default(Stu3ResourceType.Encounter)
@@ -70,7 +70,7 @@ abstract class Encounter with Resource implements _$Encounter {
 }
 
 @freezed
-abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
+class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
   factory EncounterStatusHistory({
     EncounterStatusHistoryStatus? status,
@@ -96,7 +96,7 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
 }
 
 @freezed
-abstract class EncounterClassHistory implements _$EncounterClassHistory {
+class EncounterClassHistory with _$EncounterClassHistory {
   EncounterClassHistory._();
   factory EncounterClassHistory({
     @JsonKey(name: 'class') required Coding class_,
@@ -121,7 +121,7 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
 }
 
 @freezed
-abstract class EncounterParticipant implements _$EncounterParticipant {
+class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
   factory EncounterParticipant({
     List<CodeableConcept>? type,
@@ -147,7 +147,7 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
 }
 
 @freezed
-abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
+class EncounterDiagnosis with _$EncounterDiagnosis {
   EncounterDiagnosis._();
   factory EncounterDiagnosis({
     required Reference condition,
@@ -174,7 +174,7 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
 }
 
 @freezed
-abstract class EncounterHospitalization implements _$EncounterHospitalization {
+class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
   factory EncounterHospitalization({
     Identifier? preAdmissionIdentifier,
@@ -207,7 +207,7 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
 }
 
 @freezed
-abstract class EncounterLocation implements _$EncounterLocation {
+class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
   factory EncounterLocation({
     required Reference location,
@@ -234,7 +234,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
 }
 
 @freezed
-abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
+class EpisodeOfCare with Resource, _$EpisodeOfCare {
   EpisodeOfCare._();
   factory EpisodeOfCare({
     @Default(Stu3ResourceType.EpisodeOfCare)
@@ -283,8 +283,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
 }
 
 @freezed
-abstract class EpisodeOfCareStatusHistory
-    implements _$EpisodeOfCareStatusHistory {
+class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
   factory EpisodeOfCareStatusHistory({
     EpisodeOfCareStatusHistoryStatus? status,
@@ -311,7 +310,7 @@ abstract class EpisodeOfCareStatusHistory
 }
 
 @freezed
-abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
+class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   EpisodeOfCareDiagnosis._();
   factory EpisodeOfCareDiagnosis({
     required Reference condition,
@@ -338,7 +337,7 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
 }
 
 @freezed
-abstract class Flag with Resource implements _$Flag {
+class Flag with Resource, _$Flag {
   Flag._();
   factory Flag({
     @Default(Stu3ResourceType.Flag)
@@ -382,7 +381,7 @@ abstract class Flag with Resource implements _$Flag {
 }
 
 @freezed
-abstract class Library with Resource implements _$Library {
+class Library with Resource, _$Library {
   Library._();
   factory Library({
     @Default(Stu3ResourceType.Library)
@@ -458,7 +457,7 @@ abstract class Library with Resource implements _$Library {
 }
 
 @freezed
-abstract class List_ with Resource implements _$List_ {
+class List_ with Resource, _$List_ {
   List_._();
   factory List_({
     @Default(Stu3ResourceType.List_)
@@ -510,7 +509,7 @@ abstract class List_ with Resource implements _$List_ {
 }
 
 @freezed
-abstract class ListEntry implements _$ListEntry {
+class ListEntry with _$ListEntry {
   ListEntry._();
   factory ListEntry({
     CodeableConcept? flag,

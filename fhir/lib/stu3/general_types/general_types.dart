@@ -12,7 +12,7 @@ part 'general_types.freezed.dart';
 part 'general_types.g.dart';
 
 @freezed
-abstract class BackboneElement implements _$BackboneElement {
+class BackboneElement with _$BackboneElement {
   BackboneElement._();
   factory BackboneElement({
     List<FhirExtension>? modifierExtension,
@@ -36,7 +36,7 @@ abstract class BackboneElement implements _$BackboneElement {
 }
 
 @freezed
-abstract class Annotation implements _$Annotation {
+class Annotation with _$Annotation {
   Annotation._();
   factory Annotation({
     Reference? authorReference,
@@ -66,7 +66,7 @@ abstract class Annotation implements _$Annotation {
 }
 
 @freezed
-abstract class Attachment implements _$Attachment {
+class Attachment with _$Attachment {
   Attachment._();
   factory Attachment({
     String? contentType,
@@ -105,7 +105,7 @@ abstract class Attachment implements _$Attachment {
 }
 
 @freezed
-abstract class Identifier implements _$Identifier {
+class Identifier with _$Identifier {
   Identifier._();
   factory Identifier({
     IdentifierUse? use,
@@ -137,7 +137,7 @@ abstract class Identifier implements _$Identifier {
 }
 
 @freezed
-abstract class CodeableConcept implements _$CodeableConcept {
+class CodeableConcept with _$CodeableConcept {
   CodeableConcept._();
   factory CodeableConcept({
     List<Coding>? coding,
@@ -163,7 +163,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
 }
 
 @freezed
-abstract class Coding implements _$Coding {
+class Coding with _$Coding {
   Coding._();
   factory Coding({
     String? system,
@@ -195,7 +195,7 @@ abstract class Coding implements _$Coding {
 }
 
 @freezed
-abstract class Quantity implements _$Quantity {
+class Quantity with _$Quantity {
   Quantity._();
   factory Quantity({
     Decimal? value,
@@ -228,7 +228,7 @@ abstract class Quantity implements _$Quantity {
 }
 
 @freezed
-abstract class FhirDuration implements _$FhirDuration {
+class FhirDuration with _$FhirDuration {
   FhirDuration._();
   factory FhirDuration({
     Decimal? value,
@@ -261,7 +261,7 @@ abstract class FhirDuration implements _$FhirDuration {
 }
 
 @freezed
-abstract class Distance implements _$Distance {
+class Distance with _$Distance {
   Distance._();
   factory Distance({
     Decimal? value,
@@ -294,7 +294,7 @@ abstract class Distance implements _$Distance {
 }
 
 @freezed
-abstract class Count implements _$Count {
+class Count with _$Count {
   Count._();
   factory Count({
     Decimal? value,
@@ -326,7 +326,7 @@ abstract class Count implements _$Count {
 }
 
 @freezed
-abstract class Money implements _$Money {
+class Money with _$Money {
   Money._();
   factory Money({
     Decimal? value,
@@ -358,7 +358,7 @@ abstract class Money implements _$Money {
 }
 
 @freezed
-abstract class Age implements _$Age {
+class Age with _$Age {
   Age._();
   factory Age({
     Decimal? value,
@@ -389,7 +389,7 @@ abstract class Age implements _$Age {
 }
 
 @freezed
-abstract class Range implements _$Range {
+class Range with _$Range {
   Range._();
   factory Range({
     Quantity? low,
@@ -413,7 +413,7 @@ abstract class Range implements _$Range {
 }
 
 @freezed
-abstract class Period implements _$Period {
+class Period with _$Period {
   Period._();
   factory Period({
     String? start,
@@ -439,7 +439,7 @@ abstract class Period implements _$Period {
 }
 
 @freezed
-abstract class Ratio implements _$Ratio {
+class Ratio with _$Ratio {
   Ratio._();
   factory Ratio({
     Quantity? numerator,
@@ -463,7 +463,7 @@ abstract class Ratio implements _$Ratio {
 }
 
 @freezed
-abstract class SampledData implements _$SampledData {
+class SampledData with _$SampledData {
   SampledData._();
   factory SampledData({
     required Quantity origin,
@@ -499,7 +499,7 @@ abstract class SampledData implements _$SampledData {
 }
 
 @freezed
-abstract class Signature implements _$Signature {
+class Signature with _$Signature {
   Signature._();
   factory Signature({
     required List<Coding> type,
@@ -535,7 +535,7 @@ abstract class Signature implements _$Signature {
 }
 
 @freezed
-abstract class HumanName implements _$HumanName {
+class HumanName with _$HumanName {
   HumanName._();
   factory HumanName({
     HumanNameUse? use,
@@ -571,7 +571,7 @@ abstract class HumanName implements _$HumanName {
 }
 
 @freezed
-abstract class Address implements _$Address {
+class Address with _$Address {
   Address._();
   factory Address({
     AddressUse? use,
@@ -613,7 +613,7 @@ abstract class Address implements _$Address {
 }
 
 @freezed
-abstract class ContactPoint implements _$ContactPoint {
+class ContactPoint with _$ContactPoint {
   ContactPoint._();
   factory ContactPoint({
     ContactPointSystem? system,
@@ -645,7 +645,7 @@ abstract class ContactPoint implements _$ContactPoint {
 }
 
 @freezed
-abstract class Timing implements _$Timing {
+class Timing with _$Timing {
   Timing._();
   factory Timing({
     List<String>? event,
@@ -671,7 +671,7 @@ abstract class Timing implements _$Timing {
 }
 
 @freezed
-abstract class TimingRepeat implements _$TimingRepeat {
+class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
   factory TimingRepeat({
     FhirDuration? boundsDuration,

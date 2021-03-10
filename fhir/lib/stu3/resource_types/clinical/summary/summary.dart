@@ -12,7 +12,7 @@ part 'summary.freezed.dart';
 part 'summary.g.dart';
 
 @freezed
-abstract class AdverseEvent with Resource implements _$AdverseEvent {
+class AdverseEvent with Resource, _$AdverseEvent {
   AdverseEvent._();
   factory AdverseEvent({
     @Default(Stu3ResourceType.AdverseEvent)
@@ -67,8 +67,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
 }
 
 @freezed
-abstract class AdverseEventSuspectEntity
-    implements _$AdverseEventSuspectEntity {
+class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   AdverseEventSuspectEntity._();
   factory AdverseEventSuspectEntity({
     required Reference instance,
@@ -102,9 +101,7 @@ abstract class AdverseEventSuspectEntity
 }
 
 @freezed
-abstract class AllergyIntolerance
-    with Resource
-    implements _$AllergyIntolerance {
+class AllergyIntolerance with Resource, _$AllergyIntolerance {
   AllergyIntolerance._();
   factory AllergyIntolerance({
     @Default(Stu3ResourceType.AllergyIntolerance)
@@ -168,8 +165,7 @@ abstract class AllergyIntolerance
 }
 
 @freezed
-abstract class AllergyIntoleranceReaction
-    implements _$AllergyIntoleranceReaction {
+class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
     CodeableConcept? substance,
@@ -203,9 +199,7 @@ abstract class AllergyIntoleranceReaction
 }
 
 @freezed
-abstract class ClinicalImpression
-    with Resource
-    implements _$ClinicalImpression {
+class ClinicalImpression with Resource, _$ClinicalImpression {
   ClinicalImpression._();
   factory ClinicalImpression({
     @Default(Stu3ResourceType.ClinicalImpression)
@@ -267,8 +261,7 @@ abstract class ClinicalImpression
 }
 
 @freezed
-abstract class ClinicalImpressionInvestigation
-    implements _$ClinicalImpressionInvestigation {
+class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
   ClinicalImpressionInvestigation._();
   factory ClinicalImpressionInvestigation({
     required CodeableConcept code,
@@ -296,8 +289,7 @@ abstract class ClinicalImpressionInvestigation
 }
 
 @freezed
-abstract class ClinicalImpressionFinding
-    implements _$ClinicalImpressionFinding {
+class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
   factory ClinicalImpressionFinding({
     CodeableConcept? itemCodeableConcept,
@@ -325,7 +317,7 @@ abstract class ClinicalImpressionFinding
 }
 
 @freezed
-abstract class Condition with Resource implements _$Condition {
+class Condition with Resource, _$Condition {
   Condition._();
   factory Condition({
     @Default(Stu3ResourceType.Condition)
@@ -394,7 +386,7 @@ abstract class Condition with Resource implements _$Condition {
 }
 
 @freezed
-abstract class ConditionStage implements _$ConditionStage {
+class ConditionStage with _$ConditionStage {
   ConditionStage._();
   factory ConditionStage({
     CodeableConcept? summary,
@@ -419,7 +411,7 @@ abstract class ConditionStage implements _$ConditionStage {
 }
 
 @freezed
-abstract class ConditionEvidence implements _$ConditionEvidence {
+class ConditionEvidence with _$ConditionEvidence {
   ConditionEvidence._();
   factory ConditionEvidence({
     List<CodeableConcept>? code,
@@ -444,7 +436,7 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
 }
 
 @freezed
-abstract class DetectedIssue with Resource implements _$DetectedIssue {
+class DetectedIssue with Resource, _$DetectedIssue {
   DetectedIssue._();
   factory DetectedIssue({
     @Default(Stu3ResourceType.DetectedIssue)
@@ -496,7 +488,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
 }
 
 @freezed
-abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
+class DetectedIssueMitigation with _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
   factory DetectedIssueMitigation({
     required CodeableConcept action,
@@ -523,9 +515,7 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
 }
 
 @freezed
-abstract class FamilyMemberHistory
-    with Resource
-    implements _$FamilyMemberHistory {
+class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   FamilyMemberHistory._();
   factory FamilyMemberHistory({
     @Default(Stu3ResourceType.FamilyMemberHistory)
@@ -599,8 +589,7 @@ abstract class FamilyMemberHistory
 }
 
 @freezed
-abstract class FamilyMemberHistoryCondition
-    implements _$FamilyMemberHistoryCondition {
+class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
   factory FamilyMemberHistoryCondition({
     required CodeableConcept code,
@@ -632,7 +621,7 @@ abstract class FamilyMemberHistoryCondition
 }
 
 @freezed
-abstract class Procedure with Resource implements _$Procedure {
+class Procedure with Resource, _$Procedure {
   Procedure._();
   factory Procedure({
     @Default(Stu3ResourceType.Procedure)
@@ -698,7 +687,7 @@ abstract class Procedure with Resource implements _$Procedure {
 }
 
 @freezed
-abstract class ProcedurePerformer implements _$ProcedurePerformer {
+class ProcedurePerformer with _$ProcedurePerformer {
   ProcedurePerformer._();
   factory ProcedurePerformer({
     CodeableConcept? role,
@@ -724,7 +713,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
 }
 
 @freezed
-abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
+class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
   factory ProcedureFocalDevice({
     CodeableConcept? action,

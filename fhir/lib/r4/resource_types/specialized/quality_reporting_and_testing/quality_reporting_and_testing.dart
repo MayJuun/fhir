@@ -12,7 +12,7 @@ part 'quality_reporting_and_testing.freezed.dart';
 part 'quality_reporting_and_testing.g.dart';
 
 @freezed
-abstract class Measure with Resource implements _$Measure {
+class Measure with Resource, _$Measure {
   Measure._();
 
   /// [Measure]: The Measure resource provides the definition of a quality
@@ -376,7 +376,7 @@ abstract class Measure with Resource implements _$Measure {
 }
 
 @freezed
-abstract class MeasureGroup implements _$MeasureGroup {
+class MeasureGroup with _$MeasureGroup {
   MeasureGroup._();
 
   /// [Measure_Group]: The Measure resource provides the definition of a quality
@@ -449,7 +449,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
 }
 
 @freezed
-abstract class MeasurePopulation implements _$MeasurePopulation {
+class MeasurePopulation with _$MeasurePopulation {
   MeasurePopulation._();
 
   /// [Measure_Population]: The Measure resource provides the definition of a
@@ -515,7 +515,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
 }
 
 @freezed
-abstract class MeasureStratifier implements _$MeasureStratifier {
+class MeasureStratifier with _$MeasureStratifier {
   MeasureStratifier._();
 
   /// [Measure_Stratifier]: The Measure resource provides the definition of a
@@ -590,7 +590,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
 }
 
 @freezed
-abstract class MeasureComponent implements _$MeasureComponent {
+class MeasureComponent with _$MeasureComponent {
   MeasureComponent._();
 
   /// [Measure_Component]: The Measure resource provides the definition of a
@@ -662,7 +662,7 @@ abstract class MeasureComponent implements _$MeasureComponent {
 }
 
 @freezed
-abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
+class MeasureSupplementalData with _$MeasureSupplementalData {
   MeasureSupplementalData._();
 
   /// [Measure_SupplementalData]: The Measure resource provides the definition
@@ -740,7 +740,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
 }
 
 @freezed
-abstract class MeasureReport with Resource implements _$MeasureReport {
+class MeasureReport with Resource, _$MeasureReport {
   MeasureReport._();
 
   /// [MeasureReport]: The MeasureReport resource contains the results of the
@@ -892,7 +892,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
 }
 
 @freezed
-abstract class MeasureReportGroup implements _$MeasureReportGroup {
+class MeasureReportGroup with _$MeasureReportGroup {
   MeasureReportGroup._();
 
   /// [MeasureReport_Group]: The MeasureReport resource contains the results of
@@ -963,7 +963,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
 }
 
 @freezed
-abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
+class MeasureReportPopulation with _$MeasureReportPopulation {
   MeasureReportPopulation._();
 
   /// [MeasureReport_Population]: The MeasureReport resource contains the
@@ -1030,7 +1030,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
 }
 
 @freezed
-abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
+class MeasureReportStratifier with _$MeasureReportStratifier {
   MeasureReportStratifier._();
 
   /// [MeasureReport_Stratifier]: The MeasureReport resource contains the
@@ -1093,7 +1093,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
 }
 
 @freezed
-abstract class MeasureReportStratum implements _$MeasureReportStratum {
+class MeasureReportStratum with _$MeasureReportStratum {
   MeasureReportStratum._();
 
   /// [MeasureReport_Stratum]: The MeasureReport resource contains the results
@@ -1164,7 +1164,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
 }
 
 @freezed
-abstract class MeasureReportComponent implements _$MeasureReportComponent {
+class MeasureReportComponent with _$MeasureReportComponent {
   MeasureReportComponent._();
 
   /// [MeasureReport_Component]: The MeasureReport resource contains the results
@@ -1224,7 +1224,7 @@ abstract class MeasureReportComponent implements _$MeasureReportComponent {
 }
 
 @freezed
-abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
+class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   MeasureReportPopulation1._();
 
   /// [MeasureReport_Population1]: The MeasureReport resource contains the
@@ -1293,7 +1293,7 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
 }
 
 @freezed
-abstract class TestReport with Resource implements _$TestReport {
+class TestReport with Resource, _$TestReport {
   TestReport._();
 
   /// [TestReport]: A summary of information based on the results of executing a
@@ -1451,7 +1451,7 @@ abstract class TestReport with Resource implements _$TestReport {
 }
 
 @freezed
-abstract class TestReportParticipant implements _$TestReportParticipant {
+class TestReportParticipant with _$TestReportParticipant {
   TestReportParticipant._();
 
   /// [TestReport_Participant]: A summary of information based on the results of
@@ -1523,7 +1523,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
 }
 
 @freezed
-abstract class TestReportSetup implements _$TestReportSetup {
+class TestReportSetup with _$TestReportSetup {
   TestReportSetup._();
 
   /// [TestReport_Setup]: A summary of information based on the results of
@@ -1579,7 +1579,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
 }
 
 @freezed
-abstract class TestReportAction implements _$TestReportAction {
+class TestReportAction with _$TestReportAction {
   TestReportAction._();
 
   /// [TestReport_Action]: A summary of information based on the results of
@@ -1639,7 +1639,7 @@ abstract class TestReportAction implements _$TestReportAction {
 }
 
 @freezed
-abstract class TestReportOperation implements _$TestReportOperation {
+class TestReportOperation with _$TestReportOperation {
   TestReportOperation._();
 
   /// [TestReport_Operation]: A summary of information based on the results of
@@ -1711,7 +1711,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
 }
 
 @freezed
-abstract class TestReportAssert implements _$TestReportAssert {
+class TestReportAssert with _$TestReportAssert {
   TestReportAssert._();
 
   /// [TestReport_Assert]: A summary of information based on the results of
@@ -1783,7 +1783,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
 }
 
 @freezed
-abstract class TestReportTest implements _$TestReportTest {
+class TestReportTest with _$TestReportTest {
   TestReportTest._();
 
   /// [TestReport_Test]: A summary of information based on the results of
@@ -1853,7 +1853,7 @@ abstract class TestReportTest implements _$TestReportTest {
 }
 
 @freezed
-abstract class TestReportAction1 implements _$TestReportAction1 {
+class TestReportAction1 with _$TestReportAction1 {
   TestReportAction1._();
 
   /// [TestReport_Action1]: A summary of information based on the results of
@@ -1913,7 +1913,7 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
 }
 
 @freezed
-abstract class TestReportTeardown implements _$TestReportTeardown {
+class TestReportTeardown with _$TestReportTeardown {
   TestReportTeardown._();
 
   /// [TestReport_Teardown]: A summary of information based on the results of
@@ -1969,7 +1969,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
 }
 
 @freezed
-abstract class TestReportAction2 implements _$TestReportAction2 {
+class TestReportAction2 with _$TestReportAction2 {
   TestReportAction2._();
 
   /// [TestReport_Action2]: A summary of information based on the results of
@@ -2025,7 +2025,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
 }
 
 @freezed
-abstract class TestScript with Resource implements _$TestScript {
+class TestScript with Resource, _$TestScript {
   TestScript._();
 
   /// [TestScript]: A structured set of tests against a FHIR server or client
@@ -2262,7 +2262,7 @@ abstract class TestScript with Resource implements _$TestScript {
 }
 
 @freezed
-abstract class TestScriptOrigin implements _$TestScriptOrigin {
+class TestScriptOrigin with _$TestScriptOrigin {
   TestScriptOrigin._();
 
   /// [TestScript_Origin]: A structured set of tests against a FHIR server or
@@ -2326,7 +2326,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
 }
 
 @freezed
-abstract class TestScriptDestination implements _$TestScriptDestination {
+class TestScriptDestination with _$TestScriptDestination {
   TestScriptDestination._();
 
   /// [TestScript_Destination]: A structured set of tests against a FHIR server
@@ -2390,7 +2390,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
 }
 
 @freezed
-abstract class TestScriptMetadata implements _$TestScriptMetadata {
+class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
 
   /// [TestScript_Metadata]: A structured set of tests against a FHIR server or
@@ -2451,7 +2451,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
 }
 
 @freezed
-abstract class TestScriptLink implements _$TestScriptLink {
+class TestScriptLink with _$TestScriptLink {
   TestScriptLink._();
 
   /// [TestScript_Link]: A structured set of tests against a FHIR server or
@@ -2518,7 +2518,7 @@ abstract class TestScriptLink implements _$TestScriptLink {
 }
 
 @freezed
-abstract class TestScriptCapability implements _$TestScriptCapability {
+class TestScriptCapability with _$TestScriptCapability {
   TestScriptCapability._();
 
   /// [TestScript_Capability]: A structured set of tests against a FHIR server
@@ -2618,7 +2618,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
 }
 
 @freezed
-abstract class TestScriptFixture implements _$TestScriptFixture {
+class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
 
   /// [TestScript_Fixture]: A structured set of tests against a FHIR server or
@@ -2694,7 +2694,7 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
 }
 
 @freezed
-abstract class TestScriptVariable implements _$TestScriptVariable {
+class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
 
   /// [TestScript_Variable]: A structured set of tests against a FHIR server or
@@ -2805,7 +2805,7 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
 }
 
 @freezed
-abstract class TestScriptSetup implements _$TestScriptSetup {
+class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
 
   /// [TestScript_Setup]: A structured set of tests against a FHIR server or
@@ -2862,7 +2862,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
 }
 
 @freezed
-abstract class TestScriptAction implements _$TestScriptAction {
+class TestScriptAction with _$TestScriptAction {
   TestScriptAction._();
 
   /// [TestScript_Action]: A structured set of tests against a FHIR server or
@@ -2923,7 +2923,7 @@ abstract class TestScriptAction implements _$TestScriptAction {
 }
 
 @freezed
-abstract class TestScriptOperation implements _$TestScriptOperation {
+class TestScriptOperation with _$TestScriptOperation {
   TestScriptOperation._();
 
   /// [TestScript_Operation]: A structured set of tests against a FHIR server or
@@ -3088,7 +3088,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
 }
 
 @freezed
-abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
+class TestScriptRequestHeader with _$TestScriptRequestHeader {
   TestScriptRequestHeader._();
 
   /// [TestScript_RequestHeader]: A structured set of tests against a FHIR
@@ -3154,7 +3154,7 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
 }
 
 @freezed
-abstract class TestScriptAssert implements _$TestScriptAssert {
+class TestScriptAssert with _$TestScriptAssert {
   TestScriptAssert._();
 
   /// [TestScript_Assert]: A structured set of tests against a FHIR server or
@@ -3368,7 +3368,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
 }
 
 @freezed
-abstract class TestScriptTest implements _$TestScriptTest {
+class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
 
   /// [TestScript_Test]: A structured set of tests against a FHIR server or
@@ -3439,7 +3439,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
 }
 
 @freezed
-abstract class TestScriptAction1 implements _$TestScriptAction1 {
+class TestScriptAction1 with _$TestScriptAction1 {
   TestScriptAction1._();
 
   /// [TestScript_Action1]: A structured set of tests against a FHIR server or
@@ -3500,7 +3500,7 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
 }
 
 @freezed
-abstract class TestScriptTeardown implements _$TestScriptTeardown {
+class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
 
   /// [TestScript_Teardown]: A structured set of tests against a FHIR server or
@@ -3557,7 +3557,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
 }
 
 @freezed
-abstract class TestScriptAction2 implements _$TestScriptAction2 {
+class TestScriptAction2 with _$TestScriptAction2 {
   TestScriptAction2._();
 
   /// [TestScript_Action2]: A structured set of tests against a FHIR server or

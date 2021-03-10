@@ -12,7 +12,7 @@ part 'metadata_types.freezed.dart';
 part 'metadata_types.g.dart';
 
 @freezed
-abstract class ContactDetail implements _$ContactDetail {
+class ContactDetail with _$ContactDetail {
   ContactDetail._();
   factory ContactDetail({
     String? id,
@@ -40,7 +40,7 @@ abstract class ContactDetail implements _$ContactDetail {
 }
 
 @freezed
-abstract class Contributor implements _$Contributor {
+class Contributor with _$Contributor {
   Contributor._();
   factory Contributor({
     String? id,
@@ -70,7 +70,7 @@ abstract class Contributor implements _$Contributor {
 }
 
 @freezed
-abstract class DataRequirement implements _$DataRequirement {
+class DataRequirement with _$DataRequirement {
   DataRequirement._();
   factory DataRequirement({
     String? id,
@@ -107,8 +107,7 @@ abstract class DataRequirement implements _$DataRequirement {
 }
 
 @freezed
-abstract class DataRequirementCodeFilter
-    implements _$DataRequirementCodeFilter {
+class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   DataRequirementCodeFilter._();
   factory DataRequirementCodeFilter({
     String? id,
@@ -141,8 +140,7 @@ abstract class DataRequirementCodeFilter
 }
 
 @freezed
-abstract class DataRequirementDateFilter
-    implements _$DataRequirementDateFilter {
+class DataRequirementDateFilter with _$DataRequirementDateFilter {
   DataRequirementDateFilter._();
   factory DataRequirementDateFilter({
     String? id,
@@ -177,7 +175,7 @@ abstract class DataRequirementDateFilter
 }
 
 @freezed
-abstract class DataRequirementSort implements _$DataRequirementSort {
+class DataRequirementSort with _$DataRequirementSort {
   DataRequirementSort._();
   factory DataRequirementSort({
     String? id,
@@ -208,7 +206,7 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
 }
 
 @freezed
-abstract class ParameterDefinition implements _$ParameterDefinition {
+class ParameterDefinition with _$ParameterDefinition {
   ParameterDefinition._();
   factory ParameterDefinition({
     String? id,
@@ -246,7 +244,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
 }
 
 @freezed
-abstract class RelatedArtifact implements _$RelatedArtifact {
+class RelatedArtifact with _$RelatedArtifact {
   RelatedArtifact._();
   factory RelatedArtifact({
     String? id,
@@ -284,7 +282,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
 }
 
 @freezed
-abstract class TriggerDefinition implements _$TriggerDefinition {
+class TriggerDefinition with _$TriggerDefinition {
   TriggerDefinition._();
   factory TriggerDefinition({
     String? id,
@@ -322,7 +320,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
 }
 
 @freezed
-abstract class UsageContext implements _$UsageContext {
+class UsageContext with _$UsageContext {
   UsageContext._();
   factory UsageContext({
     String? id,
@@ -352,7 +350,7 @@ abstract class UsageContext implements _$UsageContext {
 }
 
 @freezed
-abstract class Expression implements _$Expression {
+class Expression with _$Expression {
   Expression._();
   factory Expression({
     String? id,

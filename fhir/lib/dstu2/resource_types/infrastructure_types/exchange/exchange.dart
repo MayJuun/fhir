@@ -12,7 +12,7 @@ part 'exchange.freezed.dart';
 part 'exchange.g.dart';
 
 @freezed
-abstract class MessageHeader with Resource implements _$MessageHeader {
+class MessageHeader with Resource, _$MessageHeader {
   MessageHeader._();
   factory MessageHeader({
     @Default(Dstu2ResourceType.MessageHeader)
@@ -59,7 +59,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
 }
 
 @freezed
-abstract class MessageHeaderResponse with _$MessageHeaderResponse {
+class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
   factory MessageHeaderResponse({
     Id? id,
@@ -90,7 +90,7 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
 }
 
 @freezed
-abstract class MessageHeaderSource with _$MessageHeaderSource {
+class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
   factory MessageHeaderSource({
     Id? id,
@@ -125,7 +125,7 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
 }
 
 @freezed
-abstract class MessageHeaderDestination with _$MessageHeaderDestination {
+class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
   factory MessageHeaderDestination({
     Id? id,
@@ -157,7 +157,7 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
 }
 
 @freezed
-abstract class OperationOutcome with Resource implements _$OperationOutcome {
+class OperationOutcome with Resource, _$OperationOutcome {
   OperationOutcome._();
   factory OperationOutcome({
     @Default(Dstu2ResourceType.OperationOutcome)
@@ -195,7 +195,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
 }
 
 @freezed
-abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
+class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
   factory OperationOutcomeIssue({
     Id? id,
@@ -227,7 +227,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 }
 
 @freezed
-abstract class Parameters with Resource implements _$Parameters {
+class Parameters with Resource, _$Parameters {
   Parameters._();
   factory Parameters({
     @Default(Dstu2ResourceType.Parameters)
@@ -260,7 +260,7 @@ abstract class Parameters with Resource implements _$Parameters {
 }
 
 @freezed
-abstract class ParametersParameter with _$ParametersParameter {
+class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
   factory ParametersParameter({
     Id? id,
@@ -323,7 +323,7 @@ abstract class ParametersParameter with _$ParametersParameter {
 }
 
 @freezed
-abstract class Subscription with Resource implements _$Subscription {
+class Subscription with Resource, _$Subscription {
   Subscription._();
   factory Subscription({
     @Default(Dstu2ResourceType.Subscription)
@@ -373,7 +373,7 @@ abstract class Subscription with Resource implements _$Subscription {
 }
 
 @freezed
-abstract class SubscriptionChannel with _$SubscriptionChannel {
+class SubscriptionChannel with _$SubscriptionChannel {
   SubscriptionChannel._();
   factory SubscriptionChannel({
     Id? id,

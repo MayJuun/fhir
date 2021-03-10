@@ -12,9 +12,7 @@ part 'conformance.freezed.dart';
 part 'conformance.g.dart';
 
 @freezed
-abstract class CapabilityStatement
-    with Resource
-    implements _$CapabilityStatement {
+class CapabilityStatement with Resource, _$CapabilityStatement {
   CapabilityStatement._();
   factory CapabilityStatement({
     @Default(Stu3ResourceType.CapabilityStatement)
@@ -96,8 +94,7 @@ abstract class CapabilityStatement
 }
 
 @freezed
-abstract class CapabilityStatementSoftware
-    implements _$CapabilityStatementSoftware {
+class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   CapabilityStatementSoftware._();
   factory CapabilityStatementSoftware({
     String? name,
@@ -127,8 +124,8 @@ abstract class CapabilityStatementSoftware
 }
 
 @freezed
-abstract class CapabilityStatementImplementation
-    implements _$CapabilityStatementImplementation {
+class CapabilityStatementImplementation
+    with _$CapabilityStatementImplementation {
   CapabilityStatementImplementation._();
   factory CapabilityStatementImplementation({
     String? description,
@@ -158,7 +155,7 @@ abstract class CapabilityStatementImplementation
 }
 
 @freezed
-abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
+class CapabilityStatementRest with _$CapabilityStatementRest {
   CapabilityStatementRest._();
   factory CapabilityStatementRest({
     CapabilityStatementRestMode? mode,
@@ -192,8 +189,7 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
 }
 
 @freezed
-abstract class CapabilityStatementSecurity
-    implements _$CapabilityStatementSecurity {
+class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   CapabilityStatementSecurity._();
   factory CapabilityStatementSecurity({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -224,8 +220,7 @@ abstract class CapabilityStatementSecurity
 }
 
 @freezed
-abstract class CapabilityStatementCertificate
-    implements _$CapabilityStatementCertificate {
+class CapabilityStatementCertificate with _$CapabilityStatementCertificate {
   CapabilityStatementCertificate._();
   factory CapabilityStatementCertificate({
     String? type,
@@ -255,8 +250,7 @@ abstract class CapabilityStatementCertificate
 }
 
 @freezed
-abstract class CapabilityStatementResource
-    implements _$CapabilityStatementResource {
+class CapabilityStatementResource with _$CapabilityStatementResource {
   CapabilityStatementResource._();
   factory CapabilityStatementResource({
     String? type,
@@ -307,8 +301,7 @@ abstract class CapabilityStatementResource
 }
 
 @freezed
-abstract class CapabilityStatementInteraction
-    implements _$CapabilityStatementInteraction {
+class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   CapabilityStatementInteraction._();
   factory CapabilityStatementInteraction({
     CapabilityStatementInteractionCode? code,
@@ -338,8 +331,7 @@ abstract class CapabilityStatementInteraction
 }
 
 @freezed
-abstract class CapabilityStatementSearchParam
-    implements _$CapabilityStatementSearchParam {
+class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   CapabilityStatementSearchParam._();
   factory CapabilityStatementSearchParam({
     String? name,
@@ -373,8 +365,7 @@ abstract class CapabilityStatementSearchParam
 }
 
 @freezed
-abstract class CapabilityStatementInteraction1
-    implements _$CapabilityStatementInteraction1 {
+class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   CapabilityStatementInteraction1._();
   factory CapabilityStatementInteraction1({
     CapabilityStatementInteraction1Code? code,
@@ -404,8 +395,7 @@ abstract class CapabilityStatementInteraction1
 }
 
 @freezed
-abstract class CapabilityStatementOperation
-    implements _$CapabilityStatementOperation {
+class CapabilityStatementOperation with _$CapabilityStatementOperation {
   CapabilityStatementOperation._();
   factory CapabilityStatementOperation({
     String? name,
@@ -432,8 +422,7 @@ abstract class CapabilityStatementOperation
 }
 
 @freezed
-abstract class CapabilityStatementMessaging
-    implements _$CapabilityStatementMessaging {
+class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   CapabilityStatementMessaging._();
   factory CapabilityStatementMessaging({
     List<CapabilityStatementEndpoint>? endpoint,
@@ -464,8 +453,7 @@ abstract class CapabilityStatementMessaging
 }
 
 @freezed
-abstract class CapabilityStatementEndpoint
-    implements _$CapabilityStatementEndpoint {
+class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   CapabilityStatementEndpoint._();
   factory CapabilityStatementEndpoint({
     required Coding protocol,
@@ -492,8 +480,8 @@ abstract class CapabilityStatementEndpoint
 }
 
 @freezed
-abstract class CapabilityStatementSupportedMessage
-    implements _$CapabilityStatementSupportedMessage {
+class CapabilityStatementSupportedMessage
+    with _$CapabilityStatementSupportedMessage {
   CapabilityStatementSupportedMessage._();
   factory CapabilityStatementSupportedMessage({
     CapabilityStatementSupportedMessageMode? mode,
@@ -522,7 +510,7 @@ abstract class CapabilityStatementSupportedMessage
 }
 
 @freezed
-abstract class CapabilityStatementEvent implements _$CapabilityStatementEvent {
+class CapabilityStatementEvent with _$CapabilityStatementEvent {
   CapabilityStatementEvent._();
   factory CapabilityStatementEvent({
     required Coding code,
@@ -557,8 +545,7 @@ abstract class CapabilityStatementEvent implements _$CapabilityStatementEvent {
 }
 
 @freezed
-abstract class CapabilityStatementDocument
-    implements _$CapabilityStatementDocument {
+class CapabilityStatementDocument with _$CapabilityStatementDocument {
   CapabilityStatementDocument._();
   factory CapabilityStatementDocument({
     CapabilityStatementDocumentMode? mode,
@@ -587,9 +574,7 @@ abstract class CapabilityStatementDocument
 }
 
 @freezed
-abstract class CompartmentDefinition
-    with Resource
-    implements _$CompartmentDefinition {
+class CompartmentDefinition with Resource, _$CompartmentDefinition {
   CompartmentDefinition._();
   factory CompartmentDefinition({
     @Default(Stu3ResourceType.CompartmentDefinition)
@@ -651,8 +636,7 @@ abstract class CompartmentDefinition
 }
 
 @freezed
-abstract class CompartmentDefinitionResource
-    implements _$CompartmentDefinitionResource {
+class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   CompartmentDefinitionResource._();
   factory CompartmentDefinitionResource({
     Code? code,
@@ -682,7 +666,7 @@ abstract class CompartmentDefinitionResource
 }
 
 @freezed
-abstract class DataElement with Resource implements _$DataElement {
+class DataElement with Resource, _$DataElement {
   DataElement._();
   factory DataElement({
     @Default(Stu3ResourceType.DataElement)
@@ -744,7 +728,7 @@ abstract class DataElement with Resource implements _$DataElement {
 }
 
 @freezed
-abstract class DataElementMapping implements _$DataElementMapping {
+class DataElementMapping with _$DataElementMapping {
   DataElementMapping._();
   factory DataElementMapping({
     Id? identity,
@@ -775,7 +759,7 @@ abstract class DataElementMapping implements _$DataElementMapping {
 }
 
 @freezed
-abstract class GraphDefinition with Resource implements _$GraphDefinition {
+class GraphDefinition with Resource, _$GraphDefinition {
   GraphDefinition._();
   factory GraphDefinition({
     @Default(Stu3ResourceType.GraphDefinition)
@@ -837,7 +821,7 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
 }
 
 @freezed
-abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
+class GraphDefinitionLink with _$GraphDefinitionLink {
   GraphDefinitionLink._();
   factory GraphDefinitionLink({
     String? path,
@@ -871,7 +855,7 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
 }
 
 @freezed
-abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
+class GraphDefinitionTarget with _$GraphDefinitionTarget {
   GraphDefinitionTarget._();
   factory GraphDefinitionTarget({
     String? type,
@@ -900,8 +884,7 @@ abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
 }
 
 @freezed
-abstract class GraphDefinitionCompartment
-    implements _$GraphDefinitionCompartment {
+class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   GraphDefinitionCompartment._();
   factory GraphDefinitionCompartment({
     Code? code,
@@ -933,9 +916,7 @@ abstract class GraphDefinitionCompartment
 }
 
 @freezed
-abstract class ImplementationGuide
-    with Resource
-    implements _$ImplementationGuide {
+class ImplementationGuide with Resource, _$ImplementationGuide {
   ImplementationGuide._();
   factory ImplementationGuide({
     @Default(Stu3ResourceType.ImplementationGuide)
@@ -1000,8 +981,7 @@ abstract class ImplementationGuide
 }
 
 @freezed
-abstract class ImplementationGuideDependency
-    implements _$ImplementationGuideDependency {
+class ImplementationGuideDependency with _$ImplementationGuideDependency {
   ImplementationGuideDependency._();
   factory ImplementationGuideDependency({
     ImplementationGuideDependencyType? type,
@@ -1029,8 +1009,7 @@ abstract class ImplementationGuideDependency
 }
 
 @freezed
-abstract class ImplementationGuidePackage
-    implements _$ImplementationGuidePackage {
+class ImplementationGuidePackage with _$ImplementationGuidePackage {
   ImplementationGuidePackage._();
   factory ImplementationGuidePackage({
     String? name,
@@ -1059,8 +1038,7 @@ abstract class ImplementationGuidePackage
 }
 
 @freezed
-abstract class ImplementationGuideResource
-    implements _$ImplementationGuideResource {
+class ImplementationGuideResource with _$ImplementationGuideResource {
   ImplementationGuideResource._();
   factory ImplementationGuideResource({
     Boolean? example,
@@ -1096,8 +1074,7 @@ abstract class ImplementationGuideResource
 }
 
 @freezed
-abstract class ImplementationGuideGlobal
-    implements _$ImplementationGuideGlobal {
+class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
   factory ImplementationGuideGlobal({
     String? type,
@@ -1124,7 +1101,7 @@ abstract class ImplementationGuideGlobal
 }
 
 @freezed
-abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
+class ImplementationGuidePage with _$ImplementationGuidePage {
   ImplementationGuidePage._();
   factory ImplementationGuidePage({
     String? source,
@@ -1160,7 +1137,7 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
 }
 
 @freezed
-abstract class MessageDefinition with Resource implements _$MessageDefinition {
+class MessageDefinition with Resource, _$MessageDefinition {
   MessageDefinition._();
   factory MessageDefinition({
     @Default(Stu3ResourceType.MessageDefinition)
@@ -1232,7 +1209,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
 }
 
 @freezed
-abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
+class MessageDefinitionFocus with _$MessageDefinitionFocus {
   MessageDefinitionFocus._();
   factory MessageDefinitionFocus({
     Code? code,
@@ -1262,8 +1239,7 @@ abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
 }
 
 @freezed
-abstract class MessageDefinitionAllowedResponse
-    implements _$MessageDefinitionAllowedResponse {
+class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   MessageDefinitionAllowedResponse._();
   factory MessageDefinitionAllowedResponse({
     required Reference message,
@@ -1292,9 +1268,7 @@ abstract class MessageDefinitionAllowedResponse
 }
 
 @freezed
-abstract class OperationDefinition
-    with Resource
-    implements _$OperationDefinition {
+class OperationDefinition with Resource, _$OperationDefinition {
   OperationDefinition._();
   factory OperationDefinition({
     @Default(Stu3ResourceType.OperationDefinition)
@@ -1370,8 +1344,7 @@ abstract class OperationDefinition
 }
 
 @freezed
-abstract class OperationDefinitionParameter
-    implements _$OperationDefinitionParameter {
+class OperationDefinitionParameter with _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
     String? name,
@@ -1412,8 +1385,7 @@ abstract class OperationDefinitionParameter
 }
 
 @freezed
-abstract class OperationDefinitionBinding
-    implements _$OperationDefinitionBinding {
+class OperationDefinitionBinding with _$OperationDefinitionBinding {
   OperationDefinitionBinding._();
   factory OperationDefinitionBinding({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1443,8 +1415,7 @@ abstract class OperationDefinitionBinding
 }
 
 @freezed
-abstract class OperationDefinitionOverload
-    implements _$OperationDefinitionOverload {
+class OperationDefinitionOverload with _$OperationDefinitionOverload {
   OperationDefinitionOverload._();
   factory OperationDefinitionOverload({
     List<String>? parameterName,
@@ -1472,7 +1443,7 @@ abstract class OperationDefinitionOverload
 }
 
 @freezed
-abstract class SearchParameter with Resource implements _$SearchParameter {
+class SearchParameter with Resource, _$SearchParameter {
   SearchParameter._();
   factory SearchParameter({
     @Default(Stu3ResourceType.SearchParameter)
@@ -1552,7 +1523,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
 }
 
 @freezed
-abstract class SearchParameterComponent implements _$SearchParameterComponent {
+class SearchParameterComponent with _$SearchParameterComponent {
   SearchParameterComponent._();
   factory SearchParameterComponent({
     required Reference definition,
@@ -1579,9 +1550,7 @@ abstract class SearchParameterComponent implements _$SearchParameterComponent {
 }
 
 @freezed
-abstract class StructureDefinition
-    with Resource
-    implements _$StructureDefinition {
+class StructureDefinition with Resource, _$StructureDefinition {
   StructureDefinition._();
   factory StructureDefinition({
     @Default(Stu3ResourceType.StructureDefinition)
@@ -1665,8 +1634,7 @@ abstract class StructureDefinition
 }
 
 @freezed
-abstract class StructureDefinitionMapping
-    implements _$StructureDefinitionMapping {
+class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
     Id? identity,
@@ -1698,8 +1666,7 @@ abstract class StructureDefinitionMapping
 }
 
 @freezed
-abstract class StructureDefinitionSnapshot
-    implements _$StructureDefinitionSnapshot {
+class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
     required List<ElementDefinition> element,
@@ -1724,8 +1691,7 @@ abstract class StructureDefinitionSnapshot
 }
 
 @freezed
-abstract class StructureDefinitionDifferential
-    implements _$StructureDefinitionDifferential {
+class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
     required List<ElementDefinition> element,
@@ -1752,7 +1718,7 @@ abstract class StructureDefinitionDifferential
 }
 
 @freezed
-abstract class StructureMap with Resource implements _$StructureMap {
+class StructureMap with Resource, _$StructureMap {
   StructureMap._();
   factory StructureMap({
     @Default(Stu3ResourceType.StructureMap)
@@ -1818,7 +1784,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
 }
 
 @freezed
-abstract class StructureMapStructure implements _$StructureMapStructure {
+class StructureMapStructure with _$StructureMapStructure {
   StructureMapStructure._();
   factory StructureMapStructure({
     String? url,
@@ -1849,7 +1815,7 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
 }
 
 @freezed
-abstract class StructureMapGroup implements _$StructureMapGroup {
+class StructureMapGroup with _$StructureMapGroup {
   StructureMapGroup._();
   factory StructureMapGroup({
     String? name,
@@ -1882,7 +1848,7 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
 }
 
 @freezed
-abstract class StructureMapInput implements _$StructureMapInput {
+class StructureMapInput with _$StructureMapInput {
   StructureMapInput._();
   factory StructureMapInput({
     String? name,
@@ -1913,7 +1879,7 @@ abstract class StructureMapInput implements _$StructureMapInput {
 }
 
 @freezed
-abstract class StructureMapRule implements _$StructureMapRule {
+class StructureMapRule with _$StructureMapRule {
   StructureMapRule._();
   factory StructureMapRule({
     String? name,
@@ -1944,7 +1910,7 @@ abstract class StructureMapRule implements _$StructureMapRule {
 }
 
 @freezed
-abstract class StructureMapSource implements _$StructureMapSource {
+class StructureMapSource with _$StructureMapSource {
   StructureMapSource._();
   factory StructureMapSource({
     String? context,
@@ -2060,7 +2026,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
 }
 
 @freezed
-abstract class StructureMapTarget implements _$StructureMapTarget {
+class StructureMapTarget with _$StructureMapTarget {
   StructureMapTarget._();
   factory StructureMapTarget({
     String? context,
@@ -2098,7 +2064,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
 }
 
 @freezed
-abstract class StructureMapParameter implements _$StructureMapParameter {
+class StructureMapParameter with _$StructureMapParameter {
   StructureMapParameter._();
   factory StructureMapParameter({
     Id? valueId,
@@ -2131,7 +2097,7 @@ abstract class StructureMapParameter implements _$StructureMapParameter {
 }
 
 @freezed
-abstract class StructureMapDependent implements _$StructureMapDependent {
+class StructureMapDependent with _$StructureMapDependent {
   StructureMapDependent._();
   factory StructureMapDependent({
     String? name,

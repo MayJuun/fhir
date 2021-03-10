@@ -11,7 +11,7 @@ part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';
 
 @freezed
-abstract class FhirExtension with _$FhirExtension {
+class FhirExtension with _$FhirExtension {
   FhirExtension._();
   factory FhirExtension({
     Id? id,

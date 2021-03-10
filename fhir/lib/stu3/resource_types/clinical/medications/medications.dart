@@ -12,7 +12,7 @@ part 'medications.freezed.dart';
 part 'medications.g.dart';
 
 @freezed
-abstract class Immunization with Resource implements _$Immunization {
+class Immunization with Resource, _$Immunization {
   Immunization._();
   factory Immunization({
     @Default(Stu3ResourceType.Immunization)
@@ -75,7 +75,7 @@ abstract class Immunization with Resource implements _$Immunization {
 }
 
 @freezed
-abstract class ImmunizationPractitioner implements _$ImmunizationPractitioner {
+class ImmunizationPractitioner with _$ImmunizationPractitioner {
   ImmunizationPractitioner._();
   factory ImmunizationPractitioner({
     CodeableConcept? role,
@@ -101,7 +101,7 @@ abstract class ImmunizationPractitioner implements _$ImmunizationPractitioner {
 }
 
 @freezed
-abstract class ImmunizationExplanation implements _$ImmunizationExplanation {
+class ImmunizationExplanation with _$ImmunizationExplanation {
   ImmunizationExplanation._();
   factory ImmunizationExplanation({
     List<CodeableConcept>? reason,
@@ -126,7 +126,7 @@ abstract class ImmunizationExplanation implements _$ImmunizationExplanation {
 }
 
 @freezed
-abstract class ImmunizationReaction implements _$ImmunizationReaction {
+class ImmunizationReaction with _$ImmunizationReaction {
   ImmunizationReaction._();
   factory ImmunizationReaction({
     Date? date,
@@ -154,8 +154,7 @@ abstract class ImmunizationReaction implements _$ImmunizationReaction {
 }
 
 @freezed
-abstract class ImmunizationVaccinationProtocol
-    implements _$ImmunizationVaccinationProtocol {
+class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
   ImmunizationVaccinationProtocol._();
   factory ImmunizationVaccinationProtocol({
     Decimal? doseSequence,
@@ -193,9 +192,7 @@ abstract class ImmunizationVaccinationProtocol
 }
 
 @freezed
-abstract class ImmunizationRecommendation
-    with Resource
-    implements _$ImmunizationRecommendation {
+class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ImmunizationRecommendation._();
   factory ImmunizationRecommendation({
     @Default(Stu3ResourceType.ImmunizationRecommendation)
@@ -235,8 +232,8 @@ abstract class ImmunizationRecommendation
 }
 
 @freezed
-abstract class ImmunizationRecommendationRecommendation
-    implements _$ImmunizationRecommendationRecommendation {
+class ImmunizationRecommendationRecommendation
+    with _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
   factory ImmunizationRecommendationRecommendation({
     Date? date,
@@ -273,8 +270,8 @@ abstract class ImmunizationRecommendationRecommendation
 }
 
 @freezed
-abstract class ImmunizationRecommendationDateCriterion
-    implements _$ImmunizationRecommendationDateCriterion {
+class ImmunizationRecommendationDateCriterion
+    with _$ImmunizationRecommendationDateCriterion {
   ImmunizationRecommendationDateCriterion._();
   factory ImmunizationRecommendationDateCriterion({
     required CodeableConcept code,
@@ -303,8 +300,8 @@ abstract class ImmunizationRecommendationDateCriterion
 }
 
 @freezed
-abstract class ImmunizationRecommendationProtocol
-    implements _$ImmunizationRecommendationProtocol {
+class ImmunizationRecommendationProtocol
+    with _$ImmunizationRecommendationProtocol {
   ImmunizationRecommendationProtocol._();
   factory ImmunizationRecommendationProtocol({
     Decimal? doseSequence,
@@ -337,7 +334,7 @@ abstract class ImmunizationRecommendationProtocol
 }
 
 @freezed
-abstract class Medication with Resource implements _$Medication {
+class Medication with Resource, _$Medication {
   Medication._();
   factory Medication({
     @Default(Stu3ResourceType.Medication)
@@ -385,7 +382,7 @@ abstract class Medication with Resource implements _$Medication {
 }
 
 @freezed
-abstract class MedicationIngredient implements _$MedicationIngredient {
+class MedicationIngredient with _$MedicationIngredient {
   MedicationIngredient._();
   factory MedicationIngredient({
     CodeableConcept? itemCodeableConcept,
@@ -413,7 +410,7 @@ abstract class MedicationIngredient implements _$MedicationIngredient {
 }
 
 @freezed
-abstract class MedicationPackage implements _$MedicationPackage {
+class MedicationPackage with _$MedicationPackage {
   MedicationPackage._();
   factory MedicationPackage({
     CodeableConcept? container,
@@ -439,7 +436,7 @@ abstract class MedicationPackage implements _$MedicationPackage {
 }
 
 @freezed
-abstract class MedicationContent implements _$MedicationContent {
+class MedicationContent with _$MedicationContent {
   MedicationContent._();
   factory MedicationContent({
     CodeableConcept? itemCodeableConcept,
@@ -465,7 +462,7 @@ abstract class MedicationContent implements _$MedicationContent {
 }
 
 @freezed
-abstract class MedicationBatch implements _$MedicationBatch {
+class MedicationBatch with _$MedicationBatch {
   MedicationBatch._();
   factory MedicationBatch({
     String? lotNumber,
@@ -492,9 +489,7 @@ abstract class MedicationBatch implements _$MedicationBatch {
 }
 
 @freezed
-abstract class MedicationAdministration
-    with Resource
-    implements _$MedicationAdministration {
+class MedicationAdministration with Resource, _$MedicationAdministration {
   MedicationAdministration._();
   factory MedicationAdministration({
     @Default(Stu3ResourceType.MedicationAdministration)
@@ -556,8 +551,8 @@ abstract class MedicationAdministration
 }
 
 @freezed
-abstract class MedicationAdministrationPerformer
-    implements _$MedicationAdministrationPerformer {
+class MedicationAdministrationPerformer
+    with _$MedicationAdministrationPerformer {
   MedicationAdministrationPerformer._();
   factory MedicationAdministrationPerformer({
     required Reference actor,
@@ -585,8 +580,7 @@ abstract class MedicationAdministrationPerformer
 }
 
 @freezed
-abstract class MedicationAdministrationDosage
-    implements _$MedicationAdministrationDosage {
+class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
   factory MedicationAdministrationDosage({
     String? text,
@@ -620,9 +614,7 @@ abstract class MedicationAdministrationDosage
 }
 
 @freezed
-abstract class MedicationDispense
-    with Resource
-    implements _$MedicationDispense {
+class MedicationDispense with Resource, _$MedicationDispense {
   MedicationDispense._();
   factory MedicationDispense({
     @Default(Stu3ResourceType.MedicationDispense)
@@ -688,8 +680,7 @@ abstract class MedicationDispense
 }
 
 @freezed
-abstract class MedicationDispensePerformer
-    implements _$MedicationDispensePerformer {
+class MedicationDispensePerformer with _$MedicationDispensePerformer {
   MedicationDispensePerformer._();
   factory MedicationDispensePerformer({
     required Reference actor,
@@ -715,8 +706,7 @@ abstract class MedicationDispensePerformer
 }
 
 @freezed
-abstract class MedicationDispenseSubstitution
-    implements _$MedicationDispenseSubstitution {
+class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
   factory MedicationDispenseSubstitution({
     Boolean? wasSubstituted,
@@ -747,7 +737,7 @@ abstract class MedicationDispenseSubstitution
 }
 
 @freezed
-abstract class MedicationRequest with Resource implements _$MedicationRequest {
+class MedicationRequest with Resource, _$MedicationRequest {
   MedicationRequest._();
   factory MedicationRequest({
     @Default(Stu3ResourceType.MedicationRequest)
@@ -812,8 +802,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
 }
 
 @freezed
-abstract class MedicationRequestRequester
-    implements _$MedicationRequestRequester {
+class MedicationRequestRequester with _$MedicationRequestRequester {
   MedicationRequestRequester._();
   factory MedicationRequestRequester({
     required Reference agent,
@@ -839,8 +828,7 @@ abstract class MedicationRequestRequester
 }
 
 @freezed
-abstract class MedicationRequestDispenseRequest
-    implements _$MedicationRequestDispenseRequest {
+class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   MedicationRequestDispenseRequest._();
   factory MedicationRequestDispenseRequest({
     Period? validityPeriod,
@@ -873,8 +861,7 @@ abstract class MedicationRequestDispenseRequest
 }
 
 @freezed
-abstract class MedicationRequestSubstitution
-    implements _$MedicationRequestSubstitution {
+class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   MedicationRequestSubstitution._();
   factory MedicationRequestSubstitution({
     Boolean? allowed,
@@ -901,9 +888,7 @@ abstract class MedicationRequestSubstitution
 }
 
 @freezed
-abstract class MedicationStatement
-    with Resource
-    implements _$MedicationStatement {
+class MedicationStatement with Resource, _$MedicationStatement {
   MedicationStatement._();
   factory MedicationStatement({
     @Default(Stu3ResourceType.MedicationStatement)

@@ -12,7 +12,7 @@ part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
 
 @freezed
-abstract class ResearchStudy with Resource implements _$ResearchStudy {
+class ResearchStudy with Resource, _$ResearchStudy {
   ResearchStudy._();
   factory ResearchStudy({
     @Default(R5ResourceType.ResearchStudy)
@@ -76,7 +76,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
 }
 
 @freezed
-abstract class ResearchStudyArm implements _$ResearchStudyArm {
+class ResearchStudyArm with _$ResearchStudyArm {
   ResearchStudyArm._();
   factory ResearchStudyArm({
     String? id,
@@ -107,7 +107,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
 }
 
 @freezed
-abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
+class ResearchStudyObjective with _$ResearchStudyObjective {
   ResearchStudyObjective._();
   factory ResearchStudyObjective({
     String? id,
@@ -136,7 +136,7 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
 }
 
 @freezed
-abstract class ResearchSubject with Resource implements _$ResearchSubject {
+class ResearchSubject with Resource, _$ResearchSubject {
   ResearchSubject._();
   factory ResearchSubject({
     @Default(R5ResourceType.ResearchSubject)
@@ -185,7 +185,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
 }
 
 @freezed
-abstract class ResearchSubjectProgress implements _$ResearchSubjectProgress {
+class ResearchSubjectProgress with _$ResearchSubjectProgress {
   ResearchSubjectProgress._();
   factory ResearchSubjectProgress({
     String? id,

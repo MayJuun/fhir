@@ -12,7 +12,7 @@ part 'general.freezed.dart';
 part 'general.g.dart';
 
 @freezed
-abstract class Account with Resource implements _$Account {
+class Account with Resource, _$Account {
   Account._();
   factory Account({
     @Default(R5ResourceType.Account)
@@ -62,7 +62,7 @@ abstract class Account with Resource implements _$Account {
 }
 
 @freezed
-abstract class AccountCoverage implements _$AccountCoverage {
+class AccountCoverage with _$AccountCoverage {
   AccountCoverage._();
   factory AccountCoverage({
     String? id,
@@ -91,7 +91,7 @@ abstract class AccountCoverage implements _$AccountCoverage {
 }
 
 @freezed
-abstract class AccountGuarantor implements _$AccountGuarantor {
+class AccountGuarantor with _$AccountGuarantor {
   AccountGuarantor._();
   factory AccountGuarantor({
     String? id,
@@ -121,7 +121,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
 }
 
 @freezed
-abstract class ChargeItem with Resource implements _$ChargeItem {
+class ChargeItem with Resource, _$ChargeItem {
   ChargeItem._();
   factory ChargeItem({
     @Default(R5ResourceType.ChargeItem)
@@ -193,7 +193,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
 }
 
 @freezed
-abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
+class ChargeItemPerformer with _$ChargeItemPerformer {
   ChargeItemPerformer._();
   factory ChargeItemPerformer({
     String? id,
@@ -221,9 +221,7 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
 }
 
 @freezed
-abstract class ChargeItemDefinition
-    with Resource
-    implements _$ChargeItemDefinition {
+class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ChargeItemDefinition._();
   factory ChargeItemDefinition({
     @Default(R5ResourceType.ChargeItemDefinition)
@@ -299,8 +297,8 @@ abstract class ChargeItemDefinition
 }
 
 @freezed
-abstract class ChargeItemDefinitionApplicability
-    implements _$ChargeItemDefinitionApplicability {
+class ChargeItemDefinitionApplicability
+    with _$ChargeItemDefinitionApplicability {
   ChargeItemDefinitionApplicability._();
   factory ChargeItemDefinitionApplicability({
     String? id,
@@ -335,8 +333,8 @@ abstract class ChargeItemDefinitionApplicability
 }
 
 @freezed
-abstract class ChargeItemDefinitionPropertyGroup
-    implements _$ChargeItemDefinitionPropertyGroup {
+class ChargeItemDefinitionPropertyGroup
+    with _$ChargeItemDefinitionPropertyGroup {
   ChargeItemDefinitionPropertyGroup._();
   factory ChargeItemDefinitionPropertyGroup({
     String? id,
@@ -367,8 +365,8 @@ abstract class ChargeItemDefinitionPropertyGroup
 }
 
 @freezed
-abstract class ChargeItemDefinitionPriceComponent
-    implements _$ChargeItemDefinitionPriceComponent {
+class ChargeItemDefinitionPriceComponent
+    with _$ChargeItemDefinitionPriceComponent {
   ChargeItemDefinitionPriceComponent._();
   factory ChargeItemDefinitionPriceComponent({
     String? id,
@@ -403,7 +401,7 @@ abstract class ChargeItemDefinitionPriceComponent
 }
 
 @freezed
-abstract class Contract with Resource implements _$Contract {
+class Contract with Resource, _$Contract {
   Contract._();
   factory Contract({
     @Default(R5ResourceType.Contract)
@@ -483,8 +481,7 @@ abstract class Contract with Resource implements _$Contract {
 }
 
 @freezed
-abstract class ContractContentDefinition
-    implements _$ContractContentDefinition {
+class ContractContentDefinition with _$ContractContentDefinition {
   ContractContentDefinition._();
   factory ContractContentDefinition({
     String? id,
@@ -520,7 +517,7 @@ abstract class ContractContentDefinition
 }
 
 @freezed
-abstract class ContractTerm implements _$ContractTerm {
+class ContractTerm with _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
     String? id,
@@ -561,7 +558,7 @@ abstract class ContractTerm implements _$ContractTerm {
 }
 
 @freezed
-abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
+class ContractSecurityLabel with _$ContractSecurityLabel {
   ContractSecurityLabel._();
   factory ContractSecurityLabel({
     String? id,
@@ -592,7 +589,7 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
 }
 
 @freezed
-abstract class ContractOffer implements _$ContractOffer {
+class ContractOffer with _$ContractOffer {
   ContractOffer._();
   factory ContractOffer({
     String? id,
@@ -632,7 +629,7 @@ abstract class ContractOffer implements _$ContractOffer {
 }
 
 @freezed
-abstract class ContractParty implements _$ContractParty {
+class ContractParty with _$ContractParty {
   ContractParty._();
   factory ContractParty({
     String? id,
@@ -660,7 +657,7 @@ abstract class ContractParty implements _$ContractParty {
 }
 
 @freezed
-abstract class ContractAnswer implements _$ContractAnswer {
+class ContractAnswer with _$ContractAnswer {
   ContractAnswer._();
   factory ContractAnswer({
     String? id,
@@ -706,7 +703,7 @@ abstract class ContractAnswer implements _$ContractAnswer {
 }
 
 @freezed
-abstract class ContractAsset implements _$ContractAsset {
+class ContractAsset with _$ContractAsset {
   ContractAsset._();
   factory ContractAsset({
     String? id,
@@ -752,7 +749,7 @@ abstract class ContractAsset implements _$ContractAsset {
 }
 
 @freezed
-abstract class ContractContext implements _$ContractContext {
+class ContractContext with _$ContractContext {
   ContractContext._();
   factory ContractContext({
     String? id,
@@ -782,7 +779,7 @@ abstract class ContractContext implements _$ContractContext {
 }
 
 @freezed
-abstract class ContractValuedItem implements _$ContractValuedItem {
+class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
     String? id,
@@ -831,7 +828,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
 }
 
 @freezed
-abstract class ContractAction implements _$ContractAction {
+class ContractAction with _$ContractAction {
   ContractAction._();
   factory ContractAction({
     String? id,
@@ -887,7 +884,7 @@ abstract class ContractAction implements _$ContractAction {
 }
 
 @freezed
-abstract class ContractSubject implements _$ContractSubject {
+class ContractSubject with _$ContractSubject {
   ContractSubject._();
   factory ContractSubject({
     String? id,
@@ -915,7 +912,7 @@ abstract class ContractSubject implements _$ContractSubject {
 }
 
 @freezed
-abstract class ContractSigner implements _$ContractSigner {
+class ContractSigner with _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
     String? id,
@@ -944,7 +941,7 @@ abstract class ContractSigner implements _$ContractSigner {
 }
 
 @freezed
-abstract class ContractFriendly implements _$ContractFriendly {
+class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
     String? id,
@@ -972,7 +969,7 @@ abstract class ContractFriendly implements _$ContractFriendly {
 }
 
 @freezed
-abstract class ContractLegal implements _$ContractLegal {
+class ContractLegal with _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
     String? id,
@@ -1000,7 +997,7 @@ abstract class ContractLegal implements _$ContractLegal {
 }
 
 @freezed
-abstract class ContractRule implements _$ContractRule {
+class ContractRule with _$ContractRule {
   ContractRule._();
   factory ContractRule({
     String? id,
@@ -1028,9 +1025,7 @@ abstract class ContractRule implements _$ContractRule {
 }
 
 @freezed
-abstract class ExplanationOfBenefit
-    with Resource
-    implements _$ExplanationOfBenefit {
+class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
     @Default(R5ResourceType.ExplanationOfBenefit)
@@ -1117,8 +1112,7 @@ abstract class ExplanationOfBenefit
 }
 
 @freezed
-abstract class ExplanationOfBenefitRelated
-    implements _$ExplanationOfBenefitRelated {
+class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ExplanationOfBenefitRelated._();
   factory ExplanationOfBenefitRelated({
     String? id,
@@ -1148,8 +1142,7 @@ abstract class ExplanationOfBenefitRelated
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayee
-    implements _$ExplanationOfBenefitPayee {
+class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
   factory ExplanationOfBenefitPayee({
     String? id,
@@ -1178,8 +1171,7 @@ abstract class ExplanationOfBenefitPayee
 }
 
 @freezed
-abstract class ExplanationOfBenefitCareTeam
-    implements _$ExplanationOfBenefitCareTeam {
+class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
   factory ExplanationOfBenefitCareTeam({
     String? id,
@@ -1213,8 +1205,8 @@ abstract class ExplanationOfBenefitCareTeam
 }
 
 @freezed
-abstract class ExplanationOfBenefitSupportingInfo
-    implements _$ExplanationOfBenefitSupportingInfo {
+class ExplanationOfBenefitSupportingInfo
+    with _$ExplanationOfBenefitSupportingInfo {
   ExplanationOfBenefitSupportingInfo._();
   factory ExplanationOfBenefitSupportingInfo({
     String? id,
@@ -1258,8 +1250,7 @@ abstract class ExplanationOfBenefitSupportingInfo
 }
 
 @freezed
-abstract class ExplanationOfBenefitDiagnosis
-    implements _$ExplanationOfBenefitDiagnosis {
+class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
   factory ExplanationOfBenefitDiagnosis({
     String? id,
@@ -1293,8 +1284,7 @@ abstract class ExplanationOfBenefitDiagnosis
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcedure
-    implements _$ExplanationOfBenefitProcedure {
+class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
   factory ExplanationOfBenefitProcedure({
     String? id,
@@ -1329,8 +1319,7 @@ abstract class ExplanationOfBenefitProcedure
 }
 
 @freezed
-abstract class ExplanationOfBenefitInsurance
-    implements _$ExplanationOfBenefitInsurance {
+class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ExplanationOfBenefitInsurance._();
   factory ExplanationOfBenefitInsurance({
     String? id,
@@ -1362,8 +1351,7 @@ abstract class ExplanationOfBenefitInsurance
 }
 
 @freezed
-abstract class ExplanationOfBenefitAccident
-    implements _$ExplanationOfBenefitAccident {
+class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
   factory ExplanationOfBenefitAccident({
     String? id,
@@ -1395,7 +1383,7 @@ abstract class ExplanationOfBenefitAccident
 }
 
 @freezed
-abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
+class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
   factory ExplanationOfBenefitItem({
     String? id,
@@ -1459,8 +1447,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
 }
 
 @freezed
-abstract class ExplanationOfBenefitAdjudication
-    implements _$ExplanationOfBenefitAdjudication {
+class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ExplanationOfBenefitAdjudication._();
   factory ExplanationOfBenefitAdjudication({
     String? id,
@@ -1494,8 +1481,7 @@ abstract class ExplanationOfBenefitAdjudication
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail
-    implements _$ExplanationOfBenefitDetail {
+class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
   factory ExplanationOfBenefitDetail({
     String? id,
@@ -1539,8 +1525,7 @@ abstract class ExplanationOfBenefitDetail
 }
 
 @freezed
-abstract class ExplanationOfBenefitSubDetail
-    implements _$ExplanationOfBenefitSubDetail {
+class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
   factory ExplanationOfBenefitSubDetail({
     String? id,
@@ -1583,8 +1568,7 @@ abstract class ExplanationOfBenefitSubDetail
 }
 
 @freezed
-abstract class ExplanationOfBenefitAddItem
-    implements _$ExplanationOfBenefitAddItem {
+class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
   factory ExplanationOfBenefitAddItem({
     String? id,
@@ -1639,8 +1623,7 @@ abstract class ExplanationOfBenefitAddItem
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail1
-    implements _$ExplanationOfBenefitDetail1 {
+class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ExplanationOfBenefitDetail1._();
   factory ExplanationOfBenefitDetail1({
     String? id,
@@ -1678,8 +1661,7 @@ abstract class ExplanationOfBenefitDetail1
 }
 
 @freezed
-abstract class ExplanationOfBenefitSubDetail1
-    implements _$ExplanationOfBenefitSubDetail1 {
+class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   ExplanationOfBenefitSubDetail1._();
   factory ExplanationOfBenefitSubDetail1({
     String? id,
@@ -1718,8 +1700,7 @@ abstract class ExplanationOfBenefitSubDetail1
 }
 
 @freezed
-abstract class ExplanationOfBenefitTotal
-    implements _$ExplanationOfBenefitTotal {
+class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   ExplanationOfBenefitTotal._();
   factory ExplanationOfBenefitTotal({
     String? id,
@@ -1748,8 +1729,7 @@ abstract class ExplanationOfBenefitTotal
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayment
-    implements _$ExplanationOfBenefitPayment {
+class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ExplanationOfBenefitPayment._();
   factory ExplanationOfBenefitPayment({
     String? id,
@@ -1783,8 +1763,7 @@ abstract class ExplanationOfBenefitPayment
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcessNote
-    implements _$ExplanationOfBenefitProcessNote {
+class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
   factory ExplanationOfBenefitProcessNote({
     String? id,
@@ -1821,8 +1800,8 @@ abstract class ExplanationOfBenefitProcessNote
 }
 
 @freezed
-abstract class ExplanationOfBenefitBenefitBalance
-    implements _$ExplanationOfBenefitBenefitBalance {
+class ExplanationOfBenefitBenefitBalance
+    with _$ExplanationOfBenefitBenefitBalance {
   ExplanationOfBenefitBenefitBalance._();
   factory ExplanationOfBenefitBenefitBalance({
     String? id,
@@ -1862,8 +1841,7 @@ abstract class ExplanationOfBenefitBenefitBalance
 }
 
 @freezed
-abstract class ExplanationOfBenefitFinancial
-    implements _$ExplanationOfBenefitFinancial {
+class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ExplanationOfBenefitFinancial._();
   factory ExplanationOfBenefitFinancial({
     String? id,
@@ -1899,7 +1877,7 @@ abstract class ExplanationOfBenefitFinancial
 }
 
 @freezed
-abstract class InsurancePlan with Resource implements _$InsurancePlan {
+class InsurancePlan with Resource, _$InsurancePlan {
   InsurancePlan._();
   factory InsurancePlan({
     @Default(R5ResourceType.InsurancePlan)
@@ -1953,7 +1931,7 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
 }
 
 @freezed
-abstract class InsurancePlanContact implements _$InsurancePlanContact {
+class InsurancePlanContact with _$InsurancePlanContact {
   InsurancePlanContact._();
   factory InsurancePlanContact({
     String? id,
@@ -1983,7 +1961,7 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
 }
 
 @freezed
-abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
+class InsurancePlanCoverage with _$InsurancePlanCoverage {
   InsurancePlanCoverage._();
   factory InsurancePlanCoverage({
     String? id,
@@ -2012,7 +1990,7 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
 }
 
 @freezed
-abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
+class InsurancePlanBenefit with _$InsurancePlanBenefit {
   InsurancePlanBenefit._();
   factory InsurancePlanBenefit({
     String? id,
@@ -2042,7 +2020,7 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
 }
 
 @freezed
-abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
+class InsurancePlanLimit with _$InsurancePlanLimit {
   InsurancePlanLimit._();
   factory InsurancePlanLimit({
     String? id,
@@ -2070,7 +2048,7 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
 }
 
 @freezed
-abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
+class InsurancePlanPlan with _$InsurancePlanPlan {
   InsurancePlanPlan._();
   factory InsurancePlanPlan({
     String? id,
@@ -2102,7 +2080,7 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
 }
 
 @freezed
-abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
+class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   InsurancePlanGeneralCost._();
   factory InsurancePlanGeneralCost({
     String? id,
@@ -2135,8 +2113,7 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
 }
 
 @freezed
-abstract class InsurancePlanSpecificCost
-    implements _$InsurancePlanSpecificCost {
+class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   InsurancePlanSpecificCost._();
   factory InsurancePlanSpecificCost({
     String? id,
@@ -2165,7 +2142,7 @@ abstract class InsurancePlanSpecificCost
 }
 
 @freezed
-abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
+class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   InsurancePlanBenefit1._();
   factory InsurancePlanBenefit1({
     String? id,
@@ -2193,7 +2170,7 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
 }
 
 @freezed
-abstract class InsurancePlanCost implements _$InsurancePlanCost {
+class InsurancePlanCost with _$InsurancePlanCost {
   InsurancePlanCost._();
   factory InsurancePlanCost({
     String? id,

@@ -12,7 +12,7 @@ part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
 @freezed
-abstract class CarePlan with Resource implements _$CarePlan {
+class CarePlan with Resource, _$CarePlan {
   CarePlan._();
 
   /// [CarePlan]: Describes the intention of how one or more practitioners
@@ -218,7 +218,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
 }
 
 @freezed
-abstract class CarePlanActivity implements _$CarePlanActivity {
+class CarePlanActivity with _$CarePlanActivity {
   CarePlanActivity._();
 
   /// [CarePlan_Activity]: Describes the intention of how one or more
@@ -297,7 +297,7 @@ abstract class CarePlanActivity implements _$CarePlanActivity {
 }
 
 @freezed
-abstract class CarePlanDetail implements _$CarePlanDetail {
+class CarePlanDetail with _$CarePlanDetail {
   CarePlanDetail._();
 
   /// [CarePlan_Detail]: Describes the intention of how one or more
@@ -462,7 +462,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
 }
 
 @freezed
-abstract class CareTeam with Resource implements _$CareTeam {
+class CareTeam with Resource, _$CareTeam {
   CareTeam._();
 
   /// [CareTeam]: The Care Team includes all the people and organizations who
@@ -610,7 +610,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
 }
 
 @freezed
-abstract class CareTeamParticipant implements _$CareTeamParticipant {
+class CareTeamParticipant with _$CareTeamParticipant {
   CareTeamParticipant._();
 
   /// [CareTeam_Participant]: The Care Team includes all the people and
@@ -680,7 +680,7 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
 }
 
 @freezed
-abstract class Goal with Resource implements _$Goal {
+class Goal with Resource, _$Goal {
   Goal._();
 
   /// [Goal]: Describes the intended objective(s) for a patient, group or
@@ -850,7 +850,7 @@ abstract class Goal with Resource implements _$Goal {
 }
 
 @freezed
-abstract class GoalTarget implements _$GoalTarget {
+class GoalTarget with _$GoalTarget {
   GoalTarget._();
 
   /// [Goal_Target]: Describes the intended objective(s) for a patient, group or
@@ -986,7 +986,7 @@ abstract class GoalTarget implements _$GoalTarget {
 }
 
 @freezed
-abstract class NutritionOrder with Resource implements _$NutritionOrder {
+class NutritionOrder with Resource, _$NutritionOrder {
   NutritionOrder._();
 
   /// [NutritionOrder]: A request to supply a diet, formula feeding (enteral) or
@@ -1175,7 +1175,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
 }
 
 @freezed
-abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
+class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
 
   /// [NutritionOrder_OralDiet]: A request to supply a diet, formula feeding
@@ -1258,7 +1258,7 @@ abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
 }
 
 @freezed
-abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
+class NutritionOrderNutrient with _$NutritionOrderNutrient {
   NutritionOrderNutrient._();
 
   /// [NutritionOrder_Nutrient]: A request to supply a diet, formula feeding
@@ -1318,7 +1318,7 @@ abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
 }
 
 @freezed
-abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
+class NutritionOrderTexture with _$NutritionOrderTexture {
   NutritionOrderTexture._();
 
   /// [NutritionOrder_Texture]: A request to supply a diet, formula feeding
@@ -1379,7 +1379,7 @@ abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
 }
 
 @freezed
-abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
+class NutritionOrderSupplement with _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
 
   /// [NutritionOrder_Supplement]: A request to supply a diet, formula feeding
@@ -1459,8 +1459,7 @@ abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
 }
 
 @freezed
-abstract class NutritionOrderEnteralFormula
-    implements _$NutritionOrderEnteralFormula {
+class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
 
   /// [NutritionOrder_EnteralFormula]: A request to supply a diet, formula
@@ -1569,8 +1568,7 @@ abstract class NutritionOrderEnteralFormula
 }
 
 @freezed
-abstract class NutritionOrderAdministration
-    implements _$NutritionOrderAdministration {
+class NutritionOrderAdministration with _$NutritionOrderAdministration {
   NutritionOrderAdministration._();
 
   /// [NutritionOrder_Administration]: A request to supply a diet, formula
@@ -1640,7 +1638,7 @@ abstract class NutritionOrderAdministration
 }
 
 @freezed
-abstract class RequestGroup with Resource implements _$RequestGroup {
+class RequestGroup with Resource, _$RequestGroup {
   RequestGroup._();
 
   /// [RequestGroup]: A group of related requests that can be used to capture
@@ -1821,7 +1819,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
 }
 
 @freezed
-abstract class RequestGroupAction implements _$RequestGroupAction {
+class RequestGroupAction with _$RequestGroupAction {
   RequestGroupAction._();
 
   /// [RequestGroup_Action]: A group of related requests that can be used to
@@ -2004,7 +2002,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
 }
 
 @freezed
-abstract class RequestGroupCondition implements _$RequestGroupCondition {
+class RequestGroupCondition with _$RequestGroupCondition {
   RequestGroupCondition._();
 
   /// [RequestGroup_Condition]: A group of related requests that can be used to
@@ -2068,8 +2066,7 @@ abstract class RequestGroupCondition implements _$RequestGroupCondition {
 }
 
 @freezed
-abstract class RequestGroupRelatedAction
-    implements _$RequestGroupRelatedAction {
+class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   RequestGroupRelatedAction._();
 
   /// [RequestGroup_RelatedAction]: A group of related requests that can be used
@@ -2144,7 +2141,7 @@ abstract class RequestGroupRelatedAction
 }
 
 @freezed
-abstract class RiskAssessment with Resource implements _$RiskAssessment {
+class RiskAssessment with Resource, _$RiskAssessment {
   RiskAssessment._();
 
   /// [RiskAssessment]: An assessment of the likely outcome(s) for a patient or
@@ -2309,7 +2306,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
 }
 
 @freezed
-abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
+class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   RiskAssessmentPrediction._();
 
   /// [RiskAssessment_Prediction]: An assessment of the likely outcome(s) for a
@@ -2406,7 +2403,7 @@ abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
 }
 
 @freezed
-abstract class ServiceRequest with Resource implements _$ServiceRequest {
+class ServiceRequest with Resource, _$ServiceRequest {
   ServiceRequest._();
 
   /// [ServiceRequest]: A record of a request for service such as diagnostic
@@ -2697,9 +2694,7 @@ abstract class ServiceRequest with Resource implements _$ServiceRequest {
 }
 
 @freezed
-abstract class VisionPrescription
-    with Resource
-    implements _$VisionPrescription {
+class VisionPrescription with Resource, _$VisionPrescription {
   VisionPrescription._();
 
   /// [VisionPrescription]: An authorization for the provision of glasses and/or
@@ -2831,8 +2826,8 @@ abstract class VisionPrescription
 }
 
 @freezed
-abstract class VisionPrescriptionLensSpecification
-    implements _$VisionPrescriptionLensSpecification {
+class VisionPrescriptionLensSpecification
+    with _$VisionPrescriptionLensSpecification {
   VisionPrescriptionLensSpecification._();
 
   /// [VisionPrescription_LensSpecification]: An authorization for the provision
@@ -2965,7 +2960,7 @@ abstract class VisionPrescriptionLensSpecification
 }
 
 @freezed
-abstract class VisionPrescriptionPrism implements _$VisionPrescriptionPrism {
+class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   VisionPrescriptionPrism._();
 
   /// [VisionPrescription_Prism]: An authorization for the provision of glasses

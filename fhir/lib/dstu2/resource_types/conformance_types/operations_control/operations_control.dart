@@ -12,7 +12,7 @@ part 'operations_control.freezed.dart';
 part 'operations_control.g.dart';
 
 @freezed
-abstract class Conformance with Resource implements _$Conformance {
+class Conformance with Resource, _$Conformance {
   Conformance._();
   factory Conformance({
     @Default(Dstu2ResourceType.Conformance)
@@ -73,9 +73,7 @@ abstract class Conformance with Resource implements _$Conformance {
 }
 
 @freezed
-abstract class CapabilityStatement
-    with Resource
-    implements _$CapabilityStatement {
+class CapabilityStatement with Resource, _$CapabilityStatement {
   CapabilityStatement._();
   factory CapabilityStatement({
     @Default(Dstu2ResourceType.CapabilityStatement)
@@ -136,7 +134,7 @@ abstract class CapabilityStatement
 }
 
 @freezed
-abstract class ConformanceContact with _$ConformanceContact {
+class ConformanceContact with _$ConformanceContact {
   ConformanceContact._();
   factory ConformanceContact({
     Id? id,
@@ -164,7 +162,7 @@ abstract class ConformanceContact with _$ConformanceContact {
 }
 
 @freezed
-abstract class ConformanceSoftware with _$ConformanceSoftware {
+class ConformanceSoftware with _$ConformanceSoftware {
   ConformanceSoftware._();
   factory ConformanceSoftware({
     Id? id,
@@ -193,7 +191,7 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
 }
 
 @freezed
-abstract class ConformanceImplementation with _$ConformanceImplementation {
+class ConformanceImplementation with _$ConformanceImplementation {
   ConformanceImplementation._();
   factory ConformanceImplementation({
     Id? id,
@@ -222,7 +220,7 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
 }
 
 @freezed
-abstract class ConformanceRest with _$ConformanceRest {
+class ConformanceRest with _$ConformanceRest {
   ConformanceRest._();
   factory ConformanceRest({
     Id? id,
@@ -260,7 +258,7 @@ abstract class ConformanceRest with _$ConformanceRest {
 }
 
 @freezed
-abstract class ConformanceMessaging with _$ConformanceMessaging {
+class ConformanceMessaging with _$ConformanceMessaging {
   ConformanceMessaging._();
   factory ConformanceMessaging({
     Id? id,
@@ -291,7 +289,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
 }
 
 @freezed
-abstract class ConformanceDocument with _$ConformanceDocument {
+class ConformanceDocument with _$ConformanceDocument {
   ConformanceDocument._();
   factory ConformanceDocument({
     Id? id,
@@ -321,7 +319,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
 }
 
 @freezed
-abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
+class ConformanceRestSecurity with _$ConformanceRestSecurity {
   ConformanceRestSecurity._();
   factory ConformanceRestSecurity({
     Id? id,
@@ -352,7 +350,7 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
 }
 
 @freezed
-abstract class ConformanceRestResource with _$ConformanceRestResource {
+class ConformanceRestResource with _$ConformanceRestResource {
   ConformanceRestResource._();
   factory ConformanceRestResource({
     Id? id,
@@ -398,8 +396,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
 }
 
 @freezed
-abstract class ConformanceResourceInteraction
-    with _$ConformanceResourceInteraction {
+class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
   ConformanceResourceInteraction._();
   factory ConformanceResourceInteraction({
     Id? id,
@@ -431,7 +428,7 @@ abstract class ConformanceResourceInteraction
 }
 
 @freezed
-abstract class ConformanceRestOperation with _$ConformanceRestOperation {
+class ConformanceRestOperation with _$ConformanceRestOperation {
   ConformanceRestOperation._();
   factory ConformanceRestOperation({
     Id? id,
@@ -461,8 +458,7 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
 }
 
 @freezed
-abstract class ConformanceMessagingEndpoint
-    with _$ConformanceMessagingEndpoint {
+class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
   ConformanceMessagingEndpoint._();
   factory ConformanceMessagingEndpoint({
     Id? id,
@@ -492,7 +488,7 @@ abstract class ConformanceMessagingEndpoint
 }
 
 @freezed
-abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
+class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
   ConformanceMessagingEvent._();
   factory ConformanceMessagingEvent({
     Id? id,
@@ -527,8 +523,7 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
 }
 
 @freezed
-abstract class ConformanceSecurityCertificate
-    with _$ConformanceSecurityCertificate {
+class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
   ConformanceSecurityCertificate._();
   factory ConformanceSecurityCertificate({
     Id? id,
@@ -560,7 +555,7 @@ abstract class ConformanceSecurityCertificate
 }
 
 @freezed
-abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
+class ConformanceRestInteraction with _$ConformanceRestInteraction {
   ConformanceRestInteraction._();
   factory ConformanceRestInteraction({
     Id? id,
@@ -590,8 +585,7 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
 }
 
 @freezed
-abstract class ConformanceResourceSearchParam
-    with _$ConformanceResourceSearchParam {
+class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
   ConformanceResourceSearchParam._();
   factory ConformanceResourceSearchParam({
     Id? id,
@@ -629,9 +623,7 @@ abstract class ConformanceResourceSearchParam
 }
 
 @freezed
-abstract class OperationDefinition
-    with Resource
-    implements _$OperationDefinition {
+class OperationDefinition with Resource, _$OperationDefinition {
   OperationDefinition._();
   factory OperationDefinition({
     @Default(Dstu2ResourceType.OperationDefinition)
@@ -686,7 +678,7 @@ abstract class OperationDefinition
 }
 
 @freezed
-abstract class OperationDefinitionContact with _$OperationDefinitionContact {
+class OperationDefinitionContact with _$OperationDefinitionContact {
   OperationDefinitionContact._();
   factory OperationDefinitionContact({
     Id? id,
@@ -715,8 +707,7 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
 }
 
 @freezed
-abstract class OperationDefinitionParameter
-    with _$OperationDefinitionParameter {
+class OperationDefinitionParameter with _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
     Id? id,
@@ -753,7 +744,7 @@ abstract class OperationDefinitionParameter
 }
 
 @freezed
-abstract class OperationDefinitionParameterBinding
+class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
   OperationDefinitionParameterBinding._();
   factory OperationDefinitionParameterBinding({
@@ -790,7 +781,7 @@ abstract class OperationDefinitionParameterBinding
 }
 
 @freezed
-abstract class SearchParameter with Resource implements _$SearchParameter {
+class SearchParameter with Resource, _$SearchParameter {
   SearchParameter._();
   factory SearchParameter({
     @Default(Dstu2ResourceType.SearchParameter)
@@ -843,7 +834,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
 }
 
 @freezed
-abstract class SearchParameterContact with _$SearchParameterContact {
+class SearchParameterContact with _$SearchParameterContact {
   SearchParameterContact._();
   factory SearchParameterContact({
     Id? id,

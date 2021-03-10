@@ -12,7 +12,7 @@ part 'management.freezed.dart';
 part 'management.g.dart';
 
 @freezed
-abstract class Encounter with Resource implements _$Encounter {
+class Encounter with Resource, _$Encounter {
   Encounter._();
   factory Encounter({
     @Default(R5ResourceType.Encounter)
@@ -72,7 +72,7 @@ abstract class Encounter with Resource implements _$Encounter {
 }
 
 @freezed
-abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
+class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
   factory EncounterStatusHistory({
     String? id,
@@ -102,7 +102,7 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
 }
 
 @freezed
-abstract class EncounterClassHistory implements _$EncounterClassHistory {
+class EncounterClassHistory with _$EncounterClassHistory {
   EncounterClassHistory._();
   factory EncounterClassHistory({
     String? id,
@@ -130,7 +130,7 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
 }
 
 @freezed
-abstract class EncounterParticipant implements _$EncounterParticipant {
+class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
   factory EncounterParticipant({
     String? id,
@@ -159,7 +159,7 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
 }
 
 @freezed
-abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
+class EncounterDiagnosis with _$EncounterDiagnosis {
   EncounterDiagnosis._();
   factory EncounterDiagnosis({
     String? id,
@@ -189,7 +189,7 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
 }
 
 @freezed
-abstract class EncounterHospitalization implements _$EncounterHospitalization {
+class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
   factory EncounterHospitalization({
     String? id,
@@ -225,7 +225,7 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
 }
 
 @freezed
-abstract class EncounterLocation implements _$EncounterLocation {
+class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
   factory EncounterLocation({
     String? id,
@@ -257,7 +257,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
 }
 
 @freezed
-abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
+class EpisodeOfCare with Resource, _$EpisodeOfCare {
   EpisodeOfCare._();
   factory EpisodeOfCare({
     @Default(R5ResourceType.EpisodeOfCare)
@@ -307,8 +307,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
 }
 
 @freezed
-abstract class EpisodeOfCareStatusHistory
-    implements _$EpisodeOfCareStatusHistory {
+class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
   factory EpisodeOfCareStatusHistory({
     String? id,
@@ -339,7 +338,7 @@ abstract class EpisodeOfCareStatusHistory
 }
 
 @freezed
-abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
+class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   EpisodeOfCareDiagnosis._();
   factory EpisodeOfCareDiagnosis({
     String? id,
@@ -369,7 +368,7 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
 }
 
 @freezed
-abstract class Flag with Resource implements _$Flag {
+class Flag with Resource, _$Flag {
   Flag._();
   factory Flag({
     @Default(R5ResourceType.Flag)
@@ -413,7 +412,7 @@ abstract class Flag with Resource implements _$Flag {
 }
 
 @freezed
-abstract class Library with Resource implements _$Library {
+class Library with Resource, _$Library {
   Library._();
   factory Library({
     @Default(R5ResourceType.Library)
@@ -496,7 +495,7 @@ abstract class Library with Resource implements _$Library {
 }
 
 @freezed
-abstract class List_ with Resource implements _$List_ {
+class List_ with Resource, _$List_ {
   List_._();
   factory List_({
     @Default(R5ResourceType.List_)
@@ -548,7 +547,7 @@ abstract class List_ with Resource implements _$List_ {
 }
 
 @freezed
-abstract class ListEntry implements _$ListEntry {
+class ListEntry with _$ListEntry {
   ListEntry._();
   factory ListEntry({
     String? id,

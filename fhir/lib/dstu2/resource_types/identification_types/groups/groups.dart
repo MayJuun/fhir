@@ -12,7 +12,7 @@ part 'groups.freezed.dart';
 part 'groups.g.dart';
 
 @freezed
-abstract class Organization with Resource implements _$Organization {
+class Organization with Resource, _$Organization {
   Organization._();
   factory Organization({
     @Default(Dstu2ResourceType.Organization)
@@ -60,7 +60,7 @@ abstract class Organization with Resource implements _$Organization {
 }
 
 @freezed
-abstract class OrganizationContact with _$OrganizationContact {
+class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
   factory OrganizationContact({
     Id? id,
@@ -91,7 +91,7 @@ abstract class OrganizationContact with _$OrganizationContact {
 }
 
 @freezed
-abstract class HealthcareService with Resource implements _$HealthcareService {
+class HealthcareService with Resource, _$HealthcareService {
   HealthcareService._();
   factory HealthcareService({
     @Default(Dstu2ResourceType.HealthcareService)
@@ -154,8 +154,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
 }
 
 @freezed
-abstract class HealthcareServiceServiceType
-    with _$HealthcareServiceServiceType {
+class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
   HealthcareServiceServiceType._();
   factory HealthcareServiceServiceType({
     Id? id,
@@ -184,8 +183,7 @@ abstract class HealthcareServiceServiceType
 }
 
 @freezed
-abstract class HealthcareServiceAvailableTime
-    with _$HealthcareServiceAvailableTime {
+class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
     Id? id,
@@ -222,8 +220,7 @@ abstract class HealthcareServiceAvailableTime
 }
 
 @freezed
-abstract class HealthcareServiceNotAvailable
-    with _$HealthcareServiceNotAvailable {
+class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
     Id? id,
@@ -253,7 +250,7 @@ abstract class HealthcareServiceNotAvailable
 }
 
 @freezed
-abstract class Group with Resource implements _$Group {
+class Group with Resource, _$Group {
   Group._();
   factory Group({
     @Default(Dstu2ResourceType.Group)
@@ -300,7 +297,7 @@ abstract class Group with Resource implements _$Group {
 }
 
 @freezed
-abstract class GroupCharacteristic with _$GroupCharacteristic {
+class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
   factory GroupCharacteristic({
     Id? id,
@@ -334,7 +331,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
 }
 
 @freezed
-abstract class GroupMember with _$GroupMember {
+class GroupMember with _$GroupMember {
   GroupMember._();
   factory GroupMember({
     Id? id,

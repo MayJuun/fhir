@@ -12,7 +12,7 @@ part 'summary.freezed.dart';
 part 'summary.g.dart';
 
 @freezed
-abstract class AdverseEvent with Resource implements _$AdverseEvent {
+class AdverseEvent with Resource, _$AdverseEvent {
   AdverseEvent._();
 
   /// [AdverseEvent]: Actual or  potential/avoided event causing unintended
@@ -201,8 +201,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
 }
 
 @freezed
-abstract class AdverseEventSuspectEntity
-    implements _$AdverseEventSuspectEntity {
+class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   AdverseEventSuspectEntity._();
 
   /// [AdverseEvent_SuspectEntity]: Actual or  potential/avoided event causing
@@ -267,7 +266,7 @@ abstract class AdverseEventSuspectEntity
 }
 
 @freezed
-abstract class AdverseEventCausality implements _$AdverseEventCausality {
+class AdverseEventCausality with _$AdverseEventCausality {
   AdverseEventCausality._();
 
   /// [AdverseEvent_Causality]: Actual or  potential/avoided event causing
@@ -339,9 +338,7 @@ abstract class AdverseEventCausality implements _$AdverseEventCausality {
 }
 
 @freezed
-abstract class AllergyIntolerance
-    with Resource
-    implements _$AllergyIntolerance {
+class AllergyIntolerance with Resource, _$AllergyIntolerance {
   AllergyIntolerance._();
 
   /// [AllergyIntolerance]: Risk of harmful or undesirable, physiological
@@ -550,8 +547,7 @@ abstract class AllergyIntolerance
 }
 
 @freezed
-abstract class AllergyIntoleranceReaction
-    implements _$AllergyIntoleranceReaction {
+class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
 
   /// [AllergyIntolerance_Reaction]: Risk of harmful or undesirable,
@@ -652,9 +648,7 @@ abstract class AllergyIntoleranceReaction
 }
 
 @freezed
-abstract class ClinicalImpression
-    with Resource
-    implements _$ClinicalImpression {
+class ClinicalImpression with Resource, _$ClinicalImpression {
   ClinicalImpression._();
 
   /// [ClinicalImpression]: A record of a clinical assessment performed to
@@ -853,8 +847,7 @@ abstract class ClinicalImpression
 }
 
 @freezed
-abstract class ClinicalImpressionInvestigation
-    implements _$ClinicalImpressionInvestigation {
+class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
   ClinicalImpressionInvestigation._();
 
   /// [ClinicalImpression_Investigation]: A record of a clinical assessment
@@ -925,8 +918,7 @@ abstract class ClinicalImpressionInvestigation
 }
 
 @freezed
-abstract class ClinicalImpressionFinding
-    implements _$ClinicalImpressionFinding {
+class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
 
   /// [ClinicalImpression_Finding]: A record of a clinical assessment performed
@@ -1000,7 +992,7 @@ abstract class ClinicalImpressionFinding
 }
 
 @freezed
-abstract class Condition with Resource implements _$Condition {
+class Condition with Resource, _$Condition {
   Condition._();
 
   /// [Condition]: A clinical condition, problem, diagnosis, or other event,
@@ -1216,7 +1208,7 @@ abstract class Condition with Resource implements _$Condition {
 }
 
 @freezed
-abstract class ConditionStage implements _$ConditionStage {
+class ConditionStage with _$ConditionStage {
   ConditionStage._();
 
   /// [Condition_Stage]: A clinical condition, problem, diagnosis, or other
@@ -1281,7 +1273,7 @@ abstract class ConditionStage implements _$ConditionStage {
 }
 
 @freezed
-abstract class ConditionEvidence implements _$ConditionEvidence {
+class ConditionEvidence with _$ConditionEvidence {
   ConditionEvidence._();
 
   /// [Condition_Evidence]: A clinical condition, problem, diagnosis, or other
@@ -1343,7 +1335,7 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
 }
 
 @freezed
-abstract class DetectedIssue with Resource implements _$DetectedIssue {
+class DetectedIssue with Resource, _$DetectedIssue {
   DetectedIssue._();
 
   /// [DetectedIssue]: Indicates an actual or potential clinical issue with or
@@ -1506,7 +1498,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
 }
 
 @freezed
-abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
+class DetectedIssueEvidence with _$DetectedIssueEvidence {
   DetectedIssueEvidence._();
 
   /// [DetectedIssue_Evidence]: Indicates an actual or potential clinical issue
@@ -1568,7 +1560,7 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
 }
 
 @freezed
-abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
+class DetectedIssueMitigation with _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
 
   /// [DetectedIssue_Mitigation]: Indicates an actual or potential clinical
@@ -1638,9 +1630,7 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
 }
 
 @freezed
-abstract class FamilyMemberHistory
-    with Resource
-    implements _$FamilyMemberHistory {
+class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   FamilyMemberHistory._();
 
   /// [FamilyMemberHistory]: Significant health conditions for a person related
@@ -1871,8 +1861,7 @@ abstract class FamilyMemberHistory
 }
 
 @freezed
-abstract class FamilyMemberHistoryCondition
-    implements _$FamilyMemberHistoryCondition {
+class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
 
   /// [FamilyMemberHistory_Condition]: Significant health conditions for a
@@ -1972,7 +1961,7 @@ abstract class FamilyMemberHistoryCondition
 }
 
 @freezed
-abstract class Procedure with Resource implements _$Procedure {
+class Procedure with Resource, _$Procedure {
   Procedure._();
 
   /// [Procedure]: An action that is or was performed on or for a patient. This
@@ -2221,7 +2210,7 @@ abstract class Procedure with Resource implements _$Procedure {
 }
 
 @freezed
-abstract class ProcedurePerformer implements _$ProcedurePerformer {
+class ProcedurePerformer with _$ProcedurePerformer {
   ProcedurePerformer._();
 
   /// [Procedure_Performer]: An action that is or was performed on or for a
@@ -2286,7 +2275,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
 }
 
 @freezed
-abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
+class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
 
   /// [Procedure_FocalDevice]: An action that is or was performed on or for a

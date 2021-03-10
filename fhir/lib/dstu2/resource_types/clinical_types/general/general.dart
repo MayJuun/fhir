@@ -12,9 +12,7 @@ part 'general.freezed.dart';
 part 'general.g.dart';
 
 @freezed
-abstract class AllergyIntolerance
-    with Resource
-    implements _$AllergyIntolerance {
+class AllergyIntolerance with Resource, _$AllergyIntolerance {
   AllergyIntolerance._();
   factory AllergyIntolerance({
     @Default(Dstu2ResourceType.AllergyIntolerance)
@@ -74,7 +72,7 @@ abstract class AllergyIntolerance
 }
 
 @freezed
-abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
+class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
     Id? id,
@@ -116,7 +114,7 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 }
 
 @freezed
-abstract class Condition with Resource implements _$Condition {
+class Condition with Resource, _$Condition {
   Condition._();
   factory Condition({
     @Default(Dstu2ResourceType.Condition)
@@ -184,7 +182,7 @@ abstract class Condition with Resource implements _$Condition {
 }
 
 @freezed
-abstract class ConditionStage with _$ConditionStage {
+class ConditionStage with _$ConditionStage {
   ConditionStage._();
   factory ConditionStage({
     Id? id,
@@ -213,7 +211,7 @@ abstract class ConditionStage with _$ConditionStage {
 }
 
 @freezed
-abstract class ConditionEvidence with _$ConditionEvidence {
+class ConditionEvidence with _$ConditionEvidence {
   ConditionEvidence._();
   factory ConditionEvidence({
     Id? id,
@@ -242,7 +240,7 @@ abstract class ConditionEvidence with _$ConditionEvidence {
 }
 
 @freezed
-abstract class Procedure with Resource implements _$Procedure {
+class Procedure with Resource, _$Procedure {
   Procedure._();
   factory Procedure({
     @Default(Dstu2ResourceType.Procedure)
@@ -304,7 +302,7 @@ abstract class Procedure with Resource implements _$Procedure {
 }
 
 @freezed
-abstract class ProcedurePerformer with _$ProcedurePerformer {
+class ProcedurePerformer with _$ProcedurePerformer {
   ProcedurePerformer._();
   factory ProcedurePerformer({
     Id? id,
@@ -333,7 +331,7 @@ abstract class ProcedurePerformer with _$ProcedurePerformer {
 }
 
 @freezed
-abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
+class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
   factory ProcedureFocalDevice({
     Id? id,
@@ -361,9 +359,7 @@ abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
 }
 
 @freezed
-abstract class ClinicalImpression
-    with Resource
-    implements _$ClinicalImpression {
+class ClinicalImpression with Resource, _$ClinicalImpression {
   ClinicalImpression._();
   factory ClinicalImpression({
     @Default(Dstu2ResourceType.ClinicalImpression)
@@ -423,8 +419,7 @@ abstract class ClinicalImpression
 }
 
 @freezed
-abstract class ClinicalImpressionInvestigations
-    with _$ClinicalImpressionInvestigations {
+class ClinicalImpressionInvestigations with _$ClinicalImpressionInvestigations {
   ClinicalImpressionInvestigations._();
   factory ClinicalImpressionInvestigations({
     Id? id,
@@ -455,7 +450,7 @@ abstract class ClinicalImpressionInvestigations
 }
 
 @freezed
-abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
+class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
   factory ClinicalImpressionFinding({
     Id? id,
@@ -484,7 +479,7 @@ abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 }
 
 @freezed
-abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
+class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
   ClinicalImpressionRuledOut._();
   factory ClinicalImpressionRuledOut({
     Id? id,
@@ -513,9 +508,7 @@ abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
 }
 
 @freezed
-abstract class FamilyMemberHistory
-    with Resource
-    implements _$FamilyMemberHistory {
+class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   FamilyMemberHistory._();
   factory FamilyMemberHistory({
     @Default(Dstu2ResourceType.FamilyMemberHistory)
@@ -582,8 +575,7 @@ abstract class FamilyMemberHistory
 }
 
 @freezed
-abstract class FamilyMemberHistoryCondition
-    with _$FamilyMemberHistoryCondition {
+class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
   factory FamilyMemberHistoryCondition({
     Id? id,
@@ -618,7 +610,7 @@ abstract class FamilyMemberHistoryCondition
 }
 
 @freezed
-abstract class RiskAssessment with Resource implements _$RiskAssessment {
+class RiskAssessment with Resource, _$RiskAssessment {
   RiskAssessment._();
   factory RiskAssessment({
     @Default(Dstu2ResourceType.RiskAssessment)
@@ -665,7 +657,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
 }
 
 @freezed
-abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
+class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   RiskAssessmentPrediction._();
   factory RiskAssessmentPrediction({
     Id? id,
@@ -703,7 +695,7 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 }
 
 @freezed
-abstract class DetectedIssue with Resource implements _$DetectedIssue {
+class DetectedIssue with Resource, _$DetectedIssue {
   DetectedIssue._();
   factory DetectedIssue({
     @Default(Dstu2ResourceType.DetectedIssue)
@@ -753,7 +745,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
 }
 
 @freezed
-abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
+class DetectedIssueMitigation with _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
   factory DetectedIssueMitigation({
     Id? id,

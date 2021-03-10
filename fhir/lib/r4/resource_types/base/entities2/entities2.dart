@@ -12,9 +12,8 @@ part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
 @freezed
-abstract class BiologicallyDerivedProduct
-    with Resource
-    implements _$BiologicallyDerivedProduct {
+class BiologicallyDerivedProduct
+    with Resource, _$BiologicallyDerivedProduct {
   BiologicallyDerivedProduct._();
 
   /// [BiologicallyDerivedProduct]: A material substance originating from a
@@ -162,8 +161,7 @@ abstract class BiologicallyDerivedProduct
 }
 
 @freezed
-abstract class BiologicallyDerivedProductCollection
-    implements _$BiologicallyDerivedProductCollection {
+class BiologicallyDerivedProductCollection with _$BiologicallyDerivedProductCollection {
   BiologicallyDerivedProductCollection._();
 
   /// [BiologicallyDerivedProduct_Collection]: A material substance originating
@@ -236,8 +234,7 @@ abstract class BiologicallyDerivedProductCollection
 }
 
 @freezed
-abstract class BiologicallyDerivedProductProcessing
-    implements _$BiologicallyDerivedProductProcessing {
+class BiologicallyDerivedProductProcessing with _$BiologicallyDerivedProductProcessing {
   BiologicallyDerivedProductProcessing._();
 
   /// [BiologicallyDerivedProduct_Processing]: A material substance originating
@@ -315,8 +312,7 @@ abstract class BiologicallyDerivedProductProcessing
 }
 
 @freezed
-abstract class BiologicallyDerivedProductManipulation
-    implements _$BiologicallyDerivedProductManipulation {
+class BiologicallyDerivedProductManipulation with _$BiologicallyDerivedProductManipulation {
   BiologicallyDerivedProductManipulation._();
 
   /// [BiologicallyDerivedProduct_Manipulation]: A material substance
@@ -389,8 +385,7 @@ abstract class BiologicallyDerivedProductManipulation
 }
 
 @freezed
-abstract class BiologicallyDerivedProductStorage
-    implements _$BiologicallyDerivedProductStorage {
+class BiologicallyDerivedProductStorage with _$BiologicallyDerivedProductStorage {
   BiologicallyDerivedProductStorage._();
 
   /// [BiologicallyDerivedProduct_Storage]: A material substance originating
@@ -469,7 +464,7 @@ abstract class BiologicallyDerivedProductStorage
 }
 
 @freezed
-abstract class Device with Resource implements _$Device {
+class Device with Resource, _$Device {
   Device._();
 
   /// [Device]: A type of a manufactured item that is used in the provision of
@@ -689,7 +684,7 @@ abstract class Device with Resource implements _$Device {
 }
 
 @freezed
-abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
+class DeviceUdiCarrier with _$DeviceUdiCarrier {
   DeviceUdiCarrier._();
 
   /// [Device_UdiCarrier]: A type of a manufactured item that is used in the
@@ -801,7 +796,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
 }
 
 @freezed
-abstract class DeviceDeviceName implements _$DeviceDeviceName {
+class DeviceDeviceName with _$DeviceDeviceName {
   DeviceDeviceName._();
 
   /// [Device_DeviceName]: A type of a manufactured item that is used in the
@@ -870,7 +865,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
 }
 
 @freezed
-abstract class DeviceSpecialization implements _$DeviceSpecialization {
+class DeviceSpecialization with _$DeviceSpecialization {
   DeviceSpecialization._();
 
   /// [Device_Specialization]: A type of a manufactured item that is used in the
@@ -934,7 +929,7 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
 }
 
 @freezed
-abstract class DeviceVersion implements _$DeviceVersion {
+class DeviceVersion with _$DeviceVersion {
   DeviceVersion._();
 
   /// [Device_Version]: A type of a manufactured item that is used in the
@@ -1000,7 +995,7 @@ abstract class DeviceVersion implements _$DeviceVersion {
 }
 
 @freezed
-abstract class DeviceProperty implements _$DeviceProperty {
+class DeviceProperty with _$DeviceProperty {
   DeviceProperty._();
 
   /// [Device_Property]: A type of a manufactured item that is used in the
@@ -1064,7 +1059,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
 }
 
 @freezed
-abstract class DeviceMetric with Resource implements _$DeviceMetric {
+class DeviceMetric with Resource, _$DeviceMetric {
   DeviceMetric._();
 
   /// [DeviceMetric]: Describes a measurement, calculation or setting capability
@@ -1224,7 +1219,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
 }
 
 @freezed
-abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
+class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
 
   /// [DeviceMetric_Calibration]: Describes a measurement, calculation or
@@ -1297,7 +1292,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
 }
 
 @freezed
-abstract class Substance with Resource implements _$Substance {
+class Substance with Resource, _$Substance {
   Substance._();
 
   /// [Substance]: A homogeneous material with a definite composition.
@@ -1418,7 +1413,7 @@ abstract class Substance with Resource implements _$Substance {
 }
 
 @freezed
-abstract class SubstanceInstance implements _$SubstanceInstance {
+class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
 
   /// [Substance_Instance]: A homogeneous material with a definite composition.
@@ -1484,7 +1479,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
 }
 
 @freezed
-abstract class SubstanceIngredient implements _$SubstanceIngredient {
+class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
 
   /// [Substance_Ingredient]: A homogeneous material with a definite

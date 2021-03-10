@@ -12,7 +12,7 @@ part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
 @freezed
-abstract class Appointment with Resource implements _$Appointment {
+class Appointment with Resource, _$Appointment {
   Appointment._();
   factory Appointment({
     @Default(R5ResourceType.Appointment)
@@ -79,7 +79,7 @@ abstract class Appointment with Resource implements _$Appointment {
 }
 
 @freezed
-abstract class AppointmentParticipant implements _$AppointmentParticipant {
+class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
   factory AppointmentParticipant({
     String? id,
@@ -114,9 +114,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
 }
 
 @freezed
-abstract class AppointmentResponse
-    with Resource
-    implements _$AppointmentResponse {
+class AppointmentResponse with Resource, _$AppointmentResponse {
   AppointmentResponse._();
   factory AppointmentResponse({
     @Default(R5ResourceType.AppointmentResponse)
@@ -164,7 +162,7 @@ abstract class AppointmentResponse
 }
 
 @freezed
-abstract class Schedule with Resource implements _$Schedule {
+class Schedule with Resource, _$Schedule {
   Schedule._();
   factory Schedule({
     @Default(R5ResourceType.Schedule)
@@ -210,7 +208,7 @@ abstract class Schedule with Resource implements _$Schedule {
 }
 
 @freezed
-abstract class Slot with Resource implements _$Slot {
+class Slot with Resource, _$Slot {
   Slot._();
   factory Slot({
     @Default(R5ResourceType.Slot)
@@ -261,7 +259,7 @@ abstract class Slot with Resource implements _$Slot {
 }
 
 @freezed
-abstract class Task with Resource implements _$Task {
+class Task with Resource, _$Task {
   Task._();
   factory Task({
     @Default(R5ResourceType.Task)
@@ -334,7 +332,7 @@ abstract class Task with Resource implements _$Task {
 }
 
 @freezed
-abstract class TaskRestriction implements _$TaskRestriction {
+class TaskRestriction with _$TaskRestriction {
   TaskRestriction._();
   factory TaskRestriction({
     String? id,
@@ -364,7 +362,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
 }
 
 @freezed
-abstract class TaskInput implements _$TaskInput {
+class TaskInput with _$TaskInput {
   TaskInput._();
   factory TaskInput({
     String? id,
@@ -462,7 +460,7 @@ abstract class TaskInput implements _$TaskInput {
 }
 
 @freezed
-abstract class TaskOutput implements _$TaskOutput {
+class TaskOutput with _$TaskOutput {
   TaskOutput._();
   factory TaskOutput({
     String? id,
@@ -560,9 +558,7 @@ abstract class TaskOutput implements _$TaskOutput {
 }
 
 @freezed
-abstract class VerificationResult
-    with Resource
-    implements _$VerificationResult {
+class VerificationResult with Resource, _$VerificationResult {
   VerificationResult._();
   factory VerificationResult({
     @Default(R5ResourceType.VerificationResult)
@@ -617,8 +613,7 @@ abstract class VerificationResult
 }
 
 @freezed
-abstract class VerificationResultPrimarySource
-    implements _$VerificationResultPrimarySource {
+class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   VerificationResultPrimarySource._();
   factory VerificationResultPrimarySource({
     String? id,
@@ -655,8 +650,7 @@ abstract class VerificationResultPrimarySource
 }
 
 @freezed
-abstract class VerificationResultAttestation
-    implements _$VerificationResultAttestation {
+class VerificationResultAttestation with _$VerificationResultAttestation {
   VerificationResultAttestation._();
   factory VerificationResultAttestation({
     String? id,
@@ -696,8 +690,7 @@ abstract class VerificationResultAttestation
 }
 
 @freezed
-abstract class VerificationResultValidator
-    implements _$VerificationResultValidator {
+class VerificationResultValidator with _$VerificationResultValidator {
   VerificationResultValidator._();
   factory VerificationResultValidator({
     String? id,

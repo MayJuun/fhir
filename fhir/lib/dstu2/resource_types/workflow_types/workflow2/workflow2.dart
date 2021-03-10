@@ -12,7 +12,7 @@ part 'workflow2.freezed.dart';
 part 'workflow2.g.dart';
 
 @freezed
-abstract class ProcessRequest with Resource implements _$ProcessRequest {
+class ProcessRequest with Resource, _$ProcessRequest {
   ProcessRequest._();
   factory ProcessRequest({
     @Default(Dstu2ResourceType.ProcessRequest)
@@ -63,7 +63,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
 }
 
 @freezed
-abstract class ProcessRequestItem with _$ProcessRequestItem {
+class ProcessRequestItem with _$ProcessRequestItem {
   ProcessRequestItem._();
   factory ProcessRequestItem({
     Id? id,
@@ -90,7 +90,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 }
 
 @freezed
-abstract class ProcessResponse with Resource implements _$ProcessResponse {
+class ProcessResponse with Resource, _$ProcessResponse {
   ProcessResponse._();
   factory ProcessResponse({
     @Default(Dstu2ResourceType.ProcessResponse)
@@ -137,7 +137,7 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
 }
 
 @freezed
-abstract class ProcessResponseNotes with _$ProcessResponseNotes {
+class ProcessResponseNotes with _$ProcessResponseNotes {
   ProcessResponseNotes._();
   factory ProcessResponseNotes({
     Id? id,
@@ -165,7 +165,7 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
 }
 
 @freezed
-abstract class SupplyRequest with Resource implements _$SupplyRequest {
+class SupplyRequest with Resource, _$SupplyRequest {
   SupplyRequest._();
   factory SupplyRequest({
     @Default(Dstu2ResourceType.SupplyRequest)
@@ -214,7 +214,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
 }
 
 @freezed
-abstract class SupplyRequestWhen with _$SupplyRequestWhen {
+class SupplyRequestWhen with _$SupplyRequestWhen {
   SupplyRequestWhen._();
   factory SupplyRequestWhen({
     Id? id,
@@ -242,7 +242,7 @@ abstract class SupplyRequestWhen with _$SupplyRequestWhen {
 }
 
 @freezed
-abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
+class SupplyDelivery with Resource, _$SupplyDelivery {
   SupplyDelivery._();
   factory SupplyDelivery({
     @Default(Dstu2ResourceType.SupplyDelivery)

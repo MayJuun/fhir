@@ -12,7 +12,7 @@ part 'general.freezed.dart';
 part 'general.g.dart';
 
 @freezed
-abstract class Account with Resource implements _$Account {
+class Account with Resource, _$Account {
   Account._();
   factory Account({
     @Default(Stu3ResourceType.Account)
@@ -63,7 +63,7 @@ abstract class Account with Resource implements _$Account {
 }
 
 @freezed
-abstract class AccountCoverage implements _$AccountCoverage {
+class AccountCoverage with _$AccountCoverage {
   AccountCoverage._();
   factory AccountCoverage({
     required Reference coverage,
@@ -89,7 +89,7 @@ abstract class AccountCoverage implements _$AccountCoverage {
 }
 
 @freezed
-abstract class AccountGuarantor implements _$AccountGuarantor {
+class AccountGuarantor with _$AccountGuarantor {
   AccountGuarantor._();
   factory AccountGuarantor({
     required Reference party,
@@ -116,7 +116,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
 }
 
 @freezed
-abstract class ChargeItem with Resource implements _$ChargeItem {
+class ChargeItem with Resource, _$ChargeItem {
   ChargeItem._();
   factory ChargeItem({
     @Default(Stu3ResourceType.ChargeItem)
@@ -183,7 +183,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
 }
 
 @freezed
-abstract class ChargeItemParticipant implements _$ChargeItemParticipant {
+class ChargeItemParticipant with _$ChargeItemParticipant {
   ChargeItemParticipant._();
   factory ChargeItemParticipant({
     CodeableConcept? role,
@@ -208,7 +208,7 @@ abstract class ChargeItemParticipant implements _$ChargeItemParticipant {
 }
 
 @freezed
-abstract class Contract with Resource implements _$Contract {
+class Contract with Resource, _$Contract {
   Contract._();
   factory Contract({
     @Default(Stu3ResourceType.Contract)
@@ -270,7 +270,7 @@ abstract class Contract with Resource implements _$Contract {
 }
 
 @freezed
-abstract class ContractAgent implements _$ContractAgent {
+class ContractAgent with _$ContractAgent {
   ContractAgent._();
   factory ContractAgent({
     required Reference actor,
@@ -295,7 +295,7 @@ abstract class ContractAgent implements _$ContractAgent {
 }
 
 @freezed
-abstract class ContractSigner implements _$ContractSigner {
+class ContractSigner with _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
     required Coding type,
@@ -321,7 +321,7 @@ abstract class ContractSigner implements _$ContractSigner {
 }
 
 @freezed
-abstract class ContractValuedItem implements _$ContractValuedItem {
+class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
     CodeableConcept? entityCodeableConcept,
@@ -356,7 +356,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
 }
 
 @freezed
-abstract class ContractTerm implements _$ContractTerm {
+class ContractTerm with _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
     Identifier? identifier,
@@ -394,7 +394,7 @@ abstract class ContractTerm implements _$ContractTerm {
 }
 
 @freezed
-abstract class ContractAgent1 implements _$ContractAgent1 {
+class ContractAgent1 with _$ContractAgent1 {
   ContractAgent1._();
   factory ContractAgent1({
     required Reference actor,
@@ -419,7 +419,7 @@ abstract class ContractAgent1 implements _$ContractAgent1 {
 }
 
 @freezed
-abstract class ContractValuedItem1 implements _$ContractValuedItem1 {
+class ContractValuedItem1 with _$ContractValuedItem1 {
   ContractValuedItem1._();
   factory ContractValuedItem1({
     CodeableConcept? entityCodeableConcept,
@@ -454,7 +454,7 @@ abstract class ContractValuedItem1 implements _$ContractValuedItem1 {
 }
 
 @freezed
-abstract class ContractFriendly implements _$ContractFriendly {
+class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
     Attachment? contentAttachment,
@@ -479,7 +479,7 @@ abstract class ContractFriendly implements _$ContractFriendly {
 }
 
 @freezed
-abstract class ContractLegal implements _$ContractLegal {
+class ContractLegal with _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
     Attachment? contentAttachment,
@@ -504,7 +504,7 @@ abstract class ContractLegal implements _$ContractLegal {
 }
 
 @freezed
-abstract class ContractRule implements _$ContractRule {
+class ContractRule with _$ContractRule {
   ContractRule._();
   factory ContractRule({
     Attachment? contentAttachment,
@@ -529,9 +529,7 @@ abstract class ContractRule implements _$ContractRule {
 }
 
 @freezed
-abstract class ExplanationOfBenefit
-    with Resource
-    implements _$ExplanationOfBenefit {
+class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
     @Default(Stu3ResourceType.ExplanationOfBenefit)
@@ -610,8 +608,7 @@ abstract class ExplanationOfBenefit
 }
 
 @freezed
-abstract class ExplanationOfBenefitRelated
-    implements _$ExplanationOfBenefitRelated {
+class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ExplanationOfBenefitRelated._();
   factory ExplanationOfBenefitRelated({
     Reference? claim,
@@ -638,8 +635,7 @@ abstract class ExplanationOfBenefitRelated
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayee
-    implements _$ExplanationOfBenefitPayee {
+class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
   factory ExplanationOfBenefitPayee({
     CodeableConcept? type,
@@ -665,8 +661,7 @@ abstract class ExplanationOfBenefitPayee
 }
 
 @freezed
-abstract class ExplanationOfBenefitInformation
-    implements _$ExplanationOfBenefitInformation {
+class ExplanationOfBenefitInformation with _$ExplanationOfBenefitInformation {
   ExplanationOfBenefitInformation._();
   factory ExplanationOfBenefitInformation({
     Decimal? sequence,
@@ -705,8 +700,7 @@ abstract class ExplanationOfBenefitInformation
 }
 
 @freezed
-abstract class ExplanationOfBenefitCareTeam
-    implements _$ExplanationOfBenefitCareTeam {
+class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
   factory ExplanationOfBenefitCareTeam({
     Decimal? sequence,
@@ -737,8 +731,7 @@ abstract class ExplanationOfBenefitCareTeam
 }
 
 @freezed
-abstract class ExplanationOfBenefitDiagnosis
-    implements _$ExplanationOfBenefitDiagnosis {
+class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
   factory ExplanationOfBenefitDiagnosis({
     Decimal? sequence,
@@ -768,8 +761,7 @@ abstract class ExplanationOfBenefitDiagnosis
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcedure
-    implements _$ExplanationOfBenefitProcedure {
+class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
   factory ExplanationOfBenefitProcedure({
     Decimal? sequence,
@@ -799,8 +791,7 @@ abstract class ExplanationOfBenefitProcedure
 }
 
 @freezed
-abstract class ExplanationOfBenefitInsurance
-    implements _$ExplanationOfBenefitInsurance {
+class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ExplanationOfBenefitInsurance._();
   factory ExplanationOfBenefitInsurance({
     Reference? coverage,
@@ -827,8 +818,7 @@ abstract class ExplanationOfBenefitInsurance
 }
 
 @freezed
-abstract class ExplanationOfBenefitAccident
-    implements _$ExplanationOfBenefitAccident {
+class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
   factory ExplanationOfBenefitAccident({
     Date? date,
@@ -857,7 +847,7 @@ abstract class ExplanationOfBenefitAccident
 }
 
 @freezed
-abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
+class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
   factory ExplanationOfBenefitItem({
     Decimal? sequence,
@@ -916,8 +906,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
 }
 
 @freezed
-abstract class ExplanationOfBenefitAdjudication
-    implements _$ExplanationOfBenefitAdjudication {
+class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ExplanationOfBenefitAdjudication._();
   factory ExplanationOfBenefitAdjudication({
     required CodeableConcept category,
@@ -948,8 +937,7 @@ abstract class ExplanationOfBenefitAdjudication
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail
-    implements _$ExplanationOfBenefitDetail {
+class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
   factory ExplanationOfBenefitDetail({
     Decimal? sequence,
@@ -991,8 +979,7 @@ abstract class ExplanationOfBenefitDetail
 }
 
 @freezed
-abstract class ExplanationOfBenefitSubDetail
-    implements _$ExplanationOfBenefitSubDetail {
+class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
   factory ExplanationOfBenefitSubDetail({
     Decimal? sequence,
@@ -1033,8 +1020,7 @@ abstract class ExplanationOfBenefitSubDetail
 }
 
 @freezed
-abstract class ExplanationOfBenefitAddItem
-    implements _$ExplanationOfBenefitAddItem {
+class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
   factory ExplanationOfBenefitAddItem({
     List<Id>? sequenceLinkId,
@@ -1069,8 +1055,7 @@ abstract class ExplanationOfBenefitAddItem
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail1
-    implements _$ExplanationOfBenefitDetail1 {
+class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ExplanationOfBenefitDetail1._();
   factory ExplanationOfBenefitDetail1({
     CodeableConcept? revenue,
@@ -1102,8 +1087,7 @@ abstract class ExplanationOfBenefitDetail1
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayment
-    implements _$ExplanationOfBenefitPayment {
+class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ExplanationOfBenefitPayment._();
   factory ExplanationOfBenefitPayment({
     CodeableConcept? type,
@@ -1134,8 +1118,7 @@ abstract class ExplanationOfBenefitPayment
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcessNote
-    implements _$ExplanationOfBenefitProcessNote {
+class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
   factory ExplanationOfBenefitProcessNote({
     Decimal? number,
@@ -1167,8 +1150,8 @@ abstract class ExplanationOfBenefitProcessNote
 }
 
 @freezed
-abstract class ExplanationOfBenefitBenefitBalance
-    implements _$ExplanationOfBenefitBenefitBalance {
+class ExplanationOfBenefitBenefitBalance
+    with _$ExplanationOfBenefitBenefitBalance {
   ExplanationOfBenefitBenefitBalance._();
   factory ExplanationOfBenefitBenefitBalance({
     required CodeableConcept category,
@@ -1206,8 +1189,7 @@ abstract class ExplanationOfBenefitBenefitBalance
 }
 
 @freezed
-abstract class ExplanationOfBenefitFinancial
-    implements _$ExplanationOfBenefitFinancial {
+class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ExplanationOfBenefitFinancial._();
   factory ExplanationOfBenefitFinancial({
     required CodeableConcept type,

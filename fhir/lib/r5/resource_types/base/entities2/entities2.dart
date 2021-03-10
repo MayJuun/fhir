@@ -12,9 +12,7 @@ part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
 @freezed
-abstract class BiologicallyDerivedProduct
-    with Resource
-    implements _$BiologicallyDerivedProduct {
+class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   BiologicallyDerivedProduct._();
   factory BiologicallyDerivedProduct({
     @Default(R5ResourceType.BiologicallyDerivedProduct)
@@ -67,8 +65,8 @@ abstract class BiologicallyDerivedProduct
 }
 
 @freezed
-abstract class BiologicallyDerivedProductCollection
-    implements _$BiologicallyDerivedProductCollection {
+class BiologicallyDerivedProductCollection
+    with _$BiologicallyDerivedProductCollection {
   BiologicallyDerivedProductCollection._();
   factory BiologicallyDerivedProductCollection({
     String? id,
@@ -102,8 +100,8 @@ abstract class BiologicallyDerivedProductCollection
 }
 
 @freezed
-abstract class BiologicallyDerivedProductProcessing
-    implements _$BiologicallyDerivedProductProcessing {
+class BiologicallyDerivedProductProcessing
+    with _$BiologicallyDerivedProductProcessing {
   BiologicallyDerivedProductProcessing._();
   factory BiologicallyDerivedProductProcessing({
     String? id,
@@ -139,8 +137,8 @@ abstract class BiologicallyDerivedProductProcessing
 }
 
 @freezed
-abstract class BiologicallyDerivedProductManipulation
-    implements _$BiologicallyDerivedProductManipulation {
+class BiologicallyDerivedProductManipulation
+    with _$BiologicallyDerivedProductManipulation {
   BiologicallyDerivedProductManipulation._();
   factory BiologicallyDerivedProductManipulation({
     String? id,
@@ -174,8 +172,8 @@ abstract class BiologicallyDerivedProductManipulation
 }
 
 @freezed
-abstract class BiologicallyDerivedProductStorage
-    implements _$BiologicallyDerivedProductStorage {
+class BiologicallyDerivedProductStorage
+    with _$BiologicallyDerivedProductStorage {
   BiologicallyDerivedProductStorage._();
   factory BiologicallyDerivedProductStorage({
     String? id,
@@ -212,7 +210,7 @@ abstract class BiologicallyDerivedProductStorage
 }
 
 @freezed
-abstract class Device with Resource implements _$Device {
+class Device with Resource, _$Device {
   Device._();
   factory Device({
     @Default(R5ResourceType.Device)
@@ -287,7 +285,7 @@ abstract class Device with Resource implements _$Device {
 }
 
 @freezed
-abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
+class DeviceUdiCarrier with _$DeviceUdiCarrier {
   DeviceUdiCarrier._();
   factory DeviceUdiCarrier({
     String? id,
@@ -326,7 +324,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
 }
 
 @freezed
-abstract class DeviceDeviceName implements _$DeviceDeviceName {
+class DeviceDeviceName with _$DeviceDeviceName {
   DeviceDeviceName._();
   factory DeviceDeviceName({
     String? id,
@@ -357,7 +355,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
 }
 
 @freezed
-abstract class DeviceSpecialization implements _$DeviceSpecialization {
+class DeviceSpecialization with _$DeviceSpecialization {
   DeviceSpecialization._();
   factory DeviceSpecialization({
     String? id,
@@ -386,7 +384,7 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
 }
 
 @freezed
-abstract class DeviceVersion implements _$DeviceVersion {
+class DeviceVersion with _$DeviceVersion {
   DeviceVersion._();
   factory DeviceVersion({
     String? id,
@@ -416,7 +414,7 @@ abstract class DeviceVersion implements _$DeviceVersion {
 }
 
 @freezed
-abstract class DeviceProperty implements _$DeviceProperty {
+class DeviceProperty with _$DeviceProperty {
   DeviceProperty._();
   factory DeviceProperty({
     String? id,
@@ -445,7 +443,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
 }
 
 @freezed
-abstract class DeviceOperationalStatus implements _$DeviceOperationalStatus {
+class DeviceOperationalStatus with _$DeviceOperationalStatus {
   DeviceOperationalStatus._();
   factory DeviceOperationalStatus({
     String? id,
@@ -473,7 +471,7 @@ abstract class DeviceOperationalStatus implements _$DeviceOperationalStatus {
 }
 
 @freezed
-abstract class DeviceAssociationStatus implements _$DeviceAssociationStatus {
+class DeviceAssociationStatus with _$DeviceAssociationStatus {
   DeviceAssociationStatus._();
   factory DeviceAssociationStatus({
     String? id,
@@ -501,7 +499,7 @@ abstract class DeviceAssociationStatus implements _$DeviceAssociationStatus {
 }
 
 @freezed
-abstract class DeviceMetric with Resource implements _$DeviceMetric {
+class DeviceMetric with Resource, _$DeviceMetric {
   DeviceMetric._();
   factory DeviceMetric({
     @Default(R5ResourceType.DeviceMetric)
@@ -553,7 +551,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
 }
 
 @freezed
-abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
+class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
   factory DeviceMetricCalibration({
     String? id,
@@ -587,7 +585,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
 }
 
 @freezed
-abstract class NutritionProduct with Resource implements _$NutritionProduct {
+class NutritionProduct with Resource, _$NutritionProduct {
   NutritionProduct._();
   factory NutritionProduct({
     @Default(R5ResourceType.NutritionProduct)
@@ -635,7 +633,7 @@ abstract class NutritionProduct with Resource implements _$NutritionProduct {
 }
 
 @freezed
-abstract class NutritionProductNutrient implements _$NutritionProductNutrient {
+class NutritionProductNutrient with _$NutritionProductNutrient {
   NutritionProductNutrient._();
   factory NutritionProductNutrient({
     String? id,
@@ -665,8 +663,7 @@ abstract class NutritionProductNutrient implements _$NutritionProductNutrient {
 }
 
 @freezed
-abstract class NutritionProductIngredient
-    implements _$NutritionProductIngredient {
+class NutritionProductIngredient with _$NutritionProductIngredient {
   NutritionProductIngredient._();
   factory NutritionProductIngredient({
     String? id,
@@ -696,8 +693,8 @@ abstract class NutritionProductIngredient
 }
 
 @freezed
-abstract class NutritionProductProductCharacteristic
-    implements _$NutritionProductProductCharacteristic {
+class NutritionProductProductCharacteristic
+    with _$NutritionProductProductCharacteristic {
   NutritionProductProductCharacteristic._();
   factory NutritionProductProductCharacteristic({
     String? id,
@@ -736,7 +733,7 @@ abstract class NutritionProductProductCharacteristic
 }
 
 @freezed
-abstract class NutritionProductInstance implements _$NutritionProductInstance {
+class NutritionProductInstance with _$NutritionProductInstance {
   NutritionProductInstance._();
   factory NutritionProductInstance({
     String? id,
@@ -771,7 +768,7 @@ abstract class NutritionProductInstance implements _$NutritionProductInstance {
 }
 
 @freezed
-abstract class Substance with Resource implements _$Substance {
+class Substance with Resource, _$Substance {
   Substance._();
   factory Substance({
     @Default(R5ResourceType.Substance)
@@ -816,7 +813,7 @@ abstract class Substance with Resource implements _$Substance {
 }
 
 @freezed
-abstract class SubstanceInstance implements _$SubstanceInstance {
+class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
     String? id,
@@ -846,7 +843,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
 }
 
 @freezed
-abstract class SubstanceIngredient implements _$SubstanceIngredient {
+class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
     String? id,

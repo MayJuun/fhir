@@ -12,7 +12,7 @@ part 'security.freezed.dart';
 part 'security.g.dart';
 
 @freezed
-abstract class AuditEvent with Resource implements _$AuditEvent {
+class AuditEvent with Resource, _$AuditEvent {
   AuditEvent._();
   factory AuditEvent({
     @Default(Stu3ResourceType.AuditEvent)
@@ -62,7 +62,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
 }
 
 @freezed
-abstract class AuditEventAgent implements _$AuditEventAgent {
+class AuditEventAgent with _$AuditEventAgent {
   AuditEventAgent._();
   factory AuditEventAgent({
     List<CodeableConcept>? role,
@@ -100,7 +100,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
 }
 
 @freezed
-abstract class AuditEventNetwork implements _$AuditEventNetwork {
+class AuditEventNetwork with _$AuditEventNetwork {
   AuditEventNetwork._();
   factory AuditEventNetwork({
     String? address,
@@ -127,7 +127,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
 }
 
 @freezed
-abstract class AuditEventSource implements _$AuditEventSource {
+class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
   factory AuditEventSource({
     String? site,
@@ -154,7 +154,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
 }
 
 @freezed
-abstract class AuditEventEntity implements _$AuditEventEntity {
+class AuditEventEntity with _$AuditEventEntity {
   AuditEventEntity._();
   factory AuditEventEntity({
     Identifier? identifier,
@@ -190,7 +190,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
 }
 
 @freezed
-abstract class AuditEventDetail implements _$AuditEventDetail {
+class AuditEventDetail with _$AuditEventDetail {
   AuditEventDetail._();
   factory AuditEventDetail({
     String? type,
@@ -217,7 +217,7 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
 }
 
 @freezed
-abstract class Consent with Resource implements _$Consent {
+class Consent with Resource, _$Consent {
   Consent._();
   factory Consent({
     @Default(Stu3ResourceType.Consent)
@@ -276,7 +276,7 @@ abstract class Consent with Resource implements _$Consent {
 }
 
 @freezed
-abstract class ConsentActor implements _$ConsentActor {
+class ConsentActor with _$ConsentActor {
   ConsentActor._();
   factory ConsentActor({
     required CodeableConcept role,
@@ -301,7 +301,7 @@ abstract class ConsentActor implements _$ConsentActor {
 }
 
 @freezed
-abstract class ConsentPolicy implements _$ConsentPolicy {
+class ConsentPolicy with _$ConsentPolicy {
   ConsentPolicy._();
   factory ConsentPolicy({
     String? authority,
@@ -328,7 +328,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
 }
 
 @freezed
-abstract class ConsentData implements _$ConsentData {
+class ConsentData with _$ConsentData {
   ConsentData._();
   factory ConsentData({
     ConsentDataMeaning? meaning,
@@ -354,7 +354,7 @@ abstract class ConsentData implements _$ConsentData {
 }
 
 @freezed
-abstract class ConsentExcept implements _$ConsentExcept {
+class ConsentExcept with _$ConsentExcept {
   ConsentExcept._();
   factory ConsentExcept({
     ConsentExceptType? type,
@@ -388,7 +388,7 @@ abstract class ConsentExcept implements _$ConsentExcept {
 }
 
 @freezed
-abstract class ConsentActor1 implements _$ConsentActor1 {
+class ConsentActor1 with _$ConsentActor1 {
   ConsentActor1._();
   factory ConsentActor1({
     required CodeableConcept role,
@@ -413,7 +413,7 @@ abstract class ConsentActor1 implements _$ConsentActor1 {
 }
 
 @freezed
-abstract class ConsentData1 implements _$ConsentData1 {
+class ConsentData1 with _$ConsentData1 {
   ConsentData1._();
   factory ConsentData1({
     ConsentData1Meaning? meaning,
@@ -439,7 +439,7 @@ abstract class ConsentData1 implements _$ConsentData1 {
 }
 
 @freezed
-abstract class Provenance with Resource implements _$Provenance {
+class Provenance with Resource, _$Provenance {
   Provenance._();
   factory Provenance({
     @Default(Stu3ResourceType.Provenance)
@@ -487,7 +487,7 @@ abstract class Provenance with Resource implements _$Provenance {
 }
 
 @freezed
-abstract class ProvenanceAgent implements _$ProvenanceAgent {
+class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
   factory ProvenanceAgent({
     List<CodeableConcept>? role,
@@ -518,7 +518,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
 }
 
 @freezed
-abstract class ProvenanceEntity implements _$ProvenanceEntity {
+class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
   factory ProvenanceEntity({
     ProvenanceEntityRole? role,

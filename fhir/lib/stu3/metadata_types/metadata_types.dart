@@ -12,7 +12,7 @@ part 'metadata_types.freezed.dart';
 part 'metadata_types.g.dart';
 
 @freezed
-abstract class ContactDetail implements _$ContactDetail {
+class ContactDetail with _$ContactDetail {
   ContactDetail._();
   factory ContactDetail({
     String? name,
@@ -38,7 +38,7 @@ abstract class ContactDetail implements _$ContactDetail {
 }
 
 @freezed
-abstract class Contributor implements _$Contributor {
+class Contributor with _$Contributor {
   Contributor._();
   factory Contributor({
     ContributorType? type,
@@ -66,7 +66,7 @@ abstract class Contributor implements _$Contributor {
 }
 
 @freezed
-abstract class RelatedArtifact implements _$RelatedArtifact {
+class RelatedArtifact with _$RelatedArtifact {
   RelatedArtifact._();
   factory RelatedArtifact({
     RelatedArtifactType? type,
@@ -99,7 +99,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
 }
 
 @freezed
-abstract class UsageContext implements _$UsageContext {
+class UsageContext with _$UsageContext {
   UsageContext._();
   factory UsageContext({
     required Coding code,
@@ -126,7 +126,7 @@ abstract class UsageContext implements _$UsageContext {
 }
 
 @freezed
-abstract class DataRequirement implements _$DataRequirement {
+class DataRequirement with _$DataRequirement {
   DataRequirement._();
   factory DataRequirement({
     String? type,
@@ -157,8 +157,7 @@ abstract class DataRequirement implements _$DataRequirement {
 }
 
 @freezed
-abstract class DataRequirementCodeFilter
-    implements _$DataRequirementCodeFilter {
+class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   DataRequirementCodeFilter._();
   factory DataRequirementCodeFilter({
     String? path,
@@ -191,8 +190,7 @@ abstract class DataRequirementCodeFilter
 }
 
 @freezed
-abstract class DataRequirementDateFilter
-    implements _$DataRequirementDateFilter {
+class DataRequirementDateFilter with _$DataRequirementDateFilter {
   DataRequirementDateFilter._();
   factory DataRequirementDateFilter({
     String? path,
@@ -222,7 +220,7 @@ abstract class DataRequirementDateFilter
 }
 
 @freezed
-abstract class ParameterDefinition implements _$ParameterDefinition {
+class ParameterDefinition with _$ParameterDefinition {
   ParameterDefinition._();
   factory ParameterDefinition({
     String? name,
@@ -258,7 +256,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
 }
 
 @freezed
-abstract class TriggerDefinition implements _$TriggerDefinition {
+class TriggerDefinition with _$TriggerDefinition {
   TriggerDefinition._();
   factory TriggerDefinition({
     TriggerDefinitionType? type,

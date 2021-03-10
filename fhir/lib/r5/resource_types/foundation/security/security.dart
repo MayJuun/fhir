@@ -12,7 +12,7 @@ part 'security.freezed.dart';
 part 'security.g.dart';
 
 @freezed
-abstract class AuditEvent with Resource implements _$AuditEvent {
+class AuditEvent with Resource, _$AuditEvent {
   AuditEvent._();
   factory AuditEvent({
     @Default(R5ResourceType.AuditEvent)
@@ -66,7 +66,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
 }
 
 @freezed
-abstract class AuditEventAgent implements _$AuditEventAgent {
+class AuditEventAgent with _$AuditEventAgent {
   AuditEventAgent._();
   factory AuditEventAgent({
     String? id,
@@ -107,7 +107,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
 }
 
 @freezed
-abstract class AuditEventNetwork implements _$AuditEventNetwork {
+class AuditEventNetwork with _$AuditEventNetwork {
   AuditEventNetwork._();
   factory AuditEventNetwork({
     String? id,
@@ -138,7 +138,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
 }
 
 @freezed
-abstract class AuditEventSource implements _$AuditEventSource {
+class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
   factory AuditEventSource({
     String? id,
@@ -168,7 +168,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
 }
 
 @freezed
-abstract class AuditEventEntity implements _$AuditEventEntity {
+class AuditEventEntity with _$AuditEventEntity {
   AuditEventEntity._();
   factory AuditEventEntity({
     String? id,
@@ -204,7 +204,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
 }
 
 @freezed
-abstract class AuditEventDetail implements _$AuditEventDetail {
+class AuditEventDetail with _$AuditEventDetail {
   AuditEventDetail._();
   factory AuditEventDetail({
     String? id,
@@ -236,7 +236,7 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
 }
 
 @freezed
-abstract class Consent with Resource implements _$Consent {
+class Consent with Resource, _$Consent {
   Consent._();
   factory Consent({
     @Default(R5ResourceType.Consent)
@@ -289,7 +289,7 @@ abstract class Consent with Resource implements _$Consent {
 }
 
 @freezed
-abstract class ConsentPolicy implements _$ConsentPolicy {
+class ConsentPolicy with _$ConsentPolicy {
   ConsentPolicy._();
   factory ConsentPolicy({
     String? id,
@@ -319,7 +319,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
 }
 
 @freezed
-abstract class ConsentVerification implements _$ConsentVerification {
+class ConsentVerification with _$ConsentVerification {
   ConsentVerification._();
   factory ConsentVerification({
     String? id,
@@ -352,7 +352,7 @@ abstract class ConsentVerification implements _$ConsentVerification {
 }
 
 @freezed
-abstract class ConsentProvision implements _$ConsentProvision {
+class ConsentProvision with _$ConsentProvision {
   ConsentProvision._();
   factory ConsentProvision({
     String? id,
@@ -391,7 +391,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
 }
 
 @freezed
-abstract class ConsentActor implements _$ConsentActor {
+class ConsentActor with _$ConsentActor {
   ConsentActor._();
   factory ConsentActor({
     String? id,
@@ -419,7 +419,7 @@ abstract class ConsentActor implements _$ConsentActor {
 }
 
 @freezed
-abstract class ConsentData implements _$ConsentData {
+class ConsentData with _$ConsentData {
   ConsentData._();
   factory ConsentData({
     String? id,
@@ -449,7 +449,7 @@ abstract class ConsentData implements _$ConsentData {
 }
 
 @freezed
-abstract class Permission with Resource implements _$Permission {
+class Permission with Resource, _$Permission {
   Permission._();
   factory Permission({
     @Default(R5ResourceType.Permission)
@@ -498,8 +498,7 @@ abstract class Permission with Resource implements _$Permission {
 }
 
 @freezed
-abstract class PermissionProcessingActivity
-    implements _$PermissionProcessingActivity {
+class PermissionProcessingActivity with _$PermissionProcessingActivity {
   PermissionProcessingActivity._();
   factory PermissionProcessingActivity({
     String? id,
@@ -529,7 +528,7 @@ abstract class PermissionProcessingActivity
 }
 
 @freezed
-abstract class PermissionJustification implements _$PermissionJustification {
+class PermissionJustification with _$PermissionJustification {
   PermissionJustification._();
   factory PermissionJustification({
     String? id,
@@ -557,7 +556,7 @@ abstract class PermissionJustification implements _$PermissionJustification {
 }
 
 @freezed
-abstract class Provenance with Resource implements _$Provenance {
+class Provenance with Resource, _$Provenance {
   Provenance._();
   factory Provenance({
     @Default(R5ResourceType.Provenance)
@@ -607,7 +606,7 @@ abstract class Provenance with Resource implements _$Provenance {
 }
 
 @freezed
-abstract class ProvenanceAgent implements _$ProvenanceAgent {
+class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
   factory ProvenanceAgent({
     String? id,
@@ -637,7 +636,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
 }
 
 @freezed
-abstract class ProvenanceEntity implements _$ProvenanceEntity {
+class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
   factory ProvenanceEntity({
     String? id,

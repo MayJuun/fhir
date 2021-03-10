@@ -12,7 +12,7 @@ part 'general.freezed.dart';
 part 'general.g.dart';
 
 @freezed
-abstract class Account with Resource implements _$Account {
+class Account with Resource, _$Account {
   Account._();
 
   /// [Account]: A financial tool for tracking value accrued for a particular
@@ -156,7 +156,7 @@ abstract class Account with Resource implements _$Account {
 }
 
 @freezed
-abstract class AccountCoverage implements _$AccountCoverage {
+class AccountCoverage with _$AccountCoverage {
   AccountCoverage._();
 
   /// [Account_Coverage]: A financial tool for tracking value accrued for a
@@ -223,7 +223,7 @@ abstract class AccountCoverage implements _$AccountCoverage {
 }
 
 @freezed
-abstract class AccountGuarantor implements _$AccountGuarantor {
+class AccountGuarantor with _$AccountGuarantor {
   AccountGuarantor._();
 
   /// [Account_Guarantor]: A financial tool for tracking value accrued for a
@@ -291,7 +291,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
 }
 
 @freezed
-abstract class ChargeItem with Resource implements _$ChargeItem {
+class ChargeItem with Resource, _$ChargeItem {
   ChargeItem._();
 
   /// [ChargeItem]: The resource ChargeItem describes the provision of
@@ -512,7 +512,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
 }
 
 @freezed
-abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
+class ChargeItemPerformer with _$ChargeItemPerformer {
   ChargeItemPerformer._();
 
   /// [ChargeItem_Performer]: The resource ChargeItem describes the provision of
@@ -577,9 +577,7 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
 }
 
 @freezed
-abstract class ChargeItemDefinition
-    with Resource
-    implements _$ChargeItemDefinition {
+class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ChargeItemDefinition._();
 
   /// [ChargeItemDefinition]: The ChargeItemDefinition resource provides the
@@ -828,8 +826,8 @@ abstract class ChargeItemDefinition
 }
 
 @freezed
-abstract class ChargeItemDefinitionApplicability
-    implements _$ChargeItemDefinitionApplicability {
+class ChargeItemDefinitionApplicability
+    with _$ChargeItemDefinitionApplicability {
   ChargeItemDefinitionApplicability._();
 
   /// [ChargeItemDefinition_Applicability]: The ChargeItemDefinition resource
@@ -912,8 +910,8 @@ abstract class ChargeItemDefinitionApplicability
 }
 
 @freezed
-abstract class ChargeItemDefinitionPropertyGroup
-    implements _$ChargeItemDefinitionPropertyGroup {
+class ChargeItemDefinitionPropertyGroup
+    with _$ChargeItemDefinitionPropertyGroup {
   ChargeItemDefinitionPropertyGroup._();
 
   /// [ChargeItemDefinition_PropertyGroup]: The ChargeItemDefinition resource
@@ -984,8 +982,8 @@ abstract class ChargeItemDefinitionPropertyGroup
 }
 
 @freezed
-abstract class ChargeItemDefinitionPriceComponent
-    implements _$ChargeItemDefinitionPriceComponent {
+class ChargeItemDefinitionPriceComponent
+    with _$ChargeItemDefinitionPriceComponent {
   ChargeItemDefinitionPriceComponent._();
 
   /// [ChargeItemDefinition_PriceComponent]: The ChargeItemDefinition resource
@@ -1064,7 +1062,7 @@ abstract class ChargeItemDefinitionPriceComponent
 }
 
 @freezed
-abstract class Contract with Resource implements _$Contract {
+class Contract with Resource, _$Contract {
   Contract._();
 
   /// [Contract]: Legally enforceable, formally recorded unilateral or bilateral
@@ -1352,8 +1350,7 @@ abstract class Contract with Resource implements _$Contract {
 }
 
 @freezed
-abstract class ContractContentDefinition
-    implements _$ContractContentDefinition {
+class ContractContentDefinition with _$ContractContentDefinition {
   ContractContentDefinition._();
 
   /// [Contract_ContentDefinition]: Legally enforceable, formally recorded
@@ -1444,7 +1441,7 @@ abstract class ContractContentDefinition
 }
 
 @freezed
-abstract class ContractTerm implements _$ContractTerm {
+class ContractTerm with _$ContractTerm {
   ContractTerm._();
 
   /// [Contract_Term]: Legally enforceable, formally recorded unilateral or
@@ -1550,7 +1547,7 @@ abstract class ContractTerm implements _$ContractTerm {
 }
 
 @freezed
-abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
+class ContractSecurityLabel with _$ContractSecurityLabel {
   ContractSecurityLabel._();
 
   /// [Contract_SecurityLabel]: Legally enforceable, formally recorded
@@ -1622,7 +1619,7 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
 }
 
 @freezed
-abstract class ContractOffer implements _$ContractOffer {
+class ContractOffer with _$ContractOffer {
   ContractOffer._();
 
   /// [Contract_Offer]: Legally enforceable, formally recorded unilateral or
@@ -1720,7 +1717,7 @@ abstract class ContractOffer implements _$ContractOffer {
 }
 
 @freezed
-abstract class ContractParty implements _$ContractParty {
+class ContractParty with _$ContractParty {
   ContractParty._();
 
   /// [Contract_Party]: Legally enforceable, formally recorded unilateral or
@@ -1779,7 +1776,7 @@ abstract class ContractParty implements _$ContractParty {
 }
 
 @freezed
-abstract class ContractAnswer implements _$ContractAnswer {
+class ContractAnswer with _$ContractAnswer {
   ContractAnswer._();
 
   /// [Contract_Answer]: Legally enforceable, formally recorded unilateral or
@@ -1928,7 +1925,7 @@ abstract class ContractAnswer implements _$ContractAnswer {
 }
 
 @freezed
-abstract class ContractAsset implements _$ContractAsset {
+class ContractAsset with _$ContractAsset {
   ContractAsset._();
 
   /// [Contract_Asset]: Legally enforceable, formally recorded unilateral or
@@ -2045,7 +2042,7 @@ abstract class ContractAsset implements _$ContractAsset {
 }
 
 @freezed
-abstract class ContractContext implements _$ContractContext {
+class ContractContext with _$ContractContext {
   ContractContext._();
 
   /// [Contract_Context]: Legally enforceable, formally recorded unilateral or
@@ -2113,7 +2110,7 @@ abstract class ContractContext implements _$ContractContext {
 }
 
 @freezed
-abstract class ContractValuedItem implements _$ContractValuedItem {
+class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
 
   /// [Contract_ValuedItem]: Legally enforceable, formally recorded unilateral
@@ -2250,7 +2247,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
 }
 
 @freezed
-abstract class ContractAction implements _$ContractAction {
+class ContractAction with _$ContractAction {
   ContractAction._();
 
   /// [Contract_Action]: Legally enforceable, formally recorded unilateral or
@@ -2420,7 +2417,7 @@ abstract class ContractAction implements _$ContractAction {
 }
 
 @freezed
-abstract class ContractSubject implements _$ContractSubject {
+class ContractSubject with _$ContractSubject {
   ContractSubject._();
 
   /// [Contract_Subject]: Legally enforceable, formally recorded unilateral or
@@ -2480,7 +2477,7 @@ abstract class ContractSubject implements _$ContractSubject {
 }
 
 @freezed
-abstract class ContractSigner implements _$ContractSigner {
+class ContractSigner with _$ContractSigner {
   ContractSigner._();
 
   /// [Contract_Signer]: Legally enforceable, formally recorded unilateral or
@@ -2542,7 +2539,7 @@ abstract class ContractSigner implements _$ContractSigner {
 }
 
 @freezed
-abstract class ContractFriendly implements _$ContractFriendly {
+class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
 
   /// [Contract_Friendly]: Legally enforceable, formally recorded unilateral or
@@ -2605,7 +2602,7 @@ abstract class ContractFriendly implements _$ContractFriendly {
 }
 
 @freezed
-abstract class ContractLegal implements _$ContractLegal {
+class ContractLegal with _$ContractLegal {
   ContractLegal._();
 
   /// [Contract_Legal]: Legally enforceable, formally recorded unilateral or
@@ -2664,7 +2661,7 @@ abstract class ContractLegal implements _$ContractLegal {
 }
 
 @freezed
-abstract class ContractRule implements _$ContractRule {
+class ContractRule with _$ContractRule {
   ContractRule._();
 
   /// [Contract_Rule]: Legally enforceable, formally recorded unilateral or
@@ -2725,9 +2722,7 @@ abstract class ContractRule implements _$ContractRule {
 }
 
 @freezed
-abstract class ExplanationOfBenefit
-    with Resource
-    implements _$ExplanationOfBenefit {
+class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
 
   /// [ExplanationOfBenefit]: This resource provides: the claim details;
@@ -3012,8 +3007,7 @@ abstract class ExplanationOfBenefit
 }
 
 @freezed
-abstract class ExplanationOfBenefitRelated
-    implements _$ExplanationOfBenefitRelated {
+class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ExplanationOfBenefitRelated._();
 
   /// [ExplanationOfBenefit_Related]: This resource provides: the claim details;
@@ -3079,8 +3073,7 @@ abstract class ExplanationOfBenefitRelated
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayee
-    implements _$ExplanationOfBenefitPayee {
+class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
 
   /// [ExplanationOfBenefit_Payee]: This resource provides: the claim details;
@@ -3143,8 +3136,7 @@ abstract class ExplanationOfBenefitPayee
 }
 
 @freezed
-abstract class ExplanationOfBenefitCareTeam
-    implements _$ExplanationOfBenefitCareTeam {
+class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
 
   /// [ExplanationOfBenefit_CareTeam]: This resource provides: the claim
@@ -3224,8 +3216,8 @@ abstract class ExplanationOfBenefitCareTeam
 }
 
 @freezed
-abstract class ExplanationOfBenefitSupportingInfo
-    implements _$ExplanationOfBenefitSupportingInfo {
+class ExplanationOfBenefitSupportingInfo
+    with _$ExplanationOfBenefitSupportingInfo {
   ExplanationOfBenefitSupportingInfo._();
 
   /// [ExplanationOfBenefit_SupportingInfo]: This resource provides: the claim
@@ -3342,8 +3334,7 @@ abstract class ExplanationOfBenefitSupportingInfo
 }
 
 @freezed
-abstract class ExplanationOfBenefitDiagnosis
-    implements _$ExplanationOfBenefitDiagnosis {
+class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
 
   /// [ExplanationOfBenefit_Diagnosis]: This resource provides: the claim
@@ -3425,8 +3416,7 @@ abstract class ExplanationOfBenefitDiagnosis
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcedure
-    implements _$ExplanationOfBenefitProcedure {
+class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
 
   /// [ExplanationOfBenefit_Procedure]: This resource provides: the claim
@@ -3508,8 +3498,7 @@ abstract class ExplanationOfBenefitProcedure
 }
 
 @freezed
-abstract class ExplanationOfBenefitInsurance
-    implements _$ExplanationOfBenefitInsurance {
+class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ExplanationOfBenefitInsurance._();
 
   /// [ExplanationOfBenefit_Insurance]: This resource provides: the claim
@@ -3586,8 +3575,7 @@ abstract class ExplanationOfBenefitInsurance
 }
 
 @freezed
-abstract class ExplanationOfBenefitAccident
-    implements _$ExplanationOfBenefitAccident {
+class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
 
   /// [ExplanationOfBenefit_Accident]: This resource provides: the claim
@@ -3661,7 +3649,7 @@ abstract class ExplanationOfBenefitAccident
 }
 
 @freezed
-abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
+class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
 
   /// [ExplanationOfBenefit_Item]: This resource provides: the claim details;
@@ -3841,8 +3829,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
 }
 
 @freezed
-abstract class ExplanationOfBenefitAdjudication
-    implements _$ExplanationOfBenefitAdjudication {
+class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ExplanationOfBenefitAdjudication._();
 
   /// [ExplanationOfBenefit_Adjudication]: This resource provides: the claim
@@ -3921,8 +3908,7 @@ abstract class ExplanationOfBenefitAdjudication
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail
-    implements _$ExplanationOfBenefitDetail {
+class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
 
   /// [ExplanationOfBenefit_Detail]: This resource provides: the claim details;
@@ -4042,8 +4028,7 @@ abstract class ExplanationOfBenefitDetail
 }
 
 @freezed
-abstract class ExplanationOfBenefitSubDetail
-    implements _$ExplanationOfBenefitSubDetail {
+class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
 
   /// [ExplanationOfBenefit_SubDetail]: This resource provides: the claim
@@ -4160,8 +4145,7 @@ abstract class ExplanationOfBenefitSubDetail
 }
 
 @freezed
-abstract class ExplanationOfBenefitAddItem
-    implements _$ExplanationOfBenefitAddItem {
+class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
 
   /// [ExplanationOfBenefit_AddItem]: This resource provides: the claim details;
@@ -4316,8 +4300,7 @@ abstract class ExplanationOfBenefitAddItem
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail1
-    implements _$ExplanationOfBenefitDetail1 {
+class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ExplanationOfBenefitDetail1._();
 
   /// [ExplanationOfBenefit_Detail1]: This resource provides: the claim details;
@@ -4417,8 +4400,7 @@ abstract class ExplanationOfBenefitDetail1
 }
 
 @freezed
-abstract class ExplanationOfBenefitSubDetail1
-    implements _$ExplanationOfBenefitSubDetail1 {
+class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   ExplanationOfBenefitSubDetail1._();
 
   /// [ExplanationOfBenefit_SubDetail1]: This resource provides: the claim
@@ -4516,8 +4498,7 @@ abstract class ExplanationOfBenefitSubDetail1
 }
 
 @freezed
-abstract class ExplanationOfBenefitTotal
-    implements _$ExplanationOfBenefitTotal {
+class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   ExplanationOfBenefitTotal._();
 
   /// [ExplanationOfBenefit_Total]: This resource provides: the claim details;
@@ -4583,8 +4564,7 @@ abstract class ExplanationOfBenefitTotal
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayment
-    implements _$ExplanationOfBenefitPayment {
+class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ExplanationOfBenefitPayment._();
 
   /// [ExplanationOfBenefit_Payment]: This resource provides: the claim details;
@@ -4664,8 +4644,7 @@ abstract class ExplanationOfBenefitPayment
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcessNote
-    implements _$ExplanationOfBenefitProcessNote {
+class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
 
   /// [ExplanationOfBenefit_ProcessNote]: This resource provides: the claim
@@ -4745,8 +4724,8 @@ abstract class ExplanationOfBenefitProcessNote
 }
 
 @freezed
-abstract class ExplanationOfBenefitBenefitBalance
-    implements _$ExplanationOfBenefitBenefitBalance {
+class ExplanationOfBenefitBenefitBalance
+    with _$ExplanationOfBenefitBenefitBalance {
   ExplanationOfBenefitBenefitBalance._();
 
   /// [ExplanationOfBenefit_BenefitBalance]: This resource provides: the claim
@@ -4842,8 +4821,7 @@ abstract class ExplanationOfBenefitBenefitBalance
 }
 
 @freezed
-abstract class ExplanationOfBenefitFinancial
-    implements _$ExplanationOfBenefitFinancial {
+class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ExplanationOfBenefitFinancial._();
 
   /// [ExplanationOfBenefit_Financial]: This resource provides: the claim
@@ -4930,7 +4908,7 @@ abstract class ExplanationOfBenefitFinancial
 }
 
 @freezed
-abstract class InsurancePlan with Resource implements _$InsurancePlan {
+class InsurancePlan with Resource, _$InsurancePlan {
   InsurancePlan._();
 
   /// [InsurancePlan]: Details of a Health Insurance product/plan provided by an
@@ -5088,7 +5066,7 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
 }
 
 @freezed
-abstract class InsurancePlanContact implements _$InsurancePlanContact {
+class InsurancePlanContact with _$InsurancePlanContact {
   InsurancePlanContact._();
 
   /// [InsurancePlan_Contact]: Details of a Health Insurance product/plan
@@ -5154,7 +5132,7 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
 }
 
 @freezed
-abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
+class InsurancePlanCoverage with _$InsurancePlanCoverage {
   InsurancePlanCoverage._();
 
   /// [InsurancePlan_Coverage]: Details of a Health Insurance product/plan
@@ -5217,7 +5195,7 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
 }
 
 @freezed
-abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
+class InsurancePlanBenefit with _$InsurancePlanBenefit {
   InsurancePlanBenefit._();
 
   /// [InsurancePlan_Benefit]: Details of a Health Insurance product/plan
@@ -5284,7 +5262,7 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
 }
 
 @freezed
-abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
+class InsurancePlanLimit with _$InsurancePlanLimit {
   InsurancePlanLimit._();
 
   /// [InsurancePlan_Limit]: Details of a Health Insurance product/plan provided
@@ -5344,7 +5322,7 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
 }
 
 @freezed
-abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
+class InsurancePlanPlan with _$InsurancePlanPlan {
   InsurancePlanPlan._();
 
   /// [InsurancePlan_Plan]: Details of a Health Insurance product/plan provided
@@ -5419,7 +5397,7 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
 }
 
 @freezed
-abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
+class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   InsurancePlanGeneralCost._();
 
   /// [InsurancePlan_GeneralCost]: Details of a Health Insurance product/plan
@@ -5492,8 +5470,7 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
 }
 
 @freezed
-abstract class InsurancePlanSpecificCost
-    implements _$InsurancePlanSpecificCost {
+class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   InsurancePlanSpecificCost._();
 
   /// [InsurancePlan_SpecificCost]: Details of a Health Insurance product/plan
@@ -5554,7 +5531,7 @@ abstract class InsurancePlanSpecificCost
 }
 
 @freezed
-abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
+class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   InsurancePlanBenefit1._();
 
   /// [InsurancePlan_Benefit1]: Details of a Health Insurance product/plan
@@ -5614,7 +5591,7 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
 }
 
 @freezed
-abstract class InsurancePlanCost implements _$InsurancePlanCost {
+class InsurancePlanCost with _$InsurancePlanCost {
   InsurancePlanCost._();
 
   /// [InsurancePlan_Cost]: Details of a Health Insurance product/plan provided

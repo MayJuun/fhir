@@ -12,7 +12,7 @@ part 'evidence_based_medicine.freezed.dart';
 part 'evidence_based_medicine.g.dart';
 
 @freezed
-abstract class Evidence with Resource implements _$Evidence {
+class Evidence with Resource, _$Evidence {
   Evidence._();
   factory Evidence({
     @Default(R5ResourceType.Evidence)
@@ -95,8 +95,7 @@ abstract class Evidence with Resource implements _$Evidence {
 }
 
 @freezed
-abstract class EvidenceVariableDefinition
-    implements _$EvidenceVariableDefinition {
+class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
   EvidenceVariableDefinition._();
   factory EvidenceVariableDefinition({
     String? id,
@@ -130,7 +129,7 @@ abstract class EvidenceVariableDefinition
 }
 
 @freezed
-abstract class EvidenceCertainty implements _$EvidenceCertainty {
+class EvidenceCertainty with _$EvidenceCertainty {
   EvidenceCertainty._();
   factory EvidenceCertainty({
     String? id,
@@ -163,8 +162,7 @@ abstract class EvidenceCertainty implements _$EvidenceCertainty {
 }
 
 @freezed
-abstract class EvidenceCertaintySubcomponent
-    implements _$EvidenceCertaintySubcomponent {
+class EvidenceCertaintySubcomponent with _$EvidenceCertaintySubcomponent {
   EvidenceCertaintySubcomponent._();
   factory EvidenceCertaintySubcomponent({
     String? id,
@@ -198,7 +196,7 @@ abstract class EvidenceCertaintySubcomponent
 }
 
 @freezed
-abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
+class EvidenceVariable with Resource, _$EvidenceVariable {
   EvidenceVariable._();
   factory EvidenceVariable({
     @Default(R5ResourceType.EvidenceVariable)
@@ -287,8 +285,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
 }
 
 @freezed
-abstract class EvidenceVariableCharacteristic
-    implements _$EvidenceVariableCharacteristic {
+class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   EvidenceVariableCharacteristic._();
   factory EvidenceVariableCharacteristic({
     String? id,
@@ -332,8 +329,7 @@ abstract class EvidenceVariableCharacteristic
 }
 
 @freezed
-abstract class EvidenceVariableTimeFromStart
-    implements _$EvidenceVariableTimeFromStart {
+class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
   EvidenceVariableTimeFromStart._();
   factory EvidenceVariableTimeFromStart({
     String? id,
@@ -365,7 +361,7 @@ abstract class EvidenceVariableTimeFromStart
 }
 
 @freezed
-abstract class EvidenceVariableCategory implements _$EvidenceVariableCategory {
+class EvidenceVariableCategory with _$EvidenceVariableCategory {
   EvidenceVariableCategory._();
   factory EvidenceVariableCategory({
     String? id,

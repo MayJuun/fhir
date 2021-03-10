@@ -12,7 +12,7 @@ part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
 @freezed
-abstract class Communication with Resource implements _$Communication {
+class Communication with Resource, _$Communication {
   Communication._();
   factory Communication({
     @Default(R5ResourceType.Communication)
@@ -75,7 +75,7 @@ abstract class Communication with Resource implements _$Communication {
 }
 
 @freezed
-abstract class CommunicationPayload implements _$CommunicationPayload {
+class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
   factory CommunicationPayload({
     String? id,
@@ -104,9 +104,7 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
 }
 
 @freezed
-abstract class CommunicationRequest
-    with Resource
-    implements _$CommunicationRequest {
+class CommunicationRequest with Resource, _$CommunicationRequest {
   CommunicationRequest._();
   factory CommunicationRequest({
     @Default(R5ResourceType.CommunicationRequest)
@@ -169,8 +167,7 @@ abstract class CommunicationRequest
 }
 
 @freezed
-abstract class CommunicationRequestPayload
-    implements _$CommunicationRequestPayload {
+class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
   factory CommunicationRequestPayload({
     String? id,
@@ -200,7 +197,7 @@ abstract class CommunicationRequestPayload
 }
 
 @freezed
-abstract class DeviceRequest with Resource implements _$DeviceRequest {
+class DeviceRequest with Resource, _$DeviceRequest {
   DeviceRequest._();
   factory DeviceRequest({
     @Default(R5ResourceType.DeviceRequest)
@@ -268,7 +265,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
 }
 
 @freezed
-abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
+class DeviceRequestParameter with _$DeviceRequestParameter {
   DeviceRequestParameter._();
   factory DeviceRequestParameter({
     String? id,
@@ -300,9 +297,7 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
 }
 
 @freezed
-abstract class DeviceUseStatement
-    with Resource
-    implements _$DeviceUseStatement {
+class DeviceUseStatement with Resource, _$DeviceUseStatement {
   DeviceUseStatement._();
   factory DeviceUseStatement({
     @Default(R5ResourceType.DeviceUseStatement)
@@ -362,7 +357,7 @@ abstract class DeviceUseStatement
 }
 
 @freezed
-abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
+class GuidanceResponse with Resource, _$GuidanceResponse {
   GuidanceResponse._();
   factory GuidanceResponse({
     @Default(R5ResourceType.GuidanceResponse)
@@ -419,7 +414,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
 }
 
 @freezed
-abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
+class SupplyDelivery with Resource, _$SupplyDelivery {
   SupplyDelivery._();
   factory SupplyDelivery({
     @Default(R5ResourceType.SupplyDelivery)
@@ -471,8 +466,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
 }
 
 @freezed
-abstract class SupplyDeliverySuppliedItem
-    implements _$SupplyDeliverySuppliedItem {
+class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   SupplyDeliverySuppliedItem._();
   factory SupplyDeliverySuppliedItem({
     String? id,
@@ -502,7 +496,7 @@ abstract class SupplyDeliverySuppliedItem
 }
 
 @freezed
-abstract class SupplyRequest with Resource implements _$SupplyRequest {
+class SupplyRequest with Resource, _$SupplyRequest {
   SupplyRequest._();
   factory SupplyRequest({
     @Default(R5ResourceType.SupplyRequest)
@@ -560,7 +554,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
 }
 
 @freezed
-abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
+class SupplyRequestParameter with _$SupplyRequestParameter {
   SupplyRequestParameter._();
   factory SupplyRequestParameter({
     String? id,

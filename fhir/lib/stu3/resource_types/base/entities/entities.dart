@@ -12,7 +12,7 @@ part 'entities.freezed.dart';
 part 'entities.g.dart';
 
 @freezed
-abstract class Device with Resource implements _$Device {
+class Device with Resource, _$Device {
   Device._();
   factory Device({
     @Default(Stu3ResourceType.Device)
@@ -72,7 +72,7 @@ abstract class Device with Resource implements _$Device {
 }
 
 @freezed
-abstract class DeviceUdi implements _$DeviceUdi {
+class DeviceUdi with _$DeviceUdi {
   DeviceUdi._();
   factory DeviceUdi({
     String? deviceIdentifier,
@@ -109,7 +109,7 @@ abstract class DeviceUdi implements _$DeviceUdi {
 }
 
 @freezed
-abstract class DeviceComponent with Resource implements _$DeviceComponent {
+class DeviceComponent with Resource, _$DeviceComponent {
   DeviceComponent._();
   factory DeviceComponent({
     @Default(Stu3ResourceType.DeviceComponent)
@@ -158,8 +158,8 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
 }
 
 @freezed
-abstract class DeviceComponentProductionSpecification
-    implements _$DeviceComponentProductionSpecification {
+class DeviceComponentProductionSpecification
+    with _$DeviceComponentProductionSpecification {
   DeviceComponentProductionSpecification._();
   factory DeviceComponentProductionSpecification({
     CodeableConcept? specType,
@@ -189,7 +189,7 @@ abstract class DeviceComponentProductionSpecification
 }
 
 @freezed
-abstract class DeviceMetric with Resource implements _$DeviceMetric {
+class DeviceMetric with Resource, _$DeviceMetric {
   DeviceMetric._();
   factory DeviceMetric({
     @Default(Stu3ResourceType.DeviceMetric)
@@ -238,7 +238,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
 }
 
 @freezed
-abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
+class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
   factory DeviceMetricCalibration({
     DeviceMetricCalibrationType? type,
@@ -267,7 +267,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
 }
 
 @freezed
-abstract class Endpoint with Resource implements _$Endpoint {
+class Endpoint with Resource, _$Endpoint {
   Endpoint._();
   factory Endpoint({
     @Default(Stu3ResourceType.Endpoint)
@@ -319,7 +319,7 @@ abstract class Endpoint with Resource implements _$Endpoint {
 }
 
 @freezed
-abstract class HealthcareService with Resource implements _$HealthcareService {
+class HealthcareService with Resource, _$HealthcareService {
   HealthcareService._();
   factory HealthcareService({
     @Default(Stu3ResourceType.HealthcareService)
@@ -388,8 +388,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
 }
 
 @freezed
-abstract class HealthcareServiceAvailableTime
-    implements _$HealthcareServiceAvailableTime {
+class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
     List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
@@ -423,8 +422,7 @@ abstract class HealthcareServiceAvailableTime
 }
 
 @freezed
-abstract class HealthcareServiceNotAvailable
-    implements _$HealthcareServiceNotAvailable {
+class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
     String? description,
@@ -451,7 +449,7 @@ abstract class HealthcareServiceNotAvailable
 }
 
 @freezed
-abstract class Location with Resource implements _$Location {
+class Location with Resource, _$Location {
   Location._();
   factory Location({
     @Default(Stu3ResourceType.Location)
@@ -507,7 +505,7 @@ abstract class Location with Resource implements _$Location {
 }
 
 @freezed
-abstract class LocationPosition implements _$LocationPosition {
+class LocationPosition with _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
     Decimal? longitude,
@@ -536,7 +534,7 @@ abstract class LocationPosition implements _$LocationPosition {
 }
 
 @freezed
-abstract class Organization with Resource implements _$Organization {
+class Organization with Resource, _$Organization {
   Organization._();
   factory Organization({
     @Default(Stu3ResourceType.Organization)
@@ -585,7 +583,7 @@ abstract class Organization with Resource implements _$Organization {
 }
 
 @freezed
-abstract class OrganizationContact implements _$OrganizationContact {
+class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
   factory OrganizationContact({
     CodeableConcept? purpose,
@@ -612,7 +610,7 @@ abstract class OrganizationContact implements _$OrganizationContact {
 }
 
 @freezed
-abstract class Substance with Resource implements _$Substance {
+class Substance with Resource, _$Substance {
   Substance._();
   factory Substance({
     @Default(Stu3ResourceType.Substance)
@@ -657,7 +655,7 @@ abstract class Substance with Resource implements _$Substance {
 }
 
 @freezed
-abstract class SubstanceInstance implements _$SubstanceInstance {
+class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
     Identifier? identifier,
@@ -684,7 +682,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
 }
 
 @freezed
-abstract class SubstanceIngredient implements _$SubstanceIngredient {
+class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
     Ratio? quantity,

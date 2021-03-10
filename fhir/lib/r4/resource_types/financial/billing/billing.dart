@@ -12,7 +12,7 @@ part 'billing.freezed.dart';
 part 'billing.g.dart';
 
 @freezed
-abstract class Claim with Resource implements _$Claim {
+class Claim with Resource, _$Claim {
   Claim._();
 
   /// [Claim]: A provider issued list of professional services and products
@@ -219,7 +219,7 @@ abstract class Claim with Resource implements _$Claim {
 }
 
 @freezed
-abstract class ClaimRelated implements _$ClaimRelated {
+class ClaimRelated with _$ClaimRelated {
   ClaimRelated._();
 
   /// [Claim_Related]: A provider issued list of professional services and
@@ -283,7 +283,7 @@ abstract class ClaimRelated implements _$ClaimRelated {
 }
 
 @freezed
-abstract class ClaimPayee implements _$ClaimPayee {
+class ClaimPayee with _$ClaimPayee {
   ClaimPayee._();
 
   /// [Claim_Payee]: A provider issued list of professional services and
@@ -344,7 +344,7 @@ abstract class ClaimPayee implements _$ClaimPayee {
 }
 
 @freezed
-abstract class ClaimCareTeam implements _$ClaimCareTeam {
+class ClaimCareTeam with _$ClaimCareTeam {
   ClaimCareTeam._();
 
   /// [Claim_CareTeam]: A provider issued list of professional services and
@@ -422,7 +422,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
 }
 
 @freezed
-abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
+class ClaimSupportingInfo with _$ClaimSupportingInfo {
   ClaimSupportingInfo._();
 
   /// [Claim_SupportingInfo]: A provider issued list of professional services
@@ -535,7 +535,7 @@ abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
 }
 
 @freezed
-abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
+class ClaimDiagnosis with _$ClaimDiagnosis {
   ClaimDiagnosis._();
 
   /// [Claim_Diagnosis]: A provider issued list of professional services and
@@ -615,7 +615,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
 }
 
 @freezed
-abstract class ClaimProcedure implements _$ClaimProcedure {
+class ClaimProcedure with _$ClaimProcedure {
   ClaimProcedure._();
 
   /// [Claim_Procedure]: A provider issued list of professional services and
@@ -695,7 +695,7 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
 }
 
 @freezed
-abstract class ClaimInsurance implements _$ClaimInsurance {
+class ClaimInsurance with _$ClaimInsurance {
   ClaimInsurance._();
 
   /// [Claim_Insurance]: A provider issued list of professional services and
@@ -792,7 +792,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
 }
 
 @freezed
-abstract class ClaimAccident implements _$ClaimAccident {
+class ClaimAccident with _$ClaimAccident {
   ClaimAccident._();
 
   /// [Claim_Accident]: A provider issued list of professional services and
@@ -864,7 +864,7 @@ abstract class ClaimAccident implements _$ClaimAccident {
 }
 
 @freezed
-abstract class ClaimItem implements _$ClaimItem {
+class ClaimItem with _$ClaimItem {
   ClaimItem._();
 
   /// [Claim_Item]: A provider issued list of professional services and products
@@ -1031,7 +1031,7 @@ abstract class ClaimItem implements _$ClaimItem {
 }
 
 @freezed
-abstract class ClaimDetail implements _$ClaimDetail {
+class ClaimDetail with _$ClaimDetail {
   ClaimDetail._();
 
   /// [Claim_Detail]: A provider issued list of professional services and
@@ -1139,7 +1139,7 @@ abstract class ClaimDetail implements _$ClaimDetail {
 }
 
 @freezed
-abstract class ClaimSubDetail implements _$ClaimSubDetail {
+class ClaimSubDetail with _$ClaimSubDetail {
   ClaimSubDetail._();
 
   /// [Claim_SubDetail]: A provider issued list of professional services and
@@ -1243,7 +1243,7 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
 }
 
 @freezed
-abstract class ClaimResponse with Resource implements _$ClaimResponse {
+class ClaimResponse with Resource, _$ClaimResponse {
   ClaimResponse._();
 
   /// [ClaimResponse]: This resource provides the adjudication details from the
@@ -1458,7 +1458,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
 }
 
 @freezed
-abstract class ClaimResponseItem implements _$ClaimResponseItem {
+class ClaimResponseItem with _$ClaimResponseItem {
   ClaimResponseItem._();
 
   /// [ClaimResponse_Item]: This resource provides the adjudication details from
@@ -1533,8 +1533,7 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
 }
 
 @freezed
-abstract class ClaimResponseAdjudication
-    implements _$ClaimResponseAdjudication {
+class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   ClaimResponseAdjudication._();
 
   /// [ClaimResponse_Adjudication]: This resource provides the adjudication
@@ -1609,7 +1608,7 @@ abstract class ClaimResponseAdjudication
 }
 
 @freezed
-abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
+class ClaimResponseDetail with _$ClaimResponseDetail {
   ClaimResponseDetail._();
 
   /// [ClaimResponse_Detail]: This resource provides the adjudication details
@@ -1681,7 +1680,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
 }
 
 @freezed
-abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
+class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   ClaimResponseSubDetail._();
 
   /// [ClaimResponse_SubDetail]: This resource provides the adjudication details
@@ -1751,7 +1750,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
 }
 
 @freezed
-abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
+class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
 
   /// [ClaimResponse_AddItem]: This resource provides the adjudication details
@@ -1903,7 +1902,7 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
 }
 
 @freezed
-abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
+class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   ClaimResponseDetail1._();
 
   /// [ClaimResponse_Detail1]: This resource provides the adjudication details
@@ -2000,7 +1999,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
 }
 
 @freezed
-abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
+class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   ClaimResponseSubDetail1._();
 
   /// [ClaimResponse_SubDetail1]: This resource provides the adjudication
@@ -2093,7 +2092,7 @@ abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
 }
 
 @freezed
-abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
+class ClaimResponseTotal with _$ClaimResponseTotal {
   ClaimResponseTotal._();
 
   /// [ClaimResponse_Total]: This resource provides the adjudication details
@@ -2156,7 +2155,7 @@ abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
 }
 
 @freezed
-abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
+class ClaimResponsePayment with _$ClaimResponsePayment {
   ClaimResponsePayment._();
 
   /// [ClaimResponse_Payment]: This resource provides the adjudication details
@@ -2233,7 +2232,7 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
 }
 
 @freezed
-abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
+class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   ClaimResponseProcessNote._();
 
   /// [ClaimResponse_ProcessNote]: This resource provides the adjudication
@@ -2309,7 +2308,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
 }
 
 @freezed
-abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
+class ClaimResponseInsurance with _$ClaimResponseInsurance {
   ClaimResponseInsurance._();
 
   /// [ClaimResponse_Insurance]: This resource provides the adjudication details
@@ -2393,7 +2392,7 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
 }
 
 @freezed
-abstract class ClaimResponseError implements _$ClaimResponseError {
+class ClaimResponseError with _$ClaimResponseError {
   ClaimResponseError._();
 
   /// [ClaimResponse_Error]: This resource provides the adjudication details
@@ -2474,7 +2473,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
 }
 
 @freezed
-abstract class Invoice with Resource implements _$Invoice {
+class Invoice with Resource, _$Invoice {
   Invoice._();
 
   /// [Invoice]: Invoice containing collected ChargeItems from an Account with
@@ -2640,7 +2639,7 @@ abstract class Invoice with Resource implements _$Invoice {
 }
 
 @freezed
-abstract class InvoiceParticipant implements _$InvoiceParticipant {
+class InvoiceParticipant with _$InvoiceParticipant {
   InvoiceParticipant._();
 
   /// [Invoice_Participant]: Invoice containing collected ChargeItems from an
@@ -2702,7 +2701,7 @@ abstract class InvoiceParticipant implements _$InvoiceParticipant {
 }
 
 @freezed
-abstract class InvoiceLineItem implements _$InvoiceLineItem {
+class InvoiceLineItem with _$InvoiceLineItem {
   InvoiceLineItem._();
 
   /// [Invoice_LineItem]: Invoice containing collected ChargeItems from an
@@ -2781,7 +2780,7 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
 }
 
 @freezed
-abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
+class InvoicePriceComponent with _$InvoicePriceComponent {
   InvoicePriceComponent._();
 
   /// [Invoice_PriceComponent]: Invoice containing collected ChargeItems from an

@@ -11,7 +11,7 @@ part 'element.freezed.dart';
 part 'element.g.dart';
 
 @freezed
-abstract class Element with _$Element {
+class Element with _$Element {
   Element._();
 
   /// [Element]: Base definition for all elements in a resource.

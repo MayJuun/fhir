@@ -11,7 +11,7 @@ part 'medications.freezed.dart';
 part 'medications.g.dart';
 
 @freezed
-abstract class Immunization with Resource implements _$Immunization {
+class Immunization with Resource, _$Immunization {
   Immunization._();
 
   /// [Immunization]: Describes the event of a patient being administered a
@@ -236,7 +236,7 @@ abstract class Immunization with Resource implements _$Immunization {
 }
 
 @freezed
-abstract class ImmunizationPerformer implements _$ImmunizationPerformer {
+class ImmunizationPerformer with _$ImmunizationPerformer {
   ImmunizationPerformer._();
 
   /// [Immunization_Performer]: Describes the event of a patient being
@@ -297,7 +297,7 @@ abstract class ImmunizationPerformer implements _$ImmunizationPerformer {
 }
 
 @freezed
-abstract class ImmunizationEducation implements _$ImmunizationEducation {
+class ImmunizationEducation with _$ImmunizationEducation {
   ImmunizationEducation._();
 
   /// [Immunization_Education]: Describes the event of a patient being
@@ -377,7 +377,7 @@ abstract class ImmunizationEducation implements _$ImmunizationEducation {
 }
 
 @freezed
-abstract class ImmunizationReaction implements _$ImmunizationReaction {
+class ImmunizationReaction with _$ImmunizationReaction {
   ImmunizationReaction._();
 
   /// [Immunization_Reaction]: Describes the event of a patient being
@@ -446,8 +446,7 @@ abstract class ImmunizationReaction implements _$ImmunizationReaction {
 }
 
 @freezed
-abstract class ImmunizationProtocolApplied
-    implements _$ImmunizationProtocolApplied {
+class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   ImmunizationProtocolApplied._();
 
   /// [Immunization_ProtocolApplied]: Describes the event of a patient being
@@ -544,9 +543,7 @@ abstract class ImmunizationProtocolApplied
 }
 
 @freezed
-abstract class ImmunizationEvaluation
-    with Resource
-    implements _$ImmunizationEvaluation {
+class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   ImmunizationEvaluation._();
 
   /// [ImmunizationEvaluation]: Describes a comparison of an immunization event
@@ -720,9 +717,7 @@ abstract class ImmunizationEvaluation
 }
 
 @freezed
-abstract class ImmunizationRecommendation
-    with Resource
-    implements _$ImmunizationRecommendation {
+class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ImmunizationRecommendation._();
 
   /// [ImmunizationRecommendation]: A patient's point-in-time set of
@@ -836,8 +831,8 @@ abstract class ImmunizationRecommendation
 }
 
 @freezed
-abstract class ImmunizationRecommendationRecommendation
-    implements _$ImmunizationRecommendationRecommendation {
+class ImmunizationRecommendationRecommendation
+    with _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
 
   /// [ImmunizationRecommendation_Recommendation]: A patient's point-in-time set
@@ -968,8 +963,8 @@ abstract class ImmunizationRecommendationRecommendation
 }
 
 @freezed
-abstract class ImmunizationRecommendationDateCriterion
-    implements _$ImmunizationRecommendationDateCriterion {
+class ImmunizationRecommendationDateCriterion
+    with _$ImmunizationRecommendationDateCriterion {
   ImmunizationRecommendationDateCriterion._();
 
   /// [ImmunizationRecommendation_DateCriterion]: A patient's point-in-time set
@@ -1036,7 +1031,7 @@ abstract class ImmunizationRecommendationDateCriterion
 }
 
 @freezed
-abstract class Medication with Resource implements _$Medication {
+class Medication with Resource, _$Medication {
   Medication._();
 
   /// [Medication]: This resource is primarily used for the identification and
@@ -1168,7 +1163,7 @@ abstract class Medication with Resource implements _$Medication {
 }
 
 @freezed
-abstract class MedicationIngredient implements _$MedicationIngredient {
+class MedicationIngredient with _$MedicationIngredient {
   MedicationIngredient._();
 
   /// [Medication_Ingredient]: This resource is primarily used for the
@@ -1243,7 +1238,7 @@ abstract class MedicationIngredient implements _$MedicationIngredient {
 }
 
 @freezed
-abstract class MedicationBatch implements _$MedicationBatch {
+class MedicationBatch with _$MedicationBatch {
   MedicationBatch._();
 
   /// [Medication_Batch]: This resource is primarily used for the identification
@@ -1310,9 +1305,7 @@ abstract class MedicationBatch implements _$MedicationBatch {
 }
 
 @freezed
-abstract class MedicationAdministration
-    with Resource
-    implements _$MedicationAdministration {
+class MedicationAdministration with Resource, _$MedicationAdministration {
   MedicationAdministration._();
 
   /// [MedicationAdministration]: Describes the event of a patient consuming or
@@ -1514,8 +1507,8 @@ abstract class MedicationAdministration
 }
 
 @freezed
-abstract class MedicationAdministrationPerformer
-    implements _$MedicationAdministrationPerformer {
+class MedicationAdministrationPerformer
+    with _$MedicationAdministrationPerformer {
   MedicationAdministrationPerformer._();
 
   /// [MedicationAdministration_Performer]: Describes the event of a patient
@@ -1581,8 +1574,7 @@ abstract class MedicationAdministrationPerformer
 }
 
 @freezed
-abstract class MedicationAdministrationDosage
-    implements _$MedicationAdministrationDosage {
+class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
 
   /// [MedicationAdministration_Dosage]: Describes the event of a patient
@@ -1685,9 +1677,7 @@ abstract class MedicationAdministrationDosage
 }
 
 @freezed
-abstract class MedicationDispense
-    with Resource
-    implements _$MedicationDispense {
+class MedicationDispense with Resource, _$MedicationDispense {
   MedicationDispense._();
 
   /// [MedicationDispense]: Indicates that a medication product is to be or has
@@ -1906,8 +1896,7 @@ abstract class MedicationDispense
 }
 
 @freezed
-abstract class MedicationDispensePerformer
-    implements _$MedicationDispensePerformer {
+class MedicationDispensePerformer with _$MedicationDispensePerformer {
   MedicationDispensePerformer._();
 
   /// [MedicationDispense_Performer]: Indicates that a medication product is to
@@ -1972,8 +1961,7 @@ abstract class MedicationDispensePerformer
 }
 
 @freezed
-abstract class MedicationDispenseSubstitution
-    implements _$MedicationDispenseSubstitution {
+class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
 
   /// [MedicationDispense_Substitution]: Indicates that a medication product is
@@ -2051,9 +2039,7 @@ abstract class MedicationDispenseSubstitution
 }
 
 @freezed
-abstract class MedicationKnowledge
-    with Resource
-    implements _$MedicationKnowledge {
+class MedicationKnowledge with Resource, _$MedicationKnowledge {
   MedicationKnowledge._();
 
   /// [MedicationKnowledge]: Information about a medication that is used to
@@ -2248,8 +2234,8 @@ abstract class MedicationKnowledge
 }
 
 @freezed
-abstract class MedicationKnowledgeRelatedMedicationKnowledge
-    implements _$MedicationKnowledgeRelatedMedicationKnowledge {
+class MedicationKnowledgeRelatedMedicationKnowledge
+    with _$MedicationKnowledgeRelatedMedicationKnowledge {
   MedicationKnowledgeRelatedMedicationKnowledge._();
 
   /// [MedicationKnowledge_RelatedMedicationKnowledge]: Information about a
@@ -2313,8 +2299,7 @@ abstract class MedicationKnowledgeRelatedMedicationKnowledge
 }
 
 @freezed
-abstract class MedicationKnowledgeMonograph
-    implements _$MedicationKnowledgeMonograph {
+class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   MedicationKnowledgeMonograph._();
 
   /// [MedicationKnowledge_Monograph]: Information about a medication that is
@@ -2375,8 +2360,7 @@ abstract class MedicationKnowledgeMonograph
 }
 
 @freezed
-abstract class MedicationKnowledgeIngredient
-    implements _$MedicationKnowledgeIngredient {
+class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   MedicationKnowledgeIngredient._();
 
   /// [MedicationKnowledge_Ingredient]: Information about a medication that is
@@ -2450,7 +2434,7 @@ abstract class MedicationKnowledgeIngredient
 }
 
 @freezed
-abstract class MedicationKnowledgeCost implements _$MedicationKnowledgeCost {
+class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   MedicationKnowledgeCost._();
 
   /// [MedicationKnowledge_Cost]: Information about a medication that is used to
@@ -2516,8 +2500,8 @@ abstract class MedicationKnowledgeCost implements _$MedicationKnowledgeCost {
 }
 
 @freezed
-abstract class MedicationKnowledgeMonitoringProgram
-    implements _$MedicationKnowledgeMonitoringProgram {
+class MedicationKnowledgeMonitoringProgram
+    with _$MedicationKnowledgeMonitoringProgram {
   MedicationKnowledgeMonitoringProgram._();
 
   /// [MedicationKnowledge_MonitoringProgram]: Information about a medication
@@ -2582,8 +2566,8 @@ abstract class MedicationKnowledgeMonitoringProgram
 }
 
 @freezed
-abstract class MedicationKnowledgeAdministrationGuidelines
-    implements _$MedicationKnowledgeAdministrationGuidelines {
+class MedicationKnowledgeAdministrationGuidelines
+    with _$MedicationKnowledgeAdministrationGuidelines {
   MedicationKnowledgeAdministrationGuidelines._();
 
   /// [MedicationKnowledge_AdministrationGuidelines]: Information about a
@@ -2655,8 +2639,7 @@ abstract class MedicationKnowledgeAdministrationGuidelines
 }
 
 @freezed
-abstract class MedicationKnowledgeDosage
-    implements _$MedicationKnowledgeDosage {
+class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   MedicationKnowledgeDosage._();
 
   /// [MedicationKnowledge_Dosage]: Information about a medication that is used
@@ -2717,8 +2700,8 @@ abstract class MedicationKnowledgeDosage
 }
 
 @freezed
-abstract class MedicationKnowledgePatientCharacteristics
-    implements _$MedicationKnowledgePatientCharacteristics {
+class MedicationKnowledgePatientCharacteristics
+    with _$MedicationKnowledgePatientCharacteristics {
   MedicationKnowledgePatientCharacteristics._();
 
   /// [MedicationKnowledge_PatientCharacteristics]: Information about a
@@ -2788,8 +2771,8 @@ abstract class MedicationKnowledgePatientCharacteristics
 }
 
 @freezed
-abstract class MedicationKnowledgeMedicineClassification
-    implements _$MedicationKnowledgeMedicineClassification {
+class MedicationKnowledgeMedicineClassification
+    with _$MedicationKnowledgeMedicineClassification {
   MedicationKnowledgeMedicineClassification._();
 
   /// [MedicationKnowledge_MedicineClassification]: Information about a
@@ -2853,8 +2836,7 @@ abstract class MedicationKnowledgeMedicineClassification
 }
 
 @freezed
-abstract class MedicationKnowledgePackaging
-    implements _$MedicationKnowledgePackaging {
+class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   MedicationKnowledgePackaging._();
 
   /// [MedicationKnowledge_Packaging]: Information about a medication that is
@@ -2916,8 +2898,8 @@ abstract class MedicationKnowledgePackaging
 }
 
 @freezed
-abstract class MedicationKnowledgeDrugCharacteristic
-    implements _$MedicationKnowledgeDrugCharacteristic {
+class MedicationKnowledgeDrugCharacteristic
+    with _$MedicationKnowledgeDrugCharacteristic {
   MedicationKnowledgeDrugCharacteristic._();
 
   /// [MedicationKnowledge_DrugCharacteristic]: Information about a medication
@@ -2995,8 +2977,7 @@ abstract class MedicationKnowledgeDrugCharacteristic
 }
 
 @freezed
-abstract class MedicationKnowledgeRegulatory
-    implements _$MedicationKnowledgeRegulatory {
+class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   MedicationKnowledgeRegulatory._();
 
   /// [MedicationKnowledge_Regulatory]: Information about a medication that is
@@ -3064,8 +3045,7 @@ abstract class MedicationKnowledgeRegulatory
 }
 
 @freezed
-abstract class MedicationKnowledgeSubstitution
-    implements _$MedicationKnowledgeSubstitution {
+class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   MedicationKnowledgeSubstitution._();
 
   /// [MedicationKnowledge_Substitution]: Information about a medication that is
@@ -3131,8 +3111,7 @@ abstract class MedicationKnowledgeSubstitution
 }
 
 @freezed
-abstract class MedicationKnowledgeSchedule
-    implements _$MedicationKnowledgeSchedule {
+class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
   MedicationKnowledgeSchedule._();
 
   /// [MedicationKnowledge_Schedule]: Information about a medication that is
@@ -3189,8 +3168,7 @@ abstract class MedicationKnowledgeSchedule
 }
 
 @freezed
-abstract class MedicationKnowledgeMaxDispense
-    implements _$MedicationKnowledgeMaxDispense {
+class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   MedicationKnowledgeMaxDispense._();
 
   /// [MedicationKnowledge_MaxDispense]: Information about a medication that is
@@ -3253,8 +3231,7 @@ abstract class MedicationKnowledgeMaxDispense
 }
 
 @freezed
-abstract class MedicationKnowledgeKinetics
-    implements _$MedicationKnowledgeKinetics {
+class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
   MedicationKnowledgeKinetics._();
 
   /// [MedicationKnowledge_Kinetics]: Information about a medication that is
@@ -3319,7 +3296,7 @@ abstract class MedicationKnowledgeKinetics
 }
 
 @freezed
-abstract class MedicationRequest with Resource implements _$MedicationRequest {
+class MedicationRequest with Resource, _$MedicationRequest {
   MedicationRequest._();
 
   /// [MedicationRequest]: An order or request for both supply of the medication
@@ -3599,8 +3576,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
 }
 
 @freezed
-abstract class MedicationRequestDispenseRequest
-    implements _$MedicationRequestDispenseRequest {
+class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   MedicationRequestDispenseRequest._();
 
   /// [MedicationRequest_DispenseRequest]: An order or request for both supply
@@ -3698,8 +3674,7 @@ abstract class MedicationRequestDispenseRequest
 }
 
 @freezed
-abstract class MedicationRequestInitialFill
-    implements _$MedicationRequestInitialFill {
+class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   MedicationRequestInitialFill._();
 
   /// [MedicationRequest_InitialFill]: An order or request for both supply of
@@ -3765,8 +3740,7 @@ abstract class MedicationRequestInitialFill
 }
 
 @freezed
-abstract class MedicationRequestSubstitution
-    implements _$MedicationRequestSubstitution {
+class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   MedicationRequestSubstitution._();
 
   /// [MedicationRequest_Substitution]: An order or request for both supply of
@@ -3839,9 +3813,7 @@ abstract class MedicationRequestSubstitution
 }
 
 @freezed
-abstract class MedicationStatement
-    with Resource
-    implements _$MedicationStatement {
+class MedicationStatement with Resource, _$MedicationStatement {
   MedicationStatement._();
 
   /// [MedicationStatement]: A record of a medication that is being consumed by

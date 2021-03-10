@@ -12,7 +12,7 @@ part 'scheduling.freezed.dart';
 part 'scheduling.g.dart';
 
 @freezed
-abstract class Appointment with Resource implements _$Appointment {
+class Appointment with Resource, _$Appointment {
   Appointment._();
   factory Appointment({
     @Default(Dstu2ResourceType.Appointment)
@@ -68,7 +68,7 @@ abstract class Appointment with Resource implements _$Appointment {
 }
 
 @freezed
-abstract class AppointmentParticipant with _$AppointmentParticipant {
+class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
   factory AppointmentParticipant({
     Id? id,
@@ -102,9 +102,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
 }
 
 @freezed
-abstract class AppointmentResponse
-    with Resource
-    implements _$AppointmentResponse {
+class AppointmentResponse with Resource, _$AppointmentResponse {
   AppointmentResponse._();
   factory AppointmentResponse({
     @Default(Dstu2ResourceType.AppointmentResponse)
@@ -153,7 +151,7 @@ abstract class AppointmentResponse
 }
 
 @freezed
-abstract class Schedule with Resource implements _$Schedule {
+class Schedule with Resource, _$Schedule {
   Schedule._();
   factory Schedule({
     @Default(Dstu2ResourceType.Schedule)
@@ -195,7 +193,7 @@ abstract class Schedule with Resource implements _$Schedule {
 }
 
 @freezed
-abstract class Slot with Resource implements _$Slot {
+class Slot with Resource, _$Slot {
   Slot._();
   factory Slot({
     @Default(Dstu2ResourceType.Slot)

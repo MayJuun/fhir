@@ -12,7 +12,7 @@ part 'support.freezed.dart';
 part 'support.g.dart';
 
 @freezed
-abstract class Coverage with Resource implements _$Coverage {
+class Coverage with Resource, _$Coverage {
   Coverage._();
 
   /// [Coverage]: Financial instrument which may be used to reimburse or pay for
@@ -193,7 +193,7 @@ abstract class Coverage with Resource implements _$Coverage {
 }
 
 @freezed
-abstract class CoverageClass implements _$CoverageClass {
+class CoverageClass with _$CoverageClass {
   CoverageClass._();
 
   /// [Coverage_Class]: Financial instrument which may be used to reimburse or
@@ -265,8 +265,7 @@ abstract class CoverageClass implements _$CoverageClass {
 }
 
 @freezed
-abstract class CoverageCostToBeneficiary
-    implements _$CoverageCostToBeneficiary {
+class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   CoverageCostToBeneficiary._();
 
   /// [Coverage_CostToBeneficiary]: Financial instrument which may be used to
@@ -334,7 +333,7 @@ abstract class CoverageCostToBeneficiary
 }
 
 @freezed
-abstract class CoverageException implements _$CoverageException {
+class CoverageException with _$CoverageException {
   CoverageException._();
 
   /// [Coverage_Exception]: Financial instrument which may be used to reimburse
@@ -394,9 +393,7 @@ abstract class CoverageException implements _$CoverageException {
 }
 
 @freezed
-abstract class CoverageEligibilityRequest
-    with Resource
-    implements _$CoverageEligibilityRequest {
+class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   CoverageEligibilityRequest._();
 
   /// [CoverageEligibilityRequest]: The CoverageEligibilityRequest provides
@@ -564,8 +561,8 @@ abstract class CoverageEligibilityRequest
 }
 
 @freezed
-abstract class CoverageEligibilityRequestSupportingInfo
-    implements _$CoverageEligibilityRequestSupportingInfo {
+class CoverageEligibilityRequestSupportingInfo
+    with _$CoverageEligibilityRequestSupportingInfo {
   CoverageEligibilityRequestSupportingInfo._();
 
   /// [CoverageEligibilityRequest_SupportingInfo]: The
@@ -643,8 +640,8 @@ abstract class CoverageEligibilityRequestSupportingInfo
 }
 
 @freezed
-abstract class CoverageEligibilityRequestInsurance
-    implements _$CoverageEligibilityRequestInsurance {
+class CoverageEligibilityRequestInsurance
+    with _$CoverageEligibilityRequestInsurance {
   CoverageEligibilityRequestInsurance._();
 
   /// [CoverageEligibilityRequest_Insurance]: The CoverageEligibilityRequest
@@ -723,8 +720,7 @@ abstract class CoverageEligibilityRequestInsurance
 }
 
 @freezed
-abstract class CoverageEligibilityRequestItem
-    implements _$CoverageEligibilityRequestItem {
+class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   CoverageEligibilityRequestItem._();
 
   /// [CoverageEligibilityRequest_Item]: The CoverageEligibilityRequest provides
@@ -824,8 +820,8 @@ abstract class CoverageEligibilityRequestItem
 }
 
 @freezed
-abstract class CoverageEligibilityRequestDiagnosis
-    implements _$CoverageEligibilityRequestDiagnosis {
+class CoverageEligibilityRequestDiagnosis
+    with _$CoverageEligibilityRequestDiagnosis {
   CoverageEligibilityRequestDiagnosis._();
 
   /// [CoverageEligibilityRequest_Diagnosis]: The CoverageEligibilityRequest
@@ -892,9 +888,7 @@ abstract class CoverageEligibilityRequestDiagnosis
 }
 
 @freezed
-abstract class CoverageEligibilityResponse
-    with Resource
-    implements _$CoverageEligibilityResponse {
+class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   CoverageEligibilityResponse._();
 
   /// [CoverageEligibilityResponse]: This resource provides eligibility and plan
@@ -1070,8 +1064,8 @@ abstract class CoverageEligibilityResponse
 }
 
 @freezed
-abstract class CoverageEligibilityResponseInsurance
-    implements _$CoverageEligibilityResponseInsurance {
+class CoverageEligibilityResponseInsurance
+    with _$CoverageEligibilityResponseInsurance {
   CoverageEligibilityResponseInsurance._();
 
   /// [CoverageEligibilityResponse_Insurance]: This resource provides
@@ -1149,8 +1143,7 @@ abstract class CoverageEligibilityResponseInsurance
 }
 
 @freezed
-abstract class CoverageEligibilityResponseItem
-    implements _$CoverageEligibilityResponseItem {
+class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   CoverageEligibilityResponseItem._();
 
   /// [CoverageEligibilityResponse_Item]: This resource provides eligibility and
@@ -1276,8 +1269,8 @@ abstract class CoverageEligibilityResponseItem
 }
 
 @freezed
-abstract class CoverageEligibilityResponseBenefit
-    implements _$CoverageEligibilityResponseBenefit {
+class CoverageEligibilityResponseBenefit
+    with _$CoverageEligibilityResponseBenefit {
   CoverageEligibilityResponseBenefit._();
 
   /// [CoverageEligibilityResponse_Benefit]: This resource provides eligibility
@@ -1372,8 +1365,7 @@ abstract class CoverageEligibilityResponseBenefit
 }
 
 @freezed
-abstract class CoverageEligibilityResponseError
-    implements _$CoverageEligibilityResponseError {
+class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   CoverageEligibilityResponseError._();
 
   /// [CoverageEligibilityResponse_Error]: This resource provides eligibility
@@ -1434,7 +1426,7 @@ abstract class CoverageEligibilityResponseError
 }
 
 @freezed
-abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
+class EnrollmentRequest with Resource, _$EnrollmentRequest {
   EnrollmentRequest._();
 
   /// [EnrollmentRequest]: This resource provides the insurance enrollment
@@ -1555,9 +1547,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
 }
 
 @freezed
-abstract class EnrollmentResponse
-    with Resource
-    implements _$EnrollmentResponse {
+class EnrollmentResponse with Resource, _$EnrollmentResponse {
   EnrollmentResponse._();
 
   /// [EnrollmentResponse]: This resource provides enrollment and plan details

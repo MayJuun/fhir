@@ -12,9 +12,7 @@ part 'other.freezed.dart';
 part 'other.g.dart';
 
 @freezed
-abstract class ExplanationOfBenefit
-    with Resource
-    implements _$ExplanationOfBenefit {
+class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
     @Default(Dstu2ResourceType.ExplanationOfBenefit)

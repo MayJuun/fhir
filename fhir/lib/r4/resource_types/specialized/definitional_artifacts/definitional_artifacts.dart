@@ -12,9 +12,7 @@ part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
 
 @freezed
-abstract class ActivityDefinition
-    with Resource
-    implements _$ActivityDefinition {
+class ActivityDefinition with Resource, _$ActivityDefinition {
   ActivityDefinition._();
 
   /// [ActivityDefinition]: This resource allows for the definition of some
@@ -415,8 +413,7 @@ abstract class ActivityDefinition
 }
 
 @freezed
-abstract class ActivityDefinitionParticipant
-    implements _$ActivityDefinitionParticipant {
+class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   ActivityDefinitionParticipant._();
 
   /// [ActivityDefinition_Participant]: This resource allows for the definition
@@ -481,8 +478,7 @@ abstract class ActivityDefinitionParticipant
 }
 
 @freezed
-abstract class ActivityDefinitionDynamicValue
-    implements _$ActivityDefinitionDynamicValue {
+class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   ActivityDefinitionDynamicValue._();
 
   /// [ActivityDefinition_DynamicValue]: This resource allows for the definition
@@ -556,7 +552,7 @@ abstract class ActivityDefinitionDynamicValue
 }
 
 @freezed
-abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
+class DeviceDefinition with Resource, _$DeviceDefinition {
   DeviceDefinition._();
 
   /// [DeviceDefinition]: The characteristics, operational status and
@@ -747,8 +743,8 @@ abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
 }
 
 @freezed
-abstract class DeviceDefinitionUdiDeviceIdentifier
-    implements _$DeviceDefinitionUdiDeviceIdentifier {
+class DeviceDefinitionUdiDeviceIdentifier
+    with _$DeviceDefinitionUdiDeviceIdentifier {
   DeviceDefinitionUdiDeviceIdentifier._();
 
   /// [DeviceDefinition_UdiDeviceIdentifier]: The characteristics, operational
@@ -825,8 +821,7 @@ abstract class DeviceDefinitionUdiDeviceIdentifier
 }
 
 @freezed
-abstract class DeviceDefinitionDeviceName
-    implements _$DeviceDefinitionDeviceName {
+class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   DeviceDefinitionDeviceName._();
 
   /// [DeviceDefinition_DeviceName]: The characteristics, operational status and
@@ -895,8 +890,7 @@ abstract class DeviceDefinitionDeviceName
 }
 
 @freezed
-abstract class DeviceDefinitionSpecialization
-    implements _$DeviceDefinitionSpecialization {
+class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
   DeviceDefinitionSpecialization._();
 
   /// [DeviceDefinition_Specialization]: The characteristics, operational status
@@ -965,8 +959,7 @@ abstract class DeviceDefinitionSpecialization
 }
 
 @freezed
-abstract class DeviceDefinitionCapability
-    implements _$DeviceDefinitionCapability {
+class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
   DeviceDefinitionCapability._();
 
   /// [DeviceDefinition_Capability]: The characteristics, operational status and
@@ -1026,7 +1019,7 @@ abstract class DeviceDefinitionCapability
 }
 
 @freezed
-abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
+class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   DeviceDefinitionProperty._();
 
   /// [DeviceDefinition_Property]: The characteristics, operational status and
@@ -1090,7 +1083,7 @@ abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
 }
 
 @freezed
-abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
+class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   DeviceDefinitionMaterial._();
 
   /// [DeviceDefinition_Material]: The characteristics, operational status and
@@ -1160,7 +1153,7 @@ abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
 }
 
 @freezed
-abstract class EventDefinition with Resource implements _$EventDefinition {
+class EventDefinition with Resource, _$EventDefinition {
   EventDefinition._();
 
   /// [EventDefinition]: The EventDefinition resource provides a reusable
@@ -1437,9 +1430,7 @@ abstract class EventDefinition with Resource implements _$EventDefinition {
 }
 
 @freezed
-abstract class ObservationDefinition
-    with Resource
-    implements _$ObservationDefinition {
+class ObservationDefinition with Resource, _$ObservationDefinition {
   ObservationDefinition._();
 
   /// [ObservationDefinition]: Set of definitional characteristics for a kind of
@@ -1594,8 +1585,8 @@ abstract class ObservationDefinition
 }
 
 @freezed
-abstract class ObservationDefinitionQuantitativeDetails
-    implements _$ObservationDefinitionQuantitativeDetails {
+class ObservationDefinitionQuantitativeDetails
+    with _$ObservationDefinitionQuantitativeDetails {
   ObservationDefinitionQuantitativeDetails._();
 
   /// [ObservationDefinition_QuantitativeDetails]: Set of definitional
@@ -1674,8 +1665,8 @@ abstract class ObservationDefinitionQuantitativeDetails
 }
 
 @freezed
-abstract class ObservationDefinitionQualifiedInterval
-    implements _$ObservationDefinitionQualifiedInterval {
+class ObservationDefinitionQualifiedInterval
+    with _$ObservationDefinitionQualifiedInterval {
   ObservationDefinitionQualifiedInterval._();
 
   /// [ObservationDefinition_QualifiedInterval]: Set of definitional
@@ -1775,7 +1766,7 @@ abstract class ObservationDefinitionQualifiedInterval
 }
 
 @freezed
-abstract class PlanDefinition with Resource implements _$PlanDefinition {
+class PlanDefinition with Resource, _$PlanDefinition {
   PlanDefinition._();
 
   /// [PlanDefinition]: This resource allows for the definition of various types
@@ -2071,7 +2062,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
 }
 
 @freezed
-abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
+class PlanDefinitionGoal with _$PlanDefinitionGoal {
   PlanDefinitionGoal._();
 
   /// [PlanDefinition_Goal]: This resource allows for the definition of various
@@ -2155,7 +2146,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
 }
 
 @freezed
-abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
+class PlanDefinitionTarget with _$PlanDefinitionTarget {
   PlanDefinitionTarget._();
 
   /// [PlanDefinition_Target]: This resource allows for the definition of
@@ -2243,7 +2234,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
 }
 
 @freezed
-abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
+class PlanDefinitionAction with _$PlanDefinitionAction {
   PlanDefinitionAction._();
 
   /// [PlanDefinition_Action]: This resource allows for the definition of
@@ -2487,7 +2478,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
 }
 
 @freezed
-abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
+class PlanDefinitionCondition with _$PlanDefinitionCondition {
   PlanDefinitionCondition._();
 
   /// [PlanDefinition_Condition]: This resource allows for the definition of
@@ -2554,8 +2545,7 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
 }
 
 @freezed
-abstract class PlanDefinitionRelatedAction
-    implements _$PlanDefinitionRelatedAction {
+class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedAction._();
 
   /// [PlanDefinition_RelatedAction]: This resource allows for the definition of
@@ -2633,8 +2623,7 @@ abstract class PlanDefinitionRelatedAction
 }
 
 @freezed
-abstract class PlanDefinitionParticipant
-    implements _$PlanDefinitionParticipant {
+class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   PlanDefinitionParticipant._();
 
   /// [PlanDefinition_Participant]: This resource allows for the definition of
@@ -2702,8 +2691,7 @@ abstract class PlanDefinitionParticipant
 }
 
 @freezed
-abstract class PlanDefinitionDynamicValue
-    implements _$PlanDefinitionDynamicValue {
+class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   PlanDefinitionDynamicValue._();
 
   /// [PlanDefinition_DynamicValue]: This resource allows for the definition of
@@ -2777,7 +2765,7 @@ abstract class PlanDefinitionDynamicValue
 }
 
 @freezed
-abstract class Questionnaire with Resource implements _$Questionnaire {
+class Questionnaire with Resource, _$Questionnaire {
   Questionnaire._();
 
   /// [Questionnaire]: A structured set of questions intended to guide the
@@ -3022,7 +3010,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
 }
 
 @freezed
-abstract class QuestionnaireItem implements _$QuestionnaireItem {
+class QuestionnaireItem with _$QuestionnaireItem {
   QuestionnaireItem._();
 
   /// [Questionnaire_Item]: A structured set of questions intended to guide the
@@ -3192,7 +3180,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
 }
 
 @freezed
-abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
+class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   QuestionnaireEnableWhen._();
 
   /// [Questionnaire_EnableWhen]: A structured set of questions intended to
@@ -3322,8 +3310,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
 }
 
 @freezed
-abstract class QuestionnaireAnswerOption
-    implements _$QuestionnaireAnswerOption {
+class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   QuestionnaireAnswerOption._();
 
   /// [Questionnaire_AnswerOption]: A structured set of questions intended to
@@ -3422,7 +3409,7 @@ abstract class QuestionnaireAnswerOption
 }
 
 @freezed
-abstract class QuestionnaireInitial implements _$QuestionnaireInitial {
+class QuestionnaireInitial with _$QuestionnaireInitial {
   QuestionnaireInitial._();
 
   /// [Questionnaire_Initial]: A structured set of questions intended to guide
@@ -3537,9 +3524,7 @@ abstract class QuestionnaireInitial implements _$QuestionnaireInitial {
 }
 
 @freezed
-abstract class SpecimenDefinition
-    with Resource
-    implements _$SpecimenDefinition {
+class SpecimenDefinition with Resource, _$SpecimenDefinition {
   SpecimenDefinition._();
 
   /// [SpecimenDefinition]: A kind of specimen with associated set of
@@ -3653,8 +3638,7 @@ abstract class SpecimenDefinition
 }
 
 @freezed
-abstract class SpecimenDefinitionTypeTested
-    implements _$SpecimenDefinitionTypeTested {
+class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   SpecimenDefinitionTypeTested._();
 
   /// [SpecimenDefinition_TypeTested]: A kind of specimen with associated set of
@@ -3747,8 +3731,7 @@ abstract class SpecimenDefinitionTypeTested
 }
 
 @freezed
-abstract class SpecimenDefinitionContainer
-    implements _$SpecimenDefinitionContainer {
+class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   SpecimenDefinitionContainer._();
 
   /// [SpecimenDefinition_Container]: A kind of specimen with associated set of
@@ -3843,8 +3826,7 @@ abstract class SpecimenDefinitionContainer
 }
 
 @freezed
-abstract class SpecimenDefinitionAdditive
-    implements _$SpecimenDefinitionAdditive {
+class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   SpecimenDefinitionAdditive._();
 
   /// [SpecimenDefinition_Additive]: A kind of specimen with associated set of
@@ -3908,8 +3890,7 @@ abstract class SpecimenDefinitionAdditive
 }
 
 @freezed
-abstract class SpecimenDefinitionHandling
-    implements _$SpecimenDefinitionHandling {
+class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   SpecimenDefinitionHandling._();
 
   /// [SpecimenDefinition_Handling]: A kind of specimen with associated set of

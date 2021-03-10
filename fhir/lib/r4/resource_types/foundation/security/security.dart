@@ -12,7 +12,7 @@ part 'security.freezed.dart';
 part 'security.g.dart';
 
 @freezed
-abstract class AuditEvent with Resource implements _$AuditEvent {
+class AuditEvent with Resource, _$AuditEvent {
   AuditEvent._();
 
   /// [AuditEvent]: A record of an event made for purposes of maintaining a
@@ -157,7 +157,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
 }
 
 @freezed
-abstract class AuditEventAgent implements _$AuditEventAgent {
+class AuditEventAgent with _$AuditEventAgent {
   AuditEventAgent._();
 
   /// [AuditEvent_Agent]: A record of an event made for purposes of maintaining
@@ -269,7 +269,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
 }
 
 @freezed
-abstract class AuditEventNetwork implements _$AuditEventNetwork {
+class AuditEventNetwork with _$AuditEventNetwork {
   AuditEventNetwork._();
 
   /// [AuditEvent_Network]: A record of an event made for purposes of
@@ -338,7 +338,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
 }
 
 @freezed
-abstract class AuditEventSource implements _$AuditEventSource {
+class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
 
   /// [AuditEvent_Source]: A record of an event made for purposes of maintaining
@@ -406,7 +406,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
 }
 
 @freezed
-abstract class AuditEventEntity implements _$AuditEventEntity {
+class AuditEventEntity with _$AuditEventEntity {
   AuditEventEntity._();
 
   /// [AuditEvent_Entity]: A record of an event made for purposes of maintaining
@@ -499,7 +499,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
 }
 
 @freezed
-abstract class AuditEventDetail implements _$AuditEventDetail {
+class AuditEventDetail with _$AuditEventDetail {
   AuditEventDetail._();
 
   /// [AuditEvent_Detail]: A record of an event made for purposes of maintaining
@@ -571,7 +571,7 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
 }
 
 @freezed
-abstract class Consent with Resource implements _$Consent {
+class Consent with Resource, _$Consent {
   Consent._();
 
   /// [Consent]: A record of a healthcare consumer’s  choices, which permits or
@@ -733,7 +733,7 @@ abstract class Consent with Resource implements _$Consent {
 }
 
 @freezed
-abstract class ConsentPolicy implements _$ConsentPolicy {
+class ConsentPolicy with _$ConsentPolicy {
   ConsentPolicy._();
 
   /// [Consent_Policy]: A record of a healthcare consumer’s  choices, which
@@ -803,7 +803,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
 }
 
 @freezed
-abstract class ConsentVerification implements _$ConsentVerification {
+class ConsentVerification with _$ConsentVerification {
   ConsentVerification._();
 
   /// [Consent_Verification]: A record of a healthcare consumer’s  choices,
@@ -874,7 +874,7 @@ abstract class ConsentVerification implements _$ConsentVerification {
 }
 
 @freezed
-abstract class ConsentProvision implements _$ConsentProvision {
+class ConsentProvision with _$ConsentProvision {
   ConsentProvision._();
 
   /// [Consent_Provision]: A record of a healthcare consumer’s  choices, which
@@ -975,7 +975,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
 }
 
 @freezed
-abstract class ConsentActor implements _$ConsentActor {
+class ConsentActor with _$ConsentActor {
   ConsentActor._();
 
   /// [Consent_Actor]: A record of a healthcare consumer’s  choices, which
@@ -1039,7 +1039,7 @@ abstract class ConsentActor implements _$ConsentActor {
 }
 
 @freezed
-abstract class ConsentData implements _$ConsentData {
+class ConsentData with _$ConsentData {
   ConsentData._();
 
   /// [Consent_Data]: A record of a healthcare consumer’s  choices, which
@@ -1106,7 +1106,7 @@ abstract class ConsentData implements _$ConsentData {
 }
 
 @freezed
-abstract class Provenance with Resource implements _$Provenance {
+class Provenance with Resource, _$Provenance {
   Provenance._();
 
   /// [Provenance]: Provenance of a resource is a record that describes entities
@@ -1257,7 +1257,7 @@ abstract class Provenance with Resource implements _$Provenance {
 }
 
 @freezed
-abstract class ProvenanceAgent implements _$ProvenanceAgent {
+class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
 
   /// [Provenance_Agent]: Provenance of a resource is a record that describes
@@ -1333,7 +1333,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
 }
 
 @freezed
-abstract class ProvenanceEntity implements _$ProvenanceEntity {
+class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
 
   /// [Provenance_Entity]: Provenance of a resource is a record that describes

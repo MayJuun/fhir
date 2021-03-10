@@ -12,9 +12,7 @@ part 'evidence_based_medicine.freezed.dart';
 part 'evidence_based_medicine.g.dart';
 
 @freezed
-abstract class EffectEvidenceSynthesis
-    with Resource
-    implements _$EffectEvidenceSynthesis {
+class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   EffectEvidenceSynthesis._();
 
   /// [EffectEvidenceSynthesis]: The EffectEvidenceSynthesis resource describes
@@ -292,8 +290,8 @@ abstract class EffectEvidenceSynthesis
 }
 
 @freezed
-abstract class EffectEvidenceSynthesisSampleSize
-    implements _$EffectEvidenceSynthesisSampleSize {
+class EffectEvidenceSynthesisSampleSize
+    with _$EffectEvidenceSynthesisSampleSize {
   EffectEvidenceSynthesisSampleSize._();
 
   /// [EffectEvidenceSynthesis_SampleSize]: The EffectEvidenceSynthesis resource
@@ -371,8 +369,8 @@ abstract class EffectEvidenceSynthesisSampleSize
 }
 
 @freezed
-abstract class EffectEvidenceSynthesisResultsByExposure
-    implements _$EffectEvidenceSynthesisResultsByExposure {
+class EffectEvidenceSynthesisResultsByExposure
+    with _$EffectEvidenceSynthesisResultsByExposure {
   EffectEvidenceSynthesisResultsByExposure._();
 
   /// [EffectEvidenceSynthesis_ResultsByExposure]: The EffectEvidenceSynthesis
@@ -453,8 +451,8 @@ abstract class EffectEvidenceSynthesisResultsByExposure
 }
 
 @freezed
-abstract class EffectEvidenceSynthesisEffectEstimate
-    implements _$EffectEvidenceSynthesisEffectEstimate {
+class EffectEvidenceSynthesisEffectEstimate
+    with _$EffectEvidenceSynthesisEffectEstimate {
   EffectEvidenceSynthesisEffectEstimate._();
 
   /// [EffectEvidenceSynthesis_EffectEstimate]: The EffectEvidenceSynthesis
@@ -538,8 +536,8 @@ abstract class EffectEvidenceSynthesisEffectEstimate
 }
 
 @freezed
-abstract class EffectEvidenceSynthesisPrecisionEstimate
-    implements _$EffectEvidenceSynthesisPrecisionEstimate {
+class EffectEvidenceSynthesisPrecisionEstimate
+    with _$EffectEvidenceSynthesisPrecisionEstimate {
   EffectEvidenceSynthesisPrecisionEstimate._();
 
   /// [EffectEvidenceSynthesis_PrecisionEstimate]: The EffectEvidenceSynthesis
@@ -618,8 +616,7 @@ abstract class EffectEvidenceSynthesisPrecisionEstimate
 }
 
 @freezed
-abstract class EffectEvidenceSynthesisCertainty
-    implements _$EffectEvidenceSynthesisCertainty {
+class EffectEvidenceSynthesisCertainty with _$EffectEvidenceSynthesisCertainty {
   EffectEvidenceSynthesisCertainty._();
 
   /// [EffectEvidenceSynthesis_Certainty]: The EffectEvidenceSynthesis resource
@@ -688,8 +685,8 @@ abstract class EffectEvidenceSynthesisCertainty
 }
 
 @freezed
-abstract class EffectEvidenceSynthesisCertaintySubcomponent
-    implements _$EffectEvidenceSynthesisCertaintySubcomponent {
+class EffectEvidenceSynthesisCertaintySubcomponent
+    with _$EffectEvidenceSynthesisCertaintySubcomponent {
   EffectEvidenceSynthesisCertaintySubcomponent._();
 
   /// [EffectEvidenceSynthesis_CertaintySubcomponent]: The
@@ -757,7 +754,7 @@ abstract class EffectEvidenceSynthesisCertaintySubcomponent
 }
 
 @freezed
-abstract class Evidence with Resource implements _$Evidence {
+class Evidence with Resource, _$Evidence {
   Evidence._();
 
   /// [Evidence]: The Evidence resource describes the conditional state
@@ -1027,7 +1024,7 @@ abstract class Evidence with Resource implements _$Evidence {
 }
 
 @freezed
-abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
+class EvidenceVariable with Resource, _$EvidenceVariable {
   EvidenceVariable._();
 
   /// [EvidenceVariable]: The EvidenceVariable resource describes a "PICO"
@@ -1299,8 +1296,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
 }
 
 @freezed
-abstract class EvidenceVariableCharacteristic
-    implements _$EvidenceVariableCharacteristic {
+class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   EvidenceVariableCharacteristic._();
 
   /// [EvidenceVariable_Characteristic]: The EvidenceVariable resource describes
@@ -1446,9 +1442,7 @@ abstract class EvidenceVariableCharacteristic
 }
 
 @freezed
-abstract class ResearchDefinition
-    with Resource
-    implements _$ResearchDefinition {
+class ResearchDefinition with Resource, _$ResearchDefinition {
   ResearchDefinition._();
 
   /// [ResearchDefinition]: The ResearchDefinition resource describes the
@@ -1764,9 +1758,7 @@ abstract class ResearchDefinition
 }
 
 @freezed
-abstract class ResearchElementDefinition
-    with Resource
-    implements _$ResearchElementDefinition {
+class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   ResearchElementDefinition._();
 
   /// [ResearchElementDefinition]: The ResearchElementDefinition resource
@@ -2093,8 +2085,8 @@ abstract class ResearchElementDefinition
 }
 
 @freezed
-abstract class ResearchElementDefinitionCharacteristic
-    implements _$ResearchElementDefinitionCharacteristic {
+class ResearchElementDefinitionCharacteristic
+    with _$ResearchElementDefinitionCharacteristic {
   ResearchElementDefinitionCharacteristic._();
 
   /// [ResearchElementDefinition_Characteristic]: The ResearchElementDefinition
@@ -2283,9 +2275,7 @@ abstract class ResearchElementDefinitionCharacteristic
 }
 
 @freezed
-abstract class RiskEvidenceSynthesis
-    with Resource
-    implements _$RiskEvidenceSynthesis {
+class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   RiskEvidenceSynthesis._();
 
   /// [RiskEvidenceSynthesis]: The RiskEvidenceSynthesis resource describes the
@@ -2554,8 +2544,7 @@ abstract class RiskEvidenceSynthesis
 }
 
 @freezed
-abstract class RiskEvidenceSynthesisSampleSize
-    implements _$RiskEvidenceSynthesisSampleSize {
+class RiskEvidenceSynthesisSampleSize with _$RiskEvidenceSynthesisSampleSize {
   RiskEvidenceSynthesisSampleSize._();
 
   /// [RiskEvidenceSynthesis_SampleSize]: The RiskEvidenceSynthesis resource
@@ -2633,8 +2622,8 @@ abstract class RiskEvidenceSynthesisSampleSize
 }
 
 @freezed
-abstract class RiskEvidenceSynthesisRiskEstimate
-    implements _$RiskEvidenceSynthesisRiskEstimate {
+class RiskEvidenceSynthesisRiskEstimate
+    with _$RiskEvidenceSynthesisRiskEstimate {
   RiskEvidenceSynthesisRiskEstimate._();
 
   /// [RiskEvidenceSynthesis_RiskEstimate]: The RiskEvidenceSynthesis resource
@@ -2728,8 +2717,8 @@ abstract class RiskEvidenceSynthesisRiskEstimate
 }
 
 @freezed
-abstract class RiskEvidenceSynthesisPrecisionEstimate
-    implements _$RiskEvidenceSynthesisPrecisionEstimate {
+class RiskEvidenceSynthesisPrecisionEstimate
+    with _$RiskEvidenceSynthesisPrecisionEstimate {
   RiskEvidenceSynthesisPrecisionEstimate._();
 
   /// [RiskEvidenceSynthesis_PrecisionEstimate]: The RiskEvidenceSynthesis
@@ -2808,8 +2797,7 @@ abstract class RiskEvidenceSynthesisPrecisionEstimate
 }
 
 @freezed
-abstract class RiskEvidenceSynthesisCertainty
-    implements _$RiskEvidenceSynthesisCertainty {
+class RiskEvidenceSynthesisCertainty with _$RiskEvidenceSynthesisCertainty {
   RiskEvidenceSynthesisCertainty._();
 
   /// [RiskEvidenceSynthesis_Certainty]: The RiskEvidenceSynthesis resource
@@ -2878,8 +2866,8 @@ abstract class RiskEvidenceSynthesisCertainty
 }
 
 @freezed
-abstract class RiskEvidenceSynthesisCertaintySubcomponent
-    implements _$RiskEvidenceSynthesisCertaintySubcomponent {
+class RiskEvidenceSynthesisCertaintySubcomponent
+    with _$RiskEvidenceSynthesisCertaintySubcomponent {
   RiskEvidenceSynthesisCertaintySubcomponent._();
 
   /// [RiskEvidenceSynthesis_CertaintySubcomponent]: The RiskEvidenceSynthesis

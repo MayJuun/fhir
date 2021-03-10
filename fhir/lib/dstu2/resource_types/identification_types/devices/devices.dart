@@ -12,7 +12,7 @@ part 'devices.freezed.dart';
 part 'devices.g.dart';
 
 @freezed
-abstract class Device with Resource implements _$Device {
+class Device with Resource, _$Device {
   Device._();
   factory Device({
     @Default(Dstu2ResourceType.Device)
@@ -69,7 +69,7 @@ abstract class Device with Resource implements _$Device {
 }
 
 @freezed
-abstract class DeviceComponent with Resource implements _$DeviceComponent {
+class DeviceComponent with Resource, _$DeviceComponent {
   DeviceComponent._();
   factory DeviceComponent({
     @Default(Dstu2ResourceType.DeviceComponent)
@@ -115,7 +115,7 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
 }
 
 @freezed
-abstract class DeviceComponentProductionSpecification
+class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
   DeviceComponentProductionSpecification._();
   factory DeviceComponentProductionSpecification({
@@ -148,7 +148,7 @@ abstract class DeviceComponentProductionSpecification
 }
 
 @freezed
-abstract class DeviceMetric with Resource implements _$DeviceMetric {
+class DeviceMetric with Resource, _$DeviceMetric {
   DeviceMetric._();
   factory DeviceMetric({
     @Default(Dstu2ResourceType.DeviceMetric)
@@ -200,7 +200,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
 }
 
 @freezed
-abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
+class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
   factory DeviceMetricCalibration({
     Id? id,

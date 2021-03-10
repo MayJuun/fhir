@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'structure.dart';
 
@@ -8,6 +8,10 @@ part of 'structure.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Media _$MediaFromJson(Map<String, dynamic> json) {
   return _Media.fromJson(json);
 }
@@ -99,48 +103,49 @@ const $Media = _$MediaTearOff();
 /// @nodoc
 mixin _$Media {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-  Dstu2ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: MediaType.unknown)
-  MediaType get type;
-  CodeableConcept? get subtype;
-  List<Identifier>? get identifier;
-  Reference? get subject;
+  MediaType get type => throw _privateConstructorUsedError;
+  CodeableConcept? get subtype => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Reference? get subject => throw _privateConstructorUsedError;
   @JsonKey(name: 'operator')
-  Reference? get operator_;
-  CodeableConcept? get view;
-  String? get deviceName;
+  Reference? get operator_ => throw _privateConstructorUsedError;
+  CodeableConcept? get view => throw _privateConstructorUsedError;
+  String? get deviceName => throw _privateConstructorUsedError;
   @JsonKey(name: '_deviceName')
-  Element? get deviceNameElement;
-  PositiveInt? get height;
+  Element? get deviceNameElement => throw _privateConstructorUsedError;
+  PositiveInt? get height => throw _privateConstructorUsedError;
   @JsonKey(name: '_height')
-  Element? get heightElement;
-  PositiveInt? get width;
+  Element? get heightElement => throw _privateConstructorUsedError;
+  PositiveInt? get width => throw _privateConstructorUsedError;
   @JsonKey(name: '_width')
-  Element? get widthElement;
-  PositiveInt? get frames;
+  Element? get widthElement => throw _privateConstructorUsedError;
+  PositiveInt? get frames => throw _privateConstructorUsedError;
   @JsonKey(name: '_frames')
-  Element? get framesElement;
-  UnsignedInt? get duration;
+  Element? get framesElement => throw _privateConstructorUsedError;
+  UnsignedInt? get duration => throw _privateConstructorUsedError;
   @JsonKey(name: '_duration')
-  Element? get durationElement;
-  Attachment get content;
+  Element? get durationElement => throw _privateConstructorUsedError;
+  Attachment get content => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MediaCopyWith<Media> get copyWith;
+  $MediaCopyWith<Media> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -246,62 +251,116 @@ class _$MediaCopyWithImpl<$Res> implements $MediaCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as MediaType,
-      subtype:
-          subtype == freezed ? _value.subtype : subtype as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as MediaType,
+      subtype: subtype == freezed
+          ? _value.subtype
+          : subtype // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      operator_:
-          operator_ == freezed ? _value.operator_ : operator_ as Reference?,
-      view: view == freezed ? _value.view : view as CodeableConcept?,
-      deviceName:
-          deviceName == freezed ? _value.deviceName : deviceName as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      operator_: operator_ == freezed
+          ? _value.operator_
+          : operator_ // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      view: view == freezed
+          ? _value.view
+          : view // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      deviceName: deviceName == freezed
+          ? _value.deviceName
+          : deviceName // ignore: cast_nullable_to_non_nullable
+              as String?,
       deviceNameElement: deviceNameElement == freezed
           ? _value.deviceNameElement
-          : deviceNameElement as Element?,
-      height: height == freezed ? _value.height : height as PositiveInt?,
+          : deviceNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       heightElement: heightElement == freezed
           ? _value.heightElement
-          : heightElement as Element?,
-      width: width == freezed ? _value.width : width as PositiveInt?,
+          : heightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      width: width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       widthElement: widthElement == freezed
           ? _value.widthElement
-          : widthElement as Element?,
-      frames: frames == freezed ? _value.frames : frames as PositiveInt?,
+          : widthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      frames: frames == freezed
+          ? _value.frames
+          : frames // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       framesElement: framesElement == freezed
           ? _value.framesElement
-          : framesElement as Element?,
-      duration:
-          duration == freezed ? _value.duration : duration as UnsignedInt?,
+          : framesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      duration: duration == freezed
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       durationElement: durationElement == freezed
           ? _value.durationElement
-          : durationElement as Element?,
-      content: content == freezed ? _value.content : content as Attachment,
+          : durationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as Attachment,
     ));
   }
 
@@ -575,62 +634,116 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
     return _then(_Media(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as MediaType,
-      subtype:
-          subtype == freezed ? _value.subtype : subtype as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as MediaType,
+      subtype: subtype == freezed
+          ? _value.subtype
+          : subtype // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      operator_:
-          operator_ == freezed ? _value.operator_ : operator_ as Reference?,
-      view: view == freezed ? _value.view : view as CodeableConcept?,
-      deviceName:
-          deviceName == freezed ? _value.deviceName : deviceName as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      operator_: operator_ == freezed
+          ? _value.operator_
+          : operator_ // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      view: view == freezed
+          ? _value.view
+          : view // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      deviceName: deviceName == freezed
+          ? _value.deviceName
+          : deviceName // ignore: cast_nullable_to_non_nullable
+              as String?,
       deviceNameElement: deviceNameElement == freezed
           ? _value.deviceNameElement
-          : deviceNameElement as Element?,
-      height: height == freezed ? _value.height : height as PositiveInt?,
+          : deviceNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       heightElement: heightElement == freezed
           ? _value.heightElement
-          : heightElement as Element?,
-      width: width == freezed ? _value.width : width as PositiveInt?,
+          : heightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      width: width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       widthElement: widthElement == freezed
           ? _value.widthElement
-          : widthElement as Element?,
-      frames: frames == freezed ? _value.frames : frames as PositiveInt?,
+          : widthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      frames: frames == freezed
+          ? _value.frames
+          : frames // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       framesElement: framesElement == freezed
           ? _value.framesElement
-          : framesElement as Element?,
-      duration:
-          duration == freezed ? _value.duration : duration as UnsignedInt?,
+          : framesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      duration: duration == freezed
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       durationElement: durationElement == freezed
           ? _value.durationElement
-          : durationElement as Element?,
-      content: content == freezed ? _value.content : content as Attachment,
+          : durationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as Attachment,
     ));
   }
 }
@@ -878,7 +991,6 @@ class _$_Media extends _Media {
 }
 
 abstract class _Media extends Media {
-  _Media._() : super._();
   factory _Media(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
           Dstu2ResourceType resourceType,
@@ -919,79 +1031,81 @@ abstract class _Media extends Media {
       @JsonKey(name: '_duration')
           Element? durationElement,
       required Attachment content}) = _$_Media;
+  _Media._() : super._();
 
   factory _Media.fromJson(Map<String, dynamic> json) = _$_Media.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: MediaType.unknown)
-  MediaType get type;
+  MediaType get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get subtype;
+  CodeableConcept? get subtype => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'operator')
-  Reference? get operator_;
+  Reference? get operator_ => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get view;
+  CodeableConcept? get view => throw _privateConstructorUsedError;
   @override
-  String? get deviceName;
+  String? get deviceName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_deviceName')
-  Element? get deviceNameElement;
+  Element? get deviceNameElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get height;
+  PositiveInt? get height => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_height')
-  Element? get heightElement;
+  Element? get heightElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get width;
+  PositiveInt? get width => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_width')
-  Element? get widthElement;
+  Element? get widthElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get frames;
+  PositiveInt? get frames => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_frames')
-  Element? get framesElement;
+  Element? get framesElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get duration;
+  UnsignedInt? get duration => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_duration')
-  Element? get durationElement;
+  Element? get durationElement => throw _privateConstructorUsedError;
   @override
-  Attachment get content;
+  Attachment get content => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MediaCopyWith<_Media> get copyWith;
+  _$MediaCopyWith<_Media> get copyWith => throw _privateConstructorUsedError;
 }
 
 Binary _$BinaryFromJson(Map<String, dynamic> json) {
@@ -1042,23 +1156,23 @@ const $Binary = _$BinaryTearOff();
 /// @nodoc
 mixin _$Binary {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-  Dstu2ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Code? get contentType;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Code? get contentType => throw _privateConstructorUsedError;
   @JsonKey(name: '_contentType')
-  Element? get contentTypeElement;
-  Base64Binary? get content;
+  Element? get contentTypeElement => throw _privateConstructorUsedError;
+  Base64Binary? get content => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BinaryCopyWith<Binary> get copyWith;
+  $BinaryCopyWith<Binary> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1111,25 +1225,44 @@ class _$BinaryCopyWithImpl<$Res> implements $BinaryCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      contentType:
-          contentType == freezed ? _value.contentType : contentType as Code?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contentType: contentType == freezed
+          ? _value.contentType
+          : contentType // ignore: cast_nullable_to_non_nullable
+              as Code?,
       contentTypeElement: contentTypeElement == freezed
           ? _value.contentTypeElement
-          : contentTypeElement as Element?,
-      content: content == freezed ? _value.content : content as Base64Binary?,
+          : contentTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
     ));
   }
 
@@ -1234,25 +1367,44 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
     return _then(_Binary(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      contentType:
-          contentType == freezed ? _value.contentType : contentType as Code?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contentType: contentType == freezed
+          ? _value.contentType
+          : contentType // ignore: cast_nullable_to_non_nullable
+              as Code?,
       contentTypeElement: contentTypeElement == freezed
           ? _value.contentTypeElement
-          : contentTypeElement as Element?,
-      content: content == freezed ? _value.content : content as Base64Binary?,
+          : contentTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
     ));
   }
 }
@@ -1370,7 +1522,6 @@ class _$_Binary extends _Binary {
 }
 
 abstract class _Binary extends Binary {
-  _Binary._() : super._();
   factory _Binary(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
           Dstu2ResourceType resourceType,
@@ -1386,36 +1537,37 @@ abstract class _Binary extends Binary {
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
       Base64Binary? content}) = _$_Binary;
+  _Binary._() : super._();
 
   factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Code? get contentType;
+  Code? get contentType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_contentType')
-  Element? get contentTypeElement;
+  Element? get contentTypeElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get content;
+  Base64Binary? get content => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BinaryCopyWith<_Binary> get copyWith;
+  _$BinaryCopyWith<_Binary> get copyWith => throw _privateConstructorUsedError;
 }
 
 Bundle _$BundleFromJson(Map<String, dynamic> json) {
@@ -1476,29 +1628,29 @@ const $Bundle = _$BundleTearOff();
 /// @nodoc
 mixin _$Bundle {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-  Dstu2ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: BundleType.unknown)
-  BundleType get type;
+  BundleType get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  UnsignedInt? get total;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  UnsignedInt? get total => throw _privateConstructorUsedError;
   @JsonKey(name: '_total')
-  Element? get totalElement;
-  List<BundleLink>? get link;
-  List<BundleEntry>? get entry;
-  Signature? get signature;
+  Element? get totalElement => throw _privateConstructorUsedError;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
+  List<BundleEntry>? get entry => throw _privateConstructorUsedError;
+  Signature? get signature => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleCopyWith<Bundle> get copyWith;
+  $BundleCopyWith<Bundle> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1563,30 +1715,60 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      type: type == freezed ? _value.type : type as BundleType,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      total: total == freezed ? _value.total : total as UnsignedInt?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as BundleType,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      total: total == freezed
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       totalElement: totalElement == freezed
           ? _value.totalElement
-          : totalElement as Element?,
-      link: link == freezed ? _value.link : link as List<BundleLink>?,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>?,
-      signature:
-          signature == freezed ? _value.signature : signature as Signature?,
+          : totalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<BundleLink>?,
+      entry: entry == freezed
+          ? _value.entry
+          : entry // ignore: cast_nullable_to_non_nullable
+              as List<BundleEntry>?,
+      signature: signature == freezed
+          ? _value.signature
+          : signature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
     ));
   }
 
@@ -1727,30 +1909,60 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
     return _then(_Bundle(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      type: type == freezed ? _value.type : type as BundleType,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      total: total == freezed ? _value.total : total as UnsignedInt?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as BundleType,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      total: total == freezed
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       totalElement: totalElement == freezed
           ? _value.totalElement
-          : totalElement as Element?,
-      link: link == freezed ? _value.link : link as List<BundleLink>?,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>?,
-      signature:
-          signature == freezed ? _value.signature : signature as Signature?,
+          : totalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<BundleLink>?,
+      entry: entry == freezed
+          ? _value.entry
+          : entry // ignore: cast_nullable_to_non_nullable
+              as List<BundleEntry>?,
+      signature: signature == freezed
+          ? _value.signature
+          : signature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
     ));
   }
 }
@@ -1897,7 +2109,6 @@ class _$_Bundle extends _Bundle {
 }
 
 abstract class _Bundle extends Bundle {
-  _Bundle._() : super._();
   factory _Bundle(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
           Dstu2ResourceType resourceType,
@@ -1919,46 +2130,47 @@ abstract class _Bundle extends Bundle {
       List<BundleLink>? link,
       List<BundleEntry>? entry,
       Signature? signature}) = _$_Bundle;
+  _Bundle._() : super._();
 
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: BundleType.unknown)
-  BundleType get type;
+  BundleType get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get total;
+  UnsignedInt? get total => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_total')
-  Element? get totalElement;
+  Element? get totalElement => throw _privateConstructorUsedError;
   @override
-  List<BundleLink>? get link;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
   @override
-  List<BundleEntry>? get entry;
+  List<BundleEntry>? get entry => throw _privateConstructorUsedError;
   @override
-  Signature? get signature;
+  Signature? get signature => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleCopyWith<_Bundle> get copyWith;
+  _$BundleCopyWith<_Bundle> get copyWith => throw _privateConstructorUsedError;
 }
 
 BundleLink _$BundleLinkFromJson(Map<String, dynamic> json) {
@@ -2000,22 +2212,24 @@ const $BundleLink = _$BundleLinkTearOff();
 
 /// @nodoc
 mixin _$BundleLink {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
-  String get relation;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  String get relation => throw _privateConstructorUsedError;
   @JsonKey(name: '_relation')
-  Element? get relationElement;
-  FhirUri get url;
+  Element? get relationElement => throw _privateConstructorUsedError;
+  FhirUri get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleLinkCopyWith<BundleLink> get copyWith;
+  $BundleLinkCopyWith<BundleLink> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2057,23 +2271,38 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
     Object? urlElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      relation: relation == freezed ? _value.relation : relation as String,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      relation: relation == freezed
+          ? _value.relation
+          : relation // ignore: cast_nullable_to_non_nullable
+              as String,
       relationElement: relationElement == freezed
           ? _value.relationElement
-          : relationElement as Element?,
-      url: url == freezed ? _value.url : url as FhirUri,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : relationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -2144,23 +2373,38 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
     Object? urlElement = freezed,
   }) {
     return _then(_BundleLink(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      relation: relation == freezed ? _value.relation : relation as String,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      relation: relation == freezed
+          ? _value.relation
+          : relation // ignore: cast_nullable_to_non_nullable
+              as String,
       relationElement: relationElement == freezed
           ? _value.relationElement
-          : relationElement as Element?,
-      url: url == freezed ? _value.url : url as FhirUri,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : relationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -2261,7 +2505,6 @@ class _$_BundleLink extends _BundleLink {
 }
 
 abstract class _BundleLink extends BundleLink {
-  _BundleLink._() : super._();
   factory _BundleLink(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2271,33 +2514,36 @@ abstract class _BundleLink extends BundleLink {
       @JsonKey(name: '_relation') Element? relationElement,
       required FhirUri url,
       @JsonKey(name: '_url') Element? urlElement}) = _$_BundleLink;
+  _BundleLink._() : super._();
 
   factory _BundleLink.fromJson(Map<String, dynamic> json) =
       _$_BundleLink.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  String get relation;
+  String get relation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_relation')
-  Element? get relationElement;
+  Element? get relationElement => throw _privateConstructorUsedError;
   @override
-  FhirUri get url;
+  FhirUri get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleLinkCopyWith<_BundleLink> get copyWith;
+  _$BundleLinkCopyWith<_BundleLink> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
@@ -2345,24 +2591,26 @@ const $BundleEntry = _$BundleEntryTearOff();
 
 /// @nodoc
 mixin _$BundleEntry {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
-  List<BundleLink>? get link;
-  FhirUri? get fullUrl;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
+  FhirUri? get fullUrl => throw _privateConstructorUsedError;
   @JsonKey(name: '_fullUrl')
-  Element? get fullUrlElement;
-  Resource? get resource;
-  BundleEntrySearch? get search;
-  BundleEntryRequest? get request;
-  BundleEntryResponse? get response;
+  Element? get fullUrlElement => throw _privateConstructorUsedError;
+  Resource? get resource => throw _privateConstructorUsedError;
+  BundleEntrySearch? get search => throw _privateConstructorUsedError;
+  BundleEntryRequest? get request => throw _privateConstructorUsedError;
+  BundleEntryResponse? get response => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleEntryCopyWith<BundleEntry> get copyWith;
+  $BundleEntryCopyWith<BundleEntry> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2412,28 +2660,50 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
     Object? response = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      link: link == freezed ? _value.link : link as List<BundleLink>?,
-      fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<BundleLink>?,
+      fullUrl: fullUrl == freezed
+          ? _value.fullUrl
+          : fullUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       fullUrlElement: fullUrlElement == freezed
           ? _value.fullUrlElement
-          : fullUrlElement as Element?,
-      resource: resource == freezed ? _value.resource : resource as Resource?,
-      search: search == freezed ? _value.search : search as BundleEntrySearch?,
-      request:
-          request == freezed ? _value.request : request as BundleEntryRequest?,
+          : fullUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource?,
+      search: search == freezed
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as BundleEntrySearch?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as BundleEntryRequest?,
       response: response == freezed
           ? _value.response
-          : response as BundleEntryResponse?,
+          : response // ignore: cast_nullable_to_non_nullable
+              as BundleEntryResponse?,
     ));
   }
 
@@ -2537,28 +2807,50 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
     Object? response = freezed,
   }) {
     return _then(_BundleEntry(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      link: link == freezed ? _value.link : link as List<BundleLink>?,
-      fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<BundleLink>?,
+      fullUrl: fullUrl == freezed
+          ? _value.fullUrl
+          : fullUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       fullUrlElement: fullUrlElement == freezed
           ? _value.fullUrlElement
-          : fullUrlElement as Element?,
-      resource: resource == freezed ? _value.resource : resource as Resource?,
-      search: search == freezed ? _value.search : search as BundleEntrySearch?,
-      request:
-          request == freezed ? _value.request : request as BundleEntryRequest?,
+          : fullUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource?,
+      search: search == freezed
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as BundleEntrySearch?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as BundleEntryRequest?,
       response: response == freezed
           ? _value.response
-          : response as BundleEntryResponse?,
+          : response // ignore: cast_nullable_to_non_nullable
+              as BundleEntryResponse?,
     ));
   }
 }
@@ -2678,7 +2970,6 @@ class _$_BundleEntry extends _BundleEntry {
 }
 
 abstract class _BundleEntry extends BundleEntry {
-  _BundleEntry._() : super._();
   factory _BundleEntry(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2691,38 +2982,41 @@ abstract class _BundleEntry extends BundleEntry {
       BundleEntrySearch? search,
       BundleEntryRequest? request,
       BundleEntryResponse? response}) = _$_BundleEntry;
+  _BundleEntry._() : super._();
 
   factory _BundleEntry.fromJson(Map<String, dynamic> json) =
       _$_BundleEntry.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  List<BundleLink>? get link;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
   @override
-  FhirUri? get fullUrl;
+  FhirUri? get fullUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fullUrl')
-  Element? get fullUrlElement;
+  Element? get fullUrlElement => throw _privateConstructorUsedError;
   @override
-  Resource? get resource;
+  Resource? get resource => throw _privateConstructorUsedError;
   @override
-  BundleEntrySearch? get search;
+  BundleEntrySearch? get search => throw _privateConstructorUsedError;
   @override
-  BundleEntryRequest? get request;
+  BundleEntryRequest? get request => throw _privateConstructorUsedError;
   @override
-  BundleEntryResponse? get response;
+  BundleEntryResponse? get response => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleEntryCopyWith<_BundleEntry> get copyWith;
+  _$BundleEntryCopyWith<_BundleEntry> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BundleEntrySearch _$BundleEntrySearchFromJson(Map<String, dynamic> json) {
@@ -2764,23 +3058,25 @@ const $BundleEntrySearch = _$BundleEntrySearchTearOff();
 
 /// @nodoc
 mixin _$BundleEntrySearch {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchMode.unknown)
-  SearchMode? get mode;
+  SearchMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
-  Element? get modeElement;
-  Decimal? get score;
+  Element? get modeElement => throw _privateConstructorUsedError;
+  Decimal? get score => throw _privateConstructorUsedError;
   @JsonKey(name: '_score')
-  Element? get scoreElement;
+  Element? get scoreElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleEntrySearchCopyWith<BundleEntrySearch> get copyWith;
+  $BundleEntrySearchCopyWith<BundleEntrySearch> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2823,23 +3119,38 @@ class _$BundleEntrySearchCopyWithImpl<$Res>
     Object? scoreElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      mode: mode == freezed ? _value.mode : mode as SearchMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
-      score: score == freezed ? _value.score : score as Decimal?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as SearchMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       scoreElement: scoreElement == freezed
           ? _value.scoreElement
-          : scoreElement as Element?,
+          : scoreElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -2912,23 +3223,38 @@ class __$BundleEntrySearchCopyWithImpl<$Res>
     Object? scoreElement = freezed,
   }) {
     return _then(_BundleEntrySearch(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      mode: mode == freezed ? _value.mode : mode as SearchMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
-      score: score == freezed ? _value.score : score as Decimal?,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as SearchMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       scoreElement: scoreElement == freezed
           ? _value.scoreElement
-          : scoreElement as Element?,
+          : scoreElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -3029,7 +3355,6 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
 }
 
 abstract class _BundleEntrySearch extends BundleEntrySearch {
-  _BundleEntrySearch._() : super._();
   factory _BundleEntrySearch(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3039,34 +3364,37 @@ abstract class _BundleEntrySearch extends BundleEntrySearch {
       @JsonKey(name: '_mode') Element? modeElement,
       Decimal? score,
       @JsonKey(name: '_score') Element? scoreElement}) = _$_BundleEntrySearch;
+  _BundleEntrySearch._() : super._();
 
   factory _BundleEntrySearch.fromJson(Map<String, dynamic> json) =
       _$_BundleEntrySearch.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SearchMode.unknown)
-  SearchMode? get mode;
+  SearchMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get score;
+  Decimal? get score => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_score')
-  Element? get scoreElement;
+  Element? get scoreElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleEntrySearchCopyWith<_BundleEntrySearch> get copyWith;
+  _$BundleEntrySearchCopyWith<_BundleEntrySearch> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BundleEntryRequest _$BundleEntryRequestFromJson(Map<String, dynamic> json) {
@@ -3133,35 +3461,37 @@ const $BundleEntryRequest = _$BundleEntryRequestTearOff();
 
 /// @nodoc
 mixin _$BundleEntryRequest {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: RequestMethod.unknown)
-  RequestMethod get method;
+  RequestMethod get method => throw _privateConstructorUsedError;
   @JsonKey(name: '_method')
-  Element? get methodElement;
-  FhirUri get url;
+  Element? get methodElement => throw _privateConstructorUsedError;
+  FhirUri get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  String? get ifNoneMatch;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  String? get ifNoneMatch => throw _privateConstructorUsedError;
   @JsonKey(name: '_ifNoneMatch')
-  Element? get ifNoneMatchElement;
-  Instant? get ifModifiedSince;
+  Element? get ifNoneMatchElement => throw _privateConstructorUsedError;
+  Instant? get ifModifiedSince => throw _privateConstructorUsedError;
   @JsonKey(name: '_ifModifiedSince')
-  Element? get ifModifiedSinceElement;
-  String? get ifMatch;
+  Element? get ifModifiedSinceElement => throw _privateConstructorUsedError;
+  String? get ifMatch => throw _privateConstructorUsedError;
   @JsonKey(name: '_ifMatch')
-  Element? get ifMatchElement;
-  String? get ifNoneExist;
+  Element? get ifMatchElement => throw _privateConstructorUsedError;
+  String? get ifNoneExist => throw _privateConstructorUsedError;
   @JsonKey(name: '_ifNoneExist')
-  Element? get ifNoneExistElement;
+  Element? get ifNoneExistElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleEntryRequestCopyWith<BundleEntryRequest> get copyWith;
+  $BundleEntryRequestCopyWith<BundleEntryRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3224,43 +3554,70 @@ class _$BundleEntryRequestCopyWithImpl<$Res>
     Object? ifNoneExistElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      method: method == freezed ? _value.method : method as RequestMethod,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      method: method == freezed
+          ? _value.method
+          : method // ignore: cast_nullable_to_non_nullable
+              as RequestMethod,
       methodElement: methodElement == freezed
           ? _value.methodElement
-          : methodElement as Element?,
-      url: url == freezed ? _value.url : url as FhirUri,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      ifNoneMatch:
-          ifNoneMatch == freezed ? _value.ifNoneMatch : ifNoneMatch as String?,
+          : methodElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      ifNoneMatch: ifNoneMatch == freezed
+          ? _value.ifNoneMatch
+          : ifNoneMatch // ignore: cast_nullable_to_non_nullable
+              as String?,
       ifNoneMatchElement: ifNoneMatchElement == freezed
           ? _value.ifNoneMatchElement
-          : ifNoneMatchElement as Element?,
+          : ifNoneMatchElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       ifModifiedSince: ifModifiedSince == freezed
           ? _value.ifModifiedSince
-          : ifModifiedSince as Instant?,
+          : ifModifiedSince // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       ifModifiedSinceElement: ifModifiedSinceElement == freezed
           ? _value.ifModifiedSinceElement
-          : ifModifiedSinceElement as Element?,
-      ifMatch: ifMatch == freezed ? _value.ifMatch : ifMatch as String?,
+          : ifModifiedSinceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      ifMatch: ifMatch == freezed
+          ? _value.ifMatch
+          : ifMatch // ignore: cast_nullable_to_non_nullable
+              as String?,
       ifMatchElement: ifMatchElement == freezed
           ? _value.ifMatchElement
-          : ifMatchElement as Element?,
-      ifNoneExist:
-          ifNoneExist == freezed ? _value.ifNoneExist : ifNoneExist as String?,
+          : ifMatchElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      ifNoneExist: ifNoneExist == freezed
+          ? _value.ifNoneExist
+          : ifNoneExist // ignore: cast_nullable_to_non_nullable
+              as String?,
       ifNoneExistElement: ifNoneExistElement == freezed
           ? _value.ifNoneExistElement
-          : ifNoneExistElement as Element?,
+          : ifNoneExistElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -3401,43 +3758,70 @@ class __$BundleEntryRequestCopyWithImpl<$Res>
     Object? ifNoneExistElement = freezed,
   }) {
     return _then(_BundleEntryRequest(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      method: method == freezed ? _value.method : method as RequestMethod,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      method: method == freezed
+          ? _value.method
+          : method // ignore: cast_nullable_to_non_nullable
+              as RequestMethod,
       methodElement: methodElement == freezed
           ? _value.methodElement
-          : methodElement as Element?,
-      url: url == freezed ? _value.url : url as FhirUri,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      ifNoneMatch:
-          ifNoneMatch == freezed ? _value.ifNoneMatch : ifNoneMatch as String?,
+          : methodElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      ifNoneMatch: ifNoneMatch == freezed
+          ? _value.ifNoneMatch
+          : ifNoneMatch // ignore: cast_nullable_to_non_nullable
+              as String?,
       ifNoneMatchElement: ifNoneMatchElement == freezed
           ? _value.ifNoneMatchElement
-          : ifNoneMatchElement as Element?,
+          : ifNoneMatchElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       ifModifiedSince: ifModifiedSince == freezed
           ? _value.ifModifiedSince
-          : ifModifiedSince as Instant?,
+          : ifModifiedSince // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       ifModifiedSinceElement: ifModifiedSinceElement == freezed
           ? _value.ifModifiedSinceElement
-          : ifModifiedSinceElement as Element?,
-      ifMatch: ifMatch == freezed ? _value.ifMatch : ifMatch as String?,
+          : ifModifiedSinceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      ifMatch: ifMatch == freezed
+          ? _value.ifMatch
+          : ifMatch // ignore: cast_nullable_to_non_nullable
+              as String?,
       ifMatchElement: ifMatchElement == freezed
           ? _value.ifMatchElement
-          : ifMatchElement as Element?,
-      ifNoneExist:
-          ifNoneExist == freezed ? _value.ifNoneExist : ifNoneExist as String?,
+          : ifMatchElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      ifNoneExist: ifNoneExist == freezed
+          ? _value.ifNoneExist
+          : ifNoneExist // ignore: cast_nullable_to_non_nullable
+              as String?,
       ifNoneExistElement: ifNoneExistElement == freezed
           ? _value.ifNoneExistElement
-          : ifNoneExistElement as Element?,
+          : ifNoneExistElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -3598,7 +3982,6 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
 }
 
 abstract class _BundleEntryRequest extends BundleEntryRequest {
-  _BundleEntryRequest._() : super._();
   factory _BundleEntryRequest(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -3625,54 +4008,57 @@ abstract class _BundleEntryRequest extends BundleEntryRequest {
       String? ifNoneExist,
       @JsonKey(name: '_ifNoneExist')
           Element? ifNoneExistElement}) = _$_BundleEntryRequest;
+  _BundleEntryRequest._() : super._();
 
   factory _BundleEntryRequest.fromJson(Map<String, dynamic> json) =
       _$_BundleEntryRequest.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: RequestMethod.unknown)
-  RequestMethod get method;
+  RequestMethod get method => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_method')
-  Element? get methodElement;
+  Element? get methodElement => throw _privateConstructorUsedError;
   @override
-  FhirUri get url;
+  FhirUri get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get ifNoneMatch;
+  String? get ifNoneMatch => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ifNoneMatch')
-  Element? get ifNoneMatchElement;
+  Element? get ifNoneMatchElement => throw _privateConstructorUsedError;
   @override
-  Instant? get ifModifiedSince;
+  Instant? get ifModifiedSince => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ifModifiedSince')
-  Element? get ifModifiedSinceElement;
+  Element? get ifModifiedSinceElement => throw _privateConstructorUsedError;
   @override
-  String? get ifMatch;
+  String? get ifMatch => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ifMatch')
-  Element? get ifMatchElement;
+  Element? get ifMatchElement => throw _privateConstructorUsedError;
   @override
-  String? get ifNoneExist;
+  String? get ifNoneExist => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_ifNoneExist')
-  Element? get ifNoneExistElement;
+  Element? get ifNoneExistElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleEntryRequestCopyWith<_BundleEntryRequest> get copyWith;
+  _$BundleEntryRequestCopyWith<_BundleEntryRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BundleEntryResponse _$BundleEntryResponseFromJson(Map<String, dynamic> json) {
@@ -3722,28 +4108,30 @@ const $BundleEntryResponse = _$BundleEntryResponseTearOff();
 
 /// @nodoc
 mixin _$BundleEntryResponse {
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
-  String get status;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  String get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  FhirUri? get location;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  FhirUri? get location => throw _privateConstructorUsedError;
   @JsonKey(name: '_location')
-  Element? get locationElement;
-  String? get etag;
+  Element? get locationElement => throw _privateConstructorUsedError;
+  String? get etag => throw _privateConstructorUsedError;
   @JsonKey(name: '_etag')
-  Element? get etagElement;
-  Instant? get lastModified;
+  Element? get etagElement => throw _privateConstructorUsedError;
+  Instant? get lastModified => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastModified')
-  Element? get lastModifiedElement;
+  Element? get lastModifiedElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleEntryResponseCopyWith<BundleEntryResponse> get copyWith;
+  $BundleEntryResponseCopyWith<BundleEntryResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3796,33 +4184,54 @@ class _$BundleEntryResponseCopyWithImpl<$Res>
     Object? lastModifiedElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      status: status == freezed ? _value.status : status as String,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
-      location: location == freezed ? _value.location : location as FhirUri?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as Element?,
-      etag: etag == freezed ? _value.etag : etag as String?,
-      etagElement:
-          etagElement == freezed ? _value.etagElement : etagElement as Element?,
+          : locationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      etag: etag == freezed
+          ? _value.etag
+          : etag // ignore: cast_nullable_to_non_nullable
+              as String?,
+      etagElement: etagElement == freezed
+          ? _value.etagElement
+          : etagElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       lastModified: lastModified == freezed
           ? _value.lastModified
-          : lastModified as Instant?,
+          : lastModified // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       lastModifiedElement: lastModifiedElement == freezed
           ? _value.lastModifiedElement
-          : lastModifiedElement as Element?,
+          : lastModifiedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -3929,33 +4338,54 @@ class __$BundleEntryResponseCopyWithImpl<$Res>
     Object? lastModifiedElement = freezed,
   }) {
     return _then(_BundleEntryResponse(
-      id: id == freezed ? _value.id : id as Id?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
-      status: status == freezed ? _value.status : status as String,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
-      location: location == freezed ? _value.location : location as FhirUri?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as Element?,
-      etag: etag == freezed ? _value.etag : etag as String?,
-      etagElement:
-          etagElement == freezed ? _value.etagElement : etagElement as Element?,
+          : locationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      etag: etag == freezed
+          ? _value.etag
+          : etag // ignore: cast_nullable_to_non_nullable
+              as String?,
+      etagElement: etagElement == freezed
+          ? _value.etagElement
+          : etagElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       lastModified: lastModified == freezed
           ? _value.lastModified
-          : lastModified as Instant?,
+          : lastModified // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       lastModifiedElement: lastModifiedElement == freezed
           ? _value.lastModifiedElement
-          : lastModifiedElement as Element?,
+          : lastModifiedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -4086,7 +4516,6 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
 }
 
 abstract class _BundleEntryResponse extends BundleEntryResponse {
-  _BundleEntryResponse._() : super._();
   factory _BundleEntryResponse(
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4101,43 +4530,46 @@ abstract class _BundleEntryResponse extends BundleEntryResponse {
           Instant? lastModified,
           @JsonKey(name: '_lastModified') Element? lastModifiedElement}) =
       _$_BundleEntryResponse;
+  _BundleEntryResponse._() : super._();
 
   factory _BundleEntryResponse.fromJson(Map<String, dynamic> json) =
       _$_BundleEntryResponse.fromJson;
 
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
-  String get status;
+  String get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get location;
+  FhirUri? get location => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_location')
-  Element? get locationElement;
+  Element? get locationElement => throw _privateConstructorUsedError;
   @override
-  String? get etag;
+  String? get etag => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_etag')
-  Element? get etagElement;
+  Element? get etagElement => throw _privateConstructorUsedError;
   @override
-  Instant? get lastModified;
+  Instant? get lastModified => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_lastModified')
-  Element? get lastModifiedElement;
+  Element? get lastModifiedElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleEntryResponseCopyWith<_BundleEntryResponse> get copyWith;
+  _$BundleEntryResponseCopyWith<_BundleEntryResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Basic _$BasicFromJson(Map<String, dynamic> json) {
@@ -4203,31 +4635,32 @@ const $Basic = _$BasicTearOff();
 /// @nodoc
 mixin _$Basic {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-  Dstu2ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
-  CodeableConcept get code;
-  Reference? get subject;
-  Reference? get author;
-  Date? get created;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get author => throw _privateConstructorUsedError;
+  Date? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
-  Element? get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BasicCopyWith<Basic> get copyWith;
+  $BasicCopyWith<Basic> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4299,39 +4732,72 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      author: author == freezed ? _value.author : author as Reference?,
-      created: created == freezed ? _value.created : created as Date?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as Date?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element?,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -4499,39 +4965,72 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
     return _then(_Basic(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      author: author == freezed ? _value.author : author as Reference?,
-      created: created == freezed ? _value.created : created as Date?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as Date?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element?,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -4698,7 +5197,6 @@ class _$_Basic extends _Basic {
 }
 
 abstract class _Basic extends Basic {
-  _Basic._() : super._();
   factory _Basic(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
           Dstu2ResourceType resourceType,
@@ -4722,49 +5220,51 @@ abstract class _Basic extends Basic {
       Date? created,
       @JsonKey(name: '_created')
           Element? createdElement}) = _$_Basic;
+  _Basic._() : super._();
 
   factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  Reference? get author;
+  Reference? get author => throw _privateConstructorUsedError;
   @override
-  Date? get created;
+  Date? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element? get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BasicCopyWith<_Basic> get copyWith;
+  _$BasicCopyWith<_Basic> get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part 'management.freezed.dart';
 part 'management.g.dart';
 
 @freezed
-abstract class Encounter with Resource implements _$Encounter {
+class Encounter with Resource, _$Encounter {
   Encounter._();
 
   /// [Encounter]: An interaction between a patient and healthcare provider(s)
@@ -209,7 +209,7 @@ abstract class Encounter with Resource implements _$Encounter {
 }
 
 @freezed
-abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
+class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
 
   /// [Encounter_StatusHistory]: An interaction between a patient and healthcare
@@ -274,7 +274,7 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
 }
 
 @freezed
-abstract class EncounterClassHistory implements _$EncounterClassHistory {
+class EncounterClassHistory with _$EncounterClassHistory {
   EncounterClassHistory._();
 
   /// [Encounter_ClassHistory]: An interaction between a patient and healthcare
@@ -334,7 +334,7 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
 }
 
 @freezed
-abstract class EncounterParticipant implements _$EncounterParticipant {
+class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
 
   /// [Encounter_Participant]: An interaction between a patient and healthcare
@@ -399,7 +399,7 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
 }
 
 @freezed
-abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
+class EncounterDiagnosis with _$EncounterDiagnosis {
   EncounterDiagnosis._();
 
   /// [Encounter_Diagnosis]: An interaction between a patient and healthcare
@@ -469,7 +469,7 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
 }
 
 @freezed
-abstract class EncounterHospitalization implements _$EncounterHospitalization {
+class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
 
   /// [Encounter_Hospitalization]: An interaction between a patient and
@@ -556,7 +556,7 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
 }
 
 @freezed
-abstract class EncounterLocation implements _$EncounterLocation {
+class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
 
   /// [Encounter_Location]: An interaction between a patient and healthcare
@@ -631,7 +631,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
 }
 
 @freezed
-abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
+class EpisodeOfCare with Resource, _$EpisodeOfCare {
   EpisodeOfCare._();
 
   /// [EpisodeOfCare]: An association between a patient and an organization /
@@ -775,8 +775,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
 }
 
 @freezed
-abstract class EpisodeOfCareStatusHistory
-    implements _$EpisodeOfCareStatusHistory {
+class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
 
   /// [EpisodeOfCare_StatusHistory]: An association between a patient and an
@@ -843,7 +842,7 @@ abstract class EpisodeOfCareStatusHistory
 }
 
 @freezed
-abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
+class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   EpisodeOfCareDiagnosis._();
 
   /// [EpisodeOfCare_Diagnosis]: An association between a patient and an
@@ -912,7 +911,7 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
 }
 
 @freezed
-abstract class Flag with Resource implements _$Flag {
+class Flag with Resource, _$Flag {
   Flag._();
 
   /// [Flag]: Prospective warnings of potential issues when providing care to
@@ -1038,7 +1037,7 @@ abstract class Flag with Resource implements _$Flag {
 }
 
 @freezed
-abstract class Library with Resource implements _$Library {
+class Library with Resource, _$Library {
   Library._();
 
   /// [Library]: The Library resource is a general-purpose container for
@@ -1334,7 +1333,7 @@ abstract class Library with Resource implements _$Library {
 }
 
 @freezed
-abstract class List_ with Resource implements _$List_ {
+class List_ with Resource, _$List_ {
   List_._();
 
   /// [List]: A list is a curated collection of resources.
@@ -1483,7 +1482,7 @@ abstract class List_ with Resource implements _$List_ {
 }
 
 @freezed
-abstract class ListEntry implements _$ListEntry {
+class ListEntry with _$ListEntry {
   ListEntry._();
 
   /// [List_Entry]: A list is a curated collection of resources.

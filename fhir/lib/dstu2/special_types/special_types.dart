@@ -12,7 +12,7 @@ part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
-abstract class Meta implements _$Meta {
+class Meta with _$Meta {
   Meta._();
   factory Meta({
     Id? id,
@@ -44,7 +44,7 @@ abstract class Meta implements _$Meta {
 }
 
 @freezed
-abstract class Reference implements _$Reference {
+class Reference with _$Reference {
   Reference._();
   factory Reference({
     Id? id,
@@ -74,7 +74,7 @@ abstract class Reference implements _$Reference {
 }
 
 @freezed
-abstract class ElementDefinition implements _$ElementDefinition {
+class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
     Id? id,
@@ -438,7 +438,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
 }
 
 @freezed
-abstract class Narrative implements _$Narrative {
+class Narrative with _$Narrative {
   Narrative._();
   factory Narrative({
     Id? id,
@@ -468,7 +468,7 @@ abstract class Narrative implements _$Narrative {
 }
 
 @freezed
-abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
+class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
     Id? id,
@@ -502,7 +502,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
 }
 
 @freezed
-abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
+class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
   factory ElementDefinitionBase({
     Id? id,
@@ -533,7 +533,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
 }
 
 @freezed
-abstract class ElementDefinitionType implements _$ElementDefinitionType {
+class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
     Id? id,
@@ -564,7 +564,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
 }
 
 @freezed
-abstract class TypeCodeExtension implements _$TypeCodeExtension {
+class TypeCodeExtension with _$TypeCodeExtension {
   TypeCodeExtension._();
   factory TypeCodeExtension({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -588,8 +588,7 @@ abstract class TypeCodeExtension implements _$TypeCodeExtension {
 }
 
 @freezed
-abstract class ElementDefinitionConstraint
-    implements _$ElementDefinitionConstraint {
+class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
     Id? id,
@@ -626,7 +625,7 @@ abstract class ElementDefinitionConstraint
 }
 
 @freezed
-abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
+class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
     Id? id,
@@ -659,7 +658,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
 }
 
 @freezed
-abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
+class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
     Id? id,

@@ -12,7 +12,7 @@ part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
-abstract class Narrative implements _$Narrative {
+class Narrative with _$Narrative {
   Narrative._();
   factory Narrative({
     String? id,
@@ -40,7 +40,7 @@ abstract class Narrative implements _$Narrative {
 }
 
 @freezed
-abstract class Reference implements _$Reference {
+class Reference with _$Reference {
   Reference._();
 
   /// [Reference]: A reference from one resource to another.
@@ -121,7 +121,7 @@ abstract class Reference implements _$Reference {
 }
 
 @freezed
-abstract class Meta with _$Meta {
+class Meta with _$Meta {
   Meta._();
 
   /// [Meta]: The metadata about a resource. This is content in the resource
@@ -199,7 +199,7 @@ abstract class Meta with _$Meta {
 }
 
 @freezed
-abstract class Dosage implements _$Dosage {
+class Dosage with _$Dosage {
   Dosage._();
 
   /// [Dosage]: Indicates how the medication is/was taken or should be taken by
@@ -315,7 +315,7 @@ abstract class Dosage implements _$Dosage {
 }
 
 @freezed
-abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
+class DosageDoseAndRate with _$DosageDoseAndRate {
   DosageDoseAndRate._();
 
   /// [Dosage_DoseAndRate]: Indicates how the medication is/was taken or should
@@ -387,7 +387,7 @@ abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
 }
 
 @freezed
-abstract class ElementDefinition implements _$ElementDefinition {
+class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
 
   /// [ElementDefinition]: Captures constraints on each element within the
@@ -2384,7 +2384,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
 }
 
 @freezed
-abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
+class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
 
   /// [ElementDefinition_Slicing]: Captures constraints on each element within
@@ -2471,8 +2471,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
 }
 
 @freezed
-abstract class ElementDefinitionDiscriminator
-    implements _$ElementDefinitionDiscriminator {
+class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ElementDefinitionDiscriminator._();
 
   /// [ElementDefinition_Discriminator]: Captures constraints on each element
@@ -2544,7 +2543,7 @@ abstract class ElementDefinitionDiscriminator
 }
 
 @freezed
-abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
+class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
 
   /// [ElementDefinition_Base]: Captures constraints on each element within the
@@ -2618,7 +2617,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
 }
 
 @freezed
-abstract class ElementDefinitionType implements _$ElementDefinitionType {
+class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
 
   /// [ElementDefinition_Type]: Captures constraints on each element within the
@@ -2718,7 +2717,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
 }
 
 @freezed
-abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
+class ElementDefinitionExample with _$ElementDefinitionExample {
   ElementDefinitionExample._();
 
   /// [ElementDefinition_Example]: Captures constraints on each element within
@@ -3035,8 +3034,7 @@ abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
 }
 
 @freezed
-abstract class ElementDefinitionConstraint
-    implements _$ElementDefinitionConstraint {
+class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
 
   /// [ElementDefinition_Constraint]: Captures constraints on each element
@@ -3138,7 +3136,7 @@ abstract class ElementDefinitionConstraint
 }
 
 @freezed
-abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
+class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
 
   /// [ElementDefinition_Binding]: Captures constraints on each element within
@@ -3211,7 +3209,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
 }
 
 @freezed
-abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
+class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
 
   /// [ElementDefinition_Mapping]: Captures constraints on each element within

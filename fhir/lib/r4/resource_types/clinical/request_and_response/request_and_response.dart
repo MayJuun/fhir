@@ -12,7 +12,7 @@ part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
 @freezed
-abstract class Communication with Resource implements _$Communication {
+class Communication with Resource, _$Communication {
   Communication._();
 
   /// [Communication]: An occurrence of information being transmitted; e.g. an
@@ -215,7 +215,7 @@ abstract class Communication with Resource implements _$Communication {
 }
 
 @freezed
-abstract class CommunicationPayload implements _$CommunicationPayload {
+class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
 
   /// [Communication_Payload]: An occurrence of information being transmitted;
@@ -284,9 +284,7 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
 }
 
 @freezed
-abstract class CommunicationRequest
-    with Resource
-    implements _$CommunicationRequest {
+class CommunicationRequest with Resource, _$CommunicationRequest {
   CommunicationRequest._();
 
   /// [CommunicationRequest]: A request to convey information; e.g. the CDS
@@ -487,8 +485,7 @@ abstract class CommunicationRequest
 }
 
 @freezed
-abstract class CommunicationRequestPayload
-    implements _$CommunicationRequestPayload {
+class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
 
   /// [CommunicationRequest_Payload]: A request to convey information; e.g. the
@@ -559,7 +556,7 @@ abstract class CommunicationRequestPayload
 }
 
 @freezed
-abstract class DeviceRequest with Resource implements _$DeviceRequest {
+class DeviceRequest with Resource, _$DeviceRequest {
   DeviceRequest._();
 
   /// [DeviceRequest]: Represents a request for a patient to employ a medical
@@ -779,7 +776,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
 }
 
 @freezed
-abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
+class DeviceRequestParameter with _$DeviceRequestParameter {
   DeviceRequestParameter._();
 
   /// [DeviceRequest_Parameter]: Represents a request for a patient to employ a
@@ -851,9 +848,7 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
 }
 
 @freezed
-abstract class DeviceUseStatement
-    with Resource
-    implements _$DeviceUseStatement {
+class DeviceUseStatement with Resource, _$DeviceUseStatement {
   DeviceUseStatement._();
 
   /// [DeviceUseStatement]: A record of a device being used by a patient where
@@ -1011,7 +1006,7 @@ abstract class DeviceUseStatement
 }
 
 @freezed
-abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
+class GuidanceResponse with Resource, _$GuidanceResponse {
   GuidanceResponse._();
 
   /// [GuidanceResponse]: A guidance response is the formal response to a
@@ -1203,7 +1198,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
 }
 
 @freezed
-abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
+class SupplyDelivery with Resource, _$SupplyDelivery {
   SupplyDelivery._();
 
   /// [SupplyDelivery]: Record of delivery of what is supplied.
@@ -1348,8 +1343,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
 }
 
 @freezed
-abstract class SupplyDeliverySuppliedItem
-    implements _$SupplyDeliverySuppliedItem {
+class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   SupplyDeliverySuppliedItem._();
 
   /// [SupplyDelivery_SuppliedItem]: Record of delivery of what is supplied.
@@ -1416,7 +1410,7 @@ abstract class SupplyDeliverySuppliedItem
 }
 
 @freezed
-abstract class SupplyRequest with Resource implements _$SupplyRequest {
+class SupplyRequest with Resource, _$SupplyRequest {
   SupplyRequest._();
 
   /// [SupplyRequest]: A record of a request for a medication, substance or
@@ -1584,7 +1578,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
 }
 
 @freezed
-abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
+class SupplyRequestParameter with _$SupplyRequestParameter {
   SupplyRequestParameter._();
 
   /// [SupplyRequest_Parameter]: A record of a request for a medication,

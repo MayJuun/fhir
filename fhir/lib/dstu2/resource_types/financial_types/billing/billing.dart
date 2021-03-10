@@ -12,7 +12,7 @@ part 'billing.freezed.dart';
 part 'billing.g.dart';
 
 @freezed
-abstract class Account with Resource implements _$Account {
+class Account with Resource, _$Account {
   Account._();
   factory Account({
     @Default(Dstu2ResourceType.Account)
@@ -62,7 +62,7 @@ abstract class Account with Resource implements _$Account {
 }
 
 @freezed
-abstract class Claim with Resource implements _$Claim {
+class Claim with Resource, _$Claim {
   Claim._();
   factory Claim({
     @Default(Dstu2ResourceType.Claim)
@@ -128,7 +128,7 @@ abstract class Claim with Resource implements _$Claim {
 }
 
 @freezed
-abstract class ClaimPayee with _$ClaimPayee {
+class ClaimPayee with _$ClaimPayee {
   ClaimPayee._();
   factory ClaimPayee({
     Id? id,
@@ -158,7 +158,7 @@ abstract class ClaimPayee with _$ClaimPayee {
 }
 
 @freezed
-abstract class ClaimDiagnosis with _$ClaimDiagnosis {
+class ClaimDiagnosis with _$ClaimDiagnosis {
   ClaimDiagnosis._();
   factory ClaimDiagnosis({
     Id? id,
@@ -187,7 +187,7 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
 }
 
 @freezed
-abstract class ClaimCoverage with _$ClaimCoverage {
+class ClaimCoverage with _$ClaimCoverage {
   ClaimCoverage._();
   factory ClaimCoverage({
     Id? id,
@@ -221,7 +221,7 @@ abstract class ClaimCoverage with _$ClaimCoverage {
 }
 
 @freezed
-abstract class ClaimItem with _$ClaimItem {
+class ClaimItem with _$ClaimItem {
   ClaimItem._();
   factory ClaimItem({
     Id? id,
@@ -267,7 +267,7 @@ abstract class ClaimItem with _$ClaimItem {
 }
 
 @freezed
-abstract class ClaimItemDetail with _$ClaimItemDetail {
+class ClaimItemDetail with _$ClaimItemDetail {
   ClaimItemDetail._();
   factory ClaimItemDetail({
     Id? id,
@@ -305,7 +305,7 @@ abstract class ClaimItemDetail with _$ClaimItemDetail {
 }
 
 @freezed
-abstract class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
+class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
   ClaimDetailSubDetail._();
   factory ClaimDetailSubDetail({
     Id? id,
@@ -342,7 +342,7 @@ abstract class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
 }
 
 @freezed
-abstract class ClaimItemProsthesis with _$ClaimItemProsthesis {
+class ClaimItemProsthesis with _$ClaimItemProsthesis {
   ClaimItemProsthesis._();
   factory ClaimItemProsthesis({
     Id? id,
@@ -371,7 +371,7 @@ abstract class ClaimItemProsthesis with _$ClaimItemProsthesis {
 }
 
 @freezed
-abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
+class ClaimMissingTeeth with _$ClaimMissingTeeth {
   ClaimMissingTeeth._();
   factory ClaimMissingTeeth({
     Id? id,
@@ -400,7 +400,7 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
 }
 
 @freezed
-abstract class ClaimResponse with Resource implements _$ClaimResponse {
+class ClaimResponse with Resource, _$ClaimResponse {
   ClaimResponse._();
   factory ClaimResponse({
     @Default(Dstu2ResourceType.ClaimResponse)
@@ -467,7 +467,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
 }
 
 @freezed
-abstract class ClaimResponseItem with _$ClaimResponseItem {
+class ClaimResponseItem with _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
     Id? id,
@@ -499,8 +499,7 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
 }
 
 @freezed
-abstract class ClaimResponseItemAdjudication
-    with _$ClaimResponseItemAdjudication {
+class ClaimResponseItemAdjudication with _$ClaimResponseItemAdjudication {
   ClaimResponseItemAdjudication._();
   factory ClaimResponseItemAdjudication({
     Id? id,
@@ -531,7 +530,7 @@ abstract class ClaimResponseItemAdjudication
 }
 
 @freezed
-abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
+class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
   ClaimResponseItemDetail._();
   factory ClaimResponseItemDetail({
     Id? id,
@@ -560,8 +559,7 @@ abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
 }
 
 @freezed
-abstract class ClaimResponseDetailSubDetail
-    with _$ClaimResponseDetailSubDetail {
+class ClaimResponseDetailSubDetail with _$ClaimResponseDetailSubDetail {
   ClaimResponseDetailSubDetail._();
   factory ClaimResponseDetailSubDetail({
     Id? id,
@@ -590,7 +588,7 @@ abstract class ClaimResponseDetailSubDetail
 }
 
 @freezed
-abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
+class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
     Id? id,
@@ -622,7 +620,7 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
 }
 
 @freezed
-abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
+class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
   ClaimResponseAddItemDetail._();
   factory ClaimResponseAddItemDetail({
     Id? id,
@@ -652,7 +650,7 @@ abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
 }
 
 @freezed
-abstract class ClaimResponseError with _$ClaimResponseError {
+class ClaimResponseError with _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
     Id? id,
@@ -682,7 +680,7 @@ abstract class ClaimResponseError with _$ClaimResponseError {
 }
 
 @freezed
-abstract class ClaimResponseNote with _$ClaimResponseNote {
+class ClaimResponseNote with _$ClaimResponseNote {
   ClaimResponseNote._();
   factory ClaimResponseNote({
     Id? id,
@@ -714,7 +712,7 @@ abstract class ClaimResponseNote with _$ClaimResponseNote {
 }
 
 @freezed
-abstract class ClaimResponseCoverage with _$ClaimResponseCoverage {
+class ClaimResponseCoverage with _$ClaimResponseCoverage {
   ClaimResponseCoverage._();
   factory ClaimResponseCoverage({
     Id? id,

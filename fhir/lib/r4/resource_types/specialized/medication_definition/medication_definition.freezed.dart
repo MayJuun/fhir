@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'medication_definition.dart';
 
@@ -8,6 +8,10 @@ part of 'medication_definition.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 MedicinalProduct _$MedicinalProductFromJson(Map<String, dynamic> json) {
   return _MedicinalProduct.fromJson(json);
 }
@@ -102,47 +106,59 @@ const $MedicinalProduct = _$MedicinalProductTearOff();
 /// @nodoc
 mixin _$MedicinalProduct {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
-  CodeableConcept? get type;
-  Coding? get domain;
-  CodeableConcept? get combinedPharmaceuticalDoseForm;
-  CodeableConcept? get legalStatusOfSupply;
-  CodeableConcept? get additionalMonitoringIndicator;
-  List<String>? get specialMeasures;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Coding? get domain => throw _privateConstructorUsedError;
+  CodeableConcept? get combinedPharmaceuticalDoseForm =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get legalStatusOfSupply =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get additionalMonitoringIndicator =>
+      throw _privateConstructorUsedError;
+  List<String>? get specialMeasures => throw _privateConstructorUsedError;
   @JsonKey(name: '_specialMeasures')
-  List<Element?>? get specialMeasuresElement;
-  CodeableConcept? get paediatricUseIndicator;
-  List<CodeableConcept>? get productClassification;
-  List<MarketingStatus>? get marketingStatus;
-  List<Reference>? get pharmaceuticalProduct;
-  List<Reference>? get packagedMedicinalProduct;
-  List<Reference>? get attachedDocument;
-  List<Reference>? get masterFile;
-  List<Reference>? get contact;
-  List<Reference>? get clinicalTrial;
-  List<MedicinalProductName> get name;
-  List<Identifier>? get crossReference;
+  List<Element?>? get specialMeasuresElement =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get paediatricUseIndicator =>
+      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get productClassification =>
+      throw _privateConstructorUsedError;
+  List<MarketingStatus>? get marketingStatus =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get pharmaceuticalProduct =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get packagedMedicinalProduct =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
+  List<Reference>? get masterFile => throw _privateConstructorUsedError;
+  List<Reference>? get contact => throw _privateConstructorUsedError;
+  List<Reference>? get clinicalTrial => throw _privateConstructorUsedError;
+  List<MedicinalProductName> get name => throw _privateConstructorUsedError;
+  List<Identifier>? get crossReference => throw _privateConstructorUsedError;
   List<MedicinalProductManufacturingBusinessOperation>?
-      get manufacturingBusinessOperation;
-  List<MedicinalProductSpecialDesignation>? get specialDesignation;
+      get manufacturingBusinessOperation => throw _privateConstructorUsedError;
+  List<MedicinalProductSpecialDesignation>? get specialDesignation =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MedicinalProductCopyWith<MedicinalProduct> get copyWith;
+  $MedicinalProductCopyWith<MedicinalProduct> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -249,86 +265,132 @@ class _$MedicinalProductCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      domain: domain == freezed ? _value.domain : domain as Coding?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      domain: domain == freezed
+          ? _value.domain
+          : domain // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       combinedPharmaceuticalDoseForm: combinedPharmaceuticalDoseForm == freezed
           ? _value.combinedPharmaceuticalDoseForm
-          : combinedPharmaceuticalDoseForm as CodeableConcept?,
+          : combinedPharmaceuticalDoseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       legalStatusOfSupply: legalStatusOfSupply == freezed
           ? _value.legalStatusOfSupply
-          : legalStatusOfSupply as CodeableConcept?,
+          : legalStatusOfSupply // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       additionalMonitoringIndicator: additionalMonitoringIndicator == freezed
           ? _value.additionalMonitoringIndicator
-          : additionalMonitoringIndicator as CodeableConcept?,
+          : additionalMonitoringIndicator // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       specialMeasures: specialMeasures == freezed
           ? _value.specialMeasures
-          : specialMeasures as List<String>?,
+          : specialMeasures // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       specialMeasuresElement: specialMeasuresElement == freezed
           ? _value.specialMeasuresElement
-          : specialMeasuresElement as List<Element?>?,
+          : specialMeasuresElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       paediatricUseIndicator: paediatricUseIndicator == freezed
           ? _value.paediatricUseIndicator
-          : paediatricUseIndicator as CodeableConcept?,
+          : paediatricUseIndicator // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       productClassification: productClassification == freezed
           ? _value.productClassification
-          : productClassification as List<CodeableConcept>?,
+          : productClassification // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       marketingStatus: marketingStatus == freezed
           ? _value.marketingStatus
-          : marketingStatus as List<MarketingStatus>?,
+          : marketingStatus // ignore: cast_nullable_to_non_nullable
+              as List<MarketingStatus>?,
       pharmaceuticalProduct: pharmaceuticalProduct == freezed
           ? _value.pharmaceuticalProduct
-          : pharmaceuticalProduct as List<Reference>?,
+          : pharmaceuticalProduct // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       packagedMedicinalProduct: packagedMedicinalProduct == freezed
           ? _value.packagedMedicinalProduct
-          : packagedMedicinalProduct as List<Reference>?,
+          : packagedMedicinalProduct // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       attachedDocument: attachedDocument == freezed
           ? _value.attachedDocument
-          : attachedDocument as List<Reference>?,
+          : attachedDocument // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       masterFile: masterFile == freezed
           ? _value.masterFile
-          : masterFile as List<Reference>?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<Reference>?,
+          : masterFile // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       clinicalTrial: clinicalTrial == freezed
           ? _value.clinicalTrial
-          : clinicalTrial as List<Reference>?,
-      name: name == freezed ? _value.name : name as List<MedicinalProductName>,
+          : clinicalTrial // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductName>,
       crossReference: crossReference == freezed
           ? _value.crossReference
-          : crossReference as List<Identifier>?,
+          : crossReference // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
       manufacturingBusinessOperation: manufacturingBusinessOperation == freezed
           ? _value.manufacturingBusinessOperation
-          : manufacturingBusinessOperation
+          : manufacturingBusinessOperation // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductManufacturingBusinessOperation>?,
       specialDesignation: specialDesignation == freezed
           ? _value.specialDesignation
-          : specialDesignation as List<MedicinalProductSpecialDesignation>?,
+          : specialDesignation // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductSpecialDesignation>?,
     ));
   }
 
@@ -564,86 +626,132 @@ class __$MedicinalProductCopyWithImpl<$Res>
     return _then(_MedicinalProduct(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      domain: domain == freezed ? _value.domain : domain as Coding?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      domain: domain == freezed
+          ? _value.domain
+          : domain // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       combinedPharmaceuticalDoseForm: combinedPharmaceuticalDoseForm == freezed
           ? _value.combinedPharmaceuticalDoseForm
-          : combinedPharmaceuticalDoseForm as CodeableConcept?,
+          : combinedPharmaceuticalDoseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       legalStatusOfSupply: legalStatusOfSupply == freezed
           ? _value.legalStatusOfSupply
-          : legalStatusOfSupply as CodeableConcept?,
+          : legalStatusOfSupply // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       additionalMonitoringIndicator: additionalMonitoringIndicator == freezed
           ? _value.additionalMonitoringIndicator
-          : additionalMonitoringIndicator as CodeableConcept?,
+          : additionalMonitoringIndicator // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       specialMeasures: specialMeasures == freezed
           ? _value.specialMeasures
-          : specialMeasures as List<String>?,
+          : specialMeasures // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       specialMeasuresElement: specialMeasuresElement == freezed
           ? _value.specialMeasuresElement
-          : specialMeasuresElement as List<Element?>?,
+          : specialMeasuresElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       paediatricUseIndicator: paediatricUseIndicator == freezed
           ? _value.paediatricUseIndicator
-          : paediatricUseIndicator as CodeableConcept?,
+          : paediatricUseIndicator // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       productClassification: productClassification == freezed
           ? _value.productClassification
-          : productClassification as List<CodeableConcept>?,
+          : productClassification // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       marketingStatus: marketingStatus == freezed
           ? _value.marketingStatus
-          : marketingStatus as List<MarketingStatus>?,
+          : marketingStatus // ignore: cast_nullable_to_non_nullable
+              as List<MarketingStatus>?,
       pharmaceuticalProduct: pharmaceuticalProduct == freezed
           ? _value.pharmaceuticalProduct
-          : pharmaceuticalProduct as List<Reference>?,
+          : pharmaceuticalProduct // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       packagedMedicinalProduct: packagedMedicinalProduct == freezed
           ? _value.packagedMedicinalProduct
-          : packagedMedicinalProduct as List<Reference>?,
+          : packagedMedicinalProduct // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       attachedDocument: attachedDocument == freezed
           ? _value.attachedDocument
-          : attachedDocument as List<Reference>?,
+          : attachedDocument // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       masterFile: masterFile == freezed
           ? _value.masterFile
-          : masterFile as List<Reference>?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<Reference>?,
+          : masterFile // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       clinicalTrial: clinicalTrial == freezed
           ? _value.clinicalTrial
-          : clinicalTrial as List<Reference>?,
-      name: name == freezed ? _value.name : name as List<MedicinalProductName>,
+          : clinicalTrial // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductName>,
       crossReference: crossReference == freezed
           ? _value.crossReference
-          : crossReference as List<Identifier>?,
+          : crossReference // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
       manufacturingBusinessOperation: manufacturingBusinessOperation == freezed
           ? _value.manufacturingBusinessOperation
-          : manufacturingBusinessOperation
+          : manufacturingBusinessOperation // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductManufacturingBusinessOperation>?,
       specialDesignation: specialDesignation == freezed
           ? _value.specialDesignation
-          : specialDesignation as List<MedicinalProductSpecialDesignation>?,
+          : specialDesignation // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductSpecialDesignation>?,
     ));
   }
 }
@@ -895,7 +1003,6 @@ class _$_MedicinalProduct extends _MedicinalProduct {
 }
 
 abstract class _MedicinalProduct extends MedicinalProduct {
-  _MedicinalProduct._() : super._();
   factory _MedicinalProduct(
           {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
               R4ResourceType resourceType,
@@ -936,83 +1043,96 @@ abstract class _MedicinalProduct extends MedicinalProduct {
               manufacturingBusinessOperation,
           List<MedicinalProductSpecialDesignation>? specialDesignation}) =
       _$_MedicinalProduct;
+  _MedicinalProduct._() : super._();
 
   factory _MedicinalProduct.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProduct.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Coding? get domain;
+  Coding? get domain => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get combinedPharmaceuticalDoseForm;
+  CodeableConcept? get combinedPharmaceuticalDoseForm =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get legalStatusOfSupply;
+  CodeableConcept? get legalStatusOfSupply =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get additionalMonitoringIndicator;
+  CodeableConcept? get additionalMonitoringIndicator =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get specialMeasures;
+  List<String>? get specialMeasures => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_specialMeasures')
-  List<Element?>? get specialMeasuresElement;
+  List<Element?>? get specialMeasuresElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get paediatricUseIndicator;
+  CodeableConcept? get paediatricUseIndicator =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get productClassification;
+  List<CodeableConcept>? get productClassification =>
+      throw _privateConstructorUsedError;
   @override
-  List<MarketingStatus>? get marketingStatus;
+  List<MarketingStatus>? get marketingStatus =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get pharmaceuticalProduct;
+  List<Reference>? get pharmaceuticalProduct =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get packagedMedicinalProduct;
+  List<Reference>? get packagedMedicinalProduct =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get attachedDocument;
+  List<Reference>? get attachedDocument => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get masterFile;
+  List<Reference>? get masterFile => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get contact;
+  List<Reference>? get contact => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get clinicalTrial;
+  List<Reference>? get clinicalTrial => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductName> get name;
+  List<MedicinalProductName> get name => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get crossReference;
+  List<Identifier>? get crossReference => throw _privateConstructorUsedError;
   @override
   List<MedicinalProductManufacturingBusinessOperation>?
-      get manufacturingBusinessOperation;
+      get manufacturingBusinessOperation => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductSpecialDesignation>? get specialDesignation;
+  List<MedicinalProductSpecialDesignation>? get specialDesignation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductCopyWith<_MedicinalProduct> get copyWith;
+  _$MedicinalProductCopyWith<_MedicinalProduct> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MedicinalProductName _$MedicinalProductNameFromJson(Map<String, dynamic> json) {
@@ -1052,19 +1172,23 @@ const $MedicinalProductName = _$MedicinalProductNameTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductName {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get productName;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get productName => throw _privateConstructorUsedError;
   @JsonKey(name: '_productName')
-  Element? get productNameElement;
-  List<MedicinalProductNamePart>? get namePart;
-  List<MedicinalProductCountryLanguage>? get countryLanguage;
+  Element? get productNameElement => throw _privateConstructorUsedError;
+  List<MedicinalProductNamePart>? get namePart =>
+      throw _privateConstructorUsedError;
+  List<MedicinalProductCountryLanguage>? get countryLanguage =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MedicinalProductNameCopyWith<MedicinalProductName> get copyWith;
+  $MedicinalProductNameCopyWith<MedicinalProductName> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1104,24 +1228,34 @@ class _$MedicinalProductNameCopyWithImpl<$Res>
     Object? countryLanguage = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      productName:
-          productName == freezed ? _value.productName : productName as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      productName: productName == freezed
+          ? _value.productName
+          : productName // ignore: cast_nullable_to_non_nullable
+              as String?,
       productNameElement: productNameElement == freezed
           ? _value.productNameElement
-          : productNameElement as Element?,
+          : productNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       namePart: namePart == freezed
           ? _value.namePart
-          : namePart as List<MedicinalProductNamePart>?,
+          : namePart // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductNamePart>?,
       countryLanguage: countryLanguage == freezed
           ? _value.countryLanguage
-          : countryLanguage as List<MedicinalProductCountryLanguage>?,
+          : countryLanguage // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductCountryLanguage>?,
     ));
   }
 
@@ -1179,24 +1313,34 @@ class __$MedicinalProductNameCopyWithImpl<$Res>
     Object? countryLanguage = freezed,
   }) {
     return _then(_MedicinalProductName(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      productName:
-          productName == freezed ? _value.productName : productName as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      productName: productName == freezed
+          ? _value.productName
+          : productName // ignore: cast_nullable_to_non_nullable
+              as String?,
       productNameElement: productNameElement == freezed
           ? _value.productNameElement
-          : productNameElement as Element?,
+          : productNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       namePart: namePart == freezed
           ? _value.namePart
-          : namePart as List<MedicinalProductNamePart>?,
+          : namePart // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductNamePart>?,
       countryLanguage: countryLanguage == freezed
           ? _value.countryLanguage
-          : countryLanguage as List<MedicinalProductCountryLanguage>?,
+          : countryLanguage // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductCountryLanguage>?,
     ));
   }
 }
@@ -1290,7 +1434,6 @@ class _$_MedicinalProductName extends _MedicinalProductName {
 }
 
 abstract class _MedicinalProductName extends MedicinalProductName {
-  _MedicinalProductName._() : super._();
   factory _MedicinalProductName(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1300,29 +1443,34 @@ abstract class _MedicinalProductName extends MedicinalProductName {
           List<MedicinalProductNamePart>? namePart,
           List<MedicinalProductCountryLanguage>? countryLanguage}) =
       _$_MedicinalProductName;
+  _MedicinalProductName._() : super._();
 
   factory _MedicinalProductName.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductName.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get productName;
+  String? get productName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_productName')
-  Element? get productNameElement;
+  Element? get productNameElement => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductNamePart>? get namePart;
+  List<MedicinalProductNamePart>? get namePart =>
+      throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductCountryLanguage>? get countryLanguage;
+  List<MedicinalProductCountryLanguage>? get countryLanguage =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductNameCopyWith<_MedicinalProductName> get copyWith;
+  _$MedicinalProductNameCopyWith<_MedicinalProductName> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MedicinalProductNamePart _$MedicinalProductNamePartFromJson(
@@ -1361,19 +1509,21 @@ const $MedicinalProductNamePart = _$MedicinalProductNamePartTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductNamePart {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'part')
-  String? get part_;
+  String? get part_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_part')
-  Element? get partElement;
-  Coding get type;
+  Element? get partElement => throw _privateConstructorUsedError;
+  Coding get type => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MedicinalProductNamePartCopyWith<MedicinalProductNamePart> get copyWith;
+  $MedicinalProductNamePartCopyWith<MedicinalProductNamePart> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1412,17 +1562,30 @@ class _$MedicinalProductNamePartCopyWithImpl<$Res>
     Object? type = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      part_: part_ == freezed ? _value.part_ : part_ as String?,
-      partElement:
-          partElement == freezed ? _value.partElement : partElement as Element?,
-      type: type == freezed ? _value.type : type as Coding,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as String?,
+      partElement: partElement == freezed
+          ? _value.partElement
+          : partElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Coding,
     ));
   }
 
@@ -1488,17 +1651,30 @@ class __$MedicinalProductNamePartCopyWithImpl<$Res>
     Object? type = freezed,
   }) {
     return _then(_MedicinalProductNamePart(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      part_: part_ == freezed ? _value.part_ : part_ as String?,
-      partElement:
-          partElement == freezed ? _value.partElement : partElement as Element?,
-      type: type == freezed ? _value.type : type as Coding,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as String?,
+      partElement: partElement == freezed
+          ? _value.partElement
+          : partElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Coding,
     ));
   }
 }
@@ -1584,7 +1760,6 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
 }
 
 abstract class _MedicinalProductNamePart extends MedicinalProductNamePart {
-  _MedicinalProductNamePart._() : super._();
   factory _MedicinalProductNamePart(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1592,28 +1767,31 @@ abstract class _MedicinalProductNamePart extends MedicinalProductNamePart {
       @JsonKey(name: 'part') String? part_,
       @JsonKey(name: '_part') Element? partElement,
       required Coding type}) = _$_MedicinalProductNamePart;
+  _MedicinalProductNamePart._() : super._();
 
   factory _MedicinalProductNamePart.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductNamePart.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'part')
-  String? get part_;
+  String? get part_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_part')
-  Element? get partElement;
+  Element? get partElement => throw _privateConstructorUsedError;
   @override
-  Coding get type;
+  Coding get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductNamePartCopyWith<_MedicinalProductNamePart> get copyWith;
+  _$MedicinalProductNamePartCopyWith<_MedicinalProductNamePart> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MedicinalProductCountryLanguage _$MedicinalProductCountryLanguageFromJson(
@@ -1653,18 +1831,19 @@ const $MedicinalProductCountryLanguage =
 
 /// @nodoc
 mixin _$MedicinalProductCountryLanguage {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get country;
-  CodeableConcept? get jurisdiction;
-  CodeableConcept get language;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get country => throw _privateConstructorUsedError;
+  CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
+  CodeableConcept get language => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductCountryLanguageCopyWith<MedicinalProductCountryLanguage>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1705,19 +1884,30 @@ class _$MedicinalProductCountryLanguageCopyWithImpl<$Res>
     Object? language = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      country: country == freezed ? _value.country : country as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as CodeableConcept?,
-      language:
-          language == freezed ? _value.language : language as CodeableConcept,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
     ));
   }
 
@@ -1794,19 +1984,30 @@ class __$MedicinalProductCountryLanguageCopyWithImpl<$Res>
     Object? language = freezed,
   }) {
     return _then(_MedicinalProductCountryLanguage(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      country: country == freezed ? _value.country : country as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as CodeableConcept?,
-      language:
-          language == freezed ? _value.language : language as CodeableConcept,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
     ));
   }
 }
@@ -1895,7 +2096,6 @@ class _$_MedicinalProductCountryLanguage
 
 abstract class _MedicinalProductCountryLanguage
     extends MedicinalProductCountryLanguage {
-  _MedicinalProductCountryLanguage._() : super._();
   factory _MedicinalProductCountryLanguage(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1903,27 +2103,29 @@ abstract class _MedicinalProductCountryLanguage
       required CodeableConcept country,
       CodeableConcept? jurisdiction,
       required CodeableConcept language}) = _$_MedicinalProductCountryLanguage;
+  _MedicinalProductCountryLanguage._() : super._();
 
   factory _MedicinalProductCountryLanguage.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductCountryLanguage.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get country;
+  CodeableConcept get country => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get jurisdiction;
+  CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get language;
+  CodeableConcept get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductCountryLanguageCopyWith<_MedicinalProductCountryLanguage>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductManufacturingBusinessOperation
@@ -1973,23 +2175,27 @@ const $MedicinalProductManufacturingBusinessOperation =
 
 /// @nodoc
 mixin _$MedicinalProductManufacturingBusinessOperation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get operationType;
-  Identifier? get authorisationReferenceNumber;
-  FhirDateTime? get effectiveDate;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get operationType => throw _privateConstructorUsedError;
+  Identifier? get authorisationReferenceNumber =>
+      throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_effectiveDate')
-  Element? get effectiveDateElement;
-  CodeableConcept? get confidentialityIndicator;
-  List<Reference>? get manufacturer;
-  Reference? get regulator;
+  Element? get effectiveDateElement => throw _privateConstructorUsedError;
+  CodeableConcept? get confidentialityIndicator =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
+  Reference? get regulator => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductManufacturingBusinessOperationCopyWith<
-      MedicinalProductManufacturingBusinessOperation> get copyWith;
+          MedicinalProductManufacturingBusinessOperation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2041,33 +2247,46 @@ class _$MedicinalProductManufacturingBusinessOperationCopyWithImpl<$Res>
     Object? regulator = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       operationType: operationType == freezed
           ? _value.operationType
-          : operationType as CodeableConcept?,
+          : operationType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       authorisationReferenceNumber: authorisationReferenceNumber == freezed
           ? _value.authorisationReferenceNumber
-          : authorisationReferenceNumber as Identifier?,
+          : authorisationReferenceNumber // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       effectiveDate: effectiveDate == freezed
           ? _value.effectiveDate
-          : effectiveDate as FhirDateTime?,
+          : effectiveDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       effectiveDateElement: effectiveDateElement == freezed
           ? _value.effectiveDateElement
-          : effectiveDateElement as Element?,
+          : effectiveDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       confidentialityIndicator: confidentialityIndicator == freezed
           ? _value.confidentialityIndicator
-          : confidentialityIndicator as CodeableConcept?,
+          : confidentialityIndicator // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
-      regulator:
-          regulator == freezed ? _value.regulator : regulator as Reference?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      regulator: regulator == freezed
+          ? _value.regulator
+          : regulator // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -2189,33 +2408,46 @@ class __$MedicinalProductManufacturingBusinessOperationCopyWithImpl<$Res>
     Object? regulator = freezed,
   }) {
     return _then(_MedicinalProductManufacturingBusinessOperation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       operationType: operationType == freezed
           ? _value.operationType
-          : operationType as CodeableConcept?,
+          : operationType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       authorisationReferenceNumber: authorisationReferenceNumber == freezed
           ? _value.authorisationReferenceNumber
-          : authorisationReferenceNumber as Identifier?,
+          : authorisationReferenceNumber // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       effectiveDate: effectiveDate == freezed
           ? _value.effectiveDate
-          : effectiveDate as FhirDateTime?,
+          : effectiveDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       effectiveDateElement: effectiveDateElement == freezed
           ? _value.effectiveDateElement
-          : effectiveDateElement as Element?,
+          : effectiveDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       confidentialityIndicator: confidentialityIndicator == freezed
           ? _value.confidentialityIndicator
-          : confidentialityIndicator as CodeableConcept?,
+          : confidentialityIndicator // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
-      regulator:
-          regulator == freezed ? _value.regulator : regulator as Reference?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      regulator: regulator == freezed
+          ? _value.regulator
+          : regulator // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -2340,7 +2572,6 @@ class _$_MedicinalProductManufacturingBusinessOperation
 
 abstract class _MedicinalProductManufacturingBusinessOperation
     extends MedicinalProductManufacturingBusinessOperation {
-  _MedicinalProductManufacturingBusinessOperation._() : super._();
   factory _MedicinalProductManufacturingBusinessOperation(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2353,37 +2584,42 @@ abstract class _MedicinalProductManufacturingBusinessOperation
           List<Reference>? manufacturer,
           Reference? regulator}) =
       _$_MedicinalProductManufacturingBusinessOperation;
+  _MedicinalProductManufacturingBusinessOperation._() : super._();
 
   factory _MedicinalProductManufacturingBusinessOperation.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductManufacturingBusinessOperation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get operationType;
+  CodeableConcept? get operationType => throw _privateConstructorUsedError;
   @override
-  Identifier? get authorisationReferenceNumber;
+  Identifier? get authorisationReferenceNumber =>
+      throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get effectiveDate;
+  FhirDateTime? get effectiveDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_effectiveDate')
-  Element? get effectiveDateElement;
+  Element? get effectiveDateElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get confidentialityIndicator;
+  CodeableConcept? get confidentialityIndicator =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   @override
-  Reference? get regulator;
+  Reference? get regulator => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductManufacturingBusinessOperationCopyWith<
-      _MedicinalProductManufacturingBusinessOperation> get copyWith;
+          _MedicinalProductManufacturingBusinessOperation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductSpecialDesignation _$MedicinalProductSpecialDesignationFromJson(
@@ -2435,25 +2671,28 @@ const $MedicinalProductSpecialDesignation =
 
 /// @nodoc
 mixin _$MedicinalProductSpecialDesignation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
-  CodeableConcept? get type;
-  CodeableConcept? get intendedUse;
-  CodeableConcept? get indicationCodeableConcept;
-  Reference? get indicationReference;
-  CodeableConcept? get status;
-  FhirDateTime? get date;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get intendedUse => throw _privateConstructorUsedError;
+  CodeableConcept? get indicationCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Reference? get indicationReference => throw _privateConstructorUsedError;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  CodeableConcept? get species;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  CodeableConcept? get species => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductSpecialDesignationCopyWith<
-      MedicinalProductSpecialDesignation> get copyWith;
+          MedicinalProductSpecialDesignation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2510,32 +2749,54 @@ class _$MedicinalProductSpecialDesignationCopyWithImpl<$Res>
     Object? species = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       intendedUse: intendedUse == freezed
           ? _value.intendedUse
-          : intendedUse as CodeableConcept?,
+          : intendedUse // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       indicationCodeableConcept: indicationCodeableConcept == freezed
           ? _value.indicationCodeableConcept
-          : indicationCodeableConcept as CodeableConcept?,
+          : indicationCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       indicationReference: indicationReference == freezed
           ? _value.indicationReference
-          : indicationReference as Reference?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      species:
-          species == freezed ? _value.species : species as CodeableConcept?,
+          : indicationReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      species: species == freezed
+          ? _value.species
+          : species // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -2685,32 +2946,54 @@ class __$MedicinalProductSpecialDesignationCopyWithImpl<$Res>
     Object? species = freezed,
   }) {
     return _then(_MedicinalProductSpecialDesignation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       intendedUse: intendedUse == freezed
           ? _value.intendedUse
-          : intendedUse as CodeableConcept?,
+          : intendedUse // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       indicationCodeableConcept: indicationCodeableConcept == freezed
           ? _value.indicationCodeableConcept
-          : indicationCodeableConcept as CodeableConcept?,
+          : indicationCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       indicationReference: indicationReference == freezed
           ? _value.indicationReference
-          : indicationReference as Reference?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      species:
-          species == freezed ? _value.species : species as CodeableConcept?,
+          : indicationReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      species: species == freezed
+          ? _value.species
+          : species // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -2841,7 +3124,6 @@ class _$_MedicinalProductSpecialDesignation
 
 abstract class _MedicinalProductSpecialDesignation
     extends MedicinalProductSpecialDesignation {
-  _MedicinalProductSpecialDesignation._() : super._();
   factory _MedicinalProductSpecialDesignation(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2855,41 +3137,45 @@ abstract class _MedicinalProductSpecialDesignation
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? species}) = _$_MedicinalProductSpecialDesignation;
+  _MedicinalProductSpecialDesignation._() : super._();
 
   factory _MedicinalProductSpecialDesignation.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductSpecialDesignation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get intendedUse;
+  CodeableConcept? get intendedUse => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get indicationCodeableConcept;
+  CodeableConcept? get indicationCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get indicationReference;
+  Reference? get indicationReference => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get species;
+  CodeableConcept? get species => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductSpecialDesignationCopyWith<
-      _MedicinalProductSpecialDesignation> get copyWith;
+          _MedicinalProductSpecialDesignation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductAuthorization _$MedicinalProductAuthorizationFromJson(
@@ -2989,50 +3275,56 @@ const $MedicinalProductAuthorization = _$MedicinalProductAuthorizationTearOff();
 /// @nodoc
 mixin _$MedicinalProductAuthorization {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
-  Reference? get subject;
-  List<CodeableConcept>? get country;
-  List<CodeableConcept>? get jurisdiction;
-  CodeableConcept? get status;
-  FhirDateTime? get statusDate;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Reference? get subject => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get country => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
+  FhirDateTime? get statusDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_statusDate')
-  Element? get statusDateElement;
-  FhirDateTime? get restoreDate;
+  Element? get statusDateElement => throw _privateConstructorUsedError;
+  FhirDateTime? get restoreDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_restoreDate')
-  Element? get restoreDateElement;
-  Period? get validityPeriod;
-  Period? get dataExclusivityPeriod;
-  FhirDateTime? get dateOfFirstAuthorization;
+  Element? get restoreDateElement => throw _privateConstructorUsedError;
+  Period? get validityPeriod => throw _privateConstructorUsedError;
+  Period? get dataExclusivityPeriod => throw _privateConstructorUsedError;
+  FhirDateTime? get dateOfFirstAuthorization =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_dateOfFirstAuthorization')
-  Element? get dateOfFirstAuthorizationElement;
-  FhirDateTime? get internationalBirthDate;
+  Element? get dateOfFirstAuthorizationElement =>
+      throw _privateConstructorUsedError;
+  FhirDateTime? get internationalBirthDate =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_internationalBirthDate')
-  Element? get internationalBirthDateElement;
-  CodeableConcept? get legalBasis;
+  Element? get internationalBirthDateElement =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get legalBasis => throw _privateConstructorUsedError;
   List<MedicinalProductAuthorizationJurisdictionalAuthorization>?
-      get jurisdictionalAuthorization;
-  Reference? get holder;
-  Reference? get regulator;
-  MedicinalProductAuthorizationProcedure? get procedure;
+      get jurisdictionalAuthorization => throw _privateConstructorUsedError;
+  Reference? get holder => throw _privateConstructorUsedError;
+  Reference? get regulator => throw _privateConstructorUsedError;
+  MedicinalProductAuthorizationProcedure? get procedure =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductAuthorizationCopyWith<MedicinalProductAuthorization>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3147,84 +3439,130 @@ class _$MedicinalProductAuthorizationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       country: country == freezed
           ? _value.country
-          : country as List<CodeableConcept>?,
+          : country // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       statusDate: statusDate == freezed
           ? _value.statusDate
-          : statusDate as FhirDateTime?,
+          : statusDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       statusDateElement: statusDateElement == freezed
           ? _value.statusDateElement
-          : statusDateElement as Element?,
+          : statusDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
-          : restoreDate as FhirDateTime?,
+          : restoreDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       restoreDateElement: restoreDateElement == freezed
           ? _value.restoreDateElement
-          : restoreDateElement as Element?,
+          : restoreDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
-          : validityPeriod as Period?,
+          : validityPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dataExclusivityPeriod: dataExclusivityPeriod == freezed
           ? _value.dataExclusivityPeriod
-          : dataExclusivityPeriod as Period?,
+          : dataExclusivityPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dateOfFirstAuthorization: dateOfFirstAuthorization == freezed
           ? _value.dateOfFirstAuthorization
-          : dateOfFirstAuthorization as FhirDateTime?,
-      dateOfFirstAuthorizationElement:
-          dateOfFirstAuthorizationElement == freezed
-              ? _value.dateOfFirstAuthorizationElement
-              : dateOfFirstAuthorizationElement as Element?,
+          : dateOfFirstAuthorization // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateOfFirstAuthorizationElement: dateOfFirstAuthorizationElement ==
+              freezed
+          ? _value.dateOfFirstAuthorizationElement
+          : dateOfFirstAuthorizationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       internationalBirthDate: internationalBirthDate == freezed
           ? _value.internationalBirthDate
-          : internationalBirthDate as FhirDateTime?,
+          : internationalBirthDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       internationalBirthDateElement: internationalBirthDateElement == freezed
           ? _value.internationalBirthDateElement
-          : internationalBirthDateElement as Element?,
+          : internationalBirthDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       legalBasis: legalBasis == freezed
           ? _value.legalBasis
-          : legalBasis as CodeableConcept?,
+          : legalBasis // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       jurisdictionalAuthorization: jurisdictionalAuthorization == freezed
           ? _value.jurisdictionalAuthorization
-          : jurisdictionalAuthorization as List<
-              MedicinalProductAuthorizationJurisdictionalAuthorization>?,
-      holder: holder == freezed ? _value.holder : holder as Reference?,
-      regulator:
-          regulator == freezed ? _value.regulator : regulator as Reference?,
+          : jurisdictionalAuthorization // ignore: cast_nullable_to_non_nullable
+              as List<
+                  MedicinalProductAuthorizationJurisdictionalAuthorization>?,
+      holder: holder == freezed
+          ? _value.holder
+          : holder // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      regulator: regulator == freezed
+          ? _value.regulator
+          : regulator // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       procedure: procedure == freezed
           ? _value.procedure
-          : procedure as MedicinalProductAuthorizationProcedure?,
+          : procedure // ignore: cast_nullable_to_non_nullable
+              as MedicinalProductAuthorizationProcedure?,
     ));
   }
 
@@ -3542,84 +3880,130 @@ class __$MedicinalProductAuthorizationCopyWithImpl<$Res>
     return _then(_MedicinalProductAuthorization(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       country: country == freezed
           ? _value.country
-          : country as List<CodeableConcept>?,
+          : country // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       statusDate: statusDate == freezed
           ? _value.statusDate
-          : statusDate as FhirDateTime?,
+          : statusDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       statusDateElement: statusDateElement == freezed
           ? _value.statusDateElement
-          : statusDateElement as Element?,
+          : statusDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
-          : restoreDate as FhirDateTime?,
+          : restoreDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       restoreDateElement: restoreDateElement == freezed
           ? _value.restoreDateElement
-          : restoreDateElement as Element?,
+          : restoreDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
-          : validityPeriod as Period?,
+          : validityPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dataExclusivityPeriod: dataExclusivityPeriod == freezed
           ? _value.dataExclusivityPeriod
-          : dataExclusivityPeriod as Period?,
+          : dataExclusivityPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dateOfFirstAuthorization: dateOfFirstAuthorization == freezed
           ? _value.dateOfFirstAuthorization
-          : dateOfFirstAuthorization as FhirDateTime?,
-      dateOfFirstAuthorizationElement:
-          dateOfFirstAuthorizationElement == freezed
-              ? _value.dateOfFirstAuthorizationElement
-              : dateOfFirstAuthorizationElement as Element?,
+          : dateOfFirstAuthorization // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateOfFirstAuthorizationElement: dateOfFirstAuthorizationElement ==
+              freezed
+          ? _value.dateOfFirstAuthorizationElement
+          : dateOfFirstAuthorizationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       internationalBirthDate: internationalBirthDate == freezed
           ? _value.internationalBirthDate
-          : internationalBirthDate as FhirDateTime?,
+          : internationalBirthDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       internationalBirthDateElement: internationalBirthDateElement == freezed
           ? _value.internationalBirthDateElement
-          : internationalBirthDateElement as Element?,
+          : internationalBirthDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       legalBasis: legalBasis == freezed
           ? _value.legalBasis
-          : legalBasis as CodeableConcept?,
+          : legalBasis // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       jurisdictionalAuthorization: jurisdictionalAuthorization == freezed
           ? _value.jurisdictionalAuthorization
-          : jurisdictionalAuthorization as List<
-              MedicinalProductAuthorizationJurisdictionalAuthorization>?,
-      holder: holder == freezed ? _value.holder : holder as Reference?,
-      regulator:
-          regulator == freezed ? _value.regulator : regulator as Reference?,
+          : jurisdictionalAuthorization // ignore: cast_nullable_to_non_nullable
+              as List<
+                  MedicinalProductAuthorizationJurisdictionalAuthorization>?,
+      holder: holder == freezed
+          ? _value.holder
+          : holder // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      regulator: regulator == freezed
+          ? _value.regulator
+          : regulator // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       procedure: procedure == freezed
           ? _value.procedure
-          : procedure as MedicinalProductAuthorizationProcedure?,
+          : procedure // ignore: cast_nullable_to_non_nullable
+              as MedicinalProductAuthorizationProcedure?,
     ));
   }
 }
@@ -3879,7 +4263,6 @@ class _$_MedicinalProductAuthorization extends _MedicinalProductAuthorization {
 
 abstract class _MedicinalProductAuthorization
     extends MedicinalProductAuthorization {
-  _MedicinalProductAuthorization._() : super._();
   factory _MedicinalProductAuthorization(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
           R4ResourceType resourceType,
@@ -3922,85 +4305,92 @@ abstract class _MedicinalProductAuthorization
       Reference? regulator,
       MedicinalProductAuthorizationProcedure?
           procedure}) = _$_MedicinalProductAuthorization;
+  _MedicinalProductAuthorization._() : super._();
 
   factory _MedicinalProductAuthorization.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductAuthorization.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get country;
+  List<CodeableConcept>? get country => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get statusDate;
+  FhirDateTime? get statusDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_statusDate')
-  Element? get statusDateElement;
+  Element? get statusDateElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get restoreDate;
+  FhirDateTime? get restoreDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_restoreDate')
-  Element? get restoreDateElement;
+  Element? get restoreDateElement => throw _privateConstructorUsedError;
   @override
-  Period? get validityPeriod;
+  Period? get validityPeriod => throw _privateConstructorUsedError;
   @override
-  Period? get dataExclusivityPeriod;
+  Period? get dataExclusivityPeriod => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get dateOfFirstAuthorization;
+  FhirDateTime? get dateOfFirstAuthorization =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_dateOfFirstAuthorization')
-  Element? get dateOfFirstAuthorizationElement;
+  Element? get dateOfFirstAuthorizationElement =>
+      throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get internationalBirthDate;
+  FhirDateTime? get internationalBirthDate =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_internationalBirthDate')
-  Element? get internationalBirthDateElement;
+  Element? get internationalBirthDateElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get legalBasis;
+  CodeableConcept? get legalBasis => throw _privateConstructorUsedError;
   @override
   List<MedicinalProductAuthorizationJurisdictionalAuthorization>?
-      get jurisdictionalAuthorization;
+      get jurisdictionalAuthorization => throw _privateConstructorUsedError;
   @override
-  Reference? get holder;
+  Reference? get holder => throw _privateConstructorUsedError;
   @override
-  Reference? get regulator;
+  Reference? get regulator => throw _privateConstructorUsedError;
   @override
-  MedicinalProductAuthorizationProcedure? get procedure;
+  MedicinalProductAuthorizationProcedure? get procedure =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductAuthorizationCopyWith<_MedicinalProductAuthorization>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductAuthorizationJurisdictionalAuthorization
@@ -4048,20 +4438,23 @@ const $MedicinalProductAuthorizationJurisdictionalAuthorization =
 
 /// @nodoc
 mixin _$MedicinalProductAuthorizationJurisdictionalAuthorization {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
-  CodeableConcept? get country;
-  List<CodeableConcept>? get jurisdiction;
-  CodeableConcept? get legalStatusOfSupply;
-  Period? get validityPeriod;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept? get country => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  CodeableConcept? get legalStatusOfSupply =>
+      throw _privateConstructorUsedError;
+  Period? get validityPeriod => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductAuthorizationJurisdictionalAuthorizationCopyWith<
-      MedicinalProductAuthorizationJurisdictionalAuthorization> get copyWith;
+          MedicinalProductAuthorizationJurisdictionalAuthorization>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4115,27 +4508,38 @@ class _$MedicinalProductAuthorizationJurisdictionalAuthorizationCopyWithImpl<
     Object? validityPeriod = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      country:
-          country == freezed ? _value.country : country as CodeableConcept?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       legalStatusOfSupply: legalStatusOfSupply == freezed
           ? _value.legalStatusOfSupply
-          : legalStatusOfSupply as CodeableConcept?,
+          : legalStatusOfSupply // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
-          : validityPeriod as Period?,
+          : validityPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 
@@ -4238,27 +4642,38 @@ class __$MedicinalProductAuthorizationJurisdictionalAuthorizationCopyWithImpl<
     Object? validityPeriod = freezed,
   }) {
     return _then(_MedicinalProductAuthorizationJurisdictionalAuthorization(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      country:
-          country == freezed ? _value.country : country as CodeableConcept?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       legalStatusOfSupply: legalStatusOfSupply == freezed
           ? _value.legalStatusOfSupply
-          : legalStatusOfSupply as CodeableConcept?,
+          : legalStatusOfSupply // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
-          : validityPeriod as Period?,
+          : validityPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 }
@@ -4366,7 +4781,6 @@ class _$_MedicinalProductAuthorizationJurisdictionalAuthorization
 
 abstract class _MedicinalProductAuthorizationJurisdictionalAuthorization
     extends MedicinalProductAuthorizationJurisdictionalAuthorization {
-  _MedicinalProductAuthorizationJurisdictionalAuthorization._() : super._();
   factory _MedicinalProductAuthorizationJurisdictionalAuthorization(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4377,32 +4791,36 @@ abstract class _MedicinalProductAuthorizationJurisdictionalAuthorization
           CodeableConcept? legalStatusOfSupply,
           Period? validityPeriod}) =
       _$_MedicinalProductAuthorizationJurisdictionalAuthorization;
+  _MedicinalProductAuthorizationJurisdictionalAuthorization._() : super._();
 
   factory _MedicinalProductAuthorizationJurisdictionalAuthorization.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductAuthorizationJurisdictionalAuthorization.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get country;
+  CodeableConcept? get country => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get legalStatusOfSupply;
+  CodeableConcept? get legalStatusOfSupply =>
+      throw _privateConstructorUsedError;
   @override
-  Period? get validityPeriod;
+  Period? get validityPeriod => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductAuthorizationJurisdictionalAuthorizationCopyWith<
-      _MedicinalProductAuthorizationJurisdictionalAuthorization> get copyWith;
+          _MedicinalProductAuthorizationJurisdictionalAuthorization>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductAuthorizationProcedure
@@ -4449,22 +4867,25 @@ const $MedicinalProductAuthorizationProcedure =
 
 /// @nodoc
 mixin _$MedicinalProductAuthorizationProcedure {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Identifier? get identifier;
-  CodeableConcept get type;
-  Period? get datePeriod;
-  FhirDateTime? get dateDateTime;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Period? get datePeriod => throw _privateConstructorUsedError;
+  FhirDateTime? get dateDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_dateDateTime')
-  Element? get dateDateTimeElement;
-  List<MedicinalProductAuthorizationProcedure>? get application;
+  Element? get dateDateTimeElement => throw _privateConstructorUsedError;
+  List<MedicinalProductAuthorizationProcedure>? get application =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductAuthorizationProcedureCopyWith<
-      MedicinalProductAuthorizationProcedure> get copyWith;
+          MedicinalProductAuthorizationProcedure>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4512,27 +4933,42 @@ class _$MedicinalProductAuthorizationProcedureCopyWithImpl<$Res>
     Object? application = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      datePeriod:
-          datePeriod == freezed ? _value.datePeriod : datePeriod as Period?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      datePeriod: datePeriod == freezed
+          ? _value.datePeriod
+          : datePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dateDateTime: dateDateTime == freezed
           ? _value.dateDateTime
-          : dateDateTime as FhirDateTime?,
+          : dateDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       dateDateTimeElement: dateDateTimeElement == freezed
           ? _value.dateDateTimeElement
-          : dateDateTimeElement as Element?,
+          : dateDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       application: application == freezed
           ? _value.application
-          : application as List<MedicinalProductAuthorizationProcedure>?,
+          : application // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductAuthorizationProcedure>?,
     ));
   }
 
@@ -4633,27 +5069,42 @@ class __$MedicinalProductAuthorizationProcedureCopyWithImpl<$Res>
     Object? application = freezed,
   }) {
     return _then(_MedicinalProductAuthorizationProcedure(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      datePeriod:
-          datePeriod == freezed ? _value.datePeriod : datePeriod as Period?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      datePeriod: datePeriod == freezed
+          ? _value.datePeriod
+          : datePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dateDateTime: dateDateTime == freezed
           ? _value.dateDateTime
-          : dateDateTime as FhirDateTime?,
+          : dateDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       dateDateTimeElement: dateDateTimeElement == freezed
           ? _value.dateDateTimeElement
-          : dateDateTimeElement as Element?,
+          : dateDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       application: application == freezed
           ? _value.application
-          : application as List<MedicinalProductAuthorizationProcedure>?,
+          : application // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductAuthorizationProcedure>?,
     ));
   }
 }
@@ -4764,7 +5215,6 @@ class _$_MedicinalProductAuthorizationProcedure
 
 abstract class _MedicinalProductAuthorizationProcedure
     extends MedicinalProductAuthorizationProcedure {
-  _MedicinalProductAuthorizationProcedure._() : super._();
   factory _MedicinalProductAuthorizationProcedure(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4776,35 +5226,39 @@ abstract class _MedicinalProductAuthorizationProcedure
           @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
           List<MedicinalProductAuthorizationProcedure>? application}) =
       _$_MedicinalProductAuthorizationProcedure;
+  _MedicinalProductAuthorizationProcedure._() : super._();
 
   factory _MedicinalProductAuthorizationProcedure.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductAuthorizationProcedure.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Period? get datePeriod;
+  Period? get datePeriod => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get dateDateTime;
+  FhirDateTime? get dateDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_dateDateTime')
-  Element? get dateDateTimeElement;
+  Element? get dateDateTimeElement => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductAuthorizationProcedure>? get application;
+  List<MedicinalProductAuthorizationProcedure>? get application =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductAuthorizationProcedureCopyWith<
-      _MedicinalProductAuthorizationProcedure> get copyWith;
+          _MedicinalProductAuthorizationProcedure>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductContraindication _$MedicinalProductContraindicationFromJson(
@@ -4874,32 +5328,35 @@ const $MedicinalProductContraindication =
 /// @nodoc
 mixin _$MedicinalProductContraindication {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Reference>? get subject;
-  CodeableConcept? get disease;
-  CodeableConcept? get diseaseStatus;
-  List<CodeableConcept>? get comorbidity;
-  List<Reference>? get therapeuticIndication;
-  List<MedicinalProductContraindicationOtherTherapy>? get otherTherapy;
-  List<Population>? get population;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
+  CodeableConcept? get disease => throw _privateConstructorUsedError;
+  CodeableConcept? get diseaseStatus => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get comorbidity => throw _privateConstructorUsedError;
+  List<Reference>? get therapeuticIndication =>
+      throw _privateConstructorUsedError;
+  List<MedicinalProductContraindicationOtherTherapy>? get otherTherapy =>
+      throw _privateConstructorUsedError;
+  List<Population>? get population => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductContraindicationCopyWith<MedicinalProductContraindication>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4973,48 +5430,76 @@ class _$MedicinalProductContraindicationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
-      disease:
-          disease == freezed ? _value.disease : disease as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      disease: disease == freezed
+          ? _value.disease
+          : disease // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       diseaseStatus: diseaseStatus == freezed
           ? _value.diseaseStatus
-          : diseaseStatus as CodeableConcept?,
+          : diseaseStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       comorbidity: comorbidity == freezed
           ? _value.comorbidity
-          : comorbidity as List<CodeableConcept>?,
+          : comorbidity // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       therapeuticIndication: therapeuticIndication == freezed
           ? _value.therapeuticIndication
-          : therapeuticIndication as List<Reference>?,
+          : therapeuticIndication // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       otherTherapy: otherTherapy == freezed
           ? _value.otherTherapy
-          : otherTherapy as List<MedicinalProductContraindicationOtherTherapy>?,
+          : otherTherapy // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductContraindicationOtherTherapy>?,
       population: population == freezed
           ? _value.population
-          : population as List<Population>?,
+          : population // ignore: cast_nullable_to_non_nullable
+              as List<Population>?,
     ));
   }
 
@@ -5168,48 +5653,76 @@ class __$MedicinalProductContraindicationCopyWithImpl<$Res>
     return _then(_MedicinalProductContraindication(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
-      disease:
-          disease == freezed ? _value.disease : disease as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      disease: disease == freezed
+          ? _value.disease
+          : disease // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       diseaseStatus: diseaseStatus == freezed
           ? _value.diseaseStatus
-          : diseaseStatus as CodeableConcept?,
+          : diseaseStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       comorbidity: comorbidity == freezed
           ? _value.comorbidity
-          : comorbidity as List<CodeableConcept>?,
+          : comorbidity // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       therapeuticIndication: therapeuticIndication == freezed
           ? _value.therapeuticIndication
-          : therapeuticIndication as List<Reference>?,
+          : therapeuticIndication // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       otherTherapy: otherTherapy == freezed
           ? _value.otherTherapy
-          : otherTherapy as List<MedicinalProductContraindicationOtherTherapy>?,
+          : otherTherapy // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductContraindicationOtherTherapy>?,
       population: population == freezed
           ? _value.population
-          : population as List<Population>?,
+          : population // ignore: cast_nullable_to_non_nullable
+              as List<Population>?,
     ));
   }
 }
@@ -5387,7 +5900,6 @@ class _$_MedicinalProductContraindication
 
 abstract class _MedicinalProductContraindication
     extends MedicinalProductContraindication {
-  _MedicinalProductContraindication._() : super._();
   factory _MedicinalProductContraindication(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
           R4ResourceType resourceType,
@@ -5411,54 +5923,58 @@ abstract class _MedicinalProductContraindication
       List<Reference>? therapeuticIndication,
       List<MedicinalProductContraindicationOtherTherapy>? otherTherapy,
       List<Population>? population}) = _$_MedicinalProductContraindication;
+  _MedicinalProductContraindication._() : super._();
 
   factory _MedicinalProductContraindication.fromJson(
       Map<String, dynamic> json) = _$_MedicinalProductContraindication.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get subject;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get disease;
+  CodeableConcept? get disease => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get diseaseStatus;
+  CodeableConcept? get diseaseStatus => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get comorbidity;
+  List<CodeableConcept>? get comorbidity => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get therapeuticIndication;
+  List<Reference>? get therapeuticIndication =>
+      throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductContraindicationOtherTherapy>? get otherTherapy;
+  List<MedicinalProductContraindicationOtherTherapy>? get otherTherapy =>
+      throw _privateConstructorUsedError;
   @override
-  List<Population>? get population;
+  List<Population>? get population => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductContraindicationCopyWith<_MedicinalProductContraindication>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductContraindicationOtherTherapy
@@ -5500,18 +6016,22 @@ const $MedicinalProductContraindicationOtherTherapy =
 
 /// @nodoc
 mixin _$MedicinalProductContraindicationOtherTherapy {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get therapyRelationshipType;
-  CodeableConcept? get medicationCodeableConcept;
-  Reference? get medicationReference;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get therapyRelationshipType =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get medicationCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Reference? get medicationReference => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductContraindicationOtherTherapyCopyWith<
-      MedicinalProductContraindicationOtherTherapy> get copyWith;
+          MedicinalProductContraindicationOtherTherapy>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5553,22 +6073,30 @@ class _$MedicinalProductContraindicationOtherTherapyCopyWithImpl<$Res>
     Object? medicationReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       therapyRelationshipType: therapyRelationshipType == freezed
           ? _value.therapyRelationshipType
-          : therapyRelationshipType as CodeableConcept,
+          : therapyRelationshipType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
-          : medicationCodeableConcept as CodeableConcept?,
+          : medicationCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       medicationReference: medicationReference == freezed
           ? _value.medicationReference
-          : medicationReference as Reference?,
+          : medicationReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -5652,22 +6180,30 @@ class __$MedicinalProductContraindicationOtherTherapyCopyWithImpl<$Res>
     Object? medicationReference = freezed,
   }) {
     return _then(_MedicinalProductContraindicationOtherTherapy(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       therapyRelationshipType: therapyRelationshipType == freezed
           ? _value.therapyRelationshipType
-          : therapyRelationshipType as CodeableConcept,
+          : therapyRelationshipType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
-          : medicationCodeableConcept as CodeableConcept?,
+          : medicationCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       medicationReference: medicationReference == freezed
           ? _value.medicationReference
-          : medicationReference as Reference?,
+          : medicationReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -5761,7 +6297,6 @@ class _$_MedicinalProductContraindicationOtherTherapy
 
 abstract class _MedicinalProductContraindicationOtherTherapy
     extends MedicinalProductContraindicationOtherTherapy {
-  _MedicinalProductContraindicationOtherTherapy._() : super._();
   factory _MedicinalProductContraindicationOtherTherapy(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5770,28 +6305,33 @@ abstract class _MedicinalProductContraindicationOtherTherapy
           CodeableConcept? medicationCodeableConcept,
           Reference? medicationReference}) =
       _$_MedicinalProductContraindicationOtherTherapy;
+  _MedicinalProductContraindicationOtherTherapy._() : super._();
 
   factory _MedicinalProductContraindicationOtherTherapy.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductContraindicationOtherTherapy.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get therapyRelationshipType;
+  CodeableConcept get therapyRelationshipType =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get medicationCodeableConcept;
+  CodeableConcept? get medicationCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get medicationReference;
+  Reference? get medicationReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductContraindicationOtherTherapyCopyWith<
-      _MedicinalProductContraindicationOtherTherapy> get copyWith;
+          _MedicinalProductContraindicationOtherTherapy>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductIndication _$MedicinalProductIndicationFromJson(
@@ -5864,33 +6404,37 @@ const $MedicinalProductIndication = _$MedicinalProductIndicationTearOff();
 /// @nodoc
 mixin _$MedicinalProductIndication {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Reference>? get subject;
-  CodeableConcept? get diseaseSymptomProcedure;
-  CodeableConcept? get diseaseStatus;
-  List<CodeableConcept>? get comorbidity;
-  CodeableConcept? get intendedEffect;
-  Quantity? get duration;
-  List<MedicinalProductIndicationOtherTherapy>? get otherTherapy;
-  List<Reference>? get undesirableEffect;
-  List<Population>? get population;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
+  CodeableConcept? get diseaseSymptomProcedure =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get diseaseStatus => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get comorbidity => throw _privateConstructorUsedError;
+  CodeableConcept? get intendedEffect => throw _privateConstructorUsedError;
+  Quantity? get duration => throw _privateConstructorUsedError;
+  List<MedicinalProductIndicationOtherTherapy>? get otherTherapy =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get undesirableEffect => throw _privateConstructorUsedError;
+  List<Population>? get population => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MedicinalProductIndicationCopyWith<MedicinalProductIndication> get copyWith;
+  $MedicinalProductIndicationCopyWith<MedicinalProductIndication>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5969,53 +6513,84 @@ class _$MedicinalProductIndicationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       diseaseSymptomProcedure: diseaseSymptomProcedure == freezed
           ? _value.diseaseSymptomProcedure
-          : diseaseSymptomProcedure as CodeableConcept?,
+          : diseaseSymptomProcedure // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       diseaseStatus: diseaseStatus == freezed
           ? _value.diseaseStatus
-          : diseaseStatus as CodeableConcept?,
+          : diseaseStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       comorbidity: comorbidity == freezed
           ? _value.comorbidity
-          : comorbidity as List<CodeableConcept>?,
+          : comorbidity // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       intendedEffect: intendedEffect == freezed
           ? _value.intendedEffect
-          : intendedEffect as CodeableConcept?,
-      duration: duration == freezed ? _value.duration : duration as Quantity?,
+          : intendedEffect // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      duration: duration == freezed
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       otherTherapy: otherTherapy == freezed
           ? _value.otherTherapy
-          : otherTherapy as List<MedicinalProductIndicationOtherTherapy>?,
+          : otherTherapy // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductIndicationOtherTherapy>?,
       undesirableEffect: undesirableEffect == freezed
           ? _value.undesirableEffect
-          : undesirableEffect as List<Reference>?,
+          : undesirableEffect // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       population: population == freezed
           ? _value.population
-          : population as List<Population>?,
+          : population // ignore: cast_nullable_to_non_nullable
+              as List<Population>?,
     ));
   }
 
@@ -6199,53 +6774,84 @@ class __$MedicinalProductIndicationCopyWithImpl<$Res>
     return _then(_MedicinalProductIndication(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       diseaseSymptomProcedure: diseaseSymptomProcedure == freezed
           ? _value.diseaseSymptomProcedure
-          : diseaseSymptomProcedure as CodeableConcept?,
+          : diseaseSymptomProcedure // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       diseaseStatus: diseaseStatus == freezed
           ? _value.diseaseStatus
-          : diseaseStatus as CodeableConcept?,
+          : diseaseStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       comorbidity: comorbidity == freezed
           ? _value.comorbidity
-          : comorbidity as List<CodeableConcept>?,
+          : comorbidity // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       intendedEffect: intendedEffect == freezed
           ? _value.intendedEffect
-          : intendedEffect as CodeableConcept?,
-      duration: duration == freezed ? _value.duration : duration as Quantity?,
+          : intendedEffect // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      duration: duration == freezed
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       otherTherapy: otherTherapy == freezed
           ? _value.otherTherapy
-          : otherTherapy as List<MedicinalProductIndicationOtherTherapy>?,
+          : otherTherapy // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductIndicationOtherTherapy>?,
       undesirableEffect: undesirableEffect == freezed
           ? _value.undesirableEffect
-          : undesirableEffect as List<Reference>?,
+          : undesirableEffect // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       population: population == freezed
           ? _value.population
-          : population as List<Population>?,
+          : population // ignore: cast_nullable_to_non_nullable
+              as List<Population>?,
     ));
   }
 }
@@ -6435,7 +7041,6 @@ class _$_MedicinalProductIndication extends _MedicinalProductIndication {
 }
 
 abstract class _MedicinalProductIndication extends MedicinalProductIndication {
-  _MedicinalProductIndication._() : super._();
   factory _MedicinalProductIndication(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
           R4ResourceType resourceType,
@@ -6461,58 +7066,62 @@ abstract class _MedicinalProductIndication extends MedicinalProductIndication {
       List<MedicinalProductIndicationOtherTherapy>? otherTherapy,
       List<Reference>? undesirableEffect,
       List<Population>? population}) = _$_MedicinalProductIndication;
+  _MedicinalProductIndication._() : super._();
 
   factory _MedicinalProductIndication.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductIndication.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get subject;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get diseaseSymptomProcedure;
+  CodeableConcept? get diseaseSymptomProcedure =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get diseaseStatus;
+  CodeableConcept? get diseaseStatus => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get comorbidity;
+  List<CodeableConcept>? get comorbidity => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get intendedEffect;
+  CodeableConcept? get intendedEffect => throw _privateConstructorUsedError;
   @override
-  Quantity? get duration;
+  Quantity? get duration => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductIndicationOtherTherapy>? get otherTherapy;
+  List<MedicinalProductIndicationOtherTherapy>? get otherTherapy =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get undesirableEffect;
+  List<Reference>? get undesirableEffect => throw _privateConstructorUsedError;
   @override
-  List<Population>? get population;
+  List<Population>? get population => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductIndicationCopyWith<_MedicinalProductIndication>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductIndicationOtherTherapy
@@ -6553,18 +7162,22 @@ const $MedicinalProductIndicationOtherTherapy =
 
 /// @nodoc
 mixin _$MedicinalProductIndicationOtherTherapy {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get therapyRelationshipType;
-  CodeableConcept? get medicationCodeableConcept;
-  Reference? get medicationReference;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get therapyRelationshipType =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get medicationCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Reference? get medicationReference => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductIndicationOtherTherapyCopyWith<
-      MedicinalProductIndicationOtherTherapy> get copyWith;
+          MedicinalProductIndicationOtherTherapy>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6605,22 +7218,30 @@ class _$MedicinalProductIndicationOtherTherapyCopyWithImpl<$Res>
     Object? medicationReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       therapyRelationshipType: therapyRelationshipType == freezed
           ? _value.therapyRelationshipType
-          : therapyRelationshipType as CodeableConcept,
+          : therapyRelationshipType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
-          : medicationCodeableConcept as CodeableConcept?,
+          : medicationCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       medicationReference: medicationReference == freezed
           ? _value.medicationReference
-          : medicationReference as Reference?,
+          : medicationReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -6704,22 +7325,30 @@ class __$MedicinalProductIndicationOtherTherapyCopyWithImpl<$Res>
     Object? medicationReference = freezed,
   }) {
     return _then(_MedicinalProductIndicationOtherTherapy(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       therapyRelationshipType: therapyRelationshipType == freezed
           ? _value.therapyRelationshipType
-          : therapyRelationshipType as CodeableConcept,
+          : therapyRelationshipType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
-          : medicationCodeableConcept as CodeableConcept?,
+          : medicationCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       medicationReference: medicationReference == freezed
           ? _value.medicationReference
-          : medicationReference as Reference?,
+          : medicationReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -6812,7 +7441,6 @@ class _$_MedicinalProductIndicationOtherTherapy
 
 abstract class _MedicinalProductIndicationOtherTherapy
     extends MedicinalProductIndicationOtherTherapy {
-  _MedicinalProductIndicationOtherTherapy._() : super._();
   factory _MedicinalProductIndicationOtherTherapy(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6821,28 +7449,33 @@ abstract class _MedicinalProductIndicationOtherTherapy
           CodeableConcept? medicationCodeableConcept,
           Reference? medicationReference}) =
       _$_MedicinalProductIndicationOtherTherapy;
+  _MedicinalProductIndicationOtherTherapy._() : super._();
 
   factory _MedicinalProductIndicationOtherTherapy.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductIndicationOtherTherapy.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get therapyRelationshipType;
+  CodeableConcept get therapyRelationshipType =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get medicationCodeableConcept;
+  CodeableConcept? get medicationCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get medicationReference;
+  Reference? get medicationReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductIndicationOtherTherapyCopyWith<
-      _MedicinalProductIndicationOtherTherapy> get copyWith;
+          _MedicinalProductIndicationOtherTherapy>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductIngredient _$MedicinalProductIngredientFromJson(
@@ -6912,32 +7545,36 @@ const $MedicinalProductIngredient = _$MedicinalProductIngredientTearOff();
 /// @nodoc
 mixin _$MedicinalProductIngredient {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Identifier? get identifier;
-  CodeableConcept get role;
-  Boolean? get allergenicIndicator;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept get role => throw _privateConstructorUsedError;
+  Boolean? get allergenicIndicator => throw _privateConstructorUsedError;
   @JsonKey(name: '_allergenicIndicator')
-  Element? get allergenicIndicatorElement;
-  List<Reference>? get manufacturer;
-  List<MedicinalProductIngredientSpecifiedSubstance>? get specifiedSubstance;
-  MedicinalProductIngredientSubstance? get substance;
+  Element? get allergenicIndicatorElement => throw _privateConstructorUsedError;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
+  List<MedicinalProductIngredientSpecifiedSubstance>? get specifiedSubstance =>
+      throw _privateConstructorUsedError;
+  MedicinalProductIngredientSubstance? get substance =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MedicinalProductIngredientCopyWith<MedicinalProductIngredient> get copyWith;
+  $MedicinalProductIngredientCopyWith<MedicinalProductIngredient>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7013,48 +7650,76 @@ class _$MedicinalProductIngredientCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       allergenicIndicator: allergenicIndicator == freezed
           ? _value.allergenicIndicator
-          : allergenicIndicator as Boolean?,
+          : allergenicIndicator // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       allergenicIndicatorElement: allergenicIndicatorElement == freezed
           ? _value.allergenicIndicatorElement
-          : allergenicIndicatorElement as Element?,
+          : allergenicIndicatorElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       specifiedSubstance: specifiedSubstance == freezed
           ? _value.specifiedSubstance
-          : specifiedSubstance
+          : specifiedSubstance // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductIngredientSpecifiedSubstance>?,
       substance: substance == freezed
           ? _value.substance
-          : substance as MedicinalProductIngredientSubstance?,
+          : substance // ignore: cast_nullable_to_non_nullable
+              as MedicinalProductIngredientSubstance?,
     ));
   }
 
@@ -7231,48 +7896,76 @@ class __$MedicinalProductIngredientCopyWithImpl<$Res>
     return _then(_MedicinalProductIngredient(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      role: role == freezed ? _value.role : role as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       allergenicIndicator: allergenicIndicator == freezed
           ? _value.allergenicIndicator
-          : allergenicIndicator as Boolean?,
+          : allergenicIndicator // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       allergenicIndicatorElement: allergenicIndicatorElement == freezed
           ? _value.allergenicIndicatorElement
-          : allergenicIndicatorElement as Element?,
+          : allergenicIndicatorElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       specifiedSubstance: specifiedSubstance == freezed
           ? _value.specifiedSubstance
-          : specifiedSubstance
+          : specifiedSubstance // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductIngredientSpecifiedSubstance>?,
       substance: substance == freezed
           ? _value.substance
-          : substance as MedicinalProductIngredientSubstance?,
+          : substance // ignore: cast_nullable_to_non_nullable
+              as MedicinalProductIngredientSubstance?,
     ));
   }
 }
@@ -7450,7 +8143,6 @@ class _$_MedicinalProductIngredient extends _MedicinalProductIngredient {
 }
 
 abstract class _MedicinalProductIngredient extends MedicinalProductIngredient {
-  _MedicinalProductIngredient._() : super._();
   factory _MedicinalProductIngredient(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
           R4ResourceType resourceType,
@@ -7476,55 +8168,59 @@ abstract class _MedicinalProductIngredient extends MedicinalProductIngredient {
       List<MedicinalProductIngredientSpecifiedSubstance>? specifiedSubstance,
       MedicinalProductIngredientSubstance?
           substance}) = _$_MedicinalProductIngredient;
+  _MedicinalProductIngredient._() : super._();
 
   factory _MedicinalProductIngredient.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductIngredient.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get role;
+  CodeableConcept get role => throw _privateConstructorUsedError;
   @override
-  Boolean? get allergenicIndicator;
+  Boolean? get allergenicIndicator => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_allergenicIndicator')
-  Element? get allergenicIndicatorElement;
+  Element? get allergenicIndicatorElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductIngredientSpecifiedSubstance>? get specifiedSubstance;
+  List<MedicinalProductIngredientSpecifiedSubstance>? get specifiedSubstance =>
+      throw _privateConstructorUsedError;
   @override
-  MedicinalProductIngredientSubstance? get substance;
+  MedicinalProductIngredientSubstance? get substance =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductIngredientCopyWith<_MedicinalProductIngredient>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductIngredientSpecifiedSubstance
@@ -7568,19 +8264,22 @@ const $MedicinalProductIngredientSpecifiedSubstance =
 
 /// @nodoc
 mixin _$MedicinalProductIngredientSpecifiedSubstance {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get code;
-  CodeableConcept get group;
-  CodeableConcept? get confidentiality;
-  List<MedicinalProductIngredientStrength>? get strength;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  CodeableConcept get group => throw _privateConstructorUsedError;
+  CodeableConcept? get confidentiality => throw _privateConstructorUsedError;
+  List<MedicinalProductIngredientStrength>? get strength =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductIngredientSpecifiedSubstanceCopyWith<
-      MedicinalProductIngredientSpecifiedSubstance> get copyWith;
+          MedicinalProductIngredientSpecifiedSubstance>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7624,21 +8323,34 @@ class _$MedicinalProductIngredientSpecifiedSubstanceCopyWithImpl<$Res>
     Object? strength = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      group: group == freezed ? _value.group : group as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      group: group == freezed
+          ? _value.group
+          : group // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       confidentiality: confidentiality == freezed
           ? _value.confidentiality
-          : confidentiality as CodeableConcept?,
+          : confidentiality // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       strength: strength == freezed
           ? _value.strength
-          : strength as List<MedicinalProductIngredientStrength>?,
+          : strength // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductIngredientStrength>?,
     ));
   }
 
@@ -7718,21 +8430,34 @@ class __$MedicinalProductIngredientSpecifiedSubstanceCopyWithImpl<$Res>
     Object? strength = freezed,
   }) {
     return _then(_MedicinalProductIngredientSpecifiedSubstance(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      group: group == freezed ? _value.group : group as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      group: group == freezed
+          ? _value.group
+          : group // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       confidentiality: confidentiality == freezed
           ? _value.confidentiality
-          : confidentiality as CodeableConcept?,
+          : confidentiality // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       strength: strength == freezed
           ? _value.strength
-          : strength as List<MedicinalProductIngredientStrength>?,
+          : strength // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductIngredientStrength>?,
     ));
   }
 }
@@ -7828,7 +8553,6 @@ class _$_MedicinalProductIngredientSpecifiedSubstance
 
 abstract class _MedicinalProductIngredientSpecifiedSubstance
     extends MedicinalProductIngredientSpecifiedSubstance {
-  _MedicinalProductIngredientSpecifiedSubstance._() : super._();
   factory _MedicinalProductIngredientSpecifiedSubstance(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -7838,30 +8562,34 @@ abstract class _MedicinalProductIngredientSpecifiedSubstance
           CodeableConcept? confidentiality,
           List<MedicinalProductIngredientStrength>? strength}) =
       _$_MedicinalProductIngredientSpecifiedSubstance;
+  _MedicinalProductIngredientSpecifiedSubstance._() : super._();
 
   factory _MedicinalProductIngredientSpecifiedSubstance.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductIngredientSpecifiedSubstance.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get group;
+  CodeableConcept get group => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get confidentiality;
+  CodeableConcept? get confidentiality => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductIngredientStrength>? get strength;
+  List<MedicinalProductIngredientStrength>? get strength =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductIngredientSpecifiedSubstanceCopyWith<
-      _MedicinalProductIngredientSpecifiedSubstance> get copyWith;
+          _MedicinalProductIngredientSpecifiedSubstance>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductIngredientStrength _$MedicinalProductIngredientStrengthFromJson(
@@ -7911,24 +8639,27 @@ const $MedicinalProductIngredientStrength =
 
 /// @nodoc
 mixin _$MedicinalProductIngredientStrength {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Ratio get presentation;
-  Ratio? get presentationLowLimit;
-  Ratio? get concentration;
-  Ratio? get concentrationLowLimit;
-  String? get measurementPoint;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Ratio get presentation => throw _privateConstructorUsedError;
+  Ratio? get presentationLowLimit => throw _privateConstructorUsedError;
+  Ratio? get concentration => throw _privateConstructorUsedError;
+  Ratio? get concentrationLowLimit => throw _privateConstructorUsedError;
+  String? get measurementPoint => throw _privateConstructorUsedError;
   @JsonKey(name: '_measurementPoint')
-  Element? get measurementPointElement;
-  List<CodeableConcept>? get country;
-  List<MedicinalProductIngredientReferenceStrength>? get referenceStrength;
+  Element? get measurementPointElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get country => throw _privateConstructorUsedError;
+  List<MedicinalProductIngredientReferenceStrength>? get referenceStrength =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductIngredientStrengthCopyWith<
-      MedicinalProductIngredientStrength> get copyWith;
+          MedicinalProductIngredientStrength>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7981,36 +8712,49 @@ class _$MedicinalProductIngredientStrengthCopyWithImpl<$Res>
     Object? referenceStrength = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      presentation:
-          presentation == freezed ? _value.presentation : presentation as Ratio,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      presentation: presentation == freezed
+          ? _value.presentation
+          : presentation // ignore: cast_nullable_to_non_nullable
+              as Ratio,
       presentationLowLimit: presentationLowLimit == freezed
           ? _value.presentationLowLimit
-          : presentationLowLimit as Ratio?,
+          : presentationLowLimit // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       concentration: concentration == freezed
           ? _value.concentration
-          : concentration as Ratio?,
+          : concentration // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       concentrationLowLimit: concentrationLowLimit == freezed
           ? _value.concentrationLowLimit
-          : concentrationLowLimit as Ratio?,
+          : concentrationLowLimit // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       measurementPoint: measurementPoint == freezed
           ? _value.measurementPoint
-          : measurementPoint as String?,
+          : measurementPoint // ignore: cast_nullable_to_non_nullable
+              as String?,
       measurementPointElement: measurementPointElement == freezed
           ? _value.measurementPointElement
-          : measurementPointElement as Element?,
+          : measurementPointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       country: country == freezed
           ? _value.country
-          : country as List<CodeableConcept>?,
+          : country // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       referenceStrength: referenceStrength == freezed
           ? _value.referenceStrength
-          : referenceStrength
+          : referenceStrength // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductIngredientReferenceStrength>?,
     ));
   }
@@ -8128,36 +8872,49 @@ class __$MedicinalProductIngredientStrengthCopyWithImpl<$Res>
     Object? referenceStrength = freezed,
   }) {
     return _then(_MedicinalProductIngredientStrength(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      presentation:
-          presentation == freezed ? _value.presentation : presentation as Ratio,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      presentation: presentation == freezed
+          ? _value.presentation
+          : presentation // ignore: cast_nullable_to_non_nullable
+              as Ratio,
       presentationLowLimit: presentationLowLimit == freezed
           ? _value.presentationLowLimit
-          : presentationLowLimit as Ratio?,
+          : presentationLowLimit // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       concentration: concentration == freezed
           ? _value.concentration
-          : concentration as Ratio?,
+          : concentration // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       concentrationLowLimit: concentrationLowLimit == freezed
           ? _value.concentrationLowLimit
-          : concentrationLowLimit as Ratio?,
+          : concentrationLowLimit // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       measurementPoint: measurementPoint == freezed
           ? _value.measurementPoint
-          : measurementPoint as String?,
+          : measurementPoint // ignore: cast_nullable_to_non_nullable
+              as String?,
       measurementPointElement: measurementPointElement == freezed
           ? _value.measurementPointElement
-          : measurementPointElement as Element?,
+          : measurementPointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       country: country == freezed
           ? _value.country
-          : country as List<CodeableConcept>?,
+          : country // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       referenceStrength: referenceStrength == freezed
           ? _value.referenceStrength
-          : referenceStrength
+          : referenceStrength // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductIngredientReferenceStrength>?,
     ));
   }
@@ -8285,7 +9042,6 @@ class _$_MedicinalProductIngredientStrength
 
 abstract class _MedicinalProductIngredientStrength
     extends MedicinalProductIngredientStrength {
-  _MedicinalProductIngredientStrength._() : super._();
   factory _MedicinalProductIngredientStrength(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -8299,39 +9055,43 @@ abstract class _MedicinalProductIngredientStrength
       List<CodeableConcept>? country,
       List<MedicinalProductIngredientReferenceStrength>?
           referenceStrength}) = _$_MedicinalProductIngredientStrength;
+  _MedicinalProductIngredientStrength._() : super._();
 
   factory _MedicinalProductIngredientStrength.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductIngredientStrength.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Ratio get presentation;
+  Ratio get presentation => throw _privateConstructorUsedError;
   @override
-  Ratio? get presentationLowLimit;
+  Ratio? get presentationLowLimit => throw _privateConstructorUsedError;
   @override
-  Ratio? get concentration;
+  Ratio? get concentration => throw _privateConstructorUsedError;
   @override
-  Ratio? get concentrationLowLimit;
+  Ratio? get concentrationLowLimit => throw _privateConstructorUsedError;
   @override
-  String? get measurementPoint;
+  String? get measurementPoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_measurementPoint')
-  Element? get measurementPointElement;
+  Element? get measurementPointElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get country;
+  List<CodeableConcept>? get country => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductIngredientReferenceStrength>? get referenceStrength;
+  List<MedicinalProductIngredientReferenceStrength>? get referenceStrength =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductIngredientStrengthCopyWith<
-      _MedicinalProductIngredientStrength> get copyWith;
+          _MedicinalProductIngredientStrength>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductIngredientReferenceStrength
@@ -8379,22 +9139,24 @@ const $MedicinalProductIngredientReferenceStrength =
 
 /// @nodoc
 mixin _$MedicinalProductIngredientReferenceStrength {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get substance;
-  Ratio get strength;
-  Ratio? get strengthLowLimit;
-  String? get measurementPoint;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get substance => throw _privateConstructorUsedError;
+  Ratio get strength => throw _privateConstructorUsedError;
+  Ratio? get strengthLowLimit => throw _privateConstructorUsedError;
+  String? get measurementPoint => throw _privateConstructorUsedError;
   @JsonKey(name: '_measurementPoint')
-  Element? get measurementPointElement;
-  List<CodeableConcept>? get country;
+  Element? get measurementPointElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get country => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductIngredientReferenceStrengthCopyWith<
-      MedicinalProductIngredientReferenceStrength> get copyWith;
+          MedicinalProductIngredientReferenceStrength>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8443,29 +9205,42 @@ class _$MedicinalProductIngredientReferenceStrengthCopyWithImpl<$Res>
     Object? country = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       substance: substance == freezed
           ? _value.substance
-          : substance as CodeableConcept?,
-      strength: strength == freezed ? _value.strength : strength as Ratio,
+          : substance // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      strength: strength == freezed
+          ? _value.strength
+          : strength // ignore: cast_nullable_to_non_nullable
+              as Ratio,
       strengthLowLimit: strengthLowLimit == freezed
           ? _value.strengthLowLimit
-          : strengthLowLimit as Ratio?,
+          : strengthLowLimit // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       measurementPoint: measurementPoint == freezed
           ? _value.measurementPoint
-          : measurementPoint as String?,
+          : measurementPoint // ignore: cast_nullable_to_non_nullable
+              as String?,
       measurementPointElement: measurementPointElement == freezed
           ? _value.measurementPointElement
-          : measurementPointElement as Element?,
+          : measurementPointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       country: country == freezed
           ? _value.country
-          : country as List<CodeableConcept>?,
+          : country // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
     ));
   }
 
@@ -8566,29 +9341,42 @@ class __$MedicinalProductIngredientReferenceStrengthCopyWithImpl<$Res>
     Object? country = freezed,
   }) {
     return _then(_MedicinalProductIngredientReferenceStrength(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       substance: substance == freezed
           ? _value.substance
-          : substance as CodeableConcept?,
-      strength: strength == freezed ? _value.strength : strength as Ratio,
+          : substance // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      strength: strength == freezed
+          ? _value.strength
+          : strength // ignore: cast_nullable_to_non_nullable
+              as Ratio,
       strengthLowLimit: strengthLowLimit == freezed
           ? _value.strengthLowLimit
-          : strengthLowLimit as Ratio?,
+          : strengthLowLimit // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       measurementPoint: measurementPoint == freezed
           ? _value.measurementPoint
-          : measurementPoint as String?,
+          : measurementPoint // ignore: cast_nullable_to_non_nullable
+              as String?,
       measurementPointElement: measurementPointElement == freezed
           ? _value.measurementPointElement
-          : measurementPointElement as Element?,
+          : measurementPointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       country: country == freezed
           ? _value.country
-          : country as List<CodeableConcept>?,
+          : country // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
     ));
   }
 }
@@ -8701,7 +9489,6 @@ class _$_MedicinalProductIngredientReferenceStrength
 
 abstract class _MedicinalProductIngredientReferenceStrength
     extends MedicinalProductIngredientReferenceStrength {
-  _MedicinalProductIngredientReferenceStrength._() : super._();
   factory _MedicinalProductIngredientReferenceStrength(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -8713,35 +9500,38 @@ abstract class _MedicinalProductIngredientReferenceStrength
           @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
           List<CodeableConcept>? country}) =
       _$_MedicinalProductIngredientReferenceStrength;
+  _MedicinalProductIngredientReferenceStrength._() : super._();
 
   factory _MedicinalProductIngredientReferenceStrength.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductIngredientReferenceStrength.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get substance;
+  CodeableConcept? get substance => throw _privateConstructorUsedError;
   @override
-  Ratio get strength;
+  Ratio get strength => throw _privateConstructorUsedError;
   @override
-  Ratio? get strengthLowLimit;
+  Ratio? get strengthLowLimit => throw _privateConstructorUsedError;
   @override
-  String? get measurementPoint;
+  String? get measurementPoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_measurementPoint')
-  Element? get measurementPointElement;
+  Element? get measurementPointElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get country;
+  List<CodeableConcept>? get country => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductIngredientReferenceStrengthCopyWith<
-      _MedicinalProductIngredientReferenceStrength> get copyWith;
+          _MedicinalProductIngredientReferenceStrength>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductIngredientSubstance
@@ -8779,17 +9569,20 @@ const $MedicinalProductIngredientSubstance =
 
 /// @nodoc
 mixin _$MedicinalProductIngredientSubstance {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get code;
-  List<MedicinalProductIngredientStrength>? get strength;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  List<MedicinalProductIngredientStrength>? get strength =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductIngredientSubstanceCopyWith<
-      MedicinalProductIngredientSubstance> get copyWith;
+          MedicinalProductIngredientSubstance>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8826,17 +9619,26 @@ class _$MedicinalProductIngredientSubstanceCopyWithImpl<$Res>
     Object? strength = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       strength: strength == freezed
           ? _value.strength
-          : strength as List<MedicinalProductIngredientStrength>?,
+          : strength // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductIngredientStrength>?,
     ));
   }
 
@@ -8889,17 +9691,26 @@ class __$MedicinalProductIngredientSubstanceCopyWithImpl<$Res>
     Object? strength = freezed,
   }) {
     return _then(_MedicinalProductIngredientSubstance(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       strength: strength == freezed
           ? _value.strength
-          : strength as List<MedicinalProductIngredientStrength>?,
+          : strength // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductIngredientStrength>?,
     ));
   }
 }
@@ -8981,7 +9792,6 @@ class _$_MedicinalProductIngredientSubstance
 
 abstract class _MedicinalProductIngredientSubstance
     extends MedicinalProductIngredientSubstance {
-  _MedicinalProductIngredientSubstance._() : super._();
   factory _MedicinalProductIngredientSubstance(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -8989,26 +9799,30 @@ abstract class _MedicinalProductIngredientSubstance
           required CodeableConcept code,
           List<MedicinalProductIngredientStrength>? strength}) =
       _$_MedicinalProductIngredientSubstance;
+  _MedicinalProductIngredientSubstance._() : super._();
 
   factory _MedicinalProductIngredientSubstance.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductIngredientSubstance.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductIngredientStrength>? get strength;
+  List<MedicinalProductIngredientStrength>? get strength =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductIngredientSubstanceCopyWith<
-      _MedicinalProductIngredientSubstance> get copyWith;
+          _MedicinalProductIngredientSubstance>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductInteraction _$MedicinalProductInteractionFromJson(
@@ -9080,34 +9894,36 @@ const $MedicinalProductInteraction = _$MedicinalProductInteractionTearOff();
 /// @nodoc
 mixin _$MedicinalProductInteraction {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Reference>? get subject;
-  String? get description;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<MedicinalProductInteractionInteractant>? get interactant;
-  CodeableConcept? get type;
-  CodeableConcept? get effect;
-  CodeableConcept? get incidence;
-  CodeableConcept? get management;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<MedicinalProductInteractionInteractant>? get interactant =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get effect => throw _privateConstructorUsedError;
+  CodeableConcept? get incidence => throw _privateConstructorUsedError;
+  CodeableConcept? get management => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductInteractionCopyWith<MedicinalProductInteraction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -9187,47 +10003,80 @@ class _$MedicinalProductInteractionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       interactant: interactant == freezed
           ? _value.interactant
-          : interactant as List<MedicinalProductInteractionInteractant>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      effect: effect == freezed ? _value.effect : effect as CodeableConcept?,
+          : interactant // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductInteractionInteractant>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      effect: effect == freezed
+          ? _value.effect
+          : effect // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       incidence: incidence == freezed
           ? _value.incidence
-          : incidence as CodeableConcept?,
+          : incidence // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       management: management == freezed
           ? _value.management
-          : management as CodeableConcept?,
+          : management // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -9423,47 +10272,80 @@ class __$MedicinalProductInteractionCopyWithImpl<$Res>
     return _then(_MedicinalProductInteraction(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       interactant: interactant == freezed
           ? _value.interactant
-          : interactant as List<MedicinalProductInteractionInteractant>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      effect: effect == freezed ? _value.effect : effect as CodeableConcept?,
+          : interactant // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductInteractionInteractant>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      effect: effect == freezed
+          ? _value.effect
+          : effect // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       incidence: incidence == freezed
           ? _value.incidence
-          : incidence as CodeableConcept?,
+          : incidence // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       management: management == freezed
           ? _value.management
-          : management as CodeableConcept?,
+          : management // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -9646,7 +10528,6 @@ class _$_MedicinalProductInteraction extends _MedicinalProductInteraction {
 
 abstract class _MedicinalProductInteraction
     extends MedicinalProductInteraction {
-  _MedicinalProductInteraction._() : super._();
   factory _MedicinalProductInteraction(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
           R4ResourceType resourceType,
@@ -9672,57 +10553,60 @@ abstract class _MedicinalProductInteraction
       CodeableConcept? effect,
       CodeableConcept? incidence,
       CodeableConcept? management}) = _$_MedicinalProductInteraction;
+  _MedicinalProductInteraction._() : super._();
 
   factory _MedicinalProductInteraction.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductInteraction.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get subject;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductInteractionInteractant>? get interactant;
+  List<MedicinalProductInteractionInteractant>? get interactant =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get effect;
+  CodeableConcept? get effect => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get incidence;
+  CodeableConcept? get incidence => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get management;
+  CodeableConcept? get management => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductInteractionCopyWith<_MedicinalProductInteraction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductInteractionInteractant
@@ -9761,17 +10645,20 @@ const $MedicinalProductInteractionInteractant =
 
 /// @nodoc
 mixin _$MedicinalProductInteractionInteractant {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Reference? get itemReference;
-  CodeableConcept? get itemCodeableConcept;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Reference? get itemReference => throw _privateConstructorUsedError;
+  CodeableConcept? get itemCodeableConcept =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductInteractionInteractantCopyWith<
-      MedicinalProductInteractionInteractant> get copyWith;
+          MedicinalProductInteractionInteractant>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -9809,19 +10696,26 @@ class _$MedicinalProductInteractionInteractantCopyWithImpl<$Res>
     Object? itemCodeableConcept = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       itemReference: itemReference == freezed
           ? _value.itemReference
-          : itemReference as Reference?,
+          : itemReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       itemCodeableConcept: itemCodeableConcept == freezed
           ? _value.itemCodeableConcept
-          : itemCodeableConcept as CodeableConcept?,
+          : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -9892,19 +10786,26 @@ class __$MedicinalProductInteractionInteractantCopyWithImpl<$Res>
     Object? itemCodeableConcept = freezed,
   }) {
     return _then(_MedicinalProductInteractionInteractant(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       itemReference: itemReference == freezed
           ? _value.itemReference
-          : itemReference as Reference?,
+          : itemReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       itemCodeableConcept: itemCodeableConcept == freezed
           ? _value.itemCodeableConcept
-          : itemCodeableConcept as CodeableConcept?,
+          : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -9987,7 +10888,6 @@ class _$_MedicinalProductInteractionInteractant
 
 abstract class _MedicinalProductInteractionInteractant
     extends MedicinalProductInteractionInteractant {
-  _MedicinalProductInteractionInteractant._() : super._();
   factory _MedicinalProductInteractionInteractant(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -9995,26 +10895,30 @@ abstract class _MedicinalProductInteractionInteractant
           Reference? itemReference,
           CodeableConcept? itemCodeableConcept}) =
       _$_MedicinalProductInteractionInteractant;
+  _MedicinalProductInteractionInteractant._() : super._();
 
   factory _MedicinalProductInteractionInteractant.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductInteractionInteractant.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get itemReference;
+  Reference? get itemReference => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get itemCodeableConcept;
+  CodeableConcept? get itemCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductInteractionInteractantCopyWith<
-      _MedicinalProductInteractionInteractant> get copyWith;
+          _MedicinalProductInteractionInteractant>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductManufactured _$MedicinalProductManufacturedFromJson(
@@ -10083,32 +10987,36 @@ const $MedicinalProductManufactured = _$MedicinalProductManufacturedTearOff();
 /// @nodoc
 mixin _$MedicinalProductManufactured {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get manufacturedDoseForm;
-  CodeableConcept? get unitOfPresentation;
-  Quantity get quantity;
-  List<Reference>? get manufacturer;
-  List<Reference>? get ingredient;
-  ProdCharacteristic? get physicalCharacteristics;
-  List<CodeableConcept>? get otherCharacteristics;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get manufacturedDoseForm =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get unitOfPresentation => throw _privateConstructorUsedError;
+  Quantity get quantity => throw _privateConstructorUsedError;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
+  List<Reference>? get ingredient => throw _privateConstructorUsedError;
+  ProdCharacteristic? get physicalCharacteristics =>
+      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get otherCharacteristics =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductManufacturedCopyWith<MedicinalProductManufactured>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -10184,48 +11092,76 @@ class _$MedicinalProductManufacturedCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       manufacturedDoseForm: manufacturedDoseForm == freezed
           ? _value.manufacturedDoseForm
-          : manufacturedDoseForm as CodeableConcept,
+          : manufacturedDoseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       unitOfPresentation: unitOfPresentation == freezed
           ? _value.unitOfPresentation
-          : unitOfPresentation as CodeableConcept?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+          : unitOfPresentation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as List<Reference>?,
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       physicalCharacteristics: physicalCharacteristics == freezed
           ? _value.physicalCharacteristics
-          : physicalCharacteristics as ProdCharacteristic?,
+          : physicalCharacteristics // ignore: cast_nullable_to_non_nullable
+              as ProdCharacteristic?,
       otherCharacteristics: otherCharacteristics == freezed
           ? _value.otherCharacteristics
-          : otherCharacteristics as List<CodeableConcept>?,
+          : otherCharacteristics // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
     ));
   }
 
@@ -10398,48 +11334,76 @@ class __$MedicinalProductManufacturedCopyWithImpl<$Res>
     return _then(_MedicinalProductManufactured(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       manufacturedDoseForm: manufacturedDoseForm == freezed
           ? _value.manufacturedDoseForm
-          : manufacturedDoseForm as CodeableConcept,
+          : manufacturedDoseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       unitOfPresentation: unitOfPresentation == freezed
           ? _value.unitOfPresentation
-          : unitOfPresentation as CodeableConcept?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+          : unitOfPresentation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as List<Reference>?,
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       physicalCharacteristics: physicalCharacteristics == freezed
           ? _value.physicalCharacteristics
-          : physicalCharacteristics as ProdCharacteristic?,
+          : physicalCharacteristics // ignore: cast_nullable_to_non_nullable
+              as ProdCharacteristic?,
       otherCharacteristics: otherCharacteristics == freezed
           ? _value.otherCharacteristics
-          : otherCharacteristics as List<CodeableConcept>?,
+          : otherCharacteristics // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
     ));
   }
 }
@@ -10616,7 +11580,6 @@ class _$_MedicinalProductManufactured extends _MedicinalProductManufactured {
 
 abstract class _MedicinalProductManufactured
     extends MedicinalProductManufactured {
-  _MedicinalProductManufactured._() : super._();
   factory _MedicinalProductManufactured(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
           R4ResourceType resourceType,
@@ -10641,54 +11604,59 @@ abstract class _MedicinalProductManufactured
       ProdCharacteristic? physicalCharacteristics,
       List<CodeableConcept>?
           otherCharacteristics}) = _$_MedicinalProductManufactured;
+  _MedicinalProductManufactured._() : super._();
 
   factory _MedicinalProductManufactured.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductManufactured.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get manufacturedDoseForm;
+  CodeableConcept get manufacturedDoseForm =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get unitOfPresentation;
+  CodeableConcept? get unitOfPresentation => throw _privateConstructorUsedError;
   @override
-  Quantity get quantity;
+  Quantity get quantity => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get ingredient;
+  List<Reference>? get ingredient => throw _privateConstructorUsedError;
   @override
-  ProdCharacteristic? get physicalCharacteristics;
+  ProdCharacteristic? get physicalCharacteristics =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get otherCharacteristics;
+  List<CodeableConcept>? get otherCharacteristics =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductManufacturedCopyWith<_MedicinalProductManufactured>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductPackaged _$MedicinalProductPackagedFromJson(
@@ -10763,35 +11731,41 @@ const $MedicinalProductPackaged = _$MedicinalProductPackagedTearOff();
 /// @nodoc
 mixin _$MedicinalProductPackaged {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
-  List<Reference>? get subject;
-  String? get description;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  CodeableConcept? get legalStatusOfSupply;
-  List<MarketingStatus>? get marketingStatus;
-  Reference? get marketingAuthorization;
-  List<Reference>? get manufacturer;
-  List<MedicinalProductPackagedBatchIdentifier>? get batchIdentifier;
-  List<MedicinalProductPackagedPackageItem> get packageItem;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  CodeableConcept? get legalStatusOfSupply =>
+      throw _privateConstructorUsedError;
+  List<MarketingStatus>? get marketingStatus =>
+      throw _privateConstructorUsedError;
+  Reference? get marketingAuthorization => throw _privateConstructorUsedError;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
+  List<MedicinalProductPackagedBatchIdentifier>? get batchIdentifier =>
+      throw _privateConstructorUsedError;
+  List<MedicinalProductPackagedPackageItem> get packageItem =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MedicinalProductPackagedCopyWith<MedicinalProductPackaged> get copyWith;
+  $MedicinalProductPackagedCopyWith<MedicinalProductPackaged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -10872,57 +11846,88 @@ class _$MedicinalProductPackagedCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       legalStatusOfSupply: legalStatusOfSupply == freezed
           ? _value.legalStatusOfSupply
-          : legalStatusOfSupply as CodeableConcept?,
+          : legalStatusOfSupply // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       marketingStatus: marketingStatus == freezed
           ? _value.marketingStatus
-          : marketingStatus as List<MarketingStatus>?,
+          : marketingStatus // ignore: cast_nullable_to_non_nullable
+              as List<MarketingStatus>?,
       marketingAuthorization: marketingAuthorization == freezed
           ? _value.marketingAuthorization
-          : marketingAuthorization as Reference?,
+          : marketingAuthorization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       batchIdentifier: batchIdentifier == freezed
           ? _value.batchIdentifier
-          : batchIdentifier as List<MedicinalProductPackagedBatchIdentifier>?,
+          : batchIdentifier // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductPackagedBatchIdentifier>?,
       packageItem: packageItem == freezed
           ? _value.packageItem
-          : packageItem as List<MedicinalProductPackagedPackageItem>,
+          : packageItem // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductPackagedPackageItem>,
     ));
   }
 
@@ -11094,57 +12099,88 @@ class __$MedicinalProductPackagedCopyWithImpl<$Res>
     return _then(_MedicinalProductPackaged(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       legalStatusOfSupply: legalStatusOfSupply == freezed
           ? _value.legalStatusOfSupply
-          : legalStatusOfSupply as CodeableConcept?,
+          : legalStatusOfSupply // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       marketingStatus: marketingStatus == freezed
           ? _value.marketingStatus
-          : marketingStatus as List<MarketingStatus>?,
+          : marketingStatus // ignore: cast_nullable_to_non_nullable
+              as List<MarketingStatus>?,
       marketingAuthorization: marketingAuthorization == freezed
           ? _value.marketingAuthorization
-          : marketingAuthorization as Reference?,
+          : marketingAuthorization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       batchIdentifier: batchIdentifier == freezed
           ? _value.batchIdentifier
-          : batchIdentifier as List<MedicinalProductPackagedBatchIdentifier>?,
+          : batchIdentifier // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductPackagedBatchIdentifier>?,
       packageItem: packageItem == freezed
           ? _value.packageItem
-          : packageItem as List<MedicinalProductPackagedPackageItem>,
+          : packageItem // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductPackagedPackageItem>,
     ));
   }
 }
@@ -11342,7 +12378,6 @@ class _$_MedicinalProductPackaged extends _MedicinalProductPackaged {
 }
 
 abstract class _MedicinalProductPackaged extends MedicinalProductPackaged {
-  _MedicinalProductPackaged._() : super._();
   factory _MedicinalProductPackaged(
           {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
               R4ResourceType resourceType,
@@ -11371,60 +12406,67 @@ abstract class _MedicinalProductPackaged extends MedicinalProductPackaged {
           List<MedicinalProductPackagedBatchIdentifier>? batchIdentifier,
           required List<MedicinalProductPackagedPackageItem> packageItem}) =
       _$_MedicinalProductPackaged;
+  _MedicinalProductPackaged._() : super._();
 
   factory _MedicinalProductPackaged.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductPackaged.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get subject;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get legalStatusOfSupply;
+  CodeableConcept? get legalStatusOfSupply =>
+      throw _privateConstructorUsedError;
   @override
-  List<MarketingStatus>? get marketingStatus;
+  List<MarketingStatus>? get marketingStatus =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get marketingAuthorization;
+  Reference? get marketingAuthorization => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductPackagedBatchIdentifier>? get batchIdentifier;
+  List<MedicinalProductPackagedBatchIdentifier>? get batchIdentifier =>
+      throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductPackagedPackageItem> get packageItem;
+  List<MedicinalProductPackagedPackageItem> get packageItem =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicinalProductPackagedCopyWith<_MedicinalProductPackaged> get copyWith;
+  _$MedicinalProductPackagedCopyWith<_MedicinalProductPackaged> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MedicinalProductPackagedBatchIdentifier
@@ -11463,17 +12505,19 @@ const $MedicinalProductPackagedBatchIdentifier =
 
 /// @nodoc
 mixin _$MedicinalProductPackagedBatchIdentifier {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Identifier get outerPackaging;
-  Identifier? get immediatePackaging;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier get outerPackaging => throw _privateConstructorUsedError;
+  Identifier? get immediatePackaging => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductPackagedBatchIdentifierCopyWith<
-      MedicinalProductPackagedBatchIdentifier> get copyWith;
+          MedicinalProductPackagedBatchIdentifier>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -11512,19 +12556,26 @@ class _$MedicinalProductPackagedBatchIdentifierCopyWithImpl<$Res>
     Object? immediatePackaging = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       outerPackaging: outerPackaging == freezed
           ? _value.outerPackaging
-          : outerPackaging as Identifier,
+          : outerPackaging // ignore: cast_nullable_to_non_nullable
+              as Identifier,
       immediatePackaging: immediatePackaging == freezed
           ? _value.immediatePackaging
-          : immediatePackaging as Identifier?,
+          : immediatePackaging // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
     ));
   }
 
@@ -11591,19 +12642,26 @@ class __$MedicinalProductPackagedBatchIdentifierCopyWithImpl<$Res>
     Object? immediatePackaging = freezed,
   }) {
     return _then(_MedicinalProductPackagedBatchIdentifier(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       outerPackaging: outerPackaging == freezed
           ? _value.outerPackaging
-          : outerPackaging as Identifier,
+          : outerPackaging // ignore: cast_nullable_to_non_nullable
+              as Identifier,
       immediatePackaging: immediatePackaging == freezed
           ? _value.immediatePackaging
-          : immediatePackaging as Identifier?,
+          : immediatePackaging // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
     ));
   }
 }
@@ -11686,7 +12744,6 @@ class _$_MedicinalProductPackagedBatchIdentifier
 
 abstract class _MedicinalProductPackagedBatchIdentifier
     extends MedicinalProductPackagedBatchIdentifier {
-  _MedicinalProductPackagedBatchIdentifier._() : super._();
   factory _MedicinalProductPackagedBatchIdentifier(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -11694,26 +12751,29 @@ abstract class _MedicinalProductPackagedBatchIdentifier
           required Identifier outerPackaging,
           Identifier? immediatePackaging}) =
       _$_MedicinalProductPackagedBatchIdentifier;
+  _MedicinalProductPackagedBatchIdentifier._() : super._();
 
   factory _MedicinalProductPackagedBatchIdentifier.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductPackagedBatchIdentifier.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier get outerPackaging;
+  Identifier get outerPackaging => throw _privateConstructorUsedError;
   @override
-  Identifier? get immediatePackaging;
+  Identifier? get immediatePackaging => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductPackagedBatchIdentifierCopyWith<
-      _MedicinalProductPackagedBatchIdentifier> get copyWith;
+          _MedicinalProductPackagedBatchIdentifier>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductPackagedPackageItem
@@ -11771,27 +12831,34 @@ const $MedicinalProductPackagedPackageItem =
 
 /// @nodoc
 mixin _$MedicinalProductPackagedPackageItem {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
-  CodeableConcept get type;
-  Quantity get quantity;
-  List<CodeableConcept>? get material;
-  List<CodeableConcept>? get alternateMaterial;
-  List<Reference>? get device;
-  List<Reference>? get manufacturedItem;
-  List<MedicinalProductPackagedPackageItem>? get packageItem;
-  ProdCharacteristic? get physicalCharacteristics;
-  List<CodeableConcept>? get otherCharacteristics;
-  List<ProductShelfLife>? get shelfLifeStorage;
-  List<Reference>? get manufacturer;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Quantity get quantity => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get material => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get alternateMaterial =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get device => throw _privateConstructorUsedError;
+  List<Reference>? get manufacturedItem => throw _privateConstructorUsedError;
+  List<MedicinalProductPackagedPackageItem>? get packageItem =>
+      throw _privateConstructorUsedError;
+  ProdCharacteristic? get physicalCharacteristics =>
+      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get otherCharacteristics =>
+      throw _privateConstructorUsedError;
+  List<ProductShelfLife>? get shelfLifeStorage =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductPackagedPackageItemCopyWith<
-      MedicinalProductPackagedPackageItem> get copyWith;
+          MedicinalProductPackagedPackageItem>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -11850,43 +12917,66 @@ class _$MedicinalProductPackagedPackageItemCopyWithImpl<$Res>
     Object? manufacturer = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity,
       material: material == freezed
           ? _value.material
-          : material as List<CodeableConcept>?,
+          : material // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       alternateMaterial: alternateMaterial == freezed
           ? _value.alternateMaterial
-          : alternateMaterial as List<CodeableConcept>?,
-      device: device == freezed ? _value.device : device as List<Reference>?,
+          : alternateMaterial // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       manufacturedItem: manufacturedItem == freezed
           ? _value.manufacturedItem
-          : manufacturedItem as List<Reference>?,
+          : manufacturedItem // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       packageItem: packageItem == freezed
           ? _value.packageItem
-          : packageItem as List<MedicinalProductPackagedPackageItem>?,
+          : packageItem // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductPackagedPackageItem>?,
       physicalCharacteristics: physicalCharacteristics == freezed
           ? _value.physicalCharacteristics
-          : physicalCharacteristics as ProdCharacteristic?,
+          : physicalCharacteristics // ignore: cast_nullable_to_non_nullable
+              as ProdCharacteristic?,
       otherCharacteristics: otherCharacteristics == freezed
           ? _value.otherCharacteristics
-          : otherCharacteristics as List<CodeableConcept>?,
+          : otherCharacteristics // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       shelfLifeStorage: shelfLifeStorage == freezed
           ? _value.shelfLifeStorage
-          : shelfLifeStorage as List<ProductShelfLife>?,
+          : shelfLifeStorage // ignore: cast_nullable_to_non_nullable
+              as List<ProductShelfLife>?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
@@ -11982,43 +13072,66 @@ class __$MedicinalProductPackagedPackageItemCopyWithImpl<$Res>
     Object? manufacturer = freezed,
   }) {
     return _then(_MedicinalProductPackagedPackageItem(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity,
       material: material == freezed
           ? _value.material
-          : material as List<CodeableConcept>?,
+          : material // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       alternateMaterial: alternateMaterial == freezed
           ? _value.alternateMaterial
-          : alternateMaterial as List<CodeableConcept>?,
-      device: device == freezed ? _value.device : device as List<Reference>?,
+          : alternateMaterial // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       manufacturedItem: manufacturedItem == freezed
           ? _value.manufacturedItem
-          : manufacturedItem as List<Reference>?,
+          : manufacturedItem // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       packageItem: packageItem == freezed
           ? _value.packageItem
-          : packageItem as List<MedicinalProductPackagedPackageItem>?,
+          : packageItem // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductPackagedPackageItem>?,
       physicalCharacteristics: physicalCharacteristics == freezed
           ? _value.physicalCharacteristics
-          : physicalCharacteristics as ProdCharacteristic?,
+          : physicalCharacteristics // ignore: cast_nullable_to_non_nullable
+              as ProdCharacteristic?,
       otherCharacteristics: otherCharacteristics == freezed
           ? _value.otherCharacteristics
-          : otherCharacteristics as List<CodeableConcept>?,
+          : otherCharacteristics // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       shelfLifeStorage: shelfLifeStorage == freezed
           ? _value.shelfLifeStorage
-          : shelfLifeStorage as List<ProductShelfLife>?,
+          : shelfLifeStorage // ignore: cast_nullable_to_non_nullable
+              as List<ProductShelfLife>?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -12170,7 +13283,6 @@ class _$_MedicinalProductPackagedPackageItem
 
 abstract class _MedicinalProductPackagedPackageItem
     extends MedicinalProductPackagedPackageItem {
-  _MedicinalProductPackagedPackageItem._() : super._();
   factory _MedicinalProductPackagedPackageItem(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -12187,46 +13299,54 @@ abstract class _MedicinalProductPackagedPackageItem
       List<CodeableConcept>? otherCharacteristics,
       List<ProductShelfLife>? shelfLifeStorage,
       List<Reference>? manufacturer}) = _$_MedicinalProductPackagedPackageItem;
+  _MedicinalProductPackagedPackageItem._() : super._();
 
   factory _MedicinalProductPackagedPackageItem.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductPackagedPackageItem.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Quantity get quantity;
+  Quantity get quantity => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get material;
+  List<CodeableConcept>? get material => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get alternateMaterial;
+  List<CodeableConcept>? get alternateMaterial =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get device;
+  List<Reference>? get device => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturedItem;
+  List<Reference>? get manufacturedItem => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductPackagedPackageItem>? get packageItem;
+  List<MedicinalProductPackagedPackageItem>? get packageItem =>
+      throw _privateConstructorUsedError;
   @override
-  ProdCharacteristic? get physicalCharacteristics;
+  ProdCharacteristic? get physicalCharacteristics =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get otherCharacteristics;
+  List<CodeableConcept>? get otherCharacteristics =>
+      throw _privateConstructorUsedError;
   @override
-  List<ProductShelfLife>? get shelfLifeStorage;
+  List<ProductShelfLife>? get shelfLifeStorage =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference>? get manufacturer => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductPackagedPackageItemCopyWith<
-      _MedicinalProductPackagedPackageItem> get copyWith;
+          _MedicinalProductPackagedPackageItem>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductPharmaceutical _$MedicinalProductPharmaceuticalFromJson(
@@ -12297,33 +13417,36 @@ const $MedicinalProductPharmaceutical =
 /// @nodoc
 mixin _$MedicinalProductPharmaceutical {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
-  CodeableConcept get administrableDoseForm;
-  CodeableConcept? get unitOfPresentation;
-  List<Reference>? get ingredient;
-  List<Reference>? get device;
-  List<MedicinalProductPharmaceuticalCharacteristics>? get characteristics;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept get administrableDoseForm =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get unitOfPresentation => throw _privateConstructorUsedError;
+  List<Reference>? get ingredient => throw _privateConstructorUsedError;
+  List<Reference>? get device => throw _privateConstructorUsedError;
+  List<MedicinalProductPharmaceuticalCharacteristics>? get characteristics =>
+      throw _privateConstructorUsedError;
   List<MedicinalProductPharmaceuticalRouteOfAdministration>
-      get routeOfAdministration;
+      get routeOfAdministration => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalCopyWith<MedicinalProductPharmaceutical>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -12398,49 +13521,75 @@ class _$MedicinalProductPharmaceuticalCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
       administrableDoseForm: administrableDoseForm == freezed
           ? _value.administrableDoseForm
-          : administrableDoseForm as CodeableConcept,
+          : administrableDoseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       unitOfPresentation: unitOfPresentation == freezed
           ? _value.unitOfPresentation
-          : unitOfPresentation as CodeableConcept?,
+          : unitOfPresentation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as List<Reference>?,
-      device: device == freezed ? _value.device : device as List<Reference>?,
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       characteristics: characteristics == freezed
           ? _value.characteristics
-          : characteristics
+          : characteristics // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductPharmaceuticalCharacteristics>?,
       routeOfAdministration: routeOfAdministration == freezed
           ? _value.routeOfAdministration
-          : routeOfAdministration
+          : routeOfAdministration // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductPharmaceuticalRouteOfAdministration>,
     ));
   }
@@ -12593,49 +13742,75 @@ class __$MedicinalProductPharmaceuticalCopyWithImpl<$Res>
     return _then(_MedicinalProductPharmaceutical(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
       administrableDoseForm: administrableDoseForm == freezed
           ? _value.administrableDoseForm
-          : administrableDoseForm as CodeableConcept,
+          : administrableDoseForm // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       unitOfPresentation: unitOfPresentation == freezed
           ? _value.unitOfPresentation
-          : unitOfPresentation as CodeableConcept?,
+          : unitOfPresentation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as List<Reference>?,
-      device: device == freezed ? _value.device : device as List<Reference>?,
+          : ingredient // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       characteristics: characteristics == freezed
           ? _value.characteristics
-          : characteristics
+          : characteristics // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductPharmaceuticalCharacteristics>?,
       routeOfAdministration: routeOfAdministration == freezed
           ? _value.routeOfAdministration
-          : routeOfAdministration
+          : routeOfAdministration // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductPharmaceuticalRouteOfAdministration>,
     ));
   }
@@ -12814,7 +13989,6 @@ class _$_MedicinalProductPharmaceutical
 
 abstract class _MedicinalProductPharmaceutical
     extends MedicinalProductPharmaceutical {
-  _MedicinalProductPharmaceutical._() : super._();
   factory _MedicinalProductPharmaceutical(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
           R4ResourceType resourceType,
@@ -12839,55 +14013,59 @@ abstract class _MedicinalProductPharmaceutical
       List<MedicinalProductPharmaceuticalCharacteristics>? characteristics,
       required List<MedicinalProductPharmaceuticalRouteOfAdministration>
           routeOfAdministration}) = _$_MedicinalProductPharmaceutical;
+  _MedicinalProductPharmaceutical._() : super._();
 
   factory _MedicinalProductPharmaceutical.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductPharmaceutical.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get administrableDoseForm;
+  CodeableConcept get administrableDoseForm =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get unitOfPresentation;
+  CodeableConcept? get unitOfPresentation => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get ingredient;
+  List<Reference>? get ingredient => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get device;
+  List<Reference>? get device => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductPharmaceuticalCharacteristics>? get characteristics;
+  List<MedicinalProductPharmaceuticalCharacteristics>? get characteristics =>
+      throw _privateConstructorUsedError;
   @override
   List<MedicinalProductPharmaceuticalRouteOfAdministration>
-      get routeOfAdministration;
+      get routeOfAdministration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalCopyWith<_MedicinalProductPharmaceutical>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductPharmaceuticalCharacteristics
@@ -12927,17 +14105,19 @@ const $MedicinalProductPharmaceuticalCharacteristics =
 
 /// @nodoc
 mixin _$MedicinalProductPharmaceuticalCharacteristics {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get code;
-  CodeableConcept? get status;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalCharacteristicsCopyWith<
-      MedicinalProductPharmaceuticalCharacteristics> get copyWith;
+          MedicinalProductPharmaceuticalCharacteristics>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -12976,15 +14156,26 @@ class _$MedicinalProductPharmaceuticalCharacteristicsCopyWithImpl<$Res>
     Object? status = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -13051,15 +14242,26 @@ class __$MedicinalProductPharmaceuticalCharacteristicsCopyWithImpl<$Res>
     Object? status = freezed,
   }) {
     return _then(_MedicinalProductPharmaceuticalCharacteristics(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -13141,7 +14343,6 @@ class _$_MedicinalProductPharmaceuticalCharacteristics
 
 abstract class _MedicinalProductPharmaceuticalCharacteristics
     extends MedicinalProductPharmaceuticalCharacteristics {
-  _MedicinalProductPharmaceuticalCharacteristics._() : super._();
   factory _MedicinalProductPharmaceuticalCharacteristics(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -13149,26 +14350,29 @@ abstract class _MedicinalProductPharmaceuticalCharacteristics
           required CodeableConcept code,
           CodeableConcept? status}) =
       _$_MedicinalProductPharmaceuticalCharacteristics;
+  _MedicinalProductPharmaceuticalCharacteristics._() : super._();
 
   factory _MedicinalProductPharmaceuticalCharacteristics.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductPharmaceuticalCharacteristics.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalCharacteristicsCopyWith<
-      _MedicinalProductPharmaceuticalCharacteristics> get copyWith;
+          _MedicinalProductPharmaceuticalCharacteristics>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductPharmaceuticalRouteOfAdministration
@@ -13218,22 +14422,25 @@ const $MedicinalProductPharmaceuticalRouteOfAdministration =
 
 /// @nodoc
 mixin _$MedicinalProductPharmaceuticalRouteOfAdministration {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get code;
-  Quantity? get firstDose;
-  Quantity? get maxSingleDose;
-  Quantity? get maxDosePerDay;
-  Ratio? get maxDosePerTreatmentPeriod;
-  FhirDuration? get maxTreatmentPeriod;
-  List<MedicinalProductPharmaceuticalTargetSpecies>? get targetSpecies;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Quantity? get firstDose => throw _privateConstructorUsedError;
+  Quantity? get maxSingleDose => throw _privateConstructorUsedError;
+  Quantity? get maxDosePerDay => throw _privateConstructorUsedError;
+  Ratio? get maxDosePerTreatmentPeriod => throw _privateConstructorUsedError;
+  FhirDuration? get maxTreatmentPeriod => throw _privateConstructorUsedError;
+  List<MedicinalProductPharmaceuticalTargetSpecies>? get targetSpecies =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
-      MedicinalProductPharmaceuticalRouteOfAdministration> get copyWith;
+          MedicinalProductPharmaceuticalRouteOfAdministration>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -13290,31 +14497,46 @@ class _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWithImpl<$Res>
     Object? targetSpecies = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      firstDose:
-          firstDose == freezed ? _value.firstDose : firstDose as Quantity?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      firstDose: firstDose == freezed
+          ? _value.firstDose
+          : firstDose // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       maxSingleDose: maxSingleDose == freezed
           ? _value.maxSingleDose
-          : maxSingleDose as Quantity?,
+          : maxSingleDose // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       maxDosePerDay: maxDosePerDay == freezed
           ? _value.maxDosePerDay
-          : maxDosePerDay as Quantity?,
+          : maxDosePerDay // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       maxDosePerTreatmentPeriod: maxDosePerTreatmentPeriod == freezed
           ? _value.maxDosePerTreatmentPeriod
-          : maxDosePerTreatmentPeriod as Ratio?,
+          : maxDosePerTreatmentPeriod // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       maxTreatmentPeriod: maxTreatmentPeriod == freezed
           ? _value.maxTreatmentPeriod
-          : maxTreatmentPeriod as FhirDuration?,
+          : maxTreatmentPeriod // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
       targetSpecies: targetSpecies == freezed
           ? _value.targetSpecies
-          : targetSpecies as List<MedicinalProductPharmaceuticalTargetSpecies>?,
+          : targetSpecies // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductPharmaceuticalTargetSpecies>?,
     ));
   }
 
@@ -13450,31 +14672,46 @@ class __$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWithImpl<$Res>
     Object? targetSpecies = freezed,
   }) {
     return _then(_MedicinalProductPharmaceuticalRouteOfAdministration(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      firstDose:
-          firstDose == freezed ? _value.firstDose : firstDose as Quantity?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      firstDose: firstDose == freezed
+          ? _value.firstDose
+          : firstDose // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       maxSingleDose: maxSingleDose == freezed
           ? _value.maxSingleDose
-          : maxSingleDose as Quantity?,
+          : maxSingleDose // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       maxDosePerDay: maxDosePerDay == freezed
           ? _value.maxDosePerDay
-          : maxDosePerDay as Quantity?,
+          : maxDosePerDay // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       maxDosePerTreatmentPeriod: maxDosePerTreatmentPeriod == freezed
           ? _value.maxDosePerTreatmentPeriod
-          : maxDosePerTreatmentPeriod as Ratio?,
+          : maxDosePerTreatmentPeriod // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       maxTreatmentPeriod: maxTreatmentPeriod == freezed
           ? _value.maxTreatmentPeriod
-          : maxTreatmentPeriod as FhirDuration?,
+          : maxTreatmentPeriod // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
       targetSpecies: targetSpecies == freezed
           ? _value.targetSpecies
-          : targetSpecies as List<MedicinalProductPharmaceuticalTargetSpecies>?,
+          : targetSpecies // ignore: cast_nullable_to_non_nullable
+              as List<MedicinalProductPharmaceuticalTargetSpecies>?,
     ));
   }
 }
@@ -13595,7 +14832,6 @@ class _$_MedicinalProductPharmaceuticalRouteOfAdministration
 
 abstract class _MedicinalProductPharmaceuticalRouteOfAdministration
     extends MedicinalProductPharmaceuticalRouteOfAdministration {
-  _MedicinalProductPharmaceuticalRouteOfAdministration._() : super._();
   factory _MedicinalProductPharmaceuticalRouteOfAdministration(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -13608,36 +14844,40 @@ abstract class _MedicinalProductPharmaceuticalRouteOfAdministration
           FhirDuration? maxTreatmentPeriod,
           List<MedicinalProductPharmaceuticalTargetSpecies>? targetSpecies}) =
       _$_MedicinalProductPharmaceuticalRouteOfAdministration;
+  _MedicinalProductPharmaceuticalRouteOfAdministration._() : super._();
 
   factory _MedicinalProductPharmaceuticalRouteOfAdministration.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductPharmaceuticalRouteOfAdministration.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Quantity? get firstDose;
+  Quantity? get firstDose => throw _privateConstructorUsedError;
   @override
-  Quantity? get maxSingleDose;
+  Quantity? get maxSingleDose => throw _privateConstructorUsedError;
   @override
-  Quantity? get maxDosePerDay;
+  Quantity? get maxDosePerDay => throw _privateConstructorUsedError;
   @override
-  Ratio? get maxDosePerTreatmentPeriod;
+  Ratio? get maxDosePerTreatmentPeriod => throw _privateConstructorUsedError;
   @override
-  FhirDuration? get maxTreatmentPeriod;
+  FhirDuration? get maxTreatmentPeriod => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductPharmaceuticalTargetSpecies>? get targetSpecies;
+  List<MedicinalProductPharmaceuticalTargetSpecies>? get targetSpecies =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
-      _MedicinalProductPharmaceuticalRouteOfAdministration> get copyWith;
+          _MedicinalProductPharmaceuticalRouteOfAdministration>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductPharmaceuticalTargetSpecies
@@ -13677,17 +14917,20 @@ const $MedicinalProductPharmaceuticalTargetSpecies =
 
 /// @nodoc
 mixin _$MedicinalProductPharmaceuticalTargetSpecies {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get code;
-  List<MedicinalProductPharmaceuticalWithdrawalPeriod>? get withdrawalPeriod;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  List<MedicinalProductPharmaceuticalWithdrawalPeriod>? get withdrawalPeriod =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalTargetSpeciesCopyWith<
-      MedicinalProductPharmaceuticalTargetSpecies> get copyWith;
+          MedicinalProductPharmaceuticalTargetSpecies>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -13725,17 +14968,25 @@ class _$MedicinalProductPharmaceuticalTargetSpeciesCopyWithImpl<$Res>
     Object? withdrawalPeriod = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       withdrawalPeriod: withdrawalPeriod == freezed
           ? _value.withdrawalPeriod
-          : withdrawalPeriod
+          : withdrawalPeriod // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductPharmaceuticalWithdrawalPeriod>?,
     ));
   }
@@ -13790,17 +15041,25 @@ class __$MedicinalProductPharmaceuticalTargetSpeciesCopyWithImpl<$Res>
     Object? withdrawalPeriod = freezed,
   }) {
     return _then(_MedicinalProductPharmaceuticalTargetSpecies(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       withdrawalPeriod: withdrawalPeriod == freezed
           ? _value.withdrawalPeriod
-          : withdrawalPeriod
+          : withdrawalPeriod // ignore: cast_nullable_to_non_nullable
               as List<MedicinalProductPharmaceuticalWithdrawalPeriod>?,
     ));
   }
@@ -13884,7 +15143,6 @@ class _$_MedicinalProductPharmaceuticalTargetSpecies
 
 abstract class _MedicinalProductPharmaceuticalTargetSpecies
     extends MedicinalProductPharmaceuticalTargetSpecies {
-  _MedicinalProductPharmaceuticalTargetSpecies._() : super._();
   factory _MedicinalProductPharmaceuticalTargetSpecies(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -13892,26 +15150,30 @@ abstract class _MedicinalProductPharmaceuticalTargetSpecies
       required CodeableConcept code,
       List<MedicinalProductPharmaceuticalWithdrawalPeriod>?
           withdrawalPeriod}) = _$_MedicinalProductPharmaceuticalTargetSpecies;
+  _MedicinalProductPharmaceuticalTargetSpecies._() : super._();
 
   factory _MedicinalProductPharmaceuticalTargetSpecies.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductPharmaceuticalTargetSpecies.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  List<MedicinalProductPharmaceuticalWithdrawalPeriod>? get withdrawalPeriod;
+  List<MedicinalProductPharmaceuticalWithdrawalPeriod>? get withdrawalPeriod =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalTargetSpeciesCopyWith<
-      _MedicinalProductPharmaceuticalTargetSpecies> get copyWith;
+          _MedicinalProductPharmaceuticalTargetSpecies>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductPharmaceuticalWithdrawalPeriod
@@ -13957,20 +15219,23 @@ const $MedicinalProductPharmaceuticalWithdrawalPeriod =
 
 /// @nodoc
 mixin _$MedicinalProductPharmaceuticalWithdrawalPeriod {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get tissue;
-  Quantity get value;
-  String? get supportingInformation;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get tissue => throw _privateConstructorUsedError;
+  Quantity get value => throw _privateConstructorUsedError;
+  String? get supportingInformation => throw _privateConstructorUsedError;
   @JsonKey(name: '_supportingInformation')
-  Element? get supportingInformationElement;
+  Element? get supportingInformationElement =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalWithdrawalPeriodCopyWith<
-      MedicinalProductPharmaceuticalWithdrawalPeriod> get copyWith;
+          MedicinalProductPharmaceuticalWithdrawalPeriod>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -14016,21 +15281,34 @@ class _$MedicinalProductPharmaceuticalWithdrawalPeriodCopyWithImpl<$Res>
     Object? supportingInformationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      tissue: tissue == freezed ? _value.tissue : tissue as CodeableConcept,
-      value: value == freezed ? _value.value : value as Quantity,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      tissue: tissue == freezed
+          ? _value.tissue
+          : tissue // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Quantity,
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
-          : supportingInformation as String?,
+          : supportingInformation // ignore: cast_nullable_to_non_nullable
+              as String?,
       supportingInformationElement: supportingInformationElement == freezed
           ? _value.supportingInformationElement
-          : supportingInformationElement as Element?,
+          : supportingInformationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -14113,21 +15391,34 @@ class __$MedicinalProductPharmaceuticalWithdrawalPeriodCopyWithImpl<$Res>
     Object? supportingInformationElement = freezed,
   }) {
     return _then(_MedicinalProductPharmaceuticalWithdrawalPeriod(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      tissue: tissue == freezed ? _value.tissue : tissue as CodeableConcept,
-      value: value == freezed ? _value.value : value as Quantity,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      tissue: tissue == freezed
+          ? _value.tissue
+          : tissue // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Quantity,
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
-          : supportingInformation as String?,
+          : supportingInformation // ignore: cast_nullable_to_non_nullable
+              as String?,
       supportingInformationElement: supportingInformationElement == freezed
           ? _value.supportingInformationElement
-          : supportingInformationElement as Element?,
+          : supportingInformationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -14229,7 +15520,6 @@ class _$_MedicinalProductPharmaceuticalWithdrawalPeriod
 
 abstract class _MedicinalProductPharmaceuticalWithdrawalPeriod
     extends MedicinalProductPharmaceuticalWithdrawalPeriod {
-  _MedicinalProductPharmaceuticalWithdrawalPeriod._() : super._();
   factory _MedicinalProductPharmaceuticalWithdrawalPeriod(
           {String? id,
           @JsonKey(name: 'extension')
@@ -14241,31 +15531,35 @@ abstract class _MedicinalProductPharmaceuticalWithdrawalPeriod
           @JsonKey(name: '_supportingInformation')
               Element? supportingInformationElement}) =
       _$_MedicinalProductPharmaceuticalWithdrawalPeriod;
+  _MedicinalProductPharmaceuticalWithdrawalPeriod._() : super._();
 
   factory _MedicinalProductPharmaceuticalWithdrawalPeriod.fromJson(
           Map<String, dynamic> json) =
       _$_MedicinalProductPharmaceuticalWithdrawalPeriod.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get tissue;
+  CodeableConcept get tissue => throw _privateConstructorUsedError;
   @override
-  Quantity get value;
+  Quantity get value => throw _privateConstructorUsedError;
   @override
-  String? get supportingInformation;
+  String? get supportingInformation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_supportingInformation')
-  Element? get supportingInformationElement;
+  Element? get supportingInformationElement =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalWithdrawalPeriodCopyWith<
-      _MedicinalProductPharmaceuticalWithdrawalPeriod> get copyWith;
+          _MedicinalProductPharmaceuticalWithdrawalPeriod>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicinalProductUndesirableEffect _$MedicinalProductUndesirableEffectFromJson(
@@ -14335,30 +15629,33 @@ const $MedicinalProductUndesirableEffect =
 /// @nodoc
 mixin _$MedicinalProductUndesirableEffect {
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductUndesirableEffect)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Reference>? get subject;
-  CodeableConcept? get symptomConditionEffect;
-  CodeableConcept? get classification;
-  CodeableConcept? get frequencyOfOccurrence;
-  List<Population>? get population;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
+  CodeableConcept? get symptomConditionEffect =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get classification => throw _privateConstructorUsedError;
+  CodeableConcept? get frequencyOfOccurrence =>
+      throw _privateConstructorUsedError;
+  List<Population>? get population => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicinalProductUndesirableEffectCopyWith<MedicinalProductUndesirableEffect>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -14432,43 +15729,68 @@ class _$MedicinalProductUndesirableEffectCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       symptomConditionEffect: symptomConditionEffect == freezed
           ? _value.symptomConditionEffect
-          : symptomConditionEffect as CodeableConcept?,
+          : symptomConditionEffect // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       classification: classification == freezed
           ? _value.classification
-          : classification as CodeableConcept?,
+          : classification // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       frequencyOfOccurrence: frequencyOfOccurrence == freezed
           ? _value.frequencyOfOccurrence
-          : frequencyOfOccurrence as CodeableConcept?,
+          : frequencyOfOccurrence // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       population: population == freezed
           ? _value.population
-          : population as List<Population>?,
+          : population // ignore: cast_nullable_to_non_nullable
+              as List<Population>?,
     ));
   }
 
@@ -14636,43 +15958,68 @@ class __$MedicinalProductUndesirableEffectCopyWithImpl<$Res>
     return _then(_MedicinalProductUndesirableEffect(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subject:
-          subject == freezed ? _value.subject : subject as List<Reference>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       symptomConditionEffect: symptomConditionEffect == freezed
           ? _value.symptomConditionEffect
-          : symptomConditionEffect as CodeableConcept?,
+          : symptomConditionEffect // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       classification: classification == freezed
           ? _value.classification
-          : classification as CodeableConcept?,
+          : classification // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       frequencyOfOccurrence: frequencyOfOccurrence == freezed
           ? _value.frequencyOfOccurrence
-          : frequencyOfOccurrence as CodeableConcept?,
+          : frequencyOfOccurrence // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       population: population == freezed
           ? _value.population
-          : population as List<Population>?,
+          : population // ignore: cast_nullable_to_non_nullable
+              as List<Population>?,
     ));
   }
 }
@@ -14837,7 +16184,6 @@ class _$_MedicinalProductUndesirableEffect
 
 abstract class _MedicinalProductUndesirableEffect
     extends MedicinalProductUndesirableEffect {
-  _MedicinalProductUndesirableEffect._() : super._();
   factory _MedicinalProductUndesirableEffect(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductUndesirableEffect)
           R4ResourceType resourceType,
@@ -14859,6 +16205,7 @@ abstract class _MedicinalProductUndesirableEffect
       CodeableConcept? classification,
       CodeableConcept? frequencyOfOccurrence,
       List<Population>? population}) = _$_MedicinalProductUndesirableEffect;
+  _MedicinalProductUndesirableEffect._() : super._();
 
   factory _MedicinalProductUndesirableEffect.fromJson(
           Map<String, dynamic> json) =
@@ -14866,44 +16213,48 @@ abstract class _MedicinalProductUndesirableEffect
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductUndesirableEffect)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get subject;
+  List<Reference>? get subject => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get symptomConditionEffect;
+  CodeableConcept? get symptomConditionEffect =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get classification;
+  CodeableConcept? get classification => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get frequencyOfOccurrence;
+  CodeableConcept? get frequencyOfOccurrence =>
+      throw _privateConstructorUsedError;
   @override
-  List<Population>? get population;
+  List<Population>? get population => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductUndesirableEffectCopyWith<
-      _MedicinalProductUndesirableEffect> get copyWith;
+          _MedicinalProductUndesirableEffect>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceNucleicAcid _$SubstanceNucleicAcidFromJson(Map<String, dynamic> json) {
@@ -14972,33 +16323,37 @@ const $SubstanceNucleicAcid = _$SubstanceNucleicAcidTearOff();
 /// @nodoc
 mixin _$SubstanceNucleicAcid {
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get sequenceType;
-  Integer? get numberOfSubunits;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get sequenceType => throw _privateConstructorUsedError;
+  Integer? get numberOfSubunits => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfSubunits')
-  Element? get numberOfSubunitsElement;
-  String? get areaOfHybridisation;
+  Element? get numberOfSubunitsElement => throw _privateConstructorUsedError;
+  String? get areaOfHybridisation => throw _privateConstructorUsedError;
   @JsonKey(name: '_areaOfHybridisation')
-  Element? get areaOfHybridisationElement;
-  CodeableConcept? get oligoNucleotideType;
-  List<SubstanceNucleicAcidSubunit>? get subunit;
+  Element? get areaOfHybridisationElement => throw _privateConstructorUsedError;
+  CodeableConcept? get oligoNucleotideType =>
+      throw _privateConstructorUsedError;
+  List<SubstanceNucleicAcidSubunit>? get subunit =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstanceNucleicAcidCopyWith<SubstanceNucleicAcid> get copyWith;
+  $SubstanceNucleicAcidCopyWith<SubstanceNucleicAcid> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -15075,50 +16430,76 @@ class _$SubstanceNucleicAcidCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       sequenceType: sequenceType == freezed
           ? _value.sequenceType
-          : sequenceType as CodeableConcept?,
+          : sequenceType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       numberOfSubunits: numberOfSubunits == freezed
           ? _value.numberOfSubunits
-          : numberOfSubunits as Integer?,
+          : numberOfSubunits // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       numberOfSubunitsElement: numberOfSubunitsElement == freezed
           ? _value.numberOfSubunitsElement
-          : numberOfSubunitsElement as Element?,
+          : numberOfSubunitsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       areaOfHybridisation: areaOfHybridisation == freezed
           ? _value.areaOfHybridisation
-          : areaOfHybridisation as String?,
+          : areaOfHybridisation // ignore: cast_nullable_to_non_nullable
+              as String?,
       areaOfHybridisationElement: areaOfHybridisationElement == freezed
           ? _value.areaOfHybridisationElement
-          : areaOfHybridisationElement as Element?,
+          : areaOfHybridisationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       oligoNucleotideType: oligoNucleotideType == freezed
           ? _value.oligoNucleotideType
-          : oligoNucleotideType as CodeableConcept?,
+          : oligoNucleotideType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       subunit: subunit == freezed
           ? _value.subunit
-          : subunit as List<SubstanceNucleicAcidSubunit>?,
+          : subunit // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceNucleicAcidSubunit>?,
     ));
   }
 
@@ -15297,50 +16678,76 @@ class __$SubstanceNucleicAcidCopyWithImpl<$Res>
     return _then(_SubstanceNucleicAcid(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       sequenceType: sequenceType == freezed
           ? _value.sequenceType
-          : sequenceType as CodeableConcept?,
+          : sequenceType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       numberOfSubunits: numberOfSubunits == freezed
           ? _value.numberOfSubunits
-          : numberOfSubunits as Integer?,
+          : numberOfSubunits // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       numberOfSubunitsElement: numberOfSubunitsElement == freezed
           ? _value.numberOfSubunitsElement
-          : numberOfSubunitsElement as Element?,
+          : numberOfSubunitsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       areaOfHybridisation: areaOfHybridisation == freezed
           ? _value.areaOfHybridisation
-          : areaOfHybridisation as String?,
+          : areaOfHybridisation // ignore: cast_nullable_to_non_nullable
+              as String?,
       areaOfHybridisationElement: areaOfHybridisationElement == freezed
           ? _value.areaOfHybridisationElement
-          : areaOfHybridisationElement as Element?,
+          : areaOfHybridisationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       oligoNucleotideType: oligoNucleotideType == freezed
           ? _value.oligoNucleotideType
-          : oligoNucleotideType as CodeableConcept?,
+          : oligoNucleotideType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       subunit: subunit == freezed
           ? _value.subunit
-          : subunit as List<SubstanceNucleicAcidSubunit>?,
+          : subunit // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceNucleicAcidSubunit>?,
     ));
   }
 }
@@ -15521,7 +16928,6 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
 }
 
 abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
-  _SubstanceNucleicAcid._() : super._();
   factory _SubstanceNucleicAcid(
       {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
           R4ResourceType resourceType,
@@ -15547,55 +16953,60 @@ abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
           Element? areaOfHybridisationElement,
       CodeableConcept? oligoNucleotideType,
       List<SubstanceNucleicAcidSubunit>? subunit}) = _$_SubstanceNucleicAcid;
+  _SubstanceNucleicAcid._() : super._();
 
   factory _SubstanceNucleicAcid.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcid.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sequenceType;
+  CodeableConcept? get sequenceType => throw _privateConstructorUsedError;
   @override
-  Integer? get numberOfSubunits;
+  Integer? get numberOfSubunits => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_numberOfSubunits')
-  Element? get numberOfSubunitsElement;
+  Element? get numberOfSubunitsElement => throw _privateConstructorUsedError;
   @override
-  String? get areaOfHybridisation;
+  String? get areaOfHybridisation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_areaOfHybridisation')
-  Element? get areaOfHybridisationElement;
+  Element? get areaOfHybridisationElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get oligoNucleotideType;
+  CodeableConcept? get oligoNucleotideType =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceNucleicAcidSubunit>? get subunit;
+  List<SubstanceNucleicAcidSubunit>? get subunit =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceNucleicAcidCopyWith<_SubstanceNucleicAcid> get copyWith;
+  _$SubstanceNucleicAcidCopyWith<_SubstanceNucleicAcid> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubstanceNucleicAcidSubunit _$SubstanceNucleicAcidSubunitFromJson(
@@ -15650,29 +17061,32 @@ const $SubstanceNucleicAcidSubunit = _$SubstanceNucleicAcidSubunitTearOff();
 
 /// @nodoc
 mixin _$SubstanceNucleicAcidSubunit {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Integer? get subunit;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Integer? get subunit => throw _privateConstructorUsedError;
   @JsonKey(name: '_subunit')
-  Element? get subunitElement;
-  String? get sequence;
+  Element? get subunitElement => throw _privateConstructorUsedError;
+  String? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
-  Element? get sequenceElement;
-  Integer? get length;
+  Element? get sequenceElement => throw _privateConstructorUsedError;
+  Integer? get length => throw _privateConstructorUsedError;
   @JsonKey(name: '_length')
-  Element? get lengthElement;
-  Attachment? get sequenceAttachment;
-  CodeableConcept? get fivePrime;
-  CodeableConcept? get threePrime;
-  List<SubstanceNucleicAcidLinkage>? get linkage;
-  List<SubstanceNucleicAcidSugar>? get sugar;
+  Element? get lengthElement => throw _privateConstructorUsedError;
+  Attachment? get sequenceAttachment => throw _privateConstructorUsedError;
+  CodeableConcept? get fivePrime => throw _privateConstructorUsedError;
+  CodeableConcept? get threePrime => throw _privateConstructorUsedError;
+  List<SubstanceNucleicAcidLinkage>? get linkage =>
+      throw _privateConstructorUsedError;
+  List<SubstanceNucleicAcidSugar>? get sugar =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceNucleicAcidSubunitCopyWith<SubstanceNucleicAcidSubunit>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -15732,40 +17146,62 @@ class _$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
     Object? sugar = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subunit: subunit == freezed ? _value.subunit : subunit as Integer?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subunit: subunit == freezed
+          ? _value.subunit
+          : subunit // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       subunitElement: subunitElement == freezed
           ? _value.subunitElement
-          : subunitElement as Element?,
-      sequence: sequence == freezed ? _value.sequence : sequence as String?,
+          : subunitElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sequence: sequence == freezed
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as String?,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
-          : sequenceElement as Element?,
-      length: length == freezed ? _value.length : length as Integer?,
+          : sequenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      length: length == freezed
+          ? _value.length
+          : length // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       lengthElement: lengthElement == freezed
           ? _value.lengthElement
-          : lengthElement as Element?,
+          : lengthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       sequenceAttachment: sequenceAttachment == freezed
           ? _value.sequenceAttachment
-          : sequenceAttachment as Attachment?,
+          : sequenceAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
       fivePrime: fivePrime == freezed
           ? _value.fivePrime
-          : fivePrime as CodeableConcept?,
+          : fivePrime // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       threePrime: threePrime == freezed
           ? _value.threePrime
-          : threePrime as CodeableConcept?,
+          : threePrime // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       linkage: linkage == freezed
           ? _value.linkage
-          : linkage as List<SubstanceNucleicAcidLinkage>?,
+          : linkage // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceNucleicAcidLinkage>?,
       sugar: sugar == freezed
           ? _value.sugar
-          : sugar as List<SubstanceNucleicAcidSugar>?,
+          : sugar // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceNucleicAcidSugar>?,
     ));
   }
 
@@ -15905,40 +17341,62 @@ class __$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
     Object? sugar = freezed,
   }) {
     return _then(_SubstanceNucleicAcidSubunit(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subunit: subunit == freezed ? _value.subunit : subunit as Integer?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subunit: subunit == freezed
+          ? _value.subunit
+          : subunit // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       subunitElement: subunitElement == freezed
           ? _value.subunitElement
-          : subunitElement as Element?,
-      sequence: sequence == freezed ? _value.sequence : sequence as String?,
+          : subunitElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sequence: sequence == freezed
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as String?,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
-          : sequenceElement as Element?,
-      length: length == freezed ? _value.length : length as Integer?,
+          : sequenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      length: length == freezed
+          ? _value.length
+          : length // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       lengthElement: lengthElement == freezed
           ? _value.lengthElement
-          : lengthElement as Element?,
+          : lengthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       sequenceAttachment: sequenceAttachment == freezed
           ? _value.sequenceAttachment
-          : sequenceAttachment as Attachment?,
+          : sequenceAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
       fivePrime: fivePrime == freezed
           ? _value.fivePrime
-          : fivePrime as CodeableConcept?,
+          : fivePrime // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       threePrime: threePrime == freezed
           ? _value.threePrime
-          : threePrime as CodeableConcept?,
+          : threePrime // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       linkage: linkage == freezed
           ? _value.linkage
-          : linkage as List<SubstanceNucleicAcidLinkage>?,
+          : linkage // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceNucleicAcidLinkage>?,
       sugar: sugar == freezed
           ? _value.sugar
-          : sugar as List<SubstanceNucleicAcidSugar>?,
+          : sugar // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceNucleicAcidSugar>?,
     ));
   }
 }
@@ -16082,7 +17540,6 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
 
 abstract class _SubstanceNucleicAcidSubunit
     extends SubstanceNucleicAcidSubunit {
-  _SubstanceNucleicAcidSubunit._() : super._();
   factory _SubstanceNucleicAcidSubunit(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -16098,46 +17555,50 @@ abstract class _SubstanceNucleicAcidSubunit
       CodeableConcept? threePrime,
       List<SubstanceNucleicAcidLinkage>? linkage,
       List<SubstanceNucleicAcidSugar>? sugar}) = _$_SubstanceNucleicAcidSubunit;
+  _SubstanceNucleicAcidSubunit._() : super._();
 
   factory _SubstanceNucleicAcidSubunit.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcidSubunit.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Integer? get subunit;
+  Integer? get subunit => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_subunit')
-  Element? get subunitElement;
+  Element? get subunitElement => throw _privateConstructorUsedError;
   @override
-  String? get sequence;
+  String? get sequence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sequence')
-  Element? get sequenceElement;
+  Element? get sequenceElement => throw _privateConstructorUsedError;
   @override
-  Integer? get length;
+  Integer? get length => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_length')
-  Element? get lengthElement;
+  Element? get lengthElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get sequenceAttachment;
+  Attachment? get sequenceAttachment => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get fivePrime;
+  CodeableConcept? get fivePrime => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get threePrime;
+  CodeableConcept? get threePrime => throw _privateConstructorUsedError;
   @override
-  List<SubstanceNucleicAcidLinkage>? get linkage;
+  List<SubstanceNucleicAcidLinkage>? get linkage =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceNucleicAcidSugar>? get sugar;
+  List<SubstanceNucleicAcidSugar>? get sugar =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceNucleicAcidSubunitCopyWith<_SubstanceNucleicAcidSubunit>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceNucleicAcidLinkage _$SubstanceNucleicAcidLinkageFromJson(
@@ -16184,25 +17645,26 @@ const $SubstanceNucleicAcidLinkage = _$SubstanceNucleicAcidLinkageTearOff();
 
 /// @nodoc
 mixin _$SubstanceNucleicAcidLinkage {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get connectivity;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get connectivity => throw _privateConstructorUsedError;
   @JsonKey(name: '_connectivity')
-  Element? get connectivityElement;
-  Identifier? get identifier;
-  String? get name;
+  Element? get connectivityElement => throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get residueSite;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get residueSite => throw _privateConstructorUsedError;
   @JsonKey(name: '_residueSite')
-  Element? get residueSiteElement;
+  Element? get residueSiteElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceNucleicAcidLinkageCopyWith<SubstanceNucleicAcidLinkage>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -16252,29 +17714,46 @@ class _$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
     Object? residueSiteElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       connectivity: connectivity == freezed
           ? _value.connectivity
-          : connectivity as String?,
+          : connectivity // ignore: cast_nullable_to_non_nullable
+              as String?,
       connectivityElement: connectivityElement == freezed
           ? _value.connectivityElement
-          : connectivityElement as Element?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      residueSite:
-          residueSite == freezed ? _value.residueSite : residueSite as String?,
+          : connectivityElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      residueSite: residueSite == freezed
+          ? _value.residueSite
+          : residueSite // ignore: cast_nullable_to_non_nullable
+              as String?,
       residueSiteElement: residueSiteElement == freezed
           ? _value.residueSiteElement
-          : residueSiteElement as Element?,
+          : residueSiteElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -16380,29 +17859,46 @@ class __$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
     Object? residueSiteElement = freezed,
   }) {
     return _then(_SubstanceNucleicAcidLinkage(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       connectivity: connectivity == freezed
           ? _value.connectivity
-          : connectivity as String?,
+          : connectivity // ignore: cast_nullable_to_non_nullable
+              as String?,
       connectivityElement: connectivityElement == freezed
           ? _value.connectivityElement
-          : connectivityElement as Element?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      residueSite:
-          residueSite == freezed ? _value.residueSite : residueSite as String?,
+          : connectivityElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      residueSite: residueSite == freezed
+          ? _value.residueSite
+          : residueSite // ignore: cast_nullable_to_non_nullable
+              as String?,
       residueSiteElement: residueSiteElement == freezed
           ? _value.residueSiteElement
-          : residueSiteElement as Element?,
+          : residueSiteElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -16519,7 +18015,6 @@ class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
 
 abstract class _SubstanceNucleicAcidLinkage
     extends SubstanceNucleicAcidLinkage {
-  _SubstanceNucleicAcidLinkage._() : super._();
   factory _SubstanceNucleicAcidLinkage(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -16532,38 +18027,40 @@ abstract class _SubstanceNucleicAcidLinkage
           String? residueSite,
           @JsonKey(name: '_residueSite') Element? residueSiteElement}) =
       _$_SubstanceNucleicAcidLinkage;
+  _SubstanceNucleicAcidLinkage._() : super._();
 
   factory _SubstanceNucleicAcidLinkage.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcidLinkage.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get connectivity;
+  String? get connectivity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_connectivity')
-  Element? get connectivityElement;
+  Element? get connectivityElement => throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get residueSite;
+  String? get residueSite => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_residueSite')
-  Element? get residueSiteElement;
+  Element? get residueSiteElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceNucleicAcidLinkageCopyWith<_SubstanceNucleicAcidLinkage>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceNucleicAcidSugar _$SubstanceNucleicAcidSugarFromJson(
@@ -16606,21 +18103,23 @@ const $SubstanceNucleicAcidSugar = _$SubstanceNucleicAcidSugarTearOff();
 
 /// @nodoc
 mixin _$SubstanceNucleicAcidSugar {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Identifier? get identifier;
-  String? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get residueSite;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get residueSite => throw _privateConstructorUsedError;
   @JsonKey(name: '_residueSite')
-  Element? get residueSiteElement;
+  Element? get residueSiteElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstanceNucleicAcidSugarCopyWith<SubstanceNucleicAcidSugar> get copyWith;
+  $SubstanceNucleicAcidSugarCopyWith<SubstanceNucleicAcidSugar> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -16664,23 +18163,38 @@ class _$SubstanceNucleicAcidSugarCopyWithImpl<$Res>
     Object? residueSiteElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      residueSite:
-          residueSite == freezed ? _value.residueSite : residueSite as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      residueSite: residueSite == freezed
+          ? _value.residueSite
+          : residueSite // ignore: cast_nullable_to_non_nullable
+              as String?,
       residueSiteElement: residueSiteElement == freezed
           ? _value.residueSiteElement
-          : residueSiteElement as Element?,
+          : residueSiteElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -16767,23 +18281,38 @@ class __$SubstanceNucleicAcidSugarCopyWithImpl<$Res>
     Object? residueSiteElement = freezed,
   }) {
     return _then(_SubstanceNucleicAcidSugar(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      residueSite:
-          residueSite == freezed ? _value.residueSite : residueSite as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      residueSite: residueSite == freezed
+          ? _value.residueSite
+          : residueSite // ignore: cast_nullable_to_non_nullable
+              as String?,
       residueSiteElement: residueSiteElement == freezed
           ? _value.residueSiteElement
-          : residueSiteElement as Element?,
+          : residueSiteElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -16885,7 +18414,6 @@ class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
 }
 
 abstract class _SubstanceNucleicAcidSugar extends SubstanceNucleicAcidSugar {
-  _SubstanceNucleicAcidSugar._() : super._();
   factory _SubstanceNucleicAcidSugar(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -16896,32 +18424,35 @@ abstract class _SubstanceNucleicAcidSugar extends SubstanceNucleicAcidSugar {
           String? residueSite,
           @JsonKey(name: '_residueSite') Element? residueSiteElement}) =
       _$_SubstanceNucleicAcidSugar;
+  _SubstanceNucleicAcidSugar._() : super._();
 
   factory _SubstanceNucleicAcidSugar.fromJson(Map<String, dynamic> json) =
       _$_SubstanceNucleicAcidSugar.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get residueSite;
+  String? get residueSite => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_residueSite')
-  Element? get residueSiteElement;
+  Element? get residueSiteElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceNucleicAcidSugarCopyWith<_SubstanceNucleicAcidSugar> get copyWith;
+  _$SubstanceNucleicAcidSugarCopyWith<_SubstanceNucleicAcidSugar>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstancePolymer _$SubstancePolymerFromJson(Map<String, dynamic> json) {
@@ -16990,33 +18521,38 @@ const $SubstancePolymer = _$SubstancePolymerTearOff();
 /// @nodoc
 mixin _$SubstancePolymer {
   @JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'class')
-  CodeableConcept? get class_;
-  CodeableConcept? get geometry;
-  List<CodeableConcept>? get copolymerConnectivity;
-  List<String>? get modification;
+  CodeableConcept? get class_ => throw _privateConstructorUsedError;
+  CodeableConcept? get geometry => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get copolymerConnectivity =>
+      throw _privateConstructorUsedError;
+  List<String>? get modification => throw _privateConstructorUsedError;
   @JsonKey(name: '_modification')
-  List<Element?>? get modificationElement;
-  List<SubstancePolymerMonomerSet>? get monomerSet;
-  List<SubstancePolymerRepeat>? get repeat;
+  List<Element?>? get modificationElement => throw _privateConstructorUsedError;
+  List<SubstancePolymerMonomerSet>? get monomerSet =>
+      throw _privateConstructorUsedError;
+  List<SubstancePolymerRepeat>? get repeat =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstancePolymerCopyWith<SubstancePolymer> get copyWith;
+  $SubstancePolymerCopyWith<SubstancePolymer> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -17091,47 +18627,76 @@ class _$SubstancePolymerCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept?,
-      geometry:
-          geometry == freezed ? _value.geometry : geometry as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      class_: class_ == freezed
+          ? _value.class_
+          : class_ // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      geometry: geometry == freezed
+          ? _value.geometry
+          : geometry // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       copolymerConnectivity: copolymerConnectivity == freezed
           ? _value.copolymerConnectivity
-          : copolymerConnectivity as List<CodeableConcept>?,
+          : copolymerConnectivity // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       modification: modification == freezed
           ? _value.modification
-          : modification as List<String>?,
+          : modification // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       modificationElement: modificationElement == freezed
           ? _value.modificationElement
-          : modificationElement as List<Element?>?,
+          : modificationElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       monomerSet: monomerSet == freezed
           ? _value.monomerSet
-          : monomerSet as List<SubstancePolymerMonomerSet>?,
+          : monomerSet // ignore: cast_nullable_to_non_nullable
+              as List<SubstancePolymerMonomerSet>?,
       repeat: repeat == freezed
           ? _value.repeat
-          : repeat as List<SubstancePolymerRepeat>?,
+          : repeat // ignore: cast_nullable_to_non_nullable
+              as List<SubstancePolymerRepeat>?,
     ));
   }
 
@@ -17284,47 +18849,76 @@ class __$SubstancePolymerCopyWithImpl<$Res>
     return _then(_SubstancePolymer(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept?,
-      geometry:
-          geometry == freezed ? _value.geometry : geometry as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      class_: class_ == freezed
+          ? _value.class_
+          : class_ // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      geometry: geometry == freezed
+          ? _value.geometry
+          : geometry // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       copolymerConnectivity: copolymerConnectivity == freezed
           ? _value.copolymerConnectivity
-          : copolymerConnectivity as List<CodeableConcept>?,
+          : copolymerConnectivity // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       modification: modification == freezed
           ? _value.modification
-          : modification as List<String>?,
+          : modification // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       modificationElement: modificationElement == freezed
           ? _value.modificationElement
-          : modificationElement as List<Element?>?,
+          : modificationElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       monomerSet: monomerSet == freezed
           ? _value.monomerSet
-          : monomerSet as List<SubstancePolymerMonomerSet>?,
+          : monomerSet // ignore: cast_nullable_to_non_nullable
+              as List<SubstancePolymerMonomerSet>?,
       repeat: repeat == freezed
           ? _value.repeat
-          : repeat as List<SubstancePolymerRepeat>?,
+          : repeat // ignore: cast_nullable_to_non_nullable
+              as List<SubstancePolymerRepeat>?,
     ));
   }
 }
@@ -17500,7 +19094,6 @@ class _$_SubstancePolymer extends _SubstancePolymer {
 }
 
 abstract class _SubstancePolymer extends SubstancePolymer {
-  _SubstancePolymer._() : super._();
   factory _SubstancePolymer(
       {@JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
           R4ResourceType resourceType,
@@ -17526,55 +19119,61 @@ abstract class _SubstancePolymer extends SubstancePolymer {
           List<Element?>? modificationElement,
       List<SubstancePolymerMonomerSet>? monomerSet,
       List<SubstancePolymerRepeat>? repeat}) = _$_SubstancePolymer;
+  _SubstancePolymer._() : super._();
 
   factory _SubstancePolymer.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymer.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'class')
-  CodeableConcept? get class_;
+  CodeableConcept? get class_ => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get geometry;
+  CodeableConcept? get geometry => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get copolymerConnectivity;
+  List<CodeableConcept>? get copolymerConnectivity =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get modification;
+  List<String>? get modification => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_modification')
-  List<Element?>? get modificationElement;
+  List<Element?>? get modificationElement => throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerMonomerSet>? get monomerSet;
+  List<SubstancePolymerMonomerSet>? get monomerSet =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerRepeat>? get repeat;
+  List<SubstancePolymerRepeat>? get repeat =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstancePolymerCopyWith<_SubstancePolymer> get copyWith;
+  _$SubstancePolymerCopyWith<_SubstancePolymer> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubstancePolymerMonomerSet _$SubstancePolymerMonomerSetFromJson(
@@ -17611,16 +19210,19 @@ const $SubstancePolymerMonomerSet = _$SubstancePolymerMonomerSetTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymerMonomerSet {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get ratioType;
-  List<SubstancePolymerStartingMaterial>? get startingMaterial;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get ratioType => throw _privateConstructorUsedError;
+  List<SubstancePolymerStartingMaterial>? get startingMaterial =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstancePolymerMonomerSetCopyWith<SubstancePolymerMonomerSet> get copyWith;
+  $SubstancePolymerMonomerSetCopyWith<SubstancePolymerMonomerSet>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -17656,19 +19258,26 @@ class _$SubstancePolymerMonomerSetCopyWithImpl<$Res>
     Object? startingMaterial = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       ratioType: ratioType == freezed
           ? _value.ratioType
-          : ratioType as CodeableConcept?,
+          : ratioType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       startingMaterial: startingMaterial == freezed
           ? _value.startingMaterial
-          : startingMaterial as List<SubstancePolymerStartingMaterial>?,
+          : startingMaterial // ignore: cast_nullable_to_non_nullable
+              as List<SubstancePolymerStartingMaterial>?,
     ));
   }
 
@@ -17724,19 +19333,26 @@ class __$SubstancePolymerMonomerSetCopyWithImpl<$Res>
     Object? startingMaterial = freezed,
   }) {
     return _then(_SubstancePolymerMonomerSet(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       ratioType: ratioType == freezed
           ? _value.ratioType
-          : ratioType as CodeableConcept?,
+          : ratioType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       startingMaterial: startingMaterial == freezed
           ? _value.startingMaterial
-          : startingMaterial as List<SubstancePolymerStartingMaterial>?,
+          : startingMaterial // ignore: cast_nullable_to_non_nullable
+              as List<SubstancePolymerStartingMaterial>?,
     ));
   }
 }
@@ -17815,7 +19431,6 @@ class _$_SubstancePolymerMonomerSet extends _SubstancePolymerMonomerSet {
 }
 
 abstract class _SubstancePolymerMonomerSet extends SubstancePolymerMonomerSet {
-  _SubstancePolymerMonomerSet._() : super._();
   factory _SubstancePolymerMonomerSet(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -17823,25 +19438,28 @@ abstract class _SubstancePolymerMonomerSet extends SubstancePolymerMonomerSet {
           CodeableConcept? ratioType,
           List<SubstancePolymerStartingMaterial>? startingMaterial}) =
       _$_SubstancePolymerMonomerSet;
+  _SubstancePolymerMonomerSet._() : super._();
 
   factory _SubstancePolymerMonomerSet.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymerMonomerSet.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get ratioType;
+  CodeableConcept? get ratioType => throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerStartingMaterial>? get startingMaterial;
+  List<SubstancePolymerStartingMaterial>? get startingMaterial =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstancePolymerMonomerSetCopyWith<_SubstancePolymerMonomerSet>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstancePolymerStartingMaterial _$SubstancePolymerStartingMaterialFromJson(
@@ -17885,21 +19503,22 @@ const $SubstancePolymerStartingMaterial =
 
 /// @nodoc
 mixin _$SubstancePolymerStartingMaterial {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get material;
-  CodeableConcept? get type;
-  Boolean? get isDefining;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get material => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Boolean? get isDefining => throw _privateConstructorUsedError;
   @JsonKey(name: '_isDefining')
-  Element? get isDefiningElement;
-  SubstanceAmount? get amount;
+  Element? get isDefiningElement => throw _privateConstructorUsedError;
+  SubstanceAmount? get amount => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstancePolymerStartingMaterialCopyWith<SubstancePolymerStartingMaterial>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -17945,22 +19564,38 @@ class _$SubstancePolymerStartingMaterialCopyWithImpl<$Res>
     Object? amount = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      material:
-          material == freezed ? _value.material : material as CodeableConcept?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      isDefining:
-          isDefining == freezed ? _value.isDefining : isDefining as Boolean?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      material: material == freezed
+          ? _value.material
+          : material // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      isDefining: isDefining == freezed
+          ? _value.isDefining
+          : isDefining // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       isDefiningElement: isDefiningElement == freezed
           ? _value.isDefiningElement
-          : isDefiningElement as Element?,
-      amount: amount == freezed ? _value.amount : amount as SubstanceAmount?,
+          : isDefiningElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as SubstanceAmount?,
     ));
   }
 
@@ -18062,22 +19697,38 @@ class __$SubstancePolymerStartingMaterialCopyWithImpl<$Res>
     Object? amount = freezed,
   }) {
     return _then(_SubstancePolymerStartingMaterial(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      material:
-          material == freezed ? _value.material : material as CodeableConcept?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      isDefining:
-          isDefining == freezed ? _value.isDefining : isDefining as Boolean?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      material: material == freezed
+          ? _value.material
+          : material // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      isDefining: isDefining == freezed
+          ? _value.isDefining
+          : isDefining // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       isDefiningElement: isDefiningElement == freezed
           ? _value.isDefiningElement
-          : isDefiningElement as Element?,
-      amount: amount == freezed ? _value.amount : amount as SubstanceAmount?,
+          : isDefiningElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as SubstanceAmount?,
     ));
   }
 }
@@ -18179,7 +19830,6 @@ class _$_SubstancePolymerStartingMaterial
 
 abstract class _SubstancePolymerStartingMaterial
     extends SubstancePolymerStartingMaterial {
-  _SubstancePolymerStartingMaterial._() : super._();
   factory _SubstancePolymerStartingMaterial(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -18189,32 +19839,34 @@ abstract class _SubstancePolymerStartingMaterial
       Boolean? isDefining,
       @JsonKey(name: '_isDefining') Element? isDefiningElement,
       SubstanceAmount? amount}) = _$_SubstancePolymerStartingMaterial;
+  _SubstancePolymerStartingMaterial._() : super._();
 
   factory _SubstancePolymerStartingMaterial.fromJson(
       Map<String, dynamic> json) = _$_SubstancePolymerStartingMaterial.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get material;
+  CodeableConcept? get material => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Boolean? get isDefining;
+  Boolean? get isDefining => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_isDefining')
-  Element? get isDefiningElement;
+  Element? get isDefiningElement => throw _privateConstructorUsedError;
   @override
-  SubstanceAmount? get amount;
+  SubstanceAmount? get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstancePolymerStartingMaterialCopyWith<_SubstancePolymerStartingMaterial>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstancePolymerRepeat _$SubstancePolymerRepeatFromJson(
@@ -18262,22 +19914,27 @@ const $SubstancePolymerRepeat = _$SubstancePolymerRepeatTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymerRepeat {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Integer? get numberOfUnits;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Integer? get numberOfUnits => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfUnits')
-  Element? get numberOfUnitsElement;
-  String? get averageMolecularFormula;
+  Element? get numberOfUnitsElement => throw _privateConstructorUsedError;
+  String? get averageMolecularFormula => throw _privateConstructorUsedError;
   @JsonKey(name: '_averageMolecularFormula')
-  Element? get averageMolecularFormulaElement;
-  CodeableConcept? get repeatUnitAmountType;
-  List<SubstancePolymerRepeatUnit>? get repeatUnit;
+  Element? get averageMolecularFormulaElement =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get repeatUnitAmountType =>
+      throw _privateConstructorUsedError;
+  List<SubstancePolymerRepeatUnit>? get repeatUnit =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstancePolymerRepeatCopyWith<SubstancePolymerRepeat> get copyWith;
+  $SubstancePolymerRepeatCopyWith<SubstancePolymerRepeat> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -18326,31 +19983,42 @@ class _$SubstancePolymerRepeatCopyWithImpl<$Res>
     Object? repeatUnit = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       numberOfUnits: numberOfUnits == freezed
           ? _value.numberOfUnits
-          : numberOfUnits as Integer?,
+          : numberOfUnits // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       numberOfUnitsElement: numberOfUnitsElement == freezed
           ? _value.numberOfUnitsElement
-          : numberOfUnitsElement as Element?,
+          : numberOfUnitsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       averageMolecularFormula: averageMolecularFormula == freezed
           ? _value.averageMolecularFormula
-          : averageMolecularFormula as String?,
+          : averageMolecularFormula // ignore: cast_nullable_to_non_nullable
+              as String?,
       averageMolecularFormulaElement: averageMolecularFormulaElement == freezed
           ? _value.averageMolecularFormulaElement
-          : averageMolecularFormulaElement as Element?,
+          : averageMolecularFormulaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       repeatUnitAmountType: repeatUnitAmountType == freezed
           ? _value.repeatUnitAmountType
-          : repeatUnitAmountType as CodeableConcept?,
+          : repeatUnitAmountType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       repeatUnit: repeatUnit == freezed
           ? _value.repeatUnit
-          : repeatUnit as List<SubstancePolymerRepeatUnit>?,
+          : repeatUnit // ignore: cast_nullable_to_non_nullable
+              as List<SubstancePolymerRepeatUnit>?,
     ));
   }
 
@@ -18443,31 +20111,42 @@ class __$SubstancePolymerRepeatCopyWithImpl<$Res>
     Object? repeatUnit = freezed,
   }) {
     return _then(_SubstancePolymerRepeat(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       numberOfUnits: numberOfUnits == freezed
           ? _value.numberOfUnits
-          : numberOfUnits as Integer?,
+          : numberOfUnits // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       numberOfUnitsElement: numberOfUnitsElement == freezed
           ? _value.numberOfUnitsElement
-          : numberOfUnitsElement as Element?,
+          : numberOfUnitsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       averageMolecularFormula: averageMolecularFormula == freezed
           ? _value.averageMolecularFormula
-          : averageMolecularFormula as String?,
+          : averageMolecularFormula // ignore: cast_nullable_to_non_nullable
+              as String?,
       averageMolecularFormulaElement: averageMolecularFormulaElement == freezed
           ? _value.averageMolecularFormulaElement
-          : averageMolecularFormulaElement as Element?,
+          : averageMolecularFormulaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       repeatUnitAmountType: repeatUnitAmountType == freezed
           ? _value.repeatUnitAmountType
-          : repeatUnitAmountType as CodeableConcept?,
+          : repeatUnitAmountType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       repeatUnit: repeatUnit == freezed
           ? _value.repeatUnit
-          : repeatUnit as List<SubstancePolymerRepeatUnit>?,
+          : repeatUnit // ignore: cast_nullable_to_non_nullable
+              as List<SubstancePolymerRepeatUnit>?,
     ));
   }
 }
@@ -18582,7 +20261,6 @@ class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
 }
 
 abstract class _SubstancePolymerRepeat extends SubstancePolymerRepeat {
-  _SubstancePolymerRepeat._() : super._();
   factory _SubstancePolymerRepeat(
           {String? id,
           @JsonKey(name: 'extension')
@@ -18597,34 +20275,40 @@ abstract class _SubstancePolymerRepeat extends SubstancePolymerRepeat {
           CodeableConcept? repeatUnitAmountType,
           List<SubstancePolymerRepeatUnit>? repeatUnit}) =
       _$_SubstancePolymerRepeat;
+  _SubstancePolymerRepeat._() : super._();
 
   factory _SubstancePolymerRepeat.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymerRepeat.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Integer? get numberOfUnits;
+  Integer? get numberOfUnits => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_numberOfUnits')
-  Element? get numberOfUnitsElement;
+  Element? get numberOfUnitsElement => throw _privateConstructorUsedError;
   @override
-  String? get averageMolecularFormula;
+  String? get averageMolecularFormula => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_averageMolecularFormula')
-  Element? get averageMolecularFormulaElement;
+  Element? get averageMolecularFormulaElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get repeatUnitAmountType;
+  CodeableConcept? get repeatUnitAmountType =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerRepeatUnit>? get repeatUnit;
+  List<SubstancePolymerRepeatUnit>? get repeatUnit =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstancePolymerRepeatCopyWith<_SubstancePolymerRepeat> get copyWith;
+  _$SubstancePolymerRepeatCopyWith<_SubstancePolymerRepeat> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubstancePolymerRepeatUnit _$SubstancePolymerRepeatUnitFromJson(
@@ -18670,21 +20354,26 @@ const $SubstancePolymerRepeatUnit = _$SubstancePolymerRepeatUnitTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymerRepeatUnit {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get orientationOfPolymerisation;
-  String? get repeatUnit;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get orientationOfPolymerisation =>
+      throw _privateConstructorUsedError;
+  String? get repeatUnit => throw _privateConstructorUsedError;
   @JsonKey(name: '_repeatUnit')
-  Element? get repeatUnitElement;
-  SubstanceAmount? get amount;
-  List<SubstancePolymerDegreeOfPolymerisation>? get degreeOfPolymerisation;
-  List<SubstancePolymerStructuralRepresentation>? get structuralRepresentation;
+  Element? get repeatUnitElement => throw _privateConstructorUsedError;
+  SubstanceAmount? get amount => throw _privateConstructorUsedError;
+  List<SubstancePolymerDegreeOfPolymerisation>? get degreeOfPolymerisation =>
+      throw _privateConstructorUsedError;
+  List<SubstancePolymerStructuralRepresentation>?
+      get structuralRepresentation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstancePolymerRepeatUnitCopyWith<SubstancePolymerRepeatUnit> get copyWith;
+  $SubstancePolymerRepeatUnitCopyWith<SubstancePolymerRepeatUnit>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -18731,29 +20420,41 @@ class _$SubstancePolymerRepeatUnitCopyWithImpl<$Res>
     Object? structuralRepresentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       orientationOfPolymerisation: orientationOfPolymerisation == freezed
           ? _value.orientationOfPolymerisation
-          : orientationOfPolymerisation as CodeableConcept?,
-      repeatUnit:
-          repeatUnit == freezed ? _value.repeatUnit : repeatUnit as String?,
+          : orientationOfPolymerisation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      repeatUnit: repeatUnit == freezed
+          ? _value.repeatUnit
+          : repeatUnit // ignore: cast_nullable_to_non_nullable
+              as String?,
       repeatUnitElement: repeatUnitElement == freezed
           ? _value.repeatUnitElement
-          : repeatUnitElement as Element?,
-      amount: amount == freezed ? _value.amount : amount as SubstanceAmount?,
+          : repeatUnitElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as SubstanceAmount?,
       degreeOfPolymerisation: degreeOfPolymerisation == freezed
           ? _value.degreeOfPolymerisation
-          : degreeOfPolymerisation
+          : degreeOfPolymerisation // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerDegreeOfPolymerisation>?,
       structuralRepresentation: structuralRepresentation == freezed
           ? _value.structuralRepresentation
-          : structuralRepresentation
+          : structuralRepresentation // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerStructuralRepresentation>?,
     ));
   }
@@ -18846,29 +20547,41 @@ class __$SubstancePolymerRepeatUnitCopyWithImpl<$Res>
     Object? structuralRepresentation = freezed,
   }) {
     return _then(_SubstancePolymerRepeatUnit(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       orientationOfPolymerisation: orientationOfPolymerisation == freezed
           ? _value.orientationOfPolymerisation
-          : orientationOfPolymerisation as CodeableConcept?,
-      repeatUnit:
-          repeatUnit == freezed ? _value.repeatUnit : repeatUnit as String?,
+          : orientationOfPolymerisation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      repeatUnit: repeatUnit == freezed
+          ? _value.repeatUnit
+          : repeatUnit // ignore: cast_nullable_to_non_nullable
+              as String?,
       repeatUnitElement: repeatUnitElement == freezed
           ? _value.repeatUnitElement
-          : repeatUnitElement as Element?,
-      amount: amount == freezed ? _value.amount : amount as SubstanceAmount?,
+          : repeatUnitElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as SubstanceAmount?,
       degreeOfPolymerisation: degreeOfPolymerisation == freezed
           ? _value.degreeOfPolymerisation
-          : degreeOfPolymerisation
+          : degreeOfPolymerisation // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerDegreeOfPolymerisation>?,
       structuralRepresentation: structuralRepresentation == freezed
           ? _value.structuralRepresentation
-          : structuralRepresentation
+          : structuralRepresentation // ignore: cast_nullable_to_non_nullable
               as List<SubstancePolymerStructuralRepresentation>?,
     ));
   }
@@ -18980,7 +20693,6 @@ class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
 }
 
 abstract class _SubstancePolymerRepeatUnit extends SubstancePolymerRepeatUnit {
-  _SubstancePolymerRepeatUnit._() : super._();
   factory _SubstancePolymerRepeatUnit(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -18992,34 +20704,39 @@ abstract class _SubstancePolymerRepeatUnit extends SubstancePolymerRepeatUnit {
       List<SubstancePolymerDegreeOfPolymerisation>? degreeOfPolymerisation,
       List<SubstancePolymerStructuralRepresentation>?
           structuralRepresentation}) = _$_SubstancePolymerRepeatUnit;
+  _SubstancePolymerRepeatUnit._() : super._();
 
   factory _SubstancePolymerRepeatUnit.fromJson(Map<String, dynamic> json) =
       _$_SubstancePolymerRepeatUnit.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get orientationOfPolymerisation;
+  CodeableConcept? get orientationOfPolymerisation =>
+      throw _privateConstructorUsedError;
   @override
-  String? get repeatUnit;
+  String? get repeatUnit => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_repeatUnit')
-  Element? get repeatUnitElement;
+  Element? get repeatUnitElement => throw _privateConstructorUsedError;
   @override
-  SubstanceAmount? get amount;
+  SubstanceAmount? get amount => throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerDegreeOfPolymerisation>? get degreeOfPolymerisation;
+  List<SubstancePolymerDegreeOfPolymerisation>? get degreeOfPolymerisation =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstancePolymerStructuralRepresentation>? get structuralRepresentation;
+  List<SubstancePolymerStructuralRepresentation>?
+      get structuralRepresentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstancePolymerRepeatUnitCopyWith<_SubstancePolymerRepeatUnit>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstancePolymerDegreeOfPolymerisation
@@ -19058,17 +20775,19 @@ const $SubstancePolymerDegreeOfPolymerisation =
 
 /// @nodoc
 mixin _$SubstancePolymerDegreeOfPolymerisation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get degree;
-  SubstanceAmount? get amount;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get degree => throw _privateConstructorUsedError;
+  SubstanceAmount? get amount => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstancePolymerDegreeOfPolymerisationCopyWith<
-      SubstancePolymerDegreeOfPolymerisation> get copyWith;
+          SubstancePolymerDegreeOfPolymerisation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -19106,15 +20825,26 @@ class _$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
     Object? amount = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      degree: degree == freezed ? _value.degree : degree as CodeableConcept?,
-      amount: amount == freezed ? _value.amount : amount as SubstanceAmount?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      degree: degree == freezed
+          ? _value.degree
+          : degree // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as SubstanceAmount?,
     ));
   }
 
@@ -19185,15 +20915,26 @@ class __$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
     Object? amount = freezed,
   }) {
     return _then(_SubstancePolymerDegreeOfPolymerisation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      degree: degree == freezed ? _value.degree : degree as CodeableConcept?,
-      amount: amount == freezed ? _value.amount : amount as SubstanceAmount?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      degree: degree == freezed
+          ? _value.degree
+          : degree // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as SubstanceAmount?,
     ));
   }
 }
@@ -19274,33 +21015,35 @@ class _$_SubstancePolymerDegreeOfPolymerisation
 
 abstract class _SubstancePolymerDegreeOfPolymerisation
     extends SubstancePolymerDegreeOfPolymerisation {
-  _SubstancePolymerDegreeOfPolymerisation._() : super._();
   factory _SubstancePolymerDegreeOfPolymerisation(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? degree,
       SubstanceAmount? amount}) = _$_SubstancePolymerDegreeOfPolymerisation;
+  _SubstancePolymerDegreeOfPolymerisation._() : super._();
 
   factory _SubstancePolymerDegreeOfPolymerisation.fromJson(
           Map<String, dynamic> json) =
       _$_SubstancePolymerDegreeOfPolymerisation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get degree;
+  CodeableConcept? get degree => throw _privateConstructorUsedError;
   @override
-  SubstanceAmount? get amount;
+  SubstanceAmount? get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstancePolymerDegreeOfPolymerisationCopyWith<
-      _SubstancePolymerDegreeOfPolymerisation> get copyWith;
+          _SubstancePolymerDegreeOfPolymerisation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstancePolymerStructuralRepresentation
@@ -19343,20 +21086,22 @@ const $SubstancePolymerStructuralRepresentation =
 
 /// @nodoc
 mixin _$SubstancePolymerStructuralRepresentation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get type;
-  String? get representation;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  String? get representation => throw _privateConstructorUsedError;
   @JsonKey(name: '_representation')
-  Element? get representationElement;
-  Attachment? get attachment;
+  Element? get representationElement => throw _privateConstructorUsedError;
+  Attachment? get attachment => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstancePolymerStructuralRepresentationCopyWith<
-      SubstancePolymerStructuralRepresentation> get copyWith;
+          SubstancePolymerStructuralRepresentation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -19400,22 +21145,34 @@ class _$SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>
     Object? attachment = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       representation: representation == freezed
           ? _value.representation
-          : representation as String?,
+          : representation // ignore: cast_nullable_to_non_nullable
+              as String?,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as Element?,
-      attachment:
-          attachment == freezed ? _value.attachment : attachment as Attachment?,
+          : representationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      attachment: attachment == freezed
+          ? _value.attachment
+          : attachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
     ));
   }
 
@@ -19503,22 +21260,34 @@ class __$SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>
     Object? attachment = freezed,
   }) {
     return _then(_SubstancePolymerStructuralRepresentation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       representation: representation == freezed
           ? _value.representation
-          : representation as String?,
+          : representation // ignore: cast_nullable_to_non_nullable
+              as String?,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as Element?,
-      attachment:
-          attachment == freezed ? _value.attachment : attachment as Attachment?,
+          : representationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      attachment: attachment == freezed
+          ? _value.attachment
+          : attachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
     ));
   }
 }
@@ -19615,7 +21384,6 @@ class _$_SubstancePolymerStructuralRepresentation
 
 abstract class _SubstancePolymerStructuralRepresentation
     extends SubstancePolymerStructuralRepresentation {
-  _SubstancePolymerStructuralRepresentation._() : super._();
   factory _SubstancePolymerStructuralRepresentation(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -19624,31 +21392,34 @@ abstract class _SubstancePolymerStructuralRepresentation
       String? representation,
       @JsonKey(name: '_representation') Element? representationElement,
       Attachment? attachment}) = _$_SubstancePolymerStructuralRepresentation;
+  _SubstancePolymerStructuralRepresentation._() : super._();
 
   factory _SubstancePolymerStructuralRepresentation.fromJson(
           Map<String, dynamic> json) =
       _$_SubstancePolymerStructuralRepresentation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  String? get representation;
+  String? get representation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_representation')
-  Element? get representationElement;
+  Element? get representationElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get attachment;
+  Attachment? get attachment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstancePolymerStructuralRepresentationCopyWith<
-      _SubstancePolymerStructuralRepresentation> get copyWith;
+          _SubstancePolymerStructuralRepresentation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceProtein _$SubstanceProteinFromJson(Map<String, dynamic> json) {
@@ -19715,32 +21486,36 @@ const $SubstanceProtein = _$SubstanceProteinTearOff();
 /// @nodoc
 mixin _$SubstanceProtein {
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get sequenceType;
-  Integer? get numberOfSubunits;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get sequenceType => throw _privateConstructorUsedError;
+  Integer? get numberOfSubunits => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfSubunits')
-  Element? get numberOfSubunitsElement;
-  List<String>? get disulfideLinkage;
+  Element? get numberOfSubunitsElement => throw _privateConstructorUsedError;
+  List<String>? get disulfideLinkage => throw _privateConstructorUsedError;
   @JsonKey(name: '_disulfideLinkage')
-  List<Element?>? get disulfideLinkageElement;
-  List<SubstanceProteinSubunit>? get subunit;
+  List<Element?>? get disulfideLinkageElement =>
+      throw _privateConstructorUsedError;
+  List<SubstanceProteinSubunit>? get subunit =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstanceProteinCopyWith<SubstanceProtein> get copyWith;
+  $SubstanceProteinCopyWith<SubstanceProtein> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -19813,47 +21588,72 @@ class _$SubstanceProteinCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       sequenceType: sequenceType == freezed
           ? _value.sequenceType
-          : sequenceType as CodeableConcept?,
+          : sequenceType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       numberOfSubunits: numberOfSubunits == freezed
           ? _value.numberOfSubunits
-          : numberOfSubunits as Integer?,
+          : numberOfSubunits // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       numberOfSubunitsElement: numberOfSubunitsElement == freezed
           ? _value.numberOfSubunitsElement
-          : numberOfSubunitsElement as Element?,
+          : numberOfSubunitsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       disulfideLinkage: disulfideLinkage == freezed
           ? _value.disulfideLinkage
-          : disulfideLinkage as List<String>?,
+          : disulfideLinkage // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       disulfideLinkageElement: disulfideLinkageElement == freezed
           ? _value.disulfideLinkageElement
-          : disulfideLinkageElement as List<Element?>?,
+          : disulfideLinkageElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       subunit: subunit == freezed
           ? _value.subunit
-          : subunit as List<SubstanceProteinSubunit>?,
+          : subunit // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceProteinSubunit>?,
     ));
   }
 
@@ -20004,47 +21804,72 @@ class __$SubstanceProteinCopyWithImpl<$Res>
     return _then(_SubstanceProtein(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       sequenceType: sequenceType == freezed
           ? _value.sequenceType
-          : sequenceType as CodeableConcept?,
+          : sequenceType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       numberOfSubunits: numberOfSubunits == freezed
           ? _value.numberOfSubunits
-          : numberOfSubunits as Integer?,
+          : numberOfSubunits // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       numberOfSubunitsElement: numberOfSubunitsElement == freezed
           ? _value.numberOfSubunitsElement
-          : numberOfSubunitsElement as Element?,
+          : numberOfSubunitsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       disulfideLinkage: disulfideLinkage == freezed
           ? _value.disulfideLinkage
-          : disulfideLinkage as List<String>?,
+          : disulfideLinkage // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       disulfideLinkageElement: disulfideLinkageElement == freezed
           ? _value.disulfideLinkageElement
-          : disulfideLinkageElement as List<Element?>?,
+          : disulfideLinkageElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       subunit: subunit == freezed
           ? _value.subunit
-          : subunit as List<SubstanceProteinSubunit>?,
+          : subunit // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceProteinSubunit>?,
     ));
   }
 }
@@ -20216,7 +22041,6 @@ class _$_SubstanceProtein extends _SubstanceProtein {
 }
 
 abstract class _SubstanceProtein extends SubstanceProtein {
-  _SubstanceProtein._() : super._();
   factory _SubstanceProtein(
       {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
           R4ResourceType resourceType,
@@ -20241,53 +22065,58 @@ abstract class _SubstanceProtein extends SubstanceProtein {
       @JsonKey(name: '_disulfideLinkage')
           List<Element?>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit}) = _$_SubstanceProtein;
+  _SubstanceProtein._() : super._();
 
   factory _SubstanceProtein.fromJson(Map<String, dynamic> json) =
       _$_SubstanceProtein.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sequenceType;
+  CodeableConcept? get sequenceType => throw _privateConstructorUsedError;
   @override
-  Integer? get numberOfSubunits;
+  Integer? get numberOfSubunits => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_numberOfSubunits')
-  Element? get numberOfSubunitsElement;
+  Element? get numberOfSubunitsElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get disulfideLinkage;
+  List<String>? get disulfideLinkage => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_disulfideLinkage')
-  List<Element?>? get disulfideLinkageElement;
+  List<Element?>? get disulfideLinkageElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceProteinSubunit>? get subunit;
+  List<SubstanceProteinSubunit>? get subunit =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceProteinCopyWith<_SubstanceProtein> get copyWith;
+  _$SubstanceProteinCopyWith<_SubstanceProtein> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubstanceProteinSubunit _$SubstanceProteinSubunitFromJson(
@@ -20352,32 +22181,36 @@ const $SubstanceProteinSubunit = _$SubstanceProteinSubunitTearOff();
 
 /// @nodoc
 mixin _$SubstanceProteinSubunit {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Integer? get subunit;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Integer? get subunit => throw _privateConstructorUsedError;
   @JsonKey(name: '_subunit')
-  Element? get subunitElement;
-  String? get sequence;
+  Element? get subunitElement => throw _privateConstructorUsedError;
+  String? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
-  Element? get sequenceElement;
-  Integer? get length;
+  Element? get sequenceElement => throw _privateConstructorUsedError;
+  Integer? get length => throw _privateConstructorUsedError;
   @JsonKey(name: '_length')
-  Element? get lengthElement;
-  Attachment? get sequenceAttachment;
-  Identifier? get nTerminalModificationId;
-  String? get nTerminalModification;
+  Element? get lengthElement => throw _privateConstructorUsedError;
+  Attachment? get sequenceAttachment => throw _privateConstructorUsedError;
+  Identifier? get nTerminalModificationId => throw _privateConstructorUsedError;
+  String? get nTerminalModification => throw _privateConstructorUsedError;
   @JsonKey(name: '_nTerminalModification')
-  Element? get nTerminalModificationElement;
-  Identifier? get cTerminalModificationId;
-  String? get cTerminalModification;
+  Element? get nTerminalModificationElement =>
+      throw _privateConstructorUsedError;
+  Identifier? get cTerminalModificationId => throw _privateConstructorUsedError;
+  String? get cTerminalModification => throw _privateConstructorUsedError;
   @JsonKey(name: '_cTerminalModification')
-  Element? get cTerminalModificationElement;
+  Element? get cTerminalModificationElement =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstanceProteinSubunitCopyWith<SubstanceProteinSubunit> get copyWith;
+  $SubstanceProteinSubunitCopyWith<SubstanceProteinSubunit> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -20448,46 +22281,70 @@ class _$SubstanceProteinSubunitCopyWithImpl<$Res>
     Object? cTerminalModificationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subunit: subunit == freezed ? _value.subunit : subunit as Integer?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subunit: subunit == freezed
+          ? _value.subunit
+          : subunit // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       subunitElement: subunitElement == freezed
           ? _value.subunitElement
-          : subunitElement as Element?,
-      sequence: sequence == freezed ? _value.sequence : sequence as String?,
+          : subunitElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sequence: sequence == freezed
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as String?,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
-          : sequenceElement as Element?,
-      length: length == freezed ? _value.length : length as Integer?,
+          : sequenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      length: length == freezed
+          ? _value.length
+          : length // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       lengthElement: lengthElement == freezed
           ? _value.lengthElement
-          : lengthElement as Element?,
+          : lengthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       sequenceAttachment: sequenceAttachment == freezed
           ? _value.sequenceAttachment
-          : sequenceAttachment as Attachment?,
+          : sequenceAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
       nTerminalModificationId: nTerminalModificationId == freezed
           ? _value.nTerminalModificationId
-          : nTerminalModificationId as Identifier?,
+          : nTerminalModificationId // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       nTerminalModification: nTerminalModification == freezed
           ? _value.nTerminalModification
-          : nTerminalModification as String?,
+          : nTerminalModification // ignore: cast_nullable_to_non_nullable
+              as String?,
       nTerminalModificationElement: nTerminalModificationElement == freezed
           ? _value.nTerminalModificationElement
-          : nTerminalModificationElement as Element?,
+          : nTerminalModificationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       cTerminalModificationId: cTerminalModificationId == freezed
           ? _value.cTerminalModificationId
-          : cTerminalModificationId as Identifier?,
+          : cTerminalModificationId // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       cTerminalModification: cTerminalModification == freezed
           ? _value.cTerminalModification
-          : cTerminalModification as String?,
+          : cTerminalModification // ignore: cast_nullable_to_non_nullable
+              as String?,
       cTerminalModificationElement: cTerminalModificationElement == freezed
           ? _value.cTerminalModificationElement
-          : cTerminalModificationElement as Element?,
+          : cTerminalModificationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -20663,46 +22520,70 @@ class __$SubstanceProteinSubunitCopyWithImpl<$Res>
     Object? cTerminalModificationElement = freezed,
   }) {
     return _then(_SubstanceProteinSubunit(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      subunit: subunit == freezed ? _value.subunit : subunit as Integer?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      subunit: subunit == freezed
+          ? _value.subunit
+          : subunit // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       subunitElement: subunitElement == freezed
           ? _value.subunitElement
-          : subunitElement as Element?,
-      sequence: sequence == freezed ? _value.sequence : sequence as String?,
+          : subunitElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sequence: sequence == freezed
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as String?,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
-          : sequenceElement as Element?,
-      length: length == freezed ? _value.length : length as Integer?,
+          : sequenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      length: length == freezed
+          ? _value.length
+          : length // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       lengthElement: lengthElement == freezed
           ? _value.lengthElement
-          : lengthElement as Element?,
+          : lengthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       sequenceAttachment: sequenceAttachment == freezed
           ? _value.sequenceAttachment
-          : sequenceAttachment as Attachment?,
+          : sequenceAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
       nTerminalModificationId: nTerminalModificationId == freezed
           ? _value.nTerminalModificationId
-          : nTerminalModificationId as Identifier?,
+          : nTerminalModificationId // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       nTerminalModification: nTerminalModification == freezed
           ? _value.nTerminalModification
-          : nTerminalModification as String?,
+          : nTerminalModification // ignore: cast_nullable_to_non_nullable
+              as String?,
       nTerminalModificationElement: nTerminalModificationElement == freezed
           ? _value.nTerminalModificationElement
-          : nTerminalModificationElement as Element?,
+          : nTerminalModificationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       cTerminalModificationId: cTerminalModificationId == freezed
           ? _value.cTerminalModificationId
-          : cTerminalModificationId as Identifier?,
+          : cTerminalModificationId // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       cTerminalModification: cTerminalModification == freezed
           ? _value.cTerminalModification
-          : cTerminalModification as String?,
+          : cTerminalModification // ignore: cast_nullable_to_non_nullable
+              as String?,
       cTerminalModificationElement: cTerminalModificationElement == freezed
           ? _value.cTerminalModificationElement
-          : cTerminalModificationElement as Element?,
+          : cTerminalModificationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -20870,7 +22751,6 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
 }
 
 abstract class _SubstanceProteinSubunit extends SubstanceProteinSubunit {
-  _SubstanceProteinSubunit._() : super._();
   factory _SubstanceProteinSubunit(
       {String? id,
       @JsonKey(name: 'extension')
@@ -20894,51 +22774,56 @@ abstract class _SubstanceProteinSubunit extends SubstanceProteinSubunit {
       String? cTerminalModification,
       @JsonKey(name: '_cTerminalModification')
           Element? cTerminalModificationElement}) = _$_SubstanceProteinSubunit;
+  _SubstanceProteinSubunit._() : super._();
 
   factory _SubstanceProteinSubunit.fromJson(Map<String, dynamic> json) =
       _$_SubstanceProteinSubunit.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Integer? get subunit;
+  Integer? get subunit => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_subunit')
-  Element? get subunitElement;
+  Element? get subunitElement => throw _privateConstructorUsedError;
   @override
-  String? get sequence;
+  String? get sequence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sequence')
-  Element? get sequenceElement;
+  Element? get sequenceElement => throw _privateConstructorUsedError;
   @override
-  Integer? get length;
+  Integer? get length => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_length')
-  Element? get lengthElement;
+  Element? get lengthElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get sequenceAttachment;
+  Attachment? get sequenceAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier? get nTerminalModificationId;
+  Identifier? get nTerminalModificationId => throw _privateConstructorUsedError;
   @override
-  String? get nTerminalModification;
+  String? get nTerminalModification => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_nTerminalModification')
-  Element? get nTerminalModificationElement;
+  Element? get nTerminalModificationElement =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get cTerminalModificationId;
+  Identifier? get cTerminalModificationId => throw _privateConstructorUsedError;
   @override
-  String? get cTerminalModification;
+  String? get cTerminalModification => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_cTerminalModification')
-  Element? get cTerminalModificationElement;
+  Element? get cTerminalModificationElement =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceProteinSubunitCopyWith<_SubstanceProteinSubunit> get copyWith;
+  _$SubstanceProteinSubunitCopyWith<_SubstanceProteinSubunit> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubstanceReferenceInformation _$SubstanceReferenceInformationFromJson(
@@ -21006,32 +22891,37 @@ const $SubstanceReferenceInformation = _$SubstanceReferenceInformationTearOff();
 /// @nodoc
 mixin _$SubstanceReferenceInformation {
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get comment;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
   @JsonKey(name: '_comment')
-  Element? get commentElement;
-  List<SubstanceReferenceInformationGene>? get gene;
-  List<SubstanceReferenceInformationGeneElement>? get geneElement;
-  List<SubstanceReferenceInformationClassification>? get classification;
-  List<SubstanceReferenceInformationTarget>? get target;
+  Element? get commentElement => throw _privateConstructorUsedError;
+  List<SubstanceReferenceInformationGene>? get gene =>
+      throw _privateConstructorUsedError;
+  List<SubstanceReferenceInformationGeneElement>? get geneElement =>
+      throw _privateConstructorUsedError;
+  List<SubstanceReferenceInformationClassification>? get classification =>
+      throw _privateConstructorUsedError;
+  List<SubstanceReferenceInformationTarget>? get target =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceReferenceInformationCopyWith<SubstanceReferenceInformation>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -21103,46 +22993,72 @@ class _$SubstanceReferenceInformationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       gene: gene == freezed
           ? _value.gene
-          : gene as List<SubstanceReferenceInformationGene>?,
+          : gene // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceReferenceInformationGene>?,
       geneElement: geneElement == freezed
           ? _value.geneElement
-          : geneElement as List<SubstanceReferenceInformationGeneElement>?,
+          : geneElement // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceReferenceInformationGeneElement>?,
       classification: classification == freezed
           ? _value.classification
-          : classification
+          : classification // ignore: cast_nullable_to_non_nullable
               as List<SubstanceReferenceInformationClassification>?,
       target: target == freezed
           ? _value.target
-          : target as List<SubstanceReferenceInformationTarget>?,
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceReferenceInformationTarget>?,
     ));
   }
 
@@ -21282,46 +23198,72 @@ class __$SubstanceReferenceInformationCopyWithImpl<$Res>
     return _then(_SubstanceReferenceInformation(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       gene: gene == freezed
           ? _value.gene
-          : gene as List<SubstanceReferenceInformationGene>?,
+          : gene // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceReferenceInformationGene>?,
       geneElement: geneElement == freezed
           ? _value.geneElement
-          : geneElement as List<SubstanceReferenceInformationGeneElement>?,
+          : geneElement // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceReferenceInformationGeneElement>?,
       classification: classification == freezed
           ? _value.classification
-          : classification
+          : classification // ignore: cast_nullable_to_non_nullable
               as List<SubstanceReferenceInformationClassification>?,
       target: target == freezed
           ? _value.target
-          : target as List<SubstanceReferenceInformationTarget>?,
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceReferenceInformationTarget>?,
     ));
   }
 }
@@ -21491,7 +23433,6 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
 
 abstract class _SubstanceReferenceInformation
     extends SubstanceReferenceInformation {
-  _SubstanceReferenceInformation._() : super._();
   factory _SubstanceReferenceInformation(
       {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
           R4ResourceType resourceType,
@@ -21516,53 +23457,59 @@ abstract class _SubstanceReferenceInformation
       List<SubstanceReferenceInformationClassification>? classification,
       List<SubstanceReferenceInformationTarget>?
           target}) = _$_SubstanceReferenceInformation;
+  _SubstanceReferenceInformation._() : super._();
 
   factory _SubstanceReferenceInformation.fromJson(Map<String, dynamic> json) =
       _$_SubstanceReferenceInformation.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
-  List<SubstanceReferenceInformationGene>? get gene;
+  List<SubstanceReferenceInformationGene>? get gene =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceReferenceInformationGeneElement>? get geneElement;
+  List<SubstanceReferenceInformationGeneElement>? get geneElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceReferenceInformationClassification>? get classification;
+  List<SubstanceReferenceInformationClassification>? get classification =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceReferenceInformationTarget>? get target;
+  List<SubstanceReferenceInformationTarget>? get target =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceReferenceInformationCopyWith<_SubstanceReferenceInformation>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceReferenceInformationGene _$SubstanceReferenceInformationGeneFromJson(
@@ -21602,18 +23549,19 @@ const $SubstanceReferenceInformationGene =
 
 /// @nodoc
 mixin _$SubstanceReferenceInformationGene {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get geneSequenceOrigin;
-  CodeableConcept? get gene;
-  List<Reference>? get source;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get geneSequenceOrigin => throw _privateConstructorUsedError;
+  CodeableConcept? get gene => throw _privateConstructorUsedError;
+  List<Reference>? get source => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceReferenceInformationGeneCopyWith<SubstanceReferenceInformationGene>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -21653,18 +23601,30 @@ class _$SubstanceReferenceInformationGeneCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       geneSequenceOrigin: geneSequenceOrigin == freezed
           ? _value.geneSequenceOrigin
-          : geneSequenceOrigin as CodeableConcept?,
-      gene: gene == freezed ? _value.gene : gene as CodeableConcept?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : geneSequenceOrigin // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      gene: gene == freezed
+          ? _value.gene
+          : gene // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
@@ -21736,18 +23696,30 @@ class __$SubstanceReferenceInformationGeneCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_SubstanceReferenceInformationGene(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       geneSequenceOrigin: geneSequenceOrigin == freezed
           ? _value.geneSequenceOrigin
-          : geneSequenceOrigin as CodeableConcept?,
-      gene: gene == freezed ? _value.gene : gene as CodeableConcept?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : geneSequenceOrigin // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      gene: gene == freezed
+          ? _value.gene
+          : gene // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -21835,7 +23807,6 @@ class _$_SubstanceReferenceInformationGene
 
 abstract class _SubstanceReferenceInformationGene
     extends SubstanceReferenceInformationGene {
-  _SubstanceReferenceInformationGene._() : super._();
   factory _SubstanceReferenceInformationGene(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -21843,28 +23814,31 @@ abstract class _SubstanceReferenceInformationGene
       CodeableConcept? geneSequenceOrigin,
       CodeableConcept? gene,
       List<Reference>? source}) = _$_SubstanceReferenceInformationGene;
+  _SubstanceReferenceInformationGene._() : super._();
 
   factory _SubstanceReferenceInformationGene.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceReferenceInformationGene.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get geneSequenceOrigin;
+  CodeableConcept? get geneSequenceOrigin => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get gene;
+  CodeableConcept? get gene => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceReferenceInformationGeneCopyWith<
-      _SubstanceReferenceInformationGene> get copyWith;
+          _SubstanceReferenceInformationGene>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceReferenceInformationGeneElement
@@ -21905,18 +23879,20 @@ const $SubstanceReferenceInformationGeneElement =
 
 /// @nodoc
 mixin _$SubstanceReferenceInformationGeneElement {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get type;
-  Identifier? get element;
-  List<Reference>? get source;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Identifier? get element => throw _privateConstructorUsedError;
+  List<Reference>? get source => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceReferenceInformationGeneElementCopyWith<
-      SubstanceReferenceInformationGeneElement> get copyWith;
+          SubstanceReferenceInformationGeneElement>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -21957,16 +23933,30 @@ class _$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      element: element == freezed ? _value.element : element as Identifier?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      element: element == freezed
+          ? _value.element
+          : element // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
@@ -22039,16 +24029,30 @@ class __$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_SubstanceReferenceInformationGeneElement(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      element: element == freezed ? _value.element : element as Identifier?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      element: element == freezed
+          ? _value.element
+          : element // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -22136,7 +24140,6 @@ class _$_SubstanceReferenceInformationGeneElement
 
 abstract class _SubstanceReferenceInformationGeneElement
     extends SubstanceReferenceInformationGeneElement {
-  _SubstanceReferenceInformationGeneElement._() : super._();
   factory _SubstanceReferenceInformationGeneElement(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -22144,28 +24147,31 @@ abstract class _SubstanceReferenceInformationGeneElement
       CodeableConcept? type,
       Identifier? element,
       List<Reference>? source}) = _$_SubstanceReferenceInformationGeneElement;
+  _SubstanceReferenceInformationGeneElement._() : super._();
 
   factory _SubstanceReferenceInformationGeneElement.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceReferenceInformationGeneElement.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Identifier? get element;
+  Identifier? get element => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceReferenceInformationGeneElementCopyWith<
-      _SubstanceReferenceInformationGeneElement> get copyWith;
+          _SubstanceReferenceInformationGeneElement>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceReferenceInformationClassification
@@ -22209,19 +24215,21 @@ const $SubstanceReferenceInformationClassification =
 
 /// @nodoc
 mixin _$SubstanceReferenceInformationClassification {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get domain;
-  CodeableConcept? get classification;
-  List<CodeableConcept>? get subtype;
-  List<Reference>? get source;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get domain => throw _privateConstructorUsedError;
+  CodeableConcept? get classification => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get subtype => throw _privateConstructorUsedError;
+  List<Reference>? get source => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceReferenceInformationClassificationCopyWith<
-      SubstanceReferenceInformationClassification> get copyWith;
+          SubstanceReferenceInformationClassification>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -22264,21 +24272,34 @@ class _$SubstanceReferenceInformationClassificationCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      domain: domain == freezed ? _value.domain : domain as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      domain: domain == freezed
+          ? _value.domain
+          : domain // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       classification: classification == freezed
           ? _value.classification
-          : classification as CodeableConcept?,
+          : classification // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       subtype: subtype == freezed
           ? _value.subtype
-          : subtype as List<CodeableConcept>?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : subtype // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
@@ -22353,21 +24374,34 @@ class __$SubstanceReferenceInformationClassificationCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_SubstanceReferenceInformationClassification(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      domain: domain == freezed ? _value.domain : domain as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      domain: domain == freezed
+          ? _value.domain
+          : domain // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       classification: classification == freezed
           ? _value.classification
-          : classification as CodeableConcept?,
+          : classification // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       subtype: subtype == freezed
           ? _value.subtype
-          : subtype as List<CodeableConcept>?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : subtype // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -22463,7 +24497,6 @@ class _$_SubstanceReferenceInformationClassification
 
 abstract class _SubstanceReferenceInformationClassification
     extends SubstanceReferenceInformationClassification {
-  _SubstanceReferenceInformationClassification._() : super._();
   factory _SubstanceReferenceInformationClassification(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -22473,30 +24506,33 @@ abstract class _SubstanceReferenceInformationClassification
           List<CodeableConcept>? subtype,
           List<Reference>? source}) =
       _$_SubstanceReferenceInformationClassification;
+  _SubstanceReferenceInformationClassification._() : super._();
 
   factory _SubstanceReferenceInformationClassification.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceReferenceInformationClassification.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get domain;
+  CodeableConcept? get domain => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get classification;
+  CodeableConcept? get classification => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get subtype;
+  List<CodeableConcept>? get subtype => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceReferenceInformationClassificationCopyWith<
-      _SubstanceReferenceInformationClassification> get copyWith;
+          _SubstanceReferenceInformationClassification>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceReferenceInformationTarget
@@ -22552,27 +24588,29 @@ const $SubstanceReferenceInformationTarget =
 
 /// @nodoc
 mixin _$SubstanceReferenceInformationTarget {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Identifier? get target;
-  CodeableConcept? get type;
-  CodeableConcept? get interaction;
-  CodeableConcept? get organism;
-  CodeableConcept? get organismType;
-  Quantity? get amountQuantity;
-  Range? get amountRange;
-  String? get amountString;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier? get target => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get interaction => throw _privateConstructorUsedError;
+  CodeableConcept? get organism => throw _privateConstructorUsedError;
+  CodeableConcept? get organismType => throw _privateConstructorUsedError;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
+  Range? get amountRange => throw _privateConstructorUsedError;
+  String? get amountString => throw _privateConstructorUsedError;
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
-  CodeableConcept? get amountType;
-  List<Reference>? get source;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
+  CodeableConcept? get amountType => throw _privateConstructorUsedError;
+  List<Reference>? get source => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceReferenceInformationTargetCopyWith<
-      SubstanceReferenceInformationTarget> get copyWith;
+          SubstanceReferenceInformationTarget>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -22635,38 +24673,62 @@ class _$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      target: target == freezed ? _value.target : target as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as CodeableConcept?,
-      organism:
-          organism == freezed ? _value.organism : organism as CodeableConcept?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      organism: organism == freezed
+          ? _value.organism
+          : organism // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       organismType: organismType == freezed
           ? _value.organismType
-          : organismType as CodeableConcept?,
+          : organismType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity?,
-      amountRange:
-          amountRange == freezed ? _value.amountRange : amountRange as Range?,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      amountRange: amountRange == freezed
+          ? _value.amountRange
+          : amountRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String?,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element?,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountType: amountType == freezed
           ? _value.amountType
-          : amountType as CodeableConcept?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : amountType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
@@ -22845,38 +24907,62 @@ class __$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_SubstanceReferenceInformationTarget(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      target: target == freezed ? _value.target : target as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as CodeableConcept?,
-      organism:
-          organism == freezed ? _value.organism : organism as CodeableConcept?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      organism: organism == freezed
+          ? _value.organism
+          : organism // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       organismType: organismType == freezed
           ? _value.organismType
-          : organismType as CodeableConcept?,
+          : organismType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity?,
-      amountRange:
-          amountRange == freezed ? _value.amountRange : amountRange as Range?,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      amountRange: amountRange == freezed
+          ? _value.amountRange
+          : amountRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String?,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element?,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountType: amountType == freezed
           ? _value.amountType
-          : amountType as CodeableConcept?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : amountType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -23020,7 +25106,6 @@ class _$_SubstanceReferenceInformationTarget
 
 abstract class _SubstanceReferenceInformationTarget
     extends SubstanceReferenceInformationTarget {
-  _SubstanceReferenceInformationTarget._() : super._();
   factory _SubstanceReferenceInformationTarget(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -23036,45 +25121,48 @@ abstract class _SubstanceReferenceInformationTarget
       @JsonKey(name: '_amountString') Element? amountStringElement,
       CodeableConcept? amountType,
       List<Reference>? source}) = _$_SubstanceReferenceInformationTarget;
+  _SubstanceReferenceInformationTarget._() : super._();
 
   factory _SubstanceReferenceInformationTarget.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceReferenceInformationTarget.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get target;
+  Identifier? get target => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get interaction;
+  CodeableConcept? get interaction => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get organism;
+  CodeableConcept? get organism => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get organismType;
+  CodeableConcept? get organismType => throw _privateConstructorUsedError;
   @override
-  Quantity? get amountQuantity;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get amountRange;
+  Range? get amountRange => throw _privateConstructorUsedError;
   @override
-  String? get amountString;
+  String? get amountString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get amountType;
+  CodeableConcept? get amountType => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceReferenceInformationTargetCopyWith<
-      _SubstanceReferenceInformationTarget> get copyWith;
+          _SubstanceReferenceInformationTarget>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSourceMaterial _$SubstanceSourceMaterialFromJson(
@@ -23163,43 +25251,53 @@ const $SubstanceSourceMaterial = _$SubstanceSourceMaterialTearOff();
 /// @nodoc
 mixin _$SubstanceSourceMaterial {
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get sourceMaterialClass;
-  CodeableConcept? get sourceMaterialType;
-  CodeableConcept? get sourceMaterialState;
-  Identifier? get organismId;
-  String? get organismName;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get sourceMaterialClass =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get sourceMaterialType => throw _privateConstructorUsedError;
+  CodeableConcept? get sourceMaterialState =>
+      throw _privateConstructorUsedError;
+  Identifier? get organismId => throw _privateConstructorUsedError;
+  String? get organismName => throw _privateConstructorUsedError;
   @JsonKey(name: '_organismName')
-  Element? get organismNameElement;
-  List<Identifier>? get parentSubstanceId;
-  List<String>? get parentSubstanceName;
+  Element? get organismNameElement => throw _privateConstructorUsedError;
+  List<Identifier>? get parentSubstanceId => throw _privateConstructorUsedError;
+  List<String>? get parentSubstanceName => throw _privateConstructorUsedError;
   @JsonKey(name: '_parentSubstanceName')
-  List<Element>? get parentSubstanceNameElement;
-  List<CodeableConcept>? get countryOfOrigin;
-  List<String>? get geographicalLocation;
+  List<Element>? get parentSubstanceNameElement =>
+      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get countryOfOrigin =>
+      throw _privateConstructorUsedError;
+  List<String>? get geographicalLocation => throw _privateConstructorUsedError;
   @JsonKey(name: '_geographicalLocation')
-  List<Element>? get geographicalLocationElement;
-  CodeableConcept? get developmentStage;
-  List<SubstanceSourceMaterialFractionDescription>? get fractionDescription;
-  SubstanceSourceMaterialOrganism? get organism;
-  List<SubstanceSourceMaterialPartDescription>? get partDescription;
+  List<Element>? get geographicalLocationElement =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get developmentStage => throw _privateConstructorUsedError;
+  List<SubstanceSourceMaterialFractionDescription>? get fractionDescription =>
+      throw _privateConstructorUsedError;
+  SubstanceSourceMaterialOrganism? get organism =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSourceMaterialPartDescription>? get partDescription =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstanceSourceMaterialCopyWith<SubstanceSourceMaterial> get copyWith;
+  $SubstanceSourceMaterialCopyWith<SubstanceSourceMaterial> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -23298,77 +25396,112 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       sourceMaterialClass: sourceMaterialClass == freezed
           ? _value.sourceMaterialClass
-          : sourceMaterialClass as CodeableConcept?,
+          : sourceMaterialClass // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       sourceMaterialType: sourceMaterialType == freezed
           ? _value.sourceMaterialType
-          : sourceMaterialType as CodeableConcept?,
+          : sourceMaterialType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       sourceMaterialState: sourceMaterialState == freezed
           ? _value.sourceMaterialState
-          : sourceMaterialState as CodeableConcept?,
-      organismId:
-          organismId == freezed ? _value.organismId : organismId as Identifier?,
+          : sourceMaterialState // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      organismId: organismId == freezed
+          ? _value.organismId
+          : organismId // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       organismName: organismName == freezed
           ? _value.organismName
-          : organismName as String?,
+          : organismName // ignore: cast_nullable_to_non_nullable
+              as String?,
       organismNameElement: organismNameElement == freezed
           ? _value.organismNameElement
-          : organismNameElement as Element?,
+          : organismNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       parentSubstanceId: parentSubstanceId == freezed
           ? _value.parentSubstanceId
-          : parentSubstanceId as List<Identifier>?,
+          : parentSubstanceId // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
       parentSubstanceName: parentSubstanceName == freezed
           ? _value.parentSubstanceName
-          : parentSubstanceName as List<String>?,
+          : parentSubstanceName // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       parentSubstanceNameElement: parentSubstanceNameElement == freezed
           ? _value.parentSubstanceNameElement
-          : parentSubstanceNameElement as List<Element>?,
+          : parentSubstanceNameElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       countryOfOrigin: countryOfOrigin == freezed
           ? _value.countryOfOrigin
-          : countryOfOrigin as List<CodeableConcept>?,
+          : countryOfOrigin // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       geographicalLocation: geographicalLocation == freezed
           ? _value.geographicalLocation
-          : geographicalLocation as List<String>?,
+          : geographicalLocation // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       geographicalLocationElement: geographicalLocationElement == freezed
           ? _value.geographicalLocationElement
-          : geographicalLocationElement as List<Element>?,
+          : geographicalLocationElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       developmentStage: developmentStage == freezed
           ? _value.developmentStage
-          : developmentStage as CodeableConcept?,
+          : developmentStage // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       fractionDescription: fractionDescription == freezed
           ? _value.fractionDescription
-          : fractionDescription
+          : fractionDescription // ignore: cast_nullable_to_non_nullable
               as List<SubstanceSourceMaterialFractionDescription>?,
       organism: organism == freezed
           ? _value.organism
-          : organism as SubstanceSourceMaterialOrganism?,
+          : organism // ignore: cast_nullable_to_non_nullable
+              as SubstanceSourceMaterialOrganism?,
       partDescription: partDescription == freezed
           ? _value.partDescription
-          : partDescription as List<SubstanceSourceMaterialPartDescription>?,
+          : partDescription // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSourceMaterialPartDescription>?,
     ));
   }
 
@@ -23607,77 +25740,112 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
     return _then(_SubstanceSourceMaterial(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       sourceMaterialClass: sourceMaterialClass == freezed
           ? _value.sourceMaterialClass
-          : sourceMaterialClass as CodeableConcept?,
+          : sourceMaterialClass // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       sourceMaterialType: sourceMaterialType == freezed
           ? _value.sourceMaterialType
-          : sourceMaterialType as CodeableConcept?,
+          : sourceMaterialType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       sourceMaterialState: sourceMaterialState == freezed
           ? _value.sourceMaterialState
-          : sourceMaterialState as CodeableConcept?,
-      organismId:
-          organismId == freezed ? _value.organismId : organismId as Identifier?,
+          : sourceMaterialState // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      organismId: organismId == freezed
+          ? _value.organismId
+          : organismId // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       organismName: organismName == freezed
           ? _value.organismName
-          : organismName as String?,
+          : organismName // ignore: cast_nullable_to_non_nullable
+              as String?,
       organismNameElement: organismNameElement == freezed
           ? _value.organismNameElement
-          : organismNameElement as Element?,
+          : organismNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       parentSubstanceId: parentSubstanceId == freezed
           ? _value.parentSubstanceId
-          : parentSubstanceId as List<Identifier>?,
+          : parentSubstanceId // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
       parentSubstanceName: parentSubstanceName == freezed
           ? _value.parentSubstanceName
-          : parentSubstanceName as List<String>?,
+          : parentSubstanceName // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       parentSubstanceNameElement: parentSubstanceNameElement == freezed
           ? _value.parentSubstanceNameElement
-          : parentSubstanceNameElement as List<Element>?,
+          : parentSubstanceNameElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       countryOfOrigin: countryOfOrigin == freezed
           ? _value.countryOfOrigin
-          : countryOfOrigin as List<CodeableConcept>?,
+          : countryOfOrigin // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       geographicalLocation: geographicalLocation == freezed
           ? _value.geographicalLocation
-          : geographicalLocation as List<String>?,
+          : geographicalLocation // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       geographicalLocationElement: geographicalLocationElement == freezed
           ? _value.geographicalLocationElement
-          : geographicalLocationElement as List<Element>?,
+          : geographicalLocationElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       developmentStage: developmentStage == freezed
           ? _value.developmentStage
-          : developmentStage as CodeableConcept?,
+          : developmentStage // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       fractionDescription: fractionDescription == freezed
           ? _value.fractionDescription
-          : fractionDescription
+          : fractionDescription // ignore: cast_nullable_to_non_nullable
               as List<SubstanceSourceMaterialFractionDescription>?,
       organism: organism == freezed
           ? _value.organism
-          : organism as SubstanceSourceMaterialOrganism?,
+          : organism // ignore: cast_nullable_to_non_nullable
+              as SubstanceSourceMaterialOrganism?,
       partDescription: partDescription == freezed
           ? _value.partDescription
-          : partDescription as List<SubstanceSourceMaterialPartDescription>?,
+          : partDescription // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSourceMaterialPartDescription>?,
     ));
   }
 }
@@ -23912,7 +26080,6 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
 }
 
 abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
-  _SubstanceSourceMaterial._() : super._();
   factory _SubstanceSourceMaterial(
           {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
               R4ResourceType resourceType,
@@ -23949,74 +26116,85 @@ abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
           SubstanceSourceMaterialOrganism? organism,
           List<SubstanceSourceMaterialPartDescription>? partDescription}) =
       _$_SubstanceSourceMaterial;
+  _SubstanceSourceMaterial._() : super._();
 
   factory _SubstanceSourceMaterial.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterial.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sourceMaterialClass;
+  CodeableConcept? get sourceMaterialClass =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sourceMaterialType;
+  CodeableConcept? get sourceMaterialType => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get sourceMaterialState;
+  CodeableConcept? get sourceMaterialState =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get organismId;
+  Identifier? get organismId => throw _privateConstructorUsedError;
   @override
-  String? get organismName;
+  String? get organismName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_organismName')
-  Element? get organismNameElement;
+  Element? get organismNameElement => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get parentSubstanceId;
+  List<Identifier>? get parentSubstanceId => throw _privateConstructorUsedError;
   @override
-  List<String>? get parentSubstanceName;
+  List<String>? get parentSubstanceName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_parentSubstanceName')
-  List<Element>? get parentSubstanceNameElement;
+  List<Element>? get parentSubstanceNameElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get countryOfOrigin;
+  List<CodeableConcept>? get countryOfOrigin =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get geographicalLocation;
+  List<String>? get geographicalLocation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_geographicalLocation')
-  List<Element>? get geographicalLocationElement;
+  List<Element>? get geographicalLocationElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get developmentStage;
+  CodeableConcept? get developmentStage => throw _privateConstructorUsedError;
   @override
-  List<SubstanceSourceMaterialFractionDescription>? get fractionDescription;
+  List<SubstanceSourceMaterialFractionDescription>? get fractionDescription =>
+      throw _privateConstructorUsedError;
   @override
-  SubstanceSourceMaterialOrganism? get organism;
+  SubstanceSourceMaterialOrganism? get organism =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSourceMaterialPartDescription>? get partDescription;
+  List<SubstanceSourceMaterialPartDescription>? get partDescription =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceSourceMaterialCopyWith<_SubstanceSourceMaterial> get copyWith;
+  _$SubstanceSourceMaterialCopyWith<_SubstanceSourceMaterial> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubstanceSourceMaterialFractionDescription
@@ -24058,19 +26236,21 @@ const $SubstanceSourceMaterialFractionDescription =
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialFractionDescription {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get fraction;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get fraction => throw _privateConstructorUsedError;
   @JsonKey(name: '_fraction')
-  Element? get fractionElement;
-  CodeableConcept? get materialType;
+  Element? get fractionElement => throw _privateConstructorUsedError;
+  CodeableConcept? get materialType => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSourceMaterialFractionDescriptionCopyWith<
-      SubstanceSourceMaterialFractionDescription> get copyWith;
+          SubstanceSourceMaterialFractionDescription>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -24111,20 +26291,30 @@ class _$SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>
     Object? materialType = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      fraction: fraction == freezed ? _value.fraction : fraction as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      fraction: fraction == freezed
+          ? _value.fraction
+          : fraction // ignore: cast_nullable_to_non_nullable
+              as String?,
       fractionElement: fractionElement == freezed
           ? _value.fractionElement
-          : fractionElement as Element?,
+          : fractionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       materialType: materialType == freezed
           ? _value.materialType
-          : materialType as CodeableConcept?,
+          : materialType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -24197,20 +26387,30 @@ class __$SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>
     Object? materialType = freezed,
   }) {
     return _then(_SubstanceSourceMaterialFractionDescription(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      fraction: fraction == freezed ? _value.fraction : fraction as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      fraction: fraction == freezed
+          ? _value.fraction
+          : fraction // ignore: cast_nullable_to_non_nullable
+              as String?,
       fractionElement: fractionElement == freezed
           ? _value.fractionElement
-          : fractionElement as Element?,
+          : fractionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       materialType: materialType == freezed
           ? _value.materialType
-          : materialType as CodeableConcept?,
+          : materialType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -24301,7 +26501,6 @@ class _$_SubstanceSourceMaterialFractionDescription
 
 abstract class _SubstanceSourceMaterialFractionDescription
     extends SubstanceSourceMaterialFractionDescription {
-  _SubstanceSourceMaterialFractionDescription._() : super._();
   factory _SubstanceSourceMaterialFractionDescription(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -24310,29 +26509,32 @@ abstract class _SubstanceSourceMaterialFractionDescription
           @JsonKey(name: '_fraction') Element? fractionElement,
           CodeableConcept? materialType}) =
       _$_SubstanceSourceMaterialFractionDescription;
+  _SubstanceSourceMaterialFractionDescription._() : super._();
 
   factory _SubstanceSourceMaterialFractionDescription.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialFractionDescription.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get fraction;
+  String? get fraction => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fraction')
-  Element? get fractionElement;
+  Element? get fractionElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get materialType;
+  CodeableConcept? get materialType => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSourceMaterialFractionDescriptionCopyWith<
-      _SubstanceSourceMaterialFractionDescription> get copyWith;
+          _SubstanceSourceMaterialFractionDescription>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSourceMaterialOrganism _$SubstanceSourceMaterialOrganismFromJson(
@@ -24386,25 +26588,30 @@ const $SubstanceSourceMaterialOrganism =
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialOrganism {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get family;
-  CodeableConcept? get genus;
-  CodeableConcept? get species;
-  CodeableConcept? get intraspecificType;
-  String? get intraspecificDescription;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get family => throw _privateConstructorUsedError;
+  CodeableConcept? get genus => throw _privateConstructorUsedError;
+  CodeableConcept? get species => throw _privateConstructorUsedError;
+  CodeableConcept? get intraspecificType => throw _privateConstructorUsedError;
+  String? get intraspecificDescription => throw _privateConstructorUsedError;
   @JsonKey(name: '_intraspecificDescription')
-  Element? get intraspecificDescriptionElement;
-  List<SubstanceSourceMaterialAuthor>? get author;
-  SubstanceSourceMaterialHybrid? get hybrid;
-  SubstanceSourceMaterialOrganismGeneral? get organismGeneral;
+  Element? get intraspecificDescriptionElement =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSourceMaterialAuthor>? get author =>
+      throw _privateConstructorUsedError;
+  SubstanceSourceMaterialHybrid? get hybrid =>
+      throw _privateConstructorUsedError;
+  SubstanceSourceMaterialOrganismGeneral? get organismGeneral =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSourceMaterialOrganismCopyWith<SubstanceSourceMaterialOrganism>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -24463,36 +26670,55 @@ class _$SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
     Object? organismGeneral = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      family: family == freezed ? _value.family : family as CodeableConcept?,
-      genus: genus == freezed ? _value.genus : genus as CodeableConcept?,
-      species:
-          species == freezed ? _value.species : species as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      family: family == freezed
+          ? _value.family
+          : family // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      genus: genus == freezed
+          ? _value.genus
+          : genus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      species: species == freezed
+          ? _value.species
+          : species // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       intraspecificType: intraspecificType == freezed
           ? _value.intraspecificType
-          : intraspecificType as CodeableConcept?,
+          : intraspecificType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       intraspecificDescription: intraspecificDescription == freezed
           ? _value.intraspecificDescription
-          : intraspecificDescription as String?,
-      intraspecificDescriptionElement:
-          intraspecificDescriptionElement == freezed
-              ? _value.intraspecificDescriptionElement
-              : intraspecificDescriptionElement as Element?,
+          : intraspecificDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      intraspecificDescriptionElement: intraspecificDescriptionElement ==
+              freezed
+          ? _value.intraspecificDescriptionElement
+          : intraspecificDescriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       author: author == freezed
           ? _value.author
-          : author as List<SubstanceSourceMaterialAuthor>?,
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSourceMaterialAuthor>?,
       hybrid: hybrid == freezed
           ? _value.hybrid
-          : hybrid as SubstanceSourceMaterialHybrid?,
+          : hybrid // ignore: cast_nullable_to_non_nullable
+              as SubstanceSourceMaterialHybrid?,
       organismGeneral: organismGeneral == freezed
           ? _value.organismGeneral
-          : organismGeneral as SubstanceSourceMaterialOrganismGeneral?,
+          : organismGeneral // ignore: cast_nullable_to_non_nullable
+              as SubstanceSourceMaterialOrganismGeneral?,
     ));
   }
 
@@ -24646,36 +26872,55 @@ class __$SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
     Object? organismGeneral = freezed,
   }) {
     return _then(_SubstanceSourceMaterialOrganism(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      family: family == freezed ? _value.family : family as CodeableConcept?,
-      genus: genus == freezed ? _value.genus : genus as CodeableConcept?,
-      species:
-          species == freezed ? _value.species : species as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      family: family == freezed
+          ? _value.family
+          : family // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      genus: genus == freezed
+          ? _value.genus
+          : genus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      species: species == freezed
+          ? _value.species
+          : species // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       intraspecificType: intraspecificType == freezed
           ? _value.intraspecificType
-          : intraspecificType as CodeableConcept?,
+          : intraspecificType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       intraspecificDescription: intraspecificDescription == freezed
           ? _value.intraspecificDescription
-          : intraspecificDescription as String?,
-      intraspecificDescriptionElement:
-          intraspecificDescriptionElement == freezed
-              ? _value.intraspecificDescriptionElement
-              : intraspecificDescriptionElement as Element?,
+          : intraspecificDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      intraspecificDescriptionElement: intraspecificDescriptionElement ==
+              freezed
+          ? _value.intraspecificDescriptionElement
+          : intraspecificDescriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       author: author == freezed
           ? _value.author
-          : author as List<SubstanceSourceMaterialAuthor>?,
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSourceMaterialAuthor>?,
       hybrid: hybrid == freezed
           ? _value.hybrid
-          : hybrid as SubstanceSourceMaterialHybrid?,
+          : hybrid // ignore: cast_nullable_to_non_nullable
+              as SubstanceSourceMaterialHybrid?,
       organismGeneral: organismGeneral == freezed
           ? _value.organismGeneral
-          : organismGeneral as SubstanceSourceMaterialOrganismGeneral?,
+          : organismGeneral // ignore: cast_nullable_to_non_nullable
+              as SubstanceSourceMaterialOrganismGeneral?,
     ));
   }
 }
@@ -24809,7 +27054,6 @@ class _$_SubstanceSourceMaterialOrganism
 
 abstract class _SubstanceSourceMaterialOrganism
     extends SubstanceSourceMaterialOrganism {
-  _SubstanceSourceMaterialOrganism._() : super._();
   factory _SubstanceSourceMaterialOrganism(
           {String? id,
           @JsonKey(name: 'extension')
@@ -24826,40 +27070,46 @@ abstract class _SubstanceSourceMaterialOrganism
           SubstanceSourceMaterialHybrid? hybrid,
           SubstanceSourceMaterialOrganismGeneral? organismGeneral}) =
       _$_SubstanceSourceMaterialOrganism;
+  _SubstanceSourceMaterialOrganism._() : super._();
 
   factory _SubstanceSourceMaterialOrganism.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialOrganism.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get family;
+  CodeableConcept? get family => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get genus;
+  CodeableConcept? get genus => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get species;
+  CodeableConcept? get species => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get intraspecificType;
+  CodeableConcept? get intraspecificType => throw _privateConstructorUsedError;
   @override
-  String? get intraspecificDescription;
+  String? get intraspecificDescription => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_intraspecificDescription')
-  Element? get intraspecificDescriptionElement;
+  Element? get intraspecificDescriptionElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSourceMaterialAuthor>? get author;
+  List<SubstanceSourceMaterialAuthor>? get author =>
+      throw _privateConstructorUsedError;
   @override
-  SubstanceSourceMaterialHybrid? get hybrid;
+  SubstanceSourceMaterialHybrid? get hybrid =>
+      throw _privateConstructorUsedError;
   @override
-  SubstanceSourceMaterialOrganismGeneral? get organismGeneral;
+  SubstanceSourceMaterialOrganismGeneral? get organismGeneral =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSourceMaterialOrganismCopyWith<_SubstanceSourceMaterialOrganism>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSourceMaterialAuthor _$SubstanceSourceMaterialAuthorFromJson(
@@ -24898,19 +27148,20 @@ const $SubstanceSourceMaterialAuthor = _$SubstanceSourceMaterialAuthorTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialAuthor {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get authorType;
-  String? get authorDescription;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get authorType => throw _privateConstructorUsedError;
+  String? get authorDescription => throw _privateConstructorUsedError;
   @JsonKey(name: '_authorDescription')
-  Element? get authorDescriptionElement;
+  Element? get authorDescriptionElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSourceMaterialAuthorCopyWith<SubstanceSourceMaterialAuthor>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -24950,22 +27201,30 @@ class _$SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
     Object? authorDescriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       authorType: authorType == freezed
           ? _value.authorType
-          : authorType as CodeableConcept?,
+          : authorType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       authorDescription: authorDescription == freezed
           ? _value.authorDescription
-          : authorDescription as String?,
+          : authorDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
       authorDescriptionElement: authorDescriptionElement == freezed
           ? _value.authorDescriptionElement
-          : authorDescriptionElement as Element?,
+          : authorDescriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -25037,22 +27296,30 @@ class __$SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
     Object? authorDescriptionElement = freezed,
   }) {
     return _then(_SubstanceSourceMaterialAuthor(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       authorType: authorType == freezed
           ? _value.authorType
-          : authorType as CodeableConcept?,
+          : authorType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       authorDescription: authorDescription == freezed
           ? _value.authorDescription
-          : authorDescription as String?,
+          : authorDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
       authorDescriptionElement: authorDescriptionElement == freezed
           ? _value.authorDescriptionElement
-          : authorDescriptionElement as Element?,
+          : authorDescriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -25142,7 +27409,6 @@ class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
 
 abstract class _SubstanceSourceMaterialAuthor
     extends SubstanceSourceMaterialAuthor {
-  _SubstanceSourceMaterialAuthor._() : super._();
   factory _SubstanceSourceMaterialAuthor(
           {String? id,
           @JsonKey(name: 'extension')
@@ -25153,28 +27419,30 @@ abstract class _SubstanceSourceMaterialAuthor
           @JsonKey(name: '_authorDescription')
               Element? authorDescriptionElement}) =
       _$_SubstanceSourceMaterialAuthor;
+  _SubstanceSourceMaterialAuthor._() : super._();
 
   factory _SubstanceSourceMaterialAuthor.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialAuthor.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get authorType;
+  CodeableConcept? get authorType => throw _privateConstructorUsedError;
   @override
-  String? get authorDescription;
+  String? get authorDescription => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authorDescription')
-  Element? get authorDescriptionElement;
+  Element? get authorDescriptionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSourceMaterialAuthorCopyWith<_SubstanceSourceMaterialAuthor>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSourceMaterialHybrid _$SubstanceSourceMaterialHybridFromJson(
@@ -25230,28 +27498,31 @@ const $SubstanceSourceMaterialHybrid = _$SubstanceSourceMaterialHybridTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialHybrid {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get maternalOrganismId;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get maternalOrganismId => throw _privateConstructorUsedError;
   @JsonKey(name: '_maternalOrganismId')
-  Element? get maternalOrganismIdElement;
-  String? get maternalOrganismName;
+  Element? get maternalOrganismIdElement => throw _privateConstructorUsedError;
+  String? get maternalOrganismName => throw _privateConstructorUsedError;
   @JsonKey(name: '_maternalOrganismName')
-  Element? get maternalOrganismNameElement;
-  String? get paternalOrganismId;
+  Element? get maternalOrganismNameElement =>
+      throw _privateConstructorUsedError;
+  String? get paternalOrganismId => throw _privateConstructorUsedError;
   @JsonKey(name: '_paternalOrganismId')
-  Element? get paternalOrganismIdElement;
-  String? get paternalOrganismName;
+  Element? get paternalOrganismIdElement => throw _privateConstructorUsedError;
+  String? get paternalOrganismName => throw _privateConstructorUsedError;
   @JsonKey(name: '_paternalOrganismName')
-  Element? get paternalOrganismNameElement;
-  CodeableConcept? get hybridType;
+  Element? get paternalOrganismNameElement =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get hybridType => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSourceMaterialHybridCopyWith<SubstanceSourceMaterialHybrid>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -25311,40 +27582,54 @@ class _$SubstanceSourceMaterialHybridCopyWithImpl<$Res>
     Object? hybridType = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       maternalOrganismId: maternalOrganismId == freezed
           ? _value.maternalOrganismId
-          : maternalOrganismId as String?,
+          : maternalOrganismId // ignore: cast_nullable_to_non_nullable
+              as String?,
       maternalOrganismIdElement: maternalOrganismIdElement == freezed
           ? _value.maternalOrganismIdElement
-          : maternalOrganismIdElement as Element?,
+          : maternalOrganismIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       maternalOrganismName: maternalOrganismName == freezed
           ? _value.maternalOrganismName
-          : maternalOrganismName as String?,
+          : maternalOrganismName // ignore: cast_nullable_to_non_nullable
+              as String?,
       maternalOrganismNameElement: maternalOrganismNameElement == freezed
           ? _value.maternalOrganismNameElement
-          : maternalOrganismNameElement as Element?,
+          : maternalOrganismNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       paternalOrganismId: paternalOrganismId == freezed
           ? _value.paternalOrganismId
-          : paternalOrganismId as String?,
+          : paternalOrganismId // ignore: cast_nullable_to_non_nullable
+              as String?,
       paternalOrganismIdElement: paternalOrganismIdElement == freezed
           ? _value.paternalOrganismIdElement
-          : paternalOrganismIdElement as Element?,
+          : paternalOrganismIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       paternalOrganismName: paternalOrganismName == freezed
           ? _value.paternalOrganismName
-          : paternalOrganismName as String?,
+          : paternalOrganismName // ignore: cast_nullable_to_non_nullable
+              as String?,
       paternalOrganismNameElement: paternalOrganismNameElement == freezed
           ? _value.paternalOrganismNameElement
-          : paternalOrganismNameElement as Element?,
+          : paternalOrganismNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       hybridType: hybridType == freezed
           ? _value.hybridType
-          : hybridType as CodeableConcept?,
+          : hybridType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -25472,40 +27757,54 @@ class __$SubstanceSourceMaterialHybridCopyWithImpl<$Res>
     Object? hybridType = freezed,
   }) {
     return _then(_SubstanceSourceMaterialHybrid(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       maternalOrganismId: maternalOrganismId == freezed
           ? _value.maternalOrganismId
-          : maternalOrganismId as String?,
+          : maternalOrganismId // ignore: cast_nullable_to_non_nullable
+              as String?,
       maternalOrganismIdElement: maternalOrganismIdElement == freezed
           ? _value.maternalOrganismIdElement
-          : maternalOrganismIdElement as Element?,
+          : maternalOrganismIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       maternalOrganismName: maternalOrganismName == freezed
           ? _value.maternalOrganismName
-          : maternalOrganismName as String?,
+          : maternalOrganismName // ignore: cast_nullable_to_non_nullable
+              as String?,
       maternalOrganismNameElement: maternalOrganismNameElement == freezed
           ? _value.maternalOrganismNameElement
-          : maternalOrganismNameElement as Element?,
+          : maternalOrganismNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       paternalOrganismId: paternalOrganismId == freezed
           ? _value.paternalOrganismId
-          : paternalOrganismId as String?,
+          : paternalOrganismId // ignore: cast_nullable_to_non_nullable
+              as String?,
       paternalOrganismIdElement: paternalOrganismIdElement == freezed
           ? _value.paternalOrganismIdElement
-          : paternalOrganismIdElement as Element?,
+          : paternalOrganismIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       paternalOrganismName: paternalOrganismName == freezed
           ? _value.paternalOrganismName
-          : paternalOrganismName as String?,
+          : paternalOrganismName // ignore: cast_nullable_to_non_nullable
+              as String?,
       paternalOrganismNameElement: paternalOrganismNameElement == freezed
           ? _value.paternalOrganismNameElement
-          : paternalOrganismNameElement as Element?,
+          : paternalOrganismNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       hybridType: hybridType == freezed
           ? _value.hybridType
-          : hybridType as CodeableConcept?,
+          : hybridType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -25644,7 +27943,6 @@ class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
 
 abstract class _SubstanceSourceMaterialHybrid
     extends SubstanceSourceMaterialHybrid {
-  _SubstanceSourceMaterialHybrid._() : super._();
   factory _SubstanceSourceMaterialHybrid(
       {String? id,
       @JsonKey(name: 'extension')
@@ -25663,43 +27961,47 @@ abstract class _SubstanceSourceMaterialHybrid
       @JsonKey(name: '_paternalOrganismName')
           Element? paternalOrganismNameElement,
       CodeableConcept? hybridType}) = _$_SubstanceSourceMaterialHybrid;
+  _SubstanceSourceMaterialHybrid._() : super._();
 
   factory _SubstanceSourceMaterialHybrid.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialHybrid.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get maternalOrganismId;
+  String? get maternalOrganismId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maternalOrganismId')
-  Element? get maternalOrganismIdElement;
+  Element? get maternalOrganismIdElement => throw _privateConstructorUsedError;
   @override
-  String? get maternalOrganismName;
+  String? get maternalOrganismName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_maternalOrganismName')
-  Element? get maternalOrganismNameElement;
+  Element? get maternalOrganismNameElement =>
+      throw _privateConstructorUsedError;
   @override
-  String? get paternalOrganismId;
+  String? get paternalOrganismId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_paternalOrganismId')
-  Element? get paternalOrganismIdElement;
+  Element? get paternalOrganismIdElement => throw _privateConstructorUsedError;
   @override
-  String? get paternalOrganismName;
+  String? get paternalOrganismName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_paternalOrganismName')
-  Element? get paternalOrganismNameElement;
+  Element? get paternalOrganismNameElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get hybridType;
+  CodeableConcept? get hybridType => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSourceMaterialHybridCopyWith<_SubstanceSourceMaterialHybrid>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSourceMaterialOrganismGeneral
@@ -25742,20 +28044,22 @@ const $SubstanceSourceMaterialOrganismGeneral =
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialOrganismGeneral {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get kingdom;
-  CodeableConcept? get phylum;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get kingdom => throw _privateConstructorUsedError;
+  CodeableConcept? get phylum => throw _privateConstructorUsedError;
   @JsonKey(name: 'class')
-  CodeableConcept? get class_;
-  CodeableConcept? get order;
+  CodeableConcept? get class_ => throw _privateConstructorUsedError;
+  CodeableConcept? get order => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSourceMaterialOrganismGeneralCopyWith<
-      SubstanceSourceMaterialOrganismGeneral> get copyWith;
+          SubstanceSourceMaterialOrganismGeneral>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -25799,18 +28103,34 @@ class _$SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>
     Object? order = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      kingdom:
-          kingdom == freezed ? _value.kingdom : kingdom as CodeableConcept?,
-      phylum: phylum == freezed ? _value.phylum : phylum as CodeableConcept?,
-      class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept?,
-      order: order == freezed ? _value.order : order as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      kingdom: kingdom == freezed
+          ? _value.kingdom
+          : kingdom // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      phylum: phylum == freezed
+          ? _value.phylum
+          : phylum // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      class_: class_ == freezed
+          ? _value.class_
+          : class_ // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      order: order == freezed
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -25911,18 +28231,34 @@ class __$SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>
     Object? order = freezed,
   }) {
     return _then(_SubstanceSourceMaterialOrganismGeneral(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      kingdom:
-          kingdom == freezed ? _value.kingdom : kingdom as CodeableConcept?,
-      phylum: phylum == freezed ? _value.phylum : phylum as CodeableConcept?,
-      class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept?,
-      order: order == freezed ? _value.order : order as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      kingdom: kingdom == freezed
+          ? _value.kingdom
+          : kingdom // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      phylum: phylum == freezed
+          ? _value.phylum
+          : phylum // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      class_: class_ == freezed
+          ? _value.class_
+          : class_ // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      order: order == freezed
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -26017,7 +28353,6 @@ class _$_SubstanceSourceMaterialOrganismGeneral
 
 abstract class _SubstanceSourceMaterialOrganismGeneral
     extends SubstanceSourceMaterialOrganismGeneral {
-  _SubstanceSourceMaterialOrganismGeneral._() : super._();
   factory _SubstanceSourceMaterialOrganismGeneral(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -26026,31 +28361,34 @@ abstract class _SubstanceSourceMaterialOrganismGeneral
       CodeableConcept? phylum,
       @JsonKey(name: 'class') CodeableConcept? class_,
       CodeableConcept? order}) = _$_SubstanceSourceMaterialOrganismGeneral;
+  _SubstanceSourceMaterialOrganismGeneral._() : super._();
 
   factory _SubstanceSourceMaterialOrganismGeneral.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialOrganismGeneral.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get kingdom;
+  CodeableConcept? get kingdom => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get phylum;
+  CodeableConcept? get phylum => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'class')
-  CodeableConcept? get class_;
+  CodeableConcept? get class_ => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get order;
+  CodeableConcept? get order => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSourceMaterialOrganismGeneralCopyWith<
-      _SubstanceSourceMaterialOrganismGeneral> get copyWith;
+          _SubstanceSourceMaterialOrganismGeneral>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSourceMaterialPartDescription
@@ -26089,18 +28427,20 @@ const $SubstanceSourceMaterialPartDescription =
 
 /// @nodoc
 mixin _$SubstanceSourceMaterialPartDescription {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'part')
-  CodeableConcept? get part_;
-  CodeableConcept? get partLocation;
+  CodeableConcept? get part_ => throw _privateConstructorUsedError;
+  CodeableConcept? get partLocation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSourceMaterialPartDescriptionCopyWith<
-      SubstanceSourceMaterialPartDescription> get copyWith;
+          SubstanceSourceMaterialPartDescription>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -26138,17 +28478,26 @@ class _$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
     Object? partLocation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      part_: part_ == freezed ? _value.part_ : part_ as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       partLocation: partLocation == freezed
           ? _value.partLocation
-          : partLocation as CodeableConcept?,
+          : partLocation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -26219,17 +28568,26 @@ class __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
     Object? partLocation = freezed,
   }) {
     return _then(_SubstanceSourceMaterialPartDescription(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      part_: part_ == freezed ? _value.part_ : part_ as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       partLocation: partLocation == freezed
           ? _value.partLocation
-          : partLocation as CodeableConcept?,
+          : partLocation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -26312,7 +28670,6 @@ class _$_SubstanceSourceMaterialPartDescription
 
 abstract class _SubstanceSourceMaterialPartDescription
     extends SubstanceSourceMaterialPartDescription {
-  _SubstanceSourceMaterialPartDescription._() : super._();
   factory _SubstanceSourceMaterialPartDescription(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -26320,27 +28677,30 @@ abstract class _SubstanceSourceMaterialPartDescription
           @JsonKey(name: 'part') CodeableConcept? part_,
           CodeableConcept? partLocation}) =
       _$_SubstanceSourceMaterialPartDescription;
+  _SubstanceSourceMaterialPartDescription._() : super._();
 
   factory _SubstanceSourceMaterialPartDescription.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceSourceMaterialPartDescription.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'part')
-  CodeableConcept? get part_;
+  CodeableConcept? get part_ => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get partLocation;
+  CodeableConcept? get partLocation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSourceMaterialPartDescriptionCopyWith<
-      _SubstanceSourceMaterialPartDescription> get copyWith;
+          _SubstanceSourceMaterialPartDescription>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecification _$SubstanceSpecificationFromJson(
@@ -26438,47 +28798,56 @@ const $SubstanceSpecification = _$SubstanceSpecificationTearOff();
 /// @nodoc
 mixin _$SubstanceSpecification {
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Identifier? get identifier;
-  CodeableConcept? get type;
-  CodeableConcept? get status;
-  CodeableConcept? get domain;
-  String? get description;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
+  CodeableConcept? get domain => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<Reference>? get source;
-  String? get comment;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<Reference>? get source => throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
   @JsonKey(name: '_comment')
-  Element? get commentElement;
-  List<SubstanceSpecificationMoiety>? get moiety;
-  List<SubstanceSpecificationProperty>? get property;
-  Reference? get referenceInformation;
-  SubstanceSpecificationStructure? get structure;
-  List<SubstanceSpecificationCode>? get code;
-  List<SubstanceSpecificationName>? get name;
-  List<SubstanceSpecificationMolecularWeight>? get molecularWeight;
-  List<SubstanceSpecificationRelationship>? get relationship;
-  Reference? get nucleicAcid;
-  Reference? get polymer;
-  Reference? get protein;
-  Reference? get sourceMaterial;
+  Element? get commentElement => throw _privateConstructorUsedError;
+  List<SubstanceSpecificationMoiety>? get moiety =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSpecificationProperty>? get property =>
+      throw _privateConstructorUsedError;
+  Reference? get referenceInformation => throw _privateConstructorUsedError;
+  SubstanceSpecificationStructure? get structure =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSpecificationCode>? get code =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSpecificationName>? get name =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSpecificationMolecularWeight>? get molecularWeight =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSpecificationRelationship>? get relationship =>
+      throw _privateConstructorUsedError;
+  Reference? get nucleicAcid => throw _privateConstructorUsedError;
+  Reference? get polymer => throw _privateConstructorUsedError;
+  Reference? get protein => throw _privateConstructorUsedError;
+  Reference? get sourceMaterial => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstanceSpecificationCopyWith<SubstanceSpecification> get copyWith;
+  $SubstanceSpecificationCopyWith<SubstanceSpecification> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -26591,76 +28960,132 @@ class _$SubstanceSpecificationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      domain: domain == freezed ? _value.domain : domain as CodeableConcept?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      domain: domain == freezed
+          ? _value.domain
+          : domain // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       moiety: moiety == freezed
           ? _value.moiety
-          : moiety as List<SubstanceSpecificationMoiety>?,
+          : moiety // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationMoiety>?,
       property: property == freezed
           ? _value.property
-          : property as List<SubstanceSpecificationProperty>?,
+          : property // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationProperty>?,
       referenceInformation: referenceInformation == freezed
           ? _value.referenceInformation
-          : referenceInformation as Reference?,
+          : referenceInformation // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       structure: structure == freezed
           ? _value.structure
-          : structure as SubstanceSpecificationStructure?,
+          : structure // ignore: cast_nullable_to_non_nullable
+              as SubstanceSpecificationStructure?,
       code: code == freezed
           ? _value.code
-          : code as List<SubstanceSpecificationCode>?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationCode>?,
       name: name == freezed
           ? _value.name
-          : name as List<SubstanceSpecificationName>?,
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationName>?,
       molecularWeight: molecularWeight == freezed
           ? _value.molecularWeight
-          : molecularWeight as List<SubstanceSpecificationMolecularWeight>?,
+          : molecularWeight // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationMolecularWeight>?,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as List<SubstanceSpecificationRelationship>?,
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationRelationship>?,
       nucleicAcid: nucleicAcid == freezed
           ? _value.nucleicAcid
-          : nucleicAcid as Reference?,
-      polymer: polymer == freezed ? _value.polymer : polymer as Reference?,
-      protein: protein == freezed ? _value.protein : protein as Reference?,
+          : nucleicAcid // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      polymer: polymer == freezed
+          ? _value.polymer
+          : polymer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      protein: protein == freezed
+          ? _value.protein
+          : protein // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       sourceMaterial: sourceMaterial == freezed
           ? _value.sourceMaterial
-          : sourceMaterial as Reference?,
+          : sourceMaterial // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -26972,76 +29397,132 @@ class __$SubstanceSpecificationCopyWithImpl<$Res>
     return _then(_SubstanceSpecification(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      domain: domain == freezed ? _value.domain : domain as CodeableConcept?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      domain: domain == freezed
+          ? _value.domain
+          : domain // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       moiety: moiety == freezed
           ? _value.moiety
-          : moiety as List<SubstanceSpecificationMoiety>?,
+          : moiety // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationMoiety>?,
       property: property == freezed
           ? _value.property
-          : property as List<SubstanceSpecificationProperty>?,
+          : property // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationProperty>?,
       referenceInformation: referenceInformation == freezed
           ? _value.referenceInformation
-          : referenceInformation as Reference?,
+          : referenceInformation // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       structure: structure == freezed
           ? _value.structure
-          : structure as SubstanceSpecificationStructure?,
+          : structure // ignore: cast_nullable_to_non_nullable
+              as SubstanceSpecificationStructure?,
       code: code == freezed
           ? _value.code
-          : code as List<SubstanceSpecificationCode>?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationCode>?,
       name: name == freezed
           ? _value.name
-          : name as List<SubstanceSpecificationName>?,
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationName>?,
       molecularWeight: molecularWeight == freezed
           ? _value.molecularWeight
-          : molecularWeight as List<SubstanceSpecificationMolecularWeight>?,
+          : molecularWeight // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationMolecularWeight>?,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as List<SubstanceSpecificationRelationship>?,
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationRelationship>?,
       nucleicAcid: nucleicAcid == freezed
           ? _value.nucleicAcid
-          : nucleicAcid as Reference?,
-      polymer: polymer == freezed ? _value.polymer : polymer as Reference?,
-      protein: protein == freezed ? _value.protein : protein as Reference?,
+          : nucleicAcid // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      polymer: polymer == freezed
+          ? _value.polymer
+          : polymer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      protein: protein == freezed
+          ? _value.protein
+          : protein // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       sourceMaterial: sourceMaterial == freezed
           ? _value.sourceMaterial
-          : sourceMaterial as Reference?,
+          : sourceMaterial // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -27299,7 +29780,6 @@ class _$_SubstanceSpecification extends _SubstanceSpecification {
 }
 
 abstract class _SubstanceSpecification extends SubstanceSpecification {
-  _SubstanceSpecification._() : super._();
   factory _SubstanceSpecification(
       {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
           R4ResourceType resourceType,
@@ -27339,83 +29819,93 @@ abstract class _SubstanceSpecification extends SubstanceSpecification {
       Reference? polymer,
       Reference? protein,
       Reference? sourceMaterial}) = _$_SubstanceSpecification;
+  _SubstanceSpecification._() : super._();
 
   factory _SubstanceSpecification.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSpecification.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get domain;
+  CodeableConcept? get domain => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationMoiety>? get moiety;
+  List<SubstanceSpecificationMoiety>? get moiety =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationProperty>? get property;
+  List<SubstanceSpecificationProperty>? get property =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get referenceInformation;
+  Reference? get referenceInformation => throw _privateConstructorUsedError;
   @override
-  SubstanceSpecificationStructure? get structure;
+  SubstanceSpecificationStructure? get structure =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationCode>? get code;
+  List<SubstanceSpecificationCode>? get code =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationName>? get name;
+  List<SubstanceSpecificationName>? get name =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationMolecularWeight>? get molecularWeight;
+  List<SubstanceSpecificationMolecularWeight>? get molecularWeight =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationRelationship>? get relationship;
+  List<SubstanceSpecificationRelationship>? get relationship =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get nucleicAcid;
+  Reference? get nucleicAcid => throw _privateConstructorUsedError;
   @override
-  Reference? get polymer;
+  Reference? get polymer => throw _privateConstructorUsedError;
   @override
-  Reference? get protein;
+  Reference? get protein => throw _privateConstructorUsedError;
   @override
-  Reference? get sourceMaterial;
+  Reference? get sourceMaterial => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceSpecificationCopyWith<_SubstanceSpecification> get copyWith;
+  _$SubstanceSpecificationCopyWith<_SubstanceSpecification> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationMoiety _$SubstanceSpecificationMoietyFromJson(
@@ -27470,29 +29960,30 @@ const $SubstanceSpecificationMoiety = _$SubstanceSpecificationMoietyTearOff();
 
 /// @nodoc
 mixin _$SubstanceSpecificationMoiety {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get role;
-  Identifier? get identifier;
-  String? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get role => throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  CodeableConcept? get stereochemistry;
-  CodeableConcept? get opticalActivity;
-  String? get molecularFormula;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  CodeableConcept? get stereochemistry => throw _privateConstructorUsedError;
+  CodeableConcept? get opticalActivity => throw _privateConstructorUsedError;
+  String? get molecularFormula => throw _privateConstructorUsedError;
   @JsonKey(name: '_molecularFormula')
-  Element? get molecularFormulaElement;
-  Quantity? get amountQuantity;
-  String? get amountString;
+  Element? get molecularFormulaElement => throw _privateConstructorUsedError;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
+  String? get amountString => throw _privateConstructorUsedError;
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSpecificationMoietyCopyWith<SubstanceSpecificationMoiety>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -27554,40 +30045,62 @@ class _$SubstanceSpecificationMoietyCopyWithImpl<$Res>
     Object? amountStringElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      role: role == freezed ? _value.role : role as CodeableConcept?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       stereochemistry: stereochemistry == freezed
           ? _value.stereochemistry
-          : stereochemistry as CodeableConcept?,
+          : stereochemistry // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       opticalActivity: opticalActivity == freezed
           ? _value.opticalActivity
-          : opticalActivity as CodeableConcept?,
+          : opticalActivity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       molecularFormula: molecularFormula == freezed
           ? _value.molecularFormula
-          : molecularFormula as String?,
+          : molecularFormula // ignore: cast_nullable_to_non_nullable
+              as String?,
       molecularFormulaElement: molecularFormulaElement == freezed
           ? _value.molecularFormulaElement
-          : molecularFormulaElement as Element?,
+          : molecularFormulaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity?,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String?,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element?,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -27753,40 +30266,62 @@ class __$SubstanceSpecificationMoietyCopyWithImpl<$Res>
     Object? amountStringElement = freezed,
   }) {
     return _then(_SubstanceSpecificationMoiety(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      role: role == freezed ? _value.role : role as CodeableConcept?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       stereochemistry: stereochemistry == freezed
           ? _value.stereochemistry
-          : stereochemistry as CodeableConcept?,
+          : stereochemistry // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       opticalActivity: opticalActivity == freezed
           ? _value.opticalActivity
-          : opticalActivity as CodeableConcept?,
+          : opticalActivity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       molecularFormula: molecularFormula == freezed
           ? _value.molecularFormula
-          : molecularFormula as String?,
+          : molecularFormula // ignore: cast_nullable_to_non_nullable
+              as String?,
       molecularFormulaElement: molecularFormulaElement == freezed
           ? _value.molecularFormulaElement
-          : molecularFormulaElement as Element?,
+          : molecularFormulaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity?,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String?,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element?,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -27931,7 +30466,6 @@ class _$_SubstanceSpecificationMoiety extends _SubstanceSpecificationMoiety {
 
 abstract class _SubstanceSpecificationMoiety
     extends SubstanceSpecificationMoiety {
-  _SubstanceSpecificationMoiety._() : super._();
   factory _SubstanceSpecificationMoiety(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -27948,46 +30482,48 @@ abstract class _SubstanceSpecificationMoiety
           String? amountString,
           @JsonKey(name: '_amountString') Element? amountStringElement}) =
       _$_SubstanceSpecificationMoiety;
+  _SubstanceSpecificationMoiety._() : super._();
 
   factory _SubstanceSpecificationMoiety.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSpecificationMoiety.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get role;
+  CodeableConcept? get role => throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get stereochemistry;
+  CodeableConcept? get stereochemistry => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get opticalActivity;
+  CodeableConcept? get opticalActivity => throw _privateConstructorUsedError;
   @override
-  String? get molecularFormula;
+  String? get molecularFormula => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_molecularFormula')
-  Element? get molecularFormulaElement;
+  Element? get molecularFormulaElement => throw _privateConstructorUsedError;
   @override
-  Quantity? get amountQuantity;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
   @override
-  String? get amountString;
+  String? get amountString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationMoietyCopyWith<_SubstanceSpecificationMoiety>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationProperty _$SubstanceSpecificationPropertyFromJson(
@@ -28039,26 +30575,29 @@ const $SubstanceSpecificationProperty =
 
 /// @nodoc
 mixin _$SubstanceSpecificationProperty {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get category;
-  CodeableConcept? get code;
-  String? get parameters;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get category => throw _privateConstructorUsedError;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
+  String? get parameters => throw _privateConstructorUsedError;
   @JsonKey(name: '_parameters')
-  Element? get parametersElement;
-  Reference? get definingSubstanceReference;
-  CodeableConcept? get definingSubstanceCodeableConcept;
-  Quantity? get amountQuantity;
-  String? get amountString;
+  Element? get parametersElement => throw _privateConstructorUsedError;
+  Reference? get definingSubstanceReference =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get definingSubstanceCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
+  String? get amountString => throw _privateConstructorUsedError;
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSpecificationPropertyCopyWith<SubstanceSpecificationProperty>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -28115,37 +30654,55 @@ class _$SubstanceSpecificationPropertyCopyWithImpl<$Res>
     Object? amountStringElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      category:
-          category == freezed ? _value.category : category as CodeableConcept?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      parameters:
-          parameters == freezed ? _value.parameters : parameters as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      parameters: parameters == freezed
+          ? _value.parameters
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as String?,
       parametersElement: parametersElement == freezed
           ? _value.parametersElement
-          : parametersElement as Element?,
+          : parametersElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       definingSubstanceReference: definingSubstanceReference == freezed
           ? _value.definingSubstanceReference
-          : definingSubstanceReference as Reference?,
-      definingSubstanceCodeableConcept:
-          definingSubstanceCodeableConcept == freezed
-              ? _value.definingSubstanceCodeableConcept
-              : definingSubstanceCodeableConcept as CodeableConcept?,
+          : definingSubstanceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      definingSubstanceCodeableConcept: definingSubstanceCodeableConcept ==
+              freezed
+          ? _value.definingSubstanceCodeableConcept
+          : definingSubstanceCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity?,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String?,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element?,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -28296,37 +30853,55 @@ class __$SubstanceSpecificationPropertyCopyWithImpl<$Res>
     Object? amountStringElement = freezed,
   }) {
     return _then(_SubstanceSpecificationProperty(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      category:
-          category == freezed ? _value.category : category as CodeableConcept?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      parameters:
-          parameters == freezed ? _value.parameters : parameters as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      parameters: parameters == freezed
+          ? _value.parameters
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as String?,
       parametersElement: parametersElement == freezed
           ? _value.parametersElement
-          : parametersElement as Element?,
+          : parametersElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       definingSubstanceReference: definingSubstanceReference == freezed
           ? _value.definingSubstanceReference
-          : definingSubstanceReference as Reference?,
-      definingSubstanceCodeableConcept:
-          definingSubstanceCodeableConcept == freezed
-              ? _value.definingSubstanceCodeableConcept
-              : definingSubstanceCodeableConcept as CodeableConcept?,
+          : definingSubstanceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      definingSubstanceCodeableConcept: definingSubstanceCodeableConcept ==
+              freezed
+          ? _value.definingSubstanceCodeableConcept
+          : definingSubstanceCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity?,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String?,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element?,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -28462,7 +31037,6 @@ class _$_SubstanceSpecificationProperty
 
 abstract class _SubstanceSpecificationProperty
     extends SubstanceSpecificationProperty {
-  _SubstanceSpecificationProperty._() : super._();
   factory _SubstanceSpecificationProperty(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -28477,41 +31051,45 @@ abstract class _SubstanceSpecificationProperty
           String? amountString,
           @JsonKey(name: '_amountString') Element? amountStringElement}) =
       _$_SubstanceSpecificationProperty;
+  _SubstanceSpecificationProperty._() : super._();
 
   factory _SubstanceSpecificationProperty.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSpecificationProperty.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get category;
+  CodeableConcept? get category => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
-  String? get parameters;
+  String? get parameters => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_parameters')
-  Element? get parametersElement;
+  Element? get parametersElement => throw _privateConstructorUsedError;
   @override
-  Reference? get definingSubstanceReference;
+  Reference? get definingSubstanceReference =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get definingSubstanceCodeableConcept;
+  CodeableConcept? get definingSubstanceCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity? get amountQuantity;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
   @override
-  String? get amountString;
+  String? get amountString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationPropertyCopyWith<_SubstanceSpecificationProperty>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationStructure _$SubstanceSpecificationStructureFromJson(
@@ -28568,27 +31146,32 @@ const $SubstanceSpecificationStructure =
 
 /// @nodoc
 mixin _$SubstanceSpecificationStructure {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get stereochemistry;
-  CodeableConcept? get opticalActivity;
-  String? get molecularFormula;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get stereochemistry => throw _privateConstructorUsedError;
+  CodeableConcept? get opticalActivity => throw _privateConstructorUsedError;
+  String? get molecularFormula => throw _privateConstructorUsedError;
   @JsonKey(name: '_molecularFormula')
-  Element? get molecularFormulaElement;
-  String? get molecularFormulaByMoiety;
+  Element? get molecularFormulaElement => throw _privateConstructorUsedError;
+  String? get molecularFormulaByMoiety => throw _privateConstructorUsedError;
   @JsonKey(name: '_molecularFormulaByMoiety')
-  Element? get molecularFormulaByMoietyElement;
-  List<SubstanceSpecificationIsotope>? get isotope;
-  SubstanceSpecificationMolecularWeight? get molecularWeight;
-  List<Reference>? get source;
-  List<SubstanceSpecificationRepresentation>? get representation;
+  Element? get molecularFormulaByMoietyElement =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSpecificationIsotope>? get isotope =>
+      throw _privateConstructorUsedError;
+  SubstanceSpecificationMolecularWeight? get molecularWeight =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get source => throw _privateConstructorUsedError;
+  List<SubstanceSpecificationRepresentation>? get representation =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSpecificationStructureCopyWith<SubstanceSpecificationStructure>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -28648,42 +31231,59 @@ class _$SubstanceSpecificationStructureCopyWithImpl<$Res>
     Object? representation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       stereochemistry: stereochemistry == freezed
           ? _value.stereochemistry
-          : stereochemistry as CodeableConcept?,
+          : stereochemistry // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       opticalActivity: opticalActivity == freezed
           ? _value.opticalActivity
-          : opticalActivity as CodeableConcept?,
+          : opticalActivity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       molecularFormula: molecularFormula == freezed
           ? _value.molecularFormula
-          : molecularFormula as String?,
+          : molecularFormula // ignore: cast_nullable_to_non_nullable
+              as String?,
       molecularFormulaElement: molecularFormulaElement == freezed
           ? _value.molecularFormulaElement
-          : molecularFormulaElement as Element?,
+          : molecularFormulaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       molecularFormulaByMoiety: molecularFormulaByMoiety == freezed
           ? _value.molecularFormulaByMoiety
-          : molecularFormulaByMoiety as String?,
-      molecularFormulaByMoietyElement:
-          molecularFormulaByMoietyElement == freezed
-              ? _value.molecularFormulaByMoietyElement
-              : molecularFormulaByMoietyElement as Element?,
+          : molecularFormulaByMoiety // ignore: cast_nullable_to_non_nullable
+              as String?,
+      molecularFormulaByMoietyElement: molecularFormulaByMoietyElement ==
+              freezed
+          ? _value.molecularFormulaByMoietyElement
+          : molecularFormulaByMoietyElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       isotope: isotope == freezed
           ? _value.isotope
-          : isotope as List<SubstanceSpecificationIsotope>?,
+          : isotope // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationIsotope>?,
       molecularWeight: molecularWeight == freezed
           ? _value.molecularWeight
-          : molecularWeight as SubstanceSpecificationMolecularWeight?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : molecularWeight // ignore: cast_nullable_to_non_nullable
+              as SubstanceSpecificationMolecularWeight?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       representation: representation == freezed
           ? _value.representation
-          : representation as List<SubstanceSpecificationRepresentation>?,
+          : representation // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationRepresentation>?,
     ));
   }
 
@@ -28813,42 +31413,59 @@ class __$SubstanceSpecificationStructureCopyWithImpl<$Res>
     Object? representation = freezed,
   }) {
     return _then(_SubstanceSpecificationStructure(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       stereochemistry: stereochemistry == freezed
           ? _value.stereochemistry
-          : stereochemistry as CodeableConcept?,
+          : stereochemistry // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       opticalActivity: opticalActivity == freezed
           ? _value.opticalActivity
-          : opticalActivity as CodeableConcept?,
+          : opticalActivity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       molecularFormula: molecularFormula == freezed
           ? _value.molecularFormula
-          : molecularFormula as String?,
+          : molecularFormula // ignore: cast_nullable_to_non_nullable
+              as String?,
       molecularFormulaElement: molecularFormulaElement == freezed
           ? _value.molecularFormulaElement
-          : molecularFormulaElement as Element?,
+          : molecularFormulaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       molecularFormulaByMoiety: molecularFormulaByMoiety == freezed
           ? _value.molecularFormulaByMoiety
-          : molecularFormulaByMoiety as String?,
-      molecularFormulaByMoietyElement:
-          molecularFormulaByMoietyElement == freezed
-              ? _value.molecularFormulaByMoietyElement
-              : molecularFormulaByMoietyElement as Element?,
+          : molecularFormulaByMoiety // ignore: cast_nullable_to_non_nullable
+              as String?,
+      molecularFormulaByMoietyElement: molecularFormulaByMoietyElement ==
+              freezed
+          ? _value.molecularFormulaByMoietyElement
+          : molecularFormulaByMoietyElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       isotope: isotope == freezed
           ? _value.isotope
-          : isotope as List<SubstanceSpecificationIsotope>?,
+          : isotope // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationIsotope>?,
       molecularWeight: molecularWeight == freezed
           ? _value.molecularWeight
-          : molecularWeight as SubstanceSpecificationMolecularWeight?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : molecularWeight // ignore: cast_nullable_to_non_nullable
+              as SubstanceSpecificationMolecularWeight?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       representation: representation == freezed
           ? _value.representation
-          : representation as List<SubstanceSpecificationRepresentation>?,
+          : representation // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationRepresentation>?,
     ));
   }
 }
@@ -28993,7 +31610,6 @@ class _$_SubstanceSpecificationStructure
 
 abstract class _SubstanceSpecificationStructure
     extends SubstanceSpecificationStructure {
-  _SubstanceSpecificationStructure._() : super._();
   factory _SubstanceSpecificationStructure(
           {String? id,
           @JsonKey(name: 'extension')
@@ -29012,43 +31628,49 @@ abstract class _SubstanceSpecificationStructure
           List<Reference>? source,
           List<SubstanceSpecificationRepresentation>? representation}) =
       _$_SubstanceSpecificationStructure;
+  _SubstanceSpecificationStructure._() : super._();
 
   factory _SubstanceSpecificationStructure.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSpecificationStructure.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get stereochemistry;
+  CodeableConcept? get stereochemistry => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get opticalActivity;
+  CodeableConcept? get opticalActivity => throw _privateConstructorUsedError;
   @override
-  String? get molecularFormula;
+  String? get molecularFormula => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_molecularFormula')
-  Element? get molecularFormulaElement;
+  Element? get molecularFormulaElement => throw _privateConstructorUsedError;
   @override
-  String? get molecularFormulaByMoiety;
+  String? get molecularFormulaByMoiety => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_molecularFormulaByMoiety')
-  Element? get molecularFormulaByMoietyElement;
+  Element? get molecularFormulaByMoietyElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationIsotope>? get isotope;
+  List<SubstanceSpecificationIsotope>? get isotope =>
+      throw _privateConstructorUsedError;
   @override
-  SubstanceSpecificationMolecularWeight? get molecularWeight;
+  SubstanceSpecificationMolecularWeight? get molecularWeight =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationRepresentation>? get representation;
+  List<SubstanceSpecificationRepresentation>? get representation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationStructureCopyWith<_SubstanceSpecificationStructure>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationIsotope _$SubstanceSpecificationIsotopeFromJson(
@@ -29091,20 +31713,22 @@ const $SubstanceSpecificationIsotope = _$SubstanceSpecificationIsotopeTearOff();
 
 /// @nodoc
 mixin _$SubstanceSpecificationIsotope {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Identifier? get identifier;
-  CodeableConcept? get name;
-  CodeableConcept? get substitution;
-  Quantity? get halfLife;
-  SubstanceSpecificationMolecularWeight? get molecularWeight;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept? get name => throw _privateConstructorUsedError;
+  CodeableConcept? get substitution => throw _privateConstructorUsedError;
+  Quantity? get halfLife => throw _privateConstructorUsedError;
+  SubstanceSpecificationMolecularWeight? get molecularWeight =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSpecificationIsotopeCopyWith<SubstanceSpecificationIsotope>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -29151,23 +31775,38 @@ class _$SubstanceSpecificationIsotopeCopyWithImpl<$Res>
     Object? molecularWeight = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      name: name == freezed ? _value.name : name as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       substitution: substitution == freezed
           ? _value.substitution
-          : substitution as CodeableConcept?,
-      halfLife: halfLife == freezed ? _value.halfLife : halfLife as Quantity?,
+          : substitution // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      halfLife: halfLife == freezed
+          ? _value.halfLife
+          : halfLife // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       molecularWeight: molecularWeight == freezed
           ? _value.molecularWeight
-          : molecularWeight as SubstanceSpecificationMolecularWeight?,
+          : molecularWeight // ignore: cast_nullable_to_non_nullable
+              as SubstanceSpecificationMolecularWeight?,
     ));
   }
 
@@ -29283,23 +31922,38 @@ class __$SubstanceSpecificationIsotopeCopyWithImpl<$Res>
     Object? molecularWeight = freezed,
   }) {
     return _then(_SubstanceSpecificationIsotope(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier?,
-      name: name == freezed ? _value.name : name as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       substitution: substitution == freezed
           ? _value.substitution
-          : substitution as CodeableConcept?,
-      halfLife: halfLife == freezed ? _value.halfLife : halfLife as Quantity?,
+          : substitution // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      halfLife: halfLife == freezed
+          ? _value.halfLife
+          : halfLife // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       molecularWeight: molecularWeight == freezed
           ? _value.molecularWeight
-          : molecularWeight as SubstanceSpecificationMolecularWeight?,
+          : molecularWeight // ignore: cast_nullable_to_non_nullable
+              as SubstanceSpecificationMolecularWeight?,
     ));
   }
 }
@@ -29400,7 +32054,6 @@ class _$_SubstanceSpecificationIsotope extends _SubstanceSpecificationIsotope {
 
 abstract class _SubstanceSpecificationIsotope
     extends SubstanceSpecificationIsotope {
-  _SubstanceSpecificationIsotope._() : super._();
   factory _SubstanceSpecificationIsotope(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -29411,31 +32064,34 @@ abstract class _SubstanceSpecificationIsotope
           Quantity? halfLife,
           SubstanceSpecificationMolecularWeight? molecularWeight}) =
       _$_SubstanceSpecificationIsotope;
+  _SubstanceSpecificationIsotope._() : super._();
 
   factory _SubstanceSpecificationIsotope.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSpecificationIsotope.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get name;
+  CodeableConcept? get name => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get substitution;
+  CodeableConcept? get substitution => throw _privateConstructorUsedError;
   @override
-  Quantity? get halfLife;
+  Quantity? get halfLife => throw _privateConstructorUsedError;
   @override
-  SubstanceSpecificationMolecularWeight? get molecularWeight;
+  SubstanceSpecificationMolecularWeight? get molecularWeight =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationIsotopeCopyWith<_SubstanceSpecificationIsotope>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationMolecularWeight
@@ -29475,18 +32131,20 @@ const $SubstanceSpecificationMolecularWeight =
 
 /// @nodoc
 mixin _$SubstanceSpecificationMolecularWeight {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get method;
-  CodeableConcept? get type;
-  Quantity? get amount;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get method => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Quantity? get amount => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSpecificationMolecularWeightCopyWith<
-      SubstanceSpecificationMolecularWeight> get copyWith;
+          SubstanceSpecificationMolecularWeight>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -29527,16 +32185,30 @@ class _$SubstanceSpecificationMolecularWeightCopyWithImpl<$Res>
     Object? amount = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      method: method == freezed ? _value.method : method as CodeableConcept?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      amount: amount == freezed ? _value.amount : amount as Quantity?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      method: method == freezed
+          ? _value.method
+          : method // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
     ));
   }
 
@@ -29622,16 +32294,30 @@ class __$SubstanceSpecificationMolecularWeightCopyWithImpl<$Res>
     Object? amount = freezed,
   }) {
     return _then(_SubstanceSpecificationMolecularWeight(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      method: method == freezed ? _value.method : method as CodeableConcept?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      amount: amount == freezed ? _value.amount : amount as Quantity?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      method: method == freezed
+          ? _value.method
+          : method // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
     ));
   }
 }
@@ -29718,7 +32404,6 @@ class _$_SubstanceSpecificationMolecularWeight
 
 abstract class _SubstanceSpecificationMolecularWeight
     extends SubstanceSpecificationMolecularWeight {
-  _SubstanceSpecificationMolecularWeight._() : super._();
   factory _SubstanceSpecificationMolecularWeight(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -29726,28 +32411,31 @@ abstract class _SubstanceSpecificationMolecularWeight
       CodeableConcept? method,
       CodeableConcept? type,
       Quantity? amount}) = _$_SubstanceSpecificationMolecularWeight;
+  _SubstanceSpecificationMolecularWeight._() : super._();
 
   factory _SubstanceSpecificationMolecularWeight.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceSpecificationMolecularWeight.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get method;
+  CodeableConcept? get method => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Quantity? get amount;
+  Quantity? get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationMolecularWeightCopyWith<
-      _SubstanceSpecificationMolecularWeight> get copyWith;
+          _SubstanceSpecificationMolecularWeight>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationRepresentation
@@ -29789,20 +32477,22 @@ const $SubstanceSpecificationRepresentation =
 
 /// @nodoc
 mixin _$SubstanceSpecificationRepresentation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get type;
-  String? get representation;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  String? get representation => throw _privateConstructorUsedError;
   @JsonKey(name: '_representation')
-  Element? get representationElement;
-  Attachment? get attachment;
+  Element? get representationElement => throw _privateConstructorUsedError;
+  Attachment? get attachment => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSpecificationRepresentationCopyWith<
-      SubstanceSpecificationRepresentation> get copyWith;
+          SubstanceSpecificationRepresentation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -29845,22 +32535,34 @@ class _$SubstanceSpecificationRepresentationCopyWithImpl<$Res>
     Object? attachment = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       representation: representation == freezed
           ? _value.representation
-          : representation as String?,
+          : representation // ignore: cast_nullable_to_non_nullable
+              as String?,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as Element?,
-      attachment:
-          attachment == freezed ? _value.attachment : attachment as Attachment?,
+          : representationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      attachment: attachment == freezed
+          ? _value.attachment
+          : attachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
     ));
   }
 
@@ -29947,22 +32649,34 @@ class __$SubstanceSpecificationRepresentationCopyWithImpl<$Res>
     Object? attachment = freezed,
   }) {
     return _then(_SubstanceSpecificationRepresentation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       representation: representation == freezed
           ? _value.representation
-          : representation as String?,
+          : representation // ignore: cast_nullable_to_non_nullable
+              as String?,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as Element?,
-      attachment:
-          attachment == freezed ? _value.attachment : attachment as Attachment?,
+          : representationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      attachment: attachment == freezed
+          ? _value.attachment
+          : attachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
     ));
   }
 }
@@ -30059,7 +32773,6 @@ class _$_SubstanceSpecificationRepresentation
 
 abstract class _SubstanceSpecificationRepresentation
     extends SubstanceSpecificationRepresentation {
-  _SubstanceSpecificationRepresentation._() : super._();
   factory _SubstanceSpecificationRepresentation(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -30068,31 +32781,34 @@ abstract class _SubstanceSpecificationRepresentation
       String? representation,
       @JsonKey(name: '_representation') Element? representationElement,
       Attachment? attachment}) = _$_SubstanceSpecificationRepresentation;
+  _SubstanceSpecificationRepresentation._() : super._();
 
   factory _SubstanceSpecificationRepresentation.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceSpecificationRepresentation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  String? get representation;
+  String? get representation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_representation')
-  Element? get representationElement;
+  Element? get representationElement => throw _privateConstructorUsedError;
   @override
-  Attachment? get attachment;
+  Attachment? get attachment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationRepresentationCopyWith<
-      _SubstanceSpecificationRepresentation> get copyWith;
+          _SubstanceSpecificationRepresentation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationCode _$SubstanceSpecificationCodeFromJson(
@@ -30139,23 +32855,25 @@ const $SubstanceSpecificationCode = _$SubstanceSpecificationCodeTearOff();
 
 /// @nodoc
 mixin _$SubstanceSpecificationCode {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get code;
-  CodeableConcept? get status;
-  FhirDateTime? get statusDate;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
+  FhirDateTime? get statusDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_statusDate')
-  Element? get statusDateElement;
-  String? get comment;
+  Element? get statusDateElement => throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
   @JsonKey(name: '_comment')
-  Element? get commentElement;
-  List<Reference>? get source;
+  Element? get commentElement => throw _privateConstructorUsedError;
+  List<Reference>? get source => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstanceSpecificationCodeCopyWith<SubstanceSpecificationCode> get copyWith;
+  $SubstanceSpecificationCodeCopyWith<SubstanceSpecificationCode>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -30204,26 +32922,46 @@ class _$SubstanceSpecificationCodeCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       statusDate: statusDate == freezed
           ? _value.statusDate
-          : statusDate as FhirDateTime?,
+          : statusDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       statusDateElement: statusDateElement == freezed
           ? _value.statusDateElement
-          : statusDateElement as Element?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : statusDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
@@ -30328,26 +33066,46 @@ class __$SubstanceSpecificationCodeCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_SubstanceSpecificationCode(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       statusDate: statusDate == freezed
           ? _value.statusDate
-          : statusDate as FhirDateTime?,
+          : statusDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       statusDateElement: statusDateElement == freezed
           ? _value.statusDateElement
-          : statusDateElement as Element?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : statusDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -30460,7 +33218,6 @@ class _$_SubstanceSpecificationCode extends _SubstanceSpecificationCode {
 }
 
 abstract class _SubstanceSpecificationCode extends SubstanceSpecificationCode {
-  _SubstanceSpecificationCode._() : super._();
   factory _SubstanceSpecificationCode(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -30472,37 +33229,39 @@ abstract class _SubstanceSpecificationCode extends SubstanceSpecificationCode {
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
       List<Reference>? source}) = _$_SubstanceSpecificationCode;
+  _SubstanceSpecificationCode._() : super._();
 
   factory _SubstanceSpecificationCode.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSpecificationCode.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get statusDate;
+  FhirDateTime? get statusDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_statusDate')
-  Element? get statusDateElement;
+  Element? get statusDateElement => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationCodeCopyWith<_SubstanceSpecificationCode>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationName _$SubstanceSpecificationNameFromJson(
@@ -30561,29 +33320,34 @@ const $SubstanceSpecificationName = _$SubstanceSpecificationNameTearOff();
 
 /// @nodoc
 mixin _$SubstanceSpecificationName {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  CodeableConcept? get type;
-  CodeableConcept? get status;
-  Boolean? get preferred;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
+  Boolean? get preferred => throw _privateConstructorUsedError;
   @JsonKey(name: '_preferred')
-  Element? get preferredElement;
-  List<CodeableConcept>? get language;
-  List<CodeableConcept>? get domain;
-  List<CodeableConcept>? get jurisdiction;
-  List<SubstanceSpecificationName>? get synonym;
-  List<SubstanceSpecificationName>? get translation;
-  List<SubstanceSpecificationOfficial>? get official;
-  List<Reference>? get source;
+  Element? get preferredElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get language => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get domain => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  List<SubstanceSpecificationName>? get synonym =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSpecificationName>? get translation =>
+      throw _privateConstructorUsedError;
+  List<SubstanceSpecificationOfficial>? get official =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get source => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstanceSpecificationNameCopyWith<SubstanceSpecificationName> get copyWith;
+  $SubstanceSpecificationNameCopyWith<SubstanceSpecificationName>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -30644,41 +33408,70 @@ class _$SubstanceSpecificationNameCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      preferred:
-          preferred == freezed ? _value.preferred : preferred as Boolean?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      preferred: preferred == freezed
+          ? _value.preferred
+          : preferred // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       preferredElement: preferredElement == freezed
           ? _value.preferredElement
-          : preferredElement as Element?,
+          : preferredElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: language == freezed
           ? _value.language
-          : language as List<CodeableConcept>?,
-      domain:
-          domain == freezed ? _value.domain : domain as List<CodeableConcept>?,
+          : language // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      domain: domain == freezed
+          ? _value.domain
+          : domain // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       synonym: synonym == freezed
           ? _value.synonym
-          : synonym as List<SubstanceSpecificationName>?,
+          : synonym // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationName>?,
       translation: translation == freezed
           ? _value.translation
-          : translation as List<SubstanceSpecificationName>?,
+          : translation // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationName>?,
       official: official == freezed
           ? _value.official
-          : official as List<SubstanceSpecificationOfficial>?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : official // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationOfficial>?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
@@ -30795,41 +33588,70 @@ class __$SubstanceSpecificationNameCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_SubstanceSpecificationName(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      preferred:
-          preferred == freezed ? _value.preferred : preferred as Boolean?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      preferred: preferred == freezed
+          ? _value.preferred
+          : preferred // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       preferredElement: preferredElement == freezed
           ? _value.preferredElement
-          : preferredElement as Element?,
+          : preferredElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: language == freezed
           ? _value.language
-          : language as List<CodeableConcept>?,
-      domain:
-          domain == freezed ? _value.domain : domain as List<CodeableConcept>?,
+          : language // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      domain: domain == freezed
+          ? _value.domain
+          : domain // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       synonym: synonym == freezed
           ? _value.synonym
-          : synonym as List<SubstanceSpecificationName>?,
+          : synonym // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationName>?,
       translation: translation == freezed
           ? _value.translation
-          : translation as List<SubstanceSpecificationName>?,
+          : translation // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationName>?,
       official: official == freezed
           ? _value.official
-          : official as List<SubstanceSpecificationOfficial>?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : official // ignore: cast_nullable_to_non_nullable
+              as List<SubstanceSpecificationOfficial>?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -30982,7 +33804,6 @@ class _$_SubstanceSpecificationName extends _SubstanceSpecificationName {
 }
 
 abstract class _SubstanceSpecificationName extends SubstanceSpecificationName {
-  _SubstanceSpecificationName._() : super._();
   factory _SubstanceSpecificationName(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -31000,49 +33821,54 @@ abstract class _SubstanceSpecificationName extends SubstanceSpecificationName {
       List<SubstanceSpecificationName>? translation,
       List<SubstanceSpecificationOfficial>? official,
       List<Reference>? source}) = _$_SubstanceSpecificationName;
+  _SubstanceSpecificationName._() : super._();
 
   factory _SubstanceSpecificationName.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSpecificationName.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  Boolean? get preferred;
+  Boolean? get preferred => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_preferred')
-  Element? get preferredElement;
+  Element? get preferredElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get language;
+  List<CodeableConcept>? get language => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get domain;
+  List<CodeableConcept>? get domain => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationName>? get synonym;
+  List<SubstanceSpecificationName>? get synonym =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationName>? get translation;
+  List<SubstanceSpecificationName>? get translation =>
+      throw _privateConstructorUsedError;
   @override
-  List<SubstanceSpecificationOfficial>? get official;
+  List<SubstanceSpecificationOfficial>? get official =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationNameCopyWith<_SubstanceSpecificationName>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationOfficial _$SubstanceSpecificationOfficialFromJson(
@@ -31084,20 +33910,21 @@ const $SubstanceSpecificationOfficial =
 
 /// @nodoc
 mixin _$SubstanceSpecificationOfficial {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get authority;
-  CodeableConcept? get status;
-  FhirDateTime? get date;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get authority => throw _privateConstructorUsedError;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSpecificationOfficialCopyWith<SubstanceSpecificationOfficial>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -31140,20 +33967,34 @@ class _$SubstanceSpecificationOfficialCopyWithImpl<$Res>
     Object? dateElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       authority: authority == freezed
           ? _value.authority
-          : authority as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
+          : authority // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -31240,20 +34081,34 @@ class __$SubstanceSpecificationOfficialCopyWithImpl<$Res>
     Object? dateElement = freezed,
   }) {
     return _then(_SubstanceSpecificationOfficial(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       authority: authority == freezed
           ? _value.authority
-          : authority as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
+          : authority // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -31348,7 +34203,6 @@ class _$_SubstanceSpecificationOfficial
 
 abstract class _SubstanceSpecificationOfficial
     extends SubstanceSpecificationOfficial {
-  _SubstanceSpecificationOfficial._() : super._();
   factory _SubstanceSpecificationOfficial(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -31358,30 +34212,32 @@ abstract class _SubstanceSpecificationOfficial
           FhirDateTime? date,
           @JsonKey(name: '_date') Element? dateElement}) =
       _$_SubstanceSpecificationOfficial;
+  _SubstanceSpecificationOfficial._() : super._();
 
   factory _SubstanceSpecificationOfficial.fromJson(Map<String, dynamic> json) =
       _$_SubstanceSpecificationOfficial.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get authority;
+  CodeableConcept? get authority => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get status;
+  CodeableConcept? get status => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationOfficialCopyWith<_SubstanceSpecificationOfficial>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SubstanceSpecificationRelationship _$SubstanceSpecificationRelationshipFromJson(
@@ -31441,30 +34297,33 @@ const $SubstanceSpecificationRelationship =
 
 /// @nodoc
 mixin _$SubstanceSpecificationRelationship {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Reference? get substanceReference;
-  CodeableConcept? get substanceCodeableConcept;
-  CodeableConcept? get relationship;
-  Boolean? get isDefining;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Reference? get substanceReference => throw _privateConstructorUsedError;
+  CodeableConcept? get substanceCodeableConcept =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get relationship => throw _privateConstructorUsedError;
+  Boolean? get isDefining => throw _privateConstructorUsedError;
   @JsonKey(name: '_isDefining')
-  Element? get isDefiningElement;
-  Quantity? get amountQuantity;
-  Range? get amountRange;
-  Ratio? get amountRatio;
-  String? get amountString;
+  Element? get isDefiningElement => throw _privateConstructorUsedError;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
+  Range? get amountRange => throw _privateConstructorUsedError;
+  Ratio? get amountRatio => throw _privateConstructorUsedError;
+  String? get amountString => throw _privateConstructorUsedError;
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
-  Ratio? get amountRatioLowLimit;
-  CodeableConcept? get amountType;
-  List<Reference>? get source;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
+  Ratio? get amountRatioLowLimit => throw _privateConstructorUsedError;
+  CodeableConcept? get amountType => throw _privateConstructorUsedError;
+  List<Reference>? get source => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceSpecificationRelationshipCopyWith<
-      SubstanceSpecificationRelationship> get copyWith;
+          SubstanceSpecificationRelationship>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -31532,47 +34391,70 @@ class _$SubstanceSpecificationRelationshipCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       substanceReference: substanceReference == freezed
           ? _value.substanceReference
-          : substanceReference as Reference?,
+          : substanceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       substanceCodeableConcept: substanceCodeableConcept == freezed
           ? _value.substanceCodeableConcept
-          : substanceCodeableConcept as CodeableConcept?,
+          : substanceCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as CodeableConcept?,
-      isDefining:
-          isDefining == freezed ? _value.isDefining : isDefining as Boolean?,
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      isDefining: isDefining == freezed
+          ? _value.isDefining
+          : isDefining // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       isDefiningElement: isDefiningElement == freezed
           ? _value.isDefiningElement
-          : isDefiningElement as Element?,
+          : isDefiningElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity?,
-      amountRange:
-          amountRange == freezed ? _value.amountRange : amountRange as Range?,
-      amountRatio:
-          amountRatio == freezed ? _value.amountRatio : amountRatio as Ratio?,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      amountRange: amountRange == freezed
+          ? _value.amountRange
+          : amountRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      amountRatio: amountRatio == freezed
+          ? _value.amountRatio
+          : amountRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String?,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element?,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountRatioLowLimit: amountRatioLowLimit == freezed
           ? _value.amountRatioLowLimit
-          : amountRatioLowLimit as Ratio?,
+          : amountRatioLowLimit // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       amountType: amountType == freezed
           ? _value.amountType
-          : amountType as CodeableConcept?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : amountType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
@@ -31769,47 +34651,70 @@ class __$SubstanceSpecificationRelationshipCopyWithImpl<$Res>
     Object? source = freezed,
   }) {
     return _then(_SubstanceSpecificationRelationship(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       substanceReference: substanceReference == freezed
           ? _value.substanceReference
-          : substanceReference as Reference?,
+          : substanceReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       substanceCodeableConcept: substanceCodeableConcept == freezed
           ? _value.substanceCodeableConcept
-          : substanceCodeableConcept as CodeableConcept?,
+          : substanceCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as CodeableConcept?,
-      isDefining:
-          isDefining == freezed ? _value.isDefining : isDefining as Boolean?,
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      isDefining: isDefining == freezed
+          ? _value.isDefining
+          : isDefining // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       isDefiningElement: isDefiningElement == freezed
           ? _value.isDefiningElement
-          : isDefiningElement as Element?,
+          : isDefiningElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity?,
-      amountRange:
-          amountRange == freezed ? _value.amountRange : amountRange as Range?,
-      amountRatio:
-          amountRatio == freezed ? _value.amountRatio : amountRatio as Ratio?,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      amountRange: amountRange == freezed
+          ? _value.amountRange
+          : amountRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      amountRatio: amountRatio == freezed
+          ? _value.amountRatio
+          : amountRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String?,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element?,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountRatioLowLimit: amountRatioLowLimit == freezed
           ? _value.amountRatioLowLimit
-          : amountRatioLowLimit as Ratio?,
+          : amountRatioLowLimit // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       amountType: amountType == freezed
           ? _value.amountType
-          : amountType as CodeableConcept?,
-      source: source == freezed ? _value.source : source as List<Reference>?,
+          : amountType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -31972,7 +34877,6 @@ class _$_SubstanceSpecificationRelationship
 
 abstract class _SubstanceSpecificationRelationship
     extends SubstanceSpecificationRelationship {
-  _SubstanceSpecificationRelationship._() : super._();
   factory _SubstanceSpecificationRelationship(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -31990,48 +34894,52 @@ abstract class _SubstanceSpecificationRelationship
       Ratio? amountRatioLowLimit,
       CodeableConcept? amountType,
       List<Reference>? source}) = _$_SubstanceSpecificationRelationship;
+  _SubstanceSpecificationRelationship._() : super._();
 
   factory _SubstanceSpecificationRelationship.fromJson(
           Map<String, dynamic> json) =
       _$_SubstanceSpecificationRelationship.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get substanceReference;
+  Reference? get substanceReference => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get substanceCodeableConcept;
+  CodeableConcept? get substanceCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get relationship;
+  CodeableConcept? get relationship => throw _privateConstructorUsedError;
   @override
-  Boolean? get isDefining;
+  Boolean? get isDefining => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_isDefining')
-  Element? get isDefiningElement;
+  Element? get isDefiningElement => throw _privateConstructorUsedError;
   @override
-  Quantity? get amountQuantity;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get amountRange;
+  Range? get amountRange => throw _privateConstructorUsedError;
   @override
-  Ratio? get amountRatio;
+  Ratio? get amountRatio => throw _privateConstructorUsedError;
   @override
-  String? get amountString;
+  String? get amountString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amountString')
-  Element? get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
   @override
-  Ratio? get amountRatioLowLimit;
+  Ratio? get amountRatioLowLimit => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get amountType;
+  CodeableConcept? get amountType => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get source;
+  List<Reference>? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceSpecificationRelationshipCopyWith<
-      _SubstanceSpecificationRelationship> get copyWith;
+          _SubstanceSpecificationRelationship>
+      get copyWith => throw _privateConstructorUsedError;
 }

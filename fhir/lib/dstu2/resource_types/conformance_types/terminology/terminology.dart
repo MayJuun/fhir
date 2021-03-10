@@ -12,7 +12,7 @@ part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
 @freezed
-abstract class ValueSet with Resource implements _$ValueSet {
+class ValueSet with Resource, _$ValueSet {
   ValueSet._();
   factory ValueSet({
     @Default(Dstu2ResourceType.ValueSet)
@@ -80,7 +80,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
 }
 
 @freezed
-abstract class ValueSetContact with _$ValueSetContact {
+class ValueSetContact with _$ValueSetContact {
   ValueSetContact._();
   factory ValueSetContact({
     Id? id,
@@ -109,7 +109,7 @@ abstract class ValueSetContact with _$ValueSetContact {
 }
 
 @freezed
-abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
+class ValueSetCodeSystem with _$ValueSetCodeSystem {
   ValueSetCodeSystem._();
   factory ValueSetCodeSystem({
     Id? id,
@@ -143,7 +143,7 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
 }
 
 @freezed
-abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
+class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
   ValueSetCodeSystemConcept._();
   factory ValueSetCodeSystemConcept({
     Id? id,
@@ -179,7 +179,7 @@ abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
 }
 
 @freezed
-abstract class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
+class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
   ValueSetConceptDesignation._();
   factory ValueSetConceptDesignation({
     Id? id,
@@ -211,7 +211,7 @@ abstract class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
 }
 
 @freezed
-abstract class ValueSetCompose with _$ValueSetCompose {
+class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
   factory ValueSetCompose({
     Id? id,
@@ -241,7 +241,7 @@ abstract class ValueSetCompose with _$ValueSetCompose {
 }
 
 @freezed
-abstract class ValueSetComposeInclude with _$ValueSetComposeInclude {
+class ValueSetComposeInclude with _$ValueSetComposeInclude {
   ValueSetComposeInclude._();
   factory ValueSetComposeInclude({
     Id? id,
@@ -274,7 +274,7 @@ abstract class ValueSetComposeInclude with _$ValueSetComposeInclude {
 }
 
 @freezed
-abstract class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
+class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
   ValueSetIncludeConcept._();
   factory ValueSetIncludeConcept({
     Id? id,
@@ -306,7 +306,7 @@ abstract class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
 }
 
 @freezed
-abstract class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
+class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
   ValueSetIncludeFilter._();
   factory ValueSetIncludeFilter({
     Id? id,
@@ -339,7 +339,7 @@ abstract class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
 }
 
 @freezed
-abstract class ValueSetExpansion with _$ValueSetExpansion {
+class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
   factory ValueSetExpansion({
     Id? id,
@@ -376,7 +376,7 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
 }
 
 @freezed
-abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
+class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
   ValueSetExpansionParameter._();
   factory ValueSetExpansionParameter({
     Id? id,
@@ -418,7 +418,7 @@ abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
 }
 
 @freezed
-abstract class ValueSetExpansionContains with _$ValueSetExpansionContains {
+class ValueSetExpansionContains with _$ValueSetExpansionContains {
   ValueSetExpansionContains._();
   factory ValueSetExpansionContains({
     Id? id,
@@ -457,7 +457,7 @@ abstract class ValueSetExpansionContains with _$ValueSetExpansionContains {
 }
 
 @freezed
-abstract class ConceptMap with Resource implements _$ConceptMap {
+class ConceptMap with Resource, _$ConceptMap {
   ConceptMap._();
   factory ConceptMap({
     @Default(Dstu2ResourceType.ConceptMap)
@@ -523,7 +523,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
 }
 
 @freezed
-abstract class ConceptMapContact with _$ConceptMapContact {
+class ConceptMapContact with _$ConceptMapContact {
   ConceptMapContact._();
   factory ConceptMapContact({
     Id? id,
@@ -551,7 +551,7 @@ abstract class ConceptMapContact with _$ConceptMapContact {
 }
 
 @freezed
-abstract class ConceptMapElement with _$ConceptMapElement {
+class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
   factory ConceptMapElement({
     Id? id,
@@ -581,7 +581,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
 }
 
 @freezed
-abstract class ConceptMapElementTarget with _$ConceptMapElementTarget {
+class ConceptMapElementTarget with _$ConceptMapElementTarget {
   ConceptMapElementTarget._();
   factory ConceptMapElementTarget({
     Id? id,
@@ -617,7 +617,7 @@ abstract class ConceptMapElementTarget with _$ConceptMapElementTarget {
 }
 
 @freezed
-abstract class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
+class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
   ConceptMapTargetDependsOn._();
   factory ConceptMapTargetDependsOn({
     Id? id,
@@ -647,7 +647,7 @@ abstract class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
 }
 
 @freezed
-abstract class NamingSystem with Resource implements _$NamingSystem {
+class NamingSystem with Resource, _$NamingSystem {
   NamingSystem._();
   factory NamingSystem({
     @Default(Dstu2ResourceType.NamingSystem)
@@ -706,7 +706,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
 }
 
 @freezed
-abstract class NamingSystemContact with _$NamingSystemContact {
+class NamingSystemContact with _$NamingSystemContact {
   NamingSystemContact._();
   factory NamingSystemContact({
     Id? id,
@@ -734,7 +734,7 @@ abstract class NamingSystemContact with _$NamingSystemContact {
 }
 
 @freezed
-abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
+class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
     Id? id,

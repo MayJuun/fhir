@@ -12,7 +12,7 @@ part 'support.freezed.dart';
 part 'support.g.dart';
 
 @freezed
-abstract class Coverage with Resource implements _$Coverage {
+class Coverage with Resource, _$Coverage {
   Coverage._();
   factory Coverage({
     @Default(Dstu2ResourceType.Coverage)
@@ -65,9 +65,7 @@ abstract class Coverage with Resource implements _$Coverage {
 }
 
 @freezed
-abstract class EligibilityRequest
-    with Resource
-    implements _$EligibilityRequest {
+class EligibilityRequest with Resource, _$EligibilityRequest {
   EligibilityRequest._();
   factory EligibilityRequest({
     @Default(Dstu2ResourceType.EligibilityRequest)
@@ -111,9 +109,7 @@ abstract class EligibilityRequest
 }
 
 @freezed
-abstract class EligibilityResponse
-    with Resource
-    implements _$EligibilityResponse {
+class EligibilityResponse with Resource, _$EligibilityResponse {
   EligibilityResponse._();
   factory EligibilityResponse({
     @Default(Dstu2ResourceType.EligibilityResponse)
@@ -163,7 +159,7 @@ abstract class EligibilityResponse
 }
 
 @freezed
-abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
+class EnrollmentRequest with Resource, _$EnrollmentRequest {
   EnrollmentRequest._();
   factory EnrollmentRequest({
     @Default(Dstu2ResourceType.EnrollmentRequest)
@@ -210,9 +206,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
 }
 
 @freezed
-abstract class EnrollmentResponse
-    with Resource
-    implements _$EnrollmentResponse {
+class EnrollmentResponse with Resource, _$EnrollmentResponse {
   EnrollmentResponse._();
   factory EnrollmentResponse({
     @Default(Dstu2ResourceType.EnrollmentResponse)

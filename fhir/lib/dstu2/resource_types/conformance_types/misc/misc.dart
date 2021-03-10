@@ -12,9 +12,7 @@ part 'misc.freezed.dart';
 part 'misc.g.dart';
 
 @freezed
-abstract class ImplementationGuide
-    with Resource
-    implements _$ImplementationGuide {
+class ImplementationGuide with Resource, _$ImplementationGuide {
   ImplementationGuide._();
   factory ImplementationGuide({
     @Default(Dstu2ResourceType.ImplementationGuide)
@@ -78,7 +76,7 @@ abstract class ImplementationGuide
 }
 
 @freezed
-abstract class ImplementationGuideContact with _$ImplementationGuideContact {
+class ImplementationGuideContact with _$ImplementationGuideContact {
   ImplementationGuideContact._();
   factory ImplementationGuideContact({
     Id? id,
@@ -107,8 +105,7 @@ abstract class ImplementationGuideContact with _$ImplementationGuideContact {
 }
 
 @freezed
-abstract class ImplementationGuideDependency
-    with _$ImplementationGuideDependency {
+class ImplementationGuideDependency with _$ImplementationGuideDependency {
   ImplementationGuideDependency._();
   factory ImplementationGuideDependency({
     Id? id,
@@ -139,7 +136,7 @@ abstract class ImplementationGuideDependency
 }
 
 @freezed
-abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
+class ImplementationGuidePackage with _$ImplementationGuidePackage {
   ImplementationGuidePackage._();
   factory ImplementationGuidePackage({
     Id? id,
@@ -170,7 +167,7 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
 }
 
 @freezed
-abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
+class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
   factory ImplementationGuideGlobal({
     Id? id,
@@ -200,7 +197,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 }
 
 @freezed
-abstract class ImplementationGuidePage with _$ImplementationGuidePage {
+class ImplementationGuidePage with _$ImplementationGuidePage {
   ImplementationGuidePage._();
   factory ImplementationGuidePage({
     Id? id,
@@ -233,7 +230,7 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
 }
 
 @freezed
-abstract class ImplementationGuidePackageResource
+class ImplementationGuidePackageResource
     with _$ImplementationGuidePackageResource {
   ImplementationGuidePackageResource._();
   factory ImplementationGuidePackageResource({
@@ -272,7 +269,7 @@ abstract class ImplementationGuidePackageResource
 }
 
 @freezed
-abstract class TestScript with Resource implements _$TestScript {
+class TestScript with Resource, _$TestScript {
   TestScript._();
   factory TestScript({
     @Default(Dstu2ResourceType.TestScript)
@@ -338,7 +335,7 @@ abstract class TestScript with Resource implements _$TestScript {
 }
 
 @freezed
-abstract class TestScriptContact with _$TestScriptContact {
+class TestScriptContact with _$TestScriptContact {
   TestScriptContact._();
   factory TestScriptContact({
     Id? id,
@@ -366,7 +363,7 @@ abstract class TestScriptContact with _$TestScriptContact {
 }
 
 @freezed
-abstract class TestScriptMetadata with _$TestScriptMetadata {
+class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
   factory TestScriptMetadata({
     Id? id,
@@ -395,7 +392,7 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
 }
 
 @freezed
-abstract class TestScriptMetadataLink with _$TestScriptMetadataLink {
+class TestScriptMetadataLink with _$TestScriptMetadataLink {
   TestScriptMetadataLink._();
   factory TestScriptMetadataLink({
     Id? id,
@@ -425,8 +422,7 @@ abstract class TestScriptMetadataLink with _$TestScriptMetadataLink {
 }
 
 @freezed
-abstract class TestScriptMetadataCapability
-    with _$TestScriptMetadataCapability {
+class TestScriptMetadataCapability with _$TestScriptMetadataCapability {
   TestScriptMetadataCapability._();
   factory TestScriptMetadataCapability({
     Id? id,
@@ -464,7 +460,7 @@ abstract class TestScriptMetadataCapability
 }
 
 @freezed
-abstract class TestScriptFixture with _$TestScriptFixture {
+class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
   factory TestScriptFixture({
     Id? id,
@@ -495,7 +491,7 @@ abstract class TestScriptFixture with _$TestScriptFixture {
 }
 
 @freezed
-abstract class TestScriptVariable with _$TestScriptVariable {
+class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
   factory TestScriptVariable({
     Id? id,
@@ -529,7 +525,7 @@ abstract class TestScriptVariable with _$TestScriptVariable {
 }
 
 @freezed
-abstract class TestScriptSetup with _$TestScriptSetup {
+class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
   factory TestScriptSetup({
     Id? id,
@@ -557,7 +553,7 @@ abstract class TestScriptSetup with _$TestScriptSetup {
 }
 
 @freezed
-abstract class TestScriptSetupAction with _$TestScriptSetupAction {
+class TestScriptSetupAction with _$TestScriptSetupAction {
   TestScriptSetupAction._();
   factory TestScriptSetupAction({
     Id? id,
@@ -586,7 +582,7 @@ abstract class TestScriptSetupAction with _$TestScriptSetupAction {
 }
 
 @freezed
-abstract class TestScriptActionOperation with _$TestScriptActionOperation {
+class TestScriptActionOperation with _$TestScriptActionOperation {
   TestScriptActionOperation._();
   factory TestScriptActionOperation({
     Id? id,
@@ -641,8 +637,7 @@ abstract class TestScriptActionOperation with _$TestScriptActionOperation {
 }
 
 @freezed
-abstract class TestScriptOperationRequestHeader
-    with _$TestScriptOperationRequestHeader {
+class TestScriptOperationRequestHeader with _$TestScriptOperationRequestHeader {
   TestScriptOperationRequestHeader._();
   factory TestScriptOperationRequestHeader({
     Id? id,
@@ -675,7 +670,7 @@ abstract class TestScriptOperationRequestHeader
 }
 
 @freezed
-abstract class TestScriptActionAssert with _$TestScriptActionAssert {
+class TestScriptActionAssert with _$TestScriptActionAssert {
   TestScriptActionAssert._();
   factory TestScriptActionAssert({
     Id? id,
@@ -739,7 +734,7 @@ abstract class TestScriptActionAssert with _$TestScriptActionAssert {
 }
 
 @freezed
-abstract class TestScriptTest with _$TestScriptTest {
+class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
   factory TestScriptTest({
     Id? id,
@@ -771,7 +766,7 @@ abstract class TestScriptTest with _$TestScriptTest {
 }
 
 @freezed
-abstract class TestScriptTeardown with _$TestScriptTeardown {
+class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
   factory TestScriptTeardown({
     Id? id,
@@ -798,7 +793,7 @@ abstract class TestScriptTeardown with _$TestScriptTeardown {
 }
 
 @freezed
-abstract class TestScriptTeardownAction with _$TestScriptTeardownAction {
+class TestScriptTeardownAction with _$TestScriptTeardownAction {
   TestScriptTeardownAction._();
   factory TestScriptTeardownAction({
     Id? id,

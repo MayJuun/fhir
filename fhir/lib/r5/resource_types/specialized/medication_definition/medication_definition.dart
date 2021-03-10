@@ -12,9 +12,8 @@ part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
 
 @freezed
-abstract class AdministrableProductDefinition
-    with Resource
-    implements _$AdministrableProductDefinition {
+class AdministrableProductDefinition
+    with Resource, _$AdministrableProductDefinition {
   AdministrableProductDefinition._();
   factory AdministrableProductDefinition({
     @Default(R5ResourceType.AdministrableProductDefinition)
@@ -63,8 +62,7 @@ abstract class AdministrableProductDefinition
 }
 
 @freezed
-abstract class AdministrableProductDefinitionProperty
-    implements _$AdministrableProductDefinitionProperty {
+class AdministrableProductDefinitionProperty with _$AdministrableProductDefinitionProperty {
   AdministrableProductDefinitionProperty._();
   factory AdministrableProductDefinitionProperty({
     String? id,
@@ -102,8 +100,7 @@ abstract class AdministrableProductDefinitionProperty
 }
 
 @freezed
-abstract class AdministrableProductDefinitionRouteOfAdministration
-    implements _$AdministrableProductDefinitionRouteOfAdministration {
+class AdministrableProductDefinitionRouteOfAdministration with _$AdministrableProductDefinitionRouteOfAdministration {
   AdministrableProductDefinitionRouteOfAdministration._();
   factory AdministrableProductDefinitionRouteOfAdministration({
     String? id,
@@ -140,8 +137,7 @@ abstract class AdministrableProductDefinitionRouteOfAdministration
 }
 
 @freezed
-abstract class AdministrableProductDefinitionTargetSpecies
-    implements _$AdministrableProductDefinitionTargetSpecies {
+class AdministrableProductDefinitionTargetSpecies with _$AdministrableProductDefinitionTargetSpecies {
   AdministrableProductDefinitionTargetSpecies._();
   factory AdministrableProductDefinitionTargetSpecies({
     String? id,
@@ -172,8 +168,7 @@ abstract class AdministrableProductDefinitionTargetSpecies
 }
 
 @freezed
-abstract class AdministrableProductDefinitionWithdrawalPeriod
-    implements _$AdministrableProductDefinitionWithdrawalPeriod {
+class AdministrableProductDefinitionWithdrawalPeriod with _$AdministrableProductDefinitionWithdrawalPeriod {
   AdministrableProductDefinitionWithdrawalPeriod._();
   factory AdministrableProductDefinitionWithdrawalPeriod({
     String? id,
@@ -208,7 +203,7 @@ abstract class AdministrableProductDefinitionWithdrawalPeriod
 }
 
 @freezed
-abstract class ClinicalUseIssue with Resource implements _$ClinicalUseIssue {
+class ClinicalUseIssue with Resource, _$ClinicalUseIssue {
   ClinicalUseIssue._();
   factory ClinicalUseIssue({
     @Default(R5ResourceType.ClinicalUseIssue)
@@ -258,8 +253,7 @@ abstract class ClinicalUseIssue with Resource implements _$ClinicalUseIssue {
 }
 
 @freezed
-abstract class ClinicalUseIssueContraindication
-    implements _$ClinicalUseIssueContraindication {
+class ClinicalUseIssueContraindication with _$ClinicalUseIssueContraindication {
   ClinicalUseIssueContraindication._();
   factory ClinicalUseIssueContraindication({
     String? id,
@@ -293,8 +287,7 @@ abstract class ClinicalUseIssueContraindication
 }
 
 @freezed
-abstract class ClinicalUseIssueOtherTherapy
-    implements _$ClinicalUseIssueOtherTherapy {
+class ClinicalUseIssueOtherTherapy with _$ClinicalUseIssueOtherTherapy {
   ClinicalUseIssueOtherTherapy._();
   factory ClinicalUseIssueOtherTherapy({
     String? id,
@@ -324,8 +317,7 @@ abstract class ClinicalUseIssueOtherTherapy
 }
 
 @freezed
-abstract class ClinicalUseIssueIndication
-    implements _$ClinicalUseIssueIndication {
+class ClinicalUseIssueIndication with _$ClinicalUseIssueIndication {
   ClinicalUseIssueIndication._();
   factory ClinicalUseIssueIndication({
     String? id,
@@ -359,8 +351,7 @@ abstract class ClinicalUseIssueIndication
 }
 
 @freezed
-abstract class ClinicalUseIssueInteraction
-    implements _$ClinicalUseIssueInteraction {
+class ClinicalUseIssueInteraction with _$ClinicalUseIssueInteraction {
   ClinicalUseIssueInteraction._();
   factory ClinicalUseIssueInteraction({
     String? id,
@@ -392,8 +383,7 @@ abstract class ClinicalUseIssueInteraction
 }
 
 @freezed
-abstract class ClinicalUseIssueInteractant
-    implements _$ClinicalUseIssueInteractant {
+class ClinicalUseIssueInteractant with _$ClinicalUseIssueInteractant {
   ClinicalUseIssueInteractant._();
   factory ClinicalUseIssueInteractant({
     String? id,
@@ -422,8 +412,7 @@ abstract class ClinicalUseIssueInteractant
 }
 
 @freezed
-abstract class ClinicalUseIssueUndesirableEffect
-    implements _$ClinicalUseIssueUndesirableEffect {
+class ClinicalUseIssueUndesirableEffect with _$ClinicalUseIssueUndesirableEffect {
   ClinicalUseIssueUndesirableEffect._();
   factory ClinicalUseIssueUndesirableEffect({
     String? id,
@@ -455,7 +444,7 @@ abstract class ClinicalUseIssueUndesirableEffect
 }
 
 @freezed
-abstract class Ingredient with Resource implements _$Ingredient {
+class Ingredient with Resource, _$Ingredient {
   Ingredient._();
   factory Ingredient({
     @Default(R5ResourceType.Ingredient)
@@ -501,7 +490,7 @@ abstract class Ingredient with Resource implements _$Ingredient {
 }
 
 @freezed
-abstract class IngredientSubstance implements _$IngredientSubstance {
+class IngredientSubstance with _$IngredientSubstance {
   IngredientSubstance._();
   factory IngredientSubstance({
     String? id,
@@ -530,7 +519,7 @@ abstract class IngredientSubstance implements _$IngredientSubstance {
 }
 
 @freezed
-abstract class IngredientStrength implements _$IngredientStrength {
+class IngredientStrength with _$IngredientStrength {
   IngredientStrength._();
   factory IngredientStrength({
     String? id,
@@ -568,8 +557,7 @@ abstract class IngredientStrength implements _$IngredientStrength {
 }
 
 @freezed
-abstract class IngredientReferenceStrength
-    implements _$IngredientReferenceStrength {
+class IngredientReferenceStrength with _$IngredientReferenceStrength {
   IngredientReferenceStrength._();
   factory IngredientReferenceStrength({
     String? id,
@@ -603,8 +591,7 @@ abstract class IngredientReferenceStrength
 }
 
 @freezed
-abstract class IngredientSpecifiedSubstance
-    implements _$IngredientSpecifiedSubstance {
+class IngredientSpecifiedSubstance with _$IngredientSpecifiedSubstance {
   IngredientSpecifiedSubstance._();
   factory IngredientSpecifiedSubstance({
     String? id,
@@ -636,9 +623,8 @@ abstract class IngredientSpecifiedSubstance
 }
 
 @freezed
-abstract class ManufacturedItemDefinition
-    with Resource
-    implements _$ManufacturedItemDefinition {
+class ManufacturedItemDefinition
+    with Resource, _$ManufacturedItemDefinition {
   ManufacturedItemDefinition._();
   factory ManufacturedItemDefinition({
     @Default(R5ResourceType.ManufacturedItemDefinition)
@@ -681,8 +667,7 @@ abstract class ManufacturedItemDefinition
 }
 
 @freezed
-abstract class ManufacturedItemDefinitionProperty
-    implements _$ManufacturedItemDefinitionProperty {
+class ManufacturedItemDefinitionProperty with _$ManufacturedItemDefinitionProperty {
   ManufacturedItemDefinitionProperty._();
   factory ManufacturedItemDefinitionProperty({
     String? id,
@@ -719,9 +704,8 @@ abstract class ManufacturedItemDefinitionProperty
 }
 
 @freezed
-abstract class MedicinalProductDefinition
-    with Resource
-    implements _$MedicinalProductDefinition {
+class MedicinalProductDefinition
+    with Resource, _$MedicinalProductDefinition {
   MedicinalProductDefinition._();
   factory MedicinalProductDefinition({
     @Default(R5ResourceType.MedicinalProductDefinition)
@@ -790,8 +774,7 @@ abstract class MedicinalProductDefinition
 }
 
 @freezed
-abstract class MedicinalProductDefinitionContact
-    implements _$MedicinalProductDefinitionContact {
+class MedicinalProductDefinitionContact with _$MedicinalProductDefinitionContact {
   MedicinalProductDefinitionContact._();
   factory MedicinalProductDefinitionContact({
     String? id,
@@ -822,8 +805,7 @@ abstract class MedicinalProductDefinitionContact
 }
 
 @freezed
-abstract class MedicinalProductDefinitionName
-    implements _$MedicinalProductDefinitionName {
+class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
   MedicinalProductDefinitionName._();
   factory MedicinalProductDefinitionName({
     String? id,
@@ -857,8 +839,7 @@ abstract class MedicinalProductDefinitionName
 }
 
 @freezed
-abstract class MedicinalProductDefinitionNamePart
-    implements _$MedicinalProductDefinitionNamePart {
+class MedicinalProductDefinitionNamePart with _$MedicinalProductDefinitionNamePart {
   MedicinalProductDefinitionNamePart._();
   factory MedicinalProductDefinitionNamePart({
     String? id,
@@ -890,8 +871,7 @@ abstract class MedicinalProductDefinitionNamePart
 }
 
 @freezed
-abstract class MedicinalProductDefinitionCountryLanguage
-    implements _$MedicinalProductDefinitionCountryLanguage {
+class MedicinalProductDefinitionCountryLanguage with _$MedicinalProductDefinitionCountryLanguage {
   MedicinalProductDefinitionCountryLanguage._();
   factory MedicinalProductDefinitionCountryLanguage({
     String? id,
@@ -923,8 +903,7 @@ abstract class MedicinalProductDefinitionCountryLanguage
 }
 
 @freezed
-abstract class MedicinalProductDefinitionCrossReference
-    implements _$MedicinalProductDefinitionCrossReference {
+class MedicinalProductDefinitionCrossReference with _$MedicinalProductDefinitionCrossReference {
   MedicinalProductDefinitionCrossReference._();
   factory MedicinalProductDefinitionCrossReference({
     String? id,
@@ -956,8 +935,7 @@ abstract class MedicinalProductDefinitionCrossReference
 }
 
 @freezed
-abstract class MedicinalProductDefinitionManufacturingBusinessOperation
-    implements _$MedicinalProductDefinitionManufacturingBusinessOperation {
+class MedicinalProductDefinitionManufacturingBusinessOperation with _$MedicinalProductDefinitionManufacturingBusinessOperation {
   MedicinalProductDefinitionManufacturingBusinessOperation._();
   factory MedicinalProductDefinitionManufacturingBusinessOperation({
     String? id,
@@ -993,9 +971,8 @@ abstract class MedicinalProductDefinitionManufacturingBusinessOperation
 }
 
 @freezed
-abstract class PackagedProductDefinition
-    with Resource
-    implements _$PackagedProductDefinition {
+class PackagedProductDefinition
+    with Resource, _$PackagedProductDefinition {
   PackagedProductDefinition._();
   factory PackagedProductDefinition({
     @Default(R5ResourceType.PackagedProductDefinition)
@@ -1051,8 +1028,7 @@ abstract class PackagedProductDefinition
 }
 
 @freezed
-abstract class PackagedProductDefinitionBatchIdentifier
-    implements _$PackagedProductDefinitionBatchIdentifier {
+class PackagedProductDefinitionBatchIdentifier with _$PackagedProductDefinitionBatchIdentifier {
   PackagedProductDefinitionBatchIdentifier._();
   factory PackagedProductDefinitionBatchIdentifier({
     String? id,
@@ -1083,8 +1059,7 @@ abstract class PackagedProductDefinitionBatchIdentifier
 }
 
 @freezed
-abstract class PackagedProductDefinitionPackage
-    implements _$PackagedProductDefinitionPackage {
+class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
   PackagedProductDefinitionPackage._();
   factory PackagedProductDefinitionPackage({
     String? id,
@@ -1124,8 +1099,7 @@ abstract class PackagedProductDefinitionPackage
 }
 
 @freezed
-abstract class PackagedProductDefinitionProperty
-    implements _$PackagedProductDefinitionProperty {
+class PackagedProductDefinitionProperty with _$PackagedProductDefinitionProperty {
   PackagedProductDefinitionProperty._();
   factory PackagedProductDefinitionProperty({
     String? id,
@@ -1162,8 +1136,7 @@ abstract class PackagedProductDefinitionProperty
 }
 
 @freezed
-abstract class PackagedProductDefinitionContainedItem
-    implements _$PackagedProductDefinitionContainedItem {
+class PackagedProductDefinitionContainedItem with _$PackagedProductDefinitionContainedItem {
   PackagedProductDefinitionContainedItem._();
   factory PackagedProductDefinitionContainedItem({
     String? id,
@@ -1196,9 +1169,7 @@ abstract class PackagedProductDefinitionContainedItem
 }
 
 @freezed
-abstract class RegulatedAuthorization
-    with Resource
-    implements _$RegulatedAuthorization {
+class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   RegulatedAuthorization._();
   factory RegulatedAuthorization({
     @Default(R5ResourceType.RegulatedAuthorization)
@@ -1253,8 +1224,7 @@ abstract class RegulatedAuthorization
 }
 
 @freezed
-abstract class RegulatedAuthorizationRelatedDate
-    implements _$RegulatedAuthorizationRelatedDate {
+class RegulatedAuthorizationRelatedDate with _$RegulatedAuthorizationRelatedDate {
   RegulatedAuthorizationRelatedDate._();
   factory RegulatedAuthorizationRelatedDate({
     String? id,
@@ -1287,8 +1257,7 @@ abstract class RegulatedAuthorizationRelatedDate
 }
 
 @freezed
-abstract class RegulatedAuthorizationCase
-    implements _$RegulatedAuthorizationCase {
+class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
   RegulatedAuthorizationCase._();
   factory RegulatedAuthorizationCase({
     String? id,
@@ -1322,9 +1291,7 @@ abstract class RegulatedAuthorizationCase
 }
 
 @freezed
-abstract class SubstanceDefinition
-    with Resource
-    implements _$SubstanceDefinition {
+class SubstanceDefinition with Resource, _$SubstanceDefinition {
   SubstanceDefinition._();
   factory SubstanceDefinition({
     @Default(R5ResourceType.SubstanceDefinition)
@@ -1385,8 +1352,7 @@ abstract class SubstanceDefinition
 }
 
 @freezed
-abstract class SubstanceDefinitionMoiety
-    implements _$SubstanceDefinitionMoiety {
+class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
   SubstanceDefinitionMoiety._();
   factory SubstanceDefinitionMoiety({
     String? id,
@@ -1425,8 +1391,7 @@ abstract class SubstanceDefinitionMoiety
 }
 
 @freezed
-abstract class SubstanceDefinitionProperty
-    implements _$SubstanceDefinitionProperty {
+class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
   SubstanceDefinitionProperty._();
   factory SubstanceDefinitionProperty({
     String? id,
@@ -1464,8 +1429,7 @@ abstract class SubstanceDefinitionProperty
 }
 
 @freezed
-abstract class SubstanceDefinitionStructure
-    implements _$SubstanceDefinitionStructure {
+class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
   SubstanceDefinitionStructure._();
   factory SubstanceDefinitionStructure({
     String? id,
@@ -1504,8 +1468,7 @@ abstract class SubstanceDefinitionStructure
 }
 
 @freezed
-abstract class SubstanceDefinitionIsotope
-    implements _$SubstanceDefinitionIsotope {
+class SubstanceDefinitionIsotope with _$SubstanceDefinitionIsotope {
   SubstanceDefinitionIsotope._();
   factory SubstanceDefinitionIsotope({
     String? id,
@@ -1537,8 +1500,7 @@ abstract class SubstanceDefinitionIsotope
 }
 
 @freezed
-abstract class SubstanceDefinitionMolecularWeight
-    implements _$SubstanceDefinitionMolecularWeight {
+class SubstanceDefinitionMolecularWeight with _$SubstanceDefinitionMolecularWeight {
   SubstanceDefinitionMolecularWeight._();
   factory SubstanceDefinitionMolecularWeight({
     String? id,
@@ -1570,8 +1532,7 @@ abstract class SubstanceDefinitionMolecularWeight
 }
 
 @freezed
-abstract class SubstanceDefinitionRepresentation
-    implements _$SubstanceDefinitionRepresentation {
+class SubstanceDefinitionRepresentation with _$SubstanceDefinitionRepresentation {
   SubstanceDefinitionRepresentation._();
   factory SubstanceDefinitionRepresentation({
     String? id,
@@ -1605,7 +1566,7 @@ abstract class SubstanceDefinitionRepresentation
 }
 
 @freezed
-abstract class SubstanceDefinitionCode implements _$SubstanceDefinitionCode {
+class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
   SubstanceDefinitionCode._();
   factory SubstanceDefinitionCode({
     String? id,
@@ -1637,7 +1598,7 @@ abstract class SubstanceDefinitionCode implements _$SubstanceDefinitionCode {
 }
 
 @freezed
-abstract class SubstanceDefinitionName implements _$SubstanceDefinitionName {
+class SubstanceDefinitionName with _$SubstanceDefinitionName {
   SubstanceDefinitionName._();
   factory SubstanceDefinitionName({
     String? id,
@@ -1676,8 +1637,7 @@ abstract class SubstanceDefinitionName implements _$SubstanceDefinitionName {
 }
 
 @freezed
-abstract class SubstanceDefinitionOfficial
-    implements _$SubstanceDefinitionOfficial {
+class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
   SubstanceDefinitionOfficial._();
   factory SubstanceDefinitionOfficial({
     String? id,
@@ -1708,8 +1668,7 @@ abstract class SubstanceDefinitionOfficial
 }
 
 @freezed
-abstract class SubstanceDefinitionRelationship
-    implements _$SubstanceDefinitionRelationship {
+class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
   SubstanceDefinitionRelationship._();
   factory SubstanceDefinitionRelationship({
     String? id,
@@ -1751,9 +1710,7 @@ abstract class SubstanceDefinitionRelationship
 }
 
 @freezed
-abstract class SubstanceNucleicAcid
-    with Resource
-    implements _$SubstanceNucleicAcid {
+class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   SubstanceNucleicAcid._();
   factory SubstanceNucleicAcid({
     @Default(R5ResourceType.SubstanceNucleicAcid)
@@ -1796,8 +1753,7 @@ abstract class SubstanceNucleicAcid
 }
 
 @freezed
-abstract class SubstanceNucleicAcidSubunit
-    implements _$SubstanceNucleicAcidSubunit {
+class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   SubstanceNucleicAcidSubunit._();
   factory SubstanceNucleicAcidSubunit({
     String? id,
@@ -1835,8 +1791,7 @@ abstract class SubstanceNucleicAcidSubunit
 }
 
 @freezed
-abstract class SubstanceNucleicAcidLinkage
-    implements _$SubstanceNucleicAcidLinkage {
+class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   SubstanceNucleicAcidLinkage._();
   factory SubstanceNucleicAcidLinkage({
     String? id,
@@ -1870,8 +1825,7 @@ abstract class SubstanceNucleicAcidLinkage
 }
 
 @freezed
-abstract class SubstanceNucleicAcidSugar
-    implements _$SubstanceNucleicAcidSugar {
+class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   SubstanceNucleicAcidSugar._();
   factory SubstanceNucleicAcidSugar({
     String? id,
@@ -1903,7 +1857,7 @@ abstract class SubstanceNucleicAcidSugar
 }
 
 @freezed
-abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
+class SubstancePolymer with Resource, _$SubstancePolymer {
   SubstancePolymer._();
   factory SubstancePolymer({
     @Default(R5ResourceType.SubstancePolymer)
@@ -1947,8 +1901,7 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
 }
 
 @freezed
-abstract class SubstancePolymerMonomerSet
-    implements _$SubstancePolymerMonomerSet {
+class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   SubstancePolymerMonomerSet._();
   factory SubstancePolymerMonomerSet({
     String? id,
@@ -1977,8 +1930,7 @@ abstract class SubstancePolymerMonomerSet
 }
 
 @freezed
-abstract class SubstancePolymerStartingMaterial
-    implements _$SubstancePolymerStartingMaterial {
+class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   SubstancePolymerStartingMaterial._();
   factory SubstancePolymerStartingMaterial({
     String? id,
@@ -2012,7 +1964,7 @@ abstract class SubstancePolymerStartingMaterial
 }
 
 @freezed
-abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
+class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   SubstancePolymerRepeat._();
   factory SubstancePolymerRepeat({
     String? id,
@@ -2043,8 +1995,7 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
 }
 
 @freezed
-abstract class SubstancePolymerRepeatUnit
-    implements _$SubstancePolymerRepeatUnit {
+class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   SubstancePolymerRepeatUnit._();
   factory SubstancePolymerRepeatUnit({
     String? id,
@@ -2078,8 +2029,7 @@ abstract class SubstancePolymerRepeatUnit
 }
 
 @freezed
-abstract class SubstancePolymerDegreeOfPolymerisation
-    implements _$SubstancePolymerDegreeOfPolymerisation {
+class SubstancePolymerDegreeOfPolymerisation with _$SubstancePolymerDegreeOfPolymerisation {
   SubstancePolymerDegreeOfPolymerisation._();
   factory SubstancePolymerDegreeOfPolymerisation({
     String? id,
@@ -2115,8 +2065,7 @@ abstract class SubstancePolymerDegreeOfPolymerisation
 }
 
 @freezed
-abstract class SubstancePolymerStructuralRepresentation
-    implements _$SubstancePolymerStructuralRepresentation {
+class SubstancePolymerStructuralRepresentation with _$SubstancePolymerStructuralRepresentation {
   SubstancePolymerStructuralRepresentation._();
   factory SubstancePolymerStructuralRepresentation({
     String? id,
@@ -2150,7 +2099,7 @@ abstract class SubstancePolymerStructuralRepresentation
 }
 
 @freezed
-abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
+class SubstanceProtein with Resource, _$SubstanceProtein {
   SubstanceProtein._();
   factory SubstanceProtein({
     @Default(R5ResourceType.SubstanceProtein)
@@ -2192,7 +2141,7 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
 }
 
 @freezed
-abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
+class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   SubstanceProteinSubunit._();
   factory SubstanceProteinSubunit({
     String? id,
@@ -2233,9 +2182,8 @@ abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
 }
 
 @freezed
-abstract class SubstanceReferenceInformation
-    with Resource
-    implements _$SubstanceReferenceInformation {
+class SubstanceReferenceInformation
+    with Resource, _$SubstanceReferenceInformation {
   SubstanceReferenceInformation._();
   factory SubstanceReferenceInformation({
     @Default(R5ResourceType.SubstanceReferenceInformation)
@@ -2277,8 +2225,7 @@ abstract class SubstanceReferenceInformation
 }
 
 @freezed
-abstract class SubstanceReferenceInformationGene
-    implements _$SubstanceReferenceInformationGene {
+class SubstanceReferenceInformationGene with _$SubstanceReferenceInformationGene {
   SubstanceReferenceInformationGene._();
   factory SubstanceReferenceInformationGene({
     String? id,
@@ -2310,8 +2257,7 @@ abstract class SubstanceReferenceInformationGene
 }
 
 @freezed
-abstract class SubstanceReferenceInformationGeneElement
-    implements _$SubstanceReferenceInformationGeneElement {
+class SubstanceReferenceInformationGeneElement with _$SubstanceReferenceInformationGeneElement {
   SubstanceReferenceInformationGeneElement._();
   factory SubstanceReferenceInformationGeneElement({
     String? id,
@@ -2343,8 +2289,7 @@ abstract class SubstanceReferenceInformationGeneElement
 }
 
 @freezed
-abstract class SubstanceReferenceInformationTarget
-    implements _$SubstanceReferenceInformationTarget {
+class SubstanceReferenceInformationTarget with _$SubstanceReferenceInformationTarget {
   SubstanceReferenceInformationTarget._();
   factory SubstanceReferenceInformationTarget({
     String? id,
@@ -2384,9 +2329,8 @@ abstract class SubstanceReferenceInformationTarget
 }
 
 @freezed
-abstract class SubstanceSourceMaterial
-    with Resource
-    implements _$SubstanceSourceMaterial {
+class SubstanceSourceMaterial
+    with Resource, _$SubstanceSourceMaterial {
   SubstanceSourceMaterial._();
   factory SubstanceSourceMaterial({
     @Default(R5ResourceType.SubstanceSourceMaterial)
@@ -2440,8 +2384,7 @@ abstract class SubstanceSourceMaterial
 }
 
 @freezed
-abstract class SubstanceSourceMaterialFractionDescription
-    implements _$SubstanceSourceMaterialFractionDescription {
+class SubstanceSourceMaterialFractionDescription with _$SubstanceSourceMaterialFractionDescription {
   SubstanceSourceMaterialFractionDescription._();
   factory SubstanceSourceMaterialFractionDescription({
     String? id,
@@ -2473,8 +2416,7 @@ abstract class SubstanceSourceMaterialFractionDescription
 }
 
 @freezed
-abstract class SubstanceSourceMaterialOrganism
-    implements _$SubstanceSourceMaterialOrganism {
+class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   SubstanceSourceMaterialOrganism._();
   factory SubstanceSourceMaterialOrganism({
     String? id,
@@ -2513,8 +2455,7 @@ abstract class SubstanceSourceMaterialOrganism
 }
 
 @freezed
-abstract class SubstanceSourceMaterialAuthor
-    implements _$SubstanceSourceMaterialAuthor {
+class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   SubstanceSourceMaterialAuthor._();
   factory SubstanceSourceMaterialAuthor({
     String? id,
@@ -2544,8 +2485,7 @@ abstract class SubstanceSourceMaterialAuthor
 }
 
 @freezed
-abstract class SubstanceSourceMaterialHybrid
-    implements _$SubstanceSourceMaterialHybrid {
+class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   SubstanceSourceMaterialHybrid._();
   factory SubstanceSourceMaterialHybrid({
     String? id,
@@ -2583,8 +2523,7 @@ abstract class SubstanceSourceMaterialHybrid
 }
 
 @freezed
-abstract class SubstanceSourceMaterialOrganismGeneral
-    implements _$SubstanceSourceMaterialOrganismGeneral {
+class SubstanceSourceMaterialOrganismGeneral with _$SubstanceSourceMaterialOrganismGeneral {
   SubstanceSourceMaterialOrganismGeneral._();
   factory SubstanceSourceMaterialOrganismGeneral({
     String? id,
@@ -2617,8 +2556,7 @@ abstract class SubstanceSourceMaterialOrganismGeneral
 }
 
 @freezed
-abstract class SubstanceSourceMaterialPartDescription
-    implements _$SubstanceSourceMaterialPartDescription {
+class SubstanceSourceMaterialPartDescription with _$SubstanceSourceMaterialPartDescription {
   SubstanceSourceMaterialPartDescription._();
   factory SubstanceSourceMaterialPartDescription({
     String? id,

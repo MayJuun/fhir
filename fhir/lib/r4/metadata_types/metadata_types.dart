@@ -12,7 +12,7 @@ part 'metadata_types.freezed.dart';
 part 'metadata_types.g.dart';
 
 @freezed
-abstract class ContactDetail implements _$ContactDetail {
+class ContactDetail with _$ContactDetail {
   ContactDetail._();
 
   /// [ContactDetail]: Specifies contact information for a person or
@@ -60,7 +60,7 @@ abstract class ContactDetail implements _$ContactDetail {
 }
 
 @freezed
-abstract class Contributor implements _$Contributor {
+class Contributor with _$Contributor {
   Contributor._();
 
   /// [Contributor]: A contributor to the content of a knowledge asset,
@@ -115,7 +115,7 @@ abstract class Contributor implements _$Contributor {
 }
 
 @freezed
-abstract class DataRequirement implements _$DataRequirement {
+class DataRequirement with _$DataRequirement {
   DataRequirement._();
 
   /// [DataRequirement]: Describes a required data item for evaluation in terms
@@ -209,8 +209,7 @@ abstract class DataRequirement implements _$DataRequirement {
 }
 
 @freezed
-abstract class DataRequirementCodeFilter
-    implements _$DataRequirementCodeFilter {
+class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   DataRequirementCodeFilter._();
 
   /// [DataRequirement_CodeFilter]: Describes a required data item for
@@ -299,8 +298,7 @@ abstract class DataRequirementCodeFilter
 }
 
 @freezed
-abstract class DataRequirementDateFilter
-    implements _$DataRequirementDateFilter {
+class DataRequirementDateFilter with _$DataRequirementDateFilter {
   DataRequirementDateFilter._();
 
   /// [DataRequirement_DateFilter]: Describes a required data item for
@@ -403,7 +401,7 @@ abstract class DataRequirementDateFilter
 }
 
 @freezed
-abstract class DataRequirementSort implements _$DataRequirementSort {
+class DataRequirementSort with _$DataRequirementSort {
   DataRequirementSort._();
 
   /// [DataRequirement_Sort]: Describes a required data item for evaluation in
@@ -474,7 +472,7 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
 }
 
 @freezed
-abstract class ParameterDefinition implements _$ParameterDefinition {
+class ParameterDefinition with _$ParameterDefinition {
   ParameterDefinition._();
 
   /// [ParameterDefinition]: The parameters to the module. This collection
@@ -558,7 +556,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
 }
 
 @freezed
-abstract class RelatedArtifact implements _$RelatedArtifact {
+class RelatedArtifact with _$RelatedArtifact {
   RelatedArtifact._();
 
   /// [RelatedArtifact]: Related artifacts such as additional documentation,
@@ -639,7 +637,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
 }
 
 @freezed
-abstract class TriggerDefinition implements _$TriggerDefinition {
+class TriggerDefinition with _$TriggerDefinition {
   TriggerDefinition._();
 
   /// [TriggerDefinition]: A description of a triggering event. Triggering
@@ -722,7 +720,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
 }
 
 @freezed
-abstract class UsageContext implements _$UsageContext {
+class UsageContext with _$UsageContext {
   UsageContext._();
 
   /// [UsageContext]: Specifies clinical/business/etc. metadata that can be used
@@ -782,7 +780,7 @@ abstract class UsageContext implements _$UsageContext {
 }
 
 @freezed
-abstract class Expression implements _$Expression {
+class Expression with _$Expression {
   Expression._();
 
   /// [Expression]: A expression that is evaluated in a specified context and

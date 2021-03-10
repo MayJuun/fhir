@@ -12,7 +12,7 @@ part 'support.freezed.dart';
 part 'support.g.dart';
 
 @freezed
-abstract class Coverage with Resource implements _$Coverage {
+class Coverage with Resource, _$Coverage {
   Coverage._();
   factory Coverage({
     @Default(R5ResourceType.Coverage)
@@ -70,7 +70,7 @@ abstract class Coverage with Resource implements _$Coverage {
 }
 
 @freezed
-abstract class CoverageClass implements _$CoverageClass {
+class CoverageClass with _$CoverageClass {
   CoverageClass._();
   factory CoverageClass({
     String? id,
@@ -101,8 +101,7 @@ abstract class CoverageClass implements _$CoverageClass {
 }
 
 @freezed
-abstract class CoverageCostToBeneficiary
-    implements _$CoverageCostToBeneficiary {
+class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   CoverageCostToBeneficiary._();
   factory CoverageCostToBeneficiary({
     String? id,
@@ -133,7 +132,7 @@ abstract class CoverageCostToBeneficiary
 }
 
 @freezed
-abstract class CoverageException implements _$CoverageException {
+class CoverageException with _$CoverageException {
   CoverageException._();
   factory CoverageException({
     String? id,
@@ -161,9 +160,7 @@ abstract class CoverageException implements _$CoverageException {
 }
 
 @freezed
-abstract class CoverageEligibilityRequest
-    with Resource
-    implements _$CoverageEligibilityRequest {
+class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   CoverageEligibilityRequest._();
   factory CoverageEligibilityRequest({
     @Default(R5ResourceType.CoverageEligibilityRequest)
@@ -219,8 +216,8 @@ abstract class CoverageEligibilityRequest
 }
 
 @freezed
-abstract class CoverageEligibilityRequestSupportingInfo
-    implements _$CoverageEligibilityRequestSupportingInfo {
+class CoverageEligibilityRequestSupportingInfo
+    with _$CoverageEligibilityRequestSupportingInfo {
   CoverageEligibilityRequestSupportingInfo._();
   factory CoverageEligibilityRequestSupportingInfo({
     String? id,
@@ -254,8 +251,8 @@ abstract class CoverageEligibilityRequestSupportingInfo
 }
 
 @freezed
-abstract class CoverageEligibilityRequestInsurance
-    implements _$CoverageEligibilityRequestInsurance {
+class CoverageEligibilityRequestInsurance
+    with _$CoverageEligibilityRequestInsurance {
   CoverageEligibilityRequestInsurance._();
   factory CoverageEligibilityRequestInsurance({
     String? id,
@@ -289,8 +286,7 @@ abstract class CoverageEligibilityRequestInsurance
 }
 
 @freezed
-abstract class CoverageEligibilityRequestItem
-    implements _$CoverageEligibilityRequestItem {
+class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   CoverageEligibilityRequestItem._();
   factory CoverageEligibilityRequestItem({
     String? id,
@@ -331,8 +327,8 @@ abstract class CoverageEligibilityRequestItem
 }
 
 @freezed
-abstract class CoverageEligibilityRequestDiagnosis
-    implements _$CoverageEligibilityRequestDiagnosis {
+class CoverageEligibilityRequestDiagnosis
+    with _$CoverageEligibilityRequestDiagnosis {
   CoverageEligibilityRequestDiagnosis._();
   factory CoverageEligibilityRequestDiagnosis({
     String? id,
@@ -363,9 +359,7 @@ abstract class CoverageEligibilityRequestDiagnosis
 }
 
 @freezed
-abstract class CoverageEligibilityResponse
-    with Resource
-    implements _$CoverageEligibilityResponse {
+class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   CoverageEligibilityResponse._();
   factory CoverageEligibilityResponse({
     @Default(R5ResourceType.CoverageEligibilityResponse)
@@ -426,8 +420,8 @@ abstract class CoverageEligibilityResponse
 }
 
 @freezed
-abstract class CoverageEligibilityResponseInsurance
-    implements _$CoverageEligibilityResponseInsurance {
+class CoverageEligibilityResponseInsurance
+    with _$CoverageEligibilityResponseInsurance {
   CoverageEligibilityResponseInsurance._();
   factory CoverageEligibilityResponseInsurance({
     String? id,
@@ -461,8 +455,7 @@ abstract class CoverageEligibilityResponseInsurance
 }
 
 @freezed
-abstract class CoverageEligibilityResponseItem
-    implements _$CoverageEligibilityResponseItem {
+class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   CoverageEligibilityResponseItem._();
   factory CoverageEligibilityResponseItem({
     String? id,
@@ -511,8 +504,8 @@ abstract class CoverageEligibilityResponseItem
 }
 
 @freezed
-abstract class CoverageEligibilityResponseBenefit
-    implements _$CoverageEligibilityResponseBenefit {
+class CoverageEligibilityResponseBenefit
+    with _$CoverageEligibilityResponseBenefit {
   CoverageEligibilityResponseBenefit._();
   factory CoverageEligibilityResponseBenefit({
     String? id,
@@ -552,8 +545,7 @@ abstract class CoverageEligibilityResponseBenefit
 }
 
 @freezed
-abstract class CoverageEligibilityResponseError
-    implements _$CoverageEligibilityResponseError {
+class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   CoverageEligibilityResponseError._();
   factory CoverageEligibilityResponseError({
     String? id,
@@ -583,7 +575,7 @@ abstract class CoverageEligibilityResponseError
 }
 
 @freezed
-abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
+class EnrollmentRequest with Resource, _$EnrollmentRequest {
   EnrollmentRequest._();
   factory EnrollmentRequest({
     @Default(R5ResourceType.EnrollmentRequest)
@@ -628,9 +620,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
 }
 
 @freezed
-abstract class EnrollmentResponse
-    with Resource
-    implements _$EnrollmentResponse {
+class EnrollmentResponse with Resource, _$EnrollmentResponse {
   EnrollmentResponse._();
   factory EnrollmentResponse({
     @Default(R5ResourceType.EnrollmentResponse)

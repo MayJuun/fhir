@@ -12,7 +12,7 @@ part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
 @freezed
-abstract class Appointment with Resource implements _$Appointment {
+class Appointment with Resource, _$Appointment {
   Appointment._();
 
   /// [Appointment]: A booking of a healthcare event among patient(s),
@@ -239,7 +239,7 @@ abstract class Appointment with Resource implements _$Appointment {
 }
 
 @freezed
-abstract class AppointmentParticipant implements _$AppointmentParticipant {
+class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
 
   /// [Appointment_Participant]: A booking of a healthcare event among
@@ -320,9 +320,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
 }
 
 @freezed
-abstract class AppointmentResponse
-    with Resource
-    implements _$AppointmentResponse {
+class AppointmentResponse with Resource, _$AppointmentResponse {
   AppointmentResponse._();
 
   /// [AppointmentResponse]: A reply to an appointment request for a patient
@@ -461,7 +459,7 @@ abstract class AppointmentResponse
 }
 
 @freezed
-abstract class Schedule with Resource implements _$Schedule {
+class Schedule with Resource, _$Schedule {
   Schedule._();
 
   /// [Schedule]: A container for slots of time that may be available for
@@ -594,7 +592,7 @@ abstract class Schedule with Resource implements _$Schedule {
 }
 
 @freezed
-abstract class Slot with Resource implements _$Slot {
+class Slot with Resource, _$Slot {
   Slot._();
 
   /// [Slot]: A slot of time on a schedule that may be available for booking
@@ -743,7 +741,7 @@ abstract class Slot with Resource implements _$Slot {
 }
 
 @freezed
-abstract class Task with Resource implements _$Task {
+class Task with Resource, _$Task {
   Task._();
 
   /// [Task]: A task to be performed.
@@ -979,7 +977,7 @@ abstract class Task with Resource implements _$Task {
 }
 
 @freezed
-abstract class TaskRestriction implements _$TaskRestriction {
+class TaskRestriction with _$TaskRestriction {
   TaskRestriction._();
 
   /// [Task_Restriction]: A task to be performed.
@@ -1045,7 +1043,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
 }
 
 @freezed
-abstract class TaskInput implements _$TaskInput {
+class TaskInput with _$TaskInput {
   TaskInput._();
 
   /// [Task_Input]: A task to be performed.
@@ -1310,7 +1308,7 @@ abstract class TaskInput implements _$TaskInput {
 }
 
 @freezed
-abstract class TaskOutput implements _$TaskOutput {
+class TaskOutput with _$TaskOutput {
   TaskOutput._();
 
   /// [Task_Output]: A task to be performed.
@@ -1574,9 +1572,7 @@ abstract class TaskOutput implements _$TaskOutput {
 }
 
 @freezed
-abstract class VerificationResult
-    with Resource
-    implements _$VerificationResult {
+class VerificationResult with Resource, _$VerificationResult {
   VerificationResult._();
 
   /// [VerificationResult]: Describes validation requirements, source(s), status
@@ -1734,8 +1730,7 @@ abstract class VerificationResult
 }
 
 @freezed
-abstract class VerificationResultPrimarySource
-    implements _$VerificationResultPrimarySource {
+class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   VerificationResultPrimarySource._();
 
   /// [VerificationResult_PrimarySource]: Describes validation requirements,
@@ -1822,8 +1817,7 @@ abstract class VerificationResultPrimarySource
 }
 
 @freezed
-abstract class VerificationResultAttestation
-    implements _$VerificationResultAttestation {
+class VerificationResultAttestation with _$VerificationResultAttestation {
   VerificationResultAttestation._();
 
   /// [VerificationResult_Attestation]: Describes validation requirements,
@@ -1920,8 +1914,7 @@ abstract class VerificationResultAttestation
 }
 
 @freezed
-abstract class VerificationResultValidator
-    implements _$VerificationResultValidator {
+class VerificationResultValidator with _$VerificationResultValidator {
   VerificationResultValidator._();
 
   /// [VerificationResult_Validator]: Describes validation requirements,

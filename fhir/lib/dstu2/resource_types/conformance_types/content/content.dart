@@ -12,9 +12,7 @@ part 'content.freezed.dart';
 part 'content.g.dart';
 
 @freezed
-abstract class StructureDefinition
-    with Resource
-    implements _$StructureDefinition {
+class StructureDefinition with Resource, _$StructureDefinition {
   StructureDefinition._();
   factory StructureDefinition({
     @Default(Dstu2ResourceType.StructureDefinition)
@@ -91,7 +89,7 @@ abstract class StructureDefinition
 }
 
 @freezed
-abstract class StructureDefinitionContact with _$StructureDefinitionContact {
+class StructureDefinitionContact with _$StructureDefinitionContact {
   StructureDefinitionContact._();
   factory StructureDefinitionContact({
     Id? id,
@@ -120,7 +118,7 @@ abstract class StructureDefinitionContact with _$StructureDefinitionContact {
 }
 
 @freezed
-abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
+class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
     Id? id,
@@ -156,7 +154,7 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
 }
 
 @freezed
-abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
+class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
     Id? id,
@@ -184,8 +182,7 @@ abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 }
 
 @freezed
-abstract class StructureDefinitionDifferential
-    with _$StructureDefinitionDifferential {
+class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
     Id? id,
@@ -215,7 +212,7 @@ abstract class StructureDefinitionDifferential
 }
 
 @freezed
-abstract class DataElement with Resource implements _$DataElement {
+class DataElement with Resource, _$DataElement {
   DataElement._();
   factory DataElement({
     @Default(Dstu2ResourceType.DataElement)
@@ -265,7 +262,7 @@ abstract class DataElement with Resource implements _$DataElement {
 }
 
 @freezed
-abstract class DataElementContact with _$DataElementContact {
+class DataElementContact with _$DataElementContact {
   DataElementContact._();
   factory DataElementContact({
     Id? id,
@@ -293,7 +290,7 @@ abstract class DataElementContact with _$DataElementContact {
 }
 
 @freezed
-abstract class DataElementMapping with _$DataElementMapping {
+class DataElementMapping with _$DataElementMapping {
   DataElementMapping._();
   factory DataElementMapping({
     Id? id,

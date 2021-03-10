@@ -12,7 +12,7 @@ part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
-abstract class Narrative implements _$Narrative {
+class Narrative with _$Narrative {
   Narrative._();
   factory Narrative({
     NarrativeStatus? status,
@@ -38,7 +38,7 @@ abstract class Narrative implements _$Narrative {
 }
 
 @freezed
-abstract class Reference implements _$Reference {
+class Reference with _$Reference {
   Reference._();
   factory Reference({
     String? reference,
@@ -66,7 +66,7 @@ abstract class Reference implements _$Reference {
 }
 
 @freezed
-abstract class Meta implements _$Meta {
+class Meta with _$Meta {
   Meta._();
   factory Meta({
     Id? versionId,
@@ -96,7 +96,7 @@ abstract class Meta implements _$Meta {
 }
 
 @freezed
-abstract class ElementDefinition implements _$ElementDefinition {
+class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
     String? id,
@@ -416,7 +416,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
 }
 
 @freezed
-abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
+class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
     List<ElementDefinitionDiscriminator>? discriminator,
@@ -447,8 +447,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
 }
 
 @freezed
-abstract class ElementDefinitionDiscriminator
-    implements _$ElementDefinitionDiscriminator {
+class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ElementDefinitionDiscriminator._();
   factory ElementDefinitionDiscriminator({
     ElementDefinitionDiscriminatorType? type,
@@ -478,7 +477,7 @@ abstract class ElementDefinitionDiscriminator
 }
 
 @freezed
-abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
+class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
   factory ElementDefinitionBase({
     String? path,
@@ -507,7 +506,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
 }
 
 @freezed
-abstract class ElementDefinitionType implements _$ElementDefinitionType {
+class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -541,7 +540,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
 }
 
 @freezed
-abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
+class ElementDefinitionExample with _$ElementDefinitionExample {
   ElementDefinitionExample._();
   factory ElementDefinitionExample({
     String? label,
@@ -637,8 +636,7 @@ abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
 }
 
 @freezed
-abstract class ElementDefinitionConstraint
-    implements _$ElementDefinitionConstraint {
+class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
     String? key,
@@ -676,7 +674,7 @@ abstract class ElementDefinitionConstraint
 }
 
 @freezed
-abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
+class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -708,7 +706,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
 }
 
 @freezed
-abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
+class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
     Id? identity,
@@ -740,7 +738,7 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
 }
 
 @freezed
-abstract class Dosage implements _$Dosage {
+class Dosage with _$Dosage {
   Dosage._();
   factory Dosage({
     Decimal? sequence,

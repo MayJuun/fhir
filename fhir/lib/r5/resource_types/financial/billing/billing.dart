@@ -12,7 +12,7 @@ part 'billing.freezed.dart';
 part 'billing.g.dart';
 
 @freezed
-abstract class Claim with Resource implements _$Claim {
+class Claim with Resource, _$Claim {
   Claim._();
   factory Claim({
     @Default(R5ResourceType.Claim)
@@ -77,7 +77,7 @@ abstract class Claim with Resource implements _$Claim {
 }
 
 @freezed
-abstract class ClaimRelated implements _$ClaimRelated {
+class ClaimRelated with _$ClaimRelated {
   ClaimRelated._();
   factory ClaimRelated({
     String? id,
@@ -106,7 +106,7 @@ abstract class ClaimRelated implements _$ClaimRelated {
 }
 
 @freezed
-abstract class ClaimPayee implements _$ClaimPayee {
+class ClaimPayee with _$ClaimPayee {
   ClaimPayee._();
   factory ClaimPayee({
     String? id,
@@ -134,7 +134,7 @@ abstract class ClaimPayee implements _$ClaimPayee {
 }
 
 @freezed
-abstract class ClaimCareTeam implements _$ClaimCareTeam {
+class ClaimCareTeam with _$ClaimCareTeam {
   ClaimCareTeam._();
   factory ClaimCareTeam({
     String? id,
@@ -167,7 +167,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
 }
 
 @freezed
-abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
+class ClaimSupportingInfo with _$ClaimSupportingInfo {
   ClaimSupportingInfo._();
   factory ClaimSupportingInfo({
     String? id,
@@ -208,7 +208,7 @@ abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
 }
 
 @freezed
-abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
+class ClaimDiagnosis with _$ClaimDiagnosis {
   ClaimDiagnosis._();
   factory ClaimDiagnosis({
     String? id,
@@ -241,7 +241,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
 }
 
 @freezed
-abstract class ClaimProcedure implements _$ClaimProcedure {
+class ClaimProcedure with _$ClaimProcedure {
   ClaimProcedure._();
   factory ClaimProcedure({
     String? id,
@@ -275,7 +275,7 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
 }
 
 @freezed
-abstract class ClaimInsurance implements _$ClaimInsurance {
+class ClaimInsurance with _$ClaimInsurance {
   ClaimInsurance._();
   factory ClaimInsurance({
     String? id,
@@ -312,7 +312,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
 }
 
 @freezed
-abstract class ClaimAccident implements _$ClaimAccident {
+class ClaimAccident with _$ClaimAccident {
   ClaimAccident._();
   factory ClaimAccident({
     String? id,
@@ -343,7 +343,7 @@ abstract class ClaimAccident implements _$ClaimAccident {
 }
 
 @freezed
-abstract class ClaimItem implements _$ClaimItem {
+class ClaimItem with _$ClaimItem {
   ClaimItem._();
   factory ClaimItem({
     String? id,
@@ -403,7 +403,7 @@ abstract class ClaimItem implements _$ClaimItem {
 }
 
 @freezed
-abstract class ClaimDetail implements _$ClaimDetail {
+class ClaimDetail with _$ClaimDetail {
   ClaimDetail._();
   factory ClaimDetail({
     String? id,
@@ -443,7 +443,7 @@ abstract class ClaimDetail implements _$ClaimDetail {
 }
 
 @freezed
-abstract class ClaimSubDetail implements _$ClaimSubDetail {
+class ClaimSubDetail with _$ClaimSubDetail {
   ClaimSubDetail._();
   factory ClaimSubDetail({
     String? id,
@@ -482,7 +482,7 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
 }
 
 @freezed
-abstract class ClaimResponse with Resource implements _$ClaimResponse {
+class ClaimResponse with Resource, _$ClaimResponse {
   ClaimResponse._();
   factory ClaimResponse({
     @Default(R5ResourceType.ClaimResponse)
@@ -551,7 +551,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
 }
 
 @freezed
-abstract class ClaimResponseItem implements _$ClaimResponseItem {
+class ClaimResponseItem with _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
     String? id,
@@ -583,8 +583,7 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
 }
 
 @freezed
-abstract class ClaimResponseAdjudication
-    implements _$ClaimResponseAdjudication {
+class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   ClaimResponseAdjudication._();
   factory ClaimResponseAdjudication({
     String? id,
@@ -616,7 +615,7 @@ abstract class ClaimResponseAdjudication
 }
 
 @freezed
-abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
+class ClaimResponseDetail with _$ClaimResponseDetail {
   ClaimResponseDetail._();
   factory ClaimResponseDetail({
     String? id,
@@ -648,7 +647,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
 }
 
 @freezed
-abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
+class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   ClaimResponseSubDetail._();
   factory ClaimResponseSubDetail({
     String? id,
@@ -679,7 +678,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
 }
 
 @freezed
-abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
+class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
     String? id,
@@ -733,7 +732,7 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
 }
 
 @freezed
-abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
+class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   ClaimResponseDetail1._();
   factory ClaimResponseDetail1({
     String? id,
@@ -770,7 +769,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
 }
 
 @freezed
-abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
+class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   ClaimResponseSubDetail1._();
   factory ClaimResponseSubDetail1({
     String? id,
@@ -806,7 +805,7 @@ abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
 }
 
 @freezed
-abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
+class ClaimResponseTotal with _$ClaimResponseTotal {
   ClaimResponseTotal._();
   factory ClaimResponseTotal({
     String? id,
@@ -834,7 +833,7 @@ abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
 }
 
 @freezed
-abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
+class ClaimResponsePayment with _$ClaimResponsePayment {
   ClaimResponsePayment._();
   factory ClaimResponsePayment({
     String? id,
@@ -867,7 +866,7 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
 }
 
 @freezed
-abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
+class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   ClaimResponseProcessNote._();
   factory ClaimResponseProcessNote({
     String? id,
@@ -902,7 +901,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
 }
 
 @freezed
-abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
+class ClaimResponseInsurance with _$ClaimResponseInsurance {
   ClaimResponseInsurance._();
   factory ClaimResponseInsurance({
     String? id,
@@ -936,7 +935,7 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
 }
 
 @freezed
-abstract class ClaimResponseError implements _$ClaimResponseError {
+class ClaimResponseError with _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
     String? id,
@@ -969,7 +968,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
 }
 
 @freezed
-abstract class Invoice with Resource implements _$Invoice {
+class Invoice with Resource, _$Invoice {
   Invoice._();
   factory Invoice({
     @Default(R5ResourceType.Invoice)
@@ -1025,7 +1024,7 @@ abstract class Invoice with Resource implements _$Invoice {
 }
 
 @freezed
-abstract class InvoiceParticipant implements _$InvoiceParticipant {
+class InvoiceParticipant with _$InvoiceParticipant {
   InvoiceParticipant._();
   factory InvoiceParticipant({
     String? id,
@@ -1053,7 +1052,7 @@ abstract class InvoiceParticipant implements _$InvoiceParticipant {
 }
 
 @freezed
-abstract class InvoiceLineItem implements _$InvoiceLineItem {
+class InvoiceLineItem with _$InvoiceLineItem {
   InvoiceLineItem._();
   factory InvoiceLineItem({
     String? id,
@@ -1084,7 +1083,7 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
 }
 
 @freezed
-abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
+class InvoicePriceComponent with _$InvoicePriceComponent {
   InvoicePriceComponent._();
   factory InvoicePriceComponent({
     String? id,

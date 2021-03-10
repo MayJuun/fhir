@@ -12,7 +12,7 @@ part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
 @freezed
-abstract class BodySite with Resource implements _$BodySite {
+class BodySite with Resource, _$BodySite {
   BodySite._();
   factory BodySite({
     @Default(Stu3ResourceType.BodySite)
@@ -57,7 +57,7 @@ abstract class BodySite with Resource implements _$BodySite {
 }
 
 @freezed
-abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
+class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
   factory DiagnosticReport({
     @Default(Stu3ResourceType.DiagnosticReport)
@@ -115,8 +115,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
 }
 
 @freezed
-abstract class DiagnosticReportPerformer
-    implements _$DiagnosticReportPerformer {
+class DiagnosticReportPerformer with _$DiagnosticReportPerformer {
   DiagnosticReportPerformer._();
   factory DiagnosticReportPerformer({
     CodeableConcept? role,
@@ -142,7 +141,7 @@ abstract class DiagnosticReportPerformer
 }
 
 @freezed
-abstract class DiagnosticReportImage implements _$DiagnosticReportImage {
+class DiagnosticReportImage with _$DiagnosticReportImage {
   DiagnosticReportImage._();
   factory DiagnosticReportImage({
     String? comment,
@@ -168,7 +167,7 @@ abstract class DiagnosticReportImage implements _$DiagnosticReportImage {
 }
 
 @freezed
-abstract class ImagingManifest with Resource implements _$ImagingManifest {
+class ImagingManifest with Resource, _$ImagingManifest {
   ImagingManifest._();
   factory ImagingManifest({
     @Default(Stu3ResourceType.ImagingManifest)
@@ -212,7 +211,7 @@ abstract class ImagingManifest with Resource implements _$ImagingManifest {
 }
 
 @freezed
-abstract class ImagingManifestStudy implements _$ImagingManifestStudy {
+class ImagingManifestStudy with _$ImagingManifestStudy {
   ImagingManifestStudy._();
   factory ImagingManifestStudy({
     Id? uid,
@@ -240,7 +239,7 @@ abstract class ImagingManifestStudy implements _$ImagingManifestStudy {
 }
 
 @freezed
-abstract class ImagingManifestSeries implements _$ImagingManifestSeries {
+class ImagingManifestSeries with _$ImagingManifestSeries {
   ImagingManifestSeries._();
   factory ImagingManifestSeries({
     Id? uid,
@@ -267,7 +266,7 @@ abstract class ImagingManifestSeries implements _$ImagingManifestSeries {
 }
 
 @freezed
-abstract class ImagingManifestInstance implements _$ImagingManifestInstance {
+class ImagingManifestInstance with _$ImagingManifestInstance {
   ImagingManifestInstance._();
   factory ImagingManifestInstance({
     String? sopClass,
@@ -294,7 +293,7 @@ abstract class ImagingManifestInstance implements _$ImagingManifestInstance {
 }
 
 @freezed
-abstract class ImagingStudy with Resource implements _$ImagingStudy {
+class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
   factory ImagingStudy({
     @Default(Stu3ResourceType.ImagingStudy)
@@ -355,7 +354,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
 }
 
 @freezed
-abstract class ImagingStudySeries implements _$ImagingStudySeries {
+class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
     Id? uid,
@@ -396,7 +395,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
 }
 
 @freezed
-abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
+class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
   factory ImagingStudyInstance({
     Id? uid,
@@ -427,7 +426,7 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
 }
 
 @freezed
-abstract class Observation with Resource implements _$Observation {
+class Observation with Resource, _$Observation {
   Observation._();
   factory Observation({
     @Default(Stu3ResourceType.Observation)
@@ -503,8 +502,7 @@ abstract class Observation with Resource implements _$Observation {
 }
 
 @freezed
-abstract class ObservationReferenceRange
-    implements _$ObservationReferenceRange {
+class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
   factory ObservationReferenceRange({
     Quantity? low,
@@ -535,7 +533,7 @@ abstract class ObservationReferenceRange
 }
 
 @freezed
-abstract class ObservationRelated implements _$ObservationRelated {
+class ObservationRelated with _$ObservationRelated {
   ObservationRelated._();
   factory ObservationRelated({
     ObservationRelatedType? type,
@@ -561,7 +559,7 @@ abstract class ObservationRelated implements _$ObservationRelated {
 }
 
 @freezed
-abstract class ObservationComponent implements _$ObservationComponent {
+class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
   factory ObservationComponent({
     required CodeableConcept code,
@@ -601,9 +599,7 @@ abstract class ObservationComponent implements _$ObservationComponent {
 }
 
 @freezed
-abstract class QuestionnaireResponse
-    with Resource
-    implements _$QuestionnaireResponse {
+class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   QuestionnaireResponse._();
   factory QuestionnaireResponse({
     @Default(Stu3ResourceType.QuestionnaireResponse)
@@ -652,8 +648,7 @@ abstract class QuestionnaireResponse
 }
 
 @freezed
-abstract class QuestionnaireResponseItem
-    implements _$QuestionnaireResponseItem {
+class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
   factory QuestionnaireResponseItem({
     String? linkId,
@@ -686,8 +681,7 @@ abstract class QuestionnaireResponseItem
 }
 
 @freezed
-abstract class QuestionnaireResponseAnswer
-    implements _$QuestionnaireResponseAnswer {
+class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
   factory QuestionnaireResponseAnswer({
     Boolean? valueBoolean,
@@ -732,7 +726,7 @@ abstract class QuestionnaireResponseAnswer
 }
 
 @freezed
-abstract class Sequence with Resource implements _$Sequence {
+class Sequence with Resource, _$Sequence {
   Sequence._();
   factory Sequence({
     @Default(Stu3ResourceType.Sequence)
@@ -787,7 +781,7 @@ abstract class Sequence with Resource implements _$Sequence {
 }
 
 @freezed
-abstract class SequenceReferenceSeq implements _$SequenceReferenceSeq {
+class SequenceReferenceSeq with _$SequenceReferenceSeq {
   SequenceReferenceSeq._();
   factory SequenceReferenceSeq({
     CodeableConcept? chromosome,
@@ -823,7 +817,7 @@ abstract class SequenceReferenceSeq implements _$SequenceReferenceSeq {
 }
 
 @freezed
-abstract class SequenceVariant implements _$SequenceVariant {
+class SequenceVariant with _$SequenceVariant {
   SequenceVariant._();
   factory SequenceVariant({
     Decimal? start,
@@ -857,7 +851,7 @@ abstract class SequenceVariant implements _$SequenceVariant {
 }
 
 @freezed
-abstract class SequenceQuality implements _$SequenceQuality {
+class SequenceQuality with _$SequenceQuality {
   SequenceQuality._();
   factory SequenceQuality({
     SequenceQualityType? type,
@@ -905,7 +899,7 @@ abstract class SequenceQuality implements _$SequenceQuality {
 }
 
 @freezed
-abstract class SequenceRepository implements _$SequenceRepository {
+class SequenceRepository with _$SequenceRepository {
   SequenceRepository._();
   factory SequenceRepository({
     SequenceRepositoryType? type,
@@ -940,7 +934,7 @@ abstract class SequenceRepository implements _$SequenceRepository {
 }
 
 @freezed
-abstract class Specimen with Resource implements _$Specimen {
+class Specimen with Resource, _$Specimen {
   Specimen._();
   factory Specimen({
     @Default(Stu3ResourceType.Specimen)
@@ -990,7 +984,7 @@ abstract class Specimen with Resource implements _$Specimen {
 }
 
 @freezed
-abstract class SpecimenCollection implements _$SpecimenCollection {
+class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
   factory SpecimenCollection({
     Reference? collector,
@@ -1020,7 +1014,7 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
 }
 
 @freezed
-abstract class SpecimenProcessing implements _$SpecimenProcessing {
+class SpecimenProcessing with _$SpecimenProcessing {
   SpecimenProcessing._();
   factory SpecimenProcessing({
     String? description,
@@ -1050,7 +1044,7 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
 }
 
 @freezed
-abstract class SpecimenContainer implements _$SpecimenContainer {
+class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
   factory SpecimenContainer({
     List<Identifier>? identifier,

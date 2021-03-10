@@ -13,7 +13,7 @@ part 'general_types.freezed.dart';
 part 'general_types.g.dart';
 
 @freezed
-abstract class Period implements _$Period {
+class Period with _$Period {
   Period._();
   factory Period({
     Id? id,
@@ -42,7 +42,7 @@ abstract class Period implements _$Period {
 }
 
 @freezed
-abstract class Coding implements _$Coding {
+class Coding with _$Coding {
   Coding._();
   factory Coding({
     Id? id,
@@ -77,7 +77,7 @@ abstract class Coding implements _$Coding {
 }
 
 @freezed
-abstract class Range implements _$Range {
+class Range with _$Range {
   Range._();
   factory Range({
     Id? id,
@@ -103,7 +103,7 @@ abstract class Range implements _$Range {
 }
 
 @freezed
-abstract class Quantity implements _$Quantity {
+class Quantity with _$Quantity {
   Quantity._();
   factory Quantity({
     Id? id,
@@ -140,7 +140,7 @@ abstract class Quantity implements _$Quantity {
 }
 
 @freezed
-abstract class Attachment implements _$Attachment {
+class Attachment with _$Attachment {
   Attachment._();
   factory Attachment({
     Id? id,
@@ -182,7 +182,7 @@ abstract class Attachment implements _$Attachment {
 }
 
 @freezed
-abstract class Ratio implements _$Ratio {
+class Ratio with _$Ratio {
   Ratio._();
   factory Ratio({
     Id? id,
@@ -208,7 +208,7 @@ abstract class Ratio implements _$Ratio {
 }
 
 @freezed
-abstract class Annotation implements _$Annotation {
+class Annotation with _$Annotation {
   Annotation._();
   factory Annotation({
     Id? id,
@@ -241,7 +241,7 @@ abstract class Annotation implements _$Annotation {
 }
 
 @freezed
-abstract class SampledData implements _$SampledData {
+class SampledData with _$SampledData {
   SampledData._();
   factory SampledData({
     Id? id,
@@ -279,7 +279,7 @@ abstract class SampledData implements _$SampledData {
 }
 
 @freezed
-abstract class CodeableConcept implements _$CodeableConcept {
+class CodeableConcept with _$CodeableConcept {
   CodeableConcept._();
   factory CodeableConcept({
     Id? id,
@@ -308,7 +308,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
 }
 
 @freezed
-abstract class Identifier implements _$Identifier {
+class Identifier with _$Identifier {
   Identifier._();
   factory Identifier({
     Id? id,
@@ -343,7 +343,7 @@ abstract class Identifier implements _$Identifier {
 }
 
 @freezed
-abstract class Signature implements _$Signature {
+class Signature with _$Signature {
   Signature._();
   factory Signature({
     Id? id,
@@ -379,7 +379,7 @@ abstract class Signature implements _$Signature {
 }
 
 @freezed
-abstract class Timing implements _$Timing {
+class Timing with _$Timing {
   Timing._();
   factory Timing({
     Id? id,
@@ -408,7 +408,7 @@ abstract class Timing implements _$Timing {
 }
 
 @freezed
-abstract class Address implements _$Address {
+class Address with _$Address {
   Address._();
   factory Address({
     Id? id,
@@ -453,7 +453,7 @@ abstract class Address implements _$Address {
 }
 
 @freezed
-abstract class HumanName implements _$HumanName {
+class HumanName with _$HumanName {
   HumanName._();
   factory HumanName({
     Id? id,
@@ -492,7 +492,7 @@ abstract class HumanName implements _$HumanName {
 }
 
 @freezed
-abstract class ContactPoint implements _$ContactPoint {
+class ContactPoint with _$ContactPoint {
   ContactPoint._();
   factory ContactPoint({
     Id? id,
@@ -528,7 +528,7 @@ abstract class ContactPoint implements _$ContactPoint {
 }
 
 @freezed
-abstract class TimingRepeat implements _$TimingRepeat {
+class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
   factory TimingRepeat({
     Id? id,

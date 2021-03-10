@@ -12,7 +12,7 @@ part 'documents.freezed.dart';
 part 'documents.g.dart';
 
 @freezed
-abstract class CatalogEntry with Resource implements _$CatalogEntry {
+class CatalogEntry with Resource, _$CatalogEntry {
   CatalogEntry._();
   factory CatalogEntry({
     @Default(R5ResourceType.CatalogEntry)
@@ -73,7 +73,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
 }
 
 @freezed
-abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
+class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
   CatalogEntryRelatedEntry._();
   factory CatalogEntryRelatedEntry({
     String? id,
@@ -104,7 +104,7 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
 }
 
 @freezed
-abstract class Composition with Resource implements _$Composition {
+class Composition with Resource, _$Composition {
   Composition._();
   factory Composition({
     @Default(R5ResourceType.Composition)
@@ -160,7 +160,7 @@ abstract class Composition with Resource implements _$Composition {
 }
 
 @freezed
-abstract class CompositionAttester implements _$CompositionAttester {
+class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
   factory CompositionAttester({
     String? id,
@@ -192,7 +192,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
 }
 
 @freezed
-abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
+class CompositionRelatesTo with _$CompositionRelatesTo {
   CompositionRelatesTo._();
   factory CompositionRelatesTo({
     String? id,
@@ -222,7 +222,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
 }
 
 @freezed
-abstract class CompositionEvent implements _$CompositionEvent {
+class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
   factory CompositionEvent({
     String? id,
@@ -251,7 +251,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
 }
 
 @freezed
-abstract class CompositionSection implements _$CompositionSection {
+class CompositionSection with _$CompositionSection {
   CompositionSection._();
   factory CompositionSection({
     String? id,
@@ -289,7 +289,7 @@ abstract class CompositionSection implements _$CompositionSection {
 }
 
 @freezed
-abstract class DocumentManifest with Resource implements _$DocumentManifest {
+class DocumentManifest with Resource, _$DocumentManifest {
   DocumentManifest._();
   factory DocumentManifest({
     @Default(R5ResourceType.DocumentManifest)
@@ -342,7 +342,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
 }
 
 @freezed
-abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
+class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
   factory DocumentManifestRelated({
     String? id,
@@ -370,7 +370,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
 }
 
 @freezed
-abstract class DocumentReference with Resource implements _$DocumentReference {
+class DocumentReference with Resource, _$DocumentReference {
   DocumentReference._();
   factory DocumentReference({
     @Default(R5ResourceType.DocumentReference)
@@ -433,8 +433,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
 }
 
 @freezed
-abstract class DocumentReferenceAttester
-    implements _$DocumentReferenceAttester {
+class DocumentReferenceAttester with _$DocumentReferenceAttester {
   DocumentReferenceAttester._();
   factory DocumentReferenceAttester({
     String? id,
@@ -467,8 +466,7 @@ abstract class DocumentReferenceAttester
 }
 
 @freezed
-abstract class DocumentReferenceRelatesTo
-    implements _$DocumentReferenceRelatesTo {
+class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
   factory DocumentReferenceRelatesTo({
     String? id,
@@ -499,7 +497,7 @@ abstract class DocumentReferenceRelatesTo
 }
 
 @freezed
-abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
+class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
   factory DocumentReferenceContent({
     String? id,

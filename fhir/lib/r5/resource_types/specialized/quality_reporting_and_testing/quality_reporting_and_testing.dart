@@ -12,7 +12,7 @@ part 'quality_reporting_and_testing.freezed.dart';
 part 'quality_reporting_and_testing.g.dart';
 
 @freezed
-abstract class Measure with Resource implements _$Measure {
+class Measure with Resource, _$Measure {
   Measure._();
   factory Measure({
     @Default(R5ResourceType.Measure)
@@ -113,7 +113,7 @@ abstract class Measure with Resource implements _$Measure {
 }
 
 @freezed
-abstract class MeasureGroup implements _$MeasureGroup {
+class MeasureGroup with _$MeasureGroup {
   MeasureGroup._();
   factory MeasureGroup({
     String? id,
@@ -144,7 +144,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
 }
 
 @freezed
-abstract class MeasurePopulation implements _$MeasurePopulation {
+class MeasurePopulation with _$MeasurePopulation {
   MeasurePopulation._();
   factory MeasurePopulation({
     String? id,
@@ -174,7 +174,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
 }
 
 @freezed
-abstract class MeasureStratifier implements _$MeasureStratifier {
+class MeasureStratifier with _$MeasureStratifier {
   MeasureStratifier._();
   factory MeasureStratifier({
     String? id,
@@ -205,7 +205,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
 }
 
 @freezed
-abstract class MeasureComponent implements _$MeasureComponent {
+class MeasureComponent with _$MeasureComponent {
   MeasureComponent._();
   factory MeasureComponent({
     String? id,
@@ -235,7 +235,7 @@ abstract class MeasureComponent implements _$MeasureComponent {
 }
 
 @freezed
-abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
+class MeasureSupplementalData with _$MeasureSupplementalData {
   MeasureSupplementalData._();
   factory MeasureSupplementalData({
     String? id,
@@ -266,7 +266,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
 }
 
 @freezed
-abstract class MeasureReport with Resource implements _$MeasureReport {
+class MeasureReport with Resource, _$MeasureReport {
   MeasureReport._();
   factory MeasureReport({
     @Default(R5ResourceType.MeasureReport)
@@ -318,7 +318,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
 }
 
 @freezed
-abstract class MeasureReportGroup implements _$MeasureReportGroup {
+class MeasureReportGroup with _$MeasureReportGroup {
   MeasureReportGroup._();
   factory MeasureReportGroup({
     String? id,
@@ -348,7 +348,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
 }
 
 @freezed
-abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
+class MeasureReportPopulation with _$MeasureReportPopulation {
   MeasureReportPopulation._();
   factory MeasureReportPopulation({
     String? id,
@@ -378,7 +378,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
 }
 
 @freezed
-abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
+class MeasureReportStratifier with _$MeasureReportStratifier {
   MeasureReportStratifier._();
   factory MeasureReportStratifier({
     String? id,
@@ -406,7 +406,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
 }
 
 @freezed
-abstract class MeasureReportStratum implements _$MeasureReportStratum {
+class MeasureReportStratum with _$MeasureReportStratum {
   MeasureReportStratum._();
   factory MeasureReportStratum({
     String? id,
@@ -436,7 +436,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
 }
 
 @freezed
-abstract class MeasureReportComponent implements _$MeasureReportComponent {
+class MeasureReportComponent with _$MeasureReportComponent {
   MeasureReportComponent._();
   factory MeasureReportComponent({
     String? id,
@@ -464,7 +464,7 @@ abstract class MeasureReportComponent implements _$MeasureReportComponent {
 }
 
 @freezed
-abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
+class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   MeasureReportPopulation1._();
   factory MeasureReportPopulation1({
     String? id,
@@ -495,7 +495,7 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
 }
 
 @freezed
-abstract class TestReport with Resource implements _$TestReport {
+class TestReport with Resource, _$TestReport {
   TestReport._();
   factory TestReport({
     @Default(R5ResourceType.TestReport)
@@ -551,7 +551,7 @@ abstract class TestReport with Resource implements _$TestReport {
 }
 
 @freezed
-abstract class TestReportParticipant implements _$TestReportParticipant {
+class TestReportParticipant with _$TestReportParticipant {
   TestReportParticipant._();
   factory TestReportParticipant({
     String? id,
@@ -584,7 +584,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
 }
 
 @freezed
-abstract class TestReportSetup implements _$TestReportSetup {
+class TestReportSetup with _$TestReportSetup {
   TestReportSetup._();
   factory TestReportSetup({
     String? id,
@@ -611,7 +611,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
 }
 
 @freezed
-abstract class TestReportAction implements _$TestReportAction {
+class TestReportAction with _$TestReportAction {
   TestReportAction._();
   factory TestReportAction({
     String? id,
@@ -639,7 +639,7 @@ abstract class TestReportAction implements _$TestReportAction {
 }
 
 @freezed
-abstract class TestReportOperation implements _$TestReportOperation {
+class TestReportOperation with _$TestReportOperation {
   TestReportOperation._();
   factory TestReportOperation({
     String? id,
@@ -672,7 +672,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
 }
 
 @freezed
-abstract class TestReportAssert implements _$TestReportAssert {
+class TestReportAssert with _$TestReportAssert {
   TestReportAssert._();
   factory TestReportAssert({
     String? id,
@@ -705,7 +705,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
 }
 
 @freezed
-abstract class TestReportTest implements _$TestReportTest {
+class TestReportTest with _$TestReportTest {
   TestReportTest._();
   factory TestReportTest({
     String? id,
@@ -736,7 +736,7 @@ abstract class TestReportTest implements _$TestReportTest {
 }
 
 @freezed
-abstract class TestReportAction1 implements _$TestReportAction1 {
+class TestReportAction1 with _$TestReportAction1 {
   TestReportAction1._();
   factory TestReportAction1({
     String? id,
@@ -764,7 +764,7 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
 }
 
 @freezed
-abstract class TestReportTeardown implements _$TestReportTeardown {
+class TestReportTeardown with _$TestReportTeardown {
   TestReportTeardown._();
   factory TestReportTeardown({
     String? id,
@@ -791,7 +791,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
 }
 
 @freezed
-abstract class TestReportAction2 implements _$TestReportAction2 {
+class TestReportAction2 with _$TestReportAction2 {
   TestReportAction2._();
   factory TestReportAction2({
     String? id,
@@ -818,7 +818,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
 }
 
 @freezed
-abstract class TestScript with Resource implements _$TestScript {
+class TestScript with Resource, _$TestScript {
   TestScript._();
   factory TestScript({
     @Default(R5ResourceType.TestScript)
@@ -890,7 +890,7 @@ abstract class TestScript with Resource implements _$TestScript {
 }
 
 @freezed
-abstract class TestScriptOrigin implements _$TestScriptOrigin {
+class TestScriptOrigin with _$TestScriptOrigin {
   TestScriptOrigin._();
   factory TestScriptOrigin({
     String? id,
@@ -919,7 +919,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
 }
 
 @freezed
-abstract class TestScriptDestination implements _$TestScriptDestination {
+class TestScriptDestination with _$TestScriptDestination {
   TestScriptDestination._();
   factory TestScriptDestination({
     String? id,
@@ -948,7 +948,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
 }
 
 @freezed
-abstract class TestScriptMetadata implements _$TestScriptMetadata {
+class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
   factory TestScriptMetadata({
     String? id,
@@ -976,7 +976,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
 }
 
 @freezed
-abstract class TestScriptLink implements _$TestScriptLink {
+class TestScriptLink with _$TestScriptLink {
   TestScriptLink._();
   factory TestScriptLink({
     String? id,
@@ -1006,7 +1006,7 @@ abstract class TestScriptLink implements _$TestScriptLink {
 }
 
 @freezed
-abstract class TestScriptCapability implements _$TestScriptCapability {
+class TestScriptCapability with _$TestScriptCapability {
   TestScriptCapability._();
   factory TestScriptCapability({
     String? id,
@@ -1045,7 +1045,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
 }
 
 @freezed
-abstract class TestScriptFixture implements _$TestScriptFixture {
+class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
   factory TestScriptFixture({
     String? id,
@@ -1076,7 +1076,7 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
 }
 
 @freezed
-abstract class TestScriptVariable implements _$TestScriptVariable {
+class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
   factory TestScriptVariable({
     String? id,
@@ -1118,7 +1118,7 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
 }
 
 @freezed
-abstract class TestScriptSetup implements _$TestScriptSetup {
+class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
   factory TestScriptSetup({
     String? id,
@@ -1145,7 +1145,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
 }
 
 @freezed
-abstract class TestScriptAction implements _$TestScriptAction {
+class TestScriptAction with _$TestScriptAction {
   TestScriptAction._();
   factory TestScriptAction({
     String? id,
@@ -1173,7 +1173,7 @@ abstract class TestScriptAction implements _$TestScriptAction {
 }
 
 @freezed
-abstract class TestScriptOperation implements _$TestScriptOperation {
+class TestScriptOperation with _$TestScriptOperation {
   TestScriptOperation._();
   factory TestScriptOperation({
     String? id,
@@ -1232,7 +1232,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
 }
 
 @freezed
-abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
+class TestScriptRequestHeader with _$TestScriptRequestHeader {
   TestScriptRequestHeader._();
   factory TestScriptRequestHeader({
     String? id,
@@ -1262,7 +1262,7 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
 }
 
 @freezed
-abstract class TestScriptAssert implements _$TestScriptAssert {
+class TestScriptAssert with _$TestScriptAssert {
   TestScriptAssert._();
   factory TestScriptAssert({
     String? id,
@@ -1337,7 +1337,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
 }
 
 @freezed
-abstract class TestScriptTest implements _$TestScriptTest {
+class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
   factory TestScriptTest({
     String? id,
@@ -1368,7 +1368,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
 }
 
 @freezed
-abstract class TestScriptAction1 implements _$TestScriptAction1 {
+class TestScriptAction1 with _$TestScriptAction1 {
   TestScriptAction1._();
   factory TestScriptAction1({
     String? id,
@@ -1396,7 +1396,7 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
 }
 
 @freezed
-abstract class TestScriptTeardown implements _$TestScriptTeardown {
+class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
   factory TestScriptTeardown({
     String? id,
@@ -1423,7 +1423,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
 }
 
 @freezed
-abstract class TestScriptAction2 implements _$TestScriptAction2 {
+class TestScriptAction2 with _$TestScriptAction2 {
   TestScriptAction2._();
   factory TestScriptAction2({
     String? id,

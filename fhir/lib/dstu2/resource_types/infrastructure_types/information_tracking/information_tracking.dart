@@ -12,7 +12,7 @@ part 'information_tracking.freezed.dart';
 part 'information_tracking.g.dart';
 
 @freezed
-abstract class Questionnaire with Resource implements _$Questionnaire {
+class Questionnaire with Resource, _$Questionnaire {
   Questionnaire._();
   factory Questionnaire({
     @Default(Dstu2ResourceType.Questionnaire)
@@ -63,7 +63,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
 }
 
 @freezed
-abstract class QuestionnaireGroup with _$QuestionnaireGroup {
+class QuestionnaireGroup with _$QuestionnaireGroup {
   QuestionnaireGroup._();
   factory QuestionnaireGroup({
     Id? id,
@@ -100,7 +100,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
 }
 
 @freezed
-abstract class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
+class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
   QuestionnaireGroupQuestion._();
   factory QuestionnaireGroupQuestion({
     Id? id,
@@ -138,9 +138,7 @@ abstract class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
 }
 
 @freezed
-abstract class QuestionnaireResponse
-    with Resource
-    implements _$QuestionnaireResponse {
+class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   QuestionnaireResponse._();
   factory QuestionnaireResponse({
     @Default(Dstu2ResourceType.QuestionnaireResponse)
@@ -189,7 +187,7 @@ abstract class QuestionnaireResponse
 }
 
 @freezed
-abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
+class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
   QuestionnaireResponseGroup._();
   factory QuestionnaireResponseGroup({
     Id? id,
@@ -225,7 +223,7 @@ abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
 }
 
 @freezed
-abstract class QuestionnaireResponseGroupQuestion
+class QuestionnaireResponseGroupQuestion
     with _$QuestionnaireResponseGroupQuestion {
   QuestionnaireResponseGroupQuestion._();
   factory QuestionnaireResponseGroupQuestion({
@@ -260,7 +258,7 @@ abstract class QuestionnaireResponseGroupQuestion
 }
 
 @freezed
-abstract class QuestionnaireResponseQuestionAnswer
+class QuestionnaireResponseQuestionAnswer
     with _$QuestionnaireResponseQuestionAnswer {
   QuestionnaireResponseQuestionAnswer._();
   factory QuestionnaireResponseQuestionAnswer({
@@ -314,7 +312,7 @@ abstract class QuestionnaireResponseQuestionAnswer
 }
 
 @freezed
-abstract class Provenance with Resource implements _$Provenance {
+class Provenance with Resource, _$Provenance {
   Provenance._();
   factory Provenance({
     @Default(Dstu2ResourceType.Provenance)
@@ -362,7 +360,7 @@ abstract class Provenance with Resource implements _$Provenance {
 }
 
 @freezed
-abstract class ProvenanceAgent with _$ProvenanceAgent {
+class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
   factory ProvenanceAgent({
     Id? id,
@@ -393,7 +391,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
 }
 
 @freezed
-abstract class ProvenanceEntity with _$ProvenanceEntity {
+class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
   factory ProvenanceEntity({
     Id? id,
@@ -427,7 +425,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
 }
 
 @freezed
-abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
+class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
   ProvenanceAgentRelatedAgent._();
   factory ProvenanceAgentRelatedAgent({
     Id? id,
@@ -456,7 +454,7 @@ abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
 }
 
 @freezed
-abstract class AuditEvent with Resource implements _$AuditEvent {
+class AuditEvent with Resource, _$AuditEvent {
   AuditEvent._();
   factory AuditEvent({
     @Default(Dstu2ResourceType.AuditEvent)
@@ -496,7 +494,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
 }
 
 @freezed
-abstract class AuditEventEvent with _$AuditEventEvent {
+class AuditEventEvent with _$AuditEventEvent {
   AuditEventEvent._();
   factory AuditEventEvent({
     Id? id,
@@ -529,7 +527,7 @@ abstract class AuditEventEvent with _$AuditEventEvent {
 }
 
 @freezed
-abstract class AuditEventParticipant with _$AuditEventParticipant {
+class AuditEventParticipant with _$AuditEventParticipant {
   AuditEventParticipant._();
   factory AuditEventParticipant({
     Id? id,
@@ -567,7 +565,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
 }
 
 @freezed
-abstract class AuditEventSource with _$AuditEventSource {
+class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
   factory AuditEventSource({
     Id? id,
@@ -597,7 +595,7 @@ abstract class AuditEventSource with _$AuditEventSource {
 }
 
 @freezed
-abstract class AuditEventObject with _$AuditEventObject {
+class AuditEventObject with _$AuditEventObject {
   AuditEventObject._();
   factory AuditEventObject({
     Id? id,
@@ -634,8 +632,7 @@ abstract class AuditEventObject with _$AuditEventObject {
 }
 
 @freezed
-abstract class AuditEventParticipantNetwork
-    with _$AuditEventParticipantNetwork {
+class AuditEventParticipantNetwork with _$AuditEventParticipantNetwork {
   AuditEventParticipantNetwork._();
   factory AuditEventParticipantNetwork({
     Id? id,
@@ -666,7 +663,7 @@ abstract class AuditEventParticipantNetwork
 }
 
 @freezed
-abstract class AuditEventObjectDetail with _$AuditEventObjectDetail {
+class AuditEventObjectDetail with _$AuditEventObjectDetail {
   AuditEventObjectDetail._();
   factory AuditEventObjectDetail({
     Id? id,

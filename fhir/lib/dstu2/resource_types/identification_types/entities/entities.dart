@@ -12,7 +12,7 @@ part 'entities.freezed.dart';
 part 'entities.g.dart';
 
 @freezed
-abstract class Location with Resource implements _$Location {
+class Location with Resource, _$Location {
   Location._();
   factory Location({
     @Default(Dstu2ResourceType.Location)
@@ -64,7 +64,7 @@ abstract class Location with Resource implements _$Location {
 }
 
 @freezed
-abstract class LocationPosition with _$LocationPosition {
+class LocationPosition with _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
     Id? id,
@@ -96,7 +96,7 @@ abstract class LocationPosition with _$LocationPosition {
 }
 
 @freezed
-abstract class Substance with Resource implements _$Substance {
+class Substance with Resource, _$Substance {
   Substance._();
   factory Substance({
     @Default(Dstu2ResourceType.Substance)
@@ -139,7 +139,7 @@ abstract class Substance with Resource implements _$Substance {
 }
 
 @freezed
-abstract class SubstanceInstance with _$SubstanceInstance {
+class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
     Id? id,
@@ -169,7 +169,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
 }
 
 @freezed
-abstract class SubstanceIngredient with _$SubstanceIngredient {
+class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
     Id? id,
@@ -197,7 +197,7 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
 }
 
 @freezed
-abstract class Person with Resource implements _$Person {
+class Person with Resource, _$Person {
   Person._();
   factory Person({
     @Default(Dstu2ResourceType.Person)
@@ -245,7 +245,7 @@ abstract class Person with Resource implements _$Person {
 }
 
 @freezed
-abstract class PersonLink with _$PersonLink {
+class PersonLink with _$PersonLink {
   PersonLink._();
   factory PersonLink({
     Id? id,
@@ -274,7 +274,7 @@ abstract class PersonLink with _$PersonLink {
 }
 
 @freezed
-abstract class Contract with Resource implements _$Contract {
+class Contract with Resource, _$Contract {
   Contract._();
   factory Contract({
     @Default(Dstu2ResourceType.Contract)
@@ -330,7 +330,7 @@ abstract class Contract with Resource implements _$Contract {
 }
 
 @freezed
-abstract class ContractActor with _$ContractActor {
+class ContractActor with _$ContractActor {
   ContractActor._();
   factory ContractActor({
     Id? id,
@@ -358,7 +358,7 @@ abstract class ContractActor with _$ContractActor {
 }
 
 @freezed
-abstract class ContractValuedItem with _$ContractValuedItem {
+class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
     Id? id,
@@ -397,7 +397,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
 }
 
 @freezed
-abstract class ContractSigner with _$ContractSigner {
+class ContractSigner with _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
     Id? id,
@@ -426,7 +426,7 @@ abstract class ContractSigner with _$ContractSigner {
 }
 
 @freezed
-abstract class ContractTerm with _$ContractTerm {
+class ContractTerm with _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
     Id? id,
@@ -466,7 +466,7 @@ abstract class ContractTerm with _$ContractTerm {
 }
 
 @freezed
-abstract class ContractTermActor with _$ContractTermActor {
+class ContractTermActor with _$ContractTermActor {
   ContractTermActor._();
   factory ContractTermActor({
     Id? id,
@@ -494,7 +494,7 @@ abstract class ContractTermActor with _$ContractTermActor {
 }
 
 @freezed
-abstract class ContractFriendly with _$ContractFriendly {
+class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
     Id? id,
@@ -522,7 +522,7 @@ abstract class ContractFriendly with _$ContractFriendly {
 }
 
 @freezed
-abstract class ContractLegal with _$ContractLegal {
+class ContractLegal with _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
     Id? id,
@@ -550,7 +550,7 @@ abstract class ContractLegal with _$ContractLegal {
 }
 
 @freezed
-abstract class ContractRule with _$ContractRule {
+class ContractRule with _$ContractRule {
   ContractRule._();
   factory ContractRule({
     Id? id,

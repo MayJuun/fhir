@@ -12,7 +12,7 @@ part 'other.freezed.dart';
 part 'other.g.dart';
 
 @freezed
-abstract class Basic with Resource implements _$Basic {
+class Basic with Resource, _$Basic {
   Basic._();
 
   /// [Basic]: Basic is used for handling concepts not yet defined in FHIR,
@@ -126,7 +126,7 @@ abstract class Basic with Resource implements _$Basic {
 }
 
 @freezed
-abstract class Binary with Resource implements _$Binary {
+class Binary with Resource, _$Binary {
   Binary._();
 
   /// [Binary]: A resource that represents the data of a single raw artifact as
@@ -207,7 +207,7 @@ abstract class Binary with Resource implements _$Binary {
 }
 
 @freezed
-abstract class Bundle with Resource implements _$Bundle {
+class Bundle with Resource, _$Bundle {
   Bundle._();
 
   /// [Bundle]: A container for a collection of resources.
@@ -297,7 +297,7 @@ abstract class Bundle with Resource implements _$Bundle {
 }
 
 @freezed
-abstract class BundleLink implements _$BundleLink {
+class BundleLink with _$BundleLink {
   BundleLink._();
 
   /// [Bundle_Link]: A container for a collection of resources.
@@ -362,7 +362,7 @@ abstract class BundleLink implements _$BundleLink {
 }
 
 @freezed
-abstract class BundleEntry implements _$BundleEntry {
+class BundleEntry with _$BundleEntry {
   BundleEntry._();
 
   /// [Bundle_Entry]: A container for a collection of resources.
@@ -448,7 +448,7 @@ abstract class BundleEntry implements _$BundleEntry {
 }
 
 @freezed
-abstract class BundleSearch implements _$BundleSearch {
+class BundleSearch with _$BundleSearch {
   BundleSearch._();
 
   /// [Bundle_Search]: A container for a collection of resources.
@@ -514,7 +514,7 @@ abstract class BundleSearch implements _$BundleSearch {
 }
 
 @freezed
-abstract class BundleRequest implements _$BundleRequest {
+class BundleRequest with _$BundleRequest {
   BundleRequest._();
 
   /// [Bundle_Request]: A container for a collection of resources.
@@ -615,7 +615,7 @@ abstract class BundleRequest implements _$BundleRequest {
 }
 
 @freezed
-abstract class BundleResponse implements _$BundleResponse {
+class BundleResponse with _$BundleResponse {
   BundleResponse._();
 
   /// [Bundle_Response]: A container for a collection of resources.
@@ -702,7 +702,7 @@ abstract class BundleResponse implements _$BundleResponse {
 }
 
 @freezed
-abstract class Linkage with Resource implements _$Linkage {
+class Linkage with Resource, _$Linkage {
   Linkage._();
 
   /// [Linkage]: Identifies two or more records (resource instances) that refer
@@ -811,7 +811,7 @@ abstract class Linkage with Resource implements _$Linkage {
 }
 
 @freezed
-abstract class LinkageItem implements _$LinkageItem {
+class LinkageItem with _$LinkageItem {
   LinkageItem._();
 
   /// [Linkage_Item]: Identifies two or more records (resource instances) that
@@ -874,7 +874,7 @@ abstract class LinkageItem implements _$LinkageItem {
 }
 
 @freezed
-abstract class MessageHeader with Resource implements _$MessageHeader {
+class MessageHeader with Resource, _$MessageHeader {
   MessageHeader._();
 
   /// [MessageHeader]: The header for a message exchange that is either
@@ -1028,7 +1028,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
 }
 
 @freezed
-abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
+class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
 
   /// [MessageHeader_Destination]: The header for a message exchange that is
@@ -1106,7 +1106,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
 }
 
 @freezed
-abstract class MessageHeaderSource implements _$MessageHeaderSource {
+class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
 
   /// [MessageHeader_Source]: The header for a message exchange that is either
@@ -1192,7 +1192,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
 }
 
 @freezed
-abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
+class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
 
   /// [MessageHeader_Response]: The header for a message exchange that is either
@@ -1266,7 +1266,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
 }
 
 @freezed
-abstract class OperationOutcome with Resource implements _$OperationOutcome {
+class OperationOutcome with Resource, _$OperationOutcome {
   OperationOutcome._();
 
   /// [OperationOutcome]: A collection of error, warning, or information
@@ -1362,7 +1362,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
 }
 
 @freezed
-abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
+class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
 
   /// [OperationOutcome_Issue]: A collection of error, warning, or information
@@ -1464,7 +1464,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
 }
 
 @freezed
-abstract class Parameters with Resource implements _$Parameters {
+class Parameters with Resource, _$Parameters {
   Parameters._();
 
   /// [Parameters]: This resource is a non-persisted resource used to pass
@@ -1523,7 +1523,7 @@ abstract class Parameters with Resource implements _$Parameters {
 }
 
 @freezed
-abstract class ParametersParameter implements _$ParametersParameter {
+class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
 
   /// [Parameters_Parameter]: This resource is a non-persisted resource used to
@@ -1796,7 +1796,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
 }
 
 @freezed
-abstract class Subscription with Resource implements _$Subscription {
+class Subscription with Resource, _$Subscription {
   Subscription._();
 
   /// [Subscription]: The subscription resource is used to define a push-based
@@ -1934,7 +1934,7 @@ abstract class Subscription with Resource implements _$Subscription {
 }
 
 @freezed
-abstract class SubscriptionChannel implements _$SubscriptionChannel {
+class SubscriptionChannel with _$SubscriptionChannel {
   SubscriptionChannel._();
 
   /// [Subscription_Channel]: The subscription resource is used to define a

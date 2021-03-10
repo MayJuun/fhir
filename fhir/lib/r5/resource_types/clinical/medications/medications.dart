@@ -11,7 +11,7 @@ part 'medications.freezed.dart';
 part 'medications.g.dart';
 
 @freezed
-abstract class Immunization with Resource implements _$Immunization {
+class Immunization with Resource, _$Immunization {
   Immunization._();
   factory Immunization({
     @Default(R5ResourceType.Immunization)
@@ -88,7 +88,7 @@ abstract class Immunization with Resource implements _$Immunization {
 }
 
 @freezed
-abstract class ImmunizationPerformer implements _$ImmunizationPerformer {
+class ImmunizationPerformer with _$ImmunizationPerformer {
   ImmunizationPerformer._();
   factory ImmunizationPerformer({
     String? id,
@@ -116,7 +116,7 @@ abstract class ImmunizationPerformer implements _$ImmunizationPerformer {
 }
 
 @freezed
-abstract class ImmunizationEducation implements _$ImmunizationEducation {
+class ImmunizationEducation with _$ImmunizationEducation {
   ImmunizationEducation._();
   factory ImmunizationEducation({
     String? id,
@@ -150,7 +150,7 @@ abstract class ImmunizationEducation implements _$ImmunizationEducation {
 }
 
 @freezed
-abstract class ImmunizationReaction implements _$ImmunizationReaction {
+class ImmunizationReaction with _$ImmunizationReaction {
   ImmunizationReaction._();
   factory ImmunizationReaction({
     String? id,
@@ -181,8 +181,7 @@ abstract class ImmunizationReaction implements _$ImmunizationReaction {
 }
 
 @freezed
-abstract class ImmunizationProtocolApplied
-    implements _$ImmunizationProtocolApplied {
+class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   ImmunizationProtocolApplied._();
   factory ImmunizationProtocolApplied({
     String? id,
@@ -217,9 +216,7 @@ abstract class ImmunizationProtocolApplied
 }
 
 @freezed
-abstract class ImmunizationEvaluation
-    with Resource
-    implements _$ImmunizationEvaluation {
+class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   ImmunizationEvaluation._();
   factory ImmunizationEvaluation({
     @Default(R5ResourceType.ImmunizationEvaluation)
@@ -280,9 +277,7 @@ abstract class ImmunizationEvaluation
 }
 
 @freezed
-abstract class ImmunizationRecommendation
-    with Resource
-    implements _$ImmunizationRecommendation {
+class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ImmunizationRecommendation._();
   factory ImmunizationRecommendation({
     @Default(R5ResourceType.ImmunizationRecommendation)
@@ -328,8 +323,8 @@ abstract class ImmunizationRecommendation
 }
 
 @freezed
-abstract class ImmunizationRecommendationRecommendation
-    implements _$ImmunizationRecommendationRecommendation {
+class ImmunizationRecommendationRecommendation
+    with _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
   factory ImmunizationRecommendationRecommendation({
     String? id,
@@ -380,8 +375,8 @@ abstract class ImmunizationRecommendationRecommendation
 }
 
 @freezed
-abstract class ImmunizationRecommendationDateCriterion
-    implements _$ImmunizationRecommendationDateCriterion {
+class ImmunizationRecommendationDateCriterion
+    with _$ImmunizationRecommendationDateCriterion {
   ImmunizationRecommendationDateCriterion._();
   factory ImmunizationRecommendationDateCriterion({
     String? id,
@@ -413,7 +408,7 @@ abstract class ImmunizationRecommendationDateCriterion
 }
 
 @freezed
-abstract class Medication with Resource implements _$Medication {
+class Medication with Resource, _$Medication {
   Medication._();
   factory Medication({
     @Default(R5ResourceType.Medication)
@@ -458,7 +453,7 @@ abstract class Medication with Resource implements _$Medication {
 }
 
 @freezed
-abstract class MedicationIngredient implements _$MedicationIngredient {
+class MedicationIngredient with _$MedicationIngredient {
   MedicationIngredient._();
   factory MedicationIngredient({
     String? id,
@@ -491,7 +486,7 @@ abstract class MedicationIngredient implements _$MedicationIngredient {
 }
 
 @freezed
-abstract class MedicationBatch implements _$MedicationBatch {
+class MedicationBatch with _$MedicationBatch {
   MedicationBatch._();
   factory MedicationBatch({
     String? id,
@@ -521,9 +516,7 @@ abstract class MedicationBatch implements _$MedicationBatch {
 }
 
 @freezed
-abstract class MedicationAdministration
-    with Resource
-    implements _$MedicationAdministration {
+class MedicationAdministration with Resource, _$MedicationAdministration {
   MedicationAdministration._();
   factory MedicationAdministration({
     @Default(R5ResourceType.MedicationAdministration)
@@ -587,8 +580,8 @@ abstract class MedicationAdministration
 }
 
 @freezed
-abstract class MedicationAdministrationPerformer
-    implements _$MedicationAdministrationPerformer {
+class MedicationAdministrationPerformer
+    with _$MedicationAdministrationPerformer {
   MedicationAdministrationPerformer._();
   factory MedicationAdministrationPerformer({
     String? id,
@@ -619,8 +612,7 @@ abstract class MedicationAdministrationPerformer
 }
 
 @freezed
-abstract class MedicationAdministrationDosage
-    implements _$MedicationAdministrationDosage {
+class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
   factory MedicationAdministrationDosage({
     String? id,
@@ -657,9 +649,7 @@ abstract class MedicationAdministrationDosage
 }
 
 @freezed
-abstract class MedicationDispense
-    with Resource
-    implements _$MedicationDispense {
+class MedicationDispense with Resource, _$MedicationDispense {
   MedicationDispense._();
   factory MedicationDispense({
     @Default(R5ResourceType.MedicationDispense)
@@ -728,8 +718,7 @@ abstract class MedicationDispense
 }
 
 @freezed
-abstract class MedicationDispensePerformer
-    implements _$MedicationDispensePerformer {
+class MedicationDispensePerformer with _$MedicationDispensePerformer {
   MedicationDispensePerformer._();
   factory MedicationDispensePerformer({
     String? id,
@@ -758,8 +747,7 @@ abstract class MedicationDispensePerformer
 }
 
 @freezed
-abstract class MedicationDispenseSubstitution
-    implements _$MedicationDispenseSubstitution {
+class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
   factory MedicationDispenseSubstitution({
     String? id,
@@ -793,9 +781,7 @@ abstract class MedicationDispenseSubstitution
 }
 
 @freezed
-abstract class MedicationKnowledge
-    with Resource
-    implements _$MedicationKnowledge {
+class MedicationKnowledge with Resource, _$MedicationKnowledge {
   MedicationKnowledge._();
   factory MedicationKnowledge({
     @Default(R5ResourceType.MedicationKnowledge)
@@ -862,8 +848,8 @@ abstract class MedicationKnowledge
 }
 
 @freezed
-abstract class MedicationKnowledgeRelatedMedicationKnowledge
-    implements _$MedicationKnowledgeRelatedMedicationKnowledge {
+class MedicationKnowledgeRelatedMedicationKnowledge
+    with _$MedicationKnowledgeRelatedMedicationKnowledge {
   MedicationKnowledgeRelatedMedicationKnowledge._();
   factory MedicationKnowledgeRelatedMedicationKnowledge({
     String? id,
@@ -895,8 +881,7 @@ abstract class MedicationKnowledgeRelatedMedicationKnowledge
 }
 
 @freezed
-abstract class MedicationKnowledgeMonograph
-    implements _$MedicationKnowledgeMonograph {
+class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   MedicationKnowledgeMonograph._();
   factory MedicationKnowledgeMonograph({
     String? id,
@@ -925,8 +910,7 @@ abstract class MedicationKnowledgeMonograph
 }
 
 @freezed
-abstract class MedicationKnowledgeIngredient
-    implements _$MedicationKnowledgeIngredient {
+class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   MedicationKnowledgeIngredient._();
   factory MedicationKnowledgeIngredient({
     String? id,
@@ -960,7 +944,7 @@ abstract class MedicationKnowledgeIngredient
 }
 
 @freezed
-abstract class MedicationKnowledgeCost implements _$MedicationKnowledgeCost {
+class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   MedicationKnowledgeCost._();
   factory MedicationKnowledgeCost({
     String? id,
@@ -992,8 +976,8 @@ abstract class MedicationKnowledgeCost implements _$MedicationKnowledgeCost {
 }
 
 @freezed
-abstract class MedicationKnowledgeMonitoringProgram
-    implements _$MedicationKnowledgeMonitoringProgram {
+class MedicationKnowledgeMonitoringProgram
+    with _$MedicationKnowledgeMonitoringProgram {
   MedicationKnowledgeMonitoringProgram._();
   factory MedicationKnowledgeMonitoringProgram({
     String? id,
@@ -1025,8 +1009,8 @@ abstract class MedicationKnowledgeMonitoringProgram
 }
 
 @freezed
-abstract class MedicationKnowledgeAdministrationGuideline
-    implements _$MedicationKnowledgeAdministrationGuideline {
+class MedicationKnowledgeAdministrationGuideline
+    with _$MedicationKnowledgeAdministrationGuideline {
   MedicationKnowledgeAdministrationGuideline._();
   factory MedicationKnowledgeAdministrationGuideline({
     String? id,
@@ -1059,8 +1043,7 @@ abstract class MedicationKnowledgeAdministrationGuideline
 }
 
 @freezed
-abstract class MedicationKnowledgeDosage
-    implements _$MedicationKnowledgeDosage {
+class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   MedicationKnowledgeDosage._();
   factory MedicationKnowledgeDosage({
     String? id,
@@ -1089,8 +1072,8 @@ abstract class MedicationKnowledgeDosage
 }
 
 @freezed
-abstract class MedicationKnowledgePatientCharacteristic
-    implements _$MedicationKnowledgePatientCharacteristic {
+class MedicationKnowledgePatientCharacteristic
+    with _$MedicationKnowledgePatientCharacteristic {
   MedicationKnowledgePatientCharacteristic._();
   factory MedicationKnowledgePatientCharacteristic({
     String? id,
@@ -1122,8 +1105,8 @@ abstract class MedicationKnowledgePatientCharacteristic
 }
 
 @freezed
-abstract class MedicationKnowledgeMedicineClassification
-    implements _$MedicationKnowledgeMedicineClassification {
+class MedicationKnowledgeMedicineClassification
+    with _$MedicationKnowledgeMedicineClassification {
   MedicationKnowledgeMedicineClassification._();
   factory MedicationKnowledgeMedicineClassification({
     String? id,
@@ -1154,8 +1137,7 @@ abstract class MedicationKnowledgeMedicineClassification
 }
 
 @freezed
-abstract class MedicationKnowledgePackaging
-    implements _$MedicationKnowledgePackaging {
+class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   MedicationKnowledgePackaging._();
   factory MedicationKnowledgePackaging({
     String? id,
@@ -1189,8 +1171,8 @@ abstract class MedicationKnowledgePackaging
 }
 
 @freezed
-abstract class MedicationKnowledgeDrugCharacteristic
-    implements _$MedicationKnowledgeDrugCharacteristic {
+class MedicationKnowledgeDrugCharacteristic
+    with _$MedicationKnowledgeDrugCharacteristic {
   MedicationKnowledgeDrugCharacteristic._();
   factory MedicationKnowledgeDrugCharacteristic({
     String? id,
@@ -1227,8 +1209,7 @@ abstract class MedicationKnowledgeDrugCharacteristic
 }
 
 @freezed
-abstract class MedicationKnowledgeRegulatory
-    implements _$MedicationKnowledgeRegulatory {
+class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   MedicationKnowledgeRegulatory._();
   factory MedicationKnowledgeRegulatory({
     String? id,
@@ -1259,8 +1240,7 @@ abstract class MedicationKnowledgeRegulatory
 }
 
 @freezed
-abstract class MedicationKnowledgeSubstitution
-    implements _$MedicationKnowledgeSubstitution {
+class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   MedicationKnowledgeSubstitution._();
   factory MedicationKnowledgeSubstitution({
     String? id,
@@ -1292,8 +1272,7 @@ abstract class MedicationKnowledgeSubstitution
 }
 
 @freezed
-abstract class MedicationKnowledgeMaxDispense
-    implements _$MedicationKnowledgeMaxDispense {
+class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   MedicationKnowledgeMaxDispense._();
   factory MedicationKnowledgeMaxDispense({
     String? id,
@@ -1324,8 +1303,8 @@ abstract class MedicationKnowledgeMaxDispense
 }
 
 @freezed
-abstract class MedicationKnowledgeKineticCharacteristic
-    implements _$MedicationKnowledgeKineticCharacteristic {
+class MedicationKnowledgeKineticCharacteristic
+    with _$MedicationKnowledgeKineticCharacteristic {
   MedicationKnowledgeKineticCharacteristic._();
   factory MedicationKnowledgeKineticCharacteristic({
     String? id,
@@ -1357,7 +1336,7 @@ abstract class MedicationKnowledgeKineticCharacteristic
 }
 
 @freezed
-abstract class MedicationRequest with Resource implements _$MedicationRequest {
+class MedicationRequest with Resource, _$MedicationRequest {
   MedicationRequest._();
   factory MedicationRequest({
     @Default(R5ResourceType.MedicationRequest)
@@ -1436,8 +1415,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
 }
 
 @freezed
-abstract class MedicationRequestDispenseRequest
-    implements _$MedicationRequestDispenseRequest {
+class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   MedicationRequestDispenseRequest._();
   factory MedicationRequestDispenseRequest({
     String? id,
@@ -1475,8 +1453,7 @@ abstract class MedicationRequestDispenseRequest
 }
 
 @freezed
-abstract class MedicationRequestInitialFill
-    implements _$MedicationRequestInitialFill {
+class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   MedicationRequestInitialFill._();
   factory MedicationRequestInitialFill({
     String? id,
@@ -1505,8 +1482,7 @@ abstract class MedicationRequestInitialFill
 }
 
 @freezed
-abstract class MedicationRequestSubstitution
-    implements _$MedicationRequestSubstitution {
+class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   MedicationRequestSubstitution._();
   factory MedicationRequestSubstitution({
     String? id,
@@ -1537,7 +1513,7 @@ abstract class MedicationRequestSubstitution
 }
 
 @freezed
-abstract class MedicationUsage with Resource implements _$MedicationUsage {
+class MedicationUsage with Resource, _$MedicationUsage {
   MedicationUsage._();
   factory MedicationUsage({
     @Default(R5ResourceType.MedicationUsage)

@@ -12,7 +12,7 @@ part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
 @freezed
-abstract class BodyStructure with Resource implements _$BodyStructure {
+class BodyStructure with Resource, _$BodyStructure {
   BodyStructure._();
 
   /// [BodyStructure]: Record details about an anatomical structure.  This
@@ -141,7 +141,7 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
 }
 
 @freezed
-abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
+class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
 
   /// [DiagnosticReport]: The findings and interpretation of diagnostic  tests
@@ -337,7 +337,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
 }
 
 @freezed
-abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
+class DiagnosticReportMedia with _$DiagnosticReportMedia {
   DiagnosticReportMedia._();
 
   /// [DiagnosticReport_Media]: The findings and interpretation of diagnostic
@@ -405,7 +405,7 @@ abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
 }
 
 @freezed
-abstract class ImagingStudy with Resource implements _$ImagingStudy {
+class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
 
   /// [ImagingStudy]: Representation of the content produced in a DICOM imaging
@@ -601,7 +601,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
 }
 
 @freezed
-abstract class ImagingStudySeries implements _$ImagingStudySeries {
+class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
 
   /// [ImagingStudy_Series]: Representation of the content produced in a DICOM
@@ -725,7 +725,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
 }
 
 @freezed
-abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
+class ImagingStudyPerformer with _$ImagingStudyPerformer {
   ImagingStudyPerformer._();
 
   /// [ImagingStudy_Performer]: Representation of the content produced in a
@@ -789,7 +789,7 @@ abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
 }
 
 @freezed
-abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
+class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
 
   /// [ImagingStudy_Instance]: Representation of the content produced in a DICOM
@@ -867,7 +867,7 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
 }
 
 @freezed
-abstract class Media with Resource implements _$Media {
+class Media with Resource, _$Media {
   Media._();
 
   /// [Media]: A photo, video, or audio recording acquired or used in
@@ -1071,7 +1071,7 @@ abstract class Media with Resource implements _$Media {
 }
 
 @freezed
-abstract class MolecularSequence with Resource implements _$MolecularSequence {
+class MolecularSequence with Resource, _$MolecularSequence {
   MolecularSequence._();
 
   /// [MolecularSequence]: Raw data describing a biological sequence.
@@ -1242,8 +1242,7 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
 }
 
 @freezed
-abstract class MolecularSequenceReferenceSeq
-    implements _$MolecularSequenceReferenceSeq {
+class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   MolecularSequenceReferenceSeq._();
 
   /// [MolecularSequence_ReferenceSeq]: Raw data describing a biological
@@ -1363,7 +1362,7 @@ abstract class MolecularSequenceReferenceSeq
 }
 
 @freezed
-abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
+class MolecularSequenceVariant with _$MolecularSequenceVariant {
   MolecularSequenceVariant._();
 
   /// [MolecularSequence_Variant]: Raw data describing a biological sequence.
@@ -1469,7 +1468,7 @@ abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
 }
 
 @freezed
-abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
+class MolecularSequenceQuality with _$MolecularSequenceQuality {
   MolecularSequenceQuality._();
 
   /// [MolecularSequence_Quality]: Raw data describing a biological sequence.
@@ -1625,7 +1624,7 @@ abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
 }
 
 @freezed
-abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc {
+class MolecularSequenceRoc with _$MolecularSequenceRoc {
   MolecularSequenceRoc._();
 
   /// [MolecularSequence_Roc]: Raw data describing a biological sequence.
@@ -1726,8 +1725,7 @@ abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc {
 }
 
 @freezed
-abstract class MolecularSequenceRepository
-    implements _$MolecularSequenceRepository {
+class MolecularSequenceRepository with _$MolecularSequenceRepository {
   MolecularSequenceRepository._();
 
   /// [MolecularSequence_Repository]: Raw data describing a biological sequence.
@@ -1824,8 +1822,8 @@ abstract class MolecularSequenceRepository
 }
 
 @freezed
-abstract class MolecularSequenceStructureVariant
-    implements _$MolecularSequenceStructureVariant {
+class MolecularSequenceStructureVariant
+    with _$MolecularSequenceStructureVariant {
   MolecularSequenceStructureVariant._();
 
   /// [MolecularSequence_StructureVariant]: Raw data describing a biological
@@ -1904,7 +1902,7 @@ abstract class MolecularSequenceStructureVariant
 }
 
 @freezed
-abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
+class MolecularSequenceOuter with _$MolecularSequenceOuter {
   MolecularSequenceOuter._();
 
   /// [MolecularSequence_Outer]: Raw data describing a biological sequence.
@@ -1972,7 +1970,7 @@ abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
 }
 
 @freezed
-abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
+class MolecularSequenceInner with _$MolecularSequenceInner {
   MolecularSequenceInner._();
 
   /// [MolecularSequence_Inner]: Raw data describing a biological sequence.
@@ -2040,7 +2038,7 @@ abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
 }
 
 @freezed
-abstract class Observation with Resource implements _$Observation {
+class Observation with Resource, _$Observation {
   Observation._();
 
   /// [Observation]: Measurements and simple assertions made about a patient,
@@ -2335,8 +2333,7 @@ abstract class Observation with Resource implements _$Observation {
 }
 
 @freezed
-abstract class ObservationReferenceRange
-    implements _$ObservationReferenceRange {
+class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
 
   /// [Observation_ReferenceRange]: Measurements and simple assertions made
@@ -2427,7 +2424,7 @@ abstract class ObservationReferenceRange
 }
 
 @freezed
-abstract class ObservationComponent implements _$ObservationComponent {
+class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
 
   /// [Observation_Component]: Measurements and simple assertions made about a
@@ -2555,9 +2552,7 @@ abstract class ObservationComponent implements _$ObservationComponent {
 }
 
 @freezed
-abstract class QuestionnaireResponse
-    with Resource
-    implements _$QuestionnaireResponse {
+class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   QuestionnaireResponse._();
 
   /// [QuestionnaireResponse]: A structured set of questions and their answers.
@@ -2704,8 +2699,7 @@ abstract class QuestionnaireResponse
 }
 
 @freezed
-abstract class QuestionnaireResponseItem
-    implements _$QuestionnaireResponseItem {
+class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
 
   /// [QuestionnaireResponse_Item]: A structured set of questions and their
@@ -2788,8 +2782,7 @@ abstract class QuestionnaireResponseItem
 }
 
 @freezed
-abstract class QuestionnaireResponseAnswer
-    implements _$QuestionnaireResponseAnswer {
+class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
 
   /// [QuestionnaireResponse_Answer]: A structured set of questions and their
@@ -2921,7 +2914,7 @@ abstract class QuestionnaireResponseAnswer
 }
 
 @freezed
-abstract class Specimen with Resource implements _$Specimen {
+class Specimen with Resource, _$Specimen {
   Specimen._();
 
   /// [Specimen]: A sample to be used for analysis.
@@ -3068,7 +3061,7 @@ abstract class Specimen with Resource implements _$Specimen {
 }
 
 @freezed
-abstract class SpecimenCollection implements _$SpecimenCollection {
+class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
 
   /// [Specimen_Collection]: A sample to be used for analysis.
@@ -3160,7 +3153,7 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
 }
 
 @freezed
-abstract class SpecimenProcessing implements _$SpecimenProcessing {
+class SpecimenProcessing with _$SpecimenProcessing {
   SpecimenProcessing._();
 
   /// [Specimen_Processing]: A sample to be used for analysis.
@@ -3238,7 +3231,7 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
 }
 
 @freezed
-abstract class SpecimenContainer implements _$SpecimenContainer {
+class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
 
   /// [Specimen_Container]: A sample to be used for analysis.

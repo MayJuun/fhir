@@ -12,7 +12,7 @@ part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
 @freezed
-abstract class CodeSystem with Resource implements _$CodeSystem {
+class CodeSystem with Resource, _$CodeSystem {
   CodeSystem._();
   factory CodeSystem({
     @Default(R5ResourceType.CodeSystem)
@@ -94,7 +94,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
 }
 
 @freezed
-abstract class CodeSystemFilter implements _$CodeSystemFilter {
+class CodeSystemFilter with _$CodeSystemFilter {
   CodeSystemFilter._();
   factory CodeSystemFilter({
     String? id,
@@ -128,7 +128,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
 }
 
 @freezed
-abstract class CodeSystemProperty implements _$CodeSystemProperty {
+class CodeSystemProperty with _$CodeSystemProperty {
   CodeSystemProperty._();
   factory CodeSystemProperty({
     String? id,
@@ -163,7 +163,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
 }
 
 @freezed
-abstract class CodeSystemConcept implements _$CodeSystemConcept {
+class CodeSystemConcept with _$CodeSystemConcept {
   CodeSystemConcept._();
   factory CodeSystemConcept({
     String? id,
@@ -198,7 +198,7 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
 }
 
 @freezed
-abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
+class CodeSystemDesignation with _$CodeSystemDesignation {
   CodeSystemDesignation._();
   factory CodeSystemDesignation({
     String? id,
@@ -229,7 +229,7 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
 }
 
 @freezed
-abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
+class CodeSystemProperty1 with _$CodeSystemProperty1 {
   CodeSystemProperty1._();
   factory CodeSystemProperty1({
     String? id,
@@ -270,7 +270,7 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
 }
 
 @freezed
-abstract class ConceptMap with Resource implements _$ConceptMap {
+class ConceptMap with Resource, _$ConceptMap {
   ConceptMap._();
   factory ConceptMap({
     @Default(R5ResourceType.ConceptMap)
@@ -342,7 +342,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
 }
 
 @freezed
-abstract class ConceptMapGroup implements _$ConceptMapGroup {
+class ConceptMapGroup with _$ConceptMapGroup {
   ConceptMapGroup._();
   factory ConceptMapGroup({
     String? id,
@@ -378,7 +378,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
 }
 
 @freezed
-abstract class ConceptMapElement implements _$ConceptMapElement {
+class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
   factory ConceptMapElement({
     String? id,
@@ -411,7 +411,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
 }
 
 @freezed
-abstract class ConceptMapTarget implements _$ConceptMapTarget {
+class ConceptMapTarget with _$ConceptMapTarget {
   ConceptMapTarget._();
   factory ConceptMapTarget({
     String? id,
@@ -448,7 +448,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
 }
 
 @freezed
-abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
+class ConceptMapDependsOn with _$ConceptMapDependsOn {
   ConceptMapDependsOn._();
   factory ConceptMapDependsOn({
     String? id,
@@ -481,7 +481,7 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
 }
 
 @freezed
-abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
+class ConceptMapUnmapped with _$ConceptMapUnmapped {
   ConceptMapUnmapped._();
   factory ConceptMapUnmapped({
     String? id,
@@ -515,7 +515,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
 }
 
 @freezed
-abstract class NamingSystem with Resource implements _$NamingSystem {
+class NamingSystem with Resource, _$NamingSystem {
   NamingSystem._();
   factory NamingSystem({
     @Default(R5ResourceType.NamingSystem)
@@ -586,7 +586,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
 }
 
 @freezed
-abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
+class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
     String? id,
@@ -622,9 +622,7 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
 }
 
 @freezed
-abstract class TerminologyCapabilities
-    with Resource
-    implements _$TerminologyCapabilities {
+class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   TerminologyCapabilities._();
   factory TerminologyCapabilities({
     @Default(R5ResourceType.TerminologyCapabilities)
@@ -701,8 +699,7 @@ abstract class TerminologyCapabilities
 }
 
 @freezed
-abstract class TerminologyCapabilitiesSoftware
-    implements _$TerminologyCapabilitiesSoftware {
+class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   TerminologyCapabilitiesSoftware._();
   factory TerminologyCapabilitiesSoftware({
     String? id,
@@ -735,8 +732,8 @@ abstract class TerminologyCapabilitiesSoftware
 }
 
 @freezed
-abstract class TerminologyCapabilitiesImplementation
-    implements _$TerminologyCapabilitiesImplementation {
+class TerminologyCapabilitiesImplementation
+    with _$TerminologyCapabilitiesImplementation {
   TerminologyCapabilitiesImplementation._();
   factory TerminologyCapabilitiesImplementation({
     String? id,
@@ -769,8 +766,8 @@ abstract class TerminologyCapabilitiesImplementation
 }
 
 @freezed
-abstract class TerminologyCapabilitiesCodeSystem
-    implements _$TerminologyCapabilitiesCodeSystem {
+class TerminologyCapabilitiesCodeSystem
+    with _$TerminologyCapabilitiesCodeSystem {
   TerminologyCapabilitiesCodeSystem._();
   factory TerminologyCapabilitiesCodeSystem({
     String? id,
@@ -803,8 +800,7 @@ abstract class TerminologyCapabilitiesCodeSystem
 }
 
 @freezed
-abstract class TerminologyCapabilitiesVersion
-    implements _$TerminologyCapabilitiesVersion {
+class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   TerminologyCapabilitiesVersion._();
   factory TerminologyCapabilitiesVersion({
     String? id,
@@ -844,8 +840,7 @@ abstract class TerminologyCapabilitiesVersion
 }
 
 @freezed
-abstract class TerminologyCapabilitiesFilter
-    implements _$TerminologyCapabilitiesFilter {
+class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   TerminologyCapabilitiesFilter._();
   factory TerminologyCapabilitiesFilter({
     String? id,
@@ -876,8 +871,7 @@ abstract class TerminologyCapabilitiesFilter
 }
 
 @freezed
-abstract class TerminologyCapabilitiesExpansion
-    implements _$TerminologyCapabilitiesExpansion {
+class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   TerminologyCapabilitiesExpansion._();
   factory TerminologyCapabilitiesExpansion({
     String? id,
@@ -915,8 +909,7 @@ abstract class TerminologyCapabilitiesExpansion
 }
 
 @freezed
-abstract class TerminologyCapabilitiesParameter
-    implements _$TerminologyCapabilitiesParameter {
+class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   TerminologyCapabilitiesParameter._();
   factory TerminologyCapabilitiesParameter({
     String? id,
@@ -949,8 +942,8 @@ abstract class TerminologyCapabilitiesParameter
 }
 
 @freezed
-abstract class TerminologyCapabilitiesValidateCode
-    implements _$TerminologyCapabilitiesValidateCode {
+class TerminologyCapabilitiesValidateCode
+    with _$TerminologyCapabilitiesValidateCode {
   TerminologyCapabilitiesValidateCode._();
   factory TerminologyCapabilitiesValidateCode({
     String? id,
@@ -981,8 +974,8 @@ abstract class TerminologyCapabilitiesValidateCode
 }
 
 @freezed
-abstract class TerminologyCapabilitiesTranslation
-    implements _$TerminologyCapabilitiesTranslation {
+class TerminologyCapabilitiesTranslation
+    with _$TerminologyCapabilitiesTranslation {
   TerminologyCapabilitiesTranslation._();
   factory TerminologyCapabilitiesTranslation({
     String? id,
@@ -1013,8 +1006,7 @@ abstract class TerminologyCapabilitiesTranslation
 }
 
 @freezed
-abstract class TerminologyCapabilitiesClosure
-    implements _$TerminologyCapabilitiesClosure {
+class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   TerminologyCapabilitiesClosure._();
   factory TerminologyCapabilitiesClosure({
     String? id,
@@ -1045,7 +1037,7 @@ abstract class TerminologyCapabilitiesClosure
 }
 
 @freezed
-abstract class ValueSet with Resource implements _$ValueSet {
+class ValueSet with Resource, _$ValueSet {
   ValueSet._();
   factory ValueSet({
     @Default(R5ResourceType.ValueSet)
@@ -1111,7 +1103,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
 }
 
 @freezed
-abstract class ValueSetCompose implements _$ValueSetCompose {
+class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
   factory ValueSetCompose({
     String? id,
@@ -1145,7 +1137,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
 }
 
 @freezed
-abstract class ValueSetInclude implements _$ValueSetInclude {
+class ValueSetInclude with _$ValueSetInclude {
   ValueSetInclude._();
   factory ValueSetInclude({
     String? id,
@@ -1178,7 +1170,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
 }
 
 @freezed
-abstract class ValueSetConcept implements _$ValueSetConcept {
+class ValueSetConcept with _$ValueSetConcept {
   ValueSetConcept._();
   factory ValueSetConcept({
     String? id,
@@ -1209,7 +1201,7 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
 }
 
 @freezed
-abstract class ValueSetDesignation implements _$ValueSetDesignation {
+class ValueSetDesignation with _$ValueSetDesignation {
   ValueSetDesignation._();
   factory ValueSetDesignation({
     String? id,
@@ -1240,7 +1232,7 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
 }
 
 @freezed
-abstract class ValueSetFilter implements _$ValueSetFilter {
+class ValueSetFilter with _$ValueSetFilter {
   ValueSetFilter._();
   factory ValueSetFilter({
     String? id,
@@ -1272,7 +1264,7 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
 }
 
 @freezed
-abstract class ValueSetExpansion implements _$ValueSetExpansion {
+class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
   factory ValueSetExpansion({
     String? id,
@@ -1309,7 +1301,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
 }
 
 @freezed
-abstract class ValueSetParameter implements _$ValueSetParameter {
+class ValueSetParameter with _$ValueSetParameter {
   ValueSetParameter._();
   factory ValueSetParameter({
     String? id,
@@ -1351,7 +1343,7 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
 }
 
 @freezed
-abstract class ValueSetProperty implements _$ValueSetProperty {
+class ValueSetProperty with _$ValueSetProperty {
   ValueSetProperty._();
   factory ValueSetProperty({
     String? id,
@@ -1381,7 +1373,7 @@ abstract class ValueSetProperty implements _$ValueSetProperty {
 }
 
 @freezed
-abstract class ValueSetContains implements _$ValueSetContains {
+class ValueSetContains with _$ValueSetContains {
   ValueSetContains._();
   factory ValueSetContains({
     String? id,
@@ -1422,7 +1414,7 @@ abstract class ValueSetContains implements _$ValueSetContains {
 }
 
 @freezed
-abstract class ValueSetProperty1 implements _$ValueSetProperty1 {
+class ValueSetProperty1 with _$ValueSetProperty1 {
   ValueSetProperty1._();
   factory ValueSetProperty1({
     String? id,

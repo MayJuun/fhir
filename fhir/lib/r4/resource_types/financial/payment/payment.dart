@@ -12,7 +12,7 @@ part 'payment.freezed.dart';
 part 'payment.g.dart';
 
 @freezed
-abstract class PaymentNotice with Resource implements _$PaymentNotice {
+class PaymentNotice with Resource, _$PaymentNotice {
   PaymentNotice._();
 
   /// [PaymentNotice]: This resource provides the status of the payment for
@@ -154,9 +154,7 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
 }
 
 @freezed
-abstract class PaymentReconciliation
-    with Resource
-    implements _$PaymentReconciliation {
+class PaymentReconciliation with Resource, _$PaymentReconciliation {
   PaymentReconciliation._();
 
   /// [PaymentReconciliation]: This resource provides the details including
@@ -317,8 +315,7 @@ abstract class PaymentReconciliation
 }
 
 @freezed
-abstract class PaymentReconciliationDetail
-    implements _$PaymentReconciliationDetail {
+class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
 
   /// [PaymentReconciliation_Detail]: This resource provides the details
@@ -412,8 +409,7 @@ abstract class PaymentReconciliationDetail
 }
 
 @freezed
-abstract class PaymentReconciliationProcessNote
-    implements _$PaymentReconciliationProcessNote {
+class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   PaymentReconciliationProcessNote._();
 
   /// [PaymentReconciliation_ProcessNote]: This resource provides the details

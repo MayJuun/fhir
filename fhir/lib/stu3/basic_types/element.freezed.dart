@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'element.dart';
 
@@ -8,6 +8,10 @@ part of 'element.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Element _$ElementFromJson(Map<String, dynamic> json) {
   return _Element.fromJson(json);
 }
@@ -35,13 +39,13 @@ const $Element = _$ElementTearOff();
 
 /// @nodoc
 mixin _$Element {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ElementCopyWith<Element> get copyWith;
+  $ElementCopyWith<Element> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -67,10 +71,14 @@ class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
     Object? extension_ = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
     ));
   }
 }
@@ -100,10 +108,14 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
     Object? extension_ = freezed,
   }) {
     return _then(_Element(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
     ));
   }
 }
@@ -158,20 +170,21 @@ class _$_Element extends _Element {
 }
 
 abstract class _Element extends Element {
-  _Element._() : super._();
   factory _Element(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_}) =
       _$_Element;
+  _Element._() : super._();
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ElementCopyWith<_Element> get copyWith;
+  _$ElementCopyWith<_Element> get copyWith =>
+      throw _privateConstructorUsedError;
 }

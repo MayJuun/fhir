@@ -12,9 +12,7 @@ part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
 
 @freezed
-abstract class ActivityDefinition
-    with Resource
-    implements _$ActivityDefinition {
+class ActivityDefinition with Resource, _$ActivityDefinition {
   ActivityDefinition._();
   factory ActivityDefinition({
     @Default(R5ResourceType.ActivityDefinition)
@@ -124,8 +122,7 @@ abstract class ActivityDefinition
 }
 
 @freezed
-abstract class ActivityDefinitionParticipant
-    implements _$ActivityDefinitionParticipant {
+class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   ActivityDefinitionParticipant._();
   factory ActivityDefinitionParticipant({
     String? id,
@@ -155,8 +152,7 @@ abstract class ActivityDefinitionParticipant
 }
 
 @freezed
-abstract class ActivityDefinitionDynamicValue
-    implements _$ActivityDefinitionDynamicValue {
+class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   ActivityDefinitionDynamicValue._();
   factory ActivityDefinitionDynamicValue({
     String? id,
@@ -188,9 +184,7 @@ abstract class ActivityDefinitionDynamicValue
 }
 
 @freezed
-abstract class ConditionDefinition
-    with Resource
-    implements _$ConditionDefinition {
+class ConditionDefinition with Resource, _$ConditionDefinition {
   ConditionDefinition._();
   factory ConditionDefinition({
     @Default(R5ResourceType.ConditionDefinition)
@@ -278,8 +272,7 @@ abstract class ConditionDefinition
 }
 
 @freezed
-abstract class ConditionDefinitionObservation
-    implements _$ConditionDefinitionObservation {
+class ConditionDefinitionObservation with _$ConditionDefinitionObservation {
   ConditionDefinitionObservation._();
   factory ConditionDefinitionObservation({
     String? id,
@@ -310,8 +303,7 @@ abstract class ConditionDefinitionObservation
 }
 
 @freezed
-abstract class ConditionDefinitionMedication
-    implements _$ConditionDefinitionMedication {
+class ConditionDefinitionMedication with _$ConditionDefinitionMedication {
   ConditionDefinitionMedication._();
   factory ConditionDefinitionMedication({
     String? id,
@@ -340,8 +332,7 @@ abstract class ConditionDefinitionMedication
 }
 
 @freezed
-abstract class ConditionDefinitionPrecondition
-    implements _$ConditionDefinitionPrecondition {
+class ConditionDefinitionPrecondition with _$ConditionDefinitionPrecondition {
   ConditionDefinitionPrecondition._();
   factory ConditionDefinitionPrecondition({
     String? id,
@@ -376,8 +367,7 @@ abstract class ConditionDefinitionPrecondition
 }
 
 @freezed
-abstract class ConditionDefinitionQuestionnaire
-    implements _$ConditionDefinitionQuestionnaire {
+class ConditionDefinitionQuestionnaire with _$ConditionDefinitionQuestionnaire {
   ConditionDefinitionQuestionnaire._();
   factory ConditionDefinitionQuestionnaire({
     String? id,
@@ -410,7 +400,7 @@ abstract class ConditionDefinitionQuestionnaire
 }
 
 @freezed
-abstract class ConditionDefinitionPlan implements _$ConditionDefinitionPlan {
+class ConditionDefinitionPlan with _$ConditionDefinitionPlan {
   ConditionDefinitionPlan._();
   factory ConditionDefinitionPlan({
     String? id,
@@ -438,7 +428,7 @@ abstract class ConditionDefinitionPlan implements _$ConditionDefinitionPlan {
 }
 
 @freezed
-abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
+class DeviceDefinition with Resource, _$DeviceDefinition {
   DeviceDefinition._();
   factory DeviceDefinition({
     @Default(R5ResourceType.DeviceDefinition)
@@ -500,8 +490,8 @@ abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
 }
 
 @freezed
-abstract class DeviceDefinitionUdiDeviceIdentifier
-    implements _$DeviceDefinitionUdiDeviceIdentifier {
+class DeviceDefinitionUdiDeviceIdentifier
+    with _$DeviceDefinitionUdiDeviceIdentifier {
   DeviceDefinitionUdiDeviceIdentifier._();
   factory DeviceDefinitionUdiDeviceIdentifier({
     String? id,
@@ -536,8 +526,7 @@ abstract class DeviceDefinitionUdiDeviceIdentifier
 }
 
 @freezed
-abstract class DeviceDefinitionDeviceName
-    implements _$DeviceDefinitionDeviceName {
+class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   DeviceDefinitionDeviceName._();
   factory DeviceDefinitionDeviceName({
     String? id,
@@ -569,8 +558,7 @@ abstract class DeviceDefinitionDeviceName
 }
 
 @freezed
-abstract class DeviceDefinitionSpecialization
-    implements _$DeviceDefinitionSpecialization {
+class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
   DeviceDefinitionSpecialization._();
   factory DeviceDefinitionSpecialization({
     String? id,
@@ -603,8 +591,7 @@ abstract class DeviceDefinitionSpecialization
 }
 
 @freezed
-abstract class DeviceDefinitionCapability
-    implements _$DeviceDefinitionCapability {
+class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
   DeviceDefinitionCapability._();
   factory DeviceDefinitionCapability({
     String? id,
@@ -633,7 +620,7 @@ abstract class DeviceDefinitionCapability
 }
 
 @freezed
-abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
+class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   DeviceDefinitionProperty._();
   factory DeviceDefinitionProperty({
     String? id,
@@ -663,7 +650,7 @@ abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
 }
 
 @freezed
-abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
+class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   DeviceDefinitionMaterial._();
   factory DeviceDefinitionMaterial({
     String? id,
@@ -695,7 +682,7 @@ abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
 }
 
 @freezed
-abstract class EventDefinition with Resource implements _$EventDefinition {
+class EventDefinition with Resource, _$EventDefinition {
   EventDefinition._();
   factory EventDefinition({
     @Default(R5ResourceType.EventDefinition)
@@ -776,9 +763,7 @@ abstract class EventDefinition with Resource implements _$EventDefinition {
 }
 
 @freezed
-abstract class ObservationDefinition
-    with Resource
-    implements _$ObservationDefinition {
+class ObservationDefinition with Resource, _$ObservationDefinition {
   ObservationDefinition._();
   factory ObservationDefinition({
     @Default(R5ResourceType.ObservationDefinition)
@@ -870,8 +855,8 @@ abstract class ObservationDefinition
 }
 
 @freezed
-abstract class ObservationDefinitionQuantitativeDetails
-    implements _$ObservationDefinitionQuantitativeDetails {
+class ObservationDefinitionQuantitativeDetails
+    with _$ObservationDefinitionQuantitativeDetails {
   ObservationDefinitionQuantitativeDetails._();
   factory ObservationDefinitionQuantitativeDetails({
     String? id,
@@ -906,8 +891,8 @@ abstract class ObservationDefinitionQuantitativeDetails
 }
 
 @freezed
-abstract class ObservationDefinitionQualifiedInterval
-    implements _$ObservationDefinitionQualifiedInterval {
+class ObservationDefinitionQualifiedInterval
+    with _$ObservationDefinitionQualifiedInterval {
   ObservationDefinitionQualifiedInterval._();
   factory ObservationDefinitionQualifiedInterval({
     String? id,
@@ -951,8 +936,7 @@ abstract class ObservationDefinitionQualifiedInterval
 }
 
 @freezed
-abstract class ObservationDefinitionComponent
-    implements _$ObservationDefinitionComponent {
+class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
   ObservationDefinitionComponent._();
   factory ObservationDefinitionComponent({
     String? id,
@@ -987,7 +971,7 @@ abstract class ObservationDefinitionComponent
 }
 
 @freezed
-abstract class PlanDefinition with Resource implements _$PlanDefinition {
+class PlanDefinition with Resource, _$PlanDefinition {
   PlanDefinition._();
   factory PlanDefinition({
     @Default(R5ResourceType.PlanDefinition)
@@ -1071,7 +1055,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
 }
 
 @freezed
-abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
+class PlanDefinitionGoal with _$PlanDefinitionGoal {
   PlanDefinitionGoal._();
   factory PlanDefinitionGoal({
     String? id,
@@ -1104,7 +1088,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
 }
 
 @freezed
-abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
+class PlanDefinitionTarget with _$PlanDefinitionTarget {
   PlanDefinitionTarget._();
   factory PlanDefinitionTarget({
     String? id,
@@ -1135,7 +1119,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
 }
 
 @freezed
-abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
+class PlanDefinitionAction with _$PlanDefinitionAction {
   PlanDefinitionAction._();
   factory PlanDefinitionAction({
     String? id,
@@ -1214,7 +1198,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
 }
 
 @freezed
-abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
+class PlanDefinitionCondition with _$PlanDefinitionCondition {
   PlanDefinitionCondition._();
   factory PlanDefinitionCondition({
     String? id,
@@ -1244,8 +1228,7 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
 }
 
 @freezed
-abstract class PlanDefinitionRelatedAction
-    implements _$PlanDefinitionRelatedAction {
+class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedAction._();
   factory PlanDefinitionRelatedAction({
     String? id,
@@ -1279,8 +1262,7 @@ abstract class PlanDefinitionRelatedAction
 }
 
 @freezed
-abstract class PlanDefinitionParticipant
-    implements _$PlanDefinitionParticipant {
+class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   PlanDefinitionParticipant._();
   factory PlanDefinitionParticipant({
     String? id,
@@ -1311,8 +1293,7 @@ abstract class PlanDefinitionParticipant
 }
 
 @freezed
-abstract class PlanDefinitionDynamicValue
-    implements _$PlanDefinitionDynamicValue {
+class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   PlanDefinitionDynamicValue._();
   factory PlanDefinitionDynamicValue({
     String? id,
@@ -1342,7 +1323,7 @@ abstract class PlanDefinitionDynamicValue
 }
 
 @freezed
-abstract class Questionnaire with Resource implements _$Questionnaire {
+class Questionnaire with Resource, _$Questionnaire {
   Questionnaire._();
   factory Questionnaire({
     @Default(R5ResourceType.Questionnaire)
@@ -1415,7 +1396,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
 }
 
 @freezed
-abstract class QuestionnaireItem implements _$QuestionnaireItem {
+class QuestionnaireItem with _$QuestionnaireItem {
   QuestionnaireItem._();
   factory QuestionnaireItem({
     String? id,
@@ -1469,7 +1450,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
 }
 
 @freezed
-abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
+class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   QuestionnaireEnableWhen._();
   factory QuestionnaireEnableWhen({
     String? id,
@@ -1517,8 +1498,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
 }
 
 @freezed
-abstract class QuestionnaireAnswerOption
-    implements _$QuestionnaireAnswerOption {
+class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   QuestionnaireAnswerOption._();
   factory QuestionnaireAnswerOption({
     String? id,
@@ -1557,7 +1537,7 @@ abstract class QuestionnaireAnswerOption
 }
 
 @freezed
-abstract class QuestionnaireInitial implements _$QuestionnaireInitial {
+class QuestionnaireInitial with _$QuestionnaireInitial {
   QuestionnaireInitial._();
   factory QuestionnaireInitial({
     String? id,
@@ -1603,9 +1583,7 @@ abstract class QuestionnaireInitial implements _$QuestionnaireInitial {
 }
 
 @freezed
-abstract class SpecimenDefinition
-    with Resource
-    implements _$SpecimenDefinition {
+class SpecimenDefinition with Resource, _$SpecimenDefinition {
   SpecimenDefinition._();
   factory SpecimenDefinition({
     @Default(R5ResourceType.SpecimenDefinition)
@@ -1680,8 +1658,7 @@ abstract class SpecimenDefinition
 }
 
 @freezed
-abstract class SpecimenDefinitionTypeTested
-    implements _$SpecimenDefinitionTypeTested {
+class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   SpecimenDefinitionTypeTested._();
   factory SpecimenDefinitionTypeTested({
     String? id,
@@ -1723,8 +1700,7 @@ abstract class SpecimenDefinitionTypeTested
 }
 
 @freezed
-abstract class SpecimenDefinitionContainer
-    implements _$SpecimenDefinitionContainer {
+class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   SpecimenDefinitionContainer._();
   factory SpecimenDefinitionContainer({
     String? id,
@@ -1763,8 +1739,7 @@ abstract class SpecimenDefinitionContainer
 }
 
 @freezed
-abstract class SpecimenDefinitionAdditive
-    implements _$SpecimenDefinitionAdditive {
+class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   SpecimenDefinitionAdditive._();
   factory SpecimenDefinitionAdditive({
     String? id,
@@ -1793,8 +1768,7 @@ abstract class SpecimenDefinitionAdditive
 }
 
 @freezed
-abstract class SpecimenDefinitionHandling
-    implements _$SpecimenDefinitionHandling {
+class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   SpecimenDefinitionHandling._();
   factory SpecimenDefinitionHandling({
     String? id,

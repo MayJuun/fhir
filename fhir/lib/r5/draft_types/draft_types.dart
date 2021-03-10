@@ -12,7 +12,7 @@ part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
 @freezed
-abstract class Population implements _$Population {
+class Population with _$Population {
   Population._();
   factory Population({
     String? id,
@@ -43,7 +43,7 @@ abstract class Population implements _$Population {
 }
 
 @freezed
-abstract class ProductShelfLife implements _$ProductShelfLife {
+class ProductShelfLife with _$ProductShelfLife {
   ProductShelfLife._();
   factory ProductShelfLife({
     String? id,
@@ -74,7 +74,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
 }
 
 @freezed
-abstract class ProdCharacteristic implements _$ProdCharacteristic {
+class ProdCharacteristic with _$ProdCharacteristic {
   ProdCharacteristic._();
   factory ProdCharacteristic({
     String? id,
@@ -114,7 +114,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
 }
 
 @freezed
-abstract class MarketingStatus implements _$MarketingStatus {
+class MarketingStatus with _$MarketingStatus {
   MarketingStatus._();
   factory MarketingStatus({
     String? id,
@@ -146,7 +146,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
 }
 
 @freezed
-abstract class Citation implements _$Citation {
+class Citation with _$Citation {
   Citation._();
   factory Citation({
     @Default('Citation') String resourceType,
@@ -237,7 +237,7 @@ abstract class Citation implements _$Citation {
 }
 
 @freezed
-abstract class CitationSummary implements _$CitationSummary {
+class CitationSummary with _$CitationSummary {
   CitationSummary._();
   factory CitationSummary({
     String? id,
@@ -266,7 +266,7 @@ abstract class CitationSummary implements _$CitationSummary {
 }
 
 @freezed
-abstract class CitationVariantCitation implements _$CitationVariantCitation {
+class CitationVariantCitation with _$CitationVariantCitation {
   CitationVariantCitation._();
   factory CitationVariantCitation({
     String? id,
@@ -296,7 +296,7 @@ abstract class CitationVariantCitation implements _$CitationVariantCitation {
 }
 
 @freezed
-abstract class CitationJournal implements _$CitationJournal {
+class CitationJournal with _$CitationJournal {
   CitationJournal._();
   factory CitationJournal({
     String? id,
@@ -328,7 +328,7 @@ abstract class CitationJournal implements _$CitationJournal {
 }
 
 @freezed
-abstract class CitationJournalIssue implements _$CitationJournalIssue {
+class CitationJournalIssue with _$CitationJournalIssue {
   CitationJournalIssue._();
   factory CitationJournalIssue({
     String? id,
@@ -360,7 +360,7 @@ abstract class CitationJournalIssue implements _$CitationJournalIssue {
 }
 
 @freezed
-abstract class CitationPublicationDate implements _$CitationPublicationDate {
+class CitationPublicationDate with _$CitationPublicationDate {
   CitationPublicationDate._();
   factory CitationPublicationDate({
     String? id,
@@ -398,7 +398,7 @@ abstract class CitationPublicationDate implements _$CitationPublicationDate {
 }
 
 @freezed
-abstract class CitationPublicationInfo implements _$CitationPublicationInfo {
+class CitationPublicationInfo with _$CitationPublicationInfo {
   CitationPublicationInfo._();
   factory CitationPublicationInfo({
     String? id,
@@ -431,7 +431,7 @@ abstract class CitationPublicationInfo implements _$CitationPublicationInfo {
 }
 
 @freezed
-abstract class CitationPublishedIn implements _$CitationPublishedIn {
+class CitationPublishedIn with _$CitationPublishedIn {
   CitationPublishedIn._();
   factory CitationPublishedIn({
     String? id,
@@ -466,7 +466,7 @@ abstract class CitationPublishedIn implements _$CitationPublishedIn {
 }
 
 @freezed
-abstract class CitationAlternativeTitle implements _$CitationAlternativeTitle {
+class CitationAlternativeTitle with _$CitationAlternativeTitle {
   CitationAlternativeTitle._();
   factory CitationAlternativeTitle({
     String? id,
@@ -497,7 +497,7 @@ abstract class CitationAlternativeTitle implements _$CitationAlternativeTitle {
 }
 
 @freezed
-abstract class CitationPagination implements _$CitationPagination {
+class CitationPagination with _$CitationPagination {
   CitationPagination._();
   factory CitationPagination({
     String? id,
@@ -529,7 +529,7 @@ abstract class CitationPagination implements _$CitationPagination {
 }
 
 @freezed
-abstract class CitationArticleUrl implements _$CitationArticleUrl {
+class CitationArticleUrl with _$CitationArticleUrl {
   CitationArticleUrl._();
   factory CitationArticleUrl({
     String? id,
@@ -558,8 +558,7 @@ abstract class CitationArticleUrl implements _$CitationArticleUrl {
 }
 
 @freezed
-abstract class CitationAlternativeAbstract
-    implements _$CitationAlternativeAbstract {
+class CitationAlternativeAbstract with _$CitationAlternativeAbstract {
   CitationAlternativeAbstract._();
   factory CitationAlternativeAbstract({
     String? id,
@@ -592,7 +591,7 @@ abstract class CitationAlternativeAbstract
 }
 
 @freezed
-abstract class CitationContributorship implements _$CitationContributorship {
+class CitationContributorship with _$CitationContributorship {
   CitationContributorship._();
   factory CitationContributorship({
     String? id,
@@ -622,7 +621,7 @@ abstract class CitationContributorship implements _$CitationContributorship {
 }
 
 @freezed
-abstract class CitationEntry implements _$CitationEntry {
+class CitationEntry with _$CitationEntry {
   CitationEntry._();
   factory CitationEntry({
     String? id,
@@ -664,7 +663,7 @@ abstract class CitationEntry implements _$CitationEntry {
 }
 
 @freezed
-abstract class CitationAffiliationInfo implements _$CitationAffiliationInfo {
+class CitationAffiliationInfo with _$CitationAffiliationInfo {
   CitationAffiliationInfo._();
   factory CitationAffiliationInfo({
     String? id,
@@ -695,7 +694,7 @@ abstract class CitationAffiliationInfo implements _$CitationAffiliationInfo {
 }
 
 @freezed
-abstract class CitationSummary1 implements _$CitationSummary1 {
+class CitationSummary1 with _$CitationSummary1 {
   CitationSummary1._();
   factory CitationSummary1({
     String? id,
@@ -726,7 +725,7 @@ abstract class CitationSummary1 implements _$CitationSummary1 {
 }
 
 @freezed
-abstract class CitationAlternativeForm implements _$CitationAlternativeForm {
+class CitationAlternativeForm with _$CitationAlternativeForm {
   CitationAlternativeForm._();
   factory CitationAlternativeForm({
     String? id,
@@ -757,7 +756,7 @@ abstract class CitationAlternativeForm implements _$CitationAlternativeForm {
 }
 
 @freezed
-abstract class CitationJournalIssue1 implements _$CitationJournalIssue1 {
+class CitationJournalIssue1 with _$CitationJournalIssue1 {
   CitationJournalIssue1._();
   factory CitationJournalIssue1({
     String? id,
@@ -789,7 +788,7 @@ abstract class CitationJournalIssue1 implements _$CitationJournalIssue1 {
 }
 
 @freezed
-abstract class CitationPublicationDate1 implements _$CitationPublicationDate1 {
+class CitationPublicationDate1 with _$CitationPublicationDate1 {
   CitationPublicationDate1._();
   factory CitationPublicationDate1({
     String? id,
@@ -828,7 +827,7 @@ abstract class CitationPublicationDate1 implements _$CitationPublicationDate1 {
 }
 
 @freezed
-abstract class CitationPagination1 implements _$CitationPagination1 {
+class CitationPagination1 with _$CitationPagination1 {
   CitationPagination1._();
   factory CitationPagination1({
     String? id,
@@ -860,7 +859,7 @@ abstract class CitationPagination1 implements _$CitationPagination1 {
 }
 
 @freezed
-abstract class CitationPublicationInfo1 implements _$CitationPublicationInfo1 {
+class CitationPublicationInfo1 with _$CitationPublicationInfo1 {
   CitationPublicationInfo1._();
   factory CitationPublicationInfo1({
     String? id,
@@ -894,7 +893,7 @@ abstract class CitationPublicationInfo1 implements _$CitationPublicationInfo1 {
 }
 
 @freezed
-abstract class CitationPublishedIn1 implements _$CitationPublishedIn1 {
+class CitationPublishedIn1 with _$CitationPublishedIn1 {
   CitationPublishedIn1._();
   factory CitationPublishedIn1({
     String? id,
@@ -928,7 +927,7 @@ abstract class CitationPublishedIn1 implements _$CitationPublishedIn1 {
 }
 
 @freezed
-abstract class CitationKeywordList implements _$CitationKeywordList {
+class CitationKeywordList with _$CitationKeywordList {
   CitationKeywordList._();
   factory CitationKeywordList({
     String? id,
@@ -957,7 +956,7 @@ abstract class CitationKeywordList implements _$CitationKeywordList {
 }
 
 @freezed
-abstract class CitationKeyword implements _$CitationKeyword {
+class CitationKeyword with _$CitationKeyword {
   CitationKeyword._();
   factory CitationKeyword({
     String? id,
@@ -987,7 +986,7 @@ abstract class CitationKeyword implements _$CitationKeyword {
 }
 
 @freezed
-abstract class CitationMedlinePubMed implements _$CitationMedlinePubMed {
+class CitationMedlinePubMed with _$CitationMedlinePubMed {
   CitationMedlinePubMed._();
   factory CitationMedlinePubMed({
     String? id,
@@ -1028,7 +1027,7 @@ abstract class CitationMedlinePubMed implements _$CitationMedlinePubMed {
 }
 
 @freezed
-abstract class CitationPubMedPubDate implements _$CitationPubMedPubDate {
+class CitationPubMedPubDate with _$CitationPubMedPubDate {
   CitationPubMedPubDate._();
   factory CitationPubMedPubDate({
     String? id,
@@ -1057,7 +1056,7 @@ abstract class CitationPubMedPubDate implements _$CitationPubMedPubDate {
 }
 
 @freezed
-abstract class CitationRelatedArticle implements _$CitationRelatedArticle {
+class CitationRelatedArticle with _$CitationRelatedArticle {
   CitationRelatedArticle._();
   factory CitationRelatedArticle({
     String? id,
@@ -1087,7 +1086,7 @@ abstract class CitationRelatedArticle implements _$CitationRelatedArticle {
 }
 
 @freezed
-abstract class EvidenceReport implements _$EvidenceReport {
+class EvidenceReport with _$EvidenceReport {
   EvidenceReport._();
   factory EvidenceReport({
     @Default('EvidenceReport') String resourceType,
@@ -1165,7 +1164,7 @@ abstract class EvidenceReport implements _$EvidenceReport {
 }
 
 @freezed
-abstract class EvidenceReportSubject implements _$EvidenceReportSubject {
+class EvidenceReportSubject with _$EvidenceReportSubject {
   EvidenceReportSubject._();
   factory EvidenceReportSubject({
     String? id,
@@ -1193,8 +1192,7 @@ abstract class EvidenceReportSubject implements _$EvidenceReportSubject {
 }
 
 @freezed
-abstract class EvidenceReportCharacteristic
-    implements _$EvidenceReportCharacteristic {
+class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
   EvidenceReportCharacteristic._();
   factory EvidenceReportCharacteristic({
     String? id,
@@ -1231,7 +1229,7 @@ abstract class EvidenceReportCharacteristic
 }
 
 @freezed
-abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
+class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
   EvidenceReportRelatesTo._();
   factory EvidenceReportRelatesTo({
     String? id,
@@ -1262,7 +1260,7 @@ abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
 }
 
 @freezed
-abstract class EvidenceReportSection implements _$EvidenceReportSection {
+class EvidenceReportSection with _$EvidenceReportSection {
   EvidenceReportSection._();
   factory EvidenceReportSection({
     String? id,

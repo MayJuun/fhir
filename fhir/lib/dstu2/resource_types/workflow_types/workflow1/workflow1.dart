@@ -12,7 +12,7 @@ part 'workflow1.freezed.dart';
 part 'workflow1.g.dart';
 
 @freezed
-abstract class Order with Resource implements _$Order {
+class Order with Resource, _$Order {
   Order._();
   factory Order({
     @Default(Dstu2ResourceType.Order)
@@ -54,7 +54,7 @@ abstract class Order with Resource implements _$Order {
 }
 
 @freezed
-abstract class OrderWhen with _$OrderWhen {
+class OrderWhen with _$OrderWhen {
   OrderWhen._();
   factory OrderWhen({
     Id? id,
@@ -83,7 +83,7 @@ abstract class OrderWhen with _$OrderWhen {
 }
 
 @freezed
-abstract class OrderResponse with Resource implements _$OrderResponse {
+class OrderResponse with Resource, _$OrderResponse {
   OrderResponse._();
   factory OrderResponse({
     @Default(Dstu2ResourceType.OrderResponse)
@@ -126,9 +126,7 @@ abstract class OrderResponse with Resource implements _$OrderResponse {
 }
 
 @freezed
-abstract class CommunicationRequest
-    with Resource
-    implements _$CommunicationRequest {
+class CommunicationRequest with Resource, _$CommunicationRequest {
   CommunicationRequest._();
   factory CommunicationRequest({
     @Default(Dstu2ResourceType.CommunicationRequest)
@@ -182,7 +180,7 @@ abstract class CommunicationRequest
 }
 
 @freezed
-abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
+class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
   factory CommunicationRequestPayload({
     Id? id,
@@ -213,7 +211,7 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
 }
 
 @freezed
-abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
+class DeviceUseRequest with Resource, _$DeviceUseRequest {
   DeviceUseRequest._();
   factory DeviceUseRequest({
     @Default(Dstu2ResourceType.DeviceUseRequest)
@@ -269,9 +267,7 @@ abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
 }
 
 @freezed
-abstract class DeviceUseStatement
-    with Resource
-    implements _$DeviceUseStatement {
+class DeviceUseStatement with Resource, _$DeviceUseStatement {
   DeviceUseStatement._();
   factory DeviceUseStatement({
     @Default(Dstu2ResourceType.DeviceUseStatement)

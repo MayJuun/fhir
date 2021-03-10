@@ -12,7 +12,7 @@ part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
 @freezed
-abstract class CarePlan with Resource implements _$CarePlan {
+class CarePlan with Resource, _$CarePlan {
   CarePlan._();
   factory CarePlan({
     @Default(R5ResourceType.CarePlan)
@@ -77,7 +77,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
 }
 
 @freezed
-abstract class CarePlanActivity implements _$CarePlanActivity {
+class CarePlanActivity with _$CarePlanActivity {
   CarePlanActivity._();
   factory CarePlanActivity({
     String? id,
@@ -107,7 +107,7 @@ abstract class CarePlanActivity implements _$CarePlanActivity {
 }
 
 @freezed
-abstract class CarePlanDetail implements _$CarePlanDetail {
+class CarePlanDetail with _$CarePlanDetail {
   CarePlanDetail._();
   factory CarePlanDetail({
     String? id,
@@ -163,7 +163,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
 }
 
 @freezed
-abstract class CareTeam with Resource implements _$CareTeam {
+class CareTeam with Resource, _$CareTeam {
   CareTeam._();
   factory CareTeam({
     @Default(R5ResourceType.CareTeam)
@@ -212,7 +212,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
 }
 
 @freezed
-abstract class CareTeamParticipant implements _$CareTeamParticipant {
+class CareTeamParticipant with _$CareTeamParticipant {
   CareTeamParticipant._();
   factory CareTeamParticipant({
     String? id,
@@ -243,7 +243,7 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
 }
 
 @freezed
-abstract class Goal with Resource implements _$Goal {
+class Goal with Resource, _$Goal {
   Goal._();
   factory Goal({
     @Default(R5ResourceType.Goal)
@@ -301,7 +301,7 @@ abstract class Goal with Resource implements _$Goal {
 }
 
 @freezed
-abstract class GoalTarget implements _$GoalTarget {
+class GoalTarget with _$GoalTarget {
   GoalTarget._();
   factory GoalTarget({
     String? id,
@@ -341,7 +341,7 @@ abstract class GoalTarget implements _$GoalTarget {
 }
 
 @freezed
-abstract class NutritionIntake with Resource implements _$NutritionIntake {
+class NutritionIntake with Resource, _$NutritionIntake {
   NutritionIntake._();
   factory NutritionIntake({
     @Default(R5ResourceType.NutritionIntake)
@@ -404,8 +404,7 @@ abstract class NutritionIntake with Resource implements _$NutritionIntake {
 }
 
 @freezed
-abstract class NutritionIntakeConsumedItem
-    implements _$NutritionIntakeConsumedItem {
+class NutritionIntakeConsumedItem with _$NutritionIntakeConsumedItem {
   NutritionIntakeConsumedItem._();
   factory NutritionIntakeConsumedItem({
     String? id,
@@ -441,8 +440,7 @@ abstract class NutritionIntakeConsumedItem
 }
 
 @freezed
-abstract class NutritionIntakeIngredientLabel
-    implements _$NutritionIntakeIngredientLabel {
+class NutritionIntakeIngredientLabel with _$NutritionIntakeIngredientLabel {
   NutritionIntakeIngredientLabel._();
   factory NutritionIntakeIngredientLabel({
     String? id,
@@ -474,7 +472,7 @@ abstract class NutritionIntakeIngredientLabel
 }
 
 @freezed
-abstract class NutritionIntakePerformer implements _$NutritionIntakePerformer {
+class NutritionIntakePerformer with _$NutritionIntakePerformer {
   NutritionIntakePerformer._();
   factory NutritionIntakePerformer({
     String? id,
@@ -503,7 +501,7 @@ abstract class NutritionIntakePerformer implements _$NutritionIntakePerformer {
 }
 
 @freezed
-abstract class NutritionOrder with Resource implements _$NutritionOrder {
+class NutritionOrder with Resource, _$NutritionOrder {
   NutritionOrder._();
   factory NutritionOrder({
     @Default(R5ResourceType.NutritionOrder)
@@ -561,7 +559,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
 }
 
 @freezed
-abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
+class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
   factory NutritionOrderOralDiet({
     String? id,
@@ -594,7 +592,7 @@ abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
 }
 
 @freezed
-abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
+class NutritionOrderNutrient with _$NutritionOrderNutrient {
   NutritionOrderNutrient._();
   factory NutritionOrderNutrient({
     String? id,
@@ -622,7 +620,7 @@ abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
 }
 
 @freezed
-abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
+class NutritionOrderTexture with _$NutritionOrderTexture {
   NutritionOrderTexture._();
   factory NutritionOrderTexture({
     String? id,
@@ -650,7 +648,7 @@ abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
 }
 
 @freezed
-abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
+class NutritionOrderSupplement with _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
   factory NutritionOrderSupplement({
     String? id,
@@ -684,8 +682,7 @@ abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
 }
 
 @freezed
-abstract class NutritionOrderEnteralFormula
-    implements _$NutritionOrderEnteralFormula {
+class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
   factory NutritionOrderEnteralFormula({
     String? id,
@@ -726,8 +723,7 @@ abstract class NutritionOrderEnteralFormula
 }
 
 @freezed
-abstract class NutritionOrderAdministration
-    implements _$NutritionOrderAdministration {
+class NutritionOrderAdministration with _$NutritionOrderAdministration {
   NutritionOrderAdministration._();
   factory NutritionOrderAdministration({
     String? id,
@@ -758,7 +754,7 @@ abstract class NutritionOrderAdministration
 }
 
 @freezed
-abstract class RequestGroup with Resource implements _$RequestGroup {
+class RequestGroup with Resource, _$RequestGroup {
   RequestGroup._();
   factory RequestGroup({
     @Default(R5ResourceType.RequestGroup)
@@ -818,7 +814,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
 }
 
 @freezed
-abstract class RequestGroupAction implements _$RequestGroupAction {
+class RequestGroupAction with _$RequestGroupAction {
   RequestGroupAction._();
   factory RequestGroupAction({
     String? id,
@@ -879,7 +875,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
 }
 
 @freezed
-abstract class RequestGroupCondition implements _$RequestGroupCondition {
+class RequestGroupCondition with _$RequestGroupCondition {
   RequestGroupCondition._();
   factory RequestGroupCondition({
     String? id,
@@ -908,8 +904,7 @@ abstract class RequestGroupCondition implements _$RequestGroupCondition {
 }
 
 @freezed
-abstract class RequestGroupRelatedAction
-    implements _$RequestGroupRelatedAction {
+class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   RequestGroupRelatedAction._();
   factory RequestGroupRelatedAction({
     String? id,
@@ -942,7 +937,7 @@ abstract class RequestGroupRelatedAction
 }
 
 @freezed
-abstract class RiskAssessment with Resource implements _$RiskAssessment {
+class RiskAssessment with Resource, _$RiskAssessment {
   RiskAssessment._();
   factory RiskAssessment({
     @Default(R5ResourceType.RiskAssessment)
@@ -998,7 +993,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
 }
 
 @freezed
-abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
+class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   RiskAssessmentPrediction._();
   factory RiskAssessmentPrediction({
     String? id,
@@ -1036,7 +1031,7 @@ abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
 }
 
 @freezed
-abstract class ServiceRequest with Resource implements _$ServiceRequest {
+class ServiceRequest with Resource, _$ServiceRequest {
   ServiceRequest._();
   factory ServiceRequest({
     @Default(R5ResourceType.ServiceRequest)
@@ -1117,9 +1112,7 @@ abstract class ServiceRequest with Resource implements _$ServiceRequest {
 }
 
 @freezed
-abstract class VisionPrescription
-    with Resource
-    implements _$VisionPrescription {
+class VisionPrescription with Resource, _$VisionPrescription {
   VisionPrescription._();
   factory VisionPrescription({
     @Default(R5ResourceType.VisionPrescription)
@@ -1166,8 +1159,8 @@ abstract class VisionPrescription
 }
 
 @freezed
-abstract class VisionPrescriptionLensSpecification
-    implements _$VisionPrescriptionLensSpecification {
+class VisionPrescriptionLensSpecification
+    with _$VisionPrescriptionLensSpecification {
   VisionPrescriptionLensSpecification._();
   factory VisionPrescriptionLensSpecification({
     String? id,
@@ -1221,7 +1214,7 @@ abstract class VisionPrescriptionLensSpecification
 }
 
 @freezed
-abstract class VisionPrescriptionPrism implements _$VisionPrescriptionPrism {
+class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   VisionPrescriptionPrism._();
   factory VisionPrescriptionPrism({
     String? id,

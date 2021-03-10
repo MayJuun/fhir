@@ -12,7 +12,7 @@ part 'support.freezed.dart';
 part 'support.g.dart';
 
 @freezed
-abstract class Coverage with Resource implements _$Coverage {
+class Coverage with Resource, _$Coverage {
   Coverage._();
   factory Coverage({
     @Default(Stu3ResourceType.Coverage)
@@ -70,7 +70,7 @@ abstract class Coverage with Resource implements _$Coverage {
 }
 
 @freezed
-abstract class CoverageGrouping implements _$CoverageGrouping {
+class CoverageGrouping with _$CoverageGrouping {
   CoverageGrouping._();
   factory CoverageGrouping({
     String? group,
@@ -117,9 +117,7 @@ abstract class CoverageGrouping implements _$CoverageGrouping {
 }
 
 @freezed
-abstract class EligibilityRequest
-    with Resource
-    implements _$EligibilityRequest {
+class EligibilityRequest with Resource, _$EligibilityRequest {
   EligibilityRequest._();
   factory EligibilityRequest({
     @Default(Stu3ResourceType.EligibilityRequest)
@@ -175,9 +173,7 @@ abstract class EligibilityRequest
 }
 
 @freezed
-abstract class EligibilityResponse
-    with Resource
-    implements _$EligibilityResponse {
+class EligibilityResponse with Resource, _$EligibilityResponse {
   EligibilityResponse._();
   factory EligibilityResponse({
     @Default(Stu3ResourceType.EligibilityResponse)
@@ -230,8 +226,7 @@ abstract class EligibilityResponse
 }
 
 @freezed
-abstract class EligibilityResponseInsurance
-    implements _$EligibilityResponseInsurance {
+class EligibilityResponseInsurance with _$EligibilityResponseInsurance {
   EligibilityResponseInsurance._();
   factory EligibilityResponseInsurance({
     Reference? coverage,
@@ -258,8 +253,8 @@ abstract class EligibilityResponseInsurance
 }
 
 @freezed
-abstract class EligibilityResponseBenefitBalance
-    implements _$EligibilityResponseBenefitBalance {
+class EligibilityResponseBenefitBalance
+    with _$EligibilityResponseBenefitBalance {
   EligibilityResponseBenefitBalance._();
   factory EligibilityResponseBenefitBalance({
     required CodeableConcept category,
@@ -297,8 +292,7 @@ abstract class EligibilityResponseBenefitBalance
 }
 
 @freezed
-abstract class EligibilityResponseFinancial
-    implements _$EligibilityResponseFinancial {
+class EligibilityResponseFinancial with _$EligibilityResponseFinancial {
   EligibilityResponseFinancial._();
   factory EligibilityResponseFinancial({
     required CodeableConcept type,
@@ -331,7 +325,7 @@ abstract class EligibilityResponseFinancial
 }
 
 @freezed
-abstract class EligibilityResponseError implements _$EligibilityResponseError {
+class EligibilityResponseError with _$EligibilityResponseError {
   EligibilityResponseError._();
   factory EligibilityResponseError({
     required CodeableConcept code,
@@ -356,7 +350,7 @@ abstract class EligibilityResponseError implements _$EligibilityResponseError {
 }
 
 @freezed
-abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
+class EnrollmentRequest with Resource, _$EnrollmentRequest {
   EnrollmentRequest._();
   factory EnrollmentRequest({
     @Default(Stu3ResourceType.EnrollmentRequest)
@@ -402,9 +396,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
 }
 
 @freezed
-abstract class EnrollmentResponse
-    with Resource
-    implements _$EnrollmentResponse {
+class EnrollmentResponse with Resource, _$EnrollmentResponse {
   EnrollmentResponse._();
   factory EnrollmentResponse({
     @Default(Stu3ResourceType.EnrollmentResponse)

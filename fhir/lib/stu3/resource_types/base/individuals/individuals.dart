@@ -12,7 +12,7 @@ part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 @freezed
-abstract class Group with Resource implements _$Group {
+class Group with Resource, _$Group {
   Group._();
   factory Group({
     @Default(Stu3ResourceType.Group)
@@ -61,7 +61,7 @@ abstract class Group with Resource implements _$Group {
 }
 
 @freezed
-abstract class GroupCharacteristic implements _$GroupCharacteristic {
+class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
   factory GroupCharacteristic({
     required CodeableConcept code,
@@ -93,7 +93,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
 }
 
 @freezed
-abstract class GroupMember implements _$GroupMember {
+class GroupMember with _$GroupMember {
   GroupMember._();
   factory GroupMember({
     required Reference entity,
@@ -120,7 +120,7 @@ abstract class GroupMember implements _$GroupMember {
 }
 
 @freezed
-abstract class Patient with Resource implements _$Patient {
+class Patient with Resource, _$Patient {
   Patient._();
   factory Patient({
     @Default(Stu3ResourceType.Patient)
@@ -184,7 +184,7 @@ abstract class Patient with Resource implements _$Patient {
 }
 
 @freezed
-abstract class PatientContact implements _$PatientContact {
+class PatientContact with _$PatientContact {
   PatientContact._();
   factory PatientContact({
     List<CodeableConcept>? relationship,
@@ -215,7 +215,7 @@ abstract class PatientContact implements _$PatientContact {
 }
 
 @freezed
-abstract class PatientAnimal implements _$PatientAnimal {
+class PatientAnimal with _$PatientAnimal {
   PatientAnimal._();
   factory PatientAnimal({
     required CodeableConcept species,
@@ -241,7 +241,7 @@ abstract class PatientAnimal implements _$PatientAnimal {
 }
 
 @freezed
-abstract class PatientCommunication implements _$PatientCommunication {
+class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
   factory PatientCommunication({
     required CodeableConcept language,
@@ -267,7 +267,7 @@ abstract class PatientCommunication implements _$PatientCommunication {
 }
 
 @freezed
-abstract class PatientLink implements _$PatientLink {
+class PatientLink with _$PatientLink {
   PatientLink._();
   factory PatientLink({
     required Reference other,
@@ -293,7 +293,7 @@ abstract class PatientLink implements _$PatientLink {
 }
 
 @freezed
-abstract class Person with Resource implements _$Person {
+class Person with Resource, _$Person {
   Person._();
   factory Person({
     @Default(Stu3ResourceType.Person)
@@ -341,7 +341,7 @@ abstract class Person with Resource implements _$Person {
 }
 
 @freezed
-abstract class PersonLink implements _$PersonLink {
+class PersonLink with _$PersonLink {
   PersonLink._();
   factory PersonLink({
     required Reference target,
@@ -367,7 +367,7 @@ abstract class PersonLink implements _$PersonLink {
 }
 
 @freezed
-abstract class Practitioner with Resource implements _$Practitioner {
+class Practitioner with Resource, _$Practitioner {
   Practitioner._();
   factory Practitioner({
     @Default(Stu3ResourceType.Practitioner)
@@ -416,8 +416,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
 }
 
 @freezed
-abstract class PractitionerQualification
-    implements _$PractitionerQualification {
+class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
   factory PractitionerQualification({
     List<Identifier>? identifier,
@@ -445,7 +444,7 @@ abstract class PractitionerQualification
 }
 
 @freezed
-abstract class PractitionerRole with Resource implements _$PractitionerRole {
+class PractitionerRole with Resource, _$PractitionerRole {
   PractitionerRole._();
   factory PractitionerRole({
     @Default(Stu3ResourceType.PractitionerRole)
@@ -498,8 +497,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
 }
 
 @freezed
-abstract class PractitionerRoleAvailableTime
-    implements _$PractitionerRoleAvailableTime {
+class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   PractitionerRoleAvailableTime._();
   factory PractitionerRoleAvailableTime({
     List<String>? daysOfWeek,
@@ -531,8 +529,7 @@ abstract class PractitionerRoleAvailableTime
 }
 
 @freezed
-abstract class PractitionerRoleNotAvailable
-    implements _$PractitionerRoleNotAvailable {
+class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   PractitionerRoleNotAvailable._();
   factory PractitionerRoleNotAvailable({
     String? description,
@@ -559,7 +556,7 @@ abstract class PractitionerRoleNotAvailable
 }
 
 @freezed
-abstract class RelatedPerson with Resource implements _$RelatedPerson {
+class RelatedPerson with Resource, _$RelatedPerson {
   RelatedPerson._();
   factory RelatedPerson({
     @Default(Stu3ResourceType.RelatedPerson)

@@ -12,7 +12,7 @@ part 'documents.freezed.dart';
 part 'documents.g.dart';
 
 @freezed
-abstract class CatalogEntry with Resource implements _$CatalogEntry {
+class CatalogEntry with Resource, _$CatalogEntry {
   CatalogEntry._();
 
   /// [CatalogEntry]: Catalog entries are wrappers that contextualize items
@@ -164,7 +164,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
 }
 
 @freezed
-abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
+class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
   CatalogEntryRelatedEntry._();
 
   /// [CatalogEntry_RelatedEntry]: Catalog entries are wrappers that
@@ -229,7 +229,7 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
 }
 
 @freezed
-abstract class Composition with Resource implements _$Composition {
+class Composition with Resource, _$Composition {
   Composition._();
 
   /// [Composition]: A set of healthcare-related information that is assembled
@@ -405,7 +405,7 @@ abstract class Composition with Resource implements _$Composition {
 }
 
 @freezed
-abstract class CompositionAttester implements _$CompositionAttester {
+class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
 
   /// [Composition_Attester]: A set of healthcare-related information that is
@@ -482,7 +482,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
 }
 
 @freezed
-abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
+class CompositionRelatesTo with _$CompositionRelatesTo {
   CompositionRelatesTo._();
 
   /// [Composition_RelatesTo]: A set of healthcare-related information that is
@@ -556,7 +556,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
 }
 
 @freezed
-abstract class CompositionEvent implements _$CompositionEvent {
+class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
 
   /// [Composition_Event]: A set of healthcare-related information that is
@@ -634,7 +634,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
 }
 
 @freezed
-abstract class CompositionSection implements _$CompositionSection {
+class CompositionSection with _$CompositionSection {
   CompositionSection._();
 
   /// [Composition_Section]: A set of healthcare-related information that is
@@ -753,7 +753,7 @@ abstract class CompositionSection implements _$CompositionSection {
 }
 
 @freezed
-abstract class DocumentManifest with Resource implements _$DocumentManifest {
+class DocumentManifest with Resource, _$DocumentManifest {
   DocumentManifest._();
 
   /// [DocumentManifest]: A collection of documents compiled for a purpose
@@ -910,7 +910,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
 }
 
 @freezed
-abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
+class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
 
   /// [DocumentManifest_Related]: A collection of documents compiled for a
@@ -971,7 +971,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
 }
 
 @freezed
-abstract class DocumentReference with Resource implements _$DocumentReference {
+class DocumentReference with Resource, _$DocumentReference {
   DocumentReference._();
 
   /// [DocumentReference]: A reference to a document of any kind for any
@@ -1149,8 +1149,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
 }
 
 @freezed
-abstract class DocumentReferenceRelatesTo
-    implements _$DocumentReferenceRelatesTo {
+class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
 
   /// [DocumentReference_RelatesTo]: A reference to a document of any kind for
@@ -1219,7 +1218,7 @@ abstract class DocumentReferenceRelatesTo
 }
 
 @freezed
-abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
+class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
 
   /// [DocumentReference_Content]: A reference to a document of any kind for any
@@ -1286,7 +1285,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
 }
 
 @freezed
-abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
+class DocumentReferenceContext with _$DocumentReferenceContext {
   DocumentReferenceContext._();
 
   /// [DocumentReference_Context]: A reference to a document of any kind for any

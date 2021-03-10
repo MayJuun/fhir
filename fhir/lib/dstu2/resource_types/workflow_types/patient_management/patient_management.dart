@@ -12,7 +12,7 @@ part 'patient_management.freezed.dart';
 part 'patient_management.g.dart';
 
 @freezed
-abstract class Encounter with Resource implements _$Encounter {
+class Encounter with Resource, _$Encounter {
   Encounter._();
   factory Encounter({
     @Default(Dstu2ResourceType.Encounter)
@@ -71,7 +71,7 @@ abstract class Encounter with Resource implements _$Encounter {
 }
 
 @freezed
-abstract class EncounterStatusHistory with _$EncounterStatusHistory {
+class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
   factory EncounterStatusHistory({
     Id? id,
@@ -101,7 +101,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
 }
 
 @freezed
-abstract class EncounterParticipant with _$EncounterParticipant {
+class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
   factory EncounterParticipant({
     Id? id,
@@ -130,7 +130,7 @@ abstract class EncounterParticipant with _$EncounterParticipant {
 }
 
 @freezed
-abstract class EncounterHospitalization with _$EncounterHospitalization {
+class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
   factory EncounterHospitalization({
     Id? id,
@@ -169,7 +169,7 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
 }
 
 @freezed
-abstract class EncounterLocation with _$EncounterLocation {
+class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
   factory EncounterLocation({
     Id? id,
@@ -200,7 +200,7 @@ abstract class EncounterLocation with _$EncounterLocation {
 }
 
 @freezed
-abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
+class EpisodeOfCare with Resource, _$EpisodeOfCare {
   EpisodeOfCare._();
   factory EpisodeOfCare({
     @Default(Dstu2ResourceType.EpisodeOfCare)
@@ -249,7 +249,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
 }
 
 @freezed
-abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
+class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
   factory EpisodeOfCareStatusHistory({
     Id? id,
@@ -280,7 +280,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 }
 
 @freezed
-abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
+class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
   EpisodeOfCareCareTeam._();
   factory EpisodeOfCareCareTeam({
     Id? id,
@@ -309,7 +309,7 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
 }
 
 @freezed
-abstract class Communication with Resource implements _$Communication {
+class Communication with Resource, _$Communication {
   Communication._();
   factory Communication({
     @Default(Dstu2ResourceType.Communication)
@@ -362,7 +362,7 @@ abstract class Communication with Resource implements _$Communication {
 }
 
 @freezed
-abstract class CommunicationPayload with _$CommunicationPayload {
+class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
   factory CommunicationPayload({
     Id? id,
@@ -392,7 +392,7 @@ abstract class CommunicationPayload with _$CommunicationPayload {
 }
 
 @freezed
-abstract class Flag with Resource implements _$Flag {
+class Flag with Resource, _$Flag {
   Flag._();
   factory Flag({
     @Default(Dstu2ResourceType.Flag)

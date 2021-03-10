@@ -12,7 +12,7 @@ part 'structure.freezed.dart';
 part 'structure.g.dart';
 
 @freezed
-abstract class Media with Resource implements _$Media {
+class Media with Resource, _$Media {
   Media._();
   factory Media({
     @Default(Dstu2ResourceType.Media)
@@ -64,7 +64,7 @@ abstract class Media with Resource implements _$Media {
 }
 
 @freezed
-abstract class Binary with Resource implements _$Binary {
+class Binary with Resource, _$Binary {
   Binary._();
   factory Binary({
     @Default(Dstu2ResourceType.Binary)
@@ -98,7 +98,7 @@ abstract class Binary with Resource implements _$Binary {
 }
 
 @freezed
-abstract class Bundle with Resource implements _$Bundle {
+class Bundle with Resource, _$Bundle {
   Bundle._();
   factory Bundle({
     @Default(Dstu2ResourceType.Bundle)
@@ -136,7 +136,7 @@ abstract class Bundle with Resource implements _$Bundle {
 }
 
 @freezed
-abstract class BundleLink with _$BundleLink {
+class BundleLink with _$BundleLink {
   BundleLink._();
   factory BundleLink({
     Id? id,
@@ -167,7 +167,7 @@ abstract class BundleLink with _$BundleLink {
 }
 
 @freezed
-abstract class BundleEntry with _$BundleEntry {
+class BundleEntry with _$BundleEntry {
   BundleEntry._();
   factory BundleEntry({
     Id? id,
@@ -201,7 +201,7 @@ abstract class BundleEntry with _$BundleEntry {
 }
 
 @freezed
-abstract class BundleEntrySearch with _$BundleEntrySearch {
+class BundleEntrySearch with _$BundleEntrySearch {
   BundleEntrySearch._();
   factory BundleEntrySearch({
     Id? id,
@@ -232,7 +232,7 @@ abstract class BundleEntrySearch with _$BundleEntrySearch {
 }
 
 @freezed
-abstract class BundleEntryRequest with _$BundleEntryRequest {
+class BundleEntryRequest with _$BundleEntryRequest {
   BundleEntryRequest._();
   factory BundleEntryRequest({
     Id? id,
@@ -272,7 +272,7 @@ abstract class BundleEntryRequest with _$BundleEntryRequest {
 }
 
 @freezed
-abstract class BundleEntryResponse with _$BundleEntryResponse {
+class BundleEntryResponse with _$BundleEntryResponse {
   BundleEntryResponse._();
   factory BundleEntryResponse({
     Id? id,
@@ -307,7 +307,7 @@ abstract class BundleEntryResponse with _$BundleEntryResponse {
 }
 
 @freezed
-abstract class Basic with Resource implements _$Basic {
+class Basic with Resource, _$Basic {
   Basic._();
   factory Basic({
     @Default(Dstu2ResourceType.Basic)

@@ -12,7 +12,7 @@ part 'billing.freezed.dart';
 part 'billing.g.dart';
 
 @freezed
-abstract class Claim with Resource implements _$Claim {
+class Claim with Resource, _$Claim {
   Claim._();
   factory Claim({
     @Default(Stu3ResourceType.Claim)
@@ -80,7 +80,7 @@ abstract class Claim with Resource implements _$Claim {
 }
 
 @freezed
-abstract class ClaimRelated implements _$ClaimRelated {
+class ClaimRelated with _$ClaimRelated {
   ClaimRelated._();
   factory ClaimRelated({
     Reference? claim,
@@ -106,7 +106,7 @@ abstract class ClaimRelated implements _$ClaimRelated {
 }
 
 @freezed
-abstract class ClaimPayee implements _$ClaimPayee {
+class ClaimPayee with _$ClaimPayee {
   ClaimPayee._();
   factory ClaimPayee({
     required CodeableConcept type,
@@ -131,7 +131,7 @@ abstract class ClaimPayee implements _$ClaimPayee {
 }
 
 @freezed
-abstract class ClaimCareTeam implements _$ClaimCareTeam {
+class ClaimCareTeam with _$ClaimCareTeam {
   ClaimCareTeam._();
   factory ClaimCareTeam({
     Decimal? sequence,
@@ -161,7 +161,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
 }
 
 @freezed
-abstract class ClaimInformation implements _$ClaimInformation {
+class ClaimInformation with _$ClaimInformation {
   ClaimInformation._();
   factory ClaimInformation({
     Decimal? sequence,
@@ -197,7 +197,7 @@ abstract class ClaimInformation implements _$ClaimInformation {
 }
 
 @freezed
-abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
+class ClaimDiagnosis with _$ClaimDiagnosis {
   ClaimDiagnosis._();
   factory ClaimDiagnosis({
     Decimal? sequence,
@@ -226,7 +226,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
 }
 
 @freezed
-abstract class ClaimProcedure implements _$ClaimProcedure {
+class ClaimProcedure with _$ClaimProcedure {
   ClaimProcedure._();
   factory ClaimProcedure({
     Decimal? sequence,
@@ -255,7 +255,7 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
 }
 
 @freezed
-abstract class ClaimInsurance implements _$ClaimInsurance {
+class ClaimInsurance with _$ClaimInsurance {
   ClaimInsurance._();
   factory ClaimInsurance({
     Decimal? sequence,
@@ -288,7 +288,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
 }
 
 @freezed
-abstract class ClaimAccident implements _$ClaimAccident {
+class ClaimAccident with _$ClaimAccident {
   ClaimAccident._();
   factory ClaimAccident({
     Date? date,
@@ -316,7 +316,7 @@ abstract class ClaimAccident implements _$ClaimAccident {
 }
 
 @freezed
-abstract class ClaimItem implements _$ClaimItem {
+class ClaimItem with _$ClaimItem {
   ClaimItem._();
   factory ClaimItem({
     Decimal? sequence,
@@ -371,7 +371,7 @@ abstract class ClaimItem implements _$ClaimItem {
 }
 
 @freezed
-abstract class ClaimDetail implements _$ClaimDetail {
+class ClaimDetail with _$ClaimDetail {
   ClaimDetail._();
   factory ClaimDetail({
     Decimal? sequence,
@@ -408,7 +408,7 @@ abstract class ClaimDetail implements _$ClaimDetail {
 }
 
 @freezed
-abstract class ClaimSubDetail implements _$ClaimSubDetail {
+class ClaimSubDetail with _$ClaimSubDetail {
   ClaimSubDetail._();
   factory ClaimSubDetail({
     Decimal? sequence,
@@ -444,7 +444,7 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
 }
 
 @freezed
-abstract class ClaimResponse with Resource implements _$ClaimResponse {
+class ClaimResponse with Resource, _$ClaimResponse {
   ClaimResponse._();
   factory ClaimResponse({
     @Default(Stu3ResourceType.ClaimResponse)
@@ -506,7 +506,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
 }
 
 @freezed
-abstract class ClaimResponseItem implements _$ClaimResponseItem {
+class ClaimResponseItem with _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
     Id? sequenceLinkId,
@@ -535,8 +535,7 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
 }
 
 @freezed
-abstract class ClaimResponseAdjudication
-    implements _$ClaimResponseAdjudication {
+class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   ClaimResponseAdjudication._();
   factory ClaimResponseAdjudication({
     required CodeableConcept category,
@@ -565,7 +564,7 @@ abstract class ClaimResponseAdjudication
 }
 
 @freezed
-abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
+class ClaimResponseDetail with _$ClaimResponseDetail {
   ClaimResponseDetail._();
   factory ClaimResponseDetail({
     Id? sequenceLinkId,
@@ -594,7 +593,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
 }
 
 @freezed
-abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
+class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   ClaimResponseSubDetail._();
   factory ClaimResponseSubDetail({
     Id? sequenceLinkId,
@@ -622,7 +621,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
 }
 
 @freezed
-abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
+class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
     List<Id>? sequenceLinkId,
@@ -656,7 +655,7 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
 }
 
 @freezed
-abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
+class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   ClaimResponseDetail1._();
   factory ClaimResponseDetail1({
     CodeableConcept? revenue,
@@ -687,7 +686,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
 }
 
 @freezed
-abstract class ClaimResponseError implements _$ClaimResponseError {
+class ClaimResponseError with _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
     Id? sequenceLinkId,
@@ -719,7 +718,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
 }
 
 @freezed
-abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
+class ClaimResponsePayment with _$ClaimResponsePayment {
   ClaimResponsePayment._();
   factory ClaimResponsePayment({
     CodeableConcept? type,
@@ -749,7 +748,7 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
 }
 
 @freezed
-abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
+class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   ClaimResponseProcessNote._();
   factory ClaimResponseProcessNote({
     Decimal? number,
@@ -779,7 +778,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
 }
 
 @freezed
-abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
+class ClaimResponseInsurance with _$ClaimResponseInsurance {
   ClaimResponseInsurance._();
   factory ClaimResponseInsurance({
     Decimal? sequence,

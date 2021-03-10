@@ -12,7 +12,7 @@ part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
-abstract class Narrative implements _$Narrative {
+class Narrative with _$Narrative {
   Narrative._();
   factory Narrative({
     String? id,
@@ -40,7 +40,7 @@ abstract class Narrative implements _$Narrative {
 }
 
 @freezed
-abstract class CodeableReference implements _$CodeableReference {
+class CodeableReference with _$CodeableReference {
   CodeableReference._();
   factory CodeableReference({
     String? id,
@@ -67,7 +67,7 @@ abstract class CodeableReference implements _$CodeableReference {
 }
 
 @freezed
-abstract class Reference implements _$Reference {
+class Reference with _$Reference {
   Reference._();
   factory Reference({
     String? id,
@@ -99,7 +99,7 @@ abstract class Reference implements _$Reference {
 }
 
 @freezed
-abstract class Statistic implements _$Statistic {
+class Statistic with _$Statistic {
   Statistic._();
   factory Statistic({
     String? id,
@@ -135,7 +135,7 @@ abstract class Statistic implements _$Statistic {
 }
 
 @freezed
-abstract class StatisticSampleSize implements _$StatisticSampleSize {
+class StatisticSampleSize with _$StatisticSampleSize {
   StatisticSampleSize._();
   factory StatisticSampleSize({
     String? id,
@@ -171,8 +171,7 @@ abstract class StatisticSampleSize implements _$StatisticSampleSize {
 }
 
 @freezed
-abstract class StatisticAttributeEstimate
-    implements _$StatisticAttributeEstimate {
+class StatisticAttributeEstimate with _$StatisticAttributeEstimate {
   StatisticAttributeEstimate._();
   factory StatisticAttributeEstimate({
     String? id,
@@ -208,8 +207,7 @@ abstract class StatisticAttributeEstimate
 }
 
 @freezed
-abstract class StatisticAttributeEstimate1
-    implements _$StatisticAttributeEstimate1 {
+class StatisticAttributeEstimate1 with _$StatisticAttributeEstimate1 {
   StatisticAttributeEstimate1._();
   factory StatisticAttributeEstimate1({
     String? id,
@@ -244,8 +242,7 @@ abstract class StatisticAttributeEstimate1
 }
 
 @freezed
-abstract class StatisticModelCharacteristic
-    implements _$StatisticModelCharacteristic {
+class StatisticModelCharacteristic with _$StatisticModelCharacteristic {
   StatisticModelCharacteristic._();
   factory StatisticModelCharacteristic({
     String? id,
@@ -279,7 +276,7 @@ abstract class StatisticModelCharacteristic
 }
 
 @freezed
-abstract class StatisticVariable implements _$StatisticVariable {
+class StatisticVariable with _$StatisticVariable {
   StatisticVariable._();
   factory StatisticVariable({
     String? id,
@@ -311,7 +308,7 @@ abstract class StatisticVariable implements _$StatisticVariable {
 }
 
 @freezed
-abstract class OrderedDistribution implements _$OrderedDistribution {
+class OrderedDistribution with _$OrderedDistribution {
   OrderedDistribution._();
   factory OrderedDistribution({
     String? id,
@@ -345,8 +342,7 @@ abstract class OrderedDistribution implements _$OrderedDistribution {
 }
 
 @freezed
-abstract class OrderedDistributionInterval
-    implements _$OrderedDistributionInterval {
+class OrderedDistributionInterval with _$OrderedDistributionInterval {
   OrderedDistributionInterval._();
   factory OrderedDistributionInterval({
     String? id,
@@ -376,7 +372,7 @@ abstract class OrderedDistributionInterval
 }
 
 @freezed
-abstract class Meta implements _$Meta {
+class Meta with _$Meta {
   Meta._();
   factory Meta({
     String? id,
@@ -409,7 +405,7 @@ abstract class Meta implements _$Meta {
 }
 
 @freezed
-abstract class Dosage implements _$Dosage {
+class Dosage with _$Dosage {
   Dosage._();
   factory Dosage({
     String? id,
@@ -452,7 +448,7 @@ abstract class Dosage implements _$Dosage {
 }
 
 @freezed
-abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
+class DosageDoseAndRate with _$DosageDoseAndRate {
   DosageDoseAndRate._();
   factory DosageDoseAndRate({
     String? id,
@@ -484,7 +480,7 @@ abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
 }
 
 @freezed
-abstract class ElementDefinition implements _$ElementDefinition {
+class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
     String? id,
@@ -818,7 +814,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
 }
 
 @freezed
-abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
+class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
     String? id,
@@ -853,8 +849,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
 }
 
 @freezed
-abstract class ElementDefinitionDiscriminator
-    implements _$ElementDefinitionDiscriminator {
+class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ElementDefinitionDiscriminator._();
   factory ElementDefinitionDiscriminator({
     String? id,
@@ -888,7 +883,7 @@ abstract class ElementDefinitionDiscriminator
 }
 
 @freezed
-abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
+class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
   factory ElementDefinitionBase({
     String? id,
@@ -920,7 +915,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
 }
 
 @freezed
-abstract class ElementDefinitionType implements _$ElementDefinitionType {
+class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
     String? id,
@@ -955,7 +950,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
 }
 
 @freezed
-abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
+class ElementDefinitionExample with _$ElementDefinitionExample {
   ElementDefinitionExample._();
   factory ElementDefinitionExample({
     String? id,
@@ -1055,8 +1050,7 @@ abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
 }
 
 @freezed
-abstract class ElementDefinitionConstraint
-    implements _$ElementDefinitionConstraint {
+class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
     String? id,
@@ -1097,7 +1091,7 @@ abstract class ElementDefinitionConstraint
 }
 
 @freezed
-abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
+class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
     String? id,
@@ -1130,7 +1124,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
 }
 
 @freezed
-abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
+class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
     String? id,

@@ -12,7 +12,7 @@ part 'payment.freezed.dart';
 part 'payment.g.dart';
 
 @freezed
-abstract class PaymentNotice with Resource implements _$PaymentNotice {
+class PaymentNotice with Resource, _$PaymentNotice {
   PaymentNotice._();
   factory PaymentNotice({
     @Default(Stu3ResourceType.PaymentNotice)
@@ -61,9 +61,7 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
 }
 
 @freezed
-abstract class PaymentReconciliation
-    with Resource
-    implements _$PaymentReconciliation {
+class PaymentReconciliation with Resource, _$PaymentReconciliation {
   PaymentReconciliation._();
   factory PaymentReconciliation({
     @Default(Stu3ResourceType.PaymentReconciliation)
@@ -116,8 +114,7 @@ abstract class PaymentReconciliation
 }
 
 @freezed
-abstract class PaymentReconciliationDetail
-    implements _$PaymentReconciliationDetail {
+class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
   factory PaymentReconciliationDetail({
     required CodeableConcept type,
@@ -149,8 +146,7 @@ abstract class PaymentReconciliationDetail
 }
 
 @freezed
-abstract class PaymentReconciliationProcessNote
-    implements _$PaymentReconciliationProcessNote {
+class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   PaymentReconciliationProcessNote._();
   factory PaymentReconciliationProcessNote({
     CodeableConcept? type,

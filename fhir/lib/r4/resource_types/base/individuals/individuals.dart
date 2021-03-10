@@ -12,7 +12,7 @@ part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 @freezed
-abstract class Group with Resource implements _$Group {
+class Group with Resource, _$Group {
   Group._();
 
   /// [Group]: Represents a defined collection of entities that may be discussed
@@ -159,7 +159,7 @@ abstract class Group with Resource implements _$Group {
 }
 
 @freezed
-abstract class GroupCharacteristic implements _$GroupCharacteristic {
+class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
 
   /// [Group_Characteristic]: Represents a defined collection of entities that
@@ -251,7 +251,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
 }
 
 @freezed
-abstract class GroupMember implements _$GroupMember {
+class GroupMember with _$GroupMember {
   GroupMember._();
 
   /// [Group_Member]: Represents a defined collection of entities that may be
@@ -321,7 +321,7 @@ abstract class GroupMember implements _$GroupMember {
 }
 
 @freezed
-abstract class Patient with Resource implements _$Patient {
+class Patient with Resource, _$Patient {
   Patient._();
 
   /// [Patient]: Demographics and other administrative information about an
@@ -505,7 +505,7 @@ abstract class Patient with Resource implements _$Patient {
 }
 
 @freezed
-abstract class PatientContact implements _$PatientContact {
+class PatientContact with _$PatientContact {
   PatientContact._();
 
   /// [Patient_Contact]: Demographics and other administrative information about
@@ -588,7 +588,7 @@ abstract class PatientContact implements _$PatientContact {
 }
 
 @freezed
-abstract class PatientCommunication implements _$PatientCommunication {
+class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
 
   /// [Patient_Communication]: Demographics and other administrative information
@@ -655,7 +655,7 @@ abstract class PatientCommunication implements _$PatientCommunication {
 }
 
 @freezed
-abstract class PatientLink implements _$PatientLink {
+class PatientLink with _$PatientLink {
   PatientLink._();
 
   /// [Patient_Link]: Demographics and other administrative information about an
@@ -718,7 +718,7 @@ abstract class PatientLink implements _$PatientLink {
 }
 
 @freezed
-abstract class Person with Resource implements _$Person {
+class Person with Resource, _$Person {
   Person._();
 
   /// [Person]: Demographics and administrative information about a person
@@ -851,7 +851,7 @@ abstract class Person with Resource implements _$Person {
 }
 
 @freezed
-abstract class PersonLink implements _$PersonLink {
+class PersonLink with _$PersonLink {
   PersonLink._();
 
   /// [Person_Link]: Demographics and administrative information about a person
@@ -915,7 +915,7 @@ abstract class PersonLink implements _$PersonLink {
 }
 
 @freezed
-abstract class Practitioner with Resource implements _$Practitioner {
+class Practitioner with Resource, _$Practitioner {
   Practitioner._();
 
   /// [Practitioner]: A person who is directly or indirectly involved in the
@@ -1057,8 +1057,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
 }
 
 @freezed
-abstract class PractitionerQualification
-    implements _$PractitionerQualification {
+class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
 
   /// [Practitioner_Qualification]: A person who is directly or indirectly
@@ -1125,7 +1124,7 @@ abstract class PractitionerQualification
 }
 
 @freezed
-abstract class PractitionerRole with Resource implements _$PractitionerRole {
+class PractitionerRole with Resource, _$PractitionerRole {
   PractitionerRole._();
 
   /// [PractitionerRole]: A specific set of Roles/Locations/specialties/services
@@ -1277,8 +1276,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
 }
 
 @freezed
-abstract class PractitionerRoleAvailableTime
-    implements _$PractitionerRoleAvailableTime {
+class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   PractitionerRoleAvailableTime._();
 
   /// [PractitionerRole_AvailableTime]: A specific set of
@@ -1361,8 +1359,7 @@ abstract class PractitionerRoleAvailableTime
 }
 
 @freezed
-abstract class PractitionerRoleNotAvailable
-    implements _$PractitionerRoleNotAvailable {
+class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   PractitionerRoleNotAvailable._();
 
   /// [PractitionerRole_NotAvailable]: A specific set of
@@ -1428,7 +1425,7 @@ abstract class PractitionerRoleNotAvailable
 }
 
 @freezed
-abstract class RelatedPerson with Resource implements _$RelatedPerson {
+class RelatedPerson with Resource, _$RelatedPerson {
   RelatedPerson._();
 
   /// [RelatedPerson]: Information about a person that is involved in the care
@@ -1572,8 +1569,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
 }
 
 @freezed
-abstract class RelatedPersonCommunication
-    implements _$RelatedPersonCommunication {
+class RelatedPersonCommunication with _$RelatedPersonCommunication {
   RelatedPersonCommunication._();
 
   /// [RelatedPerson_Communication]: Information about a person that is involved

@@ -12,7 +12,7 @@ part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
 @freezed
-abstract class Appointment with Resource implements _$Appointment {
+class Appointment with Resource, _$Appointment {
   Appointment._();
   factory Appointment({
     @Default(Stu3ResourceType.Appointment)
@@ -76,7 +76,7 @@ abstract class Appointment with Resource implements _$Appointment {
 }
 
 @freezed
-abstract class AppointmentParticipant implements _$AppointmentParticipant {
+class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
   factory AppointmentParticipant({
     List<CodeableConcept>? type,
@@ -105,9 +105,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
 }
 
 @freezed
-abstract class AppointmentResponse
-    with Resource
-    implements _$AppointmentResponse {
+class AppointmentResponse with Resource, _$AppointmentResponse {
   AppointmentResponse._();
   factory AppointmentResponse({
     @Default(Stu3ResourceType.AppointmentResponse)
@@ -155,7 +153,7 @@ abstract class AppointmentResponse
 }
 
 @freezed
-abstract class ProcessRequest with Resource implements _$ProcessRequest {
+class ProcessRequest with Resource, _$ProcessRequest {
   ProcessRequest._();
   factory ProcessRequest({
     @Default(Stu3ResourceType.ProcessRequest)
@@ -213,7 +211,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
 }
 
 @freezed
-abstract class ProcessRequestItem implements _$ProcessRequestItem {
+class ProcessRequestItem with _$ProcessRequestItem {
   ProcessRequestItem._();
   factory ProcessRequestItem({
     Id? sequenceLinkId,
@@ -238,7 +236,7 @@ abstract class ProcessRequestItem implements _$ProcessRequestItem {
 }
 
 @freezed
-abstract class ProcessResponse with Resource implements _$ProcessResponse {
+class ProcessResponse with Resource, _$ProcessResponse {
   ProcessResponse._();
   factory ProcessResponse({
     @Default(Stu3ResourceType.ProcessResponse)
@@ -290,8 +288,7 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
 }
 
 @freezed
-abstract class ProcessResponseProcessNote
-    implements _$ProcessResponseProcessNote {
+class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
   ProcessResponseProcessNote._();
   factory ProcessResponseProcessNote({
     CodeableConcept? type,
@@ -318,7 +315,7 @@ abstract class ProcessResponseProcessNote
 }
 
 @freezed
-abstract class RequestGroup with Resource implements _$RequestGroup {
+class RequestGroup with Resource, _$RequestGroup {
   RequestGroup._();
   factory RequestGroup({
     @Default(Stu3ResourceType.RequestGroup)
@@ -374,7 +371,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
 }
 
 @freezed
-abstract class RequestGroupAction implements _$RequestGroupAction {
+class RequestGroupAction with _$RequestGroupAction {
   RequestGroupAction._();
   factory RequestGroupAction({
     String? label,
@@ -429,7 +426,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
 }
 
 @freezed
-abstract class RequestGroupCondition implements _$RequestGroupCondition {
+class RequestGroupCondition with _$RequestGroupCondition {
   RequestGroupCondition._();
   factory RequestGroupCondition({
     String? kind,
@@ -460,8 +457,7 @@ abstract class RequestGroupCondition implements _$RequestGroupCondition {
 }
 
 @freezed
-abstract class RequestGroupRelatedAction
-    implements _$RequestGroupRelatedAction {
+class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   RequestGroupRelatedAction._();
   factory RequestGroupRelatedAction({
     Id? actionId,
@@ -491,7 +487,7 @@ abstract class RequestGroupRelatedAction
 }
 
 @freezed
-abstract class Schedule with Resource implements _$Schedule {
+class Schedule with Resource, _$Schedule {
   Schedule._();
   factory Schedule({
     @Default(Stu3ResourceType.Schedule)
@@ -537,7 +533,7 @@ abstract class Schedule with Resource implements _$Schedule {
 }
 
 @freezed
-abstract class Slot with Resource implements _$Slot {
+class Slot with Resource, _$Slot {
   Slot._();
   factory Slot({
     @Default(Stu3ResourceType.Slot)
@@ -588,7 +584,7 @@ abstract class Slot with Resource implements _$Slot {
 }
 
 @freezed
-abstract class Task with Resource implements _$Task {
+class Task with Resource, _$Task {
   Task._();
   factory Task({
     @Default(Stu3ResourceType.Task)
@@ -658,7 +654,7 @@ abstract class Task with Resource implements _$Task {
 }
 
 @freezed
-abstract class TaskRequester implements _$TaskRequester {
+class TaskRequester with _$TaskRequester {
   TaskRequester._();
   factory TaskRequester({
     required Reference agent,
@@ -683,7 +679,7 @@ abstract class TaskRequester implements _$TaskRequester {
 }
 
 @freezed
-abstract class TaskRestriction implements _$TaskRestriction {
+class TaskRestriction with _$TaskRestriction {
   TaskRestriction._();
   factory TaskRestriction({
     Decimal? repetitions,
@@ -710,7 +706,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
 }
 
 @freezed
-abstract class TaskInput implements _$TaskInput {
+class TaskInput with _$TaskInput {
   TaskInput._();
   factory TaskInput({
     required CodeableConcept type,
@@ -804,7 +800,7 @@ abstract class TaskInput implements _$TaskInput {
 }
 
 @freezed
-abstract class TaskOutput implements _$TaskOutput {
+class TaskOutput with _$TaskOutput {
   TaskOutput._();
   factory TaskOutput({
     required CodeableConcept type,

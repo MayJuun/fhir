@@ -12,9 +12,7 @@ part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
 
 @freezed
-abstract class ActivityDefinition
-    with Resource
-    implements _$ActivityDefinition {
+class ActivityDefinition with Resource, _$ActivityDefinition {
   ActivityDefinition._();
   factory ActivityDefinition({
     @Default(Stu3ResourceType.ActivityDefinition)
@@ -104,8 +102,7 @@ abstract class ActivityDefinition
 }
 
 @freezed
-abstract class ActivityDefinitionParticipant
-    implements _$ActivityDefinitionParticipant {
+class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   ActivityDefinitionParticipant._();
   factory ActivityDefinitionParticipant({
     String? type,
@@ -132,8 +129,7 @@ abstract class ActivityDefinitionParticipant
 }
 
 @freezed
-abstract class ActivityDefinitionDynamicValue
-    implements _$ActivityDefinitionDynamicValue {
+class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   ActivityDefinitionDynamicValue._();
   factory ActivityDefinitionDynamicValue({
     String? description,
@@ -167,7 +163,7 @@ abstract class ActivityDefinitionDynamicValue
 }
 
 @freezed
-abstract class PlanDefinition with Resource implements _$PlanDefinition {
+class PlanDefinition with Resource, _$PlanDefinition {
   PlanDefinition._();
   factory PlanDefinition({
     @Default(Stu3ResourceType.PlanDefinition)
@@ -243,7 +239,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
 }
 
 @freezed
-abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
+class PlanDefinitionGoal with _$PlanDefinitionGoal {
   PlanDefinitionGoal._();
   factory PlanDefinitionGoal({
     CodeableConcept? category,
@@ -273,7 +269,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
 }
 
 @freezed
-abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
+class PlanDefinitionTarget with _$PlanDefinitionTarget {
   PlanDefinitionTarget._();
   factory PlanDefinitionTarget({
     CodeableConcept? measure,
@@ -301,7 +297,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
 }
 
 @freezed
-abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
+class PlanDefinitionAction with _$PlanDefinitionAction {
   PlanDefinitionAction._();
   factory PlanDefinitionAction({
     String? label,
@@ -364,7 +360,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
 }
 
 @freezed
-abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
+class PlanDefinitionCondition with _$PlanDefinitionCondition {
   PlanDefinitionCondition._();
   factory PlanDefinitionCondition({
     PlanDefinitionConditionKind? kind,
@@ -395,8 +391,7 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
 }
 
 @freezed
-abstract class PlanDefinitionRelatedAction
-    implements _$PlanDefinitionRelatedAction {
+class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedAction._();
   factory PlanDefinitionRelatedAction({
     Id? actionId,
@@ -426,8 +421,7 @@ abstract class PlanDefinitionRelatedAction
 }
 
 @freezed
-abstract class PlanDefinitionParticipant
-    implements _$PlanDefinitionParticipant {
+class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   PlanDefinitionParticipant._();
   factory PlanDefinitionParticipant({
     PlanDefinitionParticipantType? type,
@@ -454,8 +448,7 @@ abstract class PlanDefinitionParticipant
 }
 
 @freezed
-abstract class PlanDefinitionDynamicValue
-    implements _$PlanDefinitionDynamicValue {
+class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   PlanDefinitionDynamicValue._();
   factory PlanDefinitionDynamicValue({
     String? description,
@@ -487,7 +480,7 @@ abstract class PlanDefinitionDynamicValue
 }
 
 @freezed
-abstract class Questionnaire with Resource implements _$Questionnaire {
+class Questionnaire with Resource, _$Questionnaire {
   Questionnaire._();
   factory Questionnaire({
     @Default(Stu3ResourceType.Questionnaire)
@@ -558,7 +551,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
 }
 
 @freezed
-abstract class QuestionnaireItem implements _$QuestionnaireItem {
+class QuestionnaireItem with _$QuestionnaireItem {
   QuestionnaireItem._();
   factory QuestionnaireItem({
     String? linkId,
@@ -625,7 +618,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
 }
 
 @freezed
-abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
+class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   QuestionnaireEnableWhen._();
   factory QuestionnaireEnableWhen({
     String? question,
@@ -672,7 +665,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
 }
 
 @freezed
-abstract class QuestionnaireOption implements _$QuestionnaireOption {
+class QuestionnaireOption with _$QuestionnaireOption {
   QuestionnaireOption._();
   factory QuestionnaireOption({
     Decimal? valueInteger,
@@ -704,7 +697,7 @@ abstract class QuestionnaireOption implements _$QuestionnaireOption {
 }
 
 @freezed
-abstract class ServiceDefinition with Resource implements _$ServiceDefinition {
+class ServiceDefinition with Resource, _$ServiceDefinition {
   ServiceDefinition._();
   factory ServiceDefinition({
     @Default(Stu3ResourceType.ServiceDefinition)

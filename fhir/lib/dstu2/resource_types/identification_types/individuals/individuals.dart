@@ -12,7 +12,7 @@ part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 @freezed
-abstract class Patient with Resource implements _$Patient {
+class Patient with Resource, _$Patient {
   Patient._();
   factory Patient({
     @Default(Dstu2ResourceType.Patient)
@@ -77,7 +77,7 @@ abstract class Patient with Resource implements _$Patient {
 }
 
 @freezed
-abstract class PatientContact with _$PatientContact {
+class PatientContact with _$PatientContact {
   PatientContact._();
   factory PatientContact({
     Id? id,
@@ -111,7 +111,7 @@ abstract class PatientContact with _$PatientContact {
 }
 
 @freezed
-abstract class PatientAnimal with _$PatientAnimal {
+class PatientAnimal with _$PatientAnimal {
   PatientAnimal._();
   factory PatientAnimal({
     Id? id,
@@ -140,7 +140,7 @@ abstract class PatientAnimal with _$PatientAnimal {
 }
 
 @freezed
-abstract class PatientCommunication with _$PatientCommunication {
+class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
   factory PatientCommunication({
     Id? id,
@@ -169,7 +169,7 @@ abstract class PatientCommunication with _$PatientCommunication {
 }
 
 @freezed
-abstract class PatientLink with _$PatientLink {
+class PatientLink with _$PatientLink {
   PatientLink._();
   factory PatientLink({
     Id? id,
@@ -198,7 +198,7 @@ abstract class PatientLink with _$PatientLink {
 }
 
 @freezed
-abstract class Practitioner with Resource implements _$Practitioner {
+class Practitioner with Resource, _$Practitioner {
   Practitioner._();
   factory Practitioner({
     @Default(Dstu2ResourceType.Practitioner)
@@ -249,8 +249,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
 }
 
 @freezed
-abstract class PractitionerPractitionerRole
-    with _$PractitionerPractitionerRole {
+class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
   PractitionerPractitionerRole._();
   factory PractitionerPractitionerRole({
     Id? id,
@@ -284,7 +283,7 @@ abstract class PractitionerPractitionerRole
 }
 
 @freezed
-abstract class PractitionerQualification with _$PractitionerQualification {
+class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
   factory PractitionerQualification({
     Id? id,
@@ -315,7 +314,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
 }
 
 @freezed
-abstract class RelatedPerson with Resource implements _$RelatedPerson {
+class RelatedPerson with Resource, _$RelatedPerson {
   RelatedPerson._();
   factory RelatedPerson({
     @Default(Dstu2ResourceType.RelatedPerson)

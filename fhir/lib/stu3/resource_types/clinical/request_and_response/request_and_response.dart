@@ -12,7 +12,7 @@ part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
 @freezed
-abstract class Communication with Resource implements _$Communication {
+class Communication with Resource, _$Communication {
   Communication._();
   factory Communication({
     @Default(Stu3ResourceType.Communication)
@@ -72,7 +72,7 @@ abstract class Communication with Resource implements _$Communication {
 }
 
 @freezed
-abstract class CommunicationPayload implements _$CommunicationPayload {
+class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
   factory CommunicationPayload({
     String? contentString,
@@ -99,9 +99,7 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
 }
 
 @freezed
-abstract class CommunicationRequest
-    with Resource
-    implements _$CommunicationRequest {
+class CommunicationRequest with Resource, _$CommunicationRequest {
   CommunicationRequest._();
   factory CommunicationRequest({
     @Default(Stu3ResourceType.CommunicationRequest)
@@ -162,8 +160,7 @@ abstract class CommunicationRequest
 }
 
 @freezed
-abstract class CommunicationRequestPayload
-    implements _$CommunicationRequestPayload {
+class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
   factory CommunicationRequestPayload({
     String? contentString,
@@ -191,8 +188,7 @@ abstract class CommunicationRequestPayload
 }
 
 @freezed
-abstract class CommunicationRequestRequester
-    implements _$CommunicationRequestRequester {
+class CommunicationRequestRequester with _$CommunicationRequestRequester {
   CommunicationRequestRequester._();
   factory CommunicationRequestRequester({
     required Reference agent,
@@ -218,7 +214,7 @@ abstract class CommunicationRequestRequester
 }
 
 @freezed
-abstract class DeviceRequest with Resource implements _$DeviceRequest {
+class DeviceRequest with Resource, _$DeviceRequest {
   DeviceRequest._();
   factory DeviceRequest({
     @Default(Stu3ResourceType.DeviceRequest)
@@ -282,7 +278,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
 }
 
 @freezed
-abstract class DeviceRequestRequester implements _$DeviceRequestRequester {
+class DeviceRequestRequester with _$DeviceRequestRequester {
   DeviceRequestRequester._();
   factory DeviceRequestRequester({
     required Reference agent,
@@ -307,9 +303,7 @@ abstract class DeviceRequestRequester implements _$DeviceRequestRequester {
 }
 
 @freezed
-abstract class DeviceUseStatement
-    with Resource
-    implements _$DeviceUseStatement {
+class DeviceUseStatement with Resource, _$DeviceUseStatement {
   DeviceUseStatement._();
   factory DeviceUseStatement({
     @Default(Stu3ResourceType.DeviceUseStatement)
@@ -361,7 +355,7 @@ abstract class DeviceUseStatement
 }
 
 @freezed
-abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
+class SupplyDelivery with Resource, _$SupplyDelivery {
   SupplyDelivery._();
   factory SupplyDelivery({
     @Default(Stu3ResourceType.SupplyDelivery)
@@ -412,8 +406,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
 }
 
 @freezed
-abstract class SupplyDeliverySuppliedItem
-    implements _$SupplyDeliverySuppliedItem {
+class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   SupplyDeliverySuppliedItem._();
   factory SupplyDeliverySuppliedItem({
     Quantity? quantity,
@@ -440,7 +433,7 @@ abstract class SupplyDeliverySuppliedItem
 }
 
 @freezed
-abstract class SupplyRequest with Resource implements _$SupplyRequest {
+class SupplyRequest with Resource, _$SupplyRequest {
   SupplyRequest._();
   factory SupplyRequest({
     @Default(Stu3ResourceType.SupplyRequest)
@@ -495,7 +488,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
 }
 
 @freezed
-abstract class SupplyRequestOrderedItem implements _$SupplyRequestOrderedItem {
+class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
   SupplyRequestOrderedItem._();
   factory SupplyRequestOrderedItem({
     required Quantity quantity,
@@ -522,7 +515,7 @@ abstract class SupplyRequestOrderedItem implements _$SupplyRequestOrderedItem {
 }
 
 @freezed
-abstract class SupplyRequestRequester implements _$SupplyRequestRequester {
+class SupplyRequestRequester with _$SupplyRequestRequester {
   SupplyRequestRequester._();
   factory SupplyRequestRequester({
     required Reference agent,

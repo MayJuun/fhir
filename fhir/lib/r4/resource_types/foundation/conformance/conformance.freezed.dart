@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'conformance.dart';
 
@@ -8,6 +8,10 @@ part of 'conformance.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
   return _CapabilityStatement.fromJson(json);
 }
@@ -158,83 +162,91 @@ const $CapabilityStatement = _$CapabilityStatementTearOff();
 /// @nodoc
 mixin _$CapabilityStatement {
   @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get title;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
-  CapabilityStatementStatus? get status;
+  CapabilityStatementStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  Boolean? get experimental;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get purpose;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
-  Markdown? get copyright;
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
-  CapabilityStatementKind? get kind;
+  CapabilityStatementKind? get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_kind')
-  Element? get kindElement;
-  List<Canonical>? get instantiates;
-  List<Canonical>? get imports;
-  CapabilityStatementSoftware? get software;
-  CapabilityStatementImplementation? get implementation;
+  Element? get kindElement => throw _privateConstructorUsedError;
+  List<Canonical>? get instantiates => throw _privateConstructorUsedError;
+  List<Canonical>? get imports => throw _privateConstructorUsedError;
+  CapabilityStatementSoftware? get software =>
+      throw _privateConstructorUsedError;
+  CapabilityStatementImplementation? get implementation =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
-  CapabilityStatementFhirVersion? get fhirVersion;
+  CapabilityStatementFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement;
-  List<Code>? get format;
+  Element? get fhirVersionElement => throw _privateConstructorUsedError;
+  List<Code>? get format => throw _privateConstructorUsedError;
   @JsonKey(name: '_format')
-  List<Element?>? get formatElement;
-  List<Code>? get patchFormat;
+  List<Element?>? get formatElement => throw _privateConstructorUsedError;
+  List<Code>? get patchFormat => throw _privateConstructorUsedError;
   @JsonKey(name: '_patchFormat')
-  List<Element?>? get patchFormatElement;
-  List<Canonical>? get implementationGuide;
-  List<CapabilityStatementRest>? get rest;
-  List<CapabilityStatementMessaging>? get messaging;
-  List<CapabilityStatementDocument>? get document;
+  List<Element?>? get patchFormatElement => throw _privateConstructorUsedError;
+  List<Canonical>? get implementationGuide =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementRest>? get rest => throw _privateConstructorUsedError;
+  List<CapabilityStatementMessaging>? get messaging =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementDocument>? get document =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CapabilityStatementCopyWith<CapabilityStatement> get copyWith;
+  $CapabilityStatementCopyWith<CapabilityStatement> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -406,127 +418,212 @@ class _$CapabilityStatementCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as CapabilityStatementStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      kind: kind == freezed ? _value.kind : kind as CapabilityStatementKind?,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementKind?,
+      kindElement: kindElement == freezed
+          ? _value.kindElement
+          : kindElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       instantiates: instantiates == freezed
           ? _value.instantiates
-          : instantiates as List<Canonical>?,
-      imports:
-          imports == freezed ? _value.imports : imports as List<Canonical>?,
+          : instantiates // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      imports: imports == freezed
+          ? _value.imports
+          : imports // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       software: software == freezed
           ? _value.software
-          : software as CapabilityStatementSoftware?,
+          : software // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSoftware?,
       implementation: implementation == freezed
           ? _value.implementation
-          : implementation as CapabilityStatementImplementation?,
+          : implementation // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementImplementation?,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as CapabilityStatementFhirVersion?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementFhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as Element?,
-      format: format == freezed ? _value.format : format as List<Code>?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       formatElement: formatElement == freezed
           ? _value.formatElement
-          : formatElement as List<Element?>?,
+          : formatElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
-          : patchFormat as List<Code>?,
+          : patchFormat // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       patchFormatElement: patchFormatElement == freezed
           ? _value.patchFormatElement
-          : patchFormatElement as List<Element?>?,
+          : patchFormatElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
-          : implementationGuide as List<Canonical>?,
+          : implementationGuide // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       rest: rest == freezed
           ? _value.rest
-          : rest as List<CapabilityStatementRest>?,
+          : rest // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<CapabilityStatementMessaging>?,
+          : messaging // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<CapabilityStatementDocument>?,
+          : document // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementDocument>?,
     ));
   }
 
@@ -934,127 +1031,212 @@ class __$CapabilityStatementCopyWithImpl<$Res>
     return _then(_CapabilityStatement(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as CapabilityStatementStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      kind: kind == freezed ? _value.kind : kind as CapabilityStatementKind?,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementKind?,
+      kindElement: kindElement == freezed
+          ? _value.kindElement
+          : kindElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       instantiates: instantiates == freezed
           ? _value.instantiates
-          : instantiates as List<Canonical>?,
-      imports:
-          imports == freezed ? _value.imports : imports as List<Canonical>?,
+          : instantiates // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      imports: imports == freezed
+          ? _value.imports
+          : imports // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       software: software == freezed
           ? _value.software
-          : software as CapabilityStatementSoftware?,
+          : software // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSoftware?,
       implementation: implementation == freezed
           ? _value.implementation
-          : implementation as CapabilityStatementImplementation?,
+          : implementation // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementImplementation?,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as CapabilityStatementFhirVersion?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementFhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as Element?,
-      format: format == freezed ? _value.format : format as List<Code>?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       formatElement: formatElement == freezed
           ? _value.formatElement
-          : formatElement as List<Element?>?,
+          : formatElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
-          : patchFormat as List<Code>?,
+          : patchFormat // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       patchFormatElement: patchFormatElement == freezed
           ? _value.patchFormatElement
-          : patchFormatElement as List<Element?>?,
+          : patchFormatElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
-          : implementationGuide as List<Canonical>?,
+          : implementationGuide // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       rest: rest == freezed
           ? _value.rest
-          : rest as List<CapabilityStatementRest>?,
+          : rest // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<CapabilityStatementMessaging>?,
+          : messaging // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<CapabilityStatementDocument>?,
+          : document // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementDocument>?,
     ));
   }
 }
@@ -1445,7 +1627,6 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 }
 
 abstract class _CapabilityStatement extends CapabilityStatement {
-  _CapabilityStatement._() : super._();
   factory _CapabilityStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
           R4ResourceType resourceType,
@@ -1521,139 +1702,148 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       List<CapabilityStatementRest>? rest,
       List<CapabilityStatementMessaging>? messaging,
       List<CapabilityStatementDocument>? document}) = _$_CapabilityStatement;
+  _CapabilityStatement._() : super._();
 
   factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatement.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
-  CapabilityStatementStatus? get status;
+  CapabilityStatementStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get copyright;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
-  CapabilityStatementKind? get kind;
+  CapabilityStatementKind? get kind => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_kind')
-  Element? get kindElement;
+  Element? get kindElement => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get instantiates;
+  List<Canonical>? get instantiates => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get imports;
+  List<Canonical>? get imports => throw _privateConstructorUsedError;
   @override
-  CapabilityStatementSoftware? get software;
+  CapabilityStatementSoftware? get software =>
+      throw _privateConstructorUsedError;
   @override
-  CapabilityStatementImplementation? get implementation;
+  CapabilityStatementImplementation? get implementation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
-  CapabilityStatementFhirVersion? get fhirVersion;
+  CapabilityStatementFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement;
+  Element? get fhirVersionElement => throw _privateConstructorUsedError;
   @override
-  List<Code>? get format;
+  List<Code>? get format => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_format')
-  List<Element?>? get formatElement;
+  List<Element?>? get formatElement => throw _privateConstructorUsedError;
   @override
-  List<Code>? get patchFormat;
+  List<Code>? get patchFormat => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_patchFormat')
-  List<Element?>? get patchFormatElement;
+  List<Element?>? get patchFormatElement => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get implementationGuide;
+  List<Canonical>? get implementationGuide =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementRest>? get rest;
+  List<CapabilityStatementRest>? get rest => throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementMessaging>? get messaging;
+  List<CapabilityStatementMessaging>? get messaging =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementDocument>? get document;
+  List<CapabilityStatementDocument>? get document =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith;
+  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CapabilityStatementSoftware _$CapabilityStatementSoftwareFromJson(
@@ -1698,24 +1888,25 @@ const $CapabilityStatementSoftware = _$CapabilityStatementSoftwareTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementSoftware {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get version;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  FhirDateTime? get releaseDate;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_releaseDate')
-  Element? get releaseDateElement;
+  Element? get releaseDateElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementSoftwareCopyWith<CapabilityStatementSoftware>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1762,26 +1953,42 @@ class _$CapabilityStatementSoftwareCopyWithImpl<$Res>
     Object? releaseDateElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
-          : releaseDate as FhirDateTime?,
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       releaseDateElement: releaseDateElement == freezed
           ? _value.releaseDateElement
-          : releaseDateElement as Element?,
+          : releaseDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -1872,26 +2079,42 @@ class __$CapabilityStatementSoftwareCopyWithImpl<$Res>
     Object? releaseDateElement = freezed,
   }) {
     return _then(_CapabilityStatementSoftware(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
-          : releaseDate as FhirDateTime?,
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       releaseDateElement: releaseDateElement == freezed
           ? _value.releaseDateElement
-          : releaseDateElement as Element?,
+          : releaseDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -2001,7 +2224,6 @@ class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
 
 abstract class _CapabilityStatementSoftware
     extends CapabilityStatementSoftware {
-  _CapabilityStatementSoftware._() : super._();
   factory _CapabilityStatementSoftware(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2013,36 +2235,38 @@ abstract class _CapabilityStatementSoftware
           FhirDateTime? releaseDate,
           @JsonKey(name: '_releaseDate') Element? releaseDateElement}) =
       _$_CapabilityStatementSoftware;
+  _CapabilityStatementSoftware._() : super._();
 
   factory _CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSoftware.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get releaseDate;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_releaseDate')
-  Element? get releaseDateElement;
+  Element? get releaseDateElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementSoftwareCopyWith<_CapabilityStatementSoftware>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementImplementation _$CapabilityStatementImplementationFromJson(
@@ -2086,22 +2310,23 @@ const $CapabilityStatementImplementation =
 
 /// @nodoc
 mixin _$CapabilityStatementImplementation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get description;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  FhirUrl? get url;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  FhirUrl? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  Reference? get custodian;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  Reference? get custodian => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementImplementationCopyWith<CapabilityStatementImplementation>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2146,23 +2371,38 @@ class _$CapabilityStatementImplementationCopyWithImpl<$Res>
     Object? custodian = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
-      url: url == freezed ? _value.url : url as FhirUrl?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      custodian:
-          custodian == freezed ? _value.custodian : custodian as Reference?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      custodian: custodian == freezed
+          ? _value.custodian
+          : custodian // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -2251,23 +2491,38 @@ class __$CapabilityStatementImplementationCopyWithImpl<$Res>
     Object? custodian = freezed,
   }) {
     return _then(_CapabilityStatementImplementation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
-      url: url == freezed ? _value.url : url as FhirUrl?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      custodian:
-          custodian == freezed ? _value.custodian : custodian as Reference?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      custodian: custodian == freezed
+          ? _value.custodian
+          : custodian // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -2372,7 +2627,6 @@ class _$_CapabilityStatementImplementation
 
 abstract class _CapabilityStatementImplementation
     extends CapabilityStatementImplementation {
-  _CapabilityStatementImplementation._() : super._();
   factory _CapabilityStatementImplementation(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2382,34 +2636,37 @@ abstract class _CapabilityStatementImplementation
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       Reference? custodian}) = _$_CapabilityStatementImplementation;
+  _CapabilityStatementImplementation._() : super._();
 
   factory _CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =
       _$_CapabilityStatementImplementation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get url;
+  FhirUrl? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  Reference? get custodian;
+  Reference? get custodian => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementImplementationCopyWith<
-      _CapabilityStatementImplementation> get copyWith;
+          _CapabilityStatementImplementation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementRest _$CapabilityStatementRestFromJson(
@@ -2466,27 +2723,34 @@ const $CapabilityStatementRest = _$CapabilityStatementRestTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementRest {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
-  CapabilityStatementRestMode? get mode;
+  CapabilityStatementRestMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
-  Element? get modeElement;
-  Markdown? get documentation;
+  Element? get modeElement => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
-  CapabilityStatementSecurity? get security;
-  List<CapabilityStatementResource>? get resource;
-  List<CapabilityStatementInteraction1>? get interaction;
-  List<CapabilityStatementSearchParam>? get searchParam;
-  List<CapabilityStatementOperation>? get operation;
-  List<Canonical>? get compartment;
+  Element? get documentationElement => throw _privateConstructorUsedError;
+  CapabilityStatementSecurity? get security =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementResource>? get resource =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementInteraction1>? get interaction =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementOperation>? get operation =>
+      throw _privateConstructorUsedError;
+  List<Canonical>? get compartment => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CapabilityStatementRestCopyWith<CapabilityStatementRest> get copyWith;
+  $CapabilityStatementRestCopyWith<CapabilityStatementRest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2544,41 +2808,58 @@ class _$CapabilityStatementRestCopyWithImpl<$Res>
     Object? compartment = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      mode:
-          mode == freezed ? _value.mode : mode as CapabilityStatementRestMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementRestMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       security: security == freezed
           ? _value.security
-          : security as CapabilityStatementSecurity?,
+          : security // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSecurity?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CapabilityStatementResource>?,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementResource>?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction1>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementInteraction1>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementOperation>?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<Canonical>?,
+          : compartment // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
     ));
   }
 
@@ -2680,41 +2961,58 @@ class __$CapabilityStatementRestCopyWithImpl<$Res>
     Object? compartment = freezed,
   }) {
     return _then(_CapabilityStatementRest(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      mode:
-          mode == freezed ? _value.mode : mode as CapabilityStatementRestMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementRestMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       security: security == freezed
           ? _value.security
-          : security as CapabilityStatementSecurity?,
+          : security // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSecurity?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CapabilityStatementResource>?,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementResource>?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction1>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementInteraction1>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementOperation>?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<Canonical>?,
+          : compartment // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
     ));
   }
 }
@@ -2851,7 +3149,6 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
 }
 
 abstract class _CapabilityStatementRest extends CapabilityStatementRest {
-  _CapabilityStatementRest._() : super._();
   factory _CapabilityStatementRest(
       {String? id,
       @JsonKey(name: 'extension')
@@ -2870,43 +3167,51 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
       List<CapabilityStatementSearchParam>? searchParam,
       List<CapabilityStatementOperation>? operation,
       List<Canonical>? compartment}) = _$_CapabilityStatementRest;
+  _CapabilityStatementRest._() : super._();
 
   factory _CapabilityStatementRest.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementRest.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
-  CapabilityStatementRestMode? get mode;
+  CapabilityStatementRestMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
-  CapabilityStatementSecurity? get security;
+  CapabilityStatementSecurity? get security =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementResource>? get resource;
+  List<CapabilityStatementResource>? get resource =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementInteraction1>? get interaction;
+  List<CapabilityStatementInteraction1>? get interaction =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementSearchParam>? get searchParam;
+  List<CapabilityStatementSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementOperation>? get operation;
+  List<CapabilityStatementOperation>? get operation =>
+      throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get compartment;
+  List<Canonical>? get compartment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CapabilityStatementRestCopyWith<_CapabilityStatementRest> get copyWith;
+  _$CapabilityStatementRestCopyWith<_CapabilityStatementRest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CapabilityStatementSecurity _$CapabilityStatementSecurityFromJson(
@@ -2949,22 +3254,23 @@ const $CapabilityStatementSecurity = _$CapabilityStatementSecurityTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementSecurity {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Boolean? get cors;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Boolean? get cors => throw _privateConstructorUsedError;
   @JsonKey(name: '_cors')
-  Element? get corsElement;
-  List<CodeableConcept>? get service;
-  Markdown? get description;
+  Element? get corsElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get service => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementSecurityCopyWith<CapabilityStatementSecurity>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3008,25 +3314,38 @@ class _$CapabilityStatementSecurityCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      cors: cors == freezed ? _value.cors : cors as Boolean?,
-      corsElement:
-          corsElement == freezed ? _value.corsElement : corsElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      cors: cors == freezed
+          ? _value.cors
+          : cors // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      corsElement: corsElement == freezed
+          ? _value.corsElement
+          : corsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       service: service == freezed
           ? _value.service
-          : service as List<CodeableConcept>?,
+          : service // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -3102,25 +3421,38 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_CapabilityStatementSecurity(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      cors: cors == freezed ? _value.cors : cors as Boolean?,
-      corsElement:
-          corsElement == freezed ? _value.corsElement : corsElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      cors: cors == freezed
+          ? _value.cors
+          : cors // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      corsElement: corsElement == freezed
+          ? _value.corsElement
+          : corsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       service: service == freezed
           ? _value.service
-          : service as List<CodeableConcept>?,
+          : service // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -3222,7 +3554,6 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
 
 abstract class _CapabilityStatementSecurity
     extends CapabilityStatementSecurity {
-  _CapabilityStatementSecurity._() : super._();
   factory _CapabilityStatementSecurity(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3233,33 +3564,35 @@ abstract class _CapabilityStatementSecurity
           Markdown? description,
           @JsonKey(name: '_description') Element? descriptionElement}) =
       _$_CapabilityStatementSecurity;
+  _CapabilityStatementSecurity._() : super._();
 
   factory _CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSecurity.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get cors;
+  Boolean? get cors => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_cors')
-  Element? get corsElement;
+  Element? get corsElement => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get service;
+  List<CodeableConcept>? get service => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementSecurityCopyWith<_CapabilityStatementSecurity>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementResource _$CapabilityStatementResourceFromJson(
@@ -3366,60 +3699,71 @@ const $CapabilityStatementResource = _$CapabilityStatementResourceTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementResource {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Code? get type;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  Canonical? get profile;
-  List<Canonical>? get supportedProfile;
-  Markdown? get documentation;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  Canonical? get profile => throw _privateConstructorUsedError;
+  List<Canonical>? get supportedProfile => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
-  List<CapabilityStatementInteraction>? get interaction;
+  Element? get documentationElement => throw _privateConstructorUsedError;
+  List<CapabilityStatementInteraction>? get interaction =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-  CapabilityStatementResourceVersioning? get versioning;
+  CapabilityStatementResourceVersioning? get versioning =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_versioning')
-  Element? get versioningElement;
-  Boolean? get readHistory;
+  Element? get versioningElement => throw _privateConstructorUsedError;
+  Boolean? get readHistory => throw _privateConstructorUsedError;
   @JsonKey(name: '_readHistory')
-  Element? get readHistoryElement;
-  Boolean? get updateCreate;
+  Element? get readHistoryElement => throw _privateConstructorUsedError;
+  Boolean? get updateCreate => throw _privateConstructorUsedError;
   @JsonKey(name: '_updateCreate')
-  Element? get updateCreateElement;
-  Boolean? get conditionalCreate;
+  Element? get updateCreateElement => throw _privateConstructorUsedError;
+  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalCreate')
-  Element? get conditionalCreateElement;
+  Element? get conditionalCreateElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-  CapabilityStatementResourceConditionalRead? get conditionalRead;
+  CapabilityStatementResourceConditionalRead? get conditionalRead =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalRead')
-  Element? get conditionalReadElement;
-  Boolean? get conditionalUpdate;
+  Element? get conditionalReadElement => throw _privateConstructorUsedError;
+  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalUpdate')
-  Element? get conditionalUpdateElement;
+  Element? get conditionalUpdateElement => throw _privateConstructorUsedError;
   @JsonKey(
       unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-  CapabilityStatementResourceConditionalDelete? get conditionalDelete;
+  CapabilityStatementResourceConditionalDelete? get conditionalDelete =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalDelete')
-  Element? get conditionalDeleteElement;
-  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy;
+  Element? get conditionalDeleteElement => throw _privateConstructorUsedError;
+  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_referencePolicy')
-  List<Element?>? get referencePolicyElement;
-  List<String>? get searchInclude;
+  List<Element?>? get referencePolicyElement =>
+      throw _privateConstructorUsedError;
+  List<String>? get searchInclude => throw _privateConstructorUsedError;
   @JsonKey(name: '_searchInclude')
-  List<Element?>? get searchIncludeElement;
-  List<String>? get searchRevInclude;
+  List<Element?>? get searchIncludeElement =>
+      throw _privateConstructorUsedError;
+  List<String>? get searchRevInclude => throw _privateConstructorUsedError;
   @JsonKey(name: '_searchRevInclude')
-  List<Element?>? get searchRevIncludeElement;
-  List<CapabilityStatementSearchParam>? get searchParam;
-  List<CapabilityStatementOperation>? get operation;
+  List<Element?>? get searchRevIncludeElement =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementOperation>? get operation =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementResourceCopyWith<CapabilityStatementResource>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3534,95 +3878,134 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
     Object? operation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as Code?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       supportedProfile: supportedProfile == freezed
           ? _value.supportedProfile
-          : supportedProfile as List<Canonical>?,
+          : supportedProfile // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementInteraction>?,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as CapabilityStatementResourceVersioning?,
+          : versioning // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceVersioning?,
       versioningElement: versioningElement == freezed
           ? _value.versioningElement
-          : versioningElement as Element?,
-      readHistory:
-          readHistory == freezed ? _value.readHistory : readHistory as Boolean?,
+          : versioningElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      readHistory: readHistory == freezed
+          ? _value.readHistory
+          : readHistory // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       readHistoryElement: readHistoryElement == freezed
           ? _value.readHistoryElement
-          : readHistoryElement as Element?,
+          : readHistoryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       updateCreate: updateCreate == freezed
           ? _value.updateCreate
-          : updateCreate as Boolean?,
+          : updateCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       updateCreateElement: updateCreateElement == freezed
           ? _value.updateCreateElement
-          : updateCreateElement as Element?,
+          : updateCreateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalCreate: conditionalCreate == freezed
           ? _value.conditionalCreate
-          : conditionalCreate as Boolean?,
+          : conditionalCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalCreateElement: conditionalCreateElement == freezed
           ? _value.conditionalCreateElement
-          : conditionalCreateElement as Element?,
+          : conditionalCreateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalRead: conditionalRead == freezed
           ? _value.conditionalRead
-          : conditionalRead as CapabilityStatementResourceConditionalRead?,
+          : conditionalRead // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceConditionalRead?,
       conditionalReadElement: conditionalReadElement == freezed
           ? _value.conditionalReadElement
-          : conditionalReadElement as Element?,
+          : conditionalReadElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalUpdate: conditionalUpdate == freezed
           ? _value.conditionalUpdate
-          : conditionalUpdate as Boolean?,
+          : conditionalUpdate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalUpdateElement: conditionalUpdateElement == freezed
           ? _value.conditionalUpdateElement
-          : conditionalUpdateElement as Element?,
+          : conditionalUpdateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
-          : conditionalDelete as CapabilityStatementResourceConditionalDelete?,
+          : conditionalDelete // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceConditionalDelete?,
       conditionalDeleteElement: conditionalDeleteElement == freezed
           ? _value.conditionalDeleteElement
-          : conditionalDeleteElement as Element?,
+          : conditionalDeleteElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
-          : referencePolicy
+          : referencePolicy // ignore: cast_nullable_to_non_nullable
               as List<CapabilityStatementResourceReferencePolicy>?,
       referencePolicyElement: referencePolicyElement == freezed
           ? _value.referencePolicyElement
-          : referencePolicyElement as List<Element?>?,
+          : referencePolicyElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as List<String>?,
+          : searchInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchIncludeElement: searchIncludeElement == freezed
           ? _value.searchIncludeElement
-          : searchIncludeElement as List<Element?>?,
+          : searchIncludeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as List<String>?,
+          : searchRevInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchRevIncludeElement: searchRevIncludeElement == freezed
           ? _value.searchRevIncludeElement
-          : searchRevIncludeElement as List<Element?>?,
+          : searchRevIncludeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementOperation>?,
     ));
   }
 
@@ -3853,95 +4236,134 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
     Object? operation = freezed,
   }) {
     return _then(_CapabilityStatementResource(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as Code?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       supportedProfile: supportedProfile == freezed
           ? _value.supportedProfile
-          : supportedProfile as List<Canonical>?,
+          : supportedProfile // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementInteraction>?,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as CapabilityStatementResourceVersioning?,
+          : versioning // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceVersioning?,
       versioningElement: versioningElement == freezed
           ? _value.versioningElement
-          : versioningElement as Element?,
-      readHistory:
-          readHistory == freezed ? _value.readHistory : readHistory as Boolean?,
+          : versioningElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      readHistory: readHistory == freezed
+          ? _value.readHistory
+          : readHistory // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       readHistoryElement: readHistoryElement == freezed
           ? _value.readHistoryElement
-          : readHistoryElement as Element?,
+          : readHistoryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       updateCreate: updateCreate == freezed
           ? _value.updateCreate
-          : updateCreate as Boolean?,
+          : updateCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       updateCreateElement: updateCreateElement == freezed
           ? _value.updateCreateElement
-          : updateCreateElement as Element?,
+          : updateCreateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalCreate: conditionalCreate == freezed
           ? _value.conditionalCreate
-          : conditionalCreate as Boolean?,
+          : conditionalCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalCreateElement: conditionalCreateElement == freezed
           ? _value.conditionalCreateElement
-          : conditionalCreateElement as Element?,
+          : conditionalCreateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalRead: conditionalRead == freezed
           ? _value.conditionalRead
-          : conditionalRead as CapabilityStatementResourceConditionalRead?,
+          : conditionalRead // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceConditionalRead?,
       conditionalReadElement: conditionalReadElement == freezed
           ? _value.conditionalReadElement
-          : conditionalReadElement as Element?,
+          : conditionalReadElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalUpdate: conditionalUpdate == freezed
           ? _value.conditionalUpdate
-          : conditionalUpdate as Boolean?,
+          : conditionalUpdate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalUpdateElement: conditionalUpdateElement == freezed
           ? _value.conditionalUpdateElement
-          : conditionalUpdateElement as Element?,
+          : conditionalUpdateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
-          : conditionalDelete as CapabilityStatementResourceConditionalDelete?,
+          : conditionalDelete // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceConditionalDelete?,
       conditionalDeleteElement: conditionalDeleteElement == freezed
           ? _value.conditionalDeleteElement
-          : conditionalDeleteElement as Element?,
+          : conditionalDeleteElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
-          : referencePolicy
+          : referencePolicy // ignore: cast_nullable_to_non_nullable
               as List<CapabilityStatementResourceReferencePolicy>?,
       referencePolicyElement: referencePolicyElement == freezed
           ? _value.referencePolicyElement
-          : referencePolicyElement as List<Element?>?,
+          : referencePolicyElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as List<String>?,
+          : searchInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchIncludeElement: searchIncludeElement == freezed
           ? _value.searchIncludeElement
-          : searchIncludeElement as List<Element?>?,
+          : searchIncludeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as List<String>?,
+          : searchRevInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchRevIncludeElement: searchRevIncludeElement == freezed
           ? _value.searchRevIncludeElement
-          : searchRevIncludeElement as List<Element?>?,
+          : searchRevIncludeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementOperation>?,
     ));
   }
 }
@@ -4220,7 +4642,6 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
 
 abstract class _CapabilityStatementResource
     extends CapabilityStatementResource {
-  _CapabilityStatementResource._() : super._();
   factory _CapabilityStatementResource(
       {String? id,
       @JsonKey(name: 'extension')
@@ -4270,95 +4691,107 @@ abstract class _CapabilityStatementResource
           List<Element?>? searchRevIncludeElement,
       List<CapabilityStatementSearchParam>? searchParam,
       List<CapabilityStatementOperation>? operation}) = _$_CapabilityStatementResource;
+  _CapabilityStatementResource._() : super._();
 
   factory _CapabilityStatementResource.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementResource.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get type;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get profile;
+  Canonical? get profile => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get supportedProfile;
+  List<Canonical>? get supportedProfile => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementInteraction>? get interaction;
+  List<CapabilityStatementInteraction>? get interaction =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-  CapabilityStatementResourceVersioning? get versioning;
+  CapabilityStatementResourceVersioning? get versioning =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_versioning')
-  Element? get versioningElement;
+  Element? get versioningElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get readHistory;
+  Boolean? get readHistory => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_readHistory')
-  Element? get readHistoryElement;
+  Element? get readHistoryElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get updateCreate;
+  Boolean? get updateCreate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_updateCreate')
-  Element? get updateCreateElement;
+  Element? get updateCreateElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get conditionalCreate;
+  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_conditionalCreate')
-  Element? get conditionalCreateElement;
+  Element? get conditionalCreateElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-  CapabilityStatementResourceConditionalRead? get conditionalRead;
+  CapabilityStatementResourceConditionalRead? get conditionalRead =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_conditionalRead')
-  Element? get conditionalReadElement;
+  Element? get conditionalReadElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get conditionalUpdate;
+  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_conditionalUpdate')
-  Element? get conditionalUpdateElement;
+  Element? get conditionalUpdateElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-  CapabilityStatementResourceConditionalDelete? get conditionalDelete;
+  CapabilityStatementResourceConditionalDelete? get conditionalDelete =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_conditionalDelete')
-  Element? get conditionalDeleteElement;
+  Element? get conditionalDeleteElement => throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy;
+  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_referencePolicy')
-  List<Element?>? get referencePolicyElement;
+  List<Element?>? get referencePolicyElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get searchInclude;
+  List<String>? get searchInclude => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_searchInclude')
-  List<Element?>? get searchIncludeElement;
+  List<Element?>? get searchIncludeElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get searchRevInclude;
+  List<String>? get searchRevInclude => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_searchRevInclude')
-  List<Element?>? get searchRevIncludeElement;
+  List<Element?>? get searchRevIncludeElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementSearchParam>? get searchParam;
+  List<CapabilityStatementSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementOperation>? get operation;
+  List<CapabilityStatementOperation>? get operation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementResourceCopyWith<_CapabilityStatementResource>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementInteraction _$CapabilityStatementInteractionFromJson(
@@ -4404,22 +4837,24 @@ const $CapabilityStatementInteraction =
 
 /// @nodoc
 mixin _$CapabilityStatementInteraction {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
-  CapabilityStatementInteractionCode? get code;
+  CapabilityStatementInteractionCode? get code =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
-  Markdown? get documentation;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementInteractionCopyWith<CapabilityStatementInteraction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4465,24 +4900,34 @@ class _$CapabilityStatementInteractionCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       code: code == freezed
           ? _value.code
-          : code as CapabilityStatementInteractionCode?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementInteractionCode?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -4560,24 +5005,34 @@ class __$CapabilityStatementInteractionCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_CapabilityStatementInteraction(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       code: code == freezed
           ? _value.code
-          : code as CapabilityStatementInteractionCode?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementInteractionCode?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -4679,7 +5134,6 @@ class _$_CapabilityStatementInteraction
 
 abstract class _CapabilityStatementInteraction
     extends CapabilityStatementInteraction {
-  _CapabilityStatementInteraction._() : super._();
   factory _CapabilityStatementInteraction(
       {String? id,
       @JsonKey(name: 'extension')
@@ -4692,32 +5146,35 @@ abstract class _CapabilityStatementInteraction
       Markdown? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement}) = _$_CapabilityStatementInteraction;
+  _CapabilityStatementInteraction._() : super._();
 
   factory _CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementInteraction.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
-  CapabilityStatementInteractionCode? get code;
+  CapabilityStatementInteractionCode? get code =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementInteractionCopyWith<_CapabilityStatementInteraction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementSearchParam _$CapabilityStatementSearchParamFromJson(
@@ -4770,26 +5227,28 @@ const $CapabilityStatementSearchParam =
 
 /// @nodoc
 mixin _$CapabilityStatementSearchParam {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  Canonical? get definition;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  Canonical? get definition => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
-  CapabilityStatementSearchParamType? get type;
+  CapabilityStatementSearchParamType? get type =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  Markdown? get documentation;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementSearchParamCopyWith<CapabilityStatementSearchParam>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4843,29 +5302,46 @@ class _$CapabilityStatementSearchParamCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       type: type == freezed
           ? _value.type
-          : type as CapabilityStatementSearchParamType?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+          : type // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSearchParamType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -4963,29 +5439,46 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_CapabilityStatementSearchParam(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       type: type == freezed
           ? _value.type
-          : type as CapabilityStatementSearchParamType?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+          : type // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSearchParamType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -5109,7 +5602,6 @@ class _$_CapabilityStatementSearchParam
 
 abstract class _CapabilityStatementSearchParam
     extends CapabilityStatementSearchParam {
-  _CapabilityStatementSearchParam._() : super._();
   factory _CapabilityStatementSearchParam(
       {String? id,
       @JsonKey(name: 'extension')
@@ -5126,39 +5618,42 @@ abstract class _CapabilityStatementSearchParam
       Markdown? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement}) = _$_CapabilityStatementSearchParam;
+  _CapabilityStatementSearchParam._() : super._();
 
   factory _CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSearchParam.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get definition;
+  Canonical? get definition => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
-  CapabilityStatementSearchParamType? get type;
+  CapabilityStatementSearchParamType? get type =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementSearchParamCopyWith<_CapabilityStatementSearchParam>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementOperation _$CapabilityStatementOperationFromJson(
@@ -5201,22 +5696,23 @@ const $CapabilityStatementOperation = _$CapabilityStatementOperationTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementOperation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  Canonical get definition;
-  Markdown? get documentation;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  Canonical get definition => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementOperationCopyWith<CapabilityStatementOperation>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5260,24 +5756,38 @@ class _$CapabilityStatementOperationCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -5353,24 +5863,38 @@ class __$CapabilityStatementOperationCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_CapabilityStatementOperation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -5472,7 +5996,6 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
 
 abstract class _CapabilityStatementOperation
     extends CapabilityStatementOperation {
-  _CapabilityStatementOperation._() : super._();
   factory _CapabilityStatementOperation(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5483,33 +6006,35 @@ abstract class _CapabilityStatementOperation
           Markdown? documentation,
           @JsonKey(name: '_documentation') Element? documentationElement}) =
       _$_CapabilityStatementOperation;
+  _CapabilityStatementOperation._() : super._();
 
   factory _CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementOperation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Canonical get definition;
+  Canonical get definition => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementOperationCopyWith<_CapabilityStatementOperation>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementInteraction1 _$CapabilityStatementInteraction1FromJson(
@@ -5555,22 +6080,24 @@ const $CapabilityStatementInteraction1 =
 
 /// @nodoc
 mixin _$CapabilityStatementInteraction1 {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
-  CapabilityStatementInteraction1Code? get code;
+  CapabilityStatementInteraction1Code? get code =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
-  Markdown? get documentation;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementInteraction1CopyWith<CapabilityStatementInteraction1>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5616,24 +6143,34 @@ class _$CapabilityStatementInteraction1CopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       code: code == freezed
           ? _value.code
-          : code as CapabilityStatementInteraction1Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementInteraction1Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -5711,24 +6248,34 @@ class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_CapabilityStatementInteraction1(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       code: code == freezed
           ? _value.code
-          : code as CapabilityStatementInteraction1Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementInteraction1Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -5830,7 +6377,6 @@ class _$_CapabilityStatementInteraction1
 
 abstract class _CapabilityStatementInteraction1
     extends CapabilityStatementInteraction1 {
-  _CapabilityStatementInteraction1._() : super._();
   factory _CapabilityStatementInteraction1(
       {String? id,
       @JsonKey(name: 'extension')
@@ -5843,32 +6389,35 @@ abstract class _CapabilityStatementInteraction1
       Markdown? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement}) = _$_CapabilityStatementInteraction1;
+  _CapabilityStatementInteraction1._() : super._();
 
   factory _CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementInteraction1.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
-  CapabilityStatementInteraction1Code? get code;
+  CapabilityStatementInteraction1Code? get code =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementInteraction1CopyWith<_CapabilityStatementInteraction1>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementMessaging _$CapabilityStatementMessagingFromJson(
@@ -5913,23 +6462,26 @@ const $CapabilityStatementMessaging = _$CapabilityStatementMessagingTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementMessaging {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<CapabilityStatementEndpoint>? get endpoint;
-  UnsignedInt? get reliableCache;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementEndpoint>? get endpoint =>
+      throw _privateConstructorUsedError;
+  UnsignedInt? get reliableCache => throw _privateConstructorUsedError;
   @JsonKey(name: '_reliableCache')
-  Element? get reliableCacheElement;
-  Markdown? get documentation;
+  Element? get reliableCacheElement => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
-  List<CapabilityStatementSupportedMessage>? get supportedMessage;
+  Element? get documentationElement => throw _privateConstructorUsedError;
+  List<CapabilityStatementSupportedMessage>? get supportedMessage =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementMessagingCopyWith<CapabilityStatementMessaging>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5975,31 +6527,42 @@ class _$CapabilityStatementMessagingCopyWithImpl<$Res>
     Object? supportedMessage = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<CapabilityStatementEndpoint>?,
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementEndpoint>?,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
-          : reliableCache as UnsignedInt?,
+          : reliableCache // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       reliableCacheElement: reliableCacheElement == freezed
           ? _value.reliableCacheElement
-          : reliableCacheElement as Element?,
+          : reliableCacheElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       supportedMessage: supportedMessage == freezed
           ? _value.supportedMessage
-          : supportedMessage as List<CapabilityStatementSupportedMessage>?,
+          : supportedMessage // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSupportedMessage>?,
     ));
   }
 
@@ -6077,31 +6640,42 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
     Object? supportedMessage = freezed,
   }) {
     return _then(_CapabilityStatementMessaging(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<CapabilityStatementEndpoint>?,
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementEndpoint>?,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
-          : reliableCache as UnsignedInt?,
+          : reliableCache // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       reliableCacheElement: reliableCacheElement == freezed
           ? _value.reliableCacheElement
-          : reliableCacheElement as Element?,
+          : reliableCacheElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       supportedMessage: supportedMessage == freezed
           ? _value.supportedMessage
-          : supportedMessage as List<CapabilityStatementSupportedMessage>?,
+          : supportedMessage // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSupportedMessage>?,
     ));
   }
 }
@@ -6211,7 +6785,6 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
 
 abstract class _CapabilityStatementMessaging
     extends CapabilityStatementMessaging {
-  _CapabilityStatementMessaging._() : super._();
   factory _CapabilityStatementMessaging(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6223,35 +6796,39 @@ abstract class _CapabilityStatementMessaging
           @JsonKey(name: '_documentation') Element? documentationElement,
           List<CapabilityStatementSupportedMessage>? supportedMessage}) =
       _$_CapabilityStatementMessaging;
+  _CapabilityStatementMessaging._() : super._();
 
   factory _CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementMessaging.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementEndpoint>? get endpoint;
+  List<CapabilityStatementEndpoint>? get endpoint =>
+      throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get reliableCache;
+  UnsignedInt? get reliableCache => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_reliableCache')
-  Element? get reliableCacheElement;
+  Element? get reliableCacheElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementSupportedMessage>? get supportedMessage;
+  List<CapabilityStatementSupportedMessage>? get supportedMessage =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementMessagingCopyWith<_CapabilityStatementMessaging>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementEndpoint _$CapabilityStatementEndpointFromJson(
@@ -6290,19 +6867,20 @@ const $CapabilityStatementEndpoint = _$CapabilityStatementEndpointTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementEndpoint {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Coding get protocol;
-  FhirUrl? get address;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Coding get protocol => throw _privateConstructorUsedError;
+  FhirUrl? get address => throw _privateConstructorUsedError;
   @JsonKey(name: '_address')
-  Element? get addressElement;
+  Element? get addressElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementEndpointCopyWith<CapabilityStatementEndpoint>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6342,18 +6920,30 @@ class _$CapabilityStatementEndpointCopyWithImpl<$Res>
     Object? addressElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      protocol: protocol == freezed ? _value.protocol : protocol as Coding,
-      address: address == freezed ? _value.address : address as FhirUrl?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      protocol: protocol == freezed
+          ? _value.protocol
+          : protocol // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       addressElement: addressElement == freezed
           ? _value.addressElement
-          : addressElement as Element?,
+          : addressElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -6421,18 +7011,30 @@ class __$CapabilityStatementEndpointCopyWithImpl<$Res>
     Object? addressElement = freezed,
   }) {
     return _then(_CapabilityStatementEndpoint(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      protocol: protocol == freezed ? _value.protocol : protocol as Coding,
-      address: address == freezed ? _value.address : address as FhirUrl?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      protocol: protocol == freezed
+          ? _value.protocol
+          : protocol // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       addressElement: addressElement == freezed
           ? _value.addressElement
-          : addressElement as Element?,
+          : addressElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -6520,7 +7122,6 @@ class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
 
 abstract class _CapabilityStatementEndpoint
     extends CapabilityStatementEndpoint {
-  _CapabilityStatementEndpoint._() : super._();
   factory _CapabilityStatementEndpoint(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6529,28 +7130,30 @@ abstract class _CapabilityStatementEndpoint
           FhirUrl? address,
           @JsonKey(name: '_address') Element? addressElement}) =
       _$_CapabilityStatementEndpoint;
+  _CapabilityStatementEndpoint._() : super._();
 
   factory _CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementEndpoint.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Coding get protocol;
+  Coding get protocol => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get address;
+  FhirUrl? get address => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_address')
-  Element? get addressElement;
+  Element? get addressElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementEndpointCopyWith<_CapabilityStatementEndpoint>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementSupportedMessage
@@ -6593,20 +7196,23 @@ const $CapabilityStatementSupportedMessage =
 
 /// @nodoc
 mixin _$CapabilityStatementSupportedMessage {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
-  CapabilityStatementSupportedMessageMode? get mode;
+  CapabilityStatementSupportedMessageMode? get mode =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
-  Element? get modeElement;
-  Canonical get definition;
+  Element? get modeElement => throw _privateConstructorUsedError;
+  Canonical get definition => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementSupportedMessageCopyWith<
-      CapabilityStatementSupportedMessage> get copyWith;
+          CapabilityStatementSupportedMessage>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6648,20 +7254,30 @@ class _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
     Object? definition = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       mode: mode == freezed
           ? _value.mode
-          : mode as CapabilityStatementSupportedMessageMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSupportedMessageMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 
@@ -6723,20 +7339,30 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
     Object? definition = freezed,
   }) {
     return _then(_CapabilityStatementSupportedMessage(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       mode: mode == freezed
           ? _value.mode
-          : mode as CapabilityStatementSupportedMessageMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSupportedMessageMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 }
@@ -6830,7 +7456,6 @@ class _$_CapabilityStatementSupportedMessage
 
 abstract class _CapabilityStatementSupportedMessage
     extends CapabilityStatementSupportedMessage {
-  _CapabilityStatementSupportedMessage._() : super._();
   factory _CapabilityStatementSupportedMessage(
       {String? id,
       @JsonKey(name: 'extension')
@@ -6841,30 +7466,34 @@ abstract class _CapabilityStatementSupportedMessage
       @JsonKey(name: '_mode')
           Element? modeElement,
       required Canonical definition}) = _$_CapabilityStatementSupportedMessage;
+  _CapabilityStatementSupportedMessage._() : super._();
 
   factory _CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =
       _$_CapabilityStatementSupportedMessage.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
-  CapabilityStatementSupportedMessageMode? get mode;
+  CapabilityStatementSupportedMessageMode? get mode =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  Canonical get definition;
+  Canonical get definition => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementSupportedMessageCopyWith<
-      _CapabilityStatementSupportedMessage> get copyWith;
+          _CapabilityStatementSupportedMessage>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementDocument _$CapabilityStatementDocumentFromJson(
@@ -6911,23 +7540,25 @@ const $CapabilityStatementDocument = _$CapabilityStatementDocumentTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementDocument {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
-  CapabilityStatementDocumentMode? get mode;
+  CapabilityStatementDocumentMode? get mode =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
-  Element? get modeElement;
-  Markdown? get documentation;
+  Element? get modeElement => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
-  Canonical get profile;
+  Element? get documentationElement => throw _privateConstructorUsedError;
+  Canonical get profile => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementDocumentCopyWith<CapabilityStatementDocument>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6975,25 +7606,38 @@ class _$CapabilityStatementDocumentCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       mode: mode == freezed
           ? _value.mode
-          : mode as CapabilityStatementDocumentMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementDocumentMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 
@@ -7073,25 +7717,38 @@ class __$CapabilityStatementDocumentCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_CapabilityStatementDocument(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       mode: mode == freezed
           ? _value.mode
-          : mode as CapabilityStatementDocumentMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementDocumentMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 }
@@ -7197,7 +7854,6 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
 
 abstract class _CapabilityStatementDocument
     extends CapabilityStatementDocument {
-  _CapabilityStatementDocument._() : super._();
   factory _CapabilityStatementDocument(
       {String? id,
       @JsonKey(name: 'extension')
@@ -7211,34 +7867,37 @@ abstract class _CapabilityStatementDocument
       @JsonKey(name: '_documentation')
           Element? documentationElement,
       required Canonical profile}) = _$_CapabilityStatementDocument;
+  _CapabilityStatementDocument._() : super._();
 
   factory _CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementDocument.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
-  CapabilityStatementDocumentMode? get mode;
+  CapabilityStatementDocumentMode? get mode =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
-  Canonical get profile;
+  Canonical get profile => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementDocumentCopyWith<_CapabilityStatementDocument>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CompartmentDefinition _$CompartmentDefinitionFromJson(
@@ -7355,62 +8014,65 @@ const $CompartmentDefinition = _$CompartmentDefinitionTearOff();
 /// @nodoc
 mixin _$CompartmentDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-  CompartmentDefinitionStatus? get status;
+  CompartmentDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  Boolean? get experimental;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<UsageContext>? get useContext;
-  Markdown? get purpose;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
-  CompartmentDefinitionCode? get code;
+  CompartmentDefinitionCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
-  Boolean? get search;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  Boolean? get search => throw _privateConstructorUsedError;
   @JsonKey(name: '_search')
-  Element? get searchElement;
-  List<CompartmentDefinitionResource>? get resource;
+  Element? get searchElement => throw _privateConstructorUsedError;
+  List<CompartmentDefinitionResource>? get resource =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CompartmentDefinitionCopyWith<CompartmentDefinition> get copyWith;
+  $CompartmentDefinitionCopyWith<CompartmentDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7541,83 +8203,148 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as CompartmentDefinitionStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as CompartmentDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      code: code == freezed ? _value.code : code as CompartmentDefinitionCode?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      search: search == freezed ? _value.search : search as Boolean?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CompartmentDefinitionCode?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      search: search == freezed
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       searchElement: searchElement == freezed
           ? _value.searchElement
-          : searchElement as Element?,
+          : searchElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CompartmentDefinitionResource>?,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<CompartmentDefinitionResource>?,
     ));
   }
 
@@ -7934,83 +8661,148 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
     return _then(_CompartmentDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as CompartmentDefinitionStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as CompartmentDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      code: code == freezed ? _value.code : code as CompartmentDefinitionCode?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      search: search == freezed ? _value.search : search as Boolean?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CompartmentDefinitionCode?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      search: search == freezed
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       searchElement: searchElement == freezed
           ? _value.searchElement
-          : searchElement as Element?,
+          : searchElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CompartmentDefinitionResource>?,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<CompartmentDefinitionResource>?,
     ));
   }
 }
@@ -8311,7 +9103,6 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 }
 
 abstract class _CompartmentDefinition extends CompartmentDefinition {
-  _CompartmentDefinition._() : super._();
   factory _CompartmentDefinition(
           {@JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
               R4ResourceType resourceType,
@@ -8367,102 +9158,106 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
               Element? searchElement,
           List<CompartmentDefinitionResource>? resource}) =
       _$_CompartmentDefinition;
+  _CompartmentDefinition._() : super._();
 
   factory _CompartmentDefinition.fromJson(Map<String, dynamic> json) =
       _$_CompartmentDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-  CompartmentDefinitionStatus? get status;
+  CompartmentDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
-  CompartmentDefinitionCode? get code;
+  CompartmentDefinitionCode? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get search;
+  Boolean? get search => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_search')
-  Element? get searchElement;
+  Element? get searchElement => throw _privateConstructorUsedError;
   @override
-  List<CompartmentDefinitionResource>? get resource;
+  List<CompartmentDefinitionResource>? get resource =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CompartmentDefinitionCopyWith<_CompartmentDefinition> get copyWith;
+  _$CompartmentDefinitionCopyWith<_CompartmentDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CompartmentDefinitionResource _$CompartmentDefinitionResourceFromJson(
@@ -8507,24 +9302,25 @@ const $CompartmentDefinitionResource = _$CompartmentDefinitionResourceTearOff();
 
 /// @nodoc
 mixin _$CompartmentDefinitionResource {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Code? get code;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
-  List<String>? get param;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  List<String>? get param => throw _privateConstructorUsedError;
   @JsonKey(name: '_param')
-  List<Element?>? get paramElement;
-  String? get documentation;
+  List<Element?>? get paramElement => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CompartmentDefinitionResourceCopyWith<CompartmentDefinitionResource>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8570,26 +9366,42 @@ class _$CompartmentDefinitionResourceCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      param: param == freezed ? _value.param : param as List<String>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      param: param == freezed
+          ? _value.param
+          : param // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       paramElement: paramElement == freezed
           ? _value.paramElement
-          : paramElement as List<Element?>?,
+          : paramElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -8667,26 +9479,42 @@ class __$CompartmentDefinitionResourceCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_CompartmentDefinitionResource(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      param: param == freezed ? _value.param : param as List<String>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      param: param == freezed
+          ? _value.param
+          : param // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       paramElement: paramElement == freezed
           ? _value.paramElement
-          : paramElement as List<Element?>?,
+          : paramElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -8796,7 +9624,6 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
 
 abstract class _CompartmentDefinitionResource
     extends CompartmentDefinitionResource {
-  _CompartmentDefinitionResource._() : super._();
   factory _CompartmentDefinitionResource(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -8808,36 +9635,38 @@ abstract class _CompartmentDefinitionResource
           String? documentation,
           @JsonKey(name: '_documentation') Element? documentationElement}) =
       _$_CompartmentDefinitionResource;
+  _CompartmentDefinitionResource._() : super._();
 
   factory _CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =
       _$_CompartmentDefinitionResource.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get param;
+  List<String>? get param => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_param')
-  List<Element?>? get paramElement;
+  List<Element?>? get paramElement => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CompartmentDefinitionResourceCopyWith<_CompartmentDefinitionResource>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) {
@@ -8952,60 +9781,64 @@ const $ExampleScenario = _$ExampleScenarioTearOff();
 /// @nodoc
 mixin _$ExampleScenario {
   @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  List<Identifier>? get identifier;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
-  ExampleScenarioStatus? get status;
+  ExampleScenarioStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  Boolean? get experimental;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get copyright;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
-  Markdown? get purpose;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
-  List<ExampleScenarioActor>? get actor;
-  List<ExampleScenarioInstance>? get instance;
-  List<ExampleScenarioProcess>? get process;
-  List<Canonical>? get workflow;
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  List<ExampleScenarioActor>? get actor => throw _privateConstructorUsedError;
+  List<ExampleScenarioInstance>? get instance =>
+      throw _privateConstructorUsedError;
+  List<ExampleScenarioProcess>? get process =>
+      throw _privateConstructorUsedError;
+  List<Canonical>? get workflow => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExampleScenarioCopyWith<ExampleScenario> get copyWith;
+  $ExampleScenarioCopyWith<ExampleScenario> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -9133,88 +9966,152 @@ class _$ExampleScenarioCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      version: version == freezed ? _value.version : version as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      status:
-          status == freezed ? _value.status : status as ExampleScenarioStatus?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       actor: actor == freezed
           ? _value.actor
-          : actor as List<ExampleScenarioActor>?,
+          : actor // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioActor>?,
       instance: instance == freezed
           ? _value.instance
-          : instance as List<ExampleScenarioInstance>?,
+          : instance // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioInstance>?,
       process: process == freezed
           ? _value.process
-          : process as List<ExampleScenarioProcess>?,
-      workflow:
-          workflow == freezed ? _value.workflow : workflow as List<Canonical>?,
+          : process // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioProcess>?,
+      workflow: workflow == freezed
+          ? _value.workflow
+          : workflow // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
     ));
   }
 
@@ -9504,88 +10401,152 @@ class __$ExampleScenarioCopyWithImpl<$Res>
     return _then(_ExampleScenario(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      version: version == freezed ? _value.version : version as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      status:
-          status == freezed ? _value.status : status as ExampleScenarioStatus?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       actor: actor == freezed
           ? _value.actor
-          : actor as List<ExampleScenarioActor>?,
+          : actor // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioActor>?,
       instance: instance == freezed
           ? _value.instance
-          : instance as List<ExampleScenarioInstance>?,
+          : instance // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioInstance>?,
       process: process == freezed
           ? _value.process
-          : process as List<ExampleScenarioProcess>?,
-      workflow:
-          workflow == freezed ? _value.workflow : workflow as List<Canonical>?,
+          : process // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioProcess>?,
+      workflow: workflow == freezed
+          ? _value.workflow
+          : workflow // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
     ));
   }
 }
@@ -9884,7 +10845,6 @@ class _$_ExampleScenario extends _ExampleScenario {
 }
 
 abstract class _ExampleScenario extends ExampleScenario {
-  _ExampleScenario._() : super._();
   factory _ExampleScenario(
       {@JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
           R4ResourceType resourceType,
@@ -9937,101 +10897,106 @@ abstract class _ExampleScenario extends ExampleScenario {
       List<ExampleScenarioInstance>? instance,
       List<ExampleScenarioProcess>? process,
       List<Canonical>? workflow}) = _$_ExampleScenario;
+  _ExampleScenario._() : super._();
 
   factory _ExampleScenario.fromJson(Map<String, dynamic> json) =
       _$_ExampleScenario.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
-  ExampleScenarioStatus? get status;
+  ExampleScenarioStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get copyright;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
-  List<ExampleScenarioActor>? get actor;
+  List<ExampleScenarioActor>? get actor => throw _privateConstructorUsedError;
   @override
-  List<ExampleScenarioInstance>? get instance;
+  List<ExampleScenarioInstance>? get instance =>
+      throw _privateConstructorUsedError;
   @override
-  List<ExampleScenarioProcess>? get process;
+  List<ExampleScenarioProcess>? get process =>
+      throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get workflow;
+  List<Canonical>? get workflow => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ExampleScenarioCopyWith<_ExampleScenario> get copyWith;
+  _$ExampleScenarioCopyWith<_ExampleScenario> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ExampleScenarioActor _$ExampleScenarioActorFromJson(Map<String, dynamic> json) {
@@ -10085,27 +11050,29 @@ const $ExampleScenarioActor = _$ExampleScenarioActorTearOff();
 
 /// @nodoc
 mixin _$ExampleScenarioActor {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get actorId;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get actorId => throw _privateConstructorUsedError;
   @JsonKey(name: '_actorId')
-  Element? get actorIdElement;
+  Element? get actorIdElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
-  ExampleScenarioActorType? get type;
+  ExampleScenarioActorType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  String? get name;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  Markdown? get description;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExampleScenarioActorCopyWith<ExampleScenarioActor> get copyWith;
+  $ExampleScenarioActorCopyWith<ExampleScenarioActor> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -10162,29 +11129,50 @@ class _$ExampleScenarioActorCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      actorId: actorId == freezed ? _value.actorId : actorId as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String?,
       actorIdElement: actorIdElement == freezed
           ? _value.actorIdElement
-          : actorIdElement as Element?,
-      type: type == freezed ? _value.type : type as ExampleScenarioActorType?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : actorIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioActorType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -10295,29 +11283,50 @@ class __$ExampleScenarioActorCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_ExampleScenarioActor(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      actorId: actorId == freezed ? _value.actorId : actorId as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String?,
       actorIdElement: actorIdElement == freezed
           ? _value.actorIdElement
-          : actorIdElement as Element?,
-      type: type == freezed ? _value.type : type as ExampleScenarioActorType?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : actorIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioActorType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -10441,7 +11450,6 @@ class _$_ExampleScenarioActor extends _ExampleScenarioActor {
 }
 
 abstract class _ExampleScenarioActor extends ExampleScenarioActor {
-  _ExampleScenarioActor._() : super._();
   factory _ExampleScenarioActor(
       {String? id,
       @JsonKey(name: 'extension')
@@ -10460,41 +11468,44 @@ abstract class _ExampleScenarioActor extends ExampleScenarioActor {
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement}) = _$_ExampleScenarioActor;
+  _ExampleScenarioActor._() : super._();
 
   factory _ExampleScenarioActor.fromJson(Map<String, dynamic> json) =
       _$_ExampleScenarioActor.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get actorId;
+  String? get actorId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_actorId')
-  Element? get actorIdElement;
+  Element? get actorIdElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
-  ExampleScenarioActorType? get type;
+  ExampleScenarioActorType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ExampleScenarioActorCopyWith<_ExampleScenarioActor> get copyWith;
+  _$ExampleScenarioActorCopyWith<_ExampleScenarioActor> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ExampleScenarioInstance _$ExampleScenarioInstanceFromJson(
@@ -10547,28 +11558,32 @@ const $ExampleScenarioInstance = _$ExampleScenarioInstanceTearOff();
 
 /// @nodoc
 mixin _$ExampleScenarioInstance {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get resourceId;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get resourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_resourceId')
-  Element? get resourceIdElement;
-  Code? get resourceType;
+  Element? get resourceIdElement => throw _privateConstructorUsedError;
+  Code? get resourceType => throw _privateConstructorUsedError;
   @JsonKey(name: '_resourceType')
-  Element? get resourceTypeElement;
-  String? get name;
+  Element? get resourceTypeElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  Markdown? get description;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<ExampleScenarioVersion>? get version;
-  List<ExampleScenarioContainedInstance>? get containedInstance;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<ExampleScenarioVersion>? get version =>
+      throw _privateConstructorUsedError;
+  List<ExampleScenarioContainedInstance>? get containedInstance =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExampleScenarioInstanceCopyWith<ExampleScenarioInstance> get copyWith;
+  $ExampleScenarioInstanceCopyWith<ExampleScenarioInstance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -10623,38 +11638,58 @@ class _$ExampleScenarioInstanceCopyWithImpl<$Res>
     Object? containedInstance = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      resourceId:
-          resourceId == freezed ? _value.resourceId : resourceId as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      resourceId: resourceId == freezed
+          ? _value.resourceId
+          : resourceId // ignore: cast_nullable_to_non_nullable
+              as String?,
       resourceIdElement: resourceIdElement == freezed
           ? _value.resourceIdElement
-          : resourceIdElement as Element?,
-      resourceType:
-          resourceType == freezed ? _value.resourceType : resourceType as Code?,
+          : resourceIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Code?,
       resourceTypeElement: resourceTypeElement == freezed
           ? _value.resourceTypeElement
-          : resourceTypeElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : resourceTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       version: version == freezed
           ? _value.version
-          : version as List<ExampleScenarioVersion>?,
+          : version // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioVersion>?,
       containedInstance: containedInstance == freezed
           ? _value.containedInstance
-          : containedInstance as List<ExampleScenarioContainedInstance>?,
+          : containedInstance // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioContainedInstance>?,
     ));
   }
 
@@ -10764,38 +11799,58 @@ class __$ExampleScenarioInstanceCopyWithImpl<$Res>
     Object? containedInstance = freezed,
   }) {
     return _then(_ExampleScenarioInstance(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      resourceId:
-          resourceId == freezed ? _value.resourceId : resourceId as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      resourceId: resourceId == freezed
+          ? _value.resourceId
+          : resourceId // ignore: cast_nullable_to_non_nullable
+              as String?,
       resourceIdElement: resourceIdElement == freezed
           ? _value.resourceIdElement
-          : resourceIdElement as Element?,
-      resourceType:
-          resourceType == freezed ? _value.resourceType : resourceType as Code?,
+          : resourceIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Code?,
       resourceTypeElement: resourceTypeElement == freezed
           ? _value.resourceTypeElement
-          : resourceTypeElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : resourceTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       version: version == freezed
           ? _value.version
-          : version as List<ExampleScenarioVersion>?,
+          : version // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioVersion>?,
       containedInstance: containedInstance == freezed
           ? _value.containedInstance
-          : containedInstance as List<ExampleScenarioContainedInstance>?,
+          : containedInstance // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioContainedInstance>?,
     ));
   }
 }
@@ -10933,7 +11988,6 @@ class _$_ExampleScenarioInstance extends _ExampleScenarioInstance {
 }
 
 abstract class _ExampleScenarioInstance extends ExampleScenarioInstance {
-  _ExampleScenarioInstance._() : super._();
   factory _ExampleScenarioInstance(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -10949,44 +12003,49 @@ abstract class _ExampleScenarioInstance extends ExampleScenarioInstance {
           List<ExampleScenarioVersion>? version,
           List<ExampleScenarioContainedInstance>? containedInstance}) =
       _$_ExampleScenarioInstance;
+  _ExampleScenarioInstance._() : super._();
 
   factory _ExampleScenarioInstance.fromJson(Map<String, dynamic> json) =
       _$_ExampleScenarioInstance.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get resourceId;
+  String? get resourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_resourceId')
-  Element? get resourceIdElement;
+  Element? get resourceIdElement => throw _privateConstructorUsedError;
   @override
-  Code? get resourceType;
+  Code? get resourceType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_resourceType')
-  Element? get resourceTypeElement;
+  Element? get resourceTypeElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<ExampleScenarioVersion>? get version;
+  List<ExampleScenarioVersion>? get version =>
+      throw _privateConstructorUsedError;
   @override
-  List<ExampleScenarioContainedInstance>? get containedInstance;
+  List<ExampleScenarioContainedInstance>? get containedInstance =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ExampleScenarioInstanceCopyWith<_ExampleScenarioInstance> get copyWith;
+  _$ExampleScenarioInstanceCopyWith<_ExampleScenarioInstance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ExampleScenarioVersion _$ExampleScenarioVersionFromJson(
@@ -11027,20 +12086,22 @@ const $ExampleScenarioVersion = _$ExampleScenarioVersionTearOff();
 
 /// @nodoc
 mixin _$ExampleScenarioVersion {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get versionId;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get versionId => throw _privateConstructorUsedError;
   @JsonKey(name: '_versionId')
-  Element? get versionIdElement;
-  Markdown? get description;
+  Element? get versionIdElement => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExampleScenarioVersionCopyWith<ExampleScenarioVersion> get copyWith;
+  $ExampleScenarioVersionCopyWith<ExampleScenarioVersion> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -11081,23 +12142,34 @@ class _$ExampleScenarioVersionCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      versionId: versionId == freezed ? _value.versionId : versionId as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      versionId: versionId == freezed
+          ? _value.versionId
+          : versionId // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionIdElement: versionIdElement == freezed
           ? _value.versionIdElement
-          : versionIdElement as Element?,
+          : versionIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -11168,23 +12240,34 @@ class __$ExampleScenarioVersionCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_ExampleScenarioVersion(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      versionId: versionId == freezed ? _value.versionId : versionId as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      versionId: versionId == freezed
+          ? _value.versionId
+          : versionId // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionIdElement: versionIdElement == freezed
           ? _value.versionIdElement
-          : versionIdElement as Element?,
+          : versionIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -11279,7 +12362,6 @@ class _$_ExampleScenarioVersion extends _ExampleScenarioVersion {
 }
 
 abstract class _ExampleScenarioVersion extends ExampleScenarioVersion {
-  _ExampleScenarioVersion._() : super._();
   factory _ExampleScenarioVersion(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -11289,30 +12371,33 @@ abstract class _ExampleScenarioVersion extends ExampleScenarioVersion {
           Markdown? description,
           @JsonKey(name: '_description') Element? descriptionElement}) =
       _$_ExampleScenarioVersion;
+  _ExampleScenarioVersion._() : super._();
 
   factory _ExampleScenarioVersion.fromJson(Map<String, dynamic> json) =
       _$_ExampleScenarioVersion.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get versionId;
+  String? get versionId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_versionId')
-  Element? get versionIdElement;
+  Element? get versionIdElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ExampleScenarioVersionCopyWith<_ExampleScenarioVersion> get copyWith;
+  _$ExampleScenarioVersionCopyWith<_ExampleScenarioVersion> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ExampleScenarioContainedInstance _$ExampleScenarioContainedInstanceFromJson(
@@ -11354,21 +12439,22 @@ const $ExampleScenarioContainedInstance =
 
 /// @nodoc
 mixin _$ExampleScenarioContainedInstance {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get resourceId;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get resourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_resourceId')
-  Element? get resourceIdElement;
-  String? get versionId;
+  Element? get resourceIdElement => throw _privateConstructorUsedError;
+  String? get versionId => throw _privateConstructorUsedError;
   @JsonKey(name: '_versionId')
-  Element? get versionIdElement;
+  Element? get versionIdElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ExampleScenarioContainedInstanceCopyWith<ExampleScenarioContainedInstance>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -11410,22 +12496,34 @@ class _$ExampleScenarioContainedInstanceCopyWithImpl<$Res>
     Object? versionIdElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      resourceId:
-          resourceId == freezed ? _value.resourceId : resourceId as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      resourceId: resourceId == freezed
+          ? _value.resourceId
+          : resourceId // ignore: cast_nullable_to_non_nullable
+              as String?,
       resourceIdElement: resourceIdElement == freezed
           ? _value.resourceIdElement
-          : resourceIdElement as Element?,
-      versionId: versionId == freezed ? _value.versionId : versionId as String?,
+          : resourceIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionId: versionId == freezed
+          ? _value.versionId
+          : versionId // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionIdElement: versionIdElement == freezed
           ? _value.versionIdElement
-          : versionIdElement as Element?,
+          : versionIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -11499,22 +12597,34 @@ class __$ExampleScenarioContainedInstanceCopyWithImpl<$Res>
     Object? versionIdElement = freezed,
   }) {
     return _then(_ExampleScenarioContainedInstance(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      resourceId:
-          resourceId == freezed ? _value.resourceId : resourceId as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      resourceId: resourceId == freezed
+          ? _value.resourceId
+          : resourceId // ignore: cast_nullable_to_non_nullable
+              as String?,
       resourceIdElement: resourceIdElement == freezed
           ? _value.resourceIdElement
-          : resourceIdElement as Element?,
-      versionId: versionId == freezed ? _value.versionId : versionId as String?,
+          : resourceIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionId: versionId == freezed
+          ? _value.versionId
+          : versionId // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionIdElement: versionIdElement == freezed
           ? _value.versionIdElement
-          : versionIdElement as Element?,
+          : versionIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -11612,7 +12722,6 @@ class _$_ExampleScenarioContainedInstance
 
 abstract class _ExampleScenarioContainedInstance
     extends ExampleScenarioContainedInstance {
-  _ExampleScenarioContainedInstance._() : super._();
   factory _ExampleScenarioContainedInstance(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -11622,31 +12731,33 @@ abstract class _ExampleScenarioContainedInstance
           String? versionId,
           @JsonKey(name: '_versionId') Element? versionIdElement}) =
       _$_ExampleScenarioContainedInstance;
+  _ExampleScenarioContainedInstance._() : super._();
 
   factory _ExampleScenarioContainedInstance.fromJson(
       Map<String, dynamic> json) = _$_ExampleScenarioContainedInstance.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get resourceId;
+  String? get resourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_resourceId')
-  Element? get resourceIdElement;
+  Element? get resourceIdElement => throw _privateConstructorUsedError;
   @override
-  String? get versionId;
+  String? get versionId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_versionId')
-  Element? get versionIdElement;
+  Element? get versionIdElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ExampleScenarioContainedInstanceCopyWith<_ExampleScenarioContainedInstance>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ExampleScenarioProcess _$ExampleScenarioProcessFromJson(
@@ -11697,27 +12808,29 @@ const $ExampleScenarioProcess = _$ExampleScenarioProcessTearOff();
 
 /// @nodoc
 mixin _$ExampleScenarioProcess {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get title;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
-  Markdown? get description;
+  Element? get titleElement => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  Markdown? get preConditions;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Markdown? get preConditions => throw _privateConstructorUsedError;
   @JsonKey(name: '_preConditions')
-  Element? get preConditionsElement;
-  Markdown? get postConditions;
+  Element? get preConditionsElement => throw _privateConstructorUsedError;
+  Markdown? get postConditions => throw _privateConstructorUsedError;
   @JsonKey(name: '_postConditions')
-  Element? get postConditionsElement;
-  List<ExampleScenarioStep>? get step;
+  Element? get postConditionsElement => throw _privateConstructorUsedError;
+  List<ExampleScenarioStep>? get step => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExampleScenarioProcessCopyWith<ExampleScenarioProcess> get copyWith;
+  $ExampleScenarioProcessCopyWith<ExampleScenarioProcess> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -11770,36 +12883,54 @@ class _$ExampleScenarioProcessCopyWithImpl<$Res>
     Object? step = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      title: title == freezed ? _value.title : title as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       preConditions: preConditions == freezed
           ? _value.preConditions
-          : preConditions as Markdown?,
+          : preConditions // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       preConditionsElement: preConditionsElement == freezed
           ? _value.preConditionsElement
-          : preConditionsElement as Element?,
+          : preConditionsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       postConditions: postConditions == freezed
           ? _value.postConditions
-          : postConditions as Markdown?,
+          : postConditions // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       postConditionsElement: postConditionsElement == freezed
           ? _value.postConditionsElement
-          : postConditionsElement as Element?,
-      step: step == freezed ? _value.step : step as List<ExampleScenarioStep>?,
+          : postConditionsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      step: step == freezed
+          ? _value.step
+          : step // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioStep>?,
     ));
   }
 
@@ -11906,36 +13037,54 @@ class __$ExampleScenarioProcessCopyWithImpl<$Res>
     Object? step = freezed,
   }) {
     return _then(_ExampleScenarioProcess(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      title: title == freezed ? _value.title : title as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       preConditions: preConditions == freezed
           ? _value.preConditions
-          : preConditions as Markdown?,
+          : preConditions // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       preConditionsElement: preConditionsElement == freezed
           ? _value.preConditionsElement
-          : preConditionsElement as Element?,
+          : preConditionsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       postConditions: postConditions == freezed
           ? _value.postConditions
-          : postConditions as Markdown?,
+          : postConditions // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       postConditionsElement: postConditionsElement == freezed
           ? _value.postConditionsElement
-          : postConditionsElement as Element?,
-      step: step == freezed ? _value.step : step as List<ExampleScenarioStep>?,
+          : postConditionsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      step: step == freezed
+          ? _value.step
+          : step // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioStep>?,
     ));
   }
 }
@@ -12065,7 +13214,6 @@ class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
 }
 
 abstract class _ExampleScenarioProcess extends ExampleScenarioProcess {
-  _ExampleScenarioProcess._() : super._();
   factory _ExampleScenarioProcess(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -12079,42 +13227,45 @@ abstract class _ExampleScenarioProcess extends ExampleScenarioProcess {
       Markdown? postConditions,
       @JsonKey(name: '_postConditions') Element? postConditionsElement,
       List<ExampleScenarioStep>? step}) = _$_ExampleScenarioProcess;
+  _ExampleScenarioProcess._() : super._();
 
   factory _ExampleScenarioProcess.fromJson(Map<String, dynamic> json) =
       _$_ExampleScenarioProcess.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get preConditions;
+  Markdown? get preConditions => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_preConditions')
-  Element? get preConditionsElement;
+  Element? get preConditionsElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get postConditions;
+  Markdown? get postConditions => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_postConditions')
-  Element? get postConditionsElement;
+  Element? get postConditionsElement => throw _privateConstructorUsedError;
   @override
-  List<ExampleScenarioStep>? get step;
+  List<ExampleScenarioStep>? get step => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ExampleScenarioProcessCopyWith<_ExampleScenarioProcess> get copyWith;
+  _$ExampleScenarioProcessCopyWith<_ExampleScenarioProcess> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ExampleScenarioStep _$ExampleScenarioStepFromJson(Map<String, dynamic> json) {
@@ -12156,20 +13307,24 @@ const $ExampleScenarioStep = _$ExampleScenarioStepTearOff();
 
 /// @nodoc
 mixin _$ExampleScenarioStep {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<ExampleScenarioProcess>? get process;
-  Boolean? get pause;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<ExampleScenarioProcess>? get process =>
+      throw _privateConstructorUsedError;
+  Boolean? get pause => throw _privateConstructorUsedError;
   @JsonKey(name: '_pause')
-  Element? get pauseElement;
-  ExampleScenarioOperation? get operation;
-  List<ExampleScenarioAlternative>? get alternative;
+  Element? get pauseElement => throw _privateConstructorUsedError;
+  ExampleScenarioOperation? get operation => throw _privateConstructorUsedError;
+  List<ExampleScenarioAlternative>? get alternative =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExampleScenarioStepCopyWith<ExampleScenarioStep> get copyWith;
+  $ExampleScenarioStepCopyWith<ExampleScenarioStep> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -12212,26 +13367,38 @@ class _$ExampleScenarioStepCopyWithImpl<$Res>
     Object? alternative = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       process: process == freezed
           ? _value.process
-          : process as List<ExampleScenarioProcess>?,
-      pause: pause == freezed ? _value.pause : pause as Boolean?,
+          : process // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioProcess>?,
+      pause: pause == freezed
+          ? _value.pause
+          : pause // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       pauseElement: pauseElement == freezed
           ? _value.pauseElement
-          : pauseElement as Element?,
+          : pauseElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       operation: operation == freezed
           ? _value.operation
-          : operation as ExampleScenarioOperation?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioOperation?,
       alternative: alternative == freezed
           ? _value.alternative
-          : alternative as List<ExampleScenarioAlternative>?,
+          : alternative // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioAlternative>?,
     ));
   }
 
@@ -12304,26 +13471,38 @@ class __$ExampleScenarioStepCopyWithImpl<$Res>
     Object? alternative = freezed,
   }) {
     return _then(_ExampleScenarioStep(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       process: process == freezed
           ? _value.process
-          : process as List<ExampleScenarioProcess>?,
-      pause: pause == freezed ? _value.pause : pause as Boolean?,
+          : process // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioProcess>?,
+      pause: pause == freezed
+          ? _value.pause
+          : pause // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       pauseElement: pauseElement == freezed
           ? _value.pauseElement
-          : pauseElement as Element?,
+          : pauseElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       operation: operation == freezed
           ? _value.operation
-          : operation as ExampleScenarioOperation?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioOperation?,
       alternative: alternative == freezed
           ? _value.alternative
-          : alternative as List<ExampleScenarioAlternative>?,
+          : alternative // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioAlternative>?,
     ));
   }
 }
@@ -12423,7 +13602,6 @@ class _$_ExampleScenarioStep extends _ExampleScenarioStep {
 }
 
 abstract class _ExampleScenarioStep extends ExampleScenarioStep {
-  _ExampleScenarioStep._() : super._();
   factory _ExampleScenarioStep(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -12433,31 +13611,36 @@ abstract class _ExampleScenarioStep extends ExampleScenarioStep {
       @JsonKey(name: '_pause') Element? pauseElement,
       ExampleScenarioOperation? operation,
       List<ExampleScenarioAlternative>? alternative}) = _$_ExampleScenarioStep;
+  _ExampleScenarioStep._() : super._();
 
   factory _ExampleScenarioStep.fromJson(Map<String, dynamic> json) =
       _$_ExampleScenarioStep.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<ExampleScenarioProcess>? get process;
+  List<ExampleScenarioProcess>? get process =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get pause;
+  Boolean? get pause => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_pause')
-  Element? get pauseElement;
+  Element? get pauseElement => throw _privateConstructorUsedError;
   @override
-  ExampleScenarioOperation? get operation;
+  ExampleScenarioOperation? get operation => throw _privateConstructorUsedError;
   @override
-  List<ExampleScenarioAlternative>? get alternative;
+  List<ExampleScenarioAlternative>? get alternative =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ExampleScenarioStepCopyWith<_ExampleScenarioStep> get copyWith;
+  _$ExampleScenarioStepCopyWith<_ExampleScenarioStep> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ExampleScenarioOperation _$ExampleScenarioOperationFromJson(
@@ -12526,40 +13709,44 @@ const $ExampleScenarioOperation = _$ExampleScenarioOperationTearOff();
 
 /// @nodoc
 mixin _$ExampleScenarioOperation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get number;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
-  Element? get numberElement;
-  String? get type;
+  Element? get numberElement => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  String? get name;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get initiator;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get initiator => throw _privateConstructorUsedError;
   @JsonKey(name: '_initiator')
-  Element? get initiatorElement;
-  String? get receiver;
+  Element? get initiatorElement => throw _privateConstructorUsedError;
+  String? get receiver => throw _privateConstructorUsedError;
   @JsonKey(name: '_receiver')
-  Element? get receiverElement;
-  Markdown? get description;
+  Element? get receiverElement => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  Boolean? get initiatorActive;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Boolean? get initiatorActive => throw _privateConstructorUsedError;
   @JsonKey(name: '_initiatorActive')
-  Element? get initiatorActiveElement;
-  Boolean? get receiverActive;
+  Element? get initiatorActiveElement => throw _privateConstructorUsedError;
+  Boolean? get receiverActive => throw _privateConstructorUsedError;
   @JsonKey(name: '_receiverActive')
-  Element? get receiverActiveElement;
-  ExampleScenarioContainedInstance? get request;
-  ExampleScenarioContainedInstance? get response;
+  Element? get receiverActiveElement => throw _privateConstructorUsedError;
+  ExampleScenarioContainedInstance? get request =>
+      throw _privateConstructorUsedError;
+  ExampleScenarioContainedInstance? get response =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExampleScenarioOperationCopyWith<ExampleScenarioOperation> get copyWith;
+  $ExampleScenarioOperationCopyWith<ExampleScenarioOperation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -12636,55 +13823,90 @@ class _$ExampleScenarioOperationCopyWithImpl<$Res>
     Object? response = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      number: number == freezed ? _value.number : number as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      number: number == freezed
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as String?,
       numberElement: numberElement == freezed
           ? _value.numberElement
-          : numberElement as Element?,
-      type: type == freezed ? _value.type : type as String?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      initiator: initiator == freezed ? _value.initiator : initiator as String?,
+          : numberElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      initiator: initiator == freezed
+          ? _value.initiator
+          : initiator // ignore: cast_nullable_to_non_nullable
+              as String?,
       initiatorElement: initiatorElement == freezed
           ? _value.initiatorElement
-          : initiatorElement as Element?,
-      receiver: receiver == freezed ? _value.receiver : receiver as String?,
+          : initiatorElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      receiver: receiver == freezed
+          ? _value.receiver
+          : receiver // ignore: cast_nullable_to_non_nullable
+              as String?,
       receiverElement: receiverElement == freezed
           ? _value.receiverElement
-          : receiverElement as Element?,
+          : receiverElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       initiatorActive: initiatorActive == freezed
           ? _value.initiatorActive
-          : initiatorActive as Boolean?,
+          : initiatorActive // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       initiatorActiveElement: initiatorActiveElement == freezed
           ? _value.initiatorActiveElement
-          : initiatorActiveElement as Element?,
+          : initiatorActiveElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       receiverActive: receiverActive == freezed
           ? _value.receiverActive
-          : receiverActive as Boolean?,
+          : receiverActive // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       receiverActiveElement: receiverActiveElement == freezed
           ? _value.receiverActiveElement
-          : receiverActiveElement as Element?,
+          : receiverActiveElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       request: request == freezed
           ? _value.request
-          : request as ExampleScenarioContainedInstance?,
+          : request // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioContainedInstance?,
       response: response == freezed
           ? _value.response
-          : response as ExampleScenarioContainedInstance?,
+          : response // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioContainedInstance?,
     ));
   }
 
@@ -12890,55 +14112,90 @@ class __$ExampleScenarioOperationCopyWithImpl<$Res>
     Object? response = freezed,
   }) {
     return _then(_ExampleScenarioOperation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      number: number == freezed ? _value.number : number as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      number: number == freezed
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as String?,
       numberElement: numberElement == freezed
           ? _value.numberElement
-          : numberElement as Element?,
-      type: type == freezed ? _value.type : type as String?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      initiator: initiator == freezed ? _value.initiator : initiator as String?,
+          : numberElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      initiator: initiator == freezed
+          ? _value.initiator
+          : initiator // ignore: cast_nullable_to_non_nullable
+              as String?,
       initiatorElement: initiatorElement == freezed
           ? _value.initiatorElement
-          : initiatorElement as Element?,
-      receiver: receiver == freezed ? _value.receiver : receiver as String?,
+          : initiatorElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      receiver: receiver == freezed
+          ? _value.receiver
+          : receiver // ignore: cast_nullable_to_non_nullable
+              as String?,
       receiverElement: receiverElement == freezed
           ? _value.receiverElement
-          : receiverElement as Element?,
+          : receiverElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       initiatorActive: initiatorActive == freezed
           ? _value.initiatorActive
-          : initiatorActive as Boolean?,
+          : initiatorActive // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       initiatorActiveElement: initiatorActiveElement == freezed
           ? _value.initiatorActiveElement
-          : initiatorActiveElement as Element?,
+          : initiatorActiveElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       receiverActive: receiverActive == freezed
           ? _value.receiverActive
-          : receiverActive as Boolean?,
+          : receiverActive // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       receiverActiveElement: receiverActiveElement == freezed
           ? _value.receiverActiveElement
-          : receiverActiveElement as Element?,
+          : receiverActiveElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       request: request == freezed
           ? _value.request
-          : request as ExampleScenarioContainedInstance?,
+          : request // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioContainedInstance?,
       response: response == freezed
           ? _value.response
-          : response as ExampleScenarioContainedInstance?,
+          : response // ignore: cast_nullable_to_non_nullable
+              as ExampleScenarioContainedInstance?,
     ));
   }
 }
@@ -13134,7 +14391,6 @@ class _$_ExampleScenarioOperation extends _ExampleScenarioOperation {
 }
 
 abstract class _ExampleScenarioOperation extends ExampleScenarioOperation {
-  _ExampleScenarioOperation._() : super._();
   factory _ExampleScenarioOperation(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -13158,64 +14414,69 @@ abstract class _ExampleScenarioOperation extends ExampleScenarioOperation {
           ExampleScenarioContainedInstance? request,
           ExampleScenarioContainedInstance? response}) =
       _$_ExampleScenarioOperation;
+  _ExampleScenarioOperation._() : super._();
 
   factory _ExampleScenarioOperation.fromJson(Map<String, dynamic> json) =
       _$_ExampleScenarioOperation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get number;
+  String? get number => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_number')
-  Element? get numberElement;
+  Element? get numberElement => throw _privateConstructorUsedError;
   @override
-  String? get type;
+  String? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get initiator;
+  String? get initiator => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_initiator')
-  Element? get initiatorElement;
+  Element? get initiatorElement => throw _privateConstructorUsedError;
   @override
-  String? get receiver;
+  String? get receiver => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_receiver')
-  Element? get receiverElement;
+  Element? get receiverElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get initiatorActive;
+  Boolean? get initiatorActive => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_initiatorActive')
-  Element? get initiatorActiveElement;
+  Element? get initiatorActiveElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get receiverActive;
+  Boolean? get receiverActive => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_receiverActive')
-  Element? get receiverActiveElement;
+  Element? get receiverActiveElement => throw _privateConstructorUsedError;
   @override
-  ExampleScenarioContainedInstance? get request;
+  ExampleScenarioContainedInstance? get request =>
+      throw _privateConstructorUsedError;
   @override
-  ExampleScenarioContainedInstance? get response;
+  ExampleScenarioContainedInstance? get response =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ExampleScenarioOperationCopyWith<_ExampleScenarioOperation> get copyWith;
+  _$ExampleScenarioOperationCopyWith<_ExampleScenarioOperation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ExampleScenarioAlternative _$ExampleScenarioAlternativeFromJson(
@@ -13258,21 +14519,23 @@ const $ExampleScenarioAlternative = _$ExampleScenarioAlternativeTearOff();
 
 /// @nodoc
 mixin _$ExampleScenarioAlternative {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get title;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
-  Markdown? get description;
+  Element? get titleElement => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<ExampleScenarioStep>? get step;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<ExampleScenarioStep>? get step => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExampleScenarioAlternativeCopyWith<ExampleScenarioAlternative> get copyWith;
+  $ExampleScenarioAlternativeCopyWith<ExampleScenarioAlternative>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -13315,24 +14578,38 @@ class _$ExampleScenarioAlternativeCopyWithImpl<$Res>
     Object? step = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      title: title == freezed ? _value.title : title as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
-      step: step == freezed ? _value.step : step as List<ExampleScenarioStep>?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      step: step == freezed
+          ? _value.step
+          : step // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioStep>?,
     ));
   }
 
@@ -13407,24 +14684,38 @@ class __$ExampleScenarioAlternativeCopyWithImpl<$Res>
     Object? step = freezed,
   }) {
     return _then(_ExampleScenarioAlternative(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      title: title == freezed ? _value.title : title as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
-      step: step == freezed ? _value.step : step as List<ExampleScenarioStep>?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      step: step == freezed
+          ? _value.step
+          : step // ignore: cast_nullable_to_non_nullable
+              as List<ExampleScenarioStep>?,
     ));
   }
 }
@@ -13524,7 +14815,6 @@ class _$_ExampleScenarioAlternative extends _ExampleScenarioAlternative {
 }
 
 abstract class _ExampleScenarioAlternative extends ExampleScenarioAlternative {
-  _ExampleScenarioAlternative._() : super._();
   factory _ExampleScenarioAlternative(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -13534,33 +14824,35 @@ abstract class _ExampleScenarioAlternative extends ExampleScenarioAlternative {
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<ExampleScenarioStep>? step}) = _$_ExampleScenarioAlternative;
+  _ExampleScenarioAlternative._() : super._();
 
   factory _ExampleScenarioAlternative.fromJson(Map<String, dynamic> json) =
       _$_ExampleScenarioAlternative.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<ExampleScenarioStep>? get step;
+  List<ExampleScenarioStep>? get step => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ExampleScenarioAlternativeCopyWith<_ExampleScenarioAlternative>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 GraphDefinition _$GraphDefinitionFromJson(Map<String, dynamic> json) {
@@ -13674,60 +14966,62 @@ const $GraphDefinition = _$GraphDefinitionTearOff();
 /// @nodoc
 mixin _$GraphDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-  GraphDefinitionStatus? get status;
+  GraphDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  Boolean? get experimental;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get purpose;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
-  Code? get start;
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  Code? get start => throw _privateConstructorUsedError;
   @JsonKey(name: '_start')
-  Element? get startElement;
-  Canonical? get profile;
-  List<GraphDefinitionLink>? get link;
+  Element? get startElement => throw _privateConstructorUsedError;
+  Canonical? get profile => throw _privateConstructorUsedError;
+  List<GraphDefinitionLink>? get link => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GraphDefinitionCopyWith<GraphDefinition> get copyWith;
+  $GraphDefinitionCopyWith<GraphDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -13855,81 +15149,148 @@ class _$GraphDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      status:
-          status == freezed ? _value.status : status as GraphDefinitionStatus?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as GraphDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      start: start == freezed ? _value.start : start as Code?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      start: start == freezed
+          ? _value.start
+          : start // ignore: cast_nullable_to_non_nullable
+              as Code?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
-      link: link == freezed ? _value.link : link as List<GraphDefinitionLink>?,
+          : startElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<GraphDefinitionLink>?,
     ));
   }
 
@@ -14231,81 +15592,148 @@ class __$GraphDefinitionCopyWithImpl<$Res>
     return _then(_GraphDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      status:
-          status == freezed ? _value.status : status as GraphDefinitionStatus?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as GraphDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      start: start == freezed ? _value.start : start as Code?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      start: start == freezed
+          ? _value.start
+          : start // ignore: cast_nullable_to_non_nullable
+              as Code?,
       startElement: startElement == freezed
           ? _value.startElement
-          : startElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
-      link: link == freezed ? _value.link : link as List<GraphDefinitionLink>?,
+          : startElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<GraphDefinitionLink>?,
     ));
   }
 }
@@ -14601,7 +16029,6 @@ class _$_GraphDefinition extends _GraphDefinition {
 }
 
 abstract class _GraphDefinition extends GraphDefinition {
-  _GraphDefinition._() : super._();
   factory _GraphDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
           R4ResourceType resourceType,
@@ -14654,100 +16081,103 @@ abstract class _GraphDefinition extends GraphDefinition {
           Element? startElement,
       Canonical? profile,
       List<GraphDefinitionLink>? link}) = _$_GraphDefinition;
+  _GraphDefinition._() : super._();
 
   factory _GraphDefinition.fromJson(Map<String, dynamic> json) =
       _$_GraphDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-  GraphDefinitionStatus? get status;
+  GraphDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
-  Code? get start;
+  Code? get start => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_start')
-  Element? get startElement;
+  Element? get startElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get profile;
+  Canonical? get profile => throw _privateConstructorUsedError;
   @override
-  List<GraphDefinitionLink>? get link;
+  List<GraphDefinitionLink>? get link => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GraphDefinitionCopyWith<_GraphDefinition> get copyWith;
+  _$GraphDefinitionCopyWith<_GraphDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GraphDefinitionLink _$GraphDefinitionLinkFromJson(Map<String, dynamic> json) {
@@ -14801,30 +16231,32 @@ const $GraphDefinitionLink = _$GraphDefinitionLinkTearOff();
 
 /// @nodoc
 mixin _$GraphDefinitionLink {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get path;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get path => throw _privateConstructorUsedError;
   @JsonKey(name: '_path')
-  Element? get pathElement;
-  String? get sliceName;
+  Element? get pathElement => throw _privateConstructorUsedError;
+  String? get sliceName => throw _privateConstructorUsedError;
   @JsonKey(name: '_sliceName')
-  Element? get sliceNameElement;
-  Integer? get min;
+  Element? get sliceNameElement => throw _privateConstructorUsedError;
+  Integer? get min => throw _privateConstructorUsedError;
   @JsonKey(name: '_min')
-  Element? get minElement;
-  String? get max;
+  Element? get minElement => throw _privateConstructorUsedError;
+  String? get max => throw _privateConstructorUsedError;
   @JsonKey(name: '_max')
-  Element? get maxElement;
-  String? get description;
+  Element? get maxElement => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<GraphDefinitionTarget>? get target;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<GraphDefinitionTarget>? get target => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GraphDefinitionLinkCopyWith<GraphDefinitionLink> get copyWith;
+  $GraphDefinitionLinkCopyWith<GraphDefinitionLink> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -14882,34 +16314,62 @@ class _$GraphDefinitionLinkCopyWithImpl<$Res>
     Object? target = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      path: path == freezed ? _value.path : path as String?,
-      pathElement:
-          pathElement == freezed ? _value.pathElement : pathElement as Element?,
-      sliceName: sliceName == freezed ? _value.sliceName : sliceName as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      path: path == freezed
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pathElement: pathElement == freezed
+          ? _value.pathElement
+          : pathElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sliceName: sliceName == freezed
+          ? _value.sliceName
+          : sliceName // ignore: cast_nullable_to_non_nullable
+              as String?,
       sliceNameElement: sliceNameElement == freezed
           ? _value.sliceNameElement
-          : sliceNameElement as Element?,
-      min: min == freezed ? _value.min : min as Integer?,
-      minElement:
-          minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
-      maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : sliceNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      minElement: minElement == freezed
+          ? _value.minElement
+          : minElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxElement: maxElement == freezed
+          ? _value.maxElement
+          : maxElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       target: target == freezed
           ? _value.target
-          : target as List<GraphDefinitionTarget>?,
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<GraphDefinitionTarget>?,
     ));
   }
 
@@ -15033,34 +16493,62 @@ class __$GraphDefinitionLinkCopyWithImpl<$Res>
     Object? target = freezed,
   }) {
     return _then(_GraphDefinitionLink(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      path: path == freezed ? _value.path : path as String?,
-      pathElement:
-          pathElement == freezed ? _value.pathElement : pathElement as Element?,
-      sliceName: sliceName == freezed ? _value.sliceName : sliceName as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      path: path == freezed
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pathElement: pathElement == freezed
+          ? _value.pathElement
+          : pathElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sliceName: sliceName == freezed
+          ? _value.sliceName
+          : sliceName // ignore: cast_nullable_to_non_nullable
+              as String?,
       sliceNameElement: sliceNameElement == freezed
           ? _value.sliceNameElement
-          : sliceNameElement as Element?,
-      min: min == freezed ? _value.min : min as Integer?,
-      minElement:
-          minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
-      maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : sliceNameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      minElement: minElement == freezed
+          ? _value.minElement
+          : minElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxElement: maxElement == freezed
+          ? _value.maxElement
+          : maxElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       target: target == freezed
           ? _value.target
-          : target as List<GraphDefinitionTarget>?,
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<GraphDefinitionTarget>?,
     ));
   }
 }
@@ -15203,7 +16691,6 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
 }
 
 abstract class _GraphDefinitionLink extends GraphDefinitionLink {
-  _GraphDefinitionLink._() : super._();
   factory _GraphDefinitionLink(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -15219,47 +16706,50 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<GraphDefinitionTarget>? target}) = _$_GraphDefinitionLink;
+  _GraphDefinitionLink._() : super._();
 
   factory _GraphDefinitionLink.fromJson(Map<String, dynamic> json) =
       _$_GraphDefinitionLink.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get path;
+  String? get path => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement;
+  Element? get pathElement => throw _privateConstructorUsedError;
   @override
-  String? get sliceName;
+  String? get sliceName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sliceName')
-  Element? get sliceNameElement;
+  Element? get sliceNameElement => throw _privateConstructorUsedError;
   @override
-  Integer? get min;
+  Integer? get min => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement;
+  Element? get minElement => throw _privateConstructorUsedError;
   @override
-  String? get max;
+  String? get max => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement;
+  Element? get maxElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<GraphDefinitionTarget>? get target;
+  List<GraphDefinitionTarget>? get target => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GraphDefinitionLinkCopyWith<_GraphDefinitionLink> get copyWith;
+  _$GraphDefinitionLinkCopyWith<_GraphDefinitionLink> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GraphDefinitionTarget _$GraphDefinitionTargetFromJson(
@@ -15306,23 +16796,26 @@ const $GraphDefinitionTarget = _$GraphDefinitionTargetTearOff();
 
 /// @nodoc
 mixin _$GraphDefinitionTarget {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Code? get type;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  String? get params;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  String? get params => throw _privateConstructorUsedError;
   @JsonKey(name: '_params')
-  Element? get paramsElement;
-  Canonical? get profile;
-  List<GraphDefinitionCompartment>? get compartment;
-  List<GraphDefinitionLink>? get link;
+  Element? get paramsElement => throw _privateConstructorUsedError;
+  Canonical? get profile => throw _privateConstructorUsedError;
+  List<GraphDefinitionCompartment>? get compartment =>
+      throw _privateConstructorUsedError;
+  List<GraphDefinitionLink>? get link => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GraphDefinitionTargetCopyWith<GraphDefinitionTarget> get copyWith;
+  $GraphDefinitionTargetCopyWith<GraphDefinitionTarget> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -15369,25 +16862,46 @@ class _$GraphDefinitionTargetCopyWithImpl<$Res>
     Object? link = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as Code?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      params: params == freezed ? _value.params : params as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      params: params == freezed
+          ? _value.params
+          : params // ignore: cast_nullable_to_non_nullable
+              as String?,
       paramsElement: paramsElement == freezed
           ? _value.paramsElement
-          : paramsElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
+          : paramsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<GraphDefinitionCompartment>?,
-      link: link == freezed ? _value.link : link as List<GraphDefinitionLink>?,
+          : compartment // ignore: cast_nullable_to_non_nullable
+              as List<GraphDefinitionCompartment>?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<GraphDefinitionLink>?,
     ));
   }
 
@@ -15464,25 +16978,46 @@ class __$GraphDefinitionTargetCopyWithImpl<$Res>
     Object? link = freezed,
   }) {
     return _then(_GraphDefinitionTarget(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as Code?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      params: params == freezed ? _value.params : params as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      params: params == freezed
+          ? _value.params
+          : params // ignore: cast_nullable_to_non_nullable
+              as String?,
       paramsElement: paramsElement == freezed
           ? _value.paramsElement
-          : paramsElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
+          : paramsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<GraphDefinitionCompartment>?,
-      link: link == freezed ? _value.link : link as List<GraphDefinitionLink>?,
+          : compartment // ignore: cast_nullable_to_non_nullable
+              as List<GraphDefinitionCompartment>?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<GraphDefinitionLink>?,
     ));
   }
 }
@@ -15595,7 +17130,6 @@ class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
 }
 
 abstract class _GraphDefinitionTarget extends GraphDefinitionTarget {
-  _GraphDefinitionTarget._() : super._();
   factory _GraphDefinitionTarget(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -15607,36 +17141,40 @@ abstract class _GraphDefinitionTarget extends GraphDefinitionTarget {
       Canonical? profile,
       List<GraphDefinitionCompartment>? compartment,
       List<GraphDefinitionLink>? link}) = _$_GraphDefinitionTarget;
+  _GraphDefinitionTarget._() : super._();
 
   factory _GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =
       _$_GraphDefinitionTarget.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get type;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  String? get params;
+  String? get params => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_params')
-  Element? get paramsElement;
+  Element? get paramsElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get profile;
+  Canonical? get profile => throw _privateConstructorUsedError;
   @override
-  List<GraphDefinitionCompartment>? get compartment;
+  List<GraphDefinitionCompartment>? get compartment =>
+      throw _privateConstructorUsedError;
   @override
-  List<GraphDefinitionLink>? get link;
+  List<GraphDefinitionLink>? get link => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GraphDefinitionTargetCopyWith<_GraphDefinitionTarget> get copyWith;
+  _$GraphDefinitionTargetCopyWith<_GraphDefinitionTarget> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GraphDefinitionCompartment _$GraphDefinitionCompartmentFromJson(
@@ -15697,31 +17235,34 @@ const $GraphDefinitionCompartment = _$GraphDefinitionCompartmentTearOff();
 
 /// @nodoc
 mixin _$GraphDefinitionCompartment {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
-  GraphDefinitionCompartmentUse? get use;
+  GraphDefinitionCompartmentUse? get use => throw _privateConstructorUsedError;
   @JsonKey(name: '_use')
-  Element? get useElement;
-  Code? get code;
+  Element? get useElement => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
-  GraphDefinitionCompartmentRule? get rule;
+  GraphDefinitionCompartmentRule? get rule =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_rule')
-  Element? get ruleElement;
-  String? get expression;
+  Element? get ruleElement => throw _privateConstructorUsedError;
+  String? get expression => throw _privateConstructorUsedError;
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
-  String? get description;
+  Element? get expressionElement => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GraphDefinitionCompartmentCopyWith<GraphDefinitionCompartment> get copyWith;
+  $GraphDefinitionCompartmentCopyWith<GraphDefinitionCompartment>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -15785,34 +17326,58 @@ class _$GraphDefinitionCompartmentCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      use: use == freezed ? _value.use : use as GraphDefinitionCompartmentUse?,
-      useElement:
-          useElement == freezed ? _value.useElement : useElement as Element?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as GraphDefinitionCompartmentUse?,
+      useElement: useElement == freezed
+          ? _value.useElement
+          : useElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       rule: rule == freezed
           ? _value.rule
-          : rule as GraphDefinitionCompartmentRule?,
-      ruleElement:
-          ruleElement == freezed ? _value.ruleElement : ruleElement as Element?,
-      expression:
-          expression == freezed ? _value.expression : expression as String?,
+          : rule // ignore: cast_nullable_to_non_nullable
+              as GraphDefinitionCompartmentRule?,
+      ruleElement: ruleElement == freezed
+          ? _value.ruleElement
+          : ruleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as String?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : expressionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -15944,34 +17509,58 @@ class __$GraphDefinitionCompartmentCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_GraphDefinitionCompartment(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      use: use == freezed ? _value.use : use as GraphDefinitionCompartmentUse?,
-      useElement:
-          useElement == freezed ? _value.useElement : useElement as Element?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as GraphDefinitionCompartmentUse?,
+      useElement: useElement == freezed
+          ? _value.useElement
+          : useElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       rule: rule == freezed
           ? _value.rule
-          : rule as GraphDefinitionCompartmentRule?,
-      ruleElement:
-          ruleElement == freezed ? _value.ruleElement : ruleElement as Element?,
-      expression:
-          expression == freezed ? _value.expression : expression as String?,
+          : rule // ignore: cast_nullable_to_non_nullable
+              as GraphDefinitionCompartmentRule?,
+      ruleElement: ruleElement == freezed
+          ? _value.ruleElement
+          : ruleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as String?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : expressionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -16118,7 +17707,6 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
 }
 
 abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
-  _GraphDefinitionCompartment._() : super._();
   factory _GraphDefinitionCompartment(
       {String? id,
       @JsonKey(name: 'extension')
@@ -16141,48 +17729,51 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement}) = _$_GraphDefinitionCompartment;
+  _GraphDefinitionCompartment._() : super._();
 
   factory _GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =
       _$_GraphDefinitionCompartment.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
-  GraphDefinitionCompartmentUse? get use;
+  GraphDefinitionCompartmentUse? get use => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_use')
-  Element? get useElement;
+  Element? get useElement => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
-  GraphDefinitionCompartmentRule? get rule;
+  GraphDefinitionCompartmentRule? get rule =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_rule')
-  Element? get ruleElement;
+  Element? get ruleElement => throw _privateConstructorUsedError;
   @override
-  String? get expression;
+  String? get expression => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
+  Element? get expressionElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GraphDefinitionCompartmentCopyWith<_GraphDefinitionCompartment>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
@@ -16316,72 +17907,79 @@ const $ImplementationGuide = _$ImplementationGuideTearOff();
 /// @nodoc
 mixin _$ImplementationGuide {
   @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get title;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-  ImplementationGuideStatus? get status;
+  ImplementationGuideStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  Boolean? get experimental;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get copyright;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
-  Id? get packageId;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  Id? get packageId => throw _privateConstructorUsedError;
   @JsonKey(name: '_packageId')
-  Element? get packageIdElement;
+  Element? get packageIdElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
-  ImplementationGuideLicense? get license;
+  ImplementationGuideLicense? get license => throw _privateConstructorUsedError;
   @JsonKey(name: '_license')
-  Element? get licenseElement;
-  List<ImplementationGuideFhirVersion>? get fhirVersion;
+  Element? get licenseElement => throw _privateConstructorUsedError;
+  List<ImplementationGuideFhirVersion>? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
-  List<Element?>? get fhirVersionElement;
-  List<ImplementationGuideDependsOn>? get dependsOn;
-  List<ImplementationGuideGlobal>? get global;
-  ImplementationGuideDefinition? get definition;
-  ImplementationGuideManifest? get manifest;
+  List<Element?>? get fhirVersionElement => throw _privateConstructorUsedError;
+  List<ImplementationGuideDependsOn>? get dependsOn =>
+      throw _privateConstructorUsedError;
+  List<ImplementationGuideGlobal>? get global =>
+      throw _privateConstructorUsedError;
+  ImplementationGuideDefinition? get definition =>
+      throw _privateConstructorUsedError;
+  ImplementationGuideManifest? get manifest =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ImplementationGuideCopyWith<ImplementationGuide> get copyWith;
+  $ImplementationGuideCopyWith<ImplementationGuide> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -16533,109 +18131,180 @@ class _$ImplementationGuideCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as ImplementationGuideStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      packageId: packageId == freezed ? _value.packageId : packageId as Id?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      packageId: packageId == freezed
+          ? _value.packageId
+          : packageId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       packageIdElement: packageIdElement == freezed
           ? _value.packageIdElement
-          : packageIdElement as Element?,
+          : packageIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       license: license == freezed
           ? _value.license
-          : license as ImplementationGuideLicense?,
+          : license // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideLicense?,
       licenseElement: licenseElement == freezed
           ? _value.licenseElement
-          : licenseElement as Element?,
+          : licenseElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as List<ImplementationGuideFhirVersion>?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideFhirVersion>?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element?>?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       dependsOn: dependsOn == freezed
           ? _value.dependsOn
-          : dependsOn as List<ImplementationGuideDependsOn>?,
+          : dependsOn // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideDependsOn>?,
       global: global == freezed
           ? _value.global
-          : global as List<ImplementationGuideGlobal>?,
+          : global // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideGlobal>?,
       definition: definition == freezed
           ? _value.definition
-          : definition as ImplementationGuideDefinition?,
+          : definition // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideDefinition?,
       manifest: manifest == freezed
           ? _value.manifest
-          : manifest as ImplementationGuideManifest?,
+          : manifest // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideManifest?,
     ));
   }
 
@@ -17011,109 +18680,180 @@ class __$ImplementationGuideCopyWithImpl<$Res>
     return _then(_ImplementationGuide(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as ImplementationGuideStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      packageId: packageId == freezed ? _value.packageId : packageId as Id?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      packageId: packageId == freezed
+          ? _value.packageId
+          : packageId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       packageIdElement: packageIdElement == freezed
           ? _value.packageIdElement
-          : packageIdElement as Element?,
+          : packageIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       license: license == freezed
           ? _value.license
-          : license as ImplementationGuideLicense?,
+          : license // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideLicense?,
       licenseElement: licenseElement == freezed
           ? _value.licenseElement
-          : licenseElement as Element?,
+          : licenseElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as List<ImplementationGuideFhirVersion>?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideFhirVersion>?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element?>?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       dependsOn: dependsOn == freezed
           ? _value.dependsOn
-          : dependsOn as List<ImplementationGuideDependsOn>?,
+          : dependsOn // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideDependsOn>?,
       global: global == freezed
           ? _value.global
-          : global as List<ImplementationGuideGlobal>?,
+          : global // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideGlobal>?,
       definition: definition == freezed
           ? _value.definition
-          : definition as ImplementationGuideDefinition?,
+          : definition // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideDefinition?,
       manifest: manifest == freezed
           ? _value.manifest
-          : manifest as ImplementationGuideManifest?,
+          : manifest // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideManifest?,
     ));
   }
 }
@@ -17458,7 +19198,6 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 }
 
 abstract class _ImplementationGuide extends ImplementationGuide {
-  _ImplementationGuide._() : super._();
   factory _ImplementationGuide(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
           R4ResourceType resourceType,
@@ -17523,120 +19262,128 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       List<ImplementationGuideGlobal>? global,
       ImplementationGuideDefinition? definition,
       ImplementationGuideManifest? manifest}) = _$_ImplementationGuide;
+  _ImplementationGuide._() : super._();
 
   factory _ImplementationGuide.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuide.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-  ImplementationGuideStatus? get status;
+  ImplementationGuideStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get copyright;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  Id? get packageId;
+  Id? get packageId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_packageId')
-  Element? get packageIdElement;
+  Element? get packageIdElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
-  ImplementationGuideLicense? get license;
+  ImplementationGuideLicense? get license => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_license')
-  Element? get licenseElement;
+  Element? get licenseElement => throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuideFhirVersion>? get fhirVersion;
+  List<ImplementationGuideFhirVersion>? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fhirVersion')
-  List<Element?>? get fhirVersionElement;
+  List<Element?>? get fhirVersionElement => throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuideDependsOn>? get dependsOn;
+  List<ImplementationGuideDependsOn>? get dependsOn =>
+      throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuideGlobal>? get global;
+  List<ImplementationGuideGlobal>? get global =>
+      throw _privateConstructorUsedError;
   @override
-  ImplementationGuideDefinition? get definition;
+  ImplementationGuideDefinition? get definition =>
+      throw _privateConstructorUsedError;
   @override
-  ImplementationGuideManifest? get manifest;
+  ImplementationGuideManifest? get manifest =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuideCopyWith<_ImplementationGuide> get copyWith;
+  _$ImplementationGuideCopyWith<_ImplementationGuide> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ImplementationGuideDependsOn _$ImplementationGuideDependsOnFromJson(
@@ -17679,22 +19426,23 @@ const $ImplementationGuideDependsOn = _$ImplementationGuideDependsOnTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideDependsOn {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Canonical get uri;
-  Id? get packageId;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Canonical get uri => throw _privateConstructorUsedError;
+  Id? get packageId => throw _privateConstructorUsedError;
   @JsonKey(name: '_packageId')
-  Element? get packageIdElement;
-  String? get version;
+  Element? get packageIdElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ImplementationGuideDependsOnCopyWith<ImplementationGuideDependsOn>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -17738,22 +19486,38 @@ class _$ImplementationGuideDependsOnCopyWithImpl<$Res>
     Object? versionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      uri: uri == freezed ? _value.uri : uri as Canonical,
-      packageId: packageId == freezed ? _value.packageId : packageId as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      uri: uri == freezed
+          ? _value.uri
+          : uri // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      packageId: packageId == freezed
+          ? _value.packageId
+          : packageId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       packageIdElement: packageIdElement == freezed
           ? _value.packageIdElement
-          : packageIdElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : packageIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -17829,22 +19593,38 @@ class __$ImplementationGuideDependsOnCopyWithImpl<$Res>
     Object? versionElement = freezed,
   }) {
     return _then(_ImplementationGuideDependsOn(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      uri: uri == freezed ? _value.uri : uri as Canonical,
-      packageId: packageId == freezed ? _value.packageId : packageId as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      uri: uri == freezed
+          ? _value.uri
+          : uri // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      packageId: packageId == freezed
+          ? _value.packageId
+          : packageId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       packageIdElement: packageIdElement == freezed
           ? _value.packageIdElement
-          : packageIdElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : packageIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -17946,7 +19726,6 @@ class _$_ImplementationGuideDependsOn extends _ImplementationGuideDependsOn {
 
 abstract class _ImplementationGuideDependsOn
     extends ImplementationGuideDependsOn {
-  _ImplementationGuideDependsOn._() : super._();
   factory _ImplementationGuideDependsOn(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -17957,33 +19736,35 @@ abstract class _ImplementationGuideDependsOn
           String? version,
           @JsonKey(name: '_version') Element? versionElement}) =
       _$_ImplementationGuideDependsOn;
+  _ImplementationGuideDependsOn._() : super._();
 
   factory _ImplementationGuideDependsOn.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideDependsOn.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Canonical get uri;
+  Canonical get uri => throw _privateConstructorUsedError;
   @override
-  Id? get packageId;
+  Id? get packageId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_packageId')
-  Element? get packageIdElement;
+  Element? get packageIdElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideDependsOnCopyWith<_ImplementationGuideDependsOn>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuideGlobal _$ImplementationGuideGlobalFromJson(
@@ -18022,18 +19803,20 @@ const $ImplementationGuideGlobal = _$ImplementationGuideGlobalTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideGlobal {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Code? get type;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  Canonical get profile;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  Canonical get profile => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ImplementationGuideGlobalCopyWith<ImplementationGuideGlobal> get copyWith;
+  $ImplementationGuideGlobalCopyWith<ImplementationGuideGlobal> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -18071,17 +19854,30 @@ class _$ImplementationGuideGlobalCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as Code?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 
@@ -18138,17 +19934,30 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_ImplementationGuideGlobal(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as Code?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 }
@@ -18234,7 +20043,6 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
 }
 
 abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
-  _ImplementationGuideGlobal._() : super._();
   factory _ImplementationGuideGlobal(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -18242,27 +20050,30 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
       Code? type,
       @JsonKey(name: '_type') Element? typeElement,
       required Canonical profile}) = _$_ImplementationGuideGlobal;
+  _ImplementationGuideGlobal._() : super._();
 
   factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideGlobal.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get type;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Canonical get profile;
+  Canonical get profile => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuideGlobalCopyWith<_ImplementationGuideGlobal> get copyWith;
+  _$ImplementationGuideGlobalCopyWith<_ImplementationGuideGlobal>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuideDefinition _$ImplementationGuideDefinitionFromJson(
@@ -18305,20 +20116,25 @@ const $ImplementationGuideDefinition = _$ImplementationGuideDefinitionTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideDefinition {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<ImplementationGuideGrouping>? get grouping;
-  List<ImplementationGuideResource> get resource;
-  ImplementationGuidePage? get page;
-  List<ImplementationGuideParameter>? get parameter;
-  List<ImplementationGuideTemplate>? get template;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<ImplementationGuideGrouping>? get grouping =>
+      throw _privateConstructorUsedError;
+  List<ImplementationGuideResource> get resource =>
+      throw _privateConstructorUsedError;
+  ImplementationGuidePage? get page => throw _privateConstructorUsedError;
+  List<ImplementationGuideParameter>? get parameter =>
+      throw _privateConstructorUsedError;
+  List<ImplementationGuideTemplate>? get template =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ImplementationGuideDefinitionCopyWith<ImplementationGuideDefinition>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -18361,26 +20177,38 @@ class _$ImplementationGuideDefinitionCopyWithImpl<$Res>
     Object? template = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       grouping: grouping == freezed
           ? _value.grouping
-          : grouping as List<ImplementationGuideGrouping>?,
+          : grouping // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideGrouping>?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<ImplementationGuideResource>,
-      page: page == freezed ? _value.page : page as ImplementationGuidePage?,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideResource>,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuidePage?,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<ImplementationGuideParameter>?,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideParameter>?,
       template: template == freezed
           ? _value.template
-          : template as List<ImplementationGuideTemplate>?,
+          : template // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideTemplate>?,
     ));
   }
 
@@ -18443,26 +20271,38 @@ class __$ImplementationGuideDefinitionCopyWithImpl<$Res>
     Object? template = freezed,
   }) {
     return _then(_ImplementationGuideDefinition(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       grouping: grouping == freezed
           ? _value.grouping
-          : grouping as List<ImplementationGuideGrouping>?,
+          : grouping // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideGrouping>?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<ImplementationGuideResource>,
-      page: page == freezed ? _value.page : page as ImplementationGuidePage?,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideResource>,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuidePage?,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<ImplementationGuideParameter>?,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideParameter>?,
       template: template == freezed
           ? _value.template
-          : template as List<ImplementationGuideTemplate>?,
+          : template // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideTemplate>?,
     ));
   }
 }
@@ -18563,7 +20403,6 @@ class _$_ImplementationGuideDefinition extends _ImplementationGuideDefinition {
 
 abstract class _ImplementationGuideDefinition
     extends ImplementationGuideDefinition {
-  _ImplementationGuideDefinition._() : super._();
   factory _ImplementationGuideDefinition(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -18574,31 +20413,37 @@ abstract class _ImplementationGuideDefinition
           List<ImplementationGuideParameter>? parameter,
           List<ImplementationGuideTemplate>? template}) =
       _$_ImplementationGuideDefinition;
+  _ImplementationGuideDefinition._() : super._();
 
   factory _ImplementationGuideDefinition.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideDefinition.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuideGrouping>? get grouping;
+  List<ImplementationGuideGrouping>? get grouping =>
+      throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuideResource> get resource;
+  List<ImplementationGuideResource> get resource =>
+      throw _privateConstructorUsedError;
   @override
-  ImplementationGuidePage? get page;
+  ImplementationGuidePage? get page => throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuideParameter>? get parameter;
+  List<ImplementationGuideParameter>? get parameter =>
+      throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuideTemplate>? get template;
+  List<ImplementationGuideTemplate>? get template =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideDefinitionCopyWith<_ImplementationGuideDefinition>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuideGrouping _$ImplementationGuideGroupingFromJson(
@@ -18639,21 +20484,22 @@ const $ImplementationGuideGrouping = _$ImplementationGuideGroupingTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideGrouping {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get description;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ImplementationGuideGroupingCopyWith<ImplementationGuideGrouping>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -18695,21 +20541,34 @@ class _$ImplementationGuideGroupingCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -18783,21 +20642,34 @@ class __$ImplementationGuideGroupingCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_ImplementationGuideGrouping(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -18892,7 +20764,6 @@ class _$_ImplementationGuideGrouping extends _ImplementationGuideGrouping {
 
 abstract class _ImplementationGuideGrouping
     extends ImplementationGuideGrouping {
-  _ImplementationGuideGrouping._() : super._();
   factory _ImplementationGuideGrouping(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -18902,31 +20773,33 @@ abstract class _ImplementationGuideGrouping
           String? description,
           @JsonKey(name: '_description') Element? descriptionElement}) =
       _$_ImplementationGuideGrouping;
+  _ImplementationGuideGrouping._() : super._();
 
   factory _ImplementationGuideGrouping.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideGrouping.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideGroupingCopyWith<_ImplementationGuideGrouping>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuideResource _$ImplementationGuideResourceFromJson(
@@ -18985,34 +20858,36 @@ const $ImplementationGuideResource = _$ImplementationGuideResourceTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideResource {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Reference get reference;
-  List<ImplementationGuideResourceFhirVersion>? get fhirVersion;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Reference get reference => throw _privateConstructorUsedError;
+  List<ImplementationGuideResourceFhirVersion>? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
-  List<Element?>? get fhirVersionElement;
-  String? get name;
+  List<Element?>? get fhirVersionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get description;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  Boolean? get exampleBoolean;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Boolean? get exampleBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleBoolean')
-  Element? get exampleBooleanElement;
-  Canonical? get exampleCanonical;
+  Element? get exampleBooleanElement => throw _privateConstructorUsedError;
+  Canonical? get exampleCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleCanonical')
-  Element? get exampleCanonicalElement;
-  Id? get groupingId;
+  Element? get exampleCanonicalElement => throw _privateConstructorUsedError;
+  Id? get groupingId => throw _privateConstructorUsedError;
   @JsonKey(name: '_groupingId')
-  Element? get groupingIdElement;
+  Element? get groupingIdElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ImplementationGuideResourceCopyWith<ImplementationGuideResource>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -19076,45 +20951,70 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
     Object? groupingIdElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      reference:
-          reference == freezed ? _value.reference : reference as Reference,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as List<ImplementationGuideResourceFhirVersion>?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideResourceFhirVersion>?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element?>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       exampleBoolean: exampleBoolean == freezed
           ? _value.exampleBoolean
-          : exampleBoolean as Boolean?,
+          : exampleBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       exampleBooleanElement: exampleBooleanElement == freezed
           ? _value.exampleBooleanElement
-          : exampleBooleanElement as Element?,
+          : exampleBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       exampleCanonical: exampleCanonical == freezed
           ? _value.exampleCanonical
-          : exampleCanonical as Canonical?,
+          : exampleCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       exampleCanonicalElement: exampleCanonicalElement == freezed
           ? _value.exampleCanonicalElement
-          : exampleCanonicalElement as Element?,
-      groupingId: groupingId == freezed ? _value.groupingId : groupingId as Id?,
+          : exampleCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      groupingId: groupingId == freezed
+          ? _value.groupingId
+          : groupingId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       groupingIdElement: groupingIdElement == freezed
           ? _value.groupingIdElement
-          : groupingIdElement as Element?,
+          : groupingIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -19254,45 +21154,70 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
     Object? groupingIdElement = freezed,
   }) {
     return _then(_ImplementationGuideResource(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      reference:
-          reference == freezed ? _value.reference : reference as Reference,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as List<ImplementationGuideResourceFhirVersion>?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideResourceFhirVersion>?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element?>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       exampleBoolean: exampleBoolean == freezed
           ? _value.exampleBoolean
-          : exampleBoolean as Boolean?,
+          : exampleBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       exampleBooleanElement: exampleBooleanElement == freezed
           ? _value.exampleBooleanElement
-          : exampleBooleanElement as Element?,
+          : exampleBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       exampleCanonical: exampleCanonical == freezed
           ? _value.exampleCanonical
-          : exampleCanonical as Canonical?,
+          : exampleCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       exampleCanonicalElement: exampleCanonicalElement == freezed
           ? _value.exampleCanonicalElement
-          : exampleCanonicalElement as Element?,
-      groupingId: groupingId == freezed ? _value.groupingId : groupingId as Id?,
+          : exampleCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      groupingId: groupingId == freezed
+          ? _value.groupingId
+          : groupingId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       groupingIdElement: groupingIdElement == freezed
           ? _value.groupingIdElement
-          : groupingIdElement as Element?,
+          : groupingIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -19455,7 +21380,6 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
 
 abstract class _ImplementationGuideResource
     extends ImplementationGuideResource {
-  _ImplementationGuideResource._() : super._();
   factory _ImplementationGuideResource(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -19474,53 +21398,56 @@ abstract class _ImplementationGuideResource
           Id? groupingId,
           @JsonKey(name: '_groupingId') Element? groupingIdElement}) =
       _$_ImplementationGuideResource;
+  _ImplementationGuideResource._() : super._();
 
   factory _ImplementationGuideResource.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideResource.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Reference get reference;
+  Reference get reference => throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuideResourceFhirVersion>? get fhirVersion;
+  List<ImplementationGuideResourceFhirVersion>? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fhirVersion')
-  List<Element?>? get fhirVersionElement;
+  List<Element?>? get fhirVersionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get exampleBoolean;
+  Boolean? get exampleBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleBoolean')
-  Element? get exampleBooleanElement;
+  Element? get exampleBooleanElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get exampleCanonical;
+  Canonical? get exampleCanonical => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleCanonical')
-  Element? get exampleCanonicalElement;
+  Element? get exampleCanonicalElement => throw _privateConstructorUsedError;
   @override
-  Id? get groupingId;
+  Id? get groupingId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_groupingId')
-  Element? get groupingIdElement;
+  Element? get groupingIdElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideResourceCopyWith<_ImplementationGuideResource>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuidePage _$ImplementationGuidePageFromJson(
@@ -19574,26 +21501,29 @@ const $ImplementationGuidePage = _$ImplementationGuidePageTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuidePage {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUrl? get nameUrl;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUrl? get nameUrl => throw _privateConstructorUsedError;
   @JsonKey(name: '_nameUrl')
-  Element? get nameUrlElement;
-  Reference? get nameReference;
-  String? get title;
+  Element? get nameUrlElement => throw _privateConstructorUsedError;
+  Reference? get nameReference => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
-  ImplementationGuidePageGeneration? get generation;
+  ImplementationGuidePageGeneration? get generation =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_generation')
-  Element? get generationElement;
-  List<ImplementationGuidePage>? get page;
+  Element? get generationElement => throw _privateConstructorUsedError;
+  List<ImplementationGuidePage>? get page => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ImplementationGuidePageCopyWith<ImplementationGuidePage> get copyWith;
+  $ImplementationGuidePageCopyWith<ImplementationGuidePage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -19649,33 +21579,50 @@ class _$ImplementationGuidePageCopyWithImpl<$Res>
     Object? page = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      nameUrl: nameUrl == freezed ? _value.nameUrl : nameUrl as FhirUrl?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      nameUrl: nameUrl == freezed
+          ? _value.nameUrl
+          : nameUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       nameUrlElement: nameUrlElement == freezed
           ? _value.nameUrlElement
-          : nameUrlElement as Element?,
+          : nameUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       nameReference: nameReference == freezed
           ? _value.nameReference
-          : nameReference as Reference?,
-      title: title == freezed ? _value.title : title as String?,
+          : nameReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       generation: generation == freezed
           ? _value.generation
-          : generation as ImplementationGuidePageGeneration?,
+          : generation // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuidePageGeneration?,
       generationElement: generationElement == freezed
           ? _value.generationElement
-          : generationElement as Element?,
+          : generationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       page: page == freezed
           ? _value.page
-          : page as List<ImplementationGuidePage>?,
+          : page // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuidePage>?,
     ));
   }
 
@@ -19786,33 +21733,50 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
     Object? page = freezed,
   }) {
     return _then(_ImplementationGuidePage(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      nameUrl: nameUrl == freezed ? _value.nameUrl : nameUrl as FhirUrl?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      nameUrl: nameUrl == freezed
+          ? _value.nameUrl
+          : nameUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       nameUrlElement: nameUrlElement == freezed
           ? _value.nameUrlElement
-          : nameUrlElement as Element?,
+          : nameUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       nameReference: nameReference == freezed
           ? _value.nameReference
-          : nameReference as Reference?,
-      title: title == freezed ? _value.title : title as String?,
+          : nameReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       generation: generation == freezed
           ? _value.generation
-          : generation as ImplementationGuidePageGeneration?,
+          : generation // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuidePageGeneration?,
       generationElement: generationElement == freezed
           ? _value.generationElement
-          : generationElement as Element?,
+          : generationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       page: page == freezed
           ? _value.page
-          : page as List<ImplementationGuidePage>?,
+          : page // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuidePage>?,
     ));
   }
 }
@@ -19940,7 +21904,6 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
 }
 
 abstract class _ImplementationGuidePage extends ImplementationGuidePage {
-  _ImplementationGuidePage._() : super._();
   factory _ImplementationGuidePage(
       {String? id,
       @JsonKey(name: 'extension')
@@ -19958,40 +21921,44 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
       @JsonKey(name: '_generation')
           Element? generationElement,
       List<ImplementationGuidePage>? page}) = _$_ImplementationGuidePage;
+  _ImplementationGuidePage._() : super._();
 
   factory _ImplementationGuidePage.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuidePage.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUrl? get nameUrl;
+  FhirUrl? get nameUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_nameUrl')
-  Element? get nameUrlElement;
+  Element? get nameUrlElement => throw _privateConstructorUsedError;
   @override
-  Reference? get nameReference;
+  Reference? get nameReference => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
-  ImplementationGuidePageGeneration? get generation;
+  ImplementationGuidePageGeneration? get generation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_generation')
-  Element? get generationElement;
+  Element? get generationElement => throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuidePage>? get page;
+  List<ImplementationGuidePage>? get page => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuidePageCopyWith<_ImplementationGuidePage> get copyWith;
+  _$ImplementationGuidePageCopyWith<_ImplementationGuidePage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ImplementationGuideParameter _$ImplementationGuideParameterFromJson(
@@ -20036,22 +22003,24 @@ const $ImplementationGuideParameter = _$ImplementationGuideParameterTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideParameter {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ImplementationGuideParameterCode.unknown)
-  ImplementationGuideParameterCode? get code;
+  ImplementationGuideParameterCode? get code =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
-  String? get value;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ImplementationGuideParameterCopyWith<ImplementationGuideParameter>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -20097,22 +22066,34 @@ class _$ImplementationGuideParameterCopyWithImpl<$Res>
     Object? valueElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       code: code == freezed
           ? _value.code
-          : code as ImplementationGuideParameterCode?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      value: value == freezed ? _value.value : value as String?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideParameterCode?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueElement: valueElement == freezed
           ? _value.valueElement
-          : valueElement as Element?,
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -20190,22 +22171,34 @@ class __$ImplementationGuideParameterCopyWithImpl<$Res>
     Object? valueElement = freezed,
   }) {
     return _then(_ImplementationGuideParameter(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       code: code == freezed
           ? _value.code
-          : code as ImplementationGuideParameterCode?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      value: value == freezed ? _value.value : value as String?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as ImplementationGuideParameterCode?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueElement: valueElement == freezed
           ? _value.valueElement
-          : valueElement as Element?,
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -20304,7 +22297,6 @@ class _$_ImplementationGuideParameter extends _ImplementationGuideParameter {
 
 abstract class _ImplementationGuideParameter
     extends ImplementationGuideParameter {
-  _ImplementationGuideParameter._() : super._();
   factory _ImplementationGuideParameter(
       {String? id,
       @JsonKey(name: 'extension')
@@ -20317,32 +22309,35 @@ abstract class _ImplementationGuideParameter
       String? value,
       @JsonKey(name: '_value')
           Element? valueElement}) = _$_ImplementationGuideParameter;
+  _ImplementationGuideParameter._() : super._();
 
   factory _ImplementationGuideParameter.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideParameter.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ImplementationGuideParameterCode.unknown)
-  ImplementationGuideParameterCode? get code;
+  ImplementationGuideParameterCode? get code =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  String? get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideParameterCopyWith<_ImplementationGuideParameter>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuideTemplate _$ImplementationGuideTemplateFromJson(
@@ -20387,24 +22382,25 @@ const $ImplementationGuideTemplate = _$ImplementationGuideTemplateTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideTemplate {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Code? get code;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
-  String? get source;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
   @JsonKey(name: '_source')
-  Element? get sourceElement;
-  String? get scope;
+  Element? get sourceElement => throw _privateConstructorUsedError;
+  String? get scope => throw _privateConstructorUsedError;
   @JsonKey(name: '_scope')
-  Element? get scopeElement;
+  Element? get scopeElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ImplementationGuideTemplateCopyWith<ImplementationGuideTemplate>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -20451,24 +22447,42 @@ class _$ImplementationGuideTemplateCopyWithImpl<$Res>
     Object? scopeElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      source: source == freezed ? _value.source : source as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as String?,
       sourceElement: sourceElement == freezed
           ? _value.sourceElement
-          : sourceElement as Element?,
-      scope: scope == freezed ? _value.scope : scope as String?,
+          : sourceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      scope: scope == freezed
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as String?,
       scopeElement: scopeElement == freezed
           ? _value.scopeElement
-          : scopeElement as Element?,
+          : scopeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -20559,24 +22573,42 @@ class __$ImplementationGuideTemplateCopyWithImpl<$Res>
     Object? scopeElement = freezed,
   }) {
     return _then(_ImplementationGuideTemplate(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      source: source == freezed ? _value.source : source as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as String?,
       sourceElement: sourceElement == freezed
           ? _value.sourceElement
-          : sourceElement as Element?,
-      scope: scope == freezed ? _value.scope : scope as String?,
+          : sourceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      scope: scope == freezed
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as String?,
       scopeElement: scopeElement == freezed
           ? _value.scopeElement
-          : scopeElement as Element?,
+          : scopeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -20684,7 +22716,6 @@ class _$_ImplementationGuideTemplate extends _ImplementationGuideTemplate {
 
 abstract class _ImplementationGuideTemplate
     extends ImplementationGuideTemplate {
-  _ImplementationGuideTemplate._() : super._();
   factory _ImplementationGuideTemplate(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -20696,36 +22727,38 @@ abstract class _ImplementationGuideTemplate
           String? scope,
           @JsonKey(name: '_scope') Element? scopeElement}) =
       _$_ImplementationGuideTemplate;
+  _ImplementationGuideTemplate._() : super._();
 
   factory _ImplementationGuideTemplate.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideTemplate.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  String? get source;
+  String? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_source')
-  Element? get sourceElement;
+  Element? get sourceElement => throw _privateConstructorUsedError;
   @override
-  String? get scope;
+  String? get scope => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_scope')
-  Element? get scopeElement;
+  Element? get scopeElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideTemplateCopyWith<_ImplementationGuideTemplate>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuideManifest _$ImplementationGuideManifestFromJson(
@@ -20774,26 +22807,29 @@ const $ImplementationGuideManifest = _$ImplementationGuideManifestTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideManifest {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUrl? get rendering;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUrl? get rendering => throw _privateConstructorUsedError;
   @JsonKey(name: '_rendering')
-  Element? get renderingElement;
-  List<ImplementationGuideResource1> get resource;
-  List<ImplementationGuidePage1>? get page;
-  List<String>? get image;
+  Element? get renderingElement => throw _privateConstructorUsedError;
+  List<ImplementationGuideResource1> get resource =>
+      throw _privateConstructorUsedError;
+  List<ImplementationGuidePage1>? get page =>
+      throw _privateConstructorUsedError;
+  List<String>? get image => throw _privateConstructorUsedError;
   @JsonKey(name: '_image')
-  List<Element?>? get imageElement;
-  List<String>? get other;
+  List<Element?>? get imageElement => throw _privateConstructorUsedError;
+  List<String>? get other => throw _privateConstructorUsedError;
   @JsonKey(name: '_other')
-  List<Element?>? get otherElement;
+  List<Element?>? get otherElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ImplementationGuideManifestCopyWith<ImplementationGuideManifest>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -20842,32 +22878,50 @@ class _$ImplementationGuideManifestCopyWithImpl<$Res>
     Object? otherElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      rendering:
-          rendering == freezed ? _value.rendering : rendering as FhirUrl?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      rendering: rendering == freezed
+          ? _value.rendering
+          : rendering // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       renderingElement: renderingElement == freezed
           ? _value.renderingElement
-          : renderingElement as Element?,
+          : renderingElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<ImplementationGuideResource1>,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideResource1>,
       page: page == freezed
           ? _value.page
-          : page as List<ImplementationGuidePage1>?,
-      image: image == freezed ? _value.image : image as List<String>?,
+          : page // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuidePage1>?,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       imageElement: imageElement == freezed
           ? _value.imageElement
-          : imageElement as List<Element?>?,
-      other: other == freezed ? _value.other : other as List<String>?,
+          : imageElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      other: other == freezed
+          ? _value.other
+          : other // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       otherElement: otherElement == freezed
           ? _value.otherElement
-          : otherElement as List<Element?>?,
+          : otherElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
     ));
   }
 
@@ -20936,32 +22990,50 @@ class __$ImplementationGuideManifestCopyWithImpl<$Res>
     Object? otherElement = freezed,
   }) {
     return _then(_ImplementationGuideManifest(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      rendering:
-          rendering == freezed ? _value.rendering : rendering as FhirUrl?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      rendering: rendering == freezed
+          ? _value.rendering
+          : rendering // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       renderingElement: renderingElement == freezed
           ? _value.renderingElement
-          : renderingElement as Element?,
+          : renderingElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<ImplementationGuideResource1>,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuideResource1>,
       page: page == freezed
           ? _value.page
-          : page as List<ImplementationGuidePage1>?,
-      image: image == freezed ? _value.image : image as List<String>?,
+          : page // ignore: cast_nullable_to_non_nullable
+              as List<ImplementationGuidePage1>?,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       imageElement: imageElement == freezed
           ? _value.imageElement
-          : imageElement as List<Element?>?,
-      other: other == freezed ? _value.other : other as List<String>?,
+          : imageElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      other: other == freezed
+          ? _value.other
+          : other // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       otherElement: otherElement == freezed
           ? _value.otherElement
-          : otherElement as List<Element?>?,
+          : otherElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
     ));
   }
 }
@@ -21084,7 +23156,6 @@ class _$_ImplementationGuideManifest extends _ImplementationGuideManifest {
 
 abstract class _ImplementationGuideManifest
     extends ImplementationGuideManifest {
-  _ImplementationGuideManifest._() : super._();
   factory _ImplementationGuideManifest(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -21098,40 +23169,44 @@ abstract class _ImplementationGuideManifest
           List<String>? other,
           @JsonKey(name: '_other') List<Element?>? otherElement}) =
       _$_ImplementationGuideManifest;
+  _ImplementationGuideManifest._() : super._();
 
   factory _ImplementationGuideManifest.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideManifest.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUrl? get rendering;
+  FhirUrl? get rendering => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_rendering')
-  Element? get renderingElement;
+  Element? get renderingElement => throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuideResource1> get resource;
+  List<ImplementationGuideResource1> get resource =>
+      throw _privateConstructorUsedError;
   @override
-  List<ImplementationGuidePage1>? get page;
+  List<ImplementationGuidePage1>? get page =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get image;
+  List<String>? get image => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_image')
-  List<Element?>? get imageElement;
+  List<Element?>? get imageElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get other;
+  List<String>? get other => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_other')
-  List<Element?>? get otherElement;
+  List<Element?>? get otherElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideManifestCopyWith<_ImplementationGuideManifest>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuideResource1 _$ImplementationGuideResource1FromJson(
@@ -21178,25 +23253,26 @@ const $ImplementationGuideResource1 = _$ImplementationGuideResource1TearOff();
 
 /// @nodoc
 mixin _$ImplementationGuideResource1 {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Reference get reference;
-  Boolean? get exampleBoolean;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Reference get reference => throw _privateConstructorUsedError;
+  Boolean? get exampleBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleBoolean')
-  Element? get exampleBooleanElement;
-  Canonical? get exampleCanonical;
+  Element? get exampleBooleanElement => throw _privateConstructorUsedError;
+  Canonical? get exampleCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_exampleCanonical')
-  Element? get exampleCanonicalElement;
-  FhirUrl? get relativePath;
+  Element? get exampleCanonicalElement => throw _privateConstructorUsedError;
+  FhirUrl? get relativePath => throw _privateConstructorUsedError;
   @JsonKey(name: '_relativePath')
-  Element? get relativePathElement;
+  Element? get relativePathElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ImplementationGuideResource1CopyWith<ImplementationGuideResource1>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -21246,33 +23322,46 @@ class _$ImplementationGuideResource1CopyWithImpl<$Res>
     Object? relativePathElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      reference:
-          reference == freezed ? _value.reference : reference as Reference,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference,
       exampleBoolean: exampleBoolean == freezed
           ? _value.exampleBoolean
-          : exampleBoolean as Boolean?,
+          : exampleBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       exampleBooleanElement: exampleBooleanElement == freezed
           ? _value.exampleBooleanElement
-          : exampleBooleanElement as Element?,
+          : exampleBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       exampleCanonical: exampleCanonical == freezed
           ? _value.exampleCanonical
-          : exampleCanonical as Canonical?,
+          : exampleCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       exampleCanonicalElement: exampleCanonicalElement == freezed
           ? _value.exampleCanonicalElement
-          : exampleCanonicalElement as Element?,
+          : exampleCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       relativePath: relativePath == freezed
           ? _value.relativePath
-          : relativePath as FhirUrl?,
+          : relativePath // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       relativePathElement: relativePathElement == freezed
           ? _value.relativePathElement
-          : relativePathElement as Element?,
+          : relativePathElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -21374,33 +23463,46 @@ class __$ImplementationGuideResource1CopyWithImpl<$Res>
     Object? relativePathElement = freezed,
   }) {
     return _then(_ImplementationGuideResource1(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      reference:
-          reference == freezed ? _value.reference : reference as Reference,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference,
       exampleBoolean: exampleBoolean == freezed
           ? _value.exampleBoolean
-          : exampleBoolean as Boolean?,
+          : exampleBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       exampleBooleanElement: exampleBooleanElement == freezed
           ? _value.exampleBooleanElement
-          : exampleBooleanElement as Element?,
+          : exampleBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       exampleCanonical: exampleCanonical == freezed
           ? _value.exampleCanonical
-          : exampleCanonical as Canonical?,
+          : exampleCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       exampleCanonicalElement: exampleCanonicalElement == freezed
           ? _value.exampleCanonicalElement
-          : exampleCanonicalElement as Element?,
+          : exampleCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       relativePath: relativePath == freezed
           ? _value.relativePath
-          : relativePath as FhirUrl?,
+          : relativePath // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       relativePathElement: relativePathElement == freezed
           ? _value.relativePathElement
-          : relativePathElement as Element?,
+          : relativePathElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -21519,7 +23621,6 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
 
 abstract class _ImplementationGuideResource1
     extends ImplementationGuideResource1 {
-  _ImplementationGuideResource1._() : super._();
   factory _ImplementationGuideResource1(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -21532,38 +23633,40 @@ abstract class _ImplementationGuideResource1
           FhirUrl? relativePath,
           @JsonKey(name: '_relativePath') Element? relativePathElement}) =
       _$_ImplementationGuideResource1;
+  _ImplementationGuideResource1._() : super._();
 
   factory _ImplementationGuideResource1.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideResource1.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Reference get reference;
+  Reference get reference => throw _privateConstructorUsedError;
   @override
-  Boolean? get exampleBoolean;
+  Boolean? get exampleBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleBoolean')
-  Element? get exampleBooleanElement;
+  Element? get exampleBooleanElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get exampleCanonical;
+  Canonical? get exampleCanonical => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_exampleCanonical')
-  Element? get exampleCanonicalElement;
+  Element? get exampleCanonicalElement => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get relativePath;
+  FhirUrl? get relativePath => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_relativePath')
-  Element? get relativePathElement;
+  Element? get relativePathElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideResource1CopyWith<_ImplementationGuideResource1>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ImplementationGuidePage1 _$ImplementationGuidePage1FromJson(
@@ -21608,23 +23711,25 @@ const $ImplementationGuidePage1 = _$ImplementationGuidePage1TearOff();
 
 /// @nodoc
 mixin _$ImplementationGuidePage1 {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get title;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
-  List<String>? get anchor;
+  Element? get titleElement => throw _privateConstructorUsedError;
+  List<String>? get anchor => throw _privateConstructorUsedError;
   @JsonKey(name: '_anchor')
-  List<Element?>? get anchorElement;
+  List<Element?>? get anchorElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ImplementationGuidePage1CopyWith<ImplementationGuidePage1> get copyWith;
+  $ImplementationGuidePage1CopyWith<ImplementationGuidePage1> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -21669,24 +23774,42 @@ class _$ImplementationGuidePage1CopyWithImpl<$Res>
     Object? anchorElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
-      anchor: anchor == freezed ? _value.anchor : anchor as List<String>?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      anchor: anchor == freezed
+          ? _value.anchor
+          : anchor // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       anchorElement: anchorElement == freezed
           ? _value.anchorElement
-          : anchorElement as List<Element?>?,
+          : anchorElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
     ));
   }
 
@@ -21762,24 +23885,42 @@ class __$ImplementationGuidePage1CopyWithImpl<$Res>
     Object? anchorElement = freezed,
   }) {
     return _then(_ImplementationGuidePage1(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
-      anchor: anchor == freezed ? _value.anchor : anchor as List<String>?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      anchor: anchor == freezed
+          ? _value.anchor
+          : anchor // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       anchorElement: anchorElement == freezed
           ? _value.anchorElement
-          : anchorElement as List<Element?>?,
+          : anchorElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
     ));
   }
 }
@@ -21886,7 +24027,6 @@ class _$_ImplementationGuidePage1 extends _ImplementationGuidePage1 {
 }
 
 abstract class _ImplementationGuidePage1 extends ImplementationGuidePage1 {
-  _ImplementationGuidePage1._() : super._();
   factory _ImplementationGuidePage1(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -21898,35 +24038,38 @@ abstract class _ImplementationGuidePage1 extends ImplementationGuidePage1 {
           List<String>? anchor,
           @JsonKey(name: '_anchor') List<Element?>? anchorElement}) =
       _$_ImplementationGuidePage1;
+  _ImplementationGuidePage1._() : super._();
 
   factory _ImplementationGuidePage1.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuidePage1.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get anchor;
+  List<String>? get anchor => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_anchor')
-  List<Element?>? get anchorElement;
+  List<Element?>? get anchorElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ImplementationGuidePage1CopyWith<_ImplementationGuidePage1> get copyWith;
+  _$ImplementationGuidePage1CopyWith<_ImplementationGuidePage1> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) {
@@ -22074,80 +24217,84 @@ const $MessageDefinition = _$MessageDefinitionTearOff();
 /// @nodoc
 mixin _$MessageDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  List<Identifier>? get identifier;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get title;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
-  List<Canonical>? get replaces;
+  Element? get titleElement => throw _privateConstructorUsedError;
+  List<Canonical>? get replaces => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-  MessageDefinitionStatus? get status;
+  MessageDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  Boolean? get experimental;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get purpose;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
-  Markdown? get copyright;
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
-  Canonical? get base;
-  List<Canonical>? get parent;
-  Coding? get eventCoding;
-  FhirUri? get eventUri;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  Canonical? get base => throw _privateConstructorUsedError;
+  List<Canonical>? get parent => throw _privateConstructorUsedError;
+  Coding? get eventCoding => throw _privateConstructorUsedError;
+  FhirUri? get eventUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_eventUri')
-  Element? get eventUriElement;
+  Element? get eventUriElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
-  MessageDefinitionCategory? get category;
+  MessageDefinitionCategory? get category => throw _privateConstructorUsedError;
   @JsonKey(name: '_category')
-  Element? get categoryElement;
-  List<MessageDefinitionFocus>? get focus;
+  Element? get categoryElement => throw _privateConstructorUsedError;
+  List<MessageDefinitionFocus>? get focus => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
-  MessageDefinitionResponseRequired? get responseRequired;
+  MessageDefinitionResponseRequired? get responseRequired =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_responseRequired')
-  Element? get responseRequiredElement;
-  List<MessageDefinitionAllowedResponse>? get allowedResponse;
-  List<Canonical>? get graph;
+  Element? get responseRequiredElement => throw _privateConstructorUsedError;
+  List<MessageDefinitionAllowedResponse>? get allowedResponse =>
+      throw _privateConstructorUsedError;
+  List<Canonical>? get graph => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MessageDefinitionCopyWith<MessageDefinition> get copyWith;
+  $MessageDefinitionCopyWith<MessageDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -22314,117 +24461,204 @@ class _$MessageDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      version: version == freezed ? _value.version : version as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
-      replaces:
-          replaces == freezed ? _value.replaces : replaces as List<Canonical>?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      replaces: replaces == freezed
+          ? _value.replaces
+          : replaces // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       status: status == freezed
           ? _value.status
-          : status as MessageDefinitionStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as MessageDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      base: base == freezed ? _value.base : base as Canonical?,
-      parent: parent == freezed ? _value.parent : parent as List<Canonical>?,
-      eventCoding:
-          eventCoding == freezed ? _value.eventCoding : eventCoding as Coding?,
-      eventUri: eventUri == freezed ? _value.eventUri : eventUri as FhirUri?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      parent: parent == freezed
+          ? _value.parent
+          : parent // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      eventCoding: eventCoding == freezed
+          ? _value.eventCoding
+          : eventCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      eventUri: eventUri == freezed
+          ? _value.eventUri
+          : eventUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       eventUriElement: eventUriElement == freezed
           ? _value.eventUriElement
-          : eventUriElement as Element?,
+          : eventUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       category: category == freezed
           ? _value.category
-          : category as MessageDefinitionCategory?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as MessageDefinitionCategory?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as Element?,
+          : categoryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       focus: focus == freezed
           ? _value.focus
-          : focus as List<MessageDefinitionFocus>?,
+          : focus // ignore: cast_nullable_to_non_nullable
+              as List<MessageDefinitionFocus>?,
       responseRequired: responseRequired == freezed
           ? _value.responseRequired
-          : responseRequired as MessageDefinitionResponseRequired?,
+          : responseRequired // ignore: cast_nullable_to_non_nullable
+              as MessageDefinitionResponseRequired?,
       responseRequiredElement: responseRequiredElement == freezed
           ? _value.responseRequiredElement
-          : responseRequiredElement as Element?,
+          : responseRequiredElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       allowedResponse: allowedResponse == freezed
           ? _value.allowedResponse
-          : allowedResponse as List<MessageDefinitionAllowedResponse>?,
-      graph: graph == freezed ? _value.graph : graph as List<Canonical>?,
+          : allowedResponse // ignore: cast_nullable_to_non_nullable
+              as List<MessageDefinitionAllowedResponse>?,
+      graph: graph == freezed
+          ? _value.graph
+          : graph // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
     ));
   }
 
@@ -22825,117 +25059,204 @@ class __$MessageDefinitionCopyWithImpl<$Res>
     return _then(_MessageDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      version: version == freezed ? _value.version : version as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
-      replaces:
-          replaces == freezed ? _value.replaces : replaces as List<Canonical>?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      replaces: replaces == freezed
+          ? _value.replaces
+          : replaces // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       status: status == freezed
           ? _value.status
-          : status as MessageDefinitionStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as MessageDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      base: base == freezed ? _value.base : base as Canonical?,
-      parent: parent == freezed ? _value.parent : parent as List<Canonical>?,
-      eventCoding:
-          eventCoding == freezed ? _value.eventCoding : eventCoding as Coding?,
-      eventUri: eventUri == freezed ? _value.eventUri : eventUri as FhirUri?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      parent: parent == freezed
+          ? _value.parent
+          : parent // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      eventCoding: eventCoding == freezed
+          ? _value.eventCoding
+          : eventCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      eventUri: eventUri == freezed
+          ? _value.eventUri
+          : eventUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       eventUriElement: eventUriElement == freezed
           ? _value.eventUriElement
-          : eventUriElement as Element?,
+          : eventUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       category: category == freezed
           ? _value.category
-          : category as MessageDefinitionCategory?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as MessageDefinitionCategory?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as Element?,
+          : categoryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       focus: focus == freezed
           ? _value.focus
-          : focus as List<MessageDefinitionFocus>?,
+          : focus // ignore: cast_nullable_to_non_nullable
+              as List<MessageDefinitionFocus>?,
       responseRequired: responseRequired == freezed
           ? _value.responseRequired
-          : responseRequired as MessageDefinitionResponseRequired?,
+          : responseRequired // ignore: cast_nullable_to_non_nullable
+              as MessageDefinitionResponseRequired?,
       responseRequiredElement: responseRequiredElement == freezed
           ? _value.responseRequiredElement
-          : responseRequiredElement as Element?,
+          : responseRequiredElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       allowedResponse: allowedResponse == freezed
           ? _value.allowedResponse
-          : allowedResponse as List<MessageDefinitionAllowedResponse>?,
-      graph: graph == freezed ? _value.graph : graph as List<Canonical>?,
+          : allowedResponse // ignore: cast_nullable_to_non_nullable
+              as List<MessageDefinitionAllowedResponse>?,
+      graph: graph == freezed
+          ? _value.graph
+          : graph // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
     ));
   }
 }
@@ -23313,7 +25634,6 @@ class _$_MessageDefinition extends _MessageDefinition {
 }
 
 abstract class _MessageDefinition extends MessageDefinition {
-  _MessageDefinition._() : super._();
   factory _MessageDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
           R4ResourceType resourceType,
@@ -23386,134 +25706,139 @@ abstract class _MessageDefinition extends MessageDefinition {
           Element? responseRequiredElement,
       List<MessageDefinitionAllowedResponse>? allowedResponse,
       List<Canonical>? graph}) = _$_MessageDefinition;
+  _MessageDefinition._() : super._();
 
   factory _MessageDefinition.fromJson(Map<String, dynamic> json) =
       _$_MessageDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get replaces;
+  List<Canonical>? get replaces => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-  MessageDefinitionStatus? get status;
+  MessageDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get copyright;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get base;
+  Canonical? get base => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get parent;
+  List<Canonical>? get parent => throw _privateConstructorUsedError;
   @override
-  Coding? get eventCoding;
+  Coding? get eventCoding => throw _privateConstructorUsedError;
   @override
-  FhirUri? get eventUri;
+  FhirUri? get eventUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_eventUri')
-  Element? get eventUriElement;
+  Element? get eventUriElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
-  MessageDefinitionCategory? get category;
+  MessageDefinitionCategory? get category => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_category')
-  Element? get categoryElement;
+  Element? get categoryElement => throw _privateConstructorUsedError;
   @override
-  List<MessageDefinitionFocus>? get focus;
+  List<MessageDefinitionFocus>? get focus => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
-  MessageDefinitionResponseRequired? get responseRequired;
+  MessageDefinitionResponseRequired? get responseRequired =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_responseRequired')
-  Element? get responseRequiredElement;
+  Element? get responseRequiredElement => throw _privateConstructorUsedError;
   @override
-  List<MessageDefinitionAllowedResponse>? get allowedResponse;
+  List<MessageDefinitionAllowedResponse>? get allowedResponse =>
+      throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get graph;
+  List<Canonical>? get graph => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageDefinitionCopyWith<_MessageDefinition> get copyWith;
+  _$MessageDefinitionCopyWith<_MessageDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MessageDefinitionFocus _$MessageDefinitionFocusFromJson(
@@ -23560,24 +25885,26 @@ const $MessageDefinitionFocus = _$MessageDefinitionFocusTearOff();
 
 /// @nodoc
 mixin _$MessageDefinitionFocus {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Code? get code;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
-  Canonical? get profile;
-  UnsignedInt? get min;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  Canonical? get profile => throw _privateConstructorUsedError;
+  UnsignedInt? get min => throw _privateConstructorUsedError;
   @JsonKey(name: '_min')
-  Element? get minElement;
-  String? get max;
+  Element? get minElement => throw _privateConstructorUsedError;
+  String? get max => throw _privateConstructorUsedError;
   @JsonKey(name: '_max')
-  Element? get maxElement;
+  Element? get maxElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MessageDefinitionFocusCopyWith<MessageDefinitionFocus> get copyWith;
+  $MessageDefinitionFocusCopyWith<MessageDefinitionFocus> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -23625,23 +25952,46 @@ class _$MessageDefinitionFocusCopyWithImpl<$Res>
     Object? maxElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
-      min: min == freezed ? _value.min : min as UnsignedInt?,
-      minElement:
-          minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
-      maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      minElement: minElement == freezed
+          ? _value.minElement
+          : minElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxElement: maxElement == freezed
+          ? _value.maxElement
+          : maxElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -23731,23 +26081,46 @@ class __$MessageDefinitionFocusCopyWithImpl<$Res>
     Object? maxElement = freezed,
   }) {
     return _then(_MessageDefinitionFocus(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
-      min: min == freezed ? _value.min : min as UnsignedInt?,
-      minElement:
-          minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
-      maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      minElement: minElement == freezed
+          ? _value.minElement
+          : minElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxElement: maxElement == freezed
+          ? _value.maxElement
+          : maxElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -23861,7 +26234,6 @@ class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
 }
 
 abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
-  _MessageDefinitionFocus._() : super._();
   factory _MessageDefinitionFocus(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -23873,37 +26245,40 @@ abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement}) = _$_MessageDefinitionFocus;
+  _MessageDefinitionFocus._() : super._();
 
   factory _MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =
       _$_MessageDefinitionFocus.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get profile;
+  Canonical? get profile => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get min;
+  UnsignedInt? get min => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement;
+  Element? get minElement => throw _privateConstructorUsedError;
   @override
-  String? get max;
+  String? get max => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement;
+  Element? get maxElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageDefinitionFocusCopyWith<_MessageDefinitionFocus> get copyWith;
+  _$MessageDefinitionFocusCopyWith<_MessageDefinitionFocus> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MessageDefinitionAllowedResponse _$MessageDefinitionAllowedResponseFromJson(
@@ -23943,19 +26318,20 @@ const $MessageDefinitionAllowedResponse =
 
 /// @nodoc
 mixin _$MessageDefinitionAllowedResponse {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Canonical get message;
-  Markdown? get situation;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Canonical get message => throw _privateConstructorUsedError;
+  Markdown? get situation => throw _privateConstructorUsedError;
   @JsonKey(name: '_situation')
-  Element? get situationElement;
+  Element? get situationElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MessageDefinitionAllowedResponseCopyWith<MessageDefinitionAllowedResponse>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -23994,19 +26370,30 @@ class _$MessageDefinitionAllowedResponseCopyWithImpl<$Res>
     Object? situationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      message: message == freezed ? _value.message : message as Canonical,
-      situation:
-          situation == freezed ? _value.situation : situation as Markdown?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      situation: situation == freezed
+          ? _value.situation
+          : situation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       situationElement: situationElement == freezed
           ? _value.situationElement
-          : situationElement as Element?,
+          : situationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -24065,19 +26452,30 @@ class __$MessageDefinitionAllowedResponseCopyWithImpl<$Res>
     Object? situationElement = freezed,
   }) {
     return _then(_MessageDefinitionAllowedResponse(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      message: message == freezed ? _value.message : message as Canonical,
-      situation:
-          situation == freezed ? _value.situation : situation as Markdown?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      situation: situation == freezed
+          ? _value.situation
+          : situation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       situationElement: situationElement == freezed
           ? _value.situationElement
-          : situationElement as Element?,
+          : situationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -24167,7 +26565,6 @@ class _$_MessageDefinitionAllowedResponse
 
 abstract class _MessageDefinitionAllowedResponse
     extends MessageDefinitionAllowedResponse {
-  _MessageDefinitionAllowedResponse._() : super._();
   factory _MessageDefinitionAllowedResponse(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -24176,28 +26573,30 @@ abstract class _MessageDefinitionAllowedResponse
           Markdown? situation,
           @JsonKey(name: '_situation') Element? situationElement}) =
       _$_MessageDefinitionAllowedResponse;
+  _MessageDefinitionAllowedResponse._() : super._();
 
   factory _MessageDefinitionAllowedResponse.fromJson(
       Map<String, dynamic> json) = _$_MessageDefinitionAllowedResponse.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Canonical get message;
+  Canonical get message => throw _privateConstructorUsedError;
   @override
-  Markdown? get situation;
+  Markdown? get situation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_situation')
-  Element? get situationElement;
+  Element? get situationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MessageDefinitionAllowedResponseCopyWith<_MessageDefinitionAllowedResponse>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
@@ -24358,88 +26757,92 @@ const $OperationDefinition = _$OperationDefinitionTearOff();
 /// @nodoc
 mixin _$OperationDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get title;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-  OperationDefinitionStatus? get status;
+  OperationDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-  OperationDefinitionKind? get kind;
+  OperationDefinitionKind? get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_kind')
-  Element? get kindElement;
-  Boolean? get experimental;
+  Element? get kindElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get purpose;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
-  Boolean? get affectsState;
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  Boolean? get affectsState => throw _privateConstructorUsedError;
   @JsonKey(name: '_affectsState')
-  Element? get affectsStateElement;
-  Code? get code;
+  Element? get affectsStateElement => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
-  Markdown? get comment;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  Markdown? get comment => throw _privateConstructorUsedError;
   @JsonKey(name: '_comment')
-  Element? get commentElement;
-  Canonical? get base;
-  List<Code>? get resource;
+  Element? get commentElement => throw _privateConstructorUsedError;
+  Canonical? get base => throw _privateConstructorUsedError;
+  List<Code>? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: '_resource')
-  List<Element?>? get resourceElement;
-  Boolean? get system;
+  List<Element?>? get resourceElement => throw _privateConstructorUsedError;
+  Boolean? get system => throw _privateConstructorUsedError;
   @JsonKey(name: '_system')
-  Element? get systemElement;
-  Boolean? get type;
+  Element? get systemElement => throw _privateConstructorUsedError;
+  Boolean? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  Boolean? get instance;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  Boolean? get instance => throw _privateConstructorUsedError;
   @JsonKey(name: '_instance')
-  Element? get instanceElement;
-  Canonical? get inputProfile;
-  Canonical? get outputProfile;
-  List<OperationDefinitionParameter>? get parameter;
-  List<OperationDefinitionOverload>? get overload;
+  Element? get instanceElement => throw _privateConstructorUsedError;
+  Canonical? get inputProfile => throw _privateConstructorUsedError;
+  Canonical? get outputProfile => throw _privateConstructorUsedError;
+  List<OperationDefinitionParameter>? get parameter =>
+      throw _privateConstructorUsedError;
+  List<OperationDefinitionOverload>? get overload =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OperationDefinitionCopyWith<OperationDefinition> get copyWith;
+  $OperationDefinitionCopyWith<OperationDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -24621,124 +27024,224 @@ class _$OperationDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as OperationDefinitionStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
-      kind: kind == freezed ? _value.kind : kind as OperationDefinitionKind?,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionKind?,
+      kindElement: kindElement == freezed
+          ? _value.kindElement
+          : kindElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       affectsState: affectsState == freezed
           ? _value.affectsState
-          : affectsState as Boolean?,
+          : affectsState // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       affectsStateElement: affectsStateElement == freezed
           ? _value.affectsStateElement
-          : affectsStateElement as Element?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      comment: comment == freezed ? _value.comment : comment as Markdown?,
+          : affectsStateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
-      base: base == freezed ? _value.base : base as Canonical?,
-      resource: resource == freezed ? _value.resource : resource as List<Code>?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       resourceElement: resourceElement == freezed
           ? _value.resourceElement
-          : resourceElement as List<Element?>?,
-      system: system == freezed ? _value.system : system as Boolean?,
+          : resourceElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       systemElement: systemElement == freezed
           ? _value.systemElement
-          : systemElement as Element?,
-      type: type == freezed ? _value.type : type as Boolean?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      instance: instance == freezed ? _value.instance : instance as Boolean?,
+          : systemElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      instance: instance == freezed
+          ? _value.instance
+          : instance // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       instanceElement: instanceElement == freezed
           ? _value.instanceElement
-          : instanceElement as Element?,
+          : instanceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       inputProfile: inputProfile == freezed
           ? _value.inputProfile
-          : inputProfile as Canonical?,
+          : inputProfile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       outputProfile: outputProfile == freezed
           ? _value.outputProfile
-          : outputProfile as Canonical?,
+          : outputProfile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<OperationDefinitionParameter>?,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionParameter>?,
       overload: overload == freezed
           ? _value.overload
-          : overload as List<OperationDefinitionOverload>?,
+          : overload // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionOverload>?,
     ));
   }
 
@@ -25178,124 +27681,224 @@ class __$OperationDefinitionCopyWithImpl<$Res>
     return _then(_OperationDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as OperationDefinitionStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
-      kind: kind == freezed ? _value.kind : kind as OperationDefinitionKind?,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionKind?,
+      kindElement: kindElement == freezed
+          ? _value.kindElement
+          : kindElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       affectsState: affectsState == freezed
           ? _value.affectsState
-          : affectsState as Boolean?,
+          : affectsState // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       affectsStateElement: affectsStateElement == freezed
           ? _value.affectsStateElement
-          : affectsStateElement as Element?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      comment: comment == freezed ? _value.comment : comment as Markdown?,
+          : affectsStateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
-      base: base == freezed ? _value.base : base as Canonical?,
-      resource: resource == freezed ? _value.resource : resource as List<Code>?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       resourceElement: resourceElement == freezed
           ? _value.resourceElement
-          : resourceElement as List<Element?>?,
-      system: system == freezed ? _value.system : system as Boolean?,
+          : resourceElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       systemElement: systemElement == freezed
           ? _value.systemElement
-          : systemElement as Element?,
-      type: type == freezed ? _value.type : type as Boolean?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      instance: instance == freezed ? _value.instance : instance as Boolean?,
+          : systemElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      instance: instance == freezed
+          ? _value.instance
+          : instance // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       instanceElement: instanceElement == freezed
           ? _value.instanceElement
-          : instanceElement as Element?,
+          : instanceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       inputProfile: inputProfile == freezed
           ? _value.inputProfile
-          : inputProfile as Canonical?,
+          : inputProfile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       outputProfile: outputProfile == freezed
           ? _value.outputProfile
-          : outputProfile as Canonical?,
+          : outputProfile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<OperationDefinitionParameter>?,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionParameter>?,
       overload: overload == freezed
           ? _value.overload
-          : overload as List<OperationDefinitionOverload>?,
+          : overload // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionOverload>?,
     ));
   }
 }
@@ -25705,7 +28308,6 @@ class _$_OperationDefinition extends _OperationDefinition {
 }
 
 abstract class _OperationDefinition extends OperationDefinition {
-  _OperationDefinition._() : super._();
   factory _OperationDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
           R4ResourceType resourceType,
@@ -25786,147 +28388,152 @@ abstract class _OperationDefinition extends OperationDefinition {
       Canonical? outputProfile,
       List<OperationDefinitionParameter>? parameter,
       List<OperationDefinitionOverload>? overload}) = _$_OperationDefinition;
+  _OperationDefinition._() : super._();
 
   factory _OperationDefinition.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-  OperationDefinitionStatus? get status;
+  OperationDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-  OperationDefinitionKind? get kind;
+  OperationDefinitionKind? get kind => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_kind')
-  Element? get kindElement;
+  Element? get kindElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get affectsState;
+  Boolean? get affectsState => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_affectsState')
-  Element? get affectsStateElement;
+  Element? get affectsStateElement => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get comment;
+  Markdown? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get base;
+  Canonical? get base => throw _privateConstructorUsedError;
   @override
-  List<Code>? get resource;
+  List<Code>? get resource => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_resource')
-  List<Element?>? get resourceElement;
+  List<Element?>? get resourceElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get system;
+  Boolean? get system => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_system')
-  Element? get systemElement;
+  Element? get systemElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get type;
+  Boolean? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get instance;
+  Boolean? get instance => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_instance')
-  Element? get instanceElement;
+  Element? get instanceElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get inputProfile;
+  Canonical? get inputProfile => throw _privateConstructorUsedError;
   @override
-  Canonical? get outputProfile;
+  Canonical? get outputProfile => throw _privateConstructorUsedError;
   @override
-  List<OperationDefinitionParameter>? get parameter;
+  List<OperationDefinitionParameter>? get parameter =>
+      throw _privateConstructorUsedError;
   @override
-  List<OperationDefinitionOverload>? get overload;
+  List<OperationDefinitionOverload>? get overload =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith;
+  _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
@@ -26006,43 +28613,48 @@ const $OperationDefinitionParameter = _$OperationDefinitionParameterTearOff();
 
 /// @nodoc
 mixin _$OperationDefinitionParameter {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Code? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
-  OperationDefinitionParameterUse? get use;
+  OperationDefinitionParameterUse? get use =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_use')
-  Element? get useElement;
-  Integer? get min;
+  Element? get useElement => throw _privateConstructorUsedError;
+  Integer? get min => throw _privateConstructorUsedError;
   @JsonKey(name: '_min')
-  Element? get minElement;
-  String? get max;
+  Element? get minElement => throw _privateConstructorUsedError;
+  String? get max => throw _privateConstructorUsedError;
   @JsonKey(name: '_max')
-  Element? get maxElement;
-  String? get documentation;
+  Element? get maxElement => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
-  Code? get type;
+  Element? get documentationElement => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  List<Canonical>? get targetProfile;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  List<Canonical>? get targetProfile => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
-  OperationDefinitionParameterSearchType? get searchType;
+  OperationDefinitionParameterSearchType? get searchType =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_searchType')
-  Element? get searchTypeElement;
-  OperationDefinitionBinding? get binding;
-  List<OperationDefinitionReferencedFrom>? get referencedFrom;
+  Element? get searchTypeElement => throw _privateConstructorUsedError;
+  OperationDefinitionBinding? get binding => throw _privateConstructorUsedError;
+  List<OperationDefinitionReferencedFrom>? get referencedFrom =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'part')
-  List<OperationDefinitionParameter>? get part_;
+  List<OperationDefinitionParameter>? get part_ =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $OperationDefinitionParameterCopyWith<OperationDefinitionParameter>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -26129,53 +28741,90 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
     Object? part_ = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Code?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      use:
-          use == freezed ? _value.use : use as OperationDefinitionParameterUse?,
-      useElement:
-          useElement == freezed ? _value.useElement : useElement as Element?,
-      min: min == freezed ? _value.min : min as Integer?,
-      minElement:
-          minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
-      maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionParameterUse?,
+      useElement: useElement == freezed
+          ? _value.useElement
+          : useElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      minElement: minElement == freezed
+          ? _value.minElement
+          : minElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxElement: maxElement == freezed
+          ? _value.maxElement
+          : maxElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
-      type: type == freezed ? _value.type : type as Code?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
-          : targetProfile as List<Canonical>?,
+          : targetProfile // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       searchType: searchType == freezed
           ? _value.searchType
-          : searchType as OperationDefinitionParameterSearchType?,
+          : searchType // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionParameterSearchType?,
       searchTypeElement: searchTypeElement == freezed
           ? _value.searchTypeElement
-          : searchTypeElement as Element?,
+          : searchTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       binding: binding == freezed
           ? _value.binding
-          : binding as OperationDefinitionBinding?,
+          : binding // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionBinding?,
       referencedFrom: referencedFrom == freezed
           ? _value.referencedFrom
-          : referencedFrom as List<OperationDefinitionReferencedFrom>?,
+          : referencedFrom // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionReferencedFrom>?,
       part_: part_ == freezed
           ? _value.part_
-          : part_ as List<OperationDefinitionParameter>?,
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionParameter>?,
     ));
   }
 
@@ -26366,53 +29015,90 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
     Object? part_ = freezed,
   }) {
     return _then(_OperationDefinitionParameter(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Code?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      use:
-          use == freezed ? _value.use : use as OperationDefinitionParameterUse?,
-      useElement:
-          useElement == freezed ? _value.useElement : useElement as Element?,
-      min: min == freezed ? _value.min : min as Integer?,
-      minElement:
-          minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
-      maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionParameterUse?,
+      useElement: useElement == freezed
+          ? _value.useElement
+          : useElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      minElement: minElement == freezed
+          ? _value.minElement
+          : minElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxElement: maxElement == freezed
+          ? _value.maxElement
+          : maxElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
-      type: type == freezed ? _value.type : type as Code?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
-          : targetProfile as List<Canonical>?,
+          : targetProfile // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       searchType: searchType == freezed
           ? _value.searchType
-          : searchType as OperationDefinitionParameterSearchType?,
+          : searchType // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionParameterSearchType?,
       searchTypeElement: searchTypeElement == freezed
           ? _value.searchTypeElement
-          : searchTypeElement as Element?,
+          : searchTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       binding: binding == freezed
           ? _value.binding
-          : binding as OperationDefinitionBinding?,
+          : binding // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionBinding?,
       referencedFrom: referencedFrom == freezed
           ? _value.referencedFrom
-          : referencedFrom as List<OperationDefinitionReferencedFrom>?,
+          : referencedFrom // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionReferencedFrom>?,
       part_: part_ == freezed
           ? _value.part_
-          : part_ as List<OperationDefinitionParameter>?,
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as List<OperationDefinitionParameter>?,
     ));
   }
 }
@@ -26619,7 +29305,6 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 
 abstract class _OperationDefinitionParameter
     extends OperationDefinitionParameter {
-  _OperationDefinitionParameter._() : super._();
   factory _OperationDefinitionParameter(
       {String? id,
       @JsonKey(name: 'extension')
@@ -26654,67 +29339,73 @@ abstract class _OperationDefinitionParameter
       @JsonKey(name: 'part')
           List<OperationDefinitionParameter>?
               part_}) = _$_OperationDefinitionParameter;
+  _OperationDefinitionParameter._() : super._();
 
   factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionParameter.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get name;
+  Code? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
-  OperationDefinitionParameterUse? get use;
+  OperationDefinitionParameterUse? get use =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_use')
-  Element? get useElement;
+  Element? get useElement => throw _privateConstructorUsedError;
   @override
-  Integer? get min;
+  Integer? get min => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement;
+  Element? get minElement => throw _privateConstructorUsedError;
   @override
-  String? get max;
+  String? get max => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement;
+  Element? get maxElement => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
-  Code? get type;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get targetProfile;
+  List<Canonical>? get targetProfile => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
-  OperationDefinitionParameterSearchType? get searchType;
+  OperationDefinitionParameterSearchType? get searchType =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_searchType')
-  Element? get searchTypeElement;
+  Element? get searchTypeElement => throw _privateConstructorUsedError;
   @override
-  OperationDefinitionBinding? get binding;
+  OperationDefinitionBinding? get binding => throw _privateConstructorUsedError;
   @override
-  List<OperationDefinitionReferencedFrom>? get referencedFrom;
+  List<OperationDefinitionReferencedFrom>? get referencedFrom =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'part')
-  List<OperationDefinitionParameter>? get part_;
+  List<OperationDefinitionParameter>? get part_ =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 OperationDefinitionBinding _$OperationDefinitionBindingFromJson(
@@ -26756,19 +29447,22 @@ const $OperationDefinitionBinding = _$OperationDefinitionBindingTearOff();
 
 /// @nodoc
 mixin _$OperationDefinitionBinding {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
-  OperationDefinitionBindingStrength? get strength;
+  OperationDefinitionBindingStrength? get strength =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_strength')
-  Element? get strengthElement;
-  Canonical get valueSet;
+  Element? get strengthElement => throw _privateConstructorUsedError;
+  Canonical get valueSet => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OperationDefinitionBindingCopyWith<OperationDefinitionBinding> get copyWith;
+  $OperationDefinitionBindingCopyWith<OperationDefinitionBinding>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -26809,20 +29503,30 @@ class _$OperationDefinitionBindingCopyWithImpl<$Res>
     Object? valueSet = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       strength: strength == freezed
           ? _value.strength
-          : strength as OperationDefinitionBindingStrength?,
+          : strength // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionBindingStrength?,
       strengthElement: strengthElement == freezed
           ? _value.strengthElement
-          : strengthElement as Element?,
-      valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
+          : strengthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueSet: valueSet == freezed
+          ? _value.valueSet
+          : valueSet // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 
@@ -26883,20 +29587,30 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
     Object? valueSet = freezed,
   }) {
     return _then(_OperationDefinitionBinding(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       strength: strength == freezed
           ? _value.strength
-          : strength as OperationDefinitionBindingStrength?,
+          : strength // ignore: cast_nullable_to_non_nullable
+              as OperationDefinitionBindingStrength?,
       strengthElement: strengthElement == freezed
           ? _value.strengthElement
-          : strengthElement as Element?,
-      valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
+          : strengthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueSet: valueSet == freezed
+          ? _value.valueSet
+          : valueSet // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 }
@@ -26987,7 +29701,6 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
 }
 
 abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
-  _OperationDefinitionBinding._() : super._();
   factory _OperationDefinitionBinding(
       {String? id,
       @JsonKey(name: 'extension')
@@ -26998,29 +29711,32 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
       @JsonKey(name: '_strength')
           Element? strengthElement,
       required Canonical valueSet}) = _$_OperationDefinitionBinding;
+  _OperationDefinitionBinding._() : super._();
 
   factory _OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionBinding.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
-  OperationDefinitionBindingStrength? get strength;
+  OperationDefinitionBindingStrength? get strength =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_strength')
-  Element? get strengthElement;
+  Element? get strengthElement => throw _privateConstructorUsedError;
   @override
-  Canonical get valueSet;
+  Canonical get valueSet => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OperationDefinitionBindingCopyWith<_OperationDefinitionBinding>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 OperationDefinitionReferencedFrom _$OperationDefinitionReferencedFromFromJson(
@@ -27062,21 +29778,22 @@ const $OperationDefinitionReferencedFrom =
 
 /// @nodoc
 mixin _$OperationDefinitionReferencedFrom {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get source;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
   @JsonKey(name: '_source')
-  Element? get sourceElement;
-  String? get sourceId;
+  Element? get sourceElement => throw _privateConstructorUsedError;
+  String? get sourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sourceId')
-  Element? get sourceIdElement;
+  Element? get sourceIdElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $OperationDefinitionReferencedFromCopyWith<OperationDefinitionReferencedFrom>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -27118,21 +29835,34 @@ class _$OperationDefinitionReferencedFromCopyWithImpl<$Res>
     Object? sourceIdElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      source: source == freezed ? _value.source : source as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as String?,
       sourceElement: sourceElement == freezed
           ? _value.sourceElement
-          : sourceElement as Element?,
-      sourceId: sourceId == freezed ? _value.sourceId : sourceId as String?,
+          : sourceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceId: sourceId == freezed
+          ? _value.sourceId
+          : sourceId // ignore: cast_nullable_to_non_nullable
+              as String?,
       sourceIdElement: sourceIdElement == freezed
           ? _value.sourceIdElement
-          : sourceIdElement as Element?,
+          : sourceIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -27206,21 +29936,34 @@ class __$OperationDefinitionReferencedFromCopyWithImpl<$Res>
     Object? sourceIdElement = freezed,
   }) {
     return _then(_OperationDefinitionReferencedFrom(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      source: source == freezed ? _value.source : source as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as String?,
       sourceElement: sourceElement == freezed
           ? _value.sourceElement
-          : sourceElement as Element?,
-      sourceId: sourceId == freezed ? _value.sourceId : sourceId as String?,
+          : sourceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      sourceId: sourceId == freezed
+          ? _value.sourceId
+          : sourceId // ignore: cast_nullable_to_non_nullable
+              as String?,
       sourceIdElement: sourceIdElement == freezed
           ? _value.sourceIdElement
-          : sourceIdElement as Element?,
+          : sourceIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -27318,7 +30061,6 @@ class _$_OperationDefinitionReferencedFrom
 
 abstract class _OperationDefinitionReferencedFrom
     extends OperationDefinitionReferencedFrom {
-  _OperationDefinitionReferencedFrom._() : super._();
   factory _OperationDefinitionReferencedFrom(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -27328,32 +30070,35 @@ abstract class _OperationDefinitionReferencedFrom
           String? sourceId,
           @JsonKey(name: '_sourceId') Element? sourceIdElement}) =
       _$_OperationDefinitionReferencedFrom;
+  _OperationDefinitionReferencedFrom._() : super._();
 
   factory _OperationDefinitionReferencedFrom.fromJson(
           Map<String, dynamic> json) =
       _$_OperationDefinitionReferencedFrom.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get source;
+  String? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_source')
-  Element? get sourceElement;
+  Element? get sourceElement => throw _privateConstructorUsedError;
   @override
-  String? get sourceId;
+  String? get sourceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sourceId')
-  Element? get sourceIdElement;
+  Element? get sourceIdElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OperationDefinitionReferencedFromCopyWith<
-      _OperationDefinitionReferencedFrom> get copyWith;
+          _OperationDefinitionReferencedFrom>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 OperationDefinitionOverload _$OperationDefinitionOverloadFromJson(
@@ -27394,21 +30139,23 @@ const $OperationDefinitionOverload = _$OperationDefinitionOverloadTearOff();
 
 /// @nodoc
 mixin _$OperationDefinitionOverload {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<String>? get parameterName;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<String>? get parameterName => throw _privateConstructorUsedError;
   @JsonKey(name: '_parameterName')
-  List<Element?>? get parameterNameElement;
-  String? get comment;
+  List<Element?>? get parameterNameElement =>
+      throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $OperationDefinitionOverloadCopyWith<OperationDefinitionOverload>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -27449,23 +30196,34 @@ class _$OperationDefinitionOverloadCopyWithImpl<$Res>
     Object? commentElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       parameterName: parameterName == freezed
           ? _value.parameterName
-          : parameterName as List<String>?,
+          : parameterName // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       parameterNameElement: parameterNameElement == freezed
           ? _value.parameterNameElement
-          : parameterNameElement as List<Element?>?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : parameterNameElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -27526,23 +30284,34 @@ class __$OperationDefinitionOverloadCopyWithImpl<$Res>
     Object? commentElement = freezed,
   }) {
     return _then(_OperationDefinitionOverload(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       parameterName: parameterName == freezed
           ? _value.parameterName
-          : parameterName as List<String>?,
+          : parameterName // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       parameterNameElement: parameterNameElement == freezed
           ? _value.parameterNameElement
-          : parameterNameElement as List<Element?>?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : parameterNameElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -27638,7 +30407,6 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
 
 abstract class _OperationDefinitionOverload
     extends OperationDefinitionOverload {
-  _OperationDefinitionOverload._() : super._();
   factory _OperationDefinitionOverload(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -27648,31 +30416,34 @@ abstract class _OperationDefinitionOverload
           String? comment,
           @JsonKey(name: '_comment') Element? commentElement}) =
       _$_OperationDefinitionOverload;
+  _OperationDefinitionOverload._() : super._();
 
   factory _OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionOverload.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get parameterName;
+  List<String>? get parameterName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_parameterName')
-  List<Element?>? get parameterNameElement;
+  List<Element?>? get parameterNameElement =>
+      throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OperationDefinitionOverloadCopyWith<_OperationDefinitionOverload>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
@@ -27843,95 +30614,101 @@ const $SearchParameter = _$SearchParameterTearOff();
 /// @nodoc
 mixin _$SearchParameter {
   @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  Canonical? get derivedFrom;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  Canonical? get derivedFrom => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-  SearchParameterStatus? get status;
+  SearchParameterStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  Boolean? get experimental;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get purpose;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
-  Code? get code;
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element? get codeElement;
-  List<Code>? get base;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  List<Code>? get base => throw _privateConstructorUsedError;
   @JsonKey(name: '_base')
-  List<Element?>? get baseElement;
+  List<Element?>? get baseElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-  SearchParameterType? get type;
+  SearchParameterType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  String? get expression;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  String? get expression => throw _privateConstructorUsedError;
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
-  String? get xpath;
+  Element? get expressionElement => throw _privateConstructorUsedError;
+  String? get xpath => throw _privateConstructorUsedError;
   @JsonKey(name: '_xpath')
-  Element? get xpathElement;
+  Element? get xpathElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-  SearchParameterXpathUsage? get xpathUsage;
+  SearchParameterXpathUsage? get xpathUsage =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_xpathUsage')
-  Element? get xpathUsageElement;
-  List<Code>? get target;
+  Element? get xpathUsageElement => throw _privateConstructorUsedError;
+  List<Code>? get target => throw _privateConstructorUsedError;
   @JsonKey(name: '_target')
-  List<Element?>? get targetElement;
-  Boolean? get multipleOr;
+  List<Element?>? get targetElement => throw _privateConstructorUsedError;
+  Boolean? get multipleOr => throw _privateConstructorUsedError;
   @JsonKey(name: '_multipleOr')
-  Element? get multipleOrElement;
-  Boolean? get multipleAnd;
+  Element? get multipleOrElement => throw _privateConstructorUsedError;
+  Boolean? get multipleAnd => throw _privateConstructorUsedError;
   @JsonKey(name: '_multipleAnd')
-  Element? get multipleAndElement;
-  List<SearchParameterComparator>? get comparator;
+  Element? get multipleAndElement => throw _privateConstructorUsedError;
+  List<SearchParameterComparator>? get comparator =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_comparator')
-  List<Element?>? get comparatorElement;
-  List<SearchParameterModifier>? get modifier;
+  List<Element?>? get comparatorElement => throw _privateConstructorUsedError;
+  List<SearchParameterModifier>? get modifier =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_modifier')
-  List<Element?>? get modifierElement;
-  List<String>? get chain;
+  List<Element?>? get modifierElement => throw _privateConstructorUsedError;
+  List<String>? get chain => throw _privateConstructorUsedError;
   @JsonKey(name: '_chain')
-  List<Element?>? get chainElement;
-  List<SearchParameterComponent>? get component;
+  List<Element?>? get chainElement => throw _privateConstructorUsedError;
+  List<SearchParameterComponent>? get component =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SearchParameterCopyWith<SearchParameter> get copyWith;
+  $SearchParameterCopyWith<SearchParameter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -28122,136 +30899,236 @@ class _$SearchParameterCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       derivedFrom: derivedFrom == freezed
           ? _value.derivedFrom
-          : derivedFrom as Canonical?,
-      status:
-          status == freezed ? _value.status : status as SearchParameterStatus?,
+          : derivedFrom // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as SearchParameterStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      base: base == freezed ? _value.base : base as List<Code>?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       baseElement: baseElement == freezed
           ? _value.baseElement
-          : baseElement as List<Element?>?,
-      type: type == freezed ? _value.type : type as SearchParameterType?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      expression:
-          expression == freezed ? _value.expression : expression as String?,
+          : baseElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SearchParameterType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as String?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element?,
-      xpath: xpath == freezed ? _value.xpath : xpath as String?,
+          : expressionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      xpath: xpath == freezed
+          ? _value.xpath
+          : xpath // ignore: cast_nullable_to_non_nullable
+              as String?,
       xpathElement: xpathElement == freezed
           ? _value.xpathElement
-          : xpathElement as Element?,
+          : xpathElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       xpathUsage: xpathUsage == freezed
           ? _value.xpathUsage
-          : xpathUsage as SearchParameterXpathUsage?,
+          : xpathUsage // ignore: cast_nullable_to_non_nullable
+              as SearchParameterXpathUsage?,
       xpathUsageElement: xpathUsageElement == freezed
           ? _value.xpathUsageElement
-          : xpathUsageElement as Element?,
-      target: target == freezed ? _value.target : target as List<Code>?,
+          : xpathUsageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       targetElement: targetElement == freezed
           ? _value.targetElement
-          : targetElement as List<Element?>?,
-      multipleOr:
-          multipleOr == freezed ? _value.multipleOr : multipleOr as Boolean?,
+          : targetElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      multipleOr: multipleOr == freezed
+          ? _value.multipleOr
+          : multipleOr // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       multipleOrElement: multipleOrElement == freezed
           ? _value.multipleOrElement
-          : multipleOrElement as Element?,
-      multipleAnd:
-          multipleAnd == freezed ? _value.multipleAnd : multipleAnd as Boolean?,
+          : multipleOrElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      multipleAnd: multipleAnd == freezed
+          ? _value.multipleAnd
+          : multipleAnd // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       multipleAndElement: multipleAndElement == freezed
           ? _value.multipleAndElement
-          : multipleAndElement as Element?,
+          : multipleAndElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as List<SearchParameterComparator>?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as List<SearchParameterComparator>?,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
-          : comparatorElement as List<Element?>?,
+          : comparatorElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<SearchParameterModifier>?,
+          : modifier // ignore: cast_nullable_to_non_nullable
+              as List<SearchParameterModifier>?,
       modifierElement: modifierElement == freezed
           ? _value.modifierElement
-          : modifierElement as List<Element?>?,
-      chain: chain == freezed ? _value.chain : chain as List<String>?,
+          : modifierElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      chain: chain == freezed
+          ? _value.chain
+          : chain // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       chainElement: chainElement == freezed
           ? _value.chainElement
-          : chainElement as List<Element?>?,
+          : chainElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       component: component == freezed
           ? _value.component
-          : component as List<SearchParameterComponent>?,
+          : component // ignore: cast_nullable_to_non_nullable
+              as List<SearchParameterComponent>?,
     ));
   }
 
@@ -28688,136 +31565,236 @@ class __$SearchParameterCopyWithImpl<$Res>
     return _then(_SearchParameter(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       derivedFrom: derivedFrom == freezed
           ? _value.derivedFrom
-          : derivedFrom as Canonical?,
-      status:
-          status == freezed ? _value.status : status as SearchParameterStatus?,
+          : derivedFrom // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as SearchParameterStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      code: code == freezed ? _value.code : code as Code?,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      base: base == freezed ? _value.base : base as List<Code>?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       baseElement: baseElement == freezed
           ? _value.baseElement
-          : baseElement as List<Element?>?,
-      type: type == freezed ? _value.type : type as SearchParameterType?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      expression:
-          expression == freezed ? _value.expression : expression as String?,
+          : baseElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SearchParameterType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as String?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element?,
-      xpath: xpath == freezed ? _value.xpath : xpath as String?,
+          : expressionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      xpath: xpath == freezed
+          ? _value.xpath
+          : xpath // ignore: cast_nullable_to_non_nullable
+              as String?,
       xpathElement: xpathElement == freezed
           ? _value.xpathElement
-          : xpathElement as Element?,
+          : xpathElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       xpathUsage: xpathUsage == freezed
           ? _value.xpathUsage
-          : xpathUsage as SearchParameterXpathUsage?,
+          : xpathUsage // ignore: cast_nullable_to_non_nullable
+              as SearchParameterXpathUsage?,
       xpathUsageElement: xpathUsageElement == freezed
           ? _value.xpathUsageElement
-          : xpathUsageElement as Element?,
-      target: target == freezed ? _value.target : target as List<Code>?,
+          : xpathUsageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       targetElement: targetElement == freezed
           ? _value.targetElement
-          : targetElement as List<Element?>?,
-      multipleOr:
-          multipleOr == freezed ? _value.multipleOr : multipleOr as Boolean?,
+          : targetElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      multipleOr: multipleOr == freezed
+          ? _value.multipleOr
+          : multipleOr // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       multipleOrElement: multipleOrElement == freezed
           ? _value.multipleOrElement
-          : multipleOrElement as Element?,
-      multipleAnd:
-          multipleAnd == freezed ? _value.multipleAnd : multipleAnd as Boolean?,
+          : multipleOrElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      multipleAnd: multipleAnd == freezed
+          ? _value.multipleAnd
+          : multipleAnd // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       multipleAndElement: multipleAndElement == freezed
           ? _value.multipleAndElement
-          : multipleAndElement as Element?,
+          : multipleAndElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as List<SearchParameterComparator>?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as List<SearchParameterComparator>?,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
-          : comparatorElement as List<Element?>?,
+          : comparatorElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<SearchParameterModifier>?,
+          : modifier // ignore: cast_nullable_to_non_nullable
+              as List<SearchParameterModifier>?,
       modifierElement: modifierElement == freezed
           ? _value.modifierElement
-          : modifierElement as List<Element?>?,
-      chain: chain == freezed ? _value.chain : chain as List<String>?,
+          : modifierElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      chain: chain == freezed
+          ? _value.chain
+          : chain // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       chainElement: chainElement == freezed
           ? _value.chainElement
-          : chainElement as List<Element?>?,
+          : chainElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
       component: component == freezed
           ? _value.component
-          : component as List<SearchParameterComponent>?,
+          : component // ignore: cast_nullable_to_non_nullable
+              as List<SearchParameterComponent>?,
     ));
   }
 }
@@ -29249,7 +32226,6 @@ class _$_SearchParameter extends _SearchParameter {
 }
 
 abstract class _SearchParameter extends SearchParameter {
-  _SearchParameter._() : super._();
   factory _SearchParameter(
       {@JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
           R4ResourceType resourceType,
@@ -29337,157 +32313,164 @@ abstract class _SearchParameter extends SearchParameter {
       @JsonKey(name: '_chain')
           List<Element?>? chainElement,
       List<SearchParameterComponent>? component}) = _$_SearchParameter;
+  _SearchParameter._() : super._();
 
   factory _SearchParameter.fromJson(Map<String, dynamic> json) =
       _$_SearchParameter.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get derivedFrom;
+  Canonical? get derivedFrom => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-  SearchParameterStatus? get status;
+  SearchParameterStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element? get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  List<Code>? get base;
+  List<Code>? get base => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_base')
-  List<Element?>? get baseElement;
+  List<Element?>? get baseElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-  SearchParameterType? get type;
+  SearchParameterType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  String? get expression;
+  String? get expression => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
+  Element? get expressionElement => throw _privateConstructorUsedError;
   @override
-  String? get xpath;
+  String? get xpath => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_xpath')
-  Element? get xpathElement;
+  Element? get xpathElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-  SearchParameterXpathUsage? get xpathUsage;
+  SearchParameterXpathUsage? get xpathUsage =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_xpathUsage')
-  Element? get xpathUsageElement;
+  Element? get xpathUsageElement => throw _privateConstructorUsedError;
   @override
-  List<Code>? get target;
+  List<Code>? get target => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_target')
-  List<Element?>? get targetElement;
+  List<Element?>? get targetElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get multipleOr;
+  Boolean? get multipleOr => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_multipleOr')
-  Element? get multipleOrElement;
+  Element? get multipleOrElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get multipleAnd;
+  Boolean? get multipleAnd => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_multipleAnd')
-  Element? get multipleAndElement;
+  Element? get multipleAndElement => throw _privateConstructorUsedError;
   @override
-  List<SearchParameterComparator>? get comparator;
+  List<SearchParameterComparator>? get comparator =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comparator')
-  List<Element?>? get comparatorElement;
+  List<Element?>? get comparatorElement => throw _privateConstructorUsedError;
   @override
-  List<SearchParameterModifier>? get modifier;
+  List<SearchParameterModifier>? get modifier =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_modifier')
-  List<Element?>? get modifierElement;
+  List<Element?>? get modifierElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get chain;
+  List<String>? get chain => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_chain')
-  List<Element?>? get chainElement;
+  List<Element?>? get chainElement => throw _privateConstructorUsedError;
   @override
-  List<SearchParameterComponent>? get component;
+  List<SearchParameterComponent>? get component =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SearchParameterCopyWith<_SearchParameter> get copyWith;
+  _$SearchParameterCopyWith<_SearchParameter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SearchParameterComponent _$SearchParameterComponentFromJson(
@@ -29526,18 +32509,20 @@ const $SearchParameterComponent = _$SearchParameterComponentTearOff();
 
 /// @nodoc
 mixin _$SearchParameterComponent {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Canonical get definition;
-  String? get expression;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Canonical get definition => throw _privateConstructorUsedError;
+  String? get expression => throw _privateConstructorUsedError;
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
+  Element? get expressionElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SearchParameterComponentCopyWith<SearchParameterComponent> get copyWith;
+  $SearchParameterComponentCopyWith<SearchParameterComponent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -29575,20 +32560,30 @@ class _$SearchParameterComponentCopyWithImpl<$Res>
     Object? expressionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
-      expression:
-          expression == freezed ? _value.expression : expression as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as String?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element?,
+          : expressionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -29645,20 +32640,30 @@ class __$SearchParameterComponentCopyWithImpl<$Res>
     Object? expressionElement = freezed,
   }) {
     return _then(_SearchParameterComponent(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
-      expression:
-          expression == freezed ? _value.expression : expression as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as String?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element?,
+          : expressionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -29745,7 +32750,6 @@ class _$_SearchParameterComponent extends _SearchParameterComponent {
 }
 
 abstract class _SearchParameterComponent extends SearchParameterComponent {
-  _SearchParameterComponent._() : super._();
   factory _SearchParameterComponent(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -29754,27 +32758,30 @@ abstract class _SearchParameterComponent extends SearchParameterComponent {
           String? expression,
           @JsonKey(name: '_expression') Element? expressionElement}) =
       _$_SearchParameterComponent;
+  _SearchParameterComponent._() : super._();
 
   factory _SearchParameterComponent.fromJson(Map<String, dynamic> json) =
       _$_SearchParameterComponent.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Canonical get definition;
+  Canonical get definition => throw _privateConstructorUsedError;
   @override
-  String? get expression;
+  String? get expression => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
+  Element? get expressionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SearchParameterComponentCopyWith<_SearchParameterComponent> get copyWith;
+  _$SearchParameterComponentCopyWith<_SearchParameterComponent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
@@ -29940,92 +32947,101 @@ const $StructureDefinition = _$StructureDefinitionTearOff();
 /// @nodoc
 mixin _$StructureDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  List<Identifier>? get identifier;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get title;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-  StructureDefinitionStatus? get status;
+  StructureDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  Boolean? get experimental;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get purpose;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
-  Markdown? get copyright;
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
-  List<Coding>? get keyword;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  List<Coding>? get keyword => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
-  StructureDefinitionFhirVersion? get fhirVersion;
+  StructureDefinitionFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement;
-  List<StructureDefinitionMapping>? get mapping;
+  Element? get fhirVersionElement => throw _privateConstructorUsedError;
+  List<StructureDefinitionMapping>? get mapping =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-  StructureDefinitionKind? get kind;
+  StructureDefinitionKind? get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_kind')
-  Element? get kindElement;
+  Element? get kindElement => throw _privateConstructorUsedError;
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_;
+  Boolean? get abstract_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_abstract')
-  Element? get abstractElement;
-  List<StructureDefinitionContext>? get context;
-  List<String>? get contextInvariant;
+  Element? get abstractElement => throw _privateConstructorUsedError;
+  List<StructureDefinitionContext>? get context =>
+      throw _privateConstructorUsedError;
+  List<String>? get contextInvariant => throw _privateConstructorUsedError;
   @JsonKey(name: '_contextInvariant')
-  List<Element?>? get contextInvariantElement;
-  FhirUri? get type;
+  List<Element?>? get contextInvariantElement =>
+      throw _privateConstructorUsedError;
+  FhirUri? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  Canonical? get baseDefinition;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  Canonical? get baseDefinition => throw _privateConstructorUsedError;
   @JsonKey(name: '_baseDefinition')
-  Element? get baseDefinitionElement;
+  Element? get baseDefinitionElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
-  StructureDefinitionDerivation? get derivation;
+  StructureDefinitionDerivation? get derivation =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_derivation')
-  Element? get derivationElement;
-  StructureDefinitionSnapshot? get snapshot;
-  StructureDefinitionDifferential? get differential;
+  Element? get derivationElement => throw _privateConstructorUsedError;
+  StructureDefinitionSnapshot? get snapshot =>
+      throw _privateConstructorUsedError;
+  StructureDefinitionDifferential? get differential =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureDefinitionCopyWith<StructureDefinition> get copyWith;
+  $StructureDefinitionCopyWith<StructureDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -30214,136 +33230,228 @@ class _$StructureDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      version: version == freezed ? _value.version : version as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as StructureDefinitionStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      keyword: keyword == freezed ? _value.keyword : keyword as List<Coding>?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      keyword: keyword == freezed
+          ? _value.keyword
+          : keyword // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as StructureDefinitionFhirVersion?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionFhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as Element?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       mapping: mapping == freezed
           ? _value.mapping
-          : mapping as List<StructureDefinitionMapping>?,
-      kind: kind == freezed ? _value.kind : kind as StructureDefinitionKind?,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element?,
-      abstract_:
-          abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean?,
+          : mapping // ignore: cast_nullable_to_non_nullable
+              as List<StructureDefinitionMapping>?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionKind?,
+      kindElement: kindElement == freezed
+          ? _value.kindElement
+          : kindElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      abstract_: abstract_ == freezed
+          ? _value.abstract_
+          : abstract_ // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       abstractElement: abstractElement == freezed
           ? _value.abstractElement
-          : abstractElement as Element?,
+          : abstractElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       context: context == freezed
           ? _value.context
-          : context as List<StructureDefinitionContext>?,
+          : context // ignore: cast_nullable_to_non_nullable
+              as List<StructureDefinitionContext>?,
       contextInvariant: contextInvariant == freezed
           ? _value.contextInvariant
-          : contextInvariant as List<String>?,
+          : contextInvariant // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       contextInvariantElement: contextInvariantElement == freezed
           ? _value.contextInvariantElement
-          : contextInvariantElement as List<Element?>?,
-      type: type == freezed ? _value.type : type as FhirUri?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+          : contextInvariantElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       baseDefinition: baseDefinition == freezed
           ? _value.baseDefinition
-          : baseDefinition as Canonical?,
+          : baseDefinition // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       baseDefinitionElement: baseDefinitionElement == freezed
           ? _value.baseDefinitionElement
-          : baseDefinitionElement as Element?,
+          : baseDefinitionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       derivation: derivation == freezed
           ? _value.derivation
-          : derivation as StructureDefinitionDerivation?,
+          : derivation // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionDerivation?,
       derivationElement: derivationElement == freezed
           ? _value.derivationElement
-          : derivationElement as Element?,
+          : derivationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       snapshot: snapshot == freezed
           ? _value.snapshot
-          : snapshot as StructureDefinitionSnapshot?,
+          : snapshot // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionSnapshot?,
       differential: differential == freezed
           ? _value.differential
-          : differential as StructureDefinitionDifferential?,
+          : differential // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionDifferential?,
     ));
   }
 
@@ -30816,136 +33924,228 @@ class __$StructureDefinitionCopyWithImpl<$Res>
     return _then(_StructureDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      version: version == freezed ? _value.version : version as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
-          : status as StructureDefinitionStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
-      keyword: keyword == freezed ? _value.keyword : keyword as List<Coding>?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      keyword: keyword == freezed
+          ? _value.keyword
+          : keyword // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as StructureDefinitionFhirVersion?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionFhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as Element?,
+          : fhirVersionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       mapping: mapping == freezed
           ? _value.mapping
-          : mapping as List<StructureDefinitionMapping>?,
-      kind: kind == freezed ? _value.kind : kind as StructureDefinitionKind?,
-      kindElement:
-          kindElement == freezed ? _value.kindElement : kindElement as Element?,
-      abstract_:
-          abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean?,
+          : mapping // ignore: cast_nullable_to_non_nullable
+              as List<StructureDefinitionMapping>?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionKind?,
+      kindElement: kindElement == freezed
+          ? _value.kindElement
+          : kindElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      abstract_: abstract_ == freezed
+          ? _value.abstract_
+          : abstract_ // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       abstractElement: abstractElement == freezed
           ? _value.abstractElement
-          : abstractElement as Element?,
+          : abstractElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       context: context == freezed
           ? _value.context
-          : context as List<StructureDefinitionContext>?,
+          : context // ignore: cast_nullable_to_non_nullable
+              as List<StructureDefinitionContext>?,
       contextInvariant: contextInvariant == freezed
           ? _value.contextInvariant
-          : contextInvariant as List<String>?,
+          : contextInvariant // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       contextInvariantElement: contextInvariantElement == freezed
           ? _value.contextInvariantElement
-          : contextInvariantElement as List<Element?>?,
-      type: type == freezed ? _value.type : type as FhirUri?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+          : contextInvariantElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       baseDefinition: baseDefinition == freezed
           ? _value.baseDefinition
-          : baseDefinition as Canonical?,
+          : baseDefinition // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       baseDefinitionElement: baseDefinitionElement == freezed
           ? _value.baseDefinitionElement
-          : baseDefinitionElement as Element?,
+          : baseDefinitionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       derivation: derivation == freezed
           ? _value.derivation
-          : derivation as StructureDefinitionDerivation?,
+          : derivation // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionDerivation?,
       derivationElement: derivationElement == freezed
           ? _value.derivationElement
-          : derivationElement as Element?,
+          : derivationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       snapshot: snapshot == freezed
           ? _value.snapshot
-          : snapshot as StructureDefinitionSnapshot?,
+          : snapshot // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionSnapshot?,
       differential: differential == freezed
           ? _value.differential
-          : differential as StructureDefinitionDifferential?,
+          : differential // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionDifferential?,
     ));
   }
 }
@@ -31366,7 +34566,6 @@ class _$_StructureDefinition extends _StructureDefinition {
 }
 
 abstract class _StructureDefinition extends StructureDefinition {
-  _StructureDefinition._() : super._();
   factory _StructureDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
           R4ResourceType resourceType,
@@ -31451,152 +34650,162 @@ abstract class _StructureDefinition extends StructureDefinition {
           Element? derivationElement,
       StructureDefinitionSnapshot? snapshot,
       StructureDefinitionDifferential? differential}) = _$_StructureDefinition;
+  _StructureDefinition._() : super._();
 
   factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-  StructureDefinitionStatus? get status;
+  StructureDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get copyright;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  List<Coding>? get keyword;
+  List<Coding>? get keyword => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
-  StructureDefinitionFhirVersion? get fhirVersion;
+  StructureDefinitionFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement;
+  Element? get fhirVersionElement => throw _privateConstructorUsedError;
   @override
-  List<StructureDefinitionMapping>? get mapping;
+  List<StructureDefinitionMapping>? get mapping =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-  StructureDefinitionKind? get kind;
+  StructureDefinitionKind? get kind => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_kind')
-  Element? get kindElement;
+  Element? get kindElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_;
+  Boolean? get abstract_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_abstract')
-  Element? get abstractElement;
+  Element? get abstractElement => throw _privateConstructorUsedError;
   @override
-  List<StructureDefinitionContext>? get context;
+  List<StructureDefinitionContext>? get context =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get contextInvariant;
+  List<String>? get contextInvariant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_contextInvariant')
-  List<Element?>? get contextInvariantElement;
+  List<Element?>? get contextInvariantElement =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get type;
+  FhirUri? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get baseDefinition;
+  Canonical? get baseDefinition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_baseDefinition')
-  Element? get baseDefinitionElement;
+  Element? get baseDefinitionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
-  StructureDefinitionDerivation? get derivation;
+  StructureDefinitionDerivation? get derivation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_derivation')
-  Element? get derivationElement;
+  Element? get derivationElement => throw _privateConstructorUsedError;
   @override
-  StructureDefinitionSnapshot? get snapshot;
+  StructureDefinitionSnapshot? get snapshot =>
+      throw _privateConstructorUsedError;
   @override
-  StructureDefinitionDifferential? get differential;
+  StructureDefinitionDifferential? get differential =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureDefinitionCopyWith<_StructureDefinition> get copyWith;
+  _$StructureDefinitionCopyWith<_StructureDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureDefinitionMapping _$StructureDefinitionMappingFromJson(
@@ -31645,26 +34854,28 @@ const $StructureDefinitionMapping = _$StructureDefinitionMappingTearOff();
 
 /// @nodoc
 mixin _$StructureDefinitionMapping {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Id? get identity;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Id? get identity => throw _privateConstructorUsedError;
   @JsonKey(name: '_identity')
-  Element? get identityElement;
-  FhirUri? get uri;
+  Element? get identityElement => throw _privateConstructorUsedError;
+  FhirUri? get uri => throw _privateConstructorUsedError;
   @JsonKey(name: '_uri')
-  Element? get uriElement;
-  String? get name;
+  Element? get uriElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get comment;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureDefinitionMappingCopyWith<StructureDefinitionMapping> get copyWith;
+  $StructureDefinitionMappingCopyWith<StructureDefinitionMapping>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -31715,27 +34926,50 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res>
     Object? commentElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identity: identity == freezed ? _value.identity : identity as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identity: identity == freezed
+          ? _value.identity
+          : identity // ignore: cast_nullable_to_non_nullable
+              as Id?,
       identityElement: identityElement == freezed
           ? _value.identityElement
-          : identityElement as Element?,
-      uri: uri == freezed ? _value.uri : uri as FhirUri?,
-      uriElement:
-          uriElement == freezed ? _value.uriElement : uriElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : identityElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      uri: uri == freezed
+          ? _value.uri
+          : uri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      uriElement: uriElement == freezed
+          ? _value.uriElement
+          : uriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -31842,27 +35076,50 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
     Object? commentElement = freezed,
   }) {
     return _then(_StructureDefinitionMapping(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      identity: identity == freezed ? _value.identity : identity as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identity: identity == freezed
+          ? _value.identity
+          : identity // ignore: cast_nullable_to_non_nullable
+              as Id?,
       identityElement: identityElement == freezed
           ? _value.identityElement
-          : identityElement as Element?,
-      uri: uri == freezed ? _value.uri : uri as FhirUri?,
-      uriElement:
-          uriElement == freezed ? _value.uriElement : uriElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      comment: comment == freezed ? _value.comment : comment as String?,
+          : identityElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      uri: uri == freezed
+          ? _value.uri
+          : uri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      uriElement: uriElement == freezed
+          ? _value.uriElement
+          : uriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
-          : commentElement as Element?,
+          : commentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -31985,7 +35242,6 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
 }
 
 abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
-  _StructureDefinitionMapping._() : super._();
   factory _StructureDefinitionMapping(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -31999,41 +35255,43 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
           String? comment,
           @JsonKey(name: '_comment') Element? commentElement}) =
       _$_StructureDefinitionMapping;
+  _StructureDefinitionMapping._() : super._();
 
   factory _StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionMapping.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get identity;
+  Id? get identity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_identity')
-  Element? get identityElement;
+  Element? get identityElement => throw _privateConstructorUsedError;
   @override
-  FhirUri? get uri;
+  FhirUri? get uri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_uri')
-  Element? get uriElement;
+  Element? get uriElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get comment;
+  String? get comment => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_comment')
-  Element? get commentElement;
+  Element? get commentElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$StructureDefinitionMappingCopyWith<_StructureDefinitionMapping>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 StructureDefinitionContext _$StructureDefinitionContextFromJson(
@@ -32078,21 +35336,24 @@ const $StructureDefinitionContext = _$StructureDefinitionContextTearOff();
 
 /// @nodoc
 mixin _$StructureDefinitionContext {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-  StructureDefinitionContextType? get type;
+  StructureDefinitionContextType? get type =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  String? get expression;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  String? get expression => throw _privateConstructorUsedError;
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
+  Element? get expressionElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureDefinitionContextCopyWith<StructureDefinitionContext> get copyWith;
+  $StructureDefinitionContextCopyWith<StructureDefinitionContext>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -32137,23 +35398,34 @@ class _$StructureDefinitionContextCopyWithImpl<$Res>
     Object? expressionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
-          : type as StructureDefinitionContextType?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      expression:
-          expression == freezed ? _value.expression : expression as String?,
+          : type // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionContextType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as String?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element?,
+          : expressionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -32230,23 +35502,34 @@ class __$StructureDefinitionContextCopyWithImpl<$Res>
     Object? expressionElement = freezed,
   }) {
     return _then(_StructureDefinitionContext(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
-          : type as StructureDefinitionContextType?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      expression:
-          expression == freezed ? _value.expression : expression as String?,
+          : type // ignore: cast_nullable_to_non_nullable
+              as StructureDefinitionContextType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as String?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as Element?,
+          : expressionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -32345,7 +35628,6 @@ class _$_StructureDefinitionContext extends _StructureDefinitionContext {
 }
 
 abstract class _StructureDefinitionContext extends StructureDefinitionContext {
-  _StructureDefinitionContext._() : super._();
   factory _StructureDefinitionContext(
       {String? id,
       @JsonKey(name: 'extension')
@@ -32358,32 +35640,35 @@ abstract class _StructureDefinitionContext extends StructureDefinitionContext {
       String? expression,
       @JsonKey(name: '_expression')
           Element? expressionElement}) = _$_StructureDefinitionContext;
+  _StructureDefinitionContext._() : super._();
 
   factory _StructureDefinitionContext.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionContext.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-  StructureDefinitionContextType? get type;
+  StructureDefinitionContextType? get type =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  String? get expression;
+  String? get expression => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_expression')
-  Element? get expressionElement;
+  Element? get expressionElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$StructureDefinitionContextCopyWith<_StructureDefinitionContext>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 StructureDefinitionSnapshot _$StructureDefinitionSnapshotFromJson(
@@ -32418,16 +35703,17 @@ const $StructureDefinitionSnapshot = _$StructureDefinitionSnapshotTearOff();
 
 /// @nodoc
 mixin _$StructureDefinitionSnapshot {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<ElementDefinition> get element;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<ElementDefinition> get element => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $StructureDefinitionSnapshotCopyWith<StructureDefinitionSnapshot>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -32460,16 +35746,22 @@ class _$StructureDefinitionSnapshotCopyWithImpl<$Res>
     Object? element = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition>,
+          : element // ignore: cast_nullable_to_non_nullable
+              as List<ElementDefinition>,
     ));
   }
 }
@@ -32510,16 +35802,22 @@ class __$StructureDefinitionSnapshotCopyWithImpl<$Res>
     Object? element = freezed,
   }) {
     return _then(_StructureDefinitionSnapshot(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition>,
+          : element // ignore: cast_nullable_to_non_nullable
+              as List<ElementDefinition>,
     ));
   }
 }
@@ -32591,30 +35889,31 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
 
 abstract class _StructureDefinitionSnapshot
     extends StructureDefinitionSnapshot {
-  _StructureDefinitionSnapshot._() : super._();
   factory _StructureDefinitionSnapshot(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
           required List<ElementDefinition> element}) =
       _$_StructureDefinitionSnapshot;
+  _StructureDefinitionSnapshot._() : super._();
 
   factory _StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionSnapshot.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<ElementDefinition> get element;
+  List<ElementDefinition> get element => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$StructureDefinitionSnapshotCopyWith<_StructureDefinitionSnapshot>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 StructureDefinitionDifferential _$StructureDefinitionDifferentialFromJson(
@@ -32650,16 +35949,17 @@ const $StructureDefinitionDifferential =
 
 /// @nodoc
 mixin _$StructureDefinitionDifferential {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<ElementDefinition> get element;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<ElementDefinition> get element => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $StructureDefinitionDifferentialCopyWith<StructureDefinitionDifferential>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -32692,16 +35992,22 @@ class _$StructureDefinitionDifferentialCopyWithImpl<$Res>
     Object? element = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition>,
+          : element // ignore: cast_nullable_to_non_nullable
+              as List<ElementDefinition>,
     ));
   }
 }
@@ -32742,16 +36048,22 @@ class __$StructureDefinitionDifferentialCopyWithImpl<$Res>
     Object? element = freezed,
   }) {
     return _then(_StructureDefinitionDifferential(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition>,
+          : element // ignore: cast_nullable_to_non_nullable
+              as List<ElementDefinition>,
     ));
   }
 }
@@ -32825,30 +36137,31 @@ class _$_StructureDefinitionDifferential
 
 abstract class _StructureDefinitionDifferential
     extends StructureDefinitionDifferential {
-  _StructureDefinitionDifferential._() : super._();
   factory _StructureDefinitionDifferential(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
           required List<ElementDefinition> element}) =
       _$_StructureDefinitionDifferential;
+  _StructureDefinitionDifferential._() : super._();
 
   factory _StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =
       _$_StructureDefinitionDifferential.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<ElementDefinition> get element;
+  List<ElementDefinition> get element => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$StructureDefinitionDifferentialCopyWith<_StructureDefinitionDifferential>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 StructureMap _$StructureMapFromJson(Map<String, dynamic> json) {
@@ -32972,66 +36285,69 @@ const $StructureMap = _$StructureMapTearOff();
 /// @nodoc
 mixin _$StructureMap {
   @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
-  R4ResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  Code? get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element? get languageElement;
-  Narrative? get text;
-  List<Resource>? get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirUri? get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
-  Element? get urlElement;
-  List<Identifier>? get identifier;
-  String? get version;
+  Element? get urlElement => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element? get versionElement;
-  String? get name;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get title;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-  StructureMapStatus? get status;
+  StructureMapStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element? get statusElement;
-  Boolean? get experimental;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
-  FhirDateTime? get date;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element? get dateElement;
-  String? get publisher;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
+  Element? get publisherElement => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get purpose;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
-  Markdown? get copyright;
+  Element? get purposeElement => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
-  List<StructureMapStructure>? get structure;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
+  List<StructureMapStructure>? get structure =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'import')
-  List<Canonical>? get import_;
-  List<StructureMapGroup> get group;
+  List<Canonical>? get import_ => throw _privateConstructorUsedError;
+  List<StructureMapGroup> get group => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureMapCopyWith<StructureMap> get copyWith;
+  $StructureMapCopyWith<StructureMap> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -33169,92 +36485,164 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      version: version == freezed ? _value.version : version as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
-      status: status == freezed ? _value.status : status as StructureMapStatus?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as StructureMapStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       structure: structure == freezed
           ? _value.structure
-          : structure as List<StructureMapStructure>?,
-      import_:
-          import_ == freezed ? _value.import_ : import_ as List<Canonical>?,
-      group: group == freezed ? _value.group : group as List<StructureMapGroup>,
+          : structure // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapStructure>?,
+      import_: import_ == freezed
+          ? _value.import_
+          : import_ // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      group: group == freezed
+          ? _value.group
+          : group // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapGroup>,
     ));
   }
 
@@ -33578,92 +36966,164 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
     return _then(_StructureMap(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      urlElement:
-          urlElement == freezed ? _value.urlElement : urlElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      urlElement: urlElement == freezed
+          ? _value.urlElement
+          : urlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      version: version == freezed ? _value.version : version as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      title: title == freezed ? _value.title : title as String?,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
-          : titleElement as Element?,
-      status: status == freezed ? _value.status : status as StructureMapStatus?,
+          : titleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as StructureMapStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element?,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
-          : experimentalElement as Element?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
+          : experimentalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
-          : publisherElement as Element?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : publisherElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element?,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as Element?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
-          : copyrightElement as Element?,
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       structure: structure == freezed
           ? _value.structure
-          : structure as List<StructureMapStructure>?,
-      import_:
-          import_ == freezed ? _value.import_ : import_ as List<Canonical>?,
-      group: group == freezed ? _value.group : group as List<StructureMapGroup>,
+          : structure // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapStructure>?,
+      import_: import_ == freezed
+          ? _value.import_
+          : import_ // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      group: group == freezed
+          ? _value.group
+          : group // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapGroup>,
     ));
   }
 }
@@ -33983,7 +37443,6 @@ class _$_StructureMap extends _StructureMap {
 }
 
 abstract class _StructureMap extends StructureMap {
-  _StructureMap._() : super._();
   factory _StructureMap(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
           R4ResourceType resourceType,
@@ -34042,110 +37501,114 @@ abstract class _StructureMap extends StructureMap {
       @JsonKey(name: 'import')
           List<Canonical>? import_,
       required List<StructureMapGroup> group}) = _$_StructureMap;
+  _StructureMap._() : super._();
 
   factory _StructureMap.fromJson(Map<String, dynamic> json) =
       _$_StructureMap.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement;
+  Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement;
+  Element? get titleElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-  StructureMapStatus? get status;
+  StructureMapStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_experimental')
-  Element? get experimentalElement;
+  Element? get experimentalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_publisher')
-  Element? get publisherElement;
+  Element? get publisherElement => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  Element? get purposeElement;
+  Element? get purposeElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get copyright;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_copyright')
-  Element? get copyrightElement;
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  List<StructureMapStructure>? get structure;
+  List<StructureMapStructure>? get structure =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'import')
-  List<Canonical>? get import_;
+  List<Canonical>? get import_ => throw _privateConstructorUsedError;
   @override
-  List<StructureMapGroup> get group;
+  List<StructureMapGroup> get group => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureMapCopyWith<_StructureMap> get copyWith;
+  _$StructureMapCopyWith<_StructureMap> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureMapStructure _$StructureMapStructureFromJson(
@@ -34197,25 +37660,27 @@ const $StructureMapStructure = _$StructureMapStructureTearOff();
 
 /// @nodoc
 mixin _$StructureMapStructure {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Canonical get url;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Canonical get url => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
-  StructureMapStructureMode? get mode;
+  StructureMapStructureMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
-  Element? get modeElement;
-  String? get alias;
+  Element? get modeElement => throw _privateConstructorUsedError;
+  String? get alias => throw _privateConstructorUsedError;
   @JsonKey(name: '_alias')
-  Element? get aliasElement;
-  String? get documentation;
+  Element? get aliasElement => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureMapStructureCopyWith<StructureMapStructure> get copyWith;
+  $StructureMapStructureCopyWith<StructureMapStructure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -34268,27 +37733,46 @@ class _$StructureMapStructureCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as Canonical,
-      mode: mode == freezed ? _value.mode : mode as StructureMapStructureMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
-      alias: alias == freezed ? _value.alias : alias as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as StructureMapStructureMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      alias: alias == freezed
+          ? _value.alias
+          : alias // ignore: cast_nullable_to_non_nullable
+              as String?,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element?,
+          : aliasElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -34383,27 +37867,46 @@ class __$StructureMapStructureCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_StructureMapStructure(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      url: url == freezed ? _value.url : url as Canonical,
-      mode: mode == freezed ? _value.mode : mode as StructureMapStructureMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
-      alias: alias == freezed ? _value.alias : alias as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as StructureMapStructureMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      alias: alias == freezed
+          ? _value.alias
+          : alias // ignore: cast_nullable_to_non_nullable
+              as String?,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as Element?,
+          : aliasElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -34518,7 +38021,6 @@ class _$_StructureMapStructure extends _StructureMapStructure {
 }
 
 abstract class _StructureMapStructure extends StructureMapStructure {
-  _StructureMapStructure._() : super._();
   factory _StructureMapStructure(
       {String? id,
       @JsonKey(name: 'extension')
@@ -34535,38 +38037,41 @@ abstract class _StructureMapStructure extends StructureMapStructure {
       String? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement}) = _$_StructureMapStructure;
+  _StructureMapStructure._() : super._();
 
   factory _StructureMapStructure.fromJson(Map<String, dynamic> json) =
       _$_StructureMapStructure.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Canonical get url;
+  Canonical get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
-  StructureMapStructureMode? get mode;
+  StructureMapStructureMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  String? get alias;
+  String? get alias => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_alias')
-  Element? get aliasElement;
+  Element? get aliasElement => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureMapStructureCopyWith<_StructureMapStructure> get copyWith;
+  _$StructureMapStructureCopyWith<_StructureMapStructure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureMapGroup _$StructureMapGroupFromJson(Map<String, dynamic> json) {
@@ -34625,30 +38130,32 @@ const $StructureMapGroup = _$StructureMapGroupTearOff();
 
 /// @nodoc
 mixin _$StructureMapGroup {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Id? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Id? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @JsonKey(name: 'extends')
-  Id? get extends_;
+  Id? get extends_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_extends')
-  Element? get extendsElement;
+  Element? get extendsElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
-  StructureMapGroupTypeMode? get typeMode;
+  StructureMapGroupTypeMode? get typeMode => throw _privateConstructorUsedError;
   @JsonKey(name: '_typeMode')
-  Element? get typeModeElement;
-  String? get documentation;
+  Element? get typeModeElement => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
-  List<StructureMapInput> get input;
-  List<StructureMapRule> get rule;
+  Element? get documentationElement => throw _privateConstructorUsedError;
+  List<StructureMapInput> get input => throw _privateConstructorUsedError;
+  List<StructureMapRule> get rule => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureMapGroupCopyWith<StructureMapGroup> get copyWith;
+  $StructureMapGroupCopyWith<StructureMapGroup> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -34710,34 +38217,58 @@ class _$StructureMapGroupCopyWithImpl<$Res>
     Object? rule = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Id?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      extends_: extends_ == freezed ? _value.extends_ : extends_ as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      extends_: extends_ == freezed
+          ? _value.extends_
+          : extends_ // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extendsElement: extendsElement == freezed
           ? _value.extendsElement
-          : extendsElement as Element?,
+          : extendsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       typeMode: typeMode == freezed
           ? _value.typeMode
-          : typeMode as StructureMapGroupTypeMode?,
+          : typeMode // ignore: cast_nullable_to_non_nullable
+              as StructureMapGroupTypeMode?,
       typeModeElement: typeModeElement == freezed
           ? _value.typeModeElement
-          : typeModeElement as Element?,
+          : typeModeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
-      input: input == freezed ? _value.input : input as List<StructureMapInput>,
-      rule: rule == freezed ? _value.rule : rule as List<StructureMapRule>,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      input: input == freezed
+          ? _value.input
+          : input // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapInput>,
+      rule: rule == freezed
+          ? _value.rule
+          : rule // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapRule>,
     ));
   }
 
@@ -34853,34 +38384,58 @@ class __$StructureMapGroupCopyWithImpl<$Res>
     Object? rule = freezed,
   }) {
     return _then(_StructureMapGroup(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Id?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      extends_: extends_ == freezed ? _value.extends_ : extends_ as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      extends_: extends_ == freezed
+          ? _value.extends_
+          : extends_ // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extendsElement: extendsElement == freezed
           ? _value.extendsElement
-          : extendsElement as Element?,
+          : extendsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       typeMode: typeMode == freezed
           ? _value.typeMode
-          : typeMode as StructureMapGroupTypeMode?,
+          : typeMode // ignore: cast_nullable_to_non_nullable
+              as StructureMapGroupTypeMode?,
       typeModeElement: typeModeElement == freezed
           ? _value.typeModeElement
-          : typeModeElement as Element?,
+          : typeModeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
-      input: input == freezed ? _value.input : input as List<StructureMapInput>,
-      rule: rule == freezed ? _value.rule : rule as List<StructureMapRule>,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      input: input == freezed
+          ? _value.input
+          : input // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapInput>,
+      rule: rule == freezed
+          ? _value.rule
+          : rule // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapRule>,
     ));
   }
 }
@@ -35024,7 +38579,6 @@ class _$_StructureMapGroup extends _StructureMapGroup {
 }
 
 abstract class _StructureMapGroup extends StructureMapGroup {
-  _StructureMapGroup._() : super._();
   factory _StructureMapGroup(
       {String? id,
       @JsonKey(name: 'extension')
@@ -35046,46 +38600,49 @@ abstract class _StructureMapGroup extends StructureMapGroup {
           Element? documentationElement,
       required List<StructureMapInput> input,
       required List<StructureMapRule> rule}) = _$_StructureMapGroup;
+  _StructureMapGroup._() : super._();
 
   factory _StructureMapGroup.fromJson(Map<String, dynamic> json) =
       _$_StructureMapGroup.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get name;
+  Id? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extends')
-  Id? get extends_;
+  Id? get extends_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_extends')
-  Element? get extendsElement;
+  Element? get extendsElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
-  StructureMapGroupTypeMode? get typeMode;
+  StructureMapGroupTypeMode? get typeMode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_typeMode')
-  Element? get typeModeElement;
+  Element? get typeModeElement => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
-  List<StructureMapInput> get input;
+  List<StructureMapInput> get input => throw _privateConstructorUsedError;
   @override
-  List<StructureMapRule> get rule;
+  List<StructureMapRule> get rule => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureMapGroupCopyWith<_StructureMapGroup> get copyWith;
+  _$StructureMapGroupCopyWith<_StructureMapGroup> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureMapInput _$StructureMapInputFromJson(Map<String, dynamic> json) {
@@ -35139,27 +38696,29 @@ const $StructureMapInput = _$StructureMapInputTearOff();
 
 /// @nodoc
 mixin _$StructureMapInput {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Id? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Id? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  String? get type;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
-  StructureMapInputMode? get mode;
+  StructureMapInputMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
-  Element? get modeElement;
-  String? get documentation;
+  Element? get modeElement => throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureMapInputCopyWith<StructureMapInput> get copyWith;
+  $StructureMapInputCopyWith<StructureMapInput> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -35216,28 +38775,50 @@ class _$StructureMapInputCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Id?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      type: type == freezed ? _value.type : type as String?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      mode: mode == freezed ? _value.mode : mode as StructureMapInputMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as StructureMapInputMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -35348,28 +38929,50 @@ class __$StructureMapInputCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_StructureMapInput(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Id?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      type: type == freezed ? _value.type : type as String?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      mode: mode == freezed ? _value.mode : mode as StructureMapInputMode?,
-      modeElement:
-          modeElement == freezed ? _value.modeElement : modeElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as StructureMapInputMode?,
+      modeElement: modeElement == freezed
+          ? _value.modeElement
+          : modeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -35491,7 +39094,6 @@ class _$_StructureMapInput extends _StructureMapInput {
 }
 
 abstract class _StructureMapInput extends StructureMapInput {
-  _StructureMapInput._() : super._();
   factory _StructureMapInput(
       {String? id,
       @JsonKey(name: 'extension')
@@ -35510,41 +39112,44 @@ abstract class _StructureMapInput extends StructureMapInput {
       String? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement}) = _$_StructureMapInput;
+  _StructureMapInput._() : super._();
 
   factory _StructureMapInput.fromJson(Map<String, dynamic> json) =
       _$_StructureMapInput.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get name;
+  Id? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String? get type;
+  String? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
-  StructureMapInputMode? get mode;
+  StructureMapInputMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement;
+  Element? get modeElement => throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureMapInputCopyWith<_StructureMapInput> get copyWith;
+  _$StructureMapInputCopyWith<_StructureMapInput> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureMapRule _$StructureMapRuleFromJson(Map<String, dynamic> json) {
@@ -35592,24 +39197,27 @@ const $StructureMapRule = _$StructureMapRuleTearOff();
 
 /// @nodoc
 mixin _$StructureMapRule {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Id? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Id? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  List<StructureMapSource> get source;
-  List<StructureMapTarget>? get target;
-  List<StructureMapRule>? get rule;
-  List<StructureMapDependent>? get dependent;
-  String? get documentation;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  List<StructureMapSource> get source => throw _privateConstructorUsedError;
+  List<StructureMapTarget>? get target => throw _privateConstructorUsedError;
+  List<StructureMapRule>? get rule => throw _privateConstructorUsedError;
+  List<StructureMapDependent>? get dependent =>
+      throw _privateConstructorUsedError;
+  String? get documentation => throw _privateConstructorUsedError;
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureMapRuleCopyWith<StructureMapRule> get copyWith;
+  $StructureMapRuleCopyWith<StructureMapRule> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -35658,32 +39266,50 @@ class _$StructureMapRuleCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Id?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       source: source == freezed
           ? _value.source
-          : source as List<StructureMapSource>,
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapSource>,
       target: target == freezed
           ? _value.target
-          : target as List<StructureMapTarget>?,
-      rule: rule == freezed ? _value.rule : rule as List<StructureMapRule>?,
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapTarget>?,
+      rule: rule == freezed
+          ? _value.rule
+          : rule // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapRule>?,
       dependent: dependent == freezed
           ? _value.dependent
-          : dependent as List<StructureMapDependent>?,
+          : dependent // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapDependent>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -35762,32 +39388,50 @@ class __$StructureMapRuleCopyWithImpl<$Res>
     Object? documentationElement = freezed,
   }) {
     return _then(_StructureMapRule(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Id?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       source: source == freezed
           ? _value.source
-          : source as List<StructureMapSource>,
+          : source // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapSource>,
       target: target == freezed
           ? _value.target
-          : target as List<StructureMapTarget>?,
-      rule: rule == freezed ? _value.rule : rule as List<StructureMapRule>?,
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapTarget>?,
+      rule: rule == freezed
+          ? _value.rule
+          : rule // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapRule>?,
       dependent: dependent == freezed
           ? _value.dependent
-          : dependent as List<StructureMapDependent>?,
+          : dependent // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapDependent>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
-          : documentationElement as Element?,
+          : documentationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -35905,7 +39549,6 @@ class _$_StructureMapRule extends _StructureMapRule {
 }
 
 abstract class _StructureMapRule extends StructureMapRule {
-  _StructureMapRule._() : super._();
   factory _StructureMapRule(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -35919,38 +39562,42 @@ abstract class _StructureMapRule extends StructureMapRule {
           String? documentation,
           @JsonKey(name: '_documentation') Element? documentationElement}) =
       _$_StructureMapRule;
+  _StructureMapRule._() : super._();
 
   factory _StructureMapRule.fromJson(Map<String, dynamic> json) =
       _$_StructureMapRule.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get name;
+  Id? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  List<StructureMapSource> get source;
+  List<StructureMapSource> get source => throw _privateConstructorUsedError;
   @override
-  List<StructureMapTarget>? get target;
+  List<StructureMapTarget>? get target => throw _privateConstructorUsedError;
   @override
-  List<StructureMapRule>? get rule;
+  List<StructureMapRule>? get rule => throw _privateConstructorUsedError;
   @override
-  List<StructureMapDependent>? get dependent;
+  List<StructureMapDependent>? get dependent =>
+      throw _privateConstructorUsedError;
   @override
-  String? get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement;
+  Element? get documentationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureMapRuleCopyWith<_StructureMapRule> get copyWith;
+  _$StructureMapRuleCopyWith<_StructureMapRule> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) {
@@ -36191,133 +39838,155 @@ const $StructureMapSource = _$StructureMapSourceTearOff();
 
 /// @nodoc
 mixin _$StructureMapSource {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Id? get context;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Id? get context => throw _privateConstructorUsedError;
   @JsonKey(name: '_context')
-  Element? get contextElement;
-  Integer? get min;
+  Element? get contextElement => throw _privateConstructorUsedError;
+  Integer? get min => throw _privateConstructorUsedError;
   @JsonKey(name: '_min')
-  Element? get minElement;
-  String? get max;
+  Element? get minElement => throw _privateConstructorUsedError;
+  String? get max => throw _privateConstructorUsedError;
   @JsonKey(name: '_max')
-  Element? get maxElement;
-  String? get type;
+  Element? get maxElement => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element? get typeElement;
-  Base64Binary? get defaultValueBase64Binary;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  Base64Binary? get defaultValueBase64Binary =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueBase64Binary')
-  Element? get defaultValueBase64BinaryElement;
-  Boolean? get defaultValueBoolean;
+  Element? get defaultValueBase64BinaryElement =>
+      throw _privateConstructorUsedError;
+  Boolean? get defaultValueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueBoolean')
-  Element? get defaultValueBooleanElement;
-  Canonical? get defaultValueCanonical;
+  Element? get defaultValueBooleanElement => throw _privateConstructorUsedError;
+  Canonical? get defaultValueCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueCanonical')
-  Element? get defaultValueCanonicalElement;
-  Code? get defaultValueCode;
+  Element? get defaultValueCanonicalElement =>
+      throw _privateConstructorUsedError;
+  Code? get defaultValueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueCode')
-  Element? get defaultValueCodeElement;
-  Date? get defaultValueDate;
+  Element? get defaultValueCodeElement => throw _privateConstructorUsedError;
+  Date? get defaultValueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueDate')
-  Element? get defaultValueDateElement;
-  FhirDateTime? get defaultValueDateTime;
+  Element? get defaultValueDateElement => throw _privateConstructorUsedError;
+  FhirDateTime? get defaultValueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueDateTime')
-  Element? get defaultValueDateTimeElement;
-  Decimal? get defaultValueDecimal;
+  Element? get defaultValueDateTimeElement =>
+      throw _privateConstructorUsedError;
+  Decimal? get defaultValueDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueDecimal')
-  Element? get defaultValueDecimalElement;
-  Id? get defaultValueId;
+  Element? get defaultValueDecimalElement => throw _privateConstructorUsedError;
+  Id? get defaultValueId => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueId')
-  Element? get defaultValueIdElement;
-  Instant? get defaultValueInstant;
+  Element? get defaultValueIdElement => throw _privateConstructorUsedError;
+  Instant? get defaultValueInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueInstant')
-  Element? get defaultValueInstantElement;
-  Integer? get defaultValueInteger;
+  Element? get defaultValueInstantElement => throw _privateConstructorUsedError;
+  Integer? get defaultValueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueInteger')
-  Element? get defaultValueIntegerElement;
-  Markdown? get defaultValueMarkdown;
+  Element? get defaultValueIntegerElement => throw _privateConstructorUsedError;
+  Markdown? get defaultValueMarkdown => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueMarkdown')
-  Element? get defaultValueMarkdownElement;
-  Oid? get defaultValueOid;
+  Element? get defaultValueMarkdownElement =>
+      throw _privateConstructorUsedError;
+  Oid? get defaultValueOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueOid')
-  Element? get defaultValueOidElement;
-  PositiveInt? get defaultValuePositiveInt;
+  Element? get defaultValueOidElement => throw _privateConstructorUsedError;
+  PositiveInt? get defaultValuePositiveInt =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValuePositiveInt')
-  Element? get defaultValuePositiveIntElement;
-  String? get defaultValueString;
+  Element? get defaultValuePositiveIntElement =>
+      throw _privateConstructorUsedError;
+  String? get defaultValueString => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueString')
-  Element? get defaultValueStringElement;
-  Time? get defaultValueTime;
+  Element? get defaultValueStringElement => throw _privateConstructorUsedError;
+  Time? get defaultValueTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueTime')
-  Element? get defaultValueTimeElement;
-  UnsignedInt? get defaultValueUnsignedInt;
+  Element? get defaultValueTimeElement => throw _privateConstructorUsedError;
+  UnsignedInt? get defaultValueUnsignedInt =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueUnsignedInt')
-  Element? get defaultValueUnsignedIntElement;
-  FhirUri? get defaultValueUri;
+  Element? get defaultValueUnsignedIntElement =>
+      throw _privateConstructorUsedError;
+  FhirUri? get defaultValueUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueUri')
-  Element? get defaultValueUriElement;
-  FhirUrl? get defaultValueUrl;
+  Element? get defaultValueUriElement => throw _privateConstructorUsedError;
+  FhirUrl? get defaultValueUrl => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueUrl')
-  Element? get defaultValueUrlElement;
-  Uuid? get defaultValueUuid;
+  Element? get defaultValueUrlElement => throw _privateConstructorUsedError;
+  Uuid? get defaultValueUuid => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueUuid')
-  Element? get defaultValueUuidElement;
-  Address? get defaultValueAddress;
-  Age? get defaultValueAge;
-  Annotation? get defaultValueAnnotation;
-  Attachment? get defaultValueAttachment;
-  CodeableConcept? get defaultValueCodeableConcept;
-  Coding? get defaultValueCoding;
-  ContactPoint? get defaultValueContactPoint;
-  Count? get defaultValueCount;
-  Distance? get defaultValueDistance;
-  FhirDuration? get defaultValueDuration;
-  HumanName? get defaultValueHumanName;
-  Identifier? get defaultValueIdentifier;
-  Money? get defaultValueMoney;
-  Period? get defaultValuePeriod;
-  Quantity? get defaultValueQuantity;
-  Range? get defaultValueRange;
-  Ratio? get defaultValueRatio;
-  Reference? get defaultValueReference;
-  SampledData? get defaultValueSampledData;
-  Signature? get defaultValueSignature;
-  Timing? get defaultValueTiming;
-  ContactDetail? get defaultValueContactDetail;
-  Contributor? get defaultValueContributor;
-  DataRequirement? get defaultValueDataRequirement;
-  Expression? get defaultValueExpression;
-  ParameterDefinition? get defaultValueParameterDefinition;
-  RelatedArtifact? get defaultValueRelatedArtifact;
-  TriggerDefinition? get defaultValueTriggerDefinition;
-  UsageContext? get defaultValueUsageContext;
-  Dosage? get defaultValueDosage;
-  Meta? get defaultValueMeta;
-  String? get element;
+  Element? get defaultValueUuidElement => throw _privateConstructorUsedError;
+  Address? get defaultValueAddress => throw _privateConstructorUsedError;
+  Age? get defaultValueAge => throw _privateConstructorUsedError;
+  Annotation? get defaultValueAnnotation => throw _privateConstructorUsedError;
+  Attachment? get defaultValueAttachment => throw _privateConstructorUsedError;
+  CodeableConcept? get defaultValueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Coding? get defaultValueCoding => throw _privateConstructorUsedError;
+  ContactPoint? get defaultValueContactPoint =>
+      throw _privateConstructorUsedError;
+  Count? get defaultValueCount => throw _privateConstructorUsedError;
+  Distance? get defaultValueDistance => throw _privateConstructorUsedError;
+  FhirDuration? get defaultValueDuration => throw _privateConstructorUsedError;
+  HumanName? get defaultValueHumanName => throw _privateConstructorUsedError;
+  Identifier? get defaultValueIdentifier => throw _privateConstructorUsedError;
+  Money? get defaultValueMoney => throw _privateConstructorUsedError;
+  Period? get defaultValuePeriod => throw _privateConstructorUsedError;
+  Quantity? get defaultValueQuantity => throw _privateConstructorUsedError;
+  Range? get defaultValueRange => throw _privateConstructorUsedError;
+  Ratio? get defaultValueRatio => throw _privateConstructorUsedError;
+  Reference? get defaultValueReference => throw _privateConstructorUsedError;
+  SampledData? get defaultValueSampledData =>
+      throw _privateConstructorUsedError;
+  Signature? get defaultValueSignature => throw _privateConstructorUsedError;
+  Timing? get defaultValueTiming => throw _privateConstructorUsedError;
+  ContactDetail? get defaultValueContactDetail =>
+      throw _privateConstructorUsedError;
+  Contributor? get defaultValueContributor =>
+      throw _privateConstructorUsedError;
+  DataRequirement? get defaultValueDataRequirement =>
+      throw _privateConstructorUsedError;
+  Expression? get defaultValueExpression => throw _privateConstructorUsedError;
+  ParameterDefinition? get defaultValueParameterDefinition =>
+      throw _privateConstructorUsedError;
+  RelatedArtifact? get defaultValueRelatedArtifact =>
+      throw _privateConstructorUsedError;
+  TriggerDefinition? get defaultValueTriggerDefinition =>
+      throw _privateConstructorUsedError;
+  UsageContext? get defaultValueUsageContext =>
+      throw _privateConstructorUsedError;
+  Dosage? get defaultValueDosage => throw _privateConstructorUsedError;
+  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
+  String? get element => throw _privateConstructorUsedError;
   @JsonKey(name: '_element')
-  Element? get elementElement;
+  Element? get elementElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
-  StructureMapSourceListMode? get listMode;
+  StructureMapSourceListMode? get listMode =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_listMode')
-  Element? get listModeElement;
-  Id? get variable;
+  Element? get listModeElement => throw _privateConstructorUsedError;
+  Id? get variable => throw _privateConstructorUsedError;
   @JsonKey(name: '_variable')
-  Element? get variableElement;
-  String? get condition;
+  Element? get variableElement => throw _privateConstructorUsedError;
+  String? get condition => throw _privateConstructorUsedError;
   @JsonKey(name: '_condition')
-  Element? get conditionElement;
-  String? get check;
+  Element? get conditionElement => throw _privateConstructorUsedError;
+  String? get check => throw _privateConstructorUsedError;
   @JsonKey(name: '_check')
-  Element? get checkElement;
-  String? get logMessage;
+  Element? get checkElement => throw _privateConstructorUsedError;
+  String? get logMessage => throw _privateConstructorUsedError;
   @JsonKey(name: '_logMessage')
-  Element? get logMessageElement;
+  Element? get logMessageElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureMapSourceCopyWith<StructureMapSource> get copyWith;
+  $StructureMapSourceCopyWith<StructureMapSource> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -36617,262 +40286,376 @@ class _$StructureMapSourceCopyWithImpl<$Res>
     Object? logMessageElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      context: context == freezed ? _value.context : context as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      context: context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as Id?,
       contextElement: contextElement == freezed
           ? _value.contextElement
-          : contextElement as Element?,
-      min: min == freezed ? _value.min : min as Integer?,
-      minElement:
-          minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
-      maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element?,
-      type: type == freezed ? _value.type : type as String?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+          : contextElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      minElement: minElement == freezed
+          ? _value.minElement
+          : minElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxElement: maxElement == freezed
+          ? _value.maxElement
+          : maxElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueBase64Binary: defaultValueBase64Binary == freezed
           ? _value.defaultValueBase64Binary
-          : defaultValueBase64Binary as Base64Binary?,
-      defaultValueBase64BinaryElement:
-          defaultValueBase64BinaryElement == freezed
-              ? _value.defaultValueBase64BinaryElement
-              : defaultValueBase64BinaryElement as Element?,
+          : defaultValueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      defaultValueBase64BinaryElement: defaultValueBase64BinaryElement ==
+              freezed
+          ? _value.defaultValueBase64BinaryElement
+          : defaultValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueBoolean: defaultValueBoolean == freezed
           ? _value.defaultValueBoolean
-          : defaultValueBoolean as Boolean?,
+          : defaultValueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       defaultValueBooleanElement: defaultValueBooleanElement == freezed
           ? _value.defaultValueBooleanElement
-          : defaultValueBooleanElement as Element?,
+          : defaultValueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueCanonical: defaultValueCanonical == freezed
           ? _value.defaultValueCanonical
-          : defaultValueCanonical as Canonical?,
+          : defaultValueCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       defaultValueCanonicalElement: defaultValueCanonicalElement == freezed
           ? _value.defaultValueCanonicalElement
-          : defaultValueCanonicalElement as Element?,
+          : defaultValueCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueCode: defaultValueCode == freezed
           ? _value.defaultValueCode
-          : defaultValueCode as Code?,
+          : defaultValueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
       defaultValueCodeElement: defaultValueCodeElement == freezed
           ? _value.defaultValueCodeElement
-          : defaultValueCodeElement as Element?,
+          : defaultValueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueDate: defaultValueDate == freezed
           ? _value.defaultValueDate
-          : defaultValueDate as Date?,
+          : defaultValueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       defaultValueDateElement: defaultValueDateElement == freezed
           ? _value.defaultValueDateElement
-          : defaultValueDateElement as Element?,
+          : defaultValueDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueDateTime: defaultValueDateTime == freezed
           ? _value.defaultValueDateTime
-          : defaultValueDateTime as FhirDateTime?,
+          : defaultValueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       defaultValueDateTimeElement: defaultValueDateTimeElement == freezed
           ? _value.defaultValueDateTimeElement
-          : defaultValueDateTimeElement as Element?,
+          : defaultValueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueDecimal: defaultValueDecimal == freezed
           ? _value.defaultValueDecimal
-          : defaultValueDecimal as Decimal?,
+          : defaultValueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       defaultValueDecimalElement: defaultValueDecimalElement == freezed
           ? _value.defaultValueDecimalElement
-          : defaultValueDecimalElement as Element?,
+          : defaultValueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueId: defaultValueId == freezed
           ? _value.defaultValueId
-          : defaultValueId as Id?,
+          : defaultValueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       defaultValueIdElement: defaultValueIdElement == freezed
           ? _value.defaultValueIdElement
-          : defaultValueIdElement as Element?,
+          : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueInstant: defaultValueInstant == freezed
           ? _value.defaultValueInstant
-          : defaultValueInstant as Instant?,
+          : defaultValueInstant // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       defaultValueInstantElement: defaultValueInstantElement == freezed
           ? _value.defaultValueInstantElement
-          : defaultValueInstantElement as Element?,
+          : defaultValueInstantElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueInteger: defaultValueInteger == freezed
           ? _value.defaultValueInteger
-          : defaultValueInteger as Integer?,
+          : defaultValueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       defaultValueIntegerElement: defaultValueIntegerElement == freezed
           ? _value.defaultValueIntegerElement
-          : defaultValueIntegerElement as Element?,
+          : defaultValueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueMarkdown: defaultValueMarkdown == freezed
           ? _value.defaultValueMarkdown
-          : defaultValueMarkdown as Markdown?,
+          : defaultValueMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       defaultValueMarkdownElement: defaultValueMarkdownElement == freezed
           ? _value.defaultValueMarkdownElement
-          : defaultValueMarkdownElement as Element?,
+          : defaultValueMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueOid: defaultValueOid == freezed
           ? _value.defaultValueOid
-          : defaultValueOid as Oid?,
+          : defaultValueOid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
       defaultValueOidElement: defaultValueOidElement == freezed
           ? _value.defaultValueOidElement
-          : defaultValueOidElement as Element?,
+          : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValuePositiveInt: defaultValuePositiveInt == freezed
           ? _value.defaultValuePositiveInt
-          : defaultValuePositiveInt as PositiveInt?,
+          : defaultValuePositiveInt // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       defaultValuePositiveIntElement: defaultValuePositiveIntElement == freezed
           ? _value.defaultValuePositiveIntElement
-          : defaultValuePositiveIntElement as Element?,
+          : defaultValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueString: defaultValueString == freezed
           ? _value.defaultValueString
-          : defaultValueString as String?,
+          : defaultValueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       defaultValueStringElement: defaultValueStringElement == freezed
           ? _value.defaultValueStringElement
-          : defaultValueStringElement as Element?,
+          : defaultValueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueTime: defaultValueTime == freezed
           ? _value.defaultValueTime
-          : defaultValueTime as Time?,
+          : defaultValueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
       defaultValueTimeElement: defaultValueTimeElement == freezed
           ? _value.defaultValueTimeElement
-          : defaultValueTimeElement as Element?,
+          : defaultValueTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueUnsignedInt: defaultValueUnsignedInt == freezed
           ? _value.defaultValueUnsignedInt
-          : defaultValueUnsignedInt as UnsignedInt?,
+          : defaultValueUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       defaultValueUnsignedIntElement: defaultValueUnsignedIntElement == freezed
           ? _value.defaultValueUnsignedIntElement
-          : defaultValueUnsignedIntElement as Element?,
+          : defaultValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueUri: defaultValueUri == freezed
           ? _value.defaultValueUri
-          : defaultValueUri as FhirUri?,
+          : defaultValueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       defaultValueUriElement: defaultValueUriElement == freezed
           ? _value.defaultValueUriElement
-          : defaultValueUriElement as Element?,
+          : defaultValueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueUrl: defaultValueUrl == freezed
           ? _value.defaultValueUrl
-          : defaultValueUrl as FhirUrl?,
+          : defaultValueUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       defaultValueUrlElement: defaultValueUrlElement == freezed
           ? _value.defaultValueUrlElement
-          : defaultValueUrlElement as Element?,
+          : defaultValueUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueUuid: defaultValueUuid == freezed
           ? _value.defaultValueUuid
-          : defaultValueUuid as Uuid?,
+          : defaultValueUuid // ignore: cast_nullable_to_non_nullable
+              as Uuid?,
       defaultValueUuidElement: defaultValueUuidElement == freezed
           ? _value.defaultValueUuidElement
-          : defaultValueUuidElement as Element?,
+          : defaultValueUuidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueAddress: defaultValueAddress == freezed
           ? _value.defaultValueAddress
-          : defaultValueAddress as Address?,
+          : defaultValueAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
       defaultValueAge: defaultValueAge == freezed
           ? _value.defaultValueAge
-          : defaultValueAge as Age?,
+          : defaultValueAge // ignore: cast_nullable_to_non_nullable
+              as Age?,
       defaultValueAnnotation: defaultValueAnnotation == freezed
           ? _value.defaultValueAnnotation
-          : defaultValueAnnotation as Annotation?,
+          : defaultValueAnnotation // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
       defaultValueAttachment: defaultValueAttachment == freezed
           ? _value.defaultValueAttachment
-          : defaultValueAttachment as Attachment?,
+          : defaultValueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
       defaultValueCodeableConcept: defaultValueCodeableConcept == freezed
           ? _value.defaultValueCodeableConcept
-          : defaultValueCodeableConcept as CodeableConcept?,
+          : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       defaultValueCoding: defaultValueCoding == freezed
           ? _value.defaultValueCoding
-          : defaultValueCoding as Coding?,
+          : defaultValueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       defaultValueContactPoint: defaultValueContactPoint == freezed
           ? _value.defaultValueContactPoint
-          : defaultValueContactPoint as ContactPoint?,
+          : defaultValueContactPoint // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
       defaultValueCount: defaultValueCount == freezed
           ? _value.defaultValueCount
-          : defaultValueCount as Count?,
+          : defaultValueCount // ignore: cast_nullable_to_non_nullable
+              as Count?,
       defaultValueDistance: defaultValueDistance == freezed
           ? _value.defaultValueDistance
-          : defaultValueDistance as Distance?,
+          : defaultValueDistance // ignore: cast_nullable_to_non_nullable
+              as Distance?,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as FhirDuration?,
+          : defaultValueDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
       defaultValueHumanName: defaultValueHumanName == freezed
           ? _value.defaultValueHumanName
-          : defaultValueHumanName as HumanName?,
+          : defaultValueHumanName // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
       defaultValueIdentifier: defaultValueIdentifier == freezed
           ? _value.defaultValueIdentifier
-          : defaultValueIdentifier as Identifier?,
+          : defaultValueIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       defaultValueMoney: defaultValueMoney == freezed
           ? _value.defaultValueMoney
-          : defaultValueMoney as Money?,
+          : defaultValueMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
       defaultValuePeriod: defaultValuePeriod == freezed
           ? _value.defaultValuePeriod
-          : defaultValuePeriod as Period?,
+          : defaultValuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       defaultValueQuantity: defaultValueQuantity == freezed
           ? _value.defaultValueQuantity
-          : defaultValueQuantity as Quantity?,
+          : defaultValueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       defaultValueRange: defaultValueRange == freezed
           ? _value.defaultValueRange
-          : defaultValueRange as Range?,
+          : defaultValueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       defaultValueRatio: defaultValueRatio == freezed
           ? _value.defaultValueRatio
-          : defaultValueRatio as Ratio?,
+          : defaultValueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       defaultValueReference: defaultValueReference == freezed
           ? _value.defaultValueReference
-          : defaultValueReference as Reference?,
+          : defaultValueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       defaultValueSampledData: defaultValueSampledData == freezed
           ? _value.defaultValueSampledData
-          : defaultValueSampledData as SampledData?,
+          : defaultValueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
       defaultValueSignature: defaultValueSignature == freezed
           ? _value.defaultValueSignature
-          : defaultValueSignature as Signature?,
+          : defaultValueSignature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
       defaultValueTiming: defaultValueTiming == freezed
           ? _value.defaultValueTiming
-          : defaultValueTiming as Timing?,
+          : defaultValueTiming // ignore: cast_nullable_to_non_nullable
+              as Timing?,
       defaultValueContactDetail: defaultValueContactDetail == freezed
           ? _value.defaultValueContactDetail
-          : defaultValueContactDetail as ContactDetail?,
+          : defaultValueContactDetail // ignore: cast_nullable_to_non_nullable
+              as ContactDetail?,
       defaultValueContributor: defaultValueContributor == freezed
           ? _value.defaultValueContributor
-          : defaultValueContributor as Contributor?,
+          : defaultValueContributor // ignore: cast_nullable_to_non_nullable
+              as Contributor?,
       defaultValueDataRequirement: defaultValueDataRequirement == freezed
           ? _value.defaultValueDataRequirement
-          : defaultValueDataRequirement as DataRequirement?,
+          : defaultValueDataRequirement // ignore: cast_nullable_to_non_nullable
+              as DataRequirement?,
       defaultValueExpression: defaultValueExpression == freezed
           ? _value.defaultValueExpression
-          : defaultValueExpression as Expression?,
-      defaultValueParameterDefinition:
-          defaultValueParameterDefinition == freezed
-              ? _value.defaultValueParameterDefinition
-              : defaultValueParameterDefinition as ParameterDefinition?,
+          : defaultValueExpression // ignore: cast_nullable_to_non_nullable
+              as Expression?,
+      defaultValueParameterDefinition: defaultValueParameterDefinition ==
+              freezed
+          ? _value.defaultValueParameterDefinition
+          : defaultValueParameterDefinition // ignore: cast_nullable_to_non_nullable
+              as ParameterDefinition?,
       defaultValueRelatedArtifact: defaultValueRelatedArtifact == freezed
           ? _value.defaultValueRelatedArtifact
-          : defaultValueRelatedArtifact as RelatedArtifact?,
+          : defaultValueRelatedArtifact // ignore: cast_nullable_to_non_nullable
+              as RelatedArtifact?,
       defaultValueTriggerDefinition: defaultValueTriggerDefinition == freezed
           ? _value.defaultValueTriggerDefinition
-          : defaultValueTriggerDefinition as TriggerDefinition?,
+          : defaultValueTriggerDefinition // ignore: cast_nullable_to_non_nullable
+              as TriggerDefinition?,
       defaultValueUsageContext: defaultValueUsageContext == freezed
           ? _value.defaultValueUsageContext
-          : defaultValueUsageContext as UsageContext?,
+          : defaultValueUsageContext // ignore: cast_nullable_to_non_nullable
+              as UsageContext?,
       defaultValueDosage: defaultValueDosage == freezed
           ? _value.defaultValueDosage
-          : defaultValueDosage as Dosage?,
+          : defaultValueDosage // ignore: cast_nullable_to_non_nullable
+              as Dosage?,
       defaultValueMeta: defaultValueMeta == freezed
           ? _value.defaultValueMeta
-          : defaultValueMeta as Meta?,
-      element: element == freezed ? _value.element : element as String?,
+          : defaultValueMeta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      element: element == freezed
+          ? _value.element
+          : element // ignore: cast_nullable_to_non_nullable
+              as String?,
       elementElement: elementElement == freezed
           ? _value.elementElement
-          : elementElement as Element?,
+          : elementElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       listMode: listMode == freezed
           ? _value.listMode
-          : listMode as StructureMapSourceListMode?,
+          : listMode // ignore: cast_nullable_to_non_nullable
+              as StructureMapSourceListMode?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
-          : listModeElement as Element?,
-      variable: variable == freezed ? _value.variable : variable as Id?,
+          : listModeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      variable: variable == freezed
+          ? _value.variable
+          : variable // ignore: cast_nullable_to_non_nullable
+              as Id?,
       variableElement: variableElement == freezed
           ? _value.variableElement
-          : variableElement as Element?,
-      condition: condition == freezed ? _value.condition : condition as String?,
+          : variableElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      condition: condition == freezed
+          ? _value.condition
+          : condition // ignore: cast_nullable_to_non_nullable
+              as String?,
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
-          : conditionElement as Element?,
-      check: check == freezed ? _value.check : check as String?,
+          : conditionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      check: check == freezed
+          ? _value.check
+          : check // ignore: cast_nullable_to_non_nullable
+              as String?,
       checkElement: checkElement == freezed
           ? _value.checkElement
-          : checkElement as Element?,
-      logMessage:
-          logMessage == freezed ? _value.logMessage : logMessage as String?,
+          : checkElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      logMessage: logMessage == freezed
+          ? _value.logMessage
+          : logMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
       logMessageElement: logMessageElement == freezed
           ? _value.logMessageElement
-          : logMessageElement as Element?,
+          : logMessageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -37910,262 +41693,376 @@ class __$StructureMapSourceCopyWithImpl<$Res>
     Object? logMessageElement = freezed,
   }) {
     return _then(_StructureMapSource(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      context: context == freezed ? _value.context : context as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      context: context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as Id?,
       contextElement: contextElement == freezed
           ? _value.contextElement
-          : contextElement as Element?,
-      min: min == freezed ? _value.min : min as Integer?,
-      minElement:
-          minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
-      maxElement:
-          maxElement == freezed ? _value.maxElement : maxElement as Element?,
-      type: type == freezed ? _value.type : type as String?,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element?,
+          : contextElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      min: min == freezed
+          ? _value.min
+          : min // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      minElement: minElement == freezed
+          ? _value.minElement
+          : minElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      max: max == freezed
+          ? _value.max
+          : max // ignore: cast_nullable_to_non_nullable
+              as String?,
+      maxElement: maxElement == freezed
+          ? _value.maxElement
+          : maxElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueBase64Binary: defaultValueBase64Binary == freezed
           ? _value.defaultValueBase64Binary
-          : defaultValueBase64Binary as Base64Binary?,
-      defaultValueBase64BinaryElement:
-          defaultValueBase64BinaryElement == freezed
-              ? _value.defaultValueBase64BinaryElement
-              : defaultValueBase64BinaryElement as Element?,
+          : defaultValueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      defaultValueBase64BinaryElement: defaultValueBase64BinaryElement ==
+              freezed
+          ? _value.defaultValueBase64BinaryElement
+          : defaultValueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueBoolean: defaultValueBoolean == freezed
           ? _value.defaultValueBoolean
-          : defaultValueBoolean as Boolean?,
+          : defaultValueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       defaultValueBooleanElement: defaultValueBooleanElement == freezed
           ? _value.defaultValueBooleanElement
-          : defaultValueBooleanElement as Element?,
+          : defaultValueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueCanonical: defaultValueCanonical == freezed
           ? _value.defaultValueCanonical
-          : defaultValueCanonical as Canonical?,
+          : defaultValueCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       defaultValueCanonicalElement: defaultValueCanonicalElement == freezed
           ? _value.defaultValueCanonicalElement
-          : defaultValueCanonicalElement as Element?,
+          : defaultValueCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueCode: defaultValueCode == freezed
           ? _value.defaultValueCode
-          : defaultValueCode as Code?,
+          : defaultValueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
       defaultValueCodeElement: defaultValueCodeElement == freezed
           ? _value.defaultValueCodeElement
-          : defaultValueCodeElement as Element?,
+          : defaultValueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueDate: defaultValueDate == freezed
           ? _value.defaultValueDate
-          : defaultValueDate as Date?,
+          : defaultValueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       defaultValueDateElement: defaultValueDateElement == freezed
           ? _value.defaultValueDateElement
-          : defaultValueDateElement as Element?,
+          : defaultValueDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueDateTime: defaultValueDateTime == freezed
           ? _value.defaultValueDateTime
-          : defaultValueDateTime as FhirDateTime?,
+          : defaultValueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       defaultValueDateTimeElement: defaultValueDateTimeElement == freezed
           ? _value.defaultValueDateTimeElement
-          : defaultValueDateTimeElement as Element?,
+          : defaultValueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueDecimal: defaultValueDecimal == freezed
           ? _value.defaultValueDecimal
-          : defaultValueDecimal as Decimal?,
+          : defaultValueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       defaultValueDecimalElement: defaultValueDecimalElement == freezed
           ? _value.defaultValueDecimalElement
-          : defaultValueDecimalElement as Element?,
+          : defaultValueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueId: defaultValueId == freezed
           ? _value.defaultValueId
-          : defaultValueId as Id?,
+          : defaultValueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       defaultValueIdElement: defaultValueIdElement == freezed
           ? _value.defaultValueIdElement
-          : defaultValueIdElement as Element?,
+          : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueInstant: defaultValueInstant == freezed
           ? _value.defaultValueInstant
-          : defaultValueInstant as Instant?,
+          : defaultValueInstant // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       defaultValueInstantElement: defaultValueInstantElement == freezed
           ? _value.defaultValueInstantElement
-          : defaultValueInstantElement as Element?,
+          : defaultValueInstantElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueInteger: defaultValueInteger == freezed
           ? _value.defaultValueInteger
-          : defaultValueInteger as Integer?,
+          : defaultValueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       defaultValueIntegerElement: defaultValueIntegerElement == freezed
           ? _value.defaultValueIntegerElement
-          : defaultValueIntegerElement as Element?,
+          : defaultValueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueMarkdown: defaultValueMarkdown == freezed
           ? _value.defaultValueMarkdown
-          : defaultValueMarkdown as Markdown?,
+          : defaultValueMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       defaultValueMarkdownElement: defaultValueMarkdownElement == freezed
           ? _value.defaultValueMarkdownElement
-          : defaultValueMarkdownElement as Element?,
+          : defaultValueMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueOid: defaultValueOid == freezed
           ? _value.defaultValueOid
-          : defaultValueOid as Oid?,
+          : defaultValueOid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
       defaultValueOidElement: defaultValueOidElement == freezed
           ? _value.defaultValueOidElement
-          : defaultValueOidElement as Element?,
+          : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValuePositiveInt: defaultValuePositiveInt == freezed
           ? _value.defaultValuePositiveInt
-          : defaultValuePositiveInt as PositiveInt?,
+          : defaultValuePositiveInt // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       defaultValuePositiveIntElement: defaultValuePositiveIntElement == freezed
           ? _value.defaultValuePositiveIntElement
-          : defaultValuePositiveIntElement as Element?,
+          : defaultValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueString: defaultValueString == freezed
           ? _value.defaultValueString
-          : defaultValueString as String?,
+          : defaultValueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       defaultValueStringElement: defaultValueStringElement == freezed
           ? _value.defaultValueStringElement
-          : defaultValueStringElement as Element?,
+          : defaultValueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueTime: defaultValueTime == freezed
           ? _value.defaultValueTime
-          : defaultValueTime as Time?,
+          : defaultValueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
       defaultValueTimeElement: defaultValueTimeElement == freezed
           ? _value.defaultValueTimeElement
-          : defaultValueTimeElement as Element?,
+          : defaultValueTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueUnsignedInt: defaultValueUnsignedInt == freezed
           ? _value.defaultValueUnsignedInt
-          : defaultValueUnsignedInt as UnsignedInt?,
+          : defaultValueUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       defaultValueUnsignedIntElement: defaultValueUnsignedIntElement == freezed
           ? _value.defaultValueUnsignedIntElement
-          : defaultValueUnsignedIntElement as Element?,
+          : defaultValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueUri: defaultValueUri == freezed
           ? _value.defaultValueUri
-          : defaultValueUri as FhirUri?,
+          : defaultValueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       defaultValueUriElement: defaultValueUriElement == freezed
           ? _value.defaultValueUriElement
-          : defaultValueUriElement as Element?,
+          : defaultValueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueUrl: defaultValueUrl == freezed
           ? _value.defaultValueUrl
-          : defaultValueUrl as FhirUrl?,
+          : defaultValueUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
       defaultValueUrlElement: defaultValueUrlElement == freezed
           ? _value.defaultValueUrlElement
-          : defaultValueUrlElement as Element?,
+          : defaultValueUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueUuid: defaultValueUuid == freezed
           ? _value.defaultValueUuid
-          : defaultValueUuid as Uuid?,
+          : defaultValueUuid // ignore: cast_nullable_to_non_nullable
+              as Uuid?,
       defaultValueUuidElement: defaultValueUuidElement == freezed
           ? _value.defaultValueUuidElement
-          : defaultValueUuidElement as Element?,
+          : defaultValueUuidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       defaultValueAddress: defaultValueAddress == freezed
           ? _value.defaultValueAddress
-          : defaultValueAddress as Address?,
+          : defaultValueAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
       defaultValueAge: defaultValueAge == freezed
           ? _value.defaultValueAge
-          : defaultValueAge as Age?,
+          : defaultValueAge // ignore: cast_nullable_to_non_nullable
+              as Age?,
       defaultValueAnnotation: defaultValueAnnotation == freezed
           ? _value.defaultValueAnnotation
-          : defaultValueAnnotation as Annotation?,
+          : defaultValueAnnotation // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
       defaultValueAttachment: defaultValueAttachment == freezed
           ? _value.defaultValueAttachment
-          : defaultValueAttachment as Attachment?,
+          : defaultValueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
       defaultValueCodeableConcept: defaultValueCodeableConcept == freezed
           ? _value.defaultValueCodeableConcept
-          : defaultValueCodeableConcept as CodeableConcept?,
+          : defaultValueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       defaultValueCoding: defaultValueCoding == freezed
           ? _value.defaultValueCoding
-          : defaultValueCoding as Coding?,
+          : defaultValueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       defaultValueContactPoint: defaultValueContactPoint == freezed
           ? _value.defaultValueContactPoint
-          : defaultValueContactPoint as ContactPoint?,
+          : defaultValueContactPoint // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
       defaultValueCount: defaultValueCount == freezed
           ? _value.defaultValueCount
-          : defaultValueCount as Count?,
+          : defaultValueCount // ignore: cast_nullable_to_non_nullable
+              as Count?,
       defaultValueDistance: defaultValueDistance == freezed
           ? _value.defaultValueDistance
-          : defaultValueDistance as Distance?,
+          : defaultValueDistance // ignore: cast_nullable_to_non_nullable
+              as Distance?,
       defaultValueDuration: defaultValueDuration == freezed
           ? _value.defaultValueDuration
-          : defaultValueDuration as FhirDuration?,
+          : defaultValueDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
       defaultValueHumanName: defaultValueHumanName == freezed
           ? _value.defaultValueHumanName
-          : defaultValueHumanName as HumanName?,
+          : defaultValueHumanName // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
       defaultValueIdentifier: defaultValueIdentifier == freezed
           ? _value.defaultValueIdentifier
-          : defaultValueIdentifier as Identifier?,
+          : defaultValueIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       defaultValueMoney: defaultValueMoney == freezed
           ? _value.defaultValueMoney
-          : defaultValueMoney as Money?,
+          : defaultValueMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
       defaultValuePeriod: defaultValuePeriod == freezed
           ? _value.defaultValuePeriod
-          : defaultValuePeriod as Period?,
+          : defaultValuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       defaultValueQuantity: defaultValueQuantity == freezed
           ? _value.defaultValueQuantity
-          : defaultValueQuantity as Quantity?,
+          : defaultValueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       defaultValueRange: defaultValueRange == freezed
           ? _value.defaultValueRange
-          : defaultValueRange as Range?,
+          : defaultValueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       defaultValueRatio: defaultValueRatio == freezed
           ? _value.defaultValueRatio
-          : defaultValueRatio as Ratio?,
+          : defaultValueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       defaultValueReference: defaultValueReference == freezed
           ? _value.defaultValueReference
-          : defaultValueReference as Reference?,
+          : defaultValueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       defaultValueSampledData: defaultValueSampledData == freezed
           ? _value.defaultValueSampledData
-          : defaultValueSampledData as SampledData?,
+          : defaultValueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
       defaultValueSignature: defaultValueSignature == freezed
           ? _value.defaultValueSignature
-          : defaultValueSignature as Signature?,
+          : defaultValueSignature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
       defaultValueTiming: defaultValueTiming == freezed
           ? _value.defaultValueTiming
-          : defaultValueTiming as Timing?,
+          : defaultValueTiming // ignore: cast_nullable_to_non_nullable
+              as Timing?,
       defaultValueContactDetail: defaultValueContactDetail == freezed
           ? _value.defaultValueContactDetail
-          : defaultValueContactDetail as ContactDetail?,
+          : defaultValueContactDetail // ignore: cast_nullable_to_non_nullable
+              as ContactDetail?,
       defaultValueContributor: defaultValueContributor == freezed
           ? _value.defaultValueContributor
-          : defaultValueContributor as Contributor?,
+          : defaultValueContributor // ignore: cast_nullable_to_non_nullable
+              as Contributor?,
       defaultValueDataRequirement: defaultValueDataRequirement == freezed
           ? _value.defaultValueDataRequirement
-          : defaultValueDataRequirement as DataRequirement?,
+          : defaultValueDataRequirement // ignore: cast_nullable_to_non_nullable
+              as DataRequirement?,
       defaultValueExpression: defaultValueExpression == freezed
           ? _value.defaultValueExpression
-          : defaultValueExpression as Expression?,
-      defaultValueParameterDefinition:
-          defaultValueParameterDefinition == freezed
-              ? _value.defaultValueParameterDefinition
-              : defaultValueParameterDefinition as ParameterDefinition?,
+          : defaultValueExpression // ignore: cast_nullable_to_non_nullable
+              as Expression?,
+      defaultValueParameterDefinition: defaultValueParameterDefinition ==
+              freezed
+          ? _value.defaultValueParameterDefinition
+          : defaultValueParameterDefinition // ignore: cast_nullable_to_non_nullable
+              as ParameterDefinition?,
       defaultValueRelatedArtifact: defaultValueRelatedArtifact == freezed
           ? _value.defaultValueRelatedArtifact
-          : defaultValueRelatedArtifact as RelatedArtifact?,
+          : defaultValueRelatedArtifact // ignore: cast_nullable_to_non_nullable
+              as RelatedArtifact?,
       defaultValueTriggerDefinition: defaultValueTriggerDefinition == freezed
           ? _value.defaultValueTriggerDefinition
-          : defaultValueTriggerDefinition as TriggerDefinition?,
+          : defaultValueTriggerDefinition // ignore: cast_nullable_to_non_nullable
+              as TriggerDefinition?,
       defaultValueUsageContext: defaultValueUsageContext == freezed
           ? _value.defaultValueUsageContext
-          : defaultValueUsageContext as UsageContext?,
+          : defaultValueUsageContext // ignore: cast_nullable_to_non_nullable
+              as UsageContext?,
       defaultValueDosage: defaultValueDosage == freezed
           ? _value.defaultValueDosage
-          : defaultValueDosage as Dosage?,
+          : defaultValueDosage // ignore: cast_nullable_to_non_nullable
+              as Dosage?,
       defaultValueMeta: defaultValueMeta == freezed
           ? _value.defaultValueMeta
-          : defaultValueMeta as Meta?,
-      element: element == freezed ? _value.element : element as String?,
+          : defaultValueMeta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      element: element == freezed
+          ? _value.element
+          : element // ignore: cast_nullable_to_non_nullable
+              as String?,
       elementElement: elementElement == freezed
           ? _value.elementElement
-          : elementElement as Element?,
+          : elementElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       listMode: listMode == freezed
           ? _value.listMode
-          : listMode as StructureMapSourceListMode?,
+          : listMode // ignore: cast_nullable_to_non_nullable
+              as StructureMapSourceListMode?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
-          : listModeElement as Element?,
-      variable: variable == freezed ? _value.variable : variable as Id?,
+          : listModeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      variable: variable == freezed
+          ? _value.variable
+          : variable // ignore: cast_nullable_to_non_nullable
+              as Id?,
       variableElement: variableElement == freezed
           ? _value.variableElement
-          : variableElement as Element?,
-      condition: condition == freezed ? _value.condition : condition as String?,
+          : variableElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      condition: condition == freezed
+          ? _value.condition
+          : condition // ignore: cast_nullable_to_non_nullable
+              as String?,
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
-          : conditionElement as Element?,
-      check: check == freezed ? _value.check : check as String?,
+          : conditionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      check: check == freezed
+          ? _value.check
+          : check // ignore: cast_nullable_to_non_nullable
+              as String?,
       checkElement: checkElement == freezed
           ? _value.checkElement
-          : checkElement as Element?,
-      logMessage:
-          logMessage == freezed ? _value.logMessage : logMessage as String?,
+          : checkElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      logMessage: logMessage == freezed
+          ? _value.logMessage
+          : logMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
       logMessageElement: logMessageElement == freezed
           ? _value.logMessageElement
-          : logMessageElement as Element?,
+          : logMessageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -38765,7 +42662,6 @@ class _$_StructureMapSource extends _StructureMapSource {
 }
 
 abstract class _StructureMapSource extends StructureMapSource {
-  _StructureMapSource._() : super._();
   factory _StructureMapSource(
       {String? id,
       @JsonKey(name: 'extension')
@@ -38890,228 +42786,251 @@ abstract class _StructureMapSource extends StructureMapSource {
       String? logMessage,
       @JsonKey(name: '_logMessage')
           Element? logMessageElement}) = _$_StructureMapSource;
+  _StructureMapSource._() : super._();
 
   factory _StructureMapSource.fromJson(Map<String, dynamic> json) =
       _$_StructureMapSource.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get context;
+  Id? get context => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_context')
-  Element? get contextElement;
+  Element? get contextElement => throw _privateConstructorUsedError;
   @override
-  Integer? get min;
+  Integer? get min => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement;
+  Element? get minElement => throw _privateConstructorUsedError;
   @override
-  String? get max;
+  String? get max => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement;
+  Element? get maxElement => throw _privateConstructorUsedError;
   @override
-  String? get type;
+  String? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get defaultValueBase64Binary;
+  Base64Binary? get defaultValueBase64Binary =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
-  Element? get defaultValueBase64BinaryElement;
+  Element? get defaultValueBase64BinaryElement =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get defaultValueBoolean;
+  Boolean? get defaultValueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueBoolean')
-  Element? get defaultValueBooleanElement;
+  Element? get defaultValueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Canonical? get defaultValueCanonical;
+  Canonical? get defaultValueCanonical => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueCanonical')
-  Element? get defaultValueCanonicalElement;
+  Element? get defaultValueCanonicalElement =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get defaultValueCode;
+  Code? get defaultValueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueCode')
-  Element? get defaultValueCodeElement;
+  Element? get defaultValueCodeElement => throw _privateConstructorUsedError;
   @override
-  Date? get defaultValueDate;
+  Date? get defaultValueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueDate')
-  Element? get defaultValueDateElement;
+  Element? get defaultValueDateElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get defaultValueDateTime;
+  FhirDateTime? get defaultValueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueDateTime')
-  Element? get defaultValueDateTimeElement;
+  Element? get defaultValueDateTimeElement =>
+      throw _privateConstructorUsedError;
   @override
-  Decimal? get defaultValueDecimal;
+  Decimal? get defaultValueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueDecimal')
-  Element? get defaultValueDecimalElement;
+  Element? get defaultValueDecimalElement => throw _privateConstructorUsedError;
   @override
-  Id? get defaultValueId;
+  Id? get defaultValueId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueId')
-  Element? get defaultValueIdElement;
+  Element? get defaultValueIdElement => throw _privateConstructorUsedError;
   @override
-  Instant? get defaultValueInstant;
+  Instant? get defaultValueInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueInstant')
-  Element? get defaultValueInstantElement;
+  Element? get defaultValueInstantElement => throw _privateConstructorUsedError;
   @override
-  Integer? get defaultValueInteger;
+  Integer? get defaultValueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueInteger')
-  Element? get defaultValueIntegerElement;
+  Element? get defaultValueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Markdown? get defaultValueMarkdown;
+  Markdown? get defaultValueMarkdown => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueMarkdown')
-  Element? get defaultValueMarkdownElement;
+  Element? get defaultValueMarkdownElement =>
+      throw _privateConstructorUsedError;
   @override
-  Oid? get defaultValueOid;
+  Oid? get defaultValueOid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueOid')
-  Element? get defaultValueOidElement;
+  Element? get defaultValueOidElement => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get defaultValuePositiveInt;
+  PositiveInt? get defaultValuePositiveInt =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
-  Element? get defaultValuePositiveIntElement;
+  Element? get defaultValuePositiveIntElement =>
+      throw _privateConstructorUsedError;
   @override
-  String? get defaultValueString;
+  String? get defaultValueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueString')
-  Element? get defaultValueStringElement;
+  Element? get defaultValueStringElement => throw _privateConstructorUsedError;
   @override
-  Time? get defaultValueTime;
+  Time? get defaultValueTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueTime')
-  Element? get defaultValueTimeElement;
+  Element? get defaultValueTimeElement => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get defaultValueUnsignedInt;
+  UnsignedInt? get defaultValueUnsignedInt =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueUnsignedInt')
-  Element? get defaultValueUnsignedIntElement;
+  Element? get defaultValueUnsignedIntElement =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri? get defaultValueUri;
+  FhirUri? get defaultValueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueUri')
-  Element? get defaultValueUriElement;
+  Element? get defaultValueUriElement => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get defaultValueUrl;
+  FhirUrl? get defaultValueUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueUrl')
-  Element? get defaultValueUrlElement;
+  Element? get defaultValueUrlElement => throw _privateConstructorUsedError;
   @override
-  Uuid? get defaultValueUuid;
+  Uuid? get defaultValueUuid => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_defaultValueUuid')
-  Element? get defaultValueUuidElement;
+  Element? get defaultValueUuidElement => throw _privateConstructorUsedError;
   @override
-  Address? get defaultValueAddress;
+  Address? get defaultValueAddress => throw _privateConstructorUsedError;
   @override
-  Age? get defaultValueAge;
+  Age? get defaultValueAge => throw _privateConstructorUsedError;
   @override
-  Annotation? get defaultValueAnnotation;
+  Annotation? get defaultValueAnnotation => throw _privateConstructorUsedError;
   @override
-  Attachment? get defaultValueAttachment;
+  Attachment? get defaultValueAttachment => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get defaultValueCodeableConcept;
+  CodeableConcept? get defaultValueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Coding? get defaultValueCoding;
+  Coding? get defaultValueCoding => throw _privateConstructorUsedError;
   @override
-  ContactPoint? get defaultValueContactPoint;
+  ContactPoint? get defaultValueContactPoint =>
+      throw _privateConstructorUsedError;
   @override
-  Count? get defaultValueCount;
+  Count? get defaultValueCount => throw _privateConstructorUsedError;
   @override
-  Distance? get defaultValueDistance;
+  Distance? get defaultValueDistance => throw _privateConstructorUsedError;
   @override
-  FhirDuration? get defaultValueDuration;
+  FhirDuration? get defaultValueDuration => throw _privateConstructorUsedError;
   @override
-  HumanName? get defaultValueHumanName;
+  HumanName? get defaultValueHumanName => throw _privateConstructorUsedError;
   @override
-  Identifier? get defaultValueIdentifier;
+  Identifier? get defaultValueIdentifier => throw _privateConstructorUsedError;
   @override
-  Money? get defaultValueMoney;
+  Money? get defaultValueMoney => throw _privateConstructorUsedError;
   @override
-  Period? get defaultValuePeriod;
+  Period? get defaultValuePeriod => throw _privateConstructorUsedError;
   @override
-  Quantity? get defaultValueQuantity;
+  Quantity? get defaultValueQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get defaultValueRange;
+  Range? get defaultValueRange => throw _privateConstructorUsedError;
   @override
-  Ratio? get defaultValueRatio;
+  Ratio? get defaultValueRatio => throw _privateConstructorUsedError;
   @override
-  Reference? get defaultValueReference;
+  Reference? get defaultValueReference => throw _privateConstructorUsedError;
   @override
-  SampledData? get defaultValueSampledData;
+  SampledData? get defaultValueSampledData =>
+      throw _privateConstructorUsedError;
   @override
-  Signature? get defaultValueSignature;
+  Signature? get defaultValueSignature => throw _privateConstructorUsedError;
   @override
-  Timing? get defaultValueTiming;
+  Timing? get defaultValueTiming => throw _privateConstructorUsedError;
   @override
-  ContactDetail? get defaultValueContactDetail;
+  ContactDetail? get defaultValueContactDetail =>
+      throw _privateConstructorUsedError;
   @override
-  Contributor? get defaultValueContributor;
+  Contributor? get defaultValueContributor =>
+      throw _privateConstructorUsedError;
   @override
-  DataRequirement? get defaultValueDataRequirement;
+  DataRequirement? get defaultValueDataRequirement =>
+      throw _privateConstructorUsedError;
   @override
-  Expression? get defaultValueExpression;
+  Expression? get defaultValueExpression => throw _privateConstructorUsedError;
   @override
-  ParameterDefinition? get defaultValueParameterDefinition;
+  ParameterDefinition? get defaultValueParameterDefinition =>
+      throw _privateConstructorUsedError;
   @override
-  RelatedArtifact? get defaultValueRelatedArtifact;
+  RelatedArtifact? get defaultValueRelatedArtifact =>
+      throw _privateConstructorUsedError;
   @override
-  TriggerDefinition? get defaultValueTriggerDefinition;
+  TriggerDefinition? get defaultValueTriggerDefinition =>
+      throw _privateConstructorUsedError;
   @override
-  UsageContext? get defaultValueUsageContext;
+  UsageContext? get defaultValueUsageContext =>
+      throw _privateConstructorUsedError;
   @override
-  Dosage? get defaultValueDosage;
+  Dosage? get defaultValueDosage => throw _privateConstructorUsedError;
   @override
-  Meta? get defaultValueMeta;
+  Meta? get defaultValueMeta => throw _privateConstructorUsedError;
   @override
-  String? get element;
+  String? get element => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_element')
-  Element? get elementElement;
+  Element? get elementElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
-  StructureMapSourceListMode? get listMode;
+  StructureMapSourceListMode? get listMode =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_listMode')
-  Element? get listModeElement;
+  Element? get listModeElement => throw _privateConstructorUsedError;
   @override
-  Id? get variable;
+  Id? get variable => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_variable')
-  Element? get variableElement;
+  Element? get variableElement => throw _privateConstructorUsedError;
   @override
-  String? get condition;
+  String? get condition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_condition')
-  Element? get conditionElement;
+  Element? get conditionElement => throw _privateConstructorUsedError;
   @override
-  String? get check;
+  String? get check => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_check')
-  Element? get checkElement;
+  Element? get checkElement => throw _privateConstructorUsedError;
   @override
-  String? get logMessage;
+  String? get logMessage => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_logMessage')
-  Element? get logMessageElement;
+  Element? get logMessageElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureMapSourceCopyWith<_StructureMapSource> get copyWith;
+  _$StructureMapSourceCopyWith<_StructureMapSource> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) {
@@ -39183,38 +43102,44 @@ const $StructureMapTarget = _$StructureMapTargetTearOff();
 
 /// @nodoc
 mixin _$StructureMapTarget {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Id? get context;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Id? get context => throw _privateConstructorUsedError;
   @JsonKey(name: '_context')
-  Element? get contextElement;
+  Element? get contextElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureMapTargetContextType.unknown)
-  StructureMapTargetContextType? get contextType;
+  StructureMapTargetContextType? get contextType =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_contextType')
-  Element? get contextTypeElement;
-  String? get element;
+  Element? get contextTypeElement => throw _privateConstructorUsedError;
+  String? get element => throw _privateConstructorUsedError;
   @JsonKey(name: '_element')
-  Element? get elementElement;
-  Id? get variable;
+  Element? get elementElement => throw _privateConstructorUsedError;
+  Id? get variable => throw _privateConstructorUsedError;
   @JsonKey(name: '_variable')
-  Element? get variableElement;
-  List<StructureMapTargetListMode>? get listMode;
+  Element? get variableElement => throw _privateConstructorUsedError;
+  List<StructureMapTargetListMode>? get listMode =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_listMode')
-  List<Element?>? get listModeElement;
-  Id? get listRuleId;
+  List<Element?>? get listModeElement => throw _privateConstructorUsedError;
+  Id? get listRuleId => throw _privateConstructorUsedError;
   @JsonKey(name: '_listRuleId')
-  Element? get listRuleIdElement;
+  Element? get listRuleIdElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
-  StructureMapTargetTransform? get transform;
+  StructureMapTargetTransform? get transform =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_transform')
-  Element? get transformElement;
-  List<StructureMapParameter>? get parameter;
+  Element? get transformElement => throw _privateConstructorUsedError;
+  List<StructureMapParameter>? get parameter =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureMapTargetCopyWith<StructureMapTarget> get copyWith;
+  $StructureMapTargetCopyWith<StructureMapTarget> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -39291,50 +43216,78 @@ class _$StructureMapTargetCopyWithImpl<$Res>
     Object? parameter = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      context: context == freezed ? _value.context : context as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      context: context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as Id?,
       contextElement: contextElement == freezed
           ? _value.contextElement
-          : contextElement as Element?,
+          : contextElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       contextType: contextType == freezed
           ? _value.contextType
-          : contextType as StructureMapTargetContextType?,
+          : contextType // ignore: cast_nullable_to_non_nullable
+              as StructureMapTargetContextType?,
       contextTypeElement: contextTypeElement == freezed
           ? _value.contextTypeElement
-          : contextTypeElement as Element?,
-      element: element == freezed ? _value.element : element as String?,
+          : contextTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      element: element == freezed
+          ? _value.element
+          : element // ignore: cast_nullable_to_non_nullable
+              as String?,
       elementElement: elementElement == freezed
           ? _value.elementElement
-          : elementElement as Element?,
-      variable: variable == freezed ? _value.variable : variable as Id?,
+          : elementElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      variable: variable == freezed
+          ? _value.variable
+          : variable // ignore: cast_nullable_to_non_nullable
+              as Id?,
       variableElement: variableElement == freezed
           ? _value.variableElement
-          : variableElement as Element?,
+          : variableElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       listMode: listMode == freezed
           ? _value.listMode
-          : listMode as List<StructureMapTargetListMode>?,
+          : listMode // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapTargetListMode>?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
-          : listModeElement as List<Element?>?,
-      listRuleId: listRuleId == freezed ? _value.listRuleId : listRuleId as Id?,
+          : listModeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      listRuleId: listRuleId == freezed
+          ? _value.listRuleId
+          : listRuleId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       listRuleIdElement: listRuleIdElement == freezed
           ? _value.listRuleIdElement
-          : listRuleIdElement as Element?,
+          : listRuleIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       transform: transform == freezed
           ? _value.transform
-          : transform as StructureMapTargetTransform?,
+          : transform // ignore: cast_nullable_to_non_nullable
+              as StructureMapTargetTransform?,
       transformElement: transformElement == freezed
           ? _value.transformElement
-          : transformElement as Element?,
+          : transformElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<StructureMapParameter>?,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapParameter>?,
     ));
   }
 
@@ -39489,50 +43442,78 @@ class __$StructureMapTargetCopyWithImpl<$Res>
     Object? parameter = freezed,
   }) {
     return _then(_StructureMapTarget(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      context: context == freezed ? _value.context : context as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      context: context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as Id?,
       contextElement: contextElement == freezed
           ? _value.contextElement
-          : contextElement as Element?,
+          : contextElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       contextType: contextType == freezed
           ? _value.contextType
-          : contextType as StructureMapTargetContextType?,
+          : contextType // ignore: cast_nullable_to_non_nullable
+              as StructureMapTargetContextType?,
       contextTypeElement: contextTypeElement == freezed
           ? _value.contextTypeElement
-          : contextTypeElement as Element?,
-      element: element == freezed ? _value.element : element as String?,
+          : contextTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      element: element == freezed
+          ? _value.element
+          : element // ignore: cast_nullable_to_non_nullable
+              as String?,
       elementElement: elementElement == freezed
           ? _value.elementElement
-          : elementElement as Element?,
-      variable: variable == freezed ? _value.variable : variable as Id?,
+          : elementElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      variable: variable == freezed
+          ? _value.variable
+          : variable // ignore: cast_nullable_to_non_nullable
+              as Id?,
       variableElement: variableElement == freezed
           ? _value.variableElement
-          : variableElement as Element?,
+          : variableElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       listMode: listMode == freezed
           ? _value.listMode
-          : listMode as List<StructureMapTargetListMode>?,
+          : listMode // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapTargetListMode>?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
-          : listModeElement as List<Element?>?,
-      listRuleId: listRuleId == freezed ? _value.listRuleId : listRuleId as Id?,
+          : listModeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      listRuleId: listRuleId == freezed
+          ? _value.listRuleId
+          : listRuleId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       listRuleIdElement: listRuleIdElement == freezed
           ? _value.listRuleIdElement
-          : listRuleIdElement as Element?,
+          : listRuleIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       transform: transform == freezed
           ? _value.transform
-          : transform as StructureMapTargetTransform?,
+          : transform // ignore: cast_nullable_to_non_nullable
+              as StructureMapTargetTransform?,
       transformElement: transformElement == freezed
           ? _value.transformElement
-          : transformElement as Element?,
+          : transformElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<StructureMapParameter>?,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<StructureMapParameter>?,
     ));
   }
 }
@@ -39720,7 +43701,6 @@ class _$_StructureMapTarget extends _StructureMapTarget {
 }
 
 abstract class _StructureMapTarget extends StructureMapTarget {
-  _StructureMapTarget._() : super._();
   factory _StructureMapTarget(
       {String? id,
       @JsonKey(name: 'extension')
@@ -39750,59 +43730,66 @@ abstract class _StructureMapTarget extends StructureMapTarget {
       @JsonKey(name: '_transform')
           Element? transformElement,
       List<StructureMapParameter>? parameter}) = _$_StructureMapTarget;
+  _StructureMapTarget._() : super._();
 
   factory _StructureMapTarget.fromJson(Map<String, dynamic> json) =
       _$_StructureMapTarget.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get context;
+  Id? get context => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_context')
-  Element? get contextElement;
+  Element? get contextElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureMapTargetContextType.unknown)
-  StructureMapTargetContextType? get contextType;
+  StructureMapTargetContextType? get contextType =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_contextType')
-  Element? get contextTypeElement;
+  Element? get contextTypeElement => throw _privateConstructorUsedError;
   @override
-  String? get element;
+  String? get element => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_element')
-  Element? get elementElement;
+  Element? get elementElement => throw _privateConstructorUsedError;
   @override
-  Id? get variable;
+  Id? get variable => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_variable')
-  Element? get variableElement;
+  Element? get variableElement => throw _privateConstructorUsedError;
   @override
-  List<StructureMapTargetListMode>? get listMode;
+  List<StructureMapTargetListMode>? get listMode =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_listMode')
-  List<Element?>? get listModeElement;
+  List<Element?>? get listModeElement => throw _privateConstructorUsedError;
   @override
-  Id? get listRuleId;
+  Id? get listRuleId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_listRuleId')
-  Element? get listRuleIdElement;
+  Element? get listRuleIdElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
-  StructureMapTargetTransform? get transform;
+  StructureMapTargetTransform? get transform =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_transform')
-  Element? get transformElement;
+  Element? get transformElement => throw _privateConstructorUsedError;
   @override
-  List<StructureMapParameter>? get parameter;
+  List<StructureMapParameter>? get parameter =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureMapTargetCopyWith<_StructureMapTarget> get copyWith;
+  _$StructureMapTargetCopyWith<_StructureMapTarget> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureMapParameter _$StructureMapParameterFromJson(
@@ -39855,29 +43842,31 @@ const $StructureMapParameter = _$StructureMapParameterTearOff();
 
 /// @nodoc
 mixin _$StructureMapParameter {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Id? get valueId;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Id? get valueId => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueId')
-  Element? get valueIdElement;
-  String? get valueString;
+  Element? get valueIdElement => throw _privateConstructorUsedError;
+  String? get valueString => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
-  Boolean? get valueBoolean;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
-  Integer? get valueInteger;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement;
-  Decimal? get valueDecimal;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDecimal')
-  Element? get valueDecimalElement;
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureMapParameterCopyWith<StructureMapParameter> get copyWith;
+  $StructureMapParameterCopyWith<StructureMapParameter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -39933,40 +43922,58 @@ class _$StructureMapParameterCopyWithImpl<$Res>
     Object? valueDecimalElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      valueId: valueId == freezed ? _value.valueId : valueId as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      valueId: valueId == freezed
+          ? _value.valueId
+          : valueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
-          : valueIdElement as Element?,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String?,
+          : valueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
-          : valueStringElement as Element?,
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean?,
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
-          : valueBooleanElement as Element?,
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer?,
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
-          : valueIntegerElement as Element?,
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueDecimal: valueDecimal == freezed
           ? _value.valueDecimal
-          : valueDecimal as Decimal?,
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
-          : valueDecimalElement as Element?,
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -40088,40 +44095,58 @@ class __$StructureMapParameterCopyWithImpl<$Res>
     Object? valueDecimalElement = freezed,
   }) {
     return _then(_StructureMapParameter(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      valueId: valueId == freezed ? _value.valueId : valueId as Id?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      valueId: valueId == freezed
+          ? _value.valueId
+          : valueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
       valueIdElement: valueIdElement == freezed
           ? _value.valueIdElement
-          : valueIdElement as Element?,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String?,
+          : valueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
-          : valueStringElement as Element?,
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean?,
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
-          : valueBooleanElement as Element?,
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer?,
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
-          : valueIntegerElement as Element?,
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueDecimal: valueDecimal == freezed
           ? _value.valueDecimal
-          : valueDecimal as Decimal?,
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
-          : valueDecimalElement as Element?,
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -40261,7 +44286,6 @@ class _$_StructureMapParameter extends _StructureMapParameter {
 }
 
 abstract class _StructureMapParameter extends StructureMapParameter {
-  _StructureMapParameter._() : super._();
   factory _StructureMapParameter(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -40277,45 +44301,48 @@ abstract class _StructureMapParameter extends StructureMapParameter {
           Decimal? valueDecimal,
           @JsonKey(name: '_valueDecimal') Element? valueDecimalElement}) =
       _$_StructureMapParameter;
+  _StructureMapParameter._() : super._();
 
   factory _StructureMapParameter.fromJson(Map<String, dynamic> json) =
       _$_StructureMapParameter.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get valueId;
+  Id? get valueId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueId')
-  Element? get valueIdElement;
+  Element? get valueIdElement => throw _privateConstructorUsedError;
   @override
-  String? get valueString;
+  String? get valueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Integer? get valueInteger;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal? get valueDecimal;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element? get valueDecimalElement;
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureMapParameterCopyWith<_StructureMapParameter> get copyWith;
+  _$StructureMapParameterCopyWith<_StructureMapParameter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 StructureMapDependent _$StructureMapDependentFromJson(
@@ -40356,20 +44383,22 @@ const $StructureMapDependent = _$StructureMapDependentTearOff();
 
 /// @nodoc
 mixin _$StructureMapDependent {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Id? get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Id? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element? get nameElement;
-  List<String>? get variable;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  List<String>? get variable => throw _privateConstructorUsedError;
   @JsonKey(name: '_variable')
-  List<Element?>? get variableElement;
+  List<Element?>? get variableElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StructureMapDependentCopyWith<StructureMapDependent> get copyWith;
+  $StructureMapDependentCopyWith<StructureMapDependent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -40409,21 +44438,34 @@ class _$StructureMapDependentCopyWithImpl<$Res>
     Object? variableElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Id?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      variable:
-          variable == freezed ? _value.variable : variable as List<String>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      variable: variable == freezed
+          ? _value.variable
+          : variable // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       variableElement: variableElement == freezed
           ? _value.variableElement
-          : variableElement as List<Element?>?,
+          : variableElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
     ));
   }
 
@@ -40481,21 +44523,34 @@ class __$StructureMapDependentCopyWithImpl<$Res>
     Object? variableElement = freezed,
   }) {
     return _then(_StructureMapDependent(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as Id?,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      variable:
-          variable == freezed ? _value.variable : variable as List<String>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      variable: variable == freezed
+          ? _value.variable
+          : variable // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       variableElement: variableElement == freezed
           ? _value.variableElement
-          : variableElement as List<Element?>?,
+          : variableElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
     ));
   }
 }
@@ -40589,7 +44644,6 @@ class _$_StructureMapDependent extends _StructureMapDependent {
 }
 
 abstract class _StructureMapDependent extends StructureMapDependent {
-  _StructureMapDependent._() : super._();
   factory _StructureMapDependent(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -40599,28 +44653,31 @@ abstract class _StructureMapDependent extends StructureMapDependent {
           List<String>? variable,
           @JsonKey(name: '_variable') List<Element?>? variableElement}) =
       _$_StructureMapDependent;
+  _StructureMapDependent._() : super._();
 
   factory _StructureMapDependent.fromJson(Map<String, dynamic> json) =
       _$_StructureMapDependent.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Id? get name;
+  Id? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  List<String>? get variable;
+  List<String>? get variable => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_variable')
-  List<Element?>? get variableElement;
+  List<Element?>? get variableElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StructureMapDependentCopyWith<_StructureMapDependent> get copyWith;
+  _$StructureMapDependentCopyWith<_StructureMapDependent> get copyWith =>
+      throw _privateConstructorUsedError;
 }

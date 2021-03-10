@@ -12,7 +12,7 @@ part 'documents_and_lists.freezed.dart';
 part 'documents_and_lists.g.dart';
 
 @freezed
-abstract class Composition with Resource implements _$Composition {
+class Composition with Resource, _$Composition {
   Composition._();
   factory Composition({
     @Default(Dstu2ResourceType.Composition)
@@ -67,7 +67,7 @@ abstract class Composition with Resource implements _$Composition {
 }
 
 @freezed
-abstract class CompositionAttester with _$CompositionAttester {
+class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
   factory CompositionAttester({
     Id? id,
@@ -98,7 +98,7 @@ abstract class CompositionAttester with _$CompositionAttester {
 }
 
 @freezed
-abstract class CompositionEvent with _$CompositionEvent {
+class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
   factory CompositionEvent({
     Id? id,
@@ -127,7 +127,7 @@ abstract class CompositionEvent with _$CompositionEvent {
 }
 
 @freezed
-abstract class CompositionSection with _$CompositionSection {
+class CompositionSection with _$CompositionSection {
   CompositionSection._();
   factory CompositionSection({
     Id? id,
@@ -164,7 +164,7 @@ abstract class CompositionSection with _$CompositionSection {
 }
 
 @freezed
-abstract class DocumentManifest with Resource implements _$DocumentManifest {
+class DocumentManifest with Resource, _$DocumentManifest {
   DocumentManifest._();
   factory DocumentManifest({
     @Default(Dstu2ResourceType.DocumentManifest)
@@ -217,7 +217,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
 }
 
 @freezed
-abstract class DocumentManifestContent with _$DocumentManifestContent {
+class DocumentManifestContent with _$DocumentManifestContent {
   DocumentManifestContent._();
   factory DocumentManifestContent({
     Id? id,
@@ -245,7 +245,7 @@ abstract class DocumentManifestContent with _$DocumentManifestContent {
 }
 
 @freezed
-abstract class DocumentManifestRelated with _$DocumentManifestRelated {
+class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
   factory DocumentManifestRelated({
     Id? id,
@@ -273,7 +273,7 @@ abstract class DocumentManifestRelated with _$DocumentManifestRelated {
 }
 
 @freezed
-abstract class DocumentReference with Resource implements _$DocumentReference {
+class DocumentReference with Resource, _$DocumentReference {
   DocumentReference._();
   factory DocumentReference({
     @Default(Dstu2ResourceType.DocumentReference)
@@ -330,7 +330,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
 }
 
 @freezed
-abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
+class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
   factory DocumentReferenceRelatesTo({
     Id? id,
@@ -361,7 +361,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 }
 
 @freezed
-abstract class DocumentReferenceContent with _$DocumentReferenceContent {
+class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
   factory DocumentReferenceContent({
     Id? id,
@@ -390,7 +390,7 @@ abstract class DocumentReferenceContent with _$DocumentReferenceContent {
 }
 
 @freezed
-abstract class DocumentReferenceContext with _$DocumentReferenceContext {
+class DocumentReferenceContext with _$DocumentReferenceContext {
   DocumentReferenceContext._();
   factory DocumentReferenceContext({
     Id? id,
@@ -424,8 +424,7 @@ abstract class DocumentReferenceContext with _$DocumentReferenceContext {
 }
 
 @freezed
-abstract class DocumentReferenceContextRelated
-    with _$DocumentReferenceContextRelated {
+class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
   DocumentReferenceContextRelated._();
   factory DocumentReferenceContextRelated({
     Id? id,
@@ -456,7 +455,7 @@ abstract class DocumentReferenceContextRelated
 }
 
 @freezed
-abstract class List_ with Resource implements _$List_ {
+class List_ with Resource, _$List_ {
   List_._();
   factory List_({
     @Default(Dstu2ResourceType.List_)
@@ -508,7 +507,7 @@ abstract class List_ with Resource implements _$List_ {
 }
 
 @freezed
-abstract class ListEntry with _$ListEntry {
+class ListEntry with _$ListEntry {
   ListEntry._();
   factory ListEntry({
     Id? id,

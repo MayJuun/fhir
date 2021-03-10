@@ -12,7 +12,7 @@ part 'entities1.freezed.dart';
 part 'entities1.g.dart';
 
 @freezed
-abstract class Endpoint with Resource implements _$Endpoint {
+class Endpoint with Resource, _$Endpoint {
   Endpoint._();
 
   /// [Endpoint]: The technical details of an endpoint that can be used for
@@ -166,7 +166,7 @@ abstract class Endpoint with Resource implements _$Endpoint {
 }
 
 @freezed
-abstract class HealthcareService with Resource implements _$HealthcareService {
+class HealthcareService with Resource, _$HealthcareService {
   HealthcareService._();
 
   /// [HealthcareService]: The details of a healthcare service available at a
@@ -374,8 +374,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
 }
 
 @freezed
-abstract class HealthcareServiceEligibility
-    implements _$HealthcareServiceEligibility {
+class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   HealthcareServiceEligibility._();
 
   /// [HealthcareService_Eligibility]: The details of a healthcare service
@@ -438,8 +437,7 @@ abstract class HealthcareServiceEligibility
 }
 
 @freezed
-abstract class HealthcareServiceAvailableTime
-    implements _$HealthcareServiceAvailableTime {
+class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
 
   /// [HealthcareService_AvailableTime]: The details of a healthcare service
@@ -523,8 +521,7 @@ abstract class HealthcareServiceAvailableTime
 }
 
 @freezed
-abstract class HealthcareServiceNotAvailable
-    implements _$HealthcareServiceNotAvailable {
+class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
 
   /// [HealthcareService_NotAvailable]: The details of a healthcare service
@@ -589,7 +586,7 @@ abstract class HealthcareServiceNotAvailable
 }
 
 @freezed
-abstract class Location with Resource implements _$Location {
+class Location with Resource, _$Location {
   Location._();
 
   /// [Location]: Details and position information for a physical place where
@@ -772,7 +769,7 @@ abstract class Location with Resource implements _$Location {
 }
 
 @freezed
-abstract class LocationPosition implements _$LocationPosition {
+class LocationPosition with _$LocationPosition {
   LocationPosition._();
 
   /// [Location_Position]: Details and position information for a physical place
@@ -847,7 +844,7 @@ abstract class LocationPosition implements _$LocationPosition {
 }
 
 @freezed
-abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
+class LocationHoursOfOperation with _$LocationHoursOfOperation {
   LocationHoursOfOperation._();
 
   /// [Location_HoursOfOperation]: Details and position information for a
@@ -927,7 +924,7 @@ abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
 }
 
 @freezed
-abstract class Organization with Resource implements _$Organization {
+class Organization with Resource, _$Organization {
   Organization._();
 
   /// [Organization]: A formally or informally recognized grouping of people or
@@ -1063,7 +1060,7 @@ abstract class Organization with Resource implements _$Organization {
 }
 
 @freezed
-abstract class OrganizationContact implements _$OrganizationContact {
+class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
 
   /// [Organization_Contact]: A formally or informally recognized grouping of
@@ -1132,9 +1129,7 @@ abstract class OrganizationContact implements _$OrganizationContact {
 }
 
 @freezed
-abstract class OrganizationAffiliation
-    with Resource
-    implements _$OrganizationAffiliation {
+class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   OrganizationAffiliation._();
 
   /// [OrganizationAffiliation]: Defines an affiliation/assotiation/relationship

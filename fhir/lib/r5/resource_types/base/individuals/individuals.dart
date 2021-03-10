@@ -12,7 +12,7 @@ part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 @freezed
-abstract class Group with Resource implements _$Group {
+class Group with Resource, _$Group {
   Group._();
   factory Group({
     @Default(R5ResourceType.Group)
@@ -62,7 +62,7 @@ abstract class Group with Resource implements _$Group {
 }
 
 @freezed
-abstract class GroupCharacteristic implements _$GroupCharacteristic {
+class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
   factory GroupCharacteristic({
     String? id,
@@ -98,7 +98,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
 }
 
 @freezed
-abstract class GroupMember implements _$GroupMember {
+class GroupMember with _$GroupMember {
   GroupMember._();
   factory GroupMember({
     String? id,
@@ -128,7 +128,7 @@ abstract class GroupMember implements _$GroupMember {
 }
 
 @freezed
-abstract class Patient with Resource implements _$Patient {
+class Patient with Resource, _$Patient {
   Patient._();
   factory Patient({
     @Default(R5ResourceType.Patient)
@@ -191,7 +191,7 @@ abstract class Patient with Resource implements _$Patient {
 }
 
 @freezed
-abstract class PatientContact implements _$PatientContact {
+class PatientContact with _$PatientContact {
   PatientContact._();
   factory PatientContact({
     String? id,
@@ -226,7 +226,7 @@ abstract class PatientContact implements _$PatientContact {
 }
 
 @freezed
-abstract class PatientCommunication implements _$PatientCommunication {
+class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
   factory PatientCommunication({
     String? id,
@@ -255,7 +255,7 @@ abstract class PatientCommunication implements _$PatientCommunication {
 }
 
 @freezed
-abstract class PatientLink implements _$PatientLink {
+class PatientLink with _$PatientLink {
   PatientLink._();
   factory PatientLink({
     String? id,
@@ -284,7 +284,7 @@ abstract class PatientLink implements _$PatientLink {
 }
 
 @freezed
-abstract class Person with Resource implements _$Person {
+class Person with Resource, _$Person {
   Person._();
   factory Person({
     @Default(R5ResourceType.Person)
@@ -332,7 +332,7 @@ abstract class Person with Resource implements _$Person {
 }
 
 @freezed
-abstract class PersonLink implements _$PersonLink {
+class PersonLink with _$PersonLink {
   PersonLink._();
   factory PersonLink({
     String? id,
@@ -362,7 +362,7 @@ abstract class PersonLink implements _$PersonLink {
 }
 
 @freezed
-abstract class Practitioner with Resource implements _$Practitioner {
+class Practitioner with Resource, _$Practitioner {
   Practitioner._();
   factory Practitioner({
     @Default(R5ResourceType.Practitioner)
@@ -412,8 +412,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
 }
 
 @freezed
-abstract class PractitionerQualification
-    implements _$PractitionerQualification {
+class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
   factory PractitionerQualification({
     String? id,
@@ -444,7 +443,7 @@ abstract class PractitionerQualification
 }
 
 @freezed
-abstract class PractitionerRole with Resource implements _$PractitionerRole {
+class PractitionerRole with Resource, _$PractitionerRole {
   PractitionerRole._();
   factory PractitionerRole({
     @Default(R5ResourceType.PractitionerRole)
@@ -497,8 +496,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
 }
 
 @freezed
-abstract class PractitionerRoleAvailableTime
-    implements _$PractitionerRoleAvailableTime {
+class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   PractitionerRoleAvailableTime._();
   factory PractitionerRoleAvailableTime({
     String? id,
@@ -533,8 +531,7 @@ abstract class PractitionerRoleAvailableTime
 }
 
 @freezed
-abstract class PractitionerRoleNotAvailable
-    implements _$PractitionerRoleNotAvailable {
+class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   PractitionerRoleNotAvailable._();
   factory PractitionerRoleNotAvailable({
     String? id,
@@ -564,7 +561,7 @@ abstract class PractitionerRoleNotAvailable
 }
 
 @freezed
-abstract class RelatedPerson with Resource implements _$RelatedPerson {
+class RelatedPerson with Resource, _$RelatedPerson {
   RelatedPerson._();
   factory RelatedPerson({
     @Default(R5ResourceType.RelatedPerson)
@@ -616,8 +613,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
 }
 
 @freezed
-abstract class RelatedPersonCommunication
-    implements _$RelatedPersonCommunication {
+class RelatedPersonCommunication with _$RelatedPersonCommunication {
   RelatedPersonCommunication._();
   factory RelatedPersonCommunication({
     String? id,

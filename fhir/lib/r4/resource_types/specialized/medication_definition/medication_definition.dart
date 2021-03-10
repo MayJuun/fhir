@@ -11,7 +11,7 @@ part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
 
 @freezed
-abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
+class MedicinalProduct with Resource, _$MedicinalProduct {
   MedicinalProduct._();
 
   /// [MedicinalProduct]: Detailed definition of a medicinal product, typically
@@ -180,7 +180,7 @@ abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
 }
 
 @freezed
-abstract class MedicinalProductName implements _$MedicinalProductName {
+class MedicinalProductName with _$MedicinalProductName {
   MedicinalProductName._();
 
   /// [MedicinalProduct_Name]: Detailed definition of a medicinal product,
@@ -245,7 +245,7 @@ abstract class MedicinalProductName implements _$MedicinalProductName {
 }
 
 @freezed
-abstract class MedicinalProductNamePart implements _$MedicinalProductNamePart {
+class MedicinalProductNamePart with _$MedicinalProductNamePart {
   MedicinalProductNamePart._();
 
   /// [MedicinalProduct_NamePart]: Detailed definition of a medicinal product,
@@ -308,8 +308,7 @@ abstract class MedicinalProductNamePart implements _$MedicinalProductNamePart {
 }
 
 @freezed
-abstract class MedicinalProductCountryLanguage
-    implements _$MedicinalProductCountryLanguage {
+class MedicinalProductCountryLanguage with _$MedicinalProductCountryLanguage {
   MedicinalProductCountryLanguage._();
 
   /// [MedicinalProduct_CountryLanguage]: Detailed definition of a medicinal
@@ -375,8 +374,8 @@ abstract class MedicinalProductCountryLanguage
 }
 
 @freezed
-abstract class MedicinalProductManufacturingBusinessOperation
-    implements _$MedicinalProductManufacturingBusinessOperation {
+class MedicinalProductManufacturingBusinessOperation
+    with _$MedicinalProductManufacturingBusinessOperation {
   MedicinalProductManufacturingBusinessOperation._();
 
   /// [MedicinalProduct_ManufacturingBusinessOperation]: Detailed definition of
@@ -457,8 +456,8 @@ abstract class MedicinalProductManufacturingBusinessOperation
 }
 
 @freezed
-abstract class MedicinalProductSpecialDesignation
-    implements _$MedicinalProductSpecialDesignation {
+class MedicinalProductSpecialDesignation
+    with _$MedicinalProductSpecialDesignation {
   MedicinalProductSpecialDesignation._();
 
   /// [MedicinalProduct_SpecialDesignation]: Detailed definition of a medicinal
@@ -544,9 +543,8 @@ abstract class MedicinalProductSpecialDesignation
 }
 
 @freezed
-abstract class MedicinalProductAuthorization
-    with Resource
-    implements _$MedicinalProductAuthorization {
+class MedicinalProductAuthorization
+    with Resource, _$MedicinalProductAuthorization {
   MedicinalProductAuthorization._();
 
   /// [MedicinalProductAuthorization]: The regulatory authorization of a
@@ -713,8 +711,8 @@ abstract class MedicinalProductAuthorization
 }
 
 @freezed
-abstract class MedicinalProductAuthorizationJurisdictionalAuthorization
-    implements _$MedicinalProductAuthorizationJurisdictionalAuthorization {
+class MedicinalProductAuthorizationJurisdictionalAuthorization
+    with _$MedicinalProductAuthorizationJurisdictionalAuthorization {
   MedicinalProductAuthorizationJurisdictionalAuthorization._();
 
   /// [MedicinalProductAuthorization_JurisdictionalAuthorization]: The
@@ -787,8 +785,8 @@ abstract class MedicinalProductAuthorizationJurisdictionalAuthorization
 }
 
 @freezed
-abstract class MedicinalProductAuthorizationProcedure
-    implements _$MedicinalProductAuthorizationProcedure {
+class MedicinalProductAuthorizationProcedure
+    with _$MedicinalProductAuthorizationProcedure {
   MedicinalProductAuthorizationProcedure._();
 
   /// [MedicinalProductAuthorization_Procedure]: The regulatory authorization of
@@ -862,9 +860,8 @@ abstract class MedicinalProductAuthorizationProcedure
 }
 
 @freezed
-abstract class MedicinalProductContraindication
-    with Resource
-    implements _$MedicinalProductContraindication {
+class MedicinalProductContraindication
+    with Resource, _$MedicinalProductContraindication {
   MedicinalProductContraindication._();
 
   /// [MedicinalProductContraindication]: The clinical particulars -
@@ -984,8 +981,8 @@ abstract class MedicinalProductContraindication
 }
 
 @freezed
-abstract class MedicinalProductContraindicationOtherTherapy
-    implements _$MedicinalProductContraindicationOtherTherapy {
+class MedicinalProductContraindicationOtherTherapy
+    with _$MedicinalProductContraindicationOtherTherapy {
   MedicinalProductContraindicationOtherTherapy._();
 
   /// [MedicinalProductContraindication_OtherTherapy]: The clinical particulars
@@ -1056,9 +1053,7 @@ abstract class MedicinalProductContraindicationOtherTherapy
 }
 
 @freezed
-abstract class MedicinalProductIndication
-    with Resource
-    implements _$MedicinalProductIndication {
+class MedicinalProductIndication with Resource, _$MedicinalProductIndication {
   MedicinalProductIndication._();
 
   /// [MedicinalProductIndication]: Indication for the Medicinal Product.
@@ -1183,8 +1178,8 @@ abstract class MedicinalProductIndication
 }
 
 @freezed
-abstract class MedicinalProductIndicationOtherTherapy
-    implements _$MedicinalProductIndicationOtherTherapy {
+class MedicinalProductIndicationOtherTherapy
+    with _$MedicinalProductIndicationOtherTherapy {
   MedicinalProductIndicationOtherTherapy._();
 
   /// [MedicinalProductIndication_OtherTherapy]: Indication for the Medicinal
@@ -1254,9 +1249,7 @@ abstract class MedicinalProductIndicationOtherTherapy
 }
 
 @freezed
-abstract class MedicinalProductIngredient
-    with Resource
-    implements _$MedicinalProductIngredient {
+class MedicinalProductIngredient with Resource, _$MedicinalProductIngredient {
   MedicinalProductIngredient._();
 
   /// [MedicinalProductIngredient]: An ingredient of a manufactured item or
@@ -1373,8 +1366,8 @@ abstract class MedicinalProductIngredient
 }
 
 @freezed
-abstract class MedicinalProductIngredientSpecifiedSubstance
-    implements _$MedicinalProductIngredientSpecifiedSubstance {
+class MedicinalProductIngredientSpecifiedSubstance
+    with _$MedicinalProductIngredientSpecifiedSubstance {
   MedicinalProductIngredientSpecifiedSubstance._();
 
   /// [MedicinalProductIngredient_SpecifiedSubstance]: An ingredient of a
@@ -1444,8 +1437,8 @@ abstract class MedicinalProductIngredientSpecifiedSubstance
 }
 
 @freezed
-abstract class MedicinalProductIngredientStrength
-    implements _$MedicinalProductIngredientStrength {
+class MedicinalProductIngredientStrength
+    with _$MedicinalProductIngredientStrength {
   MedicinalProductIngredientStrength._();
 
   /// [MedicinalProductIngredient_Strength]: An ingredient of a manufactured
@@ -1533,8 +1526,8 @@ abstract class MedicinalProductIngredientStrength
 }
 
 @freezed
-abstract class MedicinalProductIngredientReferenceStrength
-    implements _$MedicinalProductIngredientReferenceStrength {
+class MedicinalProductIngredientReferenceStrength
+    with _$MedicinalProductIngredientReferenceStrength {
   MedicinalProductIngredientReferenceStrength._();
 
   /// [MedicinalProductIngredient_ReferenceStrength]: An ingredient of a
@@ -1609,8 +1602,8 @@ abstract class MedicinalProductIngredientReferenceStrength
 }
 
 @freezed
-abstract class MedicinalProductIngredientSubstance
-    implements _$MedicinalProductIngredientSubstance {
+class MedicinalProductIngredientSubstance
+    with _$MedicinalProductIngredientSubstance {
   MedicinalProductIngredientSubstance._();
 
   /// [MedicinalProductIngredient_Substance]: An ingredient of a manufactured
@@ -1673,9 +1666,7 @@ abstract class MedicinalProductIngredientSubstance
 }
 
 @freezed
-abstract class MedicinalProductInteraction
-    with Resource
-    implements _$MedicinalProductInteraction {
+class MedicinalProductInteraction with Resource, _$MedicinalProductInteraction {
   MedicinalProductInteraction._();
 
   /// [MedicinalProductInteraction]: The interactions of the medicinal product
@@ -1795,8 +1786,8 @@ abstract class MedicinalProductInteraction
 }
 
 @freezed
-abstract class MedicinalProductInteractionInteractant
-    implements _$MedicinalProductInteractionInteractant {
+class MedicinalProductInteractionInteractant
+    with _$MedicinalProductInteractionInteractant {
   MedicinalProductInteractionInteractant._();
 
   /// [MedicinalProductInteraction_Interactant]: The interactions of the
@@ -1861,9 +1852,8 @@ abstract class MedicinalProductInteractionInteractant
 }
 
 @freezed
-abstract class MedicinalProductManufactured
-    with Resource
-    implements _$MedicinalProductManufactured {
+class MedicinalProductManufactured
+    with Resource, _$MedicinalProductManufactured {
   MedicinalProductManufactured._();
 
   /// [MedicinalProductManufactured]: The manufactured item as contained in the
@@ -1980,9 +1970,7 @@ abstract class MedicinalProductManufactured
 }
 
 @freezed
-abstract class MedicinalProductPackaged
-    with Resource
-    implements _$MedicinalProductPackaged {
+class MedicinalProductPackaged with Resource, _$MedicinalProductPackaged {
   MedicinalProductPackaged._();
 
   /// [MedicinalProductPackaged]: A medicinal product in a container or package.
@@ -2106,8 +2094,8 @@ abstract class MedicinalProductPackaged
 }
 
 @freezed
-abstract class MedicinalProductPackagedBatchIdentifier
-    implements _$MedicinalProductPackagedBatchIdentifier {
+class MedicinalProductPackagedBatchIdentifier
+    with _$MedicinalProductPackagedBatchIdentifier {
   MedicinalProductPackagedBatchIdentifier._();
 
   /// [MedicinalProductPackaged_BatchIdentifier]: A medicinal product in a
@@ -2171,8 +2159,8 @@ abstract class MedicinalProductPackagedBatchIdentifier
 }
 
 @freezed
-abstract class MedicinalProductPackagedPackageItem
-    implements _$MedicinalProductPackagedPackageItem {
+class MedicinalProductPackagedPackageItem
+    with _$MedicinalProductPackagedPackageItem {
   MedicinalProductPackagedPackageItem._();
 
   /// [MedicinalProductPackaged_PackageItem]: A medicinal product in a container
@@ -2266,9 +2254,8 @@ abstract class MedicinalProductPackagedPackageItem
 }
 
 @freezed
-abstract class MedicinalProductPharmaceutical
-    with Resource
-    implements _$MedicinalProductPharmaceutical {
+class MedicinalProductPharmaceutical
+    with Resource, _$MedicinalProductPharmaceutical {
   MedicinalProductPharmaceutical._();
 
   /// [MedicinalProductPharmaceutical]: A pharmaceutical product described in
@@ -2387,8 +2374,8 @@ abstract class MedicinalProductPharmaceutical
 }
 
 @freezed
-abstract class MedicinalProductPharmaceuticalCharacteristics
-    implements _$MedicinalProductPharmaceuticalCharacteristics {
+class MedicinalProductPharmaceuticalCharacteristics
+    with _$MedicinalProductPharmaceuticalCharacteristics {
   MedicinalProductPharmaceuticalCharacteristics._();
 
   /// [MedicinalProductPharmaceutical_Characteristics]: A pharmaceutical product
@@ -2451,8 +2438,8 @@ abstract class MedicinalProductPharmaceuticalCharacteristics
 }
 
 @freezed
-abstract class MedicinalProductPharmaceuticalRouteOfAdministration
-    implements _$MedicinalProductPharmaceuticalRouteOfAdministration {
+class MedicinalProductPharmaceuticalRouteOfAdministration
+    with _$MedicinalProductPharmaceuticalRouteOfAdministration {
   MedicinalProductPharmaceuticalRouteOfAdministration._();
 
   /// [MedicinalProductPharmaceutical_RouteOfAdministration]: A pharmaceutical
@@ -2540,8 +2527,8 @@ abstract class MedicinalProductPharmaceuticalRouteOfAdministration
 }
 
 @freezed
-abstract class MedicinalProductPharmaceuticalTargetSpecies
-    implements _$MedicinalProductPharmaceuticalTargetSpecies {
+class MedicinalProductPharmaceuticalTargetSpecies
+    with _$MedicinalProductPharmaceuticalTargetSpecies {
   MedicinalProductPharmaceuticalTargetSpecies._();
 
   /// [MedicinalProductPharmaceutical_TargetSpecies]: A pharmaceutical product
@@ -2604,8 +2591,8 @@ abstract class MedicinalProductPharmaceuticalTargetSpecies
 }
 
 @freezed
-abstract class MedicinalProductPharmaceuticalWithdrawalPeriod
-    implements _$MedicinalProductPharmaceuticalWithdrawalPeriod {
+class MedicinalProductPharmaceuticalWithdrawalPeriod
+    with _$MedicinalProductPharmaceuticalWithdrawalPeriod {
   MedicinalProductPharmaceuticalWithdrawalPeriod._();
 
   /// [MedicinalProductPharmaceutical_WithdrawalPeriod]: A pharmaceutical
@@ -2676,9 +2663,8 @@ abstract class MedicinalProductPharmaceuticalWithdrawalPeriod
 }
 
 @freezed
-abstract class MedicinalProductUndesirableEffect
-    with Resource
-    implements _$MedicinalProductUndesirableEffect {
+class MedicinalProductUndesirableEffect
+    with Resource, _$MedicinalProductUndesirableEffect {
   MedicinalProductUndesirableEffect._();
 
   /// [MedicinalProductUndesirableEffect]: Describe the undesirable effects of
@@ -2788,9 +2774,7 @@ abstract class MedicinalProductUndesirableEffect
 }
 
 @freezed
-abstract class SubstanceNucleicAcid
-    with Resource
-    implements _$SubstanceNucleicAcid {
+class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   SubstanceNucleicAcid._();
 
   /// [SubstanceNucleicAcid]: Nucleic acids are defined by three distinct
@@ -2916,8 +2900,7 @@ abstract class SubstanceNucleicAcid
 }
 
 @freezed
-abstract class SubstanceNucleicAcidSubunit
-    implements _$SubstanceNucleicAcidSubunit {
+class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   SubstanceNucleicAcidSubunit._();
 
   /// [SubstanceNucleicAcid_Subunit]: Nucleic acids are defined by three
@@ -3017,8 +3000,7 @@ abstract class SubstanceNucleicAcidSubunit
 }
 
 @freezed
-abstract class SubstanceNucleicAcidLinkage
-    implements _$SubstanceNucleicAcidLinkage {
+class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   SubstanceNucleicAcidLinkage._();
 
   /// [SubstanceNucleicAcid_Linkage]: Nucleic acids are defined by three
@@ -3102,8 +3084,7 @@ abstract class SubstanceNucleicAcidLinkage
 }
 
 @freezed
-abstract class SubstanceNucleicAcidSugar
-    implements _$SubstanceNucleicAcidSugar {
+class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   SubstanceNucleicAcidSugar._();
 
   /// [SubstanceNucleicAcid_Sugar]: Nucleic acids are defined by three distinct
@@ -3178,7 +3159,7 @@ abstract class SubstanceNucleicAcidSugar
 }
 
 @freezed
-abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
+class SubstancePolymer with Resource, _$SubstancePolymer {
   SubstancePolymer._();
 
   /// [SubstancePolymer]: Todo.
@@ -3290,8 +3271,7 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
 }
 
 @freezed
-abstract class SubstancePolymerMonomerSet
-    implements _$SubstancePolymerMonomerSet {
+class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   SubstancePolymerMonomerSet._();
 
   /// [SubstancePolymer_MonomerSet]: Todo.
@@ -3350,8 +3330,7 @@ abstract class SubstancePolymerMonomerSet
 }
 
 @freezed
-abstract class SubstancePolymerStartingMaterial
-    implements _$SubstancePolymerStartingMaterial {
+class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   SubstancePolymerStartingMaterial._();
 
   /// [SubstancePolymer_StartingMaterial]: Todo.
@@ -3421,7 +3400,7 @@ abstract class SubstancePolymerStartingMaterial
 }
 
 @freezed
-abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
+class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   SubstancePolymerRepeat._();
 
   /// [SubstancePolymer_Repeat]: Todo.
@@ -3492,8 +3471,7 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
 }
 
 @freezed
-abstract class SubstancePolymerRepeatUnit
-    implements _$SubstancePolymerRepeatUnit {
+class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   SubstancePolymerRepeatUnit._();
 
   /// [SubstancePolymer_RepeatUnit]: Todo.
@@ -3564,8 +3542,8 @@ abstract class SubstancePolymerRepeatUnit
 }
 
 @freezed
-abstract class SubstancePolymerDegreeOfPolymerisation
-    implements _$SubstancePolymerDegreeOfPolymerisation {
+class SubstancePolymerDegreeOfPolymerisation
+    with _$SubstancePolymerDegreeOfPolymerisation {
   SubstancePolymerDegreeOfPolymerisation._();
 
   /// [SubstancePolymer_DegreeOfPolymerisation]: Todo.
@@ -3626,8 +3604,8 @@ abstract class SubstancePolymerDegreeOfPolymerisation
 }
 
 @freezed
-abstract class SubstancePolymerStructuralRepresentation
-    implements _$SubstancePolymerStructuralRepresentation {
+class SubstancePolymerStructuralRepresentation
+    with _$SubstancePolymerStructuralRepresentation {
   SubstancePolymerStructuralRepresentation._();
 
   /// [SubstancePolymer_StructuralRepresentation]: Todo.
@@ -3694,7 +3672,7 @@ abstract class SubstancePolymerStructuralRepresentation
 }
 
 @freezed
-abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
+class SubstanceProtein with Resource, _$SubstanceProtein {
   SubstanceProtein._();
 
   /// [SubstanceProtein]: A SubstanceProtein is defined as a single unit of a
@@ -3828,7 +3806,7 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
 }
 
 @freezed
-abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
+class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   SubstanceProteinSubunit._();
 
   /// [SubstanceProtein_Subunit]: A SubstanceProtein is defined as a single unit
@@ -3951,9 +3929,8 @@ abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
 }
 
 @freezed
-abstract class SubstanceReferenceInformation
-    with Resource
-    implements _$SubstanceReferenceInformation {
+class SubstanceReferenceInformation
+    with Resource, _$SubstanceReferenceInformation {
   SubstanceReferenceInformation._();
 
   /// [SubstanceReferenceInformation]: Todo.
@@ -4063,8 +4040,8 @@ abstract class SubstanceReferenceInformation
 }
 
 @freezed
-abstract class SubstanceReferenceInformationGene
-    implements _$SubstanceReferenceInformationGene {
+class SubstanceReferenceInformationGene
+    with _$SubstanceReferenceInformationGene {
   SubstanceReferenceInformationGene._();
 
   /// [SubstanceReferenceInformation_Gene]: Todo.
@@ -4128,8 +4105,8 @@ abstract class SubstanceReferenceInformationGene
 }
 
 @freezed
-abstract class SubstanceReferenceInformationGeneElement
-    implements _$SubstanceReferenceInformationGeneElement {
+class SubstanceReferenceInformationGeneElement
+    with _$SubstanceReferenceInformationGeneElement {
   SubstanceReferenceInformationGeneElement._();
 
   /// [SubstanceReferenceInformation_GeneElement]: Todo.
@@ -4193,8 +4170,8 @@ abstract class SubstanceReferenceInformationGeneElement
 }
 
 @freezed
-abstract class SubstanceReferenceInformationClassification
-    implements _$SubstanceReferenceInformationClassification {
+class SubstanceReferenceInformationClassification
+    with _$SubstanceReferenceInformationClassification {
   SubstanceReferenceInformationClassification._();
 
   /// [SubstanceReferenceInformation_Classification]: Todo.
@@ -4261,8 +4238,8 @@ abstract class SubstanceReferenceInformationClassification
 }
 
 @freezed
-abstract class SubstanceReferenceInformationTarget
-    implements _$SubstanceReferenceInformationTarget {
+class SubstanceReferenceInformationTarget
+    with _$SubstanceReferenceInformationTarget {
   SubstanceReferenceInformationTarget._();
 
   /// [SubstanceReferenceInformation_Target]: Todo.
@@ -4350,9 +4327,7 @@ abstract class SubstanceReferenceInformationTarget
 }
 
 @freezed
-abstract class SubstanceSourceMaterial
-    with Resource
-    implements _$SubstanceSourceMaterial {
+class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   SubstanceSourceMaterial._();
 
   /// [SubstanceSourceMaterial]: Source material shall capture information on
@@ -4532,8 +4507,8 @@ abstract class SubstanceSourceMaterial
 }
 
 @freezed
-abstract class SubstanceSourceMaterialFractionDescription
-    implements _$SubstanceSourceMaterialFractionDescription {
+class SubstanceSourceMaterialFractionDescription
+    with _$SubstanceSourceMaterialFractionDescription {
   SubstanceSourceMaterialFractionDescription._();
 
   /// [SubstanceSourceMaterial_FractionDescription]: Source material shall
@@ -4614,8 +4589,7 @@ abstract class SubstanceSourceMaterialFractionDescription
 }
 
 @freezed
-abstract class SubstanceSourceMaterialOrganism
-    implements _$SubstanceSourceMaterialOrganism {
+class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   SubstanceSourceMaterialOrganism._();
 
   /// [SubstanceSourceMaterial_Organism]: Source material shall capture
@@ -4720,8 +4694,7 @@ abstract class SubstanceSourceMaterialOrganism
 }
 
 @freezed
-abstract class SubstanceSourceMaterialAuthor
-    implements _$SubstanceSourceMaterialAuthor {
+class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   SubstanceSourceMaterialAuthor._();
 
   /// [SubstanceSourceMaterial_Author]: Source material shall capture
@@ -4804,8 +4777,7 @@ abstract class SubstanceSourceMaterialAuthor
 }
 
 @freezed
-abstract class SubstanceSourceMaterialHybrid
-    implements _$SubstanceSourceMaterialHybrid {
+class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   SubstanceSourceMaterialHybrid._();
 
   /// [SubstanceSourceMaterial_Hybrid]: Source material shall capture
@@ -4909,8 +4881,8 @@ abstract class SubstanceSourceMaterialHybrid
 }
 
 @freezed
-abstract class SubstanceSourceMaterialOrganismGeneral
-    implements _$SubstanceSourceMaterialOrganismGeneral {
+class SubstanceSourceMaterialOrganismGeneral
+    with _$SubstanceSourceMaterialOrganismGeneral {
   SubstanceSourceMaterialOrganismGeneral._();
 
   /// [SubstanceSourceMaterial_OrganismGeneral]: Source material shall capture
@@ -4991,8 +4963,8 @@ abstract class SubstanceSourceMaterialOrganismGeneral
 }
 
 @freezed
-abstract class SubstanceSourceMaterialPartDescription
-    implements _$SubstanceSourceMaterialPartDescription {
+class SubstanceSourceMaterialPartDescription
+    with _$SubstanceSourceMaterialPartDescription {
   SubstanceSourceMaterialPartDescription._();
 
   /// [SubstanceSourceMaterial_PartDescription]: Source material shall capture
@@ -5069,9 +5041,7 @@ abstract class SubstanceSourceMaterialPartDescription
 }
 
 @freezed
-abstract class SubstanceSpecification
-    with Resource
-    implements _$SubstanceSpecification {
+class SubstanceSpecification with Resource, _$SubstanceSpecification {
   SubstanceSpecification._();
 
   /// [SubstanceSpecification]: The detailed description of a substance,
@@ -5230,8 +5200,7 @@ abstract class SubstanceSpecification
 }
 
 @freezed
-abstract class SubstanceSpecificationMoiety
-    implements _$SubstanceSpecificationMoiety {
+class SubstanceSpecificationMoiety with _$SubstanceSpecificationMoiety {
   SubstanceSpecificationMoiety._();
 
   /// [SubstanceSpecification_Moiety]: The detailed description of a substance,
@@ -5318,8 +5287,7 @@ abstract class SubstanceSpecificationMoiety
 }
 
 @freezed
-abstract class SubstanceSpecificationProperty
-    implements _$SubstanceSpecificationProperty {
+class SubstanceSpecificationProperty with _$SubstanceSpecificationProperty {
   SubstanceSpecificationProperty._();
 
   /// [SubstanceSpecification_Property]: The detailed description of a
@@ -5406,8 +5374,7 @@ abstract class SubstanceSpecificationProperty
 }
 
 @freezed
-abstract class SubstanceSpecificationStructure
-    implements _$SubstanceSpecificationStructure {
+class SubstanceSpecificationStructure with _$SubstanceSpecificationStructure {
   SubstanceSpecificationStructure._();
 
   /// [SubstanceSpecification_Structure]: The detailed description of a
@@ -5498,8 +5465,7 @@ abstract class SubstanceSpecificationStructure
 }
 
 @freezed
-abstract class SubstanceSpecificationIsotope
-    implements _$SubstanceSpecificationIsotope {
+class SubstanceSpecificationIsotope with _$SubstanceSpecificationIsotope {
   SubstanceSpecificationIsotope._();
 
   /// [SubstanceSpecification_Isotope]: The detailed description of a substance,
@@ -5570,8 +5536,8 @@ abstract class SubstanceSpecificationIsotope
 }
 
 @freezed
-abstract class SubstanceSpecificationMolecularWeight
-    implements _$SubstanceSpecificationMolecularWeight {
+class SubstanceSpecificationMolecularWeight
+    with _$SubstanceSpecificationMolecularWeight {
   SubstanceSpecificationMolecularWeight._();
 
   /// [SubstanceSpecification_MolecularWeight]: The detailed description of a
@@ -5640,8 +5606,8 @@ abstract class SubstanceSpecificationMolecularWeight
 }
 
 @freezed
-abstract class SubstanceSpecificationRepresentation
-    implements _$SubstanceSpecificationRepresentation {
+class SubstanceSpecificationRepresentation
+    with _$SubstanceSpecificationRepresentation {
   SubstanceSpecificationRepresentation._();
 
   /// [SubstanceSpecification_Representation]: The detailed description of a
@@ -5710,8 +5676,7 @@ abstract class SubstanceSpecificationRepresentation
 }
 
 @freezed
-abstract class SubstanceSpecificationCode
-    implements _$SubstanceSpecificationCode {
+class SubstanceSpecificationCode with _$SubstanceSpecificationCode {
   SubstanceSpecificationCode._();
 
   /// [SubstanceSpecification_Code]: The detailed description of a substance,
@@ -5787,8 +5752,7 @@ abstract class SubstanceSpecificationCode
 }
 
 @freezed
-abstract class SubstanceSpecificationName
-    implements _$SubstanceSpecificationName {
+class SubstanceSpecificationName with _$SubstanceSpecificationName {
   SubstanceSpecificationName._();
 
   /// [SubstanceSpecification_Name]: The detailed description of a substance,
@@ -5882,8 +5846,7 @@ abstract class SubstanceSpecificationName
 }
 
 @freezed
-abstract class SubstanceSpecificationOfficial
-    implements _$SubstanceSpecificationOfficial {
+class SubstanceSpecificationOfficial with _$SubstanceSpecificationOfficial {
   SubstanceSpecificationOfficial._();
 
   /// [SubstanceSpecification_Official]: The detailed description of a
@@ -5951,8 +5914,8 @@ abstract class SubstanceSpecificationOfficial
 }
 
 @freezed
-abstract class SubstanceSpecificationRelationship
-    implements _$SubstanceSpecificationRelationship {
+class SubstanceSpecificationRelationship
+    with _$SubstanceSpecificationRelationship {
   SubstanceSpecificationRelationship._();
 
   /// [SubstanceSpecification_Relationship]: The detailed description of a

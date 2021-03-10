@@ -12,7 +12,7 @@ part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
 @freezed
-abstract class BodyStructure with Resource implements _$BodyStructure {
+class BodyStructure with Resource, _$BodyStructure {
   BodyStructure._();
   factory BodyStructure({
     @Default(R5ResourceType.BodyStructure)
@@ -58,7 +58,7 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
 }
 
 @freezed
-abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
+class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
   factory DiagnosticReport({
     @Default(R5ResourceType.DiagnosticReport)
@@ -118,7 +118,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
 }
 
 @freezed
-abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
+class DiagnosticReportMedia with _$DiagnosticReportMedia {
   DiagnosticReportMedia._();
   factory DiagnosticReportMedia({
     String? id,
@@ -147,7 +147,7 @@ abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
 }
 
 @freezed
-abstract class ImagingStudy with Resource implements _$ImagingStudy {
+class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
   factory ImagingStudy({
     @Default(R5ResourceType.ImagingStudy)
@@ -207,7 +207,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
 }
 
 @freezed
-abstract class ImagingStudyProcedure implements _$ImagingStudyProcedure {
+class ImagingStudyProcedure with _$ImagingStudyProcedure {
   ImagingStudyProcedure._();
   factory ImagingStudyProcedure({
     String? id,
@@ -235,7 +235,7 @@ abstract class ImagingStudyProcedure implements _$ImagingStudyProcedure {
 }
 
 @freezed
-abstract class ImagingStudySeries implements _$ImagingStudySeries {
+class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
     String? id,
@@ -278,7 +278,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
 }
 
 @freezed
-abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
+class ImagingStudyPerformer with _$ImagingStudyPerformer {
   ImagingStudyPerformer._();
   factory ImagingStudyPerformer({
     String? id,
@@ -306,7 +306,7 @@ abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
 }
 
 @freezed
-abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
+class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
   factory ImagingStudyInstance({
     String? id,
@@ -339,7 +339,7 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
 }
 
 @freezed
-abstract class MolecularSequence with Resource implements _$MolecularSequence {
+class MolecularSequence with Resource, _$MolecularSequence {
   MolecularSequence._();
   factory MolecularSequence({
     @Default(R5ResourceType.MolecularSequence)
@@ -396,8 +396,7 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
 }
 
 @freezed
-abstract class MolecularSequenceReferenceSeq
-    implements _$MolecularSequenceReferenceSeq {
+class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   MolecularSequenceReferenceSeq._();
   factory MolecularSequenceReferenceSeq({
     String? id,
@@ -441,7 +440,7 @@ abstract class MolecularSequenceReferenceSeq
 }
 
 @freezed
-abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
+class MolecularSequenceVariant with _$MolecularSequenceVariant {
   MolecularSequenceVariant._();
   factory MolecularSequenceVariant({
     String? id,
@@ -479,7 +478,7 @@ abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
 }
 
 @freezed
-abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
+class MolecularSequenceQuality with _$MolecularSequenceQuality {
   MolecularSequenceQuality._();
   factory MolecularSequenceQuality({
     String? id,
@@ -533,7 +532,7 @@ abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
 }
 
 @freezed
-abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc {
+class MolecularSequenceRoc with _$MolecularSequenceRoc {
   MolecularSequenceRoc._();
   factory MolecularSequenceRoc({
     String? id,
@@ -573,8 +572,7 @@ abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc {
 }
 
 @freezed
-abstract class MolecularSequenceRepository
-    implements _$MolecularSequenceRepository {
+class MolecularSequenceRepository with _$MolecularSequenceRepository {
   MolecularSequenceRepository._();
   factory MolecularSequenceRepository({
     String? id,
@@ -614,8 +612,8 @@ abstract class MolecularSequenceRepository
 }
 
 @freezed
-abstract class MolecularSequenceStructureVariant
-    implements _$MolecularSequenceStructureVariant {
+class MolecularSequenceStructureVariant
+    with _$MolecularSequenceStructureVariant {
   MolecularSequenceStructureVariant._();
   factory MolecularSequenceStructureVariant({
     String? id,
@@ -651,7 +649,7 @@ abstract class MolecularSequenceStructureVariant
 }
 
 @freezed
-abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
+class MolecularSequenceOuter with _$MolecularSequenceOuter {
   MolecularSequenceOuter._();
   factory MolecularSequenceOuter({
     String? id,
@@ -681,7 +679,7 @@ abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
 }
 
 @freezed
-abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
+class MolecularSequenceInner with _$MolecularSequenceInner {
   MolecularSequenceInner._();
   factory MolecularSequenceInner({
     String? id,
@@ -711,7 +709,7 @@ abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
 }
 
 @freezed
-abstract class Observation with Resource implements _$Observation {
+class Observation with Resource, _$Observation {
   Observation._();
   factory Observation({
     @Default(R5ResourceType.Observation)
@@ -795,8 +793,7 @@ abstract class Observation with Resource implements _$Observation {
 }
 
 @freezed
-abstract class ObservationReferenceRange
-    implements _$ObservationReferenceRange {
+class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
   factory ObservationReferenceRange({
     String? id,
@@ -830,7 +827,7 @@ abstract class ObservationReferenceRange
 }
 
 @freezed
-abstract class ObservationComponent implements _$ObservationComponent {
+class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
   factory ObservationComponent({
     String? id,
@@ -877,9 +874,7 @@ abstract class ObservationComponent implements _$ObservationComponent {
 }
 
 @freezed
-abstract class QuestionnaireResponse
-    with Resource
-    implements _$QuestionnaireResponse {
+class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   QuestionnaireResponse._();
   factory QuestionnaireResponse({
     @Default(R5ResourceType.QuestionnaireResponse)
@@ -929,8 +924,7 @@ abstract class QuestionnaireResponse
 }
 
 @freezed
-abstract class QuestionnaireResponseItem
-    implements _$QuestionnaireResponseItem {
+class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
   factory QuestionnaireResponseItem({
     String? id,
@@ -965,8 +959,7 @@ abstract class QuestionnaireResponseItem
 }
 
 @freezed
-abstract class QuestionnaireResponseAnswer
-    implements _$QuestionnaireResponseAnswer {
+class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
   factory QuestionnaireResponseAnswer({
     String? id,
@@ -1014,7 +1007,7 @@ abstract class QuestionnaireResponseAnswer
 }
 
 @freezed
-abstract class Specimen with Resource implements _$Specimen {
+class Specimen with Resource, _$Specimen {
   Specimen._();
   factory Specimen({
     @Default(R5ResourceType.Specimen)
@@ -1065,7 +1058,7 @@ abstract class Specimen with Resource implements _$Specimen {
 }
 
 @freezed
-abstract class SpecimenCollection implements _$SpecimenCollection {
+class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
   factory SpecimenCollection({
     String? id,
@@ -1101,7 +1094,7 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
 }
 
 @freezed
-abstract class SpecimenProcessing implements _$SpecimenProcessing {
+class SpecimenProcessing with _$SpecimenProcessing {
   SpecimenProcessing._();
   factory SpecimenProcessing({
     String? id,
@@ -1134,7 +1127,7 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
 }
 
 @freezed
-abstract class SpecimenContainer implements _$SpecimenContainer {
+class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
   factory SpecimenContainer({
     String? id,

@@ -12,7 +12,7 @@ part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
 @freezed
-abstract class CarePlan with Resource implements _$CarePlan {
+class CarePlan with Resource, _$CarePlan {
   CarePlan._();
   factory CarePlan({
     @Default(Dstu2ResourceType.CarePlan)
@@ -67,7 +67,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
 }
 
 @freezed
-abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
+class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
   CarePlanRelatedPlan._();
   factory CarePlanRelatedPlan({
     Id? id,
@@ -95,7 +95,7 @@ abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
 }
 
 @freezed
-abstract class CarePlanParticipant with _$CarePlanParticipant {
+class CarePlanParticipant with _$CarePlanParticipant {
   CarePlanParticipant._();
   factory CarePlanParticipant({
     Id? id,
@@ -123,7 +123,7 @@ abstract class CarePlanParticipant with _$CarePlanParticipant {
 }
 
 @freezed
-abstract class CarePlanActivity with _$CarePlanActivity {
+class CarePlanActivity with _$CarePlanActivity {
   CarePlanActivity._();
   factory CarePlanActivity({
     Id? id,
@@ -154,7 +154,7 @@ abstract class CarePlanActivity with _$CarePlanActivity {
 }
 
 @freezed
-abstract class CarePlanActivityDetail with _$CarePlanActivityDetail {
+class CarePlanActivityDetail with _$CarePlanActivityDetail {
   CarePlanActivityDetail._();
   factory CarePlanActivityDetail({
     Id? id,
@@ -202,7 +202,7 @@ abstract class CarePlanActivityDetail with _$CarePlanActivityDetail {
 }
 
 @freezed
-abstract class Goal with Resource implements _$Goal {
+class Goal with Resource, _$Goal {
   Goal._();
   factory Goal({
     @Default(Dstu2ResourceType.Goal)
@@ -256,7 +256,7 @@ abstract class Goal with Resource implements _$Goal {
 }
 
 @freezed
-abstract class GoalOutcome with _$GoalOutcome {
+class GoalOutcome with _$GoalOutcome {
   GoalOutcome._();
   factory GoalOutcome({
     Id? id,
@@ -284,7 +284,7 @@ abstract class GoalOutcome with _$GoalOutcome {
 }
 
 @freezed
-abstract class ReferralRequest with Resource implements _$ReferralRequest {
+class ReferralRequest with Resource, _$ReferralRequest {
   ReferralRequest._();
   factory ReferralRequest({
     @Default(Dstu2ResourceType.ReferralRequest)
@@ -335,7 +335,7 @@ abstract class ReferralRequest with Resource implements _$ReferralRequest {
 }
 
 @freezed
-abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
+class ProcedureRequest with Resource, _$ProcedureRequest {
   ProcedureRequest._();
   factory ProcedureRequest({
     @Default(Dstu2ResourceType.ProcedureRequest)
@@ -389,7 +389,7 @@ abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
 }
 
 @freezed
-abstract class NutritionOrder with Resource implements _$NutritionOrder {
+class NutritionOrder with Resource, _$NutritionOrder {
   NutritionOrder._();
   factory NutritionOrder({
     @Default(Dstu2ResourceType.NutritionOrder)
@@ -440,7 +440,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
 }
 
 @freezed
-abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
+class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
   factory NutritionOrderOralDiet({
     Id? id,
@@ -474,7 +474,7 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 }
 
 @freezed
-abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
+class NutritionOrderSupplement with _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
   factory NutritionOrderSupplement({
     Id? id,
@@ -509,8 +509,7 @@ abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
 }
 
 @freezed
-abstract class NutritionOrderEnteralFormula
-    with _$NutritionOrderEnteralFormula {
+class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
   factory NutritionOrderEnteralFormula({
     Id? id,
@@ -552,8 +551,7 @@ abstract class NutritionOrderEnteralFormula
 }
 
 @freezed
-abstract class NutritionOrderOralDietNutrient
-    with _$NutritionOrderOralDietNutrient {
+class NutritionOrderOralDietNutrient with _$NutritionOrderOralDietNutrient {
   NutritionOrderOralDietNutrient._();
   factory NutritionOrderOralDietNutrient({
     Id? id,
@@ -585,8 +583,7 @@ abstract class NutritionOrderOralDietNutrient
 }
 
 @freezed
-abstract class NutritionOrderOralDietTexture
-    with _$NutritionOrderOralDietTexture {
+class NutritionOrderOralDietTexture with _$NutritionOrderOralDietTexture {
   NutritionOrderOralDietTexture._();
   factory NutritionOrderOralDietTexture({
     Id? id,
@@ -616,7 +613,7 @@ abstract class NutritionOrderOralDietTexture
 }
 
 @freezed
-abstract class NutritionOrderEnteralFormulaAdministration
+class NutritionOrderEnteralFormulaAdministration
     with _$NutritionOrderEnteralFormulaAdministration {
   NutritionOrderEnteralFormulaAdministration._();
   factory NutritionOrderEnteralFormulaAdministration({
@@ -650,7 +647,7 @@ abstract class NutritionOrderEnteralFormulaAdministration
 }
 
 @freezed
-abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
+class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
   VisionPrescriptionDispense._();
   factory VisionPrescriptionDispense({
     Id? id,
@@ -692,9 +689,7 @@ abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
 }
 
 @freezed
-abstract class VisionPrescription
-    with Resource
-    implements _$VisionPrescription {
+class VisionPrescription with Resource, _$VisionPrescription {
   VisionPrescription._();
   factory VisionPrescription({
     @Default(Dstu2ResourceType.VisionPrescription)

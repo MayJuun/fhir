@@ -12,9 +12,7 @@ part 'conformance.freezed.dart';
 part 'conformance.g.dart';
 
 @freezed
-abstract class CapabilityStatement
-    with Resource
-    implements _$CapabilityStatement {
+class CapabilityStatement with Resource, _$CapabilityStatement {
   CapabilityStatement._();
 
   /// [CapabilityStatement]: A Capability Statement documents a set of
@@ -289,8 +287,7 @@ abstract class CapabilityStatement
 }
 
 @freezed
-abstract class CapabilityStatementSoftware
-    implements _$CapabilityStatementSoftware {
+class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   CapabilityStatementSoftware._();
 
   /// [CapabilityStatement_Software]: A Capability Statement documents a set of
@@ -365,8 +362,8 @@ abstract class CapabilityStatementSoftware
 }
 
 @freezed
-abstract class CapabilityStatementImplementation
-    implements _$CapabilityStatementImplementation {
+class CapabilityStatementImplementation
+    with _$CapabilityStatementImplementation {
   CapabilityStatementImplementation._();
 
   /// [CapabilityStatement_Implementation]: A Capability Statement documents a
@@ -442,7 +439,7 @@ abstract class CapabilityStatementImplementation
 }
 
 @freezed
-abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
+class CapabilityStatementRest with _$CapabilityStatementRest {
   CapabilityStatementRest._();
 
   /// [CapabilityStatement_Rest]: A Capability Statement documents a set of
@@ -539,8 +536,7 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
 }
 
 @freezed
-abstract class CapabilityStatementSecurity
-    implements _$CapabilityStatementSecurity {
+class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   CapabilityStatementSecurity._();
 
   /// [CapabilityStatement_Security]: A Capability Statement documents a set of
@@ -613,8 +609,7 @@ abstract class CapabilityStatementSecurity
 }
 
 @freezed
-abstract class CapabilityStatementResource
-    implements _$CapabilityStatementResource {
+class CapabilityStatementResource with _$CapabilityStatementResource {
   CapabilityStatementResource._();
 
   /// [CapabilityStatement_Resource]: A Capability Statement documents a set of
@@ -792,8 +787,7 @@ abstract class CapabilityStatementResource
 }
 
 @freezed
-abstract class CapabilityStatementInteraction
-    implements _$CapabilityStatementInteraction {
+class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   CapabilityStatementInteraction._();
 
   /// [CapabilityStatement_Interaction]: A Capability Statement documents a set
@@ -868,8 +862,7 @@ abstract class CapabilityStatementInteraction
 }
 
 @freezed
-abstract class CapabilityStatementSearchParam
-    implements _$CapabilityStatementSearchParam {
+class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   CapabilityStatementSearchParam._();
 
   /// [CapabilityStatement_SearchParam]: A Capability Statement documents a set
@@ -957,8 +950,7 @@ abstract class CapabilityStatementSearchParam
 }
 
 @freezed
-abstract class CapabilityStatementOperation
-    implements _$CapabilityStatementOperation {
+class CapabilityStatementOperation with _$CapabilityStatementOperation {
   CapabilityStatementOperation._();
 
   /// [CapabilityStatement_Operation]: A Capability Statement documents a set of
@@ -1041,8 +1033,7 @@ abstract class CapabilityStatementOperation
 }
 
 @freezed
-abstract class CapabilityStatementInteraction1
-    implements _$CapabilityStatementInteraction1 {
+class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   CapabilityStatementInteraction1._();
 
   /// [CapabilityStatement_Interaction1]: A Capability Statement documents a set
@@ -1115,8 +1106,7 @@ abstract class CapabilityStatementInteraction1
 }
 
 @freezed
-abstract class CapabilityStatementMessaging
-    implements _$CapabilityStatementMessaging {
+class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   CapabilityStatementMessaging._();
 
   /// [CapabilityStatement_Messaging]: A Capability Statement documents a set of
@@ -1197,8 +1187,7 @@ abstract class CapabilityStatementMessaging
 }
 
 @freezed
-abstract class CapabilityStatementEndpoint
-    implements _$CapabilityStatementEndpoint {
+class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   CapabilityStatementEndpoint._();
 
   /// [CapabilityStatement_Endpoint]: A Capability Statement documents a set of
@@ -1265,8 +1254,8 @@ abstract class CapabilityStatementEndpoint
 }
 
 @freezed
-abstract class CapabilityStatementSupportedMessage
-    implements _$CapabilityStatementSupportedMessage {
+class CapabilityStatementSupportedMessage
+    with _$CapabilityStatementSupportedMessage {
   CapabilityStatementSupportedMessage._();
 
   /// [CapabilityStatement_SupportedMessage]: A Capability Statement documents a
@@ -1336,8 +1325,7 @@ abstract class CapabilityStatementSupportedMessage
 }
 
 @freezed
-abstract class CapabilityStatementDocument
-    implements _$CapabilityStatementDocument {
+class CapabilityStatementDocument with _$CapabilityStatementDocument {
   CapabilityStatementDocument._();
 
   /// [CapabilityStatement_Document]: A Capability Statement documents a set of
@@ -1413,9 +1401,7 @@ abstract class CapabilityStatementDocument
 }
 
 @freezed
-abstract class CompartmentDefinition
-    with Resource
-    implements _$CompartmentDefinition {
+class CompartmentDefinition with Resource, _$CompartmentDefinition {
   CompartmentDefinition._();
 
   /// [CompartmentDefinition]: A compartment definition that defines how
@@ -1614,8 +1600,7 @@ abstract class CompartmentDefinition
 }
 
 @freezed
-abstract class CompartmentDefinitionResource
-    implements _$CompartmentDefinitionResource {
+class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   CompartmentDefinitionResource._();
 
   /// [CompartmentDefinition_Resource]: A compartment definition that defines
@@ -1690,7 +1675,7 @@ abstract class CompartmentDefinitionResource
 }
 
 @freezed
-abstract class ExampleScenario with Resource implements _$ExampleScenario {
+class ExampleScenario with Resource, _$ExampleScenario {
   ExampleScenario._();
 
   /// [ExampleScenario]: Example of workflow instance.
@@ -1895,7 +1880,7 @@ abstract class ExampleScenario with Resource implements _$ExampleScenario {
 }
 
 @freezed
-abstract class ExampleScenarioActor implements _$ExampleScenarioActor {
+class ExampleScenarioActor with _$ExampleScenarioActor {
   ExampleScenarioActor._();
 
   /// [ExampleScenario_Actor]: Example of workflow instance.
@@ -1972,7 +1957,7 @@ abstract class ExampleScenarioActor implements _$ExampleScenarioActor {
 }
 
 @freezed
-abstract class ExampleScenarioInstance implements _$ExampleScenarioInstance {
+class ExampleScenarioInstance with _$ExampleScenarioInstance {
   ExampleScenarioInstance._();
 
   /// [ExampleScenario_Instance]: Example of workflow instance.
@@ -2055,7 +2040,7 @@ abstract class ExampleScenarioInstance implements _$ExampleScenarioInstance {
 }
 
 @freezed
-abstract class ExampleScenarioVersion implements _$ExampleScenarioVersion {
+class ExampleScenarioVersion with _$ExampleScenarioVersion {
   ExampleScenarioVersion._();
 
   /// [ExampleScenario_Version]: Example of workflow instance.
@@ -2119,8 +2104,7 @@ abstract class ExampleScenarioVersion implements _$ExampleScenarioVersion {
 }
 
 @freezed
-abstract class ExampleScenarioContainedInstance
-    implements _$ExampleScenarioContainedInstance {
+class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   ExampleScenarioContainedInstance._();
 
   /// [ExampleScenario_ContainedInstance]: Example of workflow instance.
@@ -2187,7 +2171,7 @@ abstract class ExampleScenarioContainedInstance
 }
 
 @freezed
-abstract class ExampleScenarioProcess implements _$ExampleScenarioProcess {
+class ExampleScenarioProcess with _$ExampleScenarioProcess {
   ExampleScenarioProcess._();
 
   /// [ExampleScenario_Process]: Example of workflow instance.
@@ -2266,7 +2250,7 @@ abstract class ExampleScenarioProcess implements _$ExampleScenarioProcess {
 }
 
 @freezed
-abstract class ExampleScenarioStep implements _$ExampleScenarioStep {
+class ExampleScenarioStep with _$ExampleScenarioStep {
   ExampleScenarioStep._();
 
   /// [ExampleScenario_Step]: Example of workflow instance.
@@ -2334,7 +2318,7 @@ abstract class ExampleScenarioStep implements _$ExampleScenarioStep {
 }
 
 @freezed
-abstract class ExampleScenarioOperation implements _$ExampleScenarioOperation {
+class ExampleScenarioOperation with _$ExampleScenarioOperation {
   ExampleScenarioOperation._();
 
   /// [ExampleScenario_Operation]: Example of workflow instance.
@@ -2443,8 +2427,7 @@ abstract class ExampleScenarioOperation implements _$ExampleScenarioOperation {
 }
 
 @freezed
-abstract class ExampleScenarioAlternative
-    implements _$ExampleScenarioAlternative {
+class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   ExampleScenarioAlternative._();
 
   /// [ExampleScenario_Alternative]: Example of workflow instance.
@@ -2514,7 +2497,7 @@ abstract class ExampleScenarioAlternative
 }
 
 @freezed
-abstract class GraphDefinition with Resource implements _$GraphDefinition {
+class GraphDefinition with Resource, _$GraphDefinition {
   GraphDefinition._();
 
   /// [GraphDefinition]: A formal computable definition of a graph of resources
@@ -2713,7 +2696,7 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
 }
 
 @freezed
-abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
+class GraphDefinitionLink with _$GraphDefinitionLink {
   GraphDefinitionLink._();
 
   /// [GraphDefinition_Link]: A formal computable definition of a graph of
@@ -2803,7 +2786,7 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
 }
 
 @freezed
-abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
+class GraphDefinitionTarget with _$GraphDefinitionTarget {
   GraphDefinitionTarget._();
 
   /// [GraphDefinition_Target]: A formal computable definition of a graph of
@@ -2879,8 +2862,7 @@ abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
 }
 
 @freezed
-abstract class GraphDefinitionCompartment
-    implements _$GraphDefinitionCompartment {
+class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   GraphDefinitionCompartment._();
 
   /// [GraphDefinition_Compartment]: A formal computable definition of a graph
@@ -2970,9 +2952,7 @@ abstract class GraphDefinitionCompartment
 }
 
 @freezed
-abstract class ImplementationGuide
-    with Resource
-    implements _$ImplementationGuide {
+class ImplementationGuide with Resource, _$ImplementationGuide {
   ImplementationGuide._();
 
   /// [ImplementationGuide]: A set of rules of how a particular interoperability
@@ -3212,8 +3192,7 @@ abstract class ImplementationGuide
 }
 
 @freezed
-abstract class ImplementationGuideDependsOn
-    implements _$ImplementationGuideDependsOn {
+class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   ImplementationGuideDependsOn._();
 
   /// [ImplementationGuide_DependsOn]: A set of rules of how a particular
@@ -3288,8 +3267,7 @@ abstract class ImplementationGuideDependsOn
 }
 
 @freezed
-abstract class ImplementationGuideGlobal
-    implements _$ImplementationGuideGlobal {
+class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
 
   /// [ImplementationGuide_Global]: A set of rules of how a particular
@@ -3355,8 +3333,7 @@ abstract class ImplementationGuideGlobal
 }
 
 @freezed
-abstract class ImplementationGuideDefinition
-    implements _$ImplementationGuideDefinition {
+class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   ImplementationGuideDefinition._();
 
   /// [ImplementationGuide_Definition]: A set of rules of how a particular
@@ -3433,8 +3410,7 @@ abstract class ImplementationGuideDefinition
 }
 
 @freezed
-abstract class ImplementationGuideGrouping
-    implements _$ImplementationGuideGrouping {
+class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   ImplementationGuideGrouping._();
 
   /// [ImplementationGuide_Grouping]: A set of rules of how a particular
@@ -3504,8 +3480,7 @@ abstract class ImplementationGuideGrouping
 }
 
 @freezed
-abstract class ImplementationGuideResource
-    implements _$ImplementationGuideResource {
+class ImplementationGuideResource with _$ImplementationGuideResource {
   ImplementationGuideResource._();
 
   /// [ImplementationGuide_Resource]: A set of rules of how a particular
@@ -3611,7 +3586,7 @@ abstract class ImplementationGuideResource
 }
 
 @freezed
-abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
+class ImplementationGuidePage with _$ImplementationGuidePage {
   ImplementationGuidePage._();
 
   /// [ImplementationGuide_Page]: A set of rules of how a particular
@@ -3693,8 +3668,7 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
 }
 
 @freezed
-abstract class ImplementationGuideParameter
-    implements _$ImplementationGuideParameter {
+class ImplementationGuideParameter with _$ImplementationGuideParameter {
   ImplementationGuideParameter._();
 
   /// [ImplementationGuide_Parameter]: A set of rules of how a particular
@@ -3766,8 +3740,7 @@ abstract class ImplementationGuideParameter
 }
 
 @freezed
-abstract class ImplementationGuideTemplate
-    implements _$ImplementationGuideTemplate {
+class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   ImplementationGuideTemplate._();
 
   /// [ImplementationGuide_Template]: A set of rules of how a particular
@@ -3842,8 +3815,7 @@ abstract class ImplementationGuideTemplate
 }
 
 @freezed
-abstract class ImplementationGuideManifest
-    implements _$ImplementationGuideManifest {
+class ImplementationGuideManifest with _$ImplementationGuideManifest {
   ImplementationGuideManifest._();
 
   /// [ImplementationGuide_Manifest]: A set of rules of how a particular
@@ -3930,8 +3902,7 @@ abstract class ImplementationGuideManifest
 }
 
 @freezed
-abstract class ImplementationGuideResource1
-    implements _$ImplementationGuideResource1 {
+class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   ImplementationGuideResource1._();
 
   /// [ImplementationGuide_Resource1]: A set of rules of how a particular
@@ -4014,7 +3985,7 @@ abstract class ImplementationGuideResource1
 }
 
 @freezed
-abstract class ImplementationGuidePage1 implements _$ImplementationGuidePage1 {
+class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   ImplementationGuidePage1._();
 
   /// [ImplementationGuide_Page1]: A set of rules of how a particular
@@ -4089,7 +4060,7 @@ abstract class ImplementationGuidePage1 implements _$ImplementationGuidePage1 {
 }
 
 @freezed
-abstract class MessageDefinition with Resource implements _$MessageDefinition {
+class MessageDefinition with Resource, _$MessageDefinition {
   MessageDefinition._();
 
   /// [MessageDefinition]: Defines the characteristics of a message that can be
@@ -4343,7 +4314,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
 }
 
 @freezed
-abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
+class MessageDefinitionFocus with _$MessageDefinitionFocus {
   MessageDefinitionFocus._();
 
   /// [MessageDefinition_Focus]: Defines the characteristics of a message that
@@ -4424,8 +4395,7 @@ abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
 }
 
 @freezed
-abstract class MessageDefinitionAllowedResponse
-    implements _$MessageDefinitionAllowedResponse {
+class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   MessageDefinitionAllowedResponse._();
 
   /// [MessageDefinition_AllowedResponse]: Defines the characteristics of a
@@ -4494,9 +4464,7 @@ abstract class MessageDefinitionAllowedResponse
 }
 
 @freezed
-abstract class OperationDefinition
-    with Resource
-    implements _$OperationDefinition {
+class OperationDefinition with Resource, _$OperationDefinition {
   OperationDefinition._();
 
   /// [OperationDefinition]: A formal computable definition of an operation (on
@@ -4766,8 +4734,7 @@ abstract class OperationDefinition
 }
 
 @freezed
-abstract class OperationDefinitionParameter
-    implements _$OperationDefinitionParameter {
+class OperationDefinitionParameter with _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
 
   /// [OperationDefinition_Parameter]: A formal computable definition of an
@@ -4891,8 +4858,7 @@ abstract class OperationDefinitionParameter
 }
 
 @freezed
-abstract class OperationDefinitionBinding
-    implements _$OperationDefinitionBinding {
+class OperationDefinitionBinding with _$OperationDefinitionBinding {
   OperationDefinitionBinding._();
 
   /// [OperationDefinition_Binding]: A formal computable definition of an
@@ -4960,8 +4926,8 @@ abstract class OperationDefinitionBinding
 }
 
 @freezed
-abstract class OperationDefinitionReferencedFrom
-    implements _$OperationDefinitionReferencedFrom {
+class OperationDefinitionReferencedFrom
+    with _$OperationDefinitionReferencedFrom {
   OperationDefinitionReferencedFrom._();
 
   /// [OperationDefinition_ReferencedFrom]: A formal computable definition of an
@@ -5033,8 +4999,7 @@ abstract class OperationDefinitionReferencedFrom
 }
 
 @freezed
-abstract class OperationDefinitionOverload
-    implements _$OperationDefinitionOverload {
+class OperationDefinitionOverload with _$OperationDefinitionOverload {
   OperationDefinitionOverload._();
 
   /// [OperationDefinition_Overload]: A formal computable definition of an
@@ -5101,7 +5066,7 @@ abstract class OperationDefinitionOverload
 }
 
 @freezed
-abstract class SearchParameter with Resource implements _$SearchParameter {
+class SearchParameter with Resource, _$SearchParameter {
   SearchParameter._();
 
   /// [SearchParameter]: A search parameter that defines a named search item
@@ -5384,7 +5349,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
 }
 
 @freezed
-abstract class SearchParameterComponent implements _$SearchParameterComponent {
+class SearchParameterComponent with _$SearchParameterComponent {
   SearchParameterComponent._();
 
   /// [SearchParameter_Component]: A search parameter that defines a named
@@ -5449,9 +5414,7 @@ abstract class SearchParameterComponent implements _$SearchParameterComponent {
 }
 
 @freezed
-abstract class StructureDefinition
-    with Resource
-    implements _$StructureDefinition {
+class StructureDefinition with Resource, _$StructureDefinition {
   StructureDefinition._();
 
   /// [StructureDefinition]: A definition of a FHIR structure. This resource is
@@ -5739,8 +5702,7 @@ abstract class StructureDefinition
 }
 
 @freezed
-abstract class StructureDefinitionMapping
-    implements _$StructureDefinitionMapping {
+class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
 
   /// [StructureDefinition_Mapping]: A definition of a FHIR structure. This
@@ -5823,8 +5785,7 @@ abstract class StructureDefinitionMapping
 }
 
 @freezed
-abstract class StructureDefinitionContext
-    implements _$StructureDefinitionContext {
+class StructureDefinitionContext with _$StructureDefinitionContext {
   StructureDefinitionContext._();
 
   /// [StructureDefinition_Context]: A definition of a FHIR structure. This
@@ -5895,8 +5856,7 @@ abstract class StructureDefinitionContext
 }
 
 @freezed
-abstract class StructureDefinitionSnapshot
-    implements _$StructureDefinitionSnapshot {
+class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
 
   /// [StructureDefinition_Snapshot]: A definition of a FHIR structure. This
@@ -5955,8 +5915,7 @@ abstract class StructureDefinitionSnapshot
 }
 
 @freezed
-abstract class StructureDefinitionDifferential
-    implements _$StructureDefinitionDifferential {
+class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
 
   /// [StructureDefinition_Differential]: A definition of a FHIR structure. This
@@ -6017,7 +5976,7 @@ abstract class StructureDefinitionDifferential
 }
 
 @freezed
-abstract class StructureMap with Resource implements _$StructureMap {
+class StructureMap with Resource, _$StructureMap {
   StructureMap._();
 
   /// [StructureMap]: A Map of relationships between 2 structures that can be
@@ -6233,7 +6192,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
 }
 
 @freezed
-abstract class StructureMapStructure implements _$StructureMapStructure {
+class StructureMapStructure with _$StructureMapStructure {
   StructureMapStructure._();
 
   /// [StructureMap_Structure]: A Map of relationships between 2 structures that
@@ -6309,7 +6268,7 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
 }
 
 @freezed
-abstract class StructureMapGroup implements _$StructureMapGroup {
+class StructureMapGroup with _$StructureMapGroup {
   StructureMapGroup._();
 
   /// [StructureMap_Group]: A Map of relationships between 2 structures that can
@@ -6396,7 +6355,7 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
 }
 
 @freezed
-abstract class StructureMapInput implements _$StructureMapInput {
+class StructureMapInput with _$StructureMapInput {
   StructureMapInput._();
 
   /// [StructureMap_Input]: A Map of relationships between 2 structures that can
@@ -6474,7 +6433,7 @@ abstract class StructureMapInput implements _$StructureMapInput {
 }
 
 @freezed
-abstract class StructureMapRule implements _$StructureMapRule {
+class StructureMapRule with _$StructureMapRule {
   StructureMapRule._();
 
   /// [StructureMap_Rule]: A Map of relationships between 2 structures that can
@@ -6551,7 +6510,7 @@ abstract class StructureMapRule implements _$StructureMapRule {
 }
 
 @freezed
-abstract class StructureMapSource implements _$StructureMapSource {
+class StructureMapSource with _$StructureMapSource {
   StructureMapSource._();
 
   /// [StructureMap_Source]: A Map of relationships between 2 structures that
@@ -6935,7 +6894,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
 }
 
 @freezed
-abstract class StructureMapTarget implements _$StructureMapTarget {
+class StructureMapTarget with _$StructureMapTarget {
   StructureMapTarget._();
 
   /// [StructureMap_Target]: A Map of relationships between 2 structures that
@@ -7035,7 +6994,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
 }
 
 @freezed
-abstract class StructureMapParameter implements _$StructureMapParameter {
+class StructureMapParameter with _$StructureMapParameter {
   StructureMapParameter._();
 
   /// [StructureMap_Parameter]: A Map of relationships between 2 structures that
@@ -7118,7 +7077,7 @@ abstract class StructureMapParameter implements _$StructureMapParameter {
 }
 
 @freezed
-abstract class StructureMapDependent implements _$StructureMapDependent {
+class StructureMapDependent with _$StructureMapDependent {
   StructureMapDependent._();
 
   /// [StructureMap_Dependent]: A Map of relationships between 2 structures that

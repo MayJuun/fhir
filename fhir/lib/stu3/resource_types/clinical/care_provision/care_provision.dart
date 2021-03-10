@@ -12,8 +12,7 @@ part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
 @freezed
-abstract class VisionPrescriptionDispense
-    implements _$VisionPrescriptionDispense {
+class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
   VisionPrescriptionDispense._();
   factory VisionPrescriptionDispense({
     CodeableConcept? product,
@@ -64,7 +63,7 @@ abstract class VisionPrescriptionDispense
 }
 
 @freezed
-abstract class CarePlan with Resource implements _$CarePlan {
+class CarePlan with Resource, _$CarePlan {
   CarePlan._();
   factory CarePlan({
     @Default(Stu3ResourceType.CarePlan)
@@ -124,7 +123,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
 }
 
 @freezed
-abstract class CarePlanActivity implements _$CarePlanActivity {
+class CarePlanActivity with _$CarePlanActivity {
   CarePlanActivity._();
   factory CarePlanActivity({
     List<CodeableConcept>? outcomeCodeableConcept,
@@ -152,7 +151,7 @@ abstract class CarePlanActivity implements _$CarePlanActivity {
 }
 
 @freezed
-abstract class CarePlanDetail implements _$CarePlanDetail {
+class CarePlanDetail with _$CarePlanDetail {
   CarePlanDetail._();
   factory CarePlanDetail({
     CodeableConcept? category,
@@ -199,7 +198,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
 }
 
 @freezed
-abstract class CareTeam with Resource implements _$CareTeam {
+class CareTeam with Resource, _$CareTeam {
   CareTeam._();
   factory CareTeam({
     @Default(Stu3ResourceType.CareTeam)
@@ -249,7 +248,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
 }
 
 @freezed
-abstract class CareTeamParticipant implements _$CareTeamParticipant {
+class CareTeamParticipant with _$CareTeamParticipant {
   CareTeamParticipant._();
   factory CareTeamParticipant({
     CodeableConcept? role,
@@ -276,7 +275,7 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
 }
 
 @freezed
-abstract class Goal with Resource implements _$Goal {
+class Goal with Resource, _$Goal {
   Goal._();
   factory Goal({
     @Default(Stu3ResourceType.Goal)
@@ -331,7 +330,7 @@ abstract class Goal with Resource implements _$Goal {
 }
 
 @freezed
-abstract class GoalTarget implements _$GoalTarget {
+class GoalTarget with _$GoalTarget {
   GoalTarget._();
   factory GoalTarget({
     CodeableConcept? measure,
@@ -361,7 +360,7 @@ abstract class GoalTarget implements _$GoalTarget {
 }
 
 @freezed
-abstract class NutritionOrder with Resource implements _$NutritionOrder {
+class NutritionOrder with Resource, _$NutritionOrder {
   NutritionOrder._();
   factory NutritionOrder({
     @Default(Stu3ResourceType.NutritionOrder)
@@ -411,7 +410,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
 }
 
 @freezed
-abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
+class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
   factory NutritionOrderOralDiet({
     List<CodeableConcept>? type,
@@ -441,7 +440,7 @@ abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
 }
 
 @freezed
-abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
+class NutritionOrderNutrient with _$NutritionOrderNutrient {
   NutritionOrderNutrient._();
   factory NutritionOrderNutrient({
     CodeableConcept? modifier,
@@ -466,7 +465,7 @@ abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
 }
 
 @freezed
-abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
+class NutritionOrderTexture with _$NutritionOrderTexture {
   NutritionOrderTexture._();
   factory NutritionOrderTexture({
     CodeableConcept? modifier,
@@ -491,7 +490,7 @@ abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
 }
 
 @freezed
-abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
+class NutritionOrderSupplement with _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
   factory NutritionOrderSupplement({
     CodeableConcept? type,
@@ -522,8 +521,7 @@ abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
 }
 
 @freezed
-abstract class NutritionOrderEnteralFormula
-    implements _$NutritionOrderEnteralFormula {
+class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
   factory NutritionOrderEnteralFormula({
     CodeableConcept? baseFormulaType,
@@ -561,8 +559,7 @@ abstract class NutritionOrderEnteralFormula
 }
 
 @freezed
-abstract class NutritionOrderAdministration
-    implements _$NutritionOrderAdministration {
+class NutritionOrderAdministration with _$NutritionOrderAdministration {
   NutritionOrderAdministration._();
   factory NutritionOrderAdministration({
     Timing? schedule,
@@ -590,7 +587,7 @@ abstract class NutritionOrderAdministration
 }
 
 @freezed
-abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
+class ProcedureRequest with Resource, _$ProcedureRequest {
   ProcedureRequest._();
   factory ProcedureRequest({
     @Default(Stu3ResourceType.ProcedureRequest)
@@ -662,8 +659,7 @@ abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
 }
 
 @freezed
-abstract class ProcedureRequestRequester
-    implements _$ProcedureRequestRequester {
+class ProcedureRequestRequester with _$ProcedureRequestRequester {
   ProcedureRequestRequester._();
   factory ProcedureRequestRequester({
     required Reference agent,
@@ -689,7 +685,7 @@ abstract class ProcedureRequestRequester
 }
 
 @freezed
-abstract class ReferralRequest with Resource implements _$ReferralRequest {
+class ReferralRequest with Resource, _$ReferralRequest {
   ReferralRequest._();
   factory ReferralRequest({
     @Default(Stu3ResourceType.ReferralRequest)
@@ -755,7 +751,7 @@ abstract class ReferralRequest with Resource implements _$ReferralRequest {
 }
 
 @freezed
-abstract class ReferralRequestRequester implements _$ReferralRequestRequester {
+class ReferralRequestRequester with _$ReferralRequestRequester {
   ReferralRequestRequester._();
   factory ReferralRequestRequester({
     required Reference agent,
@@ -781,7 +777,7 @@ abstract class ReferralRequestRequester implements _$ReferralRequestRequester {
 }
 
 @freezed
-abstract class RiskAssessment with Resource implements _$RiskAssessment {
+class RiskAssessment with Resource, _$RiskAssessment {
   RiskAssessment._();
   factory RiskAssessment({
     @Default(Stu3ResourceType.RiskAssessment)
@@ -839,7 +835,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
 }
 
 @freezed
-abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
+class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   RiskAssessmentPrediction._();
   factory RiskAssessmentPrediction({
     required CodeableConcept outcome,
@@ -874,9 +870,7 @@ abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
 }
 
 @freezed
-abstract class VisionPrescription
-    with Resource
-    implements _$VisionPrescription {
+class VisionPrescription with Resource, _$VisionPrescription {
   VisionPrescription._();
   factory VisionPrescription({
     @Default(Stu3ResourceType.VisionPrescription)

@@ -12,7 +12,7 @@ part 'general_types.freezed.dart';
 part 'general_types.g.dart';
 
 @freezed
-abstract class Annotation implements _$Annotation {
+class Annotation with _$Annotation {
   Annotation._();
 
   /// [Annotation]: A  text note which also  contains information about who made
@@ -71,7 +71,7 @@ abstract class Annotation implements _$Annotation {
 }
 
 @freezed
-abstract class Attachment implements _$Attachment {
+class Attachment with _$Attachment {
   Attachment._();
 
   /// [Attachment]: For referring to data content defined in other formats.
@@ -162,7 +162,7 @@ abstract class Attachment implements _$Attachment {
 }
 
 @freezed
-abstract class Identifier implements _$Identifier {
+class Identifier with _$Identifier {
   Identifier._();
 
   /// [Identifier]: An identifier - identifies some entity uniquely and
@@ -230,7 +230,7 @@ abstract class Identifier implements _$Identifier {
 }
 
 @freezed
-abstract class CodeableConcept implements _$CodeableConcept {
+class CodeableConcept with _$CodeableConcept {
   CodeableConcept._();
 
   /// [CodeableConcept]: A concept that may be defined by a formal reference to
@@ -279,7 +279,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
 }
 
 @freezed
-abstract class Coding implements _$Coding {
+class Coding with _$Coding {
   Coding._();
 
   /// [Coding]: A reference to a code defined by a terminology system.
@@ -355,7 +355,7 @@ abstract class Coding implements _$Coding {
 }
 
 @freezed
-abstract class Quantity implements _$Quantity {
+class Quantity with _$Quantity {
   Quantity._();
 
   /// [Quantity]: A measured amount (or an amount that can potentially be
@@ -432,7 +432,7 @@ abstract class Quantity implements _$Quantity {
 }
 
 @freezed
-abstract class FhirDuration implements _$FhirDuration {
+class FhirDuration with _$FhirDuration {
   FhirDuration._();
 
   /// [Duration]: A length of time.
@@ -506,7 +506,7 @@ abstract class FhirDuration implements _$FhirDuration {
 }
 
 @freezed
-abstract class Distance implements _$Distance {
+class Distance with _$Distance {
   Distance._();
 
   /// [Distance]: A length - a value with a unit that is a physical distance.
@@ -580,7 +580,7 @@ abstract class Distance implements _$Distance {
 }
 
 @freezed
-abstract class Count implements _$Count {
+class Count with _$Count {
   Count._();
 
   /// [Count]: A measured amount (or an amount that can potentially be
@@ -656,7 +656,7 @@ abstract class Count implements _$Count {
 }
 
 @freezed
-abstract class Money implements _$Money {
+class Money with _$Money {
   Money._();
 
   /// [Money]: An amount of economic utility in some recognized currency.
@@ -704,7 +704,7 @@ abstract class Money implements _$Money {
 }
 
 @freezed
-abstract class Age implements _$Age {
+class Age with _$Age {
   Age._();
 
   /// [Age]: A duration of time during which an organism (or a process) has
@@ -776,7 +776,7 @@ abstract class Age implements _$Age {
 }
 
 @freezed
-abstract class Range implements _$Range {
+class Range with _$Range {
   Range._();
 
   /// [Range]: A set of ordered Quantities defined by a low and high limit.
@@ -818,7 +818,7 @@ abstract class Range implements _$Range {
 }
 
 @freezed
-abstract class Period implements _$Period {
+class Period with _$Period {
   Period._();
 
   /// [Period]: A time period defined by a start and end date and optionally
@@ -870,7 +870,7 @@ abstract class Period implements _$Period {
 }
 
 @freezed
-abstract class Ratio implements _$Ratio {
+class Ratio with _$Ratio {
   Ratio._();
 
   /// [Ratio]: A relationship of two Quantity values - expressed as a numerator
@@ -913,7 +913,7 @@ abstract class Ratio implements _$Ratio {
 }
 
 @freezed
-abstract class SampledData implements _$SampledData {
+class SampledData with _$SampledData {
   SampledData._();
 
   /// [SampledData]: A series of measurements taken by a device, with upper and
@@ -1002,7 +1002,7 @@ abstract class SampledData implements _$SampledData {
 }
 
 @freezed
-abstract class Signature implements _$Signature {
+class Signature with _$Signature {
   Signature._();
 
   /// [Signature]: A signature along with supporting context. The signature may
@@ -1086,7 +1086,7 @@ abstract class Signature implements _$Signature {
 }
 
 @freezed
-abstract class HumanName implements _$HumanName {
+class HumanName with _$HumanName {
   HumanName._();
 
   /// [HumanName]: A human's name with the ability to identify parts and usage.
@@ -1170,7 +1170,7 @@ abstract class HumanName implements _$HumanName {
 }
 
 @freezed
-abstract class Address implements _$Address {
+class Address with _$Address {
   Address._();
 
   /// [Address]: An address expressed using postal conventions (as opposed to
@@ -1279,7 +1279,7 @@ abstract class Address implements _$Address {
 }
 
 @freezed
-abstract class ContactPoint implements _$ContactPoint {
+class ContactPoint with _$ContactPoint {
   ContactPoint._();
 
   /// [ContactPoint]: Details for all kinds of technology mediated contact
@@ -1349,7 +1349,7 @@ abstract class ContactPoint implements _$ContactPoint {
 }
 
 @freezed
-abstract class Timing implements _$Timing {
+class Timing with _$Timing {
   Timing._();
 
   /// [Timing]: Specifies an event that may occur multiple times. Timing
@@ -1423,7 +1423,7 @@ abstract class Timing implements _$Timing {
 }
 
 @freezed
-abstract class TimingRepeat implements _$TimingRepeat {
+class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
 
   /// [Timing_Repeat]: Specifies an event that may occur multiple times. Timing

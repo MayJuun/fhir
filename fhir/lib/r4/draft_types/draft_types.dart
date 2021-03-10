@@ -11,7 +11,7 @@ part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
 @freezed
-abstract class Population implements _$Population {
+class Population with _$Population {
   Population._();
 
   /// [Population]: A populatioof people with some set of grouping criteria.
@@ -79,7 +79,7 @@ abstract class Population implements _$Population {
 }
 
 @freezed
-abstract class ProductShelfLife implements _$ProductShelfLife {
+class ProductShelfLife with _$ProductShelfLife {
   ProductShelfLife._();
 
   /// [ProductShelfLife]: The shelf-life and storage information for a medicinal
@@ -154,7 +154,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
 }
 
 @freezed
-abstract class ProdCharacteristic implements _$ProdCharacteristic {
+class ProdCharacteristic with _$ProdCharacteristic {
   ProdCharacteristic._();
 
   /// [ProdCharacteristic]: The marketing status describes the date when a
@@ -275,7 +275,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
 }
 
 @freezed
-abstract class MarketingStatus implements _$MarketingStatus {
+class MarketingStatus with _$MarketingStatus {
   MarketingStatus._();
 
   /// [MarketingStatus]: The marketing status describes the date when a
@@ -367,7 +367,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
 }
 
 @freezed
-abstract class SubstanceAmount implements _$SubstanceAmount {
+class SubstanceAmount with _$SubstanceAmount {
   SubstanceAmount._();
 
   /// [SubstanceAmount]: Chemical substances are a single substance type whose
@@ -464,8 +464,7 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
 }
 
 @freezed
-abstract class SubstanceAmountReferenceRange
-    implements _$SubstanceAmountReferenceRange {
+class SubstanceAmountReferenceRange with _$SubstanceAmountReferenceRange {
   SubstanceAmountReferenceRange._();
 
   /// [SubstanceAmount_ReferenceRange]: Chemical substances are a single

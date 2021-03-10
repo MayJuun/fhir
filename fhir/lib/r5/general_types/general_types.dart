@@ -12,7 +12,7 @@ part 'general_types.freezed.dart';
 part 'general_types.g.dart';
 
 @freezed
-abstract class BackboneType implements _$BackboneType {
+class BackboneType with _$BackboneType {
   BackboneType._();
   factory BackboneType({
     String? id,
@@ -38,7 +38,7 @@ abstract class BackboneType implements _$BackboneType {
 }
 
 @freezed
-abstract class Annotation implements _$Annotation {
+class Annotation with _$Annotation {
   Annotation._();
   factory Annotation({
     String? id,
@@ -70,7 +70,7 @@ abstract class Annotation implements _$Annotation {
 }
 
 @freezed
-abstract class Attachment implements _$Attachment {
+class Attachment with _$Attachment {
   Attachment._();
   factory Attachment({
     String? id,
@@ -121,7 +121,7 @@ abstract class Attachment implements _$Attachment {
 }
 
 @freezed
-abstract class Identifier implements _$Identifier {
+class Identifier with _$Identifier {
   Identifier._();
   factory Identifier({
     String? id,
@@ -155,7 +155,7 @@ abstract class Identifier implements _$Identifier {
 }
 
 @freezed
-abstract class CodeableConcept implements _$CodeableConcept {
+class CodeableConcept with _$CodeableConcept {
   CodeableConcept._();
   factory CodeableConcept({
     String? id,
@@ -183,7 +183,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
 }
 
 @freezed
-abstract class Coding implements _$Coding {
+class Coding with _$Coding {
   Coding._();
   factory Coding({
     String? id,
@@ -217,7 +217,7 @@ abstract class Coding implements _$Coding {
 }
 
 @freezed
-abstract class Quantity implements _$Quantity {
+class Quantity with _$Quantity {
   Quantity._();
   factory Quantity({
     String? id,
@@ -253,7 +253,7 @@ abstract class Quantity implements _$Quantity {
 }
 
 @freezed
-abstract class FhirDuration implements _$FhirDuration {
+class FhirDuration with _$FhirDuration {
   FhirDuration._();
   factory FhirDuration({
     String? id,
@@ -289,7 +289,7 @@ abstract class FhirDuration implements _$FhirDuration {
 }
 
 @freezed
-abstract class Distance implements _$Distance {
+class Distance with _$Distance {
   Distance._();
   factory Distance({
     String? id,
@@ -325,7 +325,7 @@ abstract class Distance implements _$Distance {
 }
 
 @freezed
-abstract class Count implements _$Count {
+class Count with _$Count {
   Count._();
   factory Count({
     String? id,
@@ -360,7 +360,7 @@ abstract class Count implements _$Count {
 }
 
 @freezed
-abstract class Money implements _$Money {
+class Money with _$Money {
   Money._();
   factory Money({
     String? id,
@@ -388,7 +388,7 @@ abstract class Money implements _$Money {
 }
 
 @freezed
-abstract class Age implements _$Age {
+class Age with _$Age {
   Age._();
   factory Age({
     String? id,
@@ -421,7 +421,7 @@ abstract class Age implements _$Age {
 }
 
 @freezed
-abstract class Range implements _$Range {
+class Range with _$Range {
   Range._();
   factory Range({
     String? id,
@@ -447,7 +447,7 @@ abstract class Range implements _$Range {
 }
 
 @freezed
-abstract class Period implements _$Period {
+class Period with _$Period {
   Period._();
   factory Period({
     String? id,
@@ -475,7 +475,7 @@ abstract class Period implements _$Period {
 }
 
 @freezed
-abstract class Ratio implements _$Ratio {
+class Ratio with _$Ratio {
   Ratio._();
   factory Ratio({
     String? id,
@@ -501,7 +501,7 @@ abstract class Ratio implements _$Ratio {
 }
 
 @freezed
-abstract class SampledData implements _$SampledData {
+class SampledData with _$SampledData {
   SampledData._();
   factory SampledData({
     String? id,
@@ -539,7 +539,7 @@ abstract class SampledData implements _$SampledData {
 }
 
 @freezed
-abstract class Signature implements _$Signature {
+class Signature with _$Signature {
   Signature._();
   factory Signature({
     String? id,
@@ -575,7 +575,7 @@ abstract class Signature implements _$Signature {
 }
 
 @freezed
-abstract class HumanName implements _$HumanName {
+class HumanName with _$HumanName {
   HumanName._();
   factory HumanName({
     String? id,
@@ -613,7 +613,7 @@ abstract class HumanName implements _$HumanName {
 }
 
 @freezed
-abstract class Address implements _$Address {
+class Address with _$Address {
   Address._();
   factory Address({
     String? id,
@@ -657,7 +657,7 @@ abstract class Address implements _$Address {
 }
 
 @freezed
-abstract class ContactPoint implements _$ContactPoint {
+class ContactPoint with _$ContactPoint {
   ContactPoint._();
   factory ContactPoint({
     String? id,
@@ -692,7 +692,7 @@ abstract class ContactPoint implements _$ContactPoint {
 }
 
 @freezed
-abstract class Timing implements _$Timing {
+class Timing with _$Timing {
   Timing._();
   factory Timing({
     String? id,
@@ -721,7 +721,7 @@ abstract class Timing implements _$Timing {
 }
 
 @freezed
-abstract class TimingRepeat implements _$TimingRepeat {
+class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
   factory TimingRepeat({
     String? id,

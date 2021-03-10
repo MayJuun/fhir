@@ -12,7 +12,7 @@ part 'medication_and_immunization.freezed.dart';
 part 'medication_and_immunization.g.dart';
 
 @freezed
-abstract class Medication with Resource implements _$Medication {
+class Medication with Resource, _$Medication {
   Medication._();
   factory Medication({
     @Default(Dstu2ResourceType.Medication)
@@ -53,7 +53,7 @@ abstract class Medication with Resource implements _$Medication {
 }
 
 @freezed
-abstract class MedicationProduct with _$MedicationProduct {
+class MedicationProduct with _$MedicationProduct {
   MedicationProduct._();
   factory MedicationProduct({
     Id? id,
@@ -83,7 +83,7 @@ abstract class MedicationProduct with _$MedicationProduct {
 }
 
 @freezed
-abstract class MedicationProductIngredient with _$MedicationProductIngredient {
+class MedicationProductIngredient with _$MedicationProductIngredient {
   MedicationProductIngredient._();
   factory MedicationProductIngredient({
     Id? id,
@@ -112,7 +112,7 @@ abstract class MedicationProductIngredient with _$MedicationProductIngredient {
 }
 
 @freezed
-abstract class MedicationProductBatch with _$MedicationProductBatch {
+class MedicationProductBatch with _$MedicationProductBatch {
   MedicationProductBatch._();
   factory MedicationProductBatch({
     Id? id,
@@ -142,7 +142,7 @@ abstract class MedicationProductBatch with _$MedicationProductBatch {
 }
 
 @freezed
-abstract class MedicationPackage with _$MedicationPackage {
+class MedicationPackage with _$MedicationPackage {
   MedicationPackage._();
   factory MedicationPackage({
     Id? id,
@@ -171,7 +171,7 @@ abstract class MedicationPackage with _$MedicationPackage {
 }
 
 @freezed
-abstract class MedicationPackageContent with _$MedicationPackageContent {
+class MedicationPackageContent with _$MedicationPackageContent {
   MedicationPackageContent._();
   factory MedicationPackageContent({
     Id? id,
@@ -200,7 +200,7 @@ abstract class MedicationPackageContent with _$MedicationPackageContent {
 }
 
 @freezed
-abstract class MedicationOrder with Resource implements _$MedicationOrder {
+class MedicationOrder with Resource, _$MedicationOrder {
   MedicationOrder._();
   factory MedicationOrder({
     @Default(Dstu2ResourceType.MedicationOrder)
@@ -254,8 +254,7 @@ abstract class MedicationOrder with Resource implements _$MedicationOrder {
 }
 
 @freezed
-abstract class MedicationOrderDosageInstruction
-    with _$MedicationOrderDosageInstruction {
+class MedicationOrderDosageInstruction with _$MedicationOrderDosageInstruction {
   MedicationOrderDosageInstruction._();
   factory MedicationOrderDosageInstruction({
     Id? id,
@@ -298,8 +297,7 @@ abstract class MedicationOrderDosageInstruction
 }
 
 @freezed
-abstract class MedicationOrderDispenseRequest
-    with _$MedicationOrderDispenseRequest {
+class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest {
   MedicationOrderDispenseRequest._();
   factory MedicationOrderDispenseRequest({
     Id? id,
@@ -334,7 +332,7 @@ abstract class MedicationOrderDispenseRequest
 }
 
 @freezed
-abstract class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
+class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
   MedicationOrderSubstitution._();
   factory MedicationOrderSubstitution({
     Id? id,
@@ -363,9 +361,7 @@ abstract class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
 }
 
 @freezed
-abstract class MedicationAdministration
-    with Resource
-    implements _$MedicationAdministration {
+class MedicationAdministration with Resource, _$MedicationAdministration {
   MedicationAdministration._();
   factory MedicationAdministration({
     @Default(Dstu2ResourceType.MedicationAdministration)
@@ -421,8 +417,7 @@ abstract class MedicationAdministration
 }
 
 @freezed
-abstract class MedicationAdministrationDosage
-    with _$MedicationAdministrationDosage {
+class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
   factory MedicationAdministrationDosage({
     Id? id,
@@ -460,9 +455,7 @@ abstract class MedicationAdministrationDosage
 }
 
 @freezed
-abstract class MedicationDispense
-    with Resource
-    implements _$MedicationDispense {
+class MedicationDispense with Resource, _$MedicationDispense {
   MedicationDispense._();
   factory MedicationDispense({
     @Default(Dstu2ResourceType.MedicationDispense)
@@ -519,7 +512,7 @@ abstract class MedicationDispense
 }
 
 @freezed
-abstract class MedicationDispenseDosageInstruction
+class MedicationDispenseDosageInstruction
     with _$MedicationDispenseDosageInstruction {
   MedicationDispenseDosageInstruction._();
   factory MedicationDispenseDosageInstruction({
@@ -563,8 +556,7 @@ abstract class MedicationDispenseDosageInstruction
 }
 
 @freezed
-abstract class MedicationDispenseSubstitution
-    with _$MedicationDispenseSubstitution {
+class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
   factory MedicationDispenseSubstitution({
     Id? id,
@@ -596,9 +588,7 @@ abstract class MedicationDispenseSubstitution
 }
 
 @freezed
-abstract class MedicationStatement
-    with Resource
-    implements _$MedicationStatement {
+class MedicationStatement with Resource, _$MedicationStatement {
   MedicationStatement._();
   factory MedicationStatement({
     @Default(Dstu2ResourceType.MedicationStatement)
@@ -654,7 +644,7 @@ abstract class MedicationStatement
 }
 
 @freezed
-abstract class MedicationStatementDosage with _$MedicationStatementDosage {
+class MedicationStatementDosage with _$MedicationStatementDosage {
   MedicationStatementDosage._();
   factory MedicationStatementDosage({
     Id? id,
@@ -694,7 +684,7 @@ abstract class MedicationStatementDosage with _$MedicationStatementDosage {
 }
 
 @freezed
-abstract class Immunization with Resource implements _$Immunization {
+class Immunization with Resource, _$Immunization {
   Immunization._();
   factory Immunization({
     @Default(Dstu2ResourceType.Immunization)
@@ -755,7 +745,7 @@ abstract class Immunization with Resource implements _$Immunization {
 }
 
 @freezed
-abstract class ImmunizationExplanation with _$ImmunizationExplanation {
+class ImmunizationExplanation with _$ImmunizationExplanation {
   ImmunizationExplanation._();
   factory ImmunizationExplanation({
     Id? id,
@@ -783,7 +773,7 @@ abstract class ImmunizationExplanation with _$ImmunizationExplanation {
 }
 
 @freezed
-abstract class ImmunizationReaction with _$ImmunizationReaction {
+class ImmunizationReaction with _$ImmunizationReaction {
   ImmunizationReaction._();
   factory ImmunizationReaction({
     Id? id,
@@ -814,8 +804,7 @@ abstract class ImmunizationReaction with _$ImmunizationReaction {
 }
 
 @freezed
-abstract class ImmunizationVaccinationProtocol
-    with _$ImmunizationVaccinationProtocol {
+class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
   ImmunizationVaccinationProtocol._();
   factory ImmunizationVaccinationProtocol({
     Id? id,
@@ -853,9 +842,7 @@ abstract class ImmunizationVaccinationProtocol
 }
 
 @freezed
-abstract class ImmunizationRecommendation
-    with Resource
-    implements _$ImmunizationRecommendation {
+class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ImmunizationRecommendation._();
   factory ImmunizationRecommendation({
     @Default(Dstu2ResourceType.ImmunizationRecommendation)
@@ -896,7 +883,7 @@ abstract class ImmunizationRecommendation
 }
 
 @freezed
-abstract class ImmunizationRecommendationRecommendation
+class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
   factory ImmunizationRecommendationRecommendation({
@@ -934,7 +921,7 @@ abstract class ImmunizationRecommendationRecommendation
 }
 
 @freezed
-abstract class ImmunizationRecommendationRecommendationDateCriterion
+class ImmunizationRecommendationRecommendationDateCriterion
     with _$ImmunizationRecommendationRecommendationDateCriterion {
   ImmunizationRecommendationRecommendationDateCriterion._();
   factory ImmunizationRecommendationRecommendationDateCriterion({
@@ -968,7 +955,7 @@ abstract class ImmunizationRecommendationRecommendationDateCriterion
 }
 
 @freezed
-abstract class ImmunizationRecommendationRecommendationProtocol
+class ImmunizationRecommendationRecommendationProtocol
     with _$ImmunizationRecommendationRecommendationProtocol {
   ImmunizationRecommendationRecommendationProtocol._();
   factory ImmunizationRecommendationRecommendationProtocol({

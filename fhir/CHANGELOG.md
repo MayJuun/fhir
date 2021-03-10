@@ -1,5 +1,9 @@
 # fhir
 
+## [0.3.0-nullsafety.1]
+* updated dependencies
+* this included freezed, so some of the syntax had to change
+
 ## [0.3.0-nullsafety.0]
 * Null safety!
 * Should be completely ready for null safety

@@ -12,7 +12,7 @@ part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
 @freezed
-abstract class Observation with Resource implements _$Observation {
+class Observation with Resource, _$Observation {
   Observation._();
   factory Observation({
     @Default(Dstu2ResourceType.Observation)
@@ -86,7 +86,7 @@ abstract class Observation with Resource implements _$Observation {
 }
 
 @freezed
-abstract class ObservationReferenceRange with _$ObservationReferenceRange {
+class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
   factory ObservationReferenceRange({
     Id? id,
@@ -120,7 +120,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
 }
 
 @freezed
-abstract class ObservationRelated with _$ObservationRelated {
+class ObservationRelated with _$ObservationRelated {
   ObservationRelated._();
   factory ObservationRelated({
     Id? id,
@@ -149,7 +149,7 @@ abstract class ObservationRelated with _$ObservationRelated {
 }
 
 @freezed
-abstract class ObservationComponent with _$ObservationComponent {
+class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
   factory ObservationComponent({
     Id? id,
@@ -192,7 +192,7 @@ abstract class ObservationComponent with _$ObservationComponent {
 }
 
 @freezed
-abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
+class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
   factory DiagnosticReport({
     @Default(Dstu2ResourceType.DiagnosticReport)
@@ -251,7 +251,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
 }
 
 @freezed
-abstract class DiagnosticReportImage with _$DiagnosticReportImage {
+class DiagnosticReportImage with _$DiagnosticReportImage {
   DiagnosticReportImage._();
   factory DiagnosticReportImage({
     Id? id,
@@ -280,7 +280,7 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 }
 
 @freezed
-abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
+class DiagnosticOrder with Resource, _$DiagnosticOrder {
   DiagnosticOrder._();
   factory DiagnosticOrder({
     @Default(Dstu2ResourceType.DiagnosticOrder)
@@ -328,7 +328,7 @@ abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
 }
 
 @freezed
-abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
+class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
   DiagnosticOrderEvent._();
   factory DiagnosticOrderEvent({
     Id? id,
@@ -358,7 +358,7 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
 }
 
 @freezed
-abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
+class DiagnosticOrderItem with _$DiagnosticOrderItem {
   DiagnosticOrderItem._();
   factory DiagnosticOrderItem({
     Id? id,
@@ -389,7 +389,7 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
 }
 
 @freezed
-abstract class Specimen with Resource implements _$Specimen {
+class Specimen with Resource, _$Specimen {
   Specimen._();
   factory Specimen({
     @Default(Dstu2ResourceType.Specimen)
@@ -437,7 +437,7 @@ abstract class Specimen with Resource implements _$Specimen {
 }
 
 @freezed
-abstract class SpecimenCollection with _$SpecimenCollection {
+class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
   factory SpecimenCollection({
     Id? id,
@@ -472,7 +472,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
 }
 
 @freezed
-abstract class SpecimenTreatment with _$SpecimenTreatment {
+class SpecimenTreatment with _$SpecimenTreatment {
   SpecimenTreatment._();
   factory SpecimenTreatment({
     Id? id,
@@ -501,7 +501,7 @@ abstract class SpecimenTreatment with _$SpecimenTreatment {
 }
 
 @freezed
-abstract class SpecimenContainer with _$SpecimenContainer {
+class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
   factory SpecimenContainer({
     Id? id,
@@ -535,7 +535,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
 }
 
 @freezed
-abstract class BodySite with Resource implements _$BodySite {
+class BodySite with Resource, _$BodySite {
   BodySite._();
   factory BodySite({
     @Default(Dstu2ResourceType.BodySite)
@@ -575,7 +575,7 @@ abstract class BodySite with Resource implements _$BodySite {
 }
 
 @freezed
-abstract class ImagingStudy with Resource implements _$ImagingStudy {
+class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
   factory ImagingStudy({
     @Default(Dstu2ResourceType.ImagingStudy)
@@ -632,7 +632,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
 }
 
 @freezed
-abstract class ImagingStudySeries with _$ImagingStudySeries {
+class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
     Id? id,
@@ -675,7 +675,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
 }
 
 @freezed
-abstract class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
+class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
   ImagingStudySeriesInstance._();
   factory ImagingStudySeriesInstance({
     Id? id,
@@ -711,9 +711,7 @@ abstract class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
 }
 
 @freezed
-abstract class ImagingObjectSelection
-    with Resource
-    implements _$ImagingObjectSelection {
+class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
   ImagingObjectSelection._();
   factory ImagingObjectSelection({
     @Default(Dstu2ResourceType.ImagingObjectSelection)
@@ -754,7 +752,7 @@ abstract class ImagingObjectSelection
 }
 
 @freezed
-abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
+class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
   ImagingObjectSelectionStudy._();
   factory ImagingObjectSelectionStudy({
     Id? id,
@@ -786,7 +784,7 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
 }
 
 @freezed
-abstract class ImagingObjectSelectionStudySeries
+class ImagingObjectSelectionStudySeries
     with _$ImagingObjectSelectionStudySeries {
   ImagingObjectSelectionStudySeries._();
   factory ImagingObjectSelectionStudySeries({
@@ -820,7 +818,7 @@ abstract class ImagingObjectSelectionStudySeries
 }
 
 @freezed
-abstract class ImagingObjectSelectionSeriesInstance
+class ImagingObjectSelectionSeriesInstance
     with _$ImagingObjectSelectionSeriesInstance {
   ImagingObjectSelectionSeriesInstance._();
   factory ImagingObjectSelectionSeriesInstance({
@@ -854,7 +852,7 @@ abstract class ImagingObjectSelectionSeriesInstance
 }
 
 @freezed
-abstract class ImagingObjectSelectionInstanceFrames
+class ImagingObjectSelectionInstanceFrames
     with _$ImagingObjectSelectionInstanceFrames {
   ImagingObjectSelectionInstanceFrames._();
   factory ImagingObjectSelectionInstanceFrames({

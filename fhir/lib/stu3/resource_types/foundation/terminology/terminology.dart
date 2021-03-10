@@ -12,7 +12,7 @@ part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
 @freezed
-abstract class CodeSystem with Resource implements _$CodeSystem {
+class CodeSystem with Resource, _$CodeSystem {
   CodeSystem._();
   factory CodeSystem({
     @Default(Stu3ResourceType.CodeSystem)
@@ -91,7 +91,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
 }
 
 @freezed
-abstract class CodeSystemFilter implements _$CodeSystemFilter {
+class CodeSystemFilter with _$CodeSystemFilter {
   CodeSystemFilter._();
   factory CodeSystemFilter({
     Code? code,
@@ -122,7 +122,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
 }
 
 @freezed
-abstract class CodeSystemProperty implements _$CodeSystemProperty {
+class CodeSystemProperty with _$CodeSystemProperty {
   CodeSystemProperty._();
   factory CodeSystemProperty({
     Code? code,
@@ -153,7 +153,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
 }
 
 @freezed
-abstract class CodeSystemConcept implements _$CodeSystemConcept {
+class CodeSystemConcept with _$CodeSystemConcept {
   CodeSystemConcept._();
   factory CodeSystemConcept({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -186,7 +186,7 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
 }
 
 @freezed
-abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
+class CodeSystemDesignation with _$CodeSystemDesignation {
   CodeSystemDesignation._();
   factory CodeSystemDesignation({
     String? language,
@@ -214,7 +214,7 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
 }
 
 @freezed
-abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
+class CodeSystemProperty1 with _$CodeSystemProperty1 {
   CodeSystemProperty1._();
   factory CodeSystemProperty1({
     Code? code,
@@ -250,7 +250,7 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
 }
 
 @freezed
-abstract class ConceptMap with Resource implements _$ConceptMap {
+class ConceptMap with Resource, _$ConceptMap {
   ConceptMap._();
   factory ConceptMap({
     @Default(Stu3ResourceType.ConceptMap)
@@ -319,7 +319,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
 }
 
 @freezed
-abstract class ConceptMapGroup implements _$ConceptMapGroup {
+class ConceptMapGroup with _$ConceptMapGroup {
   ConceptMapGroup._();
   factory ConceptMapGroup({
     String? source,
@@ -352,7 +352,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
 }
 
 @freezed
-abstract class ConceptMapElement implements _$ConceptMapElement {
+class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
   factory ConceptMapElement({
     Code? code,
@@ -380,7 +380,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
 }
 
 @freezed
-abstract class ConceptMapTarget implements _$ConceptMapTarget {
+class ConceptMapTarget with _$ConceptMapTarget {
   ConceptMapTarget._();
   factory ConceptMapTarget({
     Code? code,
@@ -413,7 +413,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
 }
 
 @freezed
-abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
+class ConceptMapDependsOn with _$ConceptMapDependsOn {
   ConceptMapDependsOn._();
   factory ConceptMapDependsOn({
     String? property,
@@ -444,7 +444,7 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
 }
 
 @freezed
-abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
+class ConceptMapUnmapped with _$ConceptMapUnmapped {
   ConceptMapUnmapped._();
   factory ConceptMapUnmapped({
     ConceptMapUnmappedMode? mode,
@@ -475,7 +475,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
 }
 
 @freezed
-abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
+class ExpansionProfile with Resource, _$ExpansionProfile {
   ExpansionProfile._();
   factory ExpansionProfile({
     @Default(Stu3ResourceType.ExpansionProfile)
@@ -551,8 +551,7 @@ abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
 }
 
 @freezed
-abstract class ExpansionProfileFixedVersion
-    implements _$ExpansionProfileFixedVersion {
+class ExpansionProfileFixedVersion with _$ExpansionProfileFixedVersion {
   ExpansionProfileFixedVersion._();
   factory ExpansionProfileFixedVersion({
     String? system,
@@ -582,8 +581,7 @@ abstract class ExpansionProfileFixedVersion
 }
 
 @freezed
-abstract class ExpansionProfileExcludedSystem
-    implements _$ExpansionProfileExcludedSystem {
+class ExpansionProfileExcludedSystem with _$ExpansionProfileExcludedSystem {
   ExpansionProfileExcludedSystem._();
   factory ExpansionProfileExcludedSystem({
     String? system,
@@ -613,8 +611,7 @@ abstract class ExpansionProfileExcludedSystem
 }
 
 @freezed
-abstract class ExpansionProfileDesignation
-    implements _$ExpansionProfileDesignation {
+class ExpansionProfileDesignation with _$ExpansionProfileDesignation {
   ExpansionProfileDesignation._();
   factory ExpansionProfileDesignation({
     ExpansionProfileInclude? include,
@@ -640,7 +637,7 @@ abstract class ExpansionProfileDesignation
 }
 
 @freezed
-abstract class ExpansionProfileInclude implements _$ExpansionProfileInclude {
+class ExpansionProfileInclude with _$ExpansionProfileInclude {
   ExpansionProfileInclude._();
   factory ExpansionProfileInclude({
     List<ExpansionProfileDesignation1>? designation,
@@ -664,8 +661,7 @@ abstract class ExpansionProfileInclude implements _$ExpansionProfileInclude {
 }
 
 @freezed
-abstract class ExpansionProfileDesignation1
-    implements _$ExpansionProfileDesignation1 {
+class ExpansionProfileDesignation1 with _$ExpansionProfileDesignation1 {
   ExpansionProfileDesignation1._();
   factory ExpansionProfileDesignation1({
     String? language,
@@ -692,7 +688,7 @@ abstract class ExpansionProfileDesignation1
 }
 
 @freezed
-abstract class ExpansionProfileExclude implements _$ExpansionProfileExclude {
+class ExpansionProfileExclude with _$ExpansionProfileExclude {
   ExpansionProfileExclude._();
   factory ExpansionProfileExclude({
     List<ExpansionProfileDesignation2>? designation,
@@ -716,8 +712,7 @@ abstract class ExpansionProfileExclude implements _$ExpansionProfileExclude {
 }
 
 @freezed
-abstract class ExpansionProfileDesignation2
-    implements _$ExpansionProfileDesignation2 {
+class ExpansionProfileDesignation2 with _$ExpansionProfileDesignation2 {
   ExpansionProfileDesignation2._();
   factory ExpansionProfileDesignation2({
     String? language,
@@ -744,7 +739,7 @@ abstract class ExpansionProfileDesignation2
 }
 
 @freezed
-abstract class NamingSystem with Resource implements _$NamingSystem {
+class NamingSystem with Resource, _$NamingSystem {
   NamingSystem._();
   factory NamingSystem({
     @Default(Stu3ResourceType.NamingSystem)
@@ -802,7 +797,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
 }
 
 @freezed
-abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
+class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
     NamingSystemUniqueIdType? type,
@@ -834,7 +829,7 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
 }
 
 @freezed
-abstract class ValueSet with Resource implements _$ValueSet {
+class ValueSet with Resource, _$ValueSet {
   ValueSet._();
   factory ValueSet({
     @Default(Stu3ResourceType.ValueSet)
@@ -902,7 +897,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
 }
 
 @freezed
-abstract class ValueSetCompose implements _$ValueSetCompose {
+class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
   factory ValueSetCompose({
     Date? lockedDate,
@@ -931,7 +926,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
 }
 
 @freezed
-abstract class ValueSetInclude implements _$ValueSetInclude {
+class ValueSetInclude with _$ValueSetInclude {
   ValueSetInclude._();
   factory ValueSetInclude({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -963,7 +958,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
 }
 
 @freezed
-abstract class ValueSetConcept implements _$ValueSetConcept {
+class ValueSetConcept with _$ValueSetConcept {
   ValueSetConcept._();
   factory ValueSetConcept({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -992,7 +987,7 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
 }
 
 @freezed
-abstract class ValueSetDesignation implements _$ValueSetDesignation {
+class ValueSetDesignation with _$ValueSetDesignation {
   ValueSetDesignation._();
   factory ValueSetDesignation({
     String? language,
@@ -1020,7 +1015,7 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
 }
 
 @freezed
-abstract class ValueSetFilter implements _$ValueSetFilter {
+class ValueSetFilter with _$ValueSetFilter {
   ValueSetFilter._();
   factory ValueSetFilter({
     String? property,
@@ -1049,7 +1044,7 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
 }
 
 @freezed
-abstract class ValueSetExpansion implements _$ValueSetExpansion {
+class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
   factory ValueSetExpansion({
     String? identifier,
@@ -1082,7 +1077,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
 }
 
 @freezed
-abstract class ValueSetParameter implements _$ValueSetParameter {
+class ValueSetParameter with _$ValueSetParameter {
   ValueSetParameter._();
   factory ValueSetParameter({
     String? name,
@@ -1119,7 +1114,7 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
 }
 
 @freezed
-abstract class ValueSetContains implements _$ValueSetContains {
+class ValueSetContains with _$ValueSetContains {
   ValueSetContains._();
   factory ValueSetContains({
     String? system,

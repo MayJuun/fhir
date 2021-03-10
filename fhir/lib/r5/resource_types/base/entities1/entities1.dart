@@ -12,7 +12,7 @@ part 'entities1.freezed.dart';
 part 'entities1.g.dart';
 
 @freezed
-abstract class Endpoint with Resource implements _$Endpoint {
+class Endpoint with Resource, _$Endpoint {
   Endpoint._();
   factory Endpoint({
     @Default(R5ResourceType.Endpoint)
@@ -64,7 +64,7 @@ abstract class Endpoint with Resource implements _$Endpoint {
 }
 
 @freezed
-abstract class HealthcareService with Resource implements _$HealthcareService {
+class HealthcareService with Resource, _$HealthcareService {
   HealthcareService._();
   factory HealthcareService({
     @Default(R5ResourceType.HealthcareService)
@@ -131,8 +131,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
 }
 
 @freezed
-abstract class HealthcareServiceEligibility
-    implements _$HealthcareServiceEligibility {
+class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   HealthcareServiceEligibility._();
   factory HealthcareServiceEligibility({
     String? id,
@@ -162,8 +161,7 @@ abstract class HealthcareServiceEligibility
 }
 
 @freezed
-abstract class HealthcareServiceAvailableTime
-    implements _$HealthcareServiceAvailableTime {
+class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
     String? id,
@@ -200,8 +198,7 @@ abstract class HealthcareServiceAvailableTime
 }
 
 @freezed
-abstract class HealthcareServiceNotAvailable
-    implements _$HealthcareServiceNotAvailable {
+class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
     String? id,
@@ -231,7 +228,7 @@ abstract class HealthcareServiceNotAvailable
 }
 
 @freezed
-abstract class Location with Resource implements _$Location {
+class Location with Resource, _$Location {
   Location._();
   factory Location({
     @Default(R5ResourceType.Location)
@@ -291,7 +288,7 @@ abstract class Location with Resource implements _$Location {
 }
 
 @freezed
-abstract class LocationPosition implements _$LocationPosition {
+class LocationPosition with _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
     String? id,
@@ -323,7 +320,7 @@ abstract class LocationPosition implements _$LocationPosition {
 }
 
 @freezed
-abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
+class LocationHoursOfOperation with _$LocationHoursOfOperation {
   LocationHoursOfOperation._();
   factory LocationHoursOfOperation({
     String? id,
@@ -358,7 +355,7 @@ abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
 }
 
 @freezed
-abstract class Organization with Resource implements _$Organization {
+class Organization with Resource, _$Organization {
   Organization._();
   factory Organization({
     @Default(R5ResourceType.Organization)
@@ -407,7 +404,7 @@ abstract class Organization with Resource implements _$Organization {
 }
 
 @freezed
-abstract class OrganizationContact implements _$OrganizationContact {
+class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
   factory OrganizationContact({
     String? id,
@@ -437,9 +434,7 @@ abstract class OrganizationContact implements _$OrganizationContact {
 }
 
 @freezed
-abstract class OrganizationAffiliation
-    with Resource
-    implements _$OrganizationAffiliation {
+class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   OrganizationAffiliation._();
   factory OrganizationAffiliation({
     @Default(R5ResourceType.OrganizationAffiliation)
