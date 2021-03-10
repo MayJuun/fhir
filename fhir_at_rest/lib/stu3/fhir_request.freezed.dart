@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'fhir_request.dart';
 
@@ -8,6 +8,9 @@ part of 'fhir_request.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 class _$FhirRequestTearOff {
@@ -378,13 +381,13 @@ const $FhirRequest = _$FhirRequestTearOff();
 
 /// @nodoc
 mixin _$FhirRequest {
-  Uri get base;
-  bool get pretty;
-  Summary get summary;
-  String get format;
-  List<String> get elements;
-  List<String> get parameters;
-  Client? get client;
+  Uri get base => throw _privateConstructorUsedError;
+  bool get pretty => throw _privateConstructorUsedError;
+  Summary get summary => throw _privateConstructorUsedError;
+  String get format => throw _privateConstructorUsedError;
+  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Client? get client => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -560,7 +563,8 @@ mixin _$FhirRequest {
             bool useFormData,
             Client? client)
         operation,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
@@ -730,7 +734,8 @@ mixin _$FhirRequest {
             Client? client)?
         operation,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FhirReadRequest value) read,
@@ -748,7 +753,8 @@ mixin _$FhirRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
@@ -767,10 +773,12 @@ mixin _$FhirRequest {
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $FhirRequestCopyWith<FhirRequest> get copyWith;
+  $FhirRequestCopyWith<FhirRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -807,16 +815,34 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
     Object? client = freezed,
   }) {
     return _then(_value.copyWith(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -864,18 +890,42 @@ class __$FhirReadRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirReadRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as Stu3ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Stu3ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -1376,7 +1426,6 @@ class _$_FhirReadRequest extends _FhirReadRequest {
 }
 
 abstract class _FhirReadRequest extends FhirRequest {
-  _FhirReadRequest._() : super._();
   factory _FhirReadRequest(
       {required Uri base,
       required Stu3ResourceType type,
@@ -1387,26 +1436,28 @@ abstract class _FhirReadRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       Client? client}) = _$_FhirReadRequest;
+  _FhirReadRequest._() : super._();
 
   @override
-  Uri get base;
-  Stu3ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  Stu3ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith;
+  _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1454,19 +1505,46 @@ class __$FhirVReadRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirVReadRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as Stu3ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      vid: vid == freezed ? _value.vid : vid as Id,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Stu3ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id,
+      vid: vid == freezed
+          ? _value.vid
+          : vid // ignore: cast_nullable_to_non_nullable
+              as Id,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -1973,7 +2051,6 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
 }
 
 abstract class _FhirVReadRequest extends FhirRequest {
-  _FhirVReadRequest._() : super._();
   factory _FhirVReadRequest(
       {required Uri base,
       required Stu3ResourceType type,
@@ -1985,27 +2062,29 @@ abstract class _FhirVReadRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       Client? client}) = _$_FhirVReadRequest;
+  _FhirVReadRequest._() : super._();
 
   @override
-  Uri get base;
-  Stu3ResourceType get type;
-  Id get id;
-  Id get vid;
+  Uri get base => throw _privateConstructorUsedError;
+  Stu3ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
+  Id get vid => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith;
+  _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2049,17 +2128,38 @@ class __$FhirUpdateRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirUpdateRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      resource: resource == freezed ? _value.resource : resource as Resource,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -2555,7 +2655,6 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
 }
 
 abstract class _FhirUpdateRequest extends FhirRequest {
-  _FhirUpdateRequest._() : super._();
   factory _FhirUpdateRequest(
       {required Uri base,
       required Resource resource,
@@ -2565,25 +2664,27 @@ abstract class _FhirUpdateRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       Client? client}) = _$_FhirUpdateRequest;
+  _FhirUpdateRequest._() : super._();
 
   @override
-  Uri get base;
-  Resource get resource;
+  Uri get base => throw _privateConstructorUsedError;
+  Resource get resource => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith;
+  _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2627,17 +2728,38 @@ class __$FhirPatchRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirPatchRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      resource: resource == freezed ? _value.resource : resource as Resource,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -3133,7 +3255,6 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
 }
 
 abstract class _FhirPatchRequest extends FhirRequest {
-  _FhirPatchRequest._() : super._();
   factory _FhirPatchRequest(
       {required Uri base,
       required Resource resource,
@@ -3143,25 +3264,27 @@ abstract class _FhirPatchRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       Client? client}) = _$_FhirPatchRequest;
+  _FhirPatchRequest._() : super._();
 
   @override
-  Uri get base;
-  Resource get resource;
+  Uri get base => throw _privateConstructorUsedError;
+  Resource get resource => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith;
+  _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3207,18 +3330,42 @@ class __$FhirDeleteRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirDeleteRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as Stu3ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Stu3ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -3719,7 +3866,6 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
 }
 
 abstract class _FhirDeleteRequest extends FhirRequest {
-  _FhirDeleteRequest._() : super._();
   factory _FhirDeleteRequest(
       {required Uri base,
       required Stu3ResourceType type,
@@ -3730,26 +3876,28 @@ abstract class _FhirDeleteRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       Client? client}) = _$_FhirDeleteRequest;
+  _FhirDeleteRequest._() : super._();
 
   @override
-  Uri get base;
-  Stu3ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  Stu3ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith;
+  _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3793,17 +3941,38 @@ class __$FhirCreateRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirCreateRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      resource: resource == freezed ? _value.resource : resource as Resource,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -4299,7 +4468,6 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
 }
 
 abstract class _FhirCreateRequest extends FhirRequest {
-  _FhirCreateRequest._() : super._();
   factory _FhirCreateRequest(
       {required Uri base,
       required Resource resource,
@@ -4309,25 +4477,27 @@ abstract class _FhirCreateRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       Client? client}) = _$_FhirCreateRequest;
+  _FhirCreateRequest._() : super._();
 
   @override
-  Uri get base;
-  Resource get resource;
+  Uri get base => throw _privateConstructorUsedError;
+  Resource get resource => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith;
+  _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4375,21 +4545,46 @@ class __$FhirSearchRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirSearchRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as Stu3ResourceType,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Stu3ResourceType,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      usePost: usePost == freezed ? _value.usePost : usePost as bool,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      usePost: usePost == freezed
+          ? _value.usePost
+          : usePost // ignore: cast_nullable_to_non_nullable
+              as bool,
       restfulRequest: restfulRequest == freezed
           ? _value.restfulRequest
-          : restfulRequest as RestfulRequest,
-      client: client == freezed ? _value.client : client as Client?,
+          : restfulRequest // ignore: cast_nullable_to_non_nullable
+              as RestfulRequest,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -4900,7 +5095,6 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
 }
 
 abstract class _FhirSearchRequest extends FhirRequest {
-  _FhirSearchRequest._() : super._();
   factory _FhirSearchRequest(
       {required Uri base,
       required Stu3ResourceType type,
@@ -4912,27 +5106,29 @@ abstract class _FhirSearchRequest extends FhirRequest {
       bool usePost,
       RestfulRequest restfulRequest,
       Client? client}) = _$_FhirSearchRequest;
+  _FhirSearchRequest._() : super._();
 
   @override
-  Uri get base;
-  Stu3ResourceType get type;
+  Uri get base => throw _privateConstructorUsedError;
+  Stu3ResourceType get type => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  bool get usePost;
-  RestfulRequest get restfulRequest;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  bool get usePost => throw _privateConstructorUsedError;
+  RestfulRequest get restfulRequest => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith;
+  _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4974,16 +5170,34 @@ class __$FhirSearchAllRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirSearchAllRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -5473,7 +5687,6 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
 }
 
 abstract class _FhirSearchAllRequest extends FhirRequest {
-  _FhirSearchAllRequest._() : super._();
   factory _FhirSearchAllRequest(
       {required Uri base,
       bool pretty,
@@ -5482,24 +5695,26 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       Client? client}) = _$_FhirSearchAllRequest;
+  _FhirSearchAllRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith;
+  _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5544,17 +5759,38 @@ class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirCapabilitiesRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      mode: mode == freezed ? _value.mode : mode as Mode,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as Mode,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -6051,7 +6287,6 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
 }
 
 abstract class _FhirCapabilitiesRequest extends FhirRequest {
-  _FhirCapabilitiesRequest._() : super._();
   factory _FhirCapabilitiesRequest(
       {required Uri base,
       bool pretty,
@@ -6061,25 +6296,27 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
       List<String> parameters,
       Mode mode,
       Client? client}) = _$_FhirCapabilitiesRequest;
+  _FhirCapabilitiesRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Mode get mode;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Mode get mode => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith;
+  _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6125,17 +6362,38 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirTransactionRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      bundle: bundle == freezed ? _value.bundle : bundle as Bundle,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      bundle: bundle == freezed
+          ? _value.bundle
+          : bundle // ignore: cast_nullable_to_non_nullable
+              as Bundle,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 
@@ -6638,7 +6896,6 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
 }
 
 abstract class _FhirTransactionRequest extends FhirRequest {
-  _FhirTransactionRequest._() : super._();
   factory _FhirTransactionRequest(
       {required Uri base,
       bool pretty,
@@ -6648,25 +6905,27 @@ abstract class _FhirTransactionRequest extends FhirRequest {
       List<String> parameters,
       required Bundle bundle,
       Client? client}) = _$_FhirTransactionRequest;
+  _FhirTransactionRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Bundle get bundle;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Bundle get bundle => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith;
+  _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6712,17 +6971,38 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirBatchRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      bundle: bundle == freezed ? _value.bundle : bundle as Bundle,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      bundle: bundle == freezed
+          ? _value.bundle
+          : bundle // ignore: cast_nullable_to_non_nullable
+              as Bundle,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 
@@ -7224,7 +7504,6 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
 }
 
 abstract class _FhirBatchRequest extends FhirRequest {
-  _FhirBatchRequest._() : super._();
   factory _FhirBatchRequest(
       {required Uri base,
       bool pretty,
@@ -7234,25 +7513,27 @@ abstract class _FhirBatchRequest extends FhirRequest {
       List<String> parameters,
       required Bundle bundle,
       Client? client}) = _$_FhirBatchRequest;
+  _FhirBatchRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Bundle get bundle;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Bundle get bundle => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith;
+  _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7306,22 +7587,58 @@ class __$FhirHistoryRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirHistoryRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as Stu3ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Stu3ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      count: count == freezed ? _value.count : count as int?,
-      since: since == freezed ? _value.since : since as Instant?,
-      at: at == freezed ? _value.at : at as FhirDateTime?,
-      reference: reference == freezed ? _value.reference : reference as String?,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      at: at == freezed
+          ? _value.at
+          : at // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as String?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -7847,7 +8164,6 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
 }
 
 abstract class _FhirHistoryRequest extends FhirRequest {
-  _FhirHistoryRequest._() : super._();
   factory _FhirHistoryRequest(
       {required Uri base,
       required Stu3ResourceType type,
@@ -7862,30 +8178,32 @@ abstract class _FhirHistoryRequest extends FhirRequest {
       FhirDateTime? at,
       String? reference,
       Client? client}) = _$_FhirHistoryRequest;
+  _FhirHistoryRequest._() : super._();
 
   @override
-  Uri get base;
-  Stu3ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  Stu3ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  int? get count;
-  Instant? get since;
-  FhirDateTime? get at;
-  String? get reference;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
+  Instant? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get at => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith;
+  _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7937,21 +8255,54 @@ class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirHistoryTypeRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as Stu3ResourceType,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Stu3ResourceType,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      count: count == freezed ? _value.count : count as int?,
-      since: since == freezed ? _value.since : since as Instant?,
-      at: at == freezed ? _value.at : at as FhirDateTime?,
-      reference: reference == freezed ? _value.reference : reference as String?,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      at: at == freezed
+          ? _value.at
+          : at // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as String?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -8472,7 +8823,6 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
 }
 
 abstract class _FhirHistoryTypeRequest extends FhirRequest {
-  _FhirHistoryTypeRequest._() : super._();
   factory _FhirHistoryTypeRequest(
       {required Uri base,
       required Stu3ResourceType type,
@@ -8486,29 +8836,31 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
       FhirDateTime? at,
       String? reference,
       Client? client}) = _$_FhirHistoryTypeRequest;
+  _FhirHistoryTypeRequest._() : super._();
 
   @override
-  Uri get base;
-  Stu3ResourceType get type;
+  Uri get base => throw _privateConstructorUsedError;
+  Stu3ResourceType get type => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  int? get count;
-  Instant? get since;
-  FhirDateTime? get at;
-  String? get reference;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
+  Instant? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get at => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith;
+  _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8558,20 +8910,50 @@ class __$FhirHistoryAllRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirHistoryAllRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      count: count == freezed ? _value.count : count as int?,
-      since: since == freezed ? _value.since : since as Instant?,
-      at: at == freezed ? _value.at : at as FhirDateTime?,
-      reference: reference == freezed ? _value.reference : reference as String?,
-      client: client == freezed ? _value.client : client as Client?,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      at: at == freezed
+          ? _value.at
+          : at // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as String?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -9086,7 +9468,6 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 }
 
 abstract class _FhirHistoryAllRequest extends FhirRequest {
-  _FhirHistoryAllRequest._() : super._();
   factory _FhirHistoryAllRequest(
       {required Uri base,
       bool pretty,
@@ -9099,28 +9480,30 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
       FhirDateTime? at,
       String? reference,
       Client? client}) = _$_FhirHistoryAllRequest;
+  _FhirHistoryAllRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  int? get count;
-  Instant? get since;
-  FhirDateTime? get at;
-  String? get reference;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
+  Instant? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get at => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith;
+  _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -9174,25 +9557,58 @@ class __$FhirOperationRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_FhirOperationRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as Stu3ResourceType?,
-      id: id == freezed ? _value.id : id as Id?,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Stu3ResourceType?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       fhirParameter: fhirParameter == freezed
           ? _value.fhirParameter
-          : fhirParameter as Map<String, dynamic>,
-      operation: operation == freezed ? _value.operation : operation as String,
-      usePost: usePost == freezed ? _value.usePost : usePost as bool,
-      useFormData:
-          useFormData == freezed ? _value.useFormData : useFormData as bool,
-      client: client == freezed ? _value.client : client as Client?,
+          : fhirParameter // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      operation: operation == freezed
+          ? _value.operation
+          : operation // ignore: cast_nullable_to_non_nullable
+              as String,
+      usePost: usePost == freezed
+          ? _value.usePost
+          : usePost // ignore: cast_nullable_to_non_nullable
+              as bool,
+      useFormData: useFormData == freezed
+          ? _value.useFormData
+          : useFormData // ignore: cast_nullable_to_non_nullable
+              as bool,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -9749,7 +10165,6 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 }
 
 abstract class _FhirOperationRequest extends FhirRequest {
-  _FhirOperationRequest._() : super._();
   factory _FhirOperationRequest(
       {required Uri base,
       Stu3ResourceType? type,
@@ -9764,28 +10179,30 @@ abstract class _FhirOperationRequest extends FhirRequest {
       bool usePost,
       bool useFormData,
       Client? client}) = _$_FhirOperationRequest;
+  _FhirOperationRequest._() : super._();
 
   @override
-  Uri get base;
-  Stu3ResourceType? get type;
-  Id? get id;
+  Uri get base => throw _privateConstructorUsedError;
+  Stu3ResourceType? get type => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Map<String, dynamic> get fhirParameter;
-  String get operation;
-  bool get usePost;
-  bool get useFormData;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Map<String, dynamic> get fhirParameter => throw _privateConstructorUsedError;
+  String get operation => throw _privateConstructorUsedError;
+  bool get usePost => throw _privateConstructorUsedError;
+  bool get useFormData => throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith;
+  _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }

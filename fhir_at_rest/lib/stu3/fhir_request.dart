@@ -10,7 +10,7 @@ import '../globals.dart' as globals;
 part 'fhir_request.freezed.dart';
 
 @freezed
-abstract class FhirRequest with _$FhirRequest {
+class FhirRequest with _$FhirRequest {
   FhirRequest._();
 
   ///  READ constructor
