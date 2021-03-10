@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'bulk_request.dart';
 
@@ -8,6 +8,9 @@ part of 'bulk_request.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 class _$BulkRequestTearOff {
@@ -60,10 +63,11 @@ const $BulkRequest = _$BulkRequestTearOff();
 
 /// @nodoc
 mixin _$BulkRequest {
-  Uri get base;
-  FhirDateTime? get since;
-  List<Tuple2<Stu3ResourceType?, Id?>>? get types;
-  Client? get client;
+  Uri get base => throw _privateConstructorUsedError;
+  FhirDateTime? get since => throw _privateConstructorUsedError;
+  List<Tuple2<Stu3ResourceType?, Id?>>? get types =>
+      throw _privateConstructorUsedError;
+  Client? get client => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -76,7 +80,8 @@ mixin _$BulkRequest {
     required TResult Function(Uri base, FhirDateTime? since,
             List<Tuple2<Stu3ResourceType?, Id?>>? types, Client? client)
         system,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Uri base, FhirDateTime? since,
@@ -89,23 +94,27 @@ mixin _$BulkRequest {
             List<Tuple2<Stu3ResourceType?, Id?>>? types, Client? client)?
         system,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_BulkPatientRequest value) patient,
     required TResult Function(_BulkGroupRequest value) group,
     required TResult Function(_BulkSystemRequest value) system,
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_BulkPatientRequest value)? patient,
     TResult Function(_BulkGroupRequest value)? group,
     TResult Function(_BulkSystemRequest value)? system,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $BulkRequestCopyWith<BulkRequest> get copyWith;
+  $BulkRequestCopyWith<BulkRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -136,12 +145,22 @@ class _$BulkRequestCopyWithImpl<$Res> implements $BulkRequestCopyWith<$Res> {
     Object? client = freezed,
   }) {
     return _then(_value.copyWith(
-      base: base == freezed ? _value.base : base as Uri,
-      since: since == freezed ? _value.since : since as FhirDateTime?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       types: types == freezed
           ? _value.types
-          : types as List<Tuple2<Stu3ResourceType?, Id?>>?,
-      client: client == freezed ? _value.client : client as Client?,
+          : types // ignore: cast_nullable_to_non_nullable
+              as List<Tuple2<Stu3ResourceType?, Id?>>?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -179,12 +198,22 @@ class __$BulkPatientRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_BulkPatientRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      since: since == freezed ? _value.since : since as FhirDateTime?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       types: types == freezed
           ? _value.types
-          : types as List<Tuple2<Stu3ResourceType?, Id?>>?,
-      client: client == freezed ? _value.client : client as Client?,
+          : types // ignore: cast_nullable_to_non_nullable
+              as List<Tuple2<Stu3ResourceType?, Id?>>?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -298,24 +327,26 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
 }
 
 abstract class _BulkPatientRequest extends BulkRequest {
-  _BulkPatientRequest._() : super._();
   factory _BulkPatientRequest(
       {required Uri base,
       FhirDateTime? since,
       List<Tuple2<Stu3ResourceType?, Id?>>? types,
       Client? client}) = _$_BulkPatientRequest;
+  _BulkPatientRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get since;
+  FhirDateTime? get since => throw _privateConstructorUsedError;
   @override
-  List<Tuple2<Stu3ResourceType?, Id?>>? get types;
+  List<Tuple2<Stu3ResourceType?, Id?>>? get types =>
+      throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BulkPatientRequestCopyWith<_BulkPatientRequest> get copyWith;
+  _$BulkPatientRequestCopyWith<_BulkPatientRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -353,13 +384,26 @@ class __$BulkGroupRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_BulkGroupRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      id: id == freezed ? _value.id : id as Id,
-      since: since == freezed ? _value.since : since as FhirDateTime?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       types: types == freezed
           ? _value.types
-          : types as List<Tuple2<Stu3ResourceType?, Id?>>?,
-      client: client == freezed ? _value.client : client as Client?,
+          : types // ignore: cast_nullable_to_non_nullable
+              as List<Tuple2<Stu3ResourceType?, Id?>>?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -482,26 +526,28 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
 }
 
 abstract class _BulkGroupRequest extends BulkRequest {
-  _BulkGroupRequest._() : super._();
   factory _BulkGroupRequest(
       {required Uri base,
       required Id id,
       FhirDateTime? since,
       List<Tuple2<Stu3ResourceType?, Id?>>? types,
       Client? client}) = _$_BulkGroupRequest;
+  _BulkGroupRequest._() : super._();
 
   @override
-  Uri get base;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get since;
+  FhirDateTime? get since => throw _privateConstructorUsedError;
   @override
-  List<Tuple2<Stu3ResourceType?, Id?>>? get types;
+  List<Tuple2<Stu3ResourceType?, Id?>>? get types =>
+      throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BulkGroupRequestCopyWith<_BulkGroupRequest> get copyWith;
+  _$BulkGroupRequestCopyWith<_BulkGroupRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -537,12 +583,22 @@ class __$BulkSystemRequestCopyWithImpl<$Res>
     Object? client = freezed,
   }) {
     return _then(_BulkSystemRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      since: since == freezed ? _value.since : since as FhirDateTime?,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       types: types == freezed
           ? _value.types
-          : types as List<Tuple2<Stu3ResourceType?, Id?>>?,
-      client: client == freezed ? _value.client : client as Client?,
+          : types // ignore: cast_nullable_to_non_nullable
+              as List<Tuple2<Stu3ResourceType?, Id?>>?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -656,22 +712,24 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
 }
 
 abstract class _BulkSystemRequest extends BulkRequest {
-  _BulkSystemRequest._() : super._();
   factory _BulkSystemRequest(
       {required Uri base,
       FhirDateTime? since,
       List<Tuple2<Stu3ResourceType?, Id?>>? types,
       Client? client}) = _$_BulkSystemRequest;
+  _BulkSystemRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get since;
+  FhirDateTime? get since => throw _privateConstructorUsedError;
   @override
-  List<Tuple2<Stu3ResourceType?, Id?>>? get types;
+  List<Tuple2<Stu3ResourceType?, Id?>>? get types =>
+      throw _privateConstructorUsedError;
   @override
-  Client? get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BulkSystemRequestCopyWith<_BulkSystemRequest> get copyWith;
+  _$BulkSystemRequestCopyWith<_BulkSystemRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
