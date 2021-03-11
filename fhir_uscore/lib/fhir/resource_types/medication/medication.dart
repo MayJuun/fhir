@@ -11,7 +11,7 @@ part 'medication.freezed.dart';
 part 'medication.g.dart';
 
 @freezed
-abstract class Medication with Resource implements _$Medication {
+class Medication with Resource, _$Medication {
   Medication._();
 
   factory Medication({

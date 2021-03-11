@@ -12,7 +12,7 @@ part 'special_types.freezed.dart';
 part 'special_types.g.dart';
 
 @freezed
-abstract class Narrative implements _$Narrative {
+class Narrative with _$Narrative {
   Narrative._();
   factory Narrative({
     String? id,
@@ -38,7 +38,7 @@ abstract class Narrative implements _$Narrative {
 }
 
 @freezed
-abstract class Reference implements _$Reference {
+class Reference with _$Reference {
   Reference._();
 
   factory Reference({
@@ -67,7 +67,7 @@ abstract class Reference implements _$Reference {
 }
 
 @freezed
-abstract class Dosage implements _$Dosage {
+class Dosage with _$Dosage {
   Dosage._();
 
   factory Dosage({
@@ -100,7 +100,7 @@ abstract class Dosage implements _$Dosage {
 }
 
 @freezed
-abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
+class DosageDoseAndRate with _$DosageDoseAndRate {
   DosageDoseAndRate._();
 
   factory DosageDoseAndRate({

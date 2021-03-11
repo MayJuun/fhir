@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'provenance.dart';
 
@@ -8,6 +8,10 @@ part of 'provenance.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
   return _Provenance.fromJson(json);
 }
@@ -47,17 +51,18 @@ const $Provenance = _$ProvenanceTearOff();
 /// @nodoc
 mixin _$Provenance {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Provenance)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<Reference?> get target;
-  Instant get recorded;
-  List<ProvenanceAgent?> get agent;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Reference?> get target => throw _privateConstructorUsedError;
+  Instant get recorded => throw _privateConstructorUsedError;
+  List<ProvenanceAgent?> get agent => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProvenanceCopyWith<Provenance> get copyWith;
+  $ProvenanceCopyWith<Provenance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -100,13 +105,32 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      target: target == freezed ? _value.target : target as List<Reference?>,
-      recorded: recorded == freezed ? _value.recorded : recorded as Instant,
-      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent?>,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<Reference?>,
+      recorded: recorded == freezed
+          ? _value.recorded
+          : recorded // ignore: cast_nullable_to_non_nullable
+              as Instant,
+      agent: agent == freezed
+          ? _value.agent
+          : agent // ignore: cast_nullable_to_non_nullable
+              as List<ProvenanceAgent?>,
     ));
   }
 
@@ -178,13 +202,32 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
     return _then(_Provenance(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      target: target == freezed ? _value.target : target as List<Reference?>,
-      recorded: recorded == freezed ? _value.recorded : recorded as Instant,
-      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent?>,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<Reference?>,
+      recorded: recorded == freezed
+          ? _value.recorded
+          : recorded // ignore: cast_nullable_to_non_nullable
+              as Instant,
+      agent: agent == freezed
+          ? _value.agent
+          : agent // ignore: cast_nullable_to_non_nullable
+              as List<ProvenanceAgent?>,
     ));
   }
 }
@@ -273,7 +316,6 @@ class _$_Provenance extends _Provenance {
 }
 
 abstract class _Provenance extends Provenance {
-  _Provenance._() : super._();
   factory _Provenance(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Provenance)
           UsCoreResourceType resourceType,
@@ -283,28 +325,30 @@ abstract class _Provenance extends Provenance {
       required List<Reference?> target,
       required Instant recorded,
       required List<ProvenanceAgent?> agent}) = _$_Provenance;
+  _Provenance._() : super._();
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
       _$_Provenance.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Provenance)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Reference?> get target;
+  List<Reference?> get target => throw _privateConstructorUsedError;
   @override
-  Instant get recorded;
+  Instant get recorded => throw _privateConstructorUsedError;
   @override
-  List<ProvenanceAgent?> get agent;
+  List<ProvenanceAgent?> get agent => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ProvenanceCopyWith<_Provenance> get copyWith;
+  _$ProvenanceCopyWith<_Provenance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ProvenanceAgent _$ProvenanceAgentFromJson(Map<String, dynamic> json) {
@@ -338,14 +382,15 @@ const $ProvenanceAgent = _$ProvenanceAgentTearOff();
 
 /// @nodoc
 mixin _$ProvenanceAgent {
-  String? get id;
-  CodeableConcept? get type;
-  Reference get who;
-  Reference? get onBehalfOf;
+  String? get id => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Reference get who => throw _privateConstructorUsedError;
+  Reference? get onBehalfOf => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProvenanceAgentCopyWith<ProvenanceAgent> get copyWith;
+  $ProvenanceAgentCopyWith<ProvenanceAgent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -381,11 +426,22 @@ class _$ProvenanceAgentCopyWithImpl<$Res>
     Object? onBehalfOf = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      who: who == freezed ? _value.who : who as Reference,
-      onBehalfOf:
-          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      who: who == freezed
+          ? _value.who
+          : who // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      onBehalfOf: onBehalfOf == freezed
+          ? _value.onBehalfOf
+          : onBehalfOf // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -459,11 +515,22 @@ class __$ProvenanceAgentCopyWithImpl<$Res>
     Object? onBehalfOf = freezed,
   }) {
     return _then(_ProvenanceAgent(
-      id: id == freezed ? _value.id : id as String?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      who: who == freezed ? _value.who : who as Reference,
-      onBehalfOf:
-          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      who: who == freezed
+          ? _value.who
+          : who // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      onBehalfOf: onBehalfOf == freezed
+          ? _value.onBehalfOf
+          : onBehalfOf // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -527,25 +594,26 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 }
 
 abstract class _ProvenanceAgent extends ProvenanceAgent {
-  _ProvenanceAgent._() : super._();
   factory _ProvenanceAgent(
       {String? id,
       CodeableConcept? type,
       required Reference who,
       Reference? onBehalfOf}) = _$_ProvenanceAgent;
+  _ProvenanceAgent._() : super._();
 
   factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgent.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Reference get who;
+  Reference get who => throw _privateConstructorUsedError;
   @override
-  Reference? get onBehalfOf;
+  Reference? get onBehalfOf => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ProvenanceAgentCopyWith<_ProvenanceAgent> get copyWith;
+  _$ProvenanceAgentCopyWith<_ProvenanceAgent> get copyWith =>
+      throw _privateConstructorUsedError;
 }

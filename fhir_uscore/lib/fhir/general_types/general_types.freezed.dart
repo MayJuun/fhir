@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: non_constant_identifier_names, unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'general_types.dart';
 
@@ -8,6 +8,10 @@ part of 'general_types.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Annotation _$AnnotationFromJson(Map<String, dynamic> json) {
   return _Annotation.fromJson(json);
 }
@@ -43,17 +47,18 @@ const $Annotation = _$AnnotationTearOff();
 
 /// @nodoc
 mixin _$Annotation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Reference? get authorReference;
-  String? get authorString;
-  FhirDateTime? get time;
-  Markdown? get text;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Reference? get authorReference => throw _privateConstructorUsedError;
+  String? get authorString => throw _privateConstructorUsedError;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
+  Markdown? get text => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AnnotationCopyWith<Annotation> get copyWith;
+  $AnnotationCopyWith<Annotation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -90,18 +95,30 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
     Object? text = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       authorReference: authorReference == freezed
           ? _value.authorReference
-          : authorReference as Reference?,
+          : authorReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       authorString: authorString == freezed
           ? _value.authorString
-          : authorString as String?,
-      time: time == freezed ? _value.time : time as FhirDateTime?,
-      text: text == freezed ? _value.text : text as Markdown?,
+          : authorString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      time: time == freezed
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 
@@ -155,18 +172,30 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
     Object? text = freezed,
   }) {
     return _then(_Annotation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       authorReference: authorReference == freezed
           ? _value.authorReference
-          : authorReference as Reference?,
+          : authorReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       authorString: authorString == freezed
           ? _value.authorString
-          : authorString as String?,
-      time: time == freezed ? _value.time : time as FhirDateTime?,
-      text: text == freezed ? _value.text : text as Markdown?,
+          : authorString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      time: time == freezed
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -249,7 +278,6 @@ class _$_Annotation extends _Annotation {
 }
 
 abstract class _Annotation extends Annotation {
-  _Annotation._() : super._();
   factory _Annotation(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -257,26 +285,28 @@ abstract class _Annotation extends Annotation {
       String? authorString,
       FhirDateTime? time,
       Markdown? text}) = _$_Annotation;
+  _Annotation._() : super._();
 
   factory _Annotation.fromJson(Map<String, dynamic> json) =
       _$_Annotation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Reference? get authorReference;
+  Reference? get authorReference => throw _privateConstructorUsedError;
   @override
-  String? get authorString;
+  String? get authorString => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get time;
+  FhirDateTime? get time => throw _privateConstructorUsedError;
   @override
-  Markdown? get text;
+  Markdown? get text => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AnnotationCopyWith<_Annotation> get copyWith;
+  _$AnnotationCopyWith<_Annotation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Attachment _$AttachmentFromJson(Map<String, dynamic> json) {
@@ -322,21 +352,22 @@ const $Attachment = _$AttachmentTearOff();
 
 /// @nodoc
 mixin _$Attachment {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Code? get contentType;
-  Code? get language;
-  Base64Binary? get data;
-  FhirUrl? get url;
-  UnsignedInt? get size;
-  Base64Binary? get hash;
-  String? get title;
-  FhirDateTime? get creation;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Code? get contentType => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  Base64Binary? get data => throw _privateConstructorUsedError;
+  FhirUrl? get url => throw _privateConstructorUsedError;
+  UnsignedInt? get size => throw _privateConstructorUsedError;
+  Base64Binary? get hash => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  FhirDateTime? get creation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AttachmentCopyWith<Attachment> get copyWith;
+  $AttachmentCopyWith<Attachment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -379,20 +410,46 @@ class _$AttachmentCopyWithImpl<$Res> implements $AttachmentCopyWith<$Res> {
     Object? creation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      contentType:
-          contentType == freezed ? _value.contentType : contentType as Code?,
-      language: language == freezed ? _value.language : language as Code?,
-      data: data == freezed ? _value.data : data as Base64Binary?,
-      url: url == freezed ? _value.url : url as FhirUrl?,
-      size: size == freezed ? _value.size : size as UnsignedInt?,
-      hash: hash == freezed ? _value.hash : hash as Base64Binary?,
-      title: title == freezed ? _value.title : title as String?,
-      creation:
-          creation == freezed ? _value.creation : creation as FhirDateTime?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      contentType: contentType == freezed
+          ? _value.contentType
+          : contentType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      size: size == freezed
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      hash: hash == freezed
+          ? _value.hash
+          : hash // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creation: creation == freezed
+          ? _value.creation
+          : creation // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -440,20 +497,46 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
     Object? creation = freezed,
   }) {
     return _then(_Attachment(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      contentType:
-          contentType == freezed ? _value.contentType : contentType as Code?,
-      language: language == freezed ? _value.language : language as Code?,
-      data: data == freezed ? _value.data : data as Base64Binary?,
-      url: url == freezed ? _value.url : url as FhirUrl?,
-      size: size == freezed ? _value.size : size as UnsignedInt?,
-      hash: hash == freezed ? _value.hash : hash as Base64Binary?,
-      title: title == freezed ? _value.title : title as String?,
-      creation:
-          creation == freezed ? _value.creation : creation as FhirDateTime?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      contentType: contentType == freezed
+          ? _value.contentType
+          : contentType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      size: size == freezed
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      hash: hash == freezed
+          ? _value.hash
+          : hash // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creation: creation == freezed
+          ? _value.creation
+          : creation // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -561,7 +644,6 @@ class _$_Attachment extends _Attachment {
 }
 
 abstract class _Attachment extends Attachment {
-  _Attachment._() : super._();
   factory _Attachment(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -573,34 +655,36 @@ abstract class _Attachment extends Attachment {
       Base64Binary? hash,
       String? title,
       FhirDateTime? creation}) = _$_Attachment;
+  _Attachment._() : super._();
 
   factory _Attachment.fromJson(Map<String, dynamic> json) =
       _$_Attachment.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Code? get contentType;
+  Code? get contentType => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get data;
+  Base64Binary? get data => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get url;
+  FhirUrl? get url => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get size;
+  UnsignedInt? get size => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get hash;
+  Base64Binary? get hash => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get creation;
+  FhirDateTime? get creation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AttachmentCopyWith<_Attachment> get copyWith;
+  _$AttachmentCopyWith<_Attachment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Identifier _$IdentifierFromJson(Map<String, dynamic> json) {
@@ -642,20 +726,21 @@ const $Identifier = _$IdentifierTearOff();
 
 /// @nodoc
 mixin _$Identifier {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: IdentifierUse.unknown)
-  IdentifierUse? get use;
-  CodeableConcept? get type;
-  FhirUri? get system;
-  String? get value;
-  Period? get period;
-  Reference? get assigner;
+  IdentifierUse? get use => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  Reference? get assigner => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $IdentifierCopyWith<Identifier> get copyWith;
+  $IdentifierCopyWith<Identifier> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -698,16 +783,38 @@ class _$IdentifierCopyWithImpl<$Res> implements $IdentifierCopyWith<$Res> {
     Object? assigner = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      use: use == freezed ? _value.use : use as IdentifierUse?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      value: value == freezed ? _value.value : value as String?,
-      period: period == freezed ? _value.period : period as Period?,
-      assigner: assigner == freezed ? _value.assigner : assigner as Reference?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as IdentifierUse?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      assigner: assigner == freezed
+          ? _value.assigner
+          : assigner // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -791,16 +898,38 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
     Object? assigner = freezed,
   }) {
     return _then(_Identifier(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      use: use == freezed ? _value.use : use as IdentifierUse?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      value: value == freezed ? _value.value : value as String?,
-      period: period == freezed ? _value.period : period as Period?,
-      assigner: assigner == freezed ? _value.assigner : assigner as Reference?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as IdentifierUse?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      assigner: assigner == freezed
+          ? _value.assigner
+          : assigner // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -895,7 +1024,6 @@ class _$_Identifier extends _Identifier {
 }
 
 abstract class _Identifier extends Identifier {
-  _Identifier._() : super._();
   factory _Identifier(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -905,31 +1033,33 @@ abstract class _Identifier extends Identifier {
       String? value,
       Period? period,
       Reference? assigner}) = _$_Identifier;
+  _Identifier._() : super._();
 
   factory _Identifier.fromJson(Map<String, dynamic> json) =
       _$_Identifier.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: IdentifierUse.unknown)
-  IdentifierUse? get use;
+  IdentifierUse? get use => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  FhirUri? get system;
+  FhirUri? get system => throw _privateConstructorUsedError;
   @override
-  String? get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  Reference? get assigner;
+  Reference? get assigner => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$IdentifierCopyWith<_Identifier> get copyWith;
+  _$IdentifierCopyWith<_Identifier> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CodeableConcept _$CodeableConceptFromJson(Map<String, dynamic> json) {
@@ -963,15 +1093,16 @@ const $CodeableConcept = _$CodeableConceptTearOff();
 
 /// @nodoc
 mixin _$CodeableConcept {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<Coding>? get coding;
-  String? get text;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<Coding>? get coding => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CodeableConceptCopyWith<CodeableConcept> get copyWith;
+  $CodeableConceptCopyWith<CodeableConcept> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1003,12 +1134,22 @@ class _$CodeableConceptCopyWithImpl<$Res>
     Object? text = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      coding: coding == freezed ? _value.coding : coding as List<Coding>?,
-      text: text == freezed ? _value.text : text as String?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      coding: coding == freezed
+          ? _value.coding
+          : coding // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1046,12 +1187,22 @@ class __$CodeableConceptCopyWithImpl<$Res>
     Object? text = freezed,
   }) {
     return _then(_CodeableConcept(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      coding: coding == freezed ? _value.coding : coding as List<Coding>?,
-      text: text == freezed ? _value.text : text as String?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      coding: coding == freezed
+          ? _value.coding
+          : coding // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1120,28 +1271,29 @@ class _$_CodeableConcept extends _CodeableConcept {
 }
 
 abstract class _CodeableConcept extends CodeableConcept {
-  _CodeableConcept._() : super._();
   factory _CodeableConcept(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<Coding>? coding,
       String? text}) = _$_CodeableConcept;
+  _CodeableConcept._() : super._();
 
   factory _CodeableConcept.fromJson(Map<String, dynamic> json) =
       _$_CodeableConcept.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<Coding>? get coding;
+  List<Coding>? get coding => throw _privateConstructorUsedError;
   @override
-  String? get text;
+  String? get text => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CodeableConceptCopyWith<_CodeableConcept> get copyWith;
+  _$CodeableConceptCopyWith<_CodeableConcept> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Coding _$CodingFromJson(Map<String, dynamic> json) {
@@ -1181,18 +1333,18 @@ const $Coding = _$CodingTearOff();
 
 /// @nodoc
 mixin _$Coding {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  FhirUri? get system;
-  String? get version;
-  Code? get code;
-  String? get display;
-  Boolean? get userSelected;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
+  String? get display => throw _privateConstructorUsedError;
+  Boolean? get userSelected => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CodingCopyWith<Coding> get copyWith;
+  $CodingCopyWith<Coding> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1228,17 +1380,34 @@ class _$CodingCopyWithImpl<$Res> implements $CodingCopyWith<$Res> {
     Object? userSelected = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      version: version == freezed ? _value.version : version as String?,
-      code: code == freezed ? _value.code : code as Code?,
-      display: display == freezed ? _value.display : display as String?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as String?,
       userSelected: userSelected == freezed
           ? _value.userSelected
-          : userSelected as Boolean?,
+          : userSelected // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
     ));
   }
 }
@@ -1278,17 +1447,34 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
     Object? userSelected = freezed,
   }) {
     return _then(_Coding(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      version: version == freezed ? _value.version : version as String?,
-      code: code == freezed ? _value.code : code as Code?,
-      display: display == freezed ? _value.display : display as String?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      display: display == freezed
+          ? _value.display
+          : display // ignore: cast_nullable_to_non_nullable
+              as String?,
       userSelected: userSelected == freezed
           ? _value.userSelected
-          : userSelected as Boolean?,
+          : userSelected // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
     ));
   }
 }
@@ -1378,7 +1564,6 @@ class _$_Coding extends _Coding {
 }
 
 abstract class _Coding extends Coding {
-  _Coding._() : super._();
   factory _Coding(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1387,27 +1572,28 @@ abstract class _Coding extends Coding {
       Code? code,
       String? display,
       Boolean? userSelected}) = _$_Coding;
+  _Coding._() : super._();
 
   factory _Coding.fromJson(Map<String, dynamic> json) = _$_Coding.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  FhirUri? get system;
+  FhirUri? get system => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
-  String? get display;
+  String? get display => throw _privateConstructorUsedError;
   @override
-  Boolean? get userSelected;
+  Boolean? get userSelected => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CodingCopyWith<_Coding> get copyWith;
+  _$CodingCopyWith<_Coding> get copyWith => throw _privateConstructorUsedError;
 }
 
 Quantity _$QuantityFromJson(Map<String, dynamic> json) {
@@ -1449,19 +1635,20 @@ const $Quantity = _$QuantityTearOff();
 
 /// @nodoc
 mixin _$Quantity {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Decimal? get value;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Decimal? get value => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: QuantityComparator.unknown)
-  QuantityComparator? get comparator;
-  String? get unit;
-  FhirUri? get system;
-  Code? get code;
+  QuantityComparator? get comparator => throw _privateConstructorUsedError;
+  String? get unit => throw _privateConstructorUsedError;
+  FhirUri? get system => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $QuantityCopyWith<Quantity> get copyWith;
+  $QuantityCopyWith<Quantity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1499,17 +1686,34 @@ class _$QuantityCopyWithImpl<$Res> implements $QuantityCopyWith<$Res> {
     Object? code = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as QuantityComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as QuantityComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -1551,17 +1755,34 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
     Object? code = freezed,
   }) {
     return _then(_Quantity(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as QuantityComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as QuantityComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -1650,7 +1871,6 @@ class _$_Quantity extends _Quantity {
 }
 
 abstract class _Quantity extends Quantity {
-  _Quantity._() : super._();
   factory _Quantity(
       {String? id,
       @JsonKey(name: 'extension')
@@ -1661,28 +1881,30 @@ abstract class _Quantity extends Quantity {
       String? unit,
       FhirUri? system,
       Code? code}) = _$_Quantity;
+  _Quantity._() : super._();
 
   factory _Quantity.fromJson(Map<String, dynamic> json) = _$_Quantity.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Decimal? get value;
+  Decimal? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: QuantityComparator.unknown)
-  QuantityComparator? get comparator;
+  QuantityComparator? get comparator => throw _privateConstructorUsedError;
   @override
-  String? get unit;
+  String? get unit => throw _privateConstructorUsedError;
   @override
-  FhirUri? get system;
+  FhirUri? get system => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$QuantityCopyWith<_Quantity> get copyWith;
+  _$QuantityCopyWith<_Quantity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 FhirDuration _$FhirDurationFromJson(Map<String, dynamic> json) {
@@ -1724,19 +1946,20 @@ const $FhirDuration = _$FhirDurationTearOff();
 
 /// @nodoc
 mixin _$FhirDuration {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Decimal? get value;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Decimal? get value => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: DurationComparator.unknown)
-  DurationComparator? get comparator;
-  String? get unit;
-  FhirUri? get system;
-  Code? get code;
+  DurationComparator? get comparator => throw _privateConstructorUsedError;
+  String? get unit => throw _privateConstructorUsedError;
+  FhirUri? get system => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FhirDurationCopyWith<FhirDuration> get copyWith;
+  $FhirDurationCopyWith<FhirDuration> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1775,17 +1998,34 @@ class _$FhirDurationCopyWithImpl<$Res> implements $FhirDurationCopyWith<$Res> {
     Object? code = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as DurationComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as DurationComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -1830,17 +2070,34 @@ class __$FhirDurationCopyWithImpl<$Res> extends _$FhirDurationCopyWithImpl<$Res>
     Object? code = freezed,
   }) {
     return _then(_FhirDuration(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as DurationComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as DurationComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -1929,7 +2186,6 @@ class _$_FhirDuration extends _FhirDuration {
 }
 
 abstract class _FhirDuration extends FhirDuration {
-  _FhirDuration._() : super._();
   factory _FhirDuration(
       {String? id,
       @JsonKey(name: 'extension')
@@ -1940,29 +2196,31 @@ abstract class _FhirDuration extends FhirDuration {
       String? unit,
       FhirUri? system,
       Code? code}) = _$_FhirDuration;
+  _FhirDuration._() : super._();
 
   factory _FhirDuration.fromJson(Map<String, dynamic> json) =
       _$_FhirDuration.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Decimal? get value;
+  Decimal? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DurationComparator.unknown)
-  DurationComparator? get comparator;
+  DurationComparator? get comparator => throw _privateConstructorUsedError;
   @override
-  String? get unit;
+  String? get unit => throw _privateConstructorUsedError;
   @override
-  FhirUri? get system;
+  FhirUri? get system => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirDurationCopyWith<_FhirDuration> get copyWith;
+  _$FhirDurationCopyWith<_FhirDuration> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Distance _$DistanceFromJson(Map<String, dynamic> json) {
@@ -2004,19 +2262,20 @@ const $Distance = _$DistanceTearOff();
 
 /// @nodoc
 mixin _$Distance {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Decimal? get value;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Decimal? get value => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: DistanceComparator.unknown)
-  DistanceComparator? get comparator;
-  String? get unit;
-  FhirUri? get system;
-  Code? get code;
+  DistanceComparator? get comparator => throw _privateConstructorUsedError;
+  String? get unit => throw _privateConstructorUsedError;
+  FhirUri? get system => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DistanceCopyWith<Distance> get copyWith;
+  $DistanceCopyWith<Distance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2054,17 +2313,34 @@ class _$DistanceCopyWithImpl<$Res> implements $DistanceCopyWith<$Res> {
     Object? code = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as DistanceComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as DistanceComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -2106,17 +2382,34 @@ class __$DistanceCopyWithImpl<$Res> extends _$DistanceCopyWithImpl<$Res>
     Object? code = freezed,
   }) {
     return _then(_Distance(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as DistanceComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as DistanceComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -2205,7 +2498,6 @@ class _$_Distance extends _Distance {
 }
 
 abstract class _Distance extends Distance {
-  _Distance._() : super._();
   factory _Distance(
       {String? id,
       @JsonKey(name: 'extension')
@@ -2216,28 +2508,30 @@ abstract class _Distance extends Distance {
       String? unit,
       FhirUri? system,
       Code? code}) = _$_Distance;
+  _Distance._() : super._();
 
   factory _Distance.fromJson(Map<String, dynamic> json) = _$_Distance.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Decimal? get value;
+  Decimal? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DistanceComparator.unknown)
-  DistanceComparator? get comparator;
+  DistanceComparator? get comparator => throw _privateConstructorUsedError;
   @override
-  String? get unit;
+  String? get unit => throw _privateConstructorUsedError;
   @override
-  FhirUri? get system;
+  FhirUri? get system => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DistanceCopyWith<_Distance> get copyWith;
+  _$DistanceCopyWith<_Distance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Count _$CountFromJson(Map<String, dynamic> json) {
@@ -2279,19 +2573,19 @@ const $Count = _$CountTearOff();
 
 /// @nodoc
 mixin _$Count {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Decimal? get value;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Decimal? get value => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CountComparator.unknown)
-  CountComparator? get comparator;
-  String? get unit;
-  FhirUri? get system;
-  Code? get code;
+  CountComparator? get comparator => throw _privateConstructorUsedError;
+  String? get unit => throw _privateConstructorUsedError;
+  FhirUri? get system => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CountCopyWith<Count> get copyWith;
+  $CountCopyWith<Count> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2329,17 +2623,34 @@ class _$CountCopyWithImpl<$Res> implements $CountCopyWith<$Res> {
     Object? code = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as CountComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as CountComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -2381,17 +2692,34 @@ class __$CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res>
     Object? code = freezed,
   }) {
     return _then(_Count(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as CountComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as CountComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -2480,7 +2808,6 @@ class _$_Count extends _Count {
 }
 
 abstract class _Count extends Count {
-  _Count._() : super._();
   factory _Count(
       {String? id,
       @JsonKey(name: 'extension')
@@ -2491,28 +2818,29 @@ abstract class _Count extends Count {
       String? unit,
       FhirUri? system,
       Code? code}) = _$_Count;
+  _Count._() : super._();
 
   factory _Count.fromJson(Map<String, dynamic> json) = _$_Count.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Decimal? get value;
+  Decimal? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CountComparator.unknown)
-  CountComparator? get comparator;
+  CountComparator? get comparator => throw _privateConstructorUsedError;
   @override
-  String? get unit;
+  String? get unit => throw _privateConstructorUsedError;
   @override
-  FhirUri? get system;
+  FhirUri? get system => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CountCopyWith<_Count> get copyWith;
+  _$CountCopyWith<_Count> get copyWith => throw _privateConstructorUsedError;
 }
 
 Money _$MoneyFromJson(Map<String, dynamic> json) {
@@ -2546,15 +2874,15 @@ const $Money = _$MoneyTearOff();
 
 /// @nodoc
 mixin _$Money {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Decimal? get value;
-  Code? get currency;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Decimal? get value => throw _privateConstructorUsedError;
+  Code? get currency => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MoneyCopyWith<Money> get copyWith;
+  $MoneyCopyWith<Money> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2584,12 +2912,22 @@ class _$MoneyCopyWithImpl<$Res> implements $MoneyCopyWith<$Res> {
     Object? currency = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
-      currency: currency == freezed ? _value.currency : currency as Code?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      currency: currency == freezed
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -2623,12 +2961,22 @@ class __$MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res>
     Object? currency = freezed,
   }) {
     return _then(_Money(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
-      currency: currency == freezed ? _value.currency : currency as Code?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      currency: currency == freezed
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -2698,27 +3046,27 @@ class _$_Money extends _Money {
 }
 
 abstract class _Money extends Money {
-  _Money._() : super._();
   factory _Money(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Decimal? value,
       Code? currency}) = _$_Money;
+  _Money._() : super._();
 
   factory _Money.fromJson(Map<String, dynamic> json) = _$_Money.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Decimal? get value;
+  Decimal? get value => throw _privateConstructorUsedError;
   @override
-  Code? get currency;
+  Code? get currency => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MoneyCopyWith<_Money> get copyWith;
+  _$MoneyCopyWith<_Money> get copyWith => throw _privateConstructorUsedError;
 }
 
 Age _$AgeFromJson(Map<String, dynamic> json) {
@@ -2760,19 +3108,19 @@ const $Age = _$AgeTearOff();
 
 /// @nodoc
 mixin _$Age {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Decimal? get value;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Decimal? get value => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: AgeComparator.unknown)
-  AgeComparator? get comparator;
-  String? get unit;
-  FhirUri? get system;
-  Code? get code;
+  AgeComparator? get comparator => throw _privateConstructorUsedError;
+  String? get unit => throw _privateConstructorUsedError;
+  FhirUri? get system => throw _privateConstructorUsedError;
+  Code? get code => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AgeCopyWith<Age> get copyWith;
+  $AgeCopyWith<Age> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2810,17 +3158,34 @@ class _$AgeCopyWithImpl<$Res> implements $AgeCopyWith<$Res> {
     Object? code = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as AgeComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as AgeComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -2862,17 +3227,34 @@ class __$AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res>
     Object? code = freezed,
   }) {
     return _then(_Age(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      value: value == freezed ? _value.value : value as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       comparator: comparator == freezed
           ? _value.comparator
-          : comparator as AgeComparator?,
-      unit: unit == freezed ? _value.unit : unit as String?,
-      system: system == freezed ? _value.system : system as FhirUri?,
-      code: code == freezed ? _value.code : code as Code?,
+          : comparator // ignore: cast_nullable_to_non_nullable
+              as AgeComparator?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code?,
     ));
   }
 }
@@ -2960,7 +3342,6 @@ class _$_Age extends _Age {
 }
 
 abstract class _Age extends Age {
-  _Age._() : super._();
   factory _Age(
       {String? id,
       @JsonKey(name: 'extension')
@@ -2971,28 +3352,29 @@ abstract class _Age extends Age {
       String? unit,
       FhirUri? system,
       Code? code}) = _$_Age;
+  _Age._() : super._();
 
   factory _Age.fromJson(Map<String, dynamic> json) = _$_Age.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Decimal? get value;
+  Decimal? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: AgeComparator.unknown)
-  AgeComparator? get comparator;
+  AgeComparator? get comparator => throw _privateConstructorUsedError;
   @override
-  String? get unit;
+  String? get unit => throw _privateConstructorUsedError;
   @override
-  FhirUri? get system;
+  FhirUri? get system => throw _privateConstructorUsedError;
   @override
-  Code? get code;
+  Code? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AgeCopyWith<_Age> get copyWith;
+  _$AgeCopyWith<_Age> get copyWith => throw _privateConstructorUsedError;
 }
 
 Range _$RangeFromJson(Map<String, dynamic> json) {
@@ -3026,15 +3408,15 @@ const $Range = _$RangeTearOff();
 
 /// @nodoc
 mixin _$Range {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Quantity? get low;
-  Quantity? get high;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Quantity? get low => throw _privateConstructorUsedError;
+  Quantity? get high => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RangeCopyWith<Range> get copyWith;
+  $RangeCopyWith<Range> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3067,12 +3449,22 @@ class _$RangeCopyWithImpl<$Res> implements $RangeCopyWith<$Res> {
     Object? high = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      low: low == freezed ? _value.low : low as Quantity?,
-      high: high == freezed ? _value.high : high as Quantity?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      low: low == freezed
+          ? _value.low
+          : low // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      high: high == freezed
+          ? _value.high
+          : high // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
     ));
   }
 
@@ -3133,12 +3525,22 @@ class __$RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res>
     Object? high = freezed,
   }) {
     return _then(_Range(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      low: low == freezed ? _value.low : low as Quantity?,
-      high: high == freezed ? _value.high : high as Quantity?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      low: low == freezed
+          ? _value.low
+          : low // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      high: high == freezed
+          ? _value.high
+          : high // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
     ));
   }
 }
@@ -3207,27 +3609,27 @@ class _$_Range extends _Range {
 }
 
 abstract class _Range extends Range {
-  _Range._() : super._();
   factory _Range(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? low,
       Quantity? high}) = _$_Range;
+  _Range._() : super._();
 
   factory _Range.fromJson(Map<String, dynamic> json) = _$_Range.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Quantity? get low;
+  Quantity? get low => throw _privateConstructorUsedError;
   @override
-  Quantity? get high;
+  Quantity? get high => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RangeCopyWith<_Range> get copyWith;
+  _$RangeCopyWith<_Range> get copyWith => throw _privateConstructorUsedError;
 }
 
 Period _$PeriodFromJson(Map<String, dynamic> json) {
@@ -3261,15 +3663,15 @@ const $Period = _$PeriodTearOff();
 
 /// @nodoc
 mixin _$Period {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  FhirDateTime? get start;
-  FhirDateTime? get end;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  FhirDateTime? get start => throw _privateConstructorUsedError;
+  FhirDateTime? get end => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PeriodCopyWith<Period> get copyWith;
+  $PeriodCopyWith<Period> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3299,12 +3701,22 @@ class _$PeriodCopyWithImpl<$Res> implements $PeriodCopyWith<$Res> {
     Object? end = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      start: start == freezed ? _value.start : start as FhirDateTime?,
-      end: end == freezed ? _value.end : end as FhirDateTime?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      start: start == freezed
+          ? _value.start
+          : start // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      end: end == freezed
+          ? _value.end
+          : end // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -3338,12 +3750,22 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
     Object? end = freezed,
   }) {
     return _then(_Period(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      start: start == freezed ? _value.start : start as FhirDateTime?,
-      end: end == freezed ? _value.end : end as FhirDateTime?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      start: start == freezed
+          ? _value.start
+          : start // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      end: end == freezed
+          ? _value.end
+          : end // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -3412,27 +3834,27 @@ class _$_Period extends _Period {
 }
 
 abstract class _Period extends Period {
-  _Period._() : super._();
   factory _Period(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirDateTime? start,
       FhirDateTime? end}) = _$_Period;
+  _Period._() : super._();
 
   factory _Period.fromJson(Map<String, dynamic> json) = _$_Period.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get start;
+  FhirDateTime? get start => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get end;
+  FhirDateTime? get end => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PeriodCopyWith<_Period> get copyWith;
+  _$PeriodCopyWith<_Period> get copyWith => throw _privateConstructorUsedError;
 }
 
 Ratio _$RatioFromJson(Map<String, dynamic> json) {
@@ -3466,15 +3888,15 @@ const $Ratio = _$RatioTearOff();
 
 /// @nodoc
 mixin _$Ratio {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Quantity? get numerator;
-  Quantity? get denominator;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Quantity? get numerator => throw _privateConstructorUsedError;
+  Quantity? get denominator => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RatioCopyWith<Ratio> get copyWith;
+  $RatioCopyWith<Ratio> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3507,15 +3929,22 @@ class _$RatioCopyWithImpl<$Res> implements $RatioCopyWith<$Res> {
     Object? denominator = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      numerator:
-          numerator == freezed ? _value.numerator : numerator as Quantity?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      numerator: numerator == freezed
+          ? _value.numerator
+          : numerator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       denominator: denominator == freezed
           ? _value.denominator
-          : denominator as Quantity?,
+          : denominator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
     ));
   }
 
@@ -3576,15 +4005,22 @@ class __$RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res>
     Object? denominator = freezed,
   }) {
     return _then(_Ratio(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      numerator:
-          numerator == freezed ? _value.numerator : numerator as Quantity?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      numerator: numerator == freezed
+          ? _value.numerator
+          : numerator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       denominator: denominator == freezed
           ? _value.denominator
-          : denominator as Quantity?,
+          : denominator // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
     ));
   }
 }
@@ -3655,27 +4091,27 @@ class _$_Ratio extends _Ratio {
 }
 
 abstract class _Ratio extends Ratio {
-  _Ratio._() : super._();
   factory _Ratio(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity? numerator,
       Quantity? denominator}) = _$_Ratio;
+  _Ratio._() : super._();
 
   factory _Ratio.fromJson(Map<String, dynamic> json) = _$_Ratio.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Quantity? get numerator;
+  Quantity? get numerator => throw _privateConstructorUsedError;
   @override
-  Quantity? get denominator;
+  Quantity? get denominator => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RatioCopyWith<_Ratio> get copyWith;
+  _$RatioCopyWith<_Ratio> get copyWith => throw _privateConstructorUsedError;
 }
 
 SampledData _$SampledDataFromJson(Map<String, dynamic> json) {
@@ -3719,20 +4155,21 @@ const $SampledData = _$SampledDataTearOff();
 
 /// @nodoc
 mixin _$SampledData {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  Quantity get origin;
-  Decimal? get period;
-  Decimal? get factor;
-  Decimal? get lowerLimit;
-  Decimal? get upperLimit;
-  PositiveInt? get dimensions;
-  String? get data;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Quantity get origin => throw _privateConstructorUsedError;
+  Decimal? get period => throw _privateConstructorUsedError;
+  Decimal? get factor => throw _privateConstructorUsedError;
+  Decimal? get lowerLimit => throw _privateConstructorUsedError;
+  Decimal? get upperLimit => throw _privateConstructorUsedError;
+  PositiveInt? get dimensions => throw _privateConstructorUsedError;
+  String? get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SampledDataCopyWith<SampledData> get copyWith;
+  $SampledDataCopyWith<SampledData> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3775,21 +4212,42 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
     Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      origin: origin == freezed ? _value.origin : origin as Quantity,
-      period: period == freezed ? _value.period : period as Decimal?,
-      factor: factor == freezed ? _value.factor : factor as Decimal?,
-      lowerLimit:
-          lowerLimit == freezed ? _value.lowerLimit : lowerLimit as Decimal?,
-      upperLimit:
-          upperLimit == freezed ? _value.upperLimit : upperLimit as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      origin: origin == freezed
+          ? _value.origin
+          : origin // ignore: cast_nullable_to_non_nullable
+              as Quantity,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      factor: factor == freezed
+          ? _value.factor
+          : factor // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      lowerLimit: lowerLimit == freezed
+          ? _value.lowerLimit
+          : lowerLimit // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      upperLimit: upperLimit == freezed
+          ? _value.upperLimit
+          : upperLimit // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       dimensions: dimensions == freezed
           ? _value.dimensions
-          : dimensions as PositiveInt?,
-      data: data == freezed ? _value.data : data as String?,
+          : dimensions // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -3846,21 +4304,42 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
     Object? data = freezed,
   }) {
     return _then(_SampledData(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      origin: origin == freezed ? _value.origin : origin as Quantity,
-      period: period == freezed ? _value.period : period as Decimal?,
-      factor: factor == freezed ? _value.factor : factor as Decimal?,
-      lowerLimit:
-          lowerLimit == freezed ? _value.lowerLimit : lowerLimit as Decimal?,
-      upperLimit:
-          upperLimit == freezed ? _value.upperLimit : upperLimit as Decimal?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      origin: origin == freezed
+          ? _value.origin
+          : origin // ignore: cast_nullable_to_non_nullable
+              as Quantity,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      factor: factor == freezed
+          ? _value.factor
+          : factor // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      lowerLimit: lowerLimit == freezed
+          ? _value.lowerLimit
+          : lowerLimit // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      upperLimit: upperLimit == freezed
+          ? _value.upperLimit
+          : upperLimit // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       dimensions: dimensions == freezed
           ? _value.dimensions
-          : dimensions as PositiveInt?,
-      data: data == freezed ? _value.data : data as String?,
+          : dimensions // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -3962,7 +4441,6 @@ class _$_SampledData extends _SampledData {
 }
 
 abstract class _SampledData extends SampledData {
-  _SampledData._() : super._();
   factory _SampledData(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3973,32 +4451,34 @@ abstract class _SampledData extends SampledData {
       Decimal? upperLimit,
       PositiveInt? dimensions,
       String? data}) = _$_SampledData;
+  _SampledData._() : super._();
 
   factory _SampledData.fromJson(Map<String, dynamic> json) =
       _$_SampledData.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  Quantity get origin;
+  Quantity get origin => throw _privateConstructorUsedError;
   @override
-  Decimal? get period;
+  Decimal? get period => throw _privateConstructorUsedError;
   @override
-  Decimal? get factor;
+  Decimal? get factor => throw _privateConstructorUsedError;
   @override
-  Decimal? get lowerLimit;
+  Decimal? get lowerLimit => throw _privateConstructorUsedError;
   @override
-  Decimal? get upperLimit;
+  Decimal? get upperLimit => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get dimensions;
+  PositiveInt? get dimensions => throw _privateConstructorUsedError;
   @override
-  String? get data;
+  String? get data => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SampledDataCopyWith<_SampledData> get copyWith;
+  _$SampledDataCopyWith<_SampledData> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Signature _$SignatureFromJson(Map<String, dynamic> json) {
@@ -4042,20 +4522,21 @@ const $Signature = _$SignatureTearOff();
 
 /// @nodoc
 mixin _$Signature {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<Coding> get type;
-  Instant? get when;
-  Reference get who;
-  Reference? get onBehalfOf;
-  Code? get targetFormat;
-  Code? get sigFormat;
-  Base64Binary? get data;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<Coding> get type => throw _privateConstructorUsedError;
+  Instant? get when => throw _privateConstructorUsedError;
+  Reference get who => throw _privateConstructorUsedError;
+  Reference? get onBehalfOf => throw _privateConstructorUsedError;
+  Code? get targetFormat => throw _privateConstructorUsedError;
+  Code? get sigFormat => throw _privateConstructorUsedError;
+  Base64Binary? get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SignatureCopyWith<Signature> get copyWith;
+  $SignatureCopyWith<Signature> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4098,19 +4579,42 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
     Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as List<Coding>,
-      when: when == freezed ? _value.when : when as Instant?,
-      who: who == freezed ? _value.who : who as Reference,
-      onBehalfOf:
-          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
-      targetFormat:
-          targetFormat == freezed ? _value.targetFormat : targetFormat as Code?,
-      sigFormat: sigFormat == freezed ? _value.sigFormat : sigFormat as Code?,
-      data: data == freezed ? _value.data : data as Base64Binary?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<Coding>,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      who: who == freezed
+          ? _value.who
+          : who // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      onBehalfOf: onBehalfOf == freezed
+          ? _value.onBehalfOf
+          : onBehalfOf // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      targetFormat: targetFormat == freezed
+          ? _value.targetFormat
+          : targetFormat // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      sigFormat: sigFormat == freezed
+          ? _value.sigFormat
+          : sigFormat // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
     ));
   }
 
@@ -4178,19 +4682,42 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
     Object? data = freezed,
   }) {
     return _then(_Signature(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as List<Coding>,
-      when: when == freezed ? _value.when : when as Instant?,
-      who: who == freezed ? _value.who : who as Reference,
-      onBehalfOf:
-          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
-      targetFormat:
-          targetFormat == freezed ? _value.targetFormat : targetFormat as Code?,
-      sigFormat: sigFormat == freezed ? _value.sigFormat : sigFormat as Code?,
-      data: data == freezed ? _value.data : data as Base64Binary?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<Coding>,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      who: who == freezed
+          ? _value.who
+          : who // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      onBehalfOf: onBehalfOf == freezed
+          ? _value.onBehalfOf
+          : onBehalfOf // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      targetFormat: targetFormat == freezed
+          ? _value.targetFormat
+          : targetFormat // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      sigFormat: sigFormat == freezed
+          ? _value.sigFormat
+          : sigFormat // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
     ));
   }
 }
@@ -4292,7 +4819,6 @@ class _$_Signature extends _Signature {
 }
 
 abstract class _Signature extends Signature {
-  _Signature._() : super._();
   factory _Signature(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4303,32 +4829,34 @@ abstract class _Signature extends Signature {
       Code? targetFormat,
       Code? sigFormat,
       Base64Binary? data}) = _$_Signature;
+  _Signature._() : super._();
 
   factory _Signature.fromJson(Map<String, dynamic> json) =
       _$_Signature.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<Coding> get type;
+  List<Coding> get type => throw _privateConstructorUsedError;
   @override
-  Instant? get when;
+  Instant? get when => throw _privateConstructorUsedError;
   @override
-  Reference get who;
+  Reference get who => throw _privateConstructorUsedError;
   @override
-  Reference? get onBehalfOf;
+  Reference? get onBehalfOf => throw _privateConstructorUsedError;
   @override
-  Code? get targetFormat;
+  Code? get targetFormat => throw _privateConstructorUsedError;
   @override
-  Code? get sigFormat;
+  Code? get sigFormat => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get data;
+  Base64Binary? get data => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SignatureCopyWith<_Signature> get copyWith;
+  _$SignatureCopyWith<_Signature> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 HumanName _$HumanNameFromJson(Map<String, dynamic> json) {
@@ -4372,21 +4900,22 @@ const $HumanName = _$HumanNameTearOff();
 
 /// @nodoc
 mixin _$HumanName {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: HumanNameUse.unknown)
-  HumanNameUse? get use;
-  String? get text;
-  String? get family;
-  List<String>? get given;
-  List<String>? get prefix;
-  List<String>? get suffix;
-  Period? get period;
+  HumanNameUse? get use => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
+  String? get family => throw _privateConstructorUsedError;
+  List<String>? get given => throw _privateConstructorUsedError;
+  List<String>? get prefix => throw _privateConstructorUsedError;
+  List<String>? get suffix => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $HumanNameCopyWith<HumanName> get copyWith;
+  $HumanNameCopyWith<HumanName> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4428,17 +4957,42 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
     Object? period = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      use: use == freezed ? _value.use : use as HumanNameUse?,
-      text: text == freezed ? _value.text : text as String?,
-      family: family == freezed ? _value.family : family as String?,
-      given: given == freezed ? _value.given : given as List<String>?,
-      prefix: prefix == freezed ? _value.prefix : prefix as List<String>?,
-      suffix: suffix == freezed ? _value.suffix : suffix as List<String>?,
-      period: period == freezed ? _value.period : period as Period?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as HumanNameUse?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      family: family == freezed
+          ? _value.family
+          : family // ignore: cast_nullable_to_non_nullable
+              as String?,
+      given: given == freezed
+          ? _value.given
+          : given // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      prefix: prefix == freezed
+          ? _value.prefix
+          : prefix // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      suffix: suffix == freezed
+          ? _value.suffix
+          : suffix // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 
@@ -4497,17 +5051,42 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
     Object? period = freezed,
   }) {
     return _then(_HumanName(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      use: use == freezed ? _value.use : use as HumanNameUse?,
-      text: text == freezed ? _value.text : text as String?,
-      family: family == freezed ? _value.family : family as String?,
-      given: given == freezed ? _value.given : given as List<String>?,
-      prefix: prefix == freezed ? _value.prefix : prefix as List<String>?,
-      suffix: suffix == freezed ? _value.suffix : suffix as List<String>?,
-      period: period == freezed ? _value.period : period as Period?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as HumanNameUse?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      family: family == freezed
+          ? _value.family
+          : family // ignore: cast_nullable_to_non_nullable
+              as String?,
+      given: given == freezed
+          ? _value.given
+          : given // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      prefix: prefix == freezed
+          ? _value.prefix
+          : prefix // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      suffix: suffix == freezed
+          ? _value.suffix
+          : suffix // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 }
@@ -4607,7 +5186,6 @@ class _$_HumanName extends _HumanName {
 }
 
 abstract class _HumanName extends HumanName {
-  _HumanName._() : super._();
   factory _HumanName(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4618,33 +5196,35 @@ abstract class _HumanName extends HumanName {
       List<String>? prefix,
       List<String>? suffix,
       Period? period}) = _$_HumanName;
+  _HumanName._() : super._();
 
   factory _HumanName.fromJson(Map<String, dynamic> json) =
       _$_HumanName.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: HumanNameUse.unknown)
-  HumanNameUse? get use;
+  HumanNameUse? get use => throw _privateConstructorUsedError;
   @override
-  String? get text;
+  String? get text => throw _privateConstructorUsedError;
   @override
-  String? get family;
+  String? get family => throw _privateConstructorUsedError;
   @override
-  List<String>? get given;
+  List<String>? get given => throw _privateConstructorUsedError;
   @override
-  List<String>? get prefix;
+  List<String>? get prefix => throw _privateConstructorUsedError;
   @override
-  List<String>? get suffix;
+  List<String>? get suffix => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$HumanNameCopyWith<_HumanName> get copyWith;
+  _$HumanNameCopyWith<_HumanName> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Address _$AddressFromJson(Map<String, dynamic> json) {
@@ -4694,25 +5274,25 @@ const $Address = _$AddressTearOff();
 
 /// @nodoc
 mixin _$Address {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: AddressUse.unknown)
-  AddressUse? get use;
+  AddressUse? get use => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: AddressType.unknown)
-  AddressType? get type;
-  String? get text;
-  List<String>? get line;
-  String? get city;
-  String? get district;
-  String? get state;
-  String? get postalCode;
-  String? get country;
-  Period? get period;
+  AddressType? get type => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
+  List<String>? get line => throw _privateConstructorUsedError;
+  String? get city => throw _privateConstructorUsedError;
+  String? get district => throw _privateConstructorUsedError;
+  String? get state => throw _privateConstructorUsedError;
+  String? get postalCode => throw _privateConstructorUsedError;
+  String? get country => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AddressCopyWith<Address> get copyWith;
+  $AddressCopyWith<Address> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4760,21 +5340,54 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
     Object? period = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      use: use == freezed ? _value.use : use as AddressUse?,
-      type: type == freezed ? _value.type : type as AddressType?,
-      text: text == freezed ? _value.text : text as String?,
-      line: line == freezed ? _value.line : line as List<String>?,
-      city: city == freezed ? _value.city : city as String?,
-      district: district == freezed ? _value.district : district as String?,
-      state: state == freezed ? _value.state : state as String?,
-      postalCode:
-          postalCode == freezed ? _value.postalCode : postalCode as String?,
-      country: country == freezed ? _value.country : country as String?,
-      period: period == freezed ? _value.period : period as Period?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as AddressUse?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as AddressType?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      line: line == freezed
+          ? _value.line
+          : line // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      city: city == freezed
+          ? _value.city
+          : city // ignore: cast_nullable_to_non_nullable
+              as String?,
+      district: district == freezed
+          ? _value.district
+          : district // ignore: cast_nullable_to_non_nullable
+              as String?,
+      state: state == freezed
+          ? _value.state
+          : state // ignore: cast_nullable_to_non_nullable
+              as String?,
+      postalCode: postalCode == freezed
+          ? _value.postalCode
+          : postalCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 
@@ -4838,21 +5451,54 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
     Object? period = freezed,
   }) {
     return _then(_Address(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      use: use == freezed ? _value.use : use as AddressUse?,
-      type: type == freezed ? _value.type : type as AddressType?,
-      text: text == freezed ? _value.text : text as String?,
-      line: line == freezed ? _value.line : line as List<String>?,
-      city: city == freezed ? _value.city : city as String?,
-      district: district == freezed ? _value.district : district as String?,
-      state: state == freezed ? _value.state : state as String?,
-      postalCode:
-          postalCode == freezed ? _value.postalCode : postalCode as String?,
-      country: country == freezed ? _value.country : country as String?,
-      period: period == freezed ? _value.period : period as Period?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as AddressUse?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as AddressType?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      line: line == freezed
+          ? _value.line
+          : line // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      city: city == freezed
+          ? _value.city
+          : city // ignore: cast_nullable_to_non_nullable
+              as String?,
+      district: district == freezed
+          ? _value.district
+          : district // ignore: cast_nullable_to_non_nullable
+              as String?,
+      state: state == freezed
+          ? _value.state
+          : state // ignore: cast_nullable_to_non_nullable
+              as String?,
+      postalCode: postalCode == freezed
+          ? _value.postalCode
+          : postalCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 }
@@ -4974,7 +5620,6 @@ class _$_Address extends _Address {
 }
 
 abstract class _Address extends Address {
-  _Address._() : super._();
   factory _Address(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4988,39 +5633,41 @@ abstract class _Address extends Address {
       String? postalCode,
       String? country,
       Period? period}) = _$_Address;
+  _Address._() : super._();
 
   factory _Address.fromJson(Map<String, dynamic> json) = _$_Address.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: AddressUse.unknown)
-  AddressUse? get use;
+  AddressUse? get use => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: AddressType.unknown)
-  AddressType? get type;
+  AddressType? get type => throw _privateConstructorUsedError;
   @override
-  String? get text;
+  String? get text => throw _privateConstructorUsedError;
   @override
-  List<String>? get line;
+  List<String>? get line => throw _privateConstructorUsedError;
   @override
-  String? get city;
+  String? get city => throw _privateConstructorUsedError;
   @override
-  String? get district;
+  String? get district => throw _privateConstructorUsedError;
   @override
-  String? get state;
+  String? get state => throw _privateConstructorUsedError;
   @override
-  String? get postalCode;
+  String? get postalCode => throw _privateConstructorUsedError;
   @override
-  String? get country;
+  String? get country => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AddressCopyWith<_Address> get copyWith;
+  _$AddressCopyWith<_Address> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ContactPoint _$ContactPointFromJson(Map<String, dynamic> json) {
@@ -5063,20 +5710,21 @@ const $ContactPoint = _$ContactPointTearOff();
 
 /// @nodoc
 mixin _$ContactPoint {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-  ContactPointSystem? get system;
-  String? get value;
+  ContactPointSystem? get system => throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-  ContactPointUse? get use;
-  PositiveInt? get rank;
-  Period? get period;
+  ContactPointUse? get use => throw _privateConstructorUsedError;
+  PositiveInt? get rank => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ContactPointCopyWith<ContactPoint> get copyWith;
+  $ContactPointCopyWith<ContactPoint> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5118,15 +5766,34 @@ class _$ContactPointCopyWithImpl<$Res> implements $ContactPointCopyWith<$Res> {
     Object? period = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      system: system == freezed ? _value.system : system as ContactPointSystem?,
-      value: value == freezed ? _value.value : value as String?,
-      use: use == freezed ? _value.use : use as ContactPointUse?,
-      rank: rank == freezed ? _value.rank : rank as PositiveInt?,
-      period: period == freezed ? _value.period : period as Period?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as ContactPointSystem?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as ContactPointUse?,
+      rank: rank == freezed
+          ? _value.rank
+          : rank // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 
@@ -5186,15 +5853,34 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
     Object? period = freezed,
   }) {
     return _then(_ContactPoint(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
-      system: system == freezed ? _value.system : system as ContactPointSystem?,
-      value: value == freezed ? _value.value : value as String?,
-      use: use == freezed ? _value.use : use as ContactPointUse?,
-      rank: rank == freezed ? _value.rank : rank as PositiveInt?,
-      period: period == freezed ? _value.period : period as Period?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      system: system == freezed
+          ? _value.system
+          : system // ignore: cast_nullable_to_non_nullable
+              as ContactPointSystem?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
+      use: use == freezed
+          ? _value.use
+          : use // ignore: cast_nullable_to_non_nullable
+              as ContactPointUse?,
+      rank: rank == freezed
+          ? _value.rank
+          : rank // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 }
@@ -5283,7 +5969,6 @@ class _$_ContactPoint extends _ContactPoint {
 }
 
 abstract class _ContactPoint extends ContactPoint {
-  _ContactPoint._() : super._();
   factory _ContactPoint(
       {String? id,
       @JsonKey(name: 'extension')
@@ -5295,30 +5980,32 @@ abstract class _ContactPoint extends ContactPoint {
           ContactPointUse? use,
       PositiveInt? rank,
       Period? period}) = _$_ContactPoint;
+  _ContactPoint._() : super._();
 
   factory _ContactPoint.fromJson(Map<String, dynamic> json) =
       _$_ContactPoint.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-  ContactPointSystem? get system;
+  ContactPointSystem? get system => throw _privateConstructorUsedError;
   @override
-  String? get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-  ContactPointUse? get use;
+  ContactPointUse? get use => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get rank;
+  PositiveInt? get rank => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ContactPointCopyWith<_ContactPoint> get copyWith;
+  _$ContactPointCopyWith<_ContactPoint> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Timing _$TimingFromJson(Map<String, dynamic> json) {
@@ -5356,17 +6043,18 @@ const $Timing = _$TimingTearOff();
 
 /// @nodoc
 mixin _$Timing {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<FhirDateTime>? get event;
-  TimingRepeat? get repeat;
-  CodeableConcept? get code;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<FhirDateTime>? get event => throw _privateConstructorUsedError;
+  TimingRepeat? get repeat => throw _privateConstructorUsedError;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TimingCopyWith<Timing> get copyWith;
+  $TimingCopyWith<Timing> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5403,16 +6091,30 @@ class _$TimingCopyWithImpl<$Res> implements $TimingCopyWith<$Res> {
     Object? code = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      event: event == freezed ? _value.event : event as List<FhirDateTime>?,
-      repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      event: event == freezed
+          ? _value.event
+          : event // ignore: cast_nullable_to_non_nullable
+              as List<FhirDateTime>?,
+      repeat: repeat == freezed
+          ? _value.repeat
+          : repeat // ignore: cast_nullable_to_non_nullable
+              as TimingRepeat?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -5477,16 +6179,30 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
     Object? code = freezed,
   }) {
     return _then(_Timing(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      event: event == freezed ? _value.event : event as List<FhirDateTime>?,
-      repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      event: event == freezed
+          ? _value.event
+          : event // ignore: cast_nullable_to_non_nullable
+              as List<FhirDateTime>?,
+      repeat: repeat == freezed
+          ? _value.repeat
+          : repeat // ignore: cast_nullable_to_non_nullable
+              as TimingRepeat?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -5568,7 +6284,6 @@ class _$_Timing extends _Timing {
 }
 
 abstract class _Timing extends Timing {
-  _Timing._() : super._();
   factory _Timing(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5576,25 +6291,27 @@ abstract class _Timing extends Timing {
       List<FhirDateTime>? event,
       TimingRepeat? repeat,
       CodeableConcept? code}) = _$_Timing;
+  _Timing._() : super._();
 
   factory _Timing.fromJson(Map<String, dynamic> json) = _$_Timing.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<FhirDateTime>? get event;
+  List<FhirDateTime>? get event => throw _privateConstructorUsedError;
   @override
-  TimingRepeat? get repeat;
+  TimingRepeat? get repeat => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TimingCopyWith<_Timing> get copyWith;
+  _$TimingCopyWith<_Timing> get copyWith => throw _privateConstructorUsedError;
 }
 
 TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
@@ -5663,33 +6380,36 @@ const $TimingRepeat = _$TimingRepeatTearOff();
 
 /// @nodoc
 mixin _$TimingRepeat {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  FhirDuration? get boundsDuration;
-  Range? get boundsRange;
-  Period? get boundsPeriod;
-  PositiveInt? get count;
-  PositiveInt? get countMax;
-  Decimal? get duration;
-  Decimal? get durationMax;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  FhirDuration? get boundsDuration => throw _privateConstructorUsedError;
+  Range? get boundsRange => throw _privateConstructorUsedError;
+  Period? get boundsPeriod => throw _privateConstructorUsedError;
+  PositiveInt? get count => throw _privateConstructorUsedError;
+  PositiveInt? get countMax => throw _privateConstructorUsedError;
+  Decimal? get duration => throw _privateConstructorUsedError;
+  Decimal? get durationMax => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
-  TimingRepeatDurationUnit? get durationUnit;
-  PositiveInt? get frequency;
-  PositiveInt? get frequencyMax;
-  Decimal? get period;
-  Decimal? get periodMax;
+  TimingRepeatDurationUnit? get durationUnit =>
+      throw _privateConstructorUsedError;
+  PositiveInt? get frequency => throw _privateConstructorUsedError;
+  PositiveInt? get frequencyMax => throw _privateConstructorUsedError;
+  Decimal? get period => throw _privateConstructorUsedError;
+  Decimal? get periodMax => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
-  TimingRepeatPeriodUnit? get periodUnit;
-  List<Code>? get dayOfWeek;
-  List<Time>? get timeOfDay;
-  List<TimingRepeatWhen>? get when;
-  UnsignedInt? get offset;
+  TimingRepeatPeriodUnit? get periodUnit => throw _privateConstructorUsedError;
+  List<Code>? get dayOfWeek => throw _privateConstructorUsedError;
+  List<Time>? get timeOfDay => throw _privateConstructorUsedError;
+  List<TimingRepeatWhen>? get when => throw _privateConstructorUsedError;
+  UnsignedInt? get offset => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TimingRepeatCopyWith<TimingRepeat> get copyWith;
+  $TimingRepeatCopyWith<TimingRepeat> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5759,47 +6479,86 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
     Object? offset = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       boundsDuration: boundsDuration == freezed
           ? _value.boundsDuration
-          : boundsDuration as FhirDuration?,
-      boundsRange:
-          boundsRange == freezed ? _value.boundsRange : boundsRange as Range?,
+          : boundsDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      boundsRange: boundsRange == freezed
+          ? _value.boundsRange
+          : boundsRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       boundsPeriod: boundsPeriod == freezed
           ? _value.boundsPeriod
-          : boundsPeriod as Period?,
-      count: count == freezed ? _value.count : count as PositiveInt?,
-      countMax:
-          countMax == freezed ? _value.countMax : countMax as PositiveInt?,
-      duration: duration == freezed ? _value.duration : duration as Decimal?,
-      durationMax:
-          durationMax == freezed ? _value.durationMax : durationMax as Decimal?,
+          : boundsPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      countMax: countMax == freezed
+          ? _value.countMax
+          : countMax // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      duration: duration == freezed
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      durationMax: durationMax == freezed
+          ? _value.durationMax
+          : durationMax // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       durationUnit: durationUnit == freezed
           ? _value.durationUnit
-          : durationUnit as TimingRepeatDurationUnit?,
-      frequency:
-          frequency == freezed ? _value.frequency : frequency as PositiveInt?,
+          : durationUnit // ignore: cast_nullable_to_non_nullable
+              as TimingRepeatDurationUnit?,
+      frequency: frequency == freezed
+          ? _value.frequency
+          : frequency // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       frequencyMax: frequencyMax == freezed
           ? _value.frequencyMax
-          : frequencyMax as PositiveInt?,
-      period: period == freezed ? _value.period : period as Decimal?,
-      periodMax:
-          periodMax == freezed ? _value.periodMax : periodMax as Decimal?,
+          : frequencyMax // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      periodMax: periodMax == freezed
+          ? _value.periodMax
+          : periodMax // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       periodUnit: periodUnit == freezed
           ? _value.periodUnit
-          : periodUnit as TimingRepeatPeriodUnit?,
-      dayOfWeek:
-          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code>?,
-      timeOfDay:
-          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>?,
-      when: when == freezed ? _value.when : when as List<TimingRepeatWhen>?,
-      offset: offset == freezed ? _value.offset : offset as UnsignedInt?,
+          : periodUnit // ignore: cast_nullable_to_non_nullable
+              as TimingRepeatPeriodUnit?,
+      dayOfWeek: dayOfWeek == freezed
+          ? _value.dayOfWeek
+          : dayOfWeek // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
+      timeOfDay: timeOfDay == freezed
+          ? _value.timeOfDay
+          : timeOfDay // ignore: cast_nullable_to_non_nullable
+              as List<Time>?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as List<TimingRepeatWhen>?,
+      offset: offset == freezed
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
     ));
   }
 
@@ -5911,47 +6670,86 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
     Object? offset = freezed,
   }) {
     return _then(_TimingRepeat(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       boundsDuration: boundsDuration == freezed
           ? _value.boundsDuration
-          : boundsDuration as FhirDuration?,
-      boundsRange:
-          boundsRange == freezed ? _value.boundsRange : boundsRange as Range?,
+          : boundsDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      boundsRange: boundsRange == freezed
+          ? _value.boundsRange
+          : boundsRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       boundsPeriod: boundsPeriod == freezed
           ? _value.boundsPeriod
-          : boundsPeriod as Period?,
-      count: count == freezed ? _value.count : count as PositiveInt?,
-      countMax:
-          countMax == freezed ? _value.countMax : countMax as PositiveInt?,
-      duration: duration == freezed ? _value.duration : duration as Decimal?,
-      durationMax:
-          durationMax == freezed ? _value.durationMax : durationMax as Decimal?,
+          : boundsPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      countMax: countMax == freezed
+          ? _value.countMax
+          : countMax // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      duration: duration == freezed
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      durationMax: durationMax == freezed
+          ? _value.durationMax
+          : durationMax // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       durationUnit: durationUnit == freezed
           ? _value.durationUnit
-          : durationUnit as TimingRepeatDurationUnit?,
-      frequency:
-          frequency == freezed ? _value.frequency : frequency as PositiveInt?,
+          : durationUnit // ignore: cast_nullable_to_non_nullable
+              as TimingRepeatDurationUnit?,
+      frequency: frequency == freezed
+          ? _value.frequency
+          : frequency // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       frequencyMax: frequencyMax == freezed
           ? _value.frequencyMax
-          : frequencyMax as PositiveInt?,
-      period: period == freezed ? _value.period : period as Decimal?,
-      periodMax:
-          periodMax == freezed ? _value.periodMax : periodMax as Decimal?,
+          : frequencyMax // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      periodMax: periodMax == freezed
+          ? _value.periodMax
+          : periodMax // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       periodUnit: periodUnit == freezed
           ? _value.periodUnit
-          : periodUnit as TimingRepeatPeriodUnit?,
-      dayOfWeek:
-          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<Code>?,
-      timeOfDay:
-          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>?,
-      when: when == freezed ? _value.when : when as List<TimingRepeatWhen>?,
-      offset: offset == freezed ? _value.offset : offset as UnsignedInt?,
+          : periodUnit // ignore: cast_nullable_to_non_nullable
+              as TimingRepeatPeriodUnit?,
+      dayOfWeek: dayOfWeek == freezed
+          ? _value.dayOfWeek
+          : dayOfWeek // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
+      timeOfDay: timeOfDay == freezed
+          ? _value.timeOfDay
+          : timeOfDay // ignore: cast_nullable_to_non_nullable
+              as List<Time>?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as List<TimingRepeatWhen>?,
+      offset: offset == freezed
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
     ));
   }
 }
@@ -6135,7 +6933,6 @@ class _$_TimingRepeat extends _TimingRepeat {
 }
 
 abstract class _TimingRepeat extends TimingRepeat {
-  _TimingRepeat._() : super._();
   factory _TimingRepeat(
       {String? id,
       @JsonKey(name: 'extension')
@@ -6160,54 +6957,58 @@ abstract class _TimingRepeat extends TimingRepeat {
       List<Time>? timeOfDay,
       List<TimingRepeatWhen>? when,
       UnsignedInt? offset}) = _$_TimingRepeat;
+  _TimingRepeat._() : super._();
 
   factory _TimingRepeat.fromJson(Map<String, dynamic> json) =
       _$_TimingRepeat.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  FhirDuration? get boundsDuration;
+  FhirDuration? get boundsDuration => throw _privateConstructorUsedError;
   @override
-  Range? get boundsRange;
+  Range? get boundsRange => throw _privateConstructorUsedError;
   @override
-  Period? get boundsPeriod;
+  Period? get boundsPeriod => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get count;
+  PositiveInt? get count => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get countMax;
+  PositiveInt? get countMax => throw _privateConstructorUsedError;
   @override
-  Decimal? get duration;
+  Decimal? get duration => throw _privateConstructorUsedError;
   @override
-  Decimal? get durationMax;
+  Decimal? get durationMax => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
-  TimingRepeatDurationUnit? get durationUnit;
+  TimingRepeatDurationUnit? get durationUnit =>
+      throw _privateConstructorUsedError;
   @override
-  PositiveInt? get frequency;
+  PositiveInt? get frequency => throw _privateConstructorUsedError;
   @override
-  PositiveInt? get frequencyMax;
+  PositiveInt? get frequencyMax => throw _privateConstructorUsedError;
   @override
-  Decimal? get period;
+  Decimal? get period => throw _privateConstructorUsedError;
   @override
-  Decimal? get periodMax;
+  Decimal? get periodMax => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
-  TimingRepeatPeriodUnit? get periodUnit;
+  TimingRepeatPeriodUnit? get periodUnit => throw _privateConstructorUsedError;
   @override
-  List<Code>? get dayOfWeek;
+  List<Code>? get dayOfWeek => throw _privateConstructorUsedError;
   @override
-  List<Time>? get timeOfDay;
+  List<Time>? get timeOfDay => throw _privateConstructorUsedError;
   @override
-  List<TimingRepeatWhen>? get when;
+  List<TimingRepeatWhen>? get when => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get offset;
+  UnsignedInt? get offset => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TimingRepeatCopyWith<_TimingRepeat> get copyWith;
+  _$TimingRepeatCopyWith<_TimingRepeat> get copyWith =>
+      throw _privateConstructorUsedError;
 }

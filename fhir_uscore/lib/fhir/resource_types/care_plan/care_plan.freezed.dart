@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'care_plan.dart';
 
@@ -8,6 +8,10 @@ part of 'care_plan.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CarePlan _$CarePlanFromJson(Map<String, dynamic> json) {
   return _CarePlan.fromJson(json);
 }
@@ -52,20 +56,21 @@ const $CarePlan = _$CarePlanTearOff();
 /// @nodoc
 mixin _$CarePlan {
   @JsonKey(unknownEnumValue: UsCoreResourceType.CarePlan)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative get text;
-  List<Resource>? get contained;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
-  CarePlanStatus get status;
-  CarePlanIntent get intent;
-  List<CodeableConcept?> get category;
-  Reference get subject;
+  CarePlanStatus get status => throw _privateConstructorUsedError;
+  CarePlanIntent get intent => throw _privateConstructorUsedError;
+  List<CodeableConcept?> get category => throw _privateConstructorUsedError;
+  Reference get subject => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CarePlanCopyWith<CarePlan> get copyWith;
+  $CarePlanCopyWith<CarePlan> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -113,19 +118,40 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
-      status: status == freezed ? _value.status : status as CarePlanStatus,
-      intent: intent == freezed ? _value.intent : intent as CarePlanIntent,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CarePlanStatus,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as CarePlanIntent,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 
@@ -205,19 +231,40 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
     return _then(_CarePlan(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
-      status: status == freezed ? _value.status : status as CarePlanStatus,
-      intent: intent == freezed ? _value.intent : intent as CarePlanIntent,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CarePlanStatus,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as CarePlanIntent,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 }
@@ -321,7 +368,6 @@ class _$_CarePlan extends _CarePlan {
 }
 
 abstract class _CarePlan extends CarePlan {
-  _CarePlan._() : super._();
   factory _CarePlan(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.CarePlan)
           UsCoreResourceType resourceType,
@@ -334,30 +380,32 @@ abstract class _CarePlan extends CarePlan {
       required CarePlanIntent intent,
       required List<CodeableConcept?> category,
       required Reference subject}) = _$_CarePlan;
+  _CarePlan._() : super._();
 
   factory _CarePlan.fromJson(Map<String, dynamic> json) = _$_CarePlan.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.CarePlan)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
-  CarePlanStatus get status;
+  CarePlanStatus get status => throw _privateConstructorUsedError;
   @override
-  CarePlanIntent get intent;
+  CarePlanIntent get intent => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept?> get category;
+  List<CodeableConcept?> get category => throw _privateConstructorUsedError;
   @override
-  Reference get subject;
+  Reference get subject => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CarePlanCopyWith<_CarePlan> get copyWith;
+  _$CarePlanCopyWith<_CarePlan> get copyWith =>
+      throw _privateConstructorUsedError;
 }

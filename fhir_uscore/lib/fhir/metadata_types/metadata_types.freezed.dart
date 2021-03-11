@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'metadata_types.dart';
 
@@ -8,6 +8,10 @@ part of 'metadata_types.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 ContactDetail _$ContactDetailFromJson(Map<String, dynamic> json) {
   return _ContactDetail.fromJson(json);
 }
@@ -34,13 +38,14 @@ const $ContactDetail = _$ContactDetailTearOff();
 
 /// @nodoc
 mixin _$ContactDetail {
-  String? get id;
-  String? get name;
-  List<ContactPoint>? get telecom;
+  String? get id => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ContactDetailCopyWith<ContactDetail> get copyWith;
+  $ContactDetailCopyWith<ContactDetail> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -67,10 +72,18 @@ class _$ContactDetailCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      name: name == freezed ? _value.name : name as String?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
     ));
   }
 }
@@ -103,10 +116,18 @@ class __$ContactDetailCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_ContactDetail(
-      id: id == freezed ? _value.id : id as String?,
-      name: name == freezed ? _value.name : name as String?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
     ));
   }
 }
@@ -163,24 +184,25 @@ class _$_ContactDetail extends _ContactDetail {
 }
 
 abstract class _ContactDetail extends ContactDetail {
-  _ContactDetail._() : super._();
   factory _ContactDetail(
       {String? id,
       String? name,
       List<ContactPoint>? telecom}) = _$_ContactDetail;
+  _ContactDetail._() : super._();
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ContactDetailCopyWith<_ContactDetail> get copyWith;
+  _$ContactDetailCopyWith<_ContactDetail> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 UsageContext _$UsageContextFromJson(Map<String, dynamic> json) {
@@ -218,16 +240,18 @@ const $UsageContext = _$UsageContextTearOff();
 
 /// @nodoc
 mixin _$UsageContext {
-  String? get id;
-  Coding get code;
-  CodeableConcept? get valueCodeableConcept;
-  Quantity? get valueQuantity;
-  Range? get valueRange;
-  Reference? get valueReference;
+  String? get id => throw _privateConstructorUsedError;
+  Coding get code => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  Reference? get valueReference => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UsageContextCopyWith<UsageContext> get copyWith;
+  $UsageContextCopyWith<UsageContext> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -268,19 +292,30 @@ class _$UsageContextCopyWithImpl<$Res> implements $UsageContextCopyWith<$Res> {
     Object? valueReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      code: code == freezed ? _value.code : code as Coding,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Coding,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept?,
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity?,
-      valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range?,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       valueReference: valueReference == freezed
           ? _value.valueReference
-          : valueReference as Reference?,
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -384,19 +419,30 @@ class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
     Object? valueReference = freezed,
   }) {
     return _then(_UsageContext(
-      id: id == freezed ? _value.id : id as String?,
-      code: code == freezed ? _value.code : code as Coding,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Coding,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept?,
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity?,
-      valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range?,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       valueReference: valueReference == freezed
           ? _value.valueReference
-          : valueReference as Reference?,
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -479,7 +525,6 @@ class _$_UsageContext extends _UsageContext {
 }
 
 abstract class _UsageContext extends UsageContext {
-  _UsageContext._() : super._();
   factory _UsageContext(
       {String? id,
       required Coding code,
@@ -487,25 +532,28 @@ abstract class _UsageContext extends UsageContext {
       Quantity? valueQuantity,
       Range? valueRange,
       Reference? valueReference}) = _$_UsageContext;
+  _UsageContext._() : super._();
 
   factory _UsageContext.fromJson(Map<String, dynamic> json) =
       _$_UsageContext.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  Coding get code;
+  Coding get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Range? get valueRange;
+  Range? get valueRange => throw _privateConstructorUsedError;
   @override
-  Reference? get valueReference;
+  Reference? get valueReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UsageContextCopyWith<_UsageContext> get copyWith;
+  _$UsageContextCopyWith<_UsageContext> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Meta _$MetaFromJson(Map<String, dynamic> json) {
@@ -545,17 +593,17 @@ const $Meta = _$MetaTearOff();
 
 /// @nodoc
 mixin _$Meta {
-  String? get id;
-  Id? get versionId;
-  Instant? get lastUpdated;
-  FhirUri? get source;
-  List<Canonical>? get profile;
-  List<Coding>? get security;
-  List<Coding>? get tag;
+  String? get id => throw _privateConstructorUsedError;
+  Id? get versionId => throw _privateConstructorUsedError;
+  Instant? get lastUpdated => throw _privateConstructorUsedError;
+  FhirUri? get source => throw _privateConstructorUsedError;
+  List<Canonical>? get profile => throw _privateConstructorUsedError;
+  List<Coding>? get security => throw _privateConstructorUsedError;
+  List<Coding>? get tag => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MetaCopyWith<Meta> get copyWith;
+  $MetaCopyWith<Meta> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -591,16 +639,34 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
     Object? tag = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      versionId: versionId == freezed ? _value.versionId : versionId as Id?,
-      lastUpdated:
-          lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant?,
-      source: source == freezed ? _value.source : source as FhirUri?,
-      profile:
-          profile == freezed ? _value.profile : profile as List<Canonical>?,
-      security:
-          security == freezed ? _value.security : security as List<Coding>?,
-      tag: tag == freezed ? _value.tag : tag as List<Coding>?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionId: versionId == freezed
+          ? _value.versionId
+          : versionId // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      lastUpdated: lastUpdated == freezed
+          ? _value.lastUpdated
+          : lastUpdated // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      security: security == freezed
+          ? _value.security
+          : security // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
+      tag: tag == freezed
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
     ));
   }
 }
@@ -640,16 +706,34 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
     Object? tag = freezed,
   }) {
     return _then(_Meta(
-      id: id == freezed ? _value.id : id as String?,
-      versionId: versionId == freezed ? _value.versionId : versionId as Id?,
-      lastUpdated:
-          lastUpdated == freezed ? _value.lastUpdated : lastUpdated as Instant?,
-      source: source == freezed ? _value.source : source as FhirUri?,
-      profile:
-          profile == freezed ? _value.profile : profile as List<Canonical>?,
-      security:
-          security == freezed ? _value.security : security as List<Coding>?,
-      tag: tag == freezed ? _value.tag : tag as List<Coding>?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionId: versionId == freezed
+          ? _value.versionId
+          : versionId // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      lastUpdated: lastUpdated == freezed
+          ? _value.lastUpdated
+          : lastUpdated // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      security: security == freezed
+          ? _value.security
+          : security // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
+      tag: tag == freezed
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
     ));
   }
 }
@@ -738,7 +822,6 @@ class _$_Meta extends _Meta {
 }
 
 abstract class _Meta extends Meta {
-  _Meta._() : super._();
   factory _Meta(
       {String? id,
       Id? versionId,
@@ -747,24 +830,25 @@ abstract class _Meta extends Meta {
       List<Canonical>? profile,
       List<Coding>? security,
       List<Coding>? tag}) = _$_Meta;
+  _Meta._() : super._();
 
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  Id? get versionId;
+  Id? get versionId => throw _privateConstructorUsedError;
   @override
-  Instant? get lastUpdated;
+  Instant? get lastUpdated => throw _privateConstructorUsedError;
   @override
-  FhirUri? get source;
+  FhirUri? get source => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get profile;
+  List<Canonical>? get profile => throw _privateConstructorUsedError;
   @override
-  List<Coding>? get security;
+  List<Coding>? get security => throw _privateConstructorUsedError;
   @override
-  List<Coding>? get tag;
+  List<Coding>? get tag => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MetaCopyWith<_Meta> get copyWith;
+  _$MetaCopyWith<_Meta> get copyWith => throw _privateConstructorUsedError;
 }

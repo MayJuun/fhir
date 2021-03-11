@@ -13,7 +13,7 @@ part 'observation.freezed.dart';
 part 'observation.g.dart';
 
 @freezed
-abstract class Observation with Resource implements _$Observation {
+class Observation with Resource, _$Observation {
   Observation._();
 
   factory Observation({
@@ -584,8 +584,7 @@ abstract class Observation with Resource implements _$Observation {
 }
 
 @freezed
-abstract class ObservationReferenceRange
-    implements _$ObservationReferenceRange {
+class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
 
   factory ObservationReferenceRange({
@@ -617,7 +616,7 @@ abstract class ObservationReferenceRange
 }
 
 @freezed
-abstract class ObservationComponent implements _$ObservationComponent {
+class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
 
   factory ObservationComponent({

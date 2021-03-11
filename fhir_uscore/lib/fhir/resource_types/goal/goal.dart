@@ -12,7 +12,7 @@ part 'goal.freezed.dart';
 part 'goal.g.dart';
 
 @freezed
-abstract class Goal with Resource implements _$Goal {
+class Goal with Resource, _$Goal {
   Goal._();
 
   factory Goal({
@@ -72,7 +72,7 @@ abstract class Goal with Resource implements _$Goal {
 }
 
 @freezed
-abstract class GoalTarget implements _$GoalTarget {
+class GoalTarget with _$GoalTarget {
   GoalTarget._();
 
   factory GoalTarget({

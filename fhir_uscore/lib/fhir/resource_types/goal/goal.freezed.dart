@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'goal.dart';
 
@@ -8,6 +8,10 @@ part of 'goal.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Goal _$GoalFromJson(Map<String, dynamic> json) {
   return _Goal.fromJson(json);
 }
@@ -52,20 +56,20 @@ const $Goal = _$GoalTearOff();
 /// @nodoc
 mixin _$Goal {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Goal)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
-  GoalLifecycleStatus get lifecycleStatus;
-  CodeableConcept? get achievementStatus;
-  CodeableConcept get description;
-  Reference get subject;
-  List<GoalTarget>? get target;
+  GoalLifecycleStatus get lifecycleStatus => throw _privateConstructorUsedError;
+  CodeableConcept? get achievementStatus => throw _privateConstructorUsedError;
+  CodeableConcept get description => throw _privateConstructorUsedError;
+  Reference get subject => throw _privateConstructorUsedError;
+  List<GoalTarget>? get target => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GoalCopyWith<Goal> get copyWith;
+  $GoalCopyWith<Goal> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -115,21 +119,40 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       lifecycleStatus: lifecycleStatus == freezed
           ? _value.lifecycleStatus
-          : lifecycleStatus as GoalLifecycleStatus,
+          : lifecycleStatus // ignore: cast_nullable_to_non_nullable
+              as GoalLifecycleStatus,
       achievementStatus: achievementStatus == freezed
           ? _value.achievementStatus
-          : achievementStatus as CodeableConcept?,
+          : achievementStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       description: description == freezed
           ? _value.description
-          : description as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      target: target == freezed ? _value.target : target as List<GoalTarget>?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<GoalTarget>?,
     ));
   }
 
@@ -235,21 +258,40 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
     return _then(_Goal(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       lifecycleStatus: lifecycleStatus == freezed
           ? _value.lifecycleStatus
-          : lifecycleStatus as GoalLifecycleStatus,
+          : lifecycleStatus // ignore: cast_nullable_to_non_nullable
+              as GoalLifecycleStatus,
       achievementStatus: achievementStatus == freezed
           ? _value.achievementStatus
-          : achievementStatus as CodeableConcept?,
+          : achievementStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       description: description == freezed
           ? _value.description
-          : description as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      target: target == freezed ? _value.target : target as List<GoalTarget>?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as List<GoalTarget>?,
     ));
   }
 }
@@ -355,7 +397,6 @@ class _$_Goal extends _Goal {
 }
 
 abstract class _Goal extends Goal {
-  _Goal._() : super._();
   factory _Goal(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Goal)
           UsCoreResourceType resourceType,
@@ -368,32 +409,33 @@ abstract class _Goal extends Goal {
       required CodeableConcept description,
       required Reference subject,
       List<GoalTarget>? target}) = _$_Goal;
+  _Goal._() : super._();
 
   factory _Goal.fromJson(Map<String, dynamic> json) = _$_Goal.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Goal)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
-  GoalLifecycleStatus get lifecycleStatus;
+  GoalLifecycleStatus get lifecycleStatus => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get achievementStatus;
+  CodeableConcept? get achievementStatus => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get description;
+  CodeableConcept get description => throw _privateConstructorUsedError;
   @override
-  Reference get subject;
+  Reference get subject => throw _privateConstructorUsedError;
   @override
-  List<GoalTarget>? get target;
+  List<GoalTarget>? get target => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GoalCopyWith<_Goal> get copyWith;
+  _$GoalCopyWith<_Goal> get copyWith => throw _privateConstructorUsedError;
 }
 
 GoalTarget _$GoalTargetFromJson(Map<String, dynamic> json) {
@@ -421,12 +463,13 @@ const $GoalTarget = _$GoalTargetTearOff();
 
 /// @nodoc
 mixin _$GoalTarget {
-  String? get id;
-  Date? get dueDate;
+  String? get id => throw _privateConstructorUsedError;
+  Date? get dueDate => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GoalTargetCopyWith<GoalTarget> get copyWith;
+  $GoalTargetCopyWith<GoalTarget> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -451,8 +494,14 @@ class _$GoalTargetCopyWithImpl<$Res> implements $GoalTargetCopyWith<$Res> {
     Object? dueDate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      dueDate: dueDate == freezed ? _value.dueDate : dueDate as Date?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dueDate: dueDate == freezed
+          ? _value.dueDate
+          : dueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
     ));
   }
 }
@@ -482,8 +531,14 @@ class __$GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
     Object? dueDate = freezed,
   }) {
     return _then(_GoalTarget(
-      id: id == freezed ? _value.id : id as String?,
-      dueDate: dueDate == freezed ? _value.dueDate : dueDate as Date?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dueDate: dueDate == freezed
+          ? _value.dueDate
+          : dueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
     ));
   }
 }
@@ -535,17 +590,18 @@ class _$_GoalTarget extends _GoalTarget {
 }
 
 abstract class _GoalTarget extends GoalTarget {
-  _GoalTarget._() : super._();
   factory _GoalTarget({String? id, Date? dueDate}) = _$_GoalTarget;
+  _GoalTarget._() : super._();
 
   factory _GoalTarget.fromJson(Map<String, dynamic> json) =
       _$_GoalTarget.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  Date? get dueDate;
+  Date? get dueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GoalTargetCopyWith<_GoalTarget> get copyWith;
+  _$GoalTargetCopyWith<_GoalTarget> get copyWith =>
+      throw _privateConstructorUsedError;
 }

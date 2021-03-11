@@ -11,7 +11,7 @@ part 'organization.freezed.dart';
 part 'organization.g.dart';
 
 @freezed
-abstract class Organization with Resource implements _$Organization {
+class Organization with Resource, _$Organization {
   Organization._();
 
   factory Organization({

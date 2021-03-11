@@ -12,7 +12,7 @@ part 'diagnostic_report.freezed.dart';
 part 'diagnostic_report.g.dart';
 
 @freezed
-abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
+class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
 
   factory DiagnosticReport({

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'allergy_intolerance.dart';
 
@@ -8,6 +8,10 @@ part of 'allergy_intolerance.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 AllergyIntolerance _$AllergyIntoleranceFromJson(Map<String, dynamic> json) {
   return _AllergyIntolerance.fromJson(json);
 }
@@ -59,23 +63,27 @@ const $AllergyIntolerance = _$AllergyIntoleranceTearOff();
 /// @nodoc
 mixin _$AllergyIntolerance {
   @JsonKey(unknownEnumValue: UsCoreResourceType.AllergyIntolerance)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  CodeableConcept? get clinicalStatus;
-  CodeableConcept? get verificationStatus;
-  CodeableConcept? get code;
-  Reference get patient;
-  List<AllergyIntoleranceReaction>? get reaction;
-  List<AllergyIntoleranceCategory>? get category;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  CodeableConcept? get clinicalStatus => throw _privateConstructorUsedError;
+  CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
+  Reference get patient => throw _privateConstructorUsedError;
+  List<AllergyIntoleranceReaction>? get reaction =>
+      throw _privateConstructorUsedError;
+  List<AllergyIntoleranceCategory>? get category =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-  AllergyIntoleranceCriticality? get criticality;
-  FhirDateTime? get onsetDateTime;
+  AllergyIntoleranceCriticality? get criticality =>
+      throw _privateConstructorUsedError;
+  FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AllergyIntoleranceCopyWith<AllergyIntolerance> get copyWith;
+  $AllergyIntoleranceCopyWith<AllergyIntolerance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -134,30 +142,52 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       clinicalStatus: clinicalStatus == freezed
           ? _value.clinicalStatus
-          : clinicalStatus as CodeableConcept?,
+          : clinicalStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       verificationStatus: verificationStatus == freezed
           ? _value.verificationStatus
-          : verificationStatus as CodeableConcept?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      patient: patient == freezed ? _value.patient : patient as Reference,
+          : verificationStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
       reaction: reaction == freezed
           ? _value.reaction
-          : reaction as List<AllergyIntoleranceReaction>?,
+          : reaction // ignore: cast_nullable_to_non_nullable
+              as List<AllergyIntoleranceReaction>?,
       category: category == freezed
           ? _value.category
-          : category as List<AllergyIntoleranceCategory>?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<AllergyIntoleranceCategory>?,
       criticality: criticality == freezed
           ? _value.criticality
-          : criticality as AllergyIntoleranceCriticality?,
+          : criticality // ignore: cast_nullable_to_non_nullable
+              as AllergyIntoleranceCriticality?,
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
-          : onsetDateTime as FhirDateTime?,
+          : onsetDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 
@@ -290,30 +320,52 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
     return _then(_AllergyIntolerance(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       clinicalStatus: clinicalStatus == freezed
           ? _value.clinicalStatus
-          : clinicalStatus as CodeableConcept?,
+          : clinicalStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       verificationStatus: verificationStatus == freezed
           ? _value.verificationStatus
-          : verificationStatus as CodeableConcept?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      patient: patient == freezed ? _value.patient : patient as Reference,
+          : verificationStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
       reaction: reaction == freezed
           ? _value.reaction
-          : reaction as List<AllergyIntoleranceReaction>?,
+          : reaction // ignore: cast_nullable_to_non_nullable
+              as List<AllergyIntoleranceReaction>?,
       category: category == freezed
           ? _value.category
-          : category as List<AllergyIntoleranceCategory>?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<AllergyIntoleranceCategory>?,
       criticality: criticality == freezed
           ? _value.criticality
-          : criticality as AllergyIntoleranceCriticality?,
+          : criticality // ignore: cast_nullable_to_non_nullable
+              as AllergyIntoleranceCriticality?,
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
-          : onsetDateTime as FhirDateTime?,
+          : onsetDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -440,7 +492,6 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 }
 
 abstract class _AllergyIntolerance extends AllergyIntolerance {
-  _AllergyIntolerance._() : super._();
   factory _AllergyIntolerance(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.AllergyIntolerance)
           UsCoreResourceType resourceType,
@@ -456,39 +507,44 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality? criticality,
       FhirDateTime? onsetDateTime}) = _$_AllergyIntolerance;
+  _AllergyIntolerance._() : super._();
 
   factory _AllergyIntolerance.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntolerance.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.AllergyIntolerance)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get clinicalStatus;
+  CodeableConcept? get clinicalStatus => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get verificationStatus;
+  CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
-  Reference get patient;
+  Reference get patient => throw _privateConstructorUsedError;
   @override
-  List<AllergyIntoleranceReaction>? get reaction;
+  List<AllergyIntoleranceReaction>? get reaction =>
+      throw _privateConstructorUsedError;
   @override
-  List<AllergyIntoleranceCategory>? get category;
+  List<AllergyIntoleranceCategory>? get category =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-  AllergyIntoleranceCriticality? get criticality;
+  AllergyIntoleranceCriticality? get criticality =>
+      throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get onsetDateTime;
+  FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AllergyIntoleranceCopyWith<_AllergyIntolerance> get copyWith;
+  _$AllergyIntoleranceCopyWith<_AllergyIntolerance> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 AllergyIntoleranceReaction _$AllergyIntoleranceReactionFromJson(
@@ -522,14 +578,16 @@ const $AllergyIntoleranceReaction = _$AllergyIntoleranceReactionTearOff();
 
 /// @nodoc
 mixin _$AllergyIntoleranceReaction {
-  List<CodeableConcept> get manifestation;
+  List<CodeableConcept> get manifestation => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
-  AllergyIntoleranceReactionSeverity? get severity;
-  FhirDateTime? get onset;
+  AllergyIntoleranceReactionSeverity? get severity =>
+      throw _privateConstructorUsedError;
+  FhirDateTime? get onset => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AllergyIntoleranceReactionCopyWith<AllergyIntoleranceReaction> get copyWith;
+  $AllergyIntoleranceReactionCopyWith<AllergyIntoleranceReaction>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -562,11 +620,16 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       manifestation: manifestation == freezed
           ? _value.manifestation
-          : manifestation as List<CodeableConcept>,
+          : manifestation // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>,
       severity: severity == freezed
           ? _value.severity
-          : severity as AllergyIntoleranceReactionSeverity?,
-      onset: onset == freezed ? _value.onset : onset as FhirDateTime?,
+          : severity // ignore: cast_nullable_to_non_nullable
+              as AllergyIntoleranceReactionSeverity?,
+      onset: onset == freezed
+          ? _value.onset
+          : onset // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -607,11 +670,16 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
     return _then(_AllergyIntoleranceReaction(
       manifestation: manifestation == freezed
           ? _value.manifestation
-          : manifestation as List<CodeableConcept>,
+          : manifestation // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>,
       severity: severity == freezed
           ? _value.severity
-          : severity as AllergyIntoleranceReactionSeverity?,
-      onset: onset == freezed ? _value.onset : onset as FhirDateTime?,
+          : severity // ignore: cast_nullable_to_non_nullable
+              as AllergyIntoleranceReactionSeverity?,
+      onset: onset == freezed
+          ? _value.onset
+          : onset // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -677,25 +745,26 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
 }
 
 abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
-  _AllergyIntoleranceReaction._() : super._();
   factory _AllergyIntoleranceReaction(
       {required List<CodeableConcept> manifestation,
       @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
           AllergyIntoleranceReactionSeverity? severity,
       FhirDateTime? onset}) = _$_AllergyIntoleranceReaction;
+  _AllergyIntoleranceReaction._() : super._();
 
   factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
       _$_AllergyIntoleranceReaction.fromJson;
 
   @override
-  List<CodeableConcept> get manifestation;
+  List<CodeableConcept> get manifestation => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
-  AllergyIntoleranceReactionSeverity? get severity;
+  AllergyIntoleranceReactionSeverity? get severity =>
+      throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get onset;
+  FhirDateTime? get onset => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AllergyIntoleranceReactionCopyWith<_AllergyIntoleranceReaction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -13,9 +13,7 @@ part 'capability_statement.freezed.dart';
 part 'capability_statement.g.dart';
 
 @freezed
-abstract class CapabilityStatement
-    with Resource
-    implements _$CapabilityStatement {
+class CapabilityStatement with Resource, _$CapabilityStatement {
   CapabilityStatement._();
 
   factory CapabilityStatement({
@@ -80,8 +78,7 @@ abstract class CapabilityStatement
 }
 
 @freezed
-abstract class CapabilityStatementSoftware
-    implements _$CapabilityStatementSoftware {
+class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   CapabilityStatementSoftware._();
 
   /// [CapabilityStatement_Software]: A Capability Statement documents a set of
@@ -153,8 +150,8 @@ abstract class CapabilityStatementSoftware
 }
 
 @freezed
-abstract class CapabilityStatementImplementation
-    implements _$CapabilityStatementImplementation {
+class CapabilityStatementImplementation
+    with _$CapabilityStatementImplementation {
   CapabilityStatementImplementation._();
 
   /// [CapabilityStatement_Implementation]: A Capability Statement documents a
@@ -228,7 +225,7 @@ abstract class CapabilityStatementImplementation
 }
 
 @freezed
-abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
+class CapabilityStatementRest with _$CapabilityStatementRest {
   CapabilityStatementRest._();
 
   /// [CapabilityStatement_Rest]: A Capability Statement documents a set of
@@ -323,8 +320,7 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
 }
 
 @freezed
-abstract class CapabilityStatementSecurity
-    implements _$CapabilityStatementSecurity {
+class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   CapabilityStatementSecurity._();
 
   /// [CapabilityStatement_Security]: A Capability Statement documents a set of
@@ -395,8 +391,7 @@ abstract class CapabilityStatementSecurity
 }
 
 @freezed
-abstract class CapabilityStatementResource
-    implements _$CapabilityStatementResource {
+class CapabilityStatementResource with _$CapabilityStatementResource {
   CapabilityStatementResource._();
 
   /// [CapabilityStatement_Resource]: A Capability Statement documents a set of
@@ -562,8 +557,8 @@ abstract class CapabilityStatementResource
 }
 
 @freezed
-abstract class CapabilityStatementInteraction
-    implements _$CapabilityStatementInteraction {
+class CapabilityStatementInteraction
+    with _$CapabilityStatementInteraction {
   CapabilityStatementInteraction._();
 
   /// [CapabilityStatement_Interaction]: A Capability Statement documents a set
@@ -636,8 +631,8 @@ abstract class CapabilityStatementInteraction
 }
 
 @freezed
-abstract class CapabilityStatementSearchParam
-    implements _$CapabilityStatementSearchParam {
+class CapabilityStatementSearchParam
+    with _$CapabilityStatementSearchParam {
   CapabilityStatementSearchParam._();
 
   /// [CapabilityStatement_SearchParam]: A Capability Statement documents a set
@@ -722,8 +717,7 @@ abstract class CapabilityStatementSearchParam
 }
 
 @freezed
-abstract class CapabilityStatementOperation
-    implements _$CapabilityStatementOperation {
+class CapabilityStatementOperation with _$CapabilityStatementOperation {
   CapabilityStatementOperation._();
 
   /// [CapabilityStatement_Operation]: A Capability Statement documents a set of
@@ -804,8 +798,8 @@ abstract class CapabilityStatementOperation
 }
 
 @freezed
-abstract class CapabilityStatementInteraction1
-    implements _$CapabilityStatementInteraction1 {
+class CapabilityStatementInteraction1
+    with _$CapabilityStatementInteraction1 {
   CapabilityStatementInteraction1._();
 
   /// [CapabilityStatement_Interaction1]: A Capability Statement documents a set
@@ -876,8 +870,7 @@ abstract class CapabilityStatementInteraction1
 }
 
 @freezed
-abstract class CapabilityStatementMessaging
-    implements _$CapabilityStatementMessaging {
+class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   CapabilityStatementMessaging._();
 
   /// [CapabilityStatement_Messaging]: A Capability Statement documents a set of
@@ -956,8 +949,7 @@ abstract class CapabilityStatementMessaging
 }
 
 @freezed
-abstract class CapabilityStatementEndpoint
-    implements _$CapabilityStatementEndpoint {
+class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   CapabilityStatementEndpoint._();
 
   /// [CapabilityStatement_Endpoint]: A Capability Statement documents a set of
@@ -1023,8 +1015,8 @@ abstract class CapabilityStatementEndpoint
 }
 
 @freezed
-abstract class CapabilityStatementSupportedMessage
-    implements _$CapabilityStatementSupportedMessage {
+class CapabilityStatementSupportedMessage
+    with _$CapabilityStatementSupportedMessage {
   CapabilityStatementSupportedMessage._();
 
   /// [CapabilityStatement_SupportedMessage]: A Capability Statement documents a
@@ -1093,8 +1085,7 @@ abstract class CapabilityStatementSupportedMessage
 }
 
 @freezed
-abstract class CapabilityStatementDocument
-    implements _$CapabilityStatementDocument {
+class CapabilityStatementDocument with _$CapabilityStatementDocument {
   CapabilityStatementDocument._();
 
   /// [CapabilityStatement_Document]: A Capability Statement documents a set of

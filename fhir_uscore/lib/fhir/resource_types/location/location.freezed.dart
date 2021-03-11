@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'location.dart';
 
@@ -8,6 +8,10 @@ part of 'location.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Location _$LocationFromJson(Map<String, dynamic> json) {
   return _Location.fromJson(json);
 }
@@ -58,23 +62,24 @@ const $Location = _$LocationTearOff();
 /// @nodoc
 mixin _$Location {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Location)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<Identifier>? get identifier;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus? get status;
-  String get name;
-  List<ContactPoint>? get telecom;
-  Address? get address;
-  LocationPosition? get position;
-  String? get description;
-  Reference? get managingOrganization;
+  LocationStatus? get status => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  Address? get address => throw _privateConstructorUsedError;
+  LocationPosition? get position => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  Reference? get managingOrganization => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LocationCopyWith<Location> get copyWith;
+  $LocationCopyWith<Location> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -130,25 +135,52 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as LocationStatus?,
-      name: name == freezed ? _value.name : name as String,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
-      address: address == freezed ? _value.address : address as Address?,
-      position:
-          position == freezed ? _value.position : position as LocationPosition?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as LocationStatus?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      position: position == freezed
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as LocationPosition?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
-          : managingOrganization as Reference?,
+          : managingOrganization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -268,25 +300,52 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     return _then(_Location(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as LocationStatus?,
-      name: name == freezed ? _value.name : name as String,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
-      address: address == freezed ? _value.address : address as Address?,
-      position:
-          position == freezed ? _value.position : position as LocationPosition?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as LocationStatus?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      position: position == freezed
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as LocationPosition?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
-          : managingOrganization as Reference?,
+          : managingOrganization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -412,7 +471,6 @@ class _$_Location extends _Location {
 }
 
 abstract class _Location extends Location {
-  _Location._() : super._();
   factory _Location(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Location)
           UsCoreResourceType resourceType,
@@ -428,38 +486,40 @@ abstract class _Location extends Location {
       LocationPosition? position,
       String? description,
       Reference? managingOrganization}) = _$_Location;
+  _Location._() : super._();
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Location)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus? get status;
+  LocationStatus? get status => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
-  Address? get address;
+  Address? get address => throw _privateConstructorUsedError;
   @override
-  LocationPosition? get position;
+  LocationPosition? get position => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  Reference? get managingOrganization;
+  Reference? get managingOrganization => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$LocationCopyWith<_Location> get copyWith;
+  _$LocationCopyWith<_Location> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 LocationPosition _$LocationPositionFromJson(Map<String, dynamic> json) {
@@ -490,14 +550,15 @@ const $LocationPosition = _$LocationPositionTearOff();
 
 /// @nodoc
 mixin _$LocationPosition {
-  String? get id;
-  Decimal? get longitude;
-  Decimal? get latitude;
-  Decimal? get altitude;
+  String? get id => throw _privateConstructorUsedError;
+  Decimal? get longitude => throw _privateConstructorUsedError;
+  Decimal? get latitude => throw _privateConstructorUsedError;
+  Decimal? get altitude => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LocationPositionCopyWith<LocationPosition> get copyWith;
+  $LocationPositionCopyWith<LocationPosition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -526,11 +587,22 @@ class _$LocationPositionCopyWithImpl<$Res>
     Object? altitude = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      longitude:
-          longitude == freezed ? _value.longitude : longitude as Decimal?,
-      latitude: latitude == freezed ? _value.latitude : latitude as Decimal?,
-      altitude: altitude == freezed ? _value.altitude : altitude as Decimal?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      latitude: latitude == freezed
+          ? _value.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      altitude: altitude == freezed
+          ? _value.altitude
+          : altitude // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
     ));
   }
 }
@@ -565,11 +637,22 @@ class __$LocationPositionCopyWithImpl<$Res>
     Object? altitude = freezed,
   }) {
     return _then(_LocationPosition(
-      id: id == freezed ? _value.id : id as String?,
-      longitude:
-          longitude == freezed ? _value.longitude : longitude as Decimal?,
-      latitude: latitude == freezed ? _value.latitude : latitude as Decimal?,
-      altitude: altitude == freezed ? _value.altitude : altitude as Decimal?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      latitude: latitude == freezed
+          ? _value.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      altitude: altitude == freezed
+          ? _value.altitude
+          : altitude // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
     ));
   }
 }
@@ -635,25 +718,26 @@ class _$_LocationPosition extends _LocationPosition {
 }
 
 abstract class _LocationPosition extends LocationPosition {
-  _LocationPosition._() : super._();
   factory _LocationPosition(
       {String? id,
       Decimal? longitude,
       Decimal? latitude,
       Decimal? altitude}) = _$_LocationPosition;
+  _LocationPosition._() : super._();
 
   factory _LocationPosition.fromJson(Map<String, dynamic> json) =
       _$_LocationPosition.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  Decimal? get longitude;
+  Decimal? get longitude => throw _privateConstructorUsedError;
   @override
-  Decimal? get latitude;
+  Decimal? get latitude => throw _privateConstructorUsedError;
   @override
-  Decimal? get altitude;
+  Decimal? get altitude => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$LocationPositionCopyWith<_LocationPosition> get copyWith;
+  _$LocationPositionCopyWith<_LocationPosition> get copyWith =>
+      throw _privateConstructorUsedError;
 }

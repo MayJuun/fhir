@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'document_reference.dart';
 
@@ -8,6 +8,10 @@ part of 'document_reference.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
   return _DocumentReference.fromJson(json);
 }
@@ -65,26 +69,28 @@ const $DocumentReference = _$DocumentReferenceTearOff();
 /// @nodoc
 mixin _$DocumentReference {
   @JsonKey(unknownEnumValue: UsCoreResourceType.DocumentReference)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<Identifier>? get identifier;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-  DocumentReferenceStatus get status;
-  CodeableConcept get type;
-  List<CodeableConcept>? get category;
-  Reference? get subject;
-  Instant? get date;
-  List<Reference>? get author;
-  Reference? get custodian;
-  List<DocumentReferenceContent?> get content;
-  DocumentReferenceContext? get context;
-  String? get description;
+  DocumentReferenceStatus get status => throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  Reference? get subject => throw _privateConstructorUsedError;
+  Instant? get date => throw _privateConstructorUsedError;
+  List<Reference>? get author => throw _privateConstructorUsedError;
+  Reference? get custodian => throw _privateConstructorUsedError;
+  List<DocumentReferenceContent?> get content =>
+      throw _privateConstructorUsedError;
+  DocumentReferenceContext? get context => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DocumentReferenceCopyWith<DocumentReference> get copyWith;
+  $DocumentReferenceCopyWith<DocumentReference> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -149,32 +155,64 @@ class _$DocumentReferenceCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status:
-          status == freezed ? _value.status : status as DocumentReferenceStatus,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as DocumentReferenceStatus,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      date: date == freezed ? _value.date : date as Instant?,
-      author: author == freezed ? _value.author : author as List<Reference>?,
-      custodian:
-          custodian == freezed ? _value.custodian : custodian as Reference?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      custodian: custodian == freezed
+          ? _value.custodian
+          : custodian // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       content: content == freezed
           ? _value.content
-          : content as List<DocumentReferenceContent?>,
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<DocumentReferenceContent?>,
       context: context == freezed
           ? _value.context
-          : context as DocumentReferenceContext?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : context // ignore: cast_nullable_to_non_nullable
+              as DocumentReferenceContext?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -313,32 +351,64 @@ class __$DocumentReferenceCopyWithImpl<$Res>
     return _then(_DocumentReference(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status:
-          status == freezed ? _value.status : status as DocumentReferenceStatus,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as DocumentReferenceStatus,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      date: date == freezed ? _value.date : date as Instant?,
-      author: author == freezed ? _value.author : author as List<Reference>?,
-      custodian:
-          custodian == freezed ? _value.custodian : custodian as Reference?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      custodian: custodian == freezed
+          ? _value.custodian
+          : custodian // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       content: content == freezed
           ? _value.content
-          : content as List<DocumentReferenceContent?>,
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<DocumentReferenceContent?>,
       context: context == freezed
           ? _value.context
-          : context as DocumentReferenceContext?,
-      description:
-          description == freezed ? _value.description : description as String?,
+          : context // ignore: cast_nullable_to_non_nullable
+              as DocumentReferenceContext?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -483,7 +553,6 @@ class _$_DocumentReference extends _DocumentReference {
 }
 
 abstract class _DocumentReference extends DocumentReference {
-  _DocumentReference._() : super._();
   factory _DocumentReference(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.DocumentReference)
           UsCoreResourceType resourceType,
@@ -502,45 +571,48 @@ abstract class _DocumentReference extends DocumentReference {
       required List<DocumentReferenceContent?> content,
       DocumentReferenceContext? context,
       String? description}) = _$_DocumentReference;
+  _DocumentReference._() : super._();
 
   factory _DocumentReference.fromJson(Map<String, dynamic> json) =
       _$_DocumentReference.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.DocumentReference)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-  DocumentReferenceStatus get status;
+  DocumentReferenceStatus get status => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get category;
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  Instant? get date;
+  Instant? get date => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get author;
+  List<Reference>? get author => throw _privateConstructorUsedError;
   @override
-  Reference? get custodian;
+  Reference? get custodian => throw _privateConstructorUsedError;
   @override
-  List<DocumentReferenceContent?> get content;
+  List<DocumentReferenceContent?> get content =>
+      throw _privateConstructorUsedError;
   @override
-  DocumentReferenceContext? get context;
+  DocumentReferenceContext? get context => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DocumentReferenceCopyWith<_DocumentReference> get copyWith;
+  _$DocumentReferenceCopyWith<_DocumentReference> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DocumentReferenceContent _$DocumentReferenceContentFromJson(
@@ -571,13 +643,14 @@ const $DocumentReferenceContent = _$DocumentReferenceContentTearOff();
 
 /// @nodoc
 mixin _$DocumentReferenceContent {
-  String? get id;
-  Attachment get attachment;
-  Coding? get format;
+  String? get id => throw _privateConstructorUsedError;
+  Attachment get attachment => throw _privateConstructorUsedError;
+  Coding? get format => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DocumentReferenceContentCopyWith<DocumentReferenceContent> get copyWith;
+  $DocumentReferenceContentCopyWith<DocumentReferenceContent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -607,10 +680,18 @@ class _$DocumentReferenceContentCopyWithImpl<$Res>
     Object? format = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      attachment:
-          attachment == freezed ? _value.attachment : attachment as Attachment,
-      format: format == freezed ? _value.format : format as Coding?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      attachment: attachment == freezed
+          ? _value.attachment
+          : attachment // ignore: cast_nullable_to_non_nullable
+              as Attachment,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as Coding?,
     ));
   }
 
@@ -667,10 +748,18 @@ class __$DocumentReferenceContentCopyWithImpl<$Res>
     Object? format = freezed,
   }) {
     return _then(_DocumentReferenceContent(
-      id: id == freezed ? _value.id : id as String?,
-      attachment:
-          attachment == freezed ? _value.attachment : attachment as Attachment,
-      format: format == freezed ? _value.format : format as Coding?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      attachment: attachment == freezed
+          ? _value.attachment
+          : attachment // ignore: cast_nullable_to_non_nullable
+              as Attachment,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as Coding?,
     ));
   }
 }
@@ -730,24 +819,25 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
 }
 
 abstract class _DocumentReferenceContent extends DocumentReferenceContent {
-  _DocumentReferenceContent._() : super._();
   factory _DocumentReferenceContent(
       {String? id,
       required Attachment attachment,
       Coding? format}) = _$_DocumentReferenceContent;
+  _DocumentReferenceContent._() : super._();
 
   factory _DocumentReferenceContent.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceContent.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  Attachment get attachment;
+  Attachment get attachment => throw _privateConstructorUsedError;
   @override
-  Coding? get format;
+  Coding? get format => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DocumentReferenceContentCopyWith<_DocumentReferenceContent> get copyWith;
+  _$DocumentReferenceContentCopyWith<_DocumentReferenceContent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DocumentReferenceContext _$DocumentReferenceContextFromJson(
@@ -778,13 +868,14 @@ const $DocumentReferenceContext = _$DocumentReferenceContextTearOff();
 
 /// @nodoc
 mixin _$DocumentReferenceContext {
-  String? get id;
-  List<Reference>? get encounter;
-  Period? get period;
+  String? get id => throw _privateConstructorUsedError;
+  List<Reference>? get encounter => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DocumentReferenceContextCopyWith<DocumentReferenceContext> get copyWith;
+  $DocumentReferenceContextCopyWith<DocumentReferenceContext> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -813,11 +904,18 @@ class _$DocumentReferenceContextCopyWithImpl<$Res>
     Object? period = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       encounter: encounter == freezed
           ? _value.encounter
-          : encounter as List<Reference>?,
-      period: period == freezed ? _value.period : period as Period?,
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 
@@ -865,11 +963,18 @@ class __$DocumentReferenceContextCopyWithImpl<$Res>
     Object? period = freezed,
   }) {
     return _then(_DocumentReferenceContext(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       encounter: encounter == freezed
           ? _value.encounter
-          : encounter as List<Reference>?,
-      period: period == freezed ? _value.period : period as Period?,
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 }
@@ -929,22 +1034,23 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
 }
 
 abstract class _DocumentReferenceContext extends DocumentReferenceContext {
-  _DocumentReferenceContext._() : super._();
   factory _DocumentReferenceContext(
       {String? id,
       List<Reference>? encounter,
       Period? period}) = _$_DocumentReferenceContext;
+  _DocumentReferenceContext._() : super._();
 
   factory _DocumentReferenceContext.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceContext.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get encounter;
+  List<Reference>? get encounter => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DocumentReferenceContextCopyWith<_DocumentReferenceContext> get copyWith;
+  _$DocumentReferenceContextCopyWith<_DocumentReferenceContext> get copyWith =>
+      throw _privateConstructorUsedError;
 }

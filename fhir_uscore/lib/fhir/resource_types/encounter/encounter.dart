@@ -13,7 +13,7 @@ part 'encounter.freezed.dart';
 part 'encounter.g.dart';
 
 @freezed
-abstract class Encounter with Resource implements _$Encounter {
+class Encounter with Resource, _$Encounter {
   Encounter._();
 
   factory Encounter({
@@ -97,7 +97,7 @@ abstract class Encounter with Resource implements _$Encounter {
 }
 
 @freezed
-abstract class EncounterParticipant implements _$EncounterParticipant {
+class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
 
   factory EncounterParticipant({
@@ -125,7 +125,7 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
 }
 
 @freezed
-abstract class EncounterHospitalization implements _$EncounterHospitalization {
+class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
 
   factory EncounterHospitalization({
@@ -152,7 +152,7 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
 }
 
 @freezed
-abstract class EncounterLocation implements _$EncounterLocation {
+class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
 
   factory EncounterLocation({

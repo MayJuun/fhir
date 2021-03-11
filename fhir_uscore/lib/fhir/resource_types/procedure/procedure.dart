@@ -12,7 +12,7 @@ part 'procedure.freezed.dart';
 part 'procedure.g.dart';
 
 @freezed
-abstract class Procedure with Resource implements _$Procedure {
+class Procedure with Resource, _$Procedure {
   Procedure._();
 
   factory Procedure({
@@ -51,7 +51,7 @@ abstract class Procedure with Resource implements _$Procedure {
 }
 
 @freezed
-abstract class ProcedurePerformer implements _$ProcedurePerformer {
+class ProcedurePerformer with _$ProcedurePerformer {
   ProcedurePerformer._();
 
   factory ProcedurePerformer({
@@ -79,7 +79,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
 }
 
 @freezed
-abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
+class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
 
   factory ProcedureFocalDevice({

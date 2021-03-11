@@ -12,7 +12,7 @@ part 'medication_request.freezed.dart';
 part 'medication_request.g.dart';
 
 @freezed
-abstract class MedicationRequest with Resource implements _$MedicationRequest {
+class MedicationRequest with Resource, _$MedicationRequest {
   MedicationRequest._();
 
   factory MedicationRequest({
@@ -104,8 +104,8 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
 }
 
 @freezed
-abstract class MedicationRequestDispenseRequest
-    implements _$MedicationRequestDispenseRequest {
+class MedicationRequestDispenseRequest
+    with _$MedicationRequestDispenseRequest {
   MedicationRequestDispenseRequest._();
 
   factory MedicationRequestDispenseRequest({
@@ -140,8 +140,7 @@ abstract class MedicationRequestDispenseRequest
 }
 
 @freezed
-abstract class MedicationRequestInitialFill
-    implements _$MedicationRequestInitialFill {
+class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   MedicationRequestInitialFill._();
 
   factory MedicationRequestInitialFill({

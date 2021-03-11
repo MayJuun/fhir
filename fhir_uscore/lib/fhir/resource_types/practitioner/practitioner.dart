@@ -12,7 +12,7 @@ part 'practitioner.freezed.dart';
 part 'practitioner.g.dart';
 
 @freezed
-abstract class Practitioner with Resource implements _$Practitioner {
+class Practitioner with Resource, _$Practitioner {
   Practitioner._();
 
   factory Practitioner({
@@ -84,7 +84,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
 }
 
 @freezed
-abstract class PractitionerRole with Resource implements _$PractitionerRole {
+class PractitionerRole with Resource, _$PractitionerRole {
   PractitionerRole._();
 
   factory PractitionerRole({
@@ -162,8 +162,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
 }
 
 @freezed
-abstract class PractitionerQualification
-    implements _$PractitionerQualification {
+class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
 
   factory PractitionerQualification({

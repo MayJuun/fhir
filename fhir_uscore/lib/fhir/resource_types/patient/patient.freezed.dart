@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: non_constant_identifier_names, unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'patient.dart';
 
@@ -8,6 +8,10 @@ part of 'patient.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Patient _$PatientFromJson(Map<String, dynamic> json) {
   return _Patient.fromJson(json);
 }
@@ -61,25 +65,26 @@ const $Patient = _$PatientTearOff();
 /// @nodoc
 mixin _$Patient {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Patient)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<Identifier?> get identifier;
-  Boolean? get active;
-  List<HumanName?> get name;
-  List<ContactPoint>? get telecom;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<Identifier?> get identifier => throw _privateConstructorUsedError;
+  Boolean? get active => throw _privateConstructorUsedError;
+  List<HumanName?> get name => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: PatientGender.unknown)
-  PatientGender get gender;
-  Date? get birthDate;
-  List<Address>? get address;
-  List<PatientCommunication>? get communication;
+  PatientGender get gender => throw _privateConstructorUsedError;
+  Date? get birthDate => throw _privateConstructorUsedError;
+  List<Address>? get address => throw _privateConstructorUsedError;
+  List<PatientCommunication>? get communication =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PatientCopyWith<Patient> get copyWith;
+  $PatientCopyWith<Patient> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -135,26 +140,56 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>,
-      active: active == freezed ? _value.active : active as Boolean?,
-      name: name == freezed ? _value.name : name as List<HumanName?>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
-      gender: gender == freezed ? _value.gender : gender as PatientGender,
-      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
-      address: address == freezed ? _value.address : address as List<Address>?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier?>,
+      active: active == freezed
+          ? _value.active
+          : active // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<HumanName?>,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      gender: gender == freezed
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as PatientGender,
+      birthDate: birthDate == freezed
+          ? _value.birthDate
+          : birthDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as List<Address>?,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<PatientCommunication>?,
+          : communication // ignore: cast_nullable_to_non_nullable
+              as List<PatientCommunication>?,
     ));
   }
 
@@ -238,26 +273,56 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
     return _then(_Patient(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>,
-      active: active == freezed ? _value.active : active as Boolean?,
-      name: name == freezed ? _value.name : name as List<HumanName?>,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
-      gender: gender == freezed ? _value.gender : gender as PatientGender,
-      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
-      address: address == freezed ? _value.address : address as List<Address>?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier?>,
+      active: active == freezed
+          ? _value.active
+          : active // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<HumanName?>,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      gender: gender == freezed
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as PatientGender,
+      birthDate: birthDate == freezed
+          ? _value.birthDate
+          : birthDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as List<Address>?,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<PatientCommunication>?,
+          : communication // ignore: cast_nullable_to_non_nullable
+              as List<PatientCommunication>?,
     ));
   }
 }
@@ -391,7 +456,6 @@ class _$_Patient extends _Patient {
 }
 
 abstract class _Patient extends Patient {
-  _Patient._() : super._();
   factory _Patient(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Patient)
           UsCoreResourceType resourceType,
@@ -409,41 +473,44 @@ abstract class _Patient extends Patient {
       Date? birthDate,
       List<Address>? address,
       List<PatientCommunication>? communication}) = _$_Patient;
+  _Patient._() : super._();
 
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Patient)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<Identifier?> get identifier;
+  List<Identifier?> get identifier => throw _privateConstructorUsedError;
   @override
-  Boolean? get active;
+  Boolean? get active => throw _privateConstructorUsedError;
   @override
-  List<HumanName?> get name;
+  List<HumanName?> get name => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: PatientGender.unknown)
-  PatientGender get gender;
+  PatientGender get gender => throw _privateConstructorUsedError;
   @override
-  Date? get birthDate;
+  Date? get birthDate => throw _privateConstructorUsedError;
   @override
-  List<Address>? get address;
+  List<Address>? get address => throw _privateConstructorUsedError;
   @override
-  List<PatientCommunication>? get communication;
+  List<PatientCommunication>? get communication =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PatientCopyWith<_Patient> get copyWith;
+  _$PatientCopyWith<_Patient> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PatientCommunication _$PatientCommunicationFromJson(Map<String, dynamic> json) {
@@ -473,13 +540,14 @@ const $PatientCommunication = _$PatientCommunicationTearOff();
 
 /// @nodoc
 mixin _$PatientCommunication {
-  String? get id;
-  CodeableConcept get language;
-  Boolean? get preferred;
+  String? get id => throw _privateConstructorUsedError;
+  CodeableConcept get language => throw _privateConstructorUsedError;
+  Boolean? get preferred => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PatientCommunicationCopyWith<PatientCommunication> get copyWith;
+  $PatientCommunicationCopyWith<PatientCommunication> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -508,11 +576,18 @@ class _$PatientCommunicationCopyWithImpl<$Res>
     Object? preferred = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      language:
-          language == freezed ? _value.language : language as CodeableConcept,
-      preferred:
-          preferred == freezed ? _value.preferred : preferred as Boolean?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      preferred: preferred == freezed
+          ? _value.preferred
+          : preferred // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
     ));
   }
 
@@ -555,11 +630,18 @@ class __$PatientCommunicationCopyWithImpl<$Res>
     Object? preferred = freezed,
   }) {
     return _then(_PatientCommunication(
-      id: id == freezed ? _value.id : id as String?,
-      language:
-          language == freezed ? _value.language : language as CodeableConcept,
-      preferred:
-          preferred == freezed ? _value.preferred : preferred as Boolean?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      preferred: preferred == freezed
+          ? _value.preferred
+          : preferred // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
     ));
   }
 }
@@ -620,22 +702,23 @@ class _$_PatientCommunication extends _PatientCommunication {
 }
 
 abstract class _PatientCommunication extends PatientCommunication {
-  _PatientCommunication._() : super._();
   factory _PatientCommunication(
       {String? id,
       required CodeableConcept language,
       Boolean? preferred}) = _$_PatientCommunication;
+  _PatientCommunication._() : super._();
 
   factory _PatientCommunication.fromJson(Map<String, dynamic> json) =
       _$_PatientCommunication.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get language;
+  CodeableConcept get language => throw _privateConstructorUsedError;
   @override
-  Boolean? get preferred;
+  Boolean? get preferred => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PatientCommunicationCopyWith<_PatientCommunication> get copyWith;
+  _$PatientCommunicationCopyWith<_PatientCommunication> get copyWith =>
+      throw _privateConstructorUsedError;
 }

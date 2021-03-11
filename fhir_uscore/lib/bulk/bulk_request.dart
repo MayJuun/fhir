@@ -11,7 +11,7 @@ import 'from_bulk.dart';
 part 'bulk_request.freezed.dart';
 
 @freezed
-abstract class BulkRequest with _$BulkRequest {
+class BulkRequest with _$BulkRequest {
   BulkRequest._();
 
   ///  Patient

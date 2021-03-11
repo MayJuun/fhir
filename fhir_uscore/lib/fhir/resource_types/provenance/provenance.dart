@@ -12,7 +12,7 @@ part 'provenance.freezed.dart';
 part 'provenance.g.dart';
 
 @freezed
-abstract class Provenance with Resource implements _$Provenance {
+class Provenance with Resource, _$Provenance {
   Provenance._();
 
   factory Provenance({
@@ -57,7 +57,7 @@ abstract class Provenance with Resource implements _$Provenance {
 }
 
 @freezed
-abstract class ProvenanceAgent implements _$ProvenanceAgent {
+class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
 
   factory ProvenanceAgent({

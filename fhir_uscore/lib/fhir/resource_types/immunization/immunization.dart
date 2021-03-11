@@ -12,7 +12,7 @@ part 'immunization.freezed.dart';
 part 'immunization.g.dart';
 
 @freezed
-abstract class Immunization with Resource implements _$Immunization {
+class Immunization with Resource, _$Immunization {
   Immunization._();
 
   factory Immunization({

@@ -9,7 +9,7 @@ import '../fhir_at_rest.dart';
 part 'fhir_request.freezed.dart';
 
 @freezed
-abstract class FhirRequest with _$FhirRequest {
+class FhirRequest with _$FhirRequest {
   FhirRequest._();
 
   ///  READ constructor

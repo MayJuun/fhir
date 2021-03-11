@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'medication.dart';
 
@@ -8,6 +8,10 @@ part of 'medication.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Medication _$MedicationFromJson(Map<String, dynamic> json) {
   return _Medication.fromJson(json);
 }
@@ -43,15 +47,16 @@ const $Medication = _$MedicationTearOff();
 /// @nodoc
 mixin _$Medication {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Medication)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  CodeableConcept get code;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MedicationCopyWith<Medication> get copyWith;
+  $MedicationCopyWith<Medication> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -91,11 +96,24 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
     ));
   }
 
@@ -172,11 +190,24 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
     return _then(_Medication(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
     ));
   }
 }
@@ -252,7 +283,6 @@ class _$_Medication extends _Medication {
 }
 
 abstract class _Medication extends Medication {
-  _Medication._() : super._();
   factory _Medication(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Medication)
           UsCoreResourceType resourceType,
@@ -260,22 +290,24 @@ abstract class _Medication extends Medication {
       Meta? meta,
       Narrative? text,
       required CodeableConcept code}) = _$_Medication;
+  _Medication._() : super._();
 
   factory _Medication.fromJson(Map<String, dynamic> json) =
       _$_Medication.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Medication)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicationCopyWith<_Medication> get copyWith;
+  _$MedicationCopyWith<_Medication> get copyWith =>
+      throw _privateConstructorUsedError;
 }

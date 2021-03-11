@@ -12,7 +12,7 @@ part 'care_plan.freezed.dart';
 part 'care_plan.g.dart';
 
 @freezed
-abstract class CarePlan with Resource implements _$CarePlan {
+class CarePlan with Resource, _$CarePlan {
   CarePlan._();
   factory CarePlan({
     @Default(UsCoreResourceType.CarePlan)

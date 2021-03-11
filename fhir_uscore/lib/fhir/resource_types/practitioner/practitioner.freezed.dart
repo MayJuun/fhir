@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'practitioner.dart';
 
@@ -8,6 +8,10 @@ part of 'practitioner.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Practitioner _$PractitionerFromJson(Map<String, dynamic> json) {
   return _Practitioner.fromJson(json);
 }
@@ -56,22 +60,24 @@ const $Practitioner = _$PractitionerTearOff();
 /// @nodoc
 mixin _$Practitioner {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Practitioner)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<Identifier?> get identifier;
-  List<HumanName?> get name;
-  List<Address>? get address;
-  List<ContactPoint>? get telecom;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Identifier?> get identifier => throw _privateConstructorUsedError;
+  List<HumanName?> get name => throw _privateConstructorUsedError;
+  List<Address>? get address => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-  PractitionerGender? get gender;
-  Date? get birthDate;
-  List<PractitionerQualification>? get qualification;
+  PractitionerGender? get gender => throw _privateConstructorUsedError;
+  Date? get birthDate => throw _privateConstructorUsedError;
+  List<PractitionerQualification>? get qualification =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PractitionerCopyWith<Practitioner> get copyWith;
+  $PractitionerCopyWith<Practitioner> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -123,22 +129,48 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>,
-      name: name == freezed ? _value.name : name as List<HumanName?>,
-      address: address == freezed ? _value.address : address as List<Address>?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
-      gender: gender == freezed ? _value.gender : gender as PractitionerGender?,
-      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier?>,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<HumanName?>,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as List<Address>?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      gender: gender == freezed
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as PractitionerGender?,
+      birthDate: birthDate == freezed
+          ? _value.birthDate
+          : birthDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as List<PractitionerQualification>?,
+          : qualification // ignore: cast_nullable_to_non_nullable
+              as List<PractitionerQualification>?,
     ));
   }
 
@@ -220,22 +252,48 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
     return _then(_Practitioner(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>,
-      name: name == freezed ? _value.name : name as List<HumanName?>,
-      address: address == freezed ? _value.address : address as List<Address>?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
-      gender: gender == freezed ? _value.gender : gender as PractitionerGender?,
-      birthDate: birthDate == freezed ? _value.birthDate : birthDate as Date?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier?>,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as List<HumanName?>,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as List<Address>?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      gender: gender == freezed
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as PractitionerGender?,
+      birthDate: birthDate == freezed
+          ? _value.birthDate
+          : birthDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as List<PractitionerQualification>?,
+          : qualification // ignore: cast_nullable_to_non_nullable
+              as List<PractitionerQualification>?,
     ));
   }
 }
@@ -354,7 +412,6 @@ class _$_Practitioner extends _Practitioner {
 }
 
 abstract class _Practitioner extends Practitioner {
-  _Practitioner._() : super._();
   factory _Practitioner(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Practitioner)
           UsCoreResourceType resourceType,
@@ -369,37 +426,40 @@ abstract class _Practitioner extends Practitioner {
           PractitionerGender? gender,
       Date? birthDate,
       List<PractitionerQualification>? qualification}) = _$_Practitioner;
+  _Practitioner._() : super._();
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
       _$_Practitioner.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Practitioner)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Identifier?> get identifier;
+  List<Identifier?> get identifier => throw _privateConstructorUsedError;
   @override
-  List<HumanName?> get name;
+  List<HumanName?> get name => throw _privateConstructorUsedError;
   @override
-  List<Address>? get address;
+  List<Address>? get address => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-  PractitionerGender? get gender;
+  PractitionerGender? get gender => throw _privateConstructorUsedError;
   @override
-  Date? get birthDate;
+  Date? get birthDate => throw _privateConstructorUsedError;
   @override
-  List<PractitionerQualification>? get qualification;
+  List<PractitionerQualification>? get qualification =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PractitionerCopyWith<_Practitioner> get copyWith;
+  _$PractitionerCopyWith<_Practitioner> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PractitionerRole _$PractitionerRoleFromJson(Map<String, dynamic> json) {
@@ -449,21 +509,22 @@ const $PractitionerRole = _$PractitionerRoleTearOff();
 /// @nodoc
 mixin _$PractitionerRole {
   @JsonKey(unknownEnumValue: UsCoreResourceType.PractitionerRole)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  Reference get practitioner;
-  Reference get organization;
-  List<CodeableConcept>? get code;
-  List<CodeableConcept>? get specialty;
-  List<Reference>? get location;
-  List<ContactPoint>? get telecom;
-  List<Reference>? get endpoint;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  Reference get practitioner => throw _privateConstructorUsedError;
+  Reference get organization => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get code => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
+  List<Reference>? get location => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<Reference>? get endpoint => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PractitionerRoleCopyWith<PractitionerRole> get copyWith;
+  $PractitionerRoleCopyWith<PractitionerRole> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -517,26 +578,48 @@ class _$PractitionerRoleCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       practitioner: practitioner == freezed
           ? _value.practitioner
-          : practitioner as Reference,
+          : practitioner // ignore: cast_nullable_to_non_nullable
+              as Reference,
       organization: organization == freezed
           ? _value.organization
-          : organization as Reference,
-      code: code == freezed ? _value.code : code as List<CodeableConcept>?,
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept>?,
-      location:
-          location == freezed ? _value.location : location as List<Reference>?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
-      endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>?,
+          : specialty // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      endpoint: endpoint == freezed
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
@@ -636,26 +719,48 @@ class __$PractitionerRoleCopyWithImpl<$Res>
     return _then(_PractitionerRole(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       practitioner: practitioner == freezed
           ? _value.practitioner
-          : practitioner as Reference,
+          : practitioner // ignore: cast_nullable_to_non_nullable
+              as Reference,
       organization: organization == freezed
           ? _value.organization
-          : organization as Reference,
-      code: code == freezed ? _value.code : code as List<CodeableConcept>?,
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       specialty: specialty == freezed
           ? _value.specialty
-          : specialty as List<CodeableConcept>?,
-      location:
-          location == freezed ? _value.location : location as List<Reference>?,
-      telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
-      endpoint:
-          endpoint == freezed ? _value.endpoint : endpoint as List<Reference>?,
+          : specialty // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      endpoint: endpoint == freezed
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
@@ -773,7 +878,6 @@ class _$_PractitionerRole extends _PractitionerRole {
 }
 
 abstract class _PractitionerRole extends PractitionerRole {
-  _PractitionerRole._() : super._();
   factory _PractitionerRole(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.PractitionerRole)
           UsCoreResourceType resourceType,
@@ -787,36 +891,38 @@ abstract class _PractitionerRole extends PractitionerRole {
       List<Reference>? location,
       List<ContactPoint>? telecom,
       List<Reference>? endpoint}) = _$_PractitionerRole;
+  _PractitionerRole._() : super._();
 
   factory _PractitionerRole.fromJson(Map<String, dynamic> json) =
       _$_PractitionerRole.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.PractitionerRole)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  Reference get practitioner;
+  Reference get practitioner => throw _privateConstructorUsedError;
   @override
-  Reference get organization;
+  Reference get organization => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get code;
+  List<CodeableConcept>? get code => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get specialty;
+  List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get location;
+  List<Reference>? get location => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get endpoint;
+  List<Reference>? get endpoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PractitionerRoleCopyWith<_PractitionerRole> get copyWith;
+  _$PractitionerRoleCopyWith<_PractitionerRole> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PractitionerQualification _$PractitionerQualificationFromJson(
@@ -853,15 +959,16 @@ const $PractitionerQualification = _$PractitionerQualificationTearOff();
 
 /// @nodoc
 mixin _$PractitionerQualification {
-  String? get id;
-  List<Identifier>? get identifier;
-  CodeableConcept get code;
-  Period? get period;
-  Reference? get issuer;
+  String? get id => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  Reference? get issuer => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PractitionerQualificationCopyWith<PractitionerQualification> get copyWith;
+  $PractitionerQualificationCopyWith<PractitionerQualification> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -899,13 +1006,26 @@ class _$PractitionerQualificationCopyWithImpl<$Res>
     Object? issuer = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      period: period == freezed ? _value.period : period as Period?,
-      issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      issuer: issuer == freezed
+          ? _value.issuer
+          : issuer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -982,13 +1102,26 @@ class __$PractitionerQualificationCopyWithImpl<$Res>
     Object? issuer = freezed,
   }) {
     return _then(_PractitionerQualification(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      period: period == freezed ? _value.period : period as Period?,
-      issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      issuer: issuer == freezed
+          ? _value.issuer
+          : issuer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -1060,28 +1193,29 @@ class _$_PractitionerQualification extends _PractitionerQualification {
 }
 
 abstract class _PractitionerQualification extends PractitionerQualification {
-  _PractitionerQualification._() : super._();
   factory _PractitionerQualification(
       {String? id,
       List<Identifier>? identifier,
       required CodeableConcept code,
       Period? period,
       Reference? issuer}) = _$_PractitionerQualification;
+  _PractitionerQualification._() : super._();
 
   factory _PractitionerQualification.fromJson(Map<String, dynamic> json) =
       _$_PractitionerQualification.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  Reference? get issuer;
+  Reference? get issuer => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PractitionerQualificationCopyWith<_PractitionerQualification> get copyWith;
+  _$PractitionerQualificationCopyWith<_PractitionerQualification>
+      get copyWith => throw _privateConstructorUsedError;
 }

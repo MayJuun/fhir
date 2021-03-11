@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'diagnostic_report.dart';
 
@@ -8,6 +8,10 @@ part of 'diagnostic_report.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) {
   return _DiagnosticReport.fromJson(json);
 }
@@ -64,26 +68,27 @@ const $DiagnosticReport = _$DiagnosticReportTearOff();
 /// @nodoc
 mixin _$DiagnosticReport {
   @JsonKey(unknownEnumValue: UsCoreResourceType.DiagnosticReport)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-  DiagnosticReportStatus get status;
-  List<CodeableConcept?> get category;
-  CodeableConcept get code;
-  Reference get subject;
-  Reference? get encounter;
-  FhirDateTime? get effectiveDateTime;
-  Period? get effectivePeriod;
-  Instant? get issued;
-  List<Reference>? get performer;
-  List<Reference>? get result;
-  List<Attachment>? get presentedForm;
+  DiagnosticReportStatus get status => throw _privateConstructorUsedError;
+  List<CodeableConcept?> get category => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Reference get subject => throw _privateConstructorUsedError;
+  Reference? get encounter => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  Instant? get issued => throw _privateConstructorUsedError;
+  List<Reference>? get performer => throw _privateConstructorUsedError;
+  List<Reference>? get result => throw _privateConstructorUsedError;
+  List<Attachment>? get presentedForm => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DiagnosticReportCopyWith<DiagnosticReport> get copyWith;
+  $DiagnosticReportCopyWith<DiagnosticReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -148,33 +153,64 @@ class _$DiagnosticReportCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      status:
-          status == freezed ? _value.status : status as DiagnosticReportStatus,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as DiagnosticReportStatus,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as FhirDateTime?,
+          : effectiveDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
-          : effectivePeriod as Period?,
-      issued: issued == freezed ? _value.issued : issued as Instant?,
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      issued: issued == freezed
+          ? _value.issued
+          : issued // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       performer: performer == freezed
           ? _value.performer
-          : performer as List<Reference>?,
-      result: result == freezed ? _value.result : result as List<Reference>?,
+          : performer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      result: result == freezed
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       presentedForm: presentedForm == freezed
           ? _value.presentedForm
-          : presentedForm as List<Attachment>?,
+          : presentedForm // ignore: cast_nullable_to_non_nullable
+              as List<Attachment>?,
     ));
   }
 
@@ -309,33 +345,64 @@ class __$DiagnosticReportCopyWithImpl<$Res>
     return _then(_DiagnosticReport(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      status:
-          status == freezed ? _value.status : status as DiagnosticReportStatus,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as DiagnosticReportStatus,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as FhirDateTime?,
+          : effectiveDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
-          : effectivePeriod as Period?,
-      issued: issued == freezed ? _value.issued : issued as Instant?,
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      issued: issued == freezed
+          ? _value.issued
+          : issued // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       performer: performer == freezed
           ? _value.performer
-          : performer as List<Reference>?,
-      result: result == freezed ? _value.result : result as List<Reference>?,
+          : performer // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      result: result == freezed
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       presentedForm: presentedForm == freezed
           ? _value.presentedForm
-          : presentedForm as List<Attachment>?,
+          : presentedForm // ignore: cast_nullable_to_non_nullable
+              as List<Attachment>?,
     ));
   }
 }
@@ -480,7 +547,6 @@ class _$_DiagnosticReport extends _DiagnosticReport {
 }
 
 abstract class _DiagnosticReport extends DiagnosticReport {
-  _DiagnosticReport._() : super._();
   factory _DiagnosticReport(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.DiagnosticReport)
           UsCoreResourceType resourceType,
@@ -499,43 +565,45 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       List<Reference>? performer,
       List<Reference>? result,
       List<Attachment>? presentedForm}) = _$_DiagnosticReport;
+  _DiagnosticReport._() : super._();
 
   factory _DiagnosticReport.fromJson(Map<String, dynamic> json) =
       _$_DiagnosticReport.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.DiagnosticReport)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-  DiagnosticReportStatus get status;
+  DiagnosticReportStatus get status => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept?> get category;
+  List<CodeableConcept?> get category => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Reference get subject;
+  Reference get subject => throw _privateConstructorUsedError;
   @override
-  Reference? get encounter;
+  Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get effectiveDateTime;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
   @override
-  Period? get effectivePeriod;
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
   @override
-  Instant? get issued;
+  Instant? get issued => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get performer;
+  List<Reference>? get performer => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get result;
+  List<Reference>? get result => throw _privateConstructorUsedError;
   @override
-  List<Attachment>? get presentedForm;
+  List<Attachment>? get presentedForm => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DiagnosticReportCopyWith<_DiagnosticReport> get copyWith;
+  _$DiagnosticReportCopyWith<_DiagnosticReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }

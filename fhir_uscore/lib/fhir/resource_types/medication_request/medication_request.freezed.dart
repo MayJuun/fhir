@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'medication_request.dart';
 
@@ -8,6 +8,10 @@ part of 'medication_request.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 MedicationRequest _$MedicationRequestFromJson(Map<String, dynamic> json) {
   return _MedicationRequest.fromJson(json);
 }
@@ -71,29 +75,32 @@ const $MedicationRequest = _$MedicationRequestTearOff();
 /// @nodoc
 mixin _$MedicationRequest {
   @JsonKey(unknownEnumValue: UsCoreResourceType.MedicationRequest)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<Identifier>? get identifier;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
-  MedicationRequestStatus get status;
-  MedicationRequestIntent get intent;
-  List<Resource?>? get contained;
-  Boolean? get reportedBoolean;
-  Reference? get reportedReference;
-  CodeableConcept? get medicationCodeableConcept;
-  Reference? get medicationReference;
-  Reference get subject;
-  Reference? get encounter;
-  FhirDateTime get authoredOn;
-  Reference get requester;
-  List<Dosage>? get dosageInstruction;
-  MedicationRequestDispenseRequest? get dispenseRequest;
+  MedicationRequestStatus get status => throw _privateConstructorUsedError;
+  MedicationRequestIntent get intent => throw _privateConstructorUsedError;
+  List<Resource?>? get contained => throw _privateConstructorUsedError;
+  Boolean? get reportedBoolean => throw _privateConstructorUsedError;
+  Reference? get reportedReference => throw _privateConstructorUsedError;
+  CodeableConcept? get medicationCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Reference? get medicationReference => throw _privateConstructorUsedError;
+  Reference get subject => throw _privateConstructorUsedError;
+  Reference? get encounter => throw _privateConstructorUsedError;
+  FhirDateTime get authoredOn => throw _privateConstructorUsedError;
+  Reference get requester => throw _privateConstructorUsedError;
+  List<Dosage>? get dosageInstruction => throw _privateConstructorUsedError;
+  MedicationRequestDispenseRequest? get dispenseRequest =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MedicationRequestCopyWith<MedicationRequest> get copyWith;
+  $MedicationRequestCopyWith<MedicationRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -167,46 +174,76 @@ class _$MedicationRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status:
-          status == freezed ? _value.status : status as MedicationRequestStatus,
-      intent:
-          intent == freezed ? _value.intent : intent as MedicationRequestIntent,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestStatus,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestIntent,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource?>?,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
-          : reportedBoolean as Boolean?,
+          : reportedBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       reportedReference: reportedReference == freezed
           ? _value.reportedReference
-          : reportedReference as Reference?,
+          : reportedReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
-          : medicationCodeableConcept as CodeableConcept?,
+          : medicationCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       medicationReference: medicationReference == freezed
           ? _value.medicationReference
-          : medicationReference as Reference?,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference?,
+          : medicationReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
-          : authoredOn as FhirDateTime,
-      requester:
-          requester == freezed ? _value.requester : requester as Reference,
+          : authoredOn // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime,
+      requester: requester == freezed
+          ? _value.requester
+          : requester // ignore: cast_nullable_to_non_nullable
+              as Reference,
       dosageInstruction: dosageInstruction == freezed
           ? _value.dosageInstruction
-          : dosageInstruction as List<Dosage>?,
+          : dosageInstruction // ignore: cast_nullable_to_non_nullable
+              as List<Dosage>?,
       dispenseRequest: dispenseRequest == freezed
           ? _value.dispenseRequest
-          : dispenseRequest as MedicationRequestDispenseRequest?,
+          : dispenseRequest // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestDispenseRequest?,
     ));
   }
 
@@ -388,46 +425,76 @@ class __$MedicationRequestCopyWithImpl<$Res>
     return _then(_MedicationRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status:
-          status == freezed ? _value.status : status as MedicationRequestStatus,
-      intent:
-          intent == freezed ? _value.intent : intent as MedicationRequestIntent,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestStatus,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestIntent,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource?>?,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
-          : reportedBoolean as Boolean?,
+          : reportedBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       reportedReference: reportedReference == freezed
           ? _value.reportedReference
-          : reportedReference as Reference?,
+          : reportedReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
-          : medicationCodeableConcept as CodeableConcept?,
+          : medicationCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       medicationReference: medicationReference == freezed
           ? _value.medicationReference
-          : medicationReference as Reference?,
-      subject: subject == freezed ? _value.subject : subject as Reference,
-      encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference?,
+          : medicationReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       authoredOn: authoredOn == freezed
           ? _value.authoredOn
-          : authoredOn as FhirDateTime,
-      requester:
-          requester == freezed ? _value.requester : requester as Reference,
+          : authoredOn // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime,
+      requester: requester == freezed
+          ? _value.requester
+          : requester // ignore: cast_nullable_to_non_nullable
+              as Reference,
       dosageInstruction: dosageInstruction == freezed
           ? _value.dosageInstruction
-          : dosageInstruction as List<Dosage>?,
+          : dosageInstruction // ignore: cast_nullable_to_non_nullable
+              as List<Dosage>?,
       dispenseRequest: dispenseRequest == freezed
           ? _value.dispenseRequest
-          : dispenseRequest as MedicationRequestDispenseRequest?,
+          : dispenseRequest // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestDispenseRequest?,
     ));
   }
 }
@@ -597,7 +664,6 @@ class _$_MedicationRequest extends _MedicationRequest {
 }
 
 abstract class _MedicationRequest extends MedicationRequest {
-  _MedicationRequest._() : super._();
   factory _MedicationRequest(
           {@JsonKey(unknownEnumValue: UsCoreResourceType.MedicationRequest)
               UsCoreResourceType resourceType,
@@ -620,51 +686,55 @@ abstract class _MedicationRequest extends MedicationRequest {
           List<Dosage>? dosageInstruction,
           MedicationRequestDispenseRequest? dispenseRequest}) =
       _$_MedicationRequest;
+  _MedicationRequest._() : super._();
 
   factory _MedicationRequest.fromJson(Map<String, dynamic> json) =
       _$_MedicationRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.MedicationRequest)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
-  MedicationRequestStatus get status;
+  MedicationRequestStatus get status => throw _privateConstructorUsedError;
   @override
-  MedicationRequestIntent get intent;
+  MedicationRequestIntent get intent => throw _privateConstructorUsedError;
   @override
-  List<Resource?>? get contained;
+  List<Resource?>? get contained => throw _privateConstructorUsedError;
   @override
-  Boolean? get reportedBoolean;
+  Boolean? get reportedBoolean => throw _privateConstructorUsedError;
   @override
-  Reference? get reportedReference;
+  Reference? get reportedReference => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get medicationCodeableConcept;
+  CodeableConcept? get medicationCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get medicationReference;
+  Reference? get medicationReference => throw _privateConstructorUsedError;
   @override
-  Reference get subject;
+  Reference get subject => throw _privateConstructorUsedError;
   @override
-  Reference? get encounter;
+  Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get authoredOn;
+  FhirDateTime get authoredOn => throw _privateConstructorUsedError;
   @override
-  Reference get requester;
+  Reference get requester => throw _privateConstructorUsedError;
   @override
-  List<Dosage>? get dosageInstruction;
+  List<Dosage>? get dosageInstruction => throw _privateConstructorUsedError;
   @override
-  MedicationRequestDispenseRequest? get dispenseRequest;
+  MedicationRequestDispenseRequest? get dispenseRequest =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MedicationRequestCopyWith<_MedicationRequest> get copyWith;
+  _$MedicationRequestCopyWith<_MedicationRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MedicationRequestDispenseRequest _$MedicationRequestDispenseRequestFromJson(
@@ -708,19 +778,21 @@ const $MedicationRequestDispenseRequest =
 
 /// @nodoc
 mixin _$MedicationRequestDispenseRequest {
-  String? get id;
-  MedicationRequestInitialFill? get initialFill;
-  FhirDuration? get dispenseInterval;
-  Period? get validityPeriod;
-  UnsignedInt? get numberOfRepeatsAllowed;
-  Quantity? get quantity;
-  FhirDuration? get expectedSupplyDuration;
-  Reference? get performer;
+  String? get id => throw _privateConstructorUsedError;
+  MedicationRequestInitialFill? get initialFill =>
+      throw _privateConstructorUsedError;
+  FhirDuration? get dispenseInterval => throw _privateConstructorUsedError;
+  Period? get validityPeriod => throw _privateConstructorUsedError;
+  UnsignedInt? get numberOfRepeatsAllowed => throw _privateConstructorUsedError;
+  Quantity? get quantity => throw _privateConstructorUsedError;
+  FhirDuration? get expectedSupplyDuration =>
+      throw _privateConstructorUsedError;
+  Reference? get performer => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicationRequestDispenseRequestCopyWith<MedicationRequestDispenseRequest>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -768,25 +840,38 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
     Object? performer = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       initialFill: initialFill == freezed
           ? _value.initialFill
-          : initialFill as MedicationRequestInitialFill?,
+          : initialFill // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestInitialFill?,
       dispenseInterval: dispenseInterval == freezed
           ? _value.dispenseInterval
-          : dispenseInterval as FhirDuration?,
+          : dispenseInterval // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
-          : validityPeriod as Period?,
+          : validityPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       numberOfRepeatsAllowed: numberOfRepeatsAllowed == freezed
           ? _value.numberOfRepeatsAllowed
-          : numberOfRepeatsAllowed as UnsignedInt?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+          : numberOfRepeatsAllowed // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       expectedSupplyDuration: expectedSupplyDuration == freezed
           ? _value.expectedSupplyDuration
-          : expectedSupplyDuration as FhirDuration?,
-      performer:
-          performer == freezed ? _value.performer : performer as Reference?,
+          : expectedSupplyDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      performer: performer == freezed
+          ? _value.performer
+          : performer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -915,25 +1000,38 @@ class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
     Object? performer = freezed,
   }) {
     return _then(_MedicationRequestDispenseRequest(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       initialFill: initialFill == freezed
           ? _value.initialFill
-          : initialFill as MedicationRequestInitialFill?,
+          : initialFill // ignore: cast_nullable_to_non_nullable
+              as MedicationRequestInitialFill?,
       dispenseInterval: dispenseInterval == freezed
           ? _value.dispenseInterval
-          : dispenseInterval as FhirDuration?,
+          : dispenseInterval // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
-          : validityPeriod as Period?,
+          : validityPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       numberOfRepeatsAllowed: numberOfRepeatsAllowed == freezed
           ? _value.numberOfRepeatsAllowed
-          : numberOfRepeatsAllowed as UnsignedInt?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+          : numberOfRepeatsAllowed // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       expectedSupplyDuration: expectedSupplyDuration == freezed
           ? _value.expectedSupplyDuration
-          : expectedSupplyDuration as FhirDuration?,
-      performer:
-          performer == freezed ? _value.performer : performer as Reference?,
+          : expectedSupplyDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
+      performer: performer == freezed
+          ? _value.performer
+          : performer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -1035,7 +1133,6 @@ class _$_MedicationRequestDispenseRequest
 
 abstract class _MedicationRequestDispenseRequest
     extends MedicationRequestDispenseRequest {
-  _MedicationRequestDispenseRequest._() : super._();
   factory _MedicationRequestDispenseRequest(
       {String? id,
       MedicationRequestInitialFill? initialFill,
@@ -1045,30 +1142,33 @@ abstract class _MedicationRequestDispenseRequest
       Quantity? quantity,
       FhirDuration? expectedSupplyDuration,
       Reference? performer}) = _$_MedicationRequestDispenseRequest;
+  _MedicationRequestDispenseRequest._() : super._();
 
   factory _MedicationRequestDispenseRequest.fromJson(
       Map<String, dynamic> json) = _$_MedicationRequestDispenseRequest.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  MedicationRequestInitialFill? get initialFill;
+  MedicationRequestInitialFill? get initialFill =>
+      throw _privateConstructorUsedError;
   @override
-  FhirDuration? get dispenseInterval;
+  FhirDuration? get dispenseInterval => throw _privateConstructorUsedError;
   @override
-  Period? get validityPeriod;
+  Period? get validityPeriod => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get numberOfRepeatsAllowed;
+  UnsignedInt? get numberOfRepeatsAllowed => throw _privateConstructorUsedError;
   @override
-  Quantity? get quantity;
+  Quantity? get quantity => throw _privateConstructorUsedError;
   @override
-  FhirDuration? get expectedSupplyDuration;
+  FhirDuration? get expectedSupplyDuration =>
+      throw _privateConstructorUsedError;
   @override
-  Reference? get performer;
+  Reference? get performer => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicationRequestDispenseRequestCopyWith<_MedicationRequestDispenseRequest>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 MedicationRequestInitialFill _$MedicationRequestInitialFillFromJson(
@@ -1099,14 +1199,14 @@ const $MedicationRequestInitialFill = _$MedicationRequestInitialFillTearOff();
 
 /// @nodoc
 mixin _$MedicationRequestInitialFill {
-  String? get id;
-  Quantity? get quantity;
-  FhirDuration? get duration;
+  String? get id => throw _privateConstructorUsedError;
+  Quantity? get quantity => throw _privateConstructorUsedError;
+  FhirDuration? get duration => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MedicationRequestInitialFillCopyWith<MedicationRequestInitialFill>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1137,10 +1237,18 @@ class _$MedicationRequestInitialFillCopyWithImpl<$Res>
     Object? duration = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
-      duration:
-          duration == freezed ? _value.duration : duration as FhirDuration?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      duration: duration == freezed
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
     ));
   }
 
@@ -1203,10 +1311,18 @@ class __$MedicationRequestInitialFillCopyWithImpl<$Res>
     Object? duration = freezed,
   }) {
     return _then(_MedicationRequestInitialFill(
-      id: id == freezed ? _value.id : id as String?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
-      duration:
-          duration == freezed ? _value.duration : duration as FhirDuration?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      duration: duration == freezed
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
     ));
   }
 }
@@ -1268,23 +1384,23 @@ class _$_MedicationRequestInitialFill extends _MedicationRequestInitialFill {
 
 abstract class _MedicationRequestInitialFill
     extends MedicationRequestInitialFill {
-  _MedicationRequestInitialFill._() : super._();
   factory _MedicationRequestInitialFill(
       {String? id,
       Quantity? quantity,
       FhirDuration? duration}) = _$_MedicationRequestInitialFill;
+  _MedicationRequestInitialFill._() : super._();
 
   factory _MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =
       _$_MedicationRequestInitialFill.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  Quantity? get quantity;
+  Quantity? get quantity => throw _privateConstructorUsedError;
   @override
-  FhirDuration? get duration;
+  FhirDuration? get duration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MedicationRequestInitialFillCopyWith<_MedicationRequestInitialFill>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }

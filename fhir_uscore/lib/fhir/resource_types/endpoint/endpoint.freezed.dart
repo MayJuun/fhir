@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'endpoint.dart';
 
@@ -8,6 +8,10 @@ part of 'endpoint.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Endpoint _$EndpointFromJson(Map<String, dynamic> json) {
   return _Endpoint.fromJson(json);
 }
@@ -66,27 +70,28 @@ const $Endpoint = _$EndpointTearOff();
 /// @nodoc
 mixin _$Endpoint {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Endpoint)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<Resource>? get contained;
-  List<Identifier>? get identifier;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  EndpointStatus? get status;
-  Coding get connectionType;
-  String? get name;
-  Reference? get managingOrganization;
-  List<ContactPoint>? get contact;
-  Period? get period;
-  List<CodeableConcept> get payloadType;
-  List<Code>? get payloadMimeType;
-  FhirUrl? get address;
-  List<String>? get header;
+  EndpointStatus? get status => throw _privateConstructorUsedError;
+  Coding get connectionType => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  Reference? get managingOrganization => throw _privateConstructorUsedError;
+  List<ContactPoint>? get contact => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  List<CodeableConcept> get payloadType => throw _privateConstructorUsedError;
+  List<Code>? get payloadMimeType => throw _privateConstructorUsedError;
+  FhirUrl? get address => throw _privateConstructorUsedError;
+  List<String>? get header => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EndpointCopyWith<Endpoint> get copyWith;
+  $EndpointCopyWith<Endpoint> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -150,35 +155,68 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as EndpointStatus?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as EndpointStatus?,
       connectionType: connectionType == freezed
           ? _value.connectionType
-          : connectionType as Coding,
-      name: name == freezed ? _value.name : name as String?,
+          : connectionType // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
-          : managingOrganization as Reference?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>?,
-      period: period == freezed ? _value.period : period as Period?,
+          : managingOrganization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
       payloadType: payloadType == freezed
           ? _value.payloadType
-          : payloadType as List<CodeableConcept>,
+          : payloadType // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
-          : payloadMimeType as List<Code>?,
-      address: address == freezed ? _value.address : address as FhirUrl?,
-      header: header == freezed ? _value.header : header as List<String>?,
+          : payloadMimeType // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      header: header == freezed
+          ? _value.header
+          : header // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 
@@ -302,35 +340,68 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
     return _then(_Endpoint(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as EndpointStatus?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as EndpointStatus?,
       connectionType: connectionType == freezed
           ? _value.connectionType
-          : connectionType as Coding,
-      name: name == freezed ? _value.name : name as String?,
+          : connectionType // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
-          : managingOrganization as Reference?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>?,
-      period: period == freezed ? _value.period : period as Period?,
+          : managingOrganization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
       payloadType: payloadType == freezed
           ? _value.payloadType
-          : payloadType as List<CodeableConcept>,
+          : payloadType // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
-          : payloadMimeType as List<Code>?,
-      address: address == freezed ? _value.address : address as FhirUrl?,
-      header: header == freezed ? _value.header : header as List<String>?,
+          : payloadMimeType // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      header: header == freezed
+          ? _value.header
+          : header // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -482,7 +553,6 @@ class _$_Endpoint extends _Endpoint {
 }
 
 abstract class _Endpoint extends Endpoint {
-  _Endpoint._() : super._();
   factory _Endpoint(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Endpoint)
           UsCoreResourceType resourceType,
@@ -502,44 +572,46 @@ abstract class _Endpoint extends Endpoint {
       List<Code>? payloadMimeType,
       FhirUrl? address,
       List<String>? header}) = _$_Endpoint;
+  _Endpoint._() : super._();
 
   factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Endpoint)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource>? get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  EndpointStatus? get status;
+  EndpointStatus? get status => throw _privateConstructorUsedError;
   @override
-  Coding get connectionType;
+  Coding get connectionType => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  Reference? get managingOrganization;
+  Reference? get managingOrganization => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint>? get contact;
+  List<ContactPoint>? get contact => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept> get payloadType;
+  List<CodeableConcept> get payloadType => throw _privateConstructorUsedError;
   @override
-  List<Code>? get payloadMimeType;
+  List<Code>? get payloadMimeType => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get address;
+  FhirUrl? get address => throw _privateConstructorUsedError;
   @override
-  List<String>? get header;
+  List<String>? get header => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EndpointCopyWith<_Endpoint> get copyWith;
+  _$EndpointCopyWith<_Endpoint> get copyWith =>
+      throw _privateConstructorUsedError;
 }

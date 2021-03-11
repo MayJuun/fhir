@@ -1,3 +1,6 @@
+## [0.3.0-nullsafety.6]
+* Updated dependencies
+
 ## [0.3.0-nullsafety.5]
 * Pana gives me 90/100, why doesn't pub.dev?
 

@@ -12,7 +12,7 @@ part 'document_reference.freezed.dart';
 part 'document_reference.g.dart';
 
 @freezed
-abstract class DocumentReference with Resource implements _$DocumentReference {
+class DocumentReference with Resource, _$DocumentReference {
   DocumentReference._();
 
   factory DocumentReference({
@@ -113,7 +113,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
 }
 
 @freezed
-abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
+class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
 
   factory DocumentReferenceContent({
@@ -141,7 +141,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
 }
 
 @freezed
-abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
+class DocumentReferenceContext with _$DocumentReferenceContext {
   DocumentReferenceContext._();
 
   factory DocumentReferenceContext({

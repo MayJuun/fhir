@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: non_constant_identifier_names, unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'observation.dart';
 
@@ -8,6 +8,10 @@ part of 'observation.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Observation _$ObservationFromJson(Map<String, dynamic> json) {
   return _Observation.fromJson(json);
 }
@@ -98,43 +102,48 @@ const $Observation = _$ObservationTearOff();
 /// @nodoc
 mixin _$Observation {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Observation)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<Identifier>? get identifier;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-  ObservationStatus? get status;
-  List<CodeableConcept>? get category;
-  CodeableConcept get code;
-  Reference? get subject;
-  Reference? get encounter;
-  FhirDateTime? get effectiveDateTime;
-  Period? get effectivePeriod;
-  Quantity? get valueQuantity;
-  CodeableConcept? get valueCodeableConcept;
-  String? get valueString;
-  Boolean? get valueBoolean;
-  Integer? get valueInteger;
-  Range? get valueRange;
-  Ratio? get valueRatio;
-  SampledData? get valueSampledData;
-  Time? get valueTime;
-  FhirDateTime? get valueDateTime;
-  Period? get valuePeriod;
-  CodeableConcept? get dataAbsentReason;
-  List<Reference>? get hasMember;
-  List<Annotation>? get note;
-  List<ObservationReferenceRange>? get referenceRange;
-  List<ObservationComponent>? get component;
-  List<CodeableConcept>? get interpretation;
-  List<CodeableConcept>? get bodySite;
-  Reference? get device;
-  Instant? get issued;
+  ObservationStatus? get status => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get encounter => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  String? get valueString => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
+  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
+  CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
+  List<Reference>? get hasMember => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<ObservationReferenceRange>? get referenceRange =>
+      throw _privateConstructorUsedError;
+  List<ObservationComponent>? get component =>
+      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get interpretation =>
+      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get bodySite => throw _privateConstructorUsedError;
+  Reference? get device => throw _privateConstructorUsedError;
+  Instant? get issued => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ObservationCopyWith<Observation> get copyWith;
+  $ObservationCopyWith<Observation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -240,75 +249,132 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as ObservationStatus?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ObservationStatus?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as FhirDateTime?,
+          : effectiveDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
-          : effectivePeriod as Period?,
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity?,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept?,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String?,
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean?,
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer?,
-      valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range?,
-      valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio?,
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
-          : valueSampledData as SampledData?,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time?,
+          : valueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
+      valueTime: valueTime == freezed
+          ? _value.valueTime
+          : valueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime?,
-      valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dataAbsentReason: dataAbsentReason == freezed
           ? _value.dataAbsentReason
-          : dataAbsentReason as CodeableConcept?,
+          : dataAbsentReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       hasMember: hasMember == freezed
           ? _value.hasMember
-          : hasMember as List<Reference>?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+          : hasMember // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange>?,
+          : referenceRange // ignore: cast_nullable_to_non_nullable
+              as List<ObservationReferenceRange>?,
       component: component == freezed
           ? _value.component
-          : component as List<ObservationComponent>?,
+          : component // ignore: cast_nullable_to_non_nullable
+              as List<ObservationComponent>?,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<CodeableConcept>?,
+          : interpretation // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       bodySite: bodySite == freezed
           ? _value.bodySite
-          : bodySite as List<CodeableConcept>?,
-      device: device == freezed ? _value.device : device as Reference?,
-      issued: issued == freezed ? _value.issued : issued as Instant?,
+          : bodySite // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      issued: issued == freezed
+          ? _value.issued
+          : issued // ignore: cast_nullable_to_non_nullable
+              as Instant?,
     ));
   }
 
@@ -585,75 +651,132 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
     return _then(_Observation(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as ObservationStatus?,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ObservationStatus?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      encounter:
-          encounter == freezed ? _value.encounter : encounter as Reference?,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       effectiveDateTime: effectiveDateTime == freezed
           ? _value.effectiveDateTime
-          : effectiveDateTime as FhirDateTime?,
+          : effectiveDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
-          : effectivePeriod as Period?,
+          : effectivePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity?,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept?,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String?,
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean?,
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer?,
-      valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range?,
-      valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio?,
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
-          : valueSampledData as SampledData?,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time?,
+          : valueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
+      valueTime: valueTime == freezed
+          ? _value.valueTime
+          : valueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime?,
-      valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dataAbsentReason: dataAbsentReason == freezed
           ? _value.dataAbsentReason
-          : dataAbsentReason as CodeableConcept?,
+          : dataAbsentReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       hasMember: hasMember == freezed
           ? _value.hasMember
-          : hasMember as List<Reference>?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+          : hasMember // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange>?,
+          : referenceRange // ignore: cast_nullable_to_non_nullable
+              as List<ObservationReferenceRange>?,
       component: component == freezed
           ? _value.component
-          : component as List<ObservationComponent>?,
+          : component // ignore: cast_nullable_to_non_nullable
+              as List<ObservationComponent>?,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<CodeableConcept>?,
+          : interpretation // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       bodySite: bodySite == freezed
           ? _value.bodySite
-          : bodySite as List<CodeableConcept>?,
-      device: device == freezed ? _value.device : device as Reference?,
-      issued: issued == freezed ? _value.issued : issued as Instant?,
+          : bodySite // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      issued: issued == freezed
+          ? _value.issued
+          : issued // ignore: cast_nullable_to_non_nullable
+              as Instant?,
     ));
   }
 }
@@ -902,7 +1025,6 @@ class _$_Observation extends _Observation {
 }
 
 abstract class _Observation extends Observation {
-  _Observation._() : super._();
   factory _Observation(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Observation)
           UsCoreResourceType resourceType,
@@ -938,79 +1060,85 @@ abstract class _Observation extends Observation {
       List<CodeableConcept>? bodySite,
       Reference? device,
       Instant? issued}) = _$_Observation;
+  _Observation._() : super._();
 
   factory _Observation.fromJson(Map<String, dynamic> json) =
       _$_Observation.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Observation)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-  ObservationStatus? get status;
+  ObservationStatus? get status => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get category;
+  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Reference? get subject;
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
-  Reference? get encounter;
+  Reference? get encounter => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get effectiveDateTime;
+  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
   @override
-  Period? get effectivePeriod;
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  String? get valueString;
+  String? get valueString => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
-  Integer? get valueInteger;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @override
-  Range? get valueRange;
+  Range? get valueRange => throw _privateConstructorUsedError;
   @override
-  Ratio? get valueRatio;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
   @override
-  SampledData? get valueSampledData;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
   @override
-  Time? get valueTime;
+  Time? get valueTime => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get valueDateTime;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
-  Period? get valuePeriod;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get dataAbsentReason;
+  CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get hasMember;
+  List<Reference>? get hasMember => throw _privateConstructorUsedError;
   @override
-  List<Annotation>? get note;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  List<ObservationReferenceRange>? get referenceRange;
+  List<ObservationReferenceRange>? get referenceRange =>
+      throw _privateConstructorUsedError;
   @override
-  List<ObservationComponent>? get component;
+  List<ObservationComponent>? get component =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get interpretation;
+  List<CodeableConcept>? get interpretation =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get bodySite;
+  List<CodeableConcept>? get bodySite => throw _privateConstructorUsedError;
   @override
-  Reference? get device;
+  Reference? get device => throw _privateConstructorUsedError;
   @override
-  Instant? get issued;
+  Instant? get issued => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ObservationCopyWith<_Observation> get copyWith;
+  _$ObservationCopyWith<_Observation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ObservationReferenceRange _$ObservationReferenceRangeFromJson(
@@ -1051,17 +1179,18 @@ const $ObservationReferenceRange = _$ObservationReferenceRangeTearOff();
 
 /// @nodoc
 mixin _$ObservationReferenceRange {
-  String? get id;
-  Quantity? get low;
-  Quantity? get high;
-  CodeableConcept? get type;
-  List<CodeableConcept>? get appliesTo;
-  Range? get age;
-  String? get text;
+  String? get id => throw _privateConstructorUsedError;
+  Quantity? get low => throw _privateConstructorUsedError;
+  Quantity? get high => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get appliesTo => throw _privateConstructorUsedError;
+  Range? get age => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ObservationReferenceRangeCopyWith<ObservationReferenceRange> get copyWith;
+  $ObservationReferenceRangeCopyWith<ObservationReferenceRange> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1104,15 +1233,34 @@ class _$ObservationReferenceRangeCopyWithImpl<$Res>
     Object? text = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      low: low == freezed ? _value.low : low as Quantity?,
-      high: high == freezed ? _value.high : high as Quantity?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      low: low == freezed
+          ? _value.low
+          : low // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      high: high == freezed
+          ? _value.high
+          : high // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       appliesTo: appliesTo == freezed
           ? _value.appliesTo
-          : appliesTo as List<CodeableConcept>?,
-      age: age == freezed ? _value.age : age as Range?,
-      text: text == freezed ? _value.text : text as String?,
+          : appliesTo // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      age: age == freezed
+          ? _value.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -1210,15 +1358,34 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
     Object? text = freezed,
   }) {
     return _then(_ObservationReferenceRange(
-      id: id == freezed ? _value.id : id as String?,
-      low: low == freezed ? _value.low : low as Quantity?,
-      high: high == freezed ? _value.high : high as Quantity?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      low: low == freezed
+          ? _value.low
+          : low // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      high: high == freezed
+          ? _value.high
+          : high // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       appliesTo: appliesTo == freezed
           ? _value.appliesTo
-          : appliesTo as List<CodeableConcept>?,
-      age: age == freezed ? _value.age : age as Range?,
-      text: text == freezed ? _value.text : text as String?,
+          : appliesTo // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      age: age == freezed
+          ? _value.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1306,7 +1473,6 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
 }
 
 abstract class _ObservationReferenceRange extends ObservationReferenceRange {
-  _ObservationReferenceRange._() : super._();
   factory _ObservationReferenceRange(
       {String? id,
       Quantity? low,
@@ -1315,27 +1481,29 @@ abstract class _ObservationReferenceRange extends ObservationReferenceRange {
       List<CodeableConcept>? appliesTo,
       Range? age,
       String? text}) = _$_ObservationReferenceRange;
+  _ObservationReferenceRange._() : super._();
 
   factory _ObservationReferenceRange.fromJson(Map<String, dynamic> json) =
       _$_ObservationReferenceRange.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  Quantity? get low;
+  Quantity? get low => throw _privateConstructorUsedError;
   @override
-  Quantity? get high;
+  Quantity? get high => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get appliesTo;
+  List<CodeableConcept>? get appliesTo => throw _privateConstructorUsedError;
   @override
-  Range? get age;
+  Range? get age => throw _privateConstructorUsedError;
   @override
-  String? get text;
+  String? get text => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ObservationReferenceRangeCopyWith<_ObservationReferenceRange> get copyWith;
+  _$ObservationReferenceRangeCopyWith<_ObservationReferenceRange>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ObservationComponent _$ObservationComponentFromJson(Map<String, dynamic> json) {
@@ -1397,29 +1565,34 @@ const $ObservationComponent = _$ObservationComponentTearOff();
 
 /// @nodoc
 mixin _$ObservationComponent {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept get code;
-  Quantity? get valueQuantity;
-  CodeableConcept? get valueCodeableConcept;
-  String? get valueString;
-  Boolean? get valueBoolean;
-  Integer? get valueInteger;
-  Range? get valueRange;
-  Ratio? get valueRatio;
-  SampledData? get valueSampledData;
-  Time? get valueTime;
-  FhirDateTime? get valueDateTime;
-  Period? get valuePeriod;
-  CodeableConcept? get dataAbsentReason;
-  List<CodeableConcept>? get interpretation;
-  List<ObservationReferenceRange>? get referenceRange;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  String? get valueString => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
+  Time? get valueTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
+  CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get interpretation =>
+      throw _privateConstructorUsedError;
+  List<ObservationReferenceRange>? get referenceRange =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ObservationComponentCopyWith<ObservationComponent> get copyWith;
+  $ObservationComponentCopyWith<ObservationComponent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1488,50 +1661,78 @@ class _$ObservationComponentCopyWithImpl<$Res>
     Object? referenceRange = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity?,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept?,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String?,
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean?,
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer?,
-      valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range?,
-      valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio?,
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
-          : valueSampledData as SampledData?,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time?,
+          : valueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
+      valueTime: valueTime == freezed
+          ? _value.valueTime
+          : valueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime?,
-      valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dataAbsentReason: dataAbsentReason == freezed
           ? _value.dataAbsentReason
-          : dataAbsentReason as CodeableConcept?,
+          : dataAbsentReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<CodeableConcept>?,
+          : interpretation // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange>?,
+          : referenceRange // ignore: cast_nullable_to_non_nullable
+              as List<ObservationReferenceRange>?,
     ));
   }
 
@@ -1699,50 +1900,78 @@ class __$ObservationComponentCopyWithImpl<$Res>
     Object? referenceRange = freezed,
   }) {
     return _then(_ObservationComponent(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity?,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept?,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String?,
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean?,
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer?,
-      valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range?,
-      valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio?,
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       valueSampledData: valueSampledData == freezed
           ? _value.valueSampledData
-          : valueSampledData as SampledData?,
-      valueTime: valueTime == freezed ? _value.valueTime : valueTime as Time?,
+          : valueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
+      valueTime: valueTime == freezed
+          ? _value.valueTime
+          : valueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime?,
-      valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period?,
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dataAbsentReason: dataAbsentReason == freezed
           ? _value.dataAbsentReason
-          : dataAbsentReason as CodeableConcept?,
+          : dataAbsentReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<CodeableConcept>?,
+          : interpretation // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange>?,
+          : referenceRange // ignore: cast_nullable_to_non_nullable
+              as List<ObservationReferenceRange>?,
     ));
   }
 }
@@ -1911,7 +2140,6 @@ class _$_ObservationComponent extends _ObservationComponent {
 }
 
 abstract class _ObservationComponent extends ObservationComponent {
-  _ObservationComponent._() : super._();
   factory _ObservationComponent(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1932,48 +2160,54 @@ abstract class _ObservationComponent extends ObservationComponent {
           List<CodeableConcept>? interpretation,
           List<ObservationReferenceRange>? referenceRange}) =
       _$_ObservationComponent;
+  _ObservationComponent._() : super._();
 
   factory _ObservationComponent.fromJson(Map<String, dynamic> json) =
       _$_ObservationComponent.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Quantity? get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  String? get valueString;
+  String? get valueString => throw _privateConstructorUsedError;
   @override
-  Boolean? get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
-  Integer? get valueInteger;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @override
-  Range? get valueRange;
+  Range? get valueRange => throw _privateConstructorUsedError;
   @override
-  Ratio? get valueRatio;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
   @override
-  SampledData? get valueSampledData;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
   @override
-  Time? get valueTime;
+  Time? get valueTime => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get valueDateTime;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
-  Period? get valuePeriod;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get dataAbsentReason;
+  CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get interpretation;
+  List<CodeableConcept>? get interpretation =>
+      throw _privateConstructorUsedError;
   @override
-  List<ObservationReferenceRange>? get referenceRange;
+  List<ObservationReferenceRange>? get referenceRange =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ObservationComponentCopyWith<_ObservationComponent> get copyWith;
+  _$ObservationComponentCopyWith<_ObservationComponent> get copyWith =>
+      throw _privateConstructorUsedError;
 }

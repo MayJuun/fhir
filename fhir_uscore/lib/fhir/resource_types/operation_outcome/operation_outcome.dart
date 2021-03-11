@@ -12,7 +12,7 @@ part 'operation_outcome.freezed.dart';
 part 'operation_outcome.g.dart';
 
 @freezed
-abstract class OperationOutcome with Resource implements _$OperationOutcome {
+class OperationOutcome with Resource, _$OperationOutcome {
   OperationOutcome._();
 
   factory OperationOutcome({
@@ -46,7 +46,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
 }
 
 @freezed
-abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
+class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
 
   factory OperationOutcomeIssue({

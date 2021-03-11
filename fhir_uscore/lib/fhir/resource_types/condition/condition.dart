@@ -12,7 +12,7 @@ part 'condition.freezed.dart';
 part 'condition.g.dart';
 
 @freezed
-abstract class Condition with Resource implements _$Condition {
+class Condition with Resource, _$Condition {
   Condition._();
 
   factory Condition({

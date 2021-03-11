@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'immunization.dart';
 
@@ -8,6 +8,10 @@ part of 'immunization.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
   return _Immunization.fromJson(json);
 }
@@ -55,21 +59,22 @@ const $Immunization = _$ImmunizationTearOff();
 /// @nodoc
 mixin _$Immunization {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Immunization)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  ImmunizationStatus get status;
-  CodeableConcept? get statusReason;
-  CodeableConcept get vaccineCode;
-  Reference get patient;
-  FhirDateTime? get occurrenceDateTime;
-  String? get occurrenceString;
-  Boolean get primarySource;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  ImmunizationStatus get status => throw _privateConstructorUsedError;
+  CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  CodeableConcept get vaccineCode => throw _privateConstructorUsedError;
+  Reference get patient => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  String? get occurrenceString => throw _privateConstructorUsedError;
+  Boolean get primarySource => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ImmunizationCopyWith<Immunization> get copyWith;
+  $ImmunizationCopyWith<Immunization> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -123,27 +128,48 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      status: status == freezed ? _value.status : status as ImmunizationStatus,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ImmunizationStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
-          : statusReason as CodeableConcept?,
+          : statusReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       vaccineCode: vaccineCode == freezed
           ? _value.vaccineCode
-          : vaccineCode as CodeableConcept,
-      patient: patient == freezed ? _value.patient : patient as Reference,
+          : vaccineCode // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as FhirDateTime?,
+          : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       occurrenceString: occurrenceString == freezed
           ? _value.occurrenceString
-          : occurrenceString as String?,
+          : occurrenceString // ignore: cast_nullable_to_non_nullable
+              as String?,
       primarySource: primarySource == freezed
           ? _value.primarySource
-          : primarySource as Boolean,
+          : primarySource // ignore: cast_nullable_to_non_nullable
+              as Boolean,
     ));
   }
 
@@ -255,27 +281,48 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
     return _then(_Immunization(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      status: status == freezed ? _value.status : status as ImmunizationStatus,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ImmunizationStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
-          : statusReason as CodeableConcept?,
+          : statusReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       vaccineCode: vaccineCode == freezed
           ? _value.vaccineCode
-          : vaccineCode as CodeableConcept,
-      patient: patient == freezed ? _value.patient : patient as Reference,
+          : vaccineCode // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
-          : occurrenceDateTime as FhirDateTime?,
+          : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       occurrenceString: occurrenceString == freezed
           ? _value.occurrenceString
-          : occurrenceString as String?,
+          : occurrenceString // ignore: cast_nullable_to_non_nullable
+              as String?,
       primarySource: primarySource == freezed
           ? _value.primarySource
-          : primarySource as Boolean,
+          : primarySource // ignore: cast_nullable_to_non_nullable
+              as Boolean,
     ));
   }
 }
@@ -393,7 +440,6 @@ class _$_Immunization extends _Immunization {
 }
 
 abstract class _Immunization extends Immunization {
-  _Immunization._() : super._();
   factory _Immunization(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Immunization)
           UsCoreResourceType resourceType,
@@ -407,34 +453,36 @@ abstract class _Immunization extends Immunization {
       FhirDateTime? occurrenceDateTime,
       String? occurrenceString,
       required Boolean primarySource}) = _$_Immunization;
+  _Immunization._() : super._();
 
   factory _Immunization.fromJson(Map<String, dynamic> json) =
       _$_Immunization.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Immunization)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  ImmunizationStatus get status;
+  ImmunizationStatus get status => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get statusReason;
+  CodeableConcept? get statusReason => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get vaccineCode;
+  CodeableConcept get vaccineCode => throw _privateConstructorUsedError;
   @override
-  Reference get patient;
+  Reference get patient => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get occurrenceDateTime;
+  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
-  String? get occurrenceString;
+  String? get occurrenceString => throw _privateConstructorUsedError;
   @override
-  Boolean get primarySource;
+  Boolean get primarySource => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ImmunizationCopyWith<_Immunization> get copyWith;
+  _$ImmunizationCopyWith<_Immunization> get copyWith =>
+      throw _privateConstructorUsedError;
 }

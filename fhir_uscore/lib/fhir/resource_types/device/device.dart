@@ -12,7 +12,7 @@ part 'device.freezed.dart';
 part 'device.g.dart';
 
 @freezed
-abstract class Device with Resource implements _$Device {
+class Device with Resource, _$Device {
   Device._();
 
   factory Device({
@@ -79,7 +79,7 @@ abstract class Device with Resource implements _$Device {
 }
 
 @freezed
-abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
+class DeviceUdiCarrier with _$DeviceUdiCarrier {
   DeviceUdiCarrier._();
 
   factory DeviceUdiCarrier({
@@ -109,7 +109,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
 }
 
 @freezed
-abstract class DeviceDeviceName implements _$DeviceDeviceName {
+class DeviceDeviceName with _$DeviceDeviceName {
   DeviceDeviceName._();
 
   factory DeviceDeviceName({

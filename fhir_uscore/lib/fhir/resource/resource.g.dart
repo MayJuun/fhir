@@ -13,6 +13,21 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) {
         _$enumDecodeNullable(_$UsCoreResourceTypeEnumMap, json['resourceType']);
 }
 
+Map<String, dynamic> _$ResourceToJson(Resource instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$UsCoreResourceTypeEnumMap[instance.resourceType]);
+  return val;
+}
+
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
   Object? source, {

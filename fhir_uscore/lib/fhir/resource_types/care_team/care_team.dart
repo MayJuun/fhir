@@ -12,7 +12,7 @@ part 'care_team.freezed.dart';
 part 'care_team.g.dart';
 
 @freezed
-abstract class CareTeam with Resource implements _$CareTeam {
+class CareTeam with Resource, _$CareTeam {
   CareTeam._();
   factory CareTeam({
     @Default(UsCoreResourceType.CareTeam)
@@ -74,7 +74,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
 }
 
 @freezed
-abstract class CareTeamParticipant implements _$CareTeamParticipant {
+class CareTeamParticipant with _$CareTeamParticipant {
   CareTeamParticipant._();
   factory CareTeamParticipant({
     String? id,

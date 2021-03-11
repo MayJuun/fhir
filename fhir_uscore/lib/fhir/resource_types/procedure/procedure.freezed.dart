@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'procedure.dart';
 
@@ -8,6 +8,10 @@ part of 'procedure.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Procedure _$ProcedureFromJson(Map<String, dynamic> json) {
   return _Procedure.fromJson(json);
 }
@@ -57,22 +61,24 @@ const $Procedure = _$ProcedureTearOff();
 /// @nodoc
 mixin _$Procedure {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Procedure)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<Identifier>? get identifier;
-  ProcedureStatus get status;
-  CodeableConcept get code;
-  Reference get subject;
-  FhirDateTime? get performedDateTime;
-  Period? get performedPeriod;
-  List<ProcedurePerformer>? get performer;
-  List<ProcedureFocalDevice>? get focalDevice;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  ProcedureStatus get status => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Reference get subject => throw _privateConstructorUsedError;
+  FhirDateTime? get performedDateTime => throw _privateConstructorUsedError;
+  Period? get performedPeriod => throw _privateConstructorUsedError;
+  List<ProcedurePerformer>? get performer => throw _privateConstructorUsedError;
+  List<ProcedureFocalDevice>? get focalDevice =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProcedureCopyWith<Procedure> get copyWith;
+  $ProcedureCopyWith<Procedure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -127,28 +133,52 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as ProcedureStatus,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ProcedureStatus,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
       performedDateTime: performedDateTime == freezed
           ? _value.performedDateTime
-          : performedDateTime as FhirDateTime?,
+          : performedDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       performedPeriod: performedPeriod == freezed
           ? _value.performedPeriod
-          : performedPeriod as Period?,
+          : performedPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       performer: performer == freezed
           ? _value.performer
-          : performer as List<ProcedurePerformer>?,
+          : performer // ignore: cast_nullable_to_non_nullable
+              as List<ProcedurePerformer>?,
       focalDevice: focalDevice == freezed
           ? _value.focalDevice
-          : focalDevice as List<ProcedureFocalDevice>?,
+          : focalDevice // ignore: cast_nullable_to_non_nullable
+              as List<ProcedureFocalDevice>?,
     ));
   }
 
@@ -260,28 +290,52 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
     return _then(_Procedure(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as ProcedureStatus,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ProcedureStatus,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
       performedDateTime: performedDateTime == freezed
           ? _value.performedDateTime
-          : performedDateTime as FhirDateTime?,
+          : performedDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       performedPeriod: performedPeriod == freezed
           ? _value.performedPeriod
-          : performedPeriod as Period?,
+          : performedPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       performer: performer == freezed
           ? _value.performer
-          : performer as List<ProcedurePerformer>?,
+          : performer // ignore: cast_nullable_to_non_nullable
+              as List<ProcedurePerformer>?,
       focalDevice: focalDevice == freezed
           ? _value.focalDevice
-          : focalDevice as List<ProcedureFocalDevice>?,
+          : focalDevice // ignore: cast_nullable_to_non_nullable
+              as List<ProcedureFocalDevice>?,
     ));
   }
 }
@@ -405,7 +459,6 @@ class _$_Procedure extends _Procedure {
 }
 
 abstract class _Procedure extends Procedure {
-  _Procedure._() : super._();
   factory _Procedure(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Procedure)
           UsCoreResourceType resourceType,
@@ -420,38 +473,41 @@ abstract class _Procedure extends Procedure {
       Period? performedPeriod,
       List<ProcedurePerformer>? performer,
       List<ProcedureFocalDevice>? focalDevice}) = _$_Procedure;
+  _Procedure._() : super._();
 
   factory _Procedure.fromJson(Map<String, dynamic> json) =
       _$_Procedure.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Procedure)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  ProcedureStatus get status;
+  ProcedureStatus get status => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Reference get subject;
+  Reference get subject => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get performedDateTime;
+  FhirDateTime? get performedDateTime => throw _privateConstructorUsedError;
   @override
-  Period? get performedPeriod;
+  Period? get performedPeriod => throw _privateConstructorUsedError;
   @override
-  List<ProcedurePerformer>? get performer;
+  List<ProcedurePerformer>? get performer => throw _privateConstructorUsedError;
   @override
-  List<ProcedureFocalDevice>? get focalDevice;
+  List<ProcedureFocalDevice>? get focalDevice =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ProcedureCopyWith<_Procedure> get copyWith;
+  _$ProcedureCopyWith<_Procedure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ProcedurePerformer _$ProcedurePerformerFromJson(Map<String, dynamic> json) {
@@ -485,14 +541,15 @@ const $ProcedurePerformer = _$ProcedurePerformerTearOff();
 
 /// @nodoc
 mixin _$ProcedurePerformer {
-  String? get id;
-  CodeableConcept? get function;
-  Reference get actor;
-  Reference? get onBehalfOf;
+  String? get id => throw _privateConstructorUsedError;
+  CodeableConcept? get function => throw _privateConstructorUsedError;
+  Reference get actor => throw _privateConstructorUsedError;
+  Reference? get onBehalfOf => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProcedurePerformerCopyWith<ProcedurePerformer> get copyWith;
+  $ProcedurePerformerCopyWith<ProcedurePerformer> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -528,12 +585,22 @@ class _$ProcedurePerformerCopyWithImpl<$Res>
     Object? onBehalfOf = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      function:
-          function == freezed ? _value.function : function as CodeableConcept?,
-      actor: actor == freezed ? _value.actor : actor as Reference,
-      onBehalfOf:
-          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      onBehalfOf: onBehalfOf == freezed
+          ? _value.onBehalfOf
+          : onBehalfOf // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -607,12 +674,22 @@ class __$ProcedurePerformerCopyWithImpl<$Res>
     Object? onBehalfOf = freezed,
   }) {
     return _then(_ProcedurePerformer(
-      id: id == freezed ? _value.id : id as String?,
-      function:
-          function == freezed ? _value.function : function as CodeableConcept?,
-      actor: actor == freezed ? _value.actor : actor as Reference,
-      onBehalfOf:
-          onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      function: function == freezed
+          ? _value.function
+          : function // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      actor: actor == freezed
+          ? _value.actor
+          : actor // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      onBehalfOf: onBehalfOf == freezed
+          ? _value.onBehalfOf
+          : onBehalfOf // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -678,27 +755,28 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
 }
 
 abstract class _ProcedurePerformer extends ProcedurePerformer {
-  _ProcedurePerformer._() : super._();
   factory _ProcedurePerformer(
       {String? id,
       CodeableConcept? function,
       required Reference actor,
       Reference? onBehalfOf}) = _$_ProcedurePerformer;
+  _ProcedurePerformer._() : super._();
 
   factory _ProcedurePerformer.fromJson(Map<String, dynamic> json) =
       _$_ProcedurePerformer.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get function;
+  CodeableConcept? get function => throw _privateConstructorUsedError;
   @override
-  Reference get actor;
+  Reference get actor => throw _privateConstructorUsedError;
   @override
-  Reference? get onBehalfOf;
+  Reference? get onBehalfOf => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ProcedurePerformerCopyWith<_ProcedurePerformer> get copyWith;
+  _$ProcedurePerformerCopyWith<_ProcedurePerformer> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ProcedureFocalDevice _$ProcedureFocalDeviceFromJson(Map<String, dynamic> json) {
@@ -732,14 +810,16 @@ const $ProcedureFocalDevice = _$ProcedureFocalDeviceTearOff();
 
 /// @nodoc
 mixin _$ProcedureFocalDevice {
-  String? get id;
-  List<FhirExtension>? get modifierExtension;
-  CodeableConcept? get action;
-  Reference get manipulated;
+  String? get id => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get action => throw _privateConstructorUsedError;
+  Reference get manipulated => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProcedureFocalDeviceCopyWith<ProcedureFocalDevice> get copyWith;
+  $ProcedureFocalDeviceCopyWith<ProcedureFocalDevice> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -774,14 +854,22 @@ class _$ProcedureFocalDeviceCopyWithImpl<$Res>
     Object? manipulated = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      action: action == freezed ? _value.action : action as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      action: action == freezed
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       manipulated: manipulated == freezed
           ? _value.manipulated
-          : manipulated as Reference,
+          : manipulated // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 
@@ -842,14 +930,22 @@ class __$ProcedureFocalDeviceCopyWithImpl<$Res>
     Object? manipulated = freezed,
   }) {
     return _then(_ProcedureFocalDevice(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      action: action == freezed ? _value.action : action as CodeableConcept?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      action: action == freezed
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       manipulated: manipulated == freezed
           ? _value.manipulated
-          : manipulated as Reference,
+          : manipulated // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 }
@@ -916,25 +1012,27 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
 }
 
 abstract class _ProcedureFocalDevice extends ProcedureFocalDevice {
-  _ProcedureFocalDevice._() : super._();
   factory _ProcedureFocalDevice(
       {String? id,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? action,
       required Reference manipulated}) = _$_ProcedureFocalDevice;
+  _ProcedureFocalDevice._() : super._();
 
   factory _ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =
       _$_ProcedureFocalDevice.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get action;
+  CodeableConcept? get action => throw _privateConstructorUsedError;
   @override
-  Reference get manipulated;
+  Reference get manipulated => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ProcedureFocalDeviceCopyWith<_ProcedureFocalDevice> get copyWith;
+  _$ProcedureFocalDeviceCopyWith<_ProcedureFocalDevice> get copyWith =>
+      throw _privateConstructorUsedError;
 }

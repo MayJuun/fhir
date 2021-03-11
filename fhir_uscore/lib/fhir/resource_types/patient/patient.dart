@@ -13,7 +13,7 @@ part 'patient.freezed.dart';
 part 'patient.g.dart';
 
 @freezed
-abstract class Patient with Resource implements _$Patient {
+class Patient with Resource, _$Patient {
   Patient._();
 
   factory Patient({
@@ -148,7 +148,7 @@ abstract class Patient with Resource implements _$Patient {
 }
 
 @freezed
-abstract class PatientCommunication implements _$PatientCommunication {
+class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
 
   factory PatientCommunication({

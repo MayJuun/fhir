@@ -12,9 +12,7 @@ part 'allergy_intolerance.freezed.dart';
 part 'allergy_intolerance.g.dart';
 
 @freezed
-abstract class AllergyIntolerance
-    with Resource
-    implements _$AllergyIntolerance {
+class AllergyIntolerance with Resource, _$AllergyIntolerance {
   AllergyIntolerance._();
   factory AllergyIntolerance({
     @Default(UsCoreResourceType.AllergyIntolerance)
@@ -80,8 +78,7 @@ abstract class AllergyIntolerance
 }
 
 @freezed
-abstract class AllergyIntoleranceReaction
-    implements _$AllergyIntoleranceReaction {
+class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
     required List<CodeableConcept> manifestation,

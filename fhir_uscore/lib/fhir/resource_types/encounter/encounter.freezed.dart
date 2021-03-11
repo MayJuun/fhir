@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: non_constant_identifier_names, unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'encounter.dart';
 
@@ -8,6 +8,10 @@ part of 'encounter.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Encounter _$EncounterFromJson(Map<String, dynamic> json) {
   return _Encounter.fromJson(json);
 }
@@ -63,26 +67,29 @@ const $Encounter = _$EncounterTearOff();
 /// @nodoc
 mixin _$Encounter {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Encounter)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<Identifier>? get identifier;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: EncounterStatus.unknown)
-  EncounterStatus get status;
+  EncounterStatus get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'class')
-  Coding get class_;
-  List<CodeableConcept?> get type;
-  Reference get subject;
-  List<EncounterParticipant>? get participant;
-  Period? get period;
-  List<CodeableConcept>? get reasonCode;
-  EncounterHospitalization? get hospitalization;
-  List<EncounterLocation>? get location;
+  Coding get class_ => throw _privateConstructorUsedError;
+  List<CodeableConcept?> get type => throw _privateConstructorUsedError;
+  Reference get subject => throw _privateConstructorUsedError;
+  List<EncounterParticipant>? get participant =>
+      throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
+  EncounterHospitalization? get hospitalization =>
+      throw _privateConstructorUsedError;
+  List<EncounterLocation>? get location => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EncounterCopyWith<Encounter> get copyWith;
+  $EncounterCopyWith<Encounter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -144,30 +151,60 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as EncounterStatus,
-      class_: class_ == freezed ? _value.class_ : class_ as Coding,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as EncounterStatus,
+      class_: class_ == freezed
+          ? _value.class_
+          : class_ // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<EncounterParticipant>?,
-      period: period == freezed ? _value.period : period as Period?,
+          : participant // ignore: cast_nullable_to_non_nullable
+              as List<EncounterParticipant>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<CodeableConcept>?,
+          : reasonCode // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
-          : hospitalization as EncounterHospitalization?,
+          : hospitalization // ignore: cast_nullable_to_non_nullable
+              as EncounterHospitalization?,
       location: location == freezed
           ? _value.location
-          : location as List<EncounterLocation>?,
+          : location // ignore: cast_nullable_to_non_nullable
+              as List<EncounterLocation>?,
     ));
   }
 
@@ -299,30 +336,60 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
     return _then(_Encounter(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
-      status: status == freezed ? _value.status : status as EncounterStatus,
-      class_: class_ == freezed ? _value.class_ : class_ as Coding,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as EncounterStatus,
+      class_: class_ == freezed
+          ? _value.class_
+          : class_ // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<EncounterParticipant>?,
-      period: period == freezed ? _value.period : period as Period?,
+          : participant // ignore: cast_nullable_to_non_nullable
+              as List<EncounterParticipant>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<CodeableConcept>?,
+          : reasonCode // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
-          : hospitalization as EncounterHospitalization?,
+          : hospitalization // ignore: cast_nullable_to_non_nullable
+              as EncounterHospitalization?,
       location: location == freezed
           ? _value.location
-          : location as List<EncounterLocation>?,
+          : location // ignore: cast_nullable_to_non_nullable
+              as List<EncounterLocation>?,
     ));
   }
 }
@@ -462,7 +529,6 @@ class _$_Encounter extends _Encounter {
 }
 
 abstract class _Encounter extends Encounter {
-  _Encounter._() : super._();
   factory _Encounter(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Encounter)
           UsCoreResourceType resourceType,
@@ -481,44 +547,48 @@ abstract class _Encounter extends Encounter {
       List<CodeableConcept>? reasonCode,
       EncounterHospitalization? hospitalization,
       List<EncounterLocation>? location}) = _$_Encounter;
+  _Encounter._() : super._();
 
   factory _Encounter.fromJson(Map<String, dynamic> json) =
       _$_Encounter.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Encounter)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: EncounterStatus.unknown)
-  EncounterStatus get status;
+  EncounterStatus get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'class')
-  Coding get class_;
+  Coding get class_ => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept?> get type;
+  List<CodeableConcept?> get type => throw _privateConstructorUsedError;
   @override
-  Reference get subject;
+  Reference get subject => throw _privateConstructorUsedError;
   @override
-  List<EncounterParticipant>? get participant;
+  List<EncounterParticipant>? get participant =>
+      throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get reasonCode;
+  List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
   @override
-  EncounterHospitalization? get hospitalization;
+  EncounterHospitalization? get hospitalization =>
+      throw _privateConstructorUsedError;
   @override
-  List<EncounterLocation>? get location;
+  List<EncounterLocation>? get location => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EncounterCopyWith<_Encounter> get copyWith;
+  _$EncounterCopyWith<_Encounter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 EncounterParticipant _$EncounterParticipantFromJson(Map<String, dynamic> json) {
@@ -552,14 +622,15 @@ const $EncounterParticipant = _$EncounterParticipantTearOff();
 
 /// @nodoc
 mixin _$EncounterParticipant {
-  String? get id;
-  List<CodeableConcept>? get type;
-  Period? get period;
-  Reference? get individual;
+  String? get id => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  Reference? get individual => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EncounterParticipantCopyWith<EncounterParticipant> get copyWith;
+  $EncounterParticipantCopyWith<EncounterParticipant> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -594,11 +665,22 @@ class _$EncounterParticipantCopyWithImpl<$Res>
     Object? individual = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
-      period: period == freezed ? _value.period : period as Period?,
-      individual:
-          individual == freezed ? _value.individual : individual as Reference?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      individual: individual == freezed
+          ? _value.individual
+          : individual // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -663,11 +745,22 @@ class __$EncounterParticipantCopyWithImpl<$Res>
     Object? individual = freezed,
   }) {
     return _then(_EncounterParticipant(
-      id: id == freezed ? _value.id : id as String?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
-      period: period == freezed ? _value.period : period as Period?,
-      individual:
-          individual == freezed ? _value.individual : individual as Reference?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      individual: individual == freezed
+          ? _value.individual
+          : individual // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -732,27 +825,28 @@ class _$_EncounterParticipant extends _EncounterParticipant {
 }
 
 abstract class _EncounterParticipant extends EncounterParticipant {
-  _EncounterParticipant._() : super._();
   factory _EncounterParticipant(
       {String? id,
       List<CodeableConcept>? type,
       Period? period,
       Reference? individual}) = _$_EncounterParticipant;
+  _EncounterParticipant._() : super._();
 
   factory _EncounterParticipant.fromJson(Map<String, dynamic> json) =
       _$_EncounterParticipant.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   @override
-  Period? get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  Reference? get individual;
+  Reference? get individual => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EncounterParticipantCopyWith<_EncounterParticipant> get copyWith;
+  _$EncounterParticipantCopyWith<_EncounterParticipant> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 EncounterHospitalization _$EncounterHospitalizationFromJson(
@@ -782,12 +876,14 @@ const $EncounterHospitalization = _$EncounterHospitalizationTearOff();
 
 /// @nodoc
 mixin _$EncounterHospitalization {
-  String? get id;
-  CodeableConcept? get dischargeDisposition;
+  String? get id => throw _privateConstructorUsedError;
+  CodeableConcept? get dischargeDisposition =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EncounterHospitalizationCopyWith<EncounterHospitalization> get copyWith;
+  $EncounterHospitalizationCopyWith<EncounterHospitalization> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -815,10 +911,14 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
     Object? dischargeDisposition = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       dischargeDisposition: dischargeDisposition == freezed
           ? _value.dischargeDisposition
-          : dischargeDisposition as CodeableConcept?,
+          : dischargeDisposition // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -866,10 +966,14 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
     Object? dischargeDisposition = freezed,
   }) {
     return _then(_EncounterHospitalization(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       dischargeDisposition: dischargeDisposition == freezed
           ? _value.dischargeDisposition
-          : dischargeDisposition as CodeableConcept?,
+          : dischargeDisposition // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -923,21 +1027,23 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
 }
 
 abstract class _EncounterHospitalization extends EncounterHospitalization {
-  _EncounterHospitalization._() : super._();
   factory _EncounterHospitalization(
       {String? id,
       CodeableConcept? dischargeDisposition}) = _$_EncounterHospitalization;
+  _EncounterHospitalization._() : super._();
 
   factory _EncounterHospitalization.fromJson(Map<String, dynamic> json) =
       _$_EncounterHospitalization.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get dischargeDisposition;
+  CodeableConcept? get dischargeDisposition =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EncounterHospitalizationCopyWith<_EncounterHospitalization> get copyWith;
+  _$EncounterHospitalizationCopyWith<_EncounterHospitalization> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 EncounterLocation _$EncounterLocationFromJson(Map<String, dynamic> json) {
@@ -965,12 +1071,13 @@ const $EncounterLocation = _$EncounterLocationTearOff();
 
 /// @nodoc
 mixin _$EncounterLocation {
-  String? get id;
-  Reference get location;
+  String? get id => throw _privateConstructorUsedError;
+  Reference get location => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EncounterLocationCopyWith<EncounterLocation> get copyWith;
+  $EncounterLocationCopyWith<EncounterLocation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -998,8 +1105,14 @@ class _$EncounterLocationCopyWithImpl<$Res>
     Object? location = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      location: location == freezed ? _value.location : location as Reference,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 
@@ -1041,8 +1154,14 @@ class __$EncounterLocationCopyWithImpl<$Res>
     Object? location = freezed,
   }) {
     return _then(_EncounterLocation(
-      id: id == freezed ? _value.id : id as String?,
-      location: location == freezed ? _value.location : location as Reference,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 }
@@ -1095,18 +1214,19 @@ class _$_EncounterLocation extends _EncounterLocation {
 }
 
 abstract class _EncounterLocation extends EncounterLocation {
-  _EncounterLocation._() : super._();
   factory _EncounterLocation({String? id, required Reference location}) =
       _$_EncounterLocation;
+  _EncounterLocation._() : super._();
 
   factory _EncounterLocation.fromJson(Map<String, dynamic> json) =
       _$_EncounterLocation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  Reference get location;
+  Reference get location => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EncounterLocationCopyWith<_EncounterLocation> get copyWith;
+  _$EncounterLocationCopyWith<_EncounterLocation> get copyWith =>
+      throw _privateConstructorUsedError;
 }

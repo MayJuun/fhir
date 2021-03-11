@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'operation_outcome.dart';
 
@@ -8,6 +8,10 @@ part of 'operation_outcome.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) {
   return _OperationOutcome.fromJson(json);
 }
@@ -47,17 +51,18 @@ const $OperationOutcome = _$OperationOutcomeTearOff();
 /// @nodoc
 mixin _$OperationOutcome {
   @JsonKey(unknownEnumValue: UsCoreResourceType.OperationOutcome)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  Code? get language;
-  List<Resource?>? get contained;
-  List<OperationOutcomeIssue> get issue;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  List<Resource?>? get contained => throw _privateConstructorUsedError;
+  List<OperationOutcomeIssue> get issue => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
+  $OperationOutcomeCopyWith<OperationOutcome> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -101,17 +106,32 @@ class _$OperationOutcomeCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      language: language == freezed ? _value.language : language as Code?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource?>?,
       issue: issue == freezed
           ? _value.issue
-          : issue as List<OperationOutcomeIssue>,
+          : issue // ignore: cast_nullable_to_non_nullable
+              as List<OperationOutcomeIssue>,
     ));
   }
 
@@ -185,17 +205,32 @@ class __$OperationOutcomeCopyWithImpl<$Res>
     return _then(_OperationOutcome(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      language: language == freezed ? _value.language : language as Code?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource?>?,
       issue: issue == freezed
           ? _value.issue
-          : issue as List<OperationOutcomeIssue>,
+          : issue // ignore: cast_nullable_to_non_nullable
+              as List<OperationOutcomeIssue>,
     ));
   }
 }
@@ -285,7 +320,6 @@ class _$_OperationOutcome extends _OperationOutcome {
 }
 
 abstract class _OperationOutcome extends OperationOutcome {
-  _OperationOutcome._() : super._();
   factory _OperationOutcome(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.OperationOutcome)
           UsCoreResourceType resourceType,
@@ -295,28 +329,30 @@ abstract class _OperationOutcome extends OperationOutcome {
       Code? language,
       List<Resource?>? contained,
       required List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
+  _OperationOutcome._() : super._();
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcome.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.OperationOutcome)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
-  List<Resource?>? get contained;
+  List<Resource?>? get contained => throw _privateConstructorUsedError;
   @override
-  List<OperationOutcomeIssue> get issue;
+  List<OperationOutcomeIssue> get issue => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith;
+  _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
@@ -359,19 +395,21 @@ const $OperationOutcomeIssue = _$OperationOutcomeIssueTearOff();
 
 /// @nodoc
 mixin _$OperationOutcomeIssue {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
-  OperationOutcomeIssueSeverity? get severity;
+  OperationOutcomeIssueSeverity? get severity =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
-  OperationOutcomeIssueCode? get code;
-  CodeableConcept? get details;
-  String? get diagnostics;
-  List<String>? get location;
-  List<String>? get expression;
+  OperationOutcomeIssueCode? get code => throw _privateConstructorUsedError;
+  CodeableConcept? get details => throw _privateConstructorUsedError;
+  String? get diagnostics => throw _privateConstructorUsedError;
+  List<String>? get location => throw _privateConstructorUsedError;
+  List<String>? get expression => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith;
+  $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -413,20 +451,34 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
     Object? expression = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       severity: severity == freezed
           ? _value.severity
-          : severity as OperationOutcomeIssueSeverity?,
-      code: code == freezed ? _value.code : code as OperationOutcomeIssueCode?,
-      details:
-          details == freezed ? _value.details : details as CodeableConcept?,
-      diagnostics:
-          diagnostics == freezed ? _value.diagnostics : diagnostics as String?,
-      location:
-          location == freezed ? _value.location : location as List<String>?,
+          : severity // ignore: cast_nullable_to_non_nullable
+              as OperationOutcomeIssueSeverity?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as OperationOutcomeIssueCode?,
+      details: details == freezed
+          ? _value.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      diagnostics: diagnostics == freezed
+          ? _value.diagnostics
+          : diagnostics // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       expression: expression == freezed
           ? _value.expression
-          : expression as List<String>?,
+          : expression // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 
@@ -486,20 +538,34 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
     Object? expression = freezed,
   }) {
     return _then(_OperationOutcomeIssue(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       severity: severity == freezed
           ? _value.severity
-          : severity as OperationOutcomeIssueSeverity?,
-      code: code == freezed ? _value.code : code as OperationOutcomeIssueCode?,
-      details:
-          details == freezed ? _value.details : details as CodeableConcept?,
-      diagnostics:
-          diagnostics == freezed ? _value.diagnostics : diagnostics as String?,
-      location:
-          location == freezed ? _value.location : location as List<String>?,
+          : severity // ignore: cast_nullable_to_non_nullable
+              as OperationOutcomeIssueSeverity?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as OperationOutcomeIssueCode?,
+      details: details == freezed
+          ? _value.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      diagnostics: diagnostics == freezed
+          ? _value.diagnostics
+          : diagnostics // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       expression: expression == freezed
           ? _value.expression
-          : expression as List<String>?,
+          : expression // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -594,7 +660,6 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 }
 
 abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
-  _OperationOutcomeIssue._() : super._();
   factory _OperationOutcomeIssue(
       {String? id,
       @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
@@ -605,27 +670,30 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
       String? diagnostics,
       List<String>? location,
       List<String>? expression}) = _$_OperationOutcomeIssue;
+  _OperationOutcomeIssue._() : super._();
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
-  OperationOutcomeIssueSeverity? get severity;
+  OperationOutcomeIssueSeverity? get severity =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
-  OperationOutcomeIssueCode? get code;
+  OperationOutcomeIssueCode? get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get details;
+  CodeableConcept? get details => throw _privateConstructorUsedError;
   @override
-  String? get diagnostics;
+  String? get diagnostics => throw _privateConstructorUsedError;
   @override
-  List<String>? get location;
+  List<String>? get location => throw _privateConstructorUsedError;
   @override
-  List<String>? get expression;
+  List<String>? get expression => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;
+  _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith =>
+      throw _privateConstructorUsedError;
 }

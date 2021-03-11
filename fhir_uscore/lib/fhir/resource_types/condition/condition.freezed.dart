@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'condition.dart';
 
@@ -8,6 +8,10 @@ part of 'condition.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Condition _$ConditionFromJson(Map<String, dynamic> json) {
   return _Condition.fromJson(json);
 }
@@ -53,20 +57,21 @@ const $Condition = _$ConditionTearOff();
 /// @nodoc
 mixin _$Condition {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Condition)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  CodeableConcept? get clinicalStatus;
-  CodeableConcept? get verificationStatus;
-  List<CodeableConcept?> get category;
-  CodeableConcept get code;
-  Reference get subject;
-  FhirDateTime? get onsetDateTime;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  CodeableConcept? get clinicalStatus => throw _privateConstructorUsedError;
+  CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
+  List<CodeableConcept?> get category => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Reference get subject => throw _privateConstructorUsedError;
+  FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConditionCopyWith<Condition> get copyWith;
+  $ConditionCopyWith<Condition> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -118,24 +123,44 @@ class _$ConditionCopyWithImpl<$Res> implements $ConditionCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       clinicalStatus: clinicalStatus == freezed
           ? _value.clinicalStatus
-          : clinicalStatus as CodeableConcept?,
+          : clinicalStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       verificationStatus: verificationStatus == freezed
           ? _value.verificationStatus
-          : verificationStatus as CodeableConcept?,
+          : verificationStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
-          : onsetDateTime as FhirDateTime?,
+          : onsetDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 
@@ -256,24 +281,44 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
     return _then(_Condition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       clinicalStatus: clinicalStatus == freezed
           ? _value.clinicalStatus
-          : clinicalStatus as CodeableConcept?,
+          : clinicalStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       verificationStatus: verificationStatus == freezed
           ? _value.verificationStatus
-          : verificationStatus as CodeableConcept?,
+          : verificationStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept?>,
-      code: code == freezed ? _value.code : code as CodeableConcept,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : category // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
       onsetDateTime: onsetDateTime == freezed
           ? _value.onsetDateTime
-          : onsetDateTime as FhirDateTime?,
+          : onsetDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -384,7 +429,6 @@ class _$_Condition extends _Condition {
 }
 
 abstract class _Condition extends Condition {
-  _Condition._() : super._();
   factory _Condition(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Condition)
           UsCoreResourceType resourceType,
@@ -397,32 +441,34 @@ abstract class _Condition extends Condition {
       required CodeableConcept code,
       required Reference subject,
       FhirDateTime? onsetDateTime}) = _$_Condition;
+  _Condition._() : super._();
 
   factory _Condition.fromJson(Map<String, dynamic> json) =
       _$_Condition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Condition)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get clinicalStatus;
+  CodeableConcept? get clinicalStatus => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get verificationStatus;
+  CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept?> get category;
+  List<CodeableConcept?> get category => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  Reference get subject;
+  Reference get subject => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get onsetDateTime;
+  FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConditionCopyWith<_Condition> get copyWith;
+  _$ConditionCopyWith<_Condition> get copyWith =>
+      throw _privateConstructorUsedError;
 }

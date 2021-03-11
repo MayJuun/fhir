@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'device.dart';
 
@@ -8,6 +8,10 @@ part of 'device.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Device _$DeviceFromJson(Map<String, dynamic> json) {
   return _Device.fromJson(json);
 }
@@ -66,27 +70,27 @@ const $Device = _$DeviceTearOff();
 /// @nodoc
 mixin _$Device {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Device)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  List<DeviceUdiCarrier>? get udiCarrier;
-  String? get distinctIdentifier;
-  String? get manufacturer;
-  FhirDateTime? get manufactureDate;
-  FhirDateTime? get expirationDate;
-  String? get lotNumber;
-  String? get serialNumber;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<DeviceUdiCarrier>? get udiCarrier => throw _privateConstructorUsedError;
+  String? get distinctIdentifier => throw _privateConstructorUsedError;
+  String? get manufacturer => throw _privateConstructorUsedError;
+  FhirDateTime? get manufactureDate => throw _privateConstructorUsedError;
+  FhirDateTime? get expirationDate => throw _privateConstructorUsedError;
+  String? get lotNumber => throw _privateConstructorUsedError;
+  String? get serialNumber => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-  DeviceStatus? get status;
-  List<DeviceDeviceName>? get deviceName;
-  String? get modelNumber;
-  CodeableConcept get type;
-  Reference get patient;
+  DeviceStatus? get status => throw _privateConstructorUsedError;
+  List<DeviceDeviceName>? get deviceName => throw _privateConstructorUsedError;
+  String? get modelNumber => throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Reference get patient => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DeviceCopyWith<Device> get copyWith;
+  $DeviceCopyWith<Device> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -149,37 +153,68 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       udiCarrier: udiCarrier == freezed
           ? _value.udiCarrier
-          : udiCarrier as List<DeviceUdiCarrier>?,
+          : udiCarrier // ignore: cast_nullable_to_non_nullable
+              as List<DeviceUdiCarrier>?,
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
-          : distinctIdentifier as String?,
+          : distinctIdentifier // ignore: cast_nullable_to_non_nullable
+              as String?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as String?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as String?,
       manufactureDate: manufactureDate == freezed
           ? _value.manufactureDate
-          : manufactureDate as FhirDateTime?,
+          : manufactureDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
-          : expirationDate as FhirDateTime?,
-      lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String?,
+          : expirationDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      lotNumber: lotNumber == freezed
+          ? _value.lotNumber
+          : lotNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
       serialNumber: serialNumber == freezed
           ? _value.serialNumber
-          : serialNumber as String?,
-      status: status == freezed ? _value.status : status as DeviceStatus?,
+          : serialNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as DeviceStatus?,
       deviceName: deviceName == freezed
           ? _value.deviceName
-          : deviceName as List<DeviceDeviceName>?,
-      modelNumber:
-          modelNumber == freezed ? _value.modelNumber : modelNumber as String?,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      patient: patient == freezed ? _value.patient : patient as Reference,
+          : deviceName // ignore: cast_nullable_to_non_nullable
+              as List<DeviceDeviceName>?,
+      modelNumber: modelNumber == freezed
+          ? _value.modelNumber
+          : modelNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 
@@ -286,37 +321,68 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
     return _then(_Device(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
       udiCarrier: udiCarrier == freezed
           ? _value.udiCarrier
-          : udiCarrier as List<DeviceUdiCarrier>?,
+          : udiCarrier // ignore: cast_nullable_to_non_nullable
+              as List<DeviceUdiCarrier>?,
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
-          : distinctIdentifier as String?,
+          : distinctIdentifier // ignore: cast_nullable_to_non_nullable
+              as String?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as String?,
+          : manufacturer // ignore: cast_nullable_to_non_nullable
+              as String?,
       manufactureDate: manufactureDate == freezed
           ? _value.manufactureDate
-          : manufactureDate as FhirDateTime?,
+          : manufactureDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       expirationDate: expirationDate == freezed
           ? _value.expirationDate
-          : expirationDate as FhirDateTime?,
-      lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String?,
+          : expirationDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      lotNumber: lotNumber == freezed
+          ? _value.lotNumber
+          : lotNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
       serialNumber: serialNumber == freezed
           ? _value.serialNumber
-          : serialNumber as String?,
-      status: status == freezed ? _value.status : status as DeviceStatus?,
+          : serialNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as DeviceStatus?,
       deviceName: deviceName == freezed
           ? _value.deviceName
-          : deviceName as List<DeviceDeviceName>?,
-      modelNumber:
-          modelNumber == freezed ? _value.modelNumber : modelNumber as String?,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      patient: patient == freezed ? _value.patient : patient as Reference,
+          : deviceName // ignore: cast_nullable_to_non_nullable
+              as List<DeviceDeviceName>?,
+      modelNumber: modelNumber == freezed
+          ? _value.modelNumber
+          : modelNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 }
@@ -469,7 +535,6 @@ class _$_Device extends _Device {
 }
 
 abstract class _Device extends Device {
-  _Device._() : super._();
   factory _Device(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Device)
           UsCoreResourceType resourceType,
@@ -489,46 +554,47 @@ abstract class _Device extends Device {
       String? modelNumber,
       required CodeableConcept type,
       required Reference patient}) = _$_Device;
+  _Device._() : super._();
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Device)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<DeviceUdiCarrier>? get udiCarrier;
+  List<DeviceUdiCarrier>? get udiCarrier => throw _privateConstructorUsedError;
   @override
-  String? get distinctIdentifier;
+  String? get distinctIdentifier => throw _privateConstructorUsedError;
   @override
-  String? get manufacturer;
+  String? get manufacturer => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get manufactureDate;
+  FhirDateTime? get manufactureDate => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get expirationDate;
+  FhirDateTime? get expirationDate => throw _privateConstructorUsedError;
   @override
-  String? get lotNumber;
+  String? get lotNumber => throw _privateConstructorUsedError;
   @override
-  String? get serialNumber;
+  String? get serialNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-  DeviceStatus? get status;
+  DeviceStatus? get status => throw _privateConstructorUsedError;
   @override
-  List<DeviceDeviceName>? get deviceName;
+  List<DeviceDeviceName>? get deviceName => throw _privateConstructorUsedError;
   @override
-  String? get modelNumber;
+  String? get modelNumber => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Reference get patient;
+  Reference get patient => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DeviceCopyWith<_Device> get copyWith;
+  _$DeviceCopyWith<_Device> get copyWith => throw _privateConstructorUsedError;
 }
 
 DeviceUdiCarrier _$DeviceUdiCarrierFromJson(Map<String, dynamic> json) {
@@ -565,16 +631,18 @@ const $DeviceUdiCarrier = _$DeviceUdiCarrierTearOff();
 
 /// @nodoc
 mixin _$DeviceUdiCarrier {
-  String? get id;
-  String? get deviceIdentifier;
-  Base64Binary? get carrierAIDC;
-  String? get carrierHRF;
+  String? get id => throw _privateConstructorUsedError;
+  String? get deviceIdentifier => throw _privateConstructorUsedError;
+  Base64Binary? get carrierAIDC => throw _privateConstructorUsedError;
+  String? get carrierHRF => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
-  DeviceUdiCarrierEntryType? get entryType;
+  DeviceUdiCarrierEntryType? get entryType =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DeviceUdiCarrierCopyWith<DeviceUdiCarrier> get copyWith;
+  $DeviceUdiCarrierCopyWith<DeviceUdiCarrier> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -609,18 +677,26 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res>
     Object? entryType = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       deviceIdentifier: deviceIdentifier == freezed
           ? _value.deviceIdentifier
-          : deviceIdentifier as String?,
+          : deviceIdentifier // ignore: cast_nullable_to_non_nullable
+              as String?,
       carrierAIDC: carrierAIDC == freezed
           ? _value.carrierAIDC
-          : carrierAIDC as Base64Binary?,
-      carrierHRF:
-          carrierHRF == freezed ? _value.carrierHRF : carrierHRF as String?,
+          : carrierAIDC // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      carrierHRF: carrierHRF == freezed
+          ? _value.carrierHRF
+          : carrierHRF // ignore: cast_nullable_to_non_nullable
+              as String?,
       entryType: entryType == freezed
           ? _value.entryType
-          : entryType as DeviceUdiCarrierEntryType?,
+          : entryType // ignore: cast_nullable_to_non_nullable
+              as DeviceUdiCarrierEntryType?,
     ));
   }
 }
@@ -661,18 +737,26 @@ class __$DeviceUdiCarrierCopyWithImpl<$Res>
     Object? entryType = freezed,
   }) {
     return _then(_DeviceUdiCarrier(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       deviceIdentifier: deviceIdentifier == freezed
           ? _value.deviceIdentifier
-          : deviceIdentifier as String?,
+          : deviceIdentifier // ignore: cast_nullable_to_non_nullable
+              as String?,
       carrierAIDC: carrierAIDC == freezed
           ? _value.carrierAIDC
-          : carrierAIDC as Base64Binary?,
-      carrierHRF:
-          carrierHRF == freezed ? _value.carrierHRF : carrierHRF as String?,
+          : carrierAIDC // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      carrierHRF: carrierHRF == freezed
+          ? _value.carrierHRF
+          : carrierHRF // ignore: cast_nullable_to_non_nullable
+              as String?,
       entryType: entryType == freezed
           ? _value.entryType
-          : entryType as DeviceUdiCarrierEntryType?,
+          : entryType // ignore: cast_nullable_to_non_nullable
+              as DeviceUdiCarrierEntryType?,
     ));
   }
 }
@@ -751,7 +835,6 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
 }
 
 abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
-  _DeviceUdiCarrier._() : super._();
   factory _DeviceUdiCarrier(
       {String? id,
       String? deviceIdentifier,
@@ -759,24 +842,27 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
       String? carrierHRF,
       @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
           DeviceUdiCarrierEntryType? entryType}) = _$_DeviceUdiCarrier;
+  _DeviceUdiCarrier._() : super._();
 
   factory _DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =
       _$_DeviceUdiCarrier.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  String? get deviceIdentifier;
+  String? get deviceIdentifier => throw _privateConstructorUsedError;
   @override
-  Base64Binary? get carrierAIDC;
+  Base64Binary? get carrierAIDC => throw _privateConstructorUsedError;
   @override
-  String? get carrierHRF;
+  String? get carrierHRF => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
-  DeviceUdiCarrierEntryType? get entryType;
+  DeviceUdiCarrierEntryType? get entryType =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DeviceUdiCarrierCopyWith<_DeviceUdiCarrier> get copyWith;
+  _$DeviceUdiCarrierCopyWith<_DeviceUdiCarrier> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DeviceDeviceName _$DeviceDeviceNameFromJson(Map<String, dynamic> json) {
@@ -809,14 +895,15 @@ const $DeviceDeviceName = _$DeviceDeviceNameTearOff();
 
 /// @nodoc
 mixin _$DeviceDeviceName {
-  String? get id;
-  String? get name;
+  String? get id => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
-  DeviceDeviceNameType? get type;
+  DeviceDeviceNameType? get type => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DeviceDeviceNameCopyWith<DeviceDeviceName> get copyWith;
+  $DeviceDeviceNameCopyWith<DeviceDeviceName> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -847,9 +934,18 @@ class _$DeviceDeviceNameCopyWithImpl<$Res>
     Object? type = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      name: name == freezed ? _value.name : name as String?,
-      type: type == freezed ? _value.type : type as DeviceDeviceNameType?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as DeviceDeviceNameType?,
     ));
   }
 }
@@ -886,9 +982,18 @@ class __$DeviceDeviceNameCopyWithImpl<$Res>
     Object? type = freezed,
   }) {
     return _then(_DeviceDeviceName(
-      id: id == freezed ? _value.id : id as String?,
-      name: name == freezed ? _value.name : name as String?,
-      type: type == freezed ? _value.type : type as DeviceDeviceNameType?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as DeviceDeviceNameType?,
     ));
   }
 }
@@ -950,24 +1055,25 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
 }
 
 abstract class _DeviceDeviceName extends DeviceDeviceName {
-  _DeviceDeviceName._() : super._();
   factory _DeviceDeviceName(
       {String? id,
       String? name,
       @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
           DeviceDeviceNameType? type}) = _$_DeviceDeviceName;
+  _DeviceDeviceName._() : super._();
 
   factory _DeviceDeviceName.fromJson(Map<String, dynamic> json) =
       _$_DeviceDeviceName.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
-  DeviceDeviceNameType? get type;
+  DeviceDeviceNameType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DeviceDeviceNameCopyWith<_DeviceDeviceName> get copyWith;
+  _$DeviceDeviceNameCopyWith<_DeviceDeviceName> get copyWith =>
+      throw _privateConstructorUsedError;
 }

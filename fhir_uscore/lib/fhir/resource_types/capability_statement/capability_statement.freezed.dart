@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: non_constant_identifier_names, unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'capability_statement.dart';
 
@@ -8,6 +8,10 @@ part of 'capability_statement.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
   return _CapabilityStatement.fromJson(json);
 }
@@ -108,49 +112,57 @@ const $CapabilityStatement = _$CapabilityStatementTearOff();
 /// @nodoc
 mixin _$CapabilityStatement {
   @JsonKey(unknownEnumValue: UsCoreResourceType.CapabilityStatement)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  FhirUri? get implicitRules;
-  Code? get language;
-  List<Resource?>? get contained;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  List<Resource?>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  Narrative? get text;
-  FhirUri? get url;
-  String? get version;
-  String? get name;
-  String? get title;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
-  CapabilityStatementStatus? get status;
-  Boolean? get experimental;
-  FhirDateTime? get date;
-  String? get publisher;
-  List<ContactDetail>? get contact;
-  Markdown? get description;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  Markdown? get purpose;
-  Markdown? get copyright;
+  CapabilityStatementStatus? get status => throw _privateConstructorUsedError;
+  Boolean? get experimental => throw _privateConstructorUsedError;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
+  String? get publisher => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  Markdown? get purpose => throw _privateConstructorUsedError;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
-  CapabilityStatementKind? get kind;
-  List<Canonical>? get instantiates;
-  List<Canonical>? get imports;
-  CapabilityStatementSoftware? get software;
-  CapabilityStatementImplementation? get implementation;
+  CapabilityStatementKind? get kind => throw _privateConstructorUsedError;
+  List<Canonical>? get instantiates => throw _privateConstructorUsedError;
+  List<Canonical>? get imports => throw _privateConstructorUsedError;
+  CapabilityStatementSoftware? get software =>
+      throw _privateConstructorUsedError;
+  CapabilityStatementImplementation? get implementation =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
-  CapabilityStatementFhirVersion? get fhirVersion;
-  List<Code>? get format;
-  List<Code>? get patchFormat;
-  List<Canonical>? get implementationGuide;
-  List<CapabilityStatementRest>? get rest;
-  List<CapabilityStatementMessaging>? get messaging;
-  List<CapabilityStatementDocument>? get document;
+  CapabilityStatementFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
+  List<Code>? get format => throw _privateConstructorUsedError;
+  List<Code>? get patchFormat => throw _privateConstructorUsedError;
+  List<Canonical>? get implementationGuide =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementRest>? get rest => throw _privateConstructorUsedError;
+  List<CapabilityStatementMessaging>? get messaging =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementDocument>? get document =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CapabilityStatementCopyWith<CapabilityStatement> get copyWith;
+  $CapabilityStatementCopyWith<CapabilityStatement> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -256,80 +268,144 @@ class _$CapabilityStatementCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      version: version == freezed ? _value.version : version as String?,
-      name: name == freezed ? _value.name : name as String?,
-      title: title == freezed ? _value.title : title as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       status: status == freezed
           ? _value.status
-          : status as CapabilityStatementStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementStatus?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
-      kind: kind == freezed ? _value.kind : kind as CapabilityStatementKind?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementKind?,
       instantiates: instantiates == freezed
           ? _value.instantiates
-          : instantiates as List<Canonical>?,
-      imports:
-          imports == freezed ? _value.imports : imports as List<Canonical>?,
+          : instantiates // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      imports: imports == freezed
+          ? _value.imports
+          : imports // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       software: software == freezed
           ? _value.software
-          : software as CapabilityStatementSoftware?,
+          : software // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSoftware?,
       implementation: implementation == freezed
           ? _value.implementation
-          : implementation as CapabilityStatementImplementation?,
+          : implementation // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementImplementation?,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as CapabilityStatementFhirVersion?,
-      format: format == freezed ? _value.format : format as List<Code>?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementFhirVersion?,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
-          : patchFormat as List<Code>?,
+          : patchFormat // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
-          : implementationGuide as List<Canonical>?,
+          : implementationGuide // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       rest: rest == freezed
           ? _value.rest
-          : rest as List<CapabilityStatementRest>?,
+          : rest // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<CapabilityStatementMessaging>?,
+          : messaging // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<CapabilityStatementDocument>?,
+          : document // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementDocument>?,
     ));
   }
 
@@ -491,80 +567,144 @@ class __$CapabilityStatementCopyWithImpl<$Res>
     return _then(_CapabilityStatement(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri?,
-      language: language == freezed ? _value.language : language as Code?,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      version: version == freezed ? _value.version : version as String?,
-      name: name == freezed ? _value.name : name as String?,
-      title: title == freezed ? _value.title : title as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
       status: status == freezed
           ? _value.status
-          : status as CapabilityStatementStatus?,
+          : status // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementStatus?,
       experimental: experimental == freezed
           ? _value.experimental
-          : experimental as Boolean?,
-      date: date == freezed ? _value.date : date as FhirDateTime?,
-      publisher: publisher == freezed ? _value.publisher : publisher as String?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : experimental // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      publisher: publisher == freezed
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext // ignore: cast_nullable_to_non_nullable
+              as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
-      copyright:
-          copyright == freezed ? _value.copyright : copyright as Markdown?,
-      kind: kind == freezed ? _value.kind : kind as CapabilityStatementKind?,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      kind: kind == freezed
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementKind?,
       instantiates: instantiates == freezed
           ? _value.instantiates
-          : instantiates as List<Canonical>?,
-      imports:
-          imports == freezed ? _value.imports : imports as List<Canonical>?,
+          : instantiates // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
+      imports: imports == freezed
+          ? _value.imports
+          : imports // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       software: software == freezed
           ? _value.software
-          : software as CapabilityStatementSoftware?,
+          : software // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSoftware?,
       implementation: implementation == freezed
           ? _value.implementation
-          : implementation as CapabilityStatementImplementation?,
+          : implementation // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementImplementation?,
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
-          : fhirVersion as CapabilityStatementFhirVersion?,
-      format: format == freezed ? _value.format : format as List<Code>?,
+          : fhirVersion // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementFhirVersion?,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
-          : patchFormat as List<Code>?,
+          : patchFormat // ignore: cast_nullable_to_non_nullable
+              as List<Code>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
-          : implementationGuide as List<Canonical>?,
+          : implementationGuide // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       rest: rest == freezed
           ? _value.rest
-          : rest as List<CapabilityStatementRest>?,
+          : rest // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementRest>?,
       messaging: messaging == freezed
           ? _value.messaging
-          : messaging as List<CapabilityStatementMessaging>?,
+          : messaging // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementMessaging>?,
       document: document == freezed
           ? _value.document
-          : document as List<CapabilityStatementDocument>?,
+          : document // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementDocument>?,
     ));
   }
 }
@@ -836,7 +976,6 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 }
 
 abstract class _CapabilityStatement extends CapabilityStatement {
-  _CapabilityStatement._() : super._();
   factory _CapabilityStatement(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.CapabilityStatement)
           UsCoreResourceType resourceType,
@@ -878,88 +1017,97 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       List<CapabilityStatementRest>? rest,
       List<CapabilityStatementMessaging>? messaging,
       List<CapabilityStatementDocument>? document}) = _$_CapabilityStatement;
+  _CapabilityStatement._() : super._();
 
   factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatement.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.CapabilityStatement)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri? get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
-  Code? get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
-  List<Resource?>? get contained;
+  List<Resource?>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
-  CapabilityStatementStatus? get status;
+  CapabilityStatementStatus? get status => throw _privateConstructorUsedError;
   @override
-  Boolean? get experimental;
+  Boolean? get experimental => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get date;
+  FhirDateTime? get date => throw _privateConstructorUsedError;
   @override
-  String? get publisher;
+  String? get publisher => throw _privateConstructorUsedError;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext>? get useContext => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  Markdown? get purpose;
+  Markdown? get purpose => throw _privateConstructorUsedError;
   @override
-  Markdown? get copyright;
+  Markdown? get copyright => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
-  CapabilityStatementKind? get kind;
+  CapabilityStatementKind? get kind => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get instantiates;
+  List<Canonical>? get instantiates => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get imports;
+  List<Canonical>? get imports => throw _privateConstructorUsedError;
   @override
-  CapabilityStatementSoftware? get software;
+  CapabilityStatementSoftware? get software =>
+      throw _privateConstructorUsedError;
   @override
-  CapabilityStatementImplementation? get implementation;
+  CapabilityStatementImplementation? get implementation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
-  CapabilityStatementFhirVersion? get fhirVersion;
+  CapabilityStatementFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @override
-  List<Code>? get format;
+  List<Code>? get format => throw _privateConstructorUsedError;
   @override
-  List<Code>? get patchFormat;
+  List<Code>? get patchFormat => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get implementationGuide;
+  List<Canonical>? get implementationGuide =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementRest>? get rest;
+  List<CapabilityStatementRest>? get rest => throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementMessaging>? get messaging;
+  List<CapabilityStatementMessaging>? get messaging =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementDocument>? get document;
+  List<CapabilityStatementDocument>? get document =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith;
+  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CapabilityStatementSoftware _$CapabilityStatementSoftwareFromJson(
@@ -998,18 +1146,19 @@ const $CapabilityStatementSoftware = _$CapabilityStatementSoftwareTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementSoftware {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  String? get name;
-  String? get version;
-  FhirDateTime? get releaseDate;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementSoftwareCopyWith<CapabilityStatementSoftware>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1046,18 +1195,30 @@ class _$CapabilityStatementSoftwareCopyWithImpl<$Res>
     Object? releaseDate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      name: name == freezed ? _value.name : name as String?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
-          : releaseDate as FhirDateTime?,
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -1102,18 +1263,30 @@ class __$CapabilityStatementSoftwareCopyWithImpl<$Res>
     Object? releaseDate = freezed,
   }) {
     return _then(_CapabilityStatementSoftware(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      name: name == freezed ? _value.name : name as String?,
-      version: version == freezed ? _value.version : version as String?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       releaseDate: releaseDate == freezed
           ? _value.releaseDate
-          : releaseDate as FhirDateTime?,
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
     ));
   }
 }
@@ -1199,7 +1372,6 @@ class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
 
 abstract class _CapabilityStatementSoftware
     extends CapabilityStatementSoftware {
-  _CapabilityStatementSoftware._() : super._();
   factory _CapabilityStatementSoftware(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
@@ -1207,27 +1379,29 @@ abstract class _CapabilityStatementSoftware
       String? name,
       String? version,
       FhirDateTime? releaseDate}) = _$_CapabilityStatementSoftware;
+  _CapabilityStatementSoftware._() : super._();
 
   factory _CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSoftware.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  String? get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
-  FhirDateTime? get releaseDate;
+  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementSoftwareCopyWith<_CapabilityStatementSoftware>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementImplementation _$CapabilityStatementImplementationFromJson(
@@ -1267,18 +1441,19 @@ const $CapabilityStatementImplementation =
 
 /// @nodoc
 mixin _$CapabilityStatementImplementation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  String? get description;
-  FhirUrl? get url;
-  Reference? get custodian;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  FhirUrl? get url => throw _privateConstructorUsedError;
+  Reference? get custodian => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementImplementationCopyWith<CapabilityStatementImplementation>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1317,18 +1492,30 @@ class _$CapabilityStatementImplementationCopyWithImpl<$Res>
     Object? custodian = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      description:
-          description == freezed ? _value.description : description as String?,
-      url: url == freezed ? _value.url : url as FhirUrl?,
-      custodian:
-          custodian == freezed ? _value.custodian : custodian as Reference?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      custodian: custodian == freezed
+          ? _value.custodian
+          : custodian // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -1387,18 +1574,30 @@ class __$CapabilityStatementImplementationCopyWithImpl<$Res>
     Object? custodian = freezed,
   }) {
     return _then(_CapabilityStatementImplementation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      description:
-          description == freezed ? _value.description : description as String?,
-      url: url == freezed ? _value.url : url as FhirUrl?,
-      custodian:
-          custodian == freezed ? _value.custodian : custodian as Reference?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      custodian: custodian == freezed
+          ? _value.custodian
+          : custodian // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -1487,7 +1686,6 @@ class _$_CapabilityStatementImplementation
 
 abstract class _CapabilityStatementImplementation
     extends CapabilityStatementImplementation {
-  _CapabilityStatementImplementation._() : super._();
   factory _CapabilityStatementImplementation(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
@@ -1495,28 +1693,31 @@ abstract class _CapabilityStatementImplementation
       String? description,
       FhirUrl? url,
       Reference? custodian}) = _$_CapabilityStatementImplementation;
+  _CapabilityStatementImplementation._() : super._();
 
   factory _CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =
       _$_CapabilityStatementImplementation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get url;
+  FhirUrl? get url => throw _privateConstructorUsedError;
   @override
-  Reference? get custodian;
+  Reference? get custodian => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementImplementationCopyWith<
-      _CapabilityStatementImplementation> get copyWith;
+          _CapabilityStatementImplementation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementRest _$CapabilityStatementRestFromJson(
@@ -1567,23 +1768,30 @@ const $CapabilityStatementRest = _$CapabilityStatementRestTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementRest {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
-  CapabilityStatementRestMode? get mode;
-  Markdown? get documentation;
-  CapabilityStatementSecurity? get security;
-  List<CapabilityStatementResource>? get resource;
-  List<CapabilityStatementInteraction1>? get interaction;
-  List<CapabilityStatementSearchParam>? get searchParam;
-  List<CapabilityStatementOperation>? get operation;
-  List<Canonical>? get compartment;
+  CapabilityStatementRestMode? get mode => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
+  CapabilityStatementSecurity? get security =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementResource>? get resource =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementInteraction1>? get interaction =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementOperation>? get operation =>
+      throw _privateConstructorUsedError;
+  List<Canonical>? get compartment => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CapabilityStatementRestCopyWith<CapabilityStatementRest> get copyWith;
+  $CapabilityStatementRestCopyWith<CapabilityStatementRest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1633,36 +1841,50 @@ class _$CapabilityStatementRestCopyWithImpl<$Res>
     Object? compartment = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      mode:
-          mode == freezed ? _value.mode : mode as CapabilityStatementRestMode?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementRestMode?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       security: security == freezed
           ? _value.security
-          : security as CapabilityStatementSecurity?,
+          : security // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSecurity?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CapabilityStatementResource>?,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementResource>?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction1>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementInteraction1>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementOperation>?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<Canonical>?,
+          : compartment // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
     ));
   }
 
@@ -1732,36 +1954,50 @@ class __$CapabilityStatementRestCopyWithImpl<$Res>
     Object? compartment = freezed,
   }) {
     return _then(_CapabilityStatementRest(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      mode:
-          mode == freezed ? _value.mode : mode as CapabilityStatementRestMode?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementRestMode?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       security: security == freezed
           ? _value.security
-          : security as CapabilityStatementSecurity?,
+          : security // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSecurity?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<CapabilityStatementResource>?,
+          : resource // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementResource>?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction1>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementInteraction1>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementOperation>?,
       compartment: compartment == freezed
           ? _value.compartment
-          : compartment as List<Canonical>?,
+          : compartment // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
     ));
   }
 }
@@ -1882,7 +2118,6 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
 }
 
 abstract class _CapabilityStatementRest extends CapabilityStatementRest {
-  _CapabilityStatementRest._() : super._();
   factory _CapabilityStatementRest(
       {String? id,
       @JsonKey(name: 'extension')
@@ -1897,37 +2132,45 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
       List<CapabilityStatementSearchParam>? searchParam,
       List<CapabilityStatementOperation>? operation,
       List<Canonical>? compartment}) = _$_CapabilityStatementRest;
+  _CapabilityStatementRest._() : super._();
 
   factory _CapabilityStatementRest.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementRest.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
-  CapabilityStatementRestMode? get mode;
+  CapabilityStatementRestMode? get mode => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
-  CapabilityStatementSecurity? get security;
+  CapabilityStatementSecurity? get security =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementResource>? get resource;
+  List<CapabilityStatementResource>? get resource =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementInteraction1>? get interaction;
+  List<CapabilityStatementInteraction1>? get interaction =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementSearchParam>? get searchParam;
+  List<CapabilityStatementSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementOperation>? get operation;
+  List<CapabilityStatementOperation>? get operation =>
+      throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get compartment;
+  List<Canonical>? get compartment => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CapabilityStatementRestCopyWith<_CapabilityStatementRest> get copyWith;
+  _$CapabilityStatementRestCopyWith<_CapabilityStatementRest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CapabilityStatementSecurity _$CapabilityStatementSecurityFromJson(
@@ -1966,18 +2209,19 @@ const $CapabilityStatementSecurity = _$CapabilityStatementSecurityTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementSecurity {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  Boolean? get cors;
-  List<CodeableConcept>? get service;
-  Markdown? get description;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Boolean? get cors => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get service => throw _privateConstructorUsedError;
+  Markdown? get description => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementSecurityCopyWith<CapabilityStatementSecurity>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2014,20 +2258,30 @@ class _$CapabilityStatementSecurityCopyWithImpl<$Res>
     Object? description = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      cors: cors == freezed ? _value.cors : cors as Boolean?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      cors: cors == freezed
+          ? _value.cors
+          : cors // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       service: service == freezed
           ? _value.service
-          : service as List<CodeableConcept>?,
+          : service // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -2072,20 +2326,30 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
     Object? description = freezed,
   }) {
     return _then(_CapabilityStatementSecurity(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      cors: cors == freezed ? _value.cors : cors as Boolean?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      cors: cors == freezed
+          ? _value.cors
+          : cors // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       service: service == freezed
           ? _value.service
-          : service as List<CodeableConcept>?,
+          : service // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       description: description == freezed
           ? _value.description
-          : description as Markdown?,
+          : description // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -2171,7 +2435,6 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
 
 abstract class _CapabilityStatementSecurity
     extends CapabilityStatementSecurity {
-  _CapabilityStatementSecurity._() : super._();
   factory _CapabilityStatementSecurity(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
@@ -2179,27 +2442,29 @@ abstract class _CapabilityStatementSecurity
       Boolean? cors,
       List<CodeableConcept>? service,
       Markdown? description}) = _$_CapabilityStatementSecurity;
+  _CapabilityStatementSecurity._() : super._();
 
   factory _CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSecurity.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get cors;
+  Boolean? get cors => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get service;
+  List<CodeableConcept>? get service => throw _privateConstructorUsedError;
   @override
-  Markdown? get description;
+  Markdown? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementSecurityCopyWith<_CapabilityStatementSecurity>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementResource _$CapabilityStatementResourceFromJson(
@@ -2270,36 +2535,44 @@ const $CapabilityStatementResource = _$CapabilityStatementResourceTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementResource {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  Code? get type;
-  Canonical? get profile;
-  List<Canonical>? get supportedProfile;
-  Markdown? get documentation;
-  List<CapabilityStatementInteraction>? get interaction;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
+  Canonical? get profile => throw _privateConstructorUsedError;
+  List<Canonical>? get supportedProfile => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
+  List<CapabilityStatementInteraction>? get interaction =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-  CapabilityStatementResourceVersioning? get versioning;
-  Boolean? get readHistory;
-  Boolean? get updateCreate;
-  Boolean? get conditionalCreate;
+  CapabilityStatementResourceVersioning? get versioning =>
+      throw _privateConstructorUsedError;
+  Boolean? get readHistory => throw _privateConstructorUsedError;
+  Boolean? get updateCreate => throw _privateConstructorUsedError;
+  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-  CapabilityStatementResourceConditionalRead? get conditionalRead;
-  Boolean? get conditionalUpdate;
+  CapabilityStatementResourceConditionalRead? get conditionalRead =>
+      throw _privateConstructorUsedError;
+  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
   @JsonKey(
       unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-  CapabilityStatementResourceConditionalDelete? get conditionalDelete;
-  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy;
-  List<String>? get searchInclude;
-  List<String>? get searchRevInclude;
-  List<CapabilityStatementSearchParam>? get searchParam;
-  List<CapabilityStatementOperation>? get operation;
+  CapabilityStatementResourceConditionalDelete? get conditionalDelete =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy =>
+      throw _privateConstructorUsedError;
+  List<String>? get searchInclude => throw _privateConstructorUsedError;
+  List<String>? get searchRevInclude => throw _privateConstructorUsedError;
+  List<CapabilityStatementSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementOperation>? get operation =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementResourceCopyWith<CapabilityStatementResource>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2368,60 +2641,86 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
     Object? operation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as Code?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       supportedProfile: supportedProfile == freezed
           ? _value.supportedProfile
-          : supportedProfile as List<Canonical>?,
+          : supportedProfile // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementInteraction>?,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as CapabilityStatementResourceVersioning?,
-      readHistory:
-          readHistory == freezed ? _value.readHistory : readHistory as Boolean?,
+          : versioning // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceVersioning?,
+      readHistory: readHistory == freezed
+          ? _value.readHistory
+          : readHistory // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       updateCreate: updateCreate == freezed
           ? _value.updateCreate
-          : updateCreate as Boolean?,
+          : updateCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalCreate: conditionalCreate == freezed
           ? _value.conditionalCreate
-          : conditionalCreate as Boolean?,
+          : conditionalCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalRead: conditionalRead == freezed
           ? _value.conditionalRead
-          : conditionalRead as CapabilityStatementResourceConditionalRead?,
+          : conditionalRead // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceConditionalRead?,
       conditionalUpdate: conditionalUpdate == freezed
           ? _value.conditionalUpdate
-          : conditionalUpdate as Boolean?,
+          : conditionalUpdate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
-          : conditionalDelete as CapabilityStatementResourceConditionalDelete?,
+          : conditionalDelete // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceConditionalDelete?,
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
-          : referencePolicy
+          : referencePolicy // ignore: cast_nullable_to_non_nullable
               as List<CapabilityStatementResourceReferencePolicy>?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as List<String>?,
+          : searchInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as List<String>?,
+          : searchRevInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementOperation>?,
     ));
   }
 }
@@ -2498,60 +2797,86 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
     Object? operation = freezed,
   }) {
     return _then(_CapabilityStatementResource(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as Code?,
-      profile: profile == freezed ? _value.profile : profile as Canonical?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       supportedProfile: supportedProfile == freezed
           ? _value.supportedProfile
-          : supportedProfile as List<Canonical>?,
+          : supportedProfile // ignore: cast_nullable_to_non_nullable
+              as List<Canonical>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction>?,
+          : interaction // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementInteraction>?,
       versioning: versioning == freezed
           ? _value.versioning
-          : versioning as CapabilityStatementResourceVersioning?,
-      readHistory:
-          readHistory == freezed ? _value.readHistory : readHistory as Boolean?,
+          : versioning // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceVersioning?,
+      readHistory: readHistory == freezed
+          ? _value.readHistory
+          : readHistory // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       updateCreate: updateCreate == freezed
           ? _value.updateCreate
-          : updateCreate as Boolean?,
+          : updateCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalCreate: conditionalCreate == freezed
           ? _value.conditionalCreate
-          : conditionalCreate as Boolean?,
+          : conditionalCreate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalRead: conditionalRead == freezed
           ? _value.conditionalRead
-          : conditionalRead as CapabilityStatementResourceConditionalRead?,
+          : conditionalRead // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceConditionalRead?,
       conditionalUpdate: conditionalUpdate == freezed
           ? _value.conditionalUpdate
-          : conditionalUpdate as Boolean?,
+          : conditionalUpdate // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
-          : conditionalDelete as CapabilityStatementResourceConditionalDelete?,
+          : conditionalDelete // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementResourceConditionalDelete?,
       referencePolicy: referencePolicy == freezed
           ? _value.referencePolicy
-          : referencePolicy
+          : referencePolicy // ignore: cast_nullable_to_non_nullable
               as List<CapabilityStatementResourceReferencePolicy>?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
-          : searchInclude as List<String>?,
+          : searchInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
-          : searchRevInclude as List<String>?,
+          : searchRevInclude // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
-          : searchParam as List<CapabilityStatementSearchParam>?,
+          : searchParam // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSearchParam>?,
       operation: operation == freezed
           ? _value.operation
-          : operation as List<CapabilityStatementOperation>?,
+          : operation // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementOperation>?,
     ));
   }
 }
@@ -2743,7 +3068,6 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
 
 abstract class _CapabilityStatementResource
     extends CapabilityStatementResource {
-  _CapabilityStatementResource._() : super._();
   factory _CapabilityStatementResource(
       {String? id,
       @JsonKey(name: 'extension')
@@ -2769,59 +3093,68 @@ abstract class _CapabilityStatementResource
       List<String>? searchRevInclude,
       List<CapabilityStatementSearchParam>? searchParam,
       List<CapabilityStatementOperation>? operation}) = _$_CapabilityStatementResource;
+  _CapabilityStatementResource._() : super._();
 
   factory _CapabilityStatementResource.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementResource.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Code? get type;
+  Code? get type => throw _privateConstructorUsedError;
   @override
-  Canonical? get profile;
+  Canonical? get profile => throw _privateConstructorUsedError;
   @override
-  List<Canonical>? get supportedProfile;
+  List<Canonical>? get supportedProfile => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementInteraction>? get interaction;
+  List<CapabilityStatementInteraction>? get interaction =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-  CapabilityStatementResourceVersioning? get versioning;
+  CapabilityStatementResourceVersioning? get versioning =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get readHistory;
+  Boolean? get readHistory => throw _privateConstructorUsedError;
   @override
-  Boolean? get updateCreate;
+  Boolean? get updateCreate => throw _privateConstructorUsedError;
   @override
-  Boolean? get conditionalCreate;
+  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-  CapabilityStatementResourceConditionalRead? get conditionalRead;
+  CapabilityStatementResourceConditionalRead? get conditionalRead =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean? get conditionalUpdate;
+  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-  CapabilityStatementResourceConditionalDelete? get conditionalDelete;
+  CapabilityStatementResourceConditionalDelete? get conditionalDelete =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy;
+  List<CapabilityStatementResourceReferencePolicy>? get referencePolicy =>
+      throw _privateConstructorUsedError;
   @override
-  List<String>? get searchInclude;
+  List<String>? get searchInclude => throw _privateConstructorUsedError;
   @override
-  List<String>? get searchRevInclude;
+  List<String>? get searchRevInclude => throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementSearchParam>? get searchParam;
+  List<CapabilityStatementSearchParam>? get searchParam =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementOperation>? get operation;
+  List<CapabilityStatementOperation>? get operation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementResourceCopyWith<_CapabilityStatementResource>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementInteraction _$CapabilityStatementInteractionFromJson(
@@ -2861,18 +3194,20 @@ const $CapabilityStatementInteraction =
 
 /// @nodoc
 mixin _$CapabilityStatementInteraction {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
-  CapabilityStatementInteractionCode? get code;
-  Markdown? get documentation;
+  CapabilityStatementInteractionCode? get code =>
+      throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementInteractionCopyWith<CapabilityStatementInteraction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2909,19 +3244,26 @@ class _$CapabilityStatementInteractionCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       code: code == freezed
           ? _value.code
-          : code as CapabilityStatementInteractionCode?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementInteractionCode?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -2966,19 +3308,26 @@ class __$CapabilityStatementInteractionCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_CapabilityStatementInteraction(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       code: code == freezed
           ? _value.code
-          : code as CapabilityStatementInteractionCode?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementInteractionCode?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -3062,7 +3411,6 @@ class _$_CapabilityStatementInteraction
 
 abstract class _CapabilityStatementInteraction
     extends CapabilityStatementInteraction {
-  _CapabilityStatementInteraction._() : super._();
   factory _CapabilityStatementInteraction(
       {String? id,
       @JsonKey(name: 'extension')
@@ -3071,26 +3419,29 @@ abstract class _CapabilityStatementInteraction
       @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
           CapabilityStatementInteractionCode? code,
       Markdown? documentation}) = _$_CapabilityStatementInteraction;
+  _CapabilityStatementInteraction._() : super._();
 
   factory _CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementInteraction.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
-  CapabilityStatementInteractionCode? get code;
+  CapabilityStatementInteractionCode? get code =>
+      throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementInteractionCopyWith<_CapabilityStatementInteraction>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementSearchParam _$CapabilityStatementSearchParamFromJson(
@@ -3134,20 +3485,22 @@ const $CapabilityStatementSearchParam =
 
 /// @nodoc
 mixin _$CapabilityStatementSearchParam {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  String? get name;
-  Canonical? get definition;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  Canonical? get definition => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
-  CapabilityStatementSearchParamType? get type;
-  Markdown? get documentation;
+  CapabilityStatementSearchParamType? get type =>
+      throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementSearchParamCopyWith<CapabilityStatementSearchParam>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3188,22 +3541,34 @@ class _$CapabilityStatementSearchParamCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       type: type == freezed
           ? _value.type
-          : type as CapabilityStatementSearchParamType?,
+          : type // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSearchParamType?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -3252,22 +3617,34 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_CapabilityStatementSearchParam(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      name: name == freezed ? _value.name : name as String?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
       type: type == freezed
           ? _value.type
-          : type as CapabilityStatementSearchParamType?,
+          : type // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSearchParamType?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -3364,7 +3741,6 @@ class _$_CapabilityStatementSearchParam
 
 abstract class _CapabilityStatementSearchParam
     extends CapabilityStatementSearchParam {
-  _CapabilityStatementSearchParam._() : super._();
   factory _CapabilityStatementSearchParam(
       {String? id,
       @JsonKey(name: 'extension')
@@ -3375,30 +3751,33 @@ abstract class _CapabilityStatementSearchParam
       @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
           CapabilityStatementSearchParamType? type,
       Markdown? documentation}) = _$_CapabilityStatementSearchParam;
+  _CapabilityStatementSearchParam._() : super._();
 
   factory _CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementSearchParam.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  Canonical? get definition;
+  Canonical? get definition => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
-  CapabilityStatementSearchParamType? get type;
+  CapabilityStatementSearchParamType? get type =>
+      throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementSearchParamCopyWith<_CapabilityStatementSearchParam>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementOperation _$CapabilityStatementOperationFromJson(
@@ -3437,18 +3816,19 @@ const $CapabilityStatementOperation = _$CapabilityStatementOperationTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementOperation {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  String? get name;
-  Canonical get definition;
-  Markdown? get documentation;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  Canonical get definition => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementOperationCopyWith<CapabilityStatementOperation>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3485,19 +3865,30 @@ class _$CapabilityStatementOperationCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      name: name == freezed ? _value.name : name as String?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -3542,19 +3933,30 @@ class __$CapabilityStatementOperationCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_CapabilityStatementOperation(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      name: name == freezed ? _value.name : name as String?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -3640,7 +4042,6 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
 
 abstract class _CapabilityStatementOperation
     extends CapabilityStatementOperation {
-  _CapabilityStatementOperation._() : super._();
   factory _CapabilityStatementOperation(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
@@ -3648,27 +4049,29 @@ abstract class _CapabilityStatementOperation
       String? name,
       required Canonical definition,
       Markdown? documentation}) = _$_CapabilityStatementOperation;
+  _CapabilityStatementOperation._() : super._();
 
   factory _CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementOperation.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  Canonical get definition;
+  Canonical get definition => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementOperationCopyWith<_CapabilityStatementOperation>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementInteraction1 _$CapabilityStatementInteraction1FromJson(
@@ -3708,18 +4111,20 @@ const $CapabilityStatementInteraction1 =
 
 /// @nodoc
 mixin _$CapabilityStatementInteraction1 {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
-  CapabilityStatementInteraction1Code? get code;
-  Markdown? get documentation;
+  CapabilityStatementInteraction1Code? get code =>
+      throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementInteraction1CopyWith<CapabilityStatementInteraction1>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3756,19 +4161,26 @@ class _$CapabilityStatementInteraction1CopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       code: code == freezed
           ? _value.code
-          : code as CapabilityStatementInteraction1Code?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementInteraction1Code?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -3813,19 +4225,26 @@ class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_CapabilityStatementInteraction1(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       code: code == freezed
           ? _value.code
-          : code as CapabilityStatementInteraction1Code?,
+          : code // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementInteraction1Code?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
     ));
   }
 }
@@ -3909,7 +4328,6 @@ class _$_CapabilityStatementInteraction1
 
 abstract class _CapabilityStatementInteraction1
     extends CapabilityStatementInteraction1 {
-  _CapabilityStatementInteraction1._() : super._();
   factory _CapabilityStatementInteraction1(
       {String? id,
       @JsonKey(name: 'extension')
@@ -3918,26 +4336,29 @@ abstract class _CapabilityStatementInteraction1
       @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
           CapabilityStatementInteraction1Code? code,
       Markdown? documentation}) = _$_CapabilityStatementInteraction1;
+  _CapabilityStatementInteraction1._() : super._();
 
   factory _CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementInteraction1.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
-  CapabilityStatementInteraction1Code? get code;
+  CapabilityStatementInteraction1Code? get code =>
+      throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementInteraction1CopyWith<_CapabilityStatementInteraction1>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementMessaging _$CapabilityStatementMessagingFromJson(
@@ -3978,19 +4399,22 @@ const $CapabilityStatementMessaging = _$CapabilityStatementMessagingTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementMessaging {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<CapabilityStatementEndpoint>? get endpoint;
-  UnsignedInt? get reliableCache;
-  Markdown? get documentation;
-  List<CapabilityStatementSupportedMessage>? get supportedMessage;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<CapabilityStatementEndpoint>? get endpoint =>
+      throw _privateConstructorUsedError;
+  UnsignedInt? get reliableCache => throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
+  List<CapabilityStatementSupportedMessage>? get supportedMessage =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementMessagingCopyWith<CapabilityStatementMessaging>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4029,25 +4453,34 @@ class _$CapabilityStatementMessagingCopyWithImpl<$Res>
     Object? supportedMessage = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<CapabilityStatementEndpoint>?,
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementEndpoint>?,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
-          : reliableCache as UnsignedInt?,
+          : reliableCache // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       supportedMessage: supportedMessage == freezed
           ? _value.supportedMessage
-          : supportedMessage as List<CapabilityStatementSupportedMessage>?,
+          : supportedMessage // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSupportedMessage>?,
     ));
   }
 }
@@ -4094,25 +4527,34 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
     Object? supportedMessage = freezed,
   }) {
     return _then(_CapabilityStatementMessaging(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
-          : endpoint as List<CapabilityStatementEndpoint>?,
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementEndpoint>?,
       reliableCache: reliableCache == freezed
           ? _value.reliableCache
-          : reliableCache as UnsignedInt?,
+          : reliableCache // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
       supportedMessage: supportedMessage == freezed
           ? _value.supportedMessage
-          : supportedMessage as List<CapabilityStatementSupportedMessage>?,
+          : supportedMessage // ignore: cast_nullable_to_non_nullable
+              as List<CapabilityStatementSupportedMessage>?,
     ));
   }
 }
@@ -4206,7 +4648,6 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
 
 abstract class _CapabilityStatementMessaging
     extends CapabilityStatementMessaging {
-  _CapabilityStatementMessaging._() : super._();
   factory _CapabilityStatementMessaging(
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4216,29 +4657,33 @@ abstract class _CapabilityStatementMessaging
           Markdown? documentation,
           List<CapabilityStatementSupportedMessage>? supportedMessage}) =
       _$_CapabilityStatementMessaging;
+  _CapabilityStatementMessaging._() : super._();
 
   factory _CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementMessaging.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementEndpoint>? get endpoint;
+  List<CapabilityStatementEndpoint>? get endpoint =>
+      throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get reliableCache;
+  UnsignedInt? get reliableCache => throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
-  List<CapabilityStatementSupportedMessage>? get supportedMessage;
+  List<CapabilityStatementSupportedMessage>? get supportedMessage =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementMessagingCopyWith<_CapabilityStatementMessaging>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementEndpoint _$CapabilityStatementEndpointFromJson(
@@ -4275,17 +4720,18 @@ const $CapabilityStatementEndpoint = _$CapabilityStatementEndpointTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementEndpoint {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  Coding get protocol;
-  FhirUrl? get address;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Coding get protocol => throw _privateConstructorUsedError;
+  FhirUrl? get address => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementEndpointCopyWith<CapabilityStatementEndpoint>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4322,15 +4768,26 @@ class _$CapabilityStatementEndpointCopyWithImpl<$Res>
     Object? address = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      protocol: protocol == freezed ? _value.protocol : protocol as Coding,
-      address: address == freezed ? _value.address : address as FhirUrl?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      protocol: protocol == freezed
+          ? _value.protocol
+          : protocol // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
     ));
   }
 
@@ -4383,15 +4840,26 @@ class __$CapabilityStatementEndpointCopyWithImpl<$Res>
     Object? address = freezed,
   }) {
     return _then(_CapabilityStatementEndpoint(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      protocol: protocol == freezed ? _value.protocol : protocol as Coding,
-      address: address == freezed ? _value.address : address as FhirUrl?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
+      protocol: protocol == freezed
+          ? _value.protocol
+          : protocol // ignore: cast_nullable_to_non_nullable
+              as Coding,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
     ));
   }
 }
@@ -4470,32 +4938,33 @@ class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
 
 abstract class _CapabilityStatementEndpoint
     extends CapabilityStatementEndpoint {
-  _CapabilityStatementEndpoint._() : super._();
   factory _CapabilityStatementEndpoint(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       required Coding protocol,
       FhirUrl? address}) = _$_CapabilityStatementEndpoint;
+  _CapabilityStatementEndpoint._() : super._();
 
   factory _CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementEndpoint.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Coding get protocol;
+  Coding get protocol => throw _privateConstructorUsedError;
   @override
-  FhirUrl? get address;
+  FhirUrl? get address => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementEndpointCopyWith<_CapabilityStatementEndpoint>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementSupportedMessage
@@ -4535,18 +5004,21 @@ const $CapabilityStatementSupportedMessage =
 
 /// @nodoc
 mixin _$CapabilityStatementSupportedMessage {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
-  CapabilityStatementSupportedMessageMode? get mode;
-  Canonical get definition;
+  CapabilityStatementSupportedMessageMode? get mode =>
+      throw _privateConstructorUsedError;
+  Canonical get definition => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementSupportedMessageCopyWith<
-      CapabilityStatementSupportedMessage> get copyWith;
+          CapabilityStatementSupportedMessage>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4583,18 +5055,26 @@ class _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
     Object? definition = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       mode: mode == freezed
           ? _value.mode
-          : mode as CapabilityStatementSupportedMessageMode?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSupportedMessageMode?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 }
@@ -4639,18 +5119,26 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
     Object? definition = freezed,
   }) {
     return _then(_CapabilityStatementSupportedMessage(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       mode: mode == freezed
           ? _value.mode
-          : mode as CapabilityStatementSupportedMessageMode?,
-      definition:
-          definition == freezed ? _value.definition : definition as Canonical,
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementSupportedMessageMode?,
+      definition: definition == freezed
+          ? _value.definition
+          : definition // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 }
@@ -4735,7 +5223,6 @@ class _$_CapabilityStatementSupportedMessage
 
 abstract class _CapabilityStatementSupportedMessage
     extends CapabilityStatementSupportedMessage {
-  _CapabilityStatementSupportedMessage._() : super._();
   factory _CapabilityStatementSupportedMessage(
       {String? id,
       @JsonKey(name: 'extension')
@@ -4744,27 +5231,31 @@ abstract class _CapabilityStatementSupportedMessage
       @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
           CapabilityStatementSupportedMessageMode? mode,
       required Canonical definition}) = _$_CapabilityStatementSupportedMessage;
+  _CapabilityStatementSupportedMessage._() : super._();
 
   factory _CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =
       _$_CapabilityStatementSupportedMessage.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
-  CapabilityStatementSupportedMessageMode? get mode;
+  CapabilityStatementSupportedMessageMode? get mode =>
+      throw _privateConstructorUsedError;
   @override
-  Canonical get definition;
+  Canonical get definition => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementSupportedMessageCopyWith<
-      _CapabilityStatementSupportedMessage> get copyWith;
+          _CapabilityStatementSupportedMessage>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CapabilityStatementDocument _$CapabilityStatementDocumentFromJson(
@@ -4805,19 +5296,21 @@ const $CapabilityStatementDocument = _$CapabilityStatementDocumentTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatementDocument {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
-  CapabilityStatementDocumentMode? get mode;
-  Markdown? get documentation;
-  Canonical get profile;
+  CapabilityStatementDocumentMode? get mode =>
+      throw _privateConstructorUsedError;
+  Markdown? get documentation => throw _privateConstructorUsedError;
+  Canonical get profile => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CapabilityStatementDocumentCopyWith<CapabilityStatementDocument>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4856,20 +5349,30 @@ class _$CapabilityStatementDocumentCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       mode: mode == freezed
           ? _value.mode
-          : mode as CapabilityStatementDocumentMode?,
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementDocumentMode?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
-      profile: profile == freezed ? _value.profile : profile as Canonical,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 }
@@ -4916,20 +5419,30 @@ class __$CapabilityStatementDocumentCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_CapabilityStatementDocument(
-      id: id == freezed ? _value.id : id as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension?>?,
       mode: mode == freezed
           ? _value.mode
-          : mode as CapabilityStatementDocumentMode?,
+          : mode // ignore: cast_nullable_to_non_nullable
+              as CapabilityStatementDocumentMode?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as Markdown?,
-      profile: profile == freezed ? _value.profile : profile as Canonical,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      profile: profile == freezed
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as Canonical,
     ));
   }
 }
@@ -5017,7 +5530,6 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
 
 abstract class _CapabilityStatementDocument
     extends CapabilityStatementDocument {
-  _CapabilityStatementDocument._() : super._();
   factory _CapabilityStatementDocument(
       {String? id,
       @JsonKey(name: 'extension')
@@ -5027,26 +5539,29 @@ abstract class _CapabilityStatementDocument
           CapabilityStatementDocumentMode? mode,
       Markdown? documentation,
       required Canonical profile}) = _$_CapabilityStatementDocument;
+  _CapabilityStatementDocument._() : super._();
 
   factory _CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementDocument.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
-  CapabilityStatementDocumentMode? get mode;
+  CapabilityStatementDocumentMode? get mode =>
+      throw _privateConstructorUsedError;
   @override
-  Markdown? get documentation;
+  Markdown? get documentation => throw _privateConstructorUsedError;
   @override
-  Canonical get profile;
+  Canonical get profile => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementDocumentCopyWith<_CapabilityStatementDocument>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }

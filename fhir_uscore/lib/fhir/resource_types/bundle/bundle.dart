@@ -12,7 +12,7 @@ part 'bundle.freezed.dart';
 part 'bundle.g.dart';
 
 @freezed
-abstract class Bundle with Resource implements _$Bundle {
+class Bundle with Resource, _$Bundle {
   Bundle._();
   factory Bundle({
     @Default(UsCoreResourceType.Bundle)
@@ -47,7 +47,7 @@ abstract class Bundle with Resource implements _$Bundle {
 }
 
 @freezed
-abstract class BundleLink implements _$BundleLink {
+class BundleLink with _$BundleLink {
   BundleLink._();
 
   factory BundleLink({
@@ -74,7 +74,7 @@ abstract class BundleLink implements _$BundleLink {
 }
 
 @freezed
-abstract class BundleEntry implements _$BundleEntry {
+class BundleEntry with _$BundleEntry {
   BundleEntry._();
 
   factory BundleEntry({
@@ -105,7 +105,7 @@ abstract class BundleEntry implements _$BundleEntry {
 }
 
 @freezed
-abstract class BundleSearch implements _$BundleSearch {
+class BundleSearch with _$BundleSearch {
   BundleSearch._();
 
   factory BundleSearch({
@@ -132,7 +132,7 @@ abstract class BundleSearch implements _$BundleSearch {
 }
 
 @freezed
-abstract class BundleRequest implements _$BundleRequest {
+class BundleRequest with _$BundleRequest {
   BundleRequest._();
 
   factory BundleRequest({
@@ -164,7 +164,7 @@ abstract class BundleRequest implements _$BundleRequest {
 }
 
 @freezed
-abstract class BundleResponse implements _$BundleResponse {
+class BundleResponse with _$BundleResponse {
   BundleResponse._();
 
   factory BundleResponse({

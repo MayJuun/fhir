@@ -22,7 +22,7 @@ enum Role {
 /// for Scopes, it's really best to go and look at the official description
 /// from HL7 http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/
 @freezed
-abstract class Scopes implements _$Scopes {
+class Scopes with _$Scopes {
   Scopes._();
 
   factory Scopes({

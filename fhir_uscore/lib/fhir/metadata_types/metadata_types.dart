@@ -11,7 +11,7 @@ part 'metadata_types.freezed.dart';
 part 'metadata_types.g.dart';
 
 @freezed
-abstract class ContactDetail implements _$ContactDetail {
+class ContactDetail with _$ContactDetail {
   ContactDetail._();
 
   factory ContactDetail({
@@ -38,7 +38,7 @@ abstract class ContactDetail implements _$ContactDetail {
 }
 
 @freezed
-abstract class UsageContext implements _$UsageContext {
+class UsageContext with _$UsageContext {
   UsageContext._();
 
   factory UsageContext({
@@ -68,7 +68,7 @@ abstract class UsageContext implements _$UsageContext {
 }
 
 @freezed
-abstract class Meta with _$Meta {
+class Meta with _$Meta {
   Meta._();
 
   factory Meta({

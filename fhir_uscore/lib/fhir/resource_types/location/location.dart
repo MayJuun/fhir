@@ -12,7 +12,7 @@ part 'location.freezed.dart';
 part 'location.g.dart';
 
 @freezed
-abstract class Location with Resource implements _$Location {
+class Location with Resource, _$Location {
   Location._();
 
   factory Location({
@@ -68,7 +68,7 @@ abstract class Location with Resource implements _$Location {
 }
 
 @freezed
-abstract class LocationPosition implements _$LocationPosition {
+class LocationPosition with _$LocationPosition {
   LocationPosition._();
 
   factory LocationPosition({

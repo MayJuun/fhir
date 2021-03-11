@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'care_team.dart';
 
@@ -8,6 +8,10 @@ part of 'care_team.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CareTeam _$CareTeamFromJson(Map<String, dynamic> json) {
   return _CareTeam.fromJson(json);
 }
@@ -50,19 +54,21 @@ const $CareTeam = _$CareTeamTearOff();
 /// @nodoc
 mixin _$CareTeam {
   @JsonKey(unknownEnumValue: UsCoreResourceType.CareTeam)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
-  String? get name;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
-  CareTeamStatus? get status;
-  Reference get subject;
-  List<CareTeamParticipant?> get participant;
+  CareTeamStatus? get status => throw _privateConstructorUsedError;
+  Reference get subject => throw _privateConstructorUsedError;
+  List<CareTeamParticipant?> get participant =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CareTeamCopyWith<CareTeam> get copyWith;
+  $CareTeamCopyWith<CareTeam> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -108,16 +114,36 @@ class _$CareTeamCopyWithImpl<$Res> implements $CareTeamCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      name: name == freezed ? _value.name : name as String?,
-      status: status == freezed ? _value.status : status as CareTeamStatus?,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CareTeamStatus?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<CareTeamParticipant?>,
+          : participant // ignore: cast_nullable_to_non_nullable
+              as List<CareTeamParticipant?>,
     ));
   }
 
@@ -199,16 +225,36 @@ class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
     return _then(_CareTeam(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      name: name == freezed ? _value.name : name as String?,
-      status: status == freezed ? _value.status : status as CareTeamStatus?,
-      subject: subject == freezed ? _value.subject : subject as Reference,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CareTeamStatus?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<CareTeamParticipant?>,
+          : participant // ignore: cast_nullable_to_non_nullable
+              as List<CareTeamParticipant?>,
     ));
   }
 }
@@ -306,7 +352,6 @@ class _$_CareTeam extends _CareTeam {
 }
 
 abstract class _CareTeam extends CareTeam {
-  _CareTeam._() : super._();
   factory _CareTeam(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.CareTeam)
           UsCoreResourceType resourceType,
@@ -318,30 +363,33 @@ abstract class _CareTeam extends CareTeam {
           CareTeamStatus? status,
       required Reference subject,
       required List<CareTeamParticipant?> participant}) = _$_CareTeam;
+  _CareTeam._() : super._();
 
   factory _CareTeam.fromJson(Map<String, dynamic> json) = _$_CareTeam.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.CareTeam)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CareTeamStatus.unknown)
-  CareTeamStatus? get status;
+  CareTeamStatus? get status => throw _privateConstructorUsedError;
   @override
-  Reference get subject;
+  Reference get subject => throw _privateConstructorUsedError;
   @override
-  List<CareTeamParticipant?> get participant;
+  List<CareTeamParticipant?> get participant =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CareTeamCopyWith<_CareTeam> get copyWith;
+  _$CareTeamCopyWith<_CareTeam> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CareTeamParticipant _$CareTeamParticipantFromJson(Map<String, dynamic> json) {
@@ -373,13 +421,14 @@ const $CareTeamParticipant = _$CareTeamParticipantTearOff();
 
 /// @nodoc
 mixin _$CareTeamParticipant {
-  String? get id;
-  List<CodeableConcept?> get role;
-  Reference get member;
+  String? get id => throw _privateConstructorUsedError;
+  List<CodeableConcept?> get role => throw _privateConstructorUsedError;
+  Reference get member => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CareTeamParticipantCopyWith<CareTeamParticipant> get copyWith;
+  $CareTeamParticipantCopyWith<CareTeamParticipant> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -408,9 +457,18 @@ class _$CareTeamParticipantCopyWithImpl<$Res>
     Object? member = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      role: role == freezed ? _value.role : role as List<CodeableConcept?>,
-      member: member == freezed ? _value.member : member as Reference,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      member: member == freezed
+          ? _value.member
+          : member // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 
@@ -453,9 +511,18 @@ class __$CareTeamParticipantCopyWithImpl<$Res>
     Object? member = freezed,
   }) {
     return _then(_CareTeamParticipant(
-      id: id == freezed ? _value.id : id as String?,
-      role: role == freezed ? _value.role : role as List<CodeableConcept?>,
-      member: member == freezed ? _value.member : member as Reference,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept?>,
+      member: member == freezed
+          ? _value.member
+          : member // ignore: cast_nullable_to_non_nullable
+              as Reference,
     ));
   }
 }
@@ -514,22 +581,23 @@ class _$_CareTeamParticipant extends _CareTeamParticipant {
 }
 
 abstract class _CareTeamParticipant extends CareTeamParticipant {
-  _CareTeamParticipant._() : super._();
   factory _CareTeamParticipant(
       {String? id,
       required List<CodeableConcept?> role,
       required Reference member}) = _$_CareTeamParticipant;
+  _CareTeamParticipant._() : super._();
 
   factory _CareTeamParticipant.fromJson(Map<String, dynamic> json) =
       _$_CareTeamParticipant.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept?> get role;
+  List<CodeableConcept?> get role => throw _privateConstructorUsedError;
   @override
-  Reference get member;
+  Reference get member => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CareTeamParticipantCopyWith<_CareTeamParticipant> get copyWith;
+  _$CareTeamParticipantCopyWith<_CareTeamParticipant> get copyWith =>
+      throw _privateConstructorUsedError;
 }

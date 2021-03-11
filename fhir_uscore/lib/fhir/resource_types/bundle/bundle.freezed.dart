@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'bundle.dart';
 
@@ -8,6 +8,10 @@ part of 'bundle.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Bundle _$BundleFromJson(Map<String, dynamic> json) {
   return _Bundle.fromJson(json);
 }
@@ -54,21 +58,21 @@ const $Bundle = _$BundleTearOff();
 /// @nodoc
 mixin _$Bundle {
   @JsonKey(unknownEnumValue: UsCoreResourceType.Bundle)
-  UsCoreResourceType get resourceType;
-  Id? get id;
-  Meta? get meta;
-  Narrative? get text;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: BundleType.unknown)
-  BundleType? get type;
-  Instant? get timestamp;
-  UnsignedInt? get total;
-  List<BundleLink>? get link;
-  List<BundleEntry>? get entry;
-  Signature? get signature;
+  BundleType? get type => throw _privateConstructorUsedError;
+  Instant? get timestamp => throw _privateConstructorUsedError;
+  UnsignedInt? get total => throw _privateConstructorUsedError;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
+  List<BundleEntry>? get entry => throw _privateConstructorUsedError;
+  Signature? get signature => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleCopyWith<Bundle> get copyWith;
+  $BundleCopyWith<Bundle> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -118,18 +122,44 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      type: type == freezed ? _value.type : type as BundleType?,
-      timestamp:
-          timestamp == freezed ? _value.timestamp : timestamp as Instant?,
-      total: total == freezed ? _value.total : total as UnsignedInt?,
-      link: link == freezed ? _value.link : link as List<BundleLink>?,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>?,
-      signature:
-          signature == freezed ? _value.signature : signature as Signature?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as BundleType?,
+      timestamp: timestamp == freezed
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      total: total == freezed
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<BundleLink>?,
+      entry: entry == freezed
+          ? _value.entry
+          : entry // ignore: cast_nullable_to_non_nullable
+              as List<BundleEntry>?,
+      signature: signature == freezed
+          ? _value.signature
+          : signature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
     ));
   }
 
@@ -219,18 +249,44 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
     return _then(_Bundle(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as UsCoreResourceType,
-      id: id == freezed ? _value.id : id as Id?,
-      meta: meta == freezed ? _value.meta : meta as Meta?,
-      text: text == freezed ? _value.text : text as Narrative?,
-      type: type == freezed ? _value.type : type as BundleType?,
-      timestamp:
-          timestamp == freezed ? _value.timestamp : timestamp as Instant?,
-      total: total == freezed ? _value.total : total as UnsignedInt?,
-      link: link == freezed ? _value.link : link as List<BundleLink>?,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>?,
-      signature:
-          signature == freezed ? _value.signature : signature as Signature?,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as UsCoreResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as BundleType?,
+      timestamp: timestamp == freezed
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      total: total == freezed
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<BundleLink>?,
+      entry: entry == freezed
+          ? _value.entry
+          : entry // ignore: cast_nullable_to_non_nullable
+              as List<BundleEntry>?,
+      signature: signature == freezed
+          ? _value.signature
+          : signature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
     ));
   }
 }
@@ -340,7 +396,6 @@ class _$_Bundle extends _Bundle {
 }
 
 abstract class _Bundle extends Bundle {
-  _Bundle._() : super._();
   factory _Bundle(
       {@JsonKey(unknownEnumValue: UsCoreResourceType.Bundle)
           UsCoreResourceType resourceType,
@@ -354,34 +409,35 @@ abstract class _Bundle extends Bundle {
       List<BundleLink>? link,
       List<BundleEntry>? entry,
       Signature? signature}) = _$_Bundle;
+  _Bundle._() : super._();
 
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: UsCoreResourceType.Bundle)
-  UsCoreResourceType get resourceType;
+  UsCoreResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id? get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta? get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  Narrative? get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: BundleType.unknown)
-  BundleType? get type;
+  BundleType? get type => throw _privateConstructorUsedError;
   @override
-  Instant? get timestamp;
+  Instant? get timestamp => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get total;
+  UnsignedInt? get total => throw _privateConstructorUsedError;
   @override
-  List<BundleLink>? get link;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
   @override
-  List<BundleEntry>? get entry;
+  List<BundleEntry>? get entry => throw _privateConstructorUsedError;
   @override
-  Signature? get signature;
+  Signature? get signature => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleCopyWith<_Bundle> get copyWith;
+  _$BundleCopyWith<_Bundle> get copyWith => throw _privateConstructorUsedError;
 }
 
 BundleLink _$BundleLinkFromJson(Map<String, dynamic> json) {
@@ -410,13 +466,14 @@ const $BundleLink = _$BundleLinkTearOff();
 
 /// @nodoc
 mixin _$BundleLink {
-  String? get id;
-  String? get relation;
-  FhirUri? get url;
+  String? get id => throw _privateConstructorUsedError;
+  String? get relation => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleLinkCopyWith<BundleLink> get copyWith;
+  $BundleLinkCopyWith<BundleLink> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -442,9 +499,18 @@ class _$BundleLinkCopyWithImpl<$Res> implements $BundleLinkCopyWith<$Res> {
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      relation: relation == freezed ? _value.relation : relation as String?,
-      url: url == freezed ? _value.url : url as FhirUri?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      relation: relation == freezed
+          ? _value.relation
+          : relation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
     ));
   }
 }
@@ -475,9 +541,18 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_BundleLink(
-      id: id == freezed ? _value.id : id as String?,
-      relation: relation == freezed ? _value.relation : relation as String?,
-      url: url == freezed ? _value.url : url as FhirUri?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      relation: relation == freezed
+          ? _value.relation
+          : relation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
     ));
   }
 }
@@ -535,22 +610,23 @@ class _$_BundleLink extends _BundleLink {
 }
 
 abstract class _BundleLink extends BundleLink {
-  _BundleLink._() : super._();
   factory _BundleLink({String? id, String? relation, FhirUri? url}) =
       _$_BundleLink;
+  _BundleLink._() : super._();
 
   factory _BundleLink.fromJson(Map<String, dynamic> json) =
       _$_BundleLink.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  String? get relation;
+  String? get relation => throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleLinkCopyWith<_BundleLink> get copyWith;
+  _$BundleLinkCopyWith<_BundleLink> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
@@ -590,17 +666,18 @@ const $BundleEntry = _$BundleEntryTearOff();
 
 /// @nodoc
 mixin _$BundleEntry {
-  String? get id;
-  List<BundleLink>? get link;
-  FhirUri? get fullUrl;
-  Resource? get resource;
-  BundleSearch? get search;
-  BundleRequest? get request;
-  BundleResponse? get response;
+  String? get id => throw _privateConstructorUsedError;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
+  FhirUri? get fullUrl => throw _privateConstructorUsedError;
+  Resource? get resource => throw _privateConstructorUsedError;
+  BundleSearch? get search => throw _privateConstructorUsedError;
+  BundleRequest? get request => throw _privateConstructorUsedError;
+  BundleResponse? get response => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleEntryCopyWith<BundleEntry> get copyWith;
+  $BundleEntryCopyWith<BundleEntry> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -641,14 +718,34 @@ class _$BundleEntryCopyWithImpl<$Res> implements $BundleEntryCopyWith<$Res> {
     Object? response = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      link: link == freezed ? _value.link : link as List<BundleLink>?,
-      fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri?,
-      resource: resource == freezed ? _value.resource : resource as Resource?,
-      search: search == freezed ? _value.search : search as BundleSearch?,
-      request: request == freezed ? _value.request : request as BundleRequest?,
-      response:
-          response == freezed ? _value.response : response as BundleResponse?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<BundleLink>?,
+      fullUrl: fullUrl == freezed
+          ? _value.fullUrl
+          : fullUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource?,
+      search: search == freezed
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as BundleSearch?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as BundleRequest?,
+      response: response == freezed
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as BundleResponse?,
     ));
   }
 
@@ -731,14 +828,34 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
     Object? response = freezed,
   }) {
     return _then(_BundleEntry(
-      id: id == freezed ? _value.id : id as String?,
-      link: link == freezed ? _value.link : link as List<BundleLink>?,
-      fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri?,
-      resource: resource == freezed ? _value.resource : resource as Resource?,
-      search: search == freezed ? _value.search : search as BundleSearch?,
-      request: request == freezed ? _value.request : request as BundleRequest?,
-      response:
-          response == freezed ? _value.response : response as BundleResponse?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as List<BundleLink>?,
+      fullUrl: fullUrl == freezed
+          ? _value.fullUrl
+          : fullUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource?,
+      search: search == freezed
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as BundleSearch?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as BundleRequest?,
+      response: response == freezed
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as BundleResponse?,
     ));
   }
 }
@@ -827,7 +944,6 @@ class _$_BundleEntry extends _BundleEntry {
 }
 
 abstract class _BundleEntry extends BundleEntry {
-  _BundleEntry._() : super._();
   factory _BundleEntry(
       {String? id,
       List<BundleLink>? link,
@@ -836,27 +952,29 @@ abstract class _BundleEntry extends BundleEntry {
       BundleSearch? search,
       BundleRequest? request,
       BundleResponse? response}) = _$_BundleEntry;
+  _BundleEntry._() : super._();
 
   factory _BundleEntry.fromJson(Map<String, dynamic> json) =
       _$_BundleEntry.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  List<BundleLink>? get link;
+  List<BundleLink>? get link => throw _privateConstructorUsedError;
   @override
-  FhirUri? get fullUrl;
+  FhirUri? get fullUrl => throw _privateConstructorUsedError;
   @override
-  Resource? get resource;
+  Resource? get resource => throw _privateConstructorUsedError;
   @override
-  BundleSearch? get search;
+  BundleSearch? get search => throw _privateConstructorUsedError;
   @override
-  BundleRequest? get request;
+  BundleRequest? get request => throw _privateConstructorUsedError;
   @override
-  BundleResponse? get response;
+  BundleResponse? get response => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleEntryCopyWith<_BundleEntry> get copyWith;
+  _$BundleEntryCopyWith<_BundleEntry> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BundleSearch _$BundleSearchFromJson(Map<String, dynamic> json) {
@@ -889,14 +1007,15 @@ const $BundleSearch = _$BundleSearchTearOff();
 
 /// @nodoc
 mixin _$BundleSearch {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
-  BundleSearchMode? get mode;
-  Decimal? get score;
+  BundleSearchMode? get mode => throw _privateConstructorUsedError;
+  Decimal? get score => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleSearchCopyWith<BundleSearch> get copyWith;
+  $BundleSearchCopyWith<BundleSearch> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -926,9 +1045,18 @@ class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
     Object? score = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      mode: mode == freezed ? _value.mode : mode as BundleSearchMode?,
-      score: score == freezed ? _value.score : score as Decimal?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as BundleSearchMode?,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
     ));
   }
 }
@@ -964,9 +1092,18 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
     Object? score = freezed,
   }) {
     return _then(_BundleSearch(
-      id: id == freezed ? _value.id : id as String?,
-      mode: mode == freezed ? _value.mode : mode as BundleSearchMode?,
-      score: score == freezed ? _value.score : score as Decimal?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as BundleSearchMode?,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
     ));
   }
 }
@@ -1028,26 +1165,27 @@ class _$_BundleSearch extends _BundleSearch {
 }
 
 abstract class _BundleSearch extends BundleSearch {
-  _BundleSearch._() : super._();
   factory _BundleSearch(
       {String? id,
       @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
           BundleSearchMode? mode,
       Decimal? score}) = _$_BundleSearch;
+  _BundleSearch._() : super._();
 
   factory _BundleSearch.fromJson(Map<String, dynamic> json) =
       _$_BundleSearch.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
-  BundleSearchMode? get mode;
+  BundleSearchMode? get mode => throw _privateConstructorUsedError;
   @override
-  Decimal? get score;
+  Decimal? get score => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleSearchCopyWith<_BundleSearch> get copyWith;
+  _$BundleSearchCopyWith<_BundleSearch> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BundleRequest _$BundleRequestFromJson(Map<String, dynamic> json) {
@@ -1088,18 +1226,19 @@ const $BundleRequest = _$BundleRequestTearOff();
 
 /// @nodoc
 mixin _$BundleRequest {
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
-  BundleRequestMethod? get method;
-  FhirUri? get url;
-  String? get ifNoneMatch;
-  Instant? get ifModifiedSince;
-  String? get ifMatch;
-  String? get ifNoneExist;
+  BundleRequestMethod? get method => throw _privateConstructorUsedError;
+  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get ifNoneMatch => throw _privateConstructorUsedError;
+  Instant? get ifModifiedSince => throw _privateConstructorUsedError;
+  String? get ifMatch => throw _privateConstructorUsedError;
+  String? get ifNoneExist => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleRequestCopyWith<BundleRequest> get copyWith;
+  $BundleRequestCopyWith<BundleRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1138,18 +1277,34 @@ class _$BundleRequestCopyWithImpl<$Res>
     Object? ifNoneExist = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      method:
-          method == freezed ? _value.method : method as BundleRequestMethod?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      ifNoneMatch:
-          ifNoneMatch == freezed ? _value.ifNoneMatch : ifNoneMatch as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      method: method == freezed
+          ? _value.method
+          : method // ignore: cast_nullable_to_non_nullable
+              as BundleRequestMethod?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      ifNoneMatch: ifNoneMatch == freezed
+          ? _value.ifNoneMatch
+          : ifNoneMatch // ignore: cast_nullable_to_non_nullable
+              as String?,
       ifModifiedSince: ifModifiedSince == freezed
           ? _value.ifModifiedSince
-          : ifModifiedSince as Instant?,
-      ifMatch: ifMatch == freezed ? _value.ifMatch : ifMatch as String?,
-      ifNoneExist:
-          ifNoneExist == freezed ? _value.ifNoneExist : ifNoneExist as String?,
+          : ifModifiedSince // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      ifMatch: ifMatch == freezed
+          ? _value.ifMatch
+          : ifMatch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      ifNoneExist: ifNoneExist == freezed
+          ? _value.ifNoneExist
+          : ifNoneExist // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1194,18 +1349,34 @@ class __$BundleRequestCopyWithImpl<$Res>
     Object? ifNoneExist = freezed,
   }) {
     return _then(_BundleRequest(
-      id: id == freezed ? _value.id : id as String?,
-      method:
-          method == freezed ? _value.method : method as BundleRequestMethod?,
-      url: url == freezed ? _value.url : url as FhirUri?,
-      ifNoneMatch:
-          ifNoneMatch == freezed ? _value.ifNoneMatch : ifNoneMatch as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      method: method == freezed
+          ? _value.method
+          : method // ignore: cast_nullable_to_non_nullable
+              as BundleRequestMethod?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      ifNoneMatch: ifNoneMatch == freezed
+          ? _value.ifNoneMatch
+          : ifNoneMatch // ignore: cast_nullable_to_non_nullable
+              as String?,
       ifModifiedSince: ifModifiedSince == freezed
           ? _value.ifModifiedSince
-          : ifModifiedSince as Instant?,
-      ifMatch: ifMatch == freezed ? _value.ifMatch : ifMatch as String?,
-      ifNoneExist:
-          ifNoneExist == freezed ? _value.ifNoneExist : ifNoneExist as String?,
+          : ifModifiedSince // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      ifMatch: ifMatch == freezed
+          ? _value.ifMatch
+          : ifMatch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      ifNoneExist: ifNoneExist == freezed
+          ? _value.ifNoneExist
+          : ifNoneExist // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1295,7 +1466,6 @@ class _$_BundleRequest extends _BundleRequest {
 }
 
 abstract class _BundleRequest extends BundleRequest {
-  _BundleRequest._() : super._();
   factory _BundleRequest(
       {String? id,
       @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
@@ -1305,28 +1475,30 @@ abstract class _BundleRequest extends BundleRequest {
       Instant? ifModifiedSince,
       String? ifMatch,
       String? ifNoneExist}) = _$_BundleRequest;
+  _BundleRequest._() : super._();
 
   factory _BundleRequest.fromJson(Map<String, dynamic> json) =
       _$_BundleRequest.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
-  BundleRequestMethod? get method;
+  BundleRequestMethod? get method => throw _privateConstructorUsedError;
   @override
-  FhirUri? get url;
+  FhirUri? get url => throw _privateConstructorUsedError;
   @override
-  String? get ifNoneMatch;
+  String? get ifNoneMatch => throw _privateConstructorUsedError;
   @override
-  Instant? get ifModifiedSince;
+  Instant? get ifModifiedSince => throw _privateConstructorUsedError;
   @override
-  String? get ifMatch;
+  String? get ifMatch => throw _privateConstructorUsedError;
   @override
-  String? get ifNoneExist;
+  String? get ifNoneExist => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleRequestCopyWith<_BundleRequest> get copyWith;
+  _$BundleRequestCopyWith<_BundleRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BundleResponse _$BundleResponseFromJson(Map<String, dynamic> json) {
@@ -1364,16 +1536,17 @@ const $BundleResponse = _$BundleResponseTearOff();
 
 /// @nodoc
 mixin _$BundleResponse {
-  String? get id;
-  String? get status;
-  FhirUri? get location;
-  String? get etag;
-  Instant? get lastModified;
-  Resource? get outcome;
+  String? get id => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
+  FhirUri? get location => throw _privateConstructorUsedError;
+  String? get etag => throw _privateConstructorUsedError;
+  Instant? get lastModified => throw _privateConstructorUsedError;
+  Resource? get outcome => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BundleResponseCopyWith<BundleResponse> get copyWith;
+  $BundleResponseCopyWith<BundleResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1409,14 +1582,30 @@ class _$BundleResponseCopyWithImpl<$Res>
     Object? outcome = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String?,
-      status: status == freezed ? _value.status : status as String?,
-      location: location == freezed ? _value.location : location as FhirUri?,
-      etag: etag == freezed ? _value.etag : etag as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      etag: etag == freezed
+          ? _value.etag
+          : etag // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastModified: lastModified == freezed
           ? _value.lastModified
-          : lastModified as Instant?,
-      outcome: outcome == freezed ? _value.outcome : outcome as Resource?,
+          : lastModified // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      outcome: outcome == freezed
+          ? _value.outcome
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as Resource?,
     ));
   }
 }
@@ -1458,14 +1647,30 @@ class __$BundleResponseCopyWithImpl<$Res>
     Object? outcome = freezed,
   }) {
     return _then(_BundleResponse(
-      id: id == freezed ? _value.id : id as String?,
-      status: status == freezed ? _value.status : status as String?,
-      location: location == freezed ? _value.location : location as FhirUri?,
-      etag: etag == freezed ? _value.etag : etag as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      etag: etag == freezed
+          ? _value.etag
+          : etag // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastModified: lastModified == freezed
           ? _value.lastModified
-          : lastModified as Instant?,
-      outcome: outcome == freezed ? _value.outcome : outcome as Resource?,
+          : lastModified // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      outcome: outcome == freezed
+          ? _value.outcome
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as Resource?,
     ));
   }
 }
@@ -1546,7 +1751,6 @@ class _$_BundleResponse extends _BundleResponse {
 }
 
 abstract class _BundleResponse extends BundleResponse {
-  _BundleResponse._() : super._();
   factory _BundleResponse(
       {String? id,
       String? status,
@@ -1554,23 +1758,25 @@ abstract class _BundleResponse extends BundleResponse {
       String? etag,
       Instant? lastModified,
       Resource? outcome}) = _$_BundleResponse;
+  _BundleResponse._() : super._();
 
   factory _BundleResponse.fromJson(Map<String, dynamic> json) =
       _$_BundleResponse.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  String? get status;
+  String? get status => throw _privateConstructorUsedError;
   @override
-  FhirUri? get location;
+  FhirUri? get location => throw _privateConstructorUsedError;
   @override
-  String? get etag;
+  String? get etag => throw _privateConstructorUsedError;
   @override
-  Instant? get lastModified;
+  Instant? get lastModified => throw _privateConstructorUsedError;
   @override
-  Resource? get outcome;
+  Resource? get outcome => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BundleResponseCopyWith<_BundleResponse> get copyWith;
+  _$BundleResponseCopyWith<_BundleResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

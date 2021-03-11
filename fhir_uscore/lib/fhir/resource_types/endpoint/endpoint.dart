@@ -12,7 +12,7 @@ part 'endpoint.freezed.dart';
 part 'endpoint.g.dart';
 
 @freezed
-abstract class Endpoint with Resource implements _$Endpoint {
+class Endpoint with Resource, _$Endpoint {
   Endpoint._();
 
   factory Endpoint({
