@@ -31,6 +31,7 @@ class SmartClient extends FhirClient {
       port: currentUri.port,
       path: '/redirect.html',
     ));
+    print(_redirectUri);
     _clientId = clientId;
     _secret = secret;
   }
@@ -71,6 +72,10 @@ class SmartClient extends FhirClient {
   String? _secret;
 
   DateTime? _accessTokenExpiration = DateTime.now();
+
+  String? _accessToken;
+
+  String? _refreshToken;
 
   bool isLoggedIn;
 
@@ -114,14 +119,16 @@ class SmartClient extends FhirClient {
         '?response_type=code'
         '&client_id=$_clientId'
         '&redirect_uri=$_redirectUri'
-        '${scopes?.scopesList() == null ? "" : "&scope=${scopes!.scopesList()}"}'
+        '${scopes?.scopesList() == null ? "" : "&scope=${scopes!.scopesList().join(' ')}"}'
         '&nonce=${_nonce()}');
+    print(authUrl);
 
     _popupWin = html.window.open(authUrl.toString(), "Redirect Window",
         "width=800, height=900, scrollbars=yes");
 
     html.window.onMessage.listen(
       (event) async {
+        print(event.data.toString());
         if (event.data.toString().contains('code=')) {
           List<String> codedStrings = event.data.split('&code=');
           if (codedStrings.length == 1) {
@@ -145,8 +152,14 @@ class SmartClient extends FhirClient {
               'client_secret': '$_secret',
             },
           );
-          print(response.headers);
-          print(response.body);
+          final body = jsonDecode(response.body);
+          _accessToken = body['access_token'];
+          _refreshToken = body['refresh_token'];
+          _accessTokenExpiration =
+              DateTime.now().add(Duration(seconds: body['864000'] ?? 0));
+          print('access: $_accessToken');
+          print('refresh: $_refreshToken');
+          print('expiration: $_accessTokenExpiration');
         }
       },
     );
