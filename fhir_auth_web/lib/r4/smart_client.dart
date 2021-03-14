@@ -85,7 +85,7 @@ class SmartClient extends FhirClient {
   /// the client secret when you make a request if you're creating a confidential
   /// app
   @override
-  Future<Unit> login() async {
+  Future<Map> login() async {
     if (authUrl == null || tokenUrl == null) {
       try {
         await _getEndpoints;
@@ -100,18 +100,32 @@ class SmartClient extends FhirClient {
     }
     try {
       await _tokens;
+      return {
+        'access': _accessToken,
+        'refresh': _refreshToken,
+      };
     } catch (e) {
       throw PlatformException(
           code: e.toString(), message: 'Failed to get Access Token');
     }
     isLoggedIn = true;
-    return unit;
+
+    // return unit;
   }
 
   @override
   Future<Unit> logout() async {
     isLoggedIn = false;
     return unit;
+  }
+
+  Future<String> tempWindow(Stream<html.MessageEvent> messageEvent) async {
+    await for (html.MessageEvent event in messageEvent) {
+      if (event.data.toString().contains('code=')) {
+        return event.data.toString();
+      }
+    }
+    return '';
   }
 
   Future<Unit> get _tokens async {
@@ -126,43 +140,38 @@ class SmartClient extends FhirClient {
     _popupWin = html.window.open(authUrl.toString(), "Redirect Window",
         "width=800, height=900, scrollbars=yes");
 
-    html.window.onMessage.listen(
-      (event) async {
-        print(event.data.toString());
-        if (event.data.toString().contains('code=')) {
-          List<String> codedStrings = event.data.split('&code=');
-          if (codedStrings.length == 1) {
-            codedStrings = event.data.split('?code=');
-          }
-          if (codedStrings.length == 1) {
-            throw Exception('No authorization code returned');
-          }
-          final _authCode = codedStrings[1].split('&')[0];
-          _popupWin?.close();
-          var response = await post(
-            tokenUrl!.value!,
-            headers: {
-              'content-type': 'application/x-www-form-urlencoded',
-            },
-            body: {
-              'grant_type': 'authorization_code',
-              'code': '$_authCode',
-              'client_id': '$_clientId',
-              'redirect_uri': '$_redirectUri',
-              'client_secret': '$_secret',
-            },
-          );
-          final body = jsonDecode(response.body);
-          _accessToken = body['access_token'];
-          _refreshToken = body['refresh_token'];
-          _accessTokenExpiration =
-              DateTime.now().add(Duration(seconds: body['864000'] ?? 0));
-          print('access: $_accessToken');
-          print('refresh: $_refreshToken');
-          print('expiration: $_accessTokenExpiration');
-        }
+    final code = await tempWindow(html.window.onMessage);
+
+    List<String> codedStrings = code.split('&code=');
+    if (codedStrings.length == 1) {
+      codedStrings = code.split('?code=');
+    }
+    if (codedStrings.length == 1) {
+      throw Exception('No authorization code returned');
+    }
+    final _authCode = codedStrings[1].split('&')[0];
+    _popupWin?.close();
+    var response = await post(
+      tokenUrl!.value!,
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+      body: {
+        'grant_type': 'authorization_code',
+        'code': '$_authCode',
+        'client_id': '$_clientId',
+        'redirect_uri': '$_redirectUri',
+        'client_secret': '$_secret',
       },
     );
+    final body = jsonDecode(response.body);
+    _accessToken = body['access_token'];
+    _refreshToken = body['refresh_token'];
+    _accessTokenExpiration =
+        DateTime.now().add(Duration(seconds: body['864000'] ?? 0));
+    print('access: $_accessToken');
+    print('refresh: $_refreshToken');
+    print('expiration: $_accessTokenExpiration');
 
     return unit;
   }
@@ -266,6 +275,8 @@ class SmartClient extends FhirClient {
 
     tokenUrl = _getUri(capabilityStatement, 'token');
     authUrl = _getUri(capabilityStatement, 'authorize');
+    print(tokenUrl);
+    print(authUrl);
 
     /// if either authorize or token are still null, we return a failure
     if (authUrl == null) {
