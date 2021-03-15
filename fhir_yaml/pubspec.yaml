@@ -1,0 +1,14 @@
+name: fhir_yaml
+description: Dart package to format JSON data to YAML. Supports formatting conventions of pubspec files.
+version: 0.2.1
+homepage: https://www.fhirfli.dev/
+repository: https://github.com/MayJuun/fhir/tree/main/fhir_yaml
+
+environment:
+  sdk: ">=2.10.0 <3.0.0"
+
+dev_dependencies:
+  dependency_validator: ^2.0.1
+  test: ^1.15.7
+  test_coverage: ^0.5.0
+  yaml: ^2.2.1
