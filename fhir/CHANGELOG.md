@@ -1,5 +1,8 @@
 # fhir
 
+## [0.3.0-nullsafety.2]
+* updated dependencies, mostly just new version of freezed
+
 ## [0.3.0-nullsafety.1]
 * updated dependencies
 * this included freezed, so some of the syntax had to change
