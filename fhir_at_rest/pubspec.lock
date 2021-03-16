@@ -158,17 +158,17 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: "../fhir"
-      relative: true
-    source: path
-    version: "0.3.0-nullsafety.2"
+      name: fhir
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.0"
   fhir_yaml:
     dependency: transitive
     description:
       name: fhir_yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.0-nullsafety.1"
+    version: "0.4.0"
   file:
     dependency: transitive
     description:
@@ -189,7 +189,7 @@ packages:
       name: freezed
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.14.0+1"
+    version: "0.14.1"
   freezed_annotation:
     dependency: "direct main"
     description:
@@ -499,4 +499,4 @@ packages:
     source: hosted
     version: "3.1.0"
 sdks:
-  dart: ">=2.12.0-0.0.dev <3.0.0"
+  dart: ">=2.12.1 <3.0.0"

@@ -1,3 +1,7 @@
+## [0.3.0-nullsafety.2]
+* Updated dependencies
+* Still prerelease because not all dependencies are stable
+
 ## [0.3.0-nullsafety.1]
 * Added web support
 
