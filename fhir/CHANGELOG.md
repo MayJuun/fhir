@@ -1,5 +1,8 @@
 # fhir
 
+## [0.4.0]
+* Stable(ish) & null safe!
+
 ## [0.3.0-nullsafety.2]
 * updated dependencies, mostly just new version of freezed
 

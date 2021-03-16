@@ -13,6 +13,8 @@ dependencies:
   dartz: ^0.10.0-nullsafety.1
   fhir:
     path: ../fhir
+  fhir_at_rest:
+    path: ../fhir_at_rest
   flutter:
     sdk: flutter
   freezed_annotation: ^0.14.0

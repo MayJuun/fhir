@@ -1,3 +1,6 @@
+## [0.4.0]
+* Stable(ish) & null safe!
+
 ## [0.3.0-nullsafety.1]
 * updated dependencies
 * once all packages for all of our FHIR software has been updated to null safety, I'll release the next stable-ish version
