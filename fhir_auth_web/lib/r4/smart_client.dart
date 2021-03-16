@@ -85,7 +85,7 @@ class SmartClient extends FhirClient {
   /// the client secret when you make a request if you're creating a confidential
   /// app
   @override
-  Future<Map> login() async {
+  Future<Unit> login() async {
     if (authUrl == null || tokenUrl == null) {
       try {
         await _getEndpoints;
@@ -100,32 +100,61 @@ class SmartClient extends FhirClient {
     }
     try {
       await _tokens;
-      return {
-        'access': _accessToken,
-        'refresh': _refreshToken,
-      };
     } catch (e) {
       throw PlatformException(
           code: e.toString(), message: 'Failed to get Access Token');
     }
     isLoggedIn = true;
-
-    // return unit;
-  }
-
-  @override
-  Future<Unit> logout() async {
-    isLoggedIn = false;
     return unit;
   }
 
-  Future<String> tempWindow(Stream<html.MessageEvent> messageEvent) async {
-    await for (html.MessageEvent event in messageEvent) {
-      if (event.data.toString().contains('code=')) {
-        return event.data.toString();
+  /// Request for the CapabilityStatement (or Conformance) and then identifying
+  /// the authUrl endpoint & tokenurl endpoing
+  Future<Unit> get _getEndpoints async {
+    var thisRequest = '$baseUrl/metadata?mode=full&_format=json';
+
+    var result = await get(Uri.parse(thisRequest));
+
+    if (_errorCodeMap.containsKey(result.statusCode)) {
+      if (result.statusCode == 422) {
+        thisRequest = thisRequest.replaceFirst(
+          '_format=json',
+          '_format=application/json',
+        );
+        result = await get(Uri.parse(thisRequest));
+      }
+      if (_errorCodeMap.containsKey(result.statusCode)) {
+        throw Exception('StatusCode: ${result.statusCode}\n${result.body}');
       }
     }
-    return '';
+    Map<String, dynamic> returnResult;
+
+    /// because I can't figure out why aidbox only has strings not lists for
+    /// the referencePolicy field
+    if (thisRequest.contains('aidbox')) {
+      returnResult = json.decode(result.body.replaceAll(
+          '"referencePolicy":"local"', '"referencePolicy":["local"]'));
+    } else {
+      returnResult = json.decode(result.body);
+    }
+
+    final resource = Resource.fromJson(returnResult);
+    if (resource.resourceType != R4ResourceType.CapabilityStatement) {
+      throw Exception(
+          'No CapabilityStatement Returned: \n${resource.toJson()}');
+    }
+
+    tokenUrl = _getUri(resource as CapabilityStatement, 'token');
+    authUrl = _getUri(resource, 'authorize');
+
+    /// if either authorize or token are still null, we return a failure
+    if (authUrl == null) {
+      throw Exception('No Authorize Url in CapabilityStatement');
+    }
+    if (tokenUrl == null) {
+      throw Exception('No Token Url in CapabilityStatement');
+    }
+    return unit;
   }
 
   Future<Unit> get _tokens async {
@@ -135,7 +164,6 @@ class SmartClient extends FhirClient {
         '&redirect_uri=$_redirectUri'
         '${scopes?.scopesList() == null ? "" : "&scope=${scopes!.scopesList().join(' ')}"}'
         '&nonce=${_nonce()}');
-    print(authUrl);
 
     _popupWin = html.window.open(authUrl.toString(), "Redirect Window",
         "width=800, height=900, scrollbars=yes");
@@ -168,124 +196,72 @@ class SmartClient extends FhirClient {
     _accessToken = body['access_token'];
     _refreshToken = body['refresh_token'];
     _accessTokenExpiration =
-        DateTime.now().add(Duration(seconds: body['864000'] ?? 0));
-    print('access: $_accessToken');
-    print('refresh: $_refreshToken');
-    print('expiration: $_accessTokenExpiration');
+        DateTime.now().add(Duration(seconds: body['expires_in'] ?? 0));
 
+    return unit;
+  }
+
+  Future<String> tempWindow(Stream<html.MessageEvent> messageEvent) async {
+    await for (html.MessageEvent event in messageEvent) {
+      if (event.data.toString().contains('code=')) {
+        return event.data.toString();
+      }
+    }
+    return '';
+  }
+
+  @override
+  Future<Unit> logout() async {
+    isLoggedIn = false;
     return unit;
   }
 
   /// attempting to follow convention of other packages, this getter allows one
   /// to call for [authHeaders], it will automatically check if if the
   /// [accessToken] is expired, if so, it will obtain a new one
-  // @override
-  // Future<Map<String, String>> get authHeaders async {
-  //   if (_accessTokenExpiration != null) {
-  //     if (DateTime.now().isAfter(_accessTokenExpiration!)) {
-  //       await _refresh;
-  //     }
-  //   }
-
-  //   final Map<String, String> authorizationHeaders = {
-  //     'Content-Type': 'application/fhir+json'
-  //   };
-  //   authorizationHeaders['Authorization'] =
-  //       'Bearer ${await secureStorage.read(key: "access_token")}';
-  //   return authorizationHeaders;
-  // }
-
-  // Future<Unit> get _refresh async {
-  //   final refreshToken = await secureStorage.read(key: 'refresh_token');
-  //   if (refreshToken == '') {
-  //     return await _tokens;
-  //   } else {
-  //     final tokenRequest = _secret == null
-  //         ? TokenRequest(
-  //             _clientId,
-  //             _redirectUri.toString(),
-  //             serviceConfiguration: AuthorizationServiceConfiguration(
-  //               authUrl.toString(),
-  //               tokenUrl.toString(),
-  //             ),
-  //             refreshToken: refreshToken,
-  //             grantType: 'refresh_token',
-  //             scopes: scopes?.scopesList(),
-  //             issuer: _clientId,
-  //           )
-  //         : TokenRequest(
-  //             _clientId,
-  //             _redirectUri.toString(),
-  //             clientSecret: _secret,
-  //             serviceConfiguration: AuthorizationServiceConfiguration(
-  //               authUrl.toString(),
-  //               tokenUrl.toString(),
-  //             ),
-  //             refreshToken: await secureStorage.read(key: 'refresh_token'),
-  //             grantType: 'refresh_token',
-  //             scopes: scopes?.scopesList(),
-  //             issuer: _clientId,
-  //           );
-  //     tokenRequest.additionalParameters =
-  //         additionalParameters ?? <String, String>{};
-  //     tokenRequest.additionalParameters!['nonce'] = _nonce();
-  //     final authorization = await appAuth.token(tokenRequest);
-  //     await secureStorage.write(
-  //         key: 'access_token', value: authorization?.accessToken ?? '');
-  //     await secureStorage.write(
-  //         key: 'refresh_token', value: authorization?.accessToken ?? '');
-  //     _accessTokenExpiration =
-  //         authorization?.accessTokenExpirationDateTime ?? DateTime.now();
-  //     return unit;
-  //   }
-  // }
-
-  /// Request for the CapabilityStatement (or Conformance) and then identifying
-  /// the authUrl endpoint & tokenurl endpoing
-  Future<Unit> get _getEndpoints async {
-    var thisRequest = '$baseUrl/metadata?mode=full&_format=json';
-
-    var result = await get(Uri.parse(thisRequest));
-
-    if (_errorCodeMap.containsKey(result.statusCode)) {
-      if (result.statusCode == 422) {
-        thisRequest = thisRequest.replaceFirst(
-          '_format=json',
-          '_format=application/json',
-        );
-        result = await get(Uri.parse(thisRequest));
-      }
-      if (_errorCodeMap.containsKey(result.statusCode)) {
-        throw Exception('StatusCode: ${result.statusCode}\n${result.body}');
+  @override
+  Future<Map<String, String>> get authHeaders async {
+    if (_accessTokenExpiration != null) {
+      if (DateTime.now().isAfter(_accessTokenExpiration!)) {
+        print('call refresh');
+        await _refresh;
       }
     }
-    Map<String, dynamic> returnResult;
 
-    /// because I can't figure out why aidbox only has strings not lists for
-    /// the referencePolicy field
-    if (thisRequest.contains('aidbox')) {
-      returnResult = json.decode(result.body.replaceAll(
-          '"referencePolicy":"local"', '"referencePolicy":["local"]'));
+    final Map<String, String> authorizationHeaders = {
+      'Content-Type': 'application/fhir+json'
+    };
+    authorizationHeaders['Authorization'] = 'Bearer $_accessToken';
+    return authorizationHeaders;
+  }
+
+  Future<Unit> get _refresh async {
+    final refreshToken = _refreshToken;
+    if (refreshToken == '') {
+      return await _tokens;
     } else {
-      returnResult = json.decode(result.body);
+      print(_refreshToken);
+      var response = await post(
+        tokenUrl!.value!,
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded',
+        },
+        body: {
+          'grant_type': 'refresh_token',
+          'refresh_token': '$_refreshToken',
+          'client_id': '$_clientId',
+          'redirect_uri': '$_redirectUri',
+          'client_secret': '$_secret',
+        },
+      );
+      final body = jsonDecode(response.body);
+      print(body);
+      _accessToken = body['access_token'];
+      _refreshToken = body['refresh_token'] ?? '';
+      _accessTokenExpiration =
+          DateTime.now().add(Duration(seconds: body['expires_in'] ?? 0));
+      return unit;
     }
-
-    final CapabilityStatement capabilityStatement =
-        CapabilityStatement.fromJson(returnResult);
-
-    tokenUrl = _getUri(capabilityStatement, 'token');
-    authUrl = _getUri(capabilityStatement, 'authorize');
-    print(tokenUrl);
-    print(authUrl);
-
-    /// if either authorize or token are still null, we return a failure
-    if (authUrl == null) {
-      throw Exception('No Authorize Url in CapabilityStatement');
-    }
-    if (tokenUrl == null) {
-      throw Exception('No Token Url in CapabilityStatement');
-    }
-    return unit;
   }
 
   /// convenience method for finding either the token or authorize endpoint

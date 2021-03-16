@@ -161,14 +161,14 @@ packages:
       path: "../fhir"
       relative: true
     source: path
-    version: "0.3.0-nullsafety.1"
+    version: "0.3.0-nullsafety.2"
   fhir_yaml:
     dependency: transitive
     description:
       name: fhir_yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.0-nullsafety.0"
+    version: "0.3.0-nullsafety.1"
   file:
     dependency: transitive
     description:
@@ -196,7 +196,7 @@ packages:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.14.0"
+    version: "0.14.1"
   glob:
     dependency: transitive
     description:
