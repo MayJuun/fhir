@@ -7,6 +7,7 @@ import 'package:dartz/dartz.dart';
 import 'package:fhir/r4.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'fhir_client.dart';
 import 'scopes.dart';
@@ -17,7 +18,7 @@ class SmartClient extends FhirClient {
   SmartClient({
     required this.baseUrl,
     required String clientId,
-    this.launch,
+    this.launchString,
     this.scopes,
     this.additionalParameters,
     this.authUrl,
@@ -54,7 +55,7 @@ class SmartClient extends FhirClient {
   late FhirUri _redirectUri;
 
   /// if there are certain launch strings that need to be included
-  String? launch;
+  String? launchString;
 
   /// the scopes that will be included with the request
   Scopes? scopes;
@@ -89,6 +90,7 @@ class SmartClient extends FhirClient {
     if (authUrl == null || tokenUrl == null) {
       try {
         await _getEndpoints;
+        print('endpoints');
       } catch (e) {
         throw PlatformException(
             code: e.toString(),
@@ -165,38 +167,40 @@ class SmartClient extends FhirClient {
         '${scopes?.scopesList() == null ? "" : "&scope=${scopes!.scopesList().join(' ')}"}'
         '&nonce=${_nonce()}');
 
-    _popupWin = html.window.open(authUrl.toString(), "Redirect Window",
-        "width=800, height=900, scrollbars=yes");
+    // await launch(authUrl.toString());
 
-    final code = await tempWindow(html.window.onMessage);
+    // _popupWin = html.window.open(authUrl.toString(), "Redirect Window",
+    //     "width=800, height=900, scrollbars=yes");
 
-    List<String> codedStrings = code.split('&code=');
-    if (codedStrings.length == 1) {
-      codedStrings = code.split('?code=');
-    }
-    if (codedStrings.length == 1) {
-      throw Exception('No authorization code returned');
-    }
-    final _authCode = codedStrings[1].split('&')[0];
-    _popupWin?.close();
-    var response = await post(
-      tokenUrl!.value!,
-      headers: {
-        'content-type': 'application/x-www-form-urlencoded',
-      },
-      body: {
-        'grant_type': 'authorization_code',
-        'code': '$_authCode',
-        'client_id': '$_clientId',
-        'redirect_uri': '$_redirectUri',
-        'client_secret': '$_secret',
-      },
-    );
-    final body = jsonDecode(response.body);
-    _accessToken = body['access_token'];
-    _refreshToken = body['refresh_token'];
-    _accessTokenExpiration =
-        DateTime.now().add(Duration(seconds: body['expires_in'] ?? 0));
+    // final code = await tempWindow(html.window.onMessage);
+
+    // List<String> codedStrings = code.split('&code=');
+    // if (codedStrings.length == 1) {
+    //   codedStrings = code.split('?code=');
+    // }
+    // if (codedStrings.length == 1) {
+    //   throw Exception('No authorization code returned');
+    // }
+    // final _authCode = codedStrings[1].split('&')[0];
+    // _popupWin?.close();
+    // var response = await post(
+    //   tokenUrl!.value!,
+    //   headers: {
+    //     'content-type': 'application/x-www-form-urlencoded',
+    //   },
+    //   body: {
+    //     'grant_type': 'authorization_code',
+    //     'code': '$_authCode',
+    //     'client_id': '$_clientId',
+    //     'redirect_uri': '$_redirectUri',
+    //     'client_secret': '$_secret',
+    //   },
+    // );
+    // final body = jsonDecode(response.body);
+    // _accessToken = body['access_token'];
+    // _refreshToken = body['refresh_token'];
+    // _accessTokenExpiration =
+    //     DateTime.now().add(Duration(seconds: body['expires_in'] ?? 0));
 
     return unit;
   }
