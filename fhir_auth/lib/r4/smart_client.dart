@@ -240,6 +240,8 @@ class SmartClient extends FhirClient {
 
     tokenUrl = _getUri(capabilityStatement, 'token');
     authUrl = _getUri(capabilityStatement, 'authorize');
+    print(tokenUrl);
+    print(authUrl);
 
     /// if either authorize or token are still null, we return a failure
     if (authUrl == null) {

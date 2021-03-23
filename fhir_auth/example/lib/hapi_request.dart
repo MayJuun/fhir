@@ -6,7 +6,7 @@ import 'new_patient.dart';
 
 Future hapiRequest(String hapiUrl) async {
   final _newPatient = newPatient();
-  print('Patient to be uploaded: ${_newPatient.toJson()}');
+  print('Patient to be uploaded:\n${_newPatient.toJson()}');
   final request1 = FhirRequest.create(
     base: Uri.parse(hapiUrl),
     resource: _newPatient,
@@ -15,7 +15,7 @@ Future hapiRequest(String hapiUrl) async {
   Id? newId;
   try {
     final response = await request1.request(headers: {});
-    print(response);
+    print('Response from upload:\n${response?.toJson()}');
     newId = response?.id;
   } catch (e) {
     print(e);
@@ -31,7 +31,7 @@ Future hapiRequest(String hapiUrl) async {
     );
     try {
       final response = await request2.request(headers: {});
-      print('Uploaded patient: ${response?.toJson()}');
+      print('Response from read:\n${response?.toJson()}');
     } catch (e) {
       print(e);
     }

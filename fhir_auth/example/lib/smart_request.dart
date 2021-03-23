@@ -41,7 +41,7 @@ Future smartRequest({
   }
 
   final _newPatient = newPatient();
-  print('Patient to be uploaded: ${_newPatient.toJson()}');
+  print('Patient to be uploaded:\n${_newPatient.toJson()}');
   final request1 = FhirRequest.create(
     base: client.baseUrl.value ?? Uri.parse('127.0.0.1'),
     resource: _newPatient,
@@ -50,8 +50,8 @@ Future smartRequest({
   Id? newId;
   try {
     final response = await request1.request(headers: await client.authHeaders);
+    print('Response from upload:\n${response?.toJson()}');
     newId = response?.id;
-    print('Uploaded patient: ${response?.toJson()}');
   } catch (e) {
     print(e);
   }
@@ -64,9 +64,9 @@ Future smartRequest({
       id: newId,
     );
     try {
-      final response2 =
+      final response =
           await request2.request(headers: await client.authHeaders);
-      print('Uploaded patient: ${response2?.toJson()}');
+      print('Response from read:\n${response?.toJson()}');
     } catch (e) {
       print(e);
     }

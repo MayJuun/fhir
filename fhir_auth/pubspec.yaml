@@ -11,8 +11,7 @@ environment:
 dependencies:
   collection: ^1.15.0
   dartz: ^0.10.0-nullsafety.1
-  fhir:
-    path: ../fhir
+  fhir: ^0.4.0
   flutter:
     sdk: flutter
   flutter_appauth: ^1.0.0-nullsafety.0
