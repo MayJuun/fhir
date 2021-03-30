@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
 
 enum DatePrecision {
@@ -13,13 +14,9 @@ class Date {
       this._precision, this._parseError);
 
   factory Date(inValue) {
-    assert(inValue != null);
-
-    switch (inValue.runtimeType.toString()) {
-      case 'DateTime':
+    if (inValue is DateTime) {
         return Date._(inValue.toIso8601String(), inValue, true,
-            DatePrecision.YYYYMMDD, null);
-      case 'String':
+            DatePrecision.YYYYMMDD, null);} else if (inValue is String) {
         try {
           final dateTimeValue = _parseDate(inValue);
           return Date._(
@@ -27,9 +24,8 @@ class Date {
         } on FormatException catch (e) {
           return Date._(inValue, null, false, DatePrecision.INVALID, e);
         }
-      default:
-        throw ArgumentError('Date cannot be constructed from $inValue.');
-    }
+    } else {
+        throw ArgumentError('Date cannot be constructed from $inValue.');}
   }
 
   factory Date.fromDateTime(DateTime dateTime,

@@ -15,25 +15,21 @@ class FhirDateTime {
       this._precision, this._parseError);
 
   factory FhirDateTime(dynamic inValue) {
-    assert(inValue != null);
-
-    final rtt = inValue.runtimeType.toString();
-    switch (rtt) {
-      case 'DateTime':
-        return FhirDateTime._(inValue.toIso8601String(), inValue, true,
-            DateTimePrecision.FULL, null);
-      case 'String':
-        try {
-          final dateTimeValue = _parseDateTime(inValue);
-          return FhirDateTime._(
-              inValue, dateTimeValue, true, _getPrecision(inValue), null);
-        } on FormatException catch (e) {
-          return FhirDateTime._(
-              inValue, null, false, DateTimePrecision.INVALID, e);
-        }
-      default:
-        throw ArgumentError(
-            "FhirDateTime cannot be constructed from '$inValue' of type '$rtt'.");
+    if (inValue is DateTime) {
+      return FhirDateTime._(inValue.toIso8601String(), inValue, true,
+          DateTimePrecision.FULL, null);
+    } else if (inValue is String) {
+      try {
+        final dateTimeValue = _parseDateTime(inValue);
+        return FhirDateTime._(
+            inValue, dateTimeValue, true, _getPrecision(inValue), null);
+      } on FormatException catch (e) {
+        return FhirDateTime._(
+            inValue, null, false, DateTimePrecision.INVALID, e);
+      }
+    } else {
+      throw ArgumentError(
+          "FhirDateTime cannot be constructed from '$inValue' of type '${inValue.runtimeType.toString()}'.");
     }
   }
 

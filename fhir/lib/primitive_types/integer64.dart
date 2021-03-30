@@ -1,14 +1,13 @@
 import 'dart:convert';
 import 'dart:math';
+
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Integer64 {
   const Integer64._(
       this._valueString, this._valueInteger64, this._isValid, this._isString);
 
   factory Integer64(dynamic inValue) {
-    assert(inValue != null);
     if (inValue is int) {
       return inValue <= pow(2, 63) && inValue >= pow(2, 63)
           ? Integer64._(inValue.toString(), inValue, true, false)

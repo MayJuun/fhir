@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
 
 class Instant {
@@ -6,19 +7,17 @@ class Instant {
       this._valueString, this._valueDateTime, this._isValid, this._parseError);
 
   factory Instant(inValue) {
-    assert(inValue != null);
-    switch (inValue.runtimeType.toString()) {
-      case 'DateTime':
-        return Instant._(inValue.toIso8601String(), inValue, true, null);
-      case 'String':
-        try {
-          final dateTimeValue = _parseDateTime(inValue);
-          return Instant._(inValue, dateTimeValue, true, null);
-        } on FormatException catch (e) {
-          return Instant._(inValue, null, false, e);
-        }
-      default:
-        throw ArgumentError('Instant cannot be constructed from $inValue.');
+    if (inValue is DateTime) {
+      return Instant._(inValue.toIso8601String(), inValue, true, null);
+    } else if (inValue is String) {
+      try {
+        final dateTimeValue = _parseDateTime(inValue);
+        return Instant._(inValue, dateTimeValue, true, null);
+      } on FormatException catch (e) {
+        return Instant._(inValue, null, false, e);
+      }
+    } else {
+      throw ArgumentError('Instant cannot be constructed from $inValue.');
     }
   }
 
