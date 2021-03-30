@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
 
 enum DateTimePrecision {
@@ -16,7 +17,8 @@ class FhirDateTime {
   factory FhirDateTime(dynamic inValue) {
     assert(inValue != null);
 
-    switch (inValue.runtimeType.toString()) {
+    final rtt = inValue.runtimeType.toString();
+    switch (rtt) {
       case 'DateTime':
         return FhirDateTime._(inValue.toIso8601String(), inValue, true,
             DateTimePrecision.FULL, null);
@@ -31,7 +33,7 @@ class FhirDateTime {
         }
       default:
         throw ArgumentError(
-            'FhirDateTime cannot be constructed from $inValue.');
+            "FhirDateTime cannot be constructed from '$inValue' of type '$rtt'.");
     }
   }
 
