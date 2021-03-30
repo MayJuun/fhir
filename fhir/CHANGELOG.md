@@ -1,5 +1,10 @@
 # fhir
 
+## [0.4.2]
+* Stable(ish)++:
+  * No longer use runtimeType string names for primitive type construction
+  * Fix for Base64 primitive type
+
 ## [0.4.0]
 * Stable(ish) & null safe!
 

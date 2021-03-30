@@ -74,7 +74,8 @@ Future<String> checkListEquality(List input, List output, String file) async {
 }
 
 Future<String> checkByTypes(dynamic input, dynamic output, String file) async {
-  /// checks if the items are both maps, and passes it to the list function
+  // checks if the items are both maps, and passes it to the list function
+  // TODO: This is very volatile code.
   if ((input.runtimeType == {}.runtimeType ||
           input.runtimeType.toString() ==
               '_InternalLinkedHashMap<String, dynamic>') &&
