@@ -1,3 +1,5 @@
+import 'package:fhir/r4.dart';
+
 import 'api.dart';
 import 'gcs_request.dart';
 import 'hapi_request.dart';
@@ -29,22 +31,32 @@ Future azure() async => await smartRequest(
       fhirCallback: Api.fhirCallback,
     );
 
-Future gcs() async => await gcsRequest(
-      url: Api.gcsUrl,
-      clientId: Api.gcsClientId,
-      scopes: Api.gcsScopes,
-    );
+Future gcs() async {
+  await gcsRequest(
+    url: Api.gcsUrl,
+    clientId: Api.gcsClientId,
+    scopes: Api.gcsScopes,
+  );
+
+//   await smartRequest(
+//     url: Api.gcsUrl,
+//     clientId: Api.gcsClientId,
+//     authUrl: Api.gcsAuthUrl,
+//     tokenUrl: Api.gcsTokenUrl,
+//     fhirCallback: Api.fhirCallback,
+//   );
+}
 
 Future hapi() async => await hapiRequest(Api.hapiUrl);
 
-Future ibm() async => await smartRequest(
-      url: Api.ibmUrl,
-      clientId: Api.ibmClientId,
-      secret: Api.ibmSecret,
-      authUrl: Api.ibmAuthUrl,
-      tokenUrl: Api.ibmTokenUrl,
-      fhirCallback: Api.fhirCallback,
-    );
+// Future ibm() async => await smartRequest(
+//       url: Api.ibmUrl,
+//       clientId: Api.ibmClientId,
+//       secret: Api.ibmSecret,
+//       authUrl: Api.ibmAuthUrl,
+//       tokenUrl: Api.ibmTokenUrl,
+//       fhirCallback: Api.fhirCallback,
+//     );
 
 Future mihin() async => await smartRequest(
       url: Api.mihinUrl,
