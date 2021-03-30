@@ -21,13 +21,21 @@ class GcsClient extends FhirClient {
   @override
   Future<Unit> login() async {
     try {
-      await googleSignIn.signIn();
+      final googleUser = await GoogleSignIn().signIn();
+      final googleAuth = await googleUser?.authentication;
+      if (googleAuth != null) {
+        print(googleAuth.accessToken);
+        print(googleAuth.idToken);
+        // final credential = GoogleAuthProvider.
+        //  .credential(
+        //   accessToken: googleAuth.accessToken,
+        //   idToken: googleAuth.idToken,
+        // );
+        // print(credential)
+      }
     } catch (e) {
-      throw PlatformException(
-          code: e.toString(),
-          message: 'Exception raised from GoogleAuth.signIn()');
+      print(e);
     }
-    isLoggedIn = true;
     return unit;
   }
 
