@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
@@ -7,16 +8,15 @@ class Boolean {
       this._isTrueBoolean);
 
   factory Boolean(dynamic inValue) {
-    assert(inValue != null);
-    switch (inValue.runtimeType.toString()) {
-      case 'bool':
-        return Boolean._(inValue.toString(), inValue, true, true);
-      case 'String':
-        return ['true', 'false'].contains(inValue.toLowerCase())
-            ? Boolean._(inValue, inValue.toLowerCase() == 'true', true, false)
-            : Boolean._(inValue, null, false, false);
-      default:
-        throw ArgumentError('Boolean cannot be constructed from $inValue.');
+    if (inValue is bool) {
+      return Boolean._(inValue.toString(), inValue, true, true);
+    } else if (inValue is String) {
+      return ['true', 'false'].contains(inValue.toLowerCase())
+          ? Boolean._(inValue, inValue.toLowerCase() == 'true', true, false)
+          : Boolean._(inValue, null, false, false);
+    } else {
+      throw ArgumentError(
+          "Boolean cannot be constructed from $inValue of type '${inValue.runtimeType.toString()}'.");
     }
   }
 

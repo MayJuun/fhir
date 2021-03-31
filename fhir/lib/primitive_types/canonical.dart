@@ -1,12 +1,10 @@
 import 'dart:convert';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Canonical {
   const Canonical._(this._valueString, this._valueCanonical, this._isValid);
 
   factory Canonical(dynamic inValue) {
-    assert(inValue != null);
     if (inValue is Uri) {
       return Canonical._(inValue.toString(), inValue, true);
     } else if (inValue is String) {

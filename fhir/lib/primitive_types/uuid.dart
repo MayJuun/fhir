@@ -1,12 +1,13 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Uuid {
   const Uuid._(this._valueString, this._valueUri, this._isValid);
 
   factory Uuid(String inValue) =>
-      RegExp(r'^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}‌​\}?$')
+      RegExp('^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-'
+                  r'[8-9A-B][0-9A-F]{3}-[0-9A-F]{12}$')
               .hasMatch(inValue)
           ? Uuid._(inValue, inValue, true)
           : Uuid._(inValue, null, false);
