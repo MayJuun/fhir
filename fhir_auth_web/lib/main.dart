@@ -1,10 +1,10 @@
-import 'package:fhir/r4.dart';
-import 'package:fhir_at_rest/r4.dart';
+import 'dart:html';
 
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
+import 'package:oauth2/oauth2.dart' as oauth2;
 
-import 'r4/scopes.dart';
-import 'r4/smart_client.dart';
+import 'api.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,31 +23,6 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Row(
           children: [
-            Expanded(child: Container(width: 10)),
-            // Expanded(
-            //   child: Column(
-            //     children: [
-            //       TextField(controller: mihinId),
-            //       TextField(controller: mihinSecret),
-            //       ElevatedButton(
-            //         child: Text('Mihin', style: TextStyle(fontSize: 36)),
-            //         onPressed: () async {
-            //           var smartClient = SmartClient(
-            //             scopes: Scopes(
-            //                 ehrLaunch: true, openid: true, profile: true),
-            //             clientId: mihinId.text,
-            //             baseUrl: FhirUri(Api.mihinUrl),
-            //             secret: mihinSecret.text,
-            //           );
-            //           var log = await smartClient.login();
-            //           mihinId.text = 'access: ${log['access']}';
-            //           mihinSecret.text = 'refresh: ${log['refresh']}';
-            //         },
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            Expanded(child: Container(width: 10)),
             Expanded(
               child: Column(
                 children: [
@@ -56,36 +31,30 @@ class MyApp extends StatelessWidget {
                   ElevatedButton(
                     child: Text('Aidbox', style: TextStyle(fontSize: 36)),
                     onPressed: () async {
-                      var base = 'https://fhirfli.aidbox.app/fhir';
-                      var smartClient = SmartClient(
-                        scopes: Scopes(
-                            ehrLaunch: true, openid: true, profile: true),
-                        clientId: aidboxId.text,
-                        baseUrl: FhirUri(base),
-                        secret: aidboxSecret.text,
+                      html.WindowBase _popupWin;
+
+                      final currentUri = Uri.base;
+                      final redirectUri = Uri(
+                        host: currentUri.host,
+                        scheme: currentUri.scheme,
+                        port: currentUri.port,
                       );
-                      var log = await smartClient.login();
-                      var _newPatient =
-                          Patient(name: [HumanName(family: 'NewName')]);
-                      final request1 = FhirRequest.create(
-                        base: Uri.parse(base),
-                        resource: _newPatient,
+                      print(redirectUri);
+                      var grant = oauth2.AuthorizationCodeGrant(
+                        Api.aidboxClientId,
+                        Uri.parse('https://fhirfli.aidbox.app/auth/authorize'),
+                        Uri.parse('https://fhirfli.aidbox.app/auth/token'),
+                        secret: Api.aidboxSecret,
                       );
-                      print(await smartClient.authHeaders);
-                      var pat = await request1.request(
-                          headers: await smartClient.authHeaders);
-                      print(pat?.toJson());
-                      await Future.delayed(const Duration(seconds: 10));
-                      _newPatient =
-                          Patient(name: [HumanName(family: 'Secondary Name')]);
-                      final request2 = FhirRequest.create(
-                        base: Uri.parse(base),
-                        resource: _newPatient,
-                      );
-                      print(await smartClient.authHeaders);
-                      pat = await request2.request(
-                          headers: await smartClient.authHeaders);
-                      print(pat?.toJson());
+
+                      var authorizationUrl = grant.getAuthorizationUrl(
+                          Uri.parse('http://localhost:44855/'),
+                          scopes: ['openid', 'offlineAccess']);
+
+                      html.window.location.assign(authorizationUrl.toString());
+                      html.window.addEventListener('newAuth', (event) {
+                        print(event.toString());
+                      });
                     },
                   ),
                 ],

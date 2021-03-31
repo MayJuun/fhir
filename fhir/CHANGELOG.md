@@ -4,6 +4,7 @@
 * Stable(ish)++:
   * No longer use runtimeType string names for primitive type construction
   * Fix for Base64 primitive type
+  * Fix Canonical, Url, Uri primitive types saying they're valid when they're not and vice versa
 
 ## [0.4.0]
 * Stable(ish) & null safe!

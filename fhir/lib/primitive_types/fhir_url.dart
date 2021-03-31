@@ -10,7 +10,7 @@ class FhirUrl {
       return FhirUrl._(inValue.toString(), inValue, true);
     } else if (inValue is String) {
       final tempUri = Uri.tryParse(inValue);
-      return FhirUrl._(inValue, tempUri, tempUri == null);
+      return FhirUrl._(inValue, tempUri, tempUri != null);
     }
     throw ArgumentError('FhirUrl cannot be constructed from $inValue.');
   }
