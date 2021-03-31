@@ -86,9 +86,6 @@ class SmartClient extends FhirClient {
             code: e.toString(),
             message: 'Failed to get Auth & Token Endpoints');
       }
-    } else {
-      authUrl = FhirUri(authUrl);
-      tokenUrl = FhirUri(tokenUrl);
     }
 
     try {
