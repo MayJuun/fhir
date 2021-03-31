@@ -6,8 +6,11 @@ class Base64Binary {
   const Base64Binary._(
       this._valueString, this._valueBase64Binary, this._isValid);
 
+  static final RegExp _base64RegExp = RegExp(
+      r'^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=|[A-Za-z0-9+\/]{4})$');
+
   factory Base64Binary(String inValue) =>
-      RegExp(r'^(\s*([0-9a-zA-Z\+\=]){4}\s*)+$').hasMatch(inValue)
+      _base64RegExp.hasMatch(inValue)
           ? Base64Binary._(inValue, inValue, true)
           : Base64Binary._(inValue, null, false);
 
