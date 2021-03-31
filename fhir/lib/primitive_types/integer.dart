@@ -1,13 +1,12 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Integer {
   const Integer._(
       this._valueString, this._valueInteger, this._isValid, this._isString);
 
   factory Integer(dynamic inValue) {
-    assert(inValue != null);
     if (inValue is int) {
       return Integer._(inValue.toString(), inValue, true, false);
     } else if (inValue is String) {

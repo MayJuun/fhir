@@ -1,13 +1,12 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class PositiveInt {
   const PositiveInt._(
       this._valueString, this._valuePositiveInt, this._isValid, this._isString);
 
   factory PositiveInt(dynamic inValue) {
-    assert(inValue != null);
     if (inValue is int) {
       return inValue > 0
           ? PositiveInt._(inValue.toString(), inValue, true, false)

@@ -1,13 +1,11 @@
 import 'dart:convert';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class UnsignedInt {
   const UnsignedInt._(
       this._valueString, this._valueUnsignedInt, this._isValid, this._isString);
 
   factory UnsignedInt(dynamic inValue) {
-    assert(inValue != null);
     if (inValue is int) {
       return inValue >= 0
           ? UnsignedInt._(inValue.toString(), inValue, true, false)

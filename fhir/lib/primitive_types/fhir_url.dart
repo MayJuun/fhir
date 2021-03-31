@@ -1,12 +1,11 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class FhirUrl {
   const FhirUrl._(this._valueString, this._valueUri, this._isValid);
 
   factory FhirUrl(dynamic inValue) {
-    assert(inValue != null);
     if (inValue is Uri) {
       return FhirUrl._(inValue.toString(), inValue, true);
     } else if (inValue is String) {

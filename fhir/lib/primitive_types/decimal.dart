@@ -1,13 +1,11 @@
 import 'dart:convert';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Decimal {
   const Decimal._(this._valueString, this._valueDecimal, this._isValid,
       this._isInt, this._isString);
 
   factory Decimal(dynamic inValue) {
-    assert(inValue != null);
     if (inValue is num) {
       return Decimal._(
         inValue.toString(),
