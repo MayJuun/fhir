@@ -1,69 +1,37 @@
-import 'dart:html';
-
 import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:oauth2/oauth2.dart' as oauth2;
 
 import 'api.dart';
 
-Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
-}
+final _redirect = 'http://localhost:39211/redirect/';
+void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  final aidboxId = TextEditingController();
-  final aidboxSecret = TextEditingController();
-  final mihinId = TextEditingController();
-  final mihinSecret = TextEditingController();
-
+class MyApp extends StatelessWidget with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Row(
-          children: [
-            Expanded(
-              child: Column(
-                children: [
-                  TextField(controller: aidboxId),
-                  TextField(controller: aidboxSecret),
-                  ElevatedButton(
-                    child: Text('Aidbox', style: TextStyle(fontSize: 36)),
-                    onPressed: () async {
-                      html.WindowBase _popupWin;
+    final base = Uri.base.toString();
+    print(base);
+    if (base.contains('code=') && base.contains('redirect')) {
+      return MaterialApp(
+          home:
+              Scaffold(body: Text('Successful Auth, here\'s the url: $base')));
+    } else {
+      var grant = oauth2.AuthorizationCodeGrant(
+        Api.aidboxClientId,
+        Uri.parse('https://fhirfli.aidbox.app/auth/authorize'),
+        Uri.parse('https://fhirfli.aidbox.app/auth/token'),
+        secret: Api.aidboxSecret,
+      );
+      var authorizationUrl = grant.getAuthorizationUrl(Uri.parse(_redirect),
+          scopes: ['openid', 'offlineAccess']);
 
-                      final currentUri = Uri.base;
-                      final redirectUri = Uri(
-                        host: currentUri.host,
-                        scheme: currentUri.scheme,
-                        port: currentUri.port,
-                      );
-                      print(redirectUri);
-                      var grant = oauth2.AuthorizationCodeGrant(
-                        Api.aidboxClientId,
-                        Uri.parse('https://fhirfli.aidbox.app/auth/authorize'),
-                        Uri.parse('https://fhirfli.aidbox.app/auth/token'),
-                        secret: Api.aidboxSecret,
-                      );
+      WidgetsBinding.instance!.addPostFrameCallback((_) {
+        html.window.location.assign(authorizationUrl.toString());
+      });
 
-                      var authorizationUrl = grant.getAuthorizationUrl(
-                          Uri.parse('http://localhost:44855/'),
-                          scopes: ['openid', 'offlineAccess']);
-
-                      html.window.location.assign(authorizationUrl.toString());
-                      html.window.addEventListener('newAuth', (event) {
-                        print(event.toString());
-                      });
-                    },
-                  ),
-                ],
-              ),
-            ),
-            Expanded(child: Container(width: 10)),
-          ],
-        ),
-      ),
-    );
+      return MaterialApp(
+          home: Scaffold(body: Text('Please wait while we log you in')));
+    }
   }
 }
