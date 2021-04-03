@@ -94,7 +94,7 @@ class Measure with Resource, _$Measure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Measure.fromYaml(dynamic yaml) => yaml is String
       ? Measure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -124,7 +124,7 @@ class MeasureGroup with _$MeasureGroup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureGroup.fromYaml(dynamic yaml) => yaml is String
       ? MeasureGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -155,7 +155,7 @@ class MeasurePopulation with _$MeasurePopulation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasurePopulation.fromYaml(dynamic yaml) => yaml is String
       ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -183,7 +183,7 @@ class MeasureStratifier with _$MeasureStratifier {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureStratifier.fromYaml(dynamic yaml) => yaml is String
       ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -212,7 +212,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureSupplementalData.fromYaml(dynamic yaml) => yaml is String
       ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -261,7 +261,7 @@ class MeasureReport with Resource, _$MeasureReport {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReport.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -289,7 +289,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportGroup.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -317,7 +317,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportPopulation.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -342,7 +342,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportStratifier.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -370,7 +370,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportStratum.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -398,7 +398,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportPopulation1.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportPopulation1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))

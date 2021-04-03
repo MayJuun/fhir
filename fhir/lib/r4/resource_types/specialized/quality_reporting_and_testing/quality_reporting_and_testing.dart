@@ -32,11 +32,11 @@ class Measure with Resource, _$Measure {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -50,7 +50,7 @@ class Measure with Resource, _$Measure {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -79,7 +79,7 @@ class Measure with Resource, _$Measure {
   /// canonical reference. It SHALL remain the same when the measure is stored
   ///  on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this measure
   /// when it is represented in other formats, or referenced in a specification,
@@ -97,33 +97,33 @@ class Measure with Resource, _$Measure {
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the measure. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the measure.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [subtitle]: An explanatory or alternate title for the measure giving
   ///  additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [status]: The status of this measure. Enables tracking the life-cycle of
   ///  the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this measure is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [subjectCodeableConcept]: The intended subjects for the measure. If this
   /// element is not provided, a Patient subject is assumed, but the subject of
@@ -138,12 +138,12 @@ class Measure with Resource, _$Measure {
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the measure changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  measure.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -151,7 +151,7 @@ class Measure with Resource, _$Measure {
   /// [description]: A free text natural language description of the measure
   ///  from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -165,30 +165,30 @@ class Measure with Resource, _$Measure {
   /// [purpose]: Explanation of why this measure is needed and why it has been
   ///  designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [usage]: A detailed description, from a clinical perspective, of how the
   ///  measure is used.
   ///
-  /// [_usage]: Extensions for usage
+  /// [usageElement]: Extensions for usage
   ///
   /// [copyright]: A copyright statement relating to the measure and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the measure.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the measure content was or is
   ///  planned to be in active use.
@@ -212,14 +212,14 @@ class Measure with Resource, _$Measure {
   /// [relatedArtifact]: Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library]: A reference to a Library resource containing the formal logic
+  /// [library_]: A reference to a Library resource containing the formal logic
   ///  used by the measure.
   ///
   /// [disclaimer]: Notices and disclaimers regarding the use of the measure or
   /// related to intellectual property (such as code systems) referenced by the
   ///  measure.
   ///
-  /// [_disclaimer]: Extensions for disclaimer
+  /// [disclaimerElement]: Extensions for disclaimer
   ///
   /// [scoring]: Indicates how the calculation is performed for the measure,
   /// including proportion, ratio, continuous-variable, and cohort. The value
@@ -237,24 +237,24 @@ class Measure with Resource, _$Measure {
   /// impact the resulting score for the measure and how they may be accounted
   ///  for when computing and reporting measure results.
   ///
-  /// [_riskAdjustment]: Extensions for riskAdjustment
+  /// [riskAdjustmentElement]: Extensions for riskAdjustment
   ///
   /// [rateAggregation]: Describes how to combine the information calculated,
   /// based on logic in each of several populations, into one summarized
   ///  result.
   ///
-  /// [_rateAggregation]: Extensions for rateAggregation
+  /// [rateAggregationElement]: Extensions for rateAggregation
   ///
   /// [rationale]: Provides a succinct statement of the need for the measure.
   /// Usually includes statements pertaining to importance criterion: impact,
   ///  gap in care, and evidence.
   ///
-  /// [_rationale]: Extensions for rationale
+  /// [rationaleElement]: Extensions for rationale
   ///
   /// [clinicalRecommendationStatement]: Provides a summary of relevant clinical
   ///  guidelines or other clinical recommendations supporting the measure.
   ///
-  /// [_clinicalRecommendationStatement]: Extensions for
+  /// [clinicalRecommendationStatementElement]: Extensions for
   ///  clinicalRecommendationStatement
   ///
   /// [improvementNotation]: Information on whether an increase or decrease in
@@ -265,12 +265,12 @@ class Measure with Resource, _$Measure {
   /// [definition]: Provides a description of an individual term used within the
   ///  measure.
   ///
-  /// [_definition]: Extensions for definition
+  /// [definitionElement]: Extensions for definition
   ///
   /// [guidance]: Additional guidance for the measure including how it can be
   ///  used in a clinical context, and the intent of the measure.
   ///
-  /// [_guidance]: Extensions for guidance
+  /// [guidanceElement]: Extensions for guidance
   ///
   /// [group]: A group of population criteria for the measure.
   ///
@@ -361,7 +361,7 @@ class Measure with Resource, _$Measure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Measure.fromYaml(dynamic yaml) => yaml is String
       ? Measure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -379,13 +379,13 @@ class Measure with Resource, _$Measure {
 class MeasureGroup with _$MeasureGroup {
   MeasureGroup._();
 
-  /// [Measure_Group]: The Measure resource provides the definition of a quality
+  /// [MeasureGroup]: The Measure resource provides the definition of a quality
   ///  measure.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -413,7 +413,7 @@ class MeasureGroup with _$MeasureGroup {
   ///
   /// [description]: The human readable description of this population group.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [population]: A population criteria for the measure.
   ///
@@ -434,7 +434,7 @@ class MeasureGroup with _$MeasureGroup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureGroup.fromYaml(dynamic yaml) => yaml is String
       ? MeasureGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -452,13 +452,13 @@ class MeasureGroup with _$MeasureGroup {
 class MeasurePopulation with _$MeasurePopulation {
   MeasurePopulation._();
 
-  /// [Measure_Population]: The Measure resource provides the definition of a
+  /// [MeasurePopulation]: The Measure resource provides the definition of a
   ///  quality measure.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -483,7 +483,7 @@ class MeasurePopulation with _$MeasurePopulation {
   ///
   /// [description]: The human readable description of this population criteria.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [criteria]: An expression that specifies the criteria for the population,
   ///  typically the name of an expression in a library.
@@ -500,7 +500,7 @@ class MeasurePopulation with _$MeasurePopulation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasurePopulation.fromYaml(dynamic yaml) => yaml is String
       ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -518,13 +518,13 @@ class MeasurePopulation with _$MeasurePopulation {
 class MeasureStratifier with _$MeasureStratifier {
   MeasureStratifier._();
 
-  /// [Measure_Stratifier]: The Measure resource provides the definition of a
+  /// [MeasureStratifier]: The Measure resource provides the definition of a
   ///  quality measure.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -552,7 +552,7 @@ class MeasureStratifier with _$MeasureStratifier {
   ///
   /// [description]: The human readable description of this stratifier criteria.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [criteria]: An expression that specifies the criteria for the stratifier.
   /// This is typically the name of an expression defined within a referenced
@@ -575,7 +575,7 @@ class MeasureStratifier with _$MeasureStratifier {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureStratifier.fromYaml(dynamic yaml) => yaml is String
       ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -593,13 +593,13 @@ class MeasureStratifier with _$MeasureStratifier {
 class MeasureComponent with _$MeasureComponent {
   MeasureComponent._();
 
-  /// [Measure_Component]: The Measure resource provides the definition of a
+  /// [MeasureComponent]: The Measure resource provides the definition of a
   ///  quality measure.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -628,7 +628,7 @@ class MeasureComponent with _$MeasureComponent {
   /// [description]: The human readable description of this stratifier criteria
   ///  component.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [criteria]: An expression that specifies the criteria for this component
   /// of the stratifier. This is typically the name of an expression defined
@@ -647,7 +647,7 @@ class MeasureComponent with _$MeasureComponent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureComponent.fromYaml(dynamic yaml) => yaml is String
       ? MeasureComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -665,13 +665,13 @@ class MeasureComponent with _$MeasureComponent {
 class MeasureSupplementalData with _$MeasureSupplementalData {
   MeasureSupplementalData._();
 
-  /// [Measure_SupplementalData]: The Measure resource provides the definition
+  /// [MeasureSupplementalData]: The Measure resource provides the definition
   ///  of a quality measure.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -705,7 +705,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   ///
   /// [description]: The human readable description of this supplemental data.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [criteria]: The criteria for the supplemental data. This is typically the
   /// name of a valid expression defined within a referenced library, but it may
@@ -725,7 +725,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureSupplementalData.fromYaml(dynamic yaml) => yaml is String
       ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -761,11 +761,11 @@ class MeasureReport with Resource, _$MeasureReport {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -779,7 +779,7 @@ class MeasureReport with Resource, _$MeasureReport {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -807,7 +807,7 @@ class MeasureReport with Resource, _$MeasureReport {
   /// [status]: The MeasureReport status. No data will be available until the
   ///  MeasureReport status is complete.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: The type of measure report. This may be an individual report,
   /// which provides the score for the measure for an individual member of the
@@ -817,7 +817,7 @@ class MeasureReport with Resource, _$MeasureReport {
   /// data-collection, which enables the MeasureReport to be used to exchange
   ///  the data-of-interest for a quality measure.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [measure]: A reference to the Measure that was calculated to produce this
   ///  report.
@@ -827,7 +827,7 @@ class MeasureReport with Resource, _$MeasureReport {
   ///
   /// [date]: The date this measure report was generated.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [reporter]: The individual, location, or organization that is reporting
   ///  the data.
@@ -877,7 +877,7 @@ class MeasureReport with Resource, _$MeasureReport {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureReport.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -895,14 +895,14 @@ class MeasureReport with Resource, _$MeasureReport {
 class MeasureReportGroup with _$MeasureReportGroup {
   MeasureReportGroup._();
 
-  /// [MeasureReport_Group]: The MeasureReport resource contains the results of
+  /// [MeasureReportGroup]: The MeasureReport resource contains the results of
   /// the calculation of a measure; and optionally a reference to the resources
   ///  involved in that calculation.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -948,7 +948,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureReportGroup.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -966,14 +966,14 @@ class MeasureReportGroup with _$MeasureReportGroup {
 class MeasureReportPopulation with _$MeasureReportPopulation {
   MeasureReportPopulation._();
 
-  /// [MeasureReport_Population]: The MeasureReport resource contains the
+  /// [MeasureReportPopulation]: The MeasureReport resource contains the
   /// results of the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -998,7 +998,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   ///
   /// [count]: The number of members of the population.
   ///
-  /// [_count]: Extensions for count
+  /// [countElement]: Extensions for count
   ///
   /// [subjectResults]: This element refers to a List of subject level
   ///  MeasureReport resources, one for each subject in this population.
@@ -1015,7 +1015,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureReportPopulation.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1033,14 +1033,14 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
 class MeasureReportStratifier with _$MeasureReportStratifier {
   MeasureReportStratifier._();
 
-  /// [MeasureReport_Stratifier]: The MeasureReport resource contains the
+  /// [MeasureReportStratifier]: The MeasureReport resource contains the
   /// results of the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1078,7 +1078,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureReportStratifier.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1096,14 +1096,14 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
 class MeasureReportStratum with _$MeasureReportStratum {
   MeasureReportStratum._();
 
-  /// [MeasureReport_Stratum]: The MeasureReport resource contains the results
+  /// [MeasureReportStratum]: The MeasureReport resource contains the results
   /// of the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1149,7 +1149,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureReportStratum.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1167,14 +1167,14 @@ class MeasureReportStratum with _$MeasureReportStratum {
 class MeasureReportComponent with _$MeasureReportComponent {
   MeasureReportComponent._();
 
-  /// [MeasureReport_Component]: The MeasureReport resource contains the results
+  /// [MeasureReportComponent]: The MeasureReport resource contains the results
   /// of the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1209,7 +1209,7 @@ class MeasureReportComponent with _$MeasureReportComponent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureReportComponent.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1227,14 +1227,14 @@ class MeasureReportComponent with _$MeasureReportComponent {
 class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   MeasureReportPopulation1._();
 
-  /// [MeasureReport_Population1]: The MeasureReport resource contains the
+  /// [MeasureReportPopulation1]: The MeasureReport resource contains the
   /// results of the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1259,7 +1259,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   ///
   /// [count]: The number of members of the population in this stratum.
   ///
-  /// [_count]: Extensions for count
+  /// [countElement]: Extensions for count
   ///
   /// [subjectResults]: This element refers to a List of subject level
   /// MeasureReport resources, one for each subject in this population in this
@@ -1277,7 +1277,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MeasureReportPopulation1.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportPopulation1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1313,11 +1313,11 @@ class TestReport with Resource, _$TestReport {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1331,7 +1331,7 @@ class TestReport with Resource, _$TestReport {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1358,11 +1358,11 @@ class TestReport with Resource, _$TestReport {
   /// [name]: A free text natural language name identifying the executed
   ///  TestScript.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [status]: The current state of this test report.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [testScript]: Ideally this is an absolute URL that is used to identify the
   /// version-specific TestScript that was executed, matching the
@@ -1370,22 +1370,22 @@ class TestReport with Resource, _$TestReport {
   ///
   /// [result]: The overall result from the execution of the TestScript.
   ///
-  /// [_result]: Extensions for result
+  /// [resultElement]: Extensions for result
   ///
   /// [score]: The final score (percentage of tests passed) resulting from the
   ///  execution of the TestScript.
   ///
-  /// [_score]: Extensions for score
+  /// [scoreElement]: Extensions for score
   ///
   /// [tester]: Name of the tester producing this report (Organization or
   ///  individual).
   ///
-  /// [_tester]: Extensions for tester
+  /// [testerElement]: Extensions for tester
   ///
   /// [issued]: When the TestScript was executed and this TestReport was
   ///  generated.
   ///
-  /// [_issued]: Extensions for issued
+  /// [issuedElement]: Extensions for issued
   ///
   /// [participant]: A participant in the test execution, either the execution
   ///  engine, a client, or a server.
@@ -1436,7 +1436,7 @@ class TestReport with Resource, _$TestReport {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReport.fromYaml(dynamic yaml) => yaml is String
       ? TestReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1454,13 +1454,13 @@ class TestReport with Resource, _$TestReport {
 class TestReportParticipant with _$TestReportParticipant {
   TestReportParticipant._();
 
-  /// [TestReport_Participant]: A summary of information based on the results of
+  /// [TestReportParticipant]: A summary of information based on the results of
   ///  executing a TestScript.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1483,15 +1483,15 @@ class TestReportParticipant with _$TestReportParticipant {
   ///
   /// [type]: The type of participant.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [uri]: The uri of the participant. An absolute URL is preferred.
   ///
-  /// [_uri]: Extensions for uri
+  /// [uriElement]: Extensions for uri
   ///
   /// [display]: The display name of the participant.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   factory TestReportParticipant({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1508,7 +1508,7 @@ class TestReportParticipant with _$TestReportParticipant {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReportParticipant.fromYaml(dynamic yaml) => yaml is String
       ? TestReportParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1526,13 +1526,13 @@ class TestReportParticipant with _$TestReportParticipant {
 class TestReportSetup with _$TestReportSetup {
   TestReportSetup._();
 
-  /// [TestReport_Setup]: A summary of information based on the results of
+  /// [TestReportSetup]: A summary of information based on the results of
   ///  executing a TestScript.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1564,7 +1564,7 @@ class TestReportSetup with _$TestReportSetup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReportSetup.fromYaml(dynamic yaml) => yaml is String
       ? TestReportSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1582,13 +1582,13 @@ class TestReportSetup with _$TestReportSetup {
 class TestReportAction with _$TestReportAction {
   TestReportAction._();
 
-  /// [TestReport_Action]: A summary of information based on the results of
+  /// [TestReportAction]: A summary of information based on the results of
   ///  executing a TestScript.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1611,7 +1611,7 @@ class TestReportAction with _$TestReportAction {
   ///
   /// [operation]: The operation performed.
   ///
-  /// [assert]: The results of the assertion performed on the previous
+  /// [assert_]: The results of the assertion performed on the previous
   ///  operations.
   factory TestReportAction({
     String? id,
@@ -1624,7 +1624,7 @@ class TestReportAction with _$TestReportAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReportAction.fromYaml(dynamic yaml) => yaml is String
       ? TestReportAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1642,13 +1642,13 @@ class TestReportAction with _$TestReportAction {
 class TestReportOperation with _$TestReportOperation {
   TestReportOperation._();
 
-  /// [TestReport_Operation]: A summary of information based on the results of
+  /// [TestReportOperation]: A summary of information based on the results of
   ///  executing a TestScript.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1671,15 +1671,15 @@ class TestReportOperation with _$TestReportOperation {
   ///
   /// [result]: The result of this operation.
   ///
-  /// [_result]: Extensions for result
+  /// [resultElement]: Extensions for result
   ///
   /// [message]: An explanatory message associated with the result.
   ///
-  /// [_message]: Extensions for message
+  /// [messageElement]: Extensions for message
   ///
   /// [detail]: A link to further details on the result.
   ///
-  /// [_detail]: Extensions for detail
+  /// [detailElement]: Extensions for detail
   factory TestReportOperation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1696,7 +1696,7 @@ class TestReportOperation with _$TestReportOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReportOperation.fromYaml(dynamic yaml) => yaml is String
       ? TestReportOperation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1714,13 +1714,13 @@ class TestReportOperation with _$TestReportOperation {
 class TestReportAssert with _$TestReportAssert {
   TestReportAssert._();
 
-  /// [TestReport_Assert]: A summary of information based on the results of
+  /// [TestReportAssert]: A summary of information based on the results of
   ///  executing a TestScript.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1743,15 +1743,15 @@ class TestReportAssert with _$TestReportAssert {
   ///
   /// [result]: The result of this assertion.
   ///
-  /// [_result]: Extensions for result
+  /// [resultElement]: Extensions for result
   ///
   /// [message]: An explanatory message associated with the result.
   ///
-  /// [_message]: Extensions for message
+  /// [messageElement]: Extensions for message
   ///
   /// [detail]: A link to further details on the result.
   ///
-  /// [_detail]: Extensions for detail
+  /// [detailElement]: Extensions for detail
   factory TestReportAssert({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1768,7 +1768,7 @@ class TestReportAssert with _$TestReportAssert {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReportAssert.fromYaml(dynamic yaml) => yaml is String
       ? TestReportAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1786,13 +1786,13 @@ class TestReportAssert with _$TestReportAssert {
 class TestReportTest with _$TestReportTest {
   TestReportTest._();
 
-  /// [TestReport_Test]: A summary of information based on the results of
+  /// [TestReportTest]: A summary of information based on the results of
   ///  executing a TestScript.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1816,12 +1816,12 @@ class TestReportTest with _$TestReportTest {
   /// [name]: The name of this test used for tracking/logging purposes by test
   ///  engines.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: A short description of the test used by test engines for
   ///  tracking and reporting purposes.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestReportTest({
@@ -1838,7 +1838,7 @@ class TestReportTest with _$TestReportTest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReportTest.fromYaml(dynamic yaml) => yaml is String
       ? TestReportTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1856,13 +1856,13 @@ class TestReportTest with _$TestReportTest {
 class TestReportAction1 with _$TestReportAction1 {
   TestReportAction1._();
 
-  /// [TestReport_Action1]: A summary of information based on the results of
+  /// [TestReportAction1]: A summary of information based on the results of
   ///  executing a TestScript.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1885,7 +1885,7 @@ class TestReportAction1 with _$TestReportAction1 {
   ///
   /// [operation]: An operation would involve a REST request to a server.
   ///
-  /// [assert]: The results of the assertion performed on the previous
+  /// [assert_]: The results of the assertion performed on the previous
   ///  operations.
   factory TestReportAction1({
     String? id,
@@ -1898,7 +1898,7 @@ class TestReportAction1 with _$TestReportAction1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReportAction1.fromYaml(dynamic yaml) => yaml is String
       ? TestReportAction1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1916,13 +1916,13 @@ class TestReportAction1 with _$TestReportAction1 {
 class TestReportTeardown with _$TestReportTeardown {
   TestReportTeardown._();
 
-  /// [TestReport_Teardown]: A summary of information based on the results of
+  /// [TestReportTeardown]: A summary of information based on the results of
   ///  executing a TestScript.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1954,7 +1954,7 @@ class TestReportTeardown with _$TestReportTeardown {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReportTeardown.fromYaml(dynamic yaml) => yaml is String
       ? TestReportTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1972,13 +1972,13 @@ class TestReportTeardown with _$TestReportTeardown {
 class TestReportAction2 with _$TestReportAction2 {
   TestReportAction2._();
 
-  /// [TestReport_Action2]: A summary of information based on the results of
+  /// [TestReportAction2]: A summary of information based on the results of
   ///  executing a TestScript.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2010,7 +2010,7 @@ class TestReportAction2 with _$TestReportAction2 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestReportAction2.fromYaml(dynamic yaml) => yaml is String
       ? TestReportAction2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2045,11 +2045,11 @@ class TestScript with Resource, _$TestScript {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2063,7 +2063,7 @@ class TestScript with Resource, _$TestScript {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2092,7 +2092,7 @@ class TestScript with Resource, _$TestScript {
   /// canonical reference. It SHALL remain the same when the test script is
   ///  stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this test
   /// script when it is represented in other formats, or referenced in a
@@ -2106,40 +2106,40 @@ class TestScript with Resource, _$TestScript {
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the test script. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the test script.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this test script. Enables tracking the life-cycle
   ///  of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this test script is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the test script was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the test script changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  test script.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -2147,7 +2147,7 @@ class TestScript with Resource, _$TestScript {
   /// [description]: A free text natural language description of the test script
   ///  from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -2161,13 +2161,13 @@ class TestScript with Resource, _$TestScript {
   /// [purpose]: Explanation of why this test script is needed and why it has
   ///  been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the test script and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the test script.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [origin]: An abstract server used in operations within this test script in
   ///  the origin element.
@@ -2247,7 +2247,7 @@ class TestScript with Resource, _$TestScript {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScript.fromYaml(dynamic yaml) => yaml is String
       ? TestScript.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2265,14 +2265,14 @@ class TestScript with Resource, _$TestScript {
 class TestScriptOrigin with _$TestScriptOrigin {
   TestScriptOrigin._();
 
-  /// [TestScript_Origin]: A structured set of tests against a FHIR server or
+  /// [TestScriptOrigin]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2296,7 +2296,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
   /// [index]: Abstract name given to an origin server in this test script.  The
   ///  name is provided as a number starting at 1.
   ///
-  /// [_index]: Extensions for index
+  /// [indexElement]: Extensions for index
   ///
   /// [profile]: The type of origin profile the test system supports.
   factory TestScriptOrigin({
@@ -2311,7 +2311,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptOrigin.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptOrigin.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2329,14 +2329,14 @@ class TestScriptOrigin with _$TestScriptOrigin {
 class TestScriptDestination with _$TestScriptDestination {
   TestScriptDestination._();
 
-  /// [TestScript_Destination]: A structured set of tests against a FHIR server
+  /// [TestScriptDestination]: A structured set of tests against a FHIR server
   /// or client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2360,7 +2360,7 @@ class TestScriptDestination with _$TestScriptDestination {
   /// [index]: Abstract name given to a destination server in this test script.
   ///  The name is provided as a number starting at 1.
   ///
-  /// [_index]: Extensions for index
+  /// [indexElement]: Extensions for index
   ///
   /// [profile]: The type of destination profile the test system supports.
   factory TestScriptDestination({
@@ -2375,7 +2375,7 @@ class TestScriptDestination with _$TestScriptDestination {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptDestination.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptDestination.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2393,14 +2393,14 @@ class TestScriptDestination with _$TestScriptDestination {
 class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
 
-  /// [TestScript_Metadata]: A structured set of tests against a FHIR server or
+  /// [TestScriptMetadata]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2436,7 +2436,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptMetadata.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2454,14 +2454,14 @@ class TestScriptMetadata with _$TestScriptMetadata {
 class TestScriptLink with _$TestScriptLink {
   TestScriptLink._();
 
-  /// [TestScript_Link]: A structured set of tests against a FHIR server or
+  /// [TestScriptLink]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2485,11 +2485,11 @@ class TestScriptLink with _$TestScriptLink {
   /// [url]: URL to a particular requirement or feature within the FHIR
   ///  specification.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [description]: Short description of the link.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   factory TestScriptLink({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2503,7 +2503,7 @@ class TestScriptLink with _$TestScriptLink {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptLink.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2521,14 +2521,14 @@ class TestScriptLink with _$TestScriptLink {
 class TestScriptCapability with _$TestScriptCapability {
   TestScriptCapability._();
 
-  /// [TestScript_Capability]: A structured set of tests against a FHIR server
+  /// [TestScriptCapability]: A structured set of tests against a FHIR server
   /// or client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2552,30 +2552,30 @@ class TestScriptCapability with _$TestScriptCapability {
   /// [required]: Whether or not the test execution will require the given
   ///  capabilities of the server in order for this test script to execute.
   ///
-  /// [_required]: Extensions for required
+  /// [requiredElement]: Extensions for required
   ///
   /// [validated]: Whether or not the test execution will validate the given
   ///  capabilities of the server in order for this test script to execute.
   ///
-  /// [_validated]: Extensions for validated
+  /// [validatedElement]: Extensions for validated
   ///
   /// [description]: Description of the capabilities that this test script is
   ///  requiring the server to support.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [origin]: Which origin server these requirements apply to.
   ///
-  /// [_origin]: Extensions for origin
+  /// [originElement]: Extensions for origin
   ///
   /// [destination]: Which server these requirements apply to.
   ///
-  /// [_destination]: Extensions for destination
+  /// [destinationElement]: Extensions for destination
   ///
   /// [link]: Links to the FHIR specification that describes this interaction
   ///  and the resources involved in more detail.
   ///
-  /// [_link]: Extensions for link
+  /// [linkElement]: Extensions for link
   ///
   /// [capabilities]: Minimum capabilities required of server for test script to
   /// execute successfully.   If server does not meet at a minimum the
@@ -2603,7 +2603,7 @@ class TestScriptCapability with _$TestScriptCapability {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptCapability.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptCapability.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2621,14 +2621,14 @@ class TestScriptCapability with _$TestScriptCapability {
 class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
 
-  /// [TestScript_Fixture]: A structured set of tests against a FHIR server or
+  /// [TestScriptFixture]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2654,14 +2654,14 @@ class TestScriptFixture with _$TestScriptFixture {
   /// tested during setup, therefore no create operation is required for this
   ///  fixture in the TestScript.setup section.
   ///
-  /// [_autocreate]: Extensions for autocreate
+  /// [autocreateElement]: Extensions for autocreate
   ///
   /// [autodelete]: Whether or not to implicitly delete the fixture during
   /// teardown. If true, the fixture is automatically deleted on each server
   /// being tested during teardown, therefore no delete operation is required
   ///  for this fixture in the TestScript.teardown section.
   ///
-  /// [_autodelete]: Extensions for autodelete
+  /// [autodeleteElement]: Extensions for autodelete
   ///
   /// [resource]: Reference to the resource (containing the contents of the
   ///  resource needed for operations).
@@ -2679,7 +2679,7 @@ class TestScriptFixture with _$TestScriptFixture {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptFixture.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptFixture.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2697,14 +2697,14 @@ class TestScriptFixture with _$TestScriptFixture {
 class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
 
-  /// [TestScript_Variable]: A structured set of tests against a FHIR server or
+  /// [TestScriptVariable]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2727,44 +2727,44 @@ class TestScriptVariable with _$TestScriptVariable {
   ///
   /// [name]: Descriptive name for this variable.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [defaultValue]: A default, hard-coded, or user-defined value for this
   ///  variable.
   ///
-  /// [_defaultValue]: Extensions for defaultValue
+  /// [defaultValueElement]: Extensions for defaultValue
   ///
   /// [description]: A free text natural language description of the variable
   ///  and its purpose.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [expression]: The FHIRPath expression to evaluate against the fixture
   /// body. When variables are defined, only one of either expression,
   ///  headerField or path must be specified.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   ///
   /// [headerField]: Will be used to grab the HTTP header field value from the
   ///  headers that sourceId is pointing to.
   ///
-  /// [_headerField]: Extensions for headerField
+  /// [headerFieldElement]: Extensions for headerField
   ///
   /// [hint]: Displayable text string with hint help information to the user
   ///  when entering a default value.
   ///
-  /// [_hint]: Extensions for hint
+  /// [hintElement]: Extensions for hint
   ///
   /// [path]: XPath or JSONPath to evaluate against the fixture body.  When
   /// variables are defined, only one of either expression, headerField or path
   ///  must be specified.
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [sourceId]: Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against within this variable.
   ///
-  /// [_sourceId]: Extensions for sourceId
+  /// [sourceIdElement]: Extensions for sourceId
   factory TestScriptVariable({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2790,7 +2790,7 @@ class TestScriptVariable with _$TestScriptVariable {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptVariable.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2808,14 +2808,14 @@ class TestScriptVariable with _$TestScriptVariable {
 class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
 
-  /// [TestScript_Setup]: A structured set of tests against a FHIR server or
+  /// [TestScriptSetup]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2847,7 +2847,7 @@ class TestScriptSetup with _$TestScriptSetup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptSetup.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2865,14 +2865,14 @@ class TestScriptSetup with _$TestScriptSetup {
 class TestScriptAction with _$TestScriptAction {
   TestScriptAction._();
 
-  /// [TestScript_Action]: A structured set of tests against a FHIR server or
+  /// [TestScriptAction]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2895,7 +2895,7 @@ class TestScriptAction with _$TestScriptAction {
   ///
   /// [operation]: The operation to perform.
   ///
-  /// [assert]: Evaluates the results of previous operations to determine if the
+  /// [assert_]: Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
   factory TestScriptAction({
     String? id,
@@ -2908,7 +2908,7 @@ class TestScriptAction with _$TestScriptAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptAction.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2926,14 +2926,14 @@ class TestScriptAction with _$TestScriptAction {
 class TestScriptOperation with _$TestScriptOperation {
   TestScriptOperation._();
 
-  /// [TestScript_Operation]: A structured set of tests against a FHIR server or
+  /// [TestScriptOperation]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2959,78 +2959,78 @@ class TestScriptOperation with _$TestScriptOperation {
   /// [resource]: The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
   ///
-  /// [_resource]: Extensions for resource
+  /// [resourceElement]: Extensions for resource
   ///
   /// [label]: The label would be used for tracking/logging purposes by test
   ///  engines.
   ///
-  /// [_label]: Extensions for label
+  /// [labelElement]: Extensions for label
   ///
   /// [description]: The description would be used by test engines for tracking
   ///  and reporting purposes.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [accept]: The mime-type to use for RESTful operation in the 'Accept'
   ///  header.
   ///
-  /// [_accept]: Extensions for accept
+  /// [acceptElement]: Extensions for accept
   ///
   /// [contentType]: The mime-type to use for RESTful operation in the
   ///  'Content-Type' header.
   ///
-  /// [_contentType]: Extensions for contentType
+  /// [contentTypeElement]: Extensions for contentType
   ///
   /// [destination]: The server where the request message is destined for.  Must
   ///  be one of the server numbers listed in TestScript.destination section.
   ///
-  /// [_destination]: Extensions for destination
+  /// [destinationElement]: Extensions for destination
   ///
   /// [encodeRequestUrl]: Whether or not to implicitly send the request url in
   /// encoded format. The default is true to match the standard RESTful client
   /// behavior. Set to false when communicating with a server that does not
   ///  support encoded url paths.
   ///
-  /// [_encodeRequestUrl]: Extensions for encodeRequestUrl
+  /// [encodeRequestUrlElement]: Extensions for encodeRequestUrl
   ///
   /// [method]: The HTTP method the test engine MUST use for this operation
   ///  regardless of any other operation details.
   ///
-  /// [_method]: Extensions for method
+  /// [methodElement]: Extensions for method
   ///
   /// [origin]: The server where the request message originates from.  Must be
   ///  one of the server numbers listed in TestScript.origin section.
   ///
-  /// [_origin]: Extensions for origin
+  /// [originElement]: Extensions for origin
   ///
   /// [params]: Path plus parameters after [type].  Used to set parts of the
   ///  request URL explicitly.
   ///
-  /// [_params]: Extensions for params
+  /// [paramsElement]: Extensions for params
   ///
   /// [requestHeader]: Header elements would be used to set HTTP headers.
   ///
   /// [requestId]: The fixture id (maybe new) to map to the request.
   ///
-  /// [_requestId]: Extensions for requestId
+  /// [requestIdElement]: Extensions for requestId
   ///
   /// [responseId]: The fixture id (maybe new) to map to the response.
   ///
-  /// [_responseId]: Extensions for responseId
+  /// [responseIdElement]: Extensions for responseId
   ///
   /// [sourceId]: The id of the fixture used as the body of a PUT or POST
   ///  request.
   ///
-  /// [_sourceId]: Extensions for sourceId
+  /// [sourceIdElement]: Extensions for sourceId
   ///
   /// [targetId]: Id of fixture used for extracting the [id],  [type], and [vid]
   ///  for GET requests.
   ///
-  /// [_targetId]: Extensions for targetId
+  /// [targetIdElement]: Extensions for targetId
   ///
   /// [url]: Complete request URL.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   factory TestScriptOperation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3073,7 +3073,7 @@ class TestScriptOperation with _$TestScriptOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptOperation.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptOperation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3091,14 +3091,14 @@ class TestScriptOperation with _$TestScriptOperation {
 class TestScriptRequestHeader with _$TestScriptRequestHeader {
   TestScriptRequestHeader._();
 
-  /// [TestScript_RequestHeader]: A structured set of tests against a FHIR
+  /// [TestScriptRequestHeader]: A structured set of tests against a FHIR
   /// server or client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3121,11 +3121,11 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   ///
   /// [field]: The HTTP header field e.g. "Accept".
   ///
-  /// [_field]: Extensions for field
+  /// [fieldElement]: Extensions for field
   ///
   /// [value]: The value of the header e.g. "application/fhir+xml".
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory TestScriptRequestHeader({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3139,7 +3139,7 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptRequestHeader.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptRequestHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3157,14 +3157,14 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
 class TestScriptAssert with _$TestScriptAssert {
   TestScriptAssert._();
 
-  /// [TestScript_Assert]: A structured set of tests against a FHIR server or
+  /// [TestScriptAssert]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3188,113 +3188,113 @@ class TestScriptAssert with _$TestScriptAssert {
   /// [label]: The label would be used for tracking/logging purposes by test
   ///  engines.
   ///
-  /// [_label]: Extensions for label
+  /// [labelElement]: Extensions for label
   ///
   /// [description]: The description would be used by test engines for tracking
   ///  and reporting purposes.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [direction]: The direction to use for the assertion.
   ///
-  /// [_direction]: Extensions for direction
+  /// [directionElement]: Extensions for direction
   ///
   /// [compareToSourceId]: Id of the source fixture used as the contents to be
   /// evaluated by either the "source/expression" or "sourceId/path"
   ///  definition.
   ///
-  /// [_compareToSourceId]: Extensions for compareToSourceId
+  /// [compareToSourceIdElement]: Extensions for compareToSourceId
   ///
   /// [compareToSourceExpression]: The FHIRPath expression to evaluate against
   /// the source fixture. When compareToSourceId is defined, either
   /// compareToSourceExpression or compareToSourcePath must be defined, but not
   ///  both.
   ///
-  /// [_compareToSourceExpression]: Extensions for compareToSourceExpression
+  /// [compareToSourceExpressionElement]: Extensions for compareToSourceExpression
   ///
   /// [compareToSourcePath]: XPath or JSONPath expression to evaluate against
   /// the source fixture. When compareToSourceId is defined, either
   /// compareToSourceExpression or compareToSourcePath must be defined, but not
   ///  both.
   ///
-  /// [_compareToSourcePath]: Extensions for compareToSourcePath
+  /// [compareToSourcePathElement]: Extensions for compareToSourcePath
   ///
   /// [contentType]: The mime-type contents to compare against the request or
   ///  response message 'Content-Type' header.
   ///
-  /// [_contentType]: Extensions for contentType
+  /// [contentTypeElement]: Extensions for contentType
   ///
   /// [expression]: The FHIRPath expression to be evaluated against the request
   ///  or response message contents - HTTP headers and payload.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   ///
   /// [headerField]: The HTTP header field name e.g. 'Location'.
   ///
-  /// [_headerField]: Extensions for headerField
+  /// [headerFieldElement]: Extensions for headerField
   ///
   /// [minimumId]: The ID of a fixture.  Asserts that the response contains at a
   ///  minimum the fixture specified by minimumId.
   ///
-  /// [_minimumId]: Extensions for minimumId
+  /// [minimumIdElement]: Extensions for minimumId
   ///
   /// [navigationLinks]: Whether or not the test execution performs validation
   ///  on the bundle navigation links.
   ///
-  /// [_navigationLinks]: Extensions for navigationLinks
+  /// [navigationLinksElement]: Extensions for navigationLinks
   ///
   /// [operator]: The operator type defines the conditional behavior of the
   ///  assert. If not defined, the default is equals.
   ///
-  /// [_operator]: Extensions for operator
+  /// [operatorElement]: Extensions for operator
   ///
   /// [path]: The XPath or JSONPath expression to be evaluated against the
   ///  fixture representing the response received from server.
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [requestMethod]: The request method or HTTP operation code to compare
   ///  against that used by the client system under test.
   ///
-  /// [_requestMethod]: Extensions for requestMethod
+  /// [requestMethodElement]: Extensions for requestMethod
   ///
   /// [requestURL]: The value to use in a comparison against the request URL
   ///  path string.
   ///
-  /// [_requestURL]: Extensions for requestURL
+  /// [requestURLElement]: Extensions for requestURL
   ///
   /// [resource]: The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
   ///
-  /// [_resource]: Extensions for resource
+  /// [resourceElement]: Extensions for resource
   ///
   /// [response]: okay | created | noContent | notModified | bad | forbidden |
   /// notFound | methodNotAllowed | conflict | gone | preconditionFailed |
   ///  unprocessable.
   ///
-  /// [_response]: Extensions for response
+  /// [responseElement]: Extensions for response
   ///
   /// [responseCode]: The value of the HTTP response code to be tested.
   ///
-  /// [_responseCode]: Extensions for responseCode
+  /// [responseCodeElement]: Extensions for responseCode
   ///
   /// [sourceId]: Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against.
   ///
-  /// [_sourceId]: Extensions for sourceId
+  /// [sourceIdElement]: Extensions for sourceId
   ///
   /// [validateProfileId]: The ID of the Profile to validate against.
   ///
-  /// [_validateProfileId]: Extensions for validateProfileId
+  /// [validateProfileIdElement]: Extensions for validateProfileId
   ///
   /// [value]: The value to compare to.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [warningOnly]: Whether or not the test execution will produce a warning
   ///  only on error for this assert.
   ///
-  /// [_warningOnly]: Extensions for warningOnly
+  /// [warningOnlyElement]: Extensions for warningOnly
   factory TestScriptAssert({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3353,7 +3353,7 @@ class TestScriptAssert with _$TestScriptAssert {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptAssert.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3371,14 +3371,14 @@ class TestScriptAssert with _$TestScriptAssert {
 class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
 
-  /// [TestScript_Test]: A structured set of tests against a FHIR server or
+  /// [TestScriptTest]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3402,12 +3402,12 @@ class TestScriptTest with _$TestScriptTest {
   /// [name]: The name of this test used for tracking/logging purposes by test
   ///  engines.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: A short description of the test used by test engines for
   ///  tracking and reporting purposes.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestScriptTest({
@@ -3424,7 +3424,7 @@ class TestScriptTest with _$TestScriptTest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptTest.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3442,14 +3442,14 @@ class TestScriptTest with _$TestScriptTest {
 class TestScriptAction1 with _$TestScriptAction1 {
   TestScriptAction1._();
 
-  /// [TestScript_Action1]: A structured set of tests against a FHIR server or
+  /// [TestScriptAction1]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3472,7 +3472,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
   ///
   /// [operation]: An operation would involve a REST request to a server.
   ///
-  /// [assert]: Evaluates the results of previous operations to determine if the
+  /// [assert_]: Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
   factory TestScriptAction1({
     String? id,
@@ -3485,7 +3485,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptAction1.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptAction1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3503,14 +3503,14 @@ class TestScriptAction1 with _$TestScriptAction1 {
 class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
 
-  /// [TestScript_Teardown]: A structured set of tests against a FHIR server or
+  /// [TestScriptTeardown]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3542,7 +3542,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptTeardown.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3560,14 +3560,14 @@ class TestScriptTeardown with _$TestScriptTeardown {
 class TestScriptAction2 with _$TestScriptAction2 {
   TestScriptAction2._();
 
-  /// [TestScript_Action2]: A structured set of tests against a FHIR server or
+  /// [TestScriptAction2]: A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3599,7 +3599,7 @@ class TestScriptAction2 with _$TestScriptAction2 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TestScriptAction2.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptAction2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

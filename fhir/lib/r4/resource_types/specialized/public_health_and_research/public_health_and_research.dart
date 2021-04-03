@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
+
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -37,11 +38,11 @@ class ResearchStudy with Resource, _$ResearchStudy {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -55,7 +56,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -81,7 +82,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   ///
   /// [title]: A short, descriptive user-friendly label for the study.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [protocol]: The set of steps expected to be performed as part of the
   ///  execution of the study.
@@ -91,7 +92,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   ///
   /// [status]: The current state of the study.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [primaryPurposeType]: The type of study based upon the intent of the
   ///  study's activities. A classification of the intent of the study.
@@ -124,7 +125,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   ///
   /// [description]: A full description of how the study is being conducted.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [enrollment]: Reference to a Group that defines the criteria for and
   /// quantity of subjects participating in the study.  E.g. " 200 female
@@ -203,7 +204,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -221,7 +222,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
 class ResearchStudyArm with _$ResearchStudyArm {
   ResearchStudyArm._();
 
-  /// [ResearchStudy_Arm]: A process where a researcher or organization plans
+  /// [ResearchStudyArm]: A process where a researcher or organization plans
   /// and then executes a series of steps intended to increase the field of
   /// healthcare-related knowledge.  This includes studies of safety, efficacy,
   /// comparative effectiveness and other information about medications,
@@ -232,7 +233,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -255,7 +256,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
   ///
   /// [name]: Unique, human-readable label for this arm of the study.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [type]: Categorization of study arm, e.g. experimental, active comparator,
   ///  placebo comparater.
@@ -263,7 +264,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
   /// [description]: A succinct description of the path through the study that
   ///  would be followed by a subject adhering to this arm.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   factory ResearchStudyArm({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -278,7 +279,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -296,7 +297,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
 class ResearchStudyObjective with _$ResearchStudyObjective {
   ResearchStudyObjective._();
 
-  /// [ResearchStudy_Objective]: A process where a researcher or organization
+  /// [ResearchStudyObjective]: A process where a researcher or organization
   /// plans and then executes a series of steps intended to increase the field
   /// of healthcare-related knowledge.  This includes studies of safety,
   /// efficacy, comparative effectiveness and other information about
@@ -307,7 +308,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -330,7 +331,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   ///
   /// [name]: Unique, human-readable label for this objective of the study.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [type]: The kind of study objective.
   factory ResearchStudyObjective({
@@ -345,7 +346,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchStudyObjective.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -380,11 +381,11 @@ class ResearchSubject with Resource, _$ResearchSubject {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -398,7 +399,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -423,7 +424,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   ///
   /// [status]: The current state of the subject.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [period]: The dates the subject began and ended their participation in the
   ///  study.
@@ -436,12 +437,12 @@ class ResearchSubject with Resource, _$ResearchSubject {
   /// [assignedArm]: The name of the arm in the study the subject is expected to
   ///  follow as part of this study.
   ///
-  /// [_assignedArm]: Extensions for assignedArm
+  /// [assignedArmElement]: Extensions for assignedArm
   ///
   /// [actualArm]: The name of the arm in the study the subject actually
   ///  followed as part of this study.
   ///
-  /// [_actualArm]: Extensions for actualArm
+  /// [actualArmElement]: Extensions for actualArm
   ///
   /// [consent]: A record of the patient's informed agreement to participate in
   ///  the study.
@@ -476,7 +477,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String
       ? ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

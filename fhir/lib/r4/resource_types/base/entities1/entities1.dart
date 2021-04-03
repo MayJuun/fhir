@@ -34,11 +34,11 @@ class Endpoint with Resource, _$Endpoint {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -52,7 +52,7 @@ class Endpoint with Resource, _$Endpoint {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -78,7 +78,7 @@ class Endpoint with Resource, _$Endpoint {
   ///
   /// [status]: active | suspended | error | off | test.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [connectionType]: A coded value that represents the technical details of
   /// the usage of this endpoint, such as what WSDLs should be used in what way.
@@ -86,7 +86,7 @@ class Endpoint with Resource, _$Endpoint {
   ///
   /// [name]: A friendly name that this endpoint can be referred to with.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [managingOrganization]: The organization that manages this endpoint (even
   /// if technically another organization is hosting this in the cloud, it is
@@ -106,16 +106,16 @@ class Endpoint with Resource, _$Endpoint {
   /// specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
   ///
-  /// [_payloadMimeType]: Extensions for payloadMimeType
+  /// [payloadMimeTypeElement]: Extensions for payloadMimeType
   ///
   /// [address]: The uri that describes the actual end-point to connect to.
   ///
-  /// [_address]: Extensions for address
+  /// [addressElement]: Extensions for address
   ///
   /// [header]: Additional headers / information to send as part of the
   ///  notification.
   ///
-  /// [_header]: Extensions for header
+  /// [headerElement]: Extensions for header
   factory Endpoint({
     @Default(R4ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
@@ -151,7 +151,7 @@ class Endpoint with Resource, _$Endpoint {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Endpoint.fromYaml(dynamic yaml) => yaml is String
       ? Endpoint.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -186,11 +186,11 @@ class HealthcareService with Resource, _$HealthcareService {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -204,7 +204,7 @@ class HealthcareService with Resource, _$HealthcareService {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -231,7 +231,7 @@ class HealthcareService with Resource, _$HealthcareService {
   /// used when a center is closed for maintenance, or for holidays, the
   ///  notAvailable period is to be used for this.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [providedBy]: The organization that provides this healthcare service.
   ///
@@ -248,18 +248,18 @@ class HealthcareService with Resource, _$HealthcareService {
   /// [name]: Further description of the service as it would be presented to a
   ///  consumer while searching.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [comment]: Any additional description of the service and/or any specific
   /// issues not covered by the other attributes, which can be displayed as
   ///  further detail under the serviceName.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [extraDetails]: Extra details about the service that can't be placed in
   ///  the other fields.
   ///
-  /// [_extraDetails]: Extensions for extraDetails
+  /// [extraDetailsElement]: Extensions for extraDetails
   ///
   /// [photo]: If there is a photo/symbol associated with this
   /// HealthcareService, it may be included here to facilitate quick
@@ -293,7 +293,7 @@ class HealthcareService with Resource, _$HealthcareService {
   /// provided by the Organization. Indicates if an appointment is required for
   ///  access to this service.
   ///
-  /// [_appointmentRequired]: Extensions for appointmentRequired
+  /// [appointmentRequiredElement]: Extensions for appointmentRequired
   ///
   /// [availableTime]: A collection of times that the Service Site is available.
   ///
@@ -305,7 +305,7 @@ class HealthcareService with Resource, _$HealthcareService {
   /// exceptions to normal site availability as details in the available Times
   ///  and not available Times.
   ///
-  /// [_availabilityExceptions]: Extensions for availabilityExceptions
+  /// [availabilityExceptionsElement]: Extensions for availabilityExceptions
   ///
   /// [endpoint]: Technical endpoints providing access to services operated for
   ///  the specific healthcare services defined at this resource.
@@ -359,7 +359,7 @@ class HealthcareService with Resource, _$HealthcareService {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareService.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -377,13 +377,13 @@ class HealthcareService with Resource, _$HealthcareService {
 class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   HealthcareServiceEligibility._();
 
-  /// [HealthcareService_Eligibility]: The details of a healthcare service
+  /// [HealthcareServiceEligibility]: The details of a healthcare service
   ///  available at a location.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -408,7 +408,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   ///
   /// [comment]: Describes the eligibility conditions for the service.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   factory HealthcareServiceEligibility({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -421,7 +421,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HealthcareServiceEligibility.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceEligibility.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -440,13 +440,13 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
 
-  /// [HealthcareService_AvailableTime]: The details of a healthcare service
+  /// [HealthcareServiceAvailableTime]: The details of a healthcare service
   ///  available at a location.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -470,22 +470,22 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   /// [daysOfWeek]: Indicates which days of the week are available between the
   ///  start and end Times.
   ///
-  /// [_daysOfWeek]: Extensions for daysOfWeek
+  /// [daysOfWeekElement]: Extensions for daysOfWeek
   ///
   /// [allDay]: Is this always available? (hence times are irrelevant) e.g. 24
   ///  hour service.
   ///
-  /// [_allDay]: Extensions for allDay
+  /// [allDayElement]: Extensions for allDay
   ///
   /// [availableStartTime]: The opening time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
   ///
-  /// [_availableStartTime]: Extensions for availableStartTime
+  /// [availableStartTimeElement]: Extensions for availableStartTime
   ///
   /// [availableEndTime]: The closing time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
   ///
-  /// [_availableEndTime]: Extensions for availableEndTime
+  /// [availableEndTimeElement]: Extensions for availableEndTime
   factory HealthcareServiceAvailableTime({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -503,7 +503,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) => yaml
           is String
       ? HealthcareServiceAvailableTime.fromJson(
@@ -524,13 +524,13 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
 
-  /// [HealthcareService_NotAvailable]: The details of a healthcare service
+  /// [HealthcareServiceNotAvailable]: The details of a healthcare service
   ///  available at a location.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -554,7 +554,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   /// [description]: The reason that can be presented to the user as to why this
   ///  time is not available.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [during]: Service is not available (seasonally or for a public holiday)
   ///  from this date.
@@ -570,7 +570,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceNotAvailable.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -607,11 +607,11 @@ class Location with Resource, _$Location {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -625,7 +625,7 @@ class Location with Resource, _$Location {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -653,7 +653,7 @@ class Location with Resource, _$Location {
   /// operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [operationalStatus]: The operational status covers operation values most
   /// relevant to beds (but can also apply to rooms/units/chairs/etc. such as an
@@ -663,22 +663,22 @@ class Location with Resource, _$Location {
   /// [name]: Name of the location as used by humans. Does not need to be
   ///  unique.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [alias]: A list of alternate names that the location is known as, or was
   ///  known as, in the past.
   ///
-  /// [_alias]: Extensions for alias
+  /// [aliasElement]: Extensions for alias
   ///
   /// [description]: Description of the Location, which helps in finding or
   ///  referencing the place.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [mode]: Indicates whether a resource instance represents a specific
   ///  location or a class of locations.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [type]: Indicates the type of function performed at the location.
   ///
@@ -707,7 +707,7 @@ class Location with Resource, _$Location {
   /// describing all possible exceptions to normal site availability as detailed
   ///  in the opening hours Times.
   ///
-  /// [_availabilityExceptions]: Extensions for availabilityExceptions
+  /// [availabilityExceptionsElement]: Extensions for availabilityExceptions
   ///
   /// [endpoint]: Technical endpoints providing access to services operated for
   ///  the location.
@@ -754,7 +754,7 @@ class Location with Resource, _$Location {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Location.fromYaml(dynamic yaml) => yaml is String
       ? Location.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -772,14 +772,14 @@ class Location with Resource, _$Location {
 class LocationPosition with _$LocationPosition {
   LocationPosition._();
 
-  /// [Location_Position]: Details and position information for a physical place
+  /// [LocationPosition]: Details and position information for a physical place
   /// where services are provided and resources and participants may be stored,
   ///  found, contained, or accommodated.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -803,17 +803,17 @@ class LocationPosition with _$LocationPosition {
   /// [longitude]: Longitude. The value domain and the interpretation are the
   ///  same as for the text of the longitude element in KML (see notes below).
   ///
-  /// [_longitude]: Extensions for longitude
+  /// [longitudeElement]: Extensions for longitude
   ///
   /// [latitude]: Latitude. The value domain and the interpretation are the same
   ///  as for the text of the latitude element in KML (see notes below).
   ///
-  /// [_latitude]: Extensions for latitude
+  /// [latitudeElement]: Extensions for latitude
   ///
   /// [altitude]: Altitude. The value domain and the interpretation are the same
   ///  as for the text of the altitude element in KML (see notes below).
   ///
-  /// [_altitude]: Extensions for altitude
+  /// [altitudeElement]: Extensions for altitude
   factory LocationPosition({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -829,7 +829,7 @@ class LocationPosition with _$LocationPosition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory LocationPosition.fromYaml(dynamic yaml) => yaml is String
       ? LocationPosition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -847,14 +847,14 @@ class LocationPosition with _$LocationPosition {
 class LocationHoursOfOperation with _$LocationHoursOfOperation {
   LocationHoursOfOperation._();
 
-  /// [Location_HoursOfOperation]: Details and position information for a
+  /// [LocationHoursOfOperation]: Details and position information for a
   /// physical place where services are provided and resources and participants
   ///  may be stored, found, contained, or accommodated.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -878,19 +878,19 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   /// [daysOfWeek]: Indicates which days of the week are available between the
   ///  start and end Times.
   ///
-  /// [_daysOfWeek]: Extensions for daysOfWeek
+  /// [daysOfWeekElement]: Extensions for daysOfWeek
   ///
   /// [allDay]: The Location is open all day.
   ///
-  /// [_allDay]: Extensions for allDay
+  /// [allDayElement]: Extensions for allDay
   ///
   /// [openingTime]: Time that the Location opens.
   ///
-  /// [_openingTime]: Extensions for openingTime
+  /// [openingTimeElement]: Extensions for openingTime
   ///
   /// [closingTime]: Time that the Location closes.
   ///
-  /// [_closingTime]: Extensions for closingTime
+  /// [closingTimeElement]: Extensions for closingTime
   factory LocationHoursOfOperation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -908,7 +908,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory LocationHoursOfOperation.fromYaml(dynamic yaml) => yaml is String
       ? LocationHoursOfOperation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -946,11 +946,11 @@ class Organization with Resource, _$Organization {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -964,7 +964,7 @@ class Organization with Resource, _$Organization {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -990,18 +990,18 @@ class Organization with Resource, _$Organization {
   ///
   /// [active]: Whether the organization's record is still in active use.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [type]: The kind(s) of organization that this is.
   ///
   /// [name]: A name associated with the organization.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [alias]: A list of alternate names that the organization is known as, or
   ///  was known as in the past.
   ///
-  /// [_alias]: Extensions for alias
+  /// [aliasElement]: Extensions for alias
   ///
   /// [telecom]: A contact detail for the organization.
   ///
@@ -1045,7 +1045,7 @@ class Organization with Resource, _$Organization {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Organization.fromYaml(dynamic yaml) => yaml is String
       ? Organization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1063,7 +1063,7 @@ class Organization with Resource, _$Organization {
 class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
 
-  /// [Organization_Contact]: A formally or informally recognized grouping of
+  /// [OrganizationContact]: A formally or informally recognized grouping of
   /// people or organizations formed for the purpose of achieving some form of
   /// collective action.  Includes companies, institutions, corporations,
   /// departments, community groups, healthcare practice groups, payer/insurer,
@@ -1072,7 +1072,7 @@ class OrganizationContact with _$OrganizationContact {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1114,7 +1114,7 @@ class OrganizationContact with _$OrganizationContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
       ? OrganizationContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1150,11 +1150,11 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1168,7 +1168,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1193,7 +1193,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   ///
   /// [active]: Whether this organization affiliation record is in active use.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [period]: The period during which the participatingOrganization is
   ///  affiliated with the primary organization.
@@ -1256,7 +1256,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OrganizationAffiliation.fromYaml(dynamic yaml) => yaml is String
       ? OrganizationAffiliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

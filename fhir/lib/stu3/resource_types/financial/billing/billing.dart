@@ -66,7 +66,7 @@ class Claim with Resource, _$Claim {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Claim.fromYaml(dynamic yaml) => yaml is String
       ? Claim.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -91,7 +91,7 @@ class ClaimRelated with _$ClaimRelated {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimRelated.fromYaml(dynamic yaml) => yaml is String
       ? ClaimRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -116,7 +116,7 @@ class ClaimPayee with _$ClaimPayee {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimPayee.fromYaml(dynamic yaml) => yaml is String
       ? ClaimPayee.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -146,7 +146,7 @@ class ClaimCareTeam with _$ClaimCareTeam {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimCareTeam.fromYaml(dynamic yaml) => yaml is String
       ? ClaimCareTeam.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -182,7 +182,7 @@ class ClaimInformation with _$ClaimInformation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimInformation.fromYaml(dynamic yaml) => yaml is String
       ? ClaimInformation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -211,7 +211,7 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimDiagnosis.fromYaml(dynamic yaml) => yaml is String
       ? ClaimDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -240,7 +240,7 @@ class ClaimProcedure with _$ClaimProcedure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimProcedure.fromYaml(dynamic yaml) => yaml is String
       ? ClaimProcedure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -273,7 +273,7 @@ class ClaimInsurance with _$ClaimInsurance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimInsurance.fromYaml(dynamic yaml) => yaml is String
       ? ClaimInsurance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -301,7 +301,7 @@ class ClaimAccident with _$ClaimAccident {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimAccident.fromYaml(dynamic yaml) => yaml is String
       ? ClaimAccident.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -356,7 +356,7 @@ class ClaimItem with _$ClaimItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimItem.fromYaml(dynamic yaml) => yaml is String
       ? ClaimItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -393,7 +393,7 @@ class ClaimDetail with _$ClaimDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimDetail.fromYaml(dynamic yaml) => yaml is String
       ? ClaimDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -429,7 +429,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimSubDetail.fromYaml(dynamic yaml) => yaml is String
       ? ClaimSubDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -491,7 +491,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponse.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -520,7 +520,7 @@ class ClaimResponseItem with _$ClaimResponseItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponseItem.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -548,7 +548,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponseAdjudication.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseAdjudication.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -578,7 +578,7 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponseDetail.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -606,7 +606,7 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponseSubDetail.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseSubDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -640,7 +640,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponseAddItem.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseAddItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -671,7 +671,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponseDetail1.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseDetail1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -703,7 +703,7 @@ class ClaimResponseError with _$ClaimResponseError {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponseError.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseError.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -733,7 +733,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponsePayment.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponsePayment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -762,7 +762,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponseProcessNote.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseProcessNote.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -796,7 +796,7 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ClaimResponseInsurance.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseInsurance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

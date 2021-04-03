@@ -33,11 +33,11 @@ class Account with Resource, _$Account {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ class Account with Resource, _$Account {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -77,14 +77,14 @@ class Account with Resource, _$Account {
   ///
   /// [status]: Indicates whether the account is presently used/usable or not.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: Categorizes the account for reporting and searching purposes.
   ///
   /// [name]: Name used for the account when displaying it to humans in reports,
   ///  etc.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [subject]: Identifies the entity which incurs the expenses. While the
   /// immediate recipients of services or goods might be entities related to the
@@ -102,7 +102,7 @@ class Account with Resource, _$Account {
   /// [description]: Provides additional information about what the account
   ///  tracks and how it is used.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [guarantor]: The parties responsible for balancing the account if other
   ///  payment options fall short.
@@ -141,7 +141,7 @@ class Account with Resource, _$Account {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Account.fromYaml(dynamic yaml) => yaml is String
       ? Account.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -159,14 +159,14 @@ class Account with Resource, _$Account {
 class AccountCoverage with _$AccountCoverage {
   AccountCoverage._();
 
-  /// [Account_Coverage]: A financial tool for tracking value accrued for a
+  /// [AccountCoverage]: A financial tool for tracking value accrued for a
   /// particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -195,7 +195,7 @@ class AccountCoverage with _$AccountCoverage {
   ///
   /// [priority]: The priority of the coverage in the context of this account.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   factory AccountCoverage({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -208,7 +208,7 @@ class AccountCoverage with _$AccountCoverage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AccountCoverage.fromYaml(dynamic yaml) => yaml is String
       ? AccountCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -226,14 +226,14 @@ class AccountCoverage with _$AccountCoverage {
 class AccountGuarantor with _$AccountGuarantor {
   AccountGuarantor._();
 
-  /// [Account_Guarantor]: A financial tool for tracking value accrued for a
+  /// [AccountGuarantor]: A financial tool for tracking value accrued for a
   /// particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -259,7 +259,7 @@ class AccountGuarantor with _$AccountGuarantor {
   /// [onHold]: A guarantor may be placed on credit hold or otherwise have their
   ///  role temporarily suspended.
   ///
-  /// [_onHold]: Extensions for onHold
+  /// [onHoldElement]: Extensions for onHold
   ///
   /// [period]: The timeframe during which the guarantor accepts responsibility
   ///  for the account.
@@ -276,7 +276,7 @@ class AccountGuarantor with _$AccountGuarantor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AccountGuarantor.fromYaml(dynamic yaml) => yaml is String
       ? AccountGuarantor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -315,11 +315,11 @@ class ChargeItem with Resource, _$ChargeItem {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -333,7 +333,7 @@ class ChargeItem with Resource, _$ChargeItem {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -360,14 +360,14 @@ class ChargeItem with Resource, _$ChargeItem {
   /// [definitionUri]: References the (external) source of pricing information,
   ///  rules of application for the code this ChargeItem uses.
   ///
-  /// [_definitionUri]: Extensions for definitionUri
+  /// [definitionUriElement]: Extensions for definitionUri
   ///
   /// [definitionCanonical]: References the source of pricing information, rules
   ///  of application for the code this ChargeItem uses.
   ///
   /// [status]: The current state of the ChargeItem.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [partOf]: ChargeItems can be grouped to larger ChargeItems covering the
   ///  whole set.
@@ -383,7 +383,7 @@ class ChargeItem with Resource, _$ChargeItem {
   /// [occurrenceDateTime]: Date/time(s) or duration when the charged service
   ///  was applied.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: Date/time(s) or duration when the charged service was
   ///  applied.
@@ -409,7 +409,7 @@ class ChargeItem with Resource, _$ChargeItem {
   /// [factorOverride]: Factor overriding the factor determined by the rules
   ///  associated with the code.
   ///
-  /// [_factorOverride]: Extensions for factorOverride
+  /// [factorOverrideElement]: Extensions for factorOverride
   ///
   /// [priceOverride]: Total price of the charge overriding the list price
   ///  associated with the code.
@@ -418,13 +418,13 @@ class ChargeItem with Resource, _$ChargeItem {
   /// with the code is overridden, this attribute can capture a text to indicate
   ///  the  reason for this action.
   ///
-  /// [_overrideReason]: Extensions for overrideReason
+  /// [overrideReasonElement]: Extensions for overrideReason
   ///
   /// [enterer]: The device, practitioner, etc. who entered the charge item.
   ///
   /// [enteredDate]: Date the charge item was entered.
   ///
-  /// [_enteredDate]: Extensions for enteredDate
+  /// [enteredDateElement]: Extensions for enteredDate
   ///
   /// [reason]: Describes why the event occurred in coded or textual form.
   ///
@@ -497,7 +497,7 @@ class ChargeItem with Resource, _$ChargeItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItem.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -515,7 +515,7 @@ class ChargeItem with Resource, _$ChargeItem {
 class ChargeItemPerformer with _$ChargeItemPerformer {
   ChargeItemPerformer._();
 
-  /// [ChargeItem_Performer]: The resource ChargeItem describes the provision of
+  /// [ChargeItemPerformer]: The resource ChargeItem describes the provision of
   /// healthcare provider products for a certain patient, therefore referring
   /// not only to the product, but containing in addition details of the
   /// provision, like date, time, amounts and participating organizations and
@@ -525,7 +525,7 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -562,7 +562,7 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItemPerformer.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItemPerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -600,11 +600,11 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -618,7 +618,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -647,7 +647,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the charge item definition is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this charge
   /// item definition when it is represented in other formats, or referenced in
@@ -665,17 +665,17 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// knowledge assets, refer to the Decision Support Service specification.
   ///  Note that a version is required for non-experimental active assets.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [title]: A short, descriptive, user-friendly title for the charge item
   ///  definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [derivedFromUri]: The URL pointing to an externally-defined charge item
   ///  definition that is adhered to in whole or in part by this definition.
   ///
-  /// [_derivedFromUri]: Extensions for derivedFromUri
+  /// [derivedFromUriElement]: Extensions for derivedFromUri
   ///
   /// [partOf]: A larger definition of which this particular definition is a
   ///  component or step.
@@ -685,26 +685,26 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ///
   /// [status]: The current state of the ChargeItemDefinition.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this charge item
   /// definition is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the charge item definition
   /// was published. The date must change when the business version changes and
   /// it must change if the status code changes. In addition, it should change
   ///  when the substantive content of the charge item definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  charge item definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -712,7 +712,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// [description]: A free text natural language description of the charge item
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -727,19 +727,19 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the charge item definition.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the charge item definition
   ///  content was or is planned to be in active use.
@@ -811,7 +811,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItemDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItemDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -830,7 +830,7 @@ class ChargeItemDefinitionApplicability
     with _$ChargeItemDefinitionApplicability {
   ChargeItemDefinitionApplicability._();
 
-  /// [ChargeItemDefinition_Applicability]: The ChargeItemDefinition resource
+  /// [ChargeItemDefinitionApplicability]: The ChargeItemDefinition resource
   /// provides the properties that apply to the (billing) codes necessary to
   /// calculate costs and prices. The properties may differ largely depending on
   /// type and realm, therefore this resource gives only a rough structure and
@@ -839,7 +839,7 @@ class ChargeItemDefinitionApplicability
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -863,20 +863,20 @@ class ChargeItemDefinitionApplicability
   /// [description]: A brief, natural language description of the condition that
   ///  effectively communicates the intended semantics.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [language]: The media type of the language for the expression, e.g.
   /// "text/cql" for Clinical Query Language expressions or "text/fhirpath" for
   ///  FHIRPath expressions.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [expression]: An expression that returns true or false, indicating whether
   /// the condition is satisfied. When using FHIRPath expressions, the %context
   /// environment variable must be replaced at runtime with the ChargeItem
   ///  resource to which this definition is applied.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   factory ChargeItemDefinitionApplicability({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -892,7 +892,7 @@ class ChargeItemDefinitionApplicability
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItemDefinitionApplicability.fromYaml(dynamic yaml) => yaml
           is String
       ? ChargeItemDefinitionApplicability.fromJson(
@@ -914,7 +914,7 @@ class ChargeItemDefinitionPropertyGroup
     with _$ChargeItemDefinitionPropertyGroup {
   ChargeItemDefinitionPropertyGroup._();
 
-  /// [ChargeItemDefinition_PropertyGroup]: The ChargeItemDefinition resource
+  /// [ChargeItemDefinitionPropertyGroup]: The ChargeItemDefinition resource
   /// provides the properties that apply to the (billing) codes necessary to
   /// calculate costs and prices. The properties may differ largely depending on
   /// type and realm, therefore this resource gives only a rough structure and
@@ -923,7 +923,7 @@ class ChargeItemDefinitionPropertyGroup
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -964,7 +964,7 @@ class ChargeItemDefinitionPropertyGroup
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItemDefinitionPropertyGroup.fromYaml(dynamic yaml) => yaml
           is String
       ? ChargeItemDefinitionPropertyGroup.fromJson(
@@ -986,7 +986,7 @@ class ChargeItemDefinitionPriceComponent
     with _$ChargeItemDefinitionPriceComponent {
   ChargeItemDefinitionPriceComponent._();
 
-  /// [ChargeItemDefinition_PriceComponent]: The ChargeItemDefinition resource
+  /// [ChargeItemDefinitionPriceComponent]: The ChargeItemDefinition resource
   /// provides the properties that apply to the (billing) codes necessary to
   /// calculate costs and prices. The properties may differ largely depending on
   /// type and realm, therefore this resource gives only a rough structure and
@@ -995,7 +995,7 @@ class ChargeItemDefinitionPriceComponent
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1018,7 +1018,7 @@ class ChargeItemDefinitionPriceComponent
   ///
   /// [type]: This code identifies the type of the component.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [code]: A code that identifies the component. Codes may be used to
   ///  differentiate between kinds of taxes, surcharges, discounts etc.
@@ -1026,7 +1026,7 @@ class ChargeItemDefinitionPriceComponent
   /// [factor]: The factor that has been applied on the base price for
   ///  calculating this component.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [amount]: The amount calculated for this component.
   factory ChargeItemDefinitionPriceComponent({
@@ -1044,7 +1044,7 @@ class ChargeItemDefinitionPriceComponent
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItemDefinitionPriceComponent.fromYaml(dynamic yaml) => yaml
           is String
       ? ChargeItemDefinitionPriceComponent.fromJson(
@@ -1082,11 +1082,11 @@ class Contract with Resource, _$Contract {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1100,7 +1100,7 @@ class Contract with Resource, _$Contract {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1127,16 +1127,16 @@ class Contract with Resource, _$Contract {
   /// [url]: Canonical identifier for this contract, represented as a URI
   ///  (globally unique).
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [version]: An edition identifier used for business purposes to label
   ///  business significant variants.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [legalState]: Legal states of the formation of a legal instrument, which
   /// is a formally executed written document that can be formally attributed to
@@ -1150,14 +1150,14 @@ class Contract with Resource, _$Contract {
   /// [instantiatesUri]: The URL pointing to an externally maintained definition
   ///  that is adhered to in whole or in part by this Contract.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [contentDerivative]: The minimal content derived from the basal
   ///  information source at a specific stage in its lifecycle.
   ///
   /// [issued]: When this  Contract was issued.
   ///
-  /// [_issued]: Extensions for issued
+  /// [issuedElement]: Extensions for issued
   ///
   /// [applies]: Relevant time or time-period when this Contract is applicable.
   ///
@@ -1186,25 +1186,25 @@ class Contract with Resource, _$Contract {
   /// for the module by machine processing applications such as code
   ///  generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for this Contract
   /// definition, derivative, or instance in any legal state.t giving additional
   ///  information about its content.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [subtitle]: An explanatory or alternate user-friendly title for this
   /// Contract definition, derivative, or instance in any legal state.t giving
   ///  additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [alias]: Alternative representation of the title for this Contract
   /// definition, derivative, or instance in any legal state., e.g., a domain
   ///  specific contract number related to legislation.
   ///
-  /// [_alias]: Extensions for alias
+  /// [aliasElement]: Extensions for alias
   ///
   /// [author]: The individual or organization that authored the Contract
   ///  definition, derivative, or instance in any legal state.
@@ -1335,7 +1335,7 @@ class Contract with Resource, _$Contract {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Contract.fromYaml(dynamic yaml) => yaml is String
       ? Contract.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1353,13 +1353,13 @@ class Contract with Resource, _$Contract {
 class ContractContentDefinition with _$ContractContentDefinition {
   ContractContentDefinition._();
 
-  /// [Contract_ContentDefinition]: Legally enforceable, formally recorded
+  /// [ContractContentDefinition]: Legally enforceable, formally recorded
   ///  unilateral or bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1394,19 +1394,19 @@ class ContractContentDefinition with _$ContractContentDefinition {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the contract changes.
   ///
-  /// [_publicationDate]: Extensions for publicationDate
+  /// [publicationDateElement]: Extensions for publicationDate
   ///
   /// [publicationStatus]: amended | appended | cancelled | disputed |
   /// entered-in-error | executable | executed | negotiable | offered | policy |
   ///  rejected | renewed | revoked | resolved | terminated.
   ///
-  /// [_publicationStatus]: Extensions for publicationStatus
+  /// [publicationStatusElement]: Extensions for publicationStatus
   ///
   /// [copyright]: A copyright statement relating to Contract precursor content.
   /// Copyright statements are generally legal restrictions on the use and
   ///  publishing of the Contract precursor content.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   factory ContractContentDefinition({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1425,7 +1425,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractContentDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ContractContentDefinition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1444,13 +1444,13 @@ class ContractContentDefinition with _$ContractContentDefinition {
 class ContractTerm with _$ContractTerm {
   ContractTerm._();
 
-  /// [Contract_Term]: Legally enforceable, formally recorded unilateral or
+  /// [ContractTerm]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1475,7 +1475,7 @@ class ContractTerm with _$ContractTerm {
   ///
   /// [issued]: When this Contract Provision was issued.
   ///
-  /// [_issued]: Extensions for issued
+  /// [issuedElement]: Extensions for issued
   ///
   /// [applies]: Relevant time or time-period when this Contract Provision is
   ///  applicable.
@@ -1494,7 +1494,7 @@ class ContractTerm with _$ContractTerm {
   ///
   /// [text]: Statement of a provision in a policy or a contract.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [securityLabel]: Security labels that protect the handling of information
   ///  about the term and its elements, which may be specifically identified..
@@ -1532,7 +1532,7 @@ class ContractTerm with _$ContractTerm {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractTerm.fromYaml(dynamic yaml) => yaml is String
       ? ContractTerm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1550,13 +1550,13 @@ class ContractTerm with _$ContractTerm {
 class ContractSecurityLabel with _$ContractSecurityLabel {
   ContractSecurityLabel._();
 
-  /// [Contract_SecurityLabel]: Legally enforceable, formally recorded
+  /// [ContractSecurityLabel]: Legally enforceable, formally recorded
   ///  unilateral or bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1580,7 +1580,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
   /// [number]: Number used to link this term or term element to the applicable
   ///  Security Label.
   ///
-  /// [_number]: Extensions for number
+  /// [numberElement]: Extensions for number
   ///
   /// [classification]: Security label privacy tag that species the level of
   ///  confidentiality protection required for this term and/or term elements.
@@ -1604,7 +1604,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractSecurityLabel.fromYaml(dynamic yaml) => yaml is String
       ? ContractSecurityLabel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1622,13 +1622,13 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
 class ContractOffer with _$ContractOffer {
   ContractOffer._();
 
-  /// [Contract_Offer]: Legally enforceable, formally recorded unilateral or
+  /// [ContractOffer]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1669,16 +1669,16 @@ class ContractOffer with _$ContractOffer {
   ///
   /// [text]: Human readable form of this Contract Offer.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [linkId]: The id of the clause or question text of the offer in the
   ///  referenced questionnaire/response.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [securityLabelNumber]: Security labels that protects the offer.
   ///
-  /// [_securityLabelNumber]: Extensions for securityLabelNumber
+  /// [securityLabelNumberElement]: Extensions for securityLabelNumber
   factory ContractOffer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1702,7 +1702,7 @@ class ContractOffer with _$ContractOffer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractOffer.fromYaml(dynamic yaml) => yaml is String
       ? ContractOffer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1720,13 +1720,13 @@ class ContractOffer with _$ContractOffer {
 class ContractParty with _$ContractParty {
   ContractParty._();
 
-  /// [Contract_Party]: Legally enforceable, formally recorded unilateral or
+  /// [ContractParty]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1761,7 +1761,7 @@ class ContractParty with _$ContractParty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractParty.fromYaml(dynamic yaml) => yaml is String
       ? ContractParty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1779,13 +1779,13 @@ class ContractParty with _$ContractParty {
 class ContractAnswer with _$ContractAnswer {
   ContractAnswer._();
 
-  /// [Contract_Answer]: Legally enforceable, formally recorded unilateral or
+  /// [ContractAnswer]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1811,56 +1811,56 @@ class ContractAnswer with _$ContractAnswer {
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueDecimal]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueInteger]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueDate]: Response to an offer clause or question text,  which enables
   /// selection of values to be agreed to, e.g., the period of participation,
   /// the date of occupancy of a rental, warrently duration, or whether
   ///  biospecimen may be used for further research.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueDateTime]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueTime]: Response to an offer clause or question text,  which enables
   /// selection of values to be agreed to, e.g., the period of participation,
   /// the date of occupancy of a rental, warrently duration, or whether
   ///  biospecimen may be used for further research.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueString]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueUri]: Response to an offer clause or question text,  which enables
   /// selection of values to be agreed to, e.g., the period of participation,
   /// the date of occupancy of a rental, warrently duration, or whether
   ///  biospecimen may be used for further research.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueAttachment]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
@@ -1910,7 +1910,7 @@ class ContractAnswer with _$ContractAnswer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractAnswer.fromYaml(dynamic yaml) => yaml is String
       ? ContractAnswer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1928,13 +1928,13 @@ class ContractAnswer with _$ContractAnswer {
 class ContractAsset with _$ContractAsset {
   ContractAsset._();
 
-  /// [Contract_Asset]: Legally enforceable, formally recorded unilateral or
+  /// [ContractAsset]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1972,7 +1972,7 @@ class ContractAsset with _$ContractAsset {
   /// [condition]: Description of the quality and completeness of the asset that
   ///  imay be a factor in its valuation.
   ///
-  /// [_condition]: Extensions for condition
+  /// [conditionElement]: Extensions for condition
   ///
   /// [periodType]: Type of Asset availability for use or ownership.
   ///
@@ -1984,18 +1984,18 @@ class ContractAsset with _$ContractAsset {
   /// linked form, such as a QuestionnaireResponse used in the formation of the
   ///  contract.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [linkId]: Id [identifier??] of the clause or question text about the asset
   ///  in the referenced form or QuestionnaireResponse.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [answer]: Response to assets.
   ///
   /// [securityLabelNumber]: Security labels that protects the asset.
   ///
-  /// [_securityLabelNumber]: Extensions for securityLabelNumber
+  /// [securityLabelNumberElement]: Extensions for securityLabelNumber
   ///
   /// [valuedItem]: Contract Valued Item List.
   factory ContractAsset({
@@ -2027,7 +2027,7 @@ class ContractAsset with _$ContractAsset {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractAsset.fromYaml(dynamic yaml) => yaml is String
       ? ContractAsset.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2045,13 +2045,13 @@ class ContractAsset with _$ContractAsset {
 class ContractContext with _$ContractContext {
   ContractContext._();
 
-  /// [Contract_Context]: Legally enforceable, formally recorded unilateral or
+  /// [ContractContext]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2081,7 +2081,7 @@ class ContractContext with _$ContractContext {
   ///
   /// [text]: Context description.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   factory ContractContext({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2095,7 +2095,7 @@ class ContractContext with _$ContractContext {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractContext.fromYaml(dynamic yaml) => yaml is String
       ? ContractContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2113,13 +2113,13 @@ class ContractContext with _$ContractContext {
 class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
 
-  /// [Contract_ValuedItem]: Legally enforceable, formally recorded unilateral
+  /// [ContractValuedItem]: Legally enforceable, formally recorded unilateral
   ///  or bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2151,7 +2151,7 @@ class ContractValuedItem with _$ContractValuedItem {
   /// [effectiveTime]: Indicates the time during which this Contract ValuedItem
   ///  information is effective.
   ///
-  /// [_effectiveTime]: Extensions for effectiveTime
+  /// [effectiveTimeElement]: Extensions for effectiveTime
   ///
   /// [quantity]: Specifies the units by which the Contract Valued Item is
   /// measured or counted, and quantifies the countable or measurable Contract
@@ -2164,7 +2164,7 @@ class ContractValuedItem with _$ContractValuedItem {
   /// Factor allows for a discount or surcharge multiplier to be applied to a
   ///  monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [points]: An amount that expresses the weighting (based on difficulty,
   /// cost and/or resource intensiveness) associated with the Contract Valued
@@ -2172,7 +2172,7 @@ class ContractValuedItem with _$ContractValuedItem {
   /// values for a Contract Valued Item, such that a monetary amount can be
   ///  assigned to each point.
   ///
-  /// [_points]: Extensions for points
+  /// [pointsElement]: Extensions for points
   ///
   /// [net]: Expresses the product of the Contract Valued Item unitQuantity and
   /// the unitPriceAmt. For example, the formula: unit Quantity * unit Price
@@ -2181,11 +2181,11 @@ class ContractValuedItem with _$ContractValuedItem {
   ///
   /// [payment]: Terms of valuation.
   ///
-  /// [_payment]: Extensions for payment
+  /// [paymentElement]: Extensions for payment
   ///
   /// [paymentDate]: When payment is due.
   ///
-  /// [_paymentDate]: Extensions for paymentDate
+  /// [paymentDateElement]: Extensions for paymentDate
   ///
   /// [responsible]: Who will make payment.
   ///
@@ -2194,12 +2194,12 @@ class ContractValuedItem with _$ContractValuedItem {
   /// [linkId]: Id  of the clause or question text related to the context of
   ///  this valuedItem in the referenced form or QuestionnaireResponse.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [securityLabelNumber]: A set of security labels that define which terms
   ///  are controlled by this condition.
   ///
-  /// [_securityLabelNumber]: Extensions for securityLabelNumber
+  /// [securityLabelNumberElement]: Extensions for securityLabelNumber
   factory ContractValuedItem({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2232,7 +2232,7 @@ class ContractValuedItem with _$ContractValuedItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
       ? ContractValuedItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2250,13 +2250,13 @@ class ContractValuedItem with _$ContractValuedItem {
 class ContractAction with _$ContractAction {
   ContractAction._();
 
-  /// [Contract_Action]: Legally enforceable, formally recorded unilateral or
+  /// [ContractAction]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2279,7 +2279,7 @@ class ContractAction with _$ContractAction {
   ///
   /// [doNotPerform]: True if the term prohibits the  action.
   ///
-  /// [_doNotPerform]: Extensions for doNotPerform
+  /// [doNotPerformElement]: Extensions for doNotPerform
   ///
   /// [type]: Activity or service obligation to be done or not done, performed
   ///  or not performed, effectuated or not by this Contract term.
@@ -2292,7 +2292,7 @@ class ContractAction with _$ContractAction {
   /// [linkId]: Id [identifier??] of the clause or question text related to this
   ///  action in the referenced form or QuestionnaireResponse.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [status]: Current state of the term action.
   ///
@@ -2303,11 +2303,11 @@ class ContractAction with _$ContractAction {
   /// to the requester of this action in the referenced form or
   ///  QuestionnaireResponse.
   ///
-  /// [_contextLinkId]: Extensions for contextLinkId
+  /// [contextLinkIdElement]: Extensions for contextLinkId
   ///
   /// [occurrenceDateTime]: When action happens.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: When action happens.
   ///
@@ -2320,7 +2320,7 @@ class ContractAction with _$ContractAction {
   /// related to the requester of this action in the referenced form or
   ///  QuestionnaireResponse.
   ///
-  /// [_requesterLinkId]: Extensions for requesterLinkId
+  /// [requesterLinkIdElement]: Extensions for requesterLinkId
   ///
   /// [performerType]: The type of individual that is desired or required to
   ///  perform or not perform the action.
@@ -2335,7 +2335,7 @@ class ContractAction with _$ContractAction {
   /// related to the reason type or reference of this  action in the referenced
   ///  form or QuestionnaireResponse.
   ///
-  /// [_performerLinkId]: Extensions for performerLinkId
+  /// [performerLinkIdElement]: Extensions for performerLinkId
   ///
   /// [reasonCode]: Rationale for the action to be performed or not performed.
   ///  Describes why the action is permitted or prohibited.
@@ -2346,20 +2346,20 @@ class ContractAction with _$ContractAction {
   /// [reason]: Describes why the action is to be performed or not performed in
   ///  textual form.
   ///
-  /// [_reason]: Extensions for reason
+  /// [reasonElement]: Extensions for reason
   ///
   /// [reasonLinkId]: Id [identifier??] of the clause or question text related
   /// to the reason type or reference of this  action in the referenced form or
   ///  QuestionnaireResponse.
   ///
-  /// [_reasonLinkId]: Extensions for reasonLinkId
+  /// [reasonLinkIdElement]: Extensions for reasonLinkId
   ///
   /// [note]: Comments made about the term action made by the requester,
   ///  performer, subject or other participants.
   ///
   /// [securityLabelNumber]: Security labels that protects the action.
   ///
-  /// [_securityLabelNumber]: Extensions for securityLabelNumber
+  /// [securityLabelNumberElement]: Extensions for securityLabelNumber
   factory ContractAction({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2402,7 +2402,7 @@ class ContractAction with _$ContractAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractAction.fromYaml(dynamic yaml) => yaml is String
       ? ContractAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2420,13 +2420,13 @@ class ContractAction with _$ContractAction {
 class ContractSubject with _$ContractSubject {
   ContractSubject._();
 
-  /// [Contract_Subject]: Legally enforceable, formally recorded unilateral or
+  /// [ContractSubject]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2462,7 +2462,7 @@ class ContractSubject with _$ContractSubject {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractSubject.fromYaml(dynamic yaml) => yaml is String
       ? ContractSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2480,13 +2480,13 @@ class ContractSubject with _$ContractSubject {
 class ContractSigner with _$ContractSigner {
   ContractSigner._();
 
-  /// [Contract_Signer]: Legally enforceable, formally recorded unilateral or
+  /// [ContractSigner]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2524,7 +2524,7 @@ class ContractSigner with _$ContractSigner {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractSigner.fromYaml(dynamic yaml) => yaml is String
       ? ContractSigner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2542,13 +2542,13 @@ class ContractSigner with _$ContractSigner {
 class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
 
-  /// [Contract_Friendly]: Legally enforceable, formally recorded unilateral or
+  /// [ContractFriendly]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2587,7 +2587,7 @@ class ContractFriendly with _$ContractFriendly {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractFriendly.fromYaml(dynamic yaml) => yaml is String
       ? ContractFriendly.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2605,13 +2605,13 @@ class ContractFriendly with _$ContractFriendly {
 class ContractLegal with _$ContractLegal {
   ContractLegal._();
 
-  /// [Contract_Legal]: Legally enforceable, formally recorded unilateral or
+  /// [ContractLegal]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2646,7 +2646,7 @@ class ContractLegal with _$ContractLegal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractLegal.fromYaml(dynamic yaml) => yaml is String
       ? ContractLegal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2664,13 +2664,13 @@ class ContractLegal with _$ContractLegal {
 class ContractRule with _$ContractRule {
   ContractRule._();
 
-  /// [Contract_Rule]: Legally enforceable, formally recorded unilateral or
+  /// [ContractRule]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2707,7 +2707,7 @@ class ContractRule with _$ContractRule {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractRule.fromYaml(dynamic yaml) => yaml is String
       ? ContractRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2744,11 +2744,11 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2762,7 +2762,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2787,7 +2787,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: The category of claim, e.g. oral, pharmacy, vision, institutional,
   ///  professional.
@@ -2802,7 +2802,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
   ///
-  /// [_use]: Extensions for use
+  /// [useElement]: Extensions for use
   ///
   /// [patient]: The party to whom the professional services and/or products
   /// have been supplied or are being considered and for whom actual for
@@ -2812,7 +2812,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///
   /// [created]: The date this resource was created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [enterer]: Individual who created the claim, predetermination or
   ///  preauthorization.
@@ -2859,17 +2859,17 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// [outcome]: The outcome of the claim, predetermination, or preauthorization
   ///  processing.
   ///
-  /// [_outcome]: Extensions for outcome
+  /// [outcomeElement]: Extensions for outcome
   ///
   /// [disposition]: A human readable description of the status of the
   ///  adjudication.
   ///
-  /// [_disposition]: Extensions for disposition
+  /// [dispositionElement]: Extensions for disposition
   ///
   /// [preAuthRef]: Reference from the Insurer which is used in later
   ///  communications which refers to this adjudication.
   ///
-  /// [_preAuthRef]: Extensions for preAuthRef
+  /// [preAuthRefElement]: Extensions for preAuthRef
   ///
   /// [preAuthRefPeriod]: The timeframe during which the supplied
   /// preauthorization reference may be quoted on claims to obtain the
@@ -2890,7 +2890,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// [precedence]: This indicates the relative order of a series of EOBs
   ///  related to different coverages for the same suite of services.
   ///
-  /// [_precedence]: Extensions for precedence
+  /// [precedenceElement]: Extensions for precedence
   ///
   /// [insurance]: Financial instruments for reimbursement for the health care
   ///  products and services specified on the claim.
@@ -2992,7 +2992,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3010,7 +3010,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ExplanationOfBenefitRelated._();
 
-  /// [ExplanationOfBenefit_Related]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitRelated]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -3018,7 +3018,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3057,7 +3057,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitRelated.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitRelated.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3076,7 +3076,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
 class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
 
-  /// [ExplanationOfBenefit_Payee]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitPayee]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -3084,7 +3084,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3120,7 +3120,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitPayee.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitPayee.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3139,7 +3139,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
 class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
 
-  /// [ExplanationOfBenefit_CareTeam]: This resource provides: the claim
+  /// [ExplanationOfBenefitCareTeam]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3147,7 +3147,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3170,14 +3170,14 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ///
   /// [sequence]: A number to uniquely identify care team entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [provider]: Member of the team who provided the product or service.
   ///
   /// [responsible]: The party who is billing and/or responsible for the claimed
   ///  products or services.
   ///
-  /// [_responsible]: Extensions for responsible
+  /// [responsibleElement]: Extensions for responsible
   ///
   /// [role]: The lead, assisting or supervising practitioner and their
   ///  discipline if a multidisciplinary team.
@@ -3200,7 +3200,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitCareTeam.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitCareTeam.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3220,7 +3220,7 @@ class ExplanationOfBenefitSupportingInfo
     with _$ExplanationOfBenefitSupportingInfo {
   ExplanationOfBenefitSupportingInfo._();
 
-  /// [ExplanationOfBenefit_SupportingInfo]: This resource provides: the claim
+  /// [ExplanationOfBenefitSupportingInfo]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3228,7 +3228,7 @@ class ExplanationOfBenefitSupportingInfo
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3251,7 +3251,7 @@ class ExplanationOfBenefitSupportingInfo
   ///
   /// [sequence]: A number to uniquely identify supporting information entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [category]: The general class of the information supplied: information;
   ///  exception; accident, employment; onset, etc.
@@ -3262,7 +3262,7 @@ class ExplanationOfBenefitSupportingInfo
   ///
   /// [timingDate]: The date when or period to which this information refers.
   ///
-  /// [_timingDate]: Extensions for timingDate
+  /// [timingDateElement]: Extensions for timingDate
   ///
   /// [timingPeriod]: The date when or period to which this information refers.
   ///
@@ -3270,13 +3270,13 @@ class ExplanationOfBenefitSupportingInfo
   /// documents, images etc. including references to the data or the actual
   ///  inclusion of the data.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueString]: Additional data or information such as resources,
   /// documents, images etc. including references to the data or the actual
   ///  inclusion of the data.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueQuantity]: Additional data or information such as resources,
   /// documents, images etc. including references to the data or the actual
@@ -3316,7 +3316,7 @@ class ExplanationOfBenefitSupportingInfo
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitSupportingInfo.fromYaml(dynamic yaml) => yaml
           is String
       ? ExplanationOfBenefitSupportingInfo.fromJson(
@@ -3337,7 +3337,7 @@ class ExplanationOfBenefitSupportingInfo
 class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
 
-  /// [ExplanationOfBenefit_Diagnosis]: This resource provides: the claim
+  /// [ExplanationOfBenefitDiagnosis]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3345,7 +3345,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3368,7 +3368,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ///
   /// [sequence]: A number to uniquely identify diagnosis entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [diagnosisCodeableConcept]: The nature of illness or problem in a coded
   ///  form or as a reference to an external defined Condition.
@@ -3400,7 +3400,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitDiagnosis.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitDiagnosis.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3419,7 +3419,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
 class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
 
-  /// [ExplanationOfBenefit_Procedure]: This resource provides: the claim
+  /// [ExplanationOfBenefitProcedure]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3427,7 +3427,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3450,13 +3450,13 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ///
   /// [sequence]: A number to uniquely identify procedure entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [type]: When the condition was observed or the relative ranking.
   ///
   /// [date]: Date and optionally time the procedure was performed.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [procedureCodeableConcept]: The code or reference to a Procedure resource
   ///  which identifies the clinical intervention performed.
@@ -3482,7 +3482,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitProcedure.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitProcedure.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3501,7 +3501,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
 class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ExplanationOfBenefitInsurance._();
 
-  /// [ExplanationOfBenefit_Insurance]: This resource provides: the claim
+  /// [ExplanationOfBenefitInsurance]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3509,7 +3509,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3533,7 +3533,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   /// [focal]: A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
   ///
-  /// [_focal]: Extensions for focal
+  /// [focalElement]: Extensions for focal
   ///
   /// [coverage]: Reference to the insurance card level information contained in
   /// the Coverage resource. The coverage issuing insurer will use these details
@@ -3544,7 +3544,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   /// provider to be quoted on subsequent claims containing services or products
   ///  related to the prior authorization.
   ///
-  /// [_preAuthRef]: Extensions for preAuthRef
+  /// [preAuthRefElement]: Extensions for preAuthRef
   factory ExplanationOfBenefitInsurance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3559,7 +3559,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitInsurance.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitInsurance.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3578,7 +3578,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
 class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
 
-  /// [ExplanationOfBenefit_Accident]: This resource provides: the claim
+  /// [ExplanationOfBenefitAccident]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3586,7 +3586,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3610,7 +3610,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   /// [date]: Date of an accident event  related to the products and services
   ///  contained in the claim.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [type]: The type or context of the accident event for the purposes of
   /// selection of potential insurance coverages and determination of
@@ -3633,7 +3633,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitAccident.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitAccident.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3652,7 +3652,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
 class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
 
-  /// [ExplanationOfBenefit_Item]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitItem]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -3660,7 +3660,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3683,24 +3683,24 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ///
   /// [sequence]: A number to uniquely identify item entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [careTeamSequence]: Care team members related to this service or product.
   ///
-  /// [_careTeamSequence]: Extensions for careTeamSequence
+  /// [careTeamSequenceElement]: Extensions for careTeamSequence
   ///
   /// [diagnosisSequence]: Diagnoses applicable for this service or product.
   ///
-  /// [_diagnosisSequence]: Extensions for diagnosisSequence
+  /// [diagnosisSequenceElement]: Extensions for diagnosisSequence
   ///
   /// [procedureSequence]: Procedures applicable for this service or product.
   ///
-  /// [_procedureSequence]: Extensions for procedureSequence
+  /// [procedureSequenceElement]: Extensions for procedureSequence
   ///
   /// [informationSequence]: Exceptions, special conditions and supporting
   ///  information applicable for this service or product.
   ///
-  /// [_informationSequence]: Extensions for informationSequence
+  /// [informationSequenceElement]: Extensions for informationSequence
   ///
   /// [revenue]: The type of revenue or cost center providing the product and/or
   ///  service.
@@ -3720,7 +3720,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   /// [servicedDate]: The date or dates when the service or product was
   ///  supplied, performed or completed.
   ///
-  /// [_servicedDate]: Extensions for servicedDate
+  /// [servicedDateElement]: Extensions for servicedDate
   ///
   /// [servicedPeriod]: The date or dates when the service or product was
   ///  supplied, performed or completed.
@@ -3742,7 +3742,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -3760,7 +3760,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: If this item is a group then the values here are a summary
   /// of the adjudication of the detail items. If this item is a simple product
@@ -3813,7 +3813,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitItem.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3832,7 +3832,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ExplanationOfBenefitAdjudication._();
 
-  /// [ExplanationOfBenefit_Adjudication]: This resource provides: the claim
+  /// [ExplanationOfBenefitAdjudication]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3840,7 +3840,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3875,7 +3875,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   /// [value]: A non-monetary value associated with the category. Mutually
   ///  exclusive to the amount element above.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory ExplanationOfBenefitAdjudication({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3890,7 +3890,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitAdjudication.fromYaml(dynamic yaml) => yaml
           is String
       ? ExplanationOfBenefitAdjudication.fromJson(
@@ -3911,7 +3911,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
 class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
 
-  /// [ExplanationOfBenefit_Detail]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitDetail]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -3919,7 +3919,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3943,7 +3943,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   /// [sequence]: A claim detail line. Either a simple (a product or service) or
   ///  a 'group' of sub-details which are simple items.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [revenue]: The type of revenue or cost center providing the product and/or
   ///  service.
@@ -3971,7 +3971,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -3981,7 +3981,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   ///
@@ -4012,7 +4012,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitDetail.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitDetail.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4031,7 +4031,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
 
-  /// [ExplanationOfBenefit_SubDetail]: This resource provides: the claim
+  /// [ExplanationOfBenefitSubDetail]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -4039,7 +4039,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4063,7 +4063,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   /// [sequence]: A claim detail line. Either a simple (a product or service) or
   ///  a 'group' of sub-details which are simple items.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [revenue]: The type of revenue or cost center providing the product and/or
   ///  service.
@@ -4091,7 +4091,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -4101,7 +4101,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   factory ExplanationOfBenefitSubDetail({
@@ -4129,7 +4129,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitSubDetail.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitSubDetail.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4148,7 +4148,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
 class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
 
-  /// [ExplanationOfBenefit_AddItem]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitAddItem]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -4156,7 +4156,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4180,17 +4180,17 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// [itemSequence]: Claim items which this service line is intended to
   ///  replace.
   ///
-  /// [_itemSequence]: Extensions for itemSequence
+  /// [itemSequenceElement]: Extensions for itemSequence
   ///
   /// [detailSequence]: The sequence number of the details within the claim item
   ///  which this line is intended to replace.
   ///
-  /// [_detailSequence]: Extensions for detailSequence
+  /// [detailSequenceElement]: Extensions for detailSequence
   ///
   /// [subDetailSequence]: The sequence number of the sub-details woithin the
   ///  details within the claim item which this line is intended to replace.
   ///
-  /// [_subDetailSequence]: Extensions for subDetailSequence
+  /// [subDetailSequenceElement]: Extensions for subDetailSequence
   ///
   /// [provider]: The providers who are authorized for the services rendered to
   ///  the patient.
@@ -4207,7 +4207,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// [servicedDate]: The date or dates when the service or product was
   ///  supplied, performed or completed.
   ///
-  /// [_servicedDate]: Extensions for servicedDate
+  /// [servicedDateElement]: Extensions for servicedDate
   ///
   /// [servicedPeriod]: The date or dates when the service or product was
   ///  supplied, performed or completed.
@@ -4229,7 +4229,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -4242,7 +4242,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   ///
@@ -4284,7 +4284,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitAddItem.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitAddItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4303,7 +4303,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ExplanationOfBenefitDetail1._();
 
-  /// [ExplanationOfBenefit_Detail1]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitDetail1]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -4311,7 +4311,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4350,7 +4350,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -4358,7 +4358,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   ///
@@ -4384,7 +4384,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitDetail1.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitDetail1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4403,7 +4403,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
 class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   ExplanationOfBenefitSubDetail1._();
 
-  /// [ExplanationOfBenefit_SubDetail1]: This resource provides: the claim
+  /// [ExplanationOfBenefitSubDetail1]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -4411,7 +4411,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4450,7 +4450,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -4458,7 +4458,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   factory ExplanationOfBenefitSubDetail1({
@@ -4480,7 +4480,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitSubDetail1.fromYaml(dynamic yaml) => yaml
           is String
       ? ExplanationOfBenefitSubDetail1.fromJson(
@@ -4501,7 +4501,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
 class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   ExplanationOfBenefitTotal._();
 
-  /// [ExplanationOfBenefit_Total]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitTotal]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -4509,7 +4509,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4548,7 +4548,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitTotal.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitTotal.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4567,7 +4567,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
 class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ExplanationOfBenefitPayment._();
 
-  /// [ExplanationOfBenefit_Payment]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitPayment]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -4575,7 +4575,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4607,7 +4607,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   /// [date]: Estimated date the payment will be issued or the actual issue date
   ///  of payment.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [amount]: Benefits payable less any payment adjustment.
   ///
@@ -4628,7 +4628,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitPayment.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitPayment.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4647,7 +4647,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
 
-  /// [ExplanationOfBenefit_ProcessNote]: This resource provides: the claim
+  /// [ExplanationOfBenefitProcessNote]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -4655,7 +4655,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4678,15 +4678,15 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ///
   /// [number]: A number to uniquely identify a note entry.
   ///
-  /// [_number]: Extensions for number
+  /// [numberElement]: Extensions for number
   ///
   /// [type]: The business purpose of the note text.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [text]: The explanation or description associated with the processing.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [language]: A code to define the language used in the text of the note.
   factory ExplanationOfBenefitProcessNote({
@@ -4706,7 +4706,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitProcessNote.fromYaml(dynamic yaml) => yaml
           is String
       ? ExplanationOfBenefitProcessNote.fromJson(
@@ -4728,7 +4728,7 @@ class ExplanationOfBenefitBenefitBalance
     with _$ExplanationOfBenefitBenefitBalance {
   ExplanationOfBenefitBenefitBalance._();
 
-  /// [ExplanationOfBenefit_BenefitBalance]: This resource provides: the claim
+  /// [ExplanationOfBenefitBenefitBalance]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -4736,7 +4736,7 @@ class ExplanationOfBenefitBenefitBalance
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4764,15 +4764,15 @@ class ExplanationOfBenefitBenefitBalance
   /// plan, missing or False indicates the product or service is included in the
   ///  coverage.
   ///
-  /// [_excluded]: Extensions for excluded
+  /// [excludedElement]: Extensions for excluded
   ///
   /// [name]: A short name or tag for the benefit.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: A richer description of the benefit or services covered.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [network]: Is a flag to indicate whether the benefits refer to in-network
   ///  providers or out-of-network providers.
@@ -4803,7 +4803,7 @@ class ExplanationOfBenefitBenefitBalance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitBenefitBalance.fromYaml(dynamic yaml) => yaml
           is String
       ? ExplanationOfBenefitBenefitBalance.fromJson(
@@ -4824,7 +4824,7 @@ class ExplanationOfBenefitBenefitBalance
 class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ExplanationOfBenefitFinancial._();
 
-  /// [ExplanationOfBenefit_Financial]: This resource provides: the claim
+  /// [ExplanationOfBenefitFinancial]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -4832,7 +4832,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4858,12 +4858,12 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   /// [allowedUnsignedInt]: The quantity of the benefit which is permitted under
   ///  the coverage.
   ///
-  /// [_allowedUnsignedInt]: Extensions for allowedUnsignedInt
+  /// [allowedUnsignedIntElement]: Extensions for allowedUnsignedInt
   ///
   /// [allowedString]: The quantity of the benefit which is permitted under the
   ///  coverage.
   ///
-  /// [_allowedString]: Extensions for allowedString
+  /// [allowedStringElement]: Extensions for allowedString
   ///
   /// [allowedMoney]: The quantity of the benefit which is permitted under the
   ///  coverage.
@@ -4871,7 +4871,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   /// [usedUnsignedInt]: The quantity of the benefit which have been consumed to
   ///  date.
   ///
-  /// [_usedUnsignedInt]: Extensions for usedUnsignedInt
+  /// [usedUnsignedIntElement]: Extensions for usedUnsignedInt
   ///
   /// [usedMoney]: The quantity of the benefit which have been consumed to date.
   factory ExplanationOfBenefitFinancial({
@@ -4892,7 +4892,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitFinancial.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitFinancial.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4928,11 +4928,11 @@ class InsurancePlan with Resource, _$InsurancePlan {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -4946,7 +4946,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -4973,19 +4973,19 @@ class InsurancePlan with Resource, _$InsurancePlan {
   ///
   /// [status]: The current state of the health insurance product.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: The kind of health insurance product.
   ///
   /// [name]: Official name of the health insurance product as designated by the
   ///  owner.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [alias]: A list of alternate names that the product is known as, or was
   ///  known as in the past.
   ///
-  /// [_alias]: Extensions for alias
+  /// [aliasElement]: Extensions for alias
   ///
   /// [period]: The period of time that the health insurance product is
   ///  available.
@@ -5051,7 +5051,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlan.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5069,13 +5069,13 @@ class InsurancePlan with Resource, _$InsurancePlan {
 class InsurancePlanContact with _$InsurancePlanContact {
   InsurancePlanContact._();
 
-  /// [InsurancePlan_Contact]: Details of a Health Insurance product/plan
+  /// [InsurancePlanContact]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5117,7 +5117,7 @@ class InsurancePlanContact with _$InsurancePlanContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanContact.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5135,13 +5135,13 @@ class InsurancePlanContact with _$InsurancePlanContact {
 class InsurancePlanCoverage with _$InsurancePlanCoverage {
   InsurancePlanCoverage._();
 
-  /// [InsurancePlan_Coverage]: Details of a Health Insurance product/plan
+  /// [InsurancePlanCoverage]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5180,7 +5180,7 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanCoverage.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5198,13 +5198,13 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
 class InsurancePlanBenefit with _$InsurancePlanBenefit {
   InsurancePlanBenefit._();
 
-  /// [InsurancePlan_Benefit]: Details of a Health Insurance product/plan
+  /// [InsurancePlanBenefit]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5231,7 +5231,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
   /// [requirement]: The referral requirements to have access/coverage for this
   ///  benefit.
   ///
-  /// [_requirement]: Extensions for requirement
+  /// [requirementElement]: Extensions for requirement
   ///
   /// [limit]: The specific limits on the benefit.
   factory InsurancePlanBenefit({
@@ -5247,7 +5247,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanBenefit.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5265,13 +5265,13 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
 class InsurancePlanLimit with _$InsurancePlanLimit {
   InsurancePlanLimit._();
 
-  /// [InsurancePlan_Limit]: Details of a Health Insurance product/plan provided
+  /// [InsurancePlanLimit]: Details of a Health Insurance product/plan provided
   ///  by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5307,7 +5307,7 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanLimit.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanLimit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5325,13 +5325,13 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
 class InsurancePlanPlan with _$InsurancePlanPlan {
   InsurancePlanPlan._();
 
-  /// [InsurancePlan_Plan]: Details of a Health Insurance product/plan provided
+  /// [InsurancePlanPlan]: Details of a Health Insurance product/plan provided
   ///  by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5382,7 +5382,7 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanPlan.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanPlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5400,13 +5400,13 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
 class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   InsurancePlanGeneralCost._();
 
-  /// [InsurancePlan_GeneralCost]: Details of a Health Insurance product/plan
+  /// [InsurancePlanGeneralCost]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5431,14 +5431,14 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   ///
   /// [groupSize]: Number of participants enrolled in the plan.
   ///
-  /// [_groupSize]: Extensions for groupSize
+  /// [groupSizeElement]: Extensions for groupSize
   ///
   /// [cost]: Value of the cost.
   ///
   /// [comment]: Additional information about the general costs associated with
   ///  this plan.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   factory InsurancePlanGeneralCost({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5454,7 +5454,7 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanGeneralCost.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanGeneralCost.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5473,13 +5473,13 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
 class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   InsurancePlanSpecificCost._();
 
-  /// [InsurancePlan_SpecificCost]: Details of a Health Insurance product/plan
+  /// [InsurancePlanSpecificCost]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5515,7 +5515,7 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanSpecificCost.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanSpecificCost.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5534,13 +5534,13 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
 class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   InsurancePlanBenefit1._();
 
-  /// [InsurancePlan_Benefit1]: Details of a Health Insurance product/plan
+  /// [InsurancePlanBenefit1]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5576,7 +5576,7 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanBenefit1.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanBenefit1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5594,13 +5594,13 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
 class InsurancePlanCost with _$InsurancePlanCost {
   InsurancePlanCost._();
 
-  /// [InsurancePlan_Cost]: Details of a Health Insurance product/plan provided
+  /// [InsurancePlanCost]: Details of a Health Insurance product/plan provided
   ///  by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5645,7 +5645,7 @@ class InsurancePlanCost with _$InsurancePlanCost {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanCost.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanCost.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

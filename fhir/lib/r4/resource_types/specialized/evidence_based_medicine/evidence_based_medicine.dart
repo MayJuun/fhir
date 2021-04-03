@@ -34,11 +34,11 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -52,7 +52,7 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -81,7 +81,7 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the effect evidence synthesis is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this effect
   /// evidence synthesis when it is represented in other formats, or referenced
@@ -95,35 +95,35 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// not available. There is also no expectation that versions can be placed in
   ///  a lexicographical sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the effect evidence synthesis.
   /// This name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the effect evidence
   ///  synthesis.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this effect evidence synthesis. Enables tracking
   ///  the life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [date]: The date  (and optionally time) when the effect evidence synthesis
   /// was published. The date must change when the business version changes and
   /// it must change if the status code changes. In addition, it should change
   ///  when the substantive content of the effect evidence synthesis changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  effect evidence synthesis.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -131,7 +131,7 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// [description]: A free text natural language description of the effect
   ///  evidence synthesis from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [note]: A human-readable string to clarify or explain concepts about the
   ///  resource.
@@ -149,19 +149,19 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// synthesis and/or its contents. Copyright statements are generally legal
   ///  restrictions on the use and publishing of the effect evidence synthesis.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the effect evidence synthesis
   ///  content was or is planned to be in active use.
@@ -275,7 +275,7 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EffectEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String
       ? EffectEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -294,7 +294,7 @@ class EffectEvidenceSynthesisSampleSize
     with _$EffectEvidenceSynthesisSampleSize {
   EffectEvidenceSynthesisSampleSize._();
 
-  /// [EffectEvidenceSynthesis_SampleSize]: The EffectEvidenceSynthesis resource
+  /// [EffectEvidenceSynthesisSampleSize]: The EffectEvidenceSynthesis resource
   /// describes the difference in an outcome between exposures states in a
   /// population where the effect estimate is derived from a combination of
   ///  research studies.
@@ -302,7 +302,7 @@ class EffectEvidenceSynthesisSampleSize
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -325,16 +325,16 @@ class EffectEvidenceSynthesisSampleSize
   ///
   /// [description]: Human-readable summary of sample size.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [numberOfStudies]: Number of studies included in this evidence synthesis.
   ///
-  /// [_numberOfStudies]: Extensions for numberOfStudies
+  /// [numberOfStudiesElement]: Extensions for numberOfStudies
   ///
   /// [numberOfParticipants]: Number of participants included in this evidence
   ///  synthesis.
   ///
-  /// [_numberOfParticipants]: Extensions for numberOfParticipants
+  /// [numberOfParticipantsElement]: Extensions for numberOfParticipants
   factory EffectEvidenceSynthesisSampleSize({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -351,7 +351,7 @@ class EffectEvidenceSynthesisSampleSize
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EffectEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) => yaml
           is String
       ? EffectEvidenceSynthesisSampleSize.fromJson(
@@ -373,7 +373,7 @@ class EffectEvidenceSynthesisResultsByExposure
     with _$EffectEvidenceSynthesisResultsByExposure {
   EffectEvidenceSynthesisResultsByExposure._();
 
-  /// [EffectEvidenceSynthesis_ResultsByExposure]: The EffectEvidenceSynthesis
+  /// [EffectEvidenceSynthesisResultsByExposure]: The EffectEvidenceSynthesis
   /// resource describes the difference in an outcome between exposures states
   /// in a population where the effect estimate is derived from a combination of
   ///  research studies.
@@ -381,7 +381,7 @@ class EffectEvidenceSynthesisResultsByExposure
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -404,12 +404,12 @@ class EffectEvidenceSynthesisResultsByExposure
   ///
   /// [description]: Human-readable summary of results by exposure state.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [exposureState]: Whether these results are for the exposure state or
   ///  alternative exposure state.
   ///
-  /// [_exposureState]: Extensions for exposureState
+  /// [exposureStateElement]: Extensions for exposureState
   ///
   /// [variantState]: Used to define variant exposure states such as low-risk
   ///  state.
@@ -433,7 +433,7 @@ class EffectEvidenceSynthesisResultsByExposure
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EffectEvidenceSynthesisResultsByExposure.fromYaml(dynamic yaml) => yaml
           is String
       ? EffectEvidenceSynthesisResultsByExposure.fromJson(
@@ -455,7 +455,7 @@ class EffectEvidenceSynthesisEffectEstimate
     with _$EffectEvidenceSynthesisEffectEstimate {
   EffectEvidenceSynthesisEffectEstimate._();
 
-  /// [EffectEvidenceSynthesis_EffectEstimate]: The EffectEvidenceSynthesis
+  /// [EffectEvidenceSynthesisEffectEstimate]: The EffectEvidenceSynthesis
   /// resource describes the difference in an outcome between exposures states
   /// in a population where the effect estimate is derived from a combination of
   ///  research studies.
@@ -463,7 +463,7 @@ class EffectEvidenceSynthesisEffectEstimate
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -486,7 +486,7 @@ class EffectEvidenceSynthesisEffectEstimate
   ///
   /// [description]: Human-readable summary of effect estimate.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [type]: Examples include relative risk and mean difference.
   ///
@@ -495,7 +495,7 @@ class EffectEvidenceSynthesisEffectEstimate
   ///
   /// [value]: The point estimate of the effect estimate.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [unitOfMeasure]: Specifies the UCUM unit for the outcome.
   ///
@@ -518,7 +518,7 @@ class EffectEvidenceSynthesisEffectEstimate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EffectEvidenceSynthesisEffectEstimate.fromYaml(dynamic yaml) => yaml
           is String
       ? EffectEvidenceSynthesisEffectEstimate.fromJson(
@@ -540,7 +540,7 @@ class EffectEvidenceSynthesisPrecisionEstimate
     with _$EffectEvidenceSynthesisPrecisionEstimate {
   EffectEvidenceSynthesisPrecisionEstimate._();
 
-  /// [EffectEvidenceSynthesis_PrecisionEstimate]: The EffectEvidenceSynthesis
+  /// [EffectEvidenceSynthesisPrecisionEstimate]: The EffectEvidenceSynthesis
   /// resource describes the difference in an outcome between exposures states
   /// in a population where the effect estimate is derived from a combination of
   ///  research studies.
@@ -548,7 +548,7 @@ class EffectEvidenceSynthesisPrecisionEstimate
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -573,15 +573,15 @@ class EffectEvidenceSynthesisPrecisionEstimate
   ///
   /// [level]: Use 95 for a 95% confidence interval.
   ///
-  /// [_level]: Extensions for level
+  /// [levelElement]: Extensions for level
   ///
   /// [from]: Lower bound of confidence interval.
   ///
-  /// [_from]: Extensions for from
+  /// [fromElement]: Extensions for from
   ///
   /// [to]: Upper bound of confidence interval.
   ///
-  /// [_to]: Extensions for to
+  /// [toElement]: Extensions for to
   factory EffectEvidenceSynthesisPrecisionEstimate({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -598,7 +598,7 @@ class EffectEvidenceSynthesisPrecisionEstimate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EffectEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) => yaml
           is String
       ? EffectEvidenceSynthesisPrecisionEstimate.fromJson(
@@ -619,7 +619,7 @@ class EffectEvidenceSynthesisPrecisionEstimate
 class EffectEvidenceSynthesisCertainty with _$EffectEvidenceSynthesisCertainty {
   EffectEvidenceSynthesisCertainty._();
 
-  /// [EffectEvidenceSynthesis_Certainty]: The EffectEvidenceSynthesis resource
+  /// [EffectEvidenceSynthesisCertainty]: The EffectEvidenceSynthesis resource
   /// describes the difference in an outcome between exposures states in a
   /// population where the effect estimate is derived from a combination of
   ///  research studies.
@@ -627,7 +627,7 @@ class EffectEvidenceSynthesisCertainty with _$EffectEvidenceSynthesisCertainty {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -667,7 +667,7 @@ class EffectEvidenceSynthesisCertainty with _$EffectEvidenceSynthesisCertainty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EffectEvidenceSynthesisCertainty.fromYaml(dynamic yaml) => yaml
           is String
       ? EffectEvidenceSynthesisCertainty.fromJson(
@@ -689,7 +689,7 @@ class EffectEvidenceSynthesisCertaintySubcomponent
     with _$EffectEvidenceSynthesisCertaintySubcomponent {
   EffectEvidenceSynthesisCertaintySubcomponent._();
 
-  /// [EffectEvidenceSynthesis_CertaintySubcomponent]: The
+  /// [EffectEvidenceSynthesisCertaintySubcomponent]: The
   /// EffectEvidenceSynthesis resource describes the difference in an outcome
   /// between exposures states in a population where the effect estimate is
   ///  derived from a combination of research studies.
@@ -697,7 +697,7 @@ class EffectEvidenceSynthesisCertaintySubcomponent
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -736,7 +736,7 @@ class EffectEvidenceSynthesisCertaintySubcomponent
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EffectEvidenceSynthesisCertaintySubcomponent.fromYaml(dynamic yaml) =>
       yaml is String
           ? EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
@@ -776,11 +776,11 @@ class Evidence with Resource, _$Evidence {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -794,7 +794,7 @@ class Evidence with Resource, _$Evidence {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -823,7 +823,7 @@ class Evidence with Resource, _$Evidence {
   /// canonical reference. It SHALL remain the same when the evidence is stored
   ///  on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this evidence
   /// when it is represented in other formats, or referenced in a specification,
@@ -841,45 +841,45 @@ class Evidence with Resource, _$Evidence {
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the evidence. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the evidence.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [shortTitle]: The short title provides an alternate title for use in
   /// informal descriptive contexts where the full, formal title is not
   ///  necessary.
   ///
-  /// [_shortTitle]: Extensions for shortTitle
+  /// [shortTitleElement]: Extensions for shortTitle
   ///
   /// [subtitle]: An explanatory or alternate title for the Evidence giving
   ///  additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [status]: The status of this evidence. Enables tracking the life-cycle of
   ///  the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [date]: The date  (and optionally time) when the evidence was published.
   /// The date must change when the business version changes and it must change
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the evidence changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  evidence.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -887,7 +887,7 @@ class Evidence with Resource, _$Evidence {
   /// [description]: A free text natural language description of the evidence
   ///  from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [note]: A human-readable string to clarify or explain concepts about the
   ///  resource.
@@ -905,19 +905,19 @@ class Evidence with Resource, _$Evidence {
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the evidence.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the evidence content was or is
   ///  planned to be in active use.
@@ -1009,7 +1009,7 @@ class Evidence with Resource, _$Evidence {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Evidence.fromYaml(dynamic yaml) => yaml is String
       ? Evidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1044,11 +1044,11 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1062,7 +1062,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1091,7 +1091,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  evidence variable is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this evidence
   /// variable when it is represented in other formats, or referenced in a
@@ -1109,46 +1109,46 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// Support Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the evidence variable. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the evidence
   ///  variable.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [shortTitle]: The short title provides an alternate title for use in
   /// informal descriptive contexts where the full, formal title is not
   ///  necessary.
   ///
-  /// [_shortTitle]: Extensions for shortTitle
+  /// [shortTitleElement]: Extensions for shortTitle
   ///
   /// [subtitle]: An explanatory or alternate title for the EvidenceVariable
   ///  giving additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [status]: The status of this evidence variable. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [date]: The date  (and optionally time) when the evidence variable was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the evidence variable changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  evidence variable.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1156,7 +1156,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [description]: A free text natural language description of the evidence
   ///  variable from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [note]: A human-readable string to clarify or explain concepts about the
   ///  resource.
@@ -1174,19 +1174,19 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the evidence variable.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the evidence variable content
   ///  was or is planned to be in active use.
@@ -1214,7 +1214,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [type]: The type of evidence element, a population, an exposure, or an
   ///  outcome.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [characteristic]: A characteristic that defines the members of the
   /// evidence element. Multiple characteristics are applied with "and"
@@ -1281,7 +1281,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1299,14 +1299,14 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
 class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   EvidenceVariableCharacteristic._();
 
-  /// [EvidenceVariable_Characteristic]: The EvidenceVariable resource describes
+  /// [EvidenceVariableCharacteristic]: The EvidenceVariable resource describes
   /// a "PICO" element that knowledge (evidence, assertion, recommendation) is
   ///  about.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1330,7 +1330,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// [description]: A short, natural language description of the characteristic
   ///  that could be used to communicate the criteria to an end-user.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [definitionReference]: Define members of the evidence element using Codes
   /// (such as condition, medication, or observation), Expressions ( using an
@@ -1342,7 +1342,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// expression language such as FHIRPath or CQL) or DataRequirements (such as
   ///  Diabetes diagnosis onset in the last year).
   ///
-  /// [_definitionCanonical]: Extensions for definitionCanonical
+  /// [definitionCanonicalElement]: Extensions for definitionCanonical
   ///
   /// [definitionCodeableConcept]: Define members of the evidence element using
   /// Codes (such as condition, medication, or observation), Expressions ( using
@@ -1370,12 +1370,12 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// [exclude]: When true, members with this characteristic are excluded from
   ///  the element.
   ///
-  /// [_exclude]: Extensions for exclude
+  /// [excludeElement]: Extensions for exclude
   ///
   /// [participantEffectiveDateTime]: Indicates what effective period the study
   ///  covers.
   ///
-  /// [_participantEffectiveDateTime]: Extensions for
+  /// [participantEffectiveDateTimeElement]: Extensions for
   ///  participantEffectiveDateTime
   ///
   /// [participantEffectivePeriod]: Indicates what effective period the study
@@ -1392,7 +1392,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// [groupMeasure]: Indicates how elements are aggregated within the study
   ///  effective period.
   ///
-  /// [_groupMeasure]: Extensions for groupMeasure
+  /// [groupMeasureElement]: Extensions for groupMeasure
   factory EvidenceVariableCharacteristic({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1424,7 +1424,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceVariableCharacteristic.fromYaml(dynamic yaml) => yaml
           is String
       ? EvidenceVariableCharacteristic.fromJson(
@@ -1464,11 +1464,11 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1482,7 +1482,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1511,7 +1511,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  research definition is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this research
   /// definition when it is represented in other formats, or referenced in a
@@ -1529,40 +1529,40 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// knowledge assets, refer to the Decision Support Service specification.
   ///  Note that a version is required for non-experimental active artifacts.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the research definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the research
   ///  definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [shortTitle]: The short title provides an alternate title for use in
   /// informal descriptive contexts where the full, formal title is not
   ///  necessary.
   ///
-  /// [_shortTitle]: Extensions for shortTitle
+  /// [shortTitleElement]: Extensions for shortTitle
   ///
   /// [subtitle]: An explanatory or alternate title for the ResearchDefinition
   ///  giving additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [status]: The status of this research definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this research definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [subjectCodeableConcept]: The intended subjects for the
   /// ResearchDefinition. If this element is not provided, a Patient subject is
@@ -1577,12 +1577,12 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the research definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  research definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1590,12 +1590,12 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// [description]: A free text natural language description of the research
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [comment]: A human-readable string to clarify or explain concepts about
   ///  the resource.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -1609,30 +1609,30 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// [purpose]: Explanation of why this research definition is needed and why
   ///  it has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [usage]: A detailed description, from a clinical perspective, of how the
   ///  ResearchDefinition is used.
   ///
-  /// [_usage]: Extensions for usage
+  /// [usageElement]: Extensions for usage
   ///
   /// [copyright]: A copyright statement relating to the research definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the research definition.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the research definition content
   ///  was or is planned to be in active use.
@@ -1657,7 +1657,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// [relatedArtifact]: Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library]: A reference to a Library resource containing the formal logic
+  /// [library_]: A reference to a Library resource containing the formal logic
   ///  used by the ResearchDefinition.
   ///
   /// [population]: A reference to a ResearchElementDefinition resource that
@@ -1743,7 +1743,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ResearchDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1779,11 +1779,11 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1797,7 +1797,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1826,7 +1826,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// This URL can be the target of a canonical reference. It SHALL remain the
   ///  same when the research element definition is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this research
   /// element definition when it is represented in other formats, or referenced
@@ -1844,42 +1844,42 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// knowledge assets, refer to the Decision Support Service specification.
   ///  Note that a version is required for non-experimental active artifacts.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the research element
   /// definition. This name should be usable as an identifier for the module by
   ///  machine processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the research
   ///  element definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [shortTitle]: The short title provides an alternate title for use in
   /// informal descriptive contexts where the full, formal title is not
   ///  necessary.
   ///
-  /// [_shortTitle]: Extensions for shortTitle
+  /// [shortTitleElement]: Extensions for shortTitle
   ///
   /// [subtitle]: An explanatory or alternate title for the
   /// ResearchElementDefinition giving additional information about its
   ///  content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [status]: The status of this research element definition. Enables tracking
   ///  the life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this research element
   /// definition is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [subjectCodeableConcept]: The intended subjects for the
   /// ResearchElementDefinition. If this element is not provided, a Patient
@@ -1897,12 +1897,12 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// should change when the substantive content of the research element
   ///  definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  research element definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1910,12 +1910,12 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [description]: A free text natural language description of the research
   ///  element definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [comment]: A human-readable string to clarify or explain concepts about
   ///  the resource.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -1929,31 +1929,31 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [purpose]: Explanation of why this research element definition is needed
   ///  and why it has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [usage]: A detailed description, from a clinical perspective, of how the
   ///  ResearchElementDefinition is used.
   ///
-  /// [_usage]: Extensions for usage
+  /// [usageElement]: Extensions for usage
   ///
   /// [copyright]: A copyright statement relating to the research element
   /// definition and/or its contents. Copyright statements are generally legal
   /// restrictions on the use and publishing of the research element
   ///  definition.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the research element definition
   ///  content was or is planned to be in active use.
@@ -1978,18 +1978,18 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [relatedArtifact]: Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library]: A reference to a Library resource containing the formal logic
+  /// [library_]: A reference to a Library resource containing the formal logic
   ///  used by the ResearchElementDefinition.
   ///
   /// [type]: The type of research element, a population, an exposure, or an
   ///  outcome.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [variableType]: The type of the outcome (e.g. Dichotomous, Continuous, or
   ///  Descriptive).
   ///
-  /// [_variableType]: Extensions for variableType
+  /// [variableTypeElement]: Extensions for variableType
   ///
   /// [characteristic]: A characteristic that defines the members of the
   /// research element. Multiple characteristics are applied with "and"
@@ -2069,7 +2069,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchElementDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ResearchElementDefinition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2089,14 +2089,14 @@ class ResearchElementDefinitionCharacteristic
     with _$ResearchElementDefinitionCharacteristic {
   ResearchElementDefinitionCharacteristic._();
 
-  /// [ResearchElementDefinition_Characteristic]: The ResearchElementDefinition
+  /// [ResearchElementDefinitionCharacteristic]: The ResearchElementDefinition
   /// resource describes a "PICO" element that knowledge (evidence, assertion,
   ///  recommendation) is about.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2127,7 +2127,7 @@ class ResearchElementDefinitionCharacteristic
   /// expression language such as FHIRPath or CQL) or DataRequirements (such as
   ///  Diabetes diagnosis onset in the last year).
   ///
-  /// [_definitionCanonical]: Extensions for definitionCanonical
+  /// [definitionCanonicalElement]: Extensions for definitionCanonical
   ///
   /// [definitionExpression]: Define members of the research element using Codes
   /// (such as condition, medication, or observation), Expressions ( using an
@@ -2145,19 +2145,19 @@ class ResearchElementDefinitionCharacteristic
   /// [exclude]: When true, members with this characteristic are excluded from
   ///  the element.
   ///
-  /// [_exclude]: Extensions for exclude
+  /// [excludeElement]: Extensions for exclude
   ///
   /// [unitOfMeasure]: Specifies the UCUM unit for the outcome.
   ///
   /// [studyEffectiveDescription]: A narrative description of the time period
   ///  the study covers.
   ///
-  /// [_studyEffectiveDescription]: Extensions for studyEffectiveDescription
+  /// [studyEffectiveDescriptionElement]: Extensions for studyEffectiveDescription
   ///
   /// [studyEffectiveDateTime]: Indicates what effective period the study
   ///  covers.
   ///
-  /// [_studyEffectiveDateTime]: Extensions for studyEffectiveDateTime
+  /// [studyEffectiveDateTimeElement]: Extensions for studyEffectiveDateTime
   ///
   /// [studyEffectivePeriod]: Indicates what effective period the study covers.
   ///
@@ -2172,18 +2172,18 @@ class ResearchElementDefinitionCharacteristic
   /// [studyEffectiveGroupMeasure]: Indicates how elements are aggregated within
   ///  the study effective period.
   ///
-  /// [_studyEffectiveGroupMeasure]: Extensions for studyEffectiveGroupMeasure
+  /// [studyEffectiveGroupMeasureElement]: Extensions for studyEffectiveGroupMeasure
   ///
   /// [participantEffectiveDescription]: A narrative description of the time
   ///  period the study covers.
   ///
-  /// [_participantEffectiveDescription]: Extensions for
+  /// [participantEffectiveDescriptionElement]: Extensions for
   ///  participantEffectiveDescription
   ///
   /// [participantEffectiveDateTime]: Indicates what effective period the study
   ///  covers.
   ///
-  /// [_participantEffectiveDateTime]: Extensions for
+  /// [participantEffectiveDateTimeElement]: Extensions for
   ///  participantEffectiveDateTime
   ///
   /// [participantEffectivePeriod]: Indicates what effective period the study
@@ -2201,7 +2201,7 @@ class ResearchElementDefinitionCharacteristic
   /// [participantEffectiveGroupMeasure]: Indicates how elements are aggregated
   ///  within the study effective period.
   ///
-  /// [_participantEffectiveGroupMeasure]: Extensions for
+  /// [participantEffectiveGroupMeasureElement]: Extensions for
   ///  participantEffectiveGroupMeasure
   factory ResearchElementDefinitionCharacteristic({
     String? id,
@@ -2257,7 +2257,7 @@ class ResearchElementDefinitionCharacteristic
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchElementDefinitionCharacteristic.fromYaml(dynamic yaml) => yaml
           is String
       ? ResearchElementDefinitionCharacteristic.fromJson(
@@ -2296,11 +2296,11 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2314,7 +2314,7 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2343,7 +2343,7 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the risk evidence synthesis is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this risk
   /// evidence synthesis when it is represented in other formats, or referenced
@@ -2357,35 +2357,35 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// not available. There is also no expectation that versions can be placed in
   ///  a lexicographical sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the risk evidence synthesis.
   /// This name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the risk evidence
   ///  synthesis.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this risk evidence synthesis. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [date]: The date  (and optionally time) when the risk evidence synthesis
   /// was published. The date must change when the business version changes and
   /// it must change if the status code changes. In addition, it should change
   ///  when the substantive content of the risk evidence synthesis changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  risk evidence synthesis.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -2393,7 +2393,7 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// [description]: A free text natural language description of the risk
   ///  evidence synthesis from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [note]: A human-readable string to clarify or explain concepts about the
   ///  resource.
@@ -2411,19 +2411,19 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the risk evidence synthesis.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the risk evidence synthesis
   ///  content was or is planned to be in active use.
@@ -2529,7 +2529,7 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RiskEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String
       ? RiskEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2547,7 +2547,7 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
 class RiskEvidenceSynthesisSampleSize with _$RiskEvidenceSynthesisSampleSize {
   RiskEvidenceSynthesisSampleSize._();
 
-  /// [RiskEvidenceSynthesis_SampleSize]: The RiskEvidenceSynthesis resource
+  /// [RiskEvidenceSynthesisSampleSize]: The RiskEvidenceSynthesis resource
   /// describes the likelihood of an outcome in a population plus exposure state
   /// where the risk estimate is derived from a combination of research
   ///  studies.
@@ -2555,7 +2555,7 @@ class RiskEvidenceSynthesisSampleSize with _$RiskEvidenceSynthesisSampleSize {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2578,16 +2578,16 @@ class RiskEvidenceSynthesisSampleSize with _$RiskEvidenceSynthesisSampleSize {
   ///
   /// [description]: Human-readable summary of sample size.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [numberOfStudies]: Number of studies included in this evidence synthesis.
   ///
-  /// [_numberOfStudies]: Extensions for numberOfStudies
+  /// [numberOfStudiesElement]: Extensions for numberOfStudies
   ///
   /// [numberOfParticipants]: Number of participants included in this evidence
   ///  synthesis.
   ///
-  /// [_numberOfParticipants]: Extensions for numberOfParticipants
+  /// [numberOfParticipantsElement]: Extensions for numberOfParticipants
   factory RiskEvidenceSynthesisSampleSize({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2604,7 +2604,7 @@ class RiskEvidenceSynthesisSampleSize with _$RiskEvidenceSynthesisSampleSize {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RiskEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) => yaml
           is String
       ? RiskEvidenceSynthesisSampleSize.fromJson(
@@ -2626,7 +2626,7 @@ class RiskEvidenceSynthesisRiskEstimate
     with _$RiskEvidenceSynthesisRiskEstimate {
   RiskEvidenceSynthesisRiskEstimate._();
 
-  /// [RiskEvidenceSynthesis_RiskEstimate]: The RiskEvidenceSynthesis resource
+  /// [RiskEvidenceSynthesisRiskEstimate]: The RiskEvidenceSynthesis resource
   /// describes the likelihood of an outcome in a population plus exposure state
   /// where the risk estimate is derived from a combination of research
   ///  studies.
@@ -2634,7 +2634,7 @@ class RiskEvidenceSynthesisRiskEstimate
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2657,25 +2657,25 @@ class RiskEvidenceSynthesisRiskEstimate
   ///
   /// [description]: Human-readable summary of risk estimate.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [type]: Examples include proportion and mean.
   ///
   /// [value]: The point estimate of the risk estimate.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [unitOfMeasure]: Specifies the UCUM unit for the outcome.
   ///
   /// [denominatorCount]: The sample size for the group that was measured for
   ///  this risk estimate.
   ///
-  /// [_denominatorCount]: Extensions for denominatorCount
+  /// [denominatorCountElement]: Extensions for denominatorCount
   ///
   /// [numeratorCount]: The number of group members with the outcome of
   ///  interest.
   ///
-  /// [_numeratorCount]: Extensions for numeratorCount
+  /// [numeratorCountElement]: Extensions for numeratorCount
   ///
   /// [precisionEstimate]: A description of the precision of the estimate for
   ///  the effect.
@@ -2699,7 +2699,7 @@ class RiskEvidenceSynthesisRiskEstimate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RiskEvidenceSynthesisRiskEstimate.fromYaml(dynamic yaml) => yaml
           is String
       ? RiskEvidenceSynthesisRiskEstimate.fromJson(
@@ -2721,7 +2721,7 @@ class RiskEvidenceSynthesisPrecisionEstimate
     with _$RiskEvidenceSynthesisPrecisionEstimate {
   RiskEvidenceSynthesisPrecisionEstimate._();
 
-  /// [RiskEvidenceSynthesis_PrecisionEstimate]: The RiskEvidenceSynthesis
+  /// [RiskEvidenceSynthesisPrecisionEstimate]: The RiskEvidenceSynthesis
   /// resource describes the likelihood of an outcome in a population plus
   /// exposure state where the risk estimate is derived from a combination of
   ///  research studies.
@@ -2729,7 +2729,7 @@ class RiskEvidenceSynthesisPrecisionEstimate
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2754,15 +2754,15 @@ class RiskEvidenceSynthesisPrecisionEstimate
   ///
   /// [level]: Use 95 for a 95% confidence interval.
   ///
-  /// [_level]: Extensions for level
+  /// [levelElement]: Extensions for level
   ///
   /// [from]: Lower bound of confidence interval.
   ///
-  /// [_from]: Extensions for from
+  /// [fromElement]: Extensions for from
   ///
   /// [to]: Upper bound of confidence interval.
   ///
-  /// [_to]: Extensions for to
+  /// [toElement]: Extensions for to
   factory RiskEvidenceSynthesisPrecisionEstimate({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2779,7 +2779,7 @@ class RiskEvidenceSynthesisPrecisionEstimate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RiskEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) => yaml
           is String
       ? RiskEvidenceSynthesisPrecisionEstimate.fromJson(
@@ -2800,7 +2800,7 @@ class RiskEvidenceSynthesisPrecisionEstimate
 class RiskEvidenceSynthesisCertainty with _$RiskEvidenceSynthesisCertainty {
   RiskEvidenceSynthesisCertainty._();
 
-  /// [RiskEvidenceSynthesis_Certainty]: The RiskEvidenceSynthesis resource
+  /// [RiskEvidenceSynthesisCertainty]: The RiskEvidenceSynthesis resource
   /// describes the likelihood of an outcome in a population plus exposure state
   /// where the risk estimate is derived from a combination of research
   ///  studies.
@@ -2808,7 +2808,7 @@ class RiskEvidenceSynthesisCertainty with _$RiskEvidenceSynthesisCertainty {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2848,7 +2848,7 @@ class RiskEvidenceSynthesisCertainty with _$RiskEvidenceSynthesisCertainty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RiskEvidenceSynthesisCertainty.fromYaml(dynamic yaml) => yaml
           is String
       ? RiskEvidenceSynthesisCertainty.fromJson(
@@ -2870,7 +2870,7 @@ class RiskEvidenceSynthesisCertaintySubcomponent
     with _$RiskEvidenceSynthesisCertaintySubcomponent {
   RiskEvidenceSynthesisCertaintySubcomponent._();
 
-  /// [RiskEvidenceSynthesis_CertaintySubcomponent]: The RiskEvidenceSynthesis
+  /// [RiskEvidenceSynthesisCertaintySubcomponent]: The RiskEvidenceSynthesis
   /// resource describes the likelihood of an outcome in a population plus
   /// exposure state where the risk estimate is derived from a combination of
   ///  research studies.
@@ -2878,7 +2878,7 @@ class RiskEvidenceSynthesisCertaintySubcomponent
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2917,7 +2917,7 @@ class RiskEvidenceSynthesisCertaintySubcomponent
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RiskEvidenceSynthesisCertaintySubcomponent.fromYaml(dynamic yaml) => yaml
           is String
       ? RiskEvidenceSynthesisCertaintySubcomponent.fromJson(

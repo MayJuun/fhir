@@ -56,7 +56,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -84,7 +84,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -131,7 +131,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String
       ? ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

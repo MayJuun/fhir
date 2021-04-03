@@ -34,11 +34,11 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -52,7 +52,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -81,7 +81,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  capability statement is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [version]: The identifier that is used to identify this version of the
   /// capability statement when it is referenced in a specification, model,
@@ -91,41 +91,41 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// available. There is also no expectation that versions can be placed in a
   ///  lexicographical sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the capability statement. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the capability
   ///  statement.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this capability statement
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the capability statement was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the capability statement changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  capability statement.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -135,7 +135,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// capability statement describes a desired rather than an actual solution,
   ///  for example as a formal expression of requirements as part of an RFP.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -149,20 +149,20 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// [purpose]: Explanation of why this capability statement is needed and why
   ///  it has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the capability statement
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the capability statement.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [kind]: The way that this statement is intended to be used, to describe an
   /// actual running instance of software, a particular product (kind, not
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
   ///
-  /// [_kind]: Extensions for kind
+  /// [kindElement]: Extensions for kind
   ///
   /// [instantiates]: Reference to a canonical URL of another
   /// CapabilityStatement that this software implements. This capability
@@ -189,17 +189,17 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// CapabilityStatement describes (which SHALL be the same as the FHIR version
   ///  of the CapabilityStatement itself). There is no default value.
   ///
-  /// [_fhirVersion]: Extensions for fhirVersion
+  /// [fhirVersionElement]: Extensions for fhirVersion
   ///
   /// [format]: A list of the formats supported by this implementation using
   ///  their content types.
   ///
-  /// [_format]: Extensions for format
+  /// [formatElement]: Extensions for format
   ///
   /// [patchFormat]: A list of the patch formats supported by this
   ///  implementation using their content types.
   ///
-  /// [_patchFormat]: Extensions for patchFormat
+  /// [patchFormatElement]: Extensions for patchFormat
   ///
   /// [implementationGuide]: A list of implementation guides that the server
   ///  does (or should) support in their entirety.
@@ -272,7 +272,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -290,7 +290,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   CapabilityStatementSoftware._();
 
-  /// [CapabilityStatement_Software]: A Capability Statement documents a set of
+  /// [CapabilityStatementSoftware]: A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -298,7 +298,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -321,16 +321,16 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   ///
   /// [name]: Name the software is known by.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [version]: The version identifier for the software covered by this
   ///  statement.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [releaseDate]: Date this version of the software was released.
   ///
-  /// [_releaseDate]: Extensions for releaseDate
+  /// [releaseDateElement]: Extensions for releaseDate
   factory CapabilityStatementSoftware({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -346,7 +346,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementSoftware.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementSoftware.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -366,7 +366,7 @@ class CapabilityStatementImplementation
     with _$CapabilityStatementImplementation {
   CapabilityStatementImplementation._();
 
-  /// [CapabilityStatement_Implementation]: A Capability Statement documents a
+  /// [CapabilityStatementImplementation]: A Capability Statement documents a
   /// set of capabilities (behaviors) of a FHIR Server for a particular version
   /// of FHIR that may be used as a statement of actual server functionality or
   ///  a statement of required or desired server implementation.
@@ -374,7 +374,7 @@ class CapabilityStatementImplementation
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -398,12 +398,12 @@ class CapabilityStatementImplementation
   /// [description]: Information about the specific installation that this
   ///  capability statement relates to.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [url]: An absolute base URL for the implementation.  This forms the base
   ///  for REST interfaces as well as the mailbox and document interfaces.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [custodian]: The organization responsible for the management of the
   ///  instance and oversight of the data on the server at the specified URL.
@@ -421,7 +421,7 @@ class CapabilityStatementImplementation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementImplementation.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementImplementation.fromJson(
@@ -442,7 +442,7 @@ class CapabilityStatementImplementation
 class CapabilityStatementRest with _$CapabilityStatementRest {
   CapabilityStatementRest._();
 
-  /// [CapabilityStatement_Rest]: A Capability Statement documents a set of
+  /// [CapabilityStatementRest]: A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -450,7 +450,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -474,12 +474,12 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   /// [mode]: Identifies whether this portion of the statement is describing the
   ///  ability to initiate or receive restful operations.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [documentation]: Information about the system's restful capabilities that
   ///  apply across all applications, such as security.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   ///
   /// [security]: Information about security implementation from an interface
   ///  perspective - what a client needs to know.
@@ -521,7 +521,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementRest.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementRest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -539,7 +539,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
 class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   CapabilityStatementSecurity._();
 
-  /// [CapabilityStatement_Security]: A Capability Statement documents a set of
+  /// [CapabilityStatementSecurity]: A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -547,7 +547,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -571,14 +571,14 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   /// [cors]: Server adds CORS headers when responding to requests - this
   ///  enables Javascript applications to use the server.
   ///
-  /// [_cors]: Extensions for cors
+  /// [corsElement]: Extensions for cors
   ///
   /// [service]: Types of security services that are supported/required by the
   ///  system.
   ///
   /// [description]: General description of how security works.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   factory CapabilityStatementSecurity({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -593,7 +593,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementSecurity.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementSecurity.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -612,7 +612,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
 class CapabilityStatementResource with _$CapabilityStatementResource {
   CapabilityStatementResource._();
 
-  /// [CapabilityStatement_Resource]: A Capability Statement documents a set of
+  /// [CapabilityStatementResource]: A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -620,7 +620,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -643,7 +643,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   ///
   /// [type]: A type of resource exposed via the restful interface.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [profile]: A specification of the profile that describes the solution's
   /// overall support for the resource, including any constraints on
@@ -662,7 +662,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   /// [documentation]: Additional information about the resource type used by
   ///  the system.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   ///
   /// [interaction]: Identifies a restful operation supported by the solution.
   ///
@@ -673,12 +673,12 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   /// is 'versioned-update', then the server supports all the versioning
   ///  features, including using e-tags for version integrity in the API.
   ///
-  /// [_versioning]: Extensions for versioning
+  /// [versioningElement]: Extensions for versioning
   ///
   /// [readHistory]: A flag for whether the server is able to return past
   ///  versions as part of the vRead operation.
   ///
-  /// [_readHistory]: Extensions for readHistory
+  /// [readHistoryElement]: Extensions for readHistory
   ///
   /// [updateCreate]: A flag to indicate that the server allows or needs to
   /// allow the client to create new identities on the server (that is, the
@@ -686,41 +686,41 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   /// this operation means that the server allows the client to create new
   ///  identities on the server.
   ///
-  /// [_updateCreate]: Extensions for updateCreate
+  /// [updateCreateElement]: Extensions for updateCreate
   ///
   /// [conditionalCreate]: A flag that indicates that the server supports
   ///  conditional create.
   ///
-  /// [_conditionalCreate]: Extensions for conditionalCreate
+  /// [conditionalCreateElement]: Extensions for conditionalCreate
   ///
   /// [conditionalRead]: A code that indicates how the server supports
   ///  conditional read.
   ///
-  /// [_conditionalRead]: Extensions for conditionalRead
+  /// [conditionalReadElement]: Extensions for conditionalRead
   ///
   /// [conditionalUpdate]: A flag that indicates that the server supports
   ///  conditional update.
   ///
-  /// [_conditionalUpdate]: Extensions for conditionalUpdate
+  /// [conditionalUpdateElement]: Extensions for conditionalUpdate
   ///
   /// [conditionalDelete]: A code that indicates how the server supports
   ///  conditional delete.
   ///
-  /// [_conditionalDelete]: Extensions for conditionalDelete
+  /// [conditionalDeleteElement]: Extensions for conditionalDelete
   ///
   /// [referencePolicy]: A set of flags that defines how references are
   ///  supported.
   ///
-  /// [_referencePolicy]: Extensions for referencePolicy
+  /// [referencePolicyElement]: Extensions for referencePolicy
   ///
   /// [searchInclude]: A list of _include values supported by the server.
   ///
-  /// [_searchInclude]: Extensions for searchInclude
+  /// [searchIncludeElement]: Extensions for searchInclude
   ///
   /// [searchRevInclude]: A list of _revinclude (reverse include) values
   ///  supported by the server.
   ///
-  /// [_searchRevInclude]: Extensions for searchRevInclude
+  /// [searchRevIncludeElement]: Extensions for searchRevInclude
   ///
   /// [searchParam]: Search parameters for implementations to support and/or
   /// make use of - either references to ones defined in the specification, or
@@ -771,7 +771,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementResource.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementResource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -790,7 +790,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
 class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   CapabilityStatementInteraction._();
 
-  /// [CapabilityStatement_Interaction]: A Capability Statement documents a set
+  /// [CapabilityStatementInteraction]: A Capability Statement documents a set
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
   /// FHIR that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -798,7 +798,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -822,14 +822,14 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   /// [code]: Coded identifier of the operation, supported by the system
   ///  resource.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [documentation]: Guidance specific to the implementation of this
   /// operation, such as 'delete is a logical delete' or 'updates are only
   /// allowed with version id' or 'creates permitted from pre-authorized
   ///  certificates only'.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   factory CapabilityStatementInteraction({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -844,7 +844,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementInteraction.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementInteraction.fromJson(
@@ -865,7 +865,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
 class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   CapabilityStatementSearchParam._();
 
-  /// [CapabilityStatement_SearchParam]: A Capability Statement documents a set
+  /// [CapabilityStatementSearchParam]: A Capability Statement documents a set
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
   /// FHIR that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -873,7 +873,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -896,7 +896,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   ///
   /// [name]: The name of the search parameter used in the interface.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [definition]: An absolute URI that is a formal reference to where this
   /// parameter was first defined, so that a client can be confident of the
@@ -909,12 +909,12 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   /// [type]: The type of value a search parameter refers to, and how the
   ///  content is interpreted.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [documentation]: This allows documentation of any distinct behaviors about
   ///  how the search parameter is used.  For example, text matching algorithms.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   factory CapabilityStatementSearchParam({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -932,7 +932,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementSearchParam.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementSearchParam.fromJson(
@@ -953,7 +953,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
 class CapabilityStatementOperation with _$CapabilityStatementOperation {
   CapabilityStatementOperation._();
 
-  /// [CapabilityStatement_Operation]: A Capability Statement documents a set of
+  /// [CapabilityStatementOperation]: A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -961,7 +961,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -986,7 +986,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   /// name  prefixed with $ and used in the URL. For a query, this is the name
   ///  used in the _query parameter when the query is called.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [definition]: Where the formal definition can be found. If a server
   /// references the base definition of an Operation (i.e. from the
@@ -1002,7 +1002,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   /// operation behavior, possibly detailing different behavior for system, type
   ///  and instance-level invocation of the operation.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   factory CapabilityStatementOperation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1017,7 +1017,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementOperation.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementOperation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1036,7 +1036,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
 class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   CapabilityStatementInteraction1._();
 
-  /// [CapabilityStatement_Interaction1]: A Capability Statement documents a set
+  /// [CapabilityStatementInteraction1]: A Capability Statement documents a set
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
   /// FHIR that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -1044,7 +1044,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1067,13 +1067,13 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   ///
   /// [code]: A coded identifier of the operation, supported by the system.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [documentation]: Guidance specific to the implementation of this
   /// operation, such as limitations on the kind of transactions allowed, or
   ///  information about system wide search is implemented.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   factory CapabilityStatementInteraction1({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1088,7 +1088,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementInteraction1.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementInteraction1.fromJson(
@@ -1109,7 +1109,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
 class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   CapabilityStatementMessaging._();
 
-  /// [CapabilityStatement_Messaging]: A Capability Statement documents a set of
+  /// [CapabilityStatementMessaging]: A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -1117,7 +1117,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1145,14 +1145,14 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   /// minutes (if a receiver) or how long the cache length on the receiver
   ///  should be (if a sender).
   ///
-  /// [_reliableCache]: Extensions for reliableCache
+  /// [reliableCacheElement]: Extensions for reliableCache
   ///
   /// [documentation]: Documentation about the system's messaging capabilities
   /// for this endpoint not otherwise documented by the capability statement.
   /// For example, the process for becoming an authorized messaging exchange
   ///  partner.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   ///
   /// [supportedMessage]: References to message definitions for messages this
   ///  system can send or receive.
@@ -1171,7 +1171,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementMessaging.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementMessaging.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1190,7 +1190,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
 class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   CapabilityStatementEndpoint._();
 
-  /// [CapabilityStatement_Endpoint]: A Capability Statement documents a set of
+  /// [CapabilityStatementEndpoint]: A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -1198,7 +1198,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1225,7 +1225,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   /// [address]: The network address of the endpoint. For solutions that do not
   ///  use network addresses for routing, it can be just an identifier.
   ///
-  /// [_address]: Extensions for address
+  /// [addressElement]: Extensions for address
   factory CapabilityStatementEndpoint({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1238,7 +1238,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementEndpoint.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementEndpoint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1258,7 +1258,7 @@ class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
   CapabilityStatementSupportedMessage._();
 
-  /// [CapabilityStatement_SupportedMessage]: A Capability Statement documents a
+  /// [CapabilityStatementSupportedMessage]: A Capability Statement documents a
   /// set of capabilities (behaviors) of a FHIR Server for a particular version
   /// of FHIR that may be used as a statement of actual server functionality or
   ///  a statement of required or desired server implementation.
@@ -1266,7 +1266,7 @@ class CapabilityStatementSupportedMessage
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1290,7 +1290,7 @@ class CapabilityStatementSupportedMessage
   /// [mode]: The mode of this event declaration - whether application is sender
   ///  or receiver.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [definition]: Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
@@ -1307,7 +1307,7 @@ class CapabilityStatementSupportedMessage
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementSupportedMessage.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementSupportedMessage.fromJson(
@@ -1328,7 +1328,7 @@ class CapabilityStatementSupportedMessage
 class CapabilityStatementDocument with _$CapabilityStatementDocument {
   CapabilityStatementDocument._();
 
-  /// [CapabilityStatement_Document]: A Capability Statement documents a set of
+  /// [CapabilityStatementDocument]: A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -1336,7 +1336,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1360,13 +1360,13 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   /// [mode]: Mode of this document declaration - whether an application is a
   ///  producer or consumer.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [documentation]: A description of how the application supports or uses the
   /// specified document profile.  For example, when documents are created, what
   ///  action is taken with consumed documents, etc.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   ///
   /// [profile]: A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
@@ -1385,7 +1385,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementDocument.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementDocument.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1421,11 +1421,11 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1439,7 +1439,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1468,7 +1468,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the compartment definition is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [version]: The identifier that is used to identify this version of the
   /// compartment definition when it is referenced in a specification, model,
@@ -1478,37 +1478,37 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// available. There is also no expectation that versions can be placed in a
   ///  lexicographical sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the compartment definition.
   /// This name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [status]: The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this compartment
   /// definition is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the compartment definition
   /// was published. The date must change when the business version changes and
   /// it must change if the status code changes. In addition, it should change
   ///  when the substantive content of the compartment definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  compartment definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1516,7 +1516,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// [description]: A free text natural language description of the compartment
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -1527,15 +1527,15 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// [purpose]: Explanation of why this compartment definition is needed and
   ///  why it has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [code]: Which compartment this definition describes.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [search]: Whether the search syntax is supported,.
   ///
-  /// [_search]: Extensions for search
+  /// [searchElement]: Extensions for search
   ///
   /// [resource]: Information about how a resource is related to the
   ///  compartment.
@@ -1585,7 +1585,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompartmentDefinition.fromYaml(dynamic yaml) => yaml is String
       ? CompartmentDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1603,13 +1603,13 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
 class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   CompartmentDefinitionResource._();
 
-  /// [CompartmentDefinition_Resource]: A compartment definition that defines
+  /// [CompartmentDefinitionResource]: A compartment definition that defines
   ///  how resources are accessed on a server.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1632,18 +1632,18 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   ///
   /// [code]: The name of a resource supported by the server.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [param]: The name of a search parameter that represents the link to the
   /// compartment. More than one may be listed because a resource may be linked
   ///  to a compartment in more than one way,.
   ///
-  /// [_param]: Extensions for param
+  /// [paramElement]: Extensions for param
   ///
   /// [documentation]: Additional documentation about the resource and
   ///  compartment.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   factory CompartmentDefinitionResource({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1659,7 +1659,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompartmentDefinitionResource.fromYaml(dynamic yaml) => yaml is String
       ? CompartmentDefinitionResource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1694,11 +1694,11 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1712,7 +1712,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1741,7 +1741,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// a canonical reference. It SHALL remain the same when the example scenario
   ///  is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this example
   /// scenario when it is represented in other formats, or referenced in a
@@ -1755,24 +1755,24 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the example scenario. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [status]: The status of this example scenario. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this example scenario is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the example scenario was
   /// published. The date must change when the business version changes and it
@@ -1780,12 +1780,12 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// the substantive content of the example scenario changes. (e.g. the
   ///  'content logical definition').
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  example scenario.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1803,13 +1803,13 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the example scenario.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [purpose]: What the example scenario resource is created for. This should
   /// not be used to show the business purpose of the scenario itself, but the
   ///  purpose of documenting a scenario.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [actor]: Actor participating in the resource.
   ///
@@ -1865,7 +1865,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenario.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenario.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1883,12 +1883,12 @@ class ExampleScenario with Resource, _$ExampleScenario {
 class ExampleScenarioActor with _$ExampleScenarioActor {
   ExampleScenarioActor._();
 
-  /// [ExampleScenario_Actor]: Example of workflow instance.
+  /// [ExampleScenarioActor]: Example of workflow instance.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1911,19 +1911,19 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
   ///
   /// [actorId]: ID or acronym of actor.
   ///
-  /// [_actorId]: Extensions for actorId
+  /// [actorIdElement]: Extensions for actorId
   ///
   /// [type]: The type of actor - person or system.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [name]: The name of the actor as shown in the page.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: The description of the actor.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   factory ExampleScenarioActor({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1942,7 +1942,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioActor.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1960,12 +1960,12 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
 class ExampleScenarioInstance with _$ExampleScenarioInstance {
   ExampleScenarioInstance._();
 
-  /// [ExampleScenario_Instance]: Example of workflow instance.
+  /// [ExampleScenarioInstance]: Example of workflow instance.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1988,19 +1988,19 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
   ///
   /// [resourceId]: The id of the resource for referencing.
   ///
-  /// [_resourceId]: Extensions for resourceId
+  /// [resourceIdElement]: Extensions for resourceId
   ///
   /// [resourceType]: The type of the resource.
   ///
-  /// [_resourceType]: Extensions for resourceType
+  /// [resourceTypeElement]: Extensions for resourceType
   ///
   /// [name]: A short name for the resource instance.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: Human-friendly description of the resource instance.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [version]: A specific version of the resource.
   ///
@@ -2025,7 +2025,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioInstance.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2043,12 +2043,12 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
 class ExampleScenarioVersion with _$ExampleScenarioVersion {
   ExampleScenarioVersion._();
 
-  /// [ExampleScenario_Version]: Example of workflow instance.
+  /// [ExampleScenarioVersion]: Example of workflow instance.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2071,11 +2071,11 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
   ///
   /// [versionId]: The identifier of a specific version of a resource.
   ///
-  /// [_versionId]: Extensions for versionId
+  /// [versionIdElement]: Extensions for versionId
   ///
   /// [description]: The description of the resource version.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   factory ExampleScenarioVersion({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2089,7 +2089,7 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioVersion.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioVersion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2107,12 +2107,12 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
 class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   ExampleScenarioContainedInstance._();
 
-  /// [ExampleScenario_ContainedInstance]: Example of workflow instance.
+  /// [ExampleScenarioContainedInstance]: Example of workflow instance.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2135,11 +2135,11 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   ///
   /// [resourceId]: Each resource contained in the instance.
   ///
-  /// [_resourceId]: Extensions for resourceId
+  /// [resourceIdElement]: Extensions for resourceId
   ///
   /// [versionId]: A specific version of a resource contained in the instance.
   ///
-  /// [_versionId]: Extensions for versionId
+  /// [versionIdElement]: Extensions for versionId
   factory ExampleScenarioContainedInstance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2153,7 +2153,7 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioContainedInstance.fromYaml(dynamic yaml) => yaml
           is String
       ? ExampleScenarioContainedInstance.fromJson(
@@ -2174,12 +2174,12 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
 class ExampleScenarioProcess with _$ExampleScenarioProcess {
   ExampleScenarioProcess._();
 
-  /// [ExampleScenario_Process]: Example of workflow instance.
+  /// [ExampleScenarioProcess]: Example of workflow instance.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2202,19 +2202,19 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
   ///
   /// [title]: The diagram title of the group of operations.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [description]: A longer description of the group of operations.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [preConditions]: Description of initial status before the process starts.
   ///
-  /// [_preConditions]: Extensions for preConditions
+  /// [preConditionsElement]: Extensions for preConditions
   ///
   /// [postConditions]: Description of final status after the process ends.
   ///
-  /// [_postConditions]: Extensions for postConditions
+  /// [postConditionsElement]: Extensions for postConditions
   ///
   /// [step]: Each step of the process.
   factory ExampleScenarioProcess({
@@ -2235,7 +2235,7 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioProcess.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioProcess.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2253,12 +2253,12 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
 class ExampleScenarioStep with _$ExampleScenarioStep {
   ExampleScenarioStep._();
 
-  /// [ExampleScenario_Step]: Example of workflow instance.
+  /// [ExampleScenarioStep]: Example of workflow instance.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2283,7 +2283,7 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
   ///
   /// [pause]: If there is a pause in the flow.
   ///
-  /// [_pause]: Extensions for pause
+  /// [pauseElement]: Extensions for pause
   ///
   /// [operation]: Each interaction or action.
   ///
@@ -2303,7 +2303,7 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioStep.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioStep.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2321,12 +2321,12 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
 class ExampleScenarioOperation with _$ExampleScenarioOperation {
   ExampleScenarioOperation._();
 
-  /// [ExampleScenario_Operation]: Example of workflow instance.
+  /// [ExampleScenarioOperation]: Example of workflow instance.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2349,37 +2349,37 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
   ///
   /// [number]: The sequential number of the interaction, e.g. 1.2.5.
   ///
-  /// [_number]: Extensions for number
+  /// [numberElement]: Extensions for number
   ///
   /// [type]: The type of operation - CRUD.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [name]: The human-friendly name of the interaction.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [initiator]: Who starts the transaction.
   ///
-  /// [_initiator]: Extensions for initiator
+  /// [initiatorElement]: Extensions for initiator
   ///
   /// [receiver]: Who receives the transaction.
   ///
-  /// [_receiver]: Extensions for receiver
+  /// [receiverElement]: Extensions for receiver
   ///
   /// [description]: A comment to be inserted in the diagram.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [initiatorActive]: Whether the initiator is deactivated right after the
   ///  transaction.
   ///
-  /// [_initiatorActive]: Extensions for initiatorActive
+  /// [initiatorActiveElement]: Extensions for initiatorActive
   ///
   /// [receiverActive]: Whether the receiver is deactivated right after the
   ///  transaction.
   ///
-  /// [_receiverActive]: Extensions for receiverActive
+  /// [receiverActiveElement]: Extensions for receiverActive
   ///
   /// [request]: Each resource instance used by the initiator.
   ///
@@ -2411,7 +2411,7 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioOperation.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioOperation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2430,12 +2430,12 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
 class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   ExampleScenarioAlternative._();
 
-  /// [ExampleScenario_Alternative]: Example of workflow instance.
+  /// [ExampleScenarioAlternative]: Example of workflow instance.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2459,12 +2459,12 @@ class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   /// [title]: The label to display for the alternative that gives a sense of
   ///  the circumstance in which the alternative should be invoked.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [description]: A human-readable description of the alternative explaining
   ///  when the alternative should occur rather than the base step.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [step]: What happens in each alternative option.
   factory ExampleScenarioAlternative({
@@ -2481,7 +2481,7 @@ class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioAlternative.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioAlternative.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2519,11 +2519,11 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2537,7 +2537,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2566,7 +2566,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// a canonical reference. It SHALL remain the same when the graph definition
   ///  is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [version]: The identifier that is used to identify this version of the
   /// graph definition when it is referenced in a specification, model, design
@@ -2576,36 +2576,36 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the graph definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [status]: The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this graph definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the graph definition was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the graph definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  graph definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -2613,7 +2613,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// [description]: A free text natural language description of the graph
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -2627,11 +2627,11 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// [purpose]: Explanation of why this graph definition is needed and why it
   ///  has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [start]: The type of FHIR resource at which instances of this graph start.
   ///
-  /// [_start]: Extensions for start
+  /// [startElement]: Extensions for start
   ///
   /// [profile]: The profile that describes the use of the base resource.
   ///
@@ -2681,7 +2681,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinition.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2699,7 +2699,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
 class GraphDefinitionLink with _$GraphDefinitionLink {
   GraphDefinitionLink._();
 
-  /// [GraphDefinition_Link]: A formal computable definition of a graph of
+  /// [GraphDefinitionLink]: A formal computable definition of a graph of
   /// resources - that is, a coherent set of resources that form a graph by
   /// following references. The Graph Definition resource defines a set and
   ///  makes rules about the set.
@@ -2707,7 +2707,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2731,24 +2731,24 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
   /// [path]: A FHIR expression that identifies one of FHIR References to other
   ///  resources.
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [sliceName]: Which slice (if profiled).
   ///
-  /// [_sliceName]: Extensions for sliceName
+  /// [sliceNameElement]: Extensions for sliceName
   ///
   /// [min]: Minimum occurrences for this link.
   ///
-  /// [_min]: Extensions for min
+  /// [minElement]: Extensions for min
   ///
   /// [max]: Maximum occurrences for this link.
   ///
-  /// [_max]: Extensions for max
+  /// [maxElement]: Extensions for max
   ///
   /// [description]: Information about why this link is of interest in this
   ///  graph definition.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [target]: Potential target for the link.
   factory GraphDefinitionLink({
@@ -2771,7 +2771,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinitionLink.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinitionLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2789,7 +2789,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
 class GraphDefinitionTarget with _$GraphDefinitionTarget {
   GraphDefinitionTarget._();
 
-  /// [GraphDefinition_Target]: A formal computable definition of a graph of
+  /// [GraphDefinitionTarget]: A formal computable definition of a graph of
   /// resources - that is, a coherent set of resources that form a graph by
   /// following references. The Graph Definition resource defines a set and
   ///  makes rules about the set.
@@ -2797,7 +2797,7 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2820,11 +2820,11 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
   ///
   /// [type]: Type of resource this link refers to.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [params]: A set of parameters to look up.
   ///
-  /// [_params]: Extensions for params
+  /// [paramsElement]: Extensions for params
   ///
   /// [profile]: Profile for the target resource.
   ///
@@ -2847,7 +2847,7 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinitionTarget.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinitionTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2865,7 +2865,7 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
 class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   GraphDefinitionCompartment._();
 
-  /// [GraphDefinition_Compartment]: A formal computable definition of a graph
+  /// [GraphDefinitionCompartment]: A formal computable definition of a graph
   /// of resources - that is, a coherent set of resources that form a graph by
   /// following references. The Graph Definition resource defines a set and
   ///  makes rules about the set.
@@ -2873,7 +2873,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2898,23 +2898,23 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   /// test whether resources are subject to the rule, or whether it is a rule
   ///  that must be followed.
   ///
-  /// [_use]: Extensions for use
+  /// [useElement]: Extensions for use
   ///
   /// [code]: Identifies the compartment.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [rule]: identical | matching | different | no-rule | custom.
   ///
-  /// [_rule]: Extensions for rule
+  /// [ruleElement]: Extensions for rule
   ///
   /// [expression]: Custom rule, as a FHIRPath expression.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   ///
   /// [description]: Documentation for FHIRPath expression.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   factory GraphDefinitionCompartment({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2936,7 +2936,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinitionCompartment.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinitionCompartment.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2975,11 +2975,11 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2993,7 +2993,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -3022,7 +3022,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  implementation guide is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [version]: The identifier that is used to identify this version of the
   /// implementation guide when it is referenced in a specification, model,
@@ -3032,41 +3032,41 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// not available. There is also no expectation that versions can be placed in
   ///  a lexicographical sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the implementation guide. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the implementation
   ///  guide.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this implementation guide
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the implementation guide was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the implementation guide changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  implementation guide.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -3074,7 +3074,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// [description]: A free text natural language description of the
   ///  implementation guide from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -3089,19 +3089,19 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the implementation guide.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [packageId]: The NPM package name for this Implementation Guide, used in
   /// the NPM package distribution, which is the primary mechanism by which FHIR
   /// based tooling manages IG dependencies. This value must be globally unique,
   ///  and should be assigned with care.
   ///
-  /// [_packageId]: Extensions for packageId
+  /// [packageIdElement]: Extensions for packageId
   ///
   /// [license]: The license that applies to this Implementation Guide, using an
   ///  SPDX license code, or 'not-open-source'.
   ///
-  /// [_license]: Extensions for license
+  /// [licenseElement]: Extensions for license
   ///
   /// [fhirVersion]: The version(s) of the FHIR specification that this
   /// ImplementationGuide targets - e.g. describes how to use. The value of this
@@ -3109,7 +3109,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// number, e.g. [publication].[major].[minor], which is 4.0.1. for this
   ///  version.
   ///
-  /// [_fhirVersion]: Extensions for fhirVersion
+  /// [fhirVersionElement]: Extensions for fhirVersion
   ///
   /// [dependsOn]: Another implementation guide that this implementation depends
   /// on. Typically, an implementation guide uses value sets, profiles
@@ -3177,7 +3177,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuide.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3195,7 +3195,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   ImplementationGuideDependsOn._();
 
-  /// [ImplementationGuide_DependsOn]: A set of rules of how a particular
+  /// [ImplementationGuideDependsOn]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3204,7 +3204,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3231,12 +3231,12 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   /// [packageId]: The NPM package name for the Implementation Guide that this
   ///  IG depends on.
   ///
-  /// [_packageId]: Extensions for packageId
+  /// [packageIdElement]: Extensions for packageId
   ///
   /// [version]: The version of the IG that is depended on, when the correct
   ///  version is required to understand the IG correctly.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   factory ImplementationGuideDependsOn({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3251,7 +3251,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideDependsOn.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideDependsOn.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3270,7 +3270,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
 class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
 
-  /// [ImplementationGuide_Global]: A set of rules of how a particular
+  /// [ImplementationGuideGlobal]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3279,7 +3279,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3302,7 +3302,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ///
   /// [type]: The type of resource that all instances must conform to.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [profile]: A reference to the profile that all instances must conform to.
   factory ImplementationGuideGlobal({
@@ -3317,7 +3317,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideGlobal.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideGlobal.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3336,7 +3336,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   ImplementationGuideDefinition._();
 
-  /// [ImplementationGuide_Definition]: A set of rules of how a particular
+  /// [ImplementationGuideDefinition]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3345,7 +3345,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3394,7 +3394,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideDefinition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3413,7 +3413,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
 class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   ImplementationGuideGrouping._();
 
-  /// [ImplementationGuide_Grouping]: A set of rules of how a particular
+  /// [ImplementationGuideGrouping]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3422,7 +3422,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3446,11 +3446,11 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   /// [name]: The human-readable title to display for the package of resources
   ///  when rendering the implementation guide.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: Human readable text describing the package.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   factory ImplementationGuideGrouping({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3464,7 +3464,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideGrouping.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideGrouping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3483,7 +3483,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
 class ImplementationGuideResource with _$ImplementationGuideResource {
   ImplementationGuideResource._();
 
-  /// [ImplementationGuide_Resource]: A set of rules of how a particular
+  /// [ImplementationGuideResource]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3492,7 +3492,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3519,35 +3519,35 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   /// apply to. If no versions are specified, the resource is assumed to apply
   ///  to all the versions stated in ImplementationGuide.fhirVersion.
   ///
-  /// [_fhirVersion]: Extensions for fhirVersion
+  /// [fhirVersionElement]: Extensions for fhirVersion
   ///
   /// [name]: A human assigned name for the resource. All resources SHOULD have
   /// a name, but the name may be extracted from the resource (e.g.
   ///  ValueSet.name).
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: A description of the reason that a resource has been
   ///  included in the implementation guide.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [exampleBoolean]: If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
   ///
-  /// [_exampleBoolean]: Extensions for exampleBoolean
+  /// [exampleBooleanElement]: Extensions for exampleBoolean
   ///
   /// [exampleCanonical]: If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
   ///
-  /// [_exampleCanonical]: Extensions for exampleCanonical
+  /// [exampleCanonicalElement]: Extensions for exampleCanonical
   ///
   /// [groupingId]: Reference to the id of the grouping this resource appears
   ///  in.
   ///
-  /// [_groupingId]: Extensions for groupingId
+  /// [groupingIdElement]: Extensions for groupingId
   factory ImplementationGuideResource({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3570,7 +3570,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideResource.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideResource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3589,7 +3589,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
 class ImplementationGuidePage with _$ImplementationGuidePage {
   ImplementationGuidePage._();
 
-  /// [ImplementationGuide_Page]: A set of rules of how a particular
+  /// [ImplementationGuidePage]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3598,7 +3598,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3621,18 +3621,18 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   ///
   /// [nameUrl]: The source address for the page.
   ///
-  /// [_nameUrl]: Extensions for nameUrl
+  /// [nameUrlElement]: Extensions for nameUrl
   ///
   /// [nameReference]: The source address for the page.
   ///
   /// [title]: A short title used to represent this page in navigational
   ///  structures such as table of contents, bread crumbs, etc.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [generation]: A code that indicates how the page is generated.
   ///
-  /// [_generation]: Extensions for generation
+  /// [generationElement]: Extensions for generation
   ///
   /// [page]: Nested Pages/Sections under this page.
   factory ImplementationGuidePage({
@@ -3653,7 +3653,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuidePage.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuidePage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3671,7 +3671,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
 class ImplementationGuideParameter with _$ImplementationGuideParameter {
   ImplementationGuideParameter._();
 
-  /// [ImplementationGuide_Parameter]: A set of rules of how a particular
+  /// [ImplementationGuideParameter]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3680,7 +3680,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3705,11 +3705,11 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   /// expansion-parameter | rule-broken-links | generate-xml | generate-json |
   ///  generate-turtle | html-template.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [value]: Value for named type.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory ImplementationGuideParameter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3724,7 +3724,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideParameter.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideParameter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3743,7 +3743,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
 class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   ImplementationGuideTemplate._();
 
-  /// [ImplementationGuide_Template]: A set of rules of how a particular
+  /// [ImplementationGuideTemplate]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3752,7 +3752,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3775,15 +3775,15 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   ///
   /// [code]: Type of template specified.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [source]: The source location for the template.
   ///
-  /// [_source]: Extensions for source
+  /// [sourceElement]: Extensions for source
   ///
   /// [scope]: The scope in which the template applies.
   ///
-  /// [_scope]: Extensions for scope
+  /// [scopeElement]: Extensions for scope
   factory ImplementationGuideTemplate({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3799,7 +3799,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideTemplate.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideTemplate.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3818,7 +3818,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
 class ImplementationGuideManifest with _$ImplementationGuideManifest {
   ImplementationGuideManifest._();
 
-  /// [ImplementationGuide_Manifest]: A set of rules of how a particular
+  /// [ImplementationGuideManifest]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3827,7 +3827,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3851,7 +3851,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   /// [rendering]: A pointer to official web page, PDF or other rendering of the
   ///  implementation guide.
   ///
-  /// [_rendering]: Extensions for rendering
+  /// [renderingElement]: Extensions for rendering
   ///
   /// [resource]: A resource that is part of the implementation guide.
   /// Conformance resources (value set, structure definition, capability
@@ -3862,13 +3862,13 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   ///
   /// [image]: Indicates a relative path to an image that exists within the IG.
   ///
-  /// [_image]: Extensions for image
+  /// [imageElement]: Extensions for image
   ///
   /// [other]: Indicates the relative path of an additional non-page, non-image
   /// file that is part of the IG - e.g. zip, jar and similar files that could
   ///  be the target of a hyperlink in a derived IG.
   ///
-  /// [_other]: Extensions for other
+  /// [otherElement]: Extensions for other
   factory ImplementationGuideManifest({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3886,7 +3886,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideManifest.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideManifest.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3905,7 +3905,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
 class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   ImplementationGuideResource1._();
 
-  /// [ImplementationGuide_Resource1]: A set of rules of how a particular
+  /// [ImplementationGuideResource1]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3914,7 +3914,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3941,18 +3941,18 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
   ///
-  /// [_exampleBoolean]: Extensions for exampleBoolean
+  /// [exampleBooleanElement]: Extensions for exampleBoolean
   ///
   /// [exampleCanonical]: If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
   ///
-  /// [_exampleCanonical]: Extensions for exampleCanonical
+  /// [exampleCanonicalElement]: Extensions for exampleCanonical
   ///
   /// [relativePath]: The relative path for primary page for this resource
   ///  within the IG.
   ///
-  /// [_relativePath]: Extensions for relativePath
+  /// [relativePathElement]: Extensions for relativePath
   factory ImplementationGuideResource1({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3969,7 +3969,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideResource1.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideResource1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3988,7 +3988,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
 class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   ImplementationGuidePage1._();
 
-  /// [ImplementationGuide_Page1]: A set of rules of how a particular
+  /// [ImplementationGuidePage1]: A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
   /// use of FHIR resources. This resource is used to gather all the parts of an
   /// implementation guide into a logical whole and to publish a computable
@@ -3997,7 +3997,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4020,15 +4020,15 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   ///
   /// [name]: Relative path to the page.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: Label for the page intended for human display.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [anchor]: The name of an anchor available on the page.
   ///
-  /// [_anchor]: Extensions for anchor
+  /// [anchorElement]: Extensions for anchor
   factory ImplementationGuidePage1({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4044,7 +4044,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuidePage1.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuidePage1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4082,11 +4082,11 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -4100,7 +4100,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -4125,7 +4125,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// MessageDefinition and *is* expected to be consistent from server to
   ///  server.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this message
   /// definition when it is represented in other formats, or referenced in a
@@ -4139,43 +4139,43 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the message definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the message
   ///  definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [replaces]: A MessageDefinition that is superseded by this definition.
   ///
   /// [status]: The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this message definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the message definition was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the message definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  message definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -4183,7 +4183,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// [description]: A free text natural language description of the message
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -4197,13 +4197,13 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// [purpose]: Explanation of why this message definition is needed and why it
   ///  has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the message definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the message definition.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [base]: The MessageDefinition that is the basis for the contents of this
   ///  resource.
@@ -4215,11 +4215,11 @@ class MessageDefinition with Resource, _$MessageDefinition {
   ///
   /// [eventUri]: Event code or link to the EventDefinition.
   ///
-  /// [_eventUri]: Extensions for eventUri
+  /// [eventUriElement]: Extensions for eventUri
   ///
   /// [category]: The impact of the content of the message.
   ///
-  /// [_category]: Extensions for category
+  /// [categoryElement]: Extensions for category
   ///
   /// [focus]: Identifies the resource (or resources) that are being addressed
   /// by the event.  For example, the Encounter for an admit message or two
@@ -4228,7 +4228,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// [responseRequired]: Declare at a message definition level whether a
   ///  response is required or only upon error or success, or never.
   ///
-  /// [_responseRequired]: Extensions for responseRequired
+  /// [responseRequiredElement]: Extensions for responseRequired
   ///
   /// [allowedResponse]: Indicates what types of messages may be sent as an
   ///  application-level response to this message.
@@ -4299,7 +4299,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageDefinition.fromYaml(dynamic yaml) => yaml is String
       ? MessageDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -4317,7 +4317,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
 class MessageDefinitionFocus with _$MessageDefinitionFocus {
   MessageDefinitionFocus._();
 
-  /// [MessageDefinition_Focus]: Defines the characteristics of a message that
+  /// [MessageDefinitionFocus]: Defines the characteristics of a message that
   /// can be shared between systems, including the type of event that initiates
   /// the message, the content to be transmitted and what response(s), if any,
   ///  are permitted.
@@ -4325,7 +4325,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4348,7 +4348,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   ///
   /// [code]: The kind of resource that must be the focus for this message.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [profile]: A profile that reflects constraints for the focal resource (and
   ///  potentially for related resources).
@@ -4357,13 +4357,13 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   /// be pointed to by a message in order for it to be valid against this
   ///  MessageDefinition.
   ///
-  /// [_min]: Extensions for min
+  /// [minElement]: Extensions for min
   ///
   /// [max]: Identifies the maximum number of resources of this type that must
   /// be pointed to by a message in order for it to be valid against this
   ///  MessageDefinition.
   ///
-  /// [_max]: Extensions for max
+  /// [maxElement]: Extensions for max
   factory MessageDefinitionFocus({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4380,7 +4380,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageDefinitionFocus.fromYaml(dynamic yaml) => yaml is String
       ? MessageDefinitionFocus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -4398,7 +4398,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
 class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   MessageDefinitionAllowedResponse._();
 
-  /// [MessageDefinition_AllowedResponse]: Defines the characteristics of a
+  /// [MessageDefinitionAllowedResponse]: Defines the characteristics of a
   /// message that can be shared between systems, including the type of event
   /// that initiates the message, the content to be transmitted and what
   ///  response(s), if any, are permitted.
@@ -4406,7 +4406,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4433,7 +4433,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   /// [situation]: Provides a description of the circumstances in which this
   ///  response should be used (as opposed to one of the alternative responses).
   ///
-  /// [_situation]: Extensions for situation
+  /// [situationElement]: Extensions for situation
   factory MessageDefinitionAllowedResponse({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4446,7 +4446,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageDefinitionAllowedResponse.fromYaml(dynamic yaml) => yaml
           is String
       ? MessageDefinitionAllowedResponse.fromJson(
@@ -4484,11 +4484,11 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -4502,7 +4502,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -4531,7 +4531,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  operation definition is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [version]: The identifier that is used to identify this version of the
   /// operation definition when it is referenced in a specification, model,
@@ -4541,45 +4541,45 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// available. There is also no expectation that versions can be placed in a
   ///  lexicographical sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the operation definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the operation
   ///  definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this operation definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [kind]: Whether this is an operation or a named query.
   ///
-  /// [_kind]: Extensions for kind
+  /// [kindElement]: Extensions for kind
   ///
   /// [experimental]: A Boolean value to indicate that this operation definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the operation definition was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the operation definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  operation definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -4587,7 +4587,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// [description]: A free text natural language description of the operation
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -4601,45 +4601,45 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// [purpose]: Explanation of why this operation definition is needed and why
   ///  it has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [affectsState]: Whether the operation affects state. Side effects such as
   ///  producing audit trail entries do not count as 'affecting  state'.
   ///
-  /// [_affectsState]: Extensions for affectsState
+  /// [affectsStateElement]: Extensions for affectsState
   ///
   /// [code]: The name used to invoke the operation.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [comment]: Additional information about how to use this operation or named
   ///  query.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [base]: Indicates that this operation definition is a constraining profile
   ///  on the base.
   ///
   /// [resource]: The types on which this operation can be executed.
   ///
-  /// [_resource]: Extensions for resource
+  /// [resourceElement]: Extensions for resource
   ///
   /// [system]: Indicates whether this operation or named query can be invoked
   /// at the system level (e.g. without needing to choose a resource type for
   ///  the context).
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [type]: Indicates whether this operation or named query can be invoked at
   /// the resource type level for any given resource type level (e.g. without
   ///  needing to choose a specific resource id for the context).
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [instance]: Indicates whether this operation can be invoked on a
   ///  particular instance of one of the given types.
   ///
-  /// [_instance]: Extensions for instance
+  /// [instanceElement]: Extensions for instance
   ///
   /// [inputProfile]: Additional validation information for the in parameters -
   /// a single profile that covers all the parameters. The profile is a
@@ -4719,7 +4719,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -4737,14 +4737,14 @@ class OperationDefinition with Resource, _$OperationDefinition {
 class OperationDefinitionParameter with _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
 
-  /// [OperationDefinition_Parameter]: A formal computable definition of an
+  /// [OperationDefinitionParameter]: A formal computable definition of an
   /// operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4767,29 +4767,29 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   ///
   /// [name]: The name of used to identify the parameter.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [use]: Whether this is an input or an output parameter.
   ///
-  /// [_use]: Extensions for use
+  /// [useElement]: Extensions for use
   ///
   /// [min]: The minimum number of times this parameter SHALL appear in the
   ///  request or response.
   ///
-  /// [_min]: Extensions for min
+  /// [minElement]: Extensions for min
   ///
   /// [max]: The maximum number of times this element is permitted to appear in
   ///  the request or response.
   ///
-  /// [_max]: Extensions for max
+  /// [maxElement]: Extensions for max
   ///
   /// [documentation]: Describes the meaning or use of this parameter.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   ///
   /// [type]: The type for this parameter.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [targetProfile]: Used when the type is "Reference" or "canonical", and
   /// identifies a profile structure or implementation Guide that applies to the
@@ -4804,7 +4804,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   /// [searchType]: How the parameter is understood as a search parameter. This
   ///  is only used if the parameter type is 'string'.
   ///
-  /// [_searchType]: Extensions for searchType
+  /// [searchTypeElement]: Extensions for searchType
   ///
   /// [binding]: Binds to a value set if this parameter is coded (code, Coding,
   ///  CodeableConcept).
@@ -4812,7 +4812,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   /// [referencedFrom]: Identifies other resource parameters within the
   ///  operation invocation that are expected to resolve to this resource.
   ///
-  /// [part]: The parts of a nested Parameter.
+  /// [part_]: The parts of a nested Parameter.
   factory OperationDefinitionParameter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4842,7 +4842,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinitionParameter.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionParameter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4861,14 +4861,14 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
 class OperationDefinitionBinding with _$OperationDefinitionBinding {
   OperationDefinitionBinding._();
 
-  /// [OperationDefinition_Binding]: A formal computable definition of an
+  /// [OperationDefinitionBinding]: A formal computable definition of an
   /// operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4893,7 +4893,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
   /// with this binding - that is, the degree to which the provided value set
   ///  must be adhered to in the instances.
   ///
-  /// [_strength]: Extensions for strength
+  /// [strengthElement]: Extensions for strength
   ///
   /// [valueSet]: Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
@@ -4910,7 +4910,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionBinding.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4930,14 +4930,14 @@ class OperationDefinitionReferencedFrom
     with _$OperationDefinitionReferencedFrom {
   OperationDefinitionReferencedFrom._();
 
-  /// [OperationDefinition_ReferencedFrom]: A formal computable definition of an
+  /// [OperationDefinitionReferencedFrom]: A formal computable definition of an
   /// operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4962,12 +4962,12 @@ class OperationDefinitionReferencedFrom
   /// names pointing to the resource parameter that is expected to contain a
   ///  reference to this resource.
   ///
-  /// [_source]: Extensions for source
+  /// [sourceElement]: Extensions for source
   ///
   /// [sourceId]: The id of the element in the referencing resource that is
   ///  expected to resolve to this resource.
   ///
-  /// [_sourceId]: Extensions for sourceId
+  /// [sourceIdElement]: Extensions for sourceId
   factory OperationDefinitionReferencedFrom({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4981,7 +4981,7 @@ class OperationDefinitionReferencedFrom
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinitionReferencedFrom.fromYaml(dynamic yaml) => yaml
           is String
       ? OperationDefinitionReferencedFrom.fromJson(
@@ -5002,14 +5002,14 @@ class OperationDefinitionReferencedFrom
 class OperationDefinitionOverload with _$OperationDefinitionOverload {
   OperationDefinitionOverload._();
 
-  /// [OperationDefinition_Overload]: A formal computable definition of an
+  /// [OperationDefinitionOverload]: A formal computable definition of an
   /// operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5032,11 +5032,11 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
   ///
   /// [parameterName]: Name of parameter to include in overload.
   ///
-  /// [_parameterName]: Extensions for parameterName
+  /// [parameterNameElement]: Extensions for parameterName
   ///
   /// [comment]: Comments to go on overload.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   factory OperationDefinitionOverload({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5050,7 +5050,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinitionOverload.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionOverload.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5086,11 +5086,11 @@ class SearchParameter with Resource, _$SearchParameter {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -5104,7 +5104,7 @@ class SearchParameter with Resource, _$SearchParameter {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -5133,7 +5133,7 @@ class SearchParameter with Resource, _$SearchParameter {
   /// a canonical reference. It SHALL remain the same when the search parameter
   ///  is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [version]: The identifier that is used to identify this version of the
   /// search parameter when it is referenced in a specification, model, design
@@ -5143,13 +5143,13 @@ class SearchParameter with Resource, _$SearchParameter {
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the search parameter. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [derivedFrom]: Where this search parameter is originally defined. If a
   /// derivedFrom is provided, then the details in the search parameter must be
@@ -5160,32 +5160,32 @@ class SearchParameter with Resource, _$SearchParameter {
   /// [status]: The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this search parameter is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the search parameter was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the search parameter changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  search parameter.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
   ///
   /// [description]: And how it used.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -5199,61 +5199,61 @@ class SearchParameter with Resource, _$SearchParameter {
   /// [purpose]: Explanation of why this search parameter is needed and why it
   ///  has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [code]: The code used in the URL or the parameter name in a parameters
   ///  resource for this search parameter.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [base]: The base resource type(s) that this search parameter can be used
   ///  against.
   ///
-  /// [_base]: Extensions for base
+  /// [baseElement]: Extensions for base
   ///
   /// [type]: The type of value that a search parameter may contain, and how the
   ///  content is interpreted.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [expression]: A FHIRPath expression that returns a set of elements for the
   ///  search parameter.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   ///
   /// [xpath]: An XPath expression that returns a set of elements for the search
   ///  parameter.
   ///
-  /// [_xpath]: Extensions for xpath
+  /// [xpathElement]: Extensions for xpath
   ///
   /// [xpathUsage]: How the search parameter relates to the set of elements
   ///  returned by evaluating the xpath query.
   ///
-  /// [_xpathUsage]: Extensions for xpathUsage
+  /// [xpathUsageElement]: Extensions for xpathUsage
   ///
   /// [target]: Types of resource (if a resource is referenced).
   ///
-  /// [_target]: Extensions for target
+  /// [targetElement]: Extensions for target
   ///
   /// [multipleOr]: Whether multiple values are allowed for each time the
   /// parameter exists. Values are separated by commas, and the parameter
   ///  matches if any of the values match.
   ///
-  /// [_multipleOr]: Extensions for multipleOr
+  /// [multipleOrElement]: Extensions for multipleOr
   ///
   /// [multipleAnd]: Whether multiple parameters are allowed - e.g. more than
   /// one parameter with the same name. The search matches if all the parameters
   ///  match.
   ///
-  /// [_multipleAnd]: Extensions for multipleAnd
+  /// [multipleAndElement]: Extensions for multipleAnd
   ///
   /// [comparator]: Comparators supported for the search parameter.
   ///
-  /// [_comparator]: Extensions for comparator
+  /// [comparatorElement]: Extensions for comparator
   ///
   /// [modifier]: A modifier supported for the search parameter.
   ///
-  /// [_modifier]: Extensions for modifier
+  /// [modifierElement]: Extensions for modifier
   ///
   /// [chain]: Contains the names of any search parameters which may be chained
   /// to the containing search parameter. Chained parameters may be added to
@@ -5262,7 +5262,7 @@ class SearchParameter with Resource, _$SearchParameter {
   /// chained parameter value. Values for this field should be drawn from
   ///  SearchParameter.code for a parameter on the target resource type.
   ///
-  /// [_chain]: Extensions for chain
+  /// [chainElement]: Extensions for chain
   ///
   /// [component]: Used to define the parts of a composite search parameter.
   factory SearchParameter({
@@ -5334,7 +5334,7 @@ class SearchParameter with Resource, _$SearchParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5352,13 +5352,13 @@ class SearchParameter with Resource, _$SearchParameter {
 class SearchParameterComponent with _$SearchParameterComponent {
   SearchParameterComponent._();
 
-  /// [SearchParameter_Component]: A search parameter that defines a named
+  /// [SearchParameterComponent]: A search parameter that defines a named
   ///  search item that can be used to search/filter on a resource.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5385,7 +5385,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
   /// [expression]: A sub-expression that defines how to extract values for this
   ///  component from the output of the main SearchParameter.expression.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   factory SearchParameterComponent({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5398,7 +5398,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SearchParameterComponent.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameterComponent.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5436,11 +5436,11 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -5454,7 +5454,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -5483,7 +5483,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  structure definition is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this structure
   /// definition when it is represented in other formats, or referenced in a
@@ -5497,41 +5497,41 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// available. There is also no expectation that versions can be placed in a
   ///  lexicographical sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the structure definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the structure
   ///  definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this structure definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the structure definition was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the structure definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  structure definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -5539,7 +5539,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// [description]: A free text natural language description of the structure
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -5553,13 +5553,13 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// [purpose]: Explanation of why this structure definition is needed and why
   ///  it has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the structure definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the structure definition.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [keyword]: A set of key words or terms from external terminologies that
   /// may be used to assist with indexing and searching of templates nby
@@ -5571,20 +5571,20 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// specification, without the revision number, e.g.
   ///  [publication].[major].[minor], which is 4.0.1. for this version.
   ///
-  /// [_fhirVersion]: Extensions for fhirVersion
+  /// [fhirVersionElement]: Extensions for fhirVersion
   ///
   /// [mapping]: An external specification that the content is mapped to.
   ///
   /// [kind]: Defines the kind of structure that this definition is describing.
   ///
-  /// [_kind]: Extensions for kind
+  /// [kindElement]: Extensions for kind
   ///
-  /// [abstract]: Whether structure this definition describes is abstract or not
+  /// [abstract_]: Whether structure this definition describes is abstract or not
   /// - that is, whether the structure is not intended to be instantiated. For
   /// Resources and Data types, abstract types will never be exchanged  between
   ///  systems.
   ///
-  /// [_abstract]: Extensions for abstract
+  /// [abstractElement]: Extensions for abstract
   ///
   /// [context]: Identifies the types of resource or data type elements to which
   ///  the extension can be applied.
@@ -5593,7 +5593,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// extension can be used (e.g. co-occurrence variants for the extension). All
   ///  the rules must be true.
   ///
-  /// [_contextInvariant]: Extensions for contextInvariant
+  /// [contextInvariantElement]: Extensions for contextInvariant
   ///
   /// [type]: The type this structure describes. If the derivation kind is
   /// 'specialization' then this is the master definition for a type, and there
@@ -5605,14 +5605,14 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
   ///  allowed in logical models.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [baseDefinition]: An absolute URI that is the base structure from which
   ///  this type is derived, either by specialization or constraint.
   ///
   /// [derivation]: How the type relates to the baseDefinition.
   ///
-  /// [_derivation]: Extensions for derivation
+  /// [derivationElement]: Extensions for derivation
   ///
   /// [snapshot]: A snapshot view is expressed in a standalone form that can be
   ///  used and interpreted without considering the base StructureDefinition.
@@ -5687,7 +5687,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5705,7 +5705,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
 
-  /// [StructureDefinition_Mapping]: A definition of a FHIR structure. This
+  /// [StructureDefinitionMapping]: A definition of a FHIR structure. This
   /// resource is used to describe the underlying resources, data types defined
   /// in FHIR, and also for describing extensions and constraints on resources
   ///  and data types.
@@ -5713,7 +5713,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5737,21 +5737,21 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   /// [identity]: An Internal id that is used to identify this mapping set when
   ///  specific mappings are made.
   ///
-  /// [_identity]: Extensions for identity
+  /// [identityElement]: Extensions for identity
   ///
   /// [uri]: An absolute URI that identifies the specification that this mapping
   ///  is expressed to.
   ///
-  /// [_uri]: Extensions for uri
+  /// [uriElement]: Extensions for uri
   ///
   /// [name]: A name for the specification that is being mapped to.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [comment]: Comments about this mapping, including version notes, issues,
   ///  scope limitations, and other important notes for usage.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   factory StructureDefinitionMapping({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5769,7 +5769,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionMapping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5788,7 +5788,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 class StructureDefinitionContext with _$StructureDefinitionContext {
   StructureDefinitionContext._();
 
-  /// [StructureDefinition_Context]: A definition of a FHIR structure. This
+  /// [StructureDefinitionContext]: A definition of a FHIR structure. This
   /// resource is used to describe the underlying resources, data types defined
   /// in FHIR, and also for describing extensions and constraints on resources
   ///  and data types.
@@ -5796,7 +5796,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5820,12 +5820,12 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
   /// [type]: Defines how to interpret the expression that defines what the
   ///  context of the extension is.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [expression]: An expression that defines where an extension can be used in
   ///  resources.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   factory StructureDefinitionContext({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5840,7 +5840,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinitionContext.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionContext.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5859,7 +5859,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
 class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
 
-  /// [StructureDefinition_Snapshot]: A definition of a FHIR structure. This
+  /// [StructureDefinitionSnapshot]: A definition of a FHIR structure. This
   /// resource is used to describe the underlying resources, data types defined
   /// in FHIR, and also for describing extensions and constraints on resources
   ///  and data types.
@@ -5867,7 +5867,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5899,7 +5899,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinitionSnapshot.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionSnapshot.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5918,7 +5918,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
 
-  /// [StructureDefinition_Differential]: A definition of a FHIR structure. This
+  /// [StructureDefinitionDifferential]: A definition of a FHIR structure. This
   /// resource is used to describe the underlying resources, data types defined
   /// in FHIR, and also for describing extensions and constraints on resources
   ///  and data types.
@@ -5926,7 +5926,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5958,7 +5958,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinitionDifferential.fromYaml(dynamic yaml) => yaml
           is String
       ? StructureDefinitionDifferential.fromJson(
@@ -5996,11 +5996,11 @@ class StructureMap with Resource, _$StructureMap {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -6014,7 +6014,7 @@ class StructureMap with Resource, _$StructureMap {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -6043,7 +6043,7 @@ class StructureMap with Resource, _$StructureMap {
   /// canonical reference. It SHALL remain the same when the structure map is
   ///  stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this structure
   /// map when it is represented in other formats, or referenced in a
@@ -6057,40 +6057,40 @@ class StructureMap with Resource, _$StructureMap {
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the structure map. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the structure map.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this structure map. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this structure map is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the structure map was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the structure map changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  structure map.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -6098,7 +6098,7 @@ class StructureMap with Resource, _$StructureMap {
   /// [description]: A free text natural language description of the structure
   ///  map from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -6112,19 +6112,19 @@ class StructureMap with Resource, _$StructureMap {
   /// [purpose]: Explanation of why this structure map is needed and why it has
   ///  been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the structure map and/or
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the structure map.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [structure]: A structure definition used by this map. The structure
   /// definition may describe instances that are converted, or the instances
   ///  that are produced.
   ///
-  /// [import]: Other maps used by this map (canonical URLs).
+  /// [import_]: Other maps used by this map (canonical URLs).
   ///
   /// [group]: Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
@@ -6177,7 +6177,7 @@ class StructureMap with Resource, _$StructureMap {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMap.fromYaml(dynamic yaml) => yaml is String
       ? StructureMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -6195,13 +6195,13 @@ class StructureMap with Resource, _$StructureMap {
 class StructureMapStructure with _$StructureMapStructure {
   StructureMapStructure._();
 
-  /// [StructureMap_Structure]: A Map of relationships between 2 structures that
+  /// [StructureMapStructure]: A Map of relationships between 2 structures that
   ///  can be used to transform data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -6226,16 +6226,16 @@ class StructureMapStructure with _$StructureMapStructure {
   ///
   /// [mode]: How the referenced structure is used in this mapping.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [alias]: The name used for this type in the map.
   ///
-  /// [_alias]: Extensions for alias
+  /// [aliasElement]: Extensions for alias
   ///
   /// [documentation]: Documentation that describes how the structure is used in
   ///  the mapping.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   factory StructureMapStructure({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6253,7 +6253,7 @@ class StructureMapStructure with _$StructureMapStructure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapStructure.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapStructure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -6271,13 +6271,13 @@ class StructureMapStructure with _$StructureMapStructure {
 class StructureMapGroup with _$StructureMapGroup {
   StructureMapGroup._();
 
-  /// [StructureMap_Group]: A Map of relationships between 2 structures that can
+  /// [StructureMapGroup]: A Map of relationships between 2 structures that can
   ///  be used to transform data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -6300,21 +6300,21 @@ class StructureMapGroup with _$StructureMapGroup {
   ///
   /// [name]: A unique name for the group for the convenience of human readers.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [extends]: Another group that this group adds rules to.
   ///
-  /// [_extends]: Extensions for extends
+  /// [extendsElement]: Extensions for extends
   ///
   /// [typeMode]: If this is the default rule set to apply for the source type
   ///  or this combination of types.
   ///
-  /// [_typeMode]: Extensions for typeMode
+  /// [typeModeElement]: Extensions for typeMode
   ///
   /// [documentation]: Additional supporting documentation that explains the
   ///  purpose of the group and the types of mappings within it.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   ///
   /// [input]: A name assigned to an instance of data. The instance must be
   ///  provided when the mapping is invoked.
@@ -6340,7 +6340,7 @@ class StructureMapGroup with _$StructureMapGroup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapGroup.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -6358,13 +6358,13 @@ class StructureMapGroup with _$StructureMapGroup {
 class StructureMapInput with _$StructureMapInput {
   StructureMapInput._();
 
-  /// [StructureMap_Input]: A Map of relationships between 2 structures that can
+  /// [StructureMapInput]: A Map of relationships between 2 structures that can
   ///  be used to transform data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -6387,19 +6387,19 @@ class StructureMapInput with _$StructureMapInput {
   ///
   /// [name]: Name for this instance of data.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [type]: Type for this instance of data.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [mode]: Mode for this instance of data.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [documentation]: Documentation for this instance of data.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   factory StructureMapInput({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6418,7 +6418,7 @@ class StructureMapInput with _$StructureMapInput {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapInput.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -6436,13 +6436,13 @@ class StructureMapInput with _$StructureMapInput {
 class StructureMapRule with _$StructureMapRule {
   StructureMapRule._();
 
-  /// [StructureMap_Rule]: A Map of relationships between 2 structures that can
+  /// [StructureMapRule]: A Map of relationships between 2 structures that can
   ///  be used to transform data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -6465,7 +6465,7 @@ class StructureMapRule with _$StructureMapRule {
   ///
   /// [name]: Name of the rule for internal references.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [source]: Source inputs to the mapping.
   ///
@@ -6477,7 +6477,7 @@ class StructureMapRule with _$StructureMapRule {
   ///
   /// [documentation]: Documentation for this instance of data.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   factory StructureMapRule({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6495,7 +6495,7 @@ class StructureMapRule with _$StructureMapRule {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapRule.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -6513,13 +6513,13 @@ class StructureMapRule with _$StructureMapRule {
 class StructureMapSource with _$StructureMapSource {
   StructureMapSource._();
 
-  /// [StructureMap_Source]: A Map of relationships between 2 structures that
+  /// [StructureMapSource]: A Map of relationships between 2 structures that
   ///  can be used to transform data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -6542,118 +6542,118 @@ class StructureMapSource with _$StructureMapSource {
   ///
   /// [context]: Type or variable this rule applies to.
   ///
-  /// [_context]: Extensions for context
+  /// [contextElement]: Extensions for context
   ///
   /// [min]: Specified minimum cardinality for the element. This is optional; if
   ///  present, it acts an implicit check on the input content.
   ///
-  /// [_min]: Extensions for min
+  /// [minElement]: Extensions for min
   ///
   /// [max]: Specified maximum cardinality for the element - a number or a "*".
   /// This is optional; if present, it acts an implicit check on the input
   ///  content (* just serves as documentation; it's the default value).
   ///
-  /// [_max]: Extensions for max
+  /// [maxElement]: Extensions for max
   ///
   /// [type]: Specified type for the element. This works as a condition on the
   ///  mapping - use for polymorphic elements.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [defaultValueBase64Binary]: A value to use if there is no existing value
   ///  in the source object.
   ///
-  /// [_defaultValueBase64Binary]: Extensions for defaultValueBase64Binary
+  /// [defaultValueBase64BinaryElement]: Extensions for defaultValueBase64Binary
   ///
   /// [defaultValueBoolean]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueBoolean]: Extensions for defaultValueBoolean
+  /// [defaultValueBooleanElement]: Extensions for defaultValueBoolean
   ///
   /// [defaultValueCanonical]: A value to use if there is no existing value in
   ///  the source object.
   ///
-  /// [_defaultValueCanonical]: Extensions for defaultValueCanonical
+  /// [defaultValueCanonicalElement]: Extensions for defaultValueCanonical
   ///
   /// [defaultValueCode]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueCode]: Extensions for defaultValueCode
+  /// [defaultValueCodeElement]: Extensions for defaultValueCode
   ///
   /// [defaultValueDate]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueDate]: Extensions for defaultValueDate
+  /// [defaultValueDateElement]: Extensions for defaultValueDate
   ///
   /// [defaultValueDateTime]: A value to use if there is no existing value in
   ///  the source object.
   ///
-  /// [_defaultValueDateTime]: Extensions for defaultValueDateTime
+  /// [defaultValueDateTimeElement]: Extensions for defaultValueDateTime
   ///
   /// [defaultValueDecimal]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueDecimal]: Extensions for defaultValueDecimal
+  /// [defaultValueDecimalElement]: Extensions for defaultValueDecimal
   ///
   /// [defaultValueId]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueId]: Extensions for defaultValueId
+  /// [defaultValueIdElement]: Extensions for defaultValueId
   ///
   /// [defaultValueInstant]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueInstant]: Extensions for defaultValueInstant
+  /// [defaultValueInstantElement]: Extensions for defaultValueInstant
   ///
   /// [defaultValueInteger]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueInteger]: Extensions for defaultValueInteger
+  /// [defaultValueIntegerElement]: Extensions for defaultValueInteger
   ///
   /// [defaultValueMarkdown]: A value to use if there is no existing value in
   ///  the source object.
   ///
-  /// [_defaultValueMarkdown]: Extensions for defaultValueMarkdown
+  /// [defaultValueMarkdownElement]: Extensions for defaultValueMarkdown
   ///
   /// [defaultValueOid]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueOid]: Extensions for defaultValueOid
+  /// [defaultValueOidElement]: Extensions for defaultValueOid
   ///
   /// [defaultValuePositiveInt]: A value to use if there is no existing value in
   ///  the source object.
   ///
-  /// [_defaultValuePositiveInt]: Extensions for defaultValuePositiveInt
+  /// [defaultValuePositiveIntElement]: Extensions for defaultValuePositiveInt
   ///
   /// [defaultValueString]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueString]: Extensions for defaultValueString
+  /// [defaultValueStringElement]: Extensions for defaultValueString
   ///
   /// [defaultValueTime]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueTime]: Extensions for defaultValueTime
+  /// [defaultValueTimeElement]: Extensions for defaultValueTime
   ///
   /// [defaultValueUnsignedInt]: A value to use if there is no existing value in
   ///  the source object.
   ///
-  /// [_defaultValueUnsignedInt]: Extensions for defaultValueUnsignedInt
+  /// [defaultValueUnsignedIntElement]: Extensions for defaultValueUnsignedInt
   ///
   /// [defaultValueUri]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueUri]: Extensions for defaultValueUri
+  /// [defaultValueUriElement]: Extensions for defaultValueUri
   ///
   /// [defaultValueUrl]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueUrl]: Extensions for defaultValueUrl
+  /// [defaultValueUrlElement]: Extensions for defaultValueUrl
   ///
   /// [defaultValueUuid]: A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [_defaultValueUuid]: Extensions for defaultValueUuid
+  /// [defaultValueUuidElement]: Extensions for defaultValueUuid
   ///
   /// [defaultValueAddress]: A value to use if there is no existing value in the
   ///  source object.
@@ -6750,30 +6750,30 @@ class StructureMapSource with _$StructureMapSource {
   ///
   /// [element]: Optional field for this source.
   ///
-  /// [_element]: Extensions for element
+  /// [elementElement]: Extensions for element
   ///
   /// [listMode]: How to handle the list mode for this element.
   ///
-  /// [_listMode]: Extensions for listMode
+  /// [listModeElement]: Extensions for listMode
   ///
   /// [variable]: Named context for field, if a field is specified.
   ///
-  /// [_variable]: Extensions for variable
+  /// [variableElement]: Extensions for variable
   ///
   /// [condition]: FHIRPath expression  - must be true or the rule does not
   ///  apply.
   ///
-  /// [_condition]: Extensions for condition
+  /// [conditionElement]: Extensions for condition
   ///
   /// [check]: FHIRPath expression  - must be true or the mapping engine throws
   ///  an error instead of completing.
   ///
-  /// [_check]: Extensions for check
+  /// [checkElement]: Extensions for check
   ///
   /// [logMessage]: A FHIRPath expression which specifies a message to put in
   ///  the transform log when content matching the source rule is found.
   ///
-  /// [_logMessage]: Extensions for logMessage
+  /// [logMessageElement]: Extensions for logMessage
   factory StructureMapSource({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6879,7 +6879,7 @@ class StructureMapSource with _$StructureMapSource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapSource.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -6897,13 +6897,13 @@ class StructureMapSource with _$StructureMapSource {
 class StructureMapTarget with _$StructureMapTarget {
   StructureMapTarget._();
 
-  /// [StructureMap_Target]: A Map of relationships between 2 structures that
+  /// [StructureMapTarget]: A Map of relationships between 2 structures that
   ///  can be used to transform data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -6926,31 +6926,31 @@ class StructureMapTarget with _$StructureMapTarget {
   ///
   /// [context]: Type or variable this rule applies to.
   ///
-  /// [_context]: Extensions for context
+  /// [contextElement]: Extensions for context
   ///
   /// [contextType]: How to interpret the context.
   ///
-  /// [_contextType]: Extensions for contextType
+  /// [contextTypeElement]: Extensions for contextType
   ///
   /// [element]: Field to create in the context.
   ///
-  /// [_element]: Extensions for element
+  /// [elementElement]: Extensions for element
   ///
   /// [variable]: Named context for field, if desired, and a field is specified.
   ///
-  /// [_variable]: Extensions for variable
+  /// [variableElement]: Extensions for variable
   ///
   /// [listMode]: If field is a list, how to manage the list.
   ///
-  /// [_listMode]: Extensions for listMode
+  /// [listModeElement]: Extensions for listMode
   ///
   /// [listRuleId]: Internal rule reference for shared list items.
   ///
-  /// [_listRuleId]: Extensions for listRuleId
+  /// [listRuleIdElement]: Extensions for listRuleId
   ///
   /// [transform]: How the data is copied / created.
   ///
-  /// [_transform]: Extensions for transform
+  /// [transformElement]: Extensions for transform
   ///
   /// [parameter]: Parameters to the transform.
   factory StructureMapTarget({
@@ -6979,7 +6979,7 @@ class StructureMapTarget with _$StructureMapTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapTarget.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -6997,13 +6997,13 @@ class StructureMapTarget with _$StructureMapTarget {
 class StructureMapParameter with _$StructureMapParameter {
   StructureMapParameter._();
 
-  /// [StructureMap_Parameter]: A Map of relationships between 2 structures that
+  /// [StructureMapParameter]: A Map of relationships between 2 structures that
   ///  can be used to transform data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -7026,23 +7026,23 @@ class StructureMapParameter with _$StructureMapParameter {
   ///
   /// [valueId]: Parameter value - variable or literal.
   ///
-  /// [_valueId]: Extensions for valueId
+  /// [valueIdElement]: Extensions for valueId
   ///
   /// [valueString]: Parameter value - variable or literal.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueBoolean]: Parameter value - variable or literal.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueInteger]: Parameter value - variable or literal.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueDecimal]: Parameter value - variable or literal.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   factory StructureMapParameter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -7062,7 +7062,7 @@ class StructureMapParameter with _$StructureMapParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapParameter.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -7080,13 +7080,13 @@ class StructureMapParameter with _$StructureMapParameter {
 class StructureMapDependent with _$StructureMapDependent {
   StructureMapDependent._();
 
-  /// [StructureMap_Dependent]: A Map of relationships between 2 structures that
+  /// [StructureMapDependent]: A Map of relationships between 2 structures that
   ///  can be used to transform data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -7109,11 +7109,11 @@ class StructureMapDependent with _$StructureMapDependent {
   ///
   /// [name]: Name of a rule or group to apply.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [variable]: Variable to pass to the rule or group.
   ///
-  /// [_variable]: Extensions for variable
+  /// [variableElement]: Extensions for variable
   factory StructureMapDependent({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -7127,7 +7127,7 @@ class StructureMapDependent with _$StructureMapDependent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapDependent.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapDependent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

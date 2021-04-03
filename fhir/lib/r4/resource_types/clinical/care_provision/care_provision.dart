@@ -34,11 +34,11 @@ class CarePlan with Resource, _$CarePlan {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -52,7 +52,7 @@ class CarePlan with Resource, _$CarePlan {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -85,7 +85,7 @@ class CarePlan with Resource, _$CarePlan {
   /// guideline, questionnaire or other definition that is adhered to in whole
   ///  or in part by this CarePlan.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [basedOn]: A care plan that is fulfilled in whole or in part by this care
   ///  plan.
@@ -99,12 +99,12 @@ class CarePlan with Resource, _$CarePlan {
   /// [status]: Indicates whether the plan is currently being acted upon,
   ///  represents future intentions or is now a historical record.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [intent]: Indicates the level of authority/intentionality associated with
   ///  the care plan and where the care plan fits into the workflow chain.
   ///
-  /// [_intent]: Extensions for intent
+  /// [intentElement]: Extensions for intent
   ///
   /// [category]: Identifies what "kind" of plan this is to support
   /// differentiation between multiple co-existing plans; e.g. "Home health",
@@ -112,11 +112,11 @@ class CarePlan with Resource, _$CarePlan {
   ///
   /// [title]: Human-friendly name for the care plan.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [description]: A description of the scope and nature of the plan.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [subject]: Identifies the patient or group whose intended care is
   ///  described by the plan.
@@ -130,7 +130,7 @@ class CarePlan with Resource, _$CarePlan {
   /// [created]: Represents when this particular CarePlan record was created in
   ///  the system, which is often a system-generated date.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [author]: When populated, the author is responsible for the care plan.
   ///  The care plan is attributed to the author.
@@ -203,7 +203,7 @@ class CarePlan with Resource, _$CarePlan {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CarePlan.fromYaml(dynamic yaml) => yaml is String
       ? CarePlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -221,7 +221,7 @@ class CarePlan with Resource, _$CarePlan {
 class CarePlanActivity with _$CarePlanActivity {
   CarePlanActivity._();
 
-  /// [CarePlan_Activity]: Describes the intention of how one or more
+  /// [CarePlanActivity]: Describes the intention of how one or more
   /// practitioners intend to deliver care for a particular patient, group or
   /// community for a period of time, possibly limited to care for a specific
   ///  condition or set of conditions.
@@ -229,7 +229,7 @@ class CarePlanActivity with _$CarePlanActivity {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -282,7 +282,7 @@ class CarePlanActivity with _$CarePlanActivity {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CarePlanActivity.fromYaml(dynamic yaml) => yaml is String
       ? CarePlanActivity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -300,7 +300,7 @@ class CarePlanActivity with _$CarePlanActivity {
 class CarePlanDetail with _$CarePlanDetail {
   CarePlanDetail._();
 
-  /// [CarePlan_Detail]: Describes the intention of how one or more
+  /// [CarePlanDetail]: Describes the intention of how one or more
   /// practitioners intend to deliver care for a particular patient, group or
   /// community for a period of time, possibly limited to care for a specific
   ///  condition or set of conditions.
@@ -308,7 +308,7 @@ class CarePlanDetail with _$CarePlanDetail {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -335,7 +335,7 @@ class CarePlanDetail with _$CarePlanDetail {
   /// CarePlan.activity.reference.  For example, a MedicationRequest, a
   ///  ServiceRequest, or a CommunicationRequest.
   ///
-  /// [_kind]: Extensions for kind
+  /// [kindElement]: Extensions for kind
   ///
   /// [instantiatesCanonical]: The URL pointing to a FHIR-defined protocol,
   /// guideline, questionnaire or other definition that is adhered to in whole
@@ -345,7 +345,7 @@ class CarePlanDetail with _$CarePlanDetail {
   /// guideline, questionnaire or other definition that is adhered to in whole
   ///  or in part by this CarePlan activity.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [code]: Detailed description of the type of planned activity; e.g. what
   ///  lab test, what procedure, what kind of encounter.
@@ -364,7 +364,7 @@ class CarePlanDetail with _$CarePlanDetail {
   /// [status]: Identifies what progress is being made for the specific
   ///  activity.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: Provides reason why the activity isn't yet started, is on
   ///  hold, was cancelled, etc.
@@ -374,7 +374,7 @@ class CarePlanDetail with _$CarePlanDetail {
   /// indicates that the described activity is one that should be engaged in
   ///  when following the plan.
   ///
-  /// [_doNotPerform]: Extensions for doNotPerform
+  /// [doNotPerformElement]: Extensions for doNotPerform
   ///
   /// [scheduledTiming]: The period, timing or frequency upon which the
   ///  described activity is to occur.
@@ -385,7 +385,7 @@ class CarePlanDetail with _$CarePlanDetail {
   /// [scheduledString]: The period, timing or frequency upon which the
   ///  described activity is to occur.
   ///
-  /// [_scheduledString]: Extensions for scheduledString
+  /// [scheduledStringElement]: Extensions for scheduledString
   ///
   /// [location]: Identifies the facility where the activity will occur; e.g.
   ///  home, hospital, specific clinic, etc.
@@ -410,7 +410,7 @@ class CarePlanDetail with _$CarePlanDetail {
   /// it may convey specifics about the activity such as body site, method,
   ///  route, etc.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   factory CarePlanDetail({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -447,7 +447,7 @@ class CarePlanDetail with _$CarePlanDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CarePlanDetail.fromYaml(dynamic yaml) => yaml is String
       ? CarePlanDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -483,11 +483,11 @@ class CareTeam with Resource, _$CareTeam {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -501,7 +501,7 @@ class CareTeam with Resource, _$CareTeam {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -528,7 +528,7 @@ class CareTeam with Resource, _$CareTeam {
   ///
   /// [status]: Indicates the current state of the care team.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [category]: Identifies what kind of team.  This is to support
   /// differentiation between multiple co-existing teams, such as care plan
@@ -537,7 +537,7 @@ class CareTeam with Resource, _$CareTeam {
   /// [name]: A label for human use intended to distinguish like teams.  E.g.
   ///  the "red" vs. "green" trauma teams.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [subject]: Identifies the patient or group whose intended care is handled
   ///  by the team.
@@ -595,7 +595,7 @@ class CareTeam with Resource, _$CareTeam {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CareTeam.fromYaml(dynamic yaml) => yaml is String
       ? CareTeam.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -613,14 +613,14 @@ class CareTeam with Resource, _$CareTeam {
 class CareTeamParticipant with _$CareTeamParticipant {
   CareTeamParticipant._();
 
-  /// [CareTeam_Participant]: The Care Team includes all the people and
+  /// [CareTeamParticipant]: The Care Team includes all the people and
   /// organizations who plan to participate in the coordination and delivery of
   ///  care for a patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -665,7 +665,7 @@ class CareTeamParticipant with _$CareTeamParticipant {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CareTeamParticipant.fromYaml(dynamic yaml) => yaml is String
       ? CareTeamParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -702,11 +702,11 @@ class Goal with Resource, _$Goal {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -720,7 +720,7 @@ class Goal with Resource, _$Goal {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -747,7 +747,7 @@ class Goal with Resource, _$Goal {
   ///
   /// [lifecycleStatus]: The state of the goal throughout its lifecycle.
   ///
-  /// [_lifecycleStatus]: Extensions for lifecycleStatus
+  /// [lifecycleStatusElement]: Extensions for lifecycleStatus
   ///
   /// [achievementStatus]: Describes the progression, or lack thereof, towards
   ///  the goal against the target.
@@ -767,7 +767,7 @@ class Goal with Resource, _$Goal {
   /// [startDate]: The date or event after which the goal should begin being
   ///  pursued.
   ///
-  /// [_startDate]: Extensions for startDate
+  /// [startDateElement]: Extensions for startDate
   ///
   /// [startCodeableConcept]: The date or event after which the goal should
   ///  begin being pursued.
@@ -777,11 +777,11 @@ class Goal with Resource, _$Goal {
   /// [statusDate]: Identifies when the current status.  I.e. When initially
   ///  created, when achieved, when cancelled, etc.
   ///
-  /// [_statusDate]: Extensions for statusDate
+  /// [statusDateElement]: Extensions for statusDate
   ///
   /// [statusReason]: Captures the reason for the current status.
   ///
-  /// [_statusReason]: Extensions for statusReason
+  /// [statusReasonElement]: Extensions for statusReason
   ///
   /// [expressedBy]: Indicates whose goal this is - patient goal, practitioner
   ///  goal, etc.
@@ -836,7 +836,7 @@ class Goal with Resource, _$Goal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Goal.fromYaml(dynamic yaml) => yaml is String
       ? Goal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -853,7 +853,7 @@ class Goal with Resource, _$Goal {
 class GoalTarget with _$GoalTarget {
   GoalTarget._();
 
-  /// [Goal_Target]: Describes the intended objective(s) for a patient, group or
+  /// [GoalTarget]: Describes the intended objective(s) for a patient, group or
   /// organization care, for example, weight loss, restoring an activity of
   /// daily living, obtaining herd immunity via immunization, meeting a process
   ///  improvement objective, etc.
@@ -861,7 +861,7 @@ class GoalTarget with _$GoalTarget {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -914,7 +914,7 @@ class GoalTarget with _$GoalTarget {
   /// high value. Similarly, if the high value is missing, it indicates that the
   ///  goal is achieved at any focus value at or above the low value.
   ///
-  /// [_detailString]: Extensions for detailString
+  /// [detailStringElement]: Extensions for detailString
   ///
   /// [detailBoolean]: The target value of the focus to be achieved to signify
   /// the fulfillment of the goal, e.g. 150 pounds, 7.0%. Either the high or low
@@ -923,7 +923,7 @@ class GoalTarget with _$GoalTarget {
   /// high value. Similarly, if the high value is missing, it indicates that the
   ///  goal is achieved at any focus value at or above the low value.
   ///
-  /// [_detailBoolean]: Extensions for detailBoolean
+  /// [detailBooleanElement]: Extensions for detailBoolean
   ///
   /// [detailInteger]: The target value of the focus to be achieved to signify
   /// the fulfillment of the goal, e.g. 150 pounds, 7.0%. Either the high or low
@@ -932,7 +932,7 @@ class GoalTarget with _$GoalTarget {
   /// high value. Similarly, if the high value is missing, it indicates that the
   ///  goal is achieved at any focus value at or above the low value.
   ///
-  /// [_detailInteger]: Extensions for detailInteger
+  /// [detailIntegerElement]: Extensions for detailInteger
   ///
   /// [detailRatio]: The target value of the focus to be achieved to signify the
   /// fulfillment of the goal, e.g. 150 pounds, 7.0%. Either the high or low or
@@ -944,7 +944,7 @@ class GoalTarget with _$GoalTarget {
   /// [dueDate]: Indicates either the date or the duration after start by which
   ///  the goal should be met.
   ///
-  /// [_dueDate]: Extensions for dueDate
+  /// [dueDateElement]: Extensions for dueDate
   ///
   /// [dueDuration]: Indicates either the date or the duration after start by
   ///  which the goal should be met.
@@ -971,7 +971,7 @@ class GoalTarget with _$GoalTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GoalTarget.fromYaml(dynamic yaml) => yaml is String
       ? GoalTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1006,11 +1006,11 @@ class NutritionOrder with Resource, _$NutritionOrder {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1024,7 +1024,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1056,22 +1056,22 @@ class NutritionOrder with Resource, _$NutritionOrder {
   /// guideline, orderset or other definition that is adhered to in whole or in
   ///  part by this NutritionOrder.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [instantiates]: The URL pointing to a protocol, guideline, orderset or
   /// other definition that is adhered to in whole or in part by this
   ///  NutritionOrder.
   ///
-  /// [_instantiates]: Extensions for instantiates
+  /// [instantiatesElement]: Extensions for instantiates
   ///
   /// [status]: The workflow status of the nutrition order/request.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [intent]: Indicates the level of authority/intentionality associated with
   ///  the NutrionOrder and where the request fits into the workflow chain.
   ///
-  /// [_intent]: Extensions for intent
+  /// [intentElement]: Extensions for intent
   ///
   /// [patient]: The person (patient) who needs the nutrition order for an oral
   ///  diet, nutritional supplement and/or enteral or formula feeding.
@@ -1081,7 +1081,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
   ///
   /// [dateTime]: The date and time that this nutrition order was requested.
   ///
-  /// [_dateTime]: Extensions for dateTime
+  /// [dateTimeElement]: Extensions for dateTime
   ///
   /// [orderer]: The practitioner that holds legal responsibility for ordering
   ///  the diet, nutritional supplement, or formula feedings.
@@ -1160,7 +1160,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NutritionOrder.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrder.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1178,13 +1178,13 @@ class NutritionOrder with Resource, _$NutritionOrder {
 class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
 
-  /// [NutritionOrder_OralDiet]: A request to supply a diet, formula feeding
+  /// [NutritionOrderOralDiet]: A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1226,7 +1226,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   /// [instruction]: Free text or additional instructions or information
   ///  pertaining to the oral diet.
   ///
-  /// [_instruction]: Extensions for instruction
+  /// [instructionElement]: Extensions for instruction
   factory NutritionOrderOralDiet({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1243,7 +1243,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NutritionOrderOralDiet.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderOralDiet.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1261,13 +1261,13 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 class NutritionOrderNutrient with _$NutritionOrderNutrient {
   NutritionOrderNutrient._();
 
-  /// [NutritionOrder_Nutrient]: A request to supply a diet, formula feeding
+  /// [NutritionOrderNutrient]: A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1303,7 +1303,7 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NutritionOrderNutrient.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderNutrient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1321,13 +1321,13 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
 class NutritionOrderTexture with _$NutritionOrderTexture {
   NutritionOrderTexture._();
 
-  /// [NutritionOrder_Texture]: A request to supply a diet, formula feeding
+  /// [NutritionOrderTexture]: A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1364,7 +1364,7 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NutritionOrderTexture.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderTexture.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1382,13 +1382,13 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
 class NutritionOrderSupplement with _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
 
-  /// [NutritionOrder_Supplement]: A request to supply a diet, formula feeding
+  /// [NutritionOrderSupplement]: A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1415,7 +1415,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
   /// [productName]: The product or brand name of the nutritional supplement
   ///  such as "Acme Protein Shake".
   ///
-  /// [_productName]: Extensions for productName
+  /// [productNameElement]: Extensions for productName
   ///
   /// [schedule]: The time period and frequency at which the supplement(s)
   /// should be given.  The supplement should be given for the combination of
@@ -1426,7 +1426,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
   /// [instruction]: Free text or additional instructions or information
   ///  pertaining to the oral supplement.
   ///
-  /// [_instruction]: Extensions for instruction
+  /// [instructionElement]: Extensions for instruction
   factory NutritionOrderSupplement({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1443,7 +1443,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NutritionOrderSupplement.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderSupplement.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1462,13 +1462,13 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
 class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
 
-  /// [NutritionOrder_EnteralFormula]: A request to supply a diet, formula
+  /// [NutritionOrderEnteralFormula]: A request to supply a diet, formula
   ///  feeding (enteral) or oral nutritional supplement to a patient/resident.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1495,7 +1495,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   /// [baseFormulaProductName]: The product or brand name of the enteral or
   ///  infant formula product such as "ACME Adult Standard Formula".
   ///
-  /// [_baseFormulaProductName]: Extensions for baseFormulaProductName
+  /// [baseFormulaProductNameElement]: Extensions for baseFormulaProductName
   ///
   /// [additiveType]: Indicates the type of modular component such as protein,
   /// carbohydrate, fat or fiber to be provided in addition to or mixed with the
@@ -1504,7 +1504,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   /// [additiveProductName]: The product or brand name of the type of modular
   ///  component to be added to the formula.
   ///
-  /// [_additiveProductName]: Extensions for additiveProductName
+  /// [additiveProductNameElement]: Extensions for additiveProductName
   ///
   /// [caloricDensity]: The amount of energy (calories) that the formula should
   /// provide per specified volume, typically per mL or fluid oz.  For example,
@@ -1528,7 +1528,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   /// [administrationInstruction]: Free text formula administration, feeding
   ///  instructions or additional instructions or information.
   ///
-  /// [_administrationInstruction]: Extensions for administrationInstruction
+  /// [administrationInstructionElement]: Extensions for administrationInstruction
   factory NutritionOrderEnteralFormula({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1552,7 +1552,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NutritionOrderEnteralFormula.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderEnteralFormula.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1571,13 +1571,13 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
 class NutritionOrderAdministration with _$NutritionOrderAdministration {
   NutritionOrderAdministration._();
 
-  /// [NutritionOrder_Administration]: A request to supply a diet, formula
+  /// [NutritionOrderAdministration]: A request to supply a diet, formula
   ///  feeding (enteral) or oral nutritional supplement to a patient/resident.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1622,7 +1622,7 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NutritionOrderAdministration.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderAdministration.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1659,11 +1659,11 @@ class RequestGroup with Resource, _$RequestGroup {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1677,7 +1677,7 @@ class RequestGroup with Resource, _$RequestGroup {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1705,13 +1705,13 @@ class RequestGroup with Resource, _$RequestGroup {
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this request.
   ///
-  /// [_instantiatesCanonical]: Extensions for instantiatesCanonical
+  /// [instantiatesCanonicalElement]: Extensions for instantiatesCanonical
   ///
   /// [instantiatesUri]: A URL referencing an externally defined protocol,
   /// guideline, orderset or other definition that is adhered to in whole or in
   ///  part by this request.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [basedOn]: A plan, proposal or order that is fulfilled in whole or in part
   ///  by this request.
@@ -1726,17 +1726,17 @@ class RequestGroup with Resource, _$RequestGroup {
   /// [status]: The current state of the request. For request groups, the status
   ///  reflects the status of all the requests in the group.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [intent]: Indicates the level of authority/intentionality associated with
   ///  the request and where the request fits into the workflow chain.
   ///
-  /// [_intent]: Extensions for intent
+  /// [intentElement]: Extensions for intent
   ///
   /// [priority]: Indicates how quickly the request should be addressed with
   ///  respect to other requests.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [code]: A code that identifies what the overall request group is.
   ///
@@ -1746,7 +1746,7 @@ class RequestGroup with Resource, _$RequestGroup {
   ///
   /// [authoredOn]: Indicates when the request group was created.
   ///
-  /// [_authoredOn]: Extensions for authoredOn
+  /// [authoredOnElement]: Extensions for authoredOn
   ///
   /// [author]: Provides a reference to the author of the request group.
   ///
@@ -1804,7 +1804,7 @@ class RequestGroup with Resource, _$RequestGroup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RequestGroup.fromYaml(dynamic yaml) => yaml is String
       ? RequestGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1822,14 +1822,14 @@ class RequestGroup with Resource, _$RequestGroup {
 class RequestGroupAction with _$RequestGroupAction {
   RequestGroupAction._();
 
-  /// [RequestGroup_Action]: A group of related requests that can be used to
+  /// [RequestGroupAction]: A group of related requests that can be used to
   /// capture intended activities that have inter-dependencies such as "give
   ///  this medication after that one".
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1852,28 +1852,28 @@ class RequestGroupAction with _$RequestGroupAction {
   ///
   /// [prefix]: A user-visible prefix for the action.
   ///
-  /// [_prefix]: Extensions for prefix
+  /// [prefixElement]: Extensions for prefix
   ///
   /// [title]: The title of the action displayed to a user.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [description]: A short description of the action used to provide a summary
   ///  to display to the user.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [textEquivalent]: A text equivalent of the action to be performed. This
   /// provides a human-interpretable description of the action when the
   /// definition is consumed by a system that might not be capable of
   ///  interpreting it dynamically.
   ///
-  /// [_textEquivalent]: Extensions for textEquivalent
+  /// [textEquivalentElement]: Extensions for textEquivalent
   ///
   /// [priority]: Indicates how quickly the action should be addressed with
   ///  respect to other actions.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [code]: A code that provides meaning for the action or action group. For
   /// example, a section may have a LOINC code for a section of a documentation
@@ -1892,7 +1892,7 @@ class RequestGroupAction with _$RequestGroupAction {
   /// [timingDateTime]: An optional value describing when the action should be
   ///  performed.
   ///
-  /// [_timingDateTime]: Extensions for timingDateTime
+  /// [timingDateTimeElement]: Extensions for timingDateTime
   ///
   /// [timingAge]: An optional value describing when the action should be
   ///  performed.
@@ -1917,27 +1917,27 @@ class RequestGroupAction with _$RequestGroupAction {
   /// [groupingBehavior]: Defines the grouping behavior for the action and its
   ///  children.
   ///
-  /// [_groupingBehavior]: Extensions for groupingBehavior
+  /// [groupingBehaviorElement]: Extensions for groupingBehavior
   ///
   /// [selectionBehavior]: Defines the selection behavior for the action and its
   ///  children.
   ///
-  /// [_selectionBehavior]: Extensions for selectionBehavior
+  /// [selectionBehaviorElement]: Extensions for selectionBehavior
   ///
   /// [requiredBehavior]: Defines expectations around whether an action is
   ///  required.
   ///
-  /// [_requiredBehavior]: Extensions for requiredBehavior
+  /// [requiredBehaviorElement]: Extensions for requiredBehavior
   ///
   /// [precheckBehavior]: Defines whether the action should usually be
   ///  preselected.
   ///
-  /// [_precheckBehavior]: Extensions for precheckBehavior
+  /// [precheckBehaviorElement]: Extensions for precheckBehavior
   ///
   /// [cardinalityBehavior]: Defines whether the action can be selected multiple
   ///  times.
   ///
-  /// [_cardinalityBehavior]: Extensions for cardinalityBehavior
+  /// [cardinalityBehaviorElement]: Extensions for cardinalityBehavior
   ///
   /// [resource]: The resource that is the target of the action (e.g.
   ///  CommunicationRequest).
@@ -1987,7 +1987,7 @@ class RequestGroupAction with _$RequestGroupAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RequestGroupAction.fromYaml(dynamic yaml) => yaml is String
       ? RequestGroupAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2005,14 +2005,14 @@ class RequestGroupAction with _$RequestGroupAction {
 class RequestGroupCondition with _$RequestGroupCondition {
   RequestGroupCondition._();
 
-  /// [RequestGroup_Condition]: A group of related requests that can be used to
+  /// [RequestGroupCondition]: A group of related requests that can be used to
   /// capture intended activities that have inter-dependencies such as "give
   ///  this medication after that one".
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2035,7 +2035,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
   ///
   /// [kind]: The kind of condition.
   ///
-  /// [_kind]: Extensions for kind
+  /// [kindElement]: Extensions for kind
   ///
   /// [expression]: An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
@@ -2051,7 +2051,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RequestGroupCondition.fromYaml(dynamic yaml) => yaml is String
       ? RequestGroupCondition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2069,14 +2069,14 @@ class RequestGroupCondition with _$RequestGroupCondition {
 class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   RequestGroupRelatedAction._();
 
-  /// [RequestGroup_RelatedAction]: A group of related requests that can be used
+  /// [RequestGroupRelatedAction]: A group of related requests that can be used
   /// to capture intended activities that have inter-dependencies such as "give
   ///  this medication after that one".
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2099,11 +2099,11 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   ///
   /// [actionId]: The element id of the action this is related to.
   ///
-  /// [_actionId]: Extensions for actionId
+  /// [actionIdElement]: Extensions for actionId
   ///
   /// [relationship]: The relationship of this action to the related action.
   ///
-  /// [_relationship]: Extensions for relationship
+  /// [relationshipElement]: Extensions for relationship
   ///
   /// [offsetDuration]: A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
@@ -2125,7 +2125,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RequestGroupRelatedAction.fromYaml(dynamic yaml) => yaml is String
       ? RequestGroupRelatedAction.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2161,11 +2161,11 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2179,7 +2179,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2211,7 +2211,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// [status]: The status of the RiskAssessment, using the same statuses as an
   ///  Observation.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [method]: The algorithm, process or mechanism used to evaluate the risk.
   ///
@@ -2224,7 +2224,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// [occurrenceDateTime]: The date (and possibly time) the risk assessment was
   ///  performed.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: The date (and possibly time) the risk assessment was
   ///  performed.
@@ -2248,7 +2248,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// [mitigation]: A description of the steps that might be taken to reduce the
   ///  identified risk(s).
   ///
-  /// [_mitigation]: Extensions for mitigation
+  /// [mitigationElement]: Extensions for mitigation
   ///
   /// [note]: Additional comments about the risk assessment.
   factory RiskAssessment({
@@ -2291,7 +2291,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RiskAssessment.fromYaml(dynamic yaml) => yaml is String
       ? RiskAssessment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2309,13 +2309,13 @@ class RiskAssessment with Resource, _$RiskAssessment {
 class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   RiskAssessmentPrediction._();
 
-  /// [RiskAssessment_Prediction]: An assessment of the likely outcome(s) for a
+  /// [RiskAssessmentPrediction]: An assessment of the likely outcome(s) for a
   ///  patient or other subject as well as the likelihood of each outcome.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2342,7 +2342,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   /// [probabilityDecimal]: Indicates how likely the outcome is (in the
   ///  specified timeframe).
   ///
-  /// [_probabilityDecimal]: Extensions for probabilityDecimal
+  /// [probabilityDecimalElement]: Extensions for probabilityDecimal
   ///
   /// [probabilityRange]: Indicates how likely the outcome is (in the specified
   ///  timeframe).
@@ -2355,7 +2355,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   /// general.  (Numbers greater than 1 = higher risk than the population,
   ///  numbers less than 1 = lower risk.).
   ///
-  /// [_relativeRisk]: Extensions for relativeRisk
+  /// [relativeRiskElement]: Extensions for relativeRisk
   ///
   /// [whenPeriod]: Indicates the period of time or age range of the subject to
   ///  which the specified probability applies.
@@ -2366,7 +2366,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   /// [rationale]: Additional information explaining the basis for the
   ///  prediction.
   ///
-  /// [_rationale]: Extensions for rationale
+  /// [rationaleElement]: Extensions for rationale
   factory RiskAssessmentPrediction({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2387,7 +2387,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RiskAssessmentPrediction.fromYaml(dynamic yaml) => yaml is String
       ? RiskAssessmentPrediction.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2423,11 +2423,11 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2441,7 +2441,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2473,7 +2473,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// guideline, orderset or other definition that is adhered to in whole or in
   ///  part by this ServiceRequest.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [basedOn]: Plan/proposal/order fulfilled by this request.
   ///
@@ -2486,12 +2486,12 @@ class ServiceRequest with Resource, _$ServiceRequest {
   ///
   /// [status]: The status of the order.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [intent]: Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
   ///
-  /// [_intent]: Extensions for intent
+  /// [intentElement]: Extensions for intent
   ///
   /// [category]: A code that classifies the service for searching, sorting and
   ///  display purposes (e.g. "Surgical Procedure").
@@ -2499,12 +2499,12 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// [priority]: Indicates how quickly the ServiceRequest should be addressed
   ///  with respect to other requests.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [doNotPerform]: Set this to true if the record is saying that the
   ///  service/procedure should NOT be performed.
   ///
-  /// [_doNotPerform]: Extensions for doNotPerform
+  /// [doNotPerformElement]: Extensions for doNotPerform
   ///
   /// [code]: A code that identifies a particular service (i.e., procedure,
   /// diagnostic investigation, or panel of investigations) that have been
@@ -2539,7 +2539,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// [occurrenceDateTime]: The date/time at which the requested service should
   ///  occur.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: The date/time at which the requested service should
   ///  occur.
@@ -2551,7 +2551,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// pre-condition for performing the service.  For example "pain", "on
   ///  flare-up", etc.
   ///
-  /// [_asNeededBoolean]: Extensions for asNeededBoolean
+  /// [asNeededBooleanElement]: Extensions for asNeededBoolean
   ///
   /// [asNeededCodeableConcept]: If a CodeableConcept is present, it indicates
   /// the pre-condition for performing the service.  For example "pain", "on
@@ -2559,7 +2559,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   ///
   /// [authoredOn]: When the request transitioned to being actionable.
   ///
-  /// [_authoredOn]: Extensions for authoredOn
+  /// [authoredOnElement]: Extensions for authoredOn
   ///
   /// [requester]: The individual who initiated the request and has
   ///  responsibility for its activation.
@@ -2610,7 +2610,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// [patientInstruction]: Instructions in terms that are understood by the
   ///  patient or consumer.
   ///
-  /// [_patientInstruction]: Extensions for patientInstruction
+  /// [patientInstructionElement]: Extensions for patientInstruction
   ///
   /// [relevantHistory]: Key events in the history of the request.
   factory ServiceRequest({
@@ -2679,7 +2679,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ServiceRequest.fromYaml(dynamic yaml) => yaml is String
       ? ServiceRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2714,11 +2714,11 @@ class VisionPrescription with Resource, _$VisionPrescription {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2732,7 +2732,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2757,11 +2757,11 @@ class VisionPrescription with Resource, _$VisionPrescription {
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [created]: The date this resource was created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [patient]: A resource reference to the person to whom the vision
   ///  prescription applies.
@@ -2773,7 +2773,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
   /// [dateWritten]: The date (and perhaps time) when the prescription was
   ///  written.
   ///
-  /// [_dateWritten]: Extensions for dateWritten
+  /// [dateWrittenElement]: Extensions for dateWritten
   ///
   /// [prescriber]: The healthcare professional responsible for authorizing the
   ///  prescription.
@@ -2811,7 +2811,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory VisionPrescription.fromYaml(dynamic yaml) => yaml is String
       ? VisionPrescription.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2830,13 +2830,13 @@ class VisionPrescriptionLensSpecification
     with _$VisionPrescriptionLensSpecification {
   VisionPrescriptionLensSpecification._();
 
-  /// [VisionPrescription_LensSpecification]: An authorization for the provision
+  /// [VisionPrescriptionLensSpecification]: An authorization for the provision
   ///  of glasses and/or contact lenses to a patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2862,49 +2862,49 @@ class VisionPrescriptionLensSpecification
   ///
   /// [eye]: The eye for which the lens specification applies.
   ///
-  /// [_eye]: Extensions for eye
+  /// [eyeElement]: Extensions for eye
   ///
   /// [sphere]: Lens power measured in dioptres (0.25 units).
   ///
-  /// [_sphere]: Extensions for sphere
+  /// [sphereElement]: Extensions for sphere
   ///
   /// [cylinder]: Power adjustment for astigmatism measured in dioptres (0.25
   ///  units).
   ///
-  /// [_cylinder]: Extensions for cylinder
+  /// [cylinderElement]: Extensions for cylinder
   ///
   /// [axis]: Adjustment for astigmatism measured in integer degrees.
   ///
-  /// [_axis]: Extensions for axis
+  /// [axisElement]: Extensions for axis
   ///
   /// [prism]: Allows for adjustment on two axis.
   ///
   /// [add]: Power adjustment for multifocal lenses measured in dioptres (0.25
   ///  units).
   ///
-  /// [_add]: Extensions for add
+  /// [addElement]: Extensions for add
   ///
   /// [power]: Contact lens power measured in dioptres (0.25 units).
   ///
-  /// [_power]: Extensions for power
+  /// [powerElement]: Extensions for power
   ///
   /// [backCurve]: Back curvature measured in millimetres.
   ///
-  /// [_backCurve]: Extensions for backCurve
+  /// [backCurveElement]: Extensions for backCurve
   ///
   /// [diameter]: Contact lens diameter measured in millimetres.
   ///
-  /// [_diameter]: Extensions for diameter
+  /// [diameterElement]: Extensions for diameter
   ///
   /// [duration]: The recommended maximum wear period for the lens.
   ///
   /// [color]: Special color or pattern.
   ///
-  /// [_color]: Extensions for color
+  /// [colorElement]: Extensions for color
   ///
   /// [brand]: Brand recommendations or restrictions.
   ///
-  /// [_brand]: Extensions for brand
+  /// [brandElement]: Extensions for brand
   ///
   /// [note]: Notes for special requirements such as coatings and lens
   ///  materials.
@@ -2942,7 +2942,7 @@ class VisionPrescriptionLensSpecification
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory VisionPrescriptionLensSpecification.fromYaml(dynamic yaml) => yaml
           is String
       ? VisionPrescriptionLensSpecification.fromJson(
@@ -2963,13 +2963,13 @@ class VisionPrescriptionLensSpecification
 class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   VisionPrescriptionPrism._();
 
-  /// [VisionPrescription_Prism]: An authorization for the provision of glasses
+  /// [VisionPrescriptionPrism]: An authorization for the provision of glasses
   ///  and/or contact lenses to a patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2993,11 +2993,11 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   /// [amount]: Amount of prism to compensate for eye alignment in fractional
   ///  units.
   ///
-  /// [_amount]: Extensions for amount
+  /// [amountElement]: Extensions for amount
   ///
   /// [base]: The relative base, or reference lens edge, for the prism.
   ///
-  /// [_base]: Extensions for base
+  /// [baseElement]: Extensions for base
   factory VisionPrescriptionPrism({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3012,7 +3012,7 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory VisionPrescriptionPrism.fromYaml(dynamic yaml) => yaml is String
       ? VisionPrescriptionPrism.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

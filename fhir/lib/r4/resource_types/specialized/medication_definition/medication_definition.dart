@@ -31,11 +31,11 @@ class MedicinalProduct with Resource, _$MedicinalProduct {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -49,7 +49,7 @@ class MedicinalProduct with Resource, _$MedicinalProduct {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -88,7 +88,7 @@ class MedicinalProduct with Resource, _$MedicinalProduct {
   /// [specialMeasures]: Whether the Medicinal Product is subject to special
   ///  measures for regulatory reasons.
   ///
-  /// [_specialMeasures]: Extensions for specialMeasures
+  /// [specialMeasuresElement]: Extensions for specialMeasures
   ///
   /// [paediatricUseIndicator]: If authorised for use in children.
   ///
@@ -165,7 +165,7 @@ class MedicinalProduct with Resource, _$MedicinalProduct {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProduct.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProduct.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -183,13 +183,13 @@ class MedicinalProduct with Resource, _$MedicinalProduct {
 class MedicinalProductName with _$MedicinalProductName {
   MedicinalProductName._();
 
-  /// [MedicinalProduct_Name]: Detailed definition of a medicinal product,
+  /// [MedicinalProductName]: Detailed definition of a medicinal product,
   ///  typically for uses other than direct patient care (e.g. regulatory use).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -212,7 +212,7 @@ class MedicinalProductName with _$MedicinalProductName {
   ///
   /// [productName]: The full product name.
   ///
-  /// [_productName]: Extensions for productName
+  /// [productNameElement]: Extensions for productName
   ///
   /// [namePart]: Coding words or phrases of the name.
   ///
@@ -230,7 +230,7 @@ class MedicinalProductName with _$MedicinalProductName {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductName.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProductName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -248,13 +248,13 @@ class MedicinalProductName with _$MedicinalProductName {
 class MedicinalProductNamePart with _$MedicinalProductNamePart {
   MedicinalProductNamePart._();
 
-  /// [MedicinalProduct_NamePart]: Detailed definition of a medicinal product,
+  /// [MedicinalProductNamePart]: Detailed definition of a medicinal product,
   ///  typically for uses other than direct patient care (e.g. regulatory use).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -275,9 +275,9 @@ class MedicinalProductNamePart with _$MedicinalProductNamePart {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [part]: A fragment of a product name.
+  /// [part_]: A fragment of a product name.
   ///
-  /// [_part]: Extensions for part
+  /// [partElement]: Extensions for part
   ///
   /// [type]: Idenifying type for this part of the name (e.g. strength part).
   factory MedicinalProductNamePart({
@@ -292,7 +292,7 @@ class MedicinalProductNamePart with _$MedicinalProductNamePart {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductNamePart.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProductNamePart.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -311,14 +311,14 @@ class MedicinalProductNamePart with _$MedicinalProductNamePart {
 class MedicinalProductCountryLanguage with _$MedicinalProductCountryLanguage {
   MedicinalProductCountryLanguage._();
 
-  /// [MedicinalProduct_CountryLanguage]: Detailed definition of a medicinal
+  /// [MedicinalProductCountryLanguage]: Detailed definition of a medicinal
   /// product, typically for uses other than direct patient care (e.g.
   ///  regulatory use).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -356,7 +356,7 @@ class MedicinalProductCountryLanguage with _$MedicinalProductCountryLanguage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductCountryLanguage.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductCountryLanguage.fromJson(
@@ -378,14 +378,14 @@ class MedicinalProductManufacturingBusinessOperation
     with _$MedicinalProductManufacturingBusinessOperation {
   MedicinalProductManufacturingBusinessOperation._();
 
-  /// [MedicinalProduct_ManufacturingBusinessOperation]: Detailed definition of
+  /// [MedicinalProductManufacturingBusinessOperation]: Detailed definition of
   /// a medicinal product, typically for uses other than direct patient care
   ///  (e.g. regulatory use).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -412,7 +412,7 @@ class MedicinalProductManufacturingBusinessOperation
   ///
   /// [effectiveDate]: Regulatory authorization date.
   ///
-  /// [_effectiveDate]: Extensions for effectiveDate
+  /// [effectiveDateElement]: Extensions for effectiveDate
   ///
   /// [confidentialityIndicator]: To indicate if this proces is commercially
   ///  confidential.
@@ -437,7 +437,7 @@ class MedicinalProductManufacturingBusinessOperation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductManufacturingBusinessOperation.fromYaml(
           dynamic yaml) =>
       yaml is String
@@ -460,14 +460,14 @@ class MedicinalProductSpecialDesignation
     with _$MedicinalProductSpecialDesignation {
   MedicinalProductSpecialDesignation._();
 
-  /// [MedicinalProduct_SpecialDesignation]: Detailed definition of a medicinal
+  /// [MedicinalProductSpecialDesignation]: Detailed definition of a medicinal
   /// product, typically for uses other than direct patient care (e.g.
   ///  regulatory use).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -504,7 +504,7 @@ class MedicinalProductSpecialDesignation
   ///
   /// [date]: Date when the designation was granted.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [species]: Animal species for which this applies.
   factory MedicinalProductSpecialDesignation({
@@ -525,7 +525,7 @@ class MedicinalProductSpecialDesignation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductSpecialDesignation.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductSpecialDesignation.fromJson(
@@ -564,11 +564,11 @@ class MedicinalProductAuthorization
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -582,7 +582,7 @@ class MedicinalProductAuthorization
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -617,12 +617,12 @@ class MedicinalProductAuthorization
   ///
   /// [statusDate]: The date at which the given status has become applicable.
   ///
-  /// [_statusDate]: Extensions for statusDate
+  /// [statusDateElement]: Extensions for statusDate
   ///
   /// [restoreDate]: The date when a suspended the marketing or the marketing
   ///  authorization of the product is anticipated to be restored.
   ///
-  /// [_restoreDate]: Extensions for restoreDate
+  /// [restoreDateElement]: Extensions for restoreDate
   ///
   /// [validityPeriod]: The beginning of the time period in which the marketing
   /// authorization is in the specific status shall be specified A complete date
@@ -635,12 +635,12 @@ class MedicinalProductAuthorization
   /// [dateOfFirstAuthorization]: The date when the first authorization was
   ///  granted by a Medicines Regulatory Agency.
   ///
-  /// [_dateOfFirstAuthorization]: Extensions for dateOfFirstAuthorization
+  /// [dateOfFirstAuthorizationElement]: Extensions for dateOfFirstAuthorization
   ///
   /// [internationalBirthDate]: Date of first marketing authorization for a
   ///  company's new medicinal product in any country in the World.
   ///
-  /// [_internationalBirthDate]: Extensions for internationalBirthDate
+  /// [internationalBirthDateElement]: Extensions for internationalBirthDate
   ///
   /// [legalBasis]: The legal framework against which this authorization is
   ///  granted.
@@ -695,7 +695,7 @@ class MedicinalProductAuthorization
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductAuthorization.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProductAuthorization.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -715,13 +715,13 @@ class MedicinalProductAuthorizationJurisdictionalAuthorization
     with _$MedicinalProductAuthorizationJurisdictionalAuthorization {
   MedicinalProductAuthorizationJurisdictionalAuthorization._();
 
-  /// [MedicinalProductAuthorization_JurisdictionalAuthorization]: The
+  /// [MedicinalProductAuthorizationJurisdictionalAuthorization]: The
   ///  regulatory authorization of a medicinal product.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -766,7 +766,7 @@ class MedicinalProductAuthorizationJurisdictionalAuthorization
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductAuthorizationJurisdictionalAuthorization.fromYaml(
           dynamic yaml) =>
       yaml is String
@@ -789,13 +789,13 @@ class MedicinalProductAuthorizationProcedure
     with _$MedicinalProductAuthorizationProcedure {
   MedicinalProductAuthorizationProcedure._();
 
-  /// [MedicinalProductAuthorization_Procedure]: The regulatory authorization of
+  /// [MedicinalProductAuthorizationProcedure]: The regulatory authorization of
   ///  a medicinal product.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -824,7 +824,7 @@ class MedicinalProductAuthorizationProcedure
   ///
   /// [dateDateTime]: Date of procedure.
   ///
-  /// [_dateDateTime]: Extensions for dateDateTime
+  /// [dateDateTimeElement]: Extensions for dateDateTime
   ///
   /// [application]: Applcations submitted to obtain a marketing authorization.
   factory MedicinalProductAuthorizationProcedure({
@@ -842,7 +842,7 @@ class MedicinalProductAuthorizationProcedure
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductAuthorizationProcedure.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductAuthorizationProcedure.fromJson(
@@ -882,11 +882,11 @@ class MedicinalProductContraindication
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -900,7 +900,7 @@ class MedicinalProductContraindication
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -963,7 +963,7 @@ class MedicinalProductContraindication
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductContraindication.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductContraindication.fromJson(
@@ -985,14 +985,14 @@ class MedicinalProductContraindicationOtherTherapy
     with _$MedicinalProductContraindicationOtherTherapy {
   MedicinalProductContraindicationOtherTherapy._();
 
-  /// [MedicinalProductContraindication_OtherTherapy]: The clinical particulars
+  /// [MedicinalProductContraindicationOtherTherapy]: The clinical particulars
   /// - indications, contraindications etc. of a medicinal product, including
   ///  for regulatory purposes.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1035,7 +1035,7 @@ class MedicinalProductContraindicationOtherTherapy
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductContraindicationOtherTherapy.fromYaml(dynamic yaml) =>
       yaml is String
           ? MedicinalProductContraindicationOtherTherapy.fromJson(
@@ -1072,11 +1072,11 @@ class MedicinalProductIndication with Resource, _$MedicinalProductIndication {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1090,7 +1090,7 @@ class MedicinalProductIndication with Resource, _$MedicinalProductIndication {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1162,7 +1162,7 @@ class MedicinalProductIndication with Resource, _$MedicinalProductIndication {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductIndication.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProductIndication.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1182,13 +1182,13 @@ class MedicinalProductIndicationOtherTherapy
     with _$MedicinalProductIndicationOtherTherapy {
   MedicinalProductIndicationOtherTherapy._();
 
-  /// [MedicinalProductIndication_OtherTherapy]: Indication for the Medicinal
+  /// [MedicinalProductIndicationOtherTherapy]: Indication for the Medicinal
   ///  Product.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1231,7 +1231,7 @@ class MedicinalProductIndicationOtherTherapy
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductIndicationOtherTherapy.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductIndicationOtherTherapy.fromJson(
@@ -1269,11 +1269,11 @@ class MedicinalProductIngredient with Resource, _$MedicinalProductIngredient {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1287,7 +1287,7 @@ class MedicinalProductIngredient with Resource, _$MedicinalProductIngredient {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1316,7 +1316,7 @@ class MedicinalProductIngredient with Resource, _$MedicinalProductIngredient {
   ///
   /// [allergenicIndicator]: If the ingredient is a known or suspected allergen.
   ///
-  /// [_allergenicIndicator]: Extensions for allergenicIndicator
+  /// [allergenicIndicatorElement]: Extensions for allergenicIndicator
   ///
   /// [manufacturer]: Manufacturer of this Ingredient.
   ///
@@ -1350,7 +1350,7 @@ class MedicinalProductIngredient with Resource, _$MedicinalProductIngredient {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductIngredient.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProductIngredient.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1370,13 +1370,13 @@ class MedicinalProductIngredientSpecifiedSubstance
     with _$MedicinalProductIngredientSpecifiedSubstance {
   MedicinalProductIngredientSpecifiedSubstance._();
 
-  /// [MedicinalProductIngredient_SpecifiedSubstance]: An ingredient of a
+  /// [MedicinalProductIngredientSpecifiedSubstance]: An ingredient of a
   ///  manufactured item or pharmaceutical product.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1419,7 +1419,7 @@ class MedicinalProductIngredientSpecifiedSubstance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductIngredientSpecifiedSubstance.fromYaml(dynamic yaml) =>
       yaml is String
           ? MedicinalProductIngredientSpecifiedSubstance.fromJson(
@@ -1441,13 +1441,13 @@ class MedicinalProductIngredientStrength
     with _$MedicinalProductIngredientStrength {
   MedicinalProductIngredientStrength._();
 
-  /// [MedicinalProductIngredient_Strength]: An ingredient of a manufactured
+  /// [MedicinalProductIngredientStrength]: An ingredient of a manufactured
   ///  item or pharmaceutical product.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1486,7 +1486,7 @@ class MedicinalProductIngredientStrength
   /// [measurementPoint]: For when strength is measured at a particular point or
   ///  distance.
   ///
-  /// [_measurementPoint]: Extensions for measurementPoint
+  /// [measurementPointElement]: Extensions for measurementPoint
   ///
   /// [country]: The country or countries for which the strength range applies.
   ///
@@ -1508,7 +1508,7 @@ class MedicinalProductIngredientStrength
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductIngredientStrength.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductIngredientStrength.fromJson(
@@ -1530,13 +1530,13 @@ class MedicinalProductIngredientReferenceStrength
     with _$MedicinalProductIngredientReferenceStrength {
   MedicinalProductIngredientReferenceStrength._();
 
-  /// [MedicinalProductIngredient_ReferenceStrength]: An ingredient of a
+  /// [MedicinalProductIngredientReferenceStrength]: An ingredient of a
   ///  manufactured item or pharmaceutical product.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1566,7 +1566,7 @@ class MedicinalProductIngredientReferenceStrength
   /// [measurementPoint]: For when strength is measured at a particular point or
   ///  distance.
   ///
-  /// [_measurementPoint]: Extensions for measurementPoint
+  /// [measurementPointElement]: Extensions for measurementPoint
   ///
   /// [country]: The country or countries for which the strength range applies.
   factory MedicinalProductIngredientReferenceStrength({
@@ -1584,7 +1584,7 @@ class MedicinalProductIngredientReferenceStrength
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductIngredientReferenceStrength.fromYaml(dynamic yaml) =>
       yaml is String
           ? MedicinalProductIngredientReferenceStrength.fromJson(
@@ -1606,13 +1606,13 @@ class MedicinalProductIngredientSubstance
     with _$MedicinalProductIngredientSubstance {
   MedicinalProductIngredientSubstance._();
 
-  /// [MedicinalProductIngredient_Substance]: An ingredient of a manufactured
+  /// [MedicinalProductIngredientSubstance]: An ingredient of a manufactured
   ///  item or pharmaceutical product.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1648,7 +1648,7 @@ class MedicinalProductIngredientSubstance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductIngredientSubstance.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductIngredientSubstance.fromJson(
@@ -1686,11 +1686,11 @@ class MedicinalProductInteraction with Resource, _$MedicinalProductInteraction {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1704,7 +1704,7 @@ class MedicinalProductInteraction with Resource, _$MedicinalProductInteraction {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1729,7 +1729,7 @@ class MedicinalProductInteraction with Resource, _$MedicinalProductInteraction {
   ///
   /// [description]: The interaction described.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [interactant]: The specific medication, food or laboratory test that
   ///  interacts.
@@ -1770,7 +1770,7 @@ class MedicinalProductInteraction with Resource, _$MedicinalProductInteraction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductInteraction.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProductInteraction.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1790,14 +1790,14 @@ class MedicinalProductInteractionInteractant
     with _$MedicinalProductInteractionInteractant {
   MedicinalProductInteractionInteractant._();
 
-  /// [MedicinalProductInteraction_Interactant]: The interactions of the
+  /// [MedicinalProductInteractionInteractant]: The interactions of the
   /// medicinal product with other medicinal products, or other forms of
   ///  interactions.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1834,7 +1834,7 @@ class MedicinalProductInteractionInteractant
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductInteractionInteractant.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductInteractionInteractant.fromJson(
@@ -1873,11 +1873,11 @@ class MedicinalProductManufactured
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1891,7 +1891,7 @@ class MedicinalProductManufactured
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1954,7 +1954,7 @@ class MedicinalProductManufactured
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductManufactured.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProductManufactured.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1989,11 +1989,11 @@ class MedicinalProductPackaged with Resource, _$MedicinalProductPackaged {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2007,7 +2007,7 @@ class MedicinalProductPackaged with Resource, _$MedicinalProductPackaged {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2034,7 +2034,7 @@ class MedicinalProductPackaged with Resource, _$MedicinalProductPackaged {
   ///
   /// [description]: Textual description.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [legalStatusOfSupply]: The legal status of supply of the medicinal product
   ///  as classified by the regulator.
@@ -2078,7 +2078,7 @@ class MedicinalProductPackaged with Resource, _$MedicinalProductPackaged {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductPackaged.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProductPackaged.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2098,13 +2098,13 @@ class MedicinalProductPackagedBatchIdentifier
     with _$MedicinalProductPackagedBatchIdentifier {
   MedicinalProductPackagedBatchIdentifier._();
 
-  /// [MedicinalProductPackaged_BatchIdentifier]: A medicinal product in a
+  /// [MedicinalProductPackagedBatchIdentifier]: A medicinal product in a
   ///  container or package.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2141,7 +2141,7 @@ class MedicinalProductPackagedBatchIdentifier
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductPackagedBatchIdentifier.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductPackagedBatchIdentifier.fromJson(
@@ -2163,13 +2163,13 @@ class MedicinalProductPackagedPackageItem
     with _$MedicinalProductPackagedPackageItem {
   MedicinalProductPackagedPackageItem._();
 
-  /// [MedicinalProductPackaged_PackageItem]: A medicinal product in a container
+  /// [MedicinalProductPackagedPackageItem]: A medicinal product in a container
   ///  or package.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2236,7 +2236,7 @@ class MedicinalProductPackagedPackageItem
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductPackagedPackageItem.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductPackagedPackageItem.fromJson(
@@ -2275,11 +2275,11 @@ class MedicinalProductPharmaceutical
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2293,7 +2293,7 @@ class MedicinalProductPharmaceutical
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2356,7 +2356,7 @@ class MedicinalProductPharmaceutical
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductPharmaceutical.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductPharmaceutical.fromJson(
@@ -2378,13 +2378,13 @@ class MedicinalProductPharmaceuticalCharacteristics
     with _$MedicinalProductPharmaceuticalCharacteristics {
   MedicinalProductPharmaceuticalCharacteristics._();
 
-  /// [MedicinalProductPharmaceutical_Characteristics]: A pharmaceutical product
+  /// [MedicinalProductPharmaceuticalCharacteristics]: A pharmaceutical product
   ///  described in terms of its composition and dose form.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2419,7 +2419,7 @@ class MedicinalProductPharmaceuticalCharacteristics
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductPharmaceuticalCharacteristics.fromYaml(
           dynamic yaml) =>
       yaml is String
@@ -2442,13 +2442,13 @@ class MedicinalProductPharmaceuticalRouteOfAdministration
     with _$MedicinalProductPharmaceuticalRouteOfAdministration {
   MedicinalProductPharmaceuticalRouteOfAdministration._();
 
-  /// [MedicinalProductPharmaceutical_RouteOfAdministration]: A pharmaceutical
+  /// [MedicinalProductPharmaceuticalRouteOfAdministration]: A pharmaceutical
   ///  product described in terms of its composition and dose form.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2508,7 +2508,7 @@ class MedicinalProductPharmaceuticalRouteOfAdministration
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductPharmaceuticalRouteOfAdministration.fromYaml(
           dynamic yaml) =>
       yaml is String
@@ -2531,13 +2531,13 @@ class MedicinalProductPharmaceuticalTargetSpecies
     with _$MedicinalProductPharmaceuticalTargetSpecies {
   MedicinalProductPharmaceuticalTargetSpecies._();
 
-  /// [MedicinalProductPharmaceutical_TargetSpecies]: A pharmaceutical product
+  /// [MedicinalProductPharmaceuticalTargetSpecies]: A pharmaceutical product
   ///  described in terms of its composition and dose form.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2573,7 +2573,7 @@ class MedicinalProductPharmaceuticalTargetSpecies
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductPharmaceuticalTargetSpecies.fromYaml(dynamic yaml) =>
       yaml is String
           ? MedicinalProductPharmaceuticalTargetSpecies.fromJson(
@@ -2595,13 +2595,13 @@ class MedicinalProductPharmaceuticalWithdrawalPeriod
     with _$MedicinalProductPharmaceuticalWithdrawalPeriod {
   MedicinalProductPharmaceuticalWithdrawalPeriod._();
 
-  /// [MedicinalProductPharmaceutical_WithdrawalPeriod]: A pharmaceutical
+  /// [MedicinalProductPharmaceuticalWithdrawalPeriod]: A pharmaceutical
   ///  product described in terms of its composition and dose form.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2629,7 +2629,7 @@ class MedicinalProductPharmaceuticalWithdrawalPeriod
   ///
   /// [supportingInformation]: Extra information about the withdrawal period.
   ///
-  /// [_supportingInformation]: Extensions for supportingInformation
+  /// [supportingInformationElement]: Extensions for supportingInformation
   factory MedicinalProductPharmaceuticalWithdrawalPeriod({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2644,7 +2644,7 @@ class MedicinalProductPharmaceuticalWithdrawalPeriod
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductPharmaceuticalWithdrawalPeriod.fromYaml(
           dynamic yaml) =>
       yaml is String
@@ -2684,11 +2684,11 @@ class MedicinalProductUndesirableEffect
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2702,7 +2702,7 @@ class MedicinalProductUndesirableEffect
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2756,7 +2756,7 @@ class MedicinalProductUndesirableEffect
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicinalProductUndesirableEffect.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicinalProductUndesirableEffect.fromJson(
@@ -2796,11 +2796,11 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2814,7 +2814,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2844,7 +2844,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   /// Watson-Crick base pairing. NOTE: If not specified in the reference source,
   ///  the assumption is that there is 1 subunit.
   ///
-  /// [_numberOfSubunits]: Extensions for numberOfSubunits
+  /// [numberOfSubunitsElement]: Extensions for numberOfSubunits
   ///
   /// [areaOfHybridisation]: The area of hybridisation shall be described if
   /// applicable for double stranded RNA or DNA. The number associated with the
@@ -2852,7 +2852,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   /// specified in increasing order. The underscore “” shall be used as
   ///  separator as follows: “Subunitnumber Residue”.
   ///
-  /// [_areaOfHybridisation]: Extensions for areaOfHybridisation
+  /// [areaOfHybridisationElement]: Extensions for areaOfHybridisation
   ///
   /// [oligoNucleotideType]: (TBC).
   ///
@@ -2885,7 +2885,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceNucleicAcid.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceNucleicAcid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2903,7 +2903,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
 class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   SubstanceNucleicAcidSubunit._();
 
-  /// [SubstanceNucleicAcid_Subunit]: Nucleic acids are defined by three
+  /// [SubstanceNucleicAcidSubunit]: Nucleic acids are defined by three
   /// distinct elements: the base, sugar and linkage. Individual
   /// substance/moiety IDs will be created for each of these elements. The
   ///  nucleotide sequence will be always entered in the 5’-3’ direction.
@@ -2911,7 +2911,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2937,17 +2937,17 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   /// molecular weight. Subunits that have identical sequences will be repeated
   ///  and have sequential subscripts.
   ///
-  /// [_subunit]: Extensions for subunit
+  /// [subunitElement]: Extensions for subunit
   ///
   /// [sequence]: Actual nucleotide sequence notation from 5' to 3' end using
   /// standard single letter codes. In addition to the base sequence, sugar and
   ///  type of phosphate or non-phosphate linkage should also be captured.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [length]: The length of the sequence shall be captured.
   ///
-  /// [_length]: Extensions for length
+  /// [lengthElement]: Extensions for length
   ///
   /// [sequenceAttachment]: (TBC).
   ///
@@ -2984,7 +2984,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceNucleicAcidSubunit.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceNucleicAcidSubunit.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3003,7 +3003,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
 class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   SubstanceNucleicAcidLinkage._();
 
-  /// [SubstanceNucleicAcid_Linkage]: Nucleic acids are defined by three
+  /// [SubstanceNucleicAcidLinkage]: Nucleic acids are defined by three
   /// distinct elements: the base, sugar and linkage. Individual
   /// substance/moiety IDs will be created for each of these elements. The
   ///  nucleotide sequence will be always entered in the 5’-3’ direction.
@@ -3011,7 +3011,7 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3039,7 +3039,7 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   /// to be 3’-5’. If the linkage is either 3’-3’ or 5’-5’ this should be
   ///  specified.
   ///
-  /// [_connectivity]: Extensions for connectivity
+  /// [connectivityElement]: Extensions for connectivity
   ///
   /// [identifier]: Each linkage will be registered as a fragment and have an
   ///  ID.
@@ -3047,11 +3047,11 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   /// [name]: Each linkage will be registered as a fragment and have at least
   ///  one name. A single name shall be assigned to each linkage.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [residueSite]: Residues shall be captured as described in 5.3.6.8.3.
   ///
-  /// [_residueSite]: Extensions for residueSite
+  /// [residueSiteElement]: Extensions for residueSite
   factory SubstanceNucleicAcidLinkage({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3068,7 +3068,7 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceNucleicAcidLinkage.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceNucleicAcidLinkage.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3087,7 +3087,7 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
 class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   SubstanceNucleicAcidSugar._();
 
-  /// [SubstanceNucleicAcid_Sugar]: Nucleic acids are defined by three distinct
+  /// [SubstanceNucleicAcidSugar]: Nucleic acids are defined by three distinct
   /// elements: the base, sugar and linkage. Individual substance/moiety IDs
   /// will be created for each of these elements. The nucleotide sequence will
   ///  be always entered in the 5’-3’ direction.
@@ -3095,7 +3095,7 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3122,13 +3122,13 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   /// [name]: The name of the sugar or sugar-like component that make up the
   ///  nucleotide.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [residueSite]: The residues that contain a given sugar will be captured.
   /// The order of given residues will be captured in the 5‘-3‘direction
   ///  consistent with the base sequences listed above.
   ///
-  /// [_residueSite]: Extensions for residueSite
+  /// [residueSiteElement]: Extensions for residueSite
   factory SubstanceNucleicAcidSugar({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3143,7 +3143,7 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceNucleicAcidSugar.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceNucleicAcidSugar.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3178,11 +3178,11 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -3196,7 +3196,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -3217,7 +3217,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [class]: Todo.
+  /// [class_]: Todo.
   ///
   /// [geometry]: Todo.
   ///
@@ -3225,7 +3225,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   ///
   /// [modification]: Todo.
   ///
-  /// [_modification]: Extensions for modification
+  /// [modificationElement]: Extensions for modification
   ///
   /// [monomerSet]: Todo.
   ///
@@ -3256,7 +3256,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstancePolymer.fromYaml(dynamic yaml) => yaml is String
       ? SubstancePolymer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3274,12 +3274,12 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
 class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   SubstancePolymerMonomerSet._();
 
-  /// [SubstancePolymer_MonomerSet]: Todo.
+  /// [SubstancePolymerMonomerSet]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3314,7 +3314,7 @@ class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstancePolymerMonomerSet.fromYaml(dynamic yaml) => yaml is String
       ? SubstancePolymerMonomerSet.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3333,12 +3333,12 @@ class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
 class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   SubstancePolymerStartingMaterial._();
 
-  /// [SubstancePolymer_StartingMaterial]: Todo.
+  /// [SubstancePolymerStartingMaterial]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3365,7 +3365,7 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   ///
   /// [isDefining]: Todo.
   ///
-  /// [_isDefining]: Extensions for isDefining
+  /// [isDefiningElement]: Extensions for isDefining
   ///
   /// [amount]: Todo.
   factory SubstancePolymerStartingMaterial({
@@ -3382,7 +3382,7 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstancePolymerStartingMaterial.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstancePolymerStartingMaterial.fromJson(
@@ -3403,12 +3403,12 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
 class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   SubstancePolymerRepeat._();
 
-  /// [SubstancePolymer_Repeat]: Todo.
+  /// [SubstancePolymerRepeat]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3431,11 +3431,11 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   ///
   /// [numberOfUnits]: Todo.
   ///
-  /// [_numberOfUnits]: Extensions for numberOfUnits
+  /// [numberOfUnitsElement]: Extensions for numberOfUnits
   ///
   /// [averageMolecularFormula]: Todo.
   ///
-  /// [_averageMolecularFormula]: Extensions for averageMolecularFormula
+  /// [averageMolecularFormulaElement]: Extensions for averageMolecularFormula
   ///
   /// [repeatUnitAmountType]: Todo.
   ///
@@ -3456,7 +3456,7 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstancePolymerRepeat.fromYaml(dynamic yaml) => yaml is String
       ? SubstancePolymerRepeat.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3474,12 +3474,12 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
 class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   SubstancePolymerRepeatUnit._();
 
-  /// [SubstancePolymer_RepeatUnit]: Todo.
+  /// [SubstancePolymerRepeatUnit]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3504,7 +3504,7 @@ class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   ///
   /// [repeatUnit]: Todo.
   ///
-  /// [_repeatUnit]: Extensions for repeatUnit
+  /// [repeatUnitElement]: Extensions for repeatUnit
   ///
   /// [amount]: Todo.
   ///
@@ -3526,7 +3526,7 @@ class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstancePolymerRepeatUnit.fromYaml(dynamic yaml) => yaml is String
       ? SubstancePolymerRepeatUnit.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3546,12 +3546,12 @@ class SubstancePolymerDegreeOfPolymerisation
     with _$SubstancePolymerDegreeOfPolymerisation {
   SubstancePolymerDegreeOfPolymerisation._();
 
-  /// [SubstancePolymer_DegreeOfPolymerisation]: Todo.
+  /// [SubstancePolymerDegreeOfPolymerisation]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3586,7 +3586,7 @@ class SubstancePolymerDegreeOfPolymerisation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstancePolymerDegreeOfPolymerisation.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstancePolymerDegreeOfPolymerisation.fromJson(
@@ -3608,12 +3608,12 @@ class SubstancePolymerStructuralRepresentation
     with _$SubstancePolymerStructuralRepresentation {
   SubstancePolymerStructuralRepresentation._();
 
-  /// [SubstancePolymer_StructuralRepresentation]: Todo.
+  /// [SubstancePolymerStructuralRepresentation]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3638,7 +3638,7 @@ class SubstancePolymerStructuralRepresentation
   ///
   /// [representation]: Todo.
   ///
-  /// [_representation]: Extensions for representation
+  /// [representationElement]: Extensions for representation
   ///
   /// [attachment]: Todo.
   factory SubstancePolymerStructuralRepresentation({
@@ -3654,7 +3654,7 @@ class SubstancePolymerStructuralRepresentation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstancePolymerStructuralRepresentation.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstancePolymerStructuralRepresentation.fromJson(
@@ -3698,11 +3698,11 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -3716,7 +3716,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -3746,7 +3746,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
   /// SubstanceProtein shall be described. It is possible that the number of
   ///  subunits can be variable.
   ///
-  /// [_numberOfSubunits]: Extensions for numberOfSubunits
+  /// [numberOfSubunitsElement]: Extensions for numberOfSubunits
   ///
   /// [disulfideLinkage]: The disulphide bond between two cysteine residues
   /// either on the same subunit or on two different subunits shall be
@@ -3756,7 +3756,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
   /// disulfide linkage positions shall actually contain the amino acid Cysteine
   ///  at the respective positions.
   ///
-  /// [_disulfideLinkage]: Extensions for disulfideLinkage
+  /// [disulfideLinkageElement]: Extensions for disulfideLinkage
   ///
   /// [subunit]: This subclause refers to the description of each subunit
   /// constituting the SubstanceProtein. A subunit is a linear sequence of amino
@@ -3791,7 +3791,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceProtein.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceProtein.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3809,7 +3809,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
 class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   SubstanceProteinSubunit._();
 
-  /// [SubstanceProtein_Subunit]: A SubstanceProtein is defined as a single unit
+  /// [SubstanceProteinSubunit]: A SubstanceProtein is defined as a single unit
   /// of a linear amino acid sequence, or a combination of subunits that are
   /// either covalently linked or have a defined invariant stoichiometric
   /// relationship. This includes all synthetic, recombinant and purified
@@ -3822,7 +3822,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3848,7 +3848,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   /// will be ordered by molecular weight. Subunits that have identical
   ///  sequences will be repeated and have sequential subscripts.
   ///
-  /// [_subunit]: Extensions for subunit
+  /// [subunitElement]: Extensions for subunit
   ///
   /// [sequence]: The sequence information shall be provided enumerating the
   /// amino acids from N- to C-terminal end using standard single-letter amino
@@ -3859,12 +3859,12 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   /// used within the sequence. The modified amino acids will be distinguished
   ///  by their position in the sequence.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [length]: Length of linear sequences of amino acids contained in the
   ///  subunit.
   ///
-  /// [_length]: Extensions for length
+  /// [lengthElement]: Extensions for length
   ///
   /// [sequenceAttachment]: The sequence information shall be provided
   /// enumerating the amino acids from N- to C-terminal end using standard
@@ -3881,7 +3881,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   /// [nTerminalModification]: The name of the fragment modified at the
   ///  N-terminal of the SubstanceProtein shall be specified.
   ///
-  /// [_nTerminalModification]: Extensions for nTerminalModification
+  /// [nTerminalModificationElement]: Extensions for nTerminalModification
   ///
   /// [cTerminalModificationId]: Unique identifier for molecular fragment
   ///  modification based on the ISO 11238 Substance ID.
@@ -3889,7 +3889,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   /// [cTerminalModification]: The modification at the C-terminal shall be
   ///  specified.
   ///
-  /// [_cTerminalModification]: Extensions for cTerminalModification
+  /// [cTerminalModificationElement]: Extensions for cTerminalModification
   factory SubstanceProteinSubunit({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3914,7 +3914,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceProteinSubunit.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceProteinSubunit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3949,11 +3949,11 @@ class SubstanceReferenceInformation
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -3967,7 +3967,7 @@ class SubstanceReferenceInformation
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -3990,7 +3990,7 @@ class SubstanceReferenceInformation
   ///
   /// [comment]: Todo.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [gene]: Todo.
   ///
@@ -4024,7 +4024,7 @@ class SubstanceReferenceInformation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceReferenceInformation.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceReferenceInformation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4044,12 +4044,12 @@ class SubstanceReferenceInformationGene
     with _$SubstanceReferenceInformationGene {
   SubstanceReferenceInformationGene._();
 
-  /// [SubstanceReferenceInformation_Gene]: Todo.
+  /// [SubstanceReferenceInformationGene]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4087,7 +4087,7 @@ class SubstanceReferenceInformationGene
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceReferenceInformationGene.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceReferenceInformationGene.fromJson(
@@ -4109,12 +4109,12 @@ class SubstanceReferenceInformationGeneElement
     with _$SubstanceReferenceInformationGeneElement {
   SubstanceReferenceInformationGeneElement._();
 
-  /// [SubstanceReferenceInformation_GeneElement]: Todo.
+  /// [SubstanceReferenceInformationGeneElement]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4152,7 +4152,7 @@ class SubstanceReferenceInformationGeneElement
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceReferenceInformationGeneElement.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceReferenceInformationGeneElement.fromJson(
@@ -4174,12 +4174,12 @@ class SubstanceReferenceInformationClassification
     with _$SubstanceReferenceInformationClassification {
   SubstanceReferenceInformationClassification._();
 
-  /// [SubstanceReferenceInformation_Classification]: Todo.
+  /// [SubstanceReferenceInformationClassification]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4220,7 +4220,7 @@ class SubstanceReferenceInformationClassification
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceReferenceInformationClassification.fromYaml(dynamic yaml) =>
       yaml is String
           ? SubstanceReferenceInformationClassification.fromJson(
@@ -4242,12 +4242,12 @@ class SubstanceReferenceInformationTarget
     with _$SubstanceReferenceInformationTarget {
   SubstanceReferenceInformationTarget._();
 
-  /// [SubstanceReferenceInformation_Target]: Todo.
+  /// [SubstanceReferenceInformationTarget]: Todo.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4284,7 +4284,7 @@ class SubstanceReferenceInformationTarget
   ///
   /// [amountString]: Todo.
   ///
-  /// [_amountString]: Extensions for amountString
+  /// [amountStringElement]: Extensions for amountString
   ///
   /// [amountType]: Todo.
   ///
@@ -4309,7 +4309,7 @@ class SubstanceReferenceInformationTarget
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceReferenceInformationTarget.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceReferenceInformationTarget.fromJson(
@@ -4359,11 +4359,11 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -4377,7 +4377,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -4413,7 +4413,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   /// [organismName]: The organism accepted Scientific name shall be provided
   ///  based on the organism taxonomy.
   ///
-  /// [_organismName]: Extensions for organismName
+  /// [organismNameElement]: Extensions for organismName
   ///
   /// [parentSubstanceId]: The parent of the herbal drug Ginkgo biloba, Leaf is
   /// the substance ID of the substance (fresh) of Ginkgo biloba L. or Ginkgo
@@ -4422,7 +4422,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   /// [parentSubstanceName]: The parent substance of the Herbal Drug, or Herbal
   ///  preparation.
   ///
-  /// [_parentSubstanceName]: Extensions for parentSubstanceName
+  /// [parentSubstanceNameElement]: Extensions for parentSubstanceName
   ///
   /// [countryOfOrigin]: The country where the plant material is harvested or
   /// the countries where the plasma is sourced from as laid down in accordance
@@ -4433,7 +4433,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   /// [geographicalLocation]: The place/region where the plant is harvested or
   ///  the places/regions where the animal source material has its habitat.
   ///
-  /// [_geographicalLocation]: Extensions for geographicalLocation
+  /// [geographicalLocationElement]: Extensions for geographicalLocation
   ///
   /// [developmentStage]: Stage of life for animals, plants, insects and
   /// microorganisms. This information shall be provided only when the substance
@@ -4492,7 +4492,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSourceMaterial.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSourceMaterial.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -4511,7 +4511,7 @@ class SubstanceSourceMaterialFractionDescription
     with _$SubstanceSourceMaterialFractionDescription {
   SubstanceSourceMaterialFractionDescription._();
 
-  /// [SubstanceSourceMaterial_FractionDescription]: Source material shall
+  /// [SubstanceSourceMaterialFractionDescription]: Source material shall
   /// capture information on the taxonomic and anatomical origins as well as the
   /// fraction of a material that can result in or can be modified to form a
   /// substance. This set of data elements shall be used to define polymer
@@ -4530,7 +4530,7 @@ class SubstanceSourceMaterialFractionDescription
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4554,7 +4554,7 @@ class SubstanceSourceMaterialFractionDescription
   /// [fraction]: This element is capturing information about the fraction of a
   ///  plant part, or human plasma for fractionation.
   ///
-  /// [_fraction]: Extensions for fraction
+  /// [fractionElement]: Extensions for fraction
   ///
   /// [materialType]: The specific type of the material constituting the
   /// component. For Herbal preparations the particulars of the extracts
@@ -4571,7 +4571,7 @@ class SubstanceSourceMaterialFractionDescription
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSourceMaterialFractionDescription.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSourceMaterialFractionDescription.fromJson(
@@ -4592,7 +4592,7 @@ class SubstanceSourceMaterialFractionDescription
 class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   SubstanceSourceMaterialOrganism._();
 
-  /// [SubstanceSourceMaterial_Organism]: Source material shall capture
+  /// [SubstanceSourceMaterialOrganism]: Source material shall capture
   /// information on the taxonomic and anatomical origins as well as the
   /// fraction of a material that can result in or can be modified to form a
   /// substance. This set of data elements shall be used to define polymer
@@ -4611,7 +4611,7 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4650,7 +4650,7 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   /// Vaccine, the intraspecific description shall contain the syntax of the
   ///  antigen in line with the WHO convention.
   ///
-  /// [_intraspecificDescription]: Extensions for intraspecificDescription
+  /// [intraspecificDescriptionElement]: Extensions for intraspecificDescription
   ///
   /// [author]: 4.9.13.6.1 Author type (Conditional).
   ///
@@ -4676,7 +4676,7 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSourceMaterialOrganism.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSourceMaterialOrganism.fromJson(
@@ -4697,7 +4697,7 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
 class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   SubstanceSourceMaterialAuthor._();
 
-  /// [SubstanceSourceMaterial_Author]: Source material shall capture
+  /// [SubstanceSourceMaterialAuthor]: Source material shall capture
   /// information on the taxonomic and anatomical origins as well as the
   /// fraction of a material that can result in or can be modified to form a
   /// substance. This set of data elements shall be used to define polymer
@@ -4716,7 +4716,7 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4748,7 +4748,7 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   /// refers to the year in which the first author(s) published the
   ///  infraspecific plant/animal name (of any rank).
   ///
-  /// [_authorDescription]: Extensions for authorDescription
+  /// [authorDescriptionElement]: Extensions for authorDescription
   factory SubstanceSourceMaterialAuthor({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4761,7 +4761,7 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSourceMaterialAuthor.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSourceMaterialAuthor.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4780,7 +4780,7 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
 class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   SubstanceSourceMaterialHybrid._();
 
-  /// [SubstanceSourceMaterial_Hybrid]: Source material shall capture
+  /// [SubstanceSourceMaterialHybrid]: Source material shall capture
   /// information on the taxonomic and anatomical origins as well as the
   /// fraction of a material that can result in or can be modified to form a
   /// substance. This set of data elements shall be used to define polymer
@@ -4799,7 +4799,7 @@ class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4825,24 +4825,24 @@ class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   /// For plants, the parents aren’t always known, and it is unlikely that it
   ///  will be known which is maternal and which is paternal.
   ///
-  /// [_maternalOrganismId]: Extensions for maternalOrganismId
+  /// [maternalOrganismIdElement]: Extensions for maternalOrganismId
   ///
   /// [maternalOrganismName]: The name of the maternal species constituting the
   /// hybrid organism shall be specified. For plants, the parents aren’t always
   /// known, and it is unlikely that it will be known which is maternal and
   ///  which is paternal.
   ///
-  /// [_maternalOrganismName]: Extensions for maternalOrganismName
+  /// [maternalOrganismNameElement]: Extensions for maternalOrganismName
   ///
   /// [paternalOrganismId]: The identifier of the paternal species constituting
   ///  the hybrid organism shall be specified based on a controlled vocabulary.
   ///
-  /// [_paternalOrganismId]: Extensions for paternalOrganismId
+  /// [paternalOrganismIdElement]: Extensions for paternalOrganismId
   ///
   /// [paternalOrganismName]: The name of the paternal species constituting the
   ///  hybrid organism shall be specified.
   ///
-  /// [_paternalOrganismName]: Extensions for paternalOrganismName
+  /// [paternalOrganismNameElement]: Extensions for paternalOrganismName
   ///
   /// [hybridType]: The hybrid type of an organism shall be specified.
   factory SubstanceSourceMaterialHybrid({
@@ -4865,7 +4865,7 @@ class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSourceMaterialHybrid.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSourceMaterialHybrid.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -4885,7 +4885,7 @@ class SubstanceSourceMaterialOrganismGeneral
     with _$SubstanceSourceMaterialOrganismGeneral {
   SubstanceSourceMaterialOrganismGeneral._();
 
-  /// [SubstanceSourceMaterial_OrganismGeneral]: Source material shall capture
+  /// [SubstanceSourceMaterialOrganismGeneral]: Source material shall capture
   /// information on the taxonomic and anatomical origins as well as the
   /// fraction of a material that can result in or can be modified to form a
   /// substance. This set of data elements shall be used to define polymer
@@ -4904,7 +4904,7 @@ class SubstanceSourceMaterialOrganismGeneral
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4929,7 +4929,7 @@ class SubstanceSourceMaterialOrganismGeneral
   ///
   /// [phylum]: The phylum of an organism shall be specified.
   ///
-  /// [class]: The class of an organism shall be specified.
+  /// [class_]: The class of an organism shall be specified.
   ///
   /// [order]: The order of an organism shall be specified,.
   factory SubstanceSourceMaterialOrganismGeneral({
@@ -4945,7 +4945,7 @@ class SubstanceSourceMaterialOrganismGeneral
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSourceMaterialOrganismGeneral.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSourceMaterialOrganismGeneral.fromJson(
@@ -4967,7 +4967,7 @@ class SubstanceSourceMaterialPartDescription
     with _$SubstanceSourceMaterialPartDescription {
   SubstanceSourceMaterialPartDescription._();
 
-  /// [SubstanceSourceMaterial_PartDescription]: Source material shall capture
+  /// [SubstanceSourceMaterialPartDescription]: Source material shall capture
   /// information on the taxonomic and anatomical origins as well as the
   /// fraction of a material that can result in or can be modified to form a
   /// substance. This set of data elements shall be used to define polymer
@@ -4986,7 +4986,7 @@ class SubstanceSourceMaterialPartDescription
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5007,7 +5007,7 @@ class SubstanceSourceMaterialPartDescription
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [part]: Entity of anatomical origin of source material within an organism.
+  /// [part_]: Entity of anatomical origin of source material within an organism.
   ///
   /// [partLocation]: The detailed anatomic location when the part can be
   /// extracted from different anatomical locations of the organism. Multiple
@@ -5023,7 +5023,7 @@ class SubstanceSourceMaterialPartDescription
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSourceMaterialPartDescription.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSourceMaterialPartDescription.fromJson(
@@ -5061,11 +5061,11 @@ class SubstanceSpecification with Resource, _$SubstanceSpecification {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -5079,7 +5079,7 @@ class SubstanceSpecification with Resource, _$SubstanceSpecification {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -5110,13 +5110,13 @@ class SubstanceSpecification with Resource, _$SubstanceSpecification {
   ///
   /// [description]: Textual description of the substance.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [source]: Supporting literature.
   ///
   /// [comment]: Textual comment about this record of a substance.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [moiety]: Moiety, for structural modifications.
   ///
@@ -5185,7 +5185,7 @@ class SubstanceSpecification with Resource, _$SubstanceSpecification {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecification.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSpecification.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -5203,13 +5203,13 @@ class SubstanceSpecification with Resource, _$SubstanceSpecification {
 class SubstanceSpecificationMoiety with _$SubstanceSpecificationMoiety {
   SubstanceSpecificationMoiety._();
 
-  /// [SubstanceSpecification_Moiety]: The detailed description of a substance,
+  /// [SubstanceSpecificationMoiety]: The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5236,7 +5236,7 @@ class SubstanceSpecificationMoiety with _$SubstanceSpecificationMoiety {
   ///
   /// [name]: Textual name for this moiety substance.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [stereochemistry]: Stereochemistry type.
   ///
@@ -5244,13 +5244,13 @@ class SubstanceSpecificationMoiety with _$SubstanceSpecificationMoiety {
   ///
   /// [molecularFormula]: Molecular formula.
   ///
-  /// [_molecularFormula]: Extensions for molecularFormula
+  /// [molecularFormulaElement]: Extensions for molecularFormula
   ///
   /// [amountQuantity]: Quantitative value for this moiety.
   ///
   /// [amountString]: Quantitative value for this moiety.
   ///
-  /// [_amountString]: Extensions for amountString
+  /// [amountStringElement]: Extensions for amountString
   factory SubstanceSpecificationMoiety({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5271,7 +5271,7 @@ class SubstanceSpecificationMoiety with _$SubstanceSpecificationMoiety {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationMoiety.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSpecificationMoiety.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5290,13 +5290,13 @@ class SubstanceSpecificationMoiety with _$SubstanceSpecificationMoiety {
 class SubstanceSpecificationProperty with _$SubstanceSpecificationProperty {
   SubstanceSpecificationProperty._();
 
-  /// [SubstanceSpecification_Property]: The detailed description of a
+  /// [SubstanceSpecificationProperty]: The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5325,7 +5325,7 @@ class SubstanceSpecificationProperty with _$SubstanceSpecificationProperty {
   /// [parameters]: Parameters that were used in the measurement of a property
   ///  (e.g. for viscosity: measured at 20C with a pH of 7.1).
   ///
-  /// [_parameters]: Extensions for parameters
+  /// [parametersElement]: Extensions for parameters
   ///
   /// [definingSubstanceReference]: A substance upon which a defining property
   ///  depends (e.g. for solubility: in water, in alcohol).
@@ -5337,7 +5337,7 @@ class SubstanceSpecificationProperty with _$SubstanceSpecificationProperty {
   ///
   /// [amountString]: Quantitative value for this property.
   ///
-  /// [_amountString]: Extensions for amountString
+  /// [amountStringElement]: Extensions for amountString
   factory SubstanceSpecificationProperty({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5356,7 +5356,7 @@ class SubstanceSpecificationProperty with _$SubstanceSpecificationProperty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationProperty.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSpecificationProperty.fromJson(
@@ -5377,13 +5377,13 @@ class SubstanceSpecificationProperty with _$SubstanceSpecificationProperty {
 class SubstanceSpecificationStructure with _$SubstanceSpecificationStructure {
   SubstanceSpecificationStructure._();
 
-  /// [SubstanceSpecification_Structure]: The detailed description of a
+  /// [SubstanceSpecificationStructure]: The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5410,13 +5410,13 @@ class SubstanceSpecificationStructure with _$SubstanceSpecificationStructure {
   ///
   /// [molecularFormula]: Molecular formula.
   ///
-  /// [_molecularFormula]: Extensions for molecularFormula
+  /// [molecularFormulaElement]: Extensions for molecularFormula
   ///
   /// [molecularFormulaByMoiety]: Specified per moiety according to the Hill
   /// system, i.e. first C, then H, then alphabetical, each moiety separated by
   ///  a dot.
   ///
-  /// [_molecularFormulaByMoiety]: Extensions for molecularFormulaByMoiety
+  /// [molecularFormulaByMoietyElement]: Extensions for molecularFormulaByMoiety
   ///
   /// [isotope]: Applicable for single substances that contain a radionuclide or
   ///  a non-natural isotopic ratio.
@@ -5447,7 +5447,7 @@ class SubstanceSpecificationStructure with _$SubstanceSpecificationStructure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationStructure.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSpecificationStructure.fromJson(
@@ -5468,13 +5468,13 @@ class SubstanceSpecificationStructure with _$SubstanceSpecificationStructure {
 class SubstanceSpecificationIsotope with _$SubstanceSpecificationIsotope {
   SubstanceSpecificationIsotope._();
 
-  /// [SubstanceSpecification_Isotope]: The detailed description of a substance,
+  /// [SubstanceSpecificationIsotope]: The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5520,7 +5520,7 @@ class SubstanceSpecificationIsotope with _$SubstanceSpecificationIsotope {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationIsotope.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSpecificationIsotope.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5540,13 +5540,13 @@ class SubstanceSpecificationMolecularWeight
     with _$SubstanceSpecificationMolecularWeight {
   SubstanceSpecificationMolecularWeight._();
 
-  /// [SubstanceSpecification_MolecularWeight]: The detailed description of a
+  /// [SubstanceSpecificationMolecularWeight]: The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5588,7 +5588,7 @@ class SubstanceSpecificationMolecularWeight
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationMolecularWeight.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSpecificationMolecularWeight.fromJson(
@@ -5610,13 +5610,13 @@ class SubstanceSpecificationRepresentation
     with _$SubstanceSpecificationRepresentation {
   SubstanceSpecificationRepresentation._();
 
-  /// [SubstanceSpecification_Representation]: The detailed description of a
+  /// [SubstanceSpecificationRepresentation]: The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5642,7 +5642,7 @@ class SubstanceSpecificationRepresentation
   /// [representation]: The structural representation as text string in a format
   ///  e.g. InChI, SMILES, MOLFILE, CDX.
   ///
-  /// [_representation]: Extensions for representation
+  /// [representationElement]: Extensions for representation
   ///
   /// [attachment]: An attached file with the structural representation.
   factory SubstanceSpecificationRepresentation({
@@ -5658,7 +5658,7 @@ class SubstanceSpecificationRepresentation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationRepresentation.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSpecificationRepresentation.fromJson(
@@ -5679,13 +5679,13 @@ class SubstanceSpecificationRepresentation
 class SubstanceSpecificationCode with _$SubstanceSpecificationCode {
   SubstanceSpecificationCode._();
 
-  /// [SubstanceSpecification_Code]: The detailed description of a substance,
+  /// [SubstanceSpecificationCode]: The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5713,11 +5713,11 @@ class SubstanceSpecificationCode with _$SubstanceSpecificationCode {
   /// [statusDate]: The date at which the code status is changed as part of the
   ///  terminology maintenance.
   ///
-  /// [_statusDate]: Extensions for statusDate
+  /// [statusDateElement]: Extensions for statusDate
   ///
   /// [comment]: Any comment can be provided in this field, if necessary.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [source]: Supporting literature.
   factory SubstanceSpecificationCode({
@@ -5736,7 +5736,7 @@ class SubstanceSpecificationCode with _$SubstanceSpecificationCode {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationCode.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSpecificationCode.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5755,13 +5755,13 @@ class SubstanceSpecificationCode with _$SubstanceSpecificationCode {
 class SubstanceSpecificationName with _$SubstanceSpecificationName {
   SubstanceSpecificationName._();
 
-  /// [SubstanceSpecification_Name]: The detailed description of a substance,
+  /// [SubstanceSpecificationName]: The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5784,7 +5784,7 @@ class SubstanceSpecificationName with _$SubstanceSpecificationName {
   ///
   /// [name]: The actual name.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [type]: Name type.
   ///
@@ -5792,7 +5792,7 @@ class SubstanceSpecificationName with _$SubstanceSpecificationName {
   ///
   /// [preferred]: If this is the preferred name for this substance.
   ///
-  /// [_preferred]: Extensions for preferred
+  /// [preferredElement]: Extensions for preferred
   ///
   /// [language]: Language of the name.
   ///
@@ -5830,7 +5830,7 @@ class SubstanceSpecificationName with _$SubstanceSpecificationName {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationName.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSpecificationName.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -5849,13 +5849,13 @@ class SubstanceSpecificationName with _$SubstanceSpecificationName {
 class SubstanceSpecificationOfficial with _$SubstanceSpecificationOfficial {
   SubstanceSpecificationOfficial._();
 
-  /// [SubstanceSpecification_Official]: The detailed description of a
+  /// [SubstanceSpecificationOfficial]: The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5882,7 +5882,7 @@ class SubstanceSpecificationOfficial with _$SubstanceSpecificationOfficial {
   ///
   /// [date]: Date of official name change.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   factory SubstanceSpecificationOfficial({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5896,7 +5896,7 @@ class SubstanceSpecificationOfficial with _$SubstanceSpecificationOfficial {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationOfficial.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSpecificationOfficial.fromJson(
@@ -5918,13 +5918,13 @@ class SubstanceSpecificationRelationship
     with _$SubstanceSpecificationRelationship {
   SubstanceSpecificationRelationship._();
 
-  /// [SubstanceSpecification_Relationship]: The detailed description of a
+  /// [SubstanceSpecificationRelationship]: The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5958,7 +5958,7 @@ class SubstanceSpecificationRelationship
   /// substance, this is a defining relationship for that enzyme, out of several
   ///  possible substance relationships.
   ///
-  /// [_isDefining]: Extensions for isDefining
+  /// [isDefiningElement]: Extensions for isDefining
   ///
   /// [amountQuantity]: A numeric factor for the relationship, for instance to
   /// express that the salt of a substance has some percentage of the active
@@ -5976,7 +5976,7 @@ class SubstanceSpecificationRelationship
   /// express that the salt of a substance has some percentage of the active
   ///  substance in relation to some other.
   ///
-  /// [_amountString]: Extensions for amountString
+  /// [amountStringElement]: Extensions for amountString
   ///
   /// [amountRatioLowLimit]: For use when the numeric.
   ///
@@ -6006,7 +6006,7 @@ class SubstanceSpecificationRelationship
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceSpecificationRelationship.fromYaml(dynamic yaml) => yaml
           is String
       ? SubstanceSpecificationRelationship.fromJson(

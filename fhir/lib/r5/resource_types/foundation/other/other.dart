@@ -39,7 +39,7 @@ class Basic with Resource, _$Basic {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Basic.fromYaml(dynamic yaml) => yaml is String
       ? Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -75,7 +75,7 @@ class Binary with Resource, _$Binary {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Binary.fromYaml(dynamic yaml) => yaml is String
       ? Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -116,7 +116,7 @@ class Bundle with Resource, _$Bundle {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
       ? Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -145,7 +145,7 @@ class BundleLink with _$BundleLink {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
       ? BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -178,7 +178,7 @@ class BundleEntry with _$BundleEntry {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
       ? BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -208,7 +208,7 @@ class BundleSearch with _$BundleSearch {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleSearch.fromYaml(dynamic yaml) => yaml is String
       ? BundleSearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -247,7 +247,7 @@ class BundleRequest with _$BundleRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleRequest.fromYaml(dynamic yaml) => yaml is String
       ? BundleRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -282,7 +282,7 @@ class BundleResponse with _$BundleResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleResponse.fromYaml(dynamic yaml) => yaml is String
       ? BundleResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -322,7 +322,7 @@ class Linkage with Resource, _$Linkage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Linkage.fromYaml(dynamic yaml) => yaml is String
       ? Linkage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -351,7 +351,7 @@ class LinkageItem with _$LinkageItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory LinkageItem.fromYaml(dynamic yaml) => yaml is String
       ? LinkageItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -400,7 +400,7 @@ class MessageHeader with Resource, _$MessageHeader {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -432,7 +432,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeaderDestination.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderDestination.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -468,7 +468,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeaderSource.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -500,7 +500,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeaderResponse.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -537,7 +537,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcome.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -576,7 +576,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationOutcomeIssue.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -609,7 +609,7 @@ class Parameters with Resource, _$Parameters {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Parameters.fromYaml(dynamic yaml) => yaml is String
       ? Parameters.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -710,7 +710,7 @@ class ParametersParameter with _$ParametersParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ParametersParameter.fromYaml(dynamic yaml) => yaml is String
       ? ParametersParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -772,7 +772,7 @@ class Subscription with Resource, _$Subscription {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Subscription.fromYaml(dynamic yaml) => yaml is String
       ? Subscription.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -804,7 +804,7 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionFilterBy.fromYaml(dynamic yaml) => yaml is String
       ? SubscriptionFilterBy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -854,7 +854,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionStatus.fromYaml(dynamic yaml) => yaml is String
       ? SubscriptionStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -922,7 +922,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionTopic.fromYaml(dynamic yaml) => yaml is String
       ? SubscriptionTopic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -957,7 +957,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionTopicResourceTrigger.fromYaml(dynamic yaml) => yaml
           is String
       ? SubscriptionTopicResourceTrigger.fromJson(
@@ -992,7 +992,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionTopicQueryCriteria.fromYaml(dynamic yaml) => yaml
           is String
       ? SubscriptionTopicQueryCriteria.fromJson(
@@ -1027,7 +1027,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionTopicCanFilterBy.fromYaml(dynamic yaml) => yaml is String
       ? SubscriptionTopicCanFilterBy.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
