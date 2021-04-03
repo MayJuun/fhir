@@ -37,6 +37,9 @@ class MyApp extends StatelessWidget {
                   child: const Text('IBM', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await hapi()),
               ElevatedButton(
+                  child: const Text('Logica', style: TextStyle(fontSize: 44)),
+                  onPressed: () async => await logica()),
+              ElevatedButton(
                   child: const Text('Mihin', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await mihin()),
             ],

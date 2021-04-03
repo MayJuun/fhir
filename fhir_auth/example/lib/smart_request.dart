@@ -43,7 +43,8 @@ Future smartRequest({
   final _newPatient = newPatient();
   print('Patient to be uploaded:\n${_newPatient.toJson()}');
   final request1 = FhirRequest.create(
-    base: client.baseUrl.value ?? Uri.parse('127.0.0.1'),
+    base: client.baseUrl.value!,
+    //?? Uri.parse('127.0.0.1'),
     resource: _newPatient,
   );
 

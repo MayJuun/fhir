@@ -58,6 +58,12 @@ Future hapi() async => await hapiRequest(Api.hapiUrl);
 //       fhirCallback: Api.fhirCallback,
 //     );
 
+Future logica() async => await smartRequest(
+      url: Api.logicaUrl,
+      clientId: Api.logicaClientId,
+      fhirCallback: Api.fhirCallback,
+    );
+
 Future mihin() async => await smartRequest(
       url: Api.mihinUrl,
       clientId: Api.mihinClientId,
