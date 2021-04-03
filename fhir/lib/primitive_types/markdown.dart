@@ -1,6 +1,6 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Markdown {
   const Markdown._(this._valueString, this._valueMarkdown, this._isValid);
