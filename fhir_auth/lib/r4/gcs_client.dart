@@ -14,38 +14,27 @@ class GcsClient extends FhirClient {
     googleSignIn = GoogleSignIn(clientId: clientId, scopes: scopes);
   }
 
-  FhirUri baseUrl;
+  final FhirUri baseUrl;
   late GoogleSignIn googleSignIn;
   bool isLoggedIn = false;
 
   @override
   Future<Unit> login() async {
     try {
-      final googleUser = await GoogleSignIn().signIn();
-      final googleAuth = await googleUser?.authentication;
-      if (googleAuth != null) {
-        print(googleAuth.accessToken);
-        print(googleAuth.idToken);
-        // final credential = GoogleAuthProvider.
-        //  .credential(
-        //   accessToken: googleAuth.accessToken,
-        //   idToken: googleAuth.idToken,
-        // );
-        // print(credential)
-      }
+      await googleSignIn.signIn();
     } catch (e) {
-      print(e);
+      throw PlatformException(
+        code: e.toString(),
+        message: 'Exception raised from GoogleAuth.signIn()',
+      );
     }
+    isLoggedIn = true;
     return unit;
   }
 
   @override
   Future<Map<String, String>> get authHeaders async {
-    if (!isLoggedIn) {
-      await login();
-    }
-    var headers = await googleSignIn.currentUser?.authHeaders;
-    headers ??= <String, String>{};
+    final headers = await googleSignIn.currentUser!.authHeaders;
     headers['Content-Type'] = 'application/fhir+json';
     return headers;
   }
@@ -56,8 +45,9 @@ class GcsClient extends FhirClient {
       await googleSignIn.signOut();
     } catch (e) {
       throw PlatformException(
-          code: e.toString(),
-          message: 'Exception raised from GoogleAuth.signIn()');
+        code: e.toString(),
+        message: 'Exception raised from GoogleAuth.signIn()',
+      );
     }
     isLoggedIn = false;
     return unit;
