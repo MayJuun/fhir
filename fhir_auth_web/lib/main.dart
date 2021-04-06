@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final base = Uri.base.toString();
+    print(base);
     return MaterialApp(
         home: base.contains('code=') && base.contains('redirect')
             ? MainPage(base)
@@ -34,7 +35,6 @@ class _AuthPageState extends State<AuthPage> {
       Api.aidboxClientId,
       Uri.parse('https://fhirfli.aidbox.app/auth/authorize'),
       Uri.parse('https://fhirfli.aidbox.app/auth/token'),
-      secret: Api.aidboxSecret,
     );
     final _redirect =
         Uri.parse(Uri.base.toString().replaceAll('#', 'redirect'));
