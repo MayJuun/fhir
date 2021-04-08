@@ -65,7 +65,7 @@ class SmartClient extends FhirClient {
   /// this is for testing, you shouldn't store the secret in the object
   String? _secret;
 
-  DateTime? _accessTokenExpiration = DateTime.now();
+  DateTime? _accessTokenExpiration;
 
   bool isLoggedIn;
 
@@ -158,7 +158,7 @@ class SmartClient extends FhirClient {
   }
 
   Future<Unit> get _refresh async {
-    final refreshToken = await secureStorage.read(key: 'refresh_token');
+    final refreshToken = await secureStorage.read(key: 'refresh_token') ?? '';
     if (refreshToken == '') {
       return await _tokens;
     } else {
@@ -237,8 +237,6 @@ class SmartClient extends FhirClient {
 
     tokenUrl = _getUri(capabilityStatement, 'token');
     authUrl = _getUri(capabilityStatement, 'authorize');
-    print(tokenUrl);
-    print(authUrl);
 
     /// if either authorize or token are still null, we return a failure
     if (authUrl == null) {
