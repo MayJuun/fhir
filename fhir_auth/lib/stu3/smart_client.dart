@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:dartz/dartz.dart';
 import 'package:fhir/stu3.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
@@ -77,7 +76,7 @@ class SmartClient extends FhirClient {
   /// the client secret when you make a request if you're creating a confidential
   /// app
   @override
-  Future<Unit> login() async {
+  Future<void> login() async {
     if (authUrl == null || tokenUrl == null) {
       try {
         await _getEndpoints;
@@ -98,15 +97,13 @@ class SmartClient extends FhirClient {
           code: e.toString(), message: 'Failed to get Access Token');
     }
     isLoggedIn = true;
-    return unit;
   }
 
   @override
-  Future<Unit> logout() async {
+  Future<void> logout() async {
     await secureStorage.delete(key: 'access_token');
     await secureStorage.delete(key: 'refresh_token');
     isLoggedIn = false;
-    return unit;
   }
 
   /// attempting to follow convention of other packages, this getter allows one
@@ -128,7 +125,7 @@ class SmartClient extends FhirClient {
     return authorizationHeaders;
   }
 
-  Future<Unit> get _tokens async {
+  Future<void> get _tokens async {
     /// this request simply includes all of the parameters we have to this
     /// point. The clientId, the redirect Url, the client secret, the
     /// authorize and token enpoints, a list of scopes, and if there are any
@@ -156,11 +153,9 @@ class SmartClient extends FhirClient {
 
     _accessTokenExpiration =
         authorization?.accessTokenExpirationDateTime ?? DateTime.now();
-
-    return unit;
   }
 
-  Future<Unit> get _refresh async {
+  Future<void> get _refresh async {
     final refreshToken = await secureStorage.read(key: 'refresh_token');
     if (refreshToken == '') {
       return await _tokens;
@@ -201,13 +196,12 @@ class SmartClient extends FhirClient {
           key: 'refresh_token', value: authorization?.accessToken ?? '');
       _accessTokenExpiration =
           authorization?.accessTokenExpirationDateTime ?? DateTime.now();
-      return unit;
     }
   }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
-  Future<Unit> get _getEndpoints async {
+  Future<void> get _getEndpoints async {
     var thisRequest = '$baseUrl/metadata?mode=full&_format=json';
 
     var result = await get(Uri.parse(thisRequest));
@@ -248,7 +242,6 @@ class SmartClient extends FhirClient {
     if (tokenUrl == null) {
       throw Exception('No Token Url in CapabilityStatement');
     }
-    return unit;
   }
 
   /// convenience method for finding either the token or authorize endpoint

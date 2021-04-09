@@ -1,4 +1,3 @@
-import 'package:dartz/dartz.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -8,10 +7,10 @@ import 'fhir_client.dart';
 class GcsClient extends FhirClient {
   GcsClient({
     required this.baseUrl,
-    required List<String> scopes,
+    List<String>? scopes,
     String? clientId,
   }) {
-    googleSignIn = GoogleSignIn(clientId: clientId, scopes: scopes);
+    googleSignIn = GoogleSignIn(clientId: clientId, scopes: scopes ?? []);
   }
 
   FhirUri baseUrl;
@@ -19,16 +18,17 @@ class GcsClient extends FhirClient {
   bool isLoggedIn = false;
 
   @override
-  Future<Unit> login() async {
+  Future<void> login() async {
+    await googleSignIn.signOut();
     try {
       await googleSignIn.signIn();
-    } catch (e) {
+    } catch (e, stacktrace) {
       throw PlatformException(
           code: e.toString(),
-          message: 'Exception raised from GoogleAuth.signIn()');
+          message: 'Exception raised from GoogleAuth.signIn()',
+          stacktrace: stacktrace.toString());
     }
     isLoggedIn = true;
-    return unit;
   }
 
   @override
@@ -43,7 +43,7 @@ class GcsClient extends FhirClient {
   }
 
   @override
-  Future<Unit> logout() async {
+  Future<void> logout() async {
     try {
       await googleSignIn.signOut();
     } catch (e) {
@@ -52,6 +52,5 @@ class GcsClient extends FhirClient {
           message: 'Exception raised from GoogleAuth.signIn()');
     }
     isLoggedIn = false;
-    return unit;
   }
 }

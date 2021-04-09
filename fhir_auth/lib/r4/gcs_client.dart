@@ -1,4 +1,3 @@
-import 'package:dartz/dartz.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -19,7 +18,7 @@ class GcsClient extends FhirClient {
   bool isLoggedIn = false;
 
   @override
-  Future<Unit> login() async {
+  Future<void> login() async {
     await googleSignIn.signOut();
     try {
       await googleSignIn.signIn();
@@ -30,24 +29,21 @@ class GcsClient extends FhirClient {
           stacktrace: stacktrace.toString());
     }
     isLoggedIn = true;
-    return unit;
   }
 
   @override
   Future<Map<String, String>> get authHeaders async {
-    print(isLoggedIn);
     if (!isLoggedIn) {
       await login();
     }
     var headers = await googleSignIn.currentUser?.authHeaders;
     headers ??= <String, String>{};
-    print(headers);
     headers['Content-Type'] = 'application/fhir+json';
     return headers;
   }
 
   @override
-  Future<Unit> logout() async {
+  Future<void> logout() async {
     try {
       await googleSignIn.signOut();
     } catch (e) {
@@ -56,6 +52,5 @@ class GcsClient extends FhirClient {
           message: 'Exception raised from GoogleAuth.signIn()');
     }
     isLoggedIn = false;
-    return unit;
   }
 }

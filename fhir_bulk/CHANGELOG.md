@@ -1,3 +1,8 @@
+## [0.4.0]
+* Removed dartz dependency
+* Included new WhichResource class (just takes the place of Tuple2 I was using)
+* Null safe!
+
 ## [0.3.0-nullsafety.2]
 * Updated dependencies
 * Still prerelease because not all dependencies are stable

@@ -20,7 +20,7 @@ Future smartRequest({
     redirectUri: fhirCallback,
     scopes: Scopes(
       clinicalScopes: [
-        const Tuple3(
+        ClinicalScope(
           Role.patient,
           R4ResourceType.Patient,
           Interaction.any,
