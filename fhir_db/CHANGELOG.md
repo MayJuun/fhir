@@ -1,3 +1,6 @@
+## [0.4.0]
+* Stable null safety!
+
 ## [0.3.0-nullsafety.1]
 * Updated dependencies
 * Moved to dart 2.12.1 - stable channel
