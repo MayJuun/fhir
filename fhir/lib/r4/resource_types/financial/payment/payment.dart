@@ -33,11 +33,11 @@ class PaymentNotice with Resource, _$PaymentNotice {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -76,7 +76,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [request]: Reference of resource for which payment is being made.
   ///
@@ -85,7 +85,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   ///
   /// [created]: The date when this resource was created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [provider]: The practitioner who is responsible for the services rendered
   ///  to the patient.
@@ -94,7 +94,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   ///
   /// [paymentDate]: The date when the above payment action occurred.
   ///
-  /// [_paymentDate]: Extensions for paymentDate
+  /// [paymentDateElement]: Extensions for paymentDate
   ///
   /// [payee]: The party who will receive or has received payment that is the
   ///  subject of this notification.
@@ -139,7 +139,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
       ? PaymentNotice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -174,11 +174,11 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -192,7 +192,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -217,14 +217,14 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [period]: The period of time for which payments have been gathered into
   ///  this bulk payment for settlement.
   ///
   /// [created]: The date when the resource was created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [paymentIssuer]: The party who generated the payment.
   ///
@@ -235,17 +235,17 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   ///
   /// [outcome]: The outcome of a request for a reconciliation.
   ///
-  /// [_outcome]: Extensions for outcome
+  /// [outcomeElement]: Extensions for outcome
   ///
   /// [disposition]: A human readable description of the status of the request
   ///  for the reconciliation.
   ///
-  /// [_disposition]: Extensions for disposition
+  /// [dispositionElement]: Extensions for disposition
   ///
   /// [paymentDate]: The date of payment as indicated on the financial
   ///  instrument.
   ///
-  /// [_paymentDate]: Extensions for paymentDate
+  /// [paymentDateElement]: Extensions for paymentDate
   ///
   /// [paymentAmount]: Total payment amount as indicated on the financial
   ///  instrument.
@@ -300,7 +300,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -318,13 +318,13 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
 
-  /// [PaymentReconciliation_Detail]: This resource provides the details
+  /// [PaymentReconciliationDetail]: This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -364,7 +364,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   /// [date]: The date from the response resource containing a commitment to
   ///  pay.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [responsible]: A reference to the individual who is responsible for
   ///  inquiries regarding the response and its payment.
@@ -393,7 +393,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentReconciliationDetail.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliationDetail.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -412,13 +412,13 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   PaymentReconciliationProcessNote._();
 
-  /// [PaymentReconciliation_ProcessNote]: This resource provides the details
+  /// [PaymentReconciliationProcessNote]: This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -441,11 +441,11 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   ///
   /// [type]: The business purpose of the note text.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [text]: The explanation or description associated with the processing.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   factory PaymentReconciliationProcessNote({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -460,7 +460,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) => yaml
           is String
       ? PaymentReconciliationProcessNote.fromJson(

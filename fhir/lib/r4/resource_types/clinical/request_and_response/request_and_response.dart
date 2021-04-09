@@ -33,11 +33,11 @@ class Communication with Resource, _$Communication {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ class Communication with Resource, _$Communication {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -84,7 +84,7 @@ class Communication with Resource, _$Communication {
   /// guideline, orderset or other definition that is adhered to in whole or in
   ///  part by this Communication.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [basedOn]: An order, proposal or plan fulfilled in whole or in part by
   ///  this Communication.
@@ -96,7 +96,7 @@ class Communication with Resource, _$Communication {
   ///
   /// [status]: The status of the transmission.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: Captures the reason for the current state of the
   ///  Communication.
@@ -108,7 +108,7 @@ class Communication with Resource, _$Communication {
   /// communication must be addressed. Includes concepts such as stat, urgent,
   ///  routine.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [medium]: A channel that was used for this communication (e.g. email,
   ///  fax).
@@ -126,11 +126,11 @@ class Communication with Resource, _$Communication {
   ///
   /// [sent]: The time when this communication was sent.
   ///
-  /// [_sent]: Extensions for sent
+  /// [sentElement]: Extensions for sent
   ///
   /// [received]: The time when this communication arrived at the destination.
   ///
-  /// [_received]: Extensions for received
+  /// [receivedElement]: Extensions for received
   ///
   /// [recipient]: The entity (e.g. person, organization, clinical information
   /// system, care team or device) which was the target of the communication. If
@@ -200,7 +200,7 @@ class Communication with Resource, _$Communication {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Communication.fromYaml(dynamic yaml) => yaml is String
       ? Communication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -218,14 +218,14 @@ class Communication with Resource, _$Communication {
 class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
 
-  /// [Communication_Payload]: An occurrence of information being transmitted;
+  /// [CommunicationPayload]: An occurrence of information being transmitted;
   /// e.g. an alert that was sent to a responsible provider, a public health
   ///  agency that was notified about a reportable condition.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -249,7 +249,7 @@ class CommunicationPayload with _$CommunicationPayload {
   /// [contentString]: A communicated content (or for multi-part communications,
   ///  one portion of the communication).
   ///
-  /// [_contentString]: Extensions for contentString
+  /// [contentStringElement]: Extensions for contentString
   ///
   /// [contentAttachment]: A communicated content (or for multi-part
   ///  communications, one portion of the communication).
@@ -269,7 +269,7 @@ class CommunicationPayload with _$CommunicationPayload {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CommunicationPayload.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -306,11 +306,11 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -324,7 +324,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -361,7 +361,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   ///
   /// [status]: The status of the proposal or order.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: Captures the reason for the current state of the
   ///  CommunicationRequest.
@@ -372,12 +372,12 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   /// [priority]: Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [doNotPerform]: If true indicates that the CommunicationRequest is asking
   ///  for the specified action to *not* occur.
   ///
-  /// [_doNotPerform]: Extensions for doNotPerform
+  /// [doNotPerformElement]: Extensions for doNotPerform
   ///
   /// [medium]: A channel that was used for this communication (e.g. email,
   ///  fax).
@@ -396,14 +396,14 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   ///
   /// [occurrenceDateTime]: The time when this communication is to occur.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: The time when this communication is to occur.
   ///
   /// [authoredOn]: For draft requests, indicates the date of initial creation.
   ///  For requests with other statuses, indicates the date of activation.
   ///
-  /// [_authoredOn]: Extensions for authoredOn
+  /// [authoredOnElement]: Extensions for authoredOn
   ///
   /// [requester]: The device, individual, or organization who initiated the
   ///  request and has responsibility for its activation.
@@ -470,7 +470,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -488,7 +488,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
 
-  /// [CommunicationRequest_Payload]: A request to convey information; e.g. the
+  /// [CommunicationRequestPayload]: A request to convey information; e.g. the
   /// CDS system proposes that an alert be sent to a responsible provider, the
   /// CDS system proposes that the public health agency be notified about a
   ///  reportable condition.
@@ -496,7 +496,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -520,7 +520,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// [contentString]: The communicated content (or for multi-part
   ///  communications, one portion of the communication).
   ///
-  /// [_contentString]: Extensions for contentString
+  /// [contentStringElement]: Extensions for contentString
   ///
   /// [contentAttachment]: The communicated content (or for multi-part
   ///  communications, one portion of the communication).
@@ -540,7 +540,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CommunicationRequestPayload.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequestPayload.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -577,11 +577,11 @@ class DeviceRequest with Resource, _$DeviceRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -595,7 +595,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -627,7 +627,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   /// guideline, orderset or other definition that is adhered to in whole or in
   ///  part by this DeviceRequest.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [basedOn]: Plan/proposal/order fulfilled by this request.
   ///
@@ -638,17 +638,17 @@ class DeviceRequest with Resource, _$DeviceRequest {
   ///
   /// [status]: The status of the request.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [intent]: Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
   ///
-  /// [_intent]: Extensions for intent
+  /// [intentElement]: Extensions for intent
   ///
   /// [priority]: Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [codeReference]: The details of the device to be used.
   ///
@@ -667,7 +667,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: The timing schedule for the use of the device. The
   /// Schedule data type allows many different expressions, for example. "Every
@@ -681,7 +681,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   ///
   /// [authoredOn]: When the request transitioned to being actionable.
   ///
-  /// [_authoredOn]: Extensions for authoredOn
+  /// [authoredOnElement]: Extensions for authoredOn
   ///
   /// [requester]: The individual who initiated the request and has
   ///  responsibility for its activation.
@@ -761,7 +761,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceRequest.fromYaml(dynamic yaml) => yaml is String
       ? DeviceRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -779,14 +779,14 @@ class DeviceRequest with Resource, _$DeviceRequest {
 class DeviceRequestParameter with _$DeviceRequestParameter {
   DeviceRequestParameter._();
 
-  /// [DeviceRequest_Parameter]: Represents a request for a patient to employ a
+  /// [DeviceRequestParameter]: Represents a request for a patient to employ a
   /// medical device. The device may be an implantable device, or an external
   ///  assistive device, such as a walker.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -817,7 +817,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   ///
   /// [valueBoolean]: The value of the device detail.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   factory DeviceRequestParameter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -833,7 +833,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceRequestParameter.fromYaml(dynamic yaml) => yaml is String
       ? DeviceRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -869,11 +869,11 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -887,7 +887,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -917,7 +917,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [subject]: The patient who used the device.
   ///
@@ -931,11 +931,11 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   ///
   /// [timingDateTime]: How often the device was used.
   ///
-  /// [_timingDateTime]: Extensions for timingDateTime
+  /// [timingDateTimeElement]: Extensions for timingDateTime
   ///
   /// [recordedOn]: The time at which the statement was made/recorded.
   ///
-  /// [_recordedOn]: Extensions for recordedOn
+  /// [recordedOnElement]: Extensions for recordedOn
   ///
   /// [source]: Who reported the device was being used by the patient.
   ///
@@ -991,7 +991,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1028,11 +1028,11 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1046,7 +1046,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1078,12 +1078,12 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// [moduleUri]: An identifier, CodeableConcept or canonical reference to the
   ///  guidance that was requested.
   ///
-  /// [_moduleUri]: Extensions for moduleUri
+  /// [moduleUriElement]: Extensions for moduleUri
   ///
   /// [moduleCanonical]: An identifier, CodeableConcept or canonical reference
   ///  to the guidance that was requested.
   ///
-  /// [_moduleCanonical]: Extensions for moduleCanonical
+  /// [moduleCanonicalElement]: Extensions for moduleCanonical
   ///
   /// [moduleCodeableConcept]: An identifier, CodeableConcept or canonical
   ///  reference to the guidance that was requested.
@@ -1098,7 +1098,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [subject]: The patient for which the request was processed.
   ///
@@ -1107,7 +1107,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   ///
   /// [occurrenceDateTime]: Indicates when the guidance response was processed.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [performer]: Provides a reference to the device that performed the
   ///  guidance.
@@ -1183,7 +1183,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
       ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1217,11 +1217,11 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1235,7 +1235,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1267,7 +1267,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   ///
   /// [status]: A code specifying the state of the dispense event.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [patient]: A link to a resource representing the person whom the delivered
   ///  item is for.
@@ -1280,7 +1280,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   ///
   /// [occurrenceDateTime]: The date or time(s) the activity occurred.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: The date or time(s) the activity occurred.
   ///
@@ -1328,7 +1328,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
       ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1346,12 +1346,12 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
 class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   SupplyDeliverySuppliedItem._();
 
-  /// [SupplyDelivery_SuppliedItem]: Record of delivery of what is supplied.
+  /// [SupplyDeliverySuppliedItem]: Record of delivery of what is supplied.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1394,7 +1394,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyDeliverySuppliedItem.fromYaml(dynamic yaml) => yaml is String
       ? SupplyDeliverySuppliedItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1430,11 +1430,11 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1448,7 +1448,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1475,7 +1475,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   ///
   /// [status]: Status of the supply request.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [category]: Category of supply, e.g.  central, non-stock, etc. This is
   ///  used to support work flows associated with the supply process.
@@ -1483,7 +1483,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// [priority]: Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [itemCodeableConcept]: The item that is requested to be supplied. This is
   /// either a link to a resource representing the details of the item or a code
@@ -1500,7 +1500,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   ///
   /// [occurrenceDateTime]: When the request should be fulfilled.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: When the request should be fulfilled.
   ///
@@ -1508,7 +1508,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   ///
   /// [authoredOn]: When the request was made.
   ///
-  /// [_authoredOn]: Extensions for authoredOn
+  /// [authoredOnElement]: Extensions for authoredOn
   ///
   /// [requester]: The device, practitioner, etc. who initiated the request.
   ///
@@ -1563,7 +1563,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
       ? SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1581,13 +1581,13 @@ class SupplyRequest with Resource, _$SupplyRequest {
 class SupplyRequestParameter with _$SupplyRequestParameter {
   SupplyRequestParameter._();
 
-  /// [SupplyRequest_Parameter]: A record of a request for a medication,
+  /// [SupplyRequestParameter]: A record of a request for a medication,
   ///  substance or device used in the healthcare setting.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1618,7 +1618,7 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
   ///
   /// [valueBoolean]: The value of the device detail.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   factory SupplyRequestParameter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1634,7 +1634,7 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyRequestParameter.fromYaml(dynamic yaml) => yaml is String
       ? SupplyRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

@@ -33,11 +33,11 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -80,7 +80,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  activity definition is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this activity
   /// definition when it is represented in other formats, or referenced in a
@@ -98,34 +98,34 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// knowledge assets, refer to the Decision Support Service specification.
   ///  Note that a version is required for non-experimental active assets.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the activity definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the activity
   ///  definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [subtitle]: An explanatory or alternate title for the activity definition
   ///  giving additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [status]: The status of this activity definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this activity definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [subjectCodeableConcept]: A code or group definition that describes the
   ///  intended subject of the activity being defined.
@@ -138,12 +138,12 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the activity definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  activity definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -151,7 +151,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// [description]: A free text natural language description of the activity
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -165,30 +165,30 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// [purpose]: Explanation of why this activity definition is needed and why
   ///  it has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [usage]: A detailed description of how the activity definition is used
   ///  from a clinical perspective.
   ///
-  /// [_usage]: Extensions for usage
+  /// [usageElement]: Extensions for usage
   ///
   /// [copyright]: A copyright statement relating to the activity definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the activity definition.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the activity definition content
   ///  was or is planned to be in active use.
@@ -212,7 +212,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// [relatedArtifact]: Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library]: A reference to a Library resource containing any formal logic
+  /// [library_]: A reference to a Library resource containing any formal logic
   ///  used by the activity definition.
   ///
   /// [kind]: A description of the kind of resource the activity definition is
@@ -220,7 +220,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// CommunicationRequest. Typically, but not always, this is a Request
   ///  resource.
   ///
-  /// [_kind]: Extensions for kind
+  /// [kindElement]: Extensions for kind
   ///
   /// [profile]: A profile to which the target of the activity definition is
   ///  expected to conform.
@@ -231,12 +231,12 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// [intent]: Indicates the level of authority/intentionality associated with
   ///  the activity and where the request should fit into the workflow chain.
   ///
-  /// [_intent]: Extensions for intent
+  /// [intentElement]: Extensions for intent
   ///
   /// [priority]: Indicates how quickly the activity  should be addressed with
   ///  respect to other requests.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [doNotPerform]: Set this to true if the definition is to indicate that a
   /// particular activity should NOT be performed. If true, this element should
@@ -244,7 +244,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// with a doNotPerform of true would still indicate to NOT perform the
   ///  action.
   ///
-  /// [_doNotPerform]: Extensions for doNotPerform
+  /// [doNotPerformElement]: Extensions for doNotPerform
   ///
   /// [timingTiming]: The period, timing or frequency upon which the described
   ///  activity is to occur.
@@ -252,7 +252,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// [timingDateTime]: The period, timing or frequency upon which the described
   ///  activity is to occur.
   ///
-  /// [_timingDateTime]: Extensions for timingDateTime
+  /// [timingDateTimeElement]: Extensions for timingDateTime
   ///
   /// [timingAge]: The period, timing or frequency upon which the described
   ///  activity is to occur.
@@ -398,7 +398,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ActivityDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ActivityDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -416,14 +416,14 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
 class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   ActivityDefinitionParticipant._();
 
-  /// [ActivityDefinition_Participant]: This resource allows for the definition
+  /// [ActivityDefinitionParticipant]: This resource allows for the definition
   /// of some activity to be performed, independent of a particular patient,
   ///  practitioner, or other performance context.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -446,7 +446,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   ///
   /// [type]: The type of participant in the action.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [role]: The role the participant should play in performing the described
   ///  action.
@@ -462,7 +462,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ActivityDefinitionParticipant.fromYaml(dynamic yaml) => yaml is String
       ? ActivityDefinitionParticipant.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -481,14 +481,14 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
 class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   ActivityDefinitionDynamicValue._();
 
-  /// [ActivityDefinition_DynamicValue]: This resource allows for the definition
+  /// [ActivityDefinitionDynamicValue]: This resource allows for the definition
   /// of some activity to be performed, independent of a particular patient,
   ///  practitioner, or other performance context.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -518,7 +518,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   /// well as indexers ([x]) to traverse multiple-cardinality sub-elements (see
   ///  the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [expression]: An expression specifying the value of the customized
   ///  element.
@@ -534,7 +534,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ActivityDefinitionDynamicValue.fromYaml(dynamic yaml) => yaml
           is String
       ? ActivityDefinitionDynamicValue.fromJson(
@@ -572,11 +572,11 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -590,7 +590,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -622,7 +622,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   ///
   /// [manufacturerString]: A name of the manufacturer.
   ///
-  /// [_manufacturerString]: Extensions for manufacturerString
+  /// [manufacturerStringElement]: Extensions for manufacturerString
   ///
   /// [manufacturerReference]: A name of the manufacturer.
   ///
@@ -630,7 +630,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   ///
   /// [modelNumber]: The model number for the device.
   ///
-  /// [_modelNumber]: Extensions for modelNumber
+  /// [modelNumberElement]: Extensions for modelNumber
   ///
   /// [type]: What kind of device or device system this is.
   ///
@@ -640,7 +640,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   ///
   /// [version]: The available versions of the device, e.g., software versions.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [safety]: Safety characteristics of the device.
   ///
@@ -664,11 +664,11 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   ///
   /// [url]: A network address on which the device may be contacted directly.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [onlineInformation]: Access to on-line information about the device.
   ///
-  /// [_onlineInformation]: Extensions for onlineInformation
+  /// [onlineInformationElement]: Extensions for onlineInformation
   ///
   /// [note]: Descriptive information, usage information or implantation
   ///  information that is not captured in an existing element.
@@ -728,7 +728,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDefinition.fromYaml(dynamic yaml) => yaml is String
       ? DeviceDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -747,14 +747,14 @@ class DeviceDefinitionUdiDeviceIdentifier
     with _$DeviceDefinitionUdiDeviceIdentifier {
   DeviceDefinitionUdiDeviceIdentifier._();
 
-  /// [DeviceDefinition_UdiDeviceIdentifier]: The characteristics, operational
+  /// [DeviceDefinitionUdiDeviceIdentifier]: The characteristics, operational
   /// status and capabilities of a medical-related component of a medical
   ///  device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -779,15 +779,15 @@ class DeviceDefinitionUdiDeviceIdentifier
   /// Device that references this DeviceDefintiion for the issuer and
   ///  jurisdication porvided in the DeviceDefinition.udiDeviceIdentifier.
   ///
-  /// [_deviceIdentifier]: Extensions for deviceIdentifier
+  /// [deviceIdentifierElement]: Extensions for deviceIdentifier
   ///
   /// [issuer]: The organization that assigns the identifier algorithm.
   ///
-  /// [_issuer]: Extensions for issuer
+  /// [issuerElement]: Extensions for issuer
   ///
   /// [jurisdiction]: The jurisdiction to which the deviceIdentifier applies.
   ///
-  /// [_jurisdiction]: Extensions for jurisdiction
+  /// [jurisdictionElement]: Extensions for jurisdiction
   factory DeviceDefinitionUdiDeviceIdentifier({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -803,7 +803,7 @@ class DeviceDefinitionUdiDeviceIdentifier
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDefinitionUdiDeviceIdentifier.fromYaml(dynamic yaml) => yaml
           is String
       ? DeviceDefinitionUdiDeviceIdentifier.fromJson(
@@ -824,13 +824,13 @@ class DeviceDefinitionUdiDeviceIdentifier
 class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   DeviceDefinitionDeviceName._();
 
-  /// [DeviceDefinition_DeviceName]: The characteristics, operational status and
+  /// [DeviceDefinitionDeviceName]: The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -853,13 +853,13 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   ///
   /// [name]: The name of the device.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [type]: The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   factory DeviceDefinitionDeviceName({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -874,7 +874,7 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDefinitionDeviceName.fromYaml(dynamic yaml) => yaml is String
       ? DeviceDefinitionDeviceName.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -893,13 +893,13 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
 class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
   DeviceDefinitionSpecialization._();
 
-  /// [DeviceDefinition_Specialization]: The characteristics, operational status
+  /// [DeviceDefinitionSpecialization]: The characteristics, operational status
   ///  and capabilities of a medical-related component of a medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -922,12 +922,12 @@ class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
   ///
   /// [systemType]: The standard that is used to operate and communicate.
   ///
-  /// [_systemType]: Extensions for systemType
+  /// [systemTypeElement]: Extensions for systemType
   ///
   /// [version]: The version of the standard that is used to operate and
   ///  communicate.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   factory DeviceDefinitionSpecialization({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -941,7 +941,7 @@ class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDefinitionSpecialization.fromYaml(dynamic yaml) => yaml
           is String
       ? DeviceDefinitionSpecialization.fromJson(
@@ -962,13 +962,13 @@ class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
 class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
   DeviceDefinitionCapability._();
 
-  /// [DeviceDefinition_Capability]: The characteristics, operational status and
+  /// [DeviceDefinitionCapability]: The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1003,7 +1003,7 @@ class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDefinitionCapability.fromYaml(dynamic yaml) => yaml is String
       ? DeviceDefinitionCapability.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1022,13 +1022,13 @@ class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
 class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   DeviceDefinitionProperty._();
 
-  /// [DeviceDefinition_Property]: The characteristics, operational status and
+  /// [DeviceDefinitionProperty]: The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1067,7 +1067,7 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDefinitionProperty.fromYaml(dynamic yaml) => yaml is String
       ? DeviceDefinitionProperty.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1086,13 +1086,13 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
 class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   DeviceDefinitionMaterial._();
 
-  /// [DeviceDefinition_Material]: The characteristics, operational status and
+  /// [DeviceDefinitionMaterial]: The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1117,12 +1117,12 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   ///
   /// [alternate]: Indicates an alternative material of the device.
   ///
-  /// [_alternate]: Extensions for alternate
+  /// [alternateElement]: Extensions for alternate
   ///
   /// [allergenicIndicator]: Whether the substance is a known or suspected
   ///  allergen.
   ///
-  /// [_allergenicIndicator]: Extensions for allergenicIndicator
+  /// [allergenicIndicatorElement]: Extensions for allergenicIndicator
   factory DeviceDefinitionMaterial({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1137,7 +1137,7 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDefinitionMaterial.fromYaml(dynamic yaml) => yaml is String
       ? DeviceDefinitionMaterial.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1173,11 +1173,11 @@ class EventDefinition with Resource, _$EventDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1191,7 +1191,7 @@ class EventDefinition with Resource, _$EventDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1220,7 +1220,7 @@ class EventDefinition with Resource, _$EventDefinition {
   /// a canonical reference. It SHALL remain the same when the event definition
   ///  is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this event
   /// definition when it is represented in other formats, or referenced in a
@@ -1234,34 +1234,34 @@ class EventDefinition with Resource, _$EventDefinition {
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the event definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the event
   ///  definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [subtitle]: An explanatory or alternate title for the event definition
   ///  giving additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [status]: The status of this event definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this event definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [subjectCodeableConcept]: A code or group definition that describes the
   ///  intended subject of the event definition.
@@ -1274,12 +1274,12 @@ class EventDefinition with Resource, _$EventDefinition {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the event definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  event definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1287,7 +1287,7 @@ class EventDefinition with Resource, _$EventDefinition {
   /// [description]: A free text natural language description of the event
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -1301,30 +1301,30 @@ class EventDefinition with Resource, _$EventDefinition {
   /// [purpose]: Explanation of why this event definition is needed and why it
   ///  has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [usage]: A detailed description of how the event definition is used from a
   ///  clinical perspective.
   ///
-  /// [_usage]: Extensions for usage
+  /// [usageElement]: Extensions for usage
   ///
   /// [copyright]: A copyright statement relating to the event definition and/or
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the event definition.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the event definition content
   ///  was or is planned to be in active use.
@@ -1415,7 +1415,7 @@ class EventDefinition with Resource, _$EventDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EventDefinition.fromYaml(dynamic yaml) => yaml is String
       ? EventDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1451,11 +1451,11 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1469,7 +1469,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1501,19 +1501,19 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   /// [permittedDataType]: The data types allowed for the value element of the
   ///  instance observations conforming to this ObservationDefinition.
   ///
-  /// [_permittedDataType]: Extensions for permittedDataType
+  /// [permittedDataTypeElement]: Extensions for permittedDataType
   ///
   /// [multipleResultsAllowed]: Multiple results allowed for observations
   ///  conforming to this ObservationDefinition.
   ///
-  /// [_multipleResultsAllowed]: Extensions for multipleResultsAllowed
+  /// [multipleResultsAllowedElement]: Extensions for multipleResultsAllowed
   ///
   /// [method]: The method or technique used to perform the observation.
   ///
   /// [preferredReportName]: The preferred name to be used when reporting the
   ///  results of observations conforming to this ObservationDefinition.
   ///
-  /// [_preferredReportName]: Extensions for preferredReportName
+  /// [preferredReportNameElement]: Extensions for preferredReportName
   ///
   /// [quantitativeDetails]: Characteristics for quantitative results of this
   ///  observation.
@@ -1570,7 +1570,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ObservationDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ObservationDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1589,14 +1589,14 @@ class ObservationDefinitionQuantitativeDetails
     with _$ObservationDefinitionQuantitativeDetails {
   ObservationDefinitionQuantitativeDetails._();
 
-  /// [ObservationDefinition_QuantitativeDetails]: Set of definitional
+  /// [ObservationDefinitionQuantitativeDetails]: Set of definitional
   /// characteristics for a kind of observation or measurement produced or
   ///  consumed by an orderable health care service.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1626,12 +1626,12 @@ class ObservationDefinitionQuantitativeDetails
   /// [conversionFactor]: Factor for converting value expressed with SI unit to
   ///  value expressed with customary unit.
   ///
-  /// [_conversionFactor]: Extensions for conversionFactor
+  /// [conversionFactorElement]: Extensions for conversionFactor
   ///
   /// [decimalPrecision]: Number of digits after decimal separator when the
   ///  results of such observations are of type Quantity.
   ///
-  /// [_decimalPrecision]: Extensions for decimalPrecision
+  /// [decimalPrecisionElement]: Extensions for decimalPrecision
   factory ObservationDefinitionQuantitativeDetails({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1647,7 +1647,7 @@ class ObservationDefinitionQuantitativeDetails
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ObservationDefinitionQuantitativeDetails.fromYaml(dynamic yaml) => yaml
           is String
       ? ObservationDefinitionQuantitativeDetails.fromJson(
@@ -1669,14 +1669,14 @@ class ObservationDefinitionQualifiedInterval
     with _$ObservationDefinitionQualifiedInterval {
   ObservationDefinitionQualifiedInterval._();
 
-  /// [ObservationDefinition_QualifiedInterval]: Set of definitional
+  /// [ObservationDefinitionQualifiedInterval]: Set of definitional
   /// characteristics for a kind of observation or measurement produced or
   ///  consumed by an orderable health care service.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1700,7 +1700,7 @@ class ObservationDefinitionQualifiedInterval
   /// [category]: The category of interval of values for continuous or ordinal
   ///  observations conforming to this ObservationDefinition.
   ///
-  /// [_category]: Extensions for category
+  /// [categoryElement]: Extensions for category
   ///
   /// [range]: The low and high values determining the interval. There may be
   ///  only one of the two.
@@ -1713,7 +1713,7 @@ class ObservationDefinitionQualifiedInterval
   ///
   /// [gender]: Sex of the population the range applies to.
   ///
-  /// [_gender]: Extensions for gender
+  /// [genderElement]: Extensions for gender
   ///
   /// [age]: The age at which this reference range is applicable. This is a
   ///  neonatal age (e.g. number of weeks at term) if the meaning says so.
@@ -1723,7 +1723,7 @@ class ObservationDefinitionQualifiedInterval
   ///
   /// [condition]: Text based condition for which the reference range is valid.
   ///
-  /// [_condition]: Extensions for condition
+  /// [conditionElement]: Extensions for condition
   factory ObservationDefinitionQualifiedInterval({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1748,7 +1748,7 @@ class ObservationDefinitionQualifiedInterval
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ObservationDefinitionQualifiedInterval.fromYaml(dynamic yaml) => yaml
           is String
       ? ObservationDefinitionQualifiedInterval.fromJson(
@@ -1789,11 +1789,11 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1807,7 +1807,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1836,7 +1836,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// canonical reference. It SHALL remain the same when the plan definition is
   ///  stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this plan
   /// definition when it is represented in other formats, or referenced in a
@@ -1854,23 +1854,23 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// Support Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the plan definition. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the plan
   ///  definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [subtitle]: An explanatory or alternate title for the plan definition
   ///  giving additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [type]: A high-level category for the plan definition that distinguishes
   ///  the kinds of systems that would be interested in the plan definition.
@@ -1878,13 +1878,13 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// [status]: The status of this plan definition. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this plan definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [subjectCodeableConcept]: A code or group definition that describes the
   ///  intended subject of the plan definition.
@@ -1897,12 +1897,12 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the plan definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  plan definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1910,7 +1910,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// [description]: A free text natural language description of the plan
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -1924,30 +1924,30 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// [purpose]: Explanation of why this plan definition is needed and why it
   ///  has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [usage]: A detailed description of how the plan definition is used from a
   ///  clinical perspective.
   ///
-  /// [_usage]: Extensions for usage
+  /// [usageElement]: Extensions for usage
   ///
   /// [copyright]: A copyright statement relating to the plan definition and/or
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the plan definition.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the plan definition content was
   ///  or is planned to be in active use.
@@ -1971,7 +1971,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// [relatedArtifact]: Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library]: A reference to a Library resource containing any formal logic
+  /// [library_]: A reference to a Library resource containing any formal logic
   ///  used by the plan definition.
   ///
   /// [goal]: Goals that describe what the activities within the plan are
@@ -2047,7 +2047,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PlanDefinition.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2065,7 +2065,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
 class PlanDefinitionGoal with _$PlanDefinitionGoal {
   PlanDefinitionGoal._();
 
-  /// [PlanDefinition_Goal]: This resource allows for the definition of various
+  /// [PlanDefinitionGoal]: This resource allows for the definition of various
   /// types of plans as a sharable, consumable, and executable artifact. The
   /// resource is general enough to support the description of a broad range of
   /// clinical artifacts such as clinical decision support rules, order sets and
@@ -2074,7 +2074,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2131,7 +2131,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PlanDefinitionGoal.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionGoal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2149,7 +2149,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
 class PlanDefinitionTarget with _$PlanDefinitionTarget {
   PlanDefinitionTarget._();
 
-  /// [PlanDefinition_Target]: This resource allows for the definition of
+  /// [PlanDefinitionTarget]: This resource allows for the definition of
   /// various types of plans as a sharable, consumable, and executable artifact.
   /// The resource is general enough to support the description of a broad range
   /// of clinical artifacts such as clinical decision support rules, order sets
@@ -2158,7 +2158,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2219,7 +2219,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PlanDefinitionTarget.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2237,7 +2237,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
 class PlanDefinitionAction with _$PlanDefinitionAction {
   PlanDefinitionAction._();
 
-  /// [PlanDefinition_Action]: This resource allows for the definition of
+  /// [PlanDefinitionAction]: This resource allows for the definition of
   /// various types of plans as a sharable, consumable, and executable artifact.
   /// The resource is general enough to support the description of a broad range
   /// of clinical artifacts such as clinical decision support rules, order sets
@@ -2246,7 +2246,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2269,28 +2269,28 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   ///
   /// [prefix]: A user-visible prefix for the action.
   ///
-  /// [_prefix]: Extensions for prefix
+  /// [prefixElement]: Extensions for prefix
   ///
   /// [title]: The title of the action displayed to a user.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [description]: A brief description of the action used to provide a summary
   ///  to display to the user.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [textEquivalent]: A text equivalent of the action to be performed. This
   /// provides a human-interpretable description of the action when the
   /// definition is consumed by a system that might not be capable of
   ///  interpreting it dynamically.
   ///
-  /// [_textEquivalent]: Extensions for textEquivalent
+  /// [textEquivalentElement]: Extensions for textEquivalent
   ///
   /// [priority]: Indicates how quickly the action should be addressed with
   ///  respect to other actions.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [code]: A code that provides meaning for the action or action group. For
   /// example, a section may have a LOINC code for the section of a
@@ -2305,7 +2305,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   /// [goalId]: Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
   ///
-  /// [_goalId]: Extensions for goalId
+  /// [goalIdElement]: Extensions for goalId
   ///
   /// [subjectCodeableConcept]: A code or group definition that describes the
   ///  intended subject of the action and its children, if any.
@@ -2328,7 +2328,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   /// [timingDateTime]: An optional value describing when the action should be
   ///  performed.
   ///
-  /// [_timingDateTime]: Extensions for timingDateTime
+  /// [timingDateTimeElement]: Extensions for timingDateTime
   ///
   /// [timingAge]: An optional value describing when the action should be
   ///  performed.
@@ -2353,38 +2353,38 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   /// [groupingBehavior]: Defines the grouping behavior for the action and its
   ///  children.
   ///
-  /// [_groupingBehavior]: Extensions for groupingBehavior
+  /// [groupingBehaviorElement]: Extensions for groupingBehavior
   ///
   /// [selectionBehavior]: Defines the selection behavior for the action and its
   ///  children.
   ///
-  /// [_selectionBehavior]: Extensions for selectionBehavior
+  /// [selectionBehaviorElement]: Extensions for selectionBehavior
   ///
   /// [requiredBehavior]: Defines the required behavior for the action.
   ///
-  /// [_requiredBehavior]: Extensions for requiredBehavior
+  /// [requiredBehaviorElement]: Extensions for requiredBehavior
   ///
   /// [precheckBehavior]: Defines whether the action should usually be
   ///  preselected.
   ///
-  /// [_precheckBehavior]: Extensions for precheckBehavior
+  /// [precheckBehaviorElement]: Extensions for precheckBehavior
   ///
   /// [cardinalityBehavior]: Defines whether the action can be selected multiple
   ///  times.
   ///
-  /// [_cardinalityBehavior]: Extensions for cardinalityBehavior
+  /// [cardinalityBehaviorElement]: Extensions for cardinalityBehavior
   ///
   /// [definitionCanonical]: A reference to an ActivityDefinition that describes
   /// the action to be taken in detail, or a PlanDefinition that describes a
   ///  series of actions to be taken.
   ///
-  /// [_definitionCanonical]: Extensions for definitionCanonical
+  /// [definitionCanonicalElement]: Extensions for definitionCanonical
   ///
   /// [definitionUri]: A reference to an ActivityDefinition that describes the
   /// action to be taken in detail, or a PlanDefinition that describes a series
   ///  of actions to be taken.
   ///
-  /// [_definitionUri]: Extensions for definitionUri
+  /// [definitionUriElement]: Extensions for definitionUri
   ///
   /// [transform]: A reference to a StructureMap resource that defines a
   /// transform that can be executed to produce the intent resource using the
@@ -2463,7 +2463,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PlanDefinitionAction.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2481,7 +2481,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
 class PlanDefinitionCondition with _$PlanDefinitionCondition {
   PlanDefinitionCondition._();
 
-  /// [PlanDefinition_Condition]: This resource allows for the definition of
+  /// [PlanDefinitionCondition]: This resource allows for the definition of
   /// various types of plans as a sharable, consumable, and executable artifact.
   /// The resource is general enough to support the description of a broad range
   /// of clinical artifacts such as clinical decision support rules, order sets
@@ -2490,7 +2490,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2513,7 +2513,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   ///
   /// [kind]: The kind of condition.
   ///
-  /// [_kind]: Extensions for kind
+  /// [kindElement]: Extensions for kind
   ///
   /// [expression]: An expression that returns true or false, indicating whether
   ///  the condition is satisfied.
@@ -2530,7 +2530,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PlanDefinitionCondition.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionCondition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2548,7 +2548,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
 class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedAction._();
 
-  /// [PlanDefinition_RelatedAction]: This resource allows for the definition of
+  /// [PlanDefinitionRelatedAction]: This resource allows for the definition of
   /// various types of plans as a sharable, consumable, and executable artifact.
   /// The resource is general enough to support the description of a broad range
   /// of clinical artifacts such as clinical decision support rules, order sets
@@ -2557,7 +2557,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2580,11 +2580,11 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   ///
   /// [actionId]: The element id of the related action.
   ///
-  /// [_actionId]: Extensions for actionId
+  /// [actionIdElement]: Extensions for actionId
   ///
   /// [relationship]: The relationship of this action to the related action.
   ///
-  /// [_relationship]: Extensions for relationship
+  /// [relationshipElement]: Extensions for relationship
   ///
   /// [offsetDuration]: A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
@@ -2607,7 +2607,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PlanDefinitionRelatedAction.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionRelatedAction.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2626,7 +2626,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
 class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   PlanDefinitionParticipant._();
 
-  /// [PlanDefinition_Participant]: This resource allows for the definition of
+  /// [PlanDefinitionParticipant]: This resource allows for the definition of
   /// various types of plans as a sharable, consumable, and executable artifact.
   /// The resource is general enough to support the description of a broad range
   /// of clinical artifacts such as clinical decision support rules, order sets
@@ -2635,7 +2635,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2658,7 +2658,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   ///
   /// [type]: The type of participant in the action.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [role]: The role the participant should play in performing the described
   ///  action.
@@ -2675,7 +2675,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PlanDefinitionParticipant.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionParticipant.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2694,7 +2694,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
 class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   PlanDefinitionDynamicValue._();
 
-  /// [PlanDefinition_DynamicValue]: This resource allows for the definition of
+  /// [PlanDefinitionDynamicValue]: This resource allows for the definition of
   /// various types of plans as a sharable, consumable, and executable artifact.
   /// The resource is general enough to support the description of a broad range
   /// of clinical artifacts such as clinical decision support rules, order sets
@@ -2703,7 +2703,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2733,7 +2733,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   /// well as indexers ([x]) to traverse multiple-cardinality sub-elements (see
   ///  the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [expression]: An expression specifying the value of the customized
   ///  element.
@@ -2749,7 +2749,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PlanDefinitionDynamicValue.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionDynamicValue.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2787,11 +2787,11 @@ class Questionnaire with Resource, _$Questionnaire {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2805,7 +2805,7 @@ class Questionnaire with Resource, _$Questionnaire {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2834,7 +2834,7 @@ class Questionnaire with Resource, _$Questionnaire {
   /// canonical reference. It SHALL remain the same when the questionnaire is
   ///  stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this
   /// questionnaire when it is represented in other formats, or referenced in a
@@ -2848,17 +2848,17 @@ class Questionnaire with Resource, _$Questionnaire {
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the questionnaire. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the questionnaire.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [derivedFrom]: The URL of a Questionnaire that this Questionnaire is based
   ///  on.
@@ -2866,30 +2866,30 @@ class Questionnaire with Resource, _$Questionnaire {
   /// [status]: The status of this questionnaire. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this questionnaire is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [subjectType]: The types of subjects that can be the subject of responses
   ///  created for the questionnaire.
   ///
-  /// [_subjectType]: Extensions for subjectType
+  /// [subjectTypeElement]: Extensions for subjectType
   ///
   /// [date]: The date  (and optionally time) when the questionnaire was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the questionnaire changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  questionnaire.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -2897,7 +2897,7 @@ class Questionnaire with Resource, _$Questionnaire {
   /// [description]: A free text natural language description of the
   ///  questionnaire from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -2911,25 +2911,25 @@ class Questionnaire with Resource, _$Questionnaire {
   /// [purpose]: Explanation of why this questionnaire is needed and why it has
   ///  been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the questionnaire and/or
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the questionnaire.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the questionnaire content was
   ///  or is planned to be in active use.
@@ -2995,7 +2995,7 @@ class Questionnaire with Resource, _$Questionnaire {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Questionnaire.fromYaml(dynamic yaml) => yaml is String
       ? Questionnaire.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3013,7 +3013,7 @@ class Questionnaire with Resource, _$Questionnaire {
 class QuestionnaireItem with _$QuestionnaireItem {
   QuestionnaireItem._();
 
-  /// [Questionnaire_Item]: A structured set of questions intended to guide the
+  /// [QuestionnaireItem]: A structured set of questions intended to guide the
   /// collection of answers from end-users. Questionnaires provide detailed
   /// control over order, presentation, phraseology and grouping to allow
   ///  coherent, consistent data collection.
@@ -3021,7 +3021,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3045,7 +3045,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   /// [linkId]: An identifier that is unique within the Questionnaire allowing
   ///  linkage to the equivalent item in a QuestionnaireResponse resource.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [definition]: This element is a URI that refers to an
   ///
@@ -3064,7 +3064,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   /// * answerValueSet (ElementDefinition.binding)
   /// * options (ElementDefinition.binding).
   ///
-  /// [_definition]: Extensions for definition
+  /// [definitionElement]: Extensions for definition
   ///
   /// [code]: A terminology code that corresponds to this group or question
   ///  (e.g. a code from LOINC, which defines many questions and answers).
@@ -3073,18 +3073,18 @@ class QuestionnaireItem with _$QuestionnaireItem {
   /// text within the questionnaire used for reference by the individual
   ///  completing the questionnaire.
   ///
-  /// [_prefix]: Extensions for prefix
+  /// [prefixElement]: Extensions for prefix
   ///
   /// [text]: The name of a section, the text of a question or text content for
   ///  a display item.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [type]: The type of questionnaire item this is - whether text for display,
   /// a grouping of other items or a particular type of data to be captured
   ///  (string, integer, coded choice, etc.).
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [enableWhen]: A constraint indicating that this item should only be
   /// enabled (displayed/allow answers to be captured) when the specified
@@ -3093,29 +3093,29 @@ class QuestionnaireItem with _$QuestionnaireItem {
   /// [enableBehavior]: Controls how multiple enableWhen values are interpreted
   ///  -  whether all or any must be true.
   ///
-  /// [_enableBehavior]: Extensions for enableBehavior
+  /// [enableBehaviorElement]: Extensions for enableBehavior
   ///
   /// [required]: An indication, if true, that the item must be present in a
   /// "completed" QuestionnaireResponse.  If false, the item may be skipped when
   ///  answering the questionnaire.
   ///
-  /// [_required]: Extensions for required
+  /// [requiredElement]: Extensions for required
   ///
   /// [repeats]: An indication, if true, that the item may occur multiple times
   /// in the response, collecting multiple answers for questions or multiple
   ///  sets of answers for groups.
   ///
-  /// [_repeats]: Extensions for repeats
+  /// [repeatsElement]: Extensions for repeats
   ///
   /// [readOnly]: An indication, when true, that the value cannot be changed by
   ///  a human respondent to the Questionnaire.
   ///
-  /// [_readOnly]: Extensions for readOnly
+  /// [readOnlyElement]: Extensions for readOnly
   ///
   /// [maxLength]: The maximum number of characters that are permitted in the
   ///  answer to be considered a "valid" QuestionnaireResponse.
   ///
-  /// [_maxLength]: Extensions for maxLength
+  /// [maxLengthElement]: Extensions for maxLength
   ///
   /// [answerValueSet]: A reference to a value set containing a list of codes
   ///  representing permitted answers for a "choice" or "open-choice" question.
@@ -3165,7 +3165,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory QuestionnaireItem.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3183,7 +3183,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
 class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   QuestionnaireEnableWhen._();
 
-  /// [Questionnaire_EnableWhen]: A structured set of questions intended to
+  /// [QuestionnaireEnableWhen]: A structured set of questions intended to
   /// guide the collection of answers from end-users. Questionnaires provide
   /// detailed control over order, presentation, phraseology and grouping to
   ///  allow coherent, consistent data collection.
@@ -3191,7 +3191,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3215,46 +3215,46 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   /// [question]: The linkId for the question whose answer (or lack of answer)
   ///  governs whether this item is enabled.
   ///
-  /// [_question]: Extensions for question
+  /// [questionElement]: Extensions for question
   ///
   /// [operator]: Specifies the criteria by which the question is enabled.
   ///
-  /// [_operator]: Extensions for operator
+  /// [operatorElement]: Extensions for operator
   ///
   /// [answerBoolean]: A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
   ///
-  /// [_answerBoolean]: Extensions for answerBoolean
+  /// [answerBooleanElement]: Extensions for answerBoolean
   ///
   /// [answerDecimal]: A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
   ///
-  /// [_answerDecimal]: Extensions for answerDecimal
+  /// [answerDecimalElement]: Extensions for answerDecimal
   ///
   /// [answerInteger]: A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
   ///
-  /// [_answerInteger]: Extensions for answerInteger
+  /// [answerIntegerElement]: Extensions for answerInteger
   ///
   /// [answerDate]: A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
   ///
-  /// [_answerDate]: Extensions for answerDate
+  /// [answerDateElement]: Extensions for answerDate
   ///
   /// [answerDateTime]: A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
   ///
-  /// [_answerDateTime]: Extensions for answerDateTime
+  /// [answerDateTimeElement]: Extensions for answerDateTime
   ///
   /// [answerTime]: A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
   ///
-  /// [_answerTime]: Extensions for answerTime
+  /// [answerTimeElement]: Extensions for answerTime
   ///
   /// [answerString]: A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
   ///
-  /// [_answerString]: Extensions for answerString
+  /// [answerStringElement]: Extensions for answerString
   ///
   /// [answerCoding]: A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
@@ -3295,7 +3295,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory QuestionnaireEnableWhen.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireEnableWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3313,7 +3313,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
 class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   QuestionnaireAnswerOption._();
 
-  /// [Questionnaire_AnswerOption]: A structured set of questions intended to
+  /// [QuestionnaireAnswerOption]: A structured set of questions intended to
   /// guide the collection of answers from end-users. Questionnaires provide
   /// detailed control over order, presentation, phraseology and grouping to
   ///  allow coherent, consistent data collection.
@@ -3321,7 +3321,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3345,22 +3345,22 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   /// [valueInteger]: A potential answer that's allowed as the answer to this
   ///  question.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueDate]: A potential answer that's allowed as the answer to this
   ///  question.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueTime]: A potential answer that's allowed as the answer to this
   ///  question.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueString]: A potential answer that's allowed as the answer to this
   ///  question.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueCoding]: A potential answer that's allowed as the answer to this
   ///  question.
@@ -3371,7 +3371,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   /// [initialSelected]: Indicates whether the answer value is selected when the
   ///  list of possible answers is initially shown.
   ///
-  /// [_initialSelected]: Extensions for initialSelected
+  /// [initialSelectedElement]: Extensions for initialSelected
   factory QuestionnaireAnswerOption({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3393,7 +3393,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory QuestionnaireAnswerOption.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireAnswerOption.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3412,7 +3412,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
 class QuestionnaireInitial with _$QuestionnaireInitial {
   QuestionnaireInitial._();
 
-  /// [Questionnaire_Initial]: A structured set of questions intended to guide
+  /// [QuestionnaireInitial]: A structured set of questions intended to guide
   /// the collection of answers from end-users. Questionnaires provide detailed
   /// control over order, presentation, phraseology and grouping to allow
   ///  coherent, consistent data collection.
@@ -3420,7 +3420,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3443,35 +3443,35 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
   ///
   /// [valueBoolean]: The actual value to for an initial answer.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueDecimal]: The actual value to for an initial answer.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueInteger]: The actual value to for an initial answer.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueDate]: The actual value to for an initial answer.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueDateTime]: The actual value to for an initial answer.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueTime]: The actual value to for an initial answer.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueString]: The actual value to for an initial answer.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueUri]: The actual value to for an initial answer.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueAttachment]: The actual value to for an initial answer.
   ///
@@ -3509,7 +3509,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory QuestionnaireInitial.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireInitial.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3544,11 +3544,11 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -3562,7 +3562,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -3591,7 +3591,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   ///
   /// [timeAspect]: Time aspect of specimen collection (duration or offset).
   ///
-  /// [_timeAspect]: Extensions for timeAspect
+  /// [timeAspectElement]: Extensions for timeAspect
   ///
   /// [collection]: The action to be performed for collecting the specimen.
   ///
@@ -3623,7 +3623,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SpecimenDefinition.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3641,13 +3641,13 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
 class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   SpecimenDefinitionTypeTested._();
 
-  /// [SpecimenDefinition_TypeTested]: A kind of specimen with associated set of
+  /// [SpecimenDefinitionTypeTested]: A kind of specimen with associated set of
   ///  requirements.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3670,20 +3670,20 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   ///
   /// [isDerived]: Primary of secondary specimen.
   ///
-  /// [_isDerived]: Extensions for isDerived
+  /// [isDerivedElement]: Extensions for isDerived
   ///
   /// [type]: The kind of specimen conditioned for testing expected by lab.
   ///
   /// [preference]: The preference for this type of conditioned specimen.
   ///
-  /// [_preference]: Extensions for preference
+  /// [preferenceElement]: Extensions for preference
   ///
   /// [container]: The specimen's container.
   ///
   /// [requirement]: Requirements for delivery and special handling of this kind
   ///  of conditioned specimen.
   ///
-  /// [_requirement]: Extensions for requirement
+  /// [requirementElement]: Extensions for requirement
   ///
   /// [retentionTime]: The usual time that a specimen of this kind is retained
   /// after the ordered tests are completed, for the purpose of additional
@@ -3715,7 +3715,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SpecimenDefinitionTypeTested.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenDefinitionTypeTested.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3734,13 +3734,13 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
 class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   SpecimenDefinitionContainer._();
 
-  /// [SpecimenDefinition_Container]: A kind of specimen with associated set of
+  /// [SpecimenDefinitionContainer]: A kind of specimen with associated set of
   ///  requirements.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3769,7 +3769,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   ///
   /// [description]: The textual description of the kind of container.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [capacity]: The capacity (volume or other measure) of this kind of
   ///  container.
@@ -3780,7 +3780,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   /// [minimumVolumeString]: The minimum volume to be conditioned in the
   ///  container.
   ///
-  /// [_minimumVolumeString]: Extensions for minimumVolumeString
+  /// [minimumVolumeStringElement]: Extensions for minimumVolumeString
   ///
   /// [additive]: Substance introduced in the kind of container to preserve,
   ///  maintain or enhance the specimen. Examples: Formalin, Citrate, EDTA.
@@ -3788,7 +3788,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   /// [preparation]: Special processing that should be applied to the container
   ///  for this kind of specimen.
   ///
-  /// [_preparation]: Extensions for preparation
+  /// [preparationElement]: Extensions for preparation
   factory SpecimenDefinitionContainer({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3810,7 +3810,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SpecimenDefinitionContainer.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenDefinitionContainer.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3829,13 +3829,13 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
 class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   SpecimenDefinitionAdditive._();
 
-  /// [SpecimenDefinition_Additive]: A kind of specimen with associated set of
+  /// [SpecimenDefinitionAdditive]: A kind of specimen with associated set of
   ///  requirements.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3874,7 +3874,7 @@ class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SpecimenDefinitionAdditive.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenDefinitionAdditive.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3893,13 +3893,13 @@ class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
 class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   SpecimenDefinitionHandling._();
 
-  /// [SpecimenDefinition_Handling]: A kind of specimen with associated set of
+  /// [SpecimenDefinitionHandling]: A kind of specimen with associated set of
   ///  requirements.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3933,7 +3933,7 @@ class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   /// [instruction]: Additional textual instructions for the preservation or
   ///  transport of the specimen. For instance, 'Protect from light exposure'.
   ///
-  /// [_instruction]: Extensions for instruction
+  /// [instructionElement]: Extensions for instruction
   factory SpecimenDefinitionHandling({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3948,7 +3948,7 @@ class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SpecimenDefinitionHandling.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenDefinitionHandling.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))

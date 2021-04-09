@@ -21,7 +21,7 @@ class Annotation with _$Annotation {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -32,15 +32,15 @@ class Annotation with _$Annotation {
   ///
   /// [authorString]: The individual responsible for making the annotation.
   ///
-  /// [_authorString]: Extensions for authorString
+  /// [authorStringElement]: Extensions for authorString
   ///
   /// [time]: Indicates when this particular annotation was made.
   ///
-  /// [_time]: Extensions for time
+  /// [timeElement]: Extensions for time
   ///
   /// [text]: The text of the annotation in markdown format.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   factory Annotation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -56,7 +56,7 @@ class Annotation with _$Annotation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Annotation.fromYaml(dynamic yaml) => yaml is String
       ? Annotation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -79,7 +79,7 @@ class Attachment with _$Attachment {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -90,39 +90,39 @@ class Attachment with _$Attachment {
   /// allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
   ///
-  /// [_contentType]: Extensions for contentType
+  /// [contentTypeElement]: Extensions for contentType
   ///
   /// [language]: The human language of the content. The value can be any valid
   ///  value according to BCP 47.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [data]: The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
   ///
-  /// [_data]: Extensions for data
+  /// [dataElement]: Extensions for data
   ///
   /// [url]: A location where the data can be accessed.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [size]: The number of bytes of data that make up this attachment (before
   ///  base64 encoding, if that is done).
   ///
-  /// [_size]: Extensions for size
+  /// [sizeElement]: Extensions for size
   ///
   /// [hash]: The calculated hash of the data using SHA-1. Represented using
   ///  base64.
   ///
-  /// [_hash]: Extensions for hash
+  /// [hashElement]: Extensions for hash
   ///
   /// [title]: A label or set of text to display in place of the data.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [creation]: The date that the attachment was first created.
   ///
-  /// [_creation]: Extensions for creation
+  /// [creationElement]: Extensions for creation
   factory Attachment({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -147,7 +147,7 @@ class Attachment with _$Attachment {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Attachment.fromYaml(dynamic yaml) => yaml is String
       ? Attachment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -171,7 +171,7 @@ class Identifier with _$Identifier {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -180,7 +180,7 @@ class Identifier with _$Identifier {
   ///
   /// [use]: The purpose of this identifier.
   ///
-  /// [_use]: Extensions for use
+  /// [useElement]: Extensions for use
   ///
   /// [type]: A coded type for the identifier that can be used to determine
   ///  which identifier to use for a specific purpose.
@@ -188,12 +188,12 @@ class Identifier with _$Identifier {
   /// [system]: Establishes the namespace for the value - that is, a URL that
   ///  describes a set values that are unique.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [value]: The portion of the identifier typically relevant to the user and
   ///  which is unique within the context of the system.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [period]: Time period during which identifier is/was valid for use.
   ///
@@ -215,7 +215,7 @@ class Identifier with _$Identifier {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Identifier.fromYaml(dynamic yaml) => yaml is String
       ? Identifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -239,7 +239,7 @@ class CodeableConcept with _$CodeableConcept {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -252,7 +252,7 @@ class CodeableConcept with _$CodeableConcept {
   /// seen/selected/uttered by the user who entered the data and/or which
   ///  represents the intended meaning of the user.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   factory CodeableConcept({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -264,7 +264,7 @@ class CodeableConcept with _$CodeableConcept {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeableConcept.fromYaml(dynamic yaml) => yaml is String
       ? CodeableConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -287,7 +287,7 @@ class Coding with _$Coding {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -297,7 +297,7 @@ class Coding with _$Coding {
   /// [system]: The identification of the code system that defines the meaning
   ///  of the symbol in the code.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [version]: The version of the code system which was used when choosing
   /// this code. Note that a well-maintained code system does not need the
@@ -306,23 +306,23 @@ class Coding with _$Coding {
   /// meaning is not guaranteed to be consistent, the version SHOULD be
   ///  exchanged.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [code]: A symbol in syntax defined by the system. The symbol may be a
   /// predefined code or an expression in a syntax defined by the coding system
   ///  (e.g. post-coordination).
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [display]: A representation of the meaning of the code in the system,
   ///  following the rules of the system.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   ///
   /// [userSelected]: Indicates that this coding was chosen by a user directly -
   ///  e.g. off a pick list of available items (codes or displays).
   ///
-  /// [_userSelected]: Extensions for userSelected
+  /// [userSelectedElement]: Extensions for userSelected
   factory Coding({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -341,7 +341,7 @@ class Coding with _$Coding {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Coding.fromYaml(dynamic yaml) => yaml is String
       ? Coding.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -366,7 +366,7 @@ class Quantity with _$Quantity {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -376,28 +376,28 @@ class Quantity with _$Quantity {
   /// [value]: The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [comparator]: How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [_comparator]: Extensions for comparator
+  /// [comparatorElement]: Extensions for comparator
   ///
   /// [unit]: A human-readable form of the unit.
   ///
-  /// [_unit]: Extensions for unit
+  /// [unitElement]: Extensions for unit
   ///
   /// [system]: The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [code]: A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   factory Quantity({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -417,7 +417,7 @@ class Quantity with _$Quantity {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Quantity.fromYaml(dynamic yaml) => yaml is String
       ? Quantity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -440,7 +440,7 @@ class FhirDuration with _$FhirDuration {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -450,28 +450,28 @@ class FhirDuration with _$FhirDuration {
   /// [value]: The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [comparator]: How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [_comparator]: Extensions for comparator
+  /// [comparatorElement]: Extensions for comparator
   ///
   /// [unit]: A human-readable form of the unit.
   ///
-  /// [_unit]: Extensions for unit
+  /// [unitElement]: Extensions for unit
   ///
   /// [system]: The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [code]: A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   factory FhirDuration({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -491,7 +491,7 @@ class FhirDuration with _$FhirDuration {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory FhirDuration.fromYaml(dynamic yaml) => yaml is String
       ? FhirDuration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -514,7 +514,7 @@ class Distance with _$Distance {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -524,28 +524,28 @@ class Distance with _$Distance {
   /// [value]: The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [comparator]: How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [_comparator]: Extensions for comparator
+  /// [comparatorElement]: Extensions for comparator
   ///
   /// [unit]: A human-readable form of the unit.
   ///
-  /// [_unit]: Extensions for unit
+  /// [unitElement]: Extensions for unit
   ///
   /// [system]: The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [code]: A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   factory Distance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -565,7 +565,7 @@ class Distance with _$Distance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Distance.fromYaml(dynamic yaml) => yaml is String
       ? Distance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -591,7 +591,7 @@ class Count with _$Count {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -601,28 +601,28 @@ class Count with _$Count {
   /// [value]: The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [comparator]: How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [_comparator]: Extensions for comparator
+  /// [comparatorElement]: Extensions for comparator
   ///
   /// [unit]: A human-readable form of the unit.
   ///
-  /// [_unit]: Extensions for unit
+  /// [unitElement]: Extensions for unit
   ///
   /// [system]: The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [code]: A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   factory Count({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -642,7 +642,7 @@ class Count with _$Count {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Count.fromYaml(dynamic yaml) => yaml is String
       ? Count.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -664,7 +664,7 @@ class Money with _$Money {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -673,11 +673,11 @@ class Money with _$Money {
   ///
   /// [value]: Numerical value (with implicit precision).
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [currency]: ISO 4217 Currency Code.
   ///
-  /// [_currency]: Extensions for currency
+  /// [currencyElement]: Extensions for currency
   factory Money({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -690,7 +690,7 @@ class Money with _$Money {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Money.fromYaml(dynamic yaml) => yaml is String
       ? Money.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -713,7 +713,7 @@ class Age with _$Age {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -723,28 +723,28 @@ class Age with _$Age {
   /// [value]: The value of the measured amount. The value includes an implicit
   ///  precision in the presentation of the value.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [comparator]: How the value should be understood and represented - whether
   /// the actual value is greater or less than the stated value due to
   /// measurement issues; e.g. if the comparator is "<" , then the real value is
   ///  < stated value.
   ///
-  /// [_comparator]: Extensions for comparator
+  /// [comparatorElement]: Extensions for comparator
   ///
   /// [unit]: A human-readable form of the unit.
   ///
-  /// [_unit]: Extensions for unit
+  /// [unitElement]: Extensions for unit
   ///
   /// [system]: The identification of the system that provides the coded form of
   ///  the unit.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [code]: A computer processable form of the unit in some unit
   ///  representation system.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   factory Age({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -763,7 +763,7 @@ class Age with _$Age {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Age.fromYaml(dynamic yaml) => yaml is String
       ? Age.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -784,7 +784,7 @@ class Range with _$Range {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -804,7 +804,7 @@ class Range with _$Range {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Range.fromYaml(dynamic yaml) => yaml is String
       ? Range.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -827,7 +827,7 @@ class Period with _$Period {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -836,14 +836,14 @@ class Period with _$Period {
   ///
   /// [start]: The start of the period. The boundary is inclusive.
   ///
-  /// [_start]: Extensions for start
+  /// [startElement]: Extensions for start
   ///
   /// [end]: The end of the period. If the end of the period is missing, it
   /// means no end was known or planned at the time the instance was created.
   /// The start may be in the past, and the end date in the future, which means
   ///  that period is expected/planned to end at that time.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   factory Period({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -856,7 +856,7 @@ class Period with _$Period {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Period.fromYaml(dynamic yaml) => yaml is String
       ? Period.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -879,7 +879,7 @@ class Ratio with _$Ratio {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -899,7 +899,7 @@ class Ratio with _$Ratio {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Ratio.fromYaml(dynamic yaml) => yaml is String
       ? Ratio.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -922,7 +922,7 @@ class SampledData with _$SampledData {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -935,37 +935,37 @@ class SampledData with _$SampledData {
   /// [period]: The length of time between sampling times, measured in
   ///  milliseconds.
   ///
-  /// [_period]: Extensions for period
+  /// [periodElement]: Extensions for period
   ///
   /// [factor]: A correction factor that is applied to the sampled data points
   ///  before they are added to the origin.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [lowerLimit]: The lower limit of detection of the measured points. This is
   /// needed if any of the data points have the value "L" (lower than detection
   ///  limit).
   ///
-  /// [_lowerLimit]: Extensions for lowerLimit
+  /// [lowerLimitElement]: Extensions for lowerLimit
   ///
   /// [upperLimit]: The upper limit of detection of the measured points. This is
   /// needed if any of the data points have the value "U" (higher than detection
   ///  limit).
   ///
-  /// [_upperLimit]: Extensions for upperLimit
+  /// [upperLimitElement]: Extensions for upperLimit
   ///
   /// [dimensions]: The number of sample points at each time point. If this
   /// value is greater than one, then the dimensions will be interlaced - all
   ///  the sample points for a point in time will be recorded at once.
   ///
-  /// [_dimensions]: Extensions for dimensions
+  /// [dimensionsElement]: Extensions for dimensions
   ///
   /// [data]: A series of data points which are decimal values separated by a
   /// single space (character u20). The special values "E" (error), "L" (below
   /// detection limit) and "U" (above detection limit) can also be used in place
   ///  of a decimal value.
   ///
-  /// [_data]: Extensions for data
+  /// [dataElement]: Extensions for data
   factory SampledData({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -987,7 +987,7 @@ class SampledData with _$SampledData {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SampledData.fromYaml(dynamic yaml) => yaml is String
       ? SampledData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1014,7 +1014,7 @@ class Signature with _$Signature {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1028,7 +1028,7 @@ class Signature with _$Signature {
   ///
   /// [when]: When the digital signature was signed.
   ///
-  /// [_when]: Extensions for when
+  /// [whenElement]: Extensions for when
   ///
   /// [who]: A reference to an application-usable description of the identity
   ///  that signed  (e.g. the signature used their private key).
@@ -1039,19 +1039,19 @@ class Signature with _$Signature {
   /// [targetFormat]: A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
   ///
-  /// [_targetFormat]: Extensions for targetFormat
+  /// [targetFormatElement]: Extensions for targetFormat
   ///
   /// [sigFormat]: A mime type that indicates the technical format of the
   /// signature. Important mime types are application/signature+xml for X ML
   /// DigSig, application/jose for JWS, and image/* for a graphical image of a
   ///  signature, etc.
   ///
-  /// [_sigFormat]: Extensions for sigFormat
+  /// [sigFormatElement]: Extensions for sigFormat
   ///
   /// [data]: The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
   ///
-  /// [_data]: Extensions for data
+  /// [dataElement]: Extensions for data
   factory Signature({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1071,7 +1071,7 @@ class Signature with _$Signature {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Signature.fromYaml(dynamic yaml) => yaml is String
       ? Signature.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1094,7 +1094,7 @@ class HumanName with _$HumanName {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1103,34 +1103,34 @@ class HumanName with _$HumanName {
   ///
   /// [use]: Identifies the purpose for this name.
   ///
-  /// [_use]: Extensions for use
+  /// [useElement]: Extensions for use
   ///
   /// [text]: Specifies the entire name as it should be displayed e.g. on an
   /// application UI. This may be provided instead of or as well as the specific
   ///  parts.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [family]: The part of a name that links to the genealogy. In some cultures
   ///  (e.g. Eritrea) the family name of a son is the first name of his father.
   ///
-  /// [_family]: Extensions for family
+  /// [familyElement]: Extensions for family
   ///
   /// [given]: Given name.
   ///
-  /// [_given]: Extensions for given
+  /// [givenElement]: Extensions for given
   ///
   /// [prefix]: Part of the name that is acquired as a title due to academic,
   /// legal, employment or nobility status, etc. and that appears at the start
   ///  of the name.
   ///
-  /// [_prefix]: Extensions for prefix
+  /// [prefixElement]: Extensions for prefix
   ///
   /// [suffix]: Part of the name that is acquired as a title due to academic,
   /// legal, employment or nobility status, etc. and that appears at the end of
   ///  the name.
   ///
-  /// [_suffix]: Extensions for suffix
+  /// [suffixElement]: Extensions for suffix
   ///
   /// [period]: Indicates the period of time when this name was valid for the
   ///  named person.
@@ -1155,7 +1155,7 @@ class HumanName with _$HumanName {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HumanName.fromYaml(dynamic yaml) => yaml is String
       ? HumanName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1182,7 +1182,7 @@ class Address with _$Address {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1191,50 +1191,50 @@ class Address with _$Address {
   ///
   /// [use]: The purpose of this address.
   ///
-  /// [_use]: Extensions for use
+  /// [useElement]: Extensions for use
   ///
   /// [type]: Distinguishes between physical addresses (those you can visit) and
   /// mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses
   ///  are both.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [text]: Specifies the entire address as it should be displayed e.g. on a
   /// postal label. This may be provided instead of or as well as the specific
   ///  parts.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [line]: This component contains the house number, apartment number, street
   /// name, street direction,  P.O. Box number, delivery hints, and similar
   ///  address information.
   ///
-  /// [_line]: Extensions for line
+  /// [lineElement]: Extensions for line
   ///
   /// [city]: The name of the city, town, suburb, village or other community or
   ///  delivery center.
   ///
-  /// [_city]: Extensions for city
+  /// [cityElement]: Extensions for city
   ///
   /// [district]: The name of the administrative area (county).
   ///
-  /// [_district]: Extensions for district
+  /// [districtElement]: Extensions for district
   ///
   /// [state]: Sub-unit of a country with limited sovereignty in a federally
   /// organized country. A code may be used if codes are in common use (e.g. US
   ///  2 letter state codes).
   ///
-  /// [_state]: Extensions for state
+  /// [stateElement]: Extensions for state
   ///
   /// [postalCode]: A postal code designating a region defined by the postal
   ///  service.
   ///
-  /// [_postalCode]: Extensions for postalCode
+  /// [postalCodeElement]: Extensions for postalCode
   ///
   /// [country]: Country - a nation as commonly understood or generally
   ///  accepted.
   ///
-  /// [_country]: Extensions for country
+  /// [countryElement]: Extensions for country
   ///
   /// [period]: Time period when address was/is in use.
   factory Address({
@@ -1264,7 +1264,7 @@ class Address with _$Address {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Address.fromYaml(dynamic yaml) => yaml is String
       ? Address.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1288,7 +1288,7 @@ class ContactPoint with _$ContactPoint {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1298,22 +1298,22 @@ class ContactPoint with _$ContactPoint {
   /// [system]: Telecommunications form for contact point - what communications
   ///  system is required to make use of the contact.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [value]: The actual contact point details, in a form that is meaningful to
   ///  the designated communication system (i.e. phone number or email address).
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [use]: Identifies the purpose for the contact point.
   ///
-  /// [_use]: Extensions for use
+  /// [useElement]: Extensions for use
   ///
   /// [rank]: Specifies a preferred order in which to use a set of contacts.
   /// ContactPoints with lower rank values are more preferred than those with
   ///  higher rank values.
   ///
-  /// [_rank]: Extensions for rank
+  /// [rankElement]: Extensions for rank
   ///
   /// [period]: Time period when the contact point was/is in use.
   factory ContactPoint({
@@ -1334,7 +1334,7 @@ class ContactPoint with _$ContactPoint {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContactPoint.fromYaml(dynamic yaml) => yaml is String
       ? ContactPoint.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1362,7 +1362,7 @@ class Timing with _$Timing {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1385,7 +1385,7 @@ class Timing with _$Timing {
   ///
   /// [event]: Identifies specific times when the event occurs.
   ///
-  /// [_event]: Extensions for event
+  /// [eventElement]: Extensions for event
   ///
   /// [repeat]: A set of rules that describe when the event is scheduled.
   ///
@@ -1409,7 +1409,7 @@ class Timing with _$Timing {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Timing.fromYaml(dynamic yaml) => yaml is String
       ? Timing.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1426,7 +1426,7 @@ class Timing with _$Timing {
 class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
 
-  /// [Timing_Repeat]: Specifies an event that may occur multiple times. Timing
+  /// [TimingRepeat]: Specifies an event that may occur multiple times. Timing
   /// schedules are used to record when things are planned, expected or
   /// requested to occur. The most common usage is in dosage instructions for
   /// medications. They are also used when planning care of various kinds, and
@@ -1436,7 +1436,7 @@ class TimingRepeat with _$TimingRepeat {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1473,77 +1473,77 @@ class TimingRepeat with _$TimingRepeat {
   /// duration of the entire timing specification. If countMax is present, this
   ///  element indicates the lower bound of the allowed range of count values.
   ///
-  /// [_count]: Extensions for count
+  /// [countElement]: Extensions for count
   ///
   /// [countMax]: If present, indicates that the count is a range - so to
   ///  perform the action between [count] and [countMax] times.
   ///
-  /// [_countMax]: Extensions for countMax
+  /// [countMaxElement]: Extensions for countMax
   ///
   /// [duration]: How long this thing happens for when it happens. If
   /// durationMax is present, this element indicates the lower bound of the
   ///  allowed range of the duration.
   ///
-  /// [_duration]: Extensions for duration
+  /// [durationElement]: Extensions for duration
   ///
   /// [durationMax]: If present, indicates that the duration is a range - so to
   ///  perform the action between [duration] and [durationMax] time length.
   ///
-  /// [_durationMax]: Extensions for durationMax
+  /// [durationMaxElement]: Extensions for durationMax
   ///
   /// [durationUnit]: The units of time for the duration, in UCUM units.
   ///
-  /// [_durationUnit]: Extensions for durationUnit
+  /// [durationUnitElement]: Extensions for durationUnit
   ///
   /// [frequency]: The number of times to repeat the action within the specified
   /// period. If frequencyMax is present, this element indicates the lower bound
   ///  of the allowed range of the frequency.
   ///
-  /// [_frequency]: Extensions for frequency
+  /// [frequencyElement]: Extensions for frequency
   ///
   /// [frequencyMax]: If present, indicates that the frequency is a range - so
   /// to repeat between [frequency] and [frequencyMax] times within the period
   ///  or period range.
   ///
-  /// [_frequencyMax]: Extensions for frequencyMax
+  /// [frequencyMaxElement]: Extensions for frequencyMax
   ///
   /// [period]: Indicates the duration of time over which repetitions are to
   /// occur; e.g. to express "3 times per day", 3 would be the frequency and "1
   /// day" would be the period. If periodMax is present, this element indicates
   ///  the lower bound of the allowed range of the period length.
   ///
-  /// [_period]: Extensions for period
+  /// [periodElement]: Extensions for period
   ///
   /// [periodMax]: If present, indicates that the period is a range from
   ///
   /// [period] to [periodMax], allowing expressing concepts such as "do this
   ///  once every 3-5 days.
   ///
-  /// [_periodMax]: Extensions for periodMax
+  /// [periodMaxElement]: Extensions for periodMax
   ///
   /// [periodUnit]: The units of time for the period in UCUM units.
   ///
-  /// [_periodUnit]: Extensions for periodUnit
+  /// [periodUnitElement]: Extensions for periodUnit
   ///
   /// [dayOfWeek]: If one or more days of week is provided, then the action
   ///  happens only on the specified day(s).
   ///
-  /// [_dayOfWeek]: Extensions for dayOfWeek
+  /// [dayOfWeekElement]: Extensions for dayOfWeek
   ///
   /// [timeOfDay]: Specified time of day for action to take place.
   ///
-  /// [_timeOfDay]: Extensions for timeOfDay
+  /// [timeOfDayElement]: Extensions for timeOfDay
   ///
   /// [when]: An approximate time period during the day, potentially linked to
   ///  an event of daily living that indicates when the action should occur.
   ///
-  /// [_when]: Extensions for when
+  /// [whenElement]: Extensions for when
   ///
   /// [offset]: The number of minutes from the event. If the event code does not
   /// indicate whether the minutes is before or after the event, then the offset
   ///  is assumed to be after the event.
   ///
-  /// [_offset]: Extensions for offset
+  /// [offsetElement]: Extensions for offset
   factory TimingRepeat({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1586,7 +1586,7 @@ class TimingRepeat with _$TimingRepeat {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TimingRepeat.fromYaml(dynamic yaml) => yaml is String
       ? TimingRepeat.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
