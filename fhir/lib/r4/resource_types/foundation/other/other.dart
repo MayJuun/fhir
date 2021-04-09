@@ -33,11 +33,11 @@ class Basic with Resource, _$Basic {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ class Basic with Resource, _$Basic {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -83,7 +83,7 @@ class Basic with Resource, _$Basic {
   ///
   /// [created]: Identifies when the resource was first created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [author]: Indicates who was responsible for creating the resource
   ///  instance.
@@ -112,7 +112,7 @@ class Basic with Resource, _$Basic {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Basic.fromYaml(dynamic yaml) => yaml is String
       ? Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -147,16 +147,16 @@ class Binary with Resource, _$Binary {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [contentType]: MimeType of the binary content represented as a standard
   ///  MimeType (BCP 13).
   ///
-  /// [_contentType]: Extensions for contentType
+  /// [contentTypeElement]: Extensions for contentType
   ///
   /// [securityContext]: This element identifies another resource that can be
   /// used as a proxy of the security sensitivity to use when deciding and
@@ -172,7 +172,7 @@ class Binary with Resource, _$Binary {
   ///
   /// [data]: The actual content, base64 encoded.
   ///
-  /// [_data]: Extensions for data
+  /// [dataElement]: Extensions for data
   factory Binary({
     @Default(R4ResourceType.Binary)
     @JsonKey(unknownEnumValue: R4ResourceType.Binary)
@@ -193,7 +193,7 @@ class Binary with Resource, _$Binary {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Binary.fromYaml(dynamic yaml) => yaml is String
       ? Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -226,11 +226,11 @@ class Bundle with Resource, _$Bundle {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [identifier]: A persistent identifier for the bundle that won't change as
   ///  a bundle is copied from server to server.
@@ -238,19 +238,19 @@ class Bundle with Resource, _$Bundle {
   /// [type]: Indicates the purpose of this bundle - how it is intended to be
   ///  used.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [timestamp]: The date/time that the bundle was assembled - i.e. when the
   ///  resources were placed in the bundle.
   ///
-  /// [_timestamp]: Extensions for timestamp
+  /// [timestampElement]: Extensions for timestamp
   ///
   /// [total]: If a set of search matches, this is the total number of entries
   /// of type 'match' across all pages in the search.  It does not include
   /// search.mode = 'include' or 'outcome' entries and it does not provide a
   ///  count of the number of entries in the Bundle.
   ///
-  /// [_total]: Extensions for total
+  /// [totalElement]: Extensions for total
   ///
   /// [link]: A series of links that provide context to this bundle.
   ///
@@ -283,7 +283,7 @@ class Bundle with Resource, _$Bundle {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
       ? Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -300,12 +300,12 @@ class Bundle with Resource, _$Bundle {
 class BundleLink with _$BundleLink {
   BundleLink._();
 
-  /// [Bundle_Link]: A container for a collection of resources.
+  /// [BundleLink]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -329,11 +329,11 @@ class BundleLink with _$BundleLink {
   /// [relation]: A name which details the functional use for this link - see
   /// [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
   ///
-  /// [_relation]: Extensions for relation
+  /// [relationElement]: Extensions for relation
   ///
   /// [url]: The reference details for the link.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   factory BundleLink({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -347,7 +347,7 @@ class BundleLink with _$BundleLink {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
       ? BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -365,12 +365,12 @@ class BundleLink with _$BundleLink {
 class BundleEntry with _$BundleEntry {
   BundleEntry._();
 
-  /// [Bundle_Entry]: A container for a collection of resources.
+  /// [BundleEntry]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -402,7 +402,7 @@ class BundleEntry with _$BundleEntry {
   ///  specifying a temporary id for reference in the bundle)
   /// * Results from operations might involve resources that are not identified.
   ///
-  /// [_fullUrl]: Extensions for fullUrl
+  /// [fullUrlElement]: Extensions for fullUrl
   ///
   /// [resource]: The Resource for the entry. The purpose/meaning of the
   ///  resource is determined by the Bundle.type.
@@ -433,7 +433,7 @@ class BundleEntry with _$BundleEntry {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
       ? BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -451,12 +451,12 @@ class BundleEntry with _$BundleEntry {
 class BundleSearch with _$BundleSearch {
   BundleSearch._();
 
-  /// [Bundle_Search]: A container for a collection of resources.
+  /// [BundleSearch]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -481,11 +481,11 @@ class BundleSearch with _$BundleSearch {
   /// match or because of an _include requirement, or to convey information or
   ///  warning information about the search process.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [score]: When searching, the server's search ranking score for the entry.
   ///
-  /// [_score]: Extensions for score
+  /// [scoreElement]: Extensions for score
   factory BundleSearch({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -499,7 +499,7 @@ class BundleSearch with _$BundleSearch {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleSearch.fromYaml(dynamic yaml) => yaml is String
       ? BundleSearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -517,12 +517,12 @@ class BundleSearch with _$BundleSearch {
 class BundleRequest with _$BundleRequest {
   BundleRequest._();
 
-  /// [Bundle_Request]: A container for a collection of resources.
+  /// [BundleRequest]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -547,29 +547,29 @@ class BundleRequest with _$BundleRequest {
   /// executed for this entry. In a history bundle, this indicates the HTTP
   ///  action that occurred.
   ///
-  /// [_method]: Extensions for method
+  /// [methodElement]: Extensions for method
   ///
   /// [url]: The URL for this entry, relative to the root (the address to which
   ///  the request is posted).
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [ifNoneMatch]: If the ETag values match, return a 304 Not Modified status.
   ///  See the API documentation for ["Conditional Read"](http.html#cread).
   ///
-  /// [_ifNoneMatch]: Extensions for ifNoneMatch
+  /// [ifNoneMatchElement]: Extensions for ifNoneMatch
   ///
   /// [ifModifiedSince]: Only perform the operation if the last updated date
   /// matches. See the API documentation for ["Conditional
   ///  Read"](http.html#cread).
   ///
-  /// [_ifModifiedSince]: Extensions for ifModifiedSince
+  /// [ifModifiedSinceElement]: Extensions for ifModifiedSince
   ///
   /// [ifMatch]: Only perform the operation if the Etag value matches. For more
   /// information, see the API section ["Managing Resource
   ///  Contention"](http.html#concurrency).
   ///
-  /// [_ifMatch]: Extensions for ifMatch
+  /// [ifMatchElement]: Extensions for ifMatch
   ///
   /// [ifNoneExist]: Instruct the server not to perform the create if a
   /// specified resource already exists. For further information, see the API
@@ -577,7 +577,7 @@ class BundleRequest with _$BundleRequest {
   /// the query portion of the URL - what follows the "?" (not including the
   ///  "?").
   ///
-  /// [_ifNoneExist]: Extensions for ifNoneExist
+  /// [ifNoneExistElement]: Extensions for ifNoneExist
   factory BundleRequest({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -600,7 +600,7 @@ class BundleRequest with _$BundleRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleRequest.fromYaml(dynamic yaml) => yaml is String
       ? BundleRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -618,12 +618,12 @@ class BundleRequest with _$BundleRequest {
 class BundleResponse with _$BundleResponse {
   BundleResponse._();
 
-  /// [Bundle_Response]: A container for a collection of resources.
+  /// [BundleResponse]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -648,24 +648,24 @@ class BundleResponse with _$BundleResponse {
   /// SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the
   ///  standard HTTP description associated with the status code.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [location]: The location header created by processing this operation,
   ///  populated if the operation returns a location.
   ///
-  /// [_location]: Extensions for location
+  /// [locationElement]: Extensions for location
   ///
   /// [etag]: The Etag for the resource, if the operation for the entry produced
   /// a versioned resource (see [Resource Metadata and
   /// Versioning](http.html#versioning) and [Managing Resource
   ///  Contention](http.html#concurrency)).
   ///
-  /// [_etag]: Extensions for etag
+  /// [etagElement]: Extensions for etag
   ///
   /// [lastModified]: The date/time that the resource was modified on the
   ///  server.
   ///
-  /// [_lastModified]: Extensions for lastModified
+  /// [lastModifiedElement]: Extensions for lastModified
   ///
   /// [outcome]: An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
@@ -687,7 +687,7 @@ class BundleResponse with _$BundleResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleResponse.fromYaml(dynamic yaml) => yaml is String
       ? BundleResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -722,11 +722,11 @@ class Linkage with Resource, _$Linkage {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -740,7 +740,7 @@ class Linkage with Resource, _$Linkage {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -764,7 +764,7 @@ class Linkage with Resource, _$Linkage {
   /// [active]: Indicates whether the asserted set of linkages are considered to
   ///  be "in effect".
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [author]: Identifies the user or organization responsible for asserting
   /// the linkages as well as the user or organization who establishes the
@@ -796,7 +796,7 @@ class Linkage with Resource, _$Linkage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Linkage.fromYaml(dynamic yaml) => yaml is String
       ? Linkage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -814,13 +814,13 @@ class Linkage with Resource, _$Linkage {
 class LinkageItem with _$LinkageItem {
   LinkageItem._();
 
-  /// [Linkage_Item]: Identifies two or more records (resource instances) that
+  /// [LinkageItem]: Identifies two or more records (resource instances) that
   ///  refer to the same real-world "occurrence".
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -844,7 +844,7 @@ class LinkageItem with _$LinkageItem {
   /// [type]: Distinguishes which item is "source of truth" (if any) and which
   ///  items are no longer considered to be current representations.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [resource]: The resource instance being linked as part of the group.
   factory LinkageItem({
@@ -859,7 +859,7 @@ class LinkageItem with _$LinkageItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory LinkageItem.fromYaml(dynamic yaml) => yaml is String
       ? LinkageItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -897,11 +897,11 @@ class MessageHeader with Resource, _$MessageHeader {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -915,7 +915,7 @@ class MessageHeader with Resource, _$MessageHeader {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -948,7 +948,7 @@ class MessageHeader with Resource, _$MessageHeader {
   /// "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively uri
   ///  to the EventDefinition.
   ///
-  /// [_eventUri]: Extensions for eventUri
+  /// [eventUriElement]: Extensions for eventUri
   ///
   /// [destination]: The destination application which the message is intended
   ///  for.
@@ -1013,7 +1013,7 @@ class MessageHeader with Resource, _$MessageHeader {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1031,7 +1031,7 @@ class MessageHeader with Resource, _$MessageHeader {
 class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
 
-  /// [MessageHeader_Destination]: The header for a message exchange that is
+  /// [MessageHeaderDestination]: The header for a message exchange that is
   /// either requesting or responding to an action.  The reference(s) that are
   /// the subject of the action as well as other information related to the
   /// action are typically transmitted in a bundle in which the MessageHeader
@@ -1040,7 +1040,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1063,14 +1063,14 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   ///
   /// [name]: Human-readable name for the target system.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [target]: Identifies the target end system in situations where the initial
   ///  message transmission is to an intermediary system.
   ///
   /// [endpoint]: Indicates where the message should be routed to.
   ///
-  /// [_endpoint]: Extensions for endpoint
+  /// [endpointElement]: Extensions for endpoint
   ///
   /// [receiver]: Allows data conveyed by a message to be addressed to a
   /// particular person or department when routing to a specific application
@@ -1090,7 +1090,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeaderDestination.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderDestination.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1109,7 +1109,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
 class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
 
-  /// [MessageHeader_Source]: The header for a message exchange that is either
+  /// [MessageHeaderSource]: The header for a message exchange that is either
   /// requesting or responding to an action.  The reference(s) that are the
   /// subject of the action as well as other information related to the action
   /// are typically transmitted in a bundle in which the MessageHeader resource
@@ -1118,7 +1118,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1141,24 +1141,24 @@ class MessageHeaderSource with _$MessageHeaderSource {
   ///
   /// [name]: Human-readable name for the source system.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [software]: May include configuration or other information useful in
   ///  debugging.
   ///
-  /// [_software]: Extensions for software
+  /// [softwareElement]: Extensions for software
   ///
   /// [version]: Can convey versions of multiple systems in situations where a
   ///  message passes through multiple hands.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [contact]: An e-mail, phone, website or other contact point to use to
   ///  resolve issues with message communications.
   ///
   /// [endpoint]: Identifies the routing target to send acknowledgements to.
   ///
-  /// [_endpoint]: Extensions for endpoint
+  /// [endpointElement]: Extensions for endpoint
   factory MessageHeaderSource({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1177,7 +1177,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeaderSource.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1195,7 +1195,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
 class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
 
-  /// [MessageHeader_Response]: The header for a message exchange that is either
+  /// [MessageHeaderResponse]: The header for a message exchange that is either
   /// requesting or responding to an action.  The reference(s) that are the
   /// subject of the action as well as other information related to the action
   /// are typically transmitted in a bundle in which the MessageHeader resource
@@ -1204,7 +1204,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1228,12 +1228,12 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   /// [identifier]: The MessageHeader.id of the message to which this message is
   ///  a response.
   ///
-  /// [_identifier]: Extensions for identifier
+  /// [identifierElement]: Extensions for identifier
   ///
   /// [code]: Code that identifies the type of response to the message - whether
   ///  it was successful or not, and whether it should be resent or not.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [details]: Full details of any issues found in the message.
   factory MessageHeaderResponse({
@@ -1251,7 +1251,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeaderResponse.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1286,11 +1286,11 @@ class OperationOutcome with Resource, _$OperationOutcome {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1304,7 +1304,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1347,7 +1347,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcome.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1365,13 +1365,13 @@ class OperationOutcome with Resource, _$OperationOutcome {
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
 
-  /// [OperationOutcome_Issue]: A collection of error, warning, or information
+  /// [OperationOutcomeIssue]: A collection of error, warning, or information
   ///  messages that result from a system action.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1395,21 +1395,21 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   /// [severity]: Indicates whether the issue indicates a variation from
   ///  successful processing.
   ///
-  /// [_severity]: Extensions for severity
+  /// [severityElement]: Extensions for severity
   ///
   /// [code]: Describes the type of the issue. The system that creates an
   /// OperationOutcome SHALL choose the most applicable code from the IssueType
   /// value set, and may additional provide its own code for the error in the
   ///  details element.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [details]: Additional details about the error. This may be a text
   ///  description of the error or a system code that identifies the error.
   ///
   /// [diagnostics]: Additional diagnostic information about the issue.
   ///
-  /// [_diagnostics]: Extensions for diagnostics
+  /// [diagnosticsElement]: Extensions for diagnostics
   ///
   /// [location]: This element is deprecated because it is XML specific. It is
   /// replaced by issue.expression, which is format independent, and simpler to
@@ -1419,14 +1419,14 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   /// of the elements in the resource that caused this issue to be raised.  For
   ///  HTTP errors, will be "http." + the parameter name.
   ///
-  /// [_location]: Extensions for location
+  /// [locationElement]: Extensions for location
   ///
   /// [expression]: A [simple subset of FHIRPath](fhirpath.html#simple) limited
   /// to element names, repetition indicators and the default child accessor
   /// that identifies one of the elements in the resource that caused this issue
   ///  to be raised.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   factory OperationOutcomeIssue({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1449,7 +1449,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationOutcomeIssue.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1485,11 +1485,11 @@ class Parameters with Resource, _$Parameters {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [parameter]: A parameter passed to or received from the operation.
   factory Parameters({
@@ -1508,7 +1508,7 @@ class Parameters with Resource, _$Parameters {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Parameters.fromYaml(dynamic yaml) => yaml is String
       ? Parameters.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1526,14 +1526,14 @@ class Parameters with Resource, _$Parameters {
 class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
 
-  /// [Parameters_Parameter]: This resource is a non-persisted resource used to
+  /// [ParametersParameter]: This resource is a non-persisted resource used to
   /// pass information into and back from an [operation](operations.html). It
   ///  has no other use, and there is no RESTful endpoint associated with it.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1556,83 +1556,83 @@ class ParametersParameter with _$ParametersParameter {
   ///
   /// [name]: The name of the parameter (reference to the operation definition).
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [valueBase64Binary]: If the parameter is a data type.
   ///
-  /// [_valueBase64Binary]: Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement]: Extensions for valueBase64Binary
   ///
   /// [valueBoolean]: If the parameter is a data type.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueCanonical]: If the parameter is a data type.
   ///
-  /// [_valueCanonical]: Extensions for valueCanonical
+  /// [valueCanonicalElement]: Extensions for valueCanonical
   ///
   /// [valueCode]: If the parameter is a data type.
   ///
-  /// [_valueCode]: Extensions for valueCode
+  /// [valueCodeElement]: Extensions for valueCode
   ///
   /// [valueDate]: If the parameter is a data type.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueDateTime]: If the parameter is a data type.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueDecimal]: If the parameter is a data type.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueId]: If the parameter is a data type.
   ///
-  /// [_valueId]: Extensions for valueId
+  /// [valueIdElement]: Extensions for valueId
   ///
   /// [valueInstant]: If the parameter is a data type.
   ///
-  /// [_valueInstant]: Extensions for valueInstant
+  /// [valueInstantElement]: Extensions for valueInstant
   ///
   /// [valueInteger]: If the parameter is a data type.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueMarkdown]: If the parameter is a data type.
   ///
-  /// [_valueMarkdown]: Extensions for valueMarkdown
+  /// [valueMarkdownElement]: Extensions for valueMarkdown
   ///
   /// [valueOid]: If the parameter is a data type.
   ///
-  /// [_valueOid]: Extensions for valueOid
+  /// [valueOidElement]: Extensions for valueOid
   ///
   /// [valuePositiveInt]: If the parameter is a data type.
   ///
-  /// [_valuePositiveInt]: Extensions for valuePositiveInt
+  /// [valuePositiveIntElement]: Extensions for valuePositiveInt
   ///
   /// [valueString]: If the parameter is a data type.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueTime]: If the parameter is a data type.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueUnsignedInt]: If the parameter is a data type.
   ///
-  /// [_valueUnsignedInt]: Extensions for valueUnsignedInt
+  /// [valueUnsignedIntElement]: Extensions for valueUnsignedInt
   ///
   /// [valueUri]: If the parameter is a data type.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueUrl]: If the parameter is a data type.
   ///
-  /// [_valueUrl]: Extensions for valueUrl
+  /// [valueUrlElement]: Extensions for valueUrl
   ///
   /// [valueUuid]: If the parameter is a data type.
   ///
-  /// [_valueUuid]: Extensions for valueUuid
+  /// [valueUuidElement]: Extensions for valueUuid
   ///
   /// [valueAddress]: If the parameter is a data type.
   ///
@@ -1698,7 +1698,7 @@ class ParametersParameter with _$ParametersParameter {
   ///
   /// [resource]: If the parameter is a whole resource.
   ///
-  /// [part]: A named part of a multi-part parameter.
+  /// [part_]: A named part of a multi-part parameter.
   factory ParametersParameter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1781,7 +1781,7 @@ class ParametersParameter with _$ParametersParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ParametersParameter.fromYaml(dynamic yaml) => yaml is String
       ? ParametersParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1820,11 +1820,11 @@ class Subscription with Resource, _$Subscription {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1838,7 +1838,7 @@ class Subscription with Resource, _$Subscription {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1862,28 +1862,28 @@ class Subscription with Resource, _$Subscription {
   /// [status]: The status of the subscription, which marks the server state for
   ///  managing the subscription.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [contact]: Contact details for a human to contact about the subscription.
   ///  The primary use of this for system administrator troubleshooting.
   ///
   /// [end]: The time for the server to turn the subscription off.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   ///
   /// [reason]: A description of why this subscription is defined.
   ///
-  /// [_reason]: Extensions for reason
+  /// [reasonElement]: Extensions for reason
   ///
   /// [criteria]: The rules that the server should use to determine when to
   ///  generate notifications for this subscription.
   ///
-  /// [_criteria]: Extensions for criteria
+  /// [criteriaElement]: Extensions for criteria
   ///
   /// [error]: A record of the last error that occurred when the server
   ///  processed a notification.
   ///
-  /// [_error]: Extensions for error
+  /// [errorElement]: Extensions for error
   ///
   /// [channel]: Details where to send notifications when resources are received
   ///  that meet the criteria.
@@ -1919,7 +1919,7 @@ class Subscription with Resource, _$Subscription {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Subscription.fromYaml(dynamic yaml) => yaml is String
       ? Subscription.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1937,7 +1937,7 @@ class Subscription with Resource, _$Subscription {
 class SubscriptionChannel with _$SubscriptionChannel {
   SubscriptionChannel._();
 
-  /// [Subscription_Channel]: The subscription resource is used to define a
+  /// [SubscriptionChannel]: The subscription resource is used to define a
   /// push-based subscription from a server to another system. Once a
   /// subscription is registered with the server, the server checks every
   /// resource that is created or updated, and if the resource matches the given
@@ -1947,7 +1947,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1970,12 +1970,12 @@ class SubscriptionChannel with _$SubscriptionChannel {
   ///
   /// [type]: The type of channel to send notifications on.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [endpoint]: The url that describes the actual end-point to send messages
   ///  to.
   ///
-  /// [_endpoint]: Extensions for endpoint
+  /// [endpointElement]: Extensions for endpoint
   ///
   /// [payload]: The mime type to send the payload in - either
   /// application/fhir+xml, or application/fhir+json. If the payload is not
@@ -1983,12 +1983,12 @@ class SubscriptionChannel with _$SubscriptionChannel {
   /// notification. The mime type "text/plain" may also be used for Email and
   ///  SMS subscriptions.
   ///
-  /// [_payload]: Extensions for payload
+  /// [payloadElement]: Extensions for payload
   ///
   /// [header]: Additional headers / information to send as part of the
   ///  notification.
   ///
-  /// [_header]: Extensions for header
+  /// [headerElement]: Extensions for header
   factory SubscriptionChannel({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2007,7 +2007,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionChannel.fromYaml(dynamic yaml) => yaml is String
       ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

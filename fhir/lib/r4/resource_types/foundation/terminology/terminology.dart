@@ -33,11 +33,11 @@ class CodeSystem with Resource, _$CodeSystem {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ class CodeSystem with Resource, _$CodeSystem {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -81,7 +81,7 @@ class CodeSystem with Resource, _$CodeSystem {
   /// stored on different servers. This is used in
   ///  [Coding](datatypes.html#Coding).system.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this code
   /// system when it is represented in other formats, or referenced in a
@@ -95,40 +95,40 @@ class CodeSystem with Resource, _$CodeSystem {
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence. This is used in [Coding](datatypes.html#Coding).version.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the code system. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the code system.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The date (and optionally time) when the code system resource was
   ///  created or revised.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this code system is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the code system was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the code system changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  code system.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -136,7 +136,7 @@ class CodeSystem with Resource, _$CodeSystem {
   /// [description]: A free text natural language description of the code system
   ///  from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -150,18 +150,18 @@ class CodeSystem with Resource, _$CodeSystem {
   /// [purpose]: Explanation of why this code system is needed and why it has
   ///  been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the code system and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the code system.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [caseSensitive]: If code comparison is case sensitive when codes within
   ///  this system are compared to each other.
   ///
-  /// [_caseSensitive]: Extensions for caseSensitive
+  /// [caseSensitiveElement]: Extensions for caseSensitive
   ///
   /// [valueSet]: Canonical reference to the value set that contains the entire
   ///  code system.
@@ -169,23 +169,23 @@ class CodeSystem with Resource, _$CodeSystem {
   /// [hierarchyMeaning]: The meaning of the hierarchy of concepts as
   ///  represented in this resource.
   ///
-  /// [_hierarchyMeaning]: Extensions for hierarchyMeaning
+  /// [hierarchyMeaningElement]: Extensions for hierarchyMeaning
   ///
   /// [compositional]: The code system defines a compositional
   ///  (post-coordination) grammar.
   ///
-  /// [_compositional]: Extensions for compositional
+  /// [compositionalElement]: Extensions for compositional
   ///
   /// [versionNeeded]: This flag is used to signify that the code system does
   /// not commit to concept permanence across versions. If true, a version must
   ///  be specified when referencing this code system.
   ///
-  /// [_versionNeeded]: Extensions for versionNeeded
+  /// [versionNeededElement]: Extensions for versionNeeded
   ///
   /// [content]: The extent of the content of the code system (the concepts and
   ///  codes it defines) are represented in this resource instance.
   ///
-  /// [_content]: Extensions for content
+  /// [contentElement]: Extensions for content
   ///
   /// [supplements]: The canonical URL of the code system that this code system
   ///  supplement is adding designations and properties to.
@@ -194,7 +194,7 @@ class CodeSystem with Resource, _$CodeSystem {
   /// the code system has a compositional grammar, the basis of this count is
   ///  defined by the system steward.
   ///
-  /// [_count]: Extensions for count
+  /// [countElement]: Extensions for count
   ///
   /// [filter]: A filter that can be used in a value set compose statement when
   ///  selecting concepts using a filter.
@@ -270,7 +270,7 @@ class CodeSystem with Resource, _$CodeSystem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystem.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -288,14 +288,14 @@ class CodeSystem with Resource, _$CodeSystem {
 class CodeSystemFilter with _$CodeSystemFilter {
   CodeSystemFilter._();
 
-  /// [CodeSystem_Filter]: The CodeSystem resource is used to declare the
+  /// [CodeSystemFilter]: The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
   ///  key properties, and optionally define a part or all of its content.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -319,19 +319,19 @@ class CodeSystemFilter with _$CodeSystemFilter {
   /// [code]: The code that identifies this filter when it is used as a filter
   ///  in [[[ValueSet]]].compose.include.filter.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [description]: A description of how or why the filter is used.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [operator]: A list of operators that can be used with the filter.
   ///
-  /// [_operator]: Extensions for operator
+  /// [operatorElement]: Extensions for operator
   ///
   /// [value]: A description of what the value for the filter should be.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory CodeSystemFilter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -349,7 +349,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemFilter.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemFilter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -367,14 +367,14 @@ class CodeSystemFilter with _$CodeSystemFilter {
 class CodeSystemProperty with _$CodeSystemProperty {
   CodeSystemProperty._();
 
-  /// [CodeSystem_Property]: The CodeSystem resource is used to declare the
+  /// [CodeSystemProperty]: The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
   ///  key properties, and optionally define a part or all of its content.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -399,24 +399,24 @@ class CodeSystemProperty with _$CodeSystemProperty {
   /// internally (in CodeSystem.concept.property.code) and also externally, such
   ///  as in property filters.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [uri]: Reference to the formal meaning of the property. One possible
   /// source of meaning is the [Concept
   ///  Properties](codesystem-concept-properties.html) code system.
   ///
-  /// [_uri]: Extensions for uri
+  /// [uriElement]: Extensions for uri
   ///
   /// [description]: A description of the property- why it is defined, and how
   ///  its value might be used.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [type]: The type of the property value. Properties of type "code" contain
   /// a code defined by the code system (e.g. a reference to another defined
   ///  concept).
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   factory CodeSystemProperty({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -435,7 +435,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemProperty.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemProperty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -453,14 +453,14 @@ class CodeSystemProperty with _$CodeSystemProperty {
 class CodeSystemConcept with _$CodeSystemConcept {
   CodeSystemConcept._();
 
-  /// [CodeSystem_Concept]: The CodeSystem resource is used to declare the
+  /// [CodeSystemConcept]: The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
   ///  key properties, and optionally define a part or all of its content.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -484,19 +484,19 @@ class CodeSystemConcept with _$CodeSystemConcept {
   /// [code]: A code - a text symbol - that uniquely identifies the concept
   ///  within the code system.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [display]: A human readable string that is the recommended default way to
   ///  present this concept to a user.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   ///
   /// [definition]: The formal definition of the concept. The code system
   /// resource does not make formal definitions required, because of the
   /// prevalence of legacy systems. However, they are highly recommended, as
   ///  without them there is no formal meaning associated with the concept.
   ///
-  /// [_definition]: Extensions for definition
+  /// [definitionElement]: Extensions for definition
   ///
   /// [designation]: Additional representations for the concept - other
   /// languages, aliases, specialized purposes, used for particular purposes,
@@ -525,7 +525,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -543,14 +543,14 @@ class CodeSystemConcept with _$CodeSystemConcept {
 class CodeSystemDesignation with _$CodeSystemDesignation {
   CodeSystemDesignation._();
 
-  /// [CodeSystem_Designation]: The CodeSystem resource is used to declare the
+  /// [CodeSystemDesignation]: The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
   ///  key properties, and optionally define a part or all of its content.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -573,13 +573,13 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
   ///
   /// [language]: The language this designation is defined for.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [use]: A code that details how this designation would be used.
   ///
   /// [value]: The text value for this designation.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory CodeSystemDesignation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -594,7 +594,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemDesignation.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemDesignation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -612,14 +612,14 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
 class CodeSystemProperty1 with _$CodeSystemProperty1 {
   CodeSystemProperty1._();
 
-  /// [CodeSystem_Property1]: The CodeSystem resource is used to declare the
+  /// [CodeSystemProperty1]: The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
   ///  key properties, and optionally define a part or all of its content.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -642,33 +642,33 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
   ///
   /// [code]: A code that is a reference to CodeSystem.property.code.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [valueCode]: The value of this property.
   ///
-  /// [_valueCode]: Extensions for valueCode
+  /// [valueCodeElement]: Extensions for valueCode
   ///
   /// [valueCoding]: The value of this property.
   ///
   /// [valueString]: The value of this property.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueInteger]: The value of this property.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueBoolean]: The value of this property.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueDateTime]: The value of this property.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueDecimal]: The value of this property.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   factory CodeSystemProperty1({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -693,7 +693,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemProperty1.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemProperty1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -729,11 +729,11 @@ class ConceptMap with Resource, _$ConceptMap {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -747,7 +747,7 @@ class ConceptMap with Resource, _$ConceptMap {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -776,7 +776,7 @@ class ConceptMap with Resource, _$ConceptMap {
   /// canonical reference. It SHALL remain the same when the concept map is
   ///  stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this concept
   /// map when it is represented in other formats, or referenced in a
@@ -790,40 +790,40 @@ class ConceptMap with Resource, _$ConceptMap {
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the concept map. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the concept map.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this concept map. Enables tracking the life-cycle
   ///  of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this concept map is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the concept map was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the concept map changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  concept map.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -831,7 +831,7 @@ class ConceptMap with Resource, _$ConceptMap {
   /// [description]: A free text natural language description of the concept map
   ///  from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -845,37 +845,37 @@ class ConceptMap with Resource, _$ConceptMap {
   /// [purpose]: Explanation of why this concept map is needed and why it has
   ///  been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the concept map and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the concept map.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [sourceUri]: Identifier for the source value set that contains the
   ///  concepts that are being mapped and provides context for the mappings.
   ///
-  /// [_sourceUri]: Extensions for sourceUri
+  /// [sourceUriElement]: Extensions for sourceUri
   ///
   /// [sourceCanonical]: Identifier for the source value set that contains the
   ///  concepts that are being mapped and provides context for the mappings.
   ///
-  /// [_sourceCanonical]: Extensions for sourceCanonical
+  /// [sourceCanonicalElement]: Extensions for sourceCanonical
   ///
   /// [targetUri]: The target value set provides context for the mappings. Note
   /// that the mapping is made between concepts, not between value sets, but the
   /// value set provides important context about how the concept mapping choices
   ///  are made.
   ///
-  /// [_targetUri]: Extensions for targetUri
+  /// [targetUriElement]: Extensions for targetUri
   ///
   /// [targetCanonical]: The target value set provides context for the mappings.
   /// Note that the mapping is made between concepts, not between value sets,
   /// but the value set provides important context about how the concept mapping
   ///  choices are made.
   ///
-  /// [_targetCanonical]: Extensions for targetCanonical
+  /// [targetCanonicalElement]: Extensions for targetCanonical
   ///
   /// [group]: A group of mappings that all have the same source and target
   ///  system.
@@ -934,7 +934,7 @@ class ConceptMap with Resource, _$ConceptMap {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -952,14 +952,14 @@ class ConceptMap with Resource, _$ConceptMap {
 class ConceptMapGroup with _$ConceptMapGroup {
   ConceptMapGroup._();
 
-  /// [ConceptMap_Group]: A statement of relationships from one set of concepts
+  /// [ConceptMapGroup]: A statement of relationships from one set of concepts
   /// to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -983,22 +983,22 @@ class ConceptMapGroup with _$ConceptMapGroup {
   /// [source]: An absolute URI that identifies the source system where the
   ///  concepts to be mapped are defined.
   ///
-  /// [_source]: Extensions for source
+  /// [sourceElement]: Extensions for source
   ///
   /// [sourceVersion]: The specific version of the code system, as determined by
   ///  the code system authority.
   ///
-  /// [_sourceVersion]: Extensions for sourceVersion
+  /// [sourceVersionElement]: Extensions for sourceVersion
   ///
   /// [target]: An absolute URI that identifies the target system that the
   ///  concepts will be mapped to.
   ///
-  /// [_target]: Extensions for target
+  /// [targetElement]: Extensions for target
   ///
   /// [targetVersion]: The specific version of the code system, as determined by
   ///  the code system authority.
   ///
-  /// [_targetVersion]: Extensions for targetVersion
+  /// [targetVersionElement]: Extensions for targetVersion
   ///
   /// [element]: Mappings for an individual concept in the source to one or more
   ///  concepts in the target.
@@ -1026,7 +1026,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapGroup.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1044,14 +1044,14 @@ class ConceptMapGroup with _$ConceptMapGroup {
 class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
 
-  /// [ConceptMap_Element]: A statement of relationships from one set of
+  /// [ConceptMapElement]: A statement of relationships from one set of
   /// concepts to one or more other concepts - either concepts in code systems,
   ///  or data element/data element concepts, or classes in class models.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1074,12 +1074,12 @@ class ConceptMapElement with _$ConceptMapElement {
   ///
   /// [code]: Identity (code or path) or the element/item being mapped.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [display]: The display for the code. The display is only provided to help
   ///  editors when editing the concept map.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   ///
   /// [target]: A concept from the target value set that this concept maps to.
   factory ConceptMapElement({
@@ -1096,7 +1096,7 @@ class ConceptMapElement with _$ConceptMapElement {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1114,14 +1114,14 @@ class ConceptMapElement with _$ConceptMapElement {
 class ConceptMapTarget with _$ConceptMapTarget {
   ConceptMapTarget._();
 
-  /// [ConceptMap_Target]: A statement of relationships from one set of concepts
+  /// [ConceptMapTarget]: A statement of relationships from one set of concepts
   /// to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1145,23 +1145,23 @@ class ConceptMapTarget with _$ConceptMapTarget {
   /// [code]: Identity (code or path) or the element/item that the map refers
   ///  to.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [display]: The display for the code. The display is only provided to help
   ///  editors when editing the concept map.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   ///
   /// [equivalence]: The equivalence between the source and target concepts
   /// (counting for the dependencies and products). The equivalence is read from
   ///  target to source (e.g. the target is 'wider' than the source).
   ///
-  /// [_equivalence]: Extensions for equivalence
+  /// [equivalenceElement]: Extensions for equivalence
   ///
   /// [comment]: A description of status/issues in mapping that conveys
   ///  additional information not represented in  the structured data.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [dependsOn]: A set of additional dependencies for this mapping to hold.
   /// This mapping is only applicable if the specified element can be resolved,
@@ -1192,7 +1192,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapTarget.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1210,14 +1210,14 @@ class ConceptMapTarget with _$ConceptMapTarget {
 class ConceptMapDependsOn with _$ConceptMapDependsOn {
   ConceptMapDependsOn._();
 
-  /// [ConceptMap_DependsOn]: A statement of relationships from one set of
+  /// [ConceptMapDependsOn]: A statement of relationships from one set of
   /// concepts to one or more other concepts - either concepts in code systems,
   ///  or data element/data element concepts, or classes in class models.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1243,7 +1243,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
   /// model carries an element somewhere that is labeled to correspond with a
   ///  code system property.
   ///
-  /// [_property]: Extensions for property
+  /// [propertyElement]: Extensions for property
   ///
   /// [system]: An absolute URI that identifies the code system of the
   /// dependency code (if the source/dependency is a value set that crosses code
@@ -1252,12 +1252,12 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
   /// [value]: Identity (code or path) or the element/item/ValueSet/text that
   ///  the map depends on / refers to.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [display]: The display for the code. The display is only provided to help
   ///  editors when editing the concept map.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   factory ConceptMapDependsOn({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1274,7 +1274,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapDependsOn.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapDependsOn.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1292,14 +1292,14 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
 class ConceptMapUnmapped with _$ConceptMapUnmapped {
   ConceptMapUnmapped._();
 
-  /// [ConceptMap_Unmapped]: A statement of relationships from one set of
+  /// [ConceptMapUnmapped]: A statement of relationships from one set of
   /// concepts to one or more other concepts - either concepts in code systems,
   ///  or data element/data element concepts, or classes in class models.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1327,17 +1327,17 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
   /// default code), or alternatively, a reference to a different concept map
   ///  can be provided (by canonical URL).
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [code]: The fixed code to use when the mode = 'fixed'  - all unmapped
   ///  codes are mapped to a single fixed code.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [display]: The display for the code. The display is only provided to help
   ///  editors when editing the concept map.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   ///
   /// [url]: The canonical reference to an additional ConceptMap resource
   /// instance to use for mapping if this ConceptMap resource contains no
@@ -1359,7 +1359,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapUnmapped.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapUnmapped.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1395,11 +1395,11 @@ class NamingSystem with Resource, _$NamingSystem {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1413,7 +1413,7 @@ class NamingSystem with Resource, _$NamingSystem {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1438,29 +1438,29 @@ class NamingSystem with Resource, _$NamingSystem {
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [status]: The status of this naming system. Enables tracking the
   ///  life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [kind]: Indicates the purpose for the naming system - what kinds of things
   ///  does it make unique?
   ///
-  /// [_kind]: Extensions for kind
+  /// [kindElement]: Extensions for kind
   ///
   /// [date]: The date  (and optionally time) when the naming system was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the naming system changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  naming system.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1469,7 +1469,7 @@ class NamingSystem with Resource, _$NamingSystem {
   /// issuing identifiers or codes for this namespace and ensuring their
   ///  non-collision.
   ///
-  /// [_responsible]: Extensions for responsible
+  /// [responsibleElement]: Extensions for responsible
   ///
   /// [type]: Categorizes a naming system for easier search by grouping related
   ///  naming systems.
@@ -1478,7 +1478,7 @@ class NamingSystem with Resource, _$NamingSystem {
   /// system from a consumer's perspective. Details about what the namespace
   ///  identifies including scope, granularity, version labeling, etc.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -1492,7 +1492,7 @@ class NamingSystem with Resource, _$NamingSystem {
   /// [usage]: Provides guidance on the use of the namespace, including the
   ///  handling of formatting characters, use of upper vs. lower case, etc.
   ///
-  /// [_usage]: Extensions for usage
+  /// [usageElement]: Extensions for usage
   ///
   /// [uniqueId]: Indicates how the system may be identified when referenced in
   ///  electronic exchange.
@@ -1537,7 +1537,7 @@ class NamingSystem with Resource, _$NamingSystem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
       ? NamingSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1555,7 +1555,7 @@ class NamingSystem with Resource, _$NamingSystem {
 class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
 
-  /// [NamingSystem_UniqueId]: A curated namespace that issues unique symbols
+  /// [NamingSystemUniqueId]: A curated namespace that issues unique symbols
   /// within that namespace for the identification of concepts, people, devices,
   /// etc.  Represents a "System" used within the Identifier and Coding data
   ///  types.
@@ -1563,7 +1563,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1587,21 +1587,21 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
   /// [type]: Identifies the unique identifier scheme used for this particular
   ///  identifier.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [value]: The string that should be sent over the wire to identify the code
   ///  system or identifier system.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [preferred]: Indicates whether this identifier is the "preferred"
   ///  identifier of this type.
   ///
-  /// [_preferred]: Extensions for preferred
+  /// [preferredElement]: Extensions for preferred
   ///
   /// [comment]: Notes about the past or intended usage of this identifier.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [period]: Identifies the period of time over which this identifier is
   /// considered appropriate to refer to the naming system.  Outside of this
@@ -1625,7 +1625,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String
       ? NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1662,11 +1662,11 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1680,7 +1680,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1709,7 +1709,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the terminology capabilities is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [version]: The identifier that is used to identify this version of the
   /// terminology capabilities when it is referenced in a specification, model,
@@ -1719,42 +1719,42 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// not available. There is also no expectation that versions can be placed in
   ///  a lexicographical sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the terminology capabilities.
   /// This name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the terminology
   ///  capabilities.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this terminology capabilities. Enables tracking
   ///  the life-cycle of the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this terminology
   /// capabilities is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the terminology capabilities
   /// was published. The date must change when the business version changes and
   /// it must change if the status code changes. In addition, it should change
   ///  when the substantive content of the terminology capabilities changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  terminology capabilities.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1765,7 +1765,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// solution, for example as a formal expression of requirements as part of an
   ///  RFP.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -1779,20 +1779,20 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// [purpose]: Explanation of why this terminology capabilities is needed and
   ///  why it has been designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the terminology
   /// capabilities and/or its contents. Copyright statements are generally legal
   ///  restrictions on the use and publishing of the terminology capabilities.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [kind]: The way that this statement is intended to be used, to describe an
   /// actual running instance of software, a particular product (kind, not
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
   ///
-  /// [_kind]: Extensions for kind
+  /// [kindElement]: Extensions for kind
   ///
   /// [software]: Software that is covered by this terminology capability
   /// statement.  It is used when the statement describes the capabilities of a
@@ -1804,7 +1804,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   ///
   /// [lockedDate]: Whether the server supports lockedDate.
   ///
-  /// [_lockedDate]: Extensions for lockedDate
+  /// [lockedDateElement]: Extensions for lockedDate
   ///
   /// [codeSystem]: Identifies a code system that is supported by the server. If
   /// there is a no code system URL, then this declares the general assumptions
@@ -1816,7 +1816,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// [codeSearch]: The degree to which the server supports the code search
   ///  parameter on ValueSet, if it is supported.
   ///
-  /// [_codeSearch]: Extensions for codeSearch
+  /// [codeSearchElement]: Extensions for codeSearch
   ///
   /// [validateCode]: Information about the
   factory TerminologyCapabilities({
@@ -1878,7 +1878,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilities.fromYaml(dynamic yaml) => yaml is String
       ? TerminologyCapabilities.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1896,7 +1896,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
 class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   TerminologyCapabilitiesSoftware._();
 
-  /// [TerminologyCapabilities_Software]: A TerminologyCapabilities resource
+  /// [TerminologyCapabilitiesSoftware]: A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -1904,7 +1904,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1927,12 +1927,12 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   ///
   /// [name]: Name the software is known by.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [version]: The version identifier for the software covered by this
   ///  statement.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   factory TerminologyCapabilitiesSoftware({
     String? id,
@@ -1947,7 +1947,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesSoftware.fromYaml(dynamic yaml) => yaml
           is String
       ? TerminologyCapabilitiesSoftware.fromJson(
@@ -1969,7 +1969,7 @@ class TerminologyCapabilitiesImplementation
     with _$TerminologyCapabilitiesImplementation {
   TerminologyCapabilitiesImplementation._();
 
-  /// [TerminologyCapabilities_Implementation]: A TerminologyCapabilities
+  /// [TerminologyCapabilitiesImplementation]: A TerminologyCapabilities
   /// resource documents a set of capabilities (behaviors) of a FHIR Terminology
   /// Server that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -1977,7 +1977,7 @@ class TerminologyCapabilitiesImplementation
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2001,11 +2001,11 @@ class TerminologyCapabilitiesImplementation
   /// [description]: Information about the specific installation that this
   ///  terminology capability statement relates to.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [url]: An absolute base URL for the implementation.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   factory TerminologyCapabilitiesImplementation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2019,7 +2019,7 @@ class TerminologyCapabilitiesImplementation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesImplementation.fromYaml(dynamic yaml) => yaml
           is String
       ? TerminologyCapabilitiesImplementation.fromJson(
@@ -2041,7 +2041,7 @@ class TerminologyCapabilitiesCodeSystem
     with _$TerminologyCapabilitiesCodeSystem {
   TerminologyCapabilitiesCodeSystem._();
 
-  /// [TerminologyCapabilities_CodeSystem]: A TerminologyCapabilities resource
+  /// [TerminologyCapabilitiesCodeSystem]: A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -2049,7 +2049,7 @@ class TerminologyCapabilitiesCodeSystem
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2078,7 +2078,7 @@ class TerminologyCapabilitiesCodeSystem
   /// [subsumption]: True if subsumption is supported for this version of the
   ///  code system.
   ///
-  /// [_subsumption]: Extensions for subsumption
+  /// [subsumptionElement]: Extensions for subsumption
   factory TerminologyCapabilitiesCodeSystem({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2092,7 +2092,7 @@ class TerminologyCapabilitiesCodeSystem
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesCodeSystem.fromYaml(dynamic yaml) => yaml
           is String
       ? TerminologyCapabilitiesCodeSystem.fromJson(
@@ -2113,7 +2113,7 @@ class TerminologyCapabilitiesCodeSystem
 class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   TerminologyCapabilitiesVersion._();
 
-  /// [TerminologyCapabilities_Version]: A TerminologyCapabilities resource
+  /// [TerminologyCapabilitiesVersion]: A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -2121,7 +2121,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2145,26 +2145,26 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   /// [code]: For version-less code systems, there should be a single version
   ///  with no identifier.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [isDefault]: If this is the default version for this code system.
   ///
-  /// [_isDefault]: Extensions for isDefault
+  /// [isDefaultElement]: Extensions for isDefault
   ///
   /// [compositional]: If the compositional grammar defined by the code system
   ///  is supported.
   ///
-  /// [_compositional]: Extensions for compositional
+  /// [compositionalElement]: Extensions for compositional
   ///
   /// [language]: Language Displays supported.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [filter]: Filter Properties supported.
   ///
   /// [property]: Properties supported for $lookup.
   ///
-  /// [_property]: Extensions for property
+  /// [propertyElement]: Extensions for property
   factory TerminologyCapabilitiesVersion({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2185,7 +2185,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesVersion.fromYaml(dynamic yaml) => yaml
           is String
       ? TerminologyCapabilitiesVersion.fromJson(
@@ -2206,7 +2206,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
 class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   TerminologyCapabilitiesFilter._();
 
-  /// [TerminologyCapabilities_Filter]: A TerminologyCapabilities resource
+  /// [TerminologyCapabilitiesFilter]: A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -2214,7 +2214,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2237,11 +2237,11 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   ///
   /// [code]: Code of the property supported.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [op]: Operations supported for the property.
   ///
-  /// [_op]: Extensions for op
+  /// [opElement]: Extensions for op
   factory TerminologyCapabilitiesFilter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2255,7 +2255,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesFilter.fromYaml(dynamic yaml) => yaml is String
       ? TerminologyCapabilitiesFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2274,7 +2274,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
 class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   TerminologyCapabilitiesExpansion._();
 
-  /// [TerminologyCapabilities_Expansion]: A TerminologyCapabilities resource
+  /// [TerminologyCapabilitiesExpansion]: A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -2282,7 +2282,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2305,21 +2305,21 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   ///
   /// [hierarchical]: Whether the server can return nested value sets.
   ///
-  /// [_hierarchical]: Extensions for hierarchical
+  /// [hierarchicalElement]: Extensions for hierarchical
   ///
   /// [paging]: Whether the server supports paging on expansion.
   ///
-  /// [_paging]: Extensions for paging
+  /// [pagingElement]: Extensions for paging
   ///
   /// [incomplete]: Allow request for incomplete expansions?
   ///
-  /// [_incomplete]: Extensions for incomplete
+  /// [incompleteElement]: Extensions for incomplete
   ///
   /// [parameter]: Supported expansion parameter.
   ///
   /// [textFilter]: Documentation about text searching works.
   ///
-  /// [_textFilter]: Extensions for textFilter
+  /// [textFilterElement]: Extensions for textFilter
   factory TerminologyCapabilitiesExpansion({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2338,7 +2338,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesExpansion.fromYaml(dynamic yaml) => yaml
           is String
       ? TerminologyCapabilitiesExpansion.fromJson(
@@ -2359,7 +2359,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
 class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   TerminologyCapabilitiesParameter._();
 
-  /// [TerminologyCapabilities_Parameter]: A TerminologyCapabilities resource
+  /// [TerminologyCapabilitiesParameter]: A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -2367,7 +2367,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2390,11 +2390,11 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   ///
   /// [name]: Expansion Parameter name.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [documentation]: Description of support for parameter.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   factory TerminologyCapabilitiesParameter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2408,7 +2408,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesParameter.fromYaml(dynamic yaml) => yaml
           is String
       ? TerminologyCapabilitiesParameter.fromJson(
@@ -2430,7 +2430,7 @@ class TerminologyCapabilitiesValidateCode
     with _$TerminologyCapabilitiesValidateCode {
   TerminologyCapabilitiesValidateCode._();
 
-  /// [TerminologyCapabilities_ValidateCode]: A TerminologyCapabilities resource
+  /// [TerminologyCapabilitiesValidateCode]: A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -2438,7 +2438,7 @@ class TerminologyCapabilitiesValidateCode
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2461,7 +2461,7 @@ class TerminologyCapabilitiesValidateCode
   ///
   /// [translations]: Whether translations are validated.
   ///
-  /// [_translations]: Extensions for translations
+  /// [translationsElement]: Extensions for translations
   factory TerminologyCapabilitiesValidateCode({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2473,7 +2473,7 @@ class TerminologyCapabilitiesValidateCode
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesValidateCode.fromYaml(dynamic yaml) => yaml
           is String
       ? TerminologyCapabilitiesValidateCode.fromJson(
@@ -2495,7 +2495,7 @@ class TerminologyCapabilitiesTranslation
     with _$TerminologyCapabilitiesTranslation {
   TerminologyCapabilitiesTranslation._();
 
-  /// [TerminologyCapabilities_Translation]: A TerminologyCapabilities resource
+  /// [TerminologyCapabilitiesTranslation]: A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -2503,7 +2503,7 @@ class TerminologyCapabilitiesTranslation
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2526,7 +2526,7 @@ class TerminologyCapabilitiesTranslation
   ///
   /// [needsMap]: Whether the client must identify the map.
   ///
-  /// [_needsMap]: Extensions for needsMap
+  /// [needsMapElement]: Extensions for needsMap
   factory TerminologyCapabilitiesTranslation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2538,7 +2538,7 @@ class TerminologyCapabilitiesTranslation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesTranslation.fromYaml(dynamic yaml) => yaml
           is String
       ? TerminologyCapabilitiesTranslation.fromJson(
@@ -2559,7 +2559,7 @@ class TerminologyCapabilitiesTranslation
 class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   TerminologyCapabilitiesClosure._();
 
-  /// [TerminologyCapabilities_Closure]: A TerminologyCapabilities resource
+  /// [TerminologyCapabilitiesClosure]: A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
@@ -2567,7 +2567,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2590,7 +2590,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   ///
   /// [translation]: If cross-system closure is supported.
   ///
-  /// [_translation]: Extensions for translation
+  /// [translationElement]: Extensions for translation
   factory TerminologyCapabilitiesClosure({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2602,7 +2602,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesClosure.fromYaml(dynamic yaml) => yaml
           is String
       ? TerminologyCapabilitiesClosure.fromJson(
@@ -2642,11 +2642,11 @@ class ValueSet with Resource, _$ValueSet {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2660,7 +2660,7 @@ class ValueSet with Resource, _$ValueSet {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2689,7 +2689,7 @@ class ValueSet with Resource, _$ValueSet {
   /// reference. It SHALL remain the same when the value set is stored on
   ///  different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this value set
   /// when it is represented in other formats, or referenced in a specification,
@@ -2703,40 +2703,40 @@ class ValueSet with Resource, _$ValueSet {
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the value set. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the value set.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [status]: The status of this value set. Enables tracking the life-cycle of
   /// the content. The status of the value set applies to the value set
   /// definition (ValueSet.compose) and the associated ValueSet metadata.
   ///  Expansions do not have a state.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this value set is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date (and optionally time) when the value set was created or
   ///  revised (e.g. the 'content logical definition').
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  value set.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -2746,7 +2746,7 @@ class ValueSet with Resource, _$ValueSet {
   /// of meanings for concepts to be included within the Value Set Expansion,
   ///  and also may specify the intended use and limitations of the Value Set.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -2761,18 +2761,18 @@ class ValueSet with Resource, _$ValueSet {
   /// logical definition can be created.  Note: Other metadata might still
   ///  change.
   ///
-  /// [_immutable]: Extensions for immutable
+  /// [immutableElement]: Extensions for immutable
   ///
   /// [purpose]: Explanation of why this value set is needed and why it has been
   ///  designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [copyright]: A copyright statement relating to the value set and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the value set.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [compose]: A set of criteria that define the contents of the value set by
   /// including or excluding codes selected from the specified code system(s)
@@ -2831,7 +2831,7 @@ class ValueSet with Resource, _$ValueSet {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSet.fromYaml(dynamic yaml) => yaml is String
       ? ValueSet.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2849,7 +2849,7 @@ class ValueSet with Resource, _$ValueSet {
 class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
 
-  /// [ValueSet_Compose]: A ValueSet resource instance specifies a set of codes
+  /// [ValueSetCompose]: A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular
   /// context. Value sets link between [[[CodeSystem]]] definitions and their
   ///  use in [coded elements](terminologies.html).
@@ -2857,7 +2857,7 @@ class ValueSetCompose with _$ValueSetCompose {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2883,7 +2883,7 @@ class ValueSetCompose with _$ValueSetCompose {
   /// Definitions included in the compose that are not already tied to a
   ///  specific version.
   ///
-  /// [_lockedDate]: Extensions for lockedDate
+  /// [lockedDateElement]: Extensions for lockedDate
   ///
   /// [inactive]: Whether inactive codes - codes that are not approved for
   /// current use - are in the value set. If inactive = true, inactive codes are
@@ -2892,7 +2892,7 @@ class ValueSetCompose with _$ValueSetCompose {
   /// determined by the implementation, or by the applicable $expand parameters
   ///  (but generally, inactive codes would be expected to be included).
   ///
-  /// [_inactive]: Extensions for inactive
+  /// [inactiveElement]: Extensions for inactive
   ///
   /// [include]: Include one or more codes from a code system or other value
   ///  set(s).
@@ -2914,7 +2914,7 @@ class ValueSetCompose with _$ValueSetCompose {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetCompose.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2932,7 +2932,7 @@ class ValueSetCompose with _$ValueSetCompose {
 class ValueSetInclude with _$ValueSetInclude {
   ValueSetInclude._();
 
-  /// [ValueSet_Include]: A ValueSet resource instance specifies a set of codes
+  /// [ValueSetInclude]: A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular
   /// context. Value sets link between [[[CodeSystem]]] definitions and their
   ///  use in [coded elements](terminologies.html).
@@ -2940,7 +2940,7 @@ class ValueSetInclude with _$ValueSetInclude {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2964,12 +2964,12 @@ class ValueSetInclude with _$ValueSetInclude {
   /// [system]: An absolute URI which is the code system from which the selected
   ///  codes come from.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
   /// [version]: The version of the code system that the codes are selected
   ///  from, or the special version '*' for all versions.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [concept]: Specifies a concept to be included or excluded.
   ///
@@ -2998,7 +2998,7 @@ class ValueSetInclude with _$ValueSetInclude {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetInclude.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetInclude.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3016,7 +3016,7 @@ class ValueSetInclude with _$ValueSetInclude {
 class ValueSetConcept with _$ValueSetConcept {
   ValueSetConcept._();
 
-  /// [ValueSet_Concept]: A ValueSet resource instance specifies a set of codes
+  /// [ValueSetConcept]: A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular
   /// context. Value sets link between [[[CodeSystem]]] definitions and their
   ///  use in [coded elements](terminologies.html).
@@ -3024,7 +3024,7 @@ class ValueSetConcept with _$ValueSetConcept {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3047,13 +3047,13 @@ class ValueSetConcept with _$ValueSetConcept {
   ///
   /// [code]: Specifies a code for the concept to be included or excluded.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [display]: The text to display to the user for this concept in the context
   /// of this valueset. If no display is provided, then applications using the
   ///  value set use the display specified for the code by the system.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   ///
   /// [designation]: Additional representations for this concept when used in
   /// this value set - other languages, aliases, specialized purposes, used for
@@ -3072,7 +3072,7 @@ class ValueSetConcept with _$ValueSetConcept {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetConcept.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3090,7 +3090,7 @@ class ValueSetConcept with _$ValueSetConcept {
 class ValueSetDesignation with _$ValueSetDesignation {
   ValueSetDesignation._();
 
-  /// [ValueSet_Designation]: A ValueSet resource instance specifies a set of
+  /// [ValueSetDesignation]: A ValueSet resource instance specifies a set of
   /// codes drawn from one or more code systems, intended for use in a
   /// particular context. Value sets link between [[[CodeSystem]]] definitions
   ///  and their use in [coded elements](terminologies.html).
@@ -3098,7 +3098,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3121,13 +3121,13 @@ class ValueSetDesignation with _$ValueSetDesignation {
   ///
   /// [language]: The language this designation is defined for.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [use]: A code that represents types of uses of designations.
   ///
   /// [value]: The text value for this designation.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory ValueSetDesignation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3142,7 +3142,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetDesignation.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetDesignation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3160,7 +3160,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
 class ValueSetFilter with _$ValueSetFilter {
   ValueSetFilter._();
 
-  /// [ValueSet_Filter]: A ValueSet resource instance specifies a set of codes
+  /// [ValueSetFilter]: A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular
   /// context. Value sets link between [[[CodeSystem]]] definitions and their
   ///  use in [coded elements](terminologies.html).
@@ -3168,7 +3168,7 @@ class ValueSetFilter with _$ValueSetFilter {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3192,11 +3192,11 @@ class ValueSetFilter with _$ValueSetFilter {
   /// [property]: A code that identifies a property or a filter defined in the
   ///  code system.
   ///
-  /// [_property]: Extensions for property
+  /// [propertyElement]: Extensions for property
   ///
   /// [op]: The kind of operation to perform as a part of the filter criteria.
   ///
-  /// [_op]: Extensions for op
+  /// [opElement]: Extensions for op
   ///
   /// [value]: The match value may be either a code defined by the system, or a
   /// string value, which is a regex match on the literal string of the property
@@ -3205,7 +3205,7 @@ class ValueSetFilter with _$ValueSetFilter {
   /// CodeSystem) when the operation is 'regex', or one of the values (true and
   ///  false), when the operation is 'exists'.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory ValueSetFilter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3221,7 +3221,7 @@ class ValueSetFilter with _$ValueSetFilter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetFilter.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetFilter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3239,7 +3239,7 @@ class ValueSetFilter with _$ValueSetFilter {
 class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
 
-  /// [ValueSet_Expansion]: A ValueSet resource instance specifies a set of
+  /// [ValueSetExpansion]: A ValueSet resource instance specifies a set of
   /// codes drawn from one or more code systems, intended for use in a
   /// particular context. Value sets link between [[[CodeSystem]]] definitions
   ///  and their use in [coded elements](terminologies.html).
@@ -3247,7 +3247,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3275,24 +3275,24 @@ class ValueSetExpansion with _$ValueSetExpansion {
   /// remain the same, and the expansion is the same, but are not required to do
   ///  so. This is a business identifier.
   ///
-  /// [_identifier]: Extensions for identifier
+  /// [identifierElement]: Extensions for identifier
   ///
   /// [timestamp]: The time at which the expansion was produced by the expanding
   ///  system.
   ///
-  /// [_timestamp]: Extensions for timestamp
+  /// [timestampElement]: Extensions for timestamp
   ///
   /// [total]: The total number of concepts in the expansion. If the number of
   /// concept nodes in this resource is less than the stated number, then the
   ///  server can return more using the offset parameter.
   ///
-  /// [_total]: Extensions for total
+  /// [totalElement]: Extensions for total
   ///
   /// [offset]: If paging is being used, the offset at which this resource
   /// starts.  I.e. this resource is a partial view into the expansion. If
   ///  paging is not being used, this element SHALL NOT be present.
   ///
-  /// [_offset]: Extensions for offset
+  /// [offsetElement]: Extensions for offset
   ///
   /// [parameter]: A parameter that controlled the expansion process. These
   /// parameters may be used by users of expanded value sets to check whether
@@ -3319,7 +3319,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetExpansion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3337,7 +3337,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
 class ValueSetParameter with _$ValueSetParameter {
   ValueSetParameter._();
 
-  /// [ValueSet_Parameter]: A ValueSet resource instance specifies a set of
+  /// [ValueSetParameter]: A ValueSet resource instance specifies a set of
   /// codes drawn from one or more code systems, intended for use in a
   /// particular context. Value sets link between [[[CodeSystem]]] definitions
   ///  and their use in [coded elements](terminologies.html).
@@ -3345,7 +3345,7 @@ class ValueSetParameter with _$ValueSetParameter {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3370,35 +3370,35 @@ class ValueSetParameter with _$ValueSetParameter {
   /// server-assigned name for additional default or other server-supplied
   ///  parameters used to control the expansion process.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [valueString]: The value of the parameter.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueBoolean]: The value of the parameter.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueInteger]: The value of the parameter.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueDecimal]: The value of the parameter.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueUri]: The value of the parameter.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueCode]: The value of the parameter.
   ///
-  /// [_valueCode]: Extensions for valueCode
+  /// [valueCodeElement]: Extensions for valueCode
   ///
   /// [valueDateTime]: The value of the parameter.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   factory ValueSetParameter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3424,7 +3424,7 @@ class ValueSetParameter with _$ValueSetParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetParameter.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3442,7 +3442,7 @@ class ValueSetParameter with _$ValueSetParameter {
 class ValueSetContains with _$ValueSetContains {
   ValueSetContains._();
 
-  /// [ValueSet_Contains]: A ValueSet resource instance specifies a set of codes
+  /// [ValueSetContains]: A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular
   /// context. Value sets link between [[[CodeSystem]]] definitions and their
   ///  use in [coded elements](terminologies.html).
@@ -3450,7 +3450,7 @@ class ValueSetContains with _$ValueSetContains {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3474,13 +3474,13 @@ class ValueSetContains with _$ValueSetContains {
   /// [system]: An absolute URI which is the code system in which the code for
   ///  this item in the expansion is defined.
   ///
-  /// [_system]: Extensions for system
+  /// [systemElement]: Extensions for system
   ///
-  /// [abstract]: If true, this entry is included in the expansion for
+  /// [abstract_]: If true, this entry is included in the expansion for
   /// navigational purposes, and the user cannot select the code directly as a
   ///  proper value.
   ///
-  /// [_abstract]: Extensions for abstract
+  /// [abstractElement]: Extensions for abstract
   ///
   /// [inactive]: If the concept is inactive in the code system that defines it.
   /// Inactive codes are those that are no longer to be used, but are maintained
@@ -3488,7 +3488,7 @@ class ValueSetContains with _$ValueSetContains {
   /// specified whether an concept is inactive (and it may depend on the context
   ///  of use).
   ///
-  /// [_inactive]: Extensions for inactive
+  /// [inactiveElement]: Extensions for inactive
   ///
   /// [version]: The version of the code system from this code was taken. Note
   /// that a well-maintained code system does not need the version reported,
@@ -3496,17 +3496,17 @@ class ValueSetContains with _$ValueSetContains {
   /// cannot consistently be assured, and when the meaning is not guaranteed to
   ///  be consistent, the version SHOULD be exchanged.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [code]: The code for this item in the expansion hierarchy. If this code is
   /// missing the entry in the hierarchy is a place holder (abstract) and does
   ///  not represent a valid code in the value set.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [display]: The recommended display for this item in the expansion.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   ///
   /// [designation]: Additional representations for this item - other languages,
   /// aliases, specialized purposes, used for particular purposes, etc. These
@@ -3538,7 +3538,7 @@ class ValueSetContains with _$ValueSetContains {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetContains.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetContains.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

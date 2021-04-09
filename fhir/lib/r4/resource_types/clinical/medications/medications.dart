@@ -32,11 +32,11 @@ class Immunization with Resource, _$Immunization {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -50,7 +50,7 @@ class Immunization with Resource, _$Immunization {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -75,7 +75,7 @@ class Immunization with Resource, _$Immunization {
   ///
   /// [status]: Indicates the current status of the immunization event.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: Indicates the reason the immunization event was not
   ///  performed.
@@ -90,23 +90,23 @@ class Immunization with Resource, _$Immunization {
   ///
   /// [occurrenceDateTime]: Date vaccine administered or was to be administered.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrenceString]: Date vaccine administered or was to be administered.
   ///
-  /// [_occurrenceString]: Extensions for occurrenceString
+  /// [occurrenceStringElement]: Extensions for occurrenceString
   ///
   /// [recorded]: The date the occurrence of the immunization was first captured
   /// in the record - potentially significantly after the occurrence of the
   ///  event.
   ///
-  /// [_recorded]: Extensions for recorded
+  /// [recordedElement]: Extensions for recorded
   ///
   /// [primarySource]: An indication that the content of the record is based on
   /// information from the person who administered the vaccine. This reflects
   ///  the context under which the data was originally recorded.
   ///
-  /// [_primarySource]: Extensions for primarySource
+  /// [primarySourceElement]: Extensions for primarySource
   ///
   /// [reportOrigin]: The source of the data when the report of the immunization
   /// event is not based on information from the person who administered the
@@ -119,11 +119,11 @@ class Immunization with Resource, _$Immunization {
   ///
   /// [lotNumber]: Lot number of the  vaccine product.
   ///
-  /// [_lotNumber]: Extensions for lotNumber
+  /// [lotNumberElement]: Extensions for lotNumber
   ///
   /// [expirationDate]: Date vaccine batch expires.
   ///
-  /// [_expirationDate]: Extensions for expirationDate
+  /// [expirationDateElement]: Extensions for expirationDate
   ///
   /// [site]: Body site where vaccine was administered.
   ///
@@ -144,7 +144,7 @@ class Immunization with Resource, _$Immunization {
   /// [isSubpotent]: Indication if a dose is considered to be subpotent. By
   ///  default, a dose should be considered to be potent.
   ///
-  /// [_isSubpotent]: Extensions for isSubpotent
+  /// [isSubpotentElement]: Extensions for isSubpotent
   ///
   /// [subpotentReason]: Reason why a dose is considered to be subpotent.
   ///
@@ -221,7 +221,7 @@ class Immunization with Resource, _$Immunization {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Immunization.fromYaml(dynamic yaml) => yaml is String
       ? Immunization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -239,14 +239,14 @@ class Immunization with Resource, _$Immunization {
 class ImmunizationPerformer with _$ImmunizationPerformer {
   ImmunizationPerformer._();
 
-  /// [Immunization_Performer]: Describes the event of a patient being
+  /// [ImmunizationPerformer]: Describes the event of a patient being
   /// administered a vaccine or a record of an immunization as reported by a
   ///  patient, a clinician or another party.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -282,7 +282,7 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationPerformer.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationPerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -300,14 +300,14 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
 class ImmunizationEducation with _$ImmunizationEducation {
   ImmunizationEducation._();
 
-  /// [Immunization_Education]: Describes the event of a patient being
+  /// [ImmunizationEducation]: Describes the event of a patient being
   /// administered a vaccine or a record of an immunization as reported by a
   ///  patient, a clinician or another party.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -330,21 +330,21 @@ class ImmunizationEducation with _$ImmunizationEducation {
   ///
   /// [documentType]: Identifier of the material presented to the patient.
   ///
-  /// [_documentType]: Extensions for documentType
+  /// [documentTypeElement]: Extensions for documentType
   ///
   /// [reference]: Reference pointer to the educational material given to the
   ///  patient if the information was on line.
   ///
-  /// [_reference]: Extensions for reference
+  /// [referenceElement]: Extensions for reference
   ///
   /// [publicationDate]: Date the educational material was published.
   ///
-  /// [_publicationDate]: Extensions for publicationDate
+  /// [publicationDateElement]: Extensions for publicationDate
   ///
   /// [presentationDate]: Date the educational material was given to the
   ///  patient.
   ///
-  /// [_presentationDate]: Extensions for presentationDate
+  /// [presentationDateElement]: Extensions for presentationDate
   factory ImmunizationEducation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -362,7 +362,7 @@ class ImmunizationEducation with _$ImmunizationEducation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationEducation.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationEducation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -380,14 +380,14 @@ class ImmunizationEducation with _$ImmunizationEducation {
 class ImmunizationReaction with _$ImmunizationReaction {
   ImmunizationReaction._();
 
-  /// [Immunization_Reaction]: Describes the event of a patient being
+  /// [ImmunizationReaction]: Describes the event of a patient being
   /// administered a vaccine or a record of an immunization as reported by a
   ///  patient, a clinician or another party.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -410,13 +410,13 @@ class ImmunizationReaction with _$ImmunizationReaction {
   ///
   /// [date]: Date of reaction to the immunization.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [detail]: Details of the reaction.
   ///
   /// [reported]: Self-reported indicator.
   ///
-  /// [_reported]: Extensions for reported
+  /// [reportedElement]: Extensions for reported
   factory ImmunizationReaction({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -431,7 +431,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationReaction.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationReaction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -449,14 +449,14 @@ class ImmunizationReaction with _$ImmunizationReaction {
 class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   ImmunizationProtocolApplied._();
 
-  /// [Immunization_ProtocolApplied]: Describes the event of a patient being
+  /// [ImmunizationProtocolApplied]: Describes the event of a patient being
   /// administered a vaccine or a record of an immunization as reported by a
   ///  patient, a clinician or another party.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -480,7 +480,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   /// [series]: One possible path to achieve presumed immunity against a disease
   ///  - within the context of an authority.
   ///
-  /// [_series]: Extensions for series
+  /// [seriesElement]: Extensions for series
   ///
   /// [authority]: Indicates the authority who published the protocol (e.g.
   ///  ACIP) that is being followed.
@@ -490,20 +490,20 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   ///
   /// [doseNumberPositiveInt]: Nominal position in a series.
   ///
-  /// [_doseNumberPositiveInt]: Extensions for doseNumberPositiveInt
+  /// [doseNumberPositiveIntElement]: Extensions for doseNumberPositiveInt
   ///
   /// [doseNumberString]: Nominal position in a series.
   ///
-  /// [_doseNumberString]: Extensions for doseNumberString
+  /// [doseNumberStringElement]: Extensions for doseNumberString
   ///
   /// [seriesDosesPositiveInt]: The recommended number of doses to achieve
   ///  immunity.
   ///
-  /// [_seriesDosesPositiveInt]: Extensions for seriesDosesPositiveInt
+  /// [seriesDosesPositiveIntElement]: Extensions for seriesDosesPositiveInt
   ///
   /// [seriesDosesString]: The recommended number of doses to achieve immunity.
   ///
-  /// [_seriesDosesString]: Extensions for seriesDosesString
+  /// [seriesDosesStringElement]: Extensions for seriesDosesString
   factory ImmunizationProtocolApplied({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -527,7 +527,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationProtocolApplied.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationProtocolApplied.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -564,11 +564,11 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -582,7 +582,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -609,14 +609,14 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   /// [status]: Indicates the current status of the evaluation of the
   ///  vaccination administration event.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [patient]: The individual for whom the evaluation is being done.
   ///
   /// [date]: The date the evaluation of the vaccine administration event was
   ///  performed.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [authority]: Indicates the authority who published the protocol (e.g.
   ///  ACIP).
@@ -635,29 +635,29 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   ///
   /// [description]: Additional information about the evaluation.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [series]: One possible path to achieve presumed immunity against a disease
   ///  - within the context of an authority.
   ///
-  /// [_series]: Extensions for series
+  /// [seriesElement]: Extensions for series
   ///
   /// [doseNumberPositiveInt]: Nominal position in a series.
   ///
-  /// [_doseNumberPositiveInt]: Extensions for doseNumberPositiveInt
+  /// [doseNumberPositiveIntElement]: Extensions for doseNumberPositiveInt
   ///
   /// [doseNumberString]: Nominal position in a series.
   ///
-  /// [_doseNumberString]: Extensions for doseNumberString
+  /// [doseNumberStringElement]: Extensions for doseNumberString
   ///
   /// [seriesDosesPositiveInt]: The recommended number of doses to achieve
   ///  immunity.
   ///
-  /// [_seriesDosesPositiveInt]: Extensions for seriesDosesPositiveInt
+  /// [seriesDosesPositiveIntElement]: Extensions for seriesDosesPositiveInt
   ///
   /// [seriesDosesString]: The recommended number of doses to achieve immunity.
   ///
-  /// [_seriesDosesString]: Extensions for seriesDosesString
+  /// [seriesDosesStringElement]: Extensions for seriesDosesString
   factory ImmunizationEvaluation({
     @Default(R4ResourceType.ImmunizationEvaluation)
     @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
@@ -702,7 +702,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationEvaluation.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationEvaluation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -738,11 +738,11 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -756,7 +756,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -784,7 +784,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ///
   /// [date]: The date the immunization recommendation(s) were created.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [authority]: Indicates the authority who published the protocol (e.g.
   ///  ACIP).
@@ -815,7 +815,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationRecommendation.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationRecommendation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -835,14 +835,14 @@ class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
 
-  /// [ImmunizationRecommendation_Recommendation]: A patient's point-in-time set
+  /// [ImmunizationRecommendationRecommendation]: A patient's point-in-time set
   /// of recommendations (i.e. forecasting) according to a published schedule
   ///  with optional supporting justification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -882,31 +882,31 @@ class ImmunizationRecommendationRecommendation
   /// [description]: Contains the description about the protocol under which the
   ///  vaccine was administered.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [series]: One possible path to achieve presumed immunity against a disease
   ///  - within the context of an authority.
   ///
-  /// [_series]: Extensions for series
+  /// [seriesElement]: Extensions for series
   ///
   /// [doseNumberPositiveInt]: Nominal position of the recommended dose in a
   ///  series (e.g. dose 2 is the next recommended dose).
   ///
-  /// [_doseNumberPositiveInt]: Extensions for doseNumberPositiveInt
+  /// [doseNumberPositiveIntElement]: Extensions for doseNumberPositiveInt
   ///
   /// [doseNumberString]: Nominal position of the recommended dose in a series
   ///  (e.g. dose 2 is the next recommended dose).
   ///
-  /// [_doseNumberString]: Extensions for doseNumberString
+  /// [doseNumberStringElement]: Extensions for doseNumberString
   ///
   /// [seriesDosesPositiveInt]: The recommended number of doses to achieve
   ///  immunity.
   ///
-  /// [_seriesDosesPositiveInt]: Extensions for seriesDosesPositiveInt
+  /// [seriesDosesPositiveIntElement]: Extensions for seriesDosesPositiveInt
   ///
   /// [seriesDosesString]: The recommended number of doses to achieve immunity.
   ///
-  /// [_seriesDosesString]: Extensions for seriesDosesString
+  /// [seriesDosesStringElement]: Extensions for seriesDosesString
   ///
   /// [supportingImmunization]: Immunization event history and/or evaluation
   ///  that supports the status and recommendation.
@@ -945,7 +945,7 @@ class ImmunizationRecommendationRecommendation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationRecommendationRecommendation.fromYaml(dynamic yaml) => yaml
           is String
       ? ImmunizationRecommendationRecommendation.fromJson(
@@ -967,14 +967,14 @@ class ImmunizationRecommendationDateCriterion
     with _$ImmunizationRecommendationDateCriterion {
   ImmunizationRecommendationDateCriterion._();
 
-  /// [ImmunizationRecommendation_DateCriterion]: A patient's point-in-time set
+  /// [ImmunizationRecommendationDateCriterion]: A patient's point-in-time set
   /// of recommendations (i.e. forecasting) according to a published schedule
   ///  with optional supporting justification.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1000,7 +1000,7 @@ class ImmunizationRecommendationDateCriterion
   ///
   /// [value]: The date whose meaning is specified by dateCriterion.code.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory ImmunizationRecommendationDateCriterion({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1013,7 +1013,7 @@ class ImmunizationRecommendationDateCriterion
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImmunizationRecommendationDateCriterion.fromYaml(dynamic yaml) => yaml
           is String
       ? ImmunizationRecommendationDateCriterion.fromJson(
@@ -1053,11 +1053,11 @@ class Medication with Resource, _$Medication {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1071,7 +1071,7 @@ class Medication with Resource, _$Medication {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1102,7 +1102,7 @@ class Medication with Resource, _$Medication {
   ///
   /// [status]: A code to indicate if the medication is in active use.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [manufacturer]: Describes the details of the manufacturer of the
   /// medication product.  This is not intended to represent the distributor of
@@ -1148,7 +1148,7 @@ class Medication with Resource, _$Medication {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Medication.fromYaml(dynamic yaml) => yaml is String
       ? Medication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1166,7 +1166,7 @@ class Medication with Resource, _$Medication {
 class MedicationIngredient with _$MedicationIngredient {
   MedicationIngredient._();
 
-  /// [Medication_Ingredient]: This resource is primarily used for the
+  /// [MedicationIngredient]: This resource is primarily used for the
   /// identification and definition of a medication for the purposes of
   /// prescribing, dispensing, and administering a medication as well as for
   ///  making statements about medication use.
@@ -1174,7 +1174,7 @@ class MedicationIngredient with _$MedicationIngredient {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1204,7 +1204,7 @@ class MedicationIngredient with _$MedicationIngredient {
   /// [isActive]: Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
   ///
-  /// [_isActive]: Extensions for isActive
+  /// [isActiveElement]: Extensions for isActive
   ///
   /// [strength]: Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
@@ -1223,7 +1223,7 @@ class MedicationIngredient with _$MedicationIngredient {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationIngredient.fromYaml(dynamic yaml) => yaml is String
       ? MedicationIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1241,7 +1241,7 @@ class MedicationIngredient with _$MedicationIngredient {
 class MedicationBatch with _$MedicationBatch {
   MedicationBatch._();
 
-  /// [Medication_Batch]: This resource is primarily used for the identification
+  /// [MedicationBatch]: This resource is primarily used for the identification
   /// and definition of a medication for the purposes of prescribing,
   /// dispensing, and administering a medication as well as for making
   ///  statements about medication use.
@@ -1249,7 +1249,7 @@ class MedicationBatch with _$MedicationBatch {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1272,11 +1272,11 @@ class MedicationBatch with _$MedicationBatch {
   ///
   /// [lotNumber]: The assigned lot number of a batch of the specified product.
   ///
-  /// [_lotNumber]: Extensions for lotNumber
+  /// [lotNumberElement]: Extensions for lotNumber
   ///
   /// [expirationDate]: When this specific batch of product will expire.
   ///
-  /// [_expirationDate]: Extensions for expirationDate
+  /// [expirationDateElement]: Extensions for expirationDate
   factory MedicationBatch({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1290,7 +1290,7 @@ class MedicationBatch with _$MedicationBatch {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationBatch.fromYaml(dynamic yaml) => yaml is String
       ? MedicationBatch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1328,11 +1328,11 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1346,7 +1346,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1377,7 +1377,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// [instantiates]: A protocol, guideline, orderset, or other definition that
   ///  was adhered to in whole or in part by this event.
   ///
-  /// [_instantiates]: Extensions for instantiates
+  /// [instantiatesElement]: Extensions for instantiates
   ///
   /// [partOf]: A larger event of which this particular event is a component or
   ///  step.
@@ -1387,7 +1387,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// possible for an administration to be started but not completed or it may
   ///  be paused while some other process is under way.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: A code indicating why the administration was not
   ///  performed.
@@ -1419,7 +1419,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// attribute is true). For many administrations, such as swallowing a tablet
   ///  the use of dateTime is more appropriate.
   ///
-  /// [_effectiveDateTime]: Extensions for effectiveDateTime
+  /// [effectiveDateTimeElement]: Extensions for effectiveDateTime
   ///
   /// [effectivePeriod]: A specific date/time or interval of time during which
   /// the administration took place (or did not take place, when the 'notGiven'
@@ -1491,7 +1491,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationAdministration.fromYaml(dynamic yaml) => yaml is String
       ? MedicationAdministration.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1511,7 +1511,7 @@ class MedicationAdministrationPerformer
     with _$MedicationAdministrationPerformer {
   MedicationAdministrationPerformer._();
 
-  /// [MedicationAdministration_Performer]: Describes the event of a patient
+  /// [MedicationAdministrationPerformer]: Describes the event of a patient
   /// consuming or otherwise being administered a medication.  This may be as
   /// simple as swallowing a tablet or it may be a long running infusion.
   /// Related resources tie this event to the authorizing prescription, and the
@@ -1520,7 +1520,7 @@ class MedicationAdministrationPerformer
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1556,7 +1556,7 @@ class MedicationAdministrationPerformer
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationAdministrationPerformer.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationAdministrationPerformer.fromJson(
@@ -1577,7 +1577,7 @@ class MedicationAdministrationPerformer
 class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
 
-  /// [MedicationAdministration_Dosage]: Describes the event of a patient
+  /// [MedicationAdministrationDosage]: Describes the event of a patient
   /// consuming or otherwise being administered a medication.  This may be as
   /// simple as swallowing a tablet or it may be a long running infusion.
   /// Related resources tie this event to the authorizing prescription, and the
@@ -1586,7 +1586,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1613,7 +1613,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   /// The dosage instructions should reflect the dosage of the medication that
   ///  was administered.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [site]: A coded specification of the anatomic site where the medication
   ///  first entered the body.  For example, "left arm".
@@ -1659,7 +1659,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationAdministrationDosage.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationAdministrationDosage.fromJson(
@@ -1700,11 +1700,11 @@ class MedicationDispense with Resource, _$MedicationDispense {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1718,7 +1718,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1750,7 +1750,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
   ///
   /// [status]: A code specifying the state of the set of dispense events.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReasonCodeableConcept]: Indicates the reason why a dispense was not
   ///  performed.
@@ -1801,12 +1801,12 @@ class MedicationDispense with Resource, _$MedicationDispense {
   /// [whenPrepared]: The time when the dispensed product was packaged and
   ///  reviewed.
   ///
-  /// [_whenPrepared]: Extensions for whenPrepared
+  /// [whenPreparedElement]: Extensions for whenPrepared
   ///
   /// [whenHandedOver]: The time the dispensed product was provided to the
   ///  patient or their representative.
   ///
-  /// [_whenHandedOver]: Extensions for whenHandedOver
+  /// [whenHandedOverElement]: Extensions for whenHandedOver
   ///
   /// [destination]: Identification of the facility/location where the
   ///  medication was shipped to, as part of the dispense event.
@@ -1881,7 +1881,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationDispense.fromYaml(dynamic yaml) => yaml is String
       ? MedicationDispense.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1899,7 +1899,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
 class MedicationDispensePerformer with _$MedicationDispensePerformer {
   MedicationDispensePerformer._();
 
-  /// [MedicationDispense_Performer]: Indicates that a medication product is to
+  /// [MedicationDispensePerformer]: Indicates that a medication product is to
   /// be or has been dispensed for a named person/patient.  This includes a
   /// description of the medication product (supply) provided and the
   /// instructions for administering the medication.  The medication dispense is
@@ -1908,7 +1908,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1945,7 +1945,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationDispensePerformer.fromYaml(dynamic yaml) => yaml is String
       ? MedicationDispensePerformer.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1964,7 +1964,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
 class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
 
-  /// [MedicationDispense_Substitution]: Indicates that a medication product is
+  /// [MedicationDispenseSubstitution]: Indicates that a medication product is
   /// to be or has been dispensed for a named person/patient.  This includes a
   /// description of the medication product (supply) provided and the
   /// instructions for administering the medication.  The medication dispense is
@@ -1973,7 +1973,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1997,7 +1997,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   /// [wasSubstituted]: True if the dispenser dispensed a different drug or
   ///  product from what was prescribed.
   ///
-  /// [_wasSubstituted]: Extensions for wasSubstituted
+  /// [wasSubstitutedElement]: Extensions for wasSubstituted
   ///
   /// [type]: A code signifying whether a different drug was dispensed from what
   ///  was prescribed.
@@ -2021,7 +2021,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationDispenseSubstitution.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationDispenseSubstitution.fromJson(
@@ -2059,11 +2059,11 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2077,7 +2077,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2108,7 +2108,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   /// status refers to the validity about the information of the medication and
   ///  not to its medicinal properties.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [manufacturer]: Describes the details of the manufacturer of the
   /// medication product.  This is not intended to represent the distributor of
@@ -2126,7 +2126,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   /// given to a medication in different countries.  For example, acetaminophen
   ///  and paracetamol or salbutamol and albuterol.
   ///
-  /// [_synonym]: Extensions for synonym
+  /// [synonymElement]: Extensions for synonym
   ///
   /// [relatedMedicationKnowledge]: Associated or related knowledge about a
   ///  medication.
@@ -2146,7 +2146,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   ///
   /// [preparationInstruction]: The instructions for preparing the medication.
   ///
-  /// [_preparationInstruction]: Extensions for preparationInstruction
+  /// [preparationInstructionElement]: Extensions for preparationInstruction
   ///
   /// [intendedRoute]: The intended or approved route of administration.
   ///
@@ -2219,7 +2219,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledge.fromYaml(dynamic yaml) => yaml is String
       ? MedicationKnowledge.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2238,13 +2238,13 @@ class MedicationKnowledgeRelatedMedicationKnowledge
     with _$MedicationKnowledgeRelatedMedicationKnowledge {
   MedicationKnowledgeRelatedMedicationKnowledge._();
 
-  /// [MedicationKnowledge_RelatedMedicationKnowledge]: Information about a
+  /// [MedicationKnowledgeRelatedMedicationKnowledge]: Information about a
   ///  medication that is used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2280,7 +2280,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeRelatedMedicationKnowledge.fromYaml(
           dynamic yaml) =>
       yaml is String
@@ -2302,13 +2302,13 @@ class MedicationKnowledgeRelatedMedicationKnowledge
 class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   MedicationKnowledgeMonograph._();
 
-  /// [MedicationKnowledge_Monograph]: Information about a medication that is
+  /// [MedicationKnowledgeMonograph]: Information about a medication that is
   ///  used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2344,7 +2344,7 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeMonograph.fromYaml(dynamic yaml) => yaml is String
       ? MedicationKnowledgeMonograph.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2363,13 +2363,13 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
 class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   MedicationKnowledgeIngredient._();
 
-  /// [MedicationKnowledge_Ingredient]: Information about a medication that is
+  /// [MedicationKnowledgeIngredient]: Information about a medication that is
   ///  used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2399,7 +2399,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   /// [isActive]: Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
   ///
-  /// [_isActive]: Extensions for isActive
+  /// [isActiveElement]: Extensions for isActive
   ///
   /// [strength]: Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
@@ -2418,7 +2418,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeIngredient.fromYaml(dynamic yaml) => yaml is String
       ? MedicationKnowledgeIngredient.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2437,13 +2437,13 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
 class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   MedicationKnowledgeCost._();
 
-  /// [MedicationKnowledge_Cost]: Information about a medication that is used to
+  /// [MedicationKnowledgeCost]: Information about a medication that is used to
   ///  support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2469,7 +2469,7 @@ class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   ///
   /// [source]: The source or owner that assigns the price to the medication.
   ///
-  /// [_source]: Extensions for source
+  /// [sourceElement]: Extensions for source
   ///
   /// [cost]: The price of the medication.
   factory MedicationKnowledgeCost({
@@ -2485,7 +2485,7 @@ class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeCost.fromYaml(dynamic yaml) => yaml is String
       ? MedicationKnowledgeCost.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2504,13 +2504,13 @@ class MedicationKnowledgeMonitoringProgram
     with _$MedicationKnowledgeMonitoringProgram {
   MedicationKnowledgeMonitoringProgram._();
 
-  /// [MedicationKnowledge_MonitoringProgram]: Information about a medication
+  /// [MedicationKnowledgeMonitoringProgram]: Information about a medication
   ///  that is used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2535,7 +2535,7 @@ class MedicationKnowledgeMonitoringProgram
   ///
   /// [name]: Name of the reviewing program.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   factory MedicationKnowledgeMonitoringProgram({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2548,7 +2548,7 @@ class MedicationKnowledgeMonitoringProgram
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeMonitoringProgram.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationKnowledgeMonitoringProgram.fromJson(
@@ -2570,13 +2570,13 @@ class MedicationKnowledgeAdministrationGuidelines
     with _$MedicationKnowledgeAdministrationGuidelines {
   MedicationKnowledgeAdministrationGuidelines._();
 
-  /// [MedicationKnowledge_AdministrationGuidelines]: Information about a
+  /// [MedicationKnowledgeAdministrationGuidelines]: Information about a
   ///  medication that is used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2621,7 +2621,7 @@ class MedicationKnowledgeAdministrationGuidelines
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeAdministrationGuidelines.fromYaml(dynamic yaml) =>
       yaml is String
           ? MedicationKnowledgeAdministrationGuidelines.fromJson(
@@ -2642,13 +2642,13 @@ class MedicationKnowledgeAdministrationGuidelines
 class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   MedicationKnowledgeDosage._();
 
-  /// [MedicationKnowledge_Dosage]: Information about a medication that is used
+  /// [MedicationKnowledgeDosage]: Information about a medication that is used
   ///  to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2684,7 +2684,7 @@ class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeDosage.fromYaml(dynamic yaml) => yaml is String
       ? MedicationKnowledgeDosage.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2704,13 +2704,13 @@ class MedicationKnowledgePatientCharacteristics
     with _$MedicationKnowledgePatientCharacteristics {
   MedicationKnowledgePatientCharacteristics._();
 
-  /// [MedicationKnowledge_PatientCharacteristics]: Information about a
+  /// [MedicationKnowledgePatientCharacteristics]: Information about a
   ///  medication that is used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2739,7 +2739,7 @@ class MedicationKnowledgePatientCharacteristics
   ///
   /// [value]: The specific characteristic (e.g. height, weight, gender, etc.).
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory MedicationKnowledgePatientCharacteristics({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2753,7 +2753,7 @@ class MedicationKnowledgePatientCharacteristics
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgePatientCharacteristics.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationKnowledgePatientCharacteristics.fromJson(
@@ -2775,13 +2775,13 @@ class MedicationKnowledgeMedicineClassification
     with _$MedicationKnowledgeMedicineClassification {
   MedicationKnowledgeMedicineClassification._();
 
-  /// [MedicationKnowledge_MedicineClassification]: Information about a
+  /// [MedicationKnowledgeMedicineClassification]: Information about a
   ///  medication that is used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2818,7 +2818,7 @@ class MedicationKnowledgeMedicineClassification
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeMedicineClassification.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationKnowledgeMedicineClassification.fromJson(
@@ -2839,13 +2839,13 @@ class MedicationKnowledgeMedicineClassification
 class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   MedicationKnowledgePackaging._();
 
-  /// [MedicationKnowledge_Packaging]: Information about a medication that is
+  /// [MedicationKnowledgePackaging]: Information about a medication that is
   ///  used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2882,7 +2882,7 @@ class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgePackaging.fromYaml(dynamic yaml) => yaml is String
       ? MedicationKnowledgePackaging.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2902,13 +2902,13 @@ class MedicationKnowledgeDrugCharacteristic
     with _$MedicationKnowledgeDrugCharacteristic {
   MedicationKnowledgeDrugCharacteristic._();
 
-  /// [MedicationKnowledge_DrugCharacteristic]: Information about a medication
+  /// [MedicationKnowledgeDrugCharacteristic]: Information about a medication
   ///  that is used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2936,13 +2936,13 @@ class MedicationKnowledgeDrugCharacteristic
   ///
   /// [valueString]: Description of the characteristic.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueQuantity]: Description of the characteristic.
   ///
   /// [valueBase64Binary]: Description of the characteristic.
   ///
-  /// [_valueBase64Binary]: Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement]: Extensions for valueBase64Binary
   factory MedicationKnowledgeDrugCharacteristic({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2959,7 +2959,7 @@ class MedicationKnowledgeDrugCharacteristic
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeDrugCharacteristic.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationKnowledgeDrugCharacteristic.fromJson(
@@ -2980,13 +2980,13 @@ class MedicationKnowledgeDrugCharacteristic
 class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   MedicationKnowledgeRegulatory._();
 
-  /// [MedicationKnowledge_Regulatory]: Information about a medication that is
+  /// [MedicationKnowledgeRegulatory]: Information about a medication that is
   ///  used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3029,7 +3029,7 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeRegulatory.fromYaml(dynamic yaml) => yaml is String
       ? MedicationKnowledgeRegulatory.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3048,13 +3048,13 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
 class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   MedicationKnowledgeSubstitution._();
 
-  /// [MedicationKnowledge_Substitution]: Information about a medication that is
+  /// [MedicationKnowledgeSubstitution]: Information about a medication that is
   ///  used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3080,7 +3080,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   /// [allowed]: Specifies if regulation allows for changes in the medication
   ///  when dispensing.
   ///
-  /// [_allowed]: Extensions for allowed
+  /// [allowedElement]: Extensions for allowed
   factory MedicationKnowledgeSubstitution({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3093,7 +3093,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeSubstitution.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationKnowledgeSubstitution.fromJson(
@@ -3114,13 +3114,13 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
 class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
   MedicationKnowledgeSchedule._();
 
-  /// [MedicationKnowledge_Schedule]: Information about a medication that is
+  /// [MedicationKnowledgeSchedule]: Information about a medication that is
   ///  used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3152,7 +3152,7 @@ class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeSchedule.fromYaml(dynamic yaml) => yaml is String
       ? MedicationKnowledgeSchedule.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3171,13 +3171,13 @@ class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
 class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   MedicationKnowledgeMaxDispense._();
 
-  /// [MedicationKnowledge_MaxDispense]: Information about a medication that is
+  /// [MedicationKnowledgeMaxDispense]: Information about a medication that is
   ///  used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3213,7 +3213,7 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeMaxDispense.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationKnowledgeMaxDispense.fromJson(
@@ -3234,13 +3234,13 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
 class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
   MedicationKnowledgeKinetics._();
 
-  /// [MedicationKnowledge_Kinetics]: Information about a medication that is
+  /// [MedicationKnowledgeKinetics]: Information about a medication that is
   ///  used to support knowledge.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3280,7 +3280,7 @@ class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationKnowledgeKinetics.fromYaml(dynamic yaml) => yaml is String
       ? MedicationKnowledgeKinetics.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3320,11 +3320,11 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -3338,7 +3338,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -3369,14 +3369,14 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// [status]: A code specifying the current state of the order.  Generally,
   ///  this will be active or completed state.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: Captures the reason for the current state of the
   ///  MedicationRequest.
   ///
   /// [intent]: Whether the request is a proposal, plan, or an original order.
   ///
-  /// [_intent]: Extensions for intent
+  /// [intentElement]: Extensions for intent
   ///
   /// [category]: Indicates the type of medication request (for example, where
   /// the medication is expected to be consumed or administered (i.e. inpatient
@@ -3385,18 +3385,18 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// [priority]: Indicates how quickly the Medication Request should be
   ///  addressed with respect to other requests.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [doNotPerform]: If true indicates that the provider is asking for the
   ///  medication request not to occur.
   ///
-  /// [_doNotPerform]: Extensions for doNotPerform
+  /// [doNotPerformElement]: Extensions for doNotPerform
   ///
   /// [reportedBoolean]: Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
   ///  record.  It may also indicate the source of the report.
   ///
-  /// [_reportedBoolean]: Extensions for reportedBoolean
+  /// [reportedBooleanElement]: Extensions for reportedBoolean
   ///
   /// [reportedReference]: Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
@@ -3424,7 +3424,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// [authoredOn]: The date (and perhaps time) when the prescription was
   ///  initially written or authored on.
   ///
-  /// [_authoredOn]: Extensions for authoredOn
+  /// [authoredOnElement]: Extensions for authoredOn
   ///
   /// [requester]: The individual, organization, or device that initiated the
   ///  request and has responsibility for its activation.
@@ -3448,13 +3448,13 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// orderset, or other definition that is adhered to in whole or in part by
   ///  this MedicationRequest.
   ///
-  /// [_instantiatesCanonical]: Extensions for instantiatesCanonical
+  /// [instantiatesCanonicalElement]: Extensions for instantiatesCanonical
   ///
   /// [instantiatesUri]: The URL pointing to an externally maintained protocol,
   /// guideline, orderset or other definition that is adhered to in whole or in
   ///  part by this MedicationRequest.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [basedOn]: A plan or request that is fulfilled in whole or in part by this
   ///  medication request.
@@ -3561,7 +3561,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationRequest.fromYaml(dynamic yaml) => yaml is String
       ? MedicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3579,7 +3579,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
 class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   MedicationRequestDispenseRequest._();
 
-  /// [MedicationRequest_DispenseRequest]: An order or request for both supply
+  /// [MedicationRequestDispenseRequest]: An order or request for both supply
   /// of the medication and the instructions for administration of the
   /// medication to a patient. The resource is called "MedicationRequest" rather
   /// than "MedicationPrescription" or "MedicationOrder" to generalize the use
@@ -3589,7 +3589,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3628,7 +3628,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   /// tablets.  A prescriber may explicitly say that zero refills are permitted
   ///  after the initial dispense.
   ///
-  /// [_numberOfRepeatsAllowed]: Extensions for numberOfRepeatsAllowed
+  /// [numberOfRepeatsAllowedElement]: Extensions for numberOfRepeatsAllowed
   ///
   /// [quantity]: The amount that is to be dispensed for one fill.
   ///
@@ -3656,7 +3656,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationRequestDispenseRequest.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationRequestDispenseRequest.fromJson(
@@ -3677,7 +3677,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
 class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   MedicationRequestInitialFill._();
 
-  /// [MedicationRequest_InitialFill]: An order or request for both supply of
+  /// [MedicationRequestInitialFill]: An order or request for both supply of
   /// the medication and the instructions for administration of the medication
   /// to a patient. The resource is called "MedicationRequest" rather than
   /// "MedicationPrescription" or "MedicationOrder" to generalize the use across
@@ -3687,7 +3687,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3724,7 +3724,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationRequestInitialFill.fromYaml(dynamic yaml) => yaml is String
       ? MedicationRequestInitialFill.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3743,7 +3743,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
 class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   MedicationRequestSubstitution._();
 
-  /// [MedicationRequest_Substitution]: An order or request for both supply of
+  /// [MedicationRequestSubstitution]: An order or request for both supply of
   /// the medication and the instructions for administration of the medication
   /// to a patient. The resource is called "MedicationRequest" rather than
   /// "MedicationPrescription" or "MedicationOrder" to generalize the use across
@@ -3753,7 +3753,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3777,7 +3777,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   /// [allowedBoolean]: True if the prescriber allows a different drug to be
   ///  dispensed from what was prescribed.
   ///
-  /// [_allowedBoolean]: Extensions for allowedBoolean
+  /// [allowedBooleanElement]: Extensions for allowedBoolean
   ///
   /// [allowedCodeableConcept]: True if the prescriber allows a different drug
   ///  to be dispensed from what was prescribed.
@@ -3797,7 +3797,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationRequestSubstitution.fromYaml(dynamic yaml) => yaml is String
       ? MedicationRequestSubstitution.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3854,11 +3854,11 @@ class MedicationStatement with Resource, _$MedicationStatement {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -3872,7 +3872,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -3910,7 +3910,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   /// the state of the medication used that this statement is about.  Generally,
   ///  this will be active or completed.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: Captures the reason for the current state of the
   ///  MedicationStatement.
@@ -3937,7 +3937,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   /// asserted that the patient is/was/will be taking the medication (or was not
   ///  taking, when the MedicationStatement.taken element is No).
   ///
-  /// [_effectiveDateTime]: Extensions for effectiveDateTime
+  /// [effectiveDateTimeElement]: Extensions for effectiveDateTime
   ///
   /// [effectivePeriod]: The interval of time during which it is being asserted
   /// that the patient is/was/will be taking the medication (or was not taking,
@@ -3946,7 +3946,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   /// [dateAsserted]: The date when the medication statement was asserted by the
   ///  information source.
   ///
-  /// [_dateAsserted]: Extensions for dateAsserted
+  /// [dateAssertedElement]: Extensions for dateAsserted
   ///
   /// [informationSource]: The person or organization that provided the
   /// information about the taking of this medication. Note: Use derivedFrom
@@ -4008,7 +4008,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MedicationStatement.fromYaml(dynamic yaml) => yaml is String
       ? MedicationStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

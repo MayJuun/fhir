@@ -21,7 +21,7 @@ part 'element.g.dart';
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Element.fromYaml(dynamic yaml) => yaml is String
       ? Element.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
