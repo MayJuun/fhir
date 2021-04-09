@@ -1,5 +1,9 @@
 # fhir
 
+## [0.4.3]
+* [Tiloc](https://github.com/tiloc) helped clean up the comments so dartdoc doesn't run so long
+* dependencies updated
+
 ## [0.4.2]
 * Stable(ish)++:
   * No longer use runtimeType string names for primitive type construction
