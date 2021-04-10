@@ -26,7 +26,14 @@ class SmartClient extends FhirClient {
     this.tokenUrl,
     this.isLoggedIn = false,
   }) {
-    final tempUri = Uri.parse(baseUri.toString().replaceAll('#', 'redirect'));
+    Uri tempUri;
+    if (baseUri.toString().contains('redirect') &&
+        baseUri.toString().contains('code=')) {
+      tempUri =
+          Uri.parse('${baseUri.toString().split('redirect')[0]}redirect/');
+    } else {
+      tempUri = Uri.parse(baseUri.toString().replaceAll('#', 'redirect'));
+    }
     if (!tempUri.toString().endsWith('redirect') &&
         !tempUri.toString().endsWith('redirect/')) {
       if (tempUri.toString().endsWith('/')) {
@@ -35,7 +42,7 @@ class SmartClient extends FhirClient {
         _redirectUri = FhirUri('${tempUri.toString()}/redirect/');
       }
     } else {
-      _redirectUri = FhirUri(baseUri);
+      _redirectUri = FhirUri(tempUri);
     }
     _clientId = clientId;
   }
@@ -113,9 +120,13 @@ class SmartClient extends FhirClient {
   }
 
   Future<void> authorize(String uriWithCode) async {
-    print('before endpoints');
     await _getEndpoints;
-    print('after endpoints');
+    var scopesList = scopes?.scopesList() ?? [];
+    scopesList.addAll(['nonce=${_nonce()}', 'aud=${fhirUrl.toString}']);
+    _grant!.getAuthorizationUrl(
+      _redirectUri.value!,
+      scopes: scopesList,
+    );
     if (uriWithCode.contains('code=') && uriWithCode.contains('redirect')) {
       final authorizationCode =
           uriWithCode.split('code=')[1].split('?')[0].split('&')[0];

@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
     print(base);
     if (base.toString().contains('code=') &&
         base.toString().contains('redirect')) {
+      smart.authorize(base.toString());
       return MaterialApp(home: MainPage(base.toString(), smart));
     } else {
       smart.login();
@@ -49,9 +50,6 @@ class MainPage extends StatelessWidget {
             Text('Exchange this code for some tokens: $base'),
             ElevatedButton(
               onPressed: () async {
-                print('authorize');
-                await smart.authorize(base.toString());
-                print('headers');
                 final headers = await smart.authHeaders;
                 Navigator.push(
                   context,
