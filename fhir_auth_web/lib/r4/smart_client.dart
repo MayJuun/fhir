@@ -113,7 +113,9 @@ class SmartClient extends FhirClient {
   }
 
   Future<void> authorize(String uriWithCode) async {
+    print('before endpoints');
     await _getEndpoints;
+    print('after endpoints');
     if (uriWithCode.contains('code=') && uriWithCode.contains('redirect')) {
       final authorizationCode =
           uriWithCode.split('code=')[1].split('?')[0].split('&')[0];

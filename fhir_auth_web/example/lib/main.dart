@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       clientId: Api.aidboxClientId,
       baseUri: base,
     );
+    print(base);
     if (base.toString().contains('code=') &&
         base.toString().contains('redirect')) {
-      smart.authorize(base.toString());
       return MaterialApp(home: MainPage(base.toString(), smart));
     } else {
       smart.login();
@@ -44,15 +44,40 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: FutureBuilder(
-            future: smart.authHeaders,
-            builder: (BuildContext context, AsyncSnapshot snapshot) {
-              if (snapshot.hasData) {
-                return Text('${snapshot.data}');
-              } else {
-                return Text('Exchange this code for some tokens: $base');
-              }
-            }),
+        body: Column(
+          children: [
+            Text('Exchange this code for some tokens: $base'),
+            ElevatedButton(
+              onPressed: () async {
+                print('authorize');
+                await smart.authorize(base.toString());
+                print('headers');
+                final headers = await smart.authHeaders;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NextPage(headers),
+                  ),
+                );
+              },
+              child: Text('Press for Headers'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class NextPage extends StatelessWidget {
+  NextPage(this.headers);
+
+  final dynamic headers;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Text('Have some headers: $headers'),
       ),
     );
   }
