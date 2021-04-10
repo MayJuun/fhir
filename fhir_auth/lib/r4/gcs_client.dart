@@ -6,14 +6,14 @@ import 'fhir_client.dart';
 
 class GcsClient extends FhirClient {
   GcsClient({
-    required this.baseUrl,
+    required this.fhirUrl,
     List<String>? scopes,
     String? clientId,
   }) {
     googleSignIn = GoogleSignIn(clientId: clientId, scopes: scopes ?? []);
   }
 
-  FhirUri baseUrl;
+  FhirUri fhirUrl;
   late GoogleSignIn googleSignIn;
   bool isLoggedIn = false;
 

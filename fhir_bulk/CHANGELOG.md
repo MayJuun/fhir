@@ -1,3 +1,6 @@
+## [0.4.1]
+* Changed description since I had copied it from auth.
+
 ## [0.4.0]
 * Removed dartz dependency
 * Included new WhichResource class (just takes the place of Tuple2 I was using)

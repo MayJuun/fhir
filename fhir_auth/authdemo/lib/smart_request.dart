@@ -15,7 +15,7 @@ Future smartRequest({
   required FhirUri fhirCallback,
 }) async {
   final client = SmartClient(
-    baseUrl: FhirUri(url),
+    fhirUrl: FhirUri(url),
     clientId: clientId,
     redirectUri: fhirCallback,
     scopes: Scopes(
@@ -43,7 +43,7 @@ Future smartRequest({
   final _newPatient = newPatient();
   print('Patient to be uploaded:\n${_newPatient.toJson()}');
   final request1 = FhirRequest.create(
-    base: client.baseUrl.value!,
+    base: client.fhirUrl.value!,
     //?? Uri.parse('127.0.0.1'),
     resource: _newPatient,
   );
@@ -60,7 +60,7 @@ Future smartRequest({
     print(newId);
   } else {
     final request2 = FhirRequest.read(
-      base: client.baseUrl.value ?? Uri.parse('127.0.0.1'),
+      base: client.fhirUrl.value ?? Uri.parse('127.0.0.1'),
       type: R4ResourceType.Patient,
       id: newId,
     );

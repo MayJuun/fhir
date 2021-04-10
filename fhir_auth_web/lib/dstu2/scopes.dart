@@ -1,21 +1,11 @@
 // ignore_for_file: prefer_final_locals
 
-import 'package:dartz/dartz.dart';
 import 'package:fhir/dstu2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'clinical_scope.dart';
+
 part 'scopes.freezed.dart';
-
-enum Interaction {
-  read,
-  write,
-  any,
-}
-
-enum Role {
-  patient,
-  user,
-}
 
 /// for Scopes, it's really best to go and look at the official description
 /// from HL7 http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/
@@ -25,7 +15,7 @@ class Scopes with _$Scopes {
 
   factory Scopes({
     /// see the clinical scopes class for details
-    List<Tuple3<Role, Dstu2ResourceType, Interaction>>? clinicalScopes,
+    List<ClinicalScope>? clinicalScopes,
 
     /// permission to retrieve information about the current logged-in user
     /// almost always coupled with fhirUser
@@ -96,12 +86,12 @@ class Scopes with _$Scopes {
     }
     if (clinicalScopes != null) {
       for (final scope in clinicalScopes!) {
-        var scopeArgument = scope.value1 == Role.patient ? 'patient/' : 'user/';
+        var scopeArgument = scope.role == Role.patient ? 'patient/' : 'user/';
         scopeArgument +=
-            ResourceUtils.resourceTypeToStringMap[scope.value2] ?? '';
-        scopeArgument += scope.value3 == Interaction.any
+            ResourceUtils.resourceTypeToStringMap[scope.resourceType] ?? '';
+        scopeArgument += scope.interaction == Interaction.any
             ? '.*'
-            : scope.value3 == Interaction.write
+            : scope.interaction == Interaction.write
                 ? '.write'
                 : '.read';
         returnValue.add(scopeArgument);

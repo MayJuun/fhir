@@ -6,7 +6,7 @@ import 'package:fhir_auth/r4.dart';
 import 'new_patient.dart';
 
 Future gcsRequest(String url) async {
-  final client = GcsClient(baseUrl: FhirUri(url));
+  final client = GcsClient(fhirUrl: FhirUri(url));
 
   try {
     await client.login();
@@ -17,7 +17,7 @@ Future gcsRequest(String url) async {
   final _newPatient = newPatient();
   print('Patient to be uploaded: ${_newPatient.toJson()}');
   final request1 = FhirRequest.create(
-    base: client.baseUrl.value!,
+    base: client.fhirUrl.value!,
     resource: _newPatient,
   );
 
@@ -33,7 +33,7 @@ Future gcsRequest(String url) async {
     print(newId);
   } else {
     final request2 = FhirRequest.read(
-      base: client.baseUrl.value!,
+      base: client.fhirUrl.value!,
       type: R4ResourceType.Patient,
       id: newId,
     );

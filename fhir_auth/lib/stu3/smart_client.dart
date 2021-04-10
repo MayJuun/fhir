@@ -15,7 +15,7 @@ import 'scopes.dart';
 /// will provide the client for interacting with the FHIR server
 class SmartClient extends FhirClient {
   SmartClient({
-    required this.baseUrl,
+    required this.fhirUrl,
     required String clientId,
     required FhirUri redirectUri,
     this.launch,
@@ -31,10 +31,10 @@ class SmartClient extends FhirClient {
     _secret = secret;
   }
 
-  /// specify the baseUrl of the Capability Statement (or conformance
+  /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
   /// server or the FHIR data server
-  FhirUri baseUrl;
+  FhirUri fhirUrl;
 
   /// the clientId of your app, must be pre-registered with the authorization
   /// server
@@ -142,7 +142,7 @@ class SmartClient extends FhirClient {
     );
     request.additionalParameters = additionalParameters ?? <String, String>{};
     request.additionalParameters!['nonce'] = _nonce();
-    request.additionalParameters!['aud'] = baseUrl.toString();
+    request.additionalParameters!['aud'] = fhirUrl.toString();
 
     final authorization = await appAuth.authorizeAndExchangeCode(request);
 
@@ -202,7 +202,7 @@ class SmartClient extends FhirClient {
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
   Future<void> get _getEndpoints async {
-    var thisRequest = '$baseUrl/metadata?mode=full&_format=json';
+    var thisRequest = '$fhirUrl/metadata?mode=full&_format=json';
 
     var result = await get(Uri.parse(thisRequest));
 

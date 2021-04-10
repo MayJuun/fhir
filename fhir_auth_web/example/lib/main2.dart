@@ -6,15 +6,14 @@ import 'package:oauth2/oauth2.dart' as oauth2;
 import 'api.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    WidgetsFlutterBinding.ensureInitialized();
     final base = Uri.base.toString();
-    print(base);
     return MaterialApp(
         home: base.contains('code=') && base.contains('redirect')
             ? MainPage(base)
@@ -38,6 +37,7 @@ class _AuthPageState extends State<AuthPage> {
     );
     final _redirect =
         Uri.parse(Uri.base.toString().replaceAll('#', 'redirect'));
+
     var authorizationUrl = grant
         .getAuthorizationUrl(_redirect, scopes: ['openid', 'offlineAccess']);
     WidgetsBinding.instance!.addPostFrameCallback((_) {

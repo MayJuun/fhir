@@ -17,7 +17,7 @@ class _$ScopesTearOff {
   const _$ScopesTearOff();
 
   _Scopes call(
-      {List<Tuple3<Role, R4ResourceType, Interaction>>? clinicalScopes,
+      {List<ClinicalScope>? clinicalScopes,
       bool? openid,
       bool? fhirUser,
       bool? profile,
@@ -54,8 +54,7 @@ const $Scopes = _$ScopesTearOff();
 /// @nodoc
 mixin _$Scopes {
   /// see the clinical scopes class for details
-  List<Tuple3<Role, R4ResourceType, Interaction>>? get clinicalScopes =>
-      throw _privateConstructorUsedError;
+  List<ClinicalScope>? get clinicalScopes => throw _privateConstructorUsedError;
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
@@ -104,7 +103,7 @@ abstract class $ScopesCopyWith<$Res> {
   factory $ScopesCopyWith(Scopes value, $Res Function(Scopes) then) =
       _$ScopesCopyWithImpl<$Res>;
   $Res call(
-      {List<Tuple3<Role, R4ResourceType, Interaction>>? clinicalScopes,
+      {List<ClinicalScope>? clinicalScopes,
       bool? openid,
       bool? fhirUser,
       bool? profile,
@@ -147,7 +146,7 @@ class _$ScopesCopyWithImpl<$Res> implements $ScopesCopyWith<$Res> {
       clinicalScopes: clinicalScopes == freezed
           ? _value.clinicalScopes
           : clinicalScopes // ignore: cast_nullable_to_non_nullable
-              as List<Tuple3<Role, R4ResourceType, Interaction>>?,
+              as List<ClinicalScope>?,
       openid: openid == freezed
           ? _value.openid
           : openid // ignore: cast_nullable_to_non_nullable
@@ -206,7 +205,7 @@ abstract class _$ScopesCopyWith<$Res> implements $ScopesCopyWith<$Res> {
       __$ScopesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<Tuple3<Role, R4ResourceType, Interaction>>? clinicalScopes,
+      {List<ClinicalScope>? clinicalScopes,
       bool? openid,
       bool? fhirUser,
       bool? profile,
@@ -250,7 +249,7 @@ class __$ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
       clinicalScopes: clinicalScopes == freezed
           ? _value.clinicalScopes
           : clinicalScopes // ignore: cast_nullable_to_non_nullable
-              as List<Tuple3<Role, R4ResourceType, Interaction>>?,
+              as List<ClinicalScope>?,
       openid: openid == freezed
           ? _value.openid
           : openid // ignore: cast_nullable_to_non_nullable
@@ -324,7 +323,7 @@ class _$_Scopes extends _Scopes {
   @override
 
   /// see the clinical scopes class for details
-  final List<Tuple3<Role, R4ResourceType, Interaction>>? clinicalScopes;
+  final List<ClinicalScope>? clinicalScopes;
   @override
 
   /// permission to retrieve information about the current logged-in user
@@ -449,7 +448,7 @@ class _$_Scopes extends _Scopes {
 
 abstract class _Scopes extends Scopes {
   factory _Scopes(
-      {List<Tuple3<Role, R4ResourceType, Interaction>>? clinicalScopes,
+      {List<ClinicalScope>? clinicalScopes,
       bool? openid,
       bool? fhirUser,
       bool? profile,
@@ -467,8 +466,7 @@ abstract class _Scopes extends Scopes {
   @override
 
   /// see the clinical scopes class for details
-  List<Tuple3<Role, R4ResourceType, Interaction>>? get clinicalScopes =>
-      throw _privateConstructorUsedError;
+  List<ClinicalScope>? get clinicalScopes => throw _privateConstructorUsedError;
   @override
 
   /// permission to retrieve information about the current logged-in user

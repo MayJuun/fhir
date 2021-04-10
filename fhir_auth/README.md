@@ -91,7 +91,7 @@ I'm going to show here a copy (with numbers changed, obviously) of my API file t
   static const mihinAuthUrl = null;
   static const mihinTokenUrl = null;
 ```
-Note the url is the baseUrl for your query, if you attache /metadata to the end, it should return a CapabilityStatement/Conformance. Pay attention to this, because different servers creat their urls differently.
+Note the url is the fhirUrl for your query, if you attache /metadata to the end, it should return a CapabilityStatement/Conformance. Pay attention to this, because different servers creat their urls differently.
 
 ```Google Healthcare API```
 ```
@@ -123,7 +123,7 @@ I think the example shows the flow pretty well. I've also tried to make both the
 So for the SmartClient, initialize as:
 ```
   final client = SmartClient(
-    baseUrl: FhirUri(url),
+    fhirUrl: FhirUri(url),
     clientId: clientId,
     redirectUri: fhirCallback,
     scopes: Scopes(
@@ -145,7 +145,7 @@ So for the SmartClient, initialize as:
 GCS Client requires fewer arguments (because you don't need to specify scopes for their Healthcare API)
 ```
   final client = GcsClient(
-    baseUrl: FhirUri(url),
+    fhirUrl: FhirUri(url),
     clientId: clientId,
     scopes: scopes,
   );
@@ -154,10 +154,10 @@ After this, the flow is the same for both:
 ```
 await client.login();
 final newPatient = Patient(id: '123');
-final request1 = FhirRequest.create(base: client.baseUrl.uri);
+final request1 = FhirRequest.create(base: client.fhirUrl.uri);
 final response1 = await request1.request(headers: await client.authHeaders);
 final request2 = FhirRequest.read(
-  base: client.baseUrl.uri,
+  base: client.fhirUrl.uri,
   type: R4ResourceType.Patient,
   id: newId,
 );
