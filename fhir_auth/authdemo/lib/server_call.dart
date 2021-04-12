@@ -28,7 +28,6 @@ Future azure() async => await smartRequest(
       fhirCallback: Api.fhirCallback,
     );
 
-/// ToDo: GCS
 Future gcs() async => await gcsRequest(Api.gcsUrl);
 
 Future hapi() async => await hapiRequest(Api.hapiUrl);

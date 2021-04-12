@@ -1,5 +1,8 @@
 # fhir
 
+## [0.4.4]
+* Updated some dateTime dependencies
+
 ## [0.4.3]
 * [Tiloc](https://github.com/tiloc) helped clean up the comments so dartdoc doesn't run so long
 * dependencies updated

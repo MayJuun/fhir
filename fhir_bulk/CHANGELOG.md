@@ -1,3 +1,6 @@
+## [0.4.2]
+* Updated to universal I/O so it would run in js
+
 ## [0.4.1]
 * Changed description since I had copied it from auth.
 

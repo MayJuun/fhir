@@ -33,7 +33,7 @@ class ResourceDao {
     return <String>[];
   }
 
-  /// keeps track of the [resourceTypes] that are currently in the db
+  /// keeps track of the resourceTypes that are currently in the db
   Future _addResourceType(String? password, R5ResourceType resourceType) async {
     final resourceTypes = await _getResourceTypes(password);
 
@@ -49,8 +49,8 @@ class ResourceDao {
   }
 
   /// Saves a [Resource] to the local Db, [password] is optional (but after set,
-  /// it must always be used everytime), will update the [meta] fields of the
-  /// [Resource] and adds an [id] if none is already given.
+  /// it must always be used everytime), will update the meta fields of the
+  /// [Resource] and adds an id if none is already given.
   Future<Resource> save(String? password, Resource? resource) async {
     if (resource != null) {
       if (resource.resourceType != null) {
@@ -109,8 +109,8 @@ class ResourceDao {
     }
   }
 
-  /// searches for a specific [resource]. That resource can be defined by
-  /// passing a full [resource] object, you may pass a [resourceType] and [id]
+  /// searches for a specific [Resource]. That resource can be defined by
+  /// passing a full [Resource] object, you may pass a [resourceType] and [id]
   /// or you can pass a search [field] - which can be nested, and the [value]
   /// you're looking for in that field
   /// From the sembast documentation:
@@ -122,8 +122,8 @@ class ResourceDao {
   ///     "reference": "Patient/12345"
   ///   }
   /// }
-  /// You can search for the nested value using a [Finder]:
-  /// [Finder(filter: Filter.equals('patient.reference', 'Patient/12345'));]
+  /// You can search for the nested value using a [Finder]
+  /// Finder(filter: Filter.equals('patient.reference', 'Patient/12345'));
   Future<List<Resource>> find(
     String? password, {
     Resource? resource,
@@ -178,9 +178,10 @@ class ResourceDao {
         }
       }
     }
+
     final List<Resource> resourceList = [];
     for (final type in typeList) {
-      if (ResourceUtils.resourceTypeFromStringMap[type] != null) {
+      if (ResourceUtils.resourceTypeToStringMap[type] != null) {
         _setStoreType(ResourceUtils.resourceTypeToStringMap[type]!);
         final finder = Finder(sortOrders: [SortOrder('id')]);
         resourceList.addAll(await _search(password, finder));
@@ -231,7 +232,7 @@ class ResourceDao {
 
   /// pass in a resourceType or a resource, and db will delete all resources of
   /// that type - Note: will NOT delete any _historical stores (must pass in
-  /// [_history] as the type for this to happen)
+  /// _history as the type for this to happen)
   Future deleteSingleType(String? password,
       {R5ResourceType? resourceType, Resource? resource}) async {
     if (resourceType != null || resource?.resourceType != null) {

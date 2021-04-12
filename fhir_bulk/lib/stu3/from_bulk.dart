@@ -1,9 +1,9 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:fhir/stu3.dart';
 import 'package:mime/mime.dart';
 import 'package:archive/archive.dart';
+import 'package:universal_io/io.dart';
 
 abstract class FhirBulk {
   static String toNdJson(List<Resource> resources) {

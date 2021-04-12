@@ -1,8 +1,6 @@
-import 'package:fhir/r4.dart';
-import 'package:fhir_auth_web/r4.dart';
 import 'package:flutter/material.dart';
 
-import 'api.dart';
+import 'server_interactions.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,72 +8,98 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  bool _baseHasCode(Uri base) =>
+      base.toString().contains('code=') && base.toString().contains('redirect');
+
   @override
   Widget build(BuildContext context) {
     final base = Uri.base;
-    final smart = SmartClient(
-      fhirUrl: FhirUri(Api.aidboxUrl),
-      clientId: Api.aidboxClientId,
-      baseUri: base,
-    );
     print(base);
-    if (base.toString().contains('code=') &&
-        base.toString().contains('redirect')) {
-      smart.authorize(base.toString());
-      return MaterialApp(home: MainPage(base.toString(), smart));
-    } else {
-      smart.login();
-      return MaterialApp(
-          home: Scaffold(
-              body: Center(
-                  child: Text(
-        'Please wait while we log you in',
-        style: TextStyle(fontSize: 44),
-      ))));
-    }
-  }
-}
-
-class MainPage extends StatelessWidget {
-  MainPage(this.base, this.smart);
-
-  final String base;
-  final SmartClient smart;
-  @override
-  Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          children: [
-            Text('Exchange this code for some tokens: $base'),
-            ElevatedButton(
-              onPressed: () async {
-                final headers = await smart.authHeaders;
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => NextPage(headers),
+        body: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                      child:
+                          const Text('Aidbox', style: TextStyle(fontSize: 44)),
+                      // need to authorize app online before logging in via app
+                      onPressed: () async => await aidboxLogin(base)),
+                  ElevatedButton(
+                      child: const Text('AWS', style: TextStyle(fontSize: 44)),
+                      onPressed: () async => await azureLogin(base)),
+                  ElevatedButton(
+                      child:
+                          const Text('Azure', style: TextStyle(fontSize: 44)),
+                      onPressed: () async => await azureLogin(base)),
+                  ElevatedButton(
+                      child: const Text('GCP Health',
+                          style: TextStyle(fontSize: 44)),
+                      onPressed: () async => await gcsLogin(base)),
+                  ElevatedButton(
+                      child: const Text('Hapi - Doesn\'t\nRequire Login',
+                          style: TextStyle(fontSize: 44)),
+                      onPressed: () async => null),
+                  ElevatedButton(
+                      child:
+                          const Text('Logica', style: TextStyle(fontSize: 44)),
+                      onPressed: () async => await logicaLogin(base)),
+                  ElevatedButton(
+                      child:
+                          const Text('Mihin', style: TextStyle(fontSize: 44)),
+                      onPressed: () async => await mihinLogin(base)),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    child: const Text('Aidbox', style: TextStyle(fontSize: 44)),
+                    // need to authorize app online before logging in via app
+                    onPressed: () async => _baseHasCode(base)
+                        ? await aidboxUpload(base)
+                        : await aidboxLogin(base),
                   ),
-                );
-              },
-              child: Text('Press for Headers'),
-            ),
-          ],
+                  ElevatedButton(
+                    child: const Text('AWS', style: TextStyle(fontSize: 44)),
+                    onPressed: () async => _baseHasCode(base)
+                        ? await awsUpload(base)
+                        : await awsLogin(base),
+                  ),
+                  ElevatedButton(
+                    child: const Text('Azure', style: TextStyle(fontSize: 44)),
+                    onPressed: () async => _baseHasCode(base)
+                        ? await azureUpload(base)
+                        : await azureLogin(base),
+                  ),
+                  ElevatedButton(
+                      child: const Text('GCP Health',
+                          style: TextStyle(fontSize: 44)),
+                      onPressed: () async => await gcsUpload(base)),
+                  ElevatedButton(
+                      child: const Text('Hapi', style: TextStyle(fontSize: 44)),
+                      onPressed: () async => await hapiUpload()),
+                  ElevatedButton(
+                    child: const Text('Logica', style: TextStyle(fontSize: 44)),
+                    onPressed: () async => _baseHasCode(base)
+                        ? await logicaUpload(base)
+                        : await logicaLogin(base),
+                  ),
+                  ElevatedButton(
+                    child: const Text('Mihin', style: TextStyle(fontSize: 44)),
+                    onPressed: () async => _baseHasCode(base)
+                        ? await mihinUpload(base)
+                        : await mihinLogin(base),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-      ),
-    );
-  }
-}
-
-class NextPage extends StatelessWidget {
-  NextPage(this.headers);
-
-  final dynamic headers;
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Text('Have some headers: $headers'),
       ),
     );
   }
