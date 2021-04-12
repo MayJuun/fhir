@@ -45,6 +45,4 @@ Future gcsRequest(String url) async {
       print(e);
     }
   }
-
-  await client.logout();
 }
