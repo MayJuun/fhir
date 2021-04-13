@@ -13,7 +13,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final base = Uri.base;
+    // final base = Uri.base;
+    // print(base);
+    final currentUri = Uri.base;
+    final base = Uri(
+      host: currentUri.host,
+      scheme: currentUri.scheme,
+      port: currentUri.port,
+      path: '/static.html',
+    );
     print(base);
     return MaterialApp(
       home: Scaffold(

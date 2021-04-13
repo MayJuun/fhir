@@ -26,24 +26,25 @@ class SmartClient extends FhirClient {
     this.tokenUrl,
     this.isLoggedIn = false,
   }) {
-    Uri tempUri;
-    if (baseUri.toString().contains('redirect') &&
-        baseUri.toString().contains('code=')) {
-      tempUri =
-          Uri.parse('${baseUri.toString().split('redirect')[0]}redirect/');
-    } else {
-      tempUri = Uri.parse(baseUri.toString().replaceAll('#', 'redirect'));
-    }
-    if (!tempUri.toString().endsWith('redirect') &&
-        !tempUri.toString().endsWith('redirect/')) {
-      if (tempUri.toString().endsWith('/')) {
-        _redirectUri = FhirUri('${tempUri.toString()}redirect/');
-      } else {
-        _redirectUri = FhirUri('${tempUri.toString()}/redirect/');
-      }
-    } else {
-      _redirectUri = FhirUri(tempUri);
-    }
+    // Uri tempUri;
+    // if (baseUri.toString().contains('redirect') &&
+    //     baseUri.toString().contains('code=')) {
+    //   tempUri =
+    //       Uri.parse('${baseUri.toString().split('redirect')[0]}redirect/');
+    // } else {
+    //   tempUri = Uri.parse(baseUri.toString().replaceAll('#', 'redirect'));
+    // }
+    // if (!tempUri.toString().endsWith('redirect') &&
+    //     !tempUri.toString().endsWith('redirect/')) {
+    //   if (tempUri.toString().endsWith('/')) {
+    //     _redirectUri = FhirUri('${tempUri.toString()}redirect/');
+    //   } else {
+    //     _redirectUri = FhirUri('${tempUri.toString()}/redirect/');
+    //   }
+    // } else {
+    //   _redirectUri = FhirUri(tempUri);
+    // }
+    _redirectUri = FhirUri(baseUri);
     _clientId = clientId;
   }
 
@@ -77,12 +78,16 @@ class SmartClient extends FhirClient {
   /// the token Url from the Conformance/Capability Statement
   FhirUri? tokenUrl;
 
+  /// Grant for this client
   oauth2.AuthorizationCodeGrant? _grant;
 
+  /// When the access token expires (we don't have a refresh token for web apps)
   DateTime? _accessTokenExpiration;
 
+  /// Easy check to see if logged in
   bool isLoggedIn;
 
+  /// The actual client
   oauth2.Client? _client;
 
   /// the function when you're ready to request access, be sure to pass in the
@@ -102,14 +107,40 @@ class SmartClient extends FhirClient {
 
     try {
       var scopesList = scopes?.scopesList() ?? [];
-      scopesList.addAll(['nonce=${_nonce()}', 'aud=${fhirUrl.toString}']);
+      final authorizationUrl =
+          _grant!.getAuthorizationUrl(_redirectUri.value!, scopes: scopesList);
+      print(authorizationUrl);
+      html.WindowBase? _popupWin;
+      _popupWin = html.window.open(
+          '$authorizationUrl'
+              '&nonce=${_nonce()}'
+              '&aud=${fhirUrl.toString()}',
+          'Auth');
 
-      final authorizationUrl = _grant!.getAuthorizationUrl(
-        _redirectUri.value!,
-        scopes: scopesList,
-      );
-
-      html.window.location.assign(authorizationUrl.toString());
+      html.window.onMessage.listen((event) async {
+        if (event.data.toString().contains('code=') &&
+            event.data.toString().contains('static.html')) {
+          print(event.data.toString());
+          if (_popupWin != null) {
+            _popupWin!.close();
+            _popupWin = null;
+          }
+          final uriWithCode = event.data.toString();
+          if (uriWithCode.contains('code=') &&
+              uriWithCode.contains('static.html')) {
+            final authorizationCode =
+                uriWithCode.split('code=')[1].split('?')[0].split('&')[0];
+            _client = await _grant!.handleAuthorizationCode(authorizationCode);
+            _accessTokenExpiration = _client?.credentials.expiration;
+            print(_client?.credentials.accessToken);
+            isLoggedIn = true;
+          } else {
+            throw PlatformException(
+                code: 'Incorrect Uri passed to authorization function',
+                message: 'Incorrect Uri passed to authorization function');
+          }
+        }
+      });
     } catch (e, stack) {
       throw PlatformException(
         code: e.toString(),
@@ -119,26 +150,28 @@ class SmartClient extends FhirClient {
     }
   }
 
-  Future<void> authorize(String uriWithCode) async {
-    await _getEndpoints;
-    var scopesList = scopes?.scopesList() ?? [];
-    scopesList.addAll(['nonce=${_nonce()}', 'aud=${fhirUrl.toString}']);
-    _grant!.getAuthorizationUrl(
-      _redirectUri.value!,
-      scopes: scopesList,
-    );
-    if (uriWithCode.contains('code=') && uriWithCode.contains('redirect')) {
-      final authorizationCode =
-          uriWithCode.split('code=')[1].split('?')[0].split('&')[0];
-      _client = await _grant!.handleAuthorizationCode(authorizationCode);
-      _accessTokenExpiration = _client?.credentials.expiration;
-      isLoggedIn = true;
-    } else {
-      throw PlatformException(
-          code: 'Incorrect Uri passed to authorization function',
-          message: 'Incorrect Uri passed to authorization function');
-    }
-  }
+  // Future<void> authorize(String uriWithCode) async {
+  //   await _getEndpoints;
+  //   // var scopesList = scopes?.scopesList() ?? [];
+  //   // scopesList.addAll(['nonce=${_nonce()}', 'aud=${fhirUrl.toString}']);
+  //   // _grant!.getAuthorizationUrl(
+  //   //   _redirectUri.value!,
+  //   //   scopes: scopesList,
+  //   // );
+
+  //   if (uriWithCode.contains('code=') && uriWithCode.contains('static.html')) {
+  //     final authorizationCode =
+  //         uriWithCode.split('code=')[1].split('?')[0].split('&')[0];
+  //     _client = await _grant!.handleAuthorizationCode(authorizationCode);
+  //     _accessTokenExpiration = _client?.credentials.expiration;
+  //     print(_client?.credentials.accessToken);
+  //     isLoggedIn = true;
+  //   } else {
+  //     throw PlatformException(
+  //         code: 'Incorrect Uri passed to authorization function',
+  //         message: 'Incorrect Uri passed to authorization function');
+  //   }
+  // }
 
   @override
   Future<void> logout() async {

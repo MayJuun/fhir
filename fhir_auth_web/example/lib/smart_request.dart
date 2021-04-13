@@ -9,11 +9,11 @@ Future smartRequest(
   SmartClient client,
   Uri base,
 ) async {
-  try {
-    await client.authorize(base.toString());
-  } catch (e) {
-    print(e);
-  }
+  // try {
+  //   await client.authorize(base.toString());
+  // } catch (e) {
+  //   print(e);
+  // }
 
   final _newPatient = newPatient();
   print('Patient to be uploaded:\n${_newPatient.toJson()}');
