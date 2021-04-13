@@ -18,7 +18,7 @@ class SmartClient extends FhirClient {
   SmartClient({
     required this.fhirUrl,
     required String clientId,
-    required Uri baseUri,
+    required FhirUri redirectUri,
     this.launch,
     this.scopes,
     this.additionalParameters,
@@ -26,26 +26,9 @@ class SmartClient extends FhirClient {
     this.tokenUrl,
     this.isLoggedIn = false,
   }) {
-    // Uri tempUri;
-    // if (baseUri.toString().contains('redirect') &&
-    //     baseUri.toString().contains('code=')) {
-    //   tempUri =
-    //       Uri.parse('${baseUri.toString().split('redirect')[0]}redirect/');
-    // } else {
-    //   tempUri = Uri.parse(baseUri.toString().replaceAll('#', 'redirect'));
-    // }
-    // if (!tempUri.toString().endsWith('redirect') &&
-    //     !tempUri.toString().endsWith('redirect/')) {
-    //   if (tempUri.toString().endsWith('/')) {
-    //     _redirectUri = FhirUri('${tempUri.toString()}redirect/');
-    //   } else {
-    //     _redirectUri = FhirUri('${tempUri.toString()}/redirect/');
-    //   }
-    // } else {
-    //   _redirectUri = FhirUri(tempUri);
-    // }
-    _redirectUri = FhirUri(baseUri);
+    _redirectUri = redirectUri;
     _clientId = clientId;
+    print(_client.toString());
   }
 
   /// specify the fhirUrl of the Capability Statement (or conformance
@@ -104,7 +87,10 @@ class SmartClient extends FhirClient {
             message: 'Failed to get Auth & Token Endpoints');
       }
     }
+    await authenticate();
+  }
 
+  Future<void> authenticate() async {
     try {
       var scopesList = scopes?.scopesList() ?? [];
       final authorizationUrl =
@@ -125,20 +111,7 @@ class SmartClient extends FhirClient {
             _popupWin!.close();
             _popupWin = null;
           }
-          final uriWithCode = event.data.toString();
-          if (uriWithCode.contains('code=') &&
-              uriWithCode.contains('static.html')) {
-            final authorizationCode =
-                uriWithCode.split('code=')[1].split('?')[0].split('&')[0];
-            _client = await _grant!.handleAuthorizationCode(authorizationCode);
-            _accessTokenExpiration = _client?.credentials.expiration;
-            print(_client?.credentials.accessToken);
-            isLoggedIn = true;
-          } else {
-            throw PlatformException(
-                code: 'Incorrect Uri passed to authorization function',
-                message: 'Incorrect Uri passed to authorization function');
-          }
+          await authorize(event.data.toString());
         }
       });
     } catch (e, stack) {
@@ -150,28 +123,20 @@ class SmartClient extends FhirClient {
     }
   }
 
-  // Future<void> authorize(String uriWithCode) async {
-  //   await _getEndpoints;
-  //   // var scopesList = scopes?.scopesList() ?? [];
-  //   // scopesList.addAll(['nonce=${_nonce()}', 'aud=${fhirUrl.toString}']);
-  //   // _grant!.getAuthorizationUrl(
-  //   //   _redirectUri.value!,
-  //   //   scopes: scopesList,
-  //   // );
-
-  //   if (uriWithCode.contains('code=') && uriWithCode.contains('static.html')) {
-  //     final authorizationCode =
-  //         uriWithCode.split('code=')[1].split('?')[0].split('&')[0];
-  //     _client = await _grant!.handleAuthorizationCode(authorizationCode);
-  //     _accessTokenExpiration = _client?.credentials.expiration;
-  //     print(_client?.credentials.accessToken);
-  //     isLoggedIn = true;
-  //   } else {
-  //     throw PlatformException(
-  //         code: 'Incorrect Uri passed to authorization function',
-  //         message: 'Incorrect Uri passed to authorization function');
-  //   }
-  // }
+  Future<void> authorize(String uriWithCode) async {
+    if (uriWithCode.contains('code=') && uriWithCode.contains('static.html')) {
+      final authorizationCode =
+          uriWithCode.split('code=')[1].split('?')[0].split('&')[0];
+      _client = await _grant!.handleAuthorizationCode(authorizationCode);
+      _accessTokenExpiration = _client?.credentials.expiration;
+      print(_client?.credentials.accessToken);
+      isLoggedIn = true;
+    } else {
+      throw PlatformException(
+          code: 'Incorrect Uri passed to authorization function',
+          message: 'Incorrect Uri passed to authorization function');
+    }
+  }
 
   @override
   Future<void> logout() async {
@@ -183,12 +148,6 @@ class SmartClient extends FhirClient {
   /// [accessToken] is expired, if so, it will obtain a new one
   @override
   Future<Map<String, String>> get authHeaders async {
-    if (_accessTokenExpiration != null) {
-      if (DateTime.now().isAfter(_accessTokenExpiration!)) {
-        await login();
-      }
-    }
-
     final Map<String, String> authorizationHeaders = {
       'Content-Type': 'application/fhir+json'
     };

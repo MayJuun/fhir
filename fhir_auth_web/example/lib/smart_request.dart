@@ -5,15 +5,41 @@ import 'package:fhir_auth_web/r4.dart';
 
 import 'new_patient.dart';
 
-Future smartRequest(
-  SmartClient client,
-  Uri base,
-) async {
-  // try {
-  //   await client.authorize(base.toString());
-  // } catch (e) {
-  //   print(e);
-  // }
+Future smartRequest({
+  String? url,
+  required String clientId,
+  String? authUrl,
+  String? tokenUrl,
+  required FhirUri fhirCallback,
+}) async {
+  final client = SmartClient(
+    fhirUrl: FhirUri(url),
+    clientId: clientId,
+    redirectUri: fhirCallback,
+    scopes: Scopes(
+      clinicalScopes: [
+        ClinicalScope(
+          Role.patient,
+          R4ResourceType.Patient,
+          Interaction.any,
+        ),
+      ],
+      openid: true,
+      offlineAccess: true,
+    ),
+    authUrl: authUrl == null ? null : FhirUri(authUrl),
+    tokenUrl: tokenUrl == null ? null : FhirUri(tokenUrl),
+  );
+
+  try {
+    await client.login();
+  } catch (e) {
+    print(e);
+  }
+
+  while (!client.isLoggedIn) {
+    await new Future.delayed(const Duration(seconds: 2));
+  }
 
   final _newPatient = newPatient();
   print('Patient to be uploaded:\n${_newPatient.toJson()}');
