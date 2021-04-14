@@ -11,6 +11,7 @@ Future smartRequest({
   String? authUrl,
   String? tokenUrl,
   required FhirUri fhirCallback,
+  String? secret,
 }) async {
   final client = SmartClient(
     fhirUrl: FhirUri(url),
@@ -27,6 +28,7 @@ Future smartRequest({
       openid: true,
       offlineAccess: true,
     ),
+    secret: secret,
     authUrl: authUrl == null ? null : FhirUri(authUrl),
     tokenUrl: tokenUrl == null ? null : FhirUri(tokenUrl),
   );

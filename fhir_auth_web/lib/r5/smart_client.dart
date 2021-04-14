@@ -3,7 +3,6 @@ import 'dart:html' as html;
 import 'dart:convert';
 import 'dart:math';
 
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:collection/collection.dart';
 import 'package:fhir/r5.dart';
@@ -19,7 +18,7 @@ class SmartClient extends FhirClient {
   SmartClient({
     required this.fhirUrl,
     required String clientId,
-    required Uri baseUri,
+    required FhirUri redirectUri,
     this.launch,
     this.scopes,
     this.additionalParameters,
@@ -27,17 +26,7 @@ class SmartClient extends FhirClient {
     this.tokenUrl,
     this.isLoggedIn = false,
   }) {
-    final tempUri = Uri.parse(baseUri.toString().replaceAll('#', 'redirect'));
-    if (!tempUri.toString().endsWith('redirect') &&
-        !tempUri.toString().endsWith('redirect/')) {
-      if (tempUri.toString().endsWith('/')) {
-        _redirectUri = FhirUri('${tempUri.toString()}redirect/');
-      } else {
-        _redirectUri = FhirUri('${tempUri.toString()}/redirect/');
-      }
-    } else {
-      _redirectUri = FhirUri(baseUri);
-    }
+    _redirectUri = redirectUri;
     _clientId = clientId;
   }
 
@@ -71,12 +60,13 @@ class SmartClient extends FhirClient {
   /// the token Url from the Conformance/Capability Statement
   FhirUri? tokenUrl;
 
+  /// Grant for this client
   oauth2.AuthorizationCodeGrant? _grant;
 
-  DateTime? _accessTokenExpiration;
-
+  /// Easy check to see if logged in
   bool isLoggedIn;
 
+  /// The actual client
   oauth2.Client? _client;
 
   /// the function when you're ready to request access, be sure to pass in the
@@ -93,9 +83,33 @@ class SmartClient extends FhirClient {
             message: 'Failed to get Auth & Token Endpoints');
       }
     }
+    await authenticate();
+  }
 
+  Future<void> authenticate() async {
     try {
-      await _authenticate;
+      var scopesList = scopes?.scopesList() ?? [];
+      final authorizationUrl =
+          _grant!.getAuthorizationUrl(_redirectUri.value!, scopes: scopesList);
+      print(authorizationUrl);
+      html.WindowBase? _popupWin;
+      _popupWin = html.window.open(
+          '$authorizationUrl'
+              '&nonce=${_nonce()}'
+              '&aud=${fhirUrl.toString()}',
+          'Auth');
+
+      html.window.onMessage.listen((event) async {
+        if (event.data.toString().contains('code=') &&
+            event.data.toString().contains('static.html')) {
+          print(event.data.toString());
+          if (_popupWin != null) {
+            _popupWin!.close();
+            _popupWin = null;
+          }
+          await authorize(event.data.toString());
+        }
+      });
     } catch (e, stack) {
       throw PlatformException(
         code: e.toString(),
@@ -105,30 +119,11 @@ class SmartClient extends FhirClient {
     }
   }
 
-  Future<void> get _authenticate async {
-    final tempUrl = _grant!.getAuthorizationUrl(
-      _redirectUri.value!,
-      scopes: scopes?.scopesList(),
-    );
-    final authorizationUrl = Uri(
-      scheme: tempUrl.toString(),
-      queryParameters: additionalParameters ?? <String, String>{},
-    );
-
-    authorizationUrl.queryParameters['nonce'] = _nonce();
-    authorizationUrl.queryParameters['aud'] = fhirUrl.toString();
-
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
-      html.window.location.assign(authorizationUrl.toString());
-    });
-  }
-
   Future<void> authorize(String uriWithCode) async {
-    if (uriWithCode.contains('code=') && uriWithCode.contains('redirect')) {
+    if (uriWithCode.contains('code=') && uriWithCode.contains('static.html')) {
       final authorizationCode =
           uriWithCode.split('code=')[1].split('?')[0].split('&')[0];
       _client = await _grant!.handleAuthorizationCode(authorizationCode);
-      _accessTokenExpiration = _client?.credentials.expiration;
       isLoggedIn = true;
     } else {
       throw PlatformException(
@@ -147,12 +142,6 @@ class SmartClient extends FhirClient {
   /// [accessToken] is expired, if so, it will obtain a new one
   @override
   Future<Map<String, String>> get authHeaders async {
-    if (_accessTokenExpiration != null) {
-      if (DateTime.now().isAfter(_accessTokenExpiration!)) {
-        await login();
-      }
-    }
-
     final Map<String, String> authorizationHeaders = {
       'Content-Type': 'application/fhir+json'
     };

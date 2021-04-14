@@ -25,7 +25,7 @@ Future gcsRequest(String url) async {
   try {
     final response = await request1.request(headers: await client.authHeaders);
     newId = response?.id;
-    print('Uploaded patient: ${response?.toJson()}');
+    print('Response from upload: ${response?.toJson()}');
   } catch (e) {
     print(e);
   }
@@ -40,7 +40,7 @@ Future gcsRequest(String url) async {
     try {
       final response2 =
           await request2.request(headers: await client.authHeaders);
-      print('Uploaded patient: ${response2?.toJson()}');
+      print('Response from read:\n${response2?.toJson()}');
     } catch (e) {
       print(e);
     }

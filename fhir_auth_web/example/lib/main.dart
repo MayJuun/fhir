@@ -33,14 +33,14 @@ class MyApp extends StatelessWidget {
                   onPressed: () async => await aws(fhirCallback)),
               ElevatedButton(
                   child: const Text('Azure', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await azure(fhirCallback)),
+                  onPressed: () {}),
               ElevatedButton(
                   child:
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await gcs()),
               ElevatedButton(
                   child: const Text('Hapi', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => null),
+                  onPressed: () async => hapi()),
               ElevatedButton(
                   child: const Text('Logica', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await logica(fhirCallback)),

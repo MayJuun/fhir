@@ -44,4 +44,5 @@ Future mihin(Uri fhirCallback) async => await smartRequest(
       url: Api.mihinUrl,
       clientId: Api.mihinClientId,
       fhirCallback: FhirUri(fhirCallback),
+      secret: Api.mihinSecret,
     );

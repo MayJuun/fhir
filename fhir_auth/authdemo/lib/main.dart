@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
                   onPressed: () async => await azure()),
               ElevatedButton(
                   child: const Text('Azure', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await azure()),
+                  onPressed: () async {}),
               ElevatedButton(
                   child:
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),
