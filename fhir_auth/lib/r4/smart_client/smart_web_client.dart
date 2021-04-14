@@ -117,7 +117,7 @@ class SmartWebClient implements SmartClient {
 
   Future<void> authenticate() async {
     try {
-      var scopesList = scopes?.scopesList() ?? [];
+      final scopesList = scopes?.scopesList() ?? [];
       final authorizationUrl =
           _grant!.getAuthorizationUrl(_redirectUri.value!, scopes: scopesList);
       print(authorizationUrl);

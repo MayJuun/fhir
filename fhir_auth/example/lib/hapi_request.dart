@@ -5,7 +5,7 @@ import 'package:fhir_at_rest/r4.dart';
 import 'new_patient.dart';
 
 Future<List<Resource>> hapiRequest(String hapiUrl) async {
-  List<Resource> resources = [];
+  final List<Resource> resources = [];
   final _newPatient = newPatient();
 
   print('Patient to be uploaded:\n${_newPatient.toJson()}');

@@ -90,17 +90,17 @@ Future _buildPopupDialog(BuildContext context, List<Resource> resources) {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               'Created Patient',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             Text('${resources[0].toYaml()}\n'),
-            Text(
+            const Text(
               'Request Response',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             Text('${resources[1].toYaml()}\n'),
-            Text(
+            const Text(
               'Read Response',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
