@@ -11,6 +11,13 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return MaterialApp(title: 'Demo', home: DemoPage());
+  }
+}
+
+class DemoPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     final currentUri = Uri.base;
     final fhirCallback = Uri(
       host: currentUri.host,
@@ -30,13 +37,7 @@ class MyApp extends StatelessWidget {
                   // need to authorize app online before logging in via app
                   onPressed: () async {
                     final resources = await aidbox(fhirCallback);
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) => _buildPopupDialog(
-                        context,
-                        resources,
-                      ),
-                    );
+                    _buildPopupDialog(context, resources);
                   }),
               ElevatedButton(
                   child: const Text('AWS', style: TextStyle(fontSize: 44)),
@@ -51,49 +52,25 @@ class MyApp extends StatelessWidget {
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
                     final resources = await gcs();
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) => _buildPopupDialog(
-                        context,
-                        resources,
-                      ),
-                    );
+                    _buildPopupDialog(context, resources);
                   }),
               ElevatedButton(
                   child: const Text('Hapi', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
                     final resources = await hapi();
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) => _buildPopupDialog(
-                        context,
-                        resources,
-                      ),
-                    );
+                    _buildPopupDialog(context, resources);
                   }),
               ElevatedButton(
                   child: const Text('Logica', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
                     final resources = await logica(fhirCallback);
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) => _buildPopupDialog(
-                        context,
-                        resources,
-                      ),
-                    );
+                    _buildPopupDialog(context, resources);
                   }),
               ElevatedButton(
                   child: const Text('Mihin', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
                     final resources = await mihin(fhirCallback);
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) => _buildPopupDialog(
-                        context,
-                        resources,
-                      ),
-                    );
+                    _buildPopupDialog(context, resources);
                   }),
             ],
           ),
@@ -103,37 +80,40 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Widget _buildPopupDialog(BuildContext context, List<Resource> resources) {
-  return AlertDialog(
-    title: const Text('Resources'),
-    content: SingleChildScrollView(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            'Created Patient',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Text('${resources[0].toYaml()}\n'),
-          Text(
-            'Request Response',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Text('${resources[1].toYaml()}\n'),
-          Text(
-            'Read Response',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Text('${resources[2].toYaml()}\n'),
-        ],
+Future _buildPopupDialog(BuildContext context, List<Resource> resources) {
+  return showDialog(
+    context: context,
+    builder: (BuildContext cxt) => AlertDialog(
+      title: const Text('Resources'),
+      content: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'Created Patient',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Text('${resources[0].toYaml()}\n'),
+            Text(
+              'Request Response',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Text('${resources[1].toYaml()}\n'),
+            Text(
+              'Read Response',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Text('${resources[2].toYaml()}\n'),
+          ],
+        ),
       ),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () => Navigator.of(context).pop(),
+          child: const Text('Close'),
+        ),
+      ],
     ),
-    actions: <Widget>[
-      TextButton(
-        onPressed: () => Navigator.of(context).pop(),
-        child: const Text('Close'),
-      ),
-    ],
   );
 }

@@ -1,3 +1,7 @@
+## [0.4.0]
+* Alright, I'll release this (mostly because I'm trying to elicit more feedback)
+* No real changes since the last preview version
+
 ## [0.3.0-nullsafety.6]
 * Updated dependencies, all now null safe
 * Still not stable release because I want to do more testing
