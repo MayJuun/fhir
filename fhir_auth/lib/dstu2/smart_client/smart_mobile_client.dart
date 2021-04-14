@@ -2,29 +2,52 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:fhir/r5.dart';
+import 'package:fhir/dstu2.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
 
-import 'fhir_client.dart';
-import 'scopes.dart';
+import '../../dstu2.dart';
+
+SmartClient getSmartClient({
+  required FhirUri fhirUrl,
+  required String clientId,
+  required FhirUri redirectUri,
+  String? launch,
+  Scopes? scopes,
+  Map<String, String>? additionalParameters,
+  FhirUri? authUrl,
+  FhirUri? tokenUrl,
+  String? secret,
+}) =>
+    SmartMobileClient(
+      fhirUrl: fhirUrl,
+      clientId: clientId,
+      redirectUri: redirectUri,
+      launch: launch,
+      scopes: scopes,
+      additionalParameters: additionalParameters ?? <String, String>{},
+      authUrl: authUrl,
+      tokenUrl: tokenUrl,
+      secret: secret,
+      isLoggedIn: false,
+    );
 
 /// the star of our show, who you've all come to see, the Smart object who
 /// will provide the client for interacting with the FHIR server
-class SmartClient extends FhirClient {
-  SmartClient({
+class SmartMobileClient implements SmartClient {
+  SmartMobileClient({
     required this.fhirUrl,
     required String clientId,
     required FhirUri redirectUri,
     this.launch,
     this.scopes,
-    this.additionalParameters,
+    required this.additionalParameters,
     this.authUrl,
     this.tokenUrl,
+    required this.isLoggedIn,
     String? secret,
-    this.isLoggedIn = false,
   }) {
     _redirectUri = redirectUri;
     _clientId = clientId;
@@ -34,6 +57,7 @@ class SmartClient extends FhirClient {
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
   /// server or the FHIR data server
+  @override
   FhirUri fhirUrl;
 
   /// the clientId of your app, must be pre-registered with the authorization
@@ -53,7 +77,7 @@ class SmartClient extends FhirClient {
   Scopes? scopes;
 
   /// any additional parameters you'd like to pass as part of this request
-  Map<String, String>? additionalParameters = <String, String>{};
+  Map<String, String> additionalParameters;
 
   /// the authorize Url from the Conformance/Capability Statement
   FhirUri? authUrl;
@@ -64,8 +88,9 @@ class SmartClient extends FhirClient {
   /// this is for testing, you shouldn't store the secret in the object
   String? _secret;
 
-  DateTime? _accessTokenExpiration = DateTime.now();
+  DateTime? _accessTokenExpiration;
 
+  @override
   bool isLoggedIn;
 
   final FlutterAppAuth appAuth = FlutterAppAuth();
@@ -85,9 +110,6 @@ class SmartClient extends FhirClient {
             code: e.toString(),
             message: 'Failed to get Auth & Token Endpoints');
       }
-    } else {
-      authUrl = FhirUri(authUrl);
-      tokenUrl = FhirUri(tokenUrl);
     }
 
     try {
@@ -140,7 +162,7 @@ class SmartClient extends FhirClient {
       ),
       scopes: scopes?.scopesList(),
     );
-    request.additionalParameters = additionalParameters ?? <String, String>{};
+    request.additionalParameters = additionalParameters;
     request.additionalParameters!['nonce'] = _nonce();
     request.additionalParameters!['aud'] = fhirUrl.toString();
 
@@ -156,7 +178,7 @@ class SmartClient extends FhirClient {
   }
 
   Future<void> get _refresh async {
-    final refreshToken = await secureStorage.read(key: 'refresh_token');
+    final refreshToken = await secureStorage.read(key: 'refresh_token') ?? '';
     if (refreshToken == '') {
       return await _tokens;
     } else {
@@ -186,8 +208,7 @@ class SmartClient extends FhirClient {
               scopes: scopes?.scopesList(),
               issuer: _clientId,
             );
-      tokenRequest.additionalParameters =
-          additionalParameters ?? <String, String>{};
+      tokenRequest.additionalParameters = additionalParameters;
       tokenRequest.additionalParameters!['nonce'] = _nonce();
       final authorization = await appAuth.token(tokenRequest);
       await secureStorage.write(
@@ -229,11 +250,10 @@ class SmartClient extends FhirClient {
       returnResult = json.decode(result.body);
     }
 
-    final CapabilityStatement capabilityStatement =
-        CapabilityStatement.fromJson(returnResult);
+    final Conformance conformance = Conformance.fromJson(returnResult);
 
-    tokenUrl = _getUri(capabilityStatement, 'token');
-    authUrl = _getUri(capabilityStatement, 'authorize');
+    tokenUrl = _getUri(conformance, 'token');
+    authUrl = _getUri(conformance, 'authorize');
 
     /// if either authorize or token are still null, we return a failure
     if (authUrl == null) {
@@ -245,15 +265,14 @@ class SmartClient extends FhirClient {
   }
 
   /// convenience method for finding either the token or authorize endpoint
-  FhirUri? _getUri(CapabilityStatement capabilityStatement, String type) {
-    return capabilityStatement.rest
+  FhirUri? _getUri(Conformance conformance, String type) {
+    return conformance.rest
         ?.firstWhereOrNull((_) => true)
         ?.security
         ?.extension_
         ?.firstWhereOrNull((_) => true)
         ?.extension_
-        ?.firstWhereOrNull(
-            (ext) => (ext.url == null ? null : ext.url.toString()) == type)
+        ?.firstWhereOrNull((ext) => ext.url.toString() == type)
         ?.valueUri;
   }
 

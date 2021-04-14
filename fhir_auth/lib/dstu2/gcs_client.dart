@@ -19,7 +19,6 @@ class GcsClient extends FhirClient {
 
   @override
   Future<void> login() async {
-    await googleSignIn.signOut();
     try {
       await googleSignIn.signIn();
     } catch (e, stacktrace) {
