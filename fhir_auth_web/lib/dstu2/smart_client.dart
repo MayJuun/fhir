@@ -25,9 +25,11 @@ class SmartClient extends FhirClient {
     this.authUrl,
     this.tokenUrl,
     this.isLoggedIn = false,
+    String? secret,
   }) {
     _redirectUri = redirectUri;
     _clientId = clientId;
+    _secret = secret;
   }
 
   /// specify the fhirUrl of the Capability Statement (or conformance
@@ -69,20 +71,23 @@ class SmartClient extends FhirClient {
   /// The actual client
   oauth2.Client? _client;
 
+  /// Don't ever actually use this in a web app, it's not secure and you
+  /// shouldn't be storing a secret here, but for testing purposes, I have
+  /// to include it for some servers
+  String? _secret;
+
   /// the function when you're ready to request access, be sure to pass in the
   /// the client secret when you make a request if you're creating a confidential
   /// app
   @override
   Future<void> login() async {
-    if (authUrl == null || tokenUrl == null) {
-      try {
-        await _getEndpoints;
-      } catch (e) {
-        throw PlatformException(
-            code: e.toString(),
-            message: 'Failed to get Auth & Token Endpoints');
-      }
+    try {
+      await _getEndpoints;
+    } catch (e) {
+      throw PlatformException(
+          code: e.toString(), message: 'Failed to get Auth & Token Endpoints');
     }
+
     await authenticate();
   }
 
@@ -102,12 +107,11 @@ class SmartClient extends FhirClient {
       html.window.onMessage.listen((event) async {
         if (event.data.toString().contains('code=') &&
             event.data.toString().contains('static.html')) {
-          print(event.data.toString());
           if (_popupWin != null) {
+            await authorize(event.data.toString());
             _popupWin!.close();
             _popupWin = null;
           }
-          await authorize(event.data.toString());
         }
       });
     } catch (e, stack) {
@@ -153,49 +157,53 @@ class SmartClient extends FhirClient {
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
   Future<void> get _getEndpoints async {
-    var thisRequest = '$fhirUrl/metadata?mode=full&_format=json';
+    if (authUrl == null || tokenUrl == null) {
+      var thisRequest = '$fhirUrl/metadata?mode=full&_format=json';
 
-    var result = await http.get(Uri.parse(thisRequest));
+      var result = await http.get(Uri.parse(thisRequest));
 
-    if (_errorCodeMap.containsKey(result.statusCode)) {
-      if (result.statusCode == 422) {
-        thisRequest = thisRequest.replaceFirst(
-          '_format=json',
-          '_format=application/json',
-        );
-        result = await http.get(Uri.parse(thisRequest));
-      }
       if (_errorCodeMap.containsKey(result.statusCode)) {
-        throw Exception('StatusCode: ${result.statusCode}\n${result.body}');
+        if (result.statusCode == 422) {
+          thisRequest = thisRequest.replaceFirst(
+            '_format=json',
+            '_format=application/json',
+          );
+          result = await http.get(Uri.parse(thisRequest));
+        }
+        if (_errorCodeMap.containsKey(result.statusCode)) {
+          throw Exception('StatusCode: ${result.statusCode}\n${result.body}');
+        }
+      }
+      Map<String, dynamic> returnResult;
+
+      /// because I can't figure out why aidbox only has strings not lists for
+      /// the referencePolicy field
+      if (thisRequest.contains('aidbox')) {
+        returnResult = json.decode(result.body.replaceAll(
+            '"referencePolicy":"local"', '"referencePolicy":["local"]'));
+      } else {
+        returnResult = json.decode(result.body);
+      }
+
+      final Conformance conformance = Conformance.fromJson(returnResult);
+
+      tokenUrl = _getUri(conformance, 'token');
+      authUrl = _getUri(conformance, 'authorize');
+
+      /// if either authorize or token are still null, we return a failure
+      if (authUrl?.value == null) {
+        throw Exception('No Authorize Url in Conformance');
+      }
+      if (tokenUrl?.value == null) {
+        throw Exception('No Token Url in Conformance');
       }
     }
-    Map<String, dynamic> returnResult;
 
-    /// because I can't figure out why aidbox only has strings not lists for
-    /// the referencePolicy field
-    if (thisRequest.contains('aidbox')) {
-      returnResult = json.decode(result.body.replaceAll(
-          '"referencePolicy":"local"', '"referencePolicy":["local"]'));
-    } else {
-      returnResult = json.decode(result.body);
-    }
-
-    final Conformance conformance = Conformance.fromJson(returnResult);
-
-    tokenUrl = _getUri(conformance, 'token');
-    authUrl = _getUri(conformance, 'authorize');
-
-    /// if either authorize or token are still null, we return a failure
-    if (authUrl?.value == null) {
-      throw Exception('No Authorize Url in CapabilityStatement');
-    }
-    if (tokenUrl?.value == null) {
-      throw Exception('No Token Url in CapabilityStatement');
-    }
     _grant = oauth2.AuthorizationCodeGrant(
       _clientId,
       authUrl!.value!,
       tokenUrl!.value!,
+      secret: _secret,
     );
   }
 

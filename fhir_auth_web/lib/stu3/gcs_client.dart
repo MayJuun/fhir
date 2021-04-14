@@ -20,8 +20,10 @@ class GcsClient extends FhirClient {
   @override
   Future<void> login() async {
     await googleSignIn.signOut();
+
     try {
       await googleSignIn.signIn();
+      print(googleSignIn.currentUser?.email);
     } catch (e, stacktrace) {
       throw PlatformException(
           code: e.toString(),
