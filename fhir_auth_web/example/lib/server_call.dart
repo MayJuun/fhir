@@ -2,6 +2,7 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 
 import 'api.dart';
 
+import 'gcs_request.dart';
 import 'hapi_request.dart';
 import 'smart_request.dart';
 
@@ -30,7 +31,11 @@ Future azure(Uri fhirCallback) async => await smartRequest(
       fhirCallback: FhirUri(fhirCallback),
     );
 
-Future gcs() async => null; //await gcsRequest(Api.gcsUrl);
+Future gcs() async => await gcsRequest(
+      Api.gcsUrl,
+      Api.gcsClientId,
+      Api.gcsScopes,
+    );
 
 Future hapi() async => await hapiRequest(Api.hapiUrl);
 
