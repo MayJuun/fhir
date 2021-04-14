@@ -5,7 +5,7 @@ import 'package:fhir_auth_web/r4.dart';
 
 import 'new_patient.dart';
 
-Future smartRequest({
+Future<List<Resource>> smartRequest({
   String? url,
   required String clientId,
   String? authUrl,
@@ -33,6 +33,8 @@ Future smartRequest({
     tokenUrl: tokenUrl == null ? null : FhirUri(tokenUrl),
   );
 
+  List<Resource> resources = [];
+
   try {
     await client.login();
   } catch (e) {
@@ -45,6 +47,7 @@ Future smartRequest({
 
   final _newPatient = newPatient();
   print('Patient to be uploaded:\n${_newPatient.toJson()}');
+  resources.add(_newPatient);
   final request1 = FhirRequest.create(
     base: client.fhirUrl.value!,
     //?? Uri.parse('127.0.0.1'),
@@ -56,6 +59,9 @@ Future smartRequest({
     final response = await request1.request(headers: await client.authHeaders);
     print('Response from upload:\n${response?.toJson()}');
     newId = response?.id;
+    if (response != null) {
+      resources.add(response);
+    }
   } catch (e) {
     print(e);
   }
@@ -71,8 +77,13 @@ Future smartRequest({
       final response =
           await request2.request(headers: await client.authHeaders);
       print('Response from read:\n${response?.toJson()}');
+      if (response != null) {
+        resources.add(response);
+      }
     } catch (e) {
       print(e);
     }
   }
+
+  return resources;
 }

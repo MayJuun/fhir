@@ -5,12 +5,14 @@ import 'package:fhir_auth_web/r4.dart';
 
 import 'new_patient.dart';
 
-Future gcsRequest(String url, String clientId, List<String> scopes) async {
+Future<List<Resource>> gcsRequest(
+    String url, String clientId, List<String> scopes) async {
   final client = GcsClient(
     fhirUrl: FhirUri(url),
     clientId: clientId,
     scopes: scopes,
   );
+  List<Resource> resources = [];
 
   try {
     await client.login();
@@ -20,6 +22,7 @@ Future gcsRequest(String url, String clientId, List<String> scopes) async {
 
   final _newPatient = newPatient();
   print('Patient to be uploaded: ${_newPatient.toJson()}');
+  resources.add(_newPatient);
   final request1 = FhirRequest.create(
     base: client.fhirUrl.value!,
     resource: _newPatient,
@@ -30,6 +33,9 @@ Future gcsRequest(String url, String clientId, List<String> scopes) async {
     final response = await request1.request(headers: await client.authHeaders);
     newId = response?.id;
     print('Response from upload: ${response?.toJson()}');
+    if (response != null) {
+      resources.add(response);
+    }
   } catch (e) {
     print(e);
   }
@@ -45,8 +51,13 @@ Future gcsRequest(String url, String clientId, List<String> scopes) async {
       final response2 =
           await request2.request(headers: await client.authHeaders);
       print('Response from read:\n${response2?.toJson()}');
+      if (response2 != null) {
+        resources.add(response2);
+      }
     } catch (e) {
       print(e);
     }
   }
+
+  return resources;
 }
