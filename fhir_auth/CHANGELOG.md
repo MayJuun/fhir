@@ -2,6 +2,8 @@
 * So Close.
 * Normal auth for mobile with no significant changes since last prerelease
 * Web auth now available! This is a big change, mostly because I've added it. Should work very similarly to mobile auth though, and I've tried to generally keep the structure of the classes the same.
+* authdemo is the example for mobile
+* example is the example for web
 
 ## [0.3.0-nullsafety.6]
 * Updated dependencies, all now null safe
