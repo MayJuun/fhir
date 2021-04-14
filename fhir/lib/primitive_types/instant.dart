@@ -49,7 +49,7 @@ class Instant {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Instant
-          ? o == value
+          ? o.value == value
           : o is DateTime
               ? o == _valueDateTime
               : o is String

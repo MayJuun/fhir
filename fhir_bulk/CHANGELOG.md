@@ -1,3 +1,14 @@
+## [0.4.2]
+* Updated to universal I/O so it would run in js
+
+## [0.4.1]
+* Changed description since I had copied it from auth.
+
+## [0.4.0]
+* Removed dartz dependency
+* Included new WhichResource class (just takes the place of Tuple2 I was using)
+* Null safe!
+
 ## [0.3.0-nullsafety.2]
 * Updated dependencies
 * Still prerelease because not all dependencies are stable

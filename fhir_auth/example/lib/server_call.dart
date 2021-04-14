@@ -1,39 +1,53 @@
+import 'package:fhir/r4.dart';
+
 import 'api.dart';
+
 import 'gcs_request.dart';
 import 'hapi_request.dart';
 import 'smart_request.dart';
 
-Future aidbox() async => await smartRequest(
+Future<List<Resource>> aidbox(Uri fhirCallback) async => await smartRequest(
       url: Api.aidboxUrl,
       clientId: Api.aidboxClientId,
-      secret: Api.aidboxSecret,
-      authUrl: Api.aidboxAuthUrl,
-      tokenUrl: Api.aidboxTokenUrl,
-      fhirCallback: Api.fhirCallback,
+      fhirCallback: FhirUri(fhirCallback),
     );
 
-Future azure() async => await smartRequest(
+/// ToDo: AWS
+Future aws(Uri fhirCallback) async {}
+//  => await smartRequest(
+//       url: Api.awsUrl,
+//       clientId: Api.awsClientId,
+//       secret: Api.awsSecret,
+//       authUrl: Api.awsAuthUrl,
+//       tokenUrl: Api.awsTokenUrl,
+//          fhirCallback: FhirUri(fhirCallback),
+//     );
+
+Future<List<Resource>> azure(Uri fhirCallback) async => await smartRequest(
       url: Api.azureUrl,
       clientId: Api.azureClientId,
-      secret: Api.azureSecret,
       authUrl: Api.azureAuthUrl,
       tokenUrl: Api.azureTokenUrl,
-      fhirCallback: Api.fhirCallback,
+      fhirCallback: FhirUri(fhirCallback),
     );
 
-Future gcs() async => await gcsRequest(
-      url: Api.gcsUrl,
-      clientId: Api.gcsClientId,
-      scopes: Api.gcsScopes,
+Future<List<Resource>> gcs() async => await gcsRequest(
+      Api.gcsUrl,
+      Api.gcsClientId,
+      Api.gcsScopes,
     );
 
-Future hapi() async => await hapiRequest(Api.hapiUrl);
+Future<List<Resource>> hapi() async => await hapiRequest(Api.hapiUrl);
 
-Future mihin() async => await smartRequest(
+Future<List<Resource>> logica(Uri fhirCallback) async => await smartRequest(
+      url: Api.logicaUrl,
+      clientId: Api.logicaClientId,
+      fhirCallback: FhirUri(fhirCallback),
+    );
+
+Future<List<Resource>> mihin(Uri fhirCallback) async => await smartRequest(
       url: Api.mihinUrl,
       clientId: Api.mihinClientId,
+      fhirCallback: FhirUri(fhirCallback),
       secret: Api.mihinSecret,
-      authUrl: Api.mihinAuthUrl,
-      tokenUrl: Api.mihinTokenUrl,
-      fhirCallback: Api.fhirCallback,
     );

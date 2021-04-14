@@ -19,7 +19,7 @@ class _$BulkRequestTearOff {
   _BulkPatientRequest patient(
       {required Uri base,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client}) {
     return _BulkPatientRequest(
       base: base,
@@ -33,7 +33,7 @@ class _$BulkRequestTearOff {
       {required Uri base,
       required Id id,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client}) {
     return _BulkGroupRequest(
       base: base,
@@ -47,7 +47,7 @@ class _$BulkRequestTearOff {
   _BulkSystemRequest system(
       {required Uri base,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client}) {
     return _BulkSystemRequest(
       base: base,
@@ -65,33 +65,32 @@ const $BulkRequest = _$BulkRequestTearOff();
 mixin _$BulkRequest {
   Uri get base => throw _privateConstructorUsedError;
   FhirDateTime? get since => throw _privateConstructorUsedError;
-  List<Tuple2<Dstu2ResourceType?, Id?>>? get types =>
-      throw _privateConstructorUsedError;
+  List<WhichResource>? get types => throw _privateConstructorUsedError;
   Client? get client => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         patient,
     required TResult Function(Uri base, Id id, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         group,
     required TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         system,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
         patient,
     TResult Function(Uri base, Id id, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+            List<WhichResource>? types, Client? client)?
         group,
-    TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
         system,
     required TResult orElse(),
   }) =>
@@ -125,7 +124,7 @@ abstract class $BulkRequestCopyWith<$Res> {
   $Res call(
       {Uri base,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client});
 }
 
@@ -156,7 +155,7 @@ class _$BulkRequestCopyWithImpl<$Res> implements $BulkRequestCopyWith<$Res> {
       types: types == freezed
           ? _value.types
           : types // ignore: cast_nullable_to_non_nullable
-              as List<Tuple2<Dstu2ResourceType?, Id?>>?,
+              as List<WhichResource>?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -175,7 +174,7 @@ abstract class _$BulkPatientRequestCopyWith<$Res>
   $Res call(
       {Uri base,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client});
 }
 
@@ -209,7 +208,7 @@ class __$BulkPatientRequestCopyWithImpl<$Res>
       types: types == freezed
           ? _value.types
           : types // ignore: cast_nullable_to_non_nullable
-              as List<Tuple2<Dstu2ResourceType?, Id?>>?,
+              as List<WhichResource>?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -229,7 +228,7 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
   @override
   final FhirDateTime? since;
   @override
-  final List<Tuple2<Dstu2ResourceType?, Id?>>? types;
+  final List<WhichResource>? types;
   @override
   final Client? client;
 
@@ -269,13 +268,13 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         patient,
     required TResult Function(Uri base, Id id, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         group,
     required TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         system,
   }) {
     return patient(base, since, types, client);
@@ -284,14 +283,14 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
         patient,
     TResult Function(Uri base, Id id, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+            List<WhichResource>? types, Client? client)?
         group,
-    TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
         system,
     required TResult orElse(),
   }) {
@@ -330,7 +329,7 @@ abstract class _BulkPatientRequest extends BulkRequest {
   factory _BulkPatientRequest(
       {required Uri base,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client}) = _$_BulkPatientRequest;
   _BulkPatientRequest._() : super._();
 
@@ -339,8 +338,7 @@ abstract class _BulkPatientRequest extends BulkRequest {
   @override
   FhirDateTime? get since => throw _privateConstructorUsedError;
   @override
-  List<Tuple2<Dstu2ResourceType?, Id?>>? get types =>
-      throw _privateConstructorUsedError;
+  List<WhichResource>? get types => throw _privateConstructorUsedError;
   @override
   Client? get client => throw _privateConstructorUsedError;
   @override
@@ -360,7 +358,7 @@ abstract class _$BulkGroupRequestCopyWith<$Res>
       {Uri base,
       Id id,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client});
 }
 
@@ -399,7 +397,7 @@ class __$BulkGroupRequestCopyWithImpl<$Res>
       types: types == freezed
           ? _value.types
           : types // ignore: cast_nullable_to_non_nullable
-              as List<Tuple2<Dstu2ResourceType?, Id?>>?,
+              as List<WhichResource>?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -425,7 +423,7 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
   @override
   final FhirDateTime? since;
   @override
-  final List<Tuple2<Dstu2ResourceType?, Id?>>? types;
+  final List<WhichResource>? types;
   @override
   final Client? client;
 
@@ -468,13 +466,13 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         patient,
     required TResult Function(Uri base, Id id, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         group,
     required TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         system,
   }) {
     return group(base, id, since, types, client);
@@ -483,14 +481,14 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
         patient,
     TResult Function(Uri base, Id id, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+            List<WhichResource>? types, Client? client)?
         group,
-    TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
         system,
     required TResult orElse(),
   }) {
@@ -530,7 +528,7 @@ abstract class _BulkGroupRequest extends BulkRequest {
       {required Uri base,
       required Id id,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client}) = _$_BulkGroupRequest;
   _BulkGroupRequest._() : super._();
 
@@ -540,8 +538,7 @@ abstract class _BulkGroupRequest extends BulkRequest {
   @override
   FhirDateTime? get since => throw _privateConstructorUsedError;
   @override
-  List<Tuple2<Dstu2ResourceType?, Id?>>? get types =>
-      throw _privateConstructorUsedError;
+  List<WhichResource>? get types => throw _privateConstructorUsedError;
   @override
   Client? get client => throw _privateConstructorUsedError;
   @override
@@ -560,7 +557,7 @@ abstract class _$BulkSystemRequestCopyWith<$Res>
   $Res call(
       {Uri base,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client});
 }
 
@@ -594,7 +591,7 @@ class __$BulkSystemRequestCopyWithImpl<$Res>
       types: types == freezed
           ? _value.types
           : types // ignore: cast_nullable_to_non_nullable
-              as List<Tuple2<Dstu2ResourceType?, Id?>>?,
+              as List<WhichResource>?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -614,7 +611,7 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
   @override
   final FhirDateTime? since;
   @override
-  final List<Tuple2<Dstu2ResourceType?, Id?>>? types;
+  final List<WhichResource>? types;
   @override
   final Client? client;
 
@@ -654,13 +651,13 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         patient,
     required TResult Function(Uri base, Id id, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         group,
     required TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)
+            List<WhichResource>? types, Client? client)
         system,
   }) {
     return system(base, since, types, client);
@@ -669,14 +666,14 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
         patient,
     TResult Function(Uri base, Id id, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+            List<WhichResource>? types, Client? client)?
         group,
-    TResult Function(Uri base, FhirDateTime? since,
-            List<Tuple2<Dstu2ResourceType?, Id?>>? types, Client? client)?
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
         system,
     required TResult orElse(),
   }) {
@@ -715,7 +712,7 @@ abstract class _BulkSystemRequest extends BulkRequest {
   factory _BulkSystemRequest(
       {required Uri base,
       FhirDateTime? since,
-      List<Tuple2<Dstu2ResourceType?, Id?>>? types,
+      List<WhichResource>? types,
       Client? client}) = _$_BulkSystemRequest;
   _BulkSystemRequest._() : super._();
 
@@ -724,8 +721,7 @@ abstract class _BulkSystemRequest extends BulkRequest {
   @override
   FhirDateTime? get since => throw _privateConstructorUsedError;
   @override
-  List<Tuple2<Dstu2ResourceType?, Id?>>? get types =>
-      throw _privateConstructorUsedError;
+  List<WhichResource>? get types => throw _privateConstructorUsedError;
   @override
   Client? get client => throw _privateConstructorUsedError;
   @override
