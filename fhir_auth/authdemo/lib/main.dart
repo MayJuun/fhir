@@ -1,3 +1,5 @@
+import 'package:fhir/r4.dart';
+import 'package:fhir_auth/r4/smart_client/smart_client.dart';
 import 'package:flutter/material.dart';
 
 import 'server_call.dart';
@@ -22,10 +24,20 @@ class MyApp extends StatelessWidget {
                   onPressed: () async => await aidbox()),
               ElevatedButton(
                   child: const Text('AWS', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await azure()),
+                  onPressed: () async {}),
               ElevatedButton(
                   child: const Text('Azure', style: TextStyle(fontSize: 44)),
-                  onPressed: () async {}),
+                  onPressed: () async {
+                    final client = SmartClient.mobile(
+                        fhirUrl: FhirUri('http://localhost:8080'),
+                        clientId: '12345',
+                        redirectUri: FhirUri('http://localhost:8080'));
+                    print(client.isLoggedIn);
+                    await client.login();
+                    print(client.isLoggedIn);
+                    await client.logout();
+                    print(client.isLoggedIn);
+                  }),
               ElevatedButton(
                   child:
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),

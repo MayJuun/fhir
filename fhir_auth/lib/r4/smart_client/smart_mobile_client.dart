@@ -8,13 +8,12 @@ import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
 
-import 'fhir_client.dart';
-import 'scopes.dart';
+import '../../r4.dart';
 
 /// the star of our show, who you've all come to see, the Smart object who
 /// will provide the client for interacting with the FHIR server
-class SmartClient extends FhirClient {
-  SmartClient({
+class SmartMobileClient extends SmartClient {
+  SmartMobileClient({
     required this.fhirUrl,
     required String clientId,
     required FhirUri redirectUri,
@@ -23,13 +22,18 @@ class SmartClient extends FhirClient {
     this.additionalParameters,
     this.authUrl,
     this.tokenUrl,
-    String? secret,
     this.isLoggedIn = false,
+    String? secret,
   }) {
     _redirectUri = redirectUri;
     _clientId = clientId;
     _secret = secret;
   }
+
+  SmartClient getSmartClient() => SmartMobileClient(
+      fhirUrl: FhirUri('http://localhost:8080'),
+      clientId: 'http://localhost:8080',
+      redirectUri: FhirUri('http://localhost:8080'));
 
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
