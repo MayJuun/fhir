@@ -10,19 +10,43 @@ import 'package:http/http.dart';
 
 import '../../r4.dart';
 
+SmartClient getSmartClient({
+  required FhirUri fhirUrl,
+  required String clientId,
+  required FhirUri redirectUri,
+  String? launch,
+  Scopes? scopes,
+  Map<String, String>? additionalParameters,
+  FhirUri? authUrl,
+  FhirUri? tokenUrl,
+  String? secret,
+}) =>
+    SmartMobileClient(
+      fhirUrl: fhirUrl,
+      clientId: clientId,
+      redirectUri: redirectUri,
+      launch: launch,
+      scopes: scopes,
+      additionalParameters: additionalParameters ?? <String, String>{},
+      authUrl: authUrl,
+      tokenUrl: tokenUrl,
+      secret: secret,
+      isLoggedIn: false,
+    );
+
 /// the star of our show, who you've all come to see, the Smart object who
 /// will provide the client for interacting with the FHIR server
-class SmartMobileClient extends SmartClient {
+class SmartMobileClient implements SmartClient {
   SmartMobileClient({
     required this.fhirUrl,
     required String clientId,
     required FhirUri redirectUri,
     this.launch,
     this.scopes,
-    this.additionalParameters,
+    required this.additionalParameters,
     this.authUrl,
     this.tokenUrl,
-    this.isLoggedIn = false,
+    required this.isLoggedIn,
     String? secret,
   }) {
     _redirectUri = redirectUri;
@@ -30,14 +54,10 @@ class SmartMobileClient extends SmartClient {
     _secret = secret;
   }
 
-  SmartClient getSmartClient() => SmartMobileClient(
-      fhirUrl: FhirUri('http://localhost:8080'),
-      clientId: 'http://localhost:8080',
-      redirectUri: FhirUri('http://localhost:8080'));
-
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
   /// server or the FHIR data server
+  @override
   FhirUri fhirUrl;
 
   /// the clientId of your app, must be pre-registered with the authorization
@@ -57,7 +77,7 @@ class SmartMobileClient extends SmartClient {
   Scopes? scopes;
 
   /// any additional parameters you'd like to pass as part of this request
-  Map<String, String>? additionalParameters = <String, String>{};
+  Map<String, String> additionalParameters;
 
   /// the authorize Url from the Conformance/Capability Statement
   FhirUri? authUrl;
@@ -70,6 +90,7 @@ class SmartMobileClient extends SmartClient {
 
   DateTime? _accessTokenExpiration;
 
+  @override
   bool isLoggedIn;
 
   final FlutterAppAuth appAuth = FlutterAppAuth();
@@ -141,7 +162,7 @@ class SmartMobileClient extends SmartClient {
       ),
       scopes: scopes?.scopesList(),
     );
-    request.additionalParameters = additionalParameters ?? <String, String>{};
+    request.additionalParameters = additionalParameters;
     request.additionalParameters!['nonce'] = _nonce();
     request.additionalParameters!['aud'] = fhirUrl.toString();
 
@@ -187,8 +208,7 @@ class SmartMobileClient extends SmartClient {
               scopes: scopes?.scopesList(),
               issuer: _clientId,
             );
-      tokenRequest.additionalParameters =
-          additionalParameters ?? <String, String>{};
+      tokenRequest.additionalParameters = additionalParameters;
       tokenRequest.additionalParameters!['nonce'] = _nonce();
       final authorization = await appAuth.token(tokenRequest);
       await secureStorage.write(

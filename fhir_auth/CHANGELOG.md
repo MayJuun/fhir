@@ -1,6 +1,7 @@
-## [0.4.0]
-* Alright, I'll release this (mostly because I'm trying to elicit more feedback)
-* No real changes since the last preview version
+## ## [0.3.0-nullsafety.7]
+* So Close.
+* Normal auth for mobile with no significant changes since last prerelease
+* Web auth now available! This is a big change, mostly because I've added it. Should work very similarly to mobile auth though, and I've tried to generally keep the structure of the classes the same.
 
 ## [0.3.0-nullsafety.6]
 * Updated dependencies, all now null safe

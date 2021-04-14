@@ -1,7 +1,6 @@
 import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
-
-import 'package:fhir_auth_web/r4.dart';
+import 'package:fhir_auth/r4.dart';
 
 import 'new_patient.dart';
 
@@ -12,7 +11,7 @@ Future<List<Resource>> gcsRequest(
     clientId: clientId,
     scopes: scopes,
   );
-  List<Resource> resources = [];
+  final List<Resource> resources = [];
 
   try {
     await client.login();

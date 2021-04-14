@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   fhir: ^0.4.3
-  fhir_auth_web:
-    path: ../../fhir_auth_web
+  fhir_auth:
+    path: ../../fhir_auth
   flutter:
     sdk: flutter

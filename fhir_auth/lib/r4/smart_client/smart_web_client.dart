@@ -1,4 +1,3 @@
-// ignore_for_file: avoid_web_libraries_in_flutter
 import 'dart:convert';
 import 'dart:html' as html;
 import 'dart:math';
@@ -11,19 +10,43 @@ import 'package:oauth2/oauth2.dart' as oauth2;
 
 import '../../r4.dart';
 
+SmartClient getSmartClient({
+  required FhirUri fhirUrl,
+  required String clientId,
+  required FhirUri redirectUri,
+  String? launch,
+  Scopes? scopes,
+  Map<String, String>? additionalParameters,
+  FhirUri? authUrl,
+  FhirUri? tokenUrl,
+  String? secret,
+}) =>
+    SmartWebClient(
+      fhirUrl: fhirUrl,
+      clientId: clientId,
+      redirectUri: redirectUri,
+      launch: launch,
+      scopes: scopes,
+      additionalParameters: additionalParameters ?? <String, String>{},
+      authUrl: authUrl,
+      tokenUrl: tokenUrl,
+      secret: secret,
+      isLoggedIn: false,
+    );
+
 /// the star of our show, who you've all come to see, the Smart object who
 /// will provide the client for interacting with the FHIR server
-class SmartWebClient extends SmartClient {
+class SmartWebClient implements SmartClient {
   SmartWebClient({
     required this.fhirUrl,
     required String clientId,
     required FhirUri redirectUri,
     this.launch,
     this.scopes,
-    this.additionalParameters,
+    required this.additionalParameters,
     this.authUrl,
     this.tokenUrl,
-    this.isLoggedIn = false,
+    required this.isLoggedIn,
     String? secret,
   }) {
     _redirectUri = redirectUri;
@@ -31,14 +54,10 @@ class SmartWebClient extends SmartClient {
     _secret = secret;
   }
 
-  SmartClient getSmartClient() => SmartWebClient(
-      fhirUrl: FhirUri('http://localhost:8080'),
-      clientId: 'http://localhost:8080',
-      redirectUri: FhirUri('http://localhost:8080'));
-
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
   /// server or the FHIR data server
+  @override
   FhirUri fhirUrl;
 
   /// the clientId of your app, must be pre-registered with the authorization
@@ -58,7 +77,7 @@ class SmartWebClient extends SmartClient {
   Scopes? scopes;
 
   /// any additional parameters you'd like to pass as part of this request
-  Map<String, String>? additionalParameters = <String, String>{};
+  Map<String, String> additionalParameters;
 
   /// the authorize Url from the Conformance/Capability Statement
   FhirUri? authUrl;
@@ -70,6 +89,7 @@ class SmartWebClient extends SmartClient {
   oauth2.AuthorizationCodeGrant? _grant;
 
   /// Easy check to see if logged in
+  @override
   bool isLoggedIn;
 
   /// The actual client

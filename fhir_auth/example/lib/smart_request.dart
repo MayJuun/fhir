@@ -1,7 +1,7 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
-import 'package:fhir_auth_web/r4.dart';
+import 'package:fhir_auth/r4.dart';
 
 import 'new_patient.dart';
 
@@ -33,7 +33,7 @@ Future<List<Resource>> smartRequest({
     tokenUrl: tokenUrl == null ? null : FhirUri(tokenUrl),
   );
 
-  List<Resource> resources = [];
+  final List<Resource> resources = [];
 
   try {
     await client.login();
@@ -42,7 +42,7 @@ Future<List<Resource>> smartRequest({
   }
 
   while (!client.isLoggedIn) {
-    await new Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
   }
 
   final _newPatient = newPatient();

@@ -1,17 +1,59 @@
-import 'smart_client_stub.dart'
-    if (dart.library.io) 'smart_mobile_client.dart'
-    if (dart.library.js) 'smart_web_client.dart';
+import 'package:fhir/r4.dart';
 
 import '../../r4.dart';
 import '../fhir_client.dart';
 
-abstract class SmartClient extends FhirClient {
-  static SmartClient? _instance;
+import 'smart_client_stub.dart' // Stub implementation
+    if (dart.library.io) 'smart_mobile_client.dart' // dart:io implementation
+    if (dart.library.html) 'smart_web_client.dart'; // dart:html implementation
 
-  static SmartClient? get instance {
-    _instance ??= getSmartClient();
-    return _instance;
+abstract class SmartClient extends FhirClient {
+  // Return the correct implementation
+  factory SmartClient({
+    /// base url of FHIR server you're querying
+    required FhirUri fhirUrl,
+
+    /// clientId for this application
+    required String clientId,
+
+    /// registerd redirectUri, see Web and Mobile client for specific details
+    /// about setting this up
+    required FhirUri redirectUri,
+
+    /// if there are certain launch strings that need to be included
+    String? launch,
+
+    /// the scopes that will be included with the request
+    Scopes? scopes,
+
+    /// any additional parameters you'd like to pass as part of this request
+    Map<String, String>? additionalParameters,
+
+    /// the authorize Url from the Conformance/Capability Statement
+    FhirUri? authUrl,
+
+    /// the token Url from the Conformance/Capability Statement
+    FhirUri? tokenUrl,
+
+    /// this is for testing, you shouldn't store the secret in the object
+    String? secret,
+  }) {
+    fhirUrl = fhirUrl;
+    return getSmartClient(
+      fhirUrl: fhirUrl,
+      clientId: clientId,
+      redirectUri: redirectUri,
+      launch: launch,
+      scopes: scopes,
+      additionalParameters: additionalParameters,
+      authUrl: authUrl,
+      tokenUrl: tokenUrl,
+      secret: secret,
+    );
   }
+
+  late FhirUri fhirUrl;
+  bool isLoggedIn = false;
 
   @override
   Future<void> login();
@@ -22,59 +64,4 @@ abstract class SmartClient extends FhirClient {
 
   @override
   Future<void> logout();
-
-  // factory SmartClient.mobile({
-  //   required FhirUri fhirUrl,
-  //   required String clientId,
-  //   required FhirUri redirectUri,
-  //   String? launch,
-  //   Scopes? scopes,
-  //   Map<String, String>? additionalParameters,
-  //   FhirUri? authUrl,
-  //   FhirUri? tokenUrl,
-  //   bool isLoggedIn = false,
-  //   String? secret,
-  // }) =>
-  //     SmartClient.mobileClient(
-  //       fhirUrl,
-  //       clientId,
-  //       redirectUri,
-  //       secret,
-  //       FlutterAppAuth(),
-  //       const FlutterSecureStorage(),
-  //       launch: launch,
-  //       scopes: scopes,
-  //       additionalParameters: additionalParameters,
-  //       authUrl: authUrl,
-  //       tokenUrl: tokenUrl,
-  //       isLoggedIn: isLoggedIn,
-  //     );
-
-  // factory SmartClient.web({
-  //   required FhirUri fhirUrl,
-  //   required String clientId,
-  //   required FhirUri redirectUri,
-  //   String? launch,
-  //   Scopes? scopes,
-  //   Map<String, String>? additionalParameters,
-  //   FhirUri? authUrl,
-  //   FhirUri? tokenUrl,
-  //   bool isLoggedIn = false,
-  //   String? secret,
-  // }) =>
-  //     SmartClient.webClient(
-  //       fhirUrl,
-  //       clientId,
-  //       redirectUri,
-  //       secret,
-  //       null,
-  //       null,
-  //       launch: launch,
-  //       scopes: scopes,
-  //       additionalParameters: additionalParameters,
-  //       authUrl: authUrl,
-  //       tokenUrl: tokenUrl,
-  //       isLoggedIn: isLoggedIn,
-  //     );
-
 }
