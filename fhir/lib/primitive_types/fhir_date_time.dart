@@ -16,8 +16,7 @@ class FhirDateTime {
 
   factory FhirDateTime(dynamic inValue) {
     if (inValue is DateTime) {
-      return FhirDateTime._(inValue.toIso8601String(), inValue, true,
-          DateTimePrecision.FULL, null);
+      return FhirDateTime.fromDateTime(inValue);
     } else if (inValue is String) {
       try {
         final dateTimeValue = _parseDateTime(inValue);
@@ -35,11 +34,20 @@ class FhirDateTime {
 
   factory FhirDateTime.fromDateTime(DateTime dateTime,
       [DateTimePrecision precision = DateTimePrecision.FULL]) {
-    final dateString = dateTime.toIso8601String();
-    final len = [4, 7, 10, dateString.length][precision.index];
+    final dateTimeString = dateTime.toIso8601String();
+    final len = [4, 7, 10, dateTimeString.length][precision.index];
 
-    return FhirDateTime._(
-        dateString.substring(0, len), dateTime, true, precision, null);
+    if (dateTime.isUtc || precision != DateTimePrecision.FULL) {
+      return FhirDateTime._(
+          dateTimeString.substring(0, len), dateTime, true, precision, null);
+    } else {
+      return FhirDateTime._(
+          '${dateTimeString}${dateTime.timeZoneOffset.isNegative ? '-' : '+'}${(dateTime.timeZoneOffset.abs().inMinutes / 60).round().toString().padLeft(2, "0")}:${(dateTime.timeZoneOffset.inMinutes % 60).toString().padLeft(2, "0")}',
+          dateTime,
+          true,
+          precision,
+          null);
+    }
   }
 
   factory FhirDateTime.fromJson(dynamic json) => FhirDateTime(json);

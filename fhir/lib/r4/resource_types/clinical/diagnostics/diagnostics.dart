@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
+
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -2627,6 +2628,8 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// [questionnaire]: The Questionnaire that defines and organizes the
   ///  questions for which answers are being provided.
   ///
+  /// [questionnaireElement]: Extensions for [questionnaire].
+  ///
   /// [status]: The position of the questionnaire response within its overall
   ///  lifecycle.
   ///
@@ -2669,6 +2672,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     List<Reference>? basedOn,
     List<Reference>? partOf,
     Canonical? questionnaire,
+    @JsonKey(name: '_questionnaire') Element? questionnaireElement,
     @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
         QuestionnaireResponseStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
