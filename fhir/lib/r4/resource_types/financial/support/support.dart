@@ -33,11 +33,11 @@ class Coverage with Resource, _$Coverage {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ class Coverage with Resource, _$Coverage {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -76,7 +76,7 @@ class Coverage with Resource, _$Coverage {
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: The type of coverage: social program, medical plan, accident
   /// coverage (workers compensation, auto), group health or payment by an
@@ -90,14 +90,14 @@ class Coverage with Resource, _$Coverage {
   ///
   /// [subscriberId]: The insurer assigned ID for the Subscriber.
   ///
-  /// [_subscriberId]: Extensions for subscriberId
+  /// [subscriberIdElement]: Extensions for subscriberId
   ///
   /// [beneficiary]: The party who benefits from the insurance coverage; the
   ///  patient when products and/or services are provided.
   ///
   /// [dependent]: A unique identifier for a dependent under the coverage.
   ///
-  /// [_dependent]: Extensions for dependent
+  /// [dependentElement]: Extensions for dependent
   ///
   /// [relationship]: The relationship of beneficiary (patient) to the
   ///  subscriber.
@@ -109,21 +109,21 @@ class Coverage with Resource, _$Coverage {
   /// [payor]: The program or plan underwriter or payor including both insurance
   ///  and non-insurance agreements, such as patient-pay agreements.
   ///
-  /// [class]: A suite of underwriter specific classifiers.
+  /// [class_]: A suite of underwriter specific classifiers.
   ///
   /// [order]: The order of applicability of this coverage relative to other
   /// coverages which are currently in force. Note, there may be gaps in the
   /// numbering and this does not imply primary, secondary etc. as the specific
   ///  positioning of coverages depends upon the episode of care.
   ///
-  /// [_order]: Extensions for order
+  /// [orderElement]: Extensions for order
   ///
   /// [network]: The insurer-specific identifier for the insurer-defined network
   /// of providers to which the beneficiary may seek treatment which will be
   /// covered at the 'in-network' rate, otherwise 'out of network' terms and
   ///  conditions apply.
   ///
-  /// [_network]: Extensions for network
+  /// [networkElement]: Extensions for network
   ///
   /// [costToBeneficiary]: A suite of codes indicating the cost category and
   /// associated amount which have been detailed in the policy and may have been
@@ -133,7 +133,7 @@ class Coverage with Resource, _$Coverage {
   /// included not for adjudication but to provide insurers with the details to
   ///  recover costs.
   ///
-  /// [_subrogation]: Extensions for subrogation
+  /// [subrogationElement]: Extensions for subrogation
   ///
   /// [contract]: The policy(s) which constitute this insurance coverage.
   factory Coverage({
@@ -178,7 +178,7 @@ class Coverage with Resource, _$Coverage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
       ? Coverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -196,14 +196,14 @@ class Coverage with Resource, _$Coverage {
 class CoverageClass with _$CoverageClass {
   CoverageClass._();
 
-  /// [Coverage_Class]: Financial instrument which may be used to reimburse or
+  /// [CoverageClass]: Financial instrument which may be used to reimburse or
   /// pay for health care products and services. Includes both insurance and
   ///  self-payment.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -231,11 +231,11 @@ class CoverageClass with _$CoverageClass {
   /// [value]: The alphanumeric string value associated with the insurer issued
   ///  label.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   ///
   /// [name]: A short description for the class.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   factory CoverageClass({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -250,7 +250,7 @@ class CoverageClass with _$CoverageClass {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageClass.fromYaml(dynamic yaml) => yaml is String
       ? CoverageClass.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -268,14 +268,14 @@ class CoverageClass with _$CoverageClass {
 class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   CoverageCostToBeneficiary._();
 
-  /// [Coverage_CostToBeneficiary]: Financial instrument which may be used to
+  /// [CoverageCostToBeneficiary]: Financial instrument which may be used to
   /// reimburse or pay for health care products and services. Includes both
   ///  insurance and self-payment.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -317,7 +317,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageCostToBeneficiary.fromYaml(dynamic yaml) => yaml is String
       ? CoverageCostToBeneficiary.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -336,14 +336,14 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
 class CoverageException with _$CoverageException {
   CoverageException._();
 
-  /// [Coverage_Exception]: Financial instrument which may be used to reimburse
+  /// [CoverageException]: Financial instrument which may be used to reimburse
   /// or pay for health care products and services. Includes both insurance and
   ///  self-payment.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -378,7 +378,7 @@ class CoverageException with _$CoverageException {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageException.fromYaml(dynamic yaml) => yaml is String
       ? CoverageException.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -416,11 +416,11 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -434,7 +434,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -460,7 +460,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [priority]: When the requestor expects the processor to complete
   ///  processing.
@@ -471,7 +471,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// the patient; and/or validation that the specified coverage is in-force at
   ///  the date/period specified or 'now' if not specified.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [patient]: The party who is the beneficiary of the supplied coverage and
   ///  for whom eligibility is sought.
@@ -479,14 +479,14 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// [servicedDate]: The date or dates when the enclosed suite of services were
   ///  performed or completed.
   ///
-  /// [_servicedDate]: Extensions for servicedDate
+  /// [servicedDateElement]: Extensions for servicedDate
   ///
   /// [servicedPeriod]: The date or dates when the enclosed suite of services
   ///  were performed or completed.
   ///
   /// [created]: The date when this resource was created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [enterer]: Person who created the request.
   ///
@@ -545,7 +545,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityRequest.fromYaml(dynamic yaml) => yaml is String
       ? CoverageEligibilityRequest.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -565,7 +565,7 @@ class CoverageEligibilityRequestSupportingInfo
     with _$CoverageEligibilityRequestSupportingInfo {
   CoverageEligibilityRequestSupportingInfo._();
 
-  /// [CoverageEligibilityRequest_SupportingInfo]: The
+  /// [CoverageEligibilityRequestSupportingInfo]: The
   /// CoverageEligibilityRequest provides patient and insurance coverage
   /// information to an insurer for them to respond, in the form of an
   /// CoverageEligibilityResponse, with information regarding whether the stated
@@ -575,7 +575,7 @@ class CoverageEligibilityRequestSupportingInfo
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -598,7 +598,7 @@ class CoverageEligibilityRequestSupportingInfo
   ///
   /// [sequence]: A number to uniquely identify supporting information entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [information]: Additional data or information such as resources,
   /// documents, images etc. including references to the data or the actual
@@ -607,7 +607,7 @@ class CoverageEligibilityRequestSupportingInfo
   /// [appliesToAll]: The supporting materials are applicable for all detail
   ///  items, product/servce categories and specific billing codes.
   ///
-  /// [_appliesToAll]: Extensions for appliesToAll
+  /// [appliesToAllElement]: Extensions for appliesToAll
   factory CoverageEligibilityRequestSupportingInfo({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -622,7 +622,7 @@ class CoverageEligibilityRequestSupportingInfo
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityRequestSupportingInfo.fromYaml(dynamic yaml) => yaml
           is String
       ? CoverageEligibilityRequestSupportingInfo.fromJson(
@@ -644,7 +644,7 @@ class CoverageEligibilityRequestInsurance
     with _$CoverageEligibilityRequestInsurance {
   CoverageEligibilityRequestInsurance._();
 
-  /// [CoverageEligibilityRequest_Insurance]: The CoverageEligibilityRequest
+  /// [CoverageEligibilityRequestInsurance]: The CoverageEligibilityRequest
   /// provides patient and insurance coverage information to an insurer for them
   /// to respond, in the form of an CoverageEligibilityResponse, with
   /// information regarding whether the stated coverage is valid and in-force
@@ -653,7 +653,7 @@ class CoverageEligibilityRequestInsurance
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -677,7 +677,7 @@ class CoverageEligibilityRequestInsurance
   /// [focal]: A flag to indicate that this Coverage is to be used for
   ///  evaluation of this request when set to true.
   ///
-  /// [_focal]: Extensions for focal
+  /// [focalElement]: Extensions for focal
   ///
   /// [coverage]: Reference to the insurance card level information contained in
   /// the Coverage resource. The coverage issuing insurer will use these details
@@ -687,7 +687,7 @@ class CoverageEligibilityRequestInsurance
   /// [businessArrangement]: A business agreement number established between the
   ///  provider and the insurer for special business processing purposes.
   ///
-  /// [_businessArrangement]: Extensions for businessArrangement
+  /// [businessArrangementElement]: Extensions for businessArrangement
   factory CoverageEligibilityRequestInsurance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -702,7 +702,7 @@ class CoverageEligibilityRequestInsurance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityRequestInsurance.fromYaml(dynamic yaml) => yaml
           is String
       ? CoverageEligibilityRequestInsurance.fromJson(
@@ -723,7 +723,7 @@ class CoverageEligibilityRequestInsurance
 class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   CoverageEligibilityRequestItem._();
 
-  /// [CoverageEligibilityRequest_Item]: The CoverageEligibilityRequest provides
+  /// [CoverageEligibilityRequestItem]: The CoverageEligibilityRequest provides
   /// patient and insurance coverage information to an insurer for them to
   /// respond, in the form of an CoverageEligibilityResponse, with information
   /// regarding whether the stated coverage is valid and in-force and optionally
@@ -732,7 +732,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -756,7 +756,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   /// [supportingInfoSequence]: Exceptions, special conditions and supporting
   ///  information applicable for this service or product line.
   ///
-  /// [_supportingInfoSequence]: Extensions for supportingInfoSequence
+  /// [supportingInfoSequenceElement]: Extensions for supportingInfoSequence
   ///
   /// [category]: Code to identify the general type of benefits under which
   ///  products and services are provided.
@@ -802,7 +802,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityRequestItem.fromYaml(dynamic yaml) => yaml
           is String
       ? CoverageEligibilityRequestItem.fromJson(
@@ -824,7 +824,7 @@ class CoverageEligibilityRequestDiagnosis
     with _$CoverageEligibilityRequestDiagnosis {
   CoverageEligibilityRequestDiagnosis._();
 
-  /// [CoverageEligibilityRequest_Diagnosis]: The CoverageEligibilityRequest
+  /// [CoverageEligibilityRequestDiagnosis]: The CoverageEligibilityRequest
   /// provides patient and insurance coverage information to an insurer for them
   /// to respond, in the form of an CoverageEligibilityResponse, with
   /// information regarding whether the stated coverage is valid and in-force
@@ -833,7 +833,7 @@ class CoverageEligibilityRequestDiagnosis
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -870,7 +870,7 @@ class CoverageEligibilityRequestDiagnosis
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityRequestDiagnosis.fromYaml(dynamic yaml) => yaml
           is String
       ? CoverageEligibilityRequestDiagnosis.fromJson(
@@ -908,11 +908,11 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -926,7 +926,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -952,7 +952,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [purpose]: Code to specify whether requesting: prior authorization
   /// requirements for some service categories or billing codes; benefits for
@@ -960,7 +960,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// the patient; and/or validation that the specified coverage is in-force at
   ///  the date/period specified or 'now' if not specified.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [patient]: The party who is the beneficiary of the supplied coverage and
   ///  for whom eligibility is sought.
@@ -968,14 +968,14 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// [servicedDate]: The date or dates when the enclosed suite of services were
   ///  performed or completed.
   ///
-  /// [_servicedDate]: Extensions for servicedDate
+  /// [servicedDateElement]: Extensions for servicedDate
   ///
   /// [servicedPeriod]: The date or dates when the enclosed suite of services
   ///  were performed or completed.
   ///
   /// [created]: The date this resource was created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [requestor]: The provider which is responsible for the request.
   ///
@@ -983,12 +983,12 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   ///
   /// [outcome]: The outcome of the request processing.
   ///
-  /// [_outcome]: Extensions for outcome
+  /// [outcomeElement]: Extensions for outcome
   ///
   /// [disposition]: A human readable description of the status of the
   ///  adjudication.
   ///
-  /// [_disposition]: Extensions for disposition
+  /// [dispositionElement]: Extensions for disposition
   ///
   /// [insurer]: The Insurer who issued the coverage in question and is the
   ///  author of the response.
@@ -1000,7 +1000,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// to be used on further communication and as proof that the request
   ///  occurred.
   ///
-  /// [_preAuthRef]: Extensions for preAuthRef
+  /// [preAuthRefElement]: Extensions for preAuthRef
   ///
   /// [form]: A code for the form to be used for printing the content.
   ///
@@ -1048,7 +1048,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityResponse.fromYaml(dynamic yaml) => yaml is String
       ? CoverageEligibilityResponse.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1068,14 +1068,14 @@ class CoverageEligibilityResponseInsurance
     with _$CoverageEligibilityResponseInsurance {
   CoverageEligibilityResponseInsurance._();
 
-  /// [CoverageEligibilityResponse_Insurance]: This resource provides
+  /// [CoverageEligibilityResponseInsurance]: This resource provides
   /// eligibility and plan details from the processing of an
   ///  CoverageEligibilityRequest resource.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1105,7 +1105,7 @@ class CoverageEligibilityResponseInsurance
   /// if no service date(s) specified or for the whole duration of the service
   ///  dates.
   ///
-  /// [_inforce]: Extensions for inforce
+  /// [inforceElement]: Extensions for inforce
   ///
   /// [benefitPeriod]: The term of the benefits documented in this response.
   ///
@@ -1125,7 +1125,7 @@ class CoverageEligibilityResponseInsurance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityResponseInsurance.fromYaml(dynamic yaml) => yaml
           is String
       ? CoverageEligibilityResponseInsurance.fromJson(
@@ -1146,14 +1146,14 @@ class CoverageEligibilityResponseInsurance
 class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   CoverageEligibilityResponseItem._();
 
-  /// [CoverageEligibilityResponse_Item]: This resource provides eligibility and
+  /// [CoverageEligibilityResponseItem]: This resource provides eligibility and
   /// plan details from the processing of an CoverageEligibilityRequest
   ///  resource.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1190,15 +1190,15 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// plan, missing or False indicates the product or service is included in the
   ///  coverage.
   ///
-  /// [_excluded]: Extensions for excluded
+  /// [excludedElement]: Extensions for excluded
   ///
   /// [name]: A short name or tag for the benefit.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: A richer description of the benefit or services covered.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [network]: Is a flag to indicate whether the benefits refer to in-network
   ///  providers or out-of-network providers.
@@ -1213,7 +1213,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// [authorizationRequired]: A boolean flag indicating whether a
   ///  preauthorization is required prior to actual service delivery.
   ///
-  /// [_authorizationRequired]: Extensions for authorizationRequired
+  /// [authorizationRequiredElement]: Extensions for authorizationRequired
   ///
   /// [authorizationSupporting]: Codes or comments regarding information or
   ///  actions associated with the preauthorization.
@@ -1221,7 +1221,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// [authorizationUrl]: A web location for obtaining requirements or
   ///  descriptive information regarding the preauthorization.
   ///
-  /// [_authorizationUrl]: Extensions for authorizationUrl
+  /// [authorizationUrlElement]: Extensions for authorizationUrl
   factory CoverageEligibilityResponseItem({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1251,7 +1251,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityResponseItem.fromYaml(dynamic yaml) => yaml
           is String
       ? CoverageEligibilityResponseItem.fromJson(
@@ -1273,14 +1273,14 @@ class CoverageEligibilityResponseBenefit
     with _$CoverageEligibilityResponseBenefit {
   CoverageEligibilityResponseBenefit._();
 
-  /// [CoverageEligibilityResponse_Benefit]: This resource provides eligibility
+  /// [CoverageEligibilityResponseBenefit]: This resource provides eligibility
   /// and plan details from the processing of an CoverageEligibilityRequest
   ///  resource.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1306,12 +1306,12 @@ class CoverageEligibilityResponseBenefit
   /// [allowedUnsignedInt]: The quantity of the benefit which is permitted under
   ///  the coverage.
   ///
-  /// [_allowedUnsignedInt]: Extensions for allowedUnsignedInt
+  /// [allowedUnsignedIntElement]: Extensions for allowedUnsignedInt
   ///
   /// [allowedString]: The quantity of the benefit which is permitted under the
   ///  coverage.
   ///
-  /// [_allowedString]: Extensions for allowedString
+  /// [allowedStringElement]: Extensions for allowedString
   ///
   /// [allowedMoney]: The quantity of the benefit which is permitted under the
   ///  coverage.
@@ -1319,12 +1319,12 @@ class CoverageEligibilityResponseBenefit
   /// [usedUnsignedInt]: The quantity of the benefit which have been consumed to
   ///  date.
   ///
-  /// [_usedUnsignedInt]: Extensions for usedUnsignedInt
+  /// [usedUnsignedIntElement]: Extensions for usedUnsignedInt
   ///
   /// [usedString]: The quantity of the benefit which have been consumed to
   ///  date.
   ///
-  /// [_usedString]: Extensions for usedString
+  /// [usedStringElement]: Extensions for usedString
   ///
   /// [usedMoney]: The quantity of the benefit which have been consumed to date.
   factory CoverageEligibilityResponseBenefit({
@@ -1347,7 +1347,7 @@ class CoverageEligibilityResponseBenefit
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityResponseBenefit.fromYaml(dynamic yaml) => yaml
           is String
       ? CoverageEligibilityResponseBenefit.fromJson(
@@ -1368,14 +1368,14 @@ class CoverageEligibilityResponseBenefit
 class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   CoverageEligibilityResponseError._();
 
-  /// [CoverageEligibilityResponse_Error]: This resource provides eligibility
+  /// [CoverageEligibilityResponseError]: This resource provides eligibility
   /// and plan details from the processing of an CoverageEligibilityRequest
   ///  resource.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1408,7 +1408,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityResponseError.fromYaml(dynamic yaml) => yaml
           is String
       ? CoverageEligibilityResponseError.fromJson(
@@ -1446,11 +1446,11 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1464,7 +1464,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1489,11 +1489,11 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [created]: The date when this resource was created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [insurer]: The Insurer who is target  of the request.
   ///
@@ -1532,7 +1532,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1567,11 +1567,11 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1585,7 +1585,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1610,22 +1610,22 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [request]: Original request resource reference.
   ///
   /// [outcome]: Processing status: error, complete.
   ///
-  /// [_outcome]: Extensions for outcome
+  /// [outcomeElement]: Extensions for outcome
   ///
   /// [disposition]: A description of the status of the adjudication.
   ///
-  /// [_disposition]: Extensions for disposition
+  /// [dispositionElement]: Extensions for disposition
   ///
   /// [created]: The date when the enclosed suite of services were performed or
   ///  completed.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [organization]: The Insurer who produced this adjudicated response.
   ///
@@ -1663,7 +1663,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

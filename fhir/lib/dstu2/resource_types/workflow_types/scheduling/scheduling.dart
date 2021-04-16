@@ -53,7 +53,7 @@ class Appointment with Resource, _$Appointment {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
       ? Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -87,7 +87,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -136,7 +136,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -178,7 +178,7 @@ class Schedule with Resource, _$Schedule {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
       ? Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -227,7 +227,7 @@ class Slot with Resource, _$Slot {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Slot.fromYaml(dynamic yaml) => yaml is String
       ? Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

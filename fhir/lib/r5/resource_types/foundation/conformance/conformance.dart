@@ -78,7 +78,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -110,7 +110,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementSoftware.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementSoftware.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -143,7 +143,7 @@ class CapabilityStatementImplementation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementImplementation.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementImplementation.fromJson(
@@ -183,7 +183,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementRest.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementRest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -214,7 +214,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementSecurity.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementSecurity.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -273,7 +273,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementResource.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementResource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -305,7 +305,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementInteraction.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementInteraction.fromJson(
@@ -342,7 +342,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementSearchParam.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementSearchParam.fromJson(
@@ -376,7 +376,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementOperation.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementOperation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -408,7 +408,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementInteraction1.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementInteraction1.fromJson(
@@ -443,7 +443,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementMessaging.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementMessaging.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -473,7 +473,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementEndpoint.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementEndpoint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -505,7 +505,7 @@ class CapabilityStatementSupportedMessage
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementSupportedMessage.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatementSupportedMessage.fromJson(
@@ -540,7 +540,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatementDocument.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementDocument.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -619,7 +619,7 @@ class CapabilityStatement2 with Resource, _$CapabilityStatement2 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -651,7 +651,7 @@ class CapabilityStatement2Software with _$CapabilityStatement2Software {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2Software.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement2Software.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -684,7 +684,7 @@ class CapabilityStatement2Implementation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2Implementation.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatement2Implementation.fromJson(
@@ -722,7 +722,7 @@ class CapabilityStatement2Rest with _$CapabilityStatement2Rest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2Rest.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement2Rest.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -758,7 +758,7 @@ class CapabilityStatement2Resource with _$CapabilityStatement2Resource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2Resource.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement2Resource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -789,7 +789,7 @@ class CapabilityStatement2Interaction with _$CapabilityStatement2Interaction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2Interaction.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatement2Interaction.fromJson(
@@ -826,7 +826,7 @@ class CapabilityStatement2SearchParam with _$CapabilityStatement2SearchParam {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2SearchParam.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatement2SearchParam.fromJson(
@@ -860,7 +860,7 @@ class CapabilityStatement2Operation with _$CapabilityStatement2Operation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2Operation.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement2Operation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -891,7 +891,7 @@ class CapabilityStatement2Interaction1 with _$CapabilityStatement2Interaction1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement2Interaction1.fromYaml(dynamic yaml) => yaml
           is String
       ? CapabilityStatement2Interaction1.fromJson(
@@ -963,7 +963,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompartmentDefinition.fromYaml(dynamic yaml) => yaml is String
       ? CompartmentDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -995,7 +995,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompartmentDefinitionResource.fromYaml(dynamic yaml) => yaml is String
       ? CompartmentDefinitionResource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1063,7 +1063,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenario.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenario.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1098,7 +1098,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioActor.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1134,7 +1134,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioInstance.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1164,7 +1164,7 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioVersion.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioVersion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1194,7 +1194,7 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioContainedInstance.fromYaml(dynamic yaml) => yaml
           is String
       ? ExampleScenarioContainedInstance.fromJson(
@@ -1232,7 +1232,7 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioProcess.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioProcess.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1263,7 +1263,7 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioStep.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioStep.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1307,7 +1307,7 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioOperation.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioOperation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1339,7 +1339,7 @@ class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExampleScenarioAlternative.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioAlternative.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1407,7 +1407,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinition.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1444,7 +1444,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinitionLink.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinitionLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1477,7 +1477,7 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinitionTarget.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinitionTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1515,7 +1515,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinitionCompartment.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinitionCompartment.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1590,7 +1590,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuide.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1621,7 +1621,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideDependsOn.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideDependsOn.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1651,7 +1651,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideGlobal.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideGlobal.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1683,7 +1683,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideDefinition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1714,7 +1714,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideGrouping.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideGrouping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1754,7 +1754,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideResource.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideResource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1790,7 +1790,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuidePage.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuidePage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1820,7 +1820,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideParameter.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideParameter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1853,7 +1853,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideTemplate.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideTemplate.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1888,7 +1888,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideManifest.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideManifest.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1922,7 +1922,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuideResource1.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideResource1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1955,7 +1955,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuidePage1.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuidePage1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2034,7 +2034,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageDefinition.fromYaml(dynamic yaml) => yaml is String
       ? MessageDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2067,7 +2067,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageDefinitionFocus.fromYaml(dynamic yaml) => yaml is String
       ? MessageDefinitionFocus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2096,7 +2096,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageDefinitionAllowedResponse.fromYaml(dynamic yaml) => yaml
           is String
       ? MessageDefinitionAllowedResponse.fromJson(
@@ -2184,7 +2184,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2230,7 +2230,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinitionParameter.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionParameter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2261,7 +2261,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionBinding.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2293,7 +2293,7 @@ class OperationDefinitionReferencedFrom
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinitionReferencedFrom.fromYaml(dynamic yaml) => yaml
           is String
       ? OperationDefinitionReferencedFrom.fromJson(
@@ -2326,7 +2326,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinitionOverload.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionOverload.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2418,7 +2418,7 @@ class SearchParameter with Resource, _$SearchParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2447,7 +2447,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SearchParameterComponent.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameterComponent.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2532,7 +2532,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2566,7 +2566,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionMapping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2598,7 +2598,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinitionContext.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionContext.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2626,7 +2626,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinitionSnapshot.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionSnapshot.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2654,7 +2654,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinitionDifferential.fromYaml(dynamic yaml) => yaml
           is String
       ? StructureDefinitionDifferential.fromJson(
@@ -2723,7 +2723,7 @@ class StructureMap with Resource, _$StructureMap {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMap.fromYaml(dynamic yaml) => yaml is String
       ? StructureMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2757,7 +2757,7 @@ class StructureMapStructure with _$StructureMapStructure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapStructure.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapStructure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2794,7 +2794,7 @@ class StructureMapGroup with _$StructureMapGroup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapGroup.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2829,7 +2829,7 @@ class StructureMapInput with _$StructureMapInput {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapInput.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2863,7 +2863,7 @@ class StructureMapRule with _$StructureMapRule {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapRule.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2988,7 +2988,7 @@ class StructureMapSource with _$StructureMapSource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapSource.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3031,7 +3031,7 @@ class StructureMapTarget with _$StructureMapTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapTarget.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3067,7 +3067,7 @@ class StructureMapParameter with _$StructureMapParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapParameter.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3097,7 +3097,7 @@ class StructureMapDependent with _$StructureMapDependent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMapDependent.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapDependent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

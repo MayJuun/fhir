@@ -1,19 +1,17 @@
 import 'package:fhir/r4.dart';
-import 'package:fhir_auth/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
+import 'package:fhir_auth/r4.dart';
 
 import 'new_patient.dart';
 
-Future gcsRequest({
-  String? url,
-  String? clientId,
-  required List<String> scopes,
-}) async {
+Future<List<Resource>> gcsRequest(
+    String url, String clientId, List<String> scopes) async {
   final client = GcsClient(
-    baseUrl: FhirUri(url),
+    fhirUrl: FhirUri(url),
     clientId: clientId,
     scopes: scopes,
   );
+  final List<Resource> resources = [];
 
   try {
     await client.login();
@@ -23,18 +21,20 @@ Future gcsRequest({
 
   final _newPatient = newPatient();
   print('Patient to be uploaded: ${_newPatient.toJson()}');
+  resources.add(_newPatient);
   final request1 = FhirRequest.create(
-    base: client.baseUrl.value ?? Uri.parse('127.0.0.1'),
+    base: client.fhirUrl.value!,
     resource: _newPatient,
   );
-
-  print(await client.authHeaders);
 
   Id? newId;
   try {
     final response = await request1.request(headers: await client.authHeaders);
     newId = response?.id;
-    print('Uploaded patient: ${response?.toJson()}');
+    print('Response from upload: ${response?.toJson()}');
+    if (response != null) {
+      resources.add(response);
+    }
   } catch (e) {
     print(e);
   }
@@ -42,16 +42,21 @@ Future gcsRequest({
     print(newId);
   } else {
     final request2 = FhirRequest.read(
-      base: client.baseUrl.value ?? Uri.parse('127.0.0.1'),
+      base: client.fhirUrl.value!,
       type: R4ResourceType.Patient,
       id: newId,
     );
     try {
       final response2 =
           await request2.request(headers: await client.authHeaders);
-      print('Uploaded patient: ${response2?.toJson()}');
+      print('Response from read:\n${response2?.toJson()}');
+      if (response2 != null) {
+        resources.add(response2);
+      }
     } catch (e) {
       print(e);
     }
   }
+
+  return resources;
 }

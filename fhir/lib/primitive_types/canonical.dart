@@ -10,7 +10,7 @@ class Canonical {
     } else if (inValue is String) {
       if (RegExp(r'^\S*$').hasMatch(inValue)) {
         final Uri? tempUri = Uri.tryParse(inValue);
-        return Canonical._(inValue, tempUri, tempUri == null);
+        return Canonical._(inValue, tempUri, tempUri != null);
       }
       return Canonical._(inValue, null, false);
     }

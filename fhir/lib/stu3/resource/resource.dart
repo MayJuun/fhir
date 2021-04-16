@@ -39,10 +39,10 @@ class Resource {
   /// Convenience method to return a [Reference] referring to that [Resource]
   Reference thisReference() => Reference(reference: '$resourceType/$id');
 
-  /// Produces a [Yaml] formatted [String] version of the object
+  /// Produces a Yaml formatted [String] version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Returns a Resource, accepts [Yaml String] as an argument
+  /// Returns a Resource, accepts a [String] in YAML format as an argument
   static Resource fromYaml(dynamic yaml) => yaml is String
       ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

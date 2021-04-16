@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:dartz/dartz.dart';
 import 'package:fhir/r4.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart';
 
 import 'from_bulk.dart';
+import 'which_resource.dart';
 
 part 'bulk_request.freezed.dart';
 
@@ -17,7 +17,7 @@ class BulkRequest with _$BulkRequest {
   factory BulkRequest.patient({
     required Uri base,
     FhirDateTime? since,
-    List<Tuple2<R4ResourceType?, Id?>>? types,
+    List<WhichResource>? types,
     Client? client,
   }) = _BulkPatientRequest;
 
@@ -26,7 +26,7 @@ class BulkRequest with _$BulkRequest {
     required Uri base,
     required Id id,
     FhirDateTime? since,
-    List<Tuple2<R4ResourceType?, Id?>>? types,
+    List<WhichResource>? types,
     Client? client,
   }) = _BulkGroupRequest;
 
@@ -34,7 +34,7 @@ class BulkRequest with _$BulkRequest {
   factory BulkRequest.system({
     required Uri base,
     FhirDateTime? since,
-    List<Tuple2<R4ResourceType?, Id?>>? types,
+    List<WhichResource>? types,
     Client? client,
   }) = _BulkSystemRequest;
 
@@ -67,7 +67,7 @@ class BulkRequest with _$BulkRequest {
 
   String _parameters(
     FhirDateTime? since,
-    List<Tuple2<R4ResourceType?, Id?>>? types,
+    List<WhichResource>? types,
   ) {
     String sinceString = '';
     String typeString = '';
@@ -77,10 +77,10 @@ class BulkRequest with _$BulkRequest {
     if (types != null) {
       typeString = sinceString.isEmpty ? '?' : '&';
       for (final type in types) {
-        if (type.value1 != null) {
+        if (type.resourceType != null) {
           typeString += typeString.length == 1 ? '_type=' : ',';
           typeString +=
-              '${ResourceUtils.resourceTypeToStringMap[type.value1]}${type.value2 != null ? "/${type.value2}" : ""}';
+              '${ResourceUtils.resourceTypeToStringMap[type.resourceType]}${type.id != null ? "/${type.id}" : ""}';
         }
       }
     }

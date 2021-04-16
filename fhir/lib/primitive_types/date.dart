@@ -15,17 +15,18 @@ class Date {
 
   factory Date(inValue) {
     if (inValue is DateTime) {
-        return Date._(inValue.toIso8601String(), inValue, true,
-            DatePrecision.YYYYMMDD, null);} else if (inValue is String) {
-        try {
-          final dateTimeValue = _parseDate(inValue);
-          return Date._(
-              inValue, dateTimeValue, true, _getPrecision(inValue), null);
-        } on FormatException catch (e) {
-          return Date._(inValue, null, false, DatePrecision.INVALID, e);
-        }
+      return Date.fromDateTime(inValue, DatePrecision.YYYYMMDD);
+    } else if (inValue is String) {
+      try {
+        final dateTimeValue = _parseDate(inValue);
+        return Date._(
+            inValue, dateTimeValue, true, _getPrecision(inValue), null);
+      } on FormatException catch (e) {
+        return Date._(inValue, null, false, DatePrecision.INVALID, e);
+      }
     } else {
-        throw ArgumentError('Date cannot be constructed from $inValue.');}
+      throw ArgumentError('Date cannot be constructed from $inValue.');
+    }
   }
 
   factory Date.fromDateTime(DateTime dateTime,
@@ -61,7 +62,7 @@ class Date {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Date
-          ? o == value
+          ? o.value == value
           : o is DateTime
               ? o == _valueDateTime
               : o is String

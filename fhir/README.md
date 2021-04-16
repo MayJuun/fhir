@@ -14,7 +14,12 @@ As well as the R5 Preview #3:
 
 ## Say Hello!
 
-- As all parts of this are new (FHIR, Flutter, using the two together), I'd love to hear from you if you're working in this space. Open to PR, suggestions or requests. You can email me at <grey@fhirfli.dev>.
+- As all parts of this are new (FHIR, Flutter, using the two together), I'd love to hear from you if you're working in this space. Open to PR, suggestions or requests. You can email me at <grey@fhirfli.dev>. Or, feel free to [join our Slack!](https://join.slack.com/t/fhir-fli/shared_invite/zt-ofv2cycm-9yjdMj8a~zXp7nDBeB_sNQ).
+
+## [Tilo](https://github.com/tiloc)
+
+### Has made a bunch of contributions to these packages so far
+### Has also created his own awesome Flutter package, faiadashu ([pub.dev](https://pub.dev/packages/faiadashu), [github](https://github.com/tiloc/faiadashu)), so check it out!
 
 ## How To Use
 

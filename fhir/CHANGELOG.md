@@ -1,9 +1,20 @@
 # fhir
 
+## [0.4.5]
+* Fixed a constructor issue in Date
+
+## [0.4.4]
+* Updated some dateTime dependencies
+
+## [0.4.3]
+* [Tiloc](https://github.com/tiloc) helped clean up the comments so dartdoc doesn't run so long
+* dependencies updated
+
 ## [0.4.2]
 * Stable(ish)++:
   * No longer use runtimeType string names for primitive type construction
   * Fix for Base64 primitive type
+  * Fix Canonical, Url, Uri primitive types saying they're valid when they're not and vice versa
 
 ## [0.4.0]
 * Stable(ish) & null safe!

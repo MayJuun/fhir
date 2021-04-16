@@ -33,11 +33,11 @@ class BodyStructure with Resource, _$BodyStructure {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ class BodyStructure with Resource, _$BodyStructure {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -76,7 +76,7 @@ class BodyStructure with Resource, _$BodyStructure {
   ///
   /// [active]: Whether this body site is in active use.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [morphology]: The kind of structure being represented by the body
   /// structure at `BodyStructure.location`.  This can define both normal and
@@ -92,7 +92,7 @@ class BodyStructure with Resource, _$BodyStructure {
   /// [description]: A summary, characterization or explanation of the body
   ///  structure.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [image]: Image or images used to identify a location.
   ///
@@ -126,7 +126,7 @@ class BodyStructure with Resource, _$BodyStructure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BodyStructure.fromYaml(dynamic yaml) => yaml is String
       ? BodyStructure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -165,11 +165,11 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -183,7 +183,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -211,7 +211,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   ///
   /// [status]: The status of the diagnostic report.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [category]: A code that classifies the clinical discipline, department or
   /// diagnostic service that created the report (e.g. cardiology, biochemistry,
@@ -233,7 +233,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// often the source of the date/time is not known, only the date/time
   ///  itself.
   ///
-  /// [_effectiveDateTime]: Extensions for effectiveDateTime
+  /// [effectiveDateTimeElement]: Extensions for effectiveDateTime
   ///
   /// [effectivePeriod]: The time or time-period the observed values are related
   /// to. When the subject of the report is a patient, this is usually either
@@ -244,7 +244,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// available to providers, typically after the report was reviewed and
   ///  verified.
   ///
-  /// [_issued]: Extensions for issued
+  /// [issuedElement]: Extensions for issued
   ///
   /// [performer]: The diagnostic service that is responsible for issuing the
   ///  report.
@@ -271,7 +271,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// [conclusion]: Concise and clinically contextualized summary conclusion
   ///  (interpretation/impression) of the diagnostic report.
   ///
-  /// [_conclusion]: Extensions for conclusion
+  /// [conclusionElement]: Extensions for conclusion
   ///
   /// [conclusionCode]: One or more codes that represent the summary conclusion
   ///  (interpretation/impression) of the diagnostic report.
@@ -322,7 +322,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DiagnosticReport.fromYaml(dynamic yaml) => yaml is String
       ? DiagnosticReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -340,7 +340,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 class DiagnosticReportMedia with _$DiagnosticReportMedia {
   DiagnosticReportMedia._();
 
-  /// [DiagnosticReport_Media]: The findings and interpretation of diagnostic
+  /// [DiagnosticReportMedia]: The findings and interpretation of diagnostic
   /// tests performed on patients, groups of patients, devices, and locations,
   /// and/or specimens derived from these. The report includes clinical context
   /// such as requesting and provider information, and some mix of atomic
@@ -350,7 +350,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -375,7 +375,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   /// an explanation for why the image is included, or to draw the viewer's
   ///  attention to important features.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [link]: Reference to the image source.
   factory DiagnosticReportMedia({
@@ -390,7 +390,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DiagnosticReportMedia.fromYaml(dynamic yaml) => yaml is String
       ? DiagnosticReportMedia.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -429,11 +429,11 @@ class ImagingStudy with Resource, _$ImagingStudy {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -447,7 +447,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -473,7 +473,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   ///
   /// [status]: The current state of the ImagingStudy.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [modality]: A list of all the series.modality values that are actual
   /// acquisition modalities, i.e. those in the DICOM Context Group 29 (value
@@ -486,7 +486,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   ///
   /// [started]: Date and time the study started.
   ///
-  /// [_started]: Extensions for started
+  /// [startedElement]: Extensions for started
   ///
   /// [basedOn]: A list of the diagnostic requests that resulted in this imaging
   ///  study being performed.
@@ -507,14 +507,14 @@ class ImagingStudy with Resource, _$ImagingStudy {
   /// resource availability, security, or other factors. This element should be
   ///  present if any series elements are present.
   ///
-  /// [_numberOfSeries]: Extensions for numberOfSeries
+  /// [numberOfSeriesElement]: Extensions for numberOfSeries
   ///
   /// [numberOfInstances]: Number of SOP Instances in Study. This value given
   /// may be larger than the number of instance elements this resource contains
   /// due to resource availability, security, or other factors. This element
   ///  should be present if any instance elements are present.
   ///
-  /// [_numberOfInstances]: Extensions for numberOfInstances
+  /// [numberOfInstancesElement]: Extensions for numberOfInstances
   ///
   /// [procedureReference]: The procedure which this ImagingStudy was part of.
   ///
@@ -538,7 +538,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   /// Institution-generated description or classification of the Study
   ///  (component) performed.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [series]: Each study has one or more series of images or other content.
   factory ImagingStudy({
@@ -586,7 +586,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImagingStudy.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -604,7 +604,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
 
-  /// [ImagingStudy_Series]: Representation of the content produced in a DICOM
+  /// [ImagingStudySeries]: Representation of the content produced in a DICOM
   /// imaging study. A study comprises a set of series, each of which includes a
   /// set of Service-Object Pair Instances (SOP Instances - images or other
   /// data) acquired or produced in a common context.  A series is of only one
@@ -614,7 +614,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -637,24 +637,24 @@ class ImagingStudySeries with _$ImagingStudySeries {
   ///
   /// [uid]: The DICOM Series Instance UID for the series.
   ///
-  /// [_uid]: Extensions for uid
+  /// [uidElement]: Extensions for uid
   ///
   /// [number]: The numeric identifier of this series in the study.
   ///
-  /// [_number]: Extensions for number
+  /// [numberElement]: Extensions for number
   ///
   /// [modality]: The modality of this series sequence.
   ///
   /// [description]: A description of the series.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [numberOfInstances]: Number of SOP Instances in the Study. The value given
   /// may be larger than the number of instance elements this resource contains
   /// due to resource availability, security, or other factors. This element
   ///  should be present if any instance elements are present.
   ///
-  /// [_numberOfInstances]: Extensions for numberOfInstances
+  /// [numberOfInstancesElement]: Extensions for numberOfInstances
   ///
   /// [endpoint]: The network service providing access (e.g., query, view, or
   /// retrieval) for this series. See implementation notes for information about
@@ -677,7 +677,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
   ///
   /// [started]: The date and time the series was started.
   ///
-  /// [_started]: Extensions for started
+  /// [startedElement]: Extensions for started
   ///
   /// [performer]: Indicates who or what performed the series and how they were
   ///  involved.
@@ -710,7 +710,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImagingStudySeries.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudySeries.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -728,7 +728,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
 class ImagingStudyPerformer with _$ImagingStudyPerformer {
   ImagingStudyPerformer._();
 
-  /// [ImagingStudy_Performer]: Representation of the content produced in a
+  /// [ImagingStudyPerformer]: Representation of the content produced in a
   /// DICOM imaging study. A study comprises a set of series, each of which
   /// includes a set of Service-Object Pair Instances (SOP Instances - images or
   /// other data) acquired or produced in a common context.  A series is of only
@@ -738,7 +738,7 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -774,7 +774,7 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImagingStudyPerformer.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudyPerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -792,7 +792,7 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
 class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
 
-  /// [ImagingStudy_Instance]: Representation of the content produced in a DICOM
+  /// [ImagingStudyInstance]: Representation of the content produced in a DICOM
   /// imaging study. A study comprises a set of series, each of which includes a
   /// set of Service-Object Pair Instances (SOP Instances - images or other
   /// data) acquired or produced in a common context.  A series is of only one
@@ -802,7 +802,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -825,17 +825,17 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   ///
   /// [uid]: The DICOM SOP Instance UID for this image or other DICOM content.
   ///
-  /// [_uid]: Extensions for uid
+  /// [uidElement]: Extensions for uid
   ///
   /// [sopClass]: DICOM instance  type.
   ///
   /// [number]: The number of instance in the series.
   ///
-  /// [_number]: Extensions for number
+  /// [numberElement]: Extensions for number
   ///
   /// [title]: The description of the instance.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   factory ImagingStudyInstance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -852,7 +852,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImagingStudyInstance.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudyInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -888,11 +888,11 @@ class Media with Resource, _$Media {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -906,7 +906,7 @@ class Media with Resource, _$Media {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -940,7 +940,7 @@ class Media with Resource, _$Media {
   ///
   /// [status]: The current state of the {{title}}.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: A code that classifies whether the media is an image, video or
   ///  audio recording or some other media category.
@@ -958,14 +958,14 @@ class Media with Resource, _$Media {
   ///
   /// [createdDateTime]: The date and time(s) at which the media was collected.
   ///
-  /// [_createdDateTime]: Extensions for createdDateTime
+  /// [createdDateTimeElement]: Extensions for createdDateTime
   ///
   /// [createdPeriod]: The date and time(s) at which the media was collected.
   ///
   /// [issued]: The date and time this version of the media was made available
   ///  to providers, typically after having been reviewed.
   ///
-  /// [_issued]: Extensions for issued
+  /// [issuedElement]: Extensions for issued
   ///
   /// [operator]: The person who administered the collection of the image.
   ///
@@ -977,17 +977,17 @@ class Media with Resource, _$Media {
   /// [deviceName]: The name of the device / manufacturer of the device  that
   ///  was used to make the recording.
   ///
-  /// [_deviceName]: Extensions for deviceName
+  /// [deviceNameElement]: Extensions for deviceName
   ///
   /// [device]: The device used to collect the media.
   ///
   /// [height]: Height of the image in pixels (photo/video).
   ///
-  /// [_height]: Extensions for height
+  /// [heightElement]: Extensions for height
   ///
   /// [width]: Width of the image in pixels (photo/video).
   ///
-  /// [_width]: Extensions for width
+  /// [widthElement]: Extensions for width
   ///
   /// [frames]: The number of frames in a photo. This is used with a multi-page
   /// fax, or an imaging acquisition context that takes multiple slices in a
@@ -995,12 +995,12 @@ class Media with Resource, _$Media {
   /// SHALL have a value in order to alert interface software that a multi-frame
   ///  capable rendering widget is required.
   ///
-  /// [_frames]: Extensions for frames
+  /// [framesElement]: Extensions for frames
   ///
   /// [duration]: The duration of the recording in seconds - for audio and
   ///  video.
   ///
-  /// [_duration]: Extensions for duration
+  /// [durationElement]: Extensions for duration
   ///
   /// [content]: The actual content of the media - inline or by direct reference
   ///  to the media source file.
@@ -1057,7 +1057,7 @@ class Media with Resource, _$Media {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Media.fromYaml(dynamic yaml) => yaml is String
       ? Media.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1090,11 +1090,11 @@ class MolecularSequence with Resource, _$MolecularSequence {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1108,7 +1108,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1134,13 +1134,13 @@ class MolecularSequence with Resource, _$MolecularSequence {
   ///
   /// [type]: Amino Acid Sequence/ DNA Sequence / RNA Sequence.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [coordinateSystem]: Whether the sequence is numbered starting at 0
   /// (0-based numbering or coordinates, inclusive start, exclusive end) or
   ///  starting at 1 (1-based numbering, inclusive start and inclusive end).
   ///
-  /// [_coordinateSystem]: Extensions for coordinateSystem
+  /// [coordinateSystemElement]: Extensions for coordinateSystem
   ///
   /// [patient]: The patient whose sequencing results are described by this
   ///  resource.
@@ -1168,7 +1168,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
   /// referenceSeq along with variant records on referenceSeq. This shall start
   ///  from referenceSeq.windowStart and end by referenceSeq.windowEnd.
   ///
-  /// [_observedSeq]: Extensions for observedSeq
+  /// [observedSeqElement]: Extensions for observedSeq
   ///
   /// [quality]: An experimental feature attribute that defines the quality of
   /// the feature in a quantitative way, such as a phred quality score
@@ -1177,7 +1177,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
   /// [readCoverage]: Coverage (read depth or depth) is the average number of
   ///  reads representing a given nucleotide in the reconstructed sequence.
   ///
-  /// [_readCoverage]: Extensions for readCoverage
+  /// [readCoverageElement]: Extensions for readCoverage
   ///
   /// [repository]: Configurations of the external repository. The repository
   /// shall store target's observedSeq or records related with target's
@@ -1227,7 +1227,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MolecularSequence.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1245,13 +1245,13 @@ class MolecularSequence with Resource, _$MolecularSequence {
 class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   MolecularSequenceReferenceSeq._();
 
-  /// [MolecularSequence_ReferenceSeq]: Raw data describing a biological
+  /// [MolecularSequenceReferenceSeq]: Raw data describing a biological
   ///  sequence.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1281,14 +1281,14 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   /// versions e.g. 'GRCh 37'.  Version number must be included if a versioned
   ///  release of a primary build was used.
   ///
-  /// [_genomeBuild]: Extensions for genomeBuild
+  /// [genomeBuildElement]: Extensions for genomeBuild
   ///
   /// [orientation]: A relative reference to a DNA strand based on gene
   /// orientation. The strand that contains the open reading frame of the gene
   /// is the "sense" strand, and the opposite complementary strand is the
   ///  "antisense" strand.
   ///
-  /// [_orientation]: Extensions for orientation
+  /// [orientationElement]: Extensions for orientation
   ///
   /// [referenceSeqId]: Reference identifier of reference sequence submitted to
   /// NCBI. It must match the type in the MolecularSequence.type field. For
@@ -1300,26 +1300,26 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   ///
   /// [referenceSeqString]: A string like "ACGT".
   ///
-  /// [_referenceSeqString]: Extensions for referenceSeqString
+  /// [referenceSeqStringElement]: Extensions for referenceSeqString
   ///
   /// [strand]: An absolute reference to a strand. The Watson strand is the
   /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
   ///  strand as the one whose 5'-end is on the long arm.
   ///
-  /// [_strand]: Extensions for strand
+  /// [strandElement]: Extensions for strand
   ///
   /// [windowStart]: Start position of the window on the reference sequence. If
   /// the coordinate system is either 0-based or 1-based, then start position is
   ///  inclusive.
   ///
-  /// [_windowStart]: Extensions for windowStart
+  /// [windowStartElement]: Extensions for windowStart
   ///
   /// [windowEnd]: End position of the window on the reference sequence. If the
   /// coordinate system is 0-based then end is exclusive and does not include
   /// the last position. If the coordinate system is 1-base, then end is
   ///  inclusive and includes the last position.
   ///
-  /// [_windowEnd]: Extensions for windowEnd
+  /// [windowEndElement]: Extensions for windowEnd
   factory MolecularSequenceReferenceSeq({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1346,7 +1346,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MolecularSequenceReferenceSeq.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceReferenceSeq.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1365,12 +1365,12 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
 class MolecularSequenceVariant with _$MolecularSequenceVariant {
   MolecularSequenceVariant._();
 
-  /// [MolecularSequence_Variant]: Raw data describing a biological sequence.
+  /// [MolecularSequenceVariant]: Raw data describing a biological sequence.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1395,14 +1395,14 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
   /// coordinate system is either 0-based or 1-based, then start position is
   ///  inclusive.
   ///
-  /// [_start]: Extensions for start
+  /// [startElement]: Extensions for start
   ///
   /// [end]: End position of the variant on the reference sequence. If the
   /// coordinate system is 0-based then end is exclusive and does not include
   /// the last position. If the coordinate system is 1-base, then end is
   ///  inclusive and includes the last position.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   ///
   /// [observedAllele]: An allele is one of a set of coexisting sequence
   /// variants of a gene
@@ -1412,7 +1412,7 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
   /// sequence  type is DNA, it should be the sequence on the positive (+)
   ///  strand. This will lay in the range between variant.start and variant.end.
   ///
-  /// [_observedAllele]: Extensions for observedAllele
+  /// [observedAlleleElement]: Extensions for observedAllele
   ///
   /// [referenceAllele]: An allele is one of a set of coexisting sequence
   /// variants of a gene
@@ -1422,13 +1422,13 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
   /// sequence  type is DNA, it should be the sequence on the positive (+)
   ///  strand. This will lay in the range between variant.start and variant.end.
   ///
-  /// [_referenceAllele]: Extensions for referenceAllele
+  /// [referenceAlleleElement]: Extensions for referenceAllele
   ///
   /// [cigar]: Extended CIGAR string for aligning the sequence with reference
   /// bases. See detailed documentation
   /// [here](http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm).
   ///
-  /// [_cigar]: Extensions for cigar
+  /// [cigarElement]: Extensions for cigar
   ///
   /// [variantPointer]: A pointer to an Observation containing variant
   ///  information.
@@ -1452,7 +1452,7 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MolecularSequenceVariant.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceVariant.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1471,12 +1471,12 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
 class MolecularSequenceQuality with _$MolecularSequenceQuality {
   MolecularSequenceQuality._();
 
-  /// [MolecularSequence_Quality]: Raw data describing a biological sequence.
+  /// [MolecularSequenceQuality]: Raw data describing a biological sequence.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1499,21 +1499,21 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
   ///
   /// [type]: INDEL / SNP / Undefined variant.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [standardSequence]: Gold standard sequence used for comparing against.
   ///
   /// [start]: Start position of the sequence. If the coordinate system is
   ///  either 0-based or 1-based, then start position is inclusive.
   ///
-  /// [_start]: Extensions for start
+  /// [startElement]: Extensions for start
   ///
   /// [end]: End position of the sequence. If the coordinate system is 0-based
   /// then end is exclusive and does not include the last position. If the
   /// coordinate system is 1-base, then end is inclusive and includes the last
   ///  position.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   ///
   /// [score]: The score of an experimentally derived feature such as a p-value
   /// ([SO:0001685](http://www.sequenceontology.org/browser/current_svn/term/SO:0001685)).
@@ -1526,7 +1526,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
   /// this site, and for which there is an accurate genotype call for the
   ///  event.
   ///
-  /// [_truthTP]: Extensions for truthTP
+  /// [truthTPElement]: Extensions for truthTP
   ///
   /// [queryTP]: True positives, from the perspective of the query data, i.e.
   /// the number of sites in the Query Call Set for which there are paths
@@ -1534,7 +1534,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
   /// this site, and for which there is an accurate genotype call for the
   ///  event.
   ///
-  /// [_queryTP]: Extensions for queryTP
+  /// [queryTPElement]: Extensions for queryTP
   ///
   /// [truthFN]: False negatives, i.e. the number of sites in the Truth Call Set
   /// for which there is no path through the Query Call Set that is consistent
@@ -1542,33 +1542,33 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
   /// inaccurate genotype call for the event. Sites with correct variant but
   ///  incorrect genotype are counted here.
   ///
-  /// [_truthFN]: Extensions for truthFN
+  /// [truthFNElement]: Extensions for truthFN
   ///
   /// [queryFP]: False positives, i.e. the number of sites in the Query Call Set
   /// for which there is no path through the Truth Call Set that is consistent
   /// with this site. Sites with correct variant but incorrect genotype are
   ///  counted here.
   ///
-  /// [_queryFP]: Extensions for queryFP
+  /// [queryFPElement]: Extensions for queryFP
   ///
   /// [gtFP]: The number of false positives where the non-REF alleles in the
   /// Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the
   ///  query is 0/1 or similar).
   ///
-  /// [_gtFP]: Extensions for gtFP
+  /// [gtFPElement]: Extensions for gtFP
   ///
   /// [precision]: QUERY.TP / (QUERY.TP + QUERY.FP).
   ///
-  /// [_precision]: Extensions for precision
+  /// [precisionElement]: Extensions for precision
   ///
   /// [recall]: TRUTH.TP / (TRUTH.TP + TRUTH.FN).
   ///
-  /// [_recall]: Extensions for recall
+  /// [recallElement]: Extensions for recall
   ///
   /// [fScore]: Harmonic mean of Recall and Precision, computed as: 2 *
   ///  precision * recall / (precision + recall).
   ///
-  /// [_fScore]: Extensions for fScore
+  /// [fScoreElement]: Extensions for fScore
   ///
   /// [roc]: Receiver Operator Characteristic (ROC) Curve  to give
   ///  sensitivity/specificity tradeoff.
@@ -1608,7 +1608,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MolecularSequenceQuality.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceQuality.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1627,12 +1627,12 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
 class MolecularSequenceRoc with _$MolecularSequenceRoc {
   MolecularSequenceRoc._();
 
-  /// [MolecularSequence_Roc]: Raw data describing a biological sequence.
+  /// [MolecularSequenceRoc]: Raw data describing a biological sequence.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1656,37 +1656,37 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
   /// [score]: Invidual data point representing the GQ (genotype quality) score
   ///  threshold.
   ///
-  /// [_score]: Extensions for score
+  /// [scoreElement]: Extensions for score
   ///
   /// [numTP]: The number of true positives if the GQ score threshold was set to
   ///  "score" field value.
   ///
-  /// [_numTP]: Extensions for numTP
+  /// [numTPElement]: Extensions for numTP
   ///
   /// [numFP]: The number of false positives if the GQ score threshold was set
   ///  to "score" field value.
   ///
-  /// [_numFP]: Extensions for numFP
+  /// [numFPElement]: Extensions for numFP
   ///
   /// [numFN]: The number of false negatives if the GQ score threshold was set
   ///  to "score" field value.
   ///
-  /// [_numFN]: Extensions for numFN
+  /// [numFNElement]: Extensions for numFN
   ///
   /// [precision]: Calculated precision if the GQ score threshold was set to
   ///  "score" field value.
   ///
-  /// [_precision]: Extensions for precision
+  /// [precisionElement]: Extensions for precision
   ///
   /// [sensitivity]: Calculated sensitivity if the GQ score threshold was set to
   ///  "score" field value.
   ///
-  /// [_sensitivity]: Extensions for sensitivity
+  /// [sensitivityElement]: Extensions for sensitivity
   ///
   /// [fMeasure]: Calculated fScore if the GQ score threshold was set to "score"
   ///  field value.
   ///
-  /// [_fMeasure]: Extensions for fMeasure
+  /// [fMeasureElement]: Extensions for fMeasure
   factory MolecularSequenceRoc({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1710,7 +1710,7 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MolecularSequenceRoc.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceRoc.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1728,12 +1728,12 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
 class MolecularSequenceRepository with _$MolecularSequenceRepository {
   MolecularSequenceRepository._();
 
-  /// [MolecularSequence_Repository]: Raw data describing a biological sequence.
+  /// [MolecularSequenceRepository]: Raw data describing a biological sequence.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1757,33 +1757,33 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
   /// [type]: Click and see / RESTful API / Need login to see / RESTful API with
   ///  authentication / Other ways to see resource.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [url]: URI of an external repository which contains further details about
   ///  the genetics data.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [name]: URI of an external repository which contains further details about
   ///  the genetics data.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [datasetId]: Id of the variant in this external repository. The server
   /// will understand how to use this id to call for more info about datasets in
   ///  external repository.
   ///
-  /// [_datasetId]: Extensions for datasetId
+  /// [datasetIdElement]: Extensions for datasetId
   ///
   /// [variantsetId]: Id of the variantset in this external repository. The
   /// server will understand how to use this id to call for more info about
   ///  variantsets in external repository.
   ///
-  /// [_variantsetId]: Extensions for variantsetId
+  /// [variantsetIdElement]: Extensions for variantsetId
   ///
   /// [readsetId]: Id of the read in this external repository.
   ///
-  /// [_readsetId]: Extensions for readsetId
+  /// [readsetIdElement]: Extensions for readsetId
   factory MolecularSequenceRepository({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1806,7 +1806,7 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MolecularSequenceRepository.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceRepository.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1826,13 +1826,13 @@ class MolecularSequenceStructureVariant
     with _$MolecularSequenceStructureVariant {
   MolecularSequenceStructureVariant._();
 
-  /// [MolecularSequence_StructureVariant]: Raw data describing a biological
+  /// [MolecularSequenceStructureVariant]: Raw data describing a biological
   ///  sequence.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1859,11 +1859,11 @@ class MolecularSequenceStructureVariant
   /// [exact]: Used to indicate if the outer and inner start-end values have the
   ///  same meaning.
   ///
-  /// [_exact]: Extensions for exact
+  /// [exactElement]: Extensions for exact
   ///
   /// [length]: Length of the variant chromosome.
   ///
-  /// [_length]: Extensions for length
+  /// [lengthElement]: Extensions for length
   ///
   /// [outer]: Structural variant outer.
   ///
@@ -1884,7 +1884,7 @@ class MolecularSequenceStructureVariant
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MolecularSequenceStructureVariant.fromYaml(dynamic yaml) => yaml
           is String
       ? MolecularSequenceStructureVariant.fromJson(
@@ -1905,12 +1905,12 @@ class MolecularSequenceStructureVariant
 class MolecularSequenceOuter with _$MolecularSequenceOuter {
   MolecularSequenceOuter._();
 
-  /// [MolecularSequence_Outer]: Raw data describing a biological sequence.
+  /// [MolecularSequenceOuter]: Raw data describing a biological sequence.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1934,14 +1934,14 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
   /// [start]: Structural variant outer start. If the coordinate system is
   ///  either 0-based or 1-based, then start position is inclusive.
   ///
-  /// [_start]: Extensions for start
+  /// [startElement]: Extensions for start
   ///
   /// [end]: Structural variant outer end. If the coordinate system is 0-based
   /// then end is exclusive and does not include the last position. If the
   /// coordinate system is 1-base, then end is inclusive and includes the last
   ///  position.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   factory MolecularSequenceOuter({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1955,7 +1955,7 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MolecularSequenceOuter.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceOuter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1973,12 +1973,12 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
 class MolecularSequenceInner with _$MolecularSequenceInner {
   MolecularSequenceInner._();
 
-  /// [MolecularSequence_Inner]: Raw data describing a biological sequence.
+  /// [MolecularSequenceInner]: Raw data describing a biological sequence.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2002,14 +2002,14 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
   /// [start]: Structural variant inner start. If the coordinate system is
   ///  either 0-based or 1-based, then start position is inclusive.
   ///
-  /// [_start]: Extensions for start
+  /// [startElement]: Extensions for start
   ///
   /// [end]: Structural variant inner end. If the coordinate system is 0-based
   /// then end is exclusive and does not include the last position. If the
   /// coordinate system is 1-base, then end is inclusive and includes the last
   ///  position.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   factory MolecularSequenceInner({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2023,7 +2023,7 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MolecularSequenceInner.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceInner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2058,11 +2058,11 @@ class Observation with Resource, _$Observation {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2076,7 +2076,7 @@ class Observation with Resource, _$Observation {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2108,7 +2108,7 @@ class Observation with Resource, _$Observation {
   ///
   /// [status]: The status of the result value.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [category]: A code that classifies the general type of observation being
   ///  made.
@@ -2143,7 +2143,7 @@ class Observation with Resource, _$Observation {
   /// very often the source of the date/time is not known, only the date/time
   ///  itself.
   ///
-  /// [_effectiveDateTime]: Extensions for effectiveDateTime
+  /// [effectiveDateTimeElement]: Extensions for effectiveDateTime
   ///
   /// [effectivePeriod]: The time or time-period the observed value is asserted
   /// as being true. For biological subjects - e.g. human patients - this is
@@ -2163,13 +2163,13 @@ class Observation with Resource, _$Observation {
   /// the time of the procedure or of specimen collection, but very often the
   ///  source of the date/time is not known, only the date/time itself.
   ///
-  /// [_effectiveInstant]: Extensions for effectiveInstant
+  /// [effectiveInstantElement]: Extensions for effectiveInstant
   ///
   /// [issued]: The date and time this version of the observation was made
   /// available to providers, typically after the results have been reviewed and
   ///  verified.
   ///
-  /// [_issued]: Extensions for issued
+  /// [issuedElement]: Extensions for issued
   ///
   /// [performer]: Who was responsible for asserting the observed value as
   ///  "true".
@@ -2183,17 +2183,17 @@ class Observation with Resource, _$Observation {
   /// [valueString]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueBoolean]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueInteger]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueRange]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
@@ -2207,12 +2207,12 @@ class Observation with Resource, _$Observation {
   /// [valueTime]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueDateTime]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valuePeriod]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
@@ -2318,7 +2318,7 @@ class Observation with Resource, _$Observation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Observation.fromYaml(dynamic yaml) => yaml is String
       ? Observation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2336,13 +2336,13 @@ class Observation with Resource, _$Observation {
 class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
 
-  /// [Observation_ReferenceRange]: Measurements and simple assertions made
+  /// [ObservationReferenceRange]: Measurements and simple assertions made
   ///  about a patient, device or other subject.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2391,7 +2391,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
   /// example would be a reference value of "Negative" or a list or table of
   ///  "normals".
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   factory ObservationReferenceRange({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2408,7 +2408,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ObservationReferenceRange.fromYaml(dynamic yaml) => yaml is String
       ? ObservationReferenceRange.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2427,13 +2427,13 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
 
-  /// [Observation_Component]: Measurements and simple assertions made about a
+  /// [ObservationComponent]: Measurements and simple assertions made about a
   ///  patient, device or other subject.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2466,17 +2466,17 @@ class ObservationComponent with _$ObservationComponent {
   /// [valueString]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueBoolean]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueInteger]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueRange]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
@@ -2490,12 +2490,12 @@ class ObservationComponent with _$ObservationComponent {
   /// [valueTime]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueDateTime]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valuePeriod]: The information determined as a result of making the
   ///  observation, if the information has a simple value.
@@ -2537,7 +2537,7 @@ class ObservationComponent with _$ObservationComponent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ObservationComponent.fromYaml(dynamic yaml) => yaml is String
       ? ObservationComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2573,11 +2573,11 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2591,7 +2591,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2630,7 +2630,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// [status]: The position of the questionnaire response within its overall
   ///  lifecycle.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [subject]: The subject of the questionnaire response.  This could be a
   /// patient, organization, practitioner, device, etc.  This is who/what the
@@ -2642,7 +2642,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// [authored]: The date and/or time that this set of answers were last
   ///  changed.
   ///
-  /// [_authored]: Extensions for authored
+  /// [authoredElement]: Extensions for authored
   ///
   /// [author]: Person who received the answers to the questions in the
   ///  QuestionnaireResponse and recorded them in the system.
@@ -2684,7 +2684,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory QuestionnaireResponse.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2702,7 +2702,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
 
-  /// [QuestionnaireResponse_Item]: A structured set of questions and their
+  /// [QuestionnaireResponseItem]: A structured set of questions and their
   /// answers. The questions are ordered and grouped into coherent subsets,
   /// corresponding to the structure of the grouping of the questionnaire being
   ///  responded to.
@@ -2710,7 +2710,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2734,17 +2734,17 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   /// [linkId]: The item from the Questionnaire that corresponds to this item in
   ///  the QuestionnaireResponse resource.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [definition]: A reference to an [[[ElementDefinition]]] that provides the
   ///  details for the item.
   ///
-  /// [_definition]: Extensions for definition
+  /// [definitionElement]: Extensions for definition
   ///
   /// [text]: Text that is displayed above the contents of the group or as the
   ///  text of the question being answered.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [answer]: The respondent's answer(s) to the question.
   ///
@@ -2766,7 +2766,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory QuestionnaireResponseItem.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponseItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2785,7 +2785,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
 
-  /// [QuestionnaireResponse_Answer]: A structured set of questions and their
+  /// [QuestionnaireResponseAnswer]: A structured set of questions and their
   /// answers. The questions are ordered and grouped into coherent subsets,
   /// corresponding to the structure of the grouping of the questionnaire being
   ///  responded to.
@@ -2793,7 +2793,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2817,42 +2817,42 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   /// [valueBoolean]: The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueDecimal]: The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueInteger]: The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueDate]: The answer (or one of the answers) provided by the respondent
   ///  to the question.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueDateTime]: The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueTime]: The answer (or one of the answers) provided by the respondent
   ///  to the question.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueString]: The answer (or one of the answers) provided by the
   ///  respondent to the question.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueUri]: The answer (or one of the answers) provided by the respondent
   ///  to the question.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueAttachment]: The answer (or one of the answers) provided by the
   ///  respondent to the question.
@@ -2898,7 +2898,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory QuestionnaireResponseAnswer.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponseAnswer.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2933,11 +2933,11 @@ class Specimen with Resource, _$Specimen {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2951,7 +2951,7 @@ class Specimen with Resource, _$Specimen {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2980,7 +2980,7 @@ class Specimen with Resource, _$Specimen {
   ///
   /// [status]: The availability of the specimen.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: The kind of material that forms the specimen.
   ///
@@ -2990,7 +2990,7 @@ class Specimen with Resource, _$Specimen {
   ///
   /// [receivedTime]: Time when specimen was received for processing or testing.
   ///
-  /// [_receivedTime]: Extensions for receivedTime
+  /// [receivedTimeElement]: Extensions for receivedTime
   ///
   /// [parent]: Reference to the parent (source) specimen which is used when the
   ///  specimen was either derived from or a component of another specimen.
@@ -3046,7 +3046,7 @@ class Specimen with Resource, _$Specimen {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Specimen.fromYaml(dynamic yaml) => yaml is String
       ? Specimen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3064,12 +3064,12 @@ class Specimen with Resource, _$Specimen {
 class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
 
-  /// [Specimen_Collection]: A sample to be used for analysis.
+  /// [SpecimenCollection]: A sample to be used for analysis.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3095,7 +3095,7 @@ class SpecimenCollection with _$SpecimenCollection {
   /// [collectedDateTime]: Time when specimen was collected from subject - the
   ///  physiologically relevant time.
   ///
-  /// [_collectedDateTime]: Extensions for collectedDateTime
+  /// [collectedDateTimeElement]: Extensions for collectedDateTime
   ///
   /// [collectedPeriod]: Time when specimen was collected from subject - the
   ///  physiologically relevant time.
@@ -3138,7 +3138,7 @@ class SpecimenCollection with _$SpecimenCollection {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SpecimenCollection.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenCollection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3156,12 +3156,12 @@ class SpecimenCollection with _$SpecimenCollection {
 class SpecimenProcessing with _$SpecimenProcessing {
   SpecimenProcessing._();
 
-  /// [Specimen_Processing]: A sample to be used for analysis.
+  /// [SpecimenProcessing]: A sample to be used for analysis.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3184,7 +3184,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
   ///
   /// [description]: Textual description of procedure.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [procedure]: A coded value specifying the procedure used to process the
   ///  specimen.
@@ -3195,7 +3195,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
   /// processing occurred.  For example the time of sample fixation or the
   ///  period of time the sample was in formalin.
   ///
-  /// [_timeDateTime]: Extensions for timeDateTime
+  /// [timeDateTimeElement]: Extensions for timeDateTime
   ///
   /// [timePeriod]: A record of the time or period when the specimen processing
   /// occurred.  For example the time of sample fixation or the period of time
@@ -3216,7 +3216,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SpecimenProcessing.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenProcessing.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -3234,12 +3234,12 @@ class SpecimenProcessing with _$SpecimenProcessing {
 class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
 
-  /// [Specimen_Container]: A sample to be used for analysis.
+  /// [SpecimenContainer]: A sample to be used for analysis.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3266,7 +3266,7 @@ class SpecimenContainer with _$SpecimenContainer {
   ///
   /// [description]: Textual description of the container.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [type]: The type of container associated with the specimen (e.g. slide,
   ///  aliquot, etc.).
@@ -3300,7 +3300,7 @@ class SpecimenContainer with _$SpecimenContainer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SpecimenContainer.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenContainer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

@@ -55,7 +55,7 @@ class Device with Resource, _$Device {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Device.fromYaml(dynamic yaml) => yaml is String
       ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -100,7 +100,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceComponent.fromYaml(dynamic yaml) => yaml is String
       ? DeviceComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -130,7 +130,7 @@ class DeviceComponentProductionSpecification
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) => yaml
           is String
       ? DeviceComponentProductionSpecification.fromJson(
@@ -185,7 +185,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetric.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -218,7 +218,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

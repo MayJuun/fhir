@@ -9,7 +9,7 @@ class FhirUri {
       return FhirUri._(inValue.toString(), inValue, true);
     } else if (inValue is String) {
       final tempUri = Uri.tryParse(inValue);
-      return FhirUri._(inValue, tempUri, tempUri == null);
+      return FhirUri._(inValue, tempUri, tempUri != null);
     }
     throw ArgumentError('FhirUri cannot be constructed from $inValue.');
   }

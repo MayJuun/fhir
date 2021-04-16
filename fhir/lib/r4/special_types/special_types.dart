@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
+
 // import 'package:flutter/foundation.dart';
 
 import '../../r4.dart';
@@ -25,7 +26,7 @@ class Narrative with _$Narrative {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Narrative.fromYaml(dynamic yaml) => yaml is String
       ? Narrative.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -48,7 +49,7 @@ class Reference with _$Reference {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -63,7 +64,7 @@ class Reference with _$Reference {
   /// should be assumed to be version specific. Internal fragment references
   ///  (start with '#') refer to contained resources.
   ///
-  /// [_reference]: Extensions for reference
+  /// [referenceElement]: Extensions for reference
   ///
   /// [type]: The expected type of the target of the reference. If both
   /// Reference.type and Reference.reference are populated and
@@ -75,7 +76,7 @@ class Reference with _$Reference {
   /// allowed for logical models (and can only be used in references in logical
   ///  models, not resources).
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [identifier]: An identifier for the target resource. This is used when
   /// there is no way to reference the other resource directly, either because
@@ -90,7 +91,7 @@ class Reference with _$Reference {
   /// [display]: Plain text narrative that identifies the resource in addition
   ///  to the resource reference.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   factory Reference({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -106,7 +107,7 @@ class Reference with _$Reference {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Reference.fromYaml(dynamic yaml) => yaml is String
       ? Reference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -131,7 +132,7 @@ class Meta with _$Meta {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -142,12 +143,12 @@ class Meta with _$Meta {
   /// portion of the URL. This value changes when the resource is created,
   ///  updated, or deleted.
   ///
-  /// [_versionId]: Extensions for versionId
+  /// [versionIdElement]: Extensions for versionId
   ///
   /// [lastUpdated]: When the resource last changed - e.g. when the version
   ///  changed.
   ///
-  /// [_lastUpdated]: Extensions for lastUpdated
+  /// [lastUpdatedElement]: Extensions for lastUpdated
   ///
   /// [source]: A uri that identifies the source system of the resource. This
   /// provides a minimal amount of [[[Provenance]]] information that can be used
@@ -155,7 +156,7 @@ class Meta with _$Meta {
   /// source may identify another FHIR server, document, message, database,
   ///  etc.
   ///
-  /// [_source]: Extensions for source
+  /// [sourceElement]: Extensions for source
   ///
   /// [profile]: A list of profiles (references to [[[StructureDefinition]]]
   /// resources) that this resource claims to conform to. The URL is a reference
@@ -185,7 +186,7 @@ class Meta with _$Meta {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Meta.fromYaml(dynamic yaml) => yaml is String
       ? Meta.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -208,7 +209,7 @@ class Dosage with _$Dosage {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -232,11 +233,11 @@ class Dosage with _$Dosage {
   /// [sequence]: Indicates the order in which the dosage instructions should be
   ///  applied or interpreted.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [text]: Free text dosage instructions e.g. SIG.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [additionalInstruction]: Supplemental instructions to the patient on how
   /// to take the medication  (e.g. "with meals" or"take half to one hour before
@@ -246,7 +247,7 @@ class Dosage with _$Dosage {
   /// [patientInstruction]: Instructions in terms that are understood by the
   ///  patient or consumer.
   ///
-  /// [_patientInstruction]: Extensions for patientInstruction
+  /// [patientInstructionElement]: Extensions for patientInstruction
   ///
   /// [timing]: When medication should be administered.
   ///
@@ -254,7 +255,7 @@ class Dosage with _$Dosage {
   /// needed within a specific dosing schedule (Boolean option), or it indicates
   ///  the precondition for taking the Medication (CodeableConcept).
   ///
-  /// [_asNeededBoolean]: Extensions for asNeededBoolean
+  /// [asNeededBooleanElement]: Extensions for asNeededBoolean
   ///
   /// [asNeededCodeableConcept]: Indicates whether the Medication is only taken
   /// when needed within a specific dosing schedule (Boolean option), or it
@@ -301,7 +302,7 @@ class Dosage with _$Dosage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Dosage.fromYaml(dynamic yaml) => yaml is String
       ? Dosage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -318,13 +319,13 @@ class Dosage with _$Dosage {
 class DosageDoseAndRate with _$DosageDoseAndRate {
   DosageDoseAndRate._();
 
-  /// [Dosage_DoseAndRate]: Indicates how the medication is/was taken or should
+  /// [DosageDoseAndRate]: Indicates how the medication is/was taken or should
   ///  be taken by the patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -372,7 +373,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DosageDoseAndRate.fromYaml(dynamic yaml) => yaml is String
       ? DosageDoseAndRate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -396,7 +397,7 @@ class ElementDefinition with _$ElementDefinition {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -421,19 +422,19 @@ class ElementDefinition with _$ElementDefinition {
   /// "."-separated list of ancestor elements, beginning with the name of the
   ///  resource or extension.
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [representation]: Codes that define how this element is represented in
   ///  instances, when the deviation varies from the normal case.
   ///
-  /// [_representation]: Extensions for representation
+  /// [representationElement]: Extensions for representation
   ///
   /// [sliceName]: The name of this element definition slice, when slicing is
   /// working. The name must be a token with no dots or spaces. This is a unique
   /// name referring to a specific set of constraints applied to this element,
   ///  used to provide a name to different slices of the same element.
   ///
-  /// [_sliceName]: Extensions for sliceName
+  /// [sliceNameElement]: Extensions for sliceName
   ///
   /// [sliceIsConstraining]: If true, indicates that this slice definition is
   /// constraining a slice definition with the same name in an inherited
@@ -441,13 +442,13 @@ class ElementDefinition with _$ElementDefinition {
   /// profile. If missing, the slice might or might not be overriding a slice in
   ///  an inherited profile, depending on the sliceName.
   ///
-  /// [_sliceIsConstraining]: Extensions for sliceIsConstraining
+  /// [sliceIsConstrainingElement]: Extensions for sliceIsConstraining
   ///
   /// [label]: A single preferred label which is the text to display beside the
   /// element indicating its meaning or to use to prompt for the element in a
   ///  user display or form.
   ///
-  /// [_label]: Extensions for label
+  /// [labelElement]: Extensions for label
   ///
   /// [code]: A code that has the same meaning as the element in a particular
   ///  terminology.
@@ -463,7 +464,7 @@ class ElementDefinition with _$ElementDefinition {
   /// [short]: A concise description of what this element means (e.g. for use in
   ///  autogenerated summaries).
   ///
-  /// [_short]: Extensions for short
+  /// [shortElement]: Extensions for short
   ///
   /// [definition]: Provides a complete explanation of the meaning of the data
   /// element for human readability.  For the case of elements derived from
@@ -472,36 +473,36 @@ class ElementDefinition with _$ElementDefinition {
   /// particular context of use of the resource. (Note: The text you are reading
   ///  is specified in ElementDefinition.definition).
   ///
-  /// [_definition]: Extensions for definition
+  /// [definitionElement]: Extensions for definition
   ///
   /// [comment]: Explanatory notes and implementation guidance about the data
   /// element, including notes about how to use the data properly, exceptions to
   /// proper use, etc. (Note: The text you are reading is specified in
   ///  ElementDefinition.comment).
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [requirements]: This element is for traceability of why the element was
   /// created and why the constraints exist as they do. This may be used to
   /// point to source materials or specifications that drove the structure of
   ///  this element.
   ///
-  /// [_requirements]: Extensions for requirements
+  /// [requirementsElement]: Extensions for requirements
   ///
   /// [alias]: Identifies additional names by which this element might also be
   ///  known.
   ///
-  /// [_alias]: Extensions for alias
+  /// [aliasElement]: Extensions for alias
   ///
   /// [min]: The minimum number of times this element SHALL appear in the
   ///  instance.
   ///
-  /// [_min]: Extensions for min
+  /// [minElement]: Extensions for min
   ///
   /// [max]: The maximum number of times this element is permitted to appear in
   ///  the instance.
   ///
-  /// [_max]: Extensions for max
+  /// [maxElement]: Extensions for max
   ///
   /// [base]: Information about the base definition of the element, provided to
   /// make it unnecessary for tools to trace the deviation of the element
@@ -518,7 +519,7 @@ class ElementDefinition with _$ElementDefinition {
   /// ElementDefinition for the element, including definitions, cardinality
   ///  constraints, bindings, invariants etc.
   ///
-  /// [_contentReference]: Extensions for contentReference
+  /// [contentReferenceElement]: Extensions for contentReference
   ///
   /// [type]: The data type or resource that the value of this element is
   ///  permitted to be.
@@ -527,115 +528,115 @@ class ElementDefinition with _$ElementDefinition {
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
   ///
-  /// [_defaultValueBase64Binary]: Extensions for defaultValueBase64Binary
+  /// [defaultValueBase64BinaryElement]: Extensions for defaultValueBase64Binary
   ///
   /// [defaultValueBoolean]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueBoolean]: Extensions for defaultValueBoolean
+  /// [defaultValueBooleanElement]: Extensions for defaultValueBoolean
   ///
   /// [defaultValueCanonical]: The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
   ///
-  /// [_defaultValueCanonical]: Extensions for defaultValueCanonical
+  /// [defaultValueCanonicalElement]: Extensions for defaultValueCanonical
   ///
   /// [defaultValueCode]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueCode]: Extensions for defaultValueCode
+  /// [defaultValueCodeElement]: Extensions for defaultValueCode
   ///
   /// [defaultValueDate]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueDate]: Extensions for defaultValueDate
+  /// [defaultValueDateElement]: Extensions for defaultValueDate
   ///
   /// [defaultValueDateTime]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueDateTime]: Extensions for defaultValueDateTime
+  /// [defaultValueDateTimeElement]: Extensions for defaultValueDateTime
   ///
   /// [defaultValueDecimal]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueDecimal]: Extensions for defaultValueDecimal
+  /// [defaultValueDecimalElement]: Extensions for defaultValueDecimal
   ///
   /// [defaultValueId]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueId]: Extensions for defaultValueId
+  /// [defaultValueIdElement]: Extensions for defaultValueId
   ///
   /// [defaultValueInstant]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueInstant]: Extensions for defaultValueInstant
+  /// [defaultValueInstantElement]: Extensions for defaultValueInstant
   ///
   /// [defaultValueInteger]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueInteger]: Extensions for defaultValueInteger
+  /// [defaultValueIntegerElement]: Extensions for defaultValueInteger
   ///
   /// [defaultValueMarkdown]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueMarkdown]: Extensions for defaultValueMarkdown
+  /// [defaultValueMarkdownElement]: Extensions for defaultValueMarkdown
   ///
   /// [defaultValueOid]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueOid]: Extensions for defaultValueOid
+  /// [defaultValueOidElement]: Extensions for defaultValueOid
   ///
   /// [defaultValuePositiveInt]: The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
   ///
-  /// [_defaultValuePositiveInt]: Extensions for defaultValuePositiveInt
+  /// [defaultValuePositiveIntElement]: Extensions for defaultValuePositiveInt
   ///
   /// [defaultValueString]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueString]: Extensions for defaultValueString
+  /// [defaultValueStringElement]: Extensions for defaultValueString
   ///
   /// [defaultValueTime]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueTime]: Extensions for defaultValueTime
+  /// [defaultValueTimeElement]: Extensions for defaultValueTime
   ///
   /// [defaultValueUnsignedInt]: The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
   ///
-  /// [_defaultValueUnsignedInt]: Extensions for defaultValueUnsignedInt
+  /// [defaultValueUnsignedIntElement]: Extensions for defaultValueUnsignedInt
   ///
   /// [defaultValueUri]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueUri]: Extensions for defaultValueUri
+  /// [defaultValueUriElement]: Extensions for defaultValueUri
   ///
   /// [defaultValueUrl]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueUrl]: Extensions for defaultValueUrl
+  /// [defaultValueUrlElement]: Extensions for defaultValueUrl
   ///
   /// [defaultValueUuid]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
   ///
-  /// [_defaultValueUuid]: Extensions for defaultValueUuid
+  /// [defaultValueUuidElement]: Extensions for defaultValueUuid
   ///
   /// [defaultValueAddress]: The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -765,13 +766,13 @@ class ElementDefinition with _$ElementDefinition {
   /// this element is missing (e.g. 'when this element is missing, the period is
   ///  ongoing').
   ///
-  /// [_meaningWhenMissing]: Extensions for meaningWhenMissing
+  /// [meaningWhenMissingElement]: Extensions for meaningWhenMissing
   ///
   /// [orderMeaning]: If present, indicates that the order of the repeating
   /// element has meaning and describes what that meaning is.  If absent, it
   ///  means that the order of the element has no meaning.
   ///
-  /// [_orderMeaning]: Extensions for orderMeaning
+  /// [orderMeaningElement]: Extensions for orderMeaning
   ///
   /// [fixedBase64Binary]: Specifies a value that SHALL be exactly the value
   /// for this element in the instance. For purposes of comparison,
@@ -779,133 +780,133 @@ class ElementDefinition with _$ElementDefinition {
   /// match (case and accent sensitive). Missing elements/attributes must also
   ///  be missing.
   ///
-  /// [_fixedBase64Binary]: Extensions for fixedBase64Binary
+  /// [fixedBase64BinaryElement]: Extensions for fixedBase64Binary
   ///
   /// [fixedBoolean]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedBoolean]: Extensions for fixedBoolean
+  /// [fixedBooleanElement]: Extensions for fixedBoolean
   ///
   /// [fixedCanonical]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedCanonical]: Extensions for fixedCanonical
+  /// [fixedCanonicalElement]: Extensions for fixedCanonical
   ///
   /// [fixedCode]: Specifies a value that SHALL be exactly the value  for this
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedCode]: Extensions for fixedCode
+  /// [fixedCodeElement]: Extensions for fixedCode
   ///
   /// [fixedDate]: Specifies a value that SHALL be exactly the value  for this
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedDate]: Extensions for fixedDate
+  /// [fixedDateElement]: Extensions for fixedDate
   ///
   /// [fixedDateTime]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedDateTime]: Extensions for fixedDateTime
+  /// [fixedDateTimeElement]: Extensions for fixedDateTime
   ///
   /// [fixedDecimal]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedDecimal]: Extensions for fixedDecimal
+  /// [fixedDecimalElement]: Extensions for fixedDecimal
   ///
   /// [fixedId]: Specifies a value that SHALL be exactly the value  for this
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedId]: Extensions for fixedId
+  /// [fixedIdElement]: Extensions for fixedId
   ///
   /// [fixedInstant]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedInstant]: Extensions for fixedInstant
+  /// [fixedInstantElement]: Extensions for fixedInstant
   ///
   /// [fixedInteger]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedInteger]: Extensions for fixedInteger
+  /// [fixedIntegerElement]: Extensions for fixedInteger
   ///
   /// [fixedMarkdown]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedMarkdown]: Extensions for fixedMarkdown
+  /// [fixedMarkdownElement]: Extensions for fixedMarkdown
   ///
   /// [fixedOid]: Specifies a value that SHALL be exactly the value  for this
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedOid]: Extensions for fixedOid
+  /// [fixedOidElement]: Extensions for fixedOid
   ///
   /// [fixedPositiveInt]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedPositiveInt]: Extensions for fixedPositiveInt
+  /// [fixedPositiveIntElement]: Extensions for fixedPositiveInt
   ///
   /// [fixedString]: Specifies a value that SHALL be exactly the value  for this
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedString]: Extensions for fixedString
+  /// [fixedStringElement]: Extensions for fixedString
   ///
   /// [fixedTime]: Specifies a value that SHALL be exactly the value  for this
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedTime]: Extensions for fixedTime
+  /// [fixedTimeElement]: Extensions for fixedTime
   ///
   /// [fixedUnsignedInt]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedUnsignedInt]: Extensions for fixedUnsignedInt
+  /// [fixedUnsignedIntElement]: Extensions for fixedUnsignedInt
   ///
   /// [fixedUri]: Specifies a value that SHALL be exactly the value  for this
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedUri]: Extensions for fixedUri
+  /// [fixedUriElement]: Extensions for fixedUri
   ///
   /// [fixedUrl]: Specifies a value that SHALL be exactly the value  for this
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedUrl]: Extensions for fixedUrl
+  /// [fixedUrlElement]: Extensions for fixedUrl
   ///
   /// [fixedUuid]: Specifies a value that SHALL be exactly the value  for this
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [_fixedUuid]: Extensions for fixedUuid
+  /// [fixedUuidElement]: Extensions for fixedUuid
   ///
   /// [fixedAddress]: Specifies a value that SHALL be exactly the value  for
   /// this element in the instance. For purposes of comparison, non-significant
@@ -1086,7 +1087,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternBase64Binary]: Extensions for patternBase64Binary
+  /// [patternBase64BinaryElement]: Extensions for patternBase64Binary
   ///
   /// [patternBoolean]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1104,7 +1105,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternBoolean]: Extensions for patternBoolean
+  /// [patternBooleanElement]: Extensions for patternBoolean
   ///
   /// [patternCanonical]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1122,7 +1123,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternCanonical]: Extensions for patternCanonical
+  /// [patternCanonicalElement]: Extensions for patternCanonical
   ///
   /// [patternCode]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1140,7 +1141,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternCode]: Extensions for patternCode
+  /// [patternCodeElement]: Extensions for patternCode
   ///
   /// [patternDate]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1158,7 +1159,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternDate]: Extensions for patternDate
+  /// [patternDateElement]: Extensions for patternDate
   ///
   /// [patternDateTime]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1176,7 +1177,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternDateTime]: Extensions for patternDateTime
+  /// [patternDateTimeElement]: Extensions for patternDateTime
   ///
   /// [patternDecimal]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1194,7 +1195,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternDecimal]: Extensions for patternDecimal
+  /// [patternDecimalElement]: Extensions for patternDecimal
   ///
   /// [patternId]: Specifies a value that the value in the instance SHALL follow
   /// - that is, any value in the pattern must be found in the instance. Other
@@ -1212,7 +1213,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternId]: Extensions for patternId
+  /// [patternIdElement]: Extensions for patternId
   ///
   /// [patternInstant]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1230,7 +1231,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternInstant]: Extensions for patternInstant
+  /// [patternInstantElement]: Extensions for patternInstant
   ///
   /// [patternInteger]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1248,7 +1249,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternInteger]: Extensions for patternInteger
+  /// [patternIntegerElement]: Extensions for patternInteger
   ///
   /// [patternMarkdown]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1266,7 +1267,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternMarkdown]: Extensions for patternMarkdown
+  /// [patternMarkdownElement]: Extensions for patternMarkdown
   ///
   /// [patternOid]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1284,7 +1285,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternOid]: Extensions for patternOid
+  /// [patternOidElement]: Extensions for patternOid
   ///
   /// [patternPositiveInt]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
@@ -1302,7 +1303,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternPositiveInt]: Extensions for patternPositiveInt
+  /// [patternPositiveIntElement]: Extensions for patternPositiveInt
   ///
   /// [patternString]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1320,7 +1321,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternString]: Extensions for patternString
+  /// [patternStringElement]: Extensions for patternString
   ///
   /// [patternTime]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1338,7 +1339,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternTime]: Extensions for patternTime
+  /// [patternTimeElement]: Extensions for patternTime
   ///
   /// [patternUnsignedInt]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
@@ -1356,7 +1357,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternUnsignedInt]: Extensions for patternUnsignedInt
+  /// [patternUnsignedIntElement]: Extensions for patternUnsignedInt
   ///
   /// [patternUri]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1374,7 +1375,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternUri]: Extensions for patternUri
+  /// [patternUriElement]: Extensions for patternUri
   ///
   /// [patternUrl]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1392,7 +1393,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternUrl]: Extensions for patternUrl
+  /// [patternUrlElement]: Extensions for patternUrl
   ///
   /// [patternUuid]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1410,7 +1411,7 @@ class ElementDefinition with _$ElementDefinition {
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
   ///
-  /// [_patternUuid]: Extensions for patternUuid
+  /// [patternUuidElement]: Extensions for patternUuid
   ///
   /// [patternAddress]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
@@ -1915,49 +1916,49 @@ class ElementDefinition with _$ElementDefinition {
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_minValueDate]: Extensions for minValueDate
+  /// [minValueDateElement]: Extensions for minValueDate
   ///
   /// [minValueDateTime]: The minimum allowed value for the element. The value
   /// is inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_minValueDateTime]: Extensions for minValueDateTime
+  /// [minValueDateTimeElement]: Extensions for minValueDateTime
   ///
   /// [minValueInstant]: The minimum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_minValueInstant]: Extensions for minValueInstant
+  /// [minValueInstantElement]: Extensions for minValueInstant
   ///
   /// [minValueTime]: The minimum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_minValueTime]: Extensions for minValueTime
+  /// [minValueTimeElement]: Extensions for minValueTime
   ///
   /// [minValueDecimal]: The minimum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_minValueDecimal]: Extensions for minValueDecimal
+  /// [minValueDecimalElement]: Extensions for minValueDecimal
   ///
   /// [minValueInteger]: The minimum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_minValueInteger]: Extensions for minValueInteger
+  /// [minValueIntegerElement]: Extensions for minValueInteger
   ///
   /// [minValuePositiveInt]: The minimum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
   ///
-  /// [_minValuePositiveInt]: Extensions for minValuePositiveInt
+  /// [minValuePositiveIntElement]: Extensions for minValuePositiveInt
   ///
   /// [minValueUnsignedInt]: The minimum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
   ///
-  /// [_minValueUnsignedInt]: Extensions for minValueUnsignedInt
+  /// [minValueUnsignedIntElement]: Extensions for minValueUnsignedInt
   ///
   /// [minValueQuantity]: The minimum allowed value for the element. The value
   /// is inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -1967,49 +1968,49 @@ class ElementDefinition with _$ElementDefinition {
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_maxValueDate]: Extensions for maxValueDate
+  /// [maxValueDateElement]: Extensions for maxValueDate
   ///
   /// [maxValueDateTime]: The maximum allowed value for the element. The value
   /// is inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_maxValueDateTime]: Extensions for maxValueDateTime
+  /// [maxValueDateTimeElement]: Extensions for maxValueDateTime
   ///
   /// [maxValueInstant]: The maximum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_maxValueInstant]: Extensions for maxValueInstant
+  /// [maxValueInstantElement]: Extensions for maxValueInstant
   ///
   /// [maxValueTime]: The maximum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_maxValueTime]: Extensions for maxValueTime
+  /// [maxValueTimeElement]: Extensions for maxValueTime
   ///
   /// [maxValueDecimal]: The maximum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_maxValueDecimal]: Extensions for maxValueDecimal
+  /// [maxValueDecimalElement]: Extensions for maxValueDecimal
   ///
   /// [maxValueInteger]: The maximum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
   ///
-  /// [_maxValueInteger]: Extensions for maxValueInteger
+  /// [maxValueIntegerElement]: Extensions for maxValueInteger
   ///
   /// [maxValuePositiveInt]: The maximum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
   ///
-  /// [_maxValuePositiveInt]: Extensions for maxValuePositiveInt
+  /// [maxValuePositiveIntElement]: Extensions for maxValuePositiveInt
   ///
   /// [maxValueUnsignedInt]: The maximum allowed value for the element. The
   /// value is inclusive. This is allowed for the types date, dateTime, instant,
   ///  time, decimal, integer, and Quantity.
   ///
-  /// [_maxValueUnsignedInt]: Extensions for maxValueUnsignedInt
+  /// [maxValueUnsignedIntElement]: Extensions for maxValueUnsignedInt
   ///
   /// [maxValueQuantity]: The maximum allowed value for the element. The value
   /// is inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -2019,12 +2020,12 @@ class ElementDefinition with _$ElementDefinition {
   /// to be present in conformant instances and which is expected to be
   ///  supported by conformant consumers that support the element.
   ///
-  /// [_maxLength]: Extensions for maxLength
+  /// [maxLengthElement]: Extensions for maxLength
   ///
   /// [condition]: A reference to an invariant that may make additional
   ///  statements about the cardinality or value in the instance.
   ///
-  /// [_condition]: Extensions for condition
+  /// [conditionElement]: Extensions for condition
   ///
   /// [constraint]: Formal constraints such as co-occurrence and other
   /// constraints that can be computationally evaluated within the context of
@@ -2036,7 +2037,7 @@ class ElementDefinition with _$ElementDefinition {
   /// populate or use the data element in any way is at the discretion of the
   ///  implementation.
   ///
-  /// [_mustSupport]: Extensions for mustSupport
+  /// [mustSupportElement]: Extensions for mustSupport
   ///
   /// [isModifier]: If true, the value of this element affects the
   /// interpretation of the element or resource that contains it, and the value
@@ -2046,17 +2047,17 @@ class ElementDefinition with _$ElementDefinition {
   /// process it, and/or a pre-determination has been made that it is not
   ///  relevant to their particular system.
   ///
-  /// [_isModifier]: Extensions for isModifier
+  /// [isModifierElement]: Extensions for isModifier
   ///
   /// [isModifierReason]: Explains how that element affects the interpretation
   ///  of the resource or element that contains it.
   ///
-  /// [_isModifierReason]: Extensions for isModifierReason
+  /// [isModifierReasonElement]: Extensions for isModifierReason
   ///
   /// [isSummary]: Whether the element should be included if a client requests a
   ///  search with the parameter _summary=true.
   ///
-  /// [_isSummary]: Extensions for isSummary
+  /// [isSummaryElement]: Extensions for isSummary
   ///
   /// [binding]: Binds to a value set if this element is coded (code, Coding,
   ///  CodeableConcept, Quantity), or the data types (string, uri).
@@ -2369,7 +2370,7 @@ class ElementDefinition with _$ElementDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ElementDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2387,13 +2388,13 @@ class ElementDefinition with _$ElementDefinition {
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
 
-  /// [ElementDefinition_Slicing]: Captures constraints on each element within
+  /// [ElementDefinitionSlicing]: Captures constraints on each element within
   ///  the resource, profile, or extension.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2426,18 +2427,18 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   /// whatever information is possible about how the slices can be
   ///  differentiated.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [ordered]: If the matching elements have to occur in the same order as
   ///  defined in the profile.
   ///
-  /// [_ordered]: Extensions for ordered
+  /// [orderedElement]: Extensions for ordered
   ///
   /// [rules]: Whether additional slices are allowed or not. When the slices are
   /// ordered, profile authors can also say that additional slices are only
   ///  allowed at the end.
   ///
-  /// [_rules]: Extensions for rules
+  /// [rulesElement]: Extensions for rules
   factory ElementDefinitionSlicing({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2455,7 +2456,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ElementDefinitionSlicing.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionSlicing.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2474,13 +2475,13 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ElementDefinitionDiscriminator._();
 
-  /// [ElementDefinition_Discriminator]: Captures constraints on each element
+  /// [ElementDefinitionDiscriminator]: Captures constraints on each element
   ///  within the resource, profile, or extension.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2504,13 +2505,13 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   /// [type]: How the element value is interpreted when discrimination is
   ///  evaluated.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [path]: A FHIRPath expression, using [the simple subset of
   /// FHIRPath](fhirpath.html#simple), that is used to identify the element on
   ///  which discrimination is based.
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   factory ElementDefinitionDiscriminator({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2525,7 +2526,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ElementDefinitionDiscriminator.fromYaml(dynamic yaml) => yaml
           is String
       ? ElementDefinitionDiscriminator.fromJson(
@@ -2546,13 +2547,13 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
 class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
 
-  /// [ElementDefinition_Base]: Captures constraints on each element within the
+  /// [ElementDefinitionBase]: Captures constraints on each element within the
   ///  resource, profile, or extension.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2578,15 +2579,15 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   /// base definition of any element - that is, an element definition on a
   ///  [[[StructureDefinition]]] without a StructureDefinition.base.
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [min]: Minimum cardinality of the base element identified by the path.
   ///
-  /// [_min]: Extensions for min
+  /// [minElement]: Extensions for min
   ///
   /// [max]: Maximum cardinality of the base element identified by the path.
   ///
-  /// [_max]: Extensions for max
+  /// [maxElement]: Extensions for max
   factory ElementDefinitionBase({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2602,7 +2603,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ElementDefinitionBase.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2620,13 +2621,13 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
 
-  /// [ElementDefinition_Type]: Captures constraints on each element within the
+  /// [ElementDefinitionType]: Captures constraints on each element within the
   ///  resource, profile, or extension.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2653,7 +2654,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
   /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
   ///  allowed in logical models.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [profile]: Identifies a profile structure or implementation Guide that
   /// applies to the datatype this element refers to. If any profiles are
@@ -2677,12 +2678,12 @@ class ElementDefinitionType with _$ElementDefinitionType {
   /// resource is or can be aggregated - is it a contained resource, or a
   ///  reference, and if the context is a bundle, is it included in the bundle.
   ///
-  /// [_aggregation]: Extensions for aggregation
+  /// [aggregationElement]: Extensions for aggregation
   ///
   /// [versioning]: Whether this reference needs to be version specific or
   ///  version independent, or whether either can be used.
   ///
-  /// [_versioning]: Extensions for versioning
+  /// [versioningElement]: Extensions for versioning
   factory ElementDefinitionType({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2702,7 +2703,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ElementDefinitionType.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionType.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2720,13 +2721,13 @@ class ElementDefinitionType with _$ElementDefinitionType {
 class ElementDefinitionExample with _$ElementDefinitionExample {
   ElementDefinitionExample._();
 
-  /// [ElementDefinition_Example]: Captures constraints on each element within
+  /// [ElementDefinitionExample]: Captures constraints on each element within
   ///  the resource, profile, or extension.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2749,102 +2750,102 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   ///
   /// [label]: Describes the purpose of this example amoung the set of examples.
   ///
-  /// [_label]: Extensions for label
+  /// [labelElement]: Extensions for label
   ///
   /// [valueBase64Binary]: The actual value for the element, which must be one
   ///  of the types allowed for this element.
   ///
-  /// [_valueBase64Binary]: Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement]: Extensions for valueBase64Binary
   ///
   /// [valueBoolean]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueCanonical]: The actual value for the element, which must be one of
   ///  the types allowed for this element.
   ///
-  /// [_valueCanonical]: Extensions for valueCanonical
+  /// [valueCanonicalElement]: Extensions for valueCanonical
   ///
   /// [valueCode]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueCode]: Extensions for valueCode
+  /// [valueCodeElement]: Extensions for valueCode
   ///
   /// [valueDate]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueDateTime]: The actual value for the element, which must be one of
   ///  the types allowed for this element.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueDecimal]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueId]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueId]: Extensions for valueId
+  /// [valueIdElement]: Extensions for valueId
   ///
   /// [valueInstant]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueInstant]: Extensions for valueInstant
+  /// [valueInstantElement]: Extensions for valueInstant
   ///
   /// [valueInteger]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueMarkdown]: The actual value for the element, which must be one of
   ///  the types allowed for this element.
   ///
-  /// [_valueMarkdown]: Extensions for valueMarkdown
+  /// [valueMarkdownElement]: Extensions for valueMarkdown
   ///
   /// [valueOid]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueOid]: Extensions for valueOid
+  /// [valueOidElement]: Extensions for valueOid
   ///
   /// [valuePositiveInt]: The actual value for the element, which must be one of
   ///  the types allowed for this element.
   ///
-  /// [_valuePositiveInt]: Extensions for valuePositiveInt
+  /// [valuePositiveIntElement]: Extensions for valuePositiveInt
   ///
   /// [valueString]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueTime]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueUnsignedInt]: The actual value for the element, which must be one of
   ///  the types allowed for this element.
   ///
-  /// [_valueUnsignedInt]: Extensions for valueUnsignedInt
+  /// [valueUnsignedIntElement]: Extensions for valueUnsignedInt
   ///
   /// [valueUri]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueUrl]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueUrl]: Extensions for valueUrl
+  /// [valueUrlElement]: Extensions for valueUrl
   ///
   /// [valueUuid]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [_valueUuid]: Extensions for valueUuid
+  /// [valueUuidElement]: Extensions for valueUuid
   ///
   /// [valueAddress]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
@@ -3018,7 +3019,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ElementDefinitionExample.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionExample.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3037,13 +3038,13 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
 
-  /// [ElementDefinition_Constraint]: Captures constraints on each element
+  /// [ElementDefinitionConstraint]: Captures constraints on each element
   ///  within the resource, profile, or extension.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3068,32 +3069,32 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   /// impacted by the constraint.  Will not be referenced for constraints that
   ///  do not affect cardinality.
   ///
-  /// [_key]: Extensions for key
+  /// [keyElement]: Extensions for key
   ///
   /// [requirements]: Description of why this constraint is necessary or
   ///  appropriate.
   ///
-  /// [_requirements]: Extensions for requirements
+  /// [requirementsElement]: Extensions for requirements
   ///
   /// [severity]: Identifies the impact constraint violation has on the
   ///  conformance of the instance.
   ///
-  /// [_severity]: Extensions for severity
+  /// [severityElement]: Extensions for severity
   ///
   /// [human]: Text that can be used to describe the constraint in messages
   ///  identifying that the constraint has been violated.
   ///
-  /// [_human]: Extensions for human
+  /// [humanElement]: Extensions for human
   ///
   /// [expression]: A [FHIRPath](fhirpath.html) expression of constraint that
   ///  can be executed to see if this constraint is met.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   ///
   /// [xpath]: An XPath expression of constraint that can be executed to see if
   ///  this constraint is met.
   ///
-  /// [_xpath]: Extensions for xpath
+  /// [xpathElement]: Extensions for xpath
   ///
   /// [source]: A reference to the original source of the constraint, for
   ///  traceability purposes.
@@ -3120,7 +3121,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ElementDefinitionConstraint.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionConstraint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3139,13 +3140,13 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
 
-  /// [ElementDefinition_Binding]: Captures constraints on each element within
+  /// [ElementDefinitionBinding]: Captures constraints on each element within
   ///  the resource, profile, or extension.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3170,11 +3171,11 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   /// with this binding - that is, the degree to which the provided value set
   ///  must be adhered to in the instances.
   ///
-  /// [_strength]: Extensions for strength
+  /// [strengthElement]: Extensions for strength
   ///
   /// [description]: Describes the intended use of this particular set of codes.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [valueSet]: Refers to the value set that identifies the set of codes the
   ///  binding refers to.
@@ -3193,7 +3194,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ElementDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionBinding.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -3212,13 +3213,13 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
 
-  /// [ElementDefinition_Mapping]: Captures constraints on each element within
+  /// [ElementDefinitionMapping]: Captures constraints on each element within
   ///  the resource, profile, or extension.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3241,21 +3242,21 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ///
   /// [identity]: An internal reference to the definition of a mapping.
   ///
-  /// [_identity]: Extensions for identity
+  /// [identityElement]: Extensions for identity
   ///
   /// [language]: Identifies the computable language in which mapping.map is
   ///  expressed.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [map]: Expresses what part of the target specification corresponds to this
   ///  element.
   ///
-  /// [_map]: Extensions for map
+  /// [mapElement]: Extensions for map
   ///
   /// [comment]: Comments that provide information about the mapping or its use.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   factory ElementDefinitionMapping({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3273,7 +3274,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ElementDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionMapping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))

@@ -33,11 +33,11 @@ class AuditEvent with Resource, _$AuditEvent {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ class AuditEvent with Resource, _$AuditEvent {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -81,21 +81,21 @@ class AuditEvent with Resource, _$AuditEvent {
   /// [action]: Indicator for type of action performed during the event that
   ///  generated the audit.
   ///
-  /// [_action]: Extensions for action
+  /// [actionElement]: Extensions for action
   ///
   /// [period]: The period during which the activity occurred.
   ///
   /// [recorded]: The time when the event was recorded.
   ///
-  /// [_recorded]: Extensions for recorded
+  /// [recordedElement]: Extensions for recorded
   ///
   /// [outcome]: Indicates whether the event succeeded or failed.
   ///
-  /// [_outcome]: Extensions for outcome
+  /// [outcomeElement]: Extensions for outcome
   ///
   /// [outcomeDesc]: A free text description of the outcome of the event.
   ///
-  /// [_outcomeDesc]: Extensions for outcomeDesc
+  /// [outcomeDescElement]: Extensions for outcomeDesc
   ///
   /// [purposeOfEvent]: The purposeOfUse (reason) that was used during the event
   ///  being recorded.
@@ -142,7 +142,7 @@ class AuditEvent with Resource, _$AuditEvent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
       ? AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -160,14 +160,14 @@ class AuditEvent with Resource, _$AuditEvent {
 class AuditEventAgent with _$AuditEventAgent {
   AuditEventAgent._();
 
-  /// [AuditEvent_Agent]: A record of an event made for purposes of maintaining
+  /// [AuditEventAgent]: A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
   ///  monitoring for inappropriate usage.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -202,16 +202,16 @@ class AuditEventAgent with _$AuditEventAgent {
   /// be one known to a common authentication system (e.g. single sign-on), if
   ///  available.
   ///
-  /// [_altId]: Extensions for altId
+  /// [altIdElement]: Extensions for altId
   ///
   /// [name]: Human-meaningful name for the agent.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [requestor]: Indicator that the user is or is not the requestor, or
   ///  initiator, for the event being audited.
   ///
-  /// [_requestor]: Extensions for requestor
+  /// [requestorElement]: Extensions for requestor
   ///
   /// [location]: Where the event occurred.
   ///
@@ -220,7 +220,7 @@ class AuditEventAgent with _$AuditEventAgent {
   /// as patient consent, guarantor funding, etc. The policy would also indicate
   ///  the security token used.
   ///
-  /// [_policy]: Extensions for policy
+  /// [policyElement]: Extensions for policy
   ///
   /// [media]: Type of media involved. Used when the event is about
   ///  exporting/importing onto media.
@@ -254,7 +254,7 @@ class AuditEventAgent with _$AuditEventAgent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventAgent.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -272,14 +272,14 @@ class AuditEventAgent with _$AuditEventAgent {
 class AuditEventNetwork with _$AuditEventNetwork {
   AuditEventNetwork._();
 
-  /// [AuditEvent_Network]: A record of an event made for purposes of
+  /// [AuditEventNetwork]: A record of an event made for purposes of
   /// maintaining a security log. Typical uses include detection of intrusion
   ///  attempts and monitoring for inappropriate usage.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -303,12 +303,12 @@ class AuditEventNetwork with _$AuditEventNetwork {
   /// [address]: An identifier for the network access point of the user device
   ///  for the audit event.
   ///
-  /// [_address]: Extensions for address
+  /// [addressElement]: Extensions for address
   ///
   /// [type]: An identifier for the type of network access point that originated
   ///  the audit event.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   factory AuditEventNetwork({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -323,7 +323,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventNetwork.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventNetwork.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -341,14 +341,14 @@ class AuditEventNetwork with _$AuditEventNetwork {
 class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
 
-  /// [AuditEvent_Source]: A record of an event made for purposes of maintaining
+  /// [AuditEventSource]: A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
   ///  monitoring for inappropriate usage.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -373,7 +373,7 @@ class AuditEventSource with _$AuditEventSource {
   /// For example, a hospital or other provider location within a multi-entity
   ///  provider group.
   ///
-  /// [_site]: Extensions for site
+  /// [siteElement]: Extensions for site
   ///
   /// [observer]: Identifier of the source where the event was detected.
   ///
@@ -391,7 +391,7 @@ class AuditEventSource with _$AuditEventSource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventSource.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -409,14 +409,14 @@ class AuditEventSource with _$AuditEventSource {
 class AuditEventEntity with _$AuditEventEntity {
   AuditEventEntity._();
 
-  /// [AuditEvent_Entity]: A record of an event made for purposes of maintaining
+  /// [AuditEventEntity]: A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
   ///  monitoring for inappropriate usage.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -451,15 +451,15 @@ class AuditEventEntity with _$AuditEventEntity {
   ///
   /// [name]: A name of the entity in the audit event.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: Text that describes the entity in more detail.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [query]: The query parameters for a query-type entities.
   ///
-  /// [_query]: Extensions for query
+  /// [queryElement]: Extensions for query
   ///
   /// [detail]: Tagged value pairs for conveying additional information about
   ///  the entity.
@@ -484,7 +484,7 @@ class AuditEventEntity with _$AuditEventEntity {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventEntity.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -502,14 +502,14 @@ class AuditEventEntity with _$AuditEventEntity {
 class AuditEventDetail with _$AuditEventDetail {
   AuditEventDetail._();
 
-  /// [AuditEvent_Detail]: A record of an event made for purposes of maintaining
+  /// [AuditEventDetail]: A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
   ///  monitoring for inappropriate usage.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -532,15 +532,15 @@ class AuditEventDetail with _$AuditEventDetail {
   ///
   /// [type]: The type of extra detail provided in the value.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [valueString]: The  value of the extra detail.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueBase64Binary]: The  value of the extra detail.
   ///
-  /// [_valueBase64Binary]: Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement]: Extensions for valueBase64Binary
   factory AuditEventDetail({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -556,7 +556,7 @@ class AuditEventDetail with _$AuditEventDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventDetail.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -593,11 +593,11 @@ class Consent with Resource, _$Consent {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -611,7 +611,7 @@ class Consent with Resource, _$Consent {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -636,7 +636,7 @@ class Consent with Resource, _$Consent {
   ///
   /// [status]: Indicates the current state of this consent.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [scope]: A selector of the type of consent being presented: ADR, Privacy,
   ///  Treatment, Research.  This list is now extensible.
@@ -649,7 +649,7 @@ class Consent with Resource, _$Consent {
   ///
   /// [dateTime]: When this  Consent was issued / created / indexed.
   ///
-  /// [_dateTime]: Extensions for dateTime
+  /// [dateTimeElement]: Extensions for dateTime
   ///
   /// [performer]: Either the Grantor, which is the entity responsible for
   /// granting the rights listed in a Consent Directive or the Grantee, which is
@@ -718,7 +718,7 @@ class Consent with Resource, _$Consent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Consent.fromYaml(dynamic yaml) => yaml is String
       ? Consent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -736,7 +736,7 @@ class Consent with Resource, _$Consent {
 class ConsentPolicy with _$ConsentPolicy {
   ConsentPolicy._();
 
-  /// [Consent_Policy]: A record of a healthcare consumer’s  choices, which
+  /// [ConsentPolicy]: A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
   /// one or more actions within a given policy context, for specific purposes
   ///  and periods of time.
@@ -744,7 +744,7 @@ class ConsentPolicy with _$ConsentPolicy {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -768,13 +768,13 @@ class ConsentPolicy with _$ConsentPolicy {
   /// [authority]: Entity or Organization having regulatory jurisdiction or
   ///  accountability for  enforcing policies pertaining to Consent Directives.
   ///
-  /// [_authority]: Extensions for authority
+  /// [authorityElement]: Extensions for authority
   ///
   /// [uri]: The references to the policies that are included in this consent
   /// scope. Policies may be organizational, but are often defined
   ///  jurisdictionally, or in law.
   ///
-  /// [_uri]: Extensions for uri
+  /// [uriElement]: Extensions for uri
   factory ConsentPolicy({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -788,7 +788,7 @@ class ConsentPolicy with _$ConsentPolicy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentPolicy.fromYaml(dynamic yaml) => yaml is String
       ? ConsentPolicy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -806,7 +806,7 @@ class ConsentPolicy with _$ConsentPolicy {
 class ConsentVerification with _$ConsentVerification {
   ConsentVerification._();
 
-  /// [Consent_Verification]: A record of a healthcare consumer’s  choices,
+  /// [ConsentVerification]: A record of a healthcare consumer’s  choices,
   /// which permits or denies identified recipient(s) or recipient role(s) to
   /// perform one or more actions within a given policy context, for specific
   ///  purposes and periods of time.
@@ -814,7 +814,7 @@ class ConsentVerification with _$ConsentVerification {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -837,14 +837,14 @@ class ConsentVerification with _$ConsentVerification {
   ///
   /// [verified]: Has the instruction been verified.
   ///
-  /// [_verified]: Extensions for verified
+  /// [verifiedElement]: Extensions for verified
   ///
   /// [verifiedWith]: Who verified the instruction (Patient, Relative or other
   ///  Authorized Person).
   ///
   /// [verificationDate]: Date verification was collected.
   ///
-  /// [_verificationDate]: Extensions for verificationDate
+  /// [verificationDateElement]: Extensions for verificationDate
   factory ConsentVerification({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -859,7 +859,7 @@ class ConsentVerification with _$ConsentVerification {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentVerification.fromYaml(dynamic yaml) => yaml is String
       ? ConsentVerification.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -877,7 +877,7 @@ class ConsentVerification with _$ConsentVerification {
 class ConsentProvision with _$ConsentProvision {
   ConsentProvision._();
 
-  /// [Consent_Provision]: A record of a healthcare consumer’s  choices, which
+  /// [ConsentProvision]: A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
   /// one or more actions within a given policy context, for specific purposes
   ///  and periods of time.
@@ -885,7 +885,7 @@ class ConsentProvision with _$ConsentProvision {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -909,7 +909,7 @@ class ConsentProvision with _$ConsentProvision {
   /// [type]: Action  to take - permit or deny - when the rule conditions are
   ///  met.  Not permitted in root rule, required in all nested rules.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [period]: The timeframe in this rule is valid.
   ///
@@ -925,7 +925,7 @@ class ConsentProvision with _$ConsentProvision {
   /// [purpose]: The context of the activities a user is taking - why the user
   ///  is accessing the data - that are controlled by this rule.
   ///
-  /// [class]: The class of information covered by this rule. The type can be a
+  /// [class_]: The class of information covered by this rule. The type can be a
   /// FHIR resource type, a profile on a type, or a CDA document, or some other
   ///  type that indicates what sort of information the consent relates to.
   ///
@@ -960,7 +960,7 @@ class ConsentProvision with _$ConsentProvision {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentProvision.fromYaml(dynamic yaml) => yaml is String
       ? ConsentProvision.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -978,7 +978,7 @@ class ConsentProvision with _$ConsentProvision {
 class ConsentActor with _$ConsentActor {
   ConsentActor._();
 
-  /// [Consent_Actor]: A record of a healthcare consumer’s  choices, which
+  /// [ConsentActor]: A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
   /// one or more actions within a given policy context, for specific purposes
   ///  and periods of time.
@@ -986,7 +986,7 @@ class ConsentActor with _$ConsentActor {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1024,7 +1024,7 @@ class ConsentActor with _$ConsentActor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentActor.fromYaml(dynamic yaml) => yaml is String
       ? ConsentActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1042,7 +1042,7 @@ class ConsentActor with _$ConsentActor {
 class ConsentData with _$ConsentData {
   ConsentData._();
 
-  /// [Consent_Data]: A record of a healthcare consumer’s  choices, which
+  /// [ConsentData]: A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
   /// one or more actions within a given policy context, for specific purposes
   ///  and periods of time.
@@ -1050,7 +1050,7 @@ class ConsentData with _$ConsentData {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1074,7 +1074,7 @@ class ConsentData with _$ConsentData {
   /// [meaning]: How the resource reference is interpreted when testing consent
   ///  restrictions.
   ///
-  /// [_meaning]: Extensions for meaning
+  /// [meaningElement]: Extensions for meaning
   ///
   /// [reference]: A reference to a specific resource that defines which
   ///  resources are covered by this consent.
@@ -1091,7 +1091,7 @@ class ConsentData with _$ConsentData {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentData.fromYaml(dynamic yaml) => yaml is String
       ? ConsentData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1134,11 +1134,11 @@ class Provenance with Resource, _$Provenance {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1152,7 +1152,7 @@ class Provenance with Resource, _$Provenance {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1181,17 +1181,17 @@ class Provenance with Resource, _$Provenance {
   ///
   /// [occurredDateTime]: The period during which the activity occurred.
   ///
-  /// [_occurredDateTime]: Extensions for occurredDateTime
+  /// [occurredDateTimeElement]: Extensions for occurredDateTime
   ///
   /// [recorded]: The instant of time at which the activity was recorded.
   ///
-  /// [_recorded]: Extensions for recorded
+  /// [recordedElement]: Extensions for recorded
   ///
   /// [policy]: Policy or plan the activity was defined by. Typically, a single
   /// activity may have multiple applicable policy documents, such as patient
   ///  consent, guarantor funding, etc.
   ///
-  /// [_policy]: Extensions for policy
+  /// [policyElement]: Extensions for policy
   ///
   /// [location]: Where the activity occurred, if relevant.
   ///
@@ -1242,7 +1242,7 @@ class Provenance with Resource, _$Provenance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
       ? Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1260,7 +1260,7 @@ class Provenance with Resource, _$Provenance {
 class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
 
-  /// [Provenance_Agent]: Provenance of a resource is a record that describes
+  /// [ProvenanceAgent]: Provenance of a resource is a record that describes
   /// entities and processes involved in producing and delivering or otherwise
   /// influencing that resource. Provenance provides a critical foundation for
   /// assessing authenticity, enabling trust, and allowing reproducibility.
@@ -1274,7 +1274,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1318,7 +1318,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
       ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1336,7 +1336,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
 class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
 
-  /// [Provenance_Entity]: Provenance of a resource is a record that describes
+  /// [ProvenanceEntity]: Provenance of a resource is a record that describes
   /// entities and processes involved in producing and delivering or otherwise
   /// influencing that resource. Provenance provides a critical foundation for
   /// assessing authenticity, enabling trust, and allowing reproducibility.
@@ -1350,7 +1350,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1373,7 +1373,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
   ///
   /// [role]: How the entity was used during the activity.
   ///
-  /// [_role]: Extensions for role
+  /// [roleElement]: Extensions for role
   ///
   /// [what]: Identity of the  Entity used. May be a logical or physical uri and
   ///  maybe absolute or relative.
@@ -1396,7 +1396,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
       ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

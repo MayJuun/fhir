@@ -21,7 +21,7 @@ class ContactDetail with _$ContactDetail {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -30,7 +30,7 @@ class ContactDetail with _$ContactDetail {
   ///
   /// [name]: The name of an individual to contact.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [telecom]: The contact details for the individual (if a name was provided)
   ///  or the organization.
@@ -45,7 +45,7 @@ class ContactDetail with _$ContactDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContactDetail.fromYaml(dynamic yaml) => yaml is String
       ? ContactDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -69,7 +69,7 @@ class Contributor with _$Contributor {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -78,12 +78,12 @@ class Contributor with _$Contributor {
   ///
   /// [type]: The type of contributor.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [name]: The name of the individual or organization responsible for the
   ///  contribution.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the contributor.
@@ -100,7 +100,7 @@ class Contributor with _$Contributor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Contributor.fromYaml(dynamic yaml) => yaml is String
       ? Contributor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -124,7 +124,7 @@ class DataRequirement with _$DataRequirement {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -135,7 +135,7 @@ class DataRequirement with _$DataRequirement {
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [profile]: The profile of the required data, specified as the uri of the
   ///  profile definition.
@@ -156,7 +156,7 @@ class DataRequirement with _$DataRequirement {
   /// indexers, and .resolve() (see the [Simple FHIRPath
   ///  Profile](fhirpath.html#simple) for full details).
   ///
-  /// [_mustSupport]: Extensions for mustSupport
+  /// [mustSupportElement]: Extensions for mustSupport
   ///
   /// [codeFilter]: Code filters specify additional constraints on the data,
   /// specifying the value set of interest for a particular element of the data.
@@ -171,7 +171,7 @@ class DataRequirement with _$DataRequirement {
   /// [limit]: Specifies a maximum number of results that are required (uses the
   ///  _count search parameter).
   ///
-  /// [_limit]: Extensions for limit
+  /// [limitElement]: Extensions for limit
   ///
   /// [sort]: Specifies the order of the results to be returned.
   factory DataRequirement({
@@ -194,7 +194,7 @@ class DataRequirement with _$DataRequirement {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DataRequirement.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -212,14 +212,14 @@ class DataRequirement with _$DataRequirement {
 class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   DataRequirementCodeFilter._();
 
-  /// [DataRequirement_CodeFilter]: Describes a required data item for
+  /// [DataRequirementCodeFilter]: Describes a required data item for
   /// evaluation in terms of the type of data, and optional code or date-based
   ///  filters of the data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -249,13 +249,13 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// Note that the index must be an integer constant. The path must resolve to
   ///  an element of type code, Coding, or CodeableConcept.
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [searchParam]: A token parameter that refers to a search parameter defined
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type code, Coding, or CodeableConcept.
   ///
-  /// [_searchParam]: Extensions for searchParam
+  /// [searchParamElement]: Extensions for searchParam
   ///
   /// [valueSet]: The valueset for the code filter. The valueSet and code
   /// elements are additive. If valueSet is specified, the filter will return
@@ -282,7 +282,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DataRequirementCodeFilter.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirementCodeFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -301,14 +301,14 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 class DataRequirementDateFilter with _$DataRequirementDateFilter {
   DataRequirementDateFilter._();
 
-  /// [DataRequirement_DateFilter]: Describes a required data item for
+  /// [DataRequirementDateFilter]: Describes a required data item for
   /// evaluation in terms of the type of data, and optional code or date-based
   ///  filters of the data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -338,13 +338,13 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// Note that the index must be an integer constant. The path must resolve to
   ///  an element of type date, dateTime, Period, Schedule, or Timing.
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [searchParam]: A date parameter that refers to a search parameter defined
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type date, dateTime, Period, Schedule, or Timing.
   ///
-  /// [_searchParam]: Extensions for searchParam
+  /// [searchParamElement]: Extensions for searchParam
   ///
   /// [valueDateTime]: The value of the filter. If period is specified, the
   /// filter will return only those data items that fall within the bounds
@@ -353,7 +353,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valuePeriod]: The value of the filter. If period is specified, the filter
   /// will return only those data items that fall within the bounds determined
@@ -385,7 +385,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DataRequirementDateFilter.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirementDateFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -404,14 +404,14 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
 class DataRequirementSort with _$DataRequirementSort {
   DataRequirementSort._();
 
-  /// [DataRequirement_Sort]: Describes a required data item for evaluation in
+  /// [DataRequirementSort]: Describes a required data item for evaluation in
   /// terms of the type of data, and optional code or date-based filters of the
   ///  data.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -438,11 +438,11 @@ class DataRequirementSort with _$DataRequirementSort {
   /// traverse multiple-cardinality sub-elements. Note that the index must be an
   ///  integer constant.
   ///
-  /// [_path]: Extensions for path
+  /// [pathElement]: Extensions for path
   ///
   /// [direction]: The direction of the sort, ascending or descending.
   ///
-  /// [_direction]: Extensions for direction
+  /// [directionElement]: Extensions for direction
   factory DataRequirementSort({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -457,7 +457,7 @@ class DataRequirementSort with _$DataRequirementSort {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DataRequirementSort.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirementSort.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -483,7 +483,7 @@ class ParameterDefinition with _$ParameterDefinition {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -493,30 +493,30 @@ class ParameterDefinition with _$ParameterDefinition {
   /// [name]: The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [use]: Whether the parameter is input or output for the module.
   ///
-  /// [_use]: Extensions for use
+  /// [useElement]: Extensions for use
   ///
   /// [min]: The minimum number of times this parameter SHALL appear in the
   ///  request or response.
   ///
-  /// [_min]: Extensions for min
+  /// [minElement]: Extensions for min
   ///
   /// [max]: The maximum number of times this element is permitted to appear in
   ///  the request or response.
   ///
-  /// [_max]: Extensions for max
+  /// [maxElement]: Extensions for max
   ///
   /// [documentation]: A brief discussion of what the parameter is for and how
   ///  it is used by the module.
   ///
-  /// [_documentation]: Extensions for documentation
+  /// [documentationElement]: Extensions for documentation
   ///
   /// [type]: The type of the parameter.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [profile]: If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
@@ -541,7 +541,7 @@ class ParameterDefinition with _$ParameterDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ParameterDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ParameterDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -565,7 +565,7 @@ class RelatedArtifact with _$RelatedArtifact {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -574,27 +574,27 @@ class RelatedArtifact with _$RelatedArtifact {
   ///
   /// [type]: The type of relationship to the related artifact.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [label]: A short label that can be used to reference the citation from
   ///  elsewhere in the containing artifact, such as a footnote index.
   ///
-  /// [_label]: Extensions for label
+  /// [labelElement]: Extensions for label
   ///
   /// [display]: A brief description of the document or knowledge resource being
   ///  referenced, suitable for display to a consumer.
   ///
-  /// [_display]: Extensions for display
+  /// [displayElement]: Extensions for display
   ///
   /// [citation]: A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
   ///
-  /// [_citation]: Extensions for citation
+  /// [citationElement]: Extensions for citation
   ///
   /// [url]: A url for the artifact that can be followed to access the actual
   ///  content.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [document]: The document being referenced, represented as an attachment.
   ///  This is exclusive with the resource element.
@@ -622,7 +622,7 @@ class RelatedArtifact with _$RelatedArtifact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RelatedArtifact.fromYaml(dynamic yaml) => yaml is String
       ? RelatedArtifact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -647,7 +647,7 @@ class TriggerDefinition with _$TriggerDefinition {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -656,13 +656,13 @@ class TriggerDefinition with _$TriggerDefinition {
   ///
   /// [type]: The type of triggering event.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [name]: A formal name for the event. This may be an absolute URI that
   /// identifies the event formally (e.g. from a trigger registry), or a simple
   ///  relative URI that identifies the event in a local context.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [timingTiming]: The timing of the event (if this is a periodic trigger).
   ///
@@ -671,11 +671,11 @@ class TriggerDefinition with _$TriggerDefinition {
   ///
   /// [timingDate]: The timing of the event (if this is a periodic trigger).
   ///
-  /// [_timingDate]: Extensions for timingDate
+  /// [timingDateElement]: Extensions for timingDate
   ///
   /// [timingDateTime]: The timing of the event (if this is a periodic trigger).
   ///
-  /// [_timingDateTime]: Extensions for timingDateTime
+  /// [timingDateTimeElement]: Extensions for timingDateTime
   ///
   /// [data]: The triggering data of the event (if this is a data trigger). If
   /// more than one data is requirement is specified, then all the data
@@ -705,7 +705,7 @@ class TriggerDefinition with _$TriggerDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TriggerDefinition.fromYaml(dynamic yaml) => yaml is String
       ? TriggerDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -731,7 +731,7 @@ class UsageContext with _$UsageContext {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -765,7 +765,7 @@ class UsageContext with _$UsageContext {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory UsageContext.fromYaml(dynamic yaml) => yaml is String
       ? UsageContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -791,7 +791,7 @@ class Expression with _$Expression {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -801,25 +801,25 @@ class Expression with _$Expression {
   /// [description]: A brief, natural language description of the condition that
   ///  effectively communicates the intended semantics.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [name]: A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [language]: The media type of the language for the expression.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [expression]: An expression in the specified language that returns a
   ///  value.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   ///
   /// [reference]: A URI that defines where the expression is found.
   ///
-  /// [_reference]: Extensions for reference
+  /// [referenceElement]: Extensions for reference
   factory Expression({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -839,7 +839,7 @@ class Expression with _$Expression {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Expression.fromYaml(dynamic yaml) => yaml is String
       ? Expression.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

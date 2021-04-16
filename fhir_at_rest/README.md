@@ -6,6 +6,11 @@ FHIR® is the registered trademark of HL7 and is used with the permission of HL7
 
 This project builds upon work done in the basic FHIR package: https://github.com/Dokotela/fhir. It is designed to allow easier RESTful requests to FHIR APIs. Most of the basic requests are described on the [RESTful API](https://www.hl7.org/fhir/https.html) page of [HL7 FHIR](https://hl7.org/fhir/), or on the page for [Search parameters](https://www.hl7.org/fhir/search.html). Not all search parameters are implemented yet, but all FHIR interactions and operations are supported.
 
+## Say Hello!
+
+- As all parts of this are new (FHIR, Flutter, using the two together), I'd love to hear from you if you're working in this space.
+You can email me at <grey@fhirfli.dev>. Or, feel free to [join our Slack!](https://join.slack.com/t/fhir-fli/shared_invite/zt-ofv2cycm-9yjdMj8a~zXp7nDBeB_sNQ).
+
 
 ## It's not complicated, but it is detailed
 

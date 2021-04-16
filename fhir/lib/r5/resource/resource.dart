@@ -36,7 +36,7 @@ class Resource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Returns a Resource, accepts [Yaml String] as an argument
+  /// Returns a Resource, accepts a [String] in YAML format as an argument
   static Resource fromYaml(dynamic yaml) => yaml is String
       ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

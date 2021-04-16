@@ -34,11 +34,11 @@ class BiologicallyDerivedProduct
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -52,7 +52,7 @@ class BiologicallyDerivedProduct
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -81,20 +81,20 @@ class BiologicallyDerivedProduct
   ///
   /// [productCategory]: Broad category of this product.
   ///
-  /// [_productCategory]: Extensions for productCategory
+  /// [productCategoryElement]: Extensions for productCategory
   ///
   /// [productCode]: A code that identifies the kind of this biologically
   ///  derived product (SNOMED Ctcode).
   ///
   /// [status]: Whether the product is currently available.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [request]: Procedure request to obtain this biologically derived product.
   ///
   /// [quantity]: Number of discrete units within this product.
   ///
-  /// [_quantity]: Extensions for quantity
+  /// [quantityElement]: Extensions for quantity
   ///
   /// [parent]: Parent product (if any).
   ///
@@ -145,7 +145,7 @@ class BiologicallyDerivedProduct
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BiologicallyDerivedProduct.fromYaml(dynamic yaml) => yaml is String
       ? BiologicallyDerivedProduct.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -164,14 +164,14 @@ class BiologicallyDerivedProduct
 class BiologicallyDerivedProductCollection with _$BiologicallyDerivedProductCollection {
   BiologicallyDerivedProductCollection._();
 
-  /// [BiologicallyDerivedProduct_Collection]: A material substance originating
+  /// [BiologicallyDerivedProductCollection]: A material substance originating
   ///  from a biological entity intended to be transplanted or infused
   /// into another (possibly the same) biological entity.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -199,7 +199,7 @@ class BiologicallyDerivedProductCollection with _$BiologicallyDerivedProductColl
   ///
   /// [collectedDateTime]: Time of product collection.
   ///
-  /// [_collectedDateTime]: Extensions for collectedDateTime
+  /// [collectedDateTimeElement]: Extensions for collectedDateTime
   ///
   /// [collectedPeriod]: Time of product collection.
   factory BiologicallyDerivedProductCollection({
@@ -216,7 +216,7 @@ class BiologicallyDerivedProductCollection with _$BiologicallyDerivedProductColl
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BiologicallyDerivedProductCollection.fromYaml(dynamic yaml) => yaml
           is String
       ? BiologicallyDerivedProductCollection.fromJson(
@@ -237,14 +237,14 @@ class BiologicallyDerivedProductCollection with _$BiologicallyDerivedProductColl
 class BiologicallyDerivedProductProcessing with _$BiologicallyDerivedProductProcessing {
   BiologicallyDerivedProductProcessing._();
 
-  /// [BiologicallyDerivedProduct_Processing]: A material substance originating
+  /// [BiologicallyDerivedProductProcessing]: A material substance originating
   ///  from a biological entity intended to be transplanted or infused
   /// into another (possibly the same) biological entity.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -267,7 +267,7 @@ class BiologicallyDerivedProductProcessing with _$BiologicallyDerivedProductProc
   ///
   /// [description]: Description of of processing.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [procedure]: Procesing code.
   ///
@@ -275,7 +275,7 @@ class BiologicallyDerivedProductProcessing with _$BiologicallyDerivedProductProc
   ///
   /// [timeDateTime]: Time of processing.
   ///
-  /// [_timeDateTime]: Extensions for timeDateTime
+  /// [timeDateTimeElement]: Extensions for timeDateTime
   ///
   /// [timePeriod]: Time of processing.
   factory BiologicallyDerivedProductProcessing({
@@ -294,7 +294,7 @@ class BiologicallyDerivedProductProcessing with _$BiologicallyDerivedProductProc
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BiologicallyDerivedProductProcessing.fromYaml(dynamic yaml) => yaml
           is String
       ? BiologicallyDerivedProductProcessing.fromJson(
@@ -315,7 +315,7 @@ class BiologicallyDerivedProductProcessing with _$BiologicallyDerivedProductProc
 class BiologicallyDerivedProductManipulation with _$BiologicallyDerivedProductManipulation {
   BiologicallyDerivedProductManipulation._();
 
-  /// [BiologicallyDerivedProduct_Manipulation]: A material substance
+  /// [BiologicallyDerivedProductManipulation]: A material substance
   /// originating from a biological entity intended to be transplanted or
   ///  infused
   /// into another (possibly the same) biological entity.
@@ -323,7 +323,7 @@ class BiologicallyDerivedProductManipulation with _$BiologicallyDerivedProductMa
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -346,11 +346,11 @@ class BiologicallyDerivedProductManipulation with _$BiologicallyDerivedProductMa
   ///
   /// [description]: Description of manipulation.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [timeDateTime]: Time of manipulation.
   ///
-  /// [_timeDateTime]: Extensions for timeDateTime
+  /// [timeDateTimeElement]: Extensions for timeDateTime
   ///
   /// [timePeriod]: Time of manipulation.
   factory BiologicallyDerivedProductManipulation({
@@ -367,7 +367,7 @@ class BiologicallyDerivedProductManipulation with _$BiologicallyDerivedProductMa
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BiologicallyDerivedProductManipulation.fromYaml(dynamic yaml) => yaml
           is String
       ? BiologicallyDerivedProductManipulation.fromJson(
@@ -388,14 +388,14 @@ class BiologicallyDerivedProductManipulation with _$BiologicallyDerivedProductMa
 class BiologicallyDerivedProductStorage with _$BiologicallyDerivedProductStorage {
   BiologicallyDerivedProductStorage._();
 
-  /// [BiologicallyDerivedProduct_Storage]: A material substance originating
+  /// [BiologicallyDerivedProductStorage]: A material substance originating
   ///  from a biological entity intended to be transplanted or infused
   /// into another (possibly the same) biological entity.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -418,15 +418,15 @@ class BiologicallyDerivedProductStorage with _$BiologicallyDerivedProductStorage
   ///
   /// [description]: Description of storage.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [temperature]: Storage temperature.
   ///
-  /// [_temperature]: Extensions for temperature
+  /// [temperatureElement]: Extensions for temperature
   ///
   /// [scale]: Temperature scale used.
   ///
-  /// [_scale]: Extensions for scale
+  /// [scaleElement]: Extensions for scale
   ///
   /// [duration]: Storage timeperiod.
   factory BiologicallyDerivedProductStorage({
@@ -446,7 +446,7 @@ class BiologicallyDerivedProductStorage with _$BiologicallyDerivedProductStorage
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BiologicallyDerivedProductStorage.fromYaml(dynamic yaml) => yaml
           is String
       ? BiologicallyDerivedProductStorage.fromJson(
@@ -485,11 +485,11 @@ class Device with Resource, _$Device {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -503,7 +503,7 @@ class Device with Resource, _$Device {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -536,7 +536,7 @@ class Device with Resource, _$Device {
   ///
   /// [status]: Status of the Device availability.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: Reason for the dtatus of the Device availability.
   ///
@@ -544,29 +544,29 @@ class Device with Resource, _$Device {
   /// regulation for a human cell, tissue, or cellular and tissue-based
   ///  product.
   ///
-  /// [_distinctIdentifier]: Extensions for distinctIdentifier
+  /// [distinctIdentifierElement]: Extensions for distinctIdentifier
   ///
   /// [manufacturer]: A name of the manufacturer.
   ///
-  /// [_manufacturer]: Extensions for manufacturer
+  /// [manufacturerElement]: Extensions for manufacturer
   ///
   /// [manufactureDate]: The date and time when the device was manufactured.
   ///
-  /// [_manufactureDate]: Extensions for manufactureDate
+  /// [manufactureDateElement]: Extensions for manufactureDate
   ///
   /// [expirationDate]: The date and time beyond which this device is no longer
   ///  valid or should not be used (if applicable).
   ///
-  /// [_expirationDate]: Extensions for expirationDate
+  /// [expirationDateElement]: Extensions for expirationDate
   ///
   /// [lotNumber]: Lot number assigned by the manufacturer.
   ///
-  /// [_lotNumber]: Extensions for lotNumber
+  /// [lotNumberElement]: Extensions for lotNumber
   ///
   /// [serialNumber]: The serial number assigned by the organization when the
   ///  device was manufactured.
   ///
-  /// [_serialNumber]: Extensions for serialNumber
+  /// [serialNumberElement]: Extensions for serialNumber
   ///
   /// [deviceName]: This represents the manufacturer's name of the device as
   /// provided by the device, from a UDI label, or by a person describing the
@@ -576,11 +576,11 @@ class Device with Resource, _$Device {
   ///
   /// [modelNumber]: The model number for the device.
   ///
-  /// [_modelNumber]: Extensions for modelNumber
+  /// [modelNumberElement]: Extensions for modelNumber
   ///
   /// [partNumber]: The part number of the device.
   ///
-  /// [_partNumber]: Extensions for partNumber
+  /// [partNumberElement]: Extensions for partNumber
   ///
   /// [type]: The kind or type of device.
   ///
@@ -606,7 +606,7 @@ class Device with Resource, _$Device {
   ///
   /// [url]: A network address on which the device may be contacted directly.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [note]: Descriptive information, usage information or implantation
   ///  information that is not captured in an existing element.
@@ -670,7 +670,7 @@ class Device with Resource, _$Device {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Device.fromYaml(dynamic yaml) => yaml is String
       ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -687,14 +687,14 @@ class Device with Resource, _$Device {
 class DeviceUdiCarrier with _$DeviceUdiCarrier {
   DeviceUdiCarrier._();
 
-  /// [Device_UdiCarrier]: A type of a manufactured item that is used in the
+  /// [DeviceUdiCarrier]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -719,7 +719,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// portion of a UDI that identifies the labeler and the specific version or
   ///  model of a device.
   ///
-  /// [_deviceIdentifier]: Extensions for deviceIdentifier
+  /// [deviceIdentifierElement]: Extensions for deviceIdentifier
   ///
   /// [issuer]: Organization that is charged with issuing UDIs for devices.  For
   ///  example, the US FDA issuers include :
@@ -732,7 +732,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// 4) ICCBA for other devices:
   /// http://hl7.org/fhir/NamingSystem/iccbba-other-di.
   ///
-  /// [_issuer]: Extensions for issuer
+  /// [issuerElement]: Extensions for issuer
   ///
   /// [jurisdiction]: The identity of the authoritative source for UDI
   /// generation within a  jurisdiction.  All UDIs are globally unique within a
@@ -740,7 +740,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// example,  UDIs of devices managed in the U.S. by the FDA, the value is
   ///  http://hl7.org/fhir/NamingSystem/fda-udi.
   ///
-  /// [_jurisdiction]: Extensions for jurisdiction
+  /// [jurisdictionElement]: Extensions for jurisdiction
   ///
   /// [carrierAIDC]: The full UDI carrier of the Automatic Identification and
   /// Data Capture (AIDC) technology representation of the barcode string as
@@ -748,17 +748,17 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// Because of limitations on character sets in XML and the need to round-trip
   ///  JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
   ///
-  /// [_carrierAIDC]: Extensions for carrierAIDC
+  /// [carrierAIDCElement]: Extensions for carrierAIDC
   ///
   /// [carrierHRF]: The full UDI carrier as the human readable form (HRF)
   /// representation of the barcode string as printed on the packaging of the
   ///  device.
   ///
-  /// [_carrierHRF]: Extensions for carrierHRF
+  /// [carrierHRFElement]: Extensions for carrierHRF
   ///
   /// [entryType]: A coded entry to indicate how the data was entered.
   ///
-  /// [_entryType]: Extensions for entryType
+  /// [entryTypeElement]: Extensions for entryType
   factory DeviceUdiCarrier({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -781,7 +781,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceUdiCarrier.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUdiCarrier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -799,14 +799,14 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
 class DeviceDeviceName with _$DeviceDeviceName {
   DeviceDeviceName._();
 
-  /// [Device_DeviceName]: A type of a manufactured item that is used in the
+  /// [DeviceDeviceName]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -829,13 +829,13 @@ class DeviceDeviceName with _$DeviceDeviceName {
   ///
   /// [name]: The name of the device.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [type]: The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   factory DeviceDeviceName({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -850,7 +850,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDeviceName.fromYaml(dynamic yaml) => yaml is String
       ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -868,14 +868,14 @@ class DeviceDeviceName with _$DeviceDeviceName {
 class DeviceSpecialization with _$DeviceSpecialization {
   DeviceSpecialization._();
 
-  /// [Device_Specialization]: A type of a manufactured item that is used in the
+  /// [DeviceSpecialization]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -901,7 +901,7 @@ class DeviceSpecialization with _$DeviceSpecialization {
   /// [version]: The version of the standard that is used to operate and
   ///  communicate.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   factory DeviceSpecialization({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -914,7 +914,7 @@ class DeviceSpecialization with _$DeviceSpecialization {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceSpecialization.fromYaml(dynamic yaml) => yaml is String
       ? DeviceSpecialization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -932,14 +932,14 @@ class DeviceSpecialization with _$DeviceSpecialization {
 class DeviceVersion with _$DeviceVersion {
   DeviceVersion._();
 
-  /// [Device_Version]: A type of a manufactured item that is used in the
+  /// [DeviceVersion]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -966,7 +966,7 @@ class DeviceVersion with _$DeviceVersion {
   ///
   /// [value]: The version text.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory DeviceVersion({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -980,7 +980,7 @@ class DeviceVersion with _$DeviceVersion {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceVersion.fromYaml(dynamic yaml) => yaml is String
       ? DeviceVersion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -998,14 +998,14 @@ class DeviceVersion with _$DeviceVersion {
 class DeviceProperty with _$DeviceProperty {
   DeviceProperty._();
 
-  /// [Device_Property]: A type of a manufactured item that is used in the
+  /// [DeviceProperty]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1044,7 +1044,7 @@ class DeviceProperty with _$DeviceProperty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceProperty.fromYaml(dynamic yaml) => yaml is String
       ? DeviceProperty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1079,11 +1079,11 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1097,7 +1097,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1142,7 +1142,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// [operationalStatus]: Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
   ///
-  /// [_operationalStatus]: Extensions for operationalStatus
+  /// [operationalStatusElement]: Extensions for operationalStatus
   ///
   /// [color]: Describes the color representation for the metric. This is often
   /// used to aid clinicians to track and identify parameter types by color. In
@@ -1150,12 +1150,12 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// example; the parameters are displayed in different characteristic colors,
   ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
   ///
-  /// [_color]: Extensions for color
+  /// [colorElement]: Extensions for color
   ///
   /// [category]: Indicates the category of the observation generation process.
   ///  A DeviceMetric can be for example a setting, measurement, or calculation.
   ///
-  /// [_category]: Extensions for category
+  /// [categoryElement]: Extensions for category
   ///
   /// [measurementPeriod]: Describes the measurement repetition time. This is
   /// not necessarily the same as the update period. The measurement repetition
@@ -1204,7 +1204,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetric.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1222,13 +1222,13 @@ class DeviceMetric with Resource, _$DeviceMetric {
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
 
-  /// [DeviceMetric_Calibration]: Describes a measurement, calculation or
+  /// [DeviceMetricCalibration]: Describes a measurement, calculation or
   ///  setting capability of a medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1251,15 +1251,15 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   ///
   /// [type]: Describes the type of the calibration method.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [state]: Describes the state of the calibration.
   ///
-  /// [_state]: Extensions for state
+  /// [stateElement]: Extensions for state
   ///
   /// [time]: Describes the time last calibration has been performed.
   ///
-  /// [_time]: Extensions for time
+  /// [timeElement]: Extensions for time
   factory DeviceMetricCalibration({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1277,7 +1277,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1311,11 +1311,11 @@ class Substance with Resource, _$Substance {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1329,7 +1329,7 @@ class Substance with Resource, _$Substance {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1354,7 +1354,7 @@ class Substance with Resource, _$Substance {
   ///
   /// [status]: A code to indicate if the substance is actively used.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [category]: A code that classifies the general type of substance.  This is
   ///  used  for searching, sorting and display purposes.
@@ -1364,7 +1364,7 @@ class Substance with Resource, _$Substance {
   /// [description]: A description of the substance - its appearance, handling
   ///  requirements, and other usage notes.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [instance]: Substance may be used to describe a kind of substance, or a
   ///  specific package/container of the substance: an instance.
@@ -1398,7 +1398,7 @@ class Substance with Resource, _$Substance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Substance.fromYaml(dynamic yaml) => yaml is String
       ? Substance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1416,12 +1416,12 @@ class Substance with Resource, _$Substance {
 class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
 
-  /// [Substance_Instance]: A homogeneous material with a definite composition.
+  /// [SubstanceInstance]: A homogeneous material with a definite composition.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1448,7 +1448,7 @@ class SubstanceInstance with _$SubstanceInstance {
   /// [expiry]: When the substance is no longer valid to use. For some
   ///  substances, a single arbitrary date is used for expiry.
   ///
-  /// [_expiry]: Extensions for expiry
+  /// [expiryElement]: Extensions for expiry
   ///
   /// [quantity]: The amount of the substance.
   factory SubstanceInstance({
@@ -1464,7 +1464,7 @@ class SubstanceInstance with _$SubstanceInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1482,13 +1482,13 @@ class SubstanceInstance with _$SubstanceInstance {
 class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
 
-  /// [Substance_Ingredient]: A homogeneous material with a definite
+  /// [SubstanceIngredient]: A homogeneous material with a definite
   ///  composition.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1529,7 +1529,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
