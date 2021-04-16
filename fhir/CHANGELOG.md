@@ -1,6 +1,6 @@
 # fhir
 
-## [0.4.5]
+## [0.4.6]
 * [Tiloc](https://github.com/tiloc) cleaned up DateTime
 * [Tiloc](https://github.com/tiloc) fixed an error in the QuestionnaireResponse
 
