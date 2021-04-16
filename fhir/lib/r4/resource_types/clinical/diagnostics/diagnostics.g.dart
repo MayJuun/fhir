@@ -2260,6 +2260,9 @@ _$_QuestionnaireResponse _$_$_QuestionnaireResponseFromJson(
     questionnaire: json['questionnaire'] == null
         ? null
         : Canonical.fromJson(json['questionnaire']),
+    questionnaireElement: json['_questionnaire'] == null
+        ? null
+        : Element.fromJson(json['_questionnaire'] as Map<String, dynamic>),
     status: _$enumDecodeNullable(
         _$QuestionnaireResponseStatusEnumMap, json['status'],
         unknownValue: QuestionnaireResponseStatus.unknown),
@@ -2320,6 +2323,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseToJson(
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull('questionnaire', instance.questionnaire?.toJson());
+  writeNotNull('_questionnaire', instance.questionnaireElement?.toJson());
   writeNotNull('status', _$QuestionnaireResponseStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('subject', instance.subject?.toJson());

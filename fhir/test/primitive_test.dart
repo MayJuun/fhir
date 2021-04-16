@@ -27,6 +27,15 @@ void main() {
         FhirDateTime.fromDateTime(DateTime(2000, 10), DateTimePrecision.YYYYMM)
             .toString(),
         '2000-10');
+
+    final zuluTime = FhirDateTime(DateTime.utc(1973)).toString();
+    expect(zuluTime.contains('Z'), true);
+
+    final localDateTime = DateTime.parse('2015-02-07T13:28:17');
+    final localDateTimeString = FhirDateTime(localDateTime).toString();
+    expect(
+        localDateTimeString.contains(RegExp(r'[\+|-][0-2][0-9]:[0-6][0-9]$')),
+        true);
   });
 
   test('dateyearstring', () {

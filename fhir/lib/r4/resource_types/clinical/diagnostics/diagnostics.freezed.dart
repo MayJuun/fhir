@@ -16262,6 +16262,8 @@ class _$QuestionnaireResponseTearOff {
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Canonical? questionnaire,
+      @JsonKey(name: '_questionnaire')
+          Element? questionnaireElement,
       @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
           QuestionnaireResponseStatus? status,
       @JsonKey(name: '_status')
@@ -16290,6 +16292,7 @@ class _$QuestionnaireResponseTearOff {
       basedOn: basedOn,
       partOf: partOf,
       questionnaire: questionnaire,
+      questionnaireElement: questionnaireElement,
       status: status,
       statusElement: statusElement,
       subject: subject,
@@ -16332,6 +16335,8 @@ mixin _$QuestionnaireResponse {
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   Canonical? get questionnaire => throw _privateConstructorUsedError;
+  @JsonKey(name: '_questionnaire')
+  Element? get questionnaireElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
   QuestionnaireResponseStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
@@ -16377,6 +16382,8 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Canonical? questionnaire,
+      @JsonKey(name: '_questionnaire')
+          Element? questionnaireElement,
       @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
           QuestionnaireResponseStatus? status,
       @JsonKey(name: '_status')
@@ -16395,6 +16402,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $IdentifierCopyWith<$Res>? get identifier;
+  $ElementCopyWith<$Res>? get questionnaireElement;
   $ElementCopyWith<$Res>? get statusElement;
   $ReferenceCopyWith<$Res>? get subject;
   $ReferenceCopyWith<$Res>? get encounter;
@@ -16429,6 +16437,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
     Object? basedOn = freezed,
     Object? partOf = freezed,
     Object? questionnaire = freezed,
+    Object? questionnaireElement = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? subject = freezed,
@@ -16500,6 +16509,10 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
           ? _value.questionnaire
           : questionnaire // ignore: cast_nullable_to_non_nullable
               as Canonical?,
+      questionnaireElement: questionnaireElement == freezed
+          ? _value.questionnaireElement
+          : questionnaireElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -16591,6 +16604,17 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
 
     return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
       return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get questionnaireElement {
+    if (_value.questionnaireElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.questionnaireElement!, (value) {
+      return _then(_value.copyWith(questionnaireElement: value));
     });
   }
 
@@ -16688,6 +16712,8 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Canonical? questionnaire,
+      @JsonKey(name: '_questionnaire')
+          Element? questionnaireElement,
       @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
           QuestionnaireResponseStatus? status,
       @JsonKey(name: '_status')
@@ -16711,6 +16737,8 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
   $NarrativeCopyWith<$Res>? get text;
   @override
   $IdentifierCopyWith<$Res>? get identifier;
+  @override
+  $ElementCopyWith<$Res>? get questionnaireElement;
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
@@ -16753,6 +16781,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
     Object? basedOn = freezed,
     Object? partOf = freezed,
     Object? questionnaire = freezed,
+    Object? questionnaireElement = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? subject = freezed,
@@ -16824,6 +16853,10 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
           ? _value.questionnaire
           : questionnaire // ignore: cast_nullable_to_non_nullable
               as Canonical?,
+      questionnaireElement: questionnaireElement == freezed
+          ? _value.questionnaireElement
+          : questionnaireElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -16888,6 +16921,8 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
       this.basedOn,
       this.partOf,
       this.questionnaire,
+      @JsonKey(name: '_questionnaire')
+          this.questionnaireElement,
       @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
@@ -16940,6 +16975,9 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @override
   final Canonical? questionnaire;
   @override
+  @JsonKey(name: '_questionnaire')
+  final Element? questionnaireElement;
+  @override
   @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
   final QuestionnaireResponseStatus? status;
   @override
@@ -16963,7 +17001,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 
   @override
   String toString() {
-    return 'QuestionnaireResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, questionnaire: $questionnaire, status: $status, statusElement: $statusElement, subject: $subject, encounter: $encounter, authored: $authored, authoredElement: $authoredElement, author: $author, source: $source, item: $item)';
+    return 'QuestionnaireResponse(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, partOf: $partOf, questionnaire: $questionnaire, questionnaireElement: $questionnaireElement, status: $status, statusElement: $statusElement, subject: $subject, encounter: $encounter, authored: $authored, authoredElement: $authoredElement, author: $author, source: $source, item: $item)';
   }
 
   @override
@@ -17011,6 +17049,9 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
             (identical(other.questionnaire, questionnaire) ||
                 const DeepCollectionEquality()
                     .equals(other.questionnaire, questionnaire)) &&
+            (identical(other.questionnaireElement, questionnaireElement) ||
+                const DeepCollectionEquality().equals(
+                    other.questionnaireElement, questionnaireElement)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.statusElement, statusElement) ||
@@ -17054,6 +17095,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
       const DeepCollectionEquality().hash(basedOn) ^
       const DeepCollectionEquality().hash(partOf) ^
       const DeepCollectionEquality().hash(questionnaire) ^
+      const DeepCollectionEquality().hash(questionnaireElement) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(subject) ^
@@ -17097,6 +17139,8 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Canonical? questionnaire,
+      @JsonKey(name: '_questionnaire')
+          Element? questionnaireElement,
       @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
           QuestionnaireResponseStatus? status,
       @JsonKey(name: '_status')
@@ -17149,6 +17193,9 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   @override
   Canonical? get questionnaire => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_questionnaire')
+  Element? get questionnaireElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
   QuestionnaireResponseStatus? get status => throw _privateConstructorUsedError;
