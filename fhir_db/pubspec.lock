@@ -70,7 +70,7 @@ packages:
       name: fhir
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.3"
+    version: "0.4.5"
   fhir_yaml:
     dependency: transitive
     description:
@@ -194,7 +194,7 @@ packages:
       name: sembast
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0+4"
+    version: "3.0.1"
   sembast_sqflite:
     dependency: "direct main"
     description:
