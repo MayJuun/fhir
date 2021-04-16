@@ -1,4 +1,7 @@
-## ## [0.3.0-nullsafety.7]
+## [0.3.0-nullsafety.8]
+* Updating dependencies
+
+## [0.3.0-nullsafety.7]
 * So Close.
 * Normal auth for mobile with no significant changes since last prerelease
 * Web auth now available! This is a big change, mostly because I've added it. Should work very similarly to mobile auth though, and I've tried to generally keep the structure of the classes the same.
