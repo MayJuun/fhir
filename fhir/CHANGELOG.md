@@ -1,6 +1,10 @@
 # fhir
 
 ## [0.4.5]
+* [Tiloc](https://github.com/tiloc) cleaned up DateTime
+* [Tiloc](https://github.com/tiloc) fixed an error in the QuestionnaireResponse
+
+## [0.4.5]
 * Fixed a constructor issue in Date
 
 ## [0.4.4]
