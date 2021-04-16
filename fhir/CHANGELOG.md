@@ -1,5 +1,8 @@
 # fhir
 
+## [0.4.5]
+* Fixed a constructor issue in Date
+
 ## [0.4.4]
 * Updated some dateTime dependencies
 

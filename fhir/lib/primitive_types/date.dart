@@ -15,8 +15,7 @@ class Date {
 
   factory Date(inValue) {
     if (inValue is DateTime) {
-      return Date._(inValue.toIso8601String(), inValue, true,
-          DatePrecision.YYYYMMDD, null);
+      return Date.fromDateTime(inValue, DatePrecision.YYYYMMDD);
     } else if (inValue is String) {
       try {
         final dateTimeValue = _parseDate(inValue);

@@ -1,3 +1,6 @@
+## [0.4.2]
+* Updating dependencies
+
 ## [0.4.1]
 * Trying to improve comments
 

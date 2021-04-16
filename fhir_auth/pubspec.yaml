@@ -1,6 +1,6 @@
 name: fhir_auth
 description: A Dart/Flutter package for authorization & authentication, includes SMART on FHIR and Google sign-in
-version: 0.3.0-nullsafety.7
+version: 0.3.0-nullsafety.8
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_auth
 
@@ -9,8 +9,8 @@ environment:
 
 dependencies:
   collection: ^1.15.0
-  fhir: ^0.4.3
-  fhir_at_rest: ^0.4.1
+  fhir: ^0.4.5
+  fhir_at_rest: ^0.4.2
   flutter:
     sdk: flutter
   flutter_appauth: ^1.0.0
@@ -18,7 +18,7 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   freezed_annotation: ^0.14.1
-  google_sign_in: ^5.0.1
+  google_sign_in: ^5.0.2
   html: ^0.15.0
   http: ^0.13.1
   oauth2: ^2.0.0
