@@ -1,3 +1,4 @@
+import '../r4.dart';
 import 'functions.dart';
 import 'operations.dart';
 import 'precedence.dart';
@@ -10,8 +11,10 @@ int _precedenceIndex(String op) {
 }
 
 void main() {
-  var pathString = '(3.toString() + 4) + ((5 + (6 + 8)) + 8 * (12 + 13))';
-  // var pathString = 'Observation.value.ofType(Quantity).unit';
+  var obs =
+      Observation(code: CodeableConcept(), valueQuantity: Quantity(unit: 'mg'));
+  // var pathString = '(3.toString() + 4) + ((5 + (6 + 8)) + 8 * (12 + 13))';
+  var pathString = 'Observation.value.ofType(Quantity).unit';
 
   /// Stack for operations
   var operatorStack = [];
@@ -91,6 +94,12 @@ void main() {
   }
   while (operatorStack.isNotEmpty) {
     outputQueue.add(operatorStack.removeLast());
+  }
+  var outputStack = [obs];
+  for (var stack in outputQueue) {
+    for (var o in outputStack) {
+      if (stack != o.resourceTypeString()) {}
+    }
   }
   print(outputQueue);
 }
