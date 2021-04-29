@@ -14,3 +14,10 @@ final precedence = {
   10: [' xor ', ' or '],
   11: [' implies '],
 };
+
+int precedenceIndex(String operation) {
+  int returnInt = -1;
+  precedence.forEach(
+      (key, value) => returnInt = value.contains(operation) ? key : returnInt);
+  return returnInt;
+}

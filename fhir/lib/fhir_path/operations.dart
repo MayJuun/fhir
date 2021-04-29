@@ -11,7 +11,7 @@ const equality = [' = ', ' ~ ', ' != ', ' !~ '];
 
 const comparison = [' > ', ' < ', ' >= ', ' <= '];
 
-const types = [' is ', 'is', ' as ', 'as'];
+const types = [' is ', '.is', ' as ', '.as'];
 
 const collections = [' | ', ' in ', ' contains '];
 
