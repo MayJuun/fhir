@@ -1,4 +1,4 @@
-import 'functions.dart';
+import '../functions_operations/functions_and_operations.dart';
 
 final precedence = {
   0: allFunctions,

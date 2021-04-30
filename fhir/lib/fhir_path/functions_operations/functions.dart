@@ -1,5 +1,5 @@
 const functions = {
-  0: path,
+  0: pathDir,
   1: existence,
   2: filtering,
   3: subsetting,
@@ -20,9 +20,9 @@ final allFunctions = existence +
     math +
     treeNavigation +
     utilityFunctions +
-    path;
+    pathDir;
 
-const path = ['.'];
+const pathDir = ['.'];
 
 const existence = [
   '.empty',

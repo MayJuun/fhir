@@ -1,6 +1,5 @@
-import 'functions.dart';
-import 'operations.dart';
-import 'precedence.dart';
+import '../functions_operations/functions_and_operations.dart';
+import 'rpn.dart';
 
 List parsePathToRpn(String pathString) {
   /// Stack for operations
@@ -21,7 +20,7 @@ List parsePathToRpn(String pathString) {
   /// sort them all by where they start
   opIndex.sort((a, b) => a.start.compareTo(b.start));
 
-  opIndex.forEach((v) => print(pathString.substring(v.start, v.end)));
+  // opIndex.forEach((v) => print(pathString.substring(v.start, v.end)));
 
   opIndex.removeWhere((element) {
     var index = opIndex.indexOf(element);

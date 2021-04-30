@@ -1,3 +1,5 @@
+import 'functions_and_operations.dart';
+
 final fhirPathFunctions = {
   '.': path,
   '.empty': () {},
@@ -71,17 +73,37 @@ final fhirPathFunctions = {
   '.now': () {},
   '.timeOfDay': () {},
   '.today': () {},
+  ' = ': equals,
+  ' ~ ': () {},
+  ' != ': () {},
+  ' !~ ': () {},
+  ' > ': () {},
+  ' < ': () {},
+  ' >= ': () {},
+  ' <= ': () {},
+  ' is ': () {},
+  '.is': () {},
+  ' as ': () {},
+  '.as': () {},
+  ' | ': () {},
+  ' in ': () {},
+  ' contains ': () {},
+  ' and ': () {},
+  ' or ': () {},
+  'not': () {},
+  ' xor ': () {},
+  ' implies ': () {},
+  ' * ': () {},
+  ' × ': () {},
+  ' / ': () {},
+  ' ÷ ': () {},
+  ' + ': () {},
+  ' - ': () {},
+  '-': () {},
+  '+': () {},
+  '−': () {},
+  ' − ': () {},
+  ' div ': () {},
+  ' mod ': () {},
+  ' & ': () {},
 };
-
-List path(List output, List active) {
-  var returnValue = [];
-  for (var o in output) {
-    var newVal = o[active.first];
-    if (newVal is List) {
-      returnValue.addAll(newVal);
-    }
-  }
-  return returnValue is List ? returnValue : [returnValue];
-}
-
-List exists(List output, List active) => [output.isNotEmpty];

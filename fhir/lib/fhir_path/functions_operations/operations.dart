@@ -4,7 +4,7 @@ final operations = {
   3: types,
   4: collections,
   5: booleanLogic,
-  6: math,
+  6: mathematics,
 };
 
 const equality = [' = ', ' ~ ', ' != ', ' !~ '];
@@ -17,7 +17,7 @@ const collections = [' | ', ' in ', ' contains '];
 
 const booleanLogic = [' and ', ' or ', 'not', ' xor ', ' implies '];
 
-const math = [
+const mathematics = [
   ' * ',
   ' × ',
   ' / ',
