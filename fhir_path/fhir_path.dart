@@ -1,4 +1,5 @@
-import '../r4.dart';
+import 'package:fhir/r4.dart';
+
 import 'functions_operations/functions_and_operations.dart';
 
 class FhirPath {

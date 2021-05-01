@@ -20,8 +20,10 @@ List parsePathToRpn(String pathString) {
   /// sort them all by where they start
   opIndex.sort((a, b) => a.start.compareTo(b.start));
 
-  // opIndex.forEach((v) => print(pathString.substring(v.start, v.end)));
-
+  /// because it will count a '.' as a function even if it's part of another
+  /// function, we compare the starting indices for each of the functions, and
+  /// if we find a '.' that starts in the same place as another function, we
+  /// remove it
   opIndex.removeWhere((element) {
     var index = opIndex.indexOf(element);
     if (index != opIndex.length - 1) {
