@@ -1,8 +1,10 @@
+import 'package:petitparser/petitparser.dart';
+
 import 'fhir_path_grammar.dart';
 
 void main() {
-  var string = 'Patient.name.something.exists(Patient.name.something)';
+  var pathString = 'Patient.name.exists(given = "Bob")';
   var definition = FhirPathGrammar();
   final parser = definition.build();
-  print(parser.parse(string));
+  print(parser.parse(pathString));
 }
