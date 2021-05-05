@@ -1,177 +1,63 @@
-void main() {
-  var initialList = ['0: '];
-  var testString =
-      "Patient.telecom.exists(system = 'phone' or use = 'mobile' and use = 'mobile' and use = 'landline')";
-  var depth = 0;
-  for (var i = 0; i < testString.length; i++) {
-    if (testString[i] == ('(')) {
-      var tempString = testString.substring(0, i);
-      var index =
-          functions.indexWhere((element) => tempString.endsWith(element));
-      if (index != -1) {
-        initialList.last = initialList.last
-            .substring(0, initialList.last.length - functions[index].length);
-      }
-      depth++;
-      initialList.add('$depth: ${index != -1 ? functions[index] : ""}(');
-      depth++;
-      initialList.add('$depth: ');
-    } else if ((testString[i] == ')')) {
-      depth--;
-      initialList.add('$depth: )');
-      depth--;
-      initialList.add('$depth: ');
-    } else {
-      initialList.last += testString[i];
-    }
-  }
-  var finalList = <String>[];
-  for (var list in initialList) {
-    final number = list.substring(0, 2);
-    final restOfList = list.substring(3, list.length);
-    final tempList = restOfList.split(' and ');
-    if (tempList.length > 1) {
-      tempList.forEach((v) {
-        finalList.add('$number$v');
-        if (tempList.indexOf(v) < tempList.length - 1) {
-          finalList.add('${number}and');
-        }
-      });
-    } else {
-      finalList.add('$number${tempList.join('')}');
-    }
-  }
-  initialList.clear();
-  initialList.addAll(finalList);
-  finalList.clear();
-  for (var list in initialList) {
-    final number = list.substring(0, 2);
+import 'package:fhir/r4.dart';
 
-    final restOfList = list.substring(3, list.length);
-    final tempList = restOfList.split(' or ');
-    if (tempList.length > 1) {
-      tempList.forEach((v) {
-        finalList.add('$number$v');
-        if (tempList.indexOf(v) < tempList.length - 1) {
-          finalList.add('${number}or');
-        }
-      });
-    } else {
-      finalList.add('$number${tempList.join('')}');
+import 'function_names.dart';
+import 'parse_path/parse_path.dart';
+
+void main() {
+  var pathString = "Patient.name.given.empty()";
+  var initial = parenthesesList(pathString);
+  var path = pathList(initial);
+  print(path);
+  var finalList = andOrXor(path);
+  var result = <dynamic>[resource.toJson()];
+  if (finalList[0].length > 3) {
+    final maybeResourceType = finalList[0].substring(3, finalList[0].length);
+    if (maybeResourceType[0] == '.' &&
+        !functionNames.keys.contains(
+            maybeResourceType.substring(1, maybeResourceType.length))) {
+      finalList.removeAt(0);
     }
   }
-  initialList.forEach((element) {
+
+  /// Need finalList, index in finalList, result
+  finalList.forEach((element) {
     print('${" " * int.parse(element[0]) * 3}$element');
   });
+  finalList.forEach((element) {
+    print(element);
+    var arg = element.substring(3, element.length);
+    if (arg[0] == '.' && !functionNames.keys.contains(arg)) {
+      arg = arg.substring(1, arg.length);
+      List temp = [];
+      for (var item in result) {
+        temp.addAll(item[arg]);
+      }
+      result.clear();
+      result.addAll(temp);
+    } else if (arg[0] == '.' && functionNames.keys.contains(arg)) {
+      var temp = [];
+      temp.addAll(
+          functionNames[arg]!(finalList, finalList.indexOf(element), result));
+      result.clear();
+      result.addAll(temp);
+    }
+  });
+  print(result);
 }
 
-const functions = [
-  '.empty',
-  '.exists',
-  '.all',
-  '.allTrue',
-  '.anyTrue',
-  '.allFalse',
-  '.anyFalse',
-  '.subsetOf',
-  '.supersetOf',
-  '.count',
-  '.distinct',
-  '.isDistinct',
-  '.where',
-  '.select',
-  '.repeat',
-  '.ofType',
-  '.single',
-  '.first',
-  '.last',
-  '.tail',
-  '.skip',
-  '.take',
-  '.intersect',
-  '.exclude',
-  '.union',
-  '.combine',
-  '.iif',
-  '.toBoolean',
-  '.convertsToBoolean',
-  '.toInteger',
-  '.convertsToInteger',
-  '.toDate',
-  '.convertsToDate',
-  '.toDateTime',
-  '.convertsToDateTime',
-  '.toDecimal',
-  '.convertsToDecimal',
-  '.toQuantity',
-  '.convertsToQuantity',
-  '.toString',
-  '.convertsToString',
-  '.toTime',
-  '.convertsToTime',
-  '.indexOf',
-  '.substring',
-  '.startsWith',
-  '.endsWith',
-  '.contains',
-  '.upper',
-  '.lower',
-  '.replace',
-  '.matches',
-  '.replaceMatches',
-  '.length',
-  '.toChars',
-  '.abs',
-  '.ceiling',
-  '.exp',
-  '.floor',
-  '.ln',
-  '.log',
-  '.power',
-  '.round',
-  '.sqrt',
-  '.truncate',
-  '.children',
-  '.descendants',
-  '.trace',
-  '.now',
-  '.timeOfDay',
-  '.today',
-  '.not',
-];
-
-const andOrXor = [
-  ' and ',
-  ' or ',
-  ' xor ',
-];
-
-const operations = [
-  ' = ',
-  ' ~ ',
-  ' != ',
-  ' !~ ',
-  ' > ',
-  ' < ',
-  ' >= ',
-  ' <= ',
-  ' is ',
-  ' as ',
-  ' | ',
-  ' in ',
-  ' contains ',
-  ' implies ',
-  ' * ',
-  ' × ',
-  ' / ',
-  ' ÷ ',
-  ' + ',
-  ' - ',
-  ' − ',
-  ' div ',
-  ' mod ',
-  ' & ',
-  // '-',
-  // '+',
-  // '−',
-];
+final resource = Patient(
+  name: [
+    HumanName(
+      family: 'Smith',
+      given: ['John'],
+    ),
+    HumanName(
+      family: 'Smith',
+      given: ['John'],
+    ),
+    HumanName(
+      family: 'Smith',
+      given: ['John'],
+    )
+  ],
+);
