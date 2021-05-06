@@ -1,4 +1,4 @@
-List<String> andOrXor(List<String> list) {
+List<String> andOrXorList(List<String> list) {
   var workingList = <String>[];
   final ops = ['and', 'or', 'xor'];
   for (var op in ops) {

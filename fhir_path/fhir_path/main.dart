@@ -1,50 +1,29 @@
 import 'package:fhir/r4.dart';
 
-import 'function_names.dart';
+import 'functions/functions.dart';
+import 'operations/operations.dart';
 import 'parse_path/parse_path.dart';
 
 void main() {
-  var pathString = "Patient.name.given.empty()";
-  var initial = parenthesesList(pathString);
-  var path = pathList(initial);
-  print(path);
-  var finalList = andOrXor(path);
-  var result = <dynamic>[resource.toJson()];
-  if (finalList[0].length > 3) {
-    final maybeResourceType = finalList[0].substring(3, finalList[0].length);
-    if (maybeResourceType[0] == '.' &&
-        !functionNames.keys.contains(
-            maybeResourceType.substring(1, maybeResourceType.length))) {
-      finalList.removeAt(0);
-    }
+  for (var pathString in pathStrings) {
+    var parentheses = parenthesesList(pathString);
+    var path = pathList(parentheses);
+    var andOrXor = andOrXorList(path);
+    var finalList = operationsList(andOrXor);
+    removeResourceType(finalList);
+    finalList.forEach((element) {
+      print('${" " * int.parse(element[0]) * 3}$element');
+    });
+    print(applyFunctions(finalList, resource));
   }
-
-  /// Need finalList, index in finalList, result
-  finalList.forEach((element) {
-    print('${" " * int.parse(element[0]) * 3}$element');
-  });
-  finalList.forEach((element) {
-    print(element);
-    var arg = element.substring(3, element.length);
-    if (arg[0] == '.' && !functionNames.keys.contains(arg)) {
-      arg = arg.substring(1, arg.length);
-      List temp = [];
-      for (var item in result) {
-        temp.addAll(item[arg]);
-      }
-      result.clear();
-      result.addAll(temp);
-    } else if (arg[0] == '.' && functionNames.keys.contains(arg)) {
-      var temp = [];
-      temp.addAll(
-          functionNames[arg]!(finalList, finalList.indexOf(element), result));
-      result.clear();
-      result.addAll(temp);
-    }
-  });
-  print(result);
 }
 
+final pathStrings = [
+  'Patient.name.exists()',
+  'Patient.identifier.exists(use = "official")',
+  // 'Patient.telecom.exists(system = "phone" and use = "mobile")',
+  // 'Patient.generalPractitioner.exists($this is Practitioner)',
+];
 final resource = Patient(
   name: [
     HumanName(
@@ -57,7 +36,6 @@ final resource = Patient(
     ),
     HumanName(
       family: 'Smith',
-      given: ['John'],
     )
   ],
 );

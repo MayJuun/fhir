@@ -1,8 +1,8 @@
-import 'no_arg_functions/no_arg_functions.dart';
+import 'functions.dart';
 
 final functionNames = {
   '.empty': empty,
-  '.exists': () {},
+  '.exists': exists,
   '.all': () {},
   '.allTrue': () {},
   '.anyTrue': () {},
@@ -10,8 +10,8 @@ final functionNames = {
   '.anyFalse': () {},
   '.subsetOf': () {},
   '.supersetOf': () {},
-  '.count': () {},
-  '.distinct': () {},
+  '.count': count,
+  '.distinct': distinct,
   '.isDistinct': () {},
   '.where': () {},
   '.select': () {},
