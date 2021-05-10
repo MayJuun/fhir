@@ -321,17 +321,17 @@ class fhirpathParser extends Parser {
         default:
           throw NoViableAltException(this);
       }
-      context.stop = tokenStream.LT(-1);
+      context!.stop = tokenStream.LT(-1);
       state = 74;
       errorHandler.sync(this);
-      _alt = interpreter.adaptivePredict(tokenStream, 2, context);
+      _alt = interpreter!.adaptivePredict(tokenStream, 2, context);
       while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
         if (_alt == 1) {
           if (parseListeners != null) triggerExitRuleEvent();
           _prevctx = _localctx;
           state = 72;
           errorHandler.sync(this);
-          switch (interpreter.adaptivePredict(tokenStream, 1, context)) {
+          switch (interpreter!.adaptivePredict(tokenStream, 1, context)) {
             case 1:
               _localctx = MultiplicativeExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
@@ -566,7 +566,7 @@ class fhirpathParser extends Parser {
         }
         state = 76;
         errorHandler.sync(this);
-        _alt = interpreter.adaptivePredict(tokenStream, 2, context);
+        _alt = interpreter!.adaptivePredict(tokenStream, 2, context);
       }
     } on RecognitionException catch (re) {
       _localctx.exception = re;
@@ -644,11 +644,11 @@ class fhirpathParser extends Parser {
   LiteralContext literal() {
     dynamic _localctx = LiteralContext(context, state);
     enterRule(_localctx, 4, RULE_literal);
-    int _la;
+    int? _la;
     try {
       state = 95;
       errorHandler.sync(this);
-      switch (interpreter.adaptivePredict(tokenStream, 4, context)) {
+      switch (interpreter!.adaptivePredict(tokenStream, 4, context)) {
         case 1:
           _localctx = NullLiteralContext(_localctx);
           enterOuterAlt(_localctx, 1);
@@ -661,7 +661,7 @@ class fhirpathParser extends Parser {
           _localctx = BooleanLiteralContext(_localctx);
           enterOuterAlt(_localctx, 2);
           state = 88;
-          _la = tokenStream.LA(1)!;
+          _la = tokenStream.LA(1);
           if (!(_la == TOKEN_T__31 || _la == TOKEN_T__32)) {
             errorHandler.recoverInline(this);
           } else {
@@ -759,7 +759,7 @@ class fhirpathParser extends Parser {
     try {
       state = 107;
       errorHandler.sync(this);
-      switch (interpreter.adaptivePredict(tokenStream, 6, context)) {
+      switch (interpreter!.adaptivePredict(tokenStream, 6, context)) {
         case 1:
           _localctx = MemberInvocationContext(_localctx);
           enterOuterAlt(_localctx, 1);
@@ -857,14 +857,14 @@ class fhirpathParser extends Parser {
   ParamListContext paramList() {
     dynamic _localctx = ParamListContext(context, state);
     enterRule(_localctx, 12, RULE_paramList);
-    int _la;
+    int? _la;
     try {
       enterOuterAlt(_localctx, 1);
       state = 116;
       expression(0);
       state = 121;
       errorHandler.sync(this);
-      _la = tokenStream.LA(1)!;
+      _la = tokenStream.LA(1);
       while (_la == TOKEN_T__37) {
         state = 117;
         match(TOKEN_T__37);
@@ -872,7 +872,7 @@ class fhirpathParser extends Parser {
         expression(0);
         state = 123;
         errorHandler.sync(this);
-        _la = tokenStream.LA(1)!;
+        _la = tokenStream.LA(1);
       }
     } on RecognitionException catch (re) {
       _localctx.exception = re;
@@ -893,7 +893,7 @@ class fhirpathParser extends Parser {
       match(TOKEN_NUMBER);
       state = 126;
       errorHandler.sync(this);
-      switch (interpreter.adaptivePredict(tokenStream, 9, context)) {
+      switch (interpreter!.adaptivePredict(tokenStream, 9, context)) {
         case 1:
           state = 125;
           unit();
@@ -1049,13 +1049,13 @@ class fhirpathParser extends Parser {
     dynamic _localctx = QualifiedIdentifierContext(context, state);
     enterRule(_localctx, 24, RULE_qualifiedIdentifier);
     try {
-      int _alt;
+      int? _alt;
       enterOuterAlt(_localctx, 1);
       state = 139;
       identifier();
       state = 144;
       errorHandler.sync(this);
-      _alt = interpreter.adaptivePredict(tokenStream, 11, context);
+      _alt = interpreter!.adaptivePredict(tokenStream, 11, context);
       while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
         if (_alt == 1) {
           state = 140;
@@ -1065,7 +1065,7 @@ class fhirpathParser extends Parser {
         }
         state = 146;
         errorHandler.sync(this);
-        _alt = interpreter.adaptivePredict(tokenStream, 11, context);
+        _alt = interpreter!.adaptivePredict(tokenStream, 11, context);
       }
     } on RecognitionException catch (re) {
       _localctx.exception = re;
@@ -1111,7 +1111,7 @@ class fhirpathParser extends Parser {
   }
 
   @override
-  bool sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
+  bool sempred(RuleContext? _localctx, int ruleIndex, int predIndex) {
     switch (ruleIndex) {
       case 0:
         return _expression_sempred(_localctx, predIndex);
@@ -1119,7 +1119,7 @@ class fhirpathParser extends Parser {
     return true;
   }
 
-  bool _expression_sempred(ExpressionContext _localctx, int predIndex) {
+  bool _expression_sempred(RuleContext? _localctx, int predIndex) {
     switch (predIndex) {
       case 0:
         return precpred(context, 10);
@@ -1299,7 +1299,7 @@ class LiteralContext extends ParserRuleContext {
 }
 
 class ExternalConstantContext extends ParserRuleContext {
-  IdentifierContext identifier() => getRuleContext<IdentifierContext>(0)!;
+  IdentifierContext? identifier() => getRuleContext<IdentifierContext>(0);
   TerminalNode? STRING() => getToken(fhirpathParser.TOKEN_STRING, 0);
   ExternalConstantContext([ParserRuleContext? parent, int? invokingState])
       : super(parent, invokingState);
@@ -1329,7 +1329,7 @@ class InvocationContext extends ParserRuleContext {
 }
 
 class FunctionContext extends ParserRuleContext {
-  IdentifierContext identifier() => getRuleContext<IdentifierContext>(0)!;
+  IdentifierContext? identifier() => getRuleContext<IdentifierContext>(0);
   ParamListContext? paramList() => getRuleContext<ParamListContext>(0);
   FunctionContext([ParserRuleContext? parent, int? invokingState])
       : super(parent, invokingState);
@@ -1348,7 +1348,7 @@ class FunctionContext extends ParserRuleContext {
 
 class ParamListContext extends ParserRuleContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   ParamListContext([ParserRuleContext? parent, int? invokingState])
       : super(parent, invokingState);
   @override
@@ -1366,7 +1366,7 @@ class ParamListContext extends ParserRuleContext {
 
 class QuantityContext extends ParserRuleContext {
   TerminalNode? NUMBER() => getToken(fhirpathParser.TOKEN_NUMBER, 0);
-  UnitContext unit() => getRuleContext<UnitContext>(0)!;
+  UnitContext? unit() => getRuleContext<UnitContext>(0);
   QuantityContext([ParserRuleContext? parent, int? invokingState])
       : super(parent, invokingState);
   @override
@@ -1383,11 +1383,11 @@ class QuantityContext extends ParserRuleContext {
 }
 
 class UnitContext extends ParserRuleContext {
-  DateTimePrecisionContext dateTimePrecision() =>
+  DateTimePrecisionContext? dateTimePrecision() =>
       getRuleContext<DateTimePrecisionContext>(0);
-  PluralDateTimePrecisionContext pluralDateTimePrecision() =>
+  PluralDateTimePrecisionContext? pluralDateTimePrecision() =>
       getRuleContext<PluralDateTimePrecisionContext>(0);
-  TerminalNode STRING() => getToken(fhirpathParser.TOKEN_STRING, 0);
+  TerminalNode? STRING() => getToken(fhirpathParser.TOKEN_STRING, 0);
   UnitContext([ParserRuleContext? parent, int? invokingState])
       : super(parent, invokingState);
   @override
@@ -1439,7 +1439,7 @@ class PluralDateTimePrecisionContext extends ParserRuleContext {
 }
 
 class TypeSpecifierContext extends ParserRuleContext {
-  QualifiedIdentifierContext qualifiedIdentifier() =>
+  QualifiedIdentifierContext? qualifiedIdentifier() =>
       getRuleContext<QualifiedIdentifierContext>(0);
   TypeSpecifierContext([ParserRuleContext? parent, int? invokingState])
       : super(parent, invokingState);
@@ -1458,7 +1458,7 @@ class TypeSpecifierContext extends ParserRuleContext {
 
 class QualifiedIdentifierContext extends ParserRuleContext {
   List<IdentifierContext> identifiers() => getRuleContexts<IdentifierContext>();
-  IdentifierContext identifier(int i) => getRuleContext<IdentifierContext>(i);
+  IdentifierContext? identifier(int i) => getRuleContext<IdentifierContext>(i);
   QualifiedIdentifierContext([ParserRuleContext? parent, int? invokingState])
       : super(parent, invokingState);
   @override
@@ -1475,8 +1475,8 @@ class QualifiedIdentifierContext extends ParserRuleContext {
 }
 
 class IdentifierContext extends ParserRuleContext {
-  TerminalNode IDENTIFIER() => getToken(fhirpathParser.TOKEN_IDENTIFIER, 0);
-  TerminalNode DELIMITEDIDENTIFIER() =>
+  TerminalNode? IDENTIFIER() => getToken(fhirpathParser.TOKEN_IDENTIFIER, 0);
+  TerminalNode? DELIMITEDIDENTIFIER() =>
       getToken(fhirpathParser.TOKEN_DELIMITEDIDENTIFIER, 0);
   IdentifierContext([ParserRuleContext? parent, int? invokingState])
       : super(parent, invokingState);
@@ -1495,7 +1495,7 @@ class IdentifierContext extends ParserRuleContext {
 
 class IndexerExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   IndexerExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1511,7 +1511,7 @@ class IndexerExpressionContext extends ExpressionContext {
 }
 
 class PolarityExpressionContext extends ExpressionContext {
-  ExpressionContext expression() => getRuleContext<ExpressionContext>(0);
+  ExpressionContext? expression() => getRuleContext<ExpressionContext>(0);
   PolarityExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1528,7 +1528,7 @@ class PolarityExpressionContext extends ExpressionContext {
 
 class AdditiveExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   AdditiveExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1545,7 +1545,7 @@ class AdditiveExpressionContext extends ExpressionContext {
 
 class MultiplicativeExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   MultiplicativeExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1564,7 +1564,7 @@ class MultiplicativeExpressionContext extends ExpressionContext {
 
 class UnionExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   UnionExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1581,7 +1581,7 @@ class UnionExpressionContext extends ExpressionContext {
 
 class OrExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   OrExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1598,7 +1598,7 @@ class OrExpressionContext extends ExpressionContext {
 
 class AndExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   AndExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1615,7 +1615,7 @@ class AndExpressionContext extends ExpressionContext {
 
 class MembershipExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   MembershipExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1632,7 +1632,7 @@ class MembershipExpressionContext extends ExpressionContext {
 
 class InequalityExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   InequalityExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1648,8 +1648,8 @@ class InequalityExpressionContext extends ExpressionContext {
 }
 
 class InvocationExpressionContext extends ExpressionContext {
-  ExpressionContext expression() => getRuleContext<ExpressionContext>(0);
-  InvocationContext invocation() => getRuleContext<InvocationContext>(0);
+  ExpressionContext? expression() => getRuleContext<ExpressionContext>(0);
+  InvocationContext? invocation() => getRuleContext<InvocationContext>(0);
   InvocationExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1666,7 +1666,7 @@ class InvocationExpressionContext extends ExpressionContext {
 
 class EqualityExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   EqualityExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1683,7 +1683,7 @@ class EqualityExpressionContext extends ExpressionContext {
 
 class ImpliesExpressionContext extends ExpressionContext {
   List<ExpressionContext> expressions() => getRuleContexts<ExpressionContext>();
-  ExpressionContext expression(int i) => getRuleContext<ExpressionContext>(i)!;
+  ExpressionContext? expression(int i) => getRuleContext<ExpressionContext>(i);
   ImpliesExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1699,7 +1699,7 @@ class ImpliesExpressionContext extends ExpressionContext {
 }
 
 class TermExpressionContext extends ExpressionContext {
-  TermContext term() => getRuleContext<TermContext>(0);
+  TermContext? term() => getRuleContext<TermContext>(0);
   TermExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
   }
@@ -1715,8 +1715,8 @@ class TermExpressionContext extends ExpressionContext {
 }
 
 class TypeExpressionContext extends ExpressionContext {
-  ExpressionContext expression() => getRuleContext<ExpressionContext>(0);
-  TypeSpecifierContext typeSpecifier() =>
+  ExpressionContext? expression() => getRuleContext<ExpressionContext>(0);
+  TypeSpecifierContext? typeSpecifier() =>
       getRuleContext<TypeSpecifierContext>(0);
   TypeExpressionContext(ExpressionContext ctx) {
     copyFrom(ctx);
@@ -1733,7 +1733,7 @@ class TypeExpressionContext extends ExpressionContext {
 }
 
 class ExternalConstantTermContext extends TermContext {
-  ExternalConstantContext externalConstant() =>
+  ExternalConstantContext? externalConstant() =>
       getRuleContext<ExternalConstantContext>(0);
   ExternalConstantTermContext(TermContext ctx) {
     copyFrom(ctx);
@@ -1750,7 +1750,7 @@ class ExternalConstantTermContext extends TermContext {
 }
 
 class LiteralTermContext extends TermContext {
-  LiteralContext literal() => getRuleContext<LiteralContext>(0);
+  LiteralContext? literal() => getRuleContext<LiteralContext>(0);
   LiteralTermContext(TermContext ctx) {
     copyFrom(ctx);
   }
@@ -1766,7 +1766,7 @@ class LiteralTermContext extends TermContext {
 }
 
 class ParenthesizedTermContext extends TermContext {
-  ExpressionContext expression() => getRuleContext<ExpressionContext>(0);
+  ExpressionContext? expression() => getRuleContext<ExpressionContext>(0);
   ParenthesizedTermContext(TermContext ctx) {
     copyFrom(ctx);
   }
@@ -1782,7 +1782,7 @@ class ParenthesizedTermContext extends TermContext {
 }
 
 class InvocationTermContext extends TermContext {
-  InvocationContext invocation() => getRuleContext<InvocationContext>(0);
+  InvocationContext? invocation() => getRuleContext<InvocationContext>(0);
   InvocationTermContext(TermContext ctx) {
     copyFrom(ctx);
   }
@@ -1798,7 +1798,7 @@ class InvocationTermContext extends TermContext {
 }
 
 class TimeLiteralContext extends LiteralContext {
-  TerminalNode TIME() => getToken(fhirpathParser.TOKEN_TIME, 0);
+  TerminalNode? TIME() => getToken(fhirpathParser.TOKEN_TIME, 0);
   TimeLiteralContext(LiteralContext ctx) {
     copyFrom(ctx);
   }
@@ -1829,7 +1829,7 @@ class NullLiteralContext extends LiteralContext {
 }
 
 class DateTimeLiteralContext extends LiteralContext {
-  TerminalNode DATETIME() => getToken(fhirpathParser.TOKEN_DATETIME, 0);
+  TerminalNode? DATETIME() => getToken(fhirpathParser.TOKEN_DATETIME, 0);
   DateTimeLiteralContext(LiteralContext ctx) {
     copyFrom(ctx);
   }
@@ -1845,7 +1845,7 @@ class DateTimeLiteralContext extends LiteralContext {
 }
 
 class StringLiteralContext extends LiteralContext {
-  TerminalNode STRING() => getToken(fhirpathParser.TOKEN_STRING, 0);
+  TerminalNode? STRING() => getToken(fhirpathParser.TOKEN_STRING, 0);
   StringLiteralContext(LiteralContext ctx) {
     copyFrom(ctx);
   }
@@ -1861,7 +1861,7 @@ class StringLiteralContext extends LiteralContext {
 }
 
 class DateLiteralContext extends LiteralContext {
-  TerminalNode DATE() => getToken(fhirpathParser.TOKEN_DATE, 0);
+  TerminalNode? DATE() => getToken(fhirpathParser.TOKEN_DATE, 0);
   DateLiteralContext(LiteralContext ctx) {
     copyFrom(ctx);
   }
@@ -1892,7 +1892,7 @@ class BooleanLiteralContext extends LiteralContext {
 }
 
 class NumberLiteralContext extends LiteralContext {
-  TerminalNode NUMBER() => getToken(fhirpathParser.TOKEN_NUMBER, 0);
+  TerminalNode? NUMBER() => getToken(fhirpathParser.TOKEN_NUMBER, 0);
   NumberLiteralContext(LiteralContext ctx) {
     copyFrom(ctx);
   }
@@ -1908,7 +1908,7 @@ class NumberLiteralContext extends LiteralContext {
 }
 
 class QuantityLiteralContext extends LiteralContext {
-  QuantityContext quantity() => getRuleContext<QuantityContext>(0);
+  QuantityContext? quantity() => getRuleContext<QuantityContext>(0);
   QuantityLiteralContext(LiteralContext ctx) {
     copyFrom(ctx);
   }
@@ -1969,7 +1969,7 @@ class IndexInvocationContext extends InvocationContext {
 }
 
 class FunctionInvocationContext extends InvocationContext {
-  FunctionContext function() => getRuleContext<FunctionContext>(0);
+  FunctionContext? function() => getRuleContext<FunctionContext>(0);
   FunctionInvocationContext(InvocationContext ctx) {
     copyFrom(ctx);
   }
@@ -1985,7 +1985,7 @@ class FunctionInvocationContext extends InvocationContext {
 }
 
 class MemberInvocationContext extends InvocationContext {
-  IdentifierContext identifier() => getRuleContext<IdentifierContext>(0)!;
+  IdentifierContext? identifier() => getRuleContext<IdentifierContext>(0);
   MemberInvocationContext(InvocationContext ctx) {
     copyFrom(ctx);
   }

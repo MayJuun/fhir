@@ -13,6 +13,5 @@ List<String> operationsList(List<String> stringList) {
       newList.add(list);
     }
   }
-  print(newList);
   return newList;
 }

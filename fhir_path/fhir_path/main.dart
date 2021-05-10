@@ -14,15 +14,19 @@ void main() {
     finalList.forEach((element) {
       print('${" " * int.parse(element[0]) * 3}$element');
     });
-    print(applyFunctions(finalList, resource));
+    // print(applyFunctions(finalList, resource));
   }
 }
 
 final pathStrings = [
   'Patient.name.exists()',
   'Patient.identifier.exists(use = "official")',
-  // 'Patient.telecom.exists(system = "phone" and use = "mobile")',
-  // 'Patient.generalPractitioner.exists($this is Practitioner)',
+  'Patient.telecom.exists(system = "phone" and use = "mobile")',
+  'Patient.generalPractitioner.exists(\$this is Practitioner)',
+  'Appointment.minutesDuration / 60 > 5',
+  'MedicationAdministration.wasNotGiven implies MedicationAdministration.reasonNotGiven.exists()',
+  'name.given | name.family',
+  "'sir ' + name.given",
 ];
 final resource = Patient(
   name: [
