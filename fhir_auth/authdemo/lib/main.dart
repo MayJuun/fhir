@@ -17,20 +17,6 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
-                  child: const Text('Aidbox', style: TextStyle(fontSize: 44)),
-                  // need to authorize app online before logging in via app
-                  onPressed: () async => await aidbox()),
-              ElevatedButton(
-                  child: const Text('AWS', style: TextStyle(fontSize: 44)),
-                  onPressed: () async {}),
-              ElevatedButton(
-                  child: const Text('Azure', style: TextStyle(fontSize: 44)),
-                  onPressed: () async {}),
-              ElevatedButton(
-                  child:
-                      const Text('GCP Health', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await gcs()),
-              ElevatedButton(
                   child: const Text('Hapi', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await hapi()),
               ElevatedButton(
@@ -39,6 +25,19 @@ class MyApp extends StatelessWidget {
               ElevatedButton(
                   child: const Text('Mihin', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await mihin()),
+              ElevatedButton(
+                  child:
+                      const Text('GCP Health', style: TextStyle(fontSize: 44)),
+                  onPressed: () async => await gcs()),
+              ElevatedButton(
+                  child: const Text('Aidbox', style: TextStyle(fontSize: 44)),
+                  onPressed: () {}),
+              ElevatedButton(
+                  child: const Text('AWS', style: TextStyle(fontSize: 44)),
+                  onPressed: () {}),
+              ElevatedButton(
+                  child: const Text('Azure', style: TextStyle(fontSize: 44)),
+                  onPressed: () {}),
             ],
           ),
         ),
