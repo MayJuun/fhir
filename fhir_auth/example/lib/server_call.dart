@@ -23,13 +23,13 @@ Future aws(Uri fhirCallback) async {}
 //          fhirCallback: FhirUri(fhirCallback),
 //     );
 
-Future<List<Resource>> azure(Uri fhirCallback) async => await smartRequest(
-      url: Api.azureUrl,
-      clientId: Api.azureClientId,
-      authUrl: Api.azureAuthUrl,
-      tokenUrl: Api.azureTokenUrl,
-      fhirCallback: FhirUri(fhirCallback),
-    );
+// Future<List<Resource>> azure(Uri fhirCallback) async => await smartRequest(
+//       url: Api.azureUrl,
+//       clientId: Api.azureClientId,
+//       authUrl: Api.azureAuthUrl,
+//       tokenUrl: Api.azureTokenUrl,
+//       fhirCallback: FhirUri(fhirCallback),
+//     );
 
 Future<List<Resource>> gcs() async => await gcsRequest(
       Api.gcsUrl,
