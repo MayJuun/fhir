@@ -1,6 +1,16 @@
+## [0.4.0]
+* Now works for mobile and web
+* Still needs a better readme
+* Now has authenticated against
+    1. Google Healthcare API
+    2. Azure API for FHIR
+    3. HAPI
+    4. Logica
+    5. Aidbox
+    6. MiHIN
+
 ## [0.3.0-nullsafety.8]
 * Updating dependencies
-
 ## [0.3.0-nullsafety.7]
 * So Close.
 * Normal auth for mobile with no significant changes since last prerelease
