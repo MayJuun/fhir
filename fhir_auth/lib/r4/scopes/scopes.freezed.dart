@@ -303,6 +303,7 @@ class __$ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_Scopes extends _Scopes {
   _$_Scopes(
       {this.clinicalScopes,
