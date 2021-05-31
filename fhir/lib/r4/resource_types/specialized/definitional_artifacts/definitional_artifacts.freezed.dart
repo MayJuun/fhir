@@ -1991,9 +1991,8 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ActivityDefinition extends _ActivityDefinition {
   _$_ActivityDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
@@ -3082,9 +3081,8 @@ class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
   _$_ActivityDefinitionParticipant(
       {this.id,
@@ -3406,9 +3404,8 @@ class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ActivityDefinitionDynamicValue
     extends _ActivityDefinitionDynamicValue {
   _$_ActivityDefinitionDynamicValue(
@@ -4436,9 +4433,8 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceDefinition extends _DeviceDefinition {
   _$_DeviceDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
@@ -5158,9 +5154,8 @@ class __$DeviceDefinitionUdiDeviceIdentifierCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceDefinitionUdiDeviceIdentifier
     extends _DeviceDefinitionUdiDeviceIdentifier {
   _$_DeviceDefinitionUdiDeviceIdentifier(
@@ -5554,9 +5549,8 @@ class __$DeviceDefinitionDeviceNameCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceDefinitionDeviceName extends _DeviceDefinitionDeviceName {
   _$_DeviceDefinitionDeviceName(
       {this.id,
@@ -5919,9 +5913,8 @@ class __$DeviceDefinitionSpecializationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceDefinitionSpecialization
     extends _DeviceDefinitionSpecialization {
   _$_DeviceDefinitionSpecialization(
@@ -6226,9 +6219,8 @@ class __$DeviceDefinitionCapabilityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceDefinitionCapability extends _DeviceDefinitionCapability {
   _$_DeviceDefinitionCapability(
       {this.id,
@@ -6518,9 +6510,8 @@ class __$DeviceDefinitionPropertyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceDefinitionProperty extends _DeviceDefinitionProperty {
   _$_DeviceDefinitionProperty(
       {this.id,
@@ -6889,9 +6880,8 @@ class __$DeviceDefinitionMaterialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceDefinitionMaterial extends _DeviceDefinitionMaterial {
   _$_DeviceDefinitionMaterial(
       {this.id,
@@ -8334,9 +8324,8 @@ class __$EventDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EventDefinition extends _EventDefinition {
   _$_EventDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
@@ -9659,9 +9648,8 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ObservationDefinition extends _ObservationDefinition {
   _$_ObservationDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
@@ -10290,9 +10278,8 @@ class __$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ObservationDefinitionQuantitativeDetails
     extends _ObservationDefinitionQuantitativeDetails {
   _$_ObservationDefinitionQuantitativeDetails(
@@ -10892,9 +10879,8 @@ class __$ObservationDefinitionQualifiedIntervalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ObservationDefinitionQualifiedInterval
     extends _ObservationDefinitionQualifiedInterval {
   _$_ObservationDefinitionQualifiedInterval(
@@ -12491,9 +12477,8 @@ class __$PlanDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinition extends _PlanDefinition {
   _$_PlanDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
@@ -13426,9 +13411,8 @@ class __$PlanDefinitionGoalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
   _$_PlanDefinitionGoal(
       {this.id,
@@ -13857,9 +13841,8 @@ class __$PlanDefinitionTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
   _$_PlanDefinitionTarget(
       {this.id,
@@ -15228,9 +15211,8 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   _$_PlanDefinitionAction(
       {this.id,
@@ -16040,9 +16022,8 @@ class __$PlanDefinitionConditionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
   _$_PlanDefinitionCondition(
       {this.id,
@@ -16459,9 +16440,8 @@ class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
   _$_PlanDefinitionRelatedAction(
       {this.id,
@@ -16837,9 +16817,8 @@ class __$PlanDefinitionParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
   _$_PlanDefinitionParticipant(
       {this.id,
@@ -17169,9 +17148,8 @@ class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
   _$_PlanDefinitionDynamicValue(
       {this.id,
@@ -18403,9 +18381,8 @@ class __$QuestionnaireCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
       {@JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
@@ -19670,9 +19647,8 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireItem extends _QuestionnaireItem {
   _$_QuestionnaireItem(
       {this.id,
@@ -20719,9 +20695,8 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   _$_QuestionnaireEnableWhen(
       {this.id,
@@ -21472,9 +21447,8 @@ class __$QuestionnaireAnswerOptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
   _$_QuestionnaireAnswerOption(
       {this.id,
@@ -22296,9 +22270,8 @@ class __$QuestionnaireInitialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireInitial extends _QuestionnaireInitial {
   _$_QuestionnaireInitial(
       {this.id,
@@ -23070,9 +23043,8 @@ class __$SpecimenDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenDefinition extends _SpecimenDefinition {
   _$_SpecimenDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
@@ -23731,9 +23703,8 @@ class __$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenDefinitionTypeTested extends _SpecimenDefinitionTypeTested {
   _$_SpecimenDefinitionTypeTested(
       {this.id,
@@ -24393,9 +24364,8 @@ class __$SpecimenDefinitionContainerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenDefinitionContainer extends _SpecimenDefinitionContainer {
   _$_SpecimenDefinitionContainer(
       {this.id,
@@ -24804,9 +24774,8 @@ class __$SpecimenDefinitionAdditiveCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenDefinitionAdditive extends _SpecimenDefinitionAdditive {
   _$_SpecimenDefinitionAdditive(
       {this.id,
@@ -25179,9 +25148,8 @@ class __$SpecimenDefinitionHandlingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenDefinitionHandling extends _SpecimenDefinitionHandling {
   _$_SpecimenDefinitionHandling(
       {this.id,

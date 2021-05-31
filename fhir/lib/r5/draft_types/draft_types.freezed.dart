@@ -289,9 +289,8 @@ class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Population extends _Population {
   _$_Population(
       {this.id,
@@ -672,9 +671,8 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProductShelfLife extends _ProductShelfLife {
   _$_ProductShelfLife(
       {this.id,
@@ -1267,9 +1265,8 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProdCharacteristic extends _ProdCharacteristic {
   _$_ProdCharacteristic(
       {this.id,
@@ -1777,9 +1774,8 @@ class __$MarketingStatusCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MarketingStatus extends _MarketingStatus {
   _$_MarketingStatus(
       {this.id,
@@ -3477,9 +3473,8 @@ class __$CitationCopyWithImpl<$Res> extends _$CitationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Citation extends _Citation {
   _$_Citation(
       {this.resourceType = 'Citation',
@@ -4376,9 +4371,8 @@ class __$CitationSummaryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationSummary extends _CitationSummary {
   _$_CitationSummary(
       {this.id,
@@ -4726,9 +4720,8 @@ class __$CitationVariantCitationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationVariantCitation extends _CitationVariantCitation {
   _$_CitationVariantCitation(
       {this.id,
@@ -5116,9 +5109,8 @@ class __$CitationJournalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationJournal extends _CitationJournal {
   _$_CitationJournal(
       {this.id,
@@ -5544,9 +5536,8 @@ class __$CitationJournalIssueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationJournalIssue extends _CitationJournalIssue {
   _$_CitationJournalIssue(
       {this.id,
@@ -6095,9 +6086,8 @@ class __$CitationPublicationDateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationPublicationDate extends _CitationPublicationDate {
   _$_CitationPublicationDate(
       {this.id,
@@ -6604,9 +6594,8 @@ class __$CitationPublicationInfoCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationPublicationInfo extends _CitationPublicationInfo {
   _$_CitationPublicationInfo(
       {this.id,
@@ -7105,9 +7094,8 @@ class __$CitationPublishedInCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationPublishedIn extends _CitationPublishedIn {
   _$_CitationPublishedIn(
       {this.id,
@@ -7526,9 +7514,8 @@ class __$CitationAlternativeTitleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationAlternativeTitle extends _CitationAlternativeTitle {
   _$_CitationAlternativeTitle(
       {this.id,
@@ -7918,9 +7905,8 @@ class __$CitationPaginationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationPagination extends _CitationPagination {
   _$_CitationPagination(
       {this.id,
@@ -8274,9 +8260,8 @@ class __$CitationArticleUrlCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationArticleUrl extends _CitationArticleUrl {
   _$_CitationArticleUrl(
       {this.id,
@@ -8673,9 +8658,8 @@ class __$CitationAlternativeAbstractCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationAlternativeAbstract extends _CitationAlternativeAbstract {
   _$_CitationAlternativeAbstract(
       {this.id,
@@ -9037,9 +9021,8 @@ class __$CitationContributorshipCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationContributorship extends _CitationContributorship {
   _$_CitationContributorship(
       {this.id,
@@ -9641,9 +9624,8 @@ class __$CitationEntryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationEntry extends _CitationEntry {
   _$_CitationEntry(
       {this.id,
@@ -10141,9 +10123,8 @@ class __$CitationAffiliationInfoCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationAffiliationInfo extends _CitationAffiliationInfo {
   _$_CitationAffiliationInfo(
       {this.id,
@@ -10542,9 +10523,8 @@ class __$CitationSummary1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationSummary1 extends _CitationSummary1 {
   _$_CitationSummary1(
       {this.id,
@@ -10954,9 +10934,8 @@ class __$CitationAlternativeFormCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationAlternativeForm extends _CitationAlternativeForm {
   _$_CitationAlternativeForm(
       {this.id,
@@ -11372,9 +11351,8 @@ class __$CitationJournalIssue1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationJournalIssue1 extends _CitationJournalIssue1 {
   _$_CitationJournalIssue1(
       {this.id,
@@ -11923,9 +11901,8 @@ class __$CitationPublicationDate1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationPublicationDate1 extends _CitationPublicationDate1 {
   _$_CitationPublicationDate1(
       {this.id,
@@ -12401,9 +12378,8 @@ class __$CitationPagination1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationPagination1 extends _CitationPagination1 {
   _$_CitationPagination1(
       {this.id,
@@ -12850,9 +12826,8 @@ class __$CitationPublicationInfo1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationPublicationInfo1 extends _CitationPublicationInfo1 {
   _$_CitationPublicationInfo1(
       {this.id,
@@ -13336,9 +13311,8 @@ class __$CitationPublishedIn1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationPublishedIn1 extends _CitationPublishedIn1 {
   _$_CitationPublishedIn1(
       {this.id,
@@ -13702,9 +13676,8 @@ class __$CitationKeywordListCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationKeywordList extends _CitationKeywordList {
   _$_CitationKeywordList(
       {this.id,
@@ -14038,9 +14011,8 @@ class __$CitationKeywordCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationKeyword extends _CitationKeyword {
   _$_CitationKeyword(
       {this.id,
@@ -14641,9 +14613,8 @@ class __$CitationMedlinePubMedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationMedlinePubMed extends _CitationMedlinePubMed {
   _$_CitationMedlinePubMed(
       {this.id,
@@ -15092,9 +15063,8 @@ class __$CitationPubMedPubDateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationPubMedPubDate extends _CitationPubMedPubDate {
   _$_CitationPubMedPubDate(
       {this.id,
@@ -15429,9 +15399,8 @@ class __$CitationRelatedArticleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CitationRelatedArticle extends _CitationRelatedArticle {
   _$_CitationRelatedArticle(
       {this.id,
@@ -16813,9 +16782,8 @@ class __$EvidenceReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EvidenceReport extends _EvidenceReport {
   _$_EvidenceReport(
       {this.resourceType = 'EvidenceReport',
@@ -17557,9 +17525,8 @@ class __$EvidenceReportSubjectCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EvidenceReportSubject extends _EvidenceReportSubject {
   _$_EvidenceReportSubject(
       {this.id,
@@ -18060,9 +18027,8 @@ class __$EvidenceReportCharacteristicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
   _$_EvidenceReportCharacteristic(
       {this.id,
@@ -18495,9 +18461,8 @@ class __$EvidenceReportRelatesToCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
   _$_EvidenceReportRelatesTo(
       {this.id,
@@ -19055,9 +19020,8 @@ class __$EvidenceReportSectionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EvidenceReportSection extends _EvidenceReportSection {
   _$_EvidenceReportSection(
       {this.id,

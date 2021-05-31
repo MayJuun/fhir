@@ -290,9 +290,8 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Annotation extends _Annotation {
   _$_Annotation(
       {this.id,
@@ -909,9 +908,8 @@ class __$AttachmentCopyWithImpl<$Res> extends _$AttachmentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Attachment extends _Attachment {
   _$_Attachment(
       {this.id,
@@ -1488,9 +1486,8 @@ class __$IdentifierCopyWithImpl<$Res> extends _$IdentifierCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Identifier extends _Identifier {
   _$_Identifier(
       {this.id,
@@ -1829,9 +1826,8 @@ class __$CodeableConceptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeableConcept extends _CodeableConcept {
   _$_CodeableConcept(
       {this.id,
@@ -2265,9 +2261,8 @@ class __$CodingCopyWithImpl<$Res> extends _$CodingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Coding extends _Coding {
   _$_Coding(
       {this.id,
@@ -2801,9 +2796,8 @@ class __$QuantityCopyWithImpl<$Res> extends _$QuantityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Quantity extends _Quantity {
   _$_Quantity(
       {this.id,
@@ -3348,9 +3342,8 @@ class __$FhirDurationCopyWithImpl<$Res> extends _$FhirDurationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_FhirDuration extends _FhirDuration {
   _$_FhirDuration(
       {this.id,
@@ -3892,9 +3885,8 @@ class __$DistanceCopyWithImpl<$Res> extends _$DistanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Distance extends _Distance {
   _$_Distance(
       {this.id,
@@ -4434,9 +4426,8 @@ class __$CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Count extends _Count {
   _$_Count(
       {this.id,
@@ -4818,9 +4809,8 @@ class __$MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Money extends _Money {
   _$_Money(
       {this.id,
@@ -5287,9 +5277,8 @@ class __$AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Age extends _Age {
   _$_Age(
       {this.id,
@@ -5638,9 +5627,8 @@ class __$RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Range extends _Range {
   _$_Range(
       {this.id,
@@ -5925,9 +5913,8 @@ class __$PeriodCopyWithImpl<$Res> extends _$PeriodCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Period extends _Period {
   _$_Period(
       {this.id,
@@ -6204,9 +6191,8 @@ class __$RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Ratio extends _Ratio {
   _$_Ratio(
       {this.id,
@@ -6703,9 +6689,8 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SampledData extends _SampledData {
   _$_SampledData(
       {this.id,
@@ -7273,9 +7258,8 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Signature extends _Signature {
   _$_Signature(
       {this.id,
@@ -7828,9 +7812,8 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_HumanName extends _HumanName {
   _$_HumanName(
       {this.id,
@@ -8568,9 +8551,8 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Address extends _Address {
   _$_Address(
       {this.id,
@@ -9190,9 +9172,8 @@ class __$ContactPointCopyWithImpl<$Res> extends _$ContactPointCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContactPoint extends _ContactPoint {
   _$_ContactPoint(
       {this.id,
@@ -9580,9 +9561,8 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Timing extends _Timing {
   _$_Timing(
       {this.id,
@@ -10559,9 +10539,8 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TimingRepeat extends _TimingRepeat {
   _$_TimingRepeat(
       {this.id,

@@ -787,9 +787,8 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEvent extends _AdverseEvent {
   _$_AdverseEvent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
@@ -1482,9 +1481,8 @@ class __$AdverseEventSuspectEntityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEventSuspectEntity extends _AdverseEventSuspectEntity {
   _$_AdverseEventSuspectEntity(
       {required this.instance,
@@ -2630,9 +2628,8 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AllergyIntolerance extends _AllergyIntolerance {
   _$_AllergyIntolerance(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AllergyIntolerance)
@@ -3404,9 +3401,8 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
   _$_AllergyIntoleranceReaction(
       {this.substance,
@@ -4451,9 +4447,8 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalImpression extends _ClinicalImpression {
   _$_ClinicalImpression(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClinicalImpression)
@@ -5010,9 +5005,8 @@ class __$ClinicalImpressionInvestigationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalImpressionInvestigation
     extends _ClinicalImpressionInvestigation {
   _$_ClinicalImpressionInvestigation({required this.code, this.item})
@@ -5272,9 +5266,8 @@ class __$ClinicalImpressionFindingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
   _$_ClinicalImpressionFinding(
       {this.itemCodeableConcept,
@@ -6490,9 +6483,8 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Condition extends _Condition {
   _$_Condition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Condition)
@@ -7108,9 +7100,8 @@ class __$ConditionStageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConditionStage extends _ConditionStage {
   _$_ConditionStage({this.summary, this.assessment}) : super._();
 
@@ -7284,9 +7275,8 @@ class __$ConditionEvidenceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConditionEvidence extends _ConditionEvidence {
   _$_ConditionEvidence({this.code, this.detail}) : super._();
 
@@ -8060,9 +8050,8 @@ class __$DetectedIssueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DetectedIssue extends _DetectedIssue {
   _$_DetectedIssue(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DetectedIssue)
@@ -8594,9 +8583,8 @@ class __$DetectedIssueMitigationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
   _$_DetectedIssueMitigation(
       {required this.action,
@@ -9899,9 +9887,8 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   _$_FamilyMemberHistory(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.FamilyMemberHistory)
@@ -10743,9 +10730,8 @@ class __$FamilyMemberHistoryConditionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
   _$_FamilyMemberHistoryCondition(
       {required this.code,
@@ -11807,9 +11793,8 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Procedure extends _Procedure {
   _$_Procedure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Procedure)
@@ -12421,9 +12406,8 @@ class __$ProcedurePerformerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcedurePerformer extends _ProcedurePerformer {
   _$_ProcedurePerformer({this.role, required this.actor, this.onBehalfOf})
       : super._();
@@ -12631,9 +12615,8 @@ class __$ProcedureFocalDeviceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
   _$_ProcedureFocalDevice({this.action, required this.manipulated}) : super._();
 

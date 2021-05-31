@@ -525,9 +525,8 @@ class __$BodySiteCopyWithImpl<$Res> extends _$BodySiteCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BodySite extends _BodySite {
   _$_BodySite(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
@@ -1586,9 +1585,8 @@ class __$DiagnosticReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DiagnosticReport extends _DiagnosticReport {
   _$_DiagnosticReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
@@ -2114,9 +2112,8 @@ class __$DiagnosticReportPerformerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DiagnosticReportPerformer extends _DiagnosticReportPerformer {
   _$_DiagnosticReportPerformer({this.role, required this.actor}) : super._();
 
@@ -2338,9 +2335,8 @@ class __$DiagnosticReportImageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DiagnosticReportImage extends _DiagnosticReportImage {
   _$_DiagnosticReportImage(
       {this.comment,
@@ -2938,9 +2934,8 @@ class __$ImagingManifestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingManifest extends _ImagingManifest {
   _$_ImagingManifest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
@@ -3388,9 +3383,8 @@ class __$ImagingManifestStudyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingManifestStudy extends _ImagingManifestStudy {
   _$_ImagingManifestStudy(
       {this.uid,
@@ -3652,9 +3646,8 @@ class __$ImagingManifestSeriesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingManifestSeries extends _ImagingManifestSeries {
   _$_ImagingManifestSeries(
       {this.uid,
@@ -3924,9 +3917,8 @@ class __$ImagingManifestInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingManifestInstance extends _ImagingManifestInstance {
   _$_ImagingManifestInstance(
       {this.sopClass,
@@ -4891,9 +4883,8 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingStudy extends _ImagingStudy {
   _$_ImagingStudy(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
@@ -5801,9 +5792,8 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingStudySeries extends _ImagingStudySeries {
   _$_ImagingStudySeries(
       {this.uid,
@@ -6311,9 +6301,8 @@ class __$ImagingStudyInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingStudyInstance extends _ImagingStudyInstance {
   _$_ImagingStudyInstance(
       {this.uid,
@@ -7752,9 +7741,8 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Observation extends _Observation {
   _$_Observation(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
@@ -8568,9 +8556,8 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ObservationReferenceRange extends _ObservationReferenceRange {
   _$_ObservationReferenceRange(
       {this.low,
@@ -8844,9 +8831,8 @@ class __$ObservationRelatedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ObservationRelated extends _ObservationRelated {
   _$_ObservationRelated(
       {this.type,
@@ -9449,9 +9435,8 @@ class __$ObservationComponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ObservationComponent extends _ObservationComponent {
   _$_ObservationComponent(
       {required this.code,
@@ -10320,9 +10305,8 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$_QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
@@ -10913,9 +10897,8 @@ class __$QuestionnaireResponseItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
   _$_QuestionnaireResponseItem(
       {this.linkId,
@@ -11642,9 +11625,8 @@ class __$QuestionnaireResponseAnswerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
   _$_QuestionnaireResponseAnswer(
       {this.valueBoolean,
@@ -12680,9 +12662,8 @@ class __$SequenceCopyWithImpl<$Res> extends _$SequenceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Sequence extends _Sequence {
   _$_Sequence(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
@@ -13441,9 +13422,8 @@ class __$SequenceReferenceSeqCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SequenceReferenceSeq extends _SequenceReferenceSeq {
   _$_SequenceReferenceSeq(
       {this.chromosome,
@@ -13978,9 +13958,8 @@ class __$SequenceVariantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SequenceVariant extends _SequenceVariant {
   _$_SequenceVariant(
       {this.start,
@@ -14813,9 +14792,8 @@ class __$SequenceQualityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SequenceQuality extends _SequenceQuality {
   _$_SequenceQuality(
       {this.type,
@@ -15483,9 +15461,8 @@ class __$SequenceRepositoryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SequenceRepository extends _SequenceRepository {
   _$_SequenceRepository(
       {this.type,
@@ -16280,9 +16257,8 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Specimen extends _Specimen {
   _$_Specimen(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
@@ -16874,9 +16850,8 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenCollection extends _SpecimenCollection {
   _$_SpecimenCollection(
       {this.collector,
@@ -17246,9 +17221,8 @@ class __$SpecimenProcessingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenProcessing extends _SpecimenProcessing {
   _$_SpecimenProcessing(
       {this.description,
@@ -17663,9 +17637,8 @@ class __$SpecimenContainerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenContainer extends _SpecimenContainer {
   _$_SpecimenContainer(
       {this.identifier,

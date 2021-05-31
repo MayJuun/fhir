@@ -734,9 +734,8 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Location extends _Location {
   _$_Location(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
@@ -1351,9 +1350,8 @@ class __$LocationPositionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_LocationPosition extends _LocationPosition {
   _$_LocationPosition(
       {this.id,
@@ -1953,9 +1951,8 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Substance extends _Substance {
   _$_Substance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
@@ -2437,9 +2434,8 @@ class __$SubstanceInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceInstance extends _SubstanceInstance {
   _$_SubstanceInstance(
       {this.id,
@@ -2747,9 +2743,8 @@ class __$SubstanceIngredientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceIngredient extends _SubstanceIngredient {
   _$_SubstanceIngredient(
       {this.id,
@@ -3448,9 +3443,8 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Person extends _Person {
   _$_Person(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
@@ -3971,9 +3965,8 @@ class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PersonLink extends _PersonLink {
   _$_PersonLink(
       {this.id,
@@ -4796,9 +4789,8 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Contract extends _Contract {
   _$_Contract(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
@@ -5331,9 +5323,8 @@ class __$ContractActorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractActor extends _ContractActor {
   _$_ContractActor(
       {this.id,
@@ -5891,9 +5882,8 @@ class __$ContractValuedItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractValuedItem extends _ContractValuedItem {
   _$_ContractValuedItem(
       {this.id,
@@ -6308,9 +6298,8 @@ class __$ContractSignerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractSigner extends _ContractSigner {
   _$_ContractSigner(
       {this.id,
@@ -6860,9 +6849,8 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractTerm extends _ContractTerm {
   _$_ContractTerm(
       {this.id,
@@ -7254,9 +7242,8 @@ class __$ContractTermActorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractTermActor extends _ContractTermActor {
   _$_ContractTermActor(
       {this.id,
@@ -7545,9 +7532,8 @@ class __$ContractFriendlyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractFriendly extends _ContractFriendly {
   _$_ContractFriendly(
       {this.id,
@@ -7838,9 +7824,8 @@ class __$ContractLegalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractLegal extends _ContractLegal {
   _$_ContractLegal(
       {this.id,
@@ -8128,9 +8113,8 @@ class __$ContractRuleCopyWithImpl<$Res> extends _$ContractRuleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractRule extends _ContractRule {
   _$_ContractRule(
       {this.id,

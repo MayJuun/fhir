@@ -675,9 +675,8 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Endpoint extends _Endpoint {
   _$_Endpoint(
       {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
@@ -1943,9 +1942,8 @@ class __$HealthcareServiceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_HealthcareService extends _HealthcareService {
   _$_HealthcareService(
       {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
@@ -2625,9 +2623,8 @@ class __$HealthcareServiceEligibilityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_HealthcareServiceEligibility extends _HealthcareServiceEligibility {
   _$_HealthcareServiceEligibility(
       {this.id,
@@ -3047,9 +3044,8 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_HealthcareServiceAvailableTime
     extends _HealthcareServiceAvailableTime {
   _$_HealthcareServiceAvailableTime(
@@ -3442,9 +3438,8 @@ class __$HealthcareServiceNotAvailableCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
   _$_HealthcareServiceNotAvailable(
       {this.id,
@@ -4410,9 +4405,8 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Location extends _Location {
   _$_Location(
       {@JsonKey(unknownEnumValue: R5ResourceType.Location)
@@ -5093,9 +5087,8 @@ class __$LocationPositionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_LocationPosition extends _LocationPosition {
   _$_LocationPosition(
       {this.id,
@@ -5543,9 +5536,8 @@ class __$LocationHoursOfOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
   _$_LocationHoursOfOperation(
       {this.id,
@@ -6285,9 +6277,8 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Organization extends _Organization {
   _$_Organization(
       {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
@@ -6831,9 +6822,8 @@ class __$OrganizationContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OrganizationContact extends _OrganizationContact {
   _$_OrganizationContact(
       {this.id,
@@ -7534,9 +7524,8 @@ class __$OrganizationAffiliationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   _$_OrganizationAffiliation(
       {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)

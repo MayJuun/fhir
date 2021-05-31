@@ -1046,9 +1046,8 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Claim extends _Claim {
   _$_Claim(
       {@JsonKey(unknownEnumValue: R4ResourceType.Claim)
@@ -1717,9 +1716,8 @@ class __$ClaimRelatedCopyWithImpl<$Res> extends _$ClaimRelatedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimRelated extends _ClaimRelated {
   _$_ClaimRelated(
       {this.id,
@@ -2012,9 +2010,8 @@ class __$ClaimPayeeCopyWithImpl<$Res> extends _$ClaimPayeeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimPayee extends _ClaimPayee {
   _$_ClaimPayee(
       {this.id,
@@ -2418,9 +2415,8 @@ class __$ClaimCareTeamCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimCareTeam extends _ClaimCareTeam {
   _$_ClaimCareTeam(
       {this.id,
@@ -3085,9 +3081,8 @@ class __$ClaimSupportingInfoCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
   _$_ClaimSupportingInfo(
       {this.id,
@@ -3635,9 +3630,8 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimDiagnosis extends _ClaimDiagnosis {
   _$_ClaimDiagnosis(
       {this.id,
@@ -4104,9 +4098,8 @@ class __$ClaimProcedureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimProcedure extends _ClaimProcedure {
   _$_ClaimProcedure(
       {this.id,
@@ -4667,9 +4660,8 @@ class __$ClaimInsuranceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimInsurance extends _ClaimInsurance {
   _$_ClaimInsurance(
       {this.id,
@@ -5138,9 +5130,8 @@ class __$ClaimAccidentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimAccident extends _ClaimAccident {
   _$_ClaimAccident(
       {this.id,
@@ -6095,9 +6086,8 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimItem extends _ClaimItem {
   _$_ClaimItem(
       {this.id,
@@ -6932,9 +6922,8 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimDetail extends _ClaimDetail {
   _$_ClaimDetail(
       {this.id,
@@ -7593,9 +7582,8 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimSubDetail extends _ClaimSubDetail {
   _$_ClaimSubDetail(
       {this.id,
@@ -8893,9 +8881,8 @@ class __$ClaimResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
@@ -9623,9 +9610,8 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseItem extends _ClaimResponseItem {
   _$_ClaimResponseItem(
       {this.id,
@@ -10032,9 +10018,8 @@ class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseAdjudication extends _ClaimResponseAdjudication {
   _$_ClaimResponseAdjudication(
       {this.id,
@@ -10407,9 +10392,8 @@ class __$ClaimResponseDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseDetail extends _ClaimResponseDetail {
   _$_ClaimResponseDetail(
       {this.id,
@@ -10782,9 +10766,8 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
   _$_ClaimResponseSubDetail(
       {this.id,
@@ -11644,9 +11627,8 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   _$_ClaimResponseAddItem(
       {this.id,
@@ -12367,9 +12349,8 @@ class __$ClaimResponseDetail1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   _$_ClaimResponseDetail1(
       {this.id,
@@ -12918,9 +12899,8 @@ class __$ClaimResponseSubDetail1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
   _$_ClaimResponseSubDetail1(
       {this.id,
@@ -13288,9 +13268,8 @@ class __$ClaimResponseTotalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseTotal extends _ClaimResponseTotal {
   _$_ClaimResponseTotal(
       {this.id,
@@ -13704,9 +13683,8 @@ class __$ClaimResponsePaymentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponsePayment extends _ClaimResponsePayment {
   _$_ClaimResponsePayment(
       {this.id,
@@ -14171,9 +14149,8 @@ class __$ClaimResponseProcessNoteCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
   _$_ClaimResponseProcessNote(
       {this.id,
@@ -14674,9 +14651,8 @@ class __$ClaimResponseInsuranceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
   _$_ClaimResponseInsurance(
       {this.id,
@@ -15141,9 +15117,8 @@ class __$ClaimResponseErrorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseError extends _ClaimResponseError {
   _$_ClaimResponseError(
       {this.id,
@@ -16093,9 +16068,8 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Invoice extends _Invoice {
   _$_Invoice(
       {@JsonKey(unknownEnumValue: R4ResourceType.Invoice)
@@ -16658,9 +16632,8 @@ class __$InvoiceParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_InvoiceParticipant extends _InvoiceParticipant {
   _$_InvoiceParticipant(
       {this.id,
@@ -17012,9 +16985,8 @@ class __$InvoiceLineItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_InvoiceLineItem extends _InvoiceLineItem {
   _$_InvoiceLineItem(
       {this.id,
@@ -17445,9 +17417,8 @@ class __$InvoicePriceComponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_InvoicePriceComponent extends _InvoicePriceComponent {
   _$_InvoicePriceComponent(
       {this.id,

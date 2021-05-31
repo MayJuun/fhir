@@ -1271,9 +1271,8 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Observation extends _Observation {
   _$_Observation(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
@@ -2111,9 +2110,8 @@ class __$ObservationReferenceRangeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ObservationReferenceRange extends _ObservationReferenceRange {
   _$_ObservationReferenceRange(
       {this.id,
@@ -2456,9 +2454,8 @@ class __$ObservationRelatedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ObservationRelated extends _ObservationRelated {
   _$_ObservationRelated(
       {this.id,
@@ -3129,9 +3126,8 @@ class __$ObservationComponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ObservationComponent extends _ObservationComponent {
   _$_ObservationComponent(
       {this.id,
@@ -4195,9 +4191,8 @@ class __$DiagnosticReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DiagnosticReport extends _DiagnosticReport {
   _$_DiagnosticReport(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
@@ -4793,9 +4788,8 @@ class __$DiagnosticReportImageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DiagnosticReportImage extends _DiagnosticReportImage {
   _$_DiagnosticReportImage(
       {this.id,
@@ -5392,9 +5386,8 @@ class __$DiagnosticOrderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DiagnosticOrder extends _DiagnosticOrder {
   _$_DiagnosticOrder(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
@@ -5886,9 +5879,8 @@ class __$DiagnosticOrderEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DiagnosticOrderEvent extends _DiagnosticOrderEvent {
   _$_DiagnosticOrderEvent(
       {this.id,
@@ -6244,9 +6236,8 @@ class __$DiagnosticOrderItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DiagnosticOrderItem extends _DiagnosticOrderItem {
   _$_DiagnosticOrderItem(
       {this.id,
@@ -6966,9 +6957,8 @@ class __$SpecimenCopyWithImpl<$Res> extends _$SpecimenCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Specimen extends _Specimen {
   _$_Specimen(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
@@ -7622,9 +7612,8 @@ class __$SpecimenCollectionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenCollection extends _SpecimenCollection {
   _$_SpecimenCollection(
       {this.id,
@@ -7991,9 +7980,8 @@ class __$SpecimenTreatmentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenTreatment extends _SpecimenTreatment {
   _$_SpecimenTreatment(
       {this.id,
@@ -8443,9 +8431,8 @@ class __$SpecimenContainerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SpecimenContainer extends _SpecimenContainer {
   _$_SpecimenContainer(
       {this.id,
@@ -8974,9 +8961,8 @@ class __$BodySiteCopyWithImpl<$Res> extends _$BodySiteCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BodySite extends _BodySite {
   _$_BodySite(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
@@ -9928,9 +9914,8 @@ class __$ImagingStudyCopyWithImpl<$Res> extends _$ImagingStudyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingStudy extends _ImagingStudy {
   _$_ImagingStudy(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
@@ -10815,9 +10800,8 @@ class __$ImagingStudySeriesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingStudySeries extends _ImagingStudySeries {
   _$_ImagingStudySeries(
       {this.id,
@@ -11392,9 +11376,8 @@ class __$ImagingStudySeriesInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingStudySeriesInstance extends _ImagingStudySeriesInstance {
   _$_ImagingStudySeriesInstance(
       {this.id,
@@ -11966,9 +11949,8 @@ class __$ImagingObjectSelectionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingObjectSelection extends _ImagingObjectSelection {
   _$_ImagingObjectSelection(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
@@ -12397,9 +12379,8 @@ class __$ImagingObjectSelectionStudyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingObjectSelectionStudy extends _ImagingObjectSelectionStudy {
   _$_ImagingObjectSelectionStudy(
       {this.id,
@@ -12714,9 +12695,8 @@ class __$ImagingObjectSelectionStudySeriesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingObjectSelectionStudySeries
     extends _ImagingObjectSelectionStudySeries {
   _$_ImagingObjectSelectionStudySeries(
@@ -13036,9 +13016,8 @@ class __$ImagingObjectSelectionSeriesInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingObjectSelectionSeriesInstance
     extends _ImagingObjectSelectionSeriesInstance {
   _$_ImagingObjectSelectionSeriesInstance(
@@ -13347,9 +13326,8 @@ class __$ImagingObjectSelectionInstanceFramesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImagingObjectSelectionInstanceFrames
     extends _ImagingObjectSelectionInstanceFrames {
   _$_ImagingObjectSelectionInstanceFrames(

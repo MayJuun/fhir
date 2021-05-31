@@ -726,9 +726,8 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Conformance extends _Conformance {
   _$_Conformance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
@@ -1836,9 +1835,8 @@ class __$CapabilityStatementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
@@ -2391,9 +2389,8 @@ class __$ConformanceContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceContact extends _ConformanceContact {
   _$_ConformanceContact(
       {this.id,
@@ -2667,9 +2664,8 @@ class __$ConformanceSoftwareCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceSoftware extends _ConformanceSoftware {
   _$_ConformanceSoftware(
       {this.id,
@@ -2942,9 +2938,8 @@ class __$ConformanceImplementationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceImplementation extends _ConformanceImplementation {
   _$_ConformanceImplementation(
       {this.id,
@@ -3395,9 +3390,8 @@ class __$ConformanceRestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceRest extends _ConformanceRest {
   _$_ConformanceRest(
       {this.id,
@@ -3818,9 +3812,8 @@ class __$ConformanceMessagingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceMessaging extends _ConformanceMessaging {
   _$_ConformanceMessaging(
       {this.id,
@@ -4163,9 +4156,8 @@ class __$ConformanceDocumentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceDocument extends _ConformanceDocument {
   _$_ConformanceDocument(
       {this.id,
@@ -4517,9 +4509,8 @@ class __$ConformanceRestSecurityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
   _$_ConformanceRestSecurity(
       {this.id,
@@ -5151,9 +5142,8 @@ class __$ConformanceRestResourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceRestResource extends _ConformanceRestResource {
   _$_ConformanceRestResource(
       {this.id,
@@ -5617,9 +5607,8 @@ class __$ConformanceResourceInteractionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceResourceInteraction
     extends _ConformanceResourceInteraction {
   _$_ConformanceResourceInteraction(
@@ -5919,9 +5908,8 @@ class __$ConformanceRestOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceRestOperation extends _ConformanceRestOperation {
   _$_ConformanceRestOperation(
       {this.id,
@@ -6241,9 +6229,8 @@ class __$ConformanceMessagingEndpointCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
   _$_ConformanceMessagingEndpoint(
       {this.id,
@@ -6660,9 +6647,8 @@ class __$ConformanceMessagingEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
   _$_ConformanceMessagingEvent(
       {this.id,
@@ -7026,9 +7012,8 @@ class __$ConformanceSecurityCertificateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceSecurityCertificate
     extends _ConformanceSecurityCertificate {
   _$_ConformanceSecurityCertificate(
@@ -7314,9 +7299,8 @@ class __$ConformanceRestInteractionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
   _$_ConformanceRestInteraction(
       {this.id,
@@ -7684,9 +7668,8 @@ class __$ConformanceResourceSearchParamCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConformanceResourceSearchParam
     extends _ConformanceResourceSearchParam {
   _$_ConformanceResourceSearchParam(
@@ -8421,9 +8404,8 @@ class __$OperationDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
@@ -8922,9 +8904,8 @@ class __$OperationDefinitionContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionContact extends _OperationDefinitionContact {
   _$_OperationDefinitionContact(
       {this.id,
@@ -9349,9 +9330,8 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   _$_OperationDefinitionParameter(
       {this.id,
@@ -9759,9 +9739,8 @@ class __$OperationDefinitionParameterBindingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionParameterBinding
     extends _OperationDefinitionParameterBinding {
   _$_OperationDefinitionParameterBinding(
@@ -10427,9 +10406,8 @@ class __$SearchParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
@@ -10904,9 +10882,8 @@ class __$SearchParameterContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SearchParameterContact extends _SearchParameterContact {
   _$_SearchParameterContact(
       {this.id,

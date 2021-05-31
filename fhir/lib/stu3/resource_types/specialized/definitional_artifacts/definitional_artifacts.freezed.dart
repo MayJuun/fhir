@@ -1583,9 +1583,8 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ActivityDefinition extends _ActivityDefinition {
   _$_ActivityDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
@@ -2451,9 +2450,8 @@ class __$ActivityDefinitionParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
   _$_ActivityDefinitionParticipant(
       {this.type, @JsonKey(name: '_type') this.typeElement, this.role})
@@ -2804,9 +2802,8 @@ class __$ActivityDefinitionDynamicValueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ActivityDefinitionDynamicValue
     extends _ActivityDefinitionDynamicValue {
   _$_ActivityDefinitionDynamicValue(
@@ -4155,9 +4152,8 @@ class __$PlanDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinition extends _PlanDefinition {
   _$_PlanDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
@@ -4978,9 +4974,8 @@ class __$PlanDefinitionGoalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
   _$_PlanDefinitionGoal(
       {this.category,
@@ -5330,9 +5325,8 @@ class __$PlanDefinitionTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
   _$_PlanDefinitionTarget(
       {this.measure,
@@ -6410,9 +6404,8 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   _$_PlanDefinitionAction(
       {this.label,
@@ -7135,9 +7128,8 @@ class __$PlanDefinitionConditionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
   _$_PlanDefinitionCondition(
       {this.kind,
@@ -7514,9 +7506,8 @@ class __$PlanDefinitionRelatedActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
   _$_PlanDefinitionRelatedAction(
       {this.actionId,
@@ -7793,9 +7784,8 @@ class __$PlanDefinitionParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
   _$_PlanDefinitionParticipant(
       {this.type, @JsonKey(name: '_type') this.typeElement, this.role})
@@ -8142,9 +8132,8 @@ class __$PlanDefinitionDynamicValueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
   _$_PlanDefinitionDynamicValue(
       {this.description,
@@ -9382,9 +9371,8 @@ class __$QuestionnaireCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
@@ -10990,9 +10978,8 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireItem extends _QuestionnaireItem {
   _$_QuestionnaireItem(
       {this.linkId,
@@ -12128,9 +12115,8 @@ class __$QuestionnaireEnableWhenCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   _$_QuestionnaireEnableWhen(
       {this.question,
@@ -12728,9 +12714,8 @@ class __$QuestionnaireOptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireOption extends _QuestionnaireOption {
   _$_QuestionnaireOption(
       {this.valueInteger,
@@ -14068,9 +14053,8 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ServiceDefinition extends _ServiceDefinition {
   _$_ServiceDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)

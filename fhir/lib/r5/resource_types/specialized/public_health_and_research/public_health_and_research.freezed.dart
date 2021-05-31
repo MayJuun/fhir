@@ -885,9 +885,8 @@ class __$ResearchStudyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchStudy extends _ResearchStudy {
   _$_ResearchStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
@@ -1569,9 +1568,8 @@ class __$ResearchStudyArmCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchStudyArm extends _ResearchStudyArm {
   _$_ResearchStudyArm(
       {this.id,
@@ -1912,9 +1910,8 @@ class __$ResearchStudyObjectiveCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchStudyObjective extends _ResearchStudyObjective {
   _$_ResearchStudyObjective(
       {this.id,
@@ -2636,9 +2633,8 @@ class __$ResearchSubjectCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchSubject extends _ResearchSubject {
   _$_ResearchSubject(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
@@ -3239,9 +3235,8 @@ class __$ResearchSubjectProgressCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
   _$_ResearchSubjectProgress(
       {this.id,

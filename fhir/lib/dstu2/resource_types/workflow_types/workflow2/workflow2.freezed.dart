@@ -626,9 +626,8 @@ class __$ProcessRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcessRequest extends _ProcessRequest {
   _$_ProcessRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
@@ -1078,9 +1077,8 @@ class __$ProcessRequestItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcessRequestItem extends _ProcessRequestItem {
   _$_ProcessRequestItem(
       {this.id,
@@ -1735,9 +1733,8 @@ class __$ProcessResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcessResponse extends _ProcessResponse {
   _$_ProcessResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
@@ -2185,9 +2182,8 @@ class __$ProcessResponseNotesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcessResponseNotes extends _ProcessResponseNotes {
   _$_ProcessResponseNotes(
       {this.id,
@@ -2926,9 +2922,8 @@ class __$SupplyRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
@@ -3415,9 +3410,8 @@ class __$SupplyRequestWhenCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyRequestWhen extends _SupplyRequestWhen {
   _$_SupplyRequestWhen(
       {this.id,
@@ -4154,9 +4148,8 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)

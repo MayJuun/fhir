@@ -981,9 +981,8 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Appointment extends _Appointment {
   _$_Appointment(
       {@JsonKey(unknownEnumValue: R5ResourceType.Appointment)
@@ -1780,9 +1779,8 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.id,
@@ -2554,9 +2552,8 @@ class __$AppointmentResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
@@ -3384,9 +3381,8 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Schedule extends _Schedule {
   _$_Schedule(
       {@JsonKey(unknownEnumValue: R5ResourceType.Schedule)
@@ -4340,9 +4336,8 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Slot extends _Slot {
   _$_Slot(
       {@JsonKey(unknownEnumValue: R5ResourceType.Slot)
@@ -5911,9 +5906,8 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Task extends _Task {
   _$_Task(
       {@JsonKey(unknownEnumValue: R5ResourceType.Task)
@@ -6673,9 +6667,8 @@ class __$TaskRestrictionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TaskRestriction extends _TaskRestriction {
   _$_TaskRestriction(
       {this.id,
@@ -8758,9 +8751,8 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TaskInput extends _TaskInput {
   _$_TaskInput(
       {this.id,
@@ -11453,9 +11445,8 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TaskOutput extends _TaskOutput {
   _$_TaskOutput(
       {this.id,
@@ -12945,9 +12936,8 @@ class __$VerificationResultCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VerificationResult extends _VerificationResult {
   _$_VerificationResult(
       {@JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
@@ -13637,9 +13627,8 @@ class __$VerificationResultPrimarySourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VerificationResultPrimarySource
     extends _VerificationResultPrimarySource {
   _$_VerificationResultPrimarySource(
@@ -14245,9 +14234,8 @@ class __$VerificationResultAttestationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VerificationResultAttestation extends _VerificationResultAttestation {
   _$_VerificationResultAttestation(
       {this.id,
@@ -14703,9 +14691,8 @@ class __$VerificationResultValidatorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VerificationResultValidator extends _VerificationResultValidator {
   _$_VerificationResultValidator(
       {this.id,

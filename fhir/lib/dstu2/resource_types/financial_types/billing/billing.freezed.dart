@@ -695,9 +695,8 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Account extends _Account {
   _$_Account(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
@@ -2053,9 +2052,8 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Claim extends _Claim {
   _$_Claim(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
@@ -2760,9 +2758,8 @@ class __$ClaimPayeeCopyWithImpl<$Res> extends _$ClaimPayeeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimPayee extends _ClaimPayee {
   _$_ClaimPayee(
       {this.id,
@@ -3083,9 +3080,8 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimDiagnosis extends _ClaimDiagnosis {
   _$_ClaimDiagnosis(
       {this.id,
@@ -3498,9 +3494,8 @@ class __$ClaimCoverageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimCoverage extends _ClaimCoverage {
   _$_ClaimCoverage(
       {this.id,
@@ -4250,9 +4245,8 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimItem extends _ClaimItem {
   _$_ClaimItem(
       {this.id,
@@ -4952,9 +4946,8 @@ class __$ClaimItemDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimItemDetail extends _ClaimItemDetail {
   _$_ClaimItemDetail(
       {this.id,
@@ -5558,9 +5551,8 @@ class __$ClaimDetailSubDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimDetailSubDetail extends _ClaimDetailSubDetail {
   _$_ClaimDetailSubDetail(
       {this.id,
@@ -5942,9 +5934,8 @@ class __$ClaimItemProsthesisCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimItemProsthesis extends _ClaimItemProsthesis {
   _$_ClaimItemProsthesis(
       {this.id,
@@ -6257,9 +6248,8 @@ class __$ClaimMissingTeethCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimMissingTeeth extends _ClaimMissingTeeth {
   _$_ClaimMissingTeeth(
       {this.id,
@@ -7442,9 +7432,8 @@ class __$ClaimResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
@@ -8126,9 +8115,8 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseItem extends _ClaimResponseItem {
   _$_ClaimResponseItem(
       {this.id,
@@ -8510,9 +8498,8 @@ class __$ClaimResponseItemAdjudicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseItemAdjudication extends _ClaimResponseItemAdjudication {
   _$_ClaimResponseItemAdjudication(
       {this.id,
@@ -8815,9 +8802,8 @@ class __$ClaimResponseItemDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseItemDetail extends _ClaimResponseItemDetail {
   _$_ClaimResponseItemDetail(
       {this.id,
@@ -9098,9 +9084,8 @@ class __$ClaimResponseDetailSubDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseDetailSubDetail extends _ClaimResponseDetailSubDetail {
   _$_ClaimResponseDetailSubDetail(
       {this.id,
@@ -9466,9 +9451,8 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   _$_ClaimResponseAddItem(
       {this.id,
@@ -9814,9 +9798,8 @@ class __$ClaimResponseAddItemDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseAddItemDetail extends _ClaimResponseAddItemDetail {
   _$_ClaimResponseAddItemDetail(
       {this.id,
@@ -10132,9 +10115,8 @@ class __$ClaimResponseErrorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseError extends _ClaimResponseError {
   _$_ClaimResponseError(
       {this.id,
@@ -10537,9 +10519,8 @@ class __$ClaimResponseNoteCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseNote extends _ClaimResponseNote {
   _$_ClaimResponseNote(
       {this.id,
@@ -10984,9 +10965,8 @@ class __$ClaimResponseCoverageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClaimResponseCoverage extends _ClaimResponseCoverage {
   _$_ClaimResponseCoverage(
       {this.id,

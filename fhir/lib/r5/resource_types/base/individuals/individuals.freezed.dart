@@ -677,9 +677,8 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Group extends _Group {
   _$_Group(
       {@JsonKey(unknownEnumValue: R5ResourceType.Group)
@@ -1413,9 +1412,8 @@ class __$GroupCharacteristicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GroupCharacteristic extends _GroupCharacteristic {
   _$_GroupCharacteristic(
       {this.id,
@@ -1829,9 +1827,8 @@ class __$GroupMemberCopyWithImpl<$Res> extends _$GroupMemberCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GroupMember extends _GroupMember {
   _$_GroupMember(
       {this.id,
@@ -2805,9 +2802,8 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Patient extends _Patient {
   _$_Patient(
       {@JsonKey(unknownEnumValue: R5ResourceType.Patient)
@@ -3571,9 +3567,8 @@ class __$PatientContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PatientContact extends _PatientContact {
   _$_PatientContact(
       {this.id,
@@ -3940,9 +3935,8 @@ class __$PatientCommunicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PatientCommunication extends _PatientCommunication {
   _$_PatientCommunication(
       {this.id,
@@ -4258,9 +4252,8 @@ class __$PatientLinkCopyWithImpl<$Res> extends _$PatientLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PatientLink extends _PatientLink {
   _$_PatientLink(
       {this.id,
@@ -4971,9 +4964,8 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Person extends _Person {
   _$_Person(
       {@JsonKey(unknownEnumValue: R5ResourceType.Person)
@@ -5494,9 +5486,8 @@ class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PersonLink extends _PersonLink {
   _$_PersonLink(
       {this.id,
@@ -6189,9 +6180,8 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Practitioner extends _Practitioner {
   _$_Practitioner(
       {@JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
@@ -6740,9 +6730,8 @@ class __$PractitionerQualificationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PractitionerQualification extends _PractitionerQualification {
   _$_PractitionerQualification(
       {this.id,
@@ -7507,9 +7496,8 @@ class __$PractitionerRoleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PractitionerRole extends _PractitionerRole {
   _$_PractitionerRole(
       {@JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
@@ -8148,9 +8136,8 @@ class __$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
   _$_PractitionerRoleAvailableTime(
       {this.id,
@@ -8540,9 +8527,8 @@ class __$PractitionerRoleNotAvailableCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
   _$_PractitionerRoleNotAvailable(
       {this.id,
@@ -9287,9 +9273,8 @@ class __$RelatedPersonCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RelatedPerson extends _RelatedPerson {
   _$_RelatedPerson(
       {@JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
@@ -9828,9 +9813,8 @@ class __$RelatedPersonCommunicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
   _$_RelatedPersonCommunication(
       {this.id,

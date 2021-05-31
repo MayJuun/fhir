@@ -1297,9 +1297,8 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystem extends _CodeSystem {
   _$_CodeSystem(
       {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
@@ -2220,9 +2219,8 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemFilter extends _CodeSystemFilter {
   _$_CodeSystemFilter(
       {this.id,
@@ -2722,9 +2720,8 @@ class __$CodeSystemPropertyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemProperty extends _CodeSystemProperty {
   _$_CodeSystemProperty(
       {this.id,
@@ -3211,9 +3208,8 @@ class __$CodeSystemConceptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemConcept extends _CodeSystemConcept {
   _$_CodeSystemConcept(
       {this.id,
@@ -3641,9 +3637,8 @@ class __$CodeSystemDesignationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemDesignation extends _CodeSystemDesignation {
   _$_CodeSystemDesignation(
       {this.id,
@@ -4254,9 +4249,8 @@ class __$CodeSystemProperty1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
   _$_CodeSystemProperty1(
       {this.id,
@@ -5635,9 +5629,8 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
       {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
@@ -6534,9 +6527,8 @@ class __$ConceptMapGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapGroup extends _ConceptMapGroup {
   _$_ConceptMapGroup(
       {this.id,
@@ -6960,9 +6952,8 @@ class __$ConceptMapElementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapElement extends _ConceptMapElement {
   _$_ConceptMapElement(
       {this.id,
@@ -7458,9 +7449,8 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapTarget extends _ConceptMapTarget {
   _$_ConceptMapTarget(
       {this.id,
@@ -7945,9 +7935,8 @@ class __$ConceptMapDependsOnCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
   _$_ConceptMapDependsOn(
       {this.id,
@@ -8402,9 +8391,8 @@ class __$ConceptMapUnmappedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
   _$_ConceptMapUnmapped(
       {this.id,
@@ -9367,9 +9355,8 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
       {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
@@ -10134,9 +10121,8 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
   _$_NamingSystemUniqueId(
       {this.id,
@@ -11575,9 +11561,8 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   _$_TerminologyCapabilities(
       {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
@@ -12380,9 +12365,8 @@ class __$TerminologyCapabilitiesSoftwareCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesSoftware
     extends _TerminologyCapabilitiesSoftware {
   _$_TerminologyCapabilitiesSoftware(
@@ -12741,9 +12725,8 @@ class __$TerminologyCapabilitiesImplementationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesImplementation
     extends _TerminologyCapabilitiesImplementation {
   _$_TerminologyCapabilitiesImplementation(
@@ -13089,9 +13072,8 @@ class __$TerminologyCapabilitiesCodeSystemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesCodeSystem
     extends _TerminologyCapabilitiesCodeSystem {
   _$_TerminologyCapabilitiesCodeSystem(
@@ -13573,9 +13555,8 @@ class __$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesVersion
     extends _TerminologyCapabilitiesVersion {
   _$_TerminologyCapabilitiesVersion(
@@ -13993,9 +13974,8 @@ class __$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesFilter extends _TerminologyCapabilitiesFilter {
   _$_TerminologyCapabilitiesFilter(
       {this.id,
@@ -14456,9 +14436,8 @@ class __$TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesExpansion
     extends _TerminologyCapabilitiesExpansion {
   _$_TerminologyCapabilitiesExpansion(
@@ -14870,9 +14849,8 @@ class __$TerminologyCapabilitiesParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesParameter
     extends _TerminologyCapabilitiesParameter {
   _$_TerminologyCapabilitiesParameter(
@@ -15185,9 +15163,8 @@ class __$TerminologyCapabilitiesValidateCodeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesValidateCode
     extends _TerminologyCapabilitiesValidateCode {
   _$_TerminologyCapabilitiesValidateCode(
@@ -15482,9 +15459,8 @@ class __$TerminologyCapabilitiesTranslationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesTranslation
     extends _TerminologyCapabilitiesTranslation {
   _$_TerminologyCapabilitiesTranslation(
@@ -15778,9 +15754,8 @@ class __$TerminologyCapabilitiesClosureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TerminologyCapabilitiesClosure
     extends _TerminologyCapabilitiesClosure {
   _$_TerminologyCapabilitiesClosure(
@@ -16903,9 +16878,8 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
       {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
@@ -17645,9 +17619,8 @@ class __$ValueSetComposeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetCompose extends _ValueSetCompose {
   _$_ValueSetCompose(
       {this.id,
@@ -18058,9 +18031,8 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetInclude extends _ValueSetInclude {
   _$_ValueSetInclude(
       {this.id,
@@ -18451,9 +18423,8 @@ class __$ValueSetConceptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetConcept extends _ValueSetConcept {
   _$_ValueSetConcept(
       {this.id,
@@ -18839,9 +18810,8 @@ class __$ValueSetDesignationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetDesignation extends _ValueSetDesignation {
   _$_ValueSetDesignation(
       {this.id,
@@ -19243,9 +19213,8 @@ class __$ValueSetFilterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetFilter extends _ValueSetFilter {
   _$_ValueSetFilter(
       {this.id,
@@ -19734,9 +19703,8 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetExpansion extends _ValueSetExpansion {
   _$_ValueSetExpansion(
       {this.id,
@@ -20415,9 +20383,8 @@ class __$ValueSetParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetParameter extends _ValueSetParameter {
   _$_ValueSetParameter(
       {this.id,
@@ -21108,9 +21075,8 @@ class __$ValueSetContainsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetContains extends _ValueSetContains {
   _$_ValueSetContains(
       {this.id,

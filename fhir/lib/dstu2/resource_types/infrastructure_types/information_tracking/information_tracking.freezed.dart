@@ -654,9 +654,8 @@ class __$QuestionnaireCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
@@ -1323,9 +1322,8 @@ class __$QuestionnaireGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireGroup extends _QuestionnaireGroup {
   _$_QuestionnaireGroup(
       {this.id,
@@ -1853,9 +1851,8 @@ class __$QuestionnaireGroupQuestionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
   _$_QuestionnaireGroupQuestion(
       {this.id,
@@ -2712,9 +2709,8 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$_QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
@@ -3339,9 +3335,8 @@ class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
   _$_QuestionnaireResponseGroup(
       {this.id,
@@ -3749,9 +3744,8 @@ class __$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireResponseGroupQuestion
     extends _QuestionnaireResponseGroupQuestion {
   _$_QuestionnaireResponseGroupQuestion(
@@ -4584,9 +4578,8 @@ class __$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_QuestionnaireResponseQuestionAnswer
     extends _QuestionnaireResponseQuestionAnswer {
   _$_QuestionnaireResponseQuestionAnswer(
@@ -5490,9 +5483,8 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Provenance extends _Provenance {
   _$_Provenance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
@@ -6034,9 +6026,8 @@ class __$ProvenanceAgentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProvenanceAgent extends _ProvenanceAgent {
   _$_ProvenanceAgent(
       {this.id,
@@ -6475,9 +6466,8 @@ class __$ProvenanceEntityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProvenanceEntity extends _ProvenanceEntity {
   _$_ProvenanceEntity(
       {this.id,
@@ -6820,9 +6810,8 @@ class __$ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
   _$_ProvenanceAgentRelatedAgent(
       {this.id,
@@ -7324,9 +7313,8 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
@@ -7784,9 +7772,8 @@ class __$AuditEventEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventEvent extends _AuditEventEvent {
   _$_AuditEventEvent(
       {this.id,
@@ -8335,9 +8322,8 @@ class __$AuditEventParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventParticipant extends _AuditEventParticipant {
   _$_AuditEventParticipant(
       {this.id,
@@ -8753,9 +8739,8 @@ class __$AuditEventSourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventSource extends _AuditEventSource {
   _$_AuditEventSource(
       {this.id,
@@ -9259,9 +9244,8 @@ class __$AuditEventObjectCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventObject extends _AuditEventObject {
   _$_AuditEventObject(
       {this.id,
@@ -9677,9 +9661,8 @@ class __$AuditEventParticipantNetworkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
   _$_AuditEventParticipantNetwork(
       {this.id,
@@ -9999,9 +9982,8 @@ class __$AuditEventObjectDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
   _$_AuditEventObjectDetail(
       {this.id,

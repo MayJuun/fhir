@@ -475,9 +475,8 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Basic extends _Basic {
   _$_Basic(
       {@JsonKey(unknownEnumValue: R5ResourceType.Basic)
@@ -1072,9 +1071,8 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Binary extends _Binary {
   _$_Binary(
       {@JsonKey(unknownEnumValue: R5ResourceType.Binary)
@@ -1731,9 +1729,8 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Bundle extends _Bundle {
   _$_Bundle(
       {@JsonKey(unknownEnumValue: R5ResourceType.Bundle)
@@ -2191,9 +2188,8 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleLink extends _BundleLink {
   _$_BundleLink(
       {this.id,
@@ -2609,9 +2605,8 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleEntry extends _BundleEntry {
   _$_BundleEntry(
       {this.id,
@@ -2995,9 +2990,8 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleSearch extends _BundleSearch {
   _$_BundleSearch(
       {this.id,
@@ -3553,9 +3547,8 @@ class __$BundleRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleRequest extends _BundleRequest {
   _$_BundleRequest(
       {this.id,
@@ -4103,9 +4096,8 @@ class __$BundleResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleResponse extends _BundleResponse {
   _$_BundleResponse(
       {this.id,
@@ -4689,9 +4681,8 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Linkage extends _Linkage {
   _$_Linkage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Linkage)
@@ -5105,9 +5096,8 @@ class __$LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_LinkageItem extends _LinkageItem {
   _$_LinkageItem(
       {this.id,
@@ -5866,9 +5856,8 @@ class __$MessageHeaderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeader extends _MessageHeader {
   _$_MessageHeader(
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
@@ -6453,9 +6442,8 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeaderDestination extends _MessageHeaderDestination {
   _$_MessageHeaderDestination(
       {this.id,
@@ -6940,9 +6928,8 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeaderSource extends _MessageHeaderSource {
   _$_MessageHeaderSource(
       {this.id,
@@ -7387,9 +7374,8 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeaderResponse extends _MessageHeaderResponse {
   _$_MessageHeaderResponse(
       {this.id,
@@ -7867,9 +7853,8 @@ class __$OperationOutcomeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationOutcome extends _OperationOutcome {
   _$_OperationOutcome(
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
@@ -8437,9 +8422,8 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   _$_OperationOutcomeIssue(
       {this.id,
@@ -8918,9 +8902,8 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Parameters extends _Parameters {
   _$_Parameters(
       {@JsonKey(unknownEnumValue: R5ResourceType.Parameters)
@@ -11077,9 +11060,8 @@ class __$ParametersParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ParametersParameter extends _ParametersParameter {
   _$_ParametersParameter(
       {this.id,
@@ -12749,9 +12731,8 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Subscription extends _Subscription {
   _$_Subscription(
       {@JsonKey(unknownEnumValue: R5ResourceType.Subscription)
@@ -13460,9 +13441,8 @@ class __$SubscriptionFilterByCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
   _$_SubscriptionFilterBy(
       {this.id,
@@ -14190,9 +14170,8 @@ class __$SubscriptionStatusCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubscriptionStatus extends _SubscriptionStatus {
   _$_SubscriptionStatus(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
@@ -15529,9 +15508,8 @@ class __$SubscriptionTopicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubscriptionTopic extends _SubscriptionTopic {
   _$_SubscriptionTopic(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
@@ -16350,9 +16328,8 @@ class __$SubscriptionTopicResourceTriggerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubscriptionTopicResourceTrigger
     extends _SubscriptionTopicResourceTrigger {
   _$_SubscriptionTopicResourceTrigger(
@@ -16818,9 +16795,8 @@ class __$SubscriptionTopicQueryCriteriaCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubscriptionTopicQueryCriteria
     extends _SubscriptionTopicQueryCriteria {
   _$_SubscriptionTopicQueryCriteria(
@@ -17231,9 +17207,8 @@ class __$SubscriptionTopicCanFilterByCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
   _$_SubscriptionTopicCanFilterBy(
       {this.id,

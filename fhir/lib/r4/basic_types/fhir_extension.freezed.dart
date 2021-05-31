@@ -1938,9 +1938,8 @@ class __$FhirExtensionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_FhirExtension extends _FhirExtension {
   _$_FhirExtension(
       {this.id,

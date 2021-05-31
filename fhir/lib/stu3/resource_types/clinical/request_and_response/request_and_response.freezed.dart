@@ -824,9 +824,8 @@ class __$CommunicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Communication extends _Communication {
   _$_Communication(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
@@ -1419,9 +1418,8 @@ class __$CommunicationPayloadCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationPayload extends _CommunicationPayload {
   _$_CommunicationPayload(
       {this.contentString,
@@ -2370,9 +2368,8 @@ class __$CommunicationRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
@@ -2981,9 +2978,8 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
   _$_CommunicationRequestPayload(
       {this.contentString,
@@ -3215,9 +3211,8 @@ class __$CommunicationRequestRequesterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationRequestRequester extends _CommunicationRequestRequester {
   _$_CommunicationRequestRequester({required this.agent, this.onBehalfOf})
       : super._();
@@ -4248,9 +4243,8 @@ class __$DeviceRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceRequest extends _DeviceRequest {
   _$_DeviceRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
@@ -4823,9 +4817,8 @@ class __$DeviceRequestRequesterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceRequestRequester extends _DeviceRequestRequester {
   _$_DeviceRequestRequester({required this.agent, this.onBehalfOf}) : super._();
 
@@ -5598,9 +5591,8 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceUseStatement extends _DeviceUseStatement {
   _$_DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
@@ -6634,9 +6626,8 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
@@ -7137,9 +7128,8 @@ class __$SupplyDeliverySuppliedItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
   _$_SupplyDeliverySuppliedItem(
       {this.quantity, this.itemCodeableConcept, this.itemReference})
@@ -8042,9 +8032,8 @@ class __$SupplyRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
@@ -8581,9 +8570,8 @@ class __$SupplyRequestOrderedItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyRequestOrderedItem extends _SupplyRequestOrderedItem {
   _$_SupplyRequestOrderedItem(
       {required this.quantity, this.itemCodeableConcept, this.itemReference})
@@ -8797,9 +8785,8 @@ class __$SupplyRequestRequesterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyRequestRequester extends _SupplyRequestRequester {
   _$_SupplyRequestRequester({required this.agent, this.onBehalfOf}) : super._();
 

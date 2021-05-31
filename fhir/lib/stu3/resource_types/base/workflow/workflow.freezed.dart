@@ -928,9 +928,8 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Appointment extends _Appointment {
   _$_Appointment(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
@@ -1608,9 +1607,8 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.type,
@@ -2326,9 +2324,8 @@ class __$AppointmentResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
@@ -3473,9 +3470,8 @@ class __$ProcessRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcessRequest extends _ProcessRequest {
   _$_ProcessRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
@@ -4006,9 +4002,8 @@ class __$ProcessRequestItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcessRequestItem extends _ProcessRequestItem {
   _$_ProcessRequestItem(
       {this.sequenceLinkId,
@@ -4783,9 +4778,8 @@ class __$ProcessResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcessResponse extends _ProcessResponse {
   _$_ProcessResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
@@ -5286,9 +5280,8 @@ class __$ProcessResponseProcessNoteCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcessResponseProcessNote extends _ProcessResponseProcessNote {
   _$_ProcessResponseProcessNote(
       {this.type, this.text, @JsonKey(name: '_text') this.textElement})
@@ -6146,9 +6139,8 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RequestGroup extends _RequestGroup {
   _$_RequestGroup(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
@@ -7354,9 +7346,8 @@ class __$RequestGroupActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RequestGroupAction extends _RequestGroupAction {
   _$_RequestGroupAction(
       {this.label,
@@ -8002,9 +7993,8 @@ class __$RequestGroupConditionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RequestGroupCondition extends _RequestGroupCondition {
   _$_RequestGroupCondition(
       {this.kind,
@@ -8377,9 +8367,8 @@ class __$RequestGroupRelatedActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
   _$_RequestGroupRelatedAction(
       {this.actionId,
@@ -9025,9 +9014,8 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Schedule extends _Schedule {
   _$_Schedule(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
@@ -9989,9 +9977,8 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Slot extends _Slot {
   _$_Slot(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
@@ -11488,9 +11475,8 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Task extends _Task {
   _$_Task(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
@@ -12130,9 +12116,8 @@ class __$TaskRequesterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TaskRequester extends _TaskRequester {
   _$_TaskRequester({required this.agent, this.onBehalfOf}) : super._();
 
@@ -12370,9 +12355,8 @@ class __$TaskRestrictionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TaskRestriction extends _TaskRestriction {
   _$_TaskRestriction(
       {this.repetitions,
@@ -14390,9 +14374,8 @@ class __$TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TaskInput extends _TaskInput {
   _$_TaskInput(
       {required this.type,
@@ -17017,9 +17000,8 @@ class __$TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TaskOutput extends _TaskOutput {
   _$_TaskOutput(
       {required this.type,

@@ -692,9 +692,8 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Account extends _Account {
   _$_Account(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
@@ -1177,9 +1176,8 @@ class __$AccountCoverageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AccountCoverage extends _AccountCoverage {
   _$_AccountCoverage(
       {required this.coverage,
@@ -1445,9 +1443,8 @@ class __$AccountGuarantorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AccountGuarantor extends _AccountGuarantor {
   _$_AccountGuarantor(
       {required this.party,
@@ -2562,9 +2559,8 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ChargeItem extends _ChargeItem {
   _$_ChargeItem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
@@ -3169,9 +3165,8 @@ class __$ChargeItemParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ChargeItemParticipant extends _ChargeItemParticipant {
   _$_ChargeItemParticipant({this.role, required this.actor}) : super._();
 
@@ -4078,9 +4073,8 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Contract extends _Contract {
   _$_Contract(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
@@ -4612,9 +4606,8 @@ class __$ContractAgentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractAgent extends _ContractAgent {
   _$_ContractAgent({required this.actor, this.role}) : super._();
 
@@ -4822,9 +4815,8 @@ class __$ContractSignerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractSigner extends _ContractSigner {
   _$_ContractSigner(
       {required this.type, required this.party, required this.signature})
@@ -5295,9 +5287,8 @@ class __$ContractValuedItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractValuedItem extends _ContractValuedItem {
   _$_ContractValuedItem(
       {this.entityCodeableConcept,
@@ -5865,9 +5856,8 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractTerm extends _ContractTerm {
   _$_ContractTerm(
       {this.identifier,
@@ -6184,9 +6174,8 @@ class __$ContractAgent1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractAgent1 extends _ContractAgent1 {
   _$_ContractAgent1({required this.actor, this.role}) : super._();
 
@@ -6646,9 +6635,8 @@ class __$ContractValuedItem1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractValuedItem1 extends _ContractValuedItem1 {
   _$_ContractValuedItem1(
       {this.entityCodeableConcept,
@@ -6960,9 +6948,8 @@ class __$ContractFriendlyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractFriendly extends _ContractFriendly {
   _$_ContractFriendly({this.contentAttachment, this.contentReference})
       : super._();
@@ -7167,9 +7154,8 @@ class __$ContractLegalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractLegal extends _ContractLegal {
   _$_ContractLegal({this.contentAttachment, this.contentReference}) : super._();
 
@@ -7371,9 +7357,8 @@ class __$ContractRuleCopyWithImpl<$Res> extends _$ContractRuleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContractRule extends _ContractRule {
   _$_ContractRule({this.contentAttachment, this.contentReference}) : super._();
 
@@ -8829,9 +8814,8 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
@@ -9575,9 +9559,8 @@ class __$ExplanationOfBenefitRelatedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitRelated extends _ExplanationOfBenefitRelated {
   _$_ExplanationOfBenefitRelated(
       {this.claim, this.relationship, this.reference})
@@ -9794,9 +9777,8 @@ class __$ExplanationOfBenefitPayeeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitPayee extends _ExplanationOfBenefitPayee {
   _$_ExplanationOfBenefitPayee({this.type, this.party}) : super._();
 
@@ -10286,9 +10268,8 @@ class __$ExplanationOfBenefitInformationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitInformation
     extends _ExplanationOfBenefitInformation {
   _$_ExplanationOfBenefitInformation(
@@ -10738,9 +10719,8 @@ class __$ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
   _$_ExplanationOfBenefitCareTeam(
       {this.sequence,
@@ -11103,9 +11083,8 @@ class __$ExplanationOfBenefitDiagnosisCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
   _$_ExplanationOfBenefitDiagnosis(
       {this.sequence,
@@ -11461,9 +11440,8 @@ class __$ExplanationOfBenefitProcedureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
   _$_ExplanationOfBenefitProcedure(
       {this.sequence,
@@ -11731,9 +11709,8 @@ class __$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
   _$_ExplanationOfBenefitInsurance(
       {this.coverage,
@@ -12040,9 +12017,8 @@ class __$ExplanationOfBenefitAccidentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
   _$_ExplanationOfBenefitAccident(
       {this.date,
@@ -12977,9 +12953,8 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   _$_ExplanationOfBenefitItem(
       {this.sequence,
@@ -13590,9 +13565,8 @@ class __$ExplanationOfBenefitAdjudicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitAdjudication
     extends _ExplanationOfBenefitAdjudication {
   _$_ExplanationOfBenefitAdjudication(
@@ -14180,9 +14154,8 @@ class __$ExplanationOfBenefitDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
   _$_ExplanationOfBenefitDetail(
       {this.sequence,
@@ -14888,9 +14861,8 @@ class __$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
   _$_ExplanationOfBenefitSubDetail(
       {this.sequence,
@@ -15432,9 +15404,8 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
   _$_ExplanationOfBenefitAddItem(
       {this.sequenceLinkId,
@@ -15869,9 +15840,8 @@ class __$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
   _$_ExplanationOfBenefitDetail1(
       {this.revenue,
@@ -16285,9 +16255,8 @@ class __$ExplanationOfBenefitPaymentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitPayment extends _ExplanationOfBenefitPayment {
   _$_ExplanationOfBenefitPayment(
       {this.type,
@@ -16646,9 +16615,8 @@ class __$ExplanationOfBenefitProcessNoteCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitProcessNote
     extends _ExplanationOfBenefitProcessNote {
   _$_ExplanationOfBenefitProcessNote(
@@ -17146,9 +17114,8 @@ class __$ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitBenefitBalance
     extends _ExplanationOfBenefitBenefitBalance {
   _$_ExplanationOfBenefitBenefitBalance(
@@ -17637,9 +17604,8 @@ class __$ExplanationOfBenefitFinancialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
   _$_ExplanationOfBenefitFinancial(
       {required this.type,

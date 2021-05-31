@@ -698,9 +698,8 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlan extends _CarePlan {
   _$_CarePlan(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
@@ -1227,9 +1226,8 @@ class __$CarePlanRelatedPlanCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlanRelatedPlan extends _CarePlanRelatedPlan {
   _$_CarePlanRelatedPlan(
       {this.id,
@@ -1521,9 +1519,8 @@ class __$CarePlanParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlanParticipant extends _CarePlanParticipant {
   _$_CarePlanParticipant(
       {this.id,
@@ -1859,9 +1856,8 @@ class __$CarePlanActivityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlanActivity extends _CarePlanActivity {
   _$_CarePlanActivity(
       {this.id,
@@ -2645,9 +2641,8 @@ class __$CarePlanActivityDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlanActivityDetail extends _CarePlanActivityDetail {
   _$_CarePlanActivityDetail(
       {this.id,
@@ -3699,9 +3694,8 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Goal extends _Goal {
   _$_Goal(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Goal)
@@ -4254,9 +4248,8 @@ class __$GoalOutcomeCopyWithImpl<$Res> extends _$GoalOutcomeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GoalOutcome extends _GoalOutcome {
   _$_GoalOutcome(
       {this.id,
@@ -4973,9 +4966,8 @@ class __$ReferralRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ReferralRequest extends _ReferralRequest {
   _$_ReferralRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ReferralRequest)
@@ -5952,9 +5944,8 @@ class __$ProcedureRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcedureRequest extends _ProcedureRequest {
   _$_ProcedureRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcedureRequest)
@@ -6924,9 +6915,8 @@ class __$NutritionOrderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrder extends _NutritionOrder {
   _$_NutritionOrder(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
@@ -7522,9 +7512,8 @@ class __$NutritionOrderOralDietCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
   _$_NutritionOrderOralDiet(
       {this.id,
@@ -8006,9 +7995,8 @@ class __$NutritionOrderSupplementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
   _$_NutritionOrderSupplement(
       {this.id,
@@ -8648,9 +8636,8 @@ class __$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
   _$_NutritionOrderEnteralFormula(
       {this.id,
@@ -9099,9 +9086,8 @@ class __$NutritionOrderOralDietNutrientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderOralDietNutrient
     extends _NutritionOrderOralDietNutrient {
   _$_NutritionOrderOralDietNutrient(
@@ -9428,9 +9414,8 @@ class __$NutritionOrderOralDietTextureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderOralDietTexture extends _NutritionOrderOralDietTexture {
   _$_NutritionOrderOralDietTexture(
       {this.id,
@@ -9805,9 +9790,8 @@ class __$NutritionOrderEnteralFormulaAdministrationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderEnteralFormulaAdministration
     extends _NutritionOrderEnteralFormulaAdministration {
   _$_NutritionOrderEnteralFormulaAdministration(
@@ -10321,9 +10305,8 @@ class __$VisionPrescriptionDispenseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VisionPrescriptionDispense extends _VisionPrescriptionDispense {
   _$_VisionPrescriptionDispense(
       {this.id,
@@ -11098,9 +11081,8 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VisionPrescription extends _VisionPrescription {
   _$_VisionPrescription(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.VisionPrescription)

@@ -1241,9 +1241,8 @@ class __$CapabilityStatementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
@@ -2119,9 +2118,8 @@ class __$CapabilityStatementSoftwareCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
   _$_CapabilityStatementSoftware(
       {this.id,
@@ -2527,9 +2525,8 @@ class __$CapabilityStatementImplementationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementImplementation
     extends _CapabilityStatementImplementation {
   _$_CapabilityStatementImplementation(
@@ -3017,9 +3014,8 @@ class __$CapabilityStatementRestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   _$_CapabilityStatementRest(
       {this.id,
@@ -3457,9 +3453,8 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
   _$_CapabilityStatementSecurity(
       {this.id,
@@ -4368,9 +4363,8 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   _$_CapabilityStatementResource(
       {this.id,
@@ -5037,9 +5031,8 @@ class __$CapabilityStatementInteractionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementInteraction
     extends _CapabilityStatementInteraction {
   _$_CapabilityStatementInteraction(
@@ -5483,9 +5476,8 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementSearchParam
     extends _CapabilityStatementSearchParam {
   _$_CapabilityStatementSearchParam(
@@ -5899,9 +5891,8 @@ class __$CapabilityStatementOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
   _$_CapabilityStatementOperation(
       {this.id,
@@ -6280,9 +6271,8 @@ class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementInteraction1
     extends _CapabilityStatementInteraction1 {
   _$_CapabilityStatementInteraction1(
@@ -6680,9 +6670,8 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
   _$_CapabilityStatementMessaging(
       {this.id,
@@ -7039,9 +7028,8 @@ class __$CapabilityStatementEndpointCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
   _$_CapabilityStatementEndpoint(
       {this.id,
@@ -7367,9 +7355,8 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementSupportedMessage
     extends _CapabilityStatementSupportedMessage {
   _$_CapabilityStatementSupportedMessage(
@@ -7753,9 +7740,8 @@ class __$CapabilityStatementDocumentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
   _$_CapabilityStatementDocument(
       {this.id,
@@ -8807,9 +8793,8 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompartmentDefinition extends _CompartmentDefinition {
   _$_CompartmentDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
@@ -9519,9 +9504,8 @@ class __$CompartmentDefinitionResourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
   _$_CompartmentDefinitionResource(
       {this.id,
@@ -10551,9 +10535,8 @@ class __$ExampleScenarioCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExampleScenario extends _ExampleScenario {
   _$_ExampleScenario(
       {@JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
@@ -11331,9 +11314,8 @@ class __$ExampleScenarioActorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExampleScenarioActor extends _ExampleScenarioActor {
   _$_ExampleScenarioActor(
       {this.id,
@@ -11855,9 +11837,8 @@ class __$ExampleScenarioInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExampleScenarioInstance extends _ExampleScenarioInstance {
   _$_ExampleScenarioInstance(
       {this.id,
@@ -12272,9 +12253,8 @@ class __$ExampleScenarioVersionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExampleScenarioVersion extends _ExampleScenarioVersion {
   _$_ExampleScenarioVersion(
       {this.id,
@@ -12629,9 +12609,8 @@ class __$ExampleScenarioContainedInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExampleScenarioContainedInstance
     extends _ExampleScenarioContainedInstance {
   _$_ExampleScenarioContainedInstance(
@@ -13089,9 +13068,8 @@ class __$ExampleScenarioProcessCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
   _$_ExampleScenarioProcess(
       {this.id,
@@ -13507,9 +13485,8 @@ class __$ExampleScenarioStepCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExampleScenarioStep extends _ExampleScenarioStep {
   _$_ExampleScenarioStep(
       {this.id,
@@ -14200,9 +14177,8 @@ class __$ExampleScenarioOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExampleScenarioOperation extends _ExampleScenarioOperation {
   _$_ExampleScenarioOperation(
       {this.id,
@@ -14720,9 +14696,8 @@ class __$ExampleScenarioAlternativeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExampleScenarioAlternative extends _ExampleScenarioAlternative {
   _$_ExampleScenarioAlternative(
       {this.id,
@@ -15738,9 +15713,8 @@ class __$GraphDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GraphDefinition extends _GraphDefinition {
   _$_GraphDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
@@ -16553,9 +16527,8 @@ class __$GraphDefinitionLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GraphDefinitionLink extends _GraphDefinitionLink {
   _$_GraphDefinitionLink(
       {this.id,
@@ -17022,9 +16995,8 @@ class __$GraphDefinitionTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
   _$_GraphDefinitionTarget(
       {this.id,
@@ -17565,9 +17537,8 @@ class __$GraphDefinitionCompartmentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
   _$_GraphDefinitionCompartment(
       {this.id,
@@ -18858,9 +18829,8 @@ class __$ImplementationGuideCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
@@ -19629,9 +19599,8 @@ class __$ImplementationGuideDependsOnCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideDependsOn extends _ImplementationGuideDependsOn {
   _$_ImplementationGuideDependsOn(
       {this.id,
@@ -19962,9 +19931,8 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
   _$_ImplementationGuideGlobal(
       {this.id,
@@ -20307,9 +20275,8 @@ class __$ImplementationGuideDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideDefinition extends _ImplementationGuideDefinition {
   _$_ImplementationGuideDefinition(
       {this.id,
@@ -20674,9 +20641,8 @@ class __$ImplementationGuideGroupingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideGrouping extends _ImplementationGuideGrouping {
   _$_ImplementationGuideGrouping(
       {this.id,
@@ -21222,9 +21188,8 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideResource extends _ImplementationGuideResource {
   _$_ImplementationGuideResource(
       {this.id,
@@ -21781,9 +21746,8 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   _$_ImplementationGuidePage(
       {this.id,
@@ -22203,9 +22167,8 @@ class __$ImplementationGuideParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideParameter extends _ImplementationGuideParameter {
   _$_ImplementationGuideParameter(
       {this.id,
@@ -22613,9 +22576,8 @@ class __$ImplementationGuideTemplateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideTemplate extends _ImplementationGuideTemplate {
   _$_ImplementationGuideTemplate(
       {this.id,
@@ -23038,9 +23000,8 @@ class __$ImplementationGuideManifestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideManifest extends _ImplementationGuideManifest {
   _$_ImplementationGuideManifest(
       {this.id,
@@ -23507,9 +23468,8 @@ class __$ImplementationGuideResource1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
   _$_ImplementationGuideResource1(
       {this.id,
@@ -23925,9 +23885,8 @@ class __$ImplementationGuidePage1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuidePage1 extends _ImplementationGuidePage1 {
   _$_ImplementationGuidePage1(
       {this.id,
@@ -25261,9 +25220,8 @@ class __$MessageDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageDefinition extends _MessageDefinition {
   _$_MessageDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
@@ -26125,9 +26083,8 @@ class __$MessageDefinitionFocusCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
   _$_MessageDefinitionFocus(
       {this.id,
@@ -26480,9 +26437,8 @@ class __$MessageDefinitionAllowedResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageDefinitionAllowedResponse
     extends _MessageDefinitionAllowedResponse {
   _$_MessageDefinitionAllowedResponse(
@@ -27903,9 +27859,8 @@ class __$OperationDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
@@ -29103,9 +29058,8 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   _$_OperationDefinitionParameter(
       {this.id,
@@ -29615,9 +29569,8 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
   _$_OperationDefinitionBinding(
       {this.id,
@@ -29968,9 +29921,8 @@ class __$OperationDefinitionReferencedFromCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionReferencedFrom
     extends _OperationDefinitionReferencedFrom {
   _$_OperationDefinitionReferencedFrom(
@@ -30316,9 +30268,8 @@ class __$OperationDefinitionOverloadCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
   _$_OperationDefinitionOverload(
       {this.id,
@@ -31799,9 +31750,8 @@ class __$SearchParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
       {@JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
@@ -32668,9 +32618,8 @@ class __$SearchParameterComponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SearchParameterComponent extends _SearchParameterComponent {
   _$_SearchParameterComponent(
       {this.id,
@@ -34150,9 +34099,8 @@ class __$StructureDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
@@ -35124,9 +35072,8 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
   _$_StructureDefinitionMapping(
       {this.id,
@@ -35534,9 +35481,8 @@ class __$StructureDefinitionContextCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionContext extends _StructureDefinitionContext {
   _$_StructureDefinitionContext(
       {this.id,
@@ -35822,9 +35768,8 @@ class __$StructureDefinitionSnapshotCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
   _$_StructureDefinitionSnapshot(
       {this.id,
@@ -36068,9 +36013,8 @@ class __$StructureDefinitionDifferentialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionDifferential
     extends _StructureDefinitionDifferential {
   _$_StructureDefinitionDifferential(
@@ -37128,9 +37072,8 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMap extends _StructureMap {
   _$_StructureMap(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
@@ -37911,9 +37854,8 @@ class __$StructureMapStructureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapStructure extends _StructureMapStructure {
   _$_StructureMapStructure(
       {this.id,
@@ -38440,9 +38382,8 @@ class __$StructureMapGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapGroup extends _StructureMapGroup {
   _$_StructureMapGroup(
       {this.id,
@@ -38977,9 +38918,8 @@ class __$StructureMapInputCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapInput extends _StructureMapInput {
   _$_StructureMapInput(
       {this.id,
@@ -39436,9 +39376,8 @@ class __$StructureMapRuleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapRule extends _StructureMapRule {
   _$_StructureMapRule(
       {this.id,
@@ -42067,9 +42006,8 @@ class __$StructureMapSourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapSource extends _StructureMapSource {
   _$_StructureMapSource(
       {this.id,
@@ -43518,9 +43456,8 @@ class __$StructureMapTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapTarget extends _StructureMapTarget {
   _$_StructureMapTarget(
       {this.id,
@@ -44151,9 +44088,8 @@ class __$StructureMapParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapParameter extends _StructureMapParameter {
   _$_StructureMapParameter(
       {this.id,
@@ -44555,9 +44491,8 @@ class __$StructureMapDependentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapDependent extends _StructureMapDependent {
   _$_StructureMapDependent(
       {this.id,
