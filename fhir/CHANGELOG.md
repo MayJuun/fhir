@@ -1,5 +1,8 @@
 # fhir
 
+## [0.4.7]
+* Updated dependencies, reran code genderation
+
 ## [0.4.6]
 * [Tiloc](https://github.com/tiloc) cleaned up DateTime
 * [Tiloc](https://github.com/tiloc) fixed an error in the QuestionnaireResponse
