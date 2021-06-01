@@ -1,3 +1,8 @@
+## [0.4.3]
+* Dependencies updated
+* Run code gen
+* Trying to rid myself of some pub.dev errors
+
 ## [0.4.2]
 * Dependencies updated
 
