@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:yaml/yaml.dart';
 
+import 'date.dart';
+
 enum DateTimePrecision {
   YYYY,
   YYYYMM,
@@ -26,9 +28,25 @@ class FhirDateTime {
         return FhirDateTime._(
             inValue, null, false, DateTimePrecision.INVALID, e);
       }
+    }
+    if (inValue is Date) {
+      switch (inValue.precision) {
+        case DatePrecision.YYYY:
+          return FhirDateTime.fromDateTime(
+              inValue.value!, DateTimePrecision.YYYY);
+        case DatePrecision.YYYYMM:
+          return FhirDateTime.fromDateTime(
+              inValue.value!, DateTimePrecision.YYYYMM);
+        case DatePrecision.YYYYMMDD:
+          return FhirDateTime.fromDateTime(
+              inValue.value!, DateTimePrecision.YYYYMMDD);
+        case DatePrecision.INVALID:
+          return FhirDateTime._(inValue.toString(), null, false,
+              DateTimePrecision.INVALID, inValue.parseError);
+      }
     } else {
       throw ArgumentError(
-          "FhirDateTime cannot be constructed from '$inValue' of type '${inValue.runtimeType.toString()}'.");
+          "FhirDateTime cannot be constructed from '$inValue' (unsupported type).");
     }
   }
 

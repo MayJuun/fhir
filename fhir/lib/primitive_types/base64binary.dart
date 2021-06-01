@@ -6,11 +6,18 @@ class Base64Binary {
   const Base64Binary._(
       this._valueString, this._valueBase64Binary, this._isValid);
 
-  static final RegExp _base64RegExp = RegExp(
-      r'^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=|[A-Za-z0-9+\/]{4})$');
+// TODO: This regexp is the most correct way to check the validity of a base64
+// But crashes the library on release builds with large base64 strings (images)
 
-  factory Base64Binary(String inValue) =>
+//  static final RegExp _base64RegExp = RegExp(
+//      r'^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=|[A-Za-z0-9+\/]{4})$');
+
+/*  factory Base64Binary(String inValue) =>
       _base64RegExp.hasMatch(inValue)
+          ? Base64Binary._(inValue, inValue, true)
+          : Base64Binary._(inValue, null, false); */
+  factory Base64Binary(String inValue) =>
+      inValue.length % 4 == 0
           ? Base64Binary._(inValue, inValue, true)
           : Base64Binary._(inValue, null, false);
 
