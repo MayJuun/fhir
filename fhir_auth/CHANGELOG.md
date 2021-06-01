@@ -1,3 +1,7 @@
+## [0.4.1]
+* Updated dependencies
+* Trying to make it fully web and mobile compliant on pub.dev
+
 ## [0.4.0]
 * Now works for mobile and web
 * Still needs a better readme
