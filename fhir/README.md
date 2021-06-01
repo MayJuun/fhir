@@ -167,3 +167,5 @@ The full resource lists I've decided it's not worth upkeeping since HL7 does tha
 ## [Resource Index Stu3](https://hl7.org/fhir/stu3/resourcelist.html)
 ## [Resource Index R4](https://www.hl7.org/fhir/resourcelist.html)
 ## [Resource Index R5 Preview #3](https://hl7.org/fhir/2020Sep/resourcelist.html)
+
+FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®
