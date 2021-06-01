@@ -1,7 +1,7 @@
 name: fhir_at_rest
 description: This package builds on the basic FHIR package. It allows easy
   creation of RESTful calls to a FHIR server or FHIR API.
-version: 0.4.3
+version: 0.4.4
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_at_rest
 
@@ -16,6 +16,7 @@ dependencies:
 dev_dependencies:
   build_runner: ^2.0.4
   freezed: ^0.14.2
+  pedantic: ^1.11.0
   test: ^1.17.5
 
 

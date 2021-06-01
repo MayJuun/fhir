@@ -1,3 +1,8 @@
+## [0.4.3]
+* Updated version numbers
+* Updated dependencies
+* Reran code gen
+
 ## [0.4.2]
 * Updated to universal I/O so it would run in js
 

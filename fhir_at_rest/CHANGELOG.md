@@ -1,3 +1,6 @@
+## [0.4.4]
+* Removed build.yaml
+
 ## [0.4.3]
 * Dependencies updated
 * Run code gen
