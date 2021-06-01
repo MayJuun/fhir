@@ -1,25 +1,6 @@
 import 'package:fhir/r4.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-enum ObservationStatus {
-  @JsonValue('registered')
-  registered,
-  @JsonValue('preliminary')
-  preliminary,
-  @JsonValue('final')
-  final_,
-  @JsonValue('amended')
-  amended,
-  @JsonValue('corrected')
-  corrected,
-  @JsonValue('cancelled')
-  cancelled,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('unknown')
-  unknown,
-}
-
 enum ObservationDataAbsentReason {
   @JsonValue('Display')
   unknown,
