@@ -84,9 +84,18 @@ void main() {
   group('Smart on FHIR Bulk Request:', () {
     test('Basic System Bulk Request', () async {
       kTestMode = false;
+
+      /// Access Token Lifetime: 15 minutes
+      /// Database Size 1,000 Patients
+      /// Resources per File 1,000
+      /// Simulate Error for Testing None
+      /// Simulated File generation duration 1 minute
+      /// Simulate deleted resources 0%
+      /// Check only AllergyIntolerance and Device
+      /// https://bulk-data.smarthealthit.org/?dur=60&m=10&page=1000&stu=4
       final request = BulkRequest.patient(
           base: Uri.parse(
-              'https://bulk-data.smarthealthit.org/eyJlcnIiOiIiLCJwYWdlIjoxMDAwLCJkdXIiOjEwLCJ0bHQiOjE1LCJtIjoxLCJzdHUiOjQsImRlbCI6MH0/fhir'),
+              'https://bulk-data.smarthealthit.org/eyJlcnIiOiIiLCJwYWdlIjoxMDAwLCJkdXIiOjYwLCJ0bHQiOjE1LCJtIjoxMCwic3R1Ijo0LCJkZWwiOjB9/fhir'),
           types: [
             WhichResource(R4ResourceType.AllergyIntolerance, null),
             WhichResource(R4ResourceType.Device, null),
