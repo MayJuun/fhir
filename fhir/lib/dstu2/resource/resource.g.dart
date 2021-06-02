@@ -33,30 +33,30 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) {
         .toList();
 }
 
-// Map<String, dynamic> _$ResourceToJson(Resource instance) {
-//   final val = <String, dynamic>{};
+Map<String, dynamic> _$ResourceToJson(Resource instance) {
+  final val = <String, dynamic>{};
 
-//   void writeNotNull(String key, dynamic value) {
-//     if (value != null) {
-//       val[key] = value;
-//     }
-//   }
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
 
-//   writeNotNull('id', instance.id?.toJson());
-//   writeNotNull(
-//       'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
-//   writeNotNull('meta', instance.meta?.toJson());
-//   writeNotNull('implicitRules', instance.implicitRules?.toJson());
-//   writeNotNull('language', instance.language?.toJson());
-//   writeNotNull('text', instance.text?.toJson());
-//   writeNotNull(
-//       'contained', instance.contained?.map((e) => e.toJson()).toList());
-//   writeNotNull(
-//       'extension', instance.extension_?.map((e) => e.toJson()).toList());
-//   writeNotNull('modifierExtension',
-//       instance.modifierExtension?.map((e) => e.toJson()).toList());
-//   return val;
-// }
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
