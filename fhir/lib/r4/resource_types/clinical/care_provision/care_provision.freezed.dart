@@ -913,9 +913,8 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlan extends _CarePlan {
   _$_CarePlan(
       {@JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
@@ -1604,9 +1603,8 @@ class __$CarePlanActivityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlanActivity extends _CarePlanActivity {
   _$_CarePlanActivity(
       {this.id,
@@ -2490,9 +2488,8 @@ class __$CarePlanDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlanDetail extends _CarePlanDetail {
   _$_CarePlanDetail(
       {this.id,
@@ -3469,9 +3466,8 @@ class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CareTeam extends _CareTeam {
   _$_CareTeam(
       {@JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
@@ -4034,9 +4030,8 @@ class __$CareTeamParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CareTeamParticipant extends _CareTeamParticipant {
   _$_CareTeamParticipant(
       {this.id,
@@ -4941,9 +4936,8 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Goal extends _Goal {
   _$_Goal(
       {@JsonKey(unknownEnumValue: R4ResourceType.Goal)
@@ -5812,9 +5806,8 @@ class __$GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GoalTarget extends _GoalTarget {
   _$_GoalTarget(
       {this.id,
@@ -6832,9 +6825,8 @@ class __$NutritionOrderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrder extends _NutritionOrder {
   _$_NutritionOrder(
       {@JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
@@ -7488,9 +7480,8 @@ class __$NutritionOrderOralDietCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
   _$_NutritionOrderOralDiet(
       {this.id,
@@ -7838,9 +7829,8 @@ class __$NutritionOrderNutrientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderNutrient extends _NutritionOrderNutrient {
   _$_NutritionOrderNutrient(
       {this.id,
@@ -8132,9 +8122,8 @@ class __$NutritionOrderTextureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderTexture extends _NutritionOrderTexture {
   _$_NutritionOrderTexture(
       {this.id,
@@ -8533,9 +8522,8 @@ class __$NutritionOrderSupplementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
   _$_NutritionOrderSupplement(
       {this.id,
@@ -9144,9 +9132,8 @@ class __$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
   _$_NutritionOrderEnteralFormula(
       {this.id,
@@ -9624,9 +9611,8 @@ class __$NutritionOrderAdministrationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderAdministration extends _NutritionOrderAdministration {
   _$_NutritionOrderAdministration(
       {this.id,
@@ -10583,9 +10569,8 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RequestGroup extends _RequestGroup {
   _$_RequestGroup(
       {@JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
@@ -11956,9 +11941,8 @@ class __$RequestGroupActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RequestGroupAction extends _RequestGroupAction {
   _$_RequestGroupAction(
       {this.id,
@@ -12600,9 +12584,8 @@ class __$RequestGroupConditionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RequestGroupCondition extends _RequestGroupCondition {
   _$_RequestGroupCondition(
       {this.id,
@@ -12997,9 +12980,8 @@ class __$RequestGroupRelatedActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
   _$_RequestGroupRelatedAction(
       {this.id,
@@ -13961,9 +13943,8 @@ class __$RiskAssessmentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskAssessment extends _RiskAssessment {
   _$_RiskAssessment(
       {@JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
@@ -14754,9 +14735,8 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
   _$_RiskAssessmentPrediction(
       {this.id,
@@ -16304,9 +16284,8 @@ class __$ServiceRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ServiceRequest extends _ServiceRequest {
   _$_ServiceRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
@@ -17494,9 +17473,8 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VisionPrescription extends _VisionPrescription {
   _$_VisionPrescription(
       {@JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)
@@ -18504,9 +18482,8 @@ class __$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VisionPrescriptionLensSpecification
     extends _VisionPrescriptionLensSpecification {
   _$_VisionPrescriptionLensSpecification(
@@ -19109,9 +19086,8 @@ class __$VisionPrescriptionPrismCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VisionPrescriptionPrism extends _VisionPrescriptionPrism {
   _$_VisionPrescriptionPrism(
       {this.id,

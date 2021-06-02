@@ -136,9 +136,8 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Element extends _Element {
   _$_Element(
       {this.id,

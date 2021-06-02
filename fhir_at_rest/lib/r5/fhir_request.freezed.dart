@@ -931,6 +931,7 @@ class __$FhirReadRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirReadRequest extends _FhirReadRequest {
   _$_FhirReadRequest(
       {required this.base,
@@ -1550,6 +1551,7 @@ class __$FhirVReadRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirVReadRequest extends _FhirVReadRequest {
   _$_FhirVReadRequest(
       {required this.base,
@@ -2165,6 +2167,7 @@ class __$FhirUpdateRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   _$_FhirUpdateRequest(
       {required this.base,
@@ -2765,6 +2768,7 @@ class __$FhirPatchRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirPatchRequest extends _FhirPatchRequest {
   _$_FhirPatchRequest(
       {required this.base,
@@ -3371,6 +3375,7 @@ class __$FhirDeleteRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   _$_FhirDeleteRequest(
       {required this.base,
@@ -3978,6 +3983,7 @@ class __$FhirCreateRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirCreateRequest extends _FhirCreateRequest {
   _$_FhirCreateRequest(
       {required this.base,
@@ -4590,6 +4596,7 @@ class __$FhirSearchRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirSearchRequest extends _FhirSearchRequest {
   _$_FhirSearchRequest(
       {required this.base,
@@ -5203,6 +5210,7 @@ class __$FhirSearchAllRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   _$_FhirSearchAllRequest(
       {required this.base,
@@ -5796,6 +5804,7 @@ class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   _$_FhirCapabilitiesRequest(
       {required this.base,
@@ -6406,6 +6415,7 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   _$_FhirTransactionRequest(
       {required this.base,
@@ -7015,6 +7025,7 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirBatchRequest extends _FhirBatchRequest {
   _$_FhirBatchRequest(
       {required this.base,
@@ -7644,6 +7655,7 @@ class __$FhirHistoryRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   _$_FhirHistoryRequest(
       {required this.base,
@@ -8308,6 +8320,7 @@ class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   _$_FhirHistoryTypeRequest(
       {required this.base,
@@ -8959,6 +8972,7 @@ class __$FhirHistoryAllRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   _$_FhirHistoryAllRequest(
       {required this.base,
@@ -9614,6 +9628,7 @@ class __$FhirOperationRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirOperationRequest extends _FhirOperationRequest {
   _$_FhirOperationRequest(
       {required this.base,

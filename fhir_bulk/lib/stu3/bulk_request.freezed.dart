@@ -218,6 +218,7 @@ class __$BulkPatientRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_BulkPatientRequest extends _BulkPatientRequest {
   _$_BulkPatientRequest(
       {required this.base, this.since, this.types, this.client})
@@ -407,6 +408,7 @@ class __$BulkGroupRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_BulkGroupRequest extends _BulkGroupRequest {
   _$_BulkGroupRequest(
       {required this.base,
@@ -601,6 +603,7 @@ class __$BulkSystemRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_BulkSystemRequest extends _BulkSystemRequest {
   _$_BulkSystemRequest(
       {required this.base, this.since, this.types, this.client})

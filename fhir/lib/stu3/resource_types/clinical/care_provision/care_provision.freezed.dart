@@ -715,9 +715,8 @@ class __$VisionPrescriptionDispenseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VisionPrescriptionDispense extends _VisionPrescriptionDispense {
   _$_VisionPrescriptionDispense(
       {this.product,
@@ -1838,9 +1837,8 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlan extends _CarePlan {
   _$_CarePlan(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
@@ -2433,9 +2431,8 @@ class __$CarePlanActivityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlanActivity extends _CarePlanActivity {
   _$_CarePlanActivity(
       {this.outcomeCodeableConcept,
@@ -3196,9 +3193,8 @@ class __$CarePlanDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CarePlanDetail extends _CarePlanDetail {
   _$_CarePlanDetail(
       {this.category,
@@ -4100,9 +4096,8 @@ class __$CareTeamCopyWithImpl<$Res> extends _$CareTeamCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CareTeam extends _CareTeam {
   _$_CareTeam(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
@@ -4620,9 +4615,8 @@ class __$CareTeamParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CareTeamParticipant extends _CareTeamParticipant {
   _$_CareTeamParticipant({this.role, this.member, this.onBehalfOf, this.period})
       : super._();
@@ -5475,9 +5469,8 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Goal extends _Goal {
   _$_Goal(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
@@ -6122,9 +6115,8 @@ class __$GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GoalTarget extends _GoalTarget {
   _$_GoalTarget(
       {this.measure,
@@ -6886,9 +6878,8 @@ class __$NutritionOrderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrder extends _NutritionOrder {
   _$_NutritionOrder(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
@@ -7417,9 +7408,8 @@ class __$NutritionOrderOralDietCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
   _$_NutritionOrderOralDiet(
       {this.type,
@@ -7682,9 +7672,8 @@ class __$NutritionOrderNutrientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderNutrient extends _NutritionOrderNutrient {
   _$_NutritionOrderNutrient({this.modifier, this.amount}) : super._();
 
@@ -7889,9 +7878,8 @@ class __$NutritionOrderTextureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderTexture extends _NutritionOrderTexture {
   _$_NutritionOrderTexture({this.modifier, this.foodType}) : super._();
 
@@ -8208,9 +8196,8 @@ class __$NutritionOrderSupplementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
   _$_NutritionOrderSupplement(
       {this.type,
@@ -8737,9 +8724,8 @@ class __$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
   _$_NutritionOrderEnteralFormula(
       {this.baseFormulaType,
@@ -9137,9 +9123,8 @@ class __$NutritionOrderAdministrationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionOrderAdministration extends _NutritionOrderAdministration {
   _$_NutritionOrderAdministration(
       {this.schedule, this.quantity, this.rateSimpleQuantity, this.rateRatio})
@@ -10351,9 +10336,8 @@ class __$ProcedureRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcedureRequest extends _ProcedureRequest {
   _$_ProcedureRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
@@ -11004,9 +10988,8 @@ class __$ProcedureRequestRequesterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcedureRequestRequester extends _ProcedureRequestRequester {
   _$_ProcedureRequestRequester({required this.agent, this.onBehalfOf})
       : super._();
@@ -12050,9 +12033,8 @@ class __$ReferralRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ReferralRequest extends _ReferralRequest {
   _$_ReferralRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
@@ -12650,9 +12632,8 @@ class __$ReferralRequestRequesterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ReferralRequestRequester extends _ReferralRequestRequester {
   _$_ReferralRequestRequester({required this.agent, this.onBehalfOf})
       : super._();
@@ -13615,9 +13596,8 @@ class __$RiskAssessmentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskAssessment extends _RiskAssessment {
   _$_RiskAssessment(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
@@ -14370,9 +14350,8 @@ class __$RiskAssessmentPredictionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
   _$_RiskAssessmentPrediction(
       {required this.outcome,
@@ -15140,9 +15119,8 @@ class __$VisionPrescriptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_VisionPrescription extends _VisionPrescription {
   _$_VisionPrescription(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)

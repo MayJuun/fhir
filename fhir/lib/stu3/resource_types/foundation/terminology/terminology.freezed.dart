@@ -1317,9 +1317,8 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystem extends _CodeSystem {
   _$_CodeSystem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
@@ -2185,9 +2184,8 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemFilter extends _CodeSystemFilter {
   _$_CodeSystemFilter(
       {this.code,
@@ -2589,9 +2587,8 @@ class __$CodeSystemPropertyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemProperty extends _CodeSystemProperty {
   _$_CodeSystemProperty(
       {this.code,
@@ -3007,9 +3004,8 @@ class __$CodeSystemConceptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemConcept extends _CodeSystemConcept {
   _$_CodeSystemConcept(
       {@JsonKey(name: 'extension') this.extension_,
@@ -3370,9 +3366,8 @@ class __$CodeSystemDesignationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemDesignation extends _CodeSystemDesignation {
   _$_CodeSystemDesignation(
       {this.language,
@@ -3859,9 +3854,8 @@ class __$CodeSystemProperty1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
   _$_CodeSystemProperty1(
       {this.code,
@@ -5144,9 +5138,8 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
@@ -5968,9 +5961,8 @@ class __$ConceptMapGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapGroup extends _ConceptMapGroup {
   _$_ConceptMapGroup(
       {this.source,
@@ -6315,9 +6307,8 @@ class __$ConceptMapElementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapElement extends _ConceptMapElement {
   _$_ConceptMapElement(
       {this.code,
@@ -6715,9 +6706,8 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapTarget extends _ConceptMapTarget {
   _$_ConceptMapTarget(
       {this.code,
@@ -7139,9 +7129,8 @@ class __$ConceptMapDependsOnCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
   _$_ConceptMapDependsOn(
       {this.property,
@@ -7543,9 +7532,8 @@ class __$ConceptMapUnmappedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
   _$_ConceptMapUnmapped(
       {this.mode,
@@ -8924,9 +8912,8 @@ class __$ExpansionProfileCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExpansionProfile extends _ExpansionProfile {
   _$_ExpansionProfile(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
@@ -9729,9 +9716,8 @@ class __$ExpansionProfileFixedVersionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExpansionProfileFixedVersion extends _ExpansionProfileFixedVersion {
   _$_ExpansionProfileFixedVersion(
       {this.system,
@@ -10029,9 +10015,8 @@ class __$ExpansionProfileExcludedSystemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExpansionProfileExcludedSystem
     extends _ExpansionProfileExcludedSystem {
   _$_ExpansionProfileExcludedSystem(
@@ -10273,9 +10258,8 @@ class __$ExpansionProfileDesignationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExpansionProfileDesignation extends _ExpansionProfileDesignation {
   _$_ExpansionProfileDesignation({this.include, this.exclude}) : super._();
 
@@ -10441,9 +10425,8 @@ class __$ExpansionProfileIncludeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExpansionProfileInclude extends _ExpansionProfileInclude {
   _$_ExpansionProfileInclude({this.designation}) : super._();
 
@@ -10666,9 +10649,8 @@ class __$ExpansionProfileDesignation1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExpansionProfileDesignation1 extends _ExpansionProfileDesignation1 {
   _$_ExpansionProfileDesignation1(
       {this.language,
@@ -10849,9 +10831,8 @@ class __$ExpansionProfileExcludeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExpansionProfileExclude extends _ExpansionProfileExclude {
   _$_ExpansionProfileExclude({this.designation}) : super._();
 
@@ -11074,9 +11055,8 @@ class __$ExpansionProfileDesignation2CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExpansionProfileDesignation2 extends _ExpansionProfileDesignation2 {
   _$_ExpansionProfileDesignation2(
       {this.language,
@@ -11981,9 +11961,8 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
@@ -12682,9 +12661,8 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
   _$_NamingSystemUniqueId(
       {this.type,
@@ -13888,9 +13866,8 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
@@ -14599,9 +14576,8 @@ class __$ValueSetComposeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetCompose extends _ValueSetCompose {
   _$_ValueSetCompose(
       {this.lockedDate,
@@ -14965,9 +14941,8 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetInclude extends _ValueSetInclude {
   _$_ValueSetInclude(
       {@JsonKey(name: 'extension') this.extension_,
@@ -15320,9 +15295,8 @@ class __$ValueSetConceptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetConcept extends _ValueSetConcept {
   _$_ValueSetConcept(
       {@JsonKey(name: 'extension') this.extension_,
@@ -15641,9 +15615,8 @@ class __$ValueSetDesignationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetDesignation extends _ValueSetDesignation {
   _$_ValueSetDesignation(
       {this.language,
@@ -15965,9 +15938,8 @@ class __$ValueSetFilterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetFilter extends _ValueSetFilter {
   _$_ValueSetFilter(
       {this.property,
@@ -16375,9 +16347,8 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetExpansion extends _ValueSetExpansion {
   _$_ValueSetExpansion(
       {this.identifier,
@@ -16932,9 +16903,8 @@ class __$ValueSetParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetParameter extends _ValueSetParameter {
   _$_ValueSetParameter(
       {this.name,
@@ -17524,9 +17494,8 @@ class __$ValueSetContainsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetContains extends _ValueSetContains {
   _$_ValueSetContains(
       {this.system,

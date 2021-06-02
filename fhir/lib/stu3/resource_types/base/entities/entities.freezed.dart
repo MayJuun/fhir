@@ -918,9 +918,8 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Device extends _Device {
   _$_Device(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Device)
@@ -1741,9 +1740,8 @@ class __$DeviceUdiCopyWithImpl<$Res> extends _$DeviceUdiCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceUdi extends _DeviceUdi {
   _$_DeviceUdi(
       {this.deviceIdentifier,
@@ -2564,9 +2562,8 @@ class __$DeviceComponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceComponent extends _DeviceComponent {
   _$_DeviceComponent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
@@ -3064,9 +3061,8 @@ class __$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceComponentProductionSpecification
     extends _DeviceComponentProductionSpecification {
   _$_DeviceComponentProductionSpecification(
@@ -3813,9 +3809,8 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceMetric)
@@ -4350,9 +4345,8 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   _$_DeviceMetricCalibration(
       {this.type,
@@ -5124,9 +5118,8 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Endpoint extends _Endpoint {
   _$_Endpoint(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
@@ -6466,9 +6459,8 @@ class __$HealthcareServiceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_HealthcareService extends _HealthcareService {
   _$_HealthcareService(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
@@ -7217,9 +7209,8 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_HealthcareServiceAvailableTime
     extends _HealthcareServiceAvailableTime {
   _$_HealthcareServiceAvailableTime(
@@ -7532,9 +7523,8 @@ class __$HealthcareServiceNotAvailableCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
   _$_HealthcareServiceNotAvailable(
       {this.description,
@@ -8408,9 +8398,8 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Location extends _Location {
   _$_Location(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Location)
@@ -9006,9 +8995,8 @@ class __$LocationPositionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_LocationPosition extends _LocationPosition {
   _$_LocationPosition(
       {this.longitude,
@@ -9694,9 +9682,8 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Organization extends _Organization {
   _$_Organization(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
@@ -10193,9 +10180,8 @@ class __$OrganizationContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OrganizationContact extends _OrganizationContact {
   _$_OrganizationContact({this.purpose, this.name, this.telecom, this.address})
       : super._();
@@ -10779,9 +10765,8 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Substance extends _Substance {
   _$_Substance(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
@@ -11239,9 +11224,8 @@ class __$SubstanceInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceInstance extends _SubstanceInstance {
   _$_SubstanceInstance(
       {this.identifier,
@@ -11505,9 +11489,8 @@ class __$SubstanceIngredientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceIngredient extends _SubstanceIngredient {
   _$_SubstanceIngredient(
       {this.quantity, this.substanceCodeableConcept, this.substanceReference})

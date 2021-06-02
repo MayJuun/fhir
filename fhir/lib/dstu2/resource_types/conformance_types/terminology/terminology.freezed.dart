@@ -1071,9 +1071,8 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
@@ -1745,9 +1744,8 @@ class __$ValueSetContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetContact extends _ValueSetContact {
   _$_ValueSetContact(
       {this.id,
@@ -2157,9 +2155,8 @@ class __$ValueSetCodeSystemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
   _$_ValueSetCodeSystem(
       {this.id,
@@ -2631,9 +2628,8 @@ class __$ValueSetCodeSystemConceptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
   _$_ValueSetCodeSystemConcept(
       {this.id,
@@ -3068,9 +3064,8 @@ class __$ValueSetConceptDesignationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
   _$_ValueSetConceptDesignation(
       {this.id,
@@ -3399,9 +3394,8 @@ class __$ValueSetComposeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetCompose extends _ValueSetCompose {
   _$_ValueSetCompose(
       {this.id,
@@ -3797,9 +3791,8 @@ class __$ValueSetComposeIncludeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
   _$_ValueSetComposeInclude(
       {this.id,
@@ -4211,9 +4204,8 @@ class __$ValueSetIncludeConceptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
   _$_ValueSetIncludeConcept(
       {this.id,
@@ -4647,9 +4639,8 @@ class __$ValueSetIncludeFilterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
   _$_ValueSetIncludeFilter(
       {this.id,
@@ -5170,9 +5161,8 @@ class __$ValueSetExpansionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetExpansion extends _ValueSetExpansion {
   _$_ValueSetExpansion(
       {this.id,
@@ -5839,9 +5829,8 @@ class __$ValueSetExpansionParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
   _$_ValueSetExpansionParameter(
       {this.id,
@@ -6481,9 +6470,8 @@ class __$ValueSetExpansionContainsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
   _$_ValueSetExpansionContains(
       {this.id,
@@ -7699,9 +7687,8 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
@@ -8338,9 +8325,8 @@ class __$ConceptMapContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapContact extends _ConceptMapContact {
   _$_ConceptMapContact(
       {this.id,
@@ -8647,9 +8633,8 @@ class __$ConceptMapElementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapElement extends _ConceptMapElement {
   _$_ConceptMapElement(
       {this.id,
@@ -9103,9 +9088,8 @@ class __$ConceptMapElementTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
   _$_ConceptMapElementTarget(
       {this.id,
@@ -9472,9 +9456,8 @@ class __$ConceptMapTargetDependsOnCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
   _$_ConceptMapTargetDependsOn(
       {this.id,
@@ -10402,9 +10385,8 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
@@ -10969,9 +10951,8 @@ class __$NamingSystemContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NamingSystemContact extends _NamingSystemContact {
   _$_NamingSystemContact(
       {this.id,
@@ -11373,9 +11354,8 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
   _$_NamingSystemUniqueId(
       {this.id,

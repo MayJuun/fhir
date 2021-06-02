@@ -1192,9 +1192,8 @@ class __$StructureDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
@@ -1932,9 +1931,8 @@ class __$StructureDefinitionContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionContact extends _StructureDefinitionContact {
   _$_StructureDefinitionContact(
       {this.id,
@@ -2365,9 +2363,8 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
   _$_StructureDefinitionMapping(
       {this.id,
@@ -2698,9 +2695,8 @@ class __$StructureDefinitionSnapshotCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
   _$_StructureDefinitionSnapshot(
       {this.id,
@@ -2944,9 +2940,8 @@ class __$StructureDefinitionDifferentialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionDifferential
     extends _StructureDefinitionDifferential {
   _$_StructureDefinitionDifferential(
@@ -3514,9 +3509,8 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DataElement extends _DataElement {
   _$_DataElement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
@@ -3964,9 +3958,8 @@ class __$DataElementContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DataElementContact extends _DataElementContact {
   _$_DataElementContact(
       {this.id,
@@ -4393,9 +4386,8 @@ class __$DataElementMappingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DataElementMapping extends _DataElementMapping {
   _$_DataElementMapping(
       {this.id,

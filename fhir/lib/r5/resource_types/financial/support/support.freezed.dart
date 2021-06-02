@@ -849,9 +849,8 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Coverage extends _Coverage {
   _$_Coverage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
@@ -1495,9 +1494,8 @@ class __$CoverageClassCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageClass extends _CoverageClass {
   _$_CoverageClass(
       {this.id,
@@ -1865,9 +1863,8 @@ class __$CoverageCostToBeneficiaryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   _$_CoverageCostToBeneficiary(
       {this.id,
@@ -2175,9 +2172,8 @@ class __$CoverageExceptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageException extends _CoverageException {
   _$_CoverageException(
       {this.id,
@@ -3040,9 +3036,8 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   _$_CoverageEligibilityRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
@@ -3670,9 +3665,8 @@ class __$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequestSupportingInfo
     extends _CoverageEligibilityRequestSupportingInfo {
   _$_CoverageEligibilityRequestSupportingInfo(
@@ -4078,9 +4072,8 @@ class __$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequestInsurance
     extends _CoverageEligibilityRequestInsurance {
   _$_CoverageEligibilityRequestInsurance(
@@ -4624,9 +4617,8 @@ class __$CoverageEligibilityRequestItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequestItem
     extends _CoverageEligibilityRequestItem {
   _$_CoverageEligibilityRequestItem(
@@ -5030,9 +5022,8 @@ class __$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequestDiagnosis
     extends _CoverageEligibilityRequestDiagnosis {
   _$_CoverageEligibilityRequestDiagnosis(
@@ -6009,9 +6000,8 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   _$_CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
@@ -6685,9 +6675,8 @@ class __$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponseInsurance
     extends _CoverageEligibilityResponseInsurance {
   _$_CoverageEligibilityResponseInsurance(
@@ -7432,9 +7421,8 @@ class __$CoverageEligibilityResponseItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponseItem
     extends _CoverageEligibilityResponseItem {
   _$_CoverageEligibilityResponseItem(
@@ -8135,9 +8123,8 @@ class __$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponseBenefit
     extends _CoverageEligibilityResponseBenefit {
   _$_CoverageEligibilityResponseBenefit(
@@ -8507,9 +8494,8 @@ class __$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponseError
     extends _CoverageEligibilityResponseError {
   _$_CoverageEligibilityResponseError(
@@ -9153,9 +9139,8 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
@@ -10046,9 +10031,8 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)

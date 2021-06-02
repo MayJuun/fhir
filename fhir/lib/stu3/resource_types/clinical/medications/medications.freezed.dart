@@ -983,9 +983,8 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Immunization extends _Immunization {
   _$_Immunization(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
@@ -1562,9 +1561,8 @@ class __$ImmunizationPractitionerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationPractitioner extends _ImmunizationPractitioner {
   _$_ImmunizationPractitioner({this.role, required this.actor}) : super._();
 
@@ -1742,9 +1740,8 @@ class __$ImmunizationExplanationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationExplanation extends _ImmunizationExplanation {
   _$_ImmunizationExplanation({this.reason, this.reasonNotGiven}) : super._();
 
@@ -2015,9 +2012,8 @@ class __$ImmunizationReactionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationReaction extends _ImmunizationReaction {
   _$_ImmunizationReaction(
       {this.date,
@@ -2489,9 +2485,8 @@ class __$ImmunizationVaccinationProtocolCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationVaccinationProtocol
     extends _ImmunizationVaccinationProtocol {
   _$_ImmunizationVaccinationProtocol(
@@ -3054,9 +3049,8 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImmunizationRecommendation)
@@ -3609,9 +3603,8 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationRecommendationRecommendation
     extends _ImmunizationRecommendationRecommendation {
   _$_ImmunizationRecommendationRecommendation(
@@ -3952,9 +3945,8 @@ class __$ImmunizationRecommendationDateCriterionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationRecommendationDateCriterion
     extends _ImmunizationRecommendationDateCriterion {
   _$_ImmunizationRecommendationDateCriterion(
@@ -4297,9 +4289,8 @@ class __$ImmunizationRecommendationProtocolCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationRecommendationProtocol
     extends _ImmunizationRecommendationProtocol {
   _$_ImmunizationRecommendationProtocol(
@@ -5042,9 +5033,8 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Medication extends _Medication {
   _$_Medication(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Medication)
@@ -5565,9 +5555,8 @@ class __$MedicationIngredientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationIngredient extends _MedicationIngredient {
   _$_MedicationIngredient(
       {this.itemCodeableConcept,
@@ -5813,9 +5802,8 @@ class __$MedicationPackageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationPackage extends _MedicationPackage {
   _$_MedicationPackage({this.container, this.content, this.batch}) : super._();
 
@@ -6062,9 +6050,8 @@ class __$MedicationContentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationContent extends _MedicationContent {
   _$_MedicationContent(
       {this.itemCodeableConcept, this.itemReference, this.amount})
@@ -6316,9 +6303,8 @@ class __$MedicationBatchCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationBatch extends _MedicationBatch {
   _$_MedicationBatch(
       {this.lotNumber,
@@ -7283,9 +7269,8 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationAdministration)
@@ -7839,9 +7824,8 @@ class __$MedicationAdministrationPerformerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationAdministrationPerformer
     extends _MedicationAdministrationPerformer {
   _$_MedicationAdministrationPerformer({required this.actor, this.onBehalfOf})
@@ -8224,9 +8208,8 @@ class __$MedicationAdministrationDosageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationAdministrationDosage
     extends _MedicationAdministrationDosage {
   _$_MedicationAdministrationDosage(
@@ -9378,9 +9361,8 @@ class __$MedicationDispenseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationDispense)
@@ -9976,9 +9958,8 @@ class __$MedicationDispensePerformerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
   _$_MedicationDispensePerformer({required this.actor, this.onBehalfOf})
       : super._();
@@ -10241,9 +10222,8 @@ class __$MedicationDispenseSubstitutionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationDispenseSubstitution
     extends _MedicationDispenseSubstitution {
   _$_MedicationDispenseSubstitution(
@@ -11335,9 +11315,8 @@ class __$MedicationRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationRequest extends _MedicationRequest {
   _$_MedicationRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationRequest)
@@ -11923,9 +11902,8 @@ class __$MedicationRequestRequesterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationRequestRequester extends _MedicationRequestRequester {
   _$_MedicationRequestRequester({required this.agent, this.onBehalfOf})
       : super._();
@@ -12250,9 +12228,8 @@ class __$MedicationRequestDispenseRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationRequestDispenseRequest
     extends _MedicationRequestDispenseRequest {
   _$_MedicationRequestDispenseRequest(
@@ -12537,9 +12514,8 @@ class __$MedicationRequestSubstitutionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
   _$_MedicationRequestSubstitution(
       {this.allowed,
@@ -13474,9 +13450,8 @@ class __$MedicationStatementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationStatement extends _MedicationStatement {
   _$_MedicationStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MedicationStatement)

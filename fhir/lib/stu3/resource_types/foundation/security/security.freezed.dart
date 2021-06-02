@@ -636,9 +636,8 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
@@ -1389,9 +1388,8 @@ class __$AuditEventAgentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventAgent extends _AuditEventAgent {
   _$_AuditEventAgent(
       {this.role,
@@ -1767,9 +1765,8 @@ class __$AuditEventNetworkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventNetwork extends _AuditEventNetwork {
   _$_AuditEventNetwork(
       {this.address,
@@ -2031,9 +2028,8 @@ class __$AuditEventSourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventSource extends _AuditEventSource {
   _$_AuditEventSource(
       {this.site,
@@ -2517,9 +2513,8 @@ class __$AuditEventEntityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventEntity extends _AuditEventEntity {
   _$_AuditEventEntity(
       {this.identifier,
@@ -2874,9 +2869,8 @@ class __$AuditEventDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuditEventDetail extends _AuditEventDetail {
   _$_AuditEventDetail(
       {this.type,
@@ -3776,9 +3770,8 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Consent extends _Consent {
   _$_Consent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
@@ -4298,9 +4291,8 @@ class __$ConsentActorCopyWithImpl<$Res> extends _$ConsentActorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConsentActor extends _ConsentActor {
   _$_ConsentActor({required this.role, required this.reference}) : super._();
 
@@ -4540,9 +4532,8 @@ class __$ConsentPolicyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConsentPolicy extends _ConsentPolicy {
   _$_ConsentPolicy(
       {this.authority,
@@ -4787,9 +4778,8 @@ class __$ConsentDataCopyWithImpl<$Res> extends _$ConsentDataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConsentData extends _ConsentData {
   _$_ConsentData(
       {this.meaning,
@@ -5164,9 +5154,8 @@ class __$ConsentExceptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConsentExcept extends _ConsentExcept {
   _$_ConsentExcept(
       {this.type,
@@ -5452,9 +5441,8 @@ class __$ConsentActor1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConsentActor1 extends _ConsentActor1 {
   _$_ConsentActor1({required this.role, required this.reference}) : super._();
 
@@ -5672,9 +5660,8 @@ class __$ConsentData1CopyWithImpl<$Res> extends _$ConsentData1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConsentData1 extends _ConsentData1 {
   _$_ConsentData1(
       {this.meaning,
@@ -6319,9 +6306,8 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Provenance extends _Provenance {
   _$_Provenance(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
@@ -6893,9 +6879,8 @@ class __$ProvenanceAgentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProvenanceAgent extends _ProvenanceAgent {
   _$_ProvenanceAgent(
       {this.role,
@@ -7274,9 +7259,8 @@ class __$ProvenanceEntityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProvenanceEntity extends _ProvenanceEntity {
   _$_ProvenanceEntity(
       {this.role,

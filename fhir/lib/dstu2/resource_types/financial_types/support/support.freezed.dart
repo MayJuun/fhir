@@ -737,9 +737,8 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Coverage extends _Coverage {
   _$_Coverage(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
@@ -1614,9 +1613,8 @@ class __$EligibilityRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EligibilityRequest extends _EligibilityRequest {
   _$_EligibilityRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
@@ -2533,9 +2531,8 @@ class __$EligibilityResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EligibilityResponse extends _EligibilityResponse {
   _$_EligibilityResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
@@ -3459,9 +3456,8 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
@@ -4407,9 +4403,8 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)

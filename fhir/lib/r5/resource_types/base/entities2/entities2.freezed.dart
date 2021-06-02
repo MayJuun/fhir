@@ -671,9 +671,8 @@ class __$BiologicallyDerivedProductCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   _$_BiologicallyDerivedProduct(
       {@JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
@@ -1279,9 +1278,8 @@ class __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BiologicallyDerivedProductCollection
     extends _BiologicallyDerivedProductCollection {
   _$_BiologicallyDerivedProductCollection(
@@ -1738,9 +1736,8 @@ class __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BiologicallyDerivedProductProcessing
     extends _BiologicallyDerivedProductProcessing {
   _$_BiologicallyDerivedProductProcessing(
@@ -2162,9 +2159,8 @@ class __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BiologicallyDerivedProductManipulation
     extends _BiologicallyDerivedProductManipulation {
   _$_BiologicallyDerivedProductManipulation(
@@ -2625,9 +2621,8 @@ class __$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BiologicallyDerivedProductStorage
     extends _BiologicallyDerivedProductStorage {
   _$_BiologicallyDerivedProductStorage(
@@ -4024,9 +4019,8 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Device extends _Device {
   _$_Device(
       {@JsonKey(unknownEnumValue: R5ResourceType.Device)
@@ -5019,9 +5013,8 @@ class __$DeviceUdiCarrierCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
   _$_DeviceUdiCarrier(
       {this.id,
@@ -5488,9 +5481,8 @@ class __$DeviceDeviceNameCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceDeviceName extends _DeviceDeviceName {
   _$_DeviceDeviceName(
       {this.id,
@@ -5821,9 +5813,8 @@ class __$DeviceSpecializationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceSpecialization extends _DeviceSpecialization {
   _$_DeviceSpecialization(
       {this.id,
@@ -6173,9 +6164,8 @@ class __$DeviceVersionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceVersion extends _DeviceVersion {
   _$_DeviceVersion(
       {this.id,
@@ -6483,9 +6473,8 @@ class __$DevicePropertyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceProperty extends _DeviceProperty {
   _$_DeviceProperty(
       {this.id,
@@ -6773,9 +6762,8 @@ class __$DeviceOperationalStatusCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceOperationalStatus extends _DeviceOperationalStatus {
   _$_DeviceOperationalStatus(
       {this.id,
@@ -7053,9 +7041,8 @@ class __$DeviceAssociationStatusCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceAssociationStatus extends _DeviceAssociationStatus {
   _$_DeviceAssociationStatus(
       {this.id,
@@ -7805,9 +7792,8 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
@@ -8421,9 +8407,8 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   _$_DeviceMetricCalibration(
       {this.id,
@@ -9126,9 +9111,8 @@ class __$NutritionProductCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionProduct extends _NutritionProduct {
   _$_NutritionProduct(
       {@JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
@@ -9628,9 +9612,8 @@ class __$NutritionProductNutrientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionProductNutrient extends _NutritionProductNutrient {
   _$_NutritionProductNutrient(
       {this.id,
@@ -9951,9 +9934,8 @@ class __$NutritionProductIngredientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionProductIngredient extends _NutritionProductIngredient {
   _$_NutritionProductIngredient(
       {this.id,
@@ -10454,9 +10436,8 @@ class __$NutritionProductProductCharacteristicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionProductProductCharacteristic
     extends _NutritionProductProductCharacteristic {
   _$_NutritionProductProductCharacteristic(
@@ -10970,9 +10951,8 @@ class __$NutritionProductInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_NutritionProductInstance extends _NutritionProductInstance {
   _$_NutritionProductInstance(
       {this.id,
@@ -11643,9 +11623,8 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Substance extends _Substance {
   _$_Substance(
       {@JsonKey(unknownEnumValue: R5ResourceType.Substance)
@@ -12154,9 +12133,8 @@ class __$SubstanceInstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceInstance extends _SubstanceInstance {
   _$_SubstanceInstance(
       {this.id,
@@ -12499,9 +12477,8 @@ class __$SubstanceIngredientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceIngredient extends _SubstanceIngredient {
   _$_SubstanceIngredient(
       {this.id,

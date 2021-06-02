@@ -11,10 +11,10 @@ void main() {
     var andOrXor = andOrXorList(path);
     var finalList = operationsList(andOrXor);
     removeResourceType(finalList);
-    finalList.forEach((element) {
-      print('${" " * int.parse(element[0]) * 3}$element');
-    });
-    // print(applyFunctions(finalList, resource));
+    // finalList.forEach((element) {
+    //   print('${" " * int.parse(element[0]) * 3}$element');
+    // });
+    print(applyFunctions(finalList, resource));
   }
 }
 

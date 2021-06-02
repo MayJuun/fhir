@@ -3,6 +3,7 @@
 ## [0.4.7]
 * Added a workaround for stack overflow on release builds
 * Added a way to create a FhirDateTime from a Date
+* Updated dependencies, reran code genderation
 
 ## [0.4.6]
 * [Tiloc](https://github.com/tiloc) cleaned up DateTime

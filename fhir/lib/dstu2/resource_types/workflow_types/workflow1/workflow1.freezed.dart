@@ -484,9 +484,8 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Order extends _Order {
   _$_Order(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
@@ -916,9 +915,8 @@ class __$OrderWhenCopyWithImpl<$Res> extends _$OrderWhenCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OrderWhen extends _OrderWhen {
   _$_OrderWhen(
       {this.id,
@@ -1454,9 +1452,8 @@ class __$OrderResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OrderResponse extends _OrderResponse {
   _$_OrderResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
@@ -2420,9 +2417,8 @@ class __$CommunicationRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
@@ -3009,9 +3005,8 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
   _$_CommunicationRequestPayload(
       {this.id,
@@ -3865,9 +3860,8 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceUseRequest extends _DeviceUseRequest {
   _$_DeviceUseRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
@@ -4881,9 +4875,8 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceUseStatement extends _DeviceUseStatement {
   _$_DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)

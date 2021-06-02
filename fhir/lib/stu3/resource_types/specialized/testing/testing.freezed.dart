@@ -764,9 +764,8 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReport extends _TestReport {
   _$_TestReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
@@ -1353,9 +1352,8 @@ class __$TestReportParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportParticipant extends _TestReportParticipant {
   _$_TestReportParticipant(
       {this.type,
@@ -1565,9 +1563,8 @@ class __$TestReportSetupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportSetup extends _TestReportSetup {
   _$_TestReportSetup({required this.action}) : super._();
 
@@ -1766,9 +1763,8 @@ class __$TestReportActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportAction extends _TestReportAction {
   _$_TestReportAction({this.operation, @JsonKey(name: 'assert') this.assert_})
       : super._();
@@ -2057,9 +2053,8 @@ class __$TestReportOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportOperation extends _TestReportOperation {
   _$_TestReportOperation(
       {this.result,
@@ -2394,9 +2389,8 @@ class __$TestReportAssertCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportAssert extends _TestReportAssert {
   _$_TestReportAssert(
       {this.result,
@@ -2699,9 +2693,8 @@ class __$TestReportTestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportTest extends _TestReportTest {
   _$_TestReportTest(
       {this.name,
@@ -2946,9 +2939,8 @@ class __$TestReportAction1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportAction1 extends _TestReportAction1 {
   _$_TestReportAction1({this.operation, @JsonKey(name: 'assert') this.assert_})
       : super._();
@@ -3112,9 +3104,8 @@ class __$TestReportTeardownCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportTeardown extends _TestReportTeardown {
   _$_TestReportTeardown({required this.action}) : super._();
 
@@ -3276,9 +3267,8 @@ class __$TestReportAction2CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportAction2 extends _TestReportAction2 {
   _$_TestReportAction2({required this.operation}) : super._();
 
@@ -4464,9 +4454,8 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScript extends _TestScript {
   _$_TestScript(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
@@ -5159,9 +5148,8 @@ class __$TestScriptOriginCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptOrigin extends _TestScriptOrigin {
   _$_TestScriptOrigin(
       {this.index,
@@ -5396,9 +5384,8 @@ class __$TestScriptDestinationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptDestination extends _TestScriptDestination {
   _$_TestScriptDestination(
       {this.index,
@@ -5590,9 +5577,8 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptMetadata extends _TestScriptMetadata {
   _$_TestScriptMetadata({this.link, required this.capability}) : super._();
 
@@ -5833,9 +5819,8 @@ class __$TestScriptLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptLink extends _TestScriptLink {
   _$_TestScriptLink(
       {this.url,
@@ -6281,9 +6266,8 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptCapability extends _TestScriptCapability {
   _$_TestScriptCapability(
       {@JsonKey(name: 'required') this.required_,
@@ -6679,9 +6663,8 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptFixture extends _TestScriptFixture {
   _$_TestScriptFixture(
       {this.autocreate,
@@ -7229,9 +7212,8 @@ class __$TestScriptVariableCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptVariable extends _TestScriptVariable {
   _$_TestScriptVariable(
       {this.name,
@@ -7574,9 +7556,8 @@ class __$TestScriptRuleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptRule extends _TestScriptRule {
   _$_TestScriptRule({required this.resource, this.param}) : super._();
 
@@ -7816,9 +7797,8 @@ class __$TestScriptParamCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptParam extends _TestScriptParam {
   _$_TestScriptParam(
       {this.name,
@@ -8029,9 +8009,8 @@ class __$TestScriptRulesetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptRuleset extends _TestScriptRuleset {
   _$_TestScriptRuleset({required this.resource, required this.rule})
       : super._();
@@ -8242,9 +8221,8 @@ class __$TestScriptRule1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptRule1 extends _TestScriptRule1 {
   _$_TestScriptRule1(
       {this.ruleId, @JsonKey(name: '_ruleId') this.ruleIdElement, this.param})
@@ -8496,9 +8474,8 @@ class __$TestScriptParam1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptParam1 extends _TestScriptParam1 {
   _$_TestScriptParam1(
       {this.name,
@@ -8684,9 +8661,8 @@ class __$TestScriptSetupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptSetup extends _TestScriptSetup {
   _$_TestScriptSetup({required this.action}) : super._();
 
@@ -8885,9 +8861,8 @@ class __$TestScriptActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptAction extends _TestScriptAction {
   _$_TestScriptAction({this.operation, @JsonKey(name: 'assert') this.assert_})
       : super._();
@@ -9717,9 +9692,8 @@ class __$TestScriptOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptOperation extends _TestScriptOperation {
   _$_TestScriptOperation(
       {this.type,
@@ -10256,9 +10230,8 @@ class __$TestScriptRequestHeaderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
   _$_TestScriptRequestHeader(
       {this.field,
@@ -11561,9 +11534,8 @@ class __$TestScriptAssertCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptAssert extends _TestScriptAssert {
   _$_TestScriptAssert(
       {this.label,
@@ -12252,9 +12224,8 @@ class __$TestScriptRule2CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptRule2 extends _TestScriptRule2 {
   _$_TestScriptRule2(
       {this.ruleId, @JsonKey(name: '_ruleId') this.ruleIdElement, this.param})
@@ -12506,9 +12477,8 @@ class __$TestScriptParam2CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptParam2 extends _TestScriptParam2 {
   _$_TestScriptParam2(
       {this.name,
@@ -12744,9 +12714,8 @@ class __$TestScriptRuleset1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
   _$_TestScriptRuleset1(
       {this.rulesetId,
@@ -12971,9 +12940,8 @@ class __$TestScriptRule3CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptRule3 extends _TestScriptRule3 {
   _$_TestScriptRule3(
       {this.ruleId, @JsonKey(name: '_ruleId') this.ruleIdElement, this.param})
@@ -13225,9 +13193,8 @@ class __$TestScriptParam3CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptParam3 extends _TestScriptParam3 {
   _$_TestScriptParam3(
       {this.name,
@@ -13508,9 +13475,8 @@ class __$TestScriptTestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptTest extends _TestScriptTest {
   _$_TestScriptTest(
       {this.name,
@@ -13755,9 +13721,8 @@ class __$TestScriptAction1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptAction1 extends _TestScriptAction1 {
   _$_TestScriptAction1({this.operation, @JsonKey(name: 'assert') this.assert_})
       : super._();
@@ -13921,9 +13886,8 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptTeardown extends _TestScriptTeardown {
   _$_TestScriptTeardown({required this.action}) : super._();
 
@@ -14085,9 +14049,8 @@ class __$TestScriptAction2CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptAction2 extends _TestScriptAction2 {
   _$_TestScriptAction2({required this.operation}) : super._();
 

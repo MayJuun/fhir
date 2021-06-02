@@ -866,9 +866,8 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Coverage extends _Coverage {
   _$_Coverage(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
@@ -1890,9 +1889,8 @@ class __$CoverageGroupingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageGrouping extends _CoverageGrouping {
   _$_CoverageGrouping(
       {this.group,
@@ -3051,9 +3049,8 @@ class __$EligibilityRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EligibilityRequest extends _EligibilityRequest {
   _$_EligibilityRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
@@ -4162,9 +4159,8 @@ class __$EligibilityResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EligibilityResponse extends _EligibilityResponse {
   _$_EligibilityResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
@@ -4680,9 +4676,8 @@ class __$EligibilityResponseInsuranceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
   _$_EligibilityResponseInsurance(
       {this.coverage, this.contract, this.benefitBalance})
@@ -5146,9 +5141,8 @@ class __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EligibilityResponseBenefitBalance
     extends _EligibilityResponseBenefitBalance {
   _$_EligibilityResponseBenefitBalance(
@@ -5637,9 +5631,8 @@ class __$EligibilityResponseFinancialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
   _$_EligibilityResponseFinancial(
       {required this.type,
@@ -5896,9 +5889,8 @@ class __$EligibilityResponseErrorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EligibilityResponseError extends _EligibilityResponseError {
   _$_EligibilityResponseError({required this.code}) : super._();
 
@@ -6533,9 +6525,8 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
@@ -7442,9 +7433,8 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)

@@ -1777,9 +1777,8 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Measure extends _Measure {
   _$_Measure(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
@@ -2824,9 +2823,8 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureGroup extends _MeasureGroup {
   _$_MeasureGroup(
       {this.id,
@@ -3189,9 +3187,8 @@ class __$MeasurePopulationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasurePopulation extends _MeasurePopulation {
   _$_MeasurePopulation(
       {this.id,
@@ -3563,9 +3560,8 @@ class __$MeasureStratifierCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureStratifier extends _MeasureStratifier {
   _$_MeasureStratifier(
       {this.id,
@@ -3928,9 +3924,8 @@ class __$MeasureComponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureComponent extends _MeasureComponent {
   _$_MeasureComponent(
       {this.id,
@@ -4300,9 +4295,8 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   _$_MeasureSupplementalData(
       {this.id,
@@ -5082,9 +5076,8 @@ class __$MeasureReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
@@ -5635,9 +5628,8 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportGroup extends _MeasureReportGroup {
   _$_MeasureReportGroup(
       {this.id,
@@ -5996,9 +5988,8 @@ class __$MeasureReportPopulationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportPopulation extends _MeasureReportPopulation {
   _$_MeasureReportPopulation(
       {this.id,
@@ -6282,9 +6273,8 @@ class __$MeasureReportStratifierCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportStratifier extends _MeasureReportStratifier {
   _$_MeasureReportStratifier(
       {this.id,
@@ -6606,9 +6596,8 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportStratum extends _MeasureReportStratum {
   _$_MeasureReportStratum(
       {this.id,
@@ -6914,9 +6903,8 @@ class __$MeasureReportComponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportComponent extends _MeasureReportComponent {
   _$_MeasureReportComponent(
       {this.id,
@@ -7253,9 +7241,8 @@ class __$MeasureReportPopulation1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
   _$_MeasureReportPopulation1(
       {this.id,
@@ -8136,9 +8123,8 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReport extends _TestReport {
   _$_TestReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
@@ -8796,9 +8782,8 @@ class __$TestReportParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportParticipant extends _TestReportParticipant {
   _$_TestReportParticipant(
       {this.id,
@@ -9096,9 +9081,8 @@ class __$TestReportSetupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportSetup extends _TestReportSetup {
   _$_TestReportSetup(
       {this.id,
@@ -9379,9 +9363,8 @@ class __$TestReportActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportAction extends _TestReportAction {
   _$_TestReportAction(
       {this.id,
@@ -9767,9 +9750,8 @@ class __$TestReportOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportOperation extends _TestReportOperation {
   _$_TestReportOperation(
       {this.id,
@@ -10205,9 +10187,8 @@ class __$TestReportAssertCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportAssert extends _TestReportAssert {
   _$_TestReportAssert(
       {this.id,
@@ -10596,9 +10577,8 @@ class __$TestReportTestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportTest extends _TestReportTest {
   _$_TestReportTest(
       {this.id,
@@ -10922,9 +10902,8 @@ class __$TestReportAction1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportAction1 extends _TestReportAction1 {
   _$_TestReportAction1(
       {this.id,
@@ -11172,9 +11151,8 @@ class __$TestReportTeardownCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportTeardown extends _TestReportTeardown {
   _$_TestReportTeardown(
       {this.id,
@@ -11421,9 +11399,8 @@ class __$TestReportAction2CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestReportAction2 extends _TestReportAction2 {
   _$_TestReportAction2(
       {this.id,
@@ -12618,9 +12595,8 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScript extends _TestScript {
   _$_TestScript(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
@@ -13348,9 +13324,8 @@ class __$TestScriptOriginCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptOrigin extends _TestScriptOrigin {
   _$_TestScriptOrigin(
       {this.id,
@@ -13664,9 +13639,8 @@ class __$TestScriptDestinationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptDestination extends _TestScriptDestination {
   _$_TestScriptDestination(
       {this.id,
@@ -13939,9 +13913,8 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptMetadata extends _TestScriptMetadata {
   _$_TestScriptMetadata(
       {this.id,
@@ -14264,9 +14237,8 @@ class __$TestScriptLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptLink extends _TestScriptLink {
   _$_TestScriptLink(
       {this.id,
@@ -14781,9 +14753,8 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptCapability extends _TestScriptCapability {
   _$_TestScriptCapability(
       {this.id,
@@ -15258,9 +15229,8 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptFixture extends _TestScriptFixture {
   _$_TestScriptFixture(
       {this.id,
@@ -15887,9 +15857,8 @@ class __$TestScriptVariableCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptVariable extends _TestScriptVariable {
   _$_TestScriptVariable(
       {this.id,
@@ -16289,9 +16258,8 @@ class __$TestScriptSetupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptSetup extends _TestScriptSetup {
   _$_TestScriptSetup(
       {this.id,
@@ -16572,9 +16540,8 @@ class __$TestScriptActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptAction extends _TestScriptAction {
   _$_TestScriptAction(
       {this.id,
@@ -17581,9 +17548,8 @@ class __$TestScriptOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptOperation extends _TestScriptOperation {
   _$_TestScriptOperation(
       {this.id,
@@ -18231,9 +18197,8 @@ class __$TestScriptRequestHeaderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
   _$_TestScriptRequestHeader(
       {this.id,
@@ -19571,9 +19536,8 @@ class __$TestScriptAssertCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptAssert extends _TestScriptAssert {
   _$_TestScriptAssert(
       {this.id,
@@ -20382,9 +20346,8 @@ class __$TestScriptTestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptTest extends _TestScriptTest {
   _$_TestScriptTest(
       {this.id,
@@ -20708,9 +20671,8 @@ class __$TestScriptAction1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptAction1 extends _TestScriptAction1 {
   _$_TestScriptAction1(
       {this.id,
@@ -20958,9 +20920,8 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptTeardown extends _TestScriptTeardown {
   _$_TestScriptTeardown(
       {this.id,
@@ -21207,9 +21168,8 @@ class __$TestScriptAction2CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptAction2 extends _TestScriptAction2 {
   _$_TestScriptAction2(
       {this.id,

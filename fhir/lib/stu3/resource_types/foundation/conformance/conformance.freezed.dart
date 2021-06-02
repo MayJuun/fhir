@@ -1315,9 +1315,8 @@ class __$CapabilityStatementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
@@ -2178,9 +2177,8 @@ class __$CapabilityStatementSoftwareCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
   _$_CapabilityStatementSoftware(
       {this.name,
@@ -2478,9 +2476,8 @@ class __$CapabilityStatementImplementationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementImplementation
     extends _CapabilityStatementImplementation {
   _$_CapabilityStatementImplementation(
@@ -2883,9 +2880,8 @@ class __$CapabilityStatementRestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   _$_CapabilityStatementRest(
       {this.mode,
@@ -3283,9 +3279,8 @@ class __$CapabilityStatementSecurityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
   _$_CapabilityStatementSecurity(
       {@JsonKey(name: 'extension') this.extension_,
@@ -3594,9 +3589,8 @@ class __$CapabilityStatementCertificateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementCertificate
     extends _CapabilityStatementCertificate {
   _$_CapabilityStatementCertificate(
@@ -4384,9 +4378,8 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   _$_CapabilityStatementResource(
       {this.type,
@@ -4920,9 +4913,8 @@ class __$CapabilityStatementInteractionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementInteraction
     extends _CapabilityStatementInteraction {
   _$_CapabilityStatementInteraction(
@@ -5292,9 +5284,8 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementSearchParam
     extends _CapabilityStatementSearchParam {
   _$_CapabilityStatementSearchParam(
@@ -5617,9 +5608,8 @@ class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementInteraction1
     extends _CapabilityStatementInteraction1 {
   _$_CapabilityStatementInteraction1(
@@ -5877,9 +5867,8 @@ class __$CapabilityStatementOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
   _$_CapabilityStatementOperation(
       {this.name,
@@ -6189,9 +6178,8 @@ class __$CapabilityStatementMessagingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
   _$_CapabilityStatementMessaging(
       {this.endpoint,
@@ -6478,9 +6466,8 @@ class __$CapabilityStatementEndpointCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
   _$_CapabilityStatementEndpoint(
       {required this.protocol,
@@ -6727,9 +6714,8 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementSupportedMessage
     extends _CapabilityStatementSupportedMessage {
   _$_CapabilityStatementSupportedMessage(
@@ -7160,9 +7146,8 @@ class __$CapabilityStatementEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementEvent extends _CapabilityStatementEvent {
   _$_CapabilityStatementEvent(
       {required this.code,
@@ -7535,9 +7520,8 @@ class __$CapabilityStatementDocumentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
   _$_CapabilityStatementDocument(
       {this.mode,
@@ -8555,9 +8539,8 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompartmentDefinition extends _CompartmentDefinition {
   _$_CompartmentDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
@@ -9220,9 +9203,8 @@ class __$CompartmentDefinitionResourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
   _$_CompartmentDefinitionResource(
       {this.code,
@@ -10230,9 +10212,8 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DataElement extends _DataElement {
   _$_DataElement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
@@ -10942,9 +10923,8 @@ class __$DataElementMappingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DataElementMapping extends _DataElementMapping {
   _$_DataElementMapping(
       {this.identity,
@@ -11991,9 +11971,8 @@ class __$GraphDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GraphDefinition extends _GraphDefinition {
   _$_GraphDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
@@ -12767,9 +12746,8 @@ class __$GraphDefinitionLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GraphDefinitionLink extends _GraphDefinitionLink {
   _$_GraphDefinitionLink(
       {this.path,
@@ -13142,9 +13120,8 @@ class __$GraphDefinitionTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
   _$_GraphDefinitionTarget(
       {this.type,
@@ -13526,9 +13503,8 @@ class __$GraphDefinitionCompartmentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
   _$_GraphDefinitionCompartment(
       {this.code,
@@ -14625,9 +14601,8 @@ class __$ImplementationGuideCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
@@ -15285,9 +15260,8 @@ class __$ImplementationGuideDependencyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
   _$_ImplementationGuideDependency(
       {this.type,
@@ -15577,9 +15551,8 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
   _$_ImplementationGuidePackage(
       {this.name,
@@ -16057,9 +16030,8 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideResource extends _ImplementationGuideResource {
   _$_ImplementationGuideResource(
       {this.example,
@@ -16396,9 +16368,8 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
   _$_ImplementationGuideGlobal(
       {this.type,
@@ -16823,9 +16794,8 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   _$_ImplementationGuidePage(
       {this.source,
@@ -18147,9 +18117,8 @@ class __$MessageDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageDefinition extends _MessageDefinition {
   _$_MessageDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
@@ -18938,9 +18907,8 @@ class __$MessageDefinitionFocusCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
   _$_MessageDefinitionFocus(
       {this.code,
@@ -19224,9 +19192,8 @@ class __$MessageDefinitionAllowedResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageDefinitionAllowedResponse
     extends _MessageDefinitionAllowedResponse {
   _$_MessageDefinitionAllowedResponse(
@@ -20543,9 +20510,8 @@ class __$OperationDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
@@ -21615,9 +21581,8 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   _$_OperationDefinitionParameter(
       {this.name,
@@ -22076,9 +22041,8 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
   _$_OperationDefinitionBinding(
       {@JsonKey(name: 'extension') this.extension_,
@@ -22362,9 +22326,8 @@ class __$OperationDefinitionOverloadCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
   _$_OperationDefinitionOverload(
       {this.parameterName,
@@ -23738,9 +23701,8 @@ class __$SearchParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
@@ -24530,9 +24492,8 @@ class __$SearchParameterComponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SearchParameterComponent extends _SearchParameterComponent {
   _$_SearchParameterComponent(
       {required this.definition,
@@ -26030,9 +25991,8 @@ class __$StructureDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
@@ -26972,9 +26932,8 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
   _$_StructureDefinitionMapping(
       {this.identity,
@@ -27212,9 +27171,8 @@ class __$StructureDefinitionSnapshotCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
   _$_StructureDefinitionSnapshot({required this.element}) : super._();
 
@@ -27374,9 +27332,8 @@ class __$StructureDefinitionDifferentialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureDefinitionDifferential
     extends _StructureDefinitionDifferential {
   _$_StructureDefinitionDifferential({required this.element}) : super._();
@@ -28414,9 +28371,8 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMap extends _StructureMap {
   _$_StructureMap(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
@@ -29172,9 +29128,8 @@ class __$StructureMapStructureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapStructure extends _StructureMapStructure {
   _$_StructureMapStructure(
       {this.url,
@@ -29606,9 +29561,8 @@ class __$StructureMapGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapGroup extends _StructureMapGroup {
   _$_StructureMapGroup(
       {this.name,
@@ -30029,9 +29983,8 @@ class __$StructureMapInputCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapInput extends _StructureMapInput {
   _$_StructureMapInput(
       {this.name,
@@ -30402,9 +30355,8 @@ class __$StructureMapRuleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapRule extends _StructureMapRule {
   _$_StructureMapRule(
       {this.name,
@@ -32949,9 +32901,8 @@ class __$StructureMapSourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapSource extends _StructureMapSource {
   _$_StructureMapSource(
       {this.context,
@@ -34268,9 +34219,8 @@ class __$StructureMapTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapTarget extends _StructureMapTarget {
   _$_StructureMapTarget(
       {this.context,
@@ -34798,9 +34748,8 @@ class __$StructureMapParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapParameter extends _StructureMapParameter {
   _$_StructureMapParameter(
       {this.valueId,
@@ -35123,9 +35072,8 @@ class __$StructureMapDependentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_StructureMapDependent extends _StructureMapDependent {
   _$_StructureMapDependent(
       {this.name,

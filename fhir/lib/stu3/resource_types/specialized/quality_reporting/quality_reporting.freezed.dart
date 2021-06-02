@@ -1690,9 +1690,8 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Measure extends _Measure {
   _$_Measure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
@@ -2701,9 +2700,8 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureGroup extends _MeasureGroup {
   _$_MeasureGroup(
       {required this.identifier,
@@ -3103,9 +3101,8 @@ class __$MeasurePopulationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasurePopulation extends _MeasurePopulation {
   _$_MeasurePopulation(
       {this.identifier,
@@ -3443,9 +3440,8 @@ class __$MeasureStratifierCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureStratifier extends _MeasureStratifier {
   _$_MeasureStratifier(
       {this.identifier,
@@ -3768,9 +3764,8 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   _$_MeasureSupplementalData(
       {this.identifier,
@@ -4531,9 +4526,8 @@ class __$MeasureReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
@@ -5030,9 +5024,8 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportGroup extends _MeasureReportGroup {
   _$_MeasureReportGroup(
       {required this.identifier,
@@ -5354,9 +5347,8 @@ class __$MeasureReportPopulationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportPopulation extends _MeasureReportPopulation {
   _$_MeasureReportPopulation(
       {this.identifier,
@@ -5582,9 +5574,8 @@ class __$MeasureReportStratifierCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportStratifier extends _MeasureReportStratifier {
   _$_MeasureReportStratifier({this.identifier, this.stratum}) : super._();
 
@@ -5841,9 +5832,8 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportStratum extends _MeasureReportStratum {
   _$_MeasureReportStratum(
       {this.value,
@@ -6167,9 +6157,8 @@ class __$MeasureReportPopulation1CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
   _$_MeasureReportPopulation1(
       {this.identifier,

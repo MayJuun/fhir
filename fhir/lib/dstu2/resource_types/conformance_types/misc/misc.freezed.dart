@@ -926,9 +926,8 @@ class __$ImplementationGuideCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
@@ -1553,9 +1552,8 @@ class __$ImplementationGuideContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideContact extends _ImplementationGuideContact {
   _$_ImplementationGuideContact(
       {this.id,
@@ -1856,9 +1854,8 @@ class __$ImplementationGuideDependencyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
   _$_ImplementationGuideDependency(
       {this.id,
@@ -2163,9 +2160,8 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
   _$_ImplementationGuidePackage(
       {this.id,
@@ -2486,9 +2482,8 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
   _$_ImplementationGuideGlobal(
       {this.id,
@@ -2839,9 +2834,8 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   _$_ImplementationGuidePage(
       {this.id,
@@ -3301,9 +3295,8 @@ class __$ImplementationGuidePackageResourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImplementationGuidePackageResource
     extends _ImplementationGuidePackageResource {
   _$_ImplementationGuidePackageResource(
@@ -4436,9 +4429,8 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScript extends _TestScript {
   _$_TestScript(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
@@ -5063,9 +5055,8 @@ class __$TestScriptContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptContact extends _TestScriptContact {
   _$_TestScriptContact(
       {this.id,
@@ -5328,9 +5319,8 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptMetadata extends _TestScriptMetadata {
   _$_TestScriptMetadata(
       {this.id,
@@ -5659,9 +5649,8 @@ class __$TestScriptMetadataLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
   _$_TestScriptMetadataLink(
       {this.id,
@@ -6161,9 +6150,8 @@ class __$TestScriptMetadataCapabilityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
   _$_TestScriptMetadataCapability(
       {this.id,
@@ -6618,9 +6606,8 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptFixture extends _TestScriptFixture {
   _$_TestScriptFixture(
       {this.id,
@@ -7067,9 +7054,8 @@ class __$TestScriptVariableCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptVariable extends _TestScriptVariable {
   _$_TestScriptVariable(
       {this.id,
@@ -7413,9 +7399,8 @@ class __$TestScriptSetupCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptSetup extends _TestScriptSetup {
   _$_TestScriptSetup(
       {this.id,
@@ -7724,9 +7709,8 @@ class __$TestScriptSetupActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptSetupAction extends _TestScriptSetupAction {
   _$_TestScriptSetupAction(
       {this.id,
@@ -8628,9 +8612,8 @@ class __$TestScriptActionOperationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptActionOperation extends _TestScriptActionOperation {
   _$_TestScriptActionOperation(
       {this.id,
@@ -9254,9 +9237,8 @@ class __$TestScriptOperationRequestHeaderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptOperationRequestHeader
     extends _TestScriptOperationRequestHeader {
   _$_TestScriptOperationRequestHeader(
@@ -10366,9 +10348,8 @@ class __$TestScriptActionAssertCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptActionAssert extends _TestScriptActionAssert {
   _$_TestScriptActionAssert(
       {this.id,
@@ -11113,9 +11094,8 @@ class __$TestScriptTestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptTest extends _TestScriptTest {
   _$_TestScriptTest(
       {this.id,
@@ -11404,9 +11384,8 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptTeardown extends _TestScriptTeardown {
   _$_TestScriptTeardown(
       {this.id,
@@ -11677,9 +11656,8 @@ class __$TestScriptTeardownActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
   _$_TestScriptTeardownAction(
       {this.id,

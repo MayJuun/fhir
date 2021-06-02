@@ -858,9 +858,8 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Encounter extends _Encounter {
   _$_Encounter(
       {@JsonKey(unknownEnumValue: R5ResourceType.Encounter)
@@ -1479,9 +1478,8 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EncounterStatusHistory extends _EncounterStatusHistory {
   _$_EncounterStatusHistory(
       {this.id,
@@ -1786,9 +1784,8 @@ class __$EncounterClassHistoryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EncounterClassHistory extends _EncounterClassHistory {
   _$_EncounterClassHistory(
       {this.id,
@@ -2095,9 +2092,8 @@ class __$EncounterParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EncounterParticipant extends _EncounterParticipant {
   _$_EncounterParticipant(
       {this.id,
@@ -2438,9 +2434,8 @@ class __$EncounterDiagnosisCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EncounterDiagnosis extends _EncounterDiagnosis {
   _$_EncounterDiagnosis(
       {this.id,
@@ -2919,9 +2914,8 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EncounterHospitalization extends _EncounterHospitalization {
   _$_EncounterHospitalization(
       {this.id,
@@ -3366,9 +3360,8 @@ class __$EncounterLocationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EncounterLocation extends _EncounterLocation {
   _$_EncounterLocation(
       {this.id,
@@ -4098,9 +4091,8 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EpisodeOfCare extends _EpisodeOfCare {
   _$_EpisodeOfCare(
       {@JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
@@ -4624,9 +4616,8 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
   _$_EpisodeOfCareStatusHistory(
       {this.id,
@@ -4979,9 +4970,8 @@ class __$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EpisodeOfCareDiagnosis extends _EpisodeOfCareDiagnosis {
   _$_EpisodeOfCareDiagnosis(
       {this.id,
@@ -5639,9 +5629,8 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Flag extends _Flag {
   _$_Flag(
       {@JsonKey(unknownEnumValue: R5ResourceType.Flag)
@@ -7258,9 +7247,8 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Library extends _Library {
   _$_Library(
       {@JsonKey(unknownEnumValue: R5ResourceType.Library)
@@ -8635,9 +8623,8 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_List_ extends _List_ {
   _$_List_(
       {@JsonKey(unknownEnumValue: R5ResourceType.List_)
@@ -9263,9 +9250,8 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ListEntry extends _ListEntry {
   _$_ListEntry(
       {this.id,

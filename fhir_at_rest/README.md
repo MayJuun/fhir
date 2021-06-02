@@ -580,3 +580,5 @@ GET http://hapi.fhir.org/baseR4/Observation?_format%3D$mimeType%26subject%3DPati
 #### ToDO: Recently removed ability to specify all resource types
 
 #### ToDo: update examples after updating FHIR package
+
+FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®

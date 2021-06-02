@@ -1303,9 +1303,8 @@ class __$EffectEvidenceSynthesisCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   _$_EffectEvidenceSynthesis(
       {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
@@ -2196,9 +2195,8 @@ class __$EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EffectEvidenceSynthesisSampleSize
     extends _EffectEvidenceSynthesisSampleSize {
   _$_EffectEvidenceSynthesisSampleSize(
@@ -2668,9 +2666,8 @@ class __$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EffectEvidenceSynthesisResultsByExposure
     extends _EffectEvidenceSynthesisResultsByExposure {
   _$_EffectEvidenceSynthesisResultsByExposure(
@@ -3175,9 +3172,8 @@ class __$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EffectEvidenceSynthesisEffectEstimate
     extends _EffectEvidenceSynthesisEffectEstimate {
   _$_EffectEvidenceSynthesisEffectEstimate(
@@ -3655,9 +3651,8 @@ class __$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EffectEvidenceSynthesisPrecisionEstimate
     extends _EffectEvidenceSynthesisPrecisionEstimate {
   _$_EffectEvidenceSynthesisPrecisionEstimate(
@@ -4003,9 +3998,8 @@ class __$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EffectEvidenceSynthesisCertainty
     extends _EffectEvidenceSynthesisCertainty {
   _$_EffectEvidenceSynthesisCertainty(
@@ -4323,9 +4317,8 @@ class __$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EffectEvidenceSynthesisCertaintySubcomponent
     extends _EffectEvidenceSynthesisCertaintySubcomponent {
   _$_EffectEvidenceSynthesisCertaintySubcomponent(
@@ -5637,9 +5630,8 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Evidence extends _Evidence {
   _$_Evidence(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
@@ -7434,9 +7426,8 @@ class __$EvidenceVariableCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EvidenceVariable extends _EvidenceVariable {
   _$_EvidenceVariable(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
@@ -8712,9 +8703,8 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EvidenceVariableCharacteristic
     extends _EvidenceVariableCharacteristic {
   _$_EvidenceVariableCharacteristic(
@@ -10519,9 +10509,8 @@ class __$ResearchDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchDefinition extends _ResearchDefinition {
   _$_ResearchDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
@@ -12725,9 +12714,8 @@ class __$ResearchElementDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   _$_ResearchElementDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
@@ -14427,9 +14415,8 @@ class __$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchElementDefinitionCharacteristic
     extends _ResearchElementDefinitionCharacteristic {
   _$_ResearchElementDefinitionCharacteristic(
@@ -16129,9 +16116,8 @@ class __$RiskEvidenceSynthesisCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   _$_RiskEvidenceSynthesis(
       {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
@@ -17004,9 +16990,8 @@ class __$RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskEvidenceSynthesisSampleSize
     extends _RiskEvidenceSynthesisSampleSize {
   _$_RiskEvidenceSynthesisSampleSize(
@@ -17557,9 +17542,8 @@ class __$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskEvidenceSynthesisRiskEstimate
     extends _RiskEvidenceSynthesisRiskEstimate {
   _$_RiskEvidenceSynthesisRiskEstimate(
@@ -18071,9 +18055,8 @@ class __$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskEvidenceSynthesisPrecisionEstimate
     extends _RiskEvidenceSynthesisPrecisionEstimate {
   _$_RiskEvidenceSynthesisPrecisionEstimate(
@@ -18417,9 +18400,8 @@ class __$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskEvidenceSynthesisCertainty
     extends _RiskEvidenceSynthesisCertainty {
   _$_RiskEvidenceSynthesisCertainty(
@@ -18736,9 +18718,8 @@ class __$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RiskEvidenceSynthesisCertaintySubcomponent
     extends _RiskEvidenceSynthesisCertaintySubcomponent {
   _$_RiskEvidenceSynthesisCertaintySubcomponent(

@@ -3,10 +3,11 @@ import 'package:fhir_at_rest/r4.dart';
 
 import 'package:fhir_auth/r4.dart';
 
+import 'api.dart';
 import 'new_patient.dart';
 
 Future gcsRequest(String url) async {
-  final client = GcsClient(fhirUrl: FhirUri(url));
+  final client = GcsClient(fhirUrl: FhirUri(url), scopes: Api.gcsScopes);
 
   try {
     await client.login();

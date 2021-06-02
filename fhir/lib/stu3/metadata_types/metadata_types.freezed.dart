@@ -158,9 +158,8 @@ class __$ContactDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ContactDetail extends _ContactDetail {
   _$_ContactDetail(
       {this.name, @JsonKey(name: '_name') this.nameElement, this.telecom})
@@ -425,9 +424,8 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Contributor extends _Contributor {
   _$_Contributor(
       {this.type,
@@ -850,9 +848,8 @@ class __$RelatedArtifactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RelatedArtifact extends _RelatedArtifact {
   _$_RelatedArtifact(
       {this.type,
@@ -1204,9 +1201,8 @@ class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_UsageContext extends _UsageContext {
   _$_UsageContext(
       {required this.code,
@@ -1519,9 +1515,8 @@ class __$DataRequirementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DataRequirement extends _DataRequirement {
   _$_DataRequirement(
       {this.type,
@@ -1925,9 +1920,8 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   _$_DataRequirementCodeFilter(
       {this.path,
@@ -2310,9 +2304,8 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   _$_DataRequirementDateFilter(
       {this.path,
@@ -2810,9 +2803,8 @@ class __$ParameterDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ParameterDefinition extends _ParameterDefinition {
   _$_ParameterDefinition(
       {this.name,
@@ -3362,9 +3354,8 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_TriggerDefinition extends _TriggerDefinition {
   _$_TriggerDefinition(
       {this.type,

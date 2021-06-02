@@ -778,9 +778,8 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Appointment extends _Appointment {
   _$_Appointment(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
@@ -1446,9 +1445,8 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.id,
@@ -2213,9 +2211,8 @@ class __$AppointmentResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
@@ -2983,9 +2980,8 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Schedule extends _Schedule {
   _$_Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
@@ -3815,9 +3811,8 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Slot extends _Slot {
   _$_Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)

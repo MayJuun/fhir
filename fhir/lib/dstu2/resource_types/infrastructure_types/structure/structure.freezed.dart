@@ -748,9 +748,8 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Media extends _Media {
   _$_Media(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
@@ -1409,9 +1408,8 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Binary extends _Binary {
   _$_Binary(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
@@ -1967,9 +1965,8 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Bundle extends _Bundle {
   _$_Bundle(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
@@ -2409,9 +2406,8 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleLink extends _BundleLink {
   _$_BundleLink(
       {this.id,
@@ -2855,9 +2851,8 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleEntry extends _BundleEntry {
   _$_BundleEntry(
       {this.id,
@@ -3259,9 +3254,8 @@ class __$BundleEntrySearchCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleEntrySearch extends _BundleEntrySearch {
   _$_BundleEntrySearch(
       {this.id,
@@ -3826,9 +3820,8 @@ class __$BundleEntryRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleEntryRequest extends _BundleEntryRequest {
   _$_BundleEntryRequest(
       {this.id,
@@ -4390,9 +4383,8 @@ class __$BundleEntryResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleEntryResponse extends _BundleEntryResponse {
   _$_BundleEntryResponse(
       {this.id,
@@ -5035,9 +5027,8 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Basic extends _Basic {
   _$_Basic(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)

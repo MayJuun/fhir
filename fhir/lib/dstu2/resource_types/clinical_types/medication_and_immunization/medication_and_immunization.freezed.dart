@@ -464,9 +464,8 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Medication extends _Medication {
   _$_Medication(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
@@ -895,9 +894,8 @@ class __$MedicationProductCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationProduct extends _MedicationProduct {
   _$_MedicationProduct(
       {this.id,
@@ -1210,9 +1208,8 @@ class __$MedicationProductIngredientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationProductIngredient extends _MedicationProductIngredient {
   _$_MedicationProductIngredient(
       {this.id,
@@ -1536,9 +1533,8 @@ class __$MedicationProductBatchCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationProductBatch extends _MedicationProductBatch {
   _$_MedicationProductBatch(
       {this.id,
@@ -1858,9 +1854,8 @@ class __$MedicationPackageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationPackage extends _MedicationPackage {
   _$_MedicationPackage(
       {this.id,
@@ -2161,9 +2156,8 @@ class __$MedicationPackageContentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationPackageContent extends _MedicationPackageContent {
   _$_MedicationPackageContent(
       {this.id,
@@ -3008,9 +3002,8 @@ class __$MedicationOrderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationOrder extends _MedicationOrder {
   _$_MedicationOrder(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
@@ -3872,9 +3865,8 @@ class __$MedicationOrderDosageInstructionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationOrderDosageInstruction
     extends _MedicationOrderDosageInstruction {
   _$_MedicationOrderDosageInstruction(
@@ -4399,9 +4391,8 @@ class __$MedicationOrderDispenseRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationOrderDispenseRequest
     extends _MedicationOrderDispenseRequest {
   _$_MedicationOrderDispenseRequest(
@@ -4740,9 +4731,8 @@ class __$MedicationOrderSubstitutionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationOrderSubstitution extends _MedicationOrderSubstitution {
   _$_MedicationOrderSubstitution(
       {this.id,
@@ -5594,9 +5584,8 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
@@ -6342,9 +6331,8 @@ class __$MedicationAdministrationDosageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationAdministrationDosage
     extends _MedicationAdministrationDosage {
   _$_MedicationAdministrationDosage(
@@ -7346,9 +7334,8 @@ class __$MedicationDispenseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
@@ -8244,9 +8231,8 @@ class __$MedicationDispenseDosageInstructionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationDispenseDosageInstruction
     extends _MedicationDispenseDosageInstruction {
   _$_MedicationDispenseDosageInstruction(
@@ -8667,9 +8653,8 @@ class __$MedicationDispenseSubstitutionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationDispenseSubstitution
     extends _MedicationDispenseSubstitution {
   _$_MedicationDispenseSubstitution(
@@ -9550,9 +9535,8 @@ class __$MedicationStatementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationStatement extends _MedicationStatement {
   _$_MedicationStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
@@ -10408,9 +10392,8 @@ class __$MedicationStatementDosageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicationStatementDosage extends _MedicationStatementDosage {
   _$_MedicationStatementDosage(
       {this.id,
@@ -11510,9 +11493,8 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Immunization extends _Immunization {
   _$_Immunization(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
@@ -12084,9 +12066,8 @@ class __$ImmunizationExplanationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationExplanation extends _ImmunizationExplanation {
   _$_ImmunizationExplanation(
       {this.id,
@@ -12439,9 +12420,8 @@ class __$ImmunizationReactionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationReaction extends _ImmunizationReaction {
   _$_ImmunizationReaction(
       {this.id,
@@ -12903,9 +12883,8 @@ class __$ImmunizationVaccinationProtocolCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationVaccinationProtocol
     extends _ImmunizationVaccinationProtocol {
   _$_ImmunizationVaccinationProtocol(
@@ -13470,9 +13449,8 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
@@ -13987,9 +13965,8 @@ class __$ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationRecommendationRecommendation
     extends _ImmunizationRecommendationRecommendation {
   _$_ImmunizationRecommendationRecommendation(
@@ -14417,9 +14394,8 @@ class __$ImmunizationRecommendationRecommendationDateCriterionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationRecommendationRecommendationDateCriterion
     extends _ImmunizationRecommendationRecommendationDateCriterion {
   _$_ImmunizationRecommendationRecommendationDateCriterion(
@@ -14803,9 +14779,8 @@ class __$ImmunizationRecommendationRecommendationProtocolCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ImmunizationRecommendationRecommendationProtocol
     extends _ImmunizationRecommendationRecommendationProtocol {
   _$_ImmunizationRecommendationRecommendationProtocol(

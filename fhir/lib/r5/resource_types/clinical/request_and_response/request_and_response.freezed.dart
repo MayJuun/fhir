@@ -889,9 +889,8 @@ class __$CommunicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Communication extends _Communication {
   _$_Communication(
       {@JsonKey(unknownEnumValue: R5ResourceType.Communication)
@@ -1546,9 +1545,8 @@ class __$CommunicationPayloadCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationPayload extends _CommunicationPayload {
   _$_CommunicationPayload(
       {this.id,
@@ -2565,9 +2563,8 @@ class __$CommunicationRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.CommunicationRequest)
@@ -3229,9 +3226,8 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
   _$_CommunicationRequestPayload(
       {this.id,
@@ -4383,9 +4379,8 @@ class __$DeviceRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceRequest extends _DeviceRequest {
   _$_DeviceRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceRequest)
@@ -5161,9 +5156,8 @@ class __$DeviceRequestParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceRequestParameter extends _DeviceRequestParameter {
   _$_DeviceRequestParameter(
       {this.id,
@@ -6174,9 +6168,8 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceUseStatement extends _DeviceUseStatement {
   _$_DeviceUseStatement(
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
@@ -7374,9 +7367,8 @@ class __$GuidanceResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_GuidanceResponse extends _GuidanceResponse {
   _$_GuidanceResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.GuidanceResponse)
@@ -8442,9 +8434,8 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
       {@JsonKey(unknownEnumValue: R5ResourceType.SupplyDelivery)
@@ -8996,9 +8987,8 @@ class __$SupplyDeliverySuppliedItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
   _$_SupplyDeliverySuppliedItem(
       {this.id,
@@ -9949,9 +9939,8 @@ class __$SupplyRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.SupplyRequest)
@@ -10633,9 +10622,8 @@ class __$SupplyRequestParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplyRequestParameter extends _SupplyRequestParameter {
   _$_SupplyRequestParameter(
       {this.id,

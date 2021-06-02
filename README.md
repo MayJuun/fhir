@@ -31,3 +31,6 @@ You can email me at <grey@fhirfli.dev>. Or, feel free to [join our Slack!](https
 
 ### Has made a bunch of contributions to these packages so far
 ### Has also created his own awesome Flutter package, faiadashu ([pub.dev](https://pub.dev/packages/faiadashu), [github](https://github.com/tiloc/faiadashu)), so check it out!
+
+
+FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®

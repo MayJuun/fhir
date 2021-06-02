@@ -513,9 +513,8 @@ class __$AdministrableProductDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdministrableProductDefinition
     extends _AdministrableProductDefinition {
   _$_AdministrableProductDefinition(
@@ -1160,9 +1159,8 @@ class __$AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdministrableProductDefinitionProperty
     extends _AdministrableProductDefinitionProperty {
   _$_AdministrableProductDefinitionProperty(
@@ -1683,9 +1681,8 @@ class __$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdministrableProductDefinitionRouteOfAdministration
     extends _AdministrableProductDefinitionRouteOfAdministration {
   _$_AdministrableProductDefinitionRouteOfAdministration(
@@ -2032,9 +2029,8 @@ class __$AdministrableProductDefinitionTargetSpeciesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdministrableProductDefinitionTargetSpecies
     extends _AdministrableProductDefinitionTargetSpecies {
   _$_AdministrableProductDefinitionTargetSpecies(
@@ -2390,9 +2386,8 @@ class __$AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdministrableProductDefinitionWithdrawalPeriod
     extends _AdministrableProductDefinitionWithdrawalPeriod {
   _$_AdministrableProductDefinitionWithdrawalPeriod(
@@ -3180,9 +3175,8 @@ class __$ClinicalUseIssueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalUseIssue extends _ClinicalUseIssue {
   _$_ClinicalUseIssue(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseIssue)
@@ -3744,9 +3738,8 @@ class __$ClinicalUseIssueContraindicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalUseIssueContraindication
     extends _ClinicalUseIssueContraindication {
   _$_ClinicalUseIssueContraindication(
@@ -4109,9 +4102,8 @@ class __$ClinicalUseIssueOtherTherapyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalUseIssueOtherTherapy extends _ClinicalUseIssueOtherTherapy {
   _$_ClinicalUseIssueOtherTherapy(
       {this.id,
@@ -4528,9 +4520,8 @@ class __$ClinicalUseIssueIndicationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalUseIssueIndication extends _ClinicalUseIssueIndication {
   _$_ClinicalUseIssueIndication(
       {this.id,
@@ -4955,9 +4946,8 @@ class __$ClinicalUseIssueInteractionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalUseIssueInteraction extends _ClinicalUseIssueInteraction {
   _$_ClinicalUseIssueInteraction(
       {this.id,
@@ -5285,9 +5275,8 @@ class __$ClinicalUseIssueInteractantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalUseIssueInteractant extends _ClinicalUseIssueInteractant {
   _$_ClinicalUseIssueInteractant(
       {this.id,
@@ -5620,9 +5609,8 @@ class __$ClinicalUseIssueUndesirableEffectCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalUseIssueUndesirableEffect
     extends _ClinicalUseIssueUndesirableEffect {
   _$_ClinicalUseIssueUndesirableEffect(
@@ -6288,9 +6276,8 @@ class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Ingredient extends _Ingredient {
   _$_Ingredient(
       {@JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
@@ -6779,9 +6766,8 @@ class __$IngredientSubstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_IngredientSubstance extends _IngredientSubstance {
   _$_IngredientSubstance(
       {this.id,
@@ -7308,9 +7294,8 @@ class __$IngredientStrengthCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_IngredientStrength extends _IngredientStrength {
   _$_IngredientStrength(
       {this.id,
@@ -7832,9 +7817,8 @@ class __$IngredientReferenceStrengthCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
   _$_IngredientReferenceStrength(
       {this.id,
@@ -8257,9 +8241,8 @@ class __$IngredientSpecifiedSubstanceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_IngredientSpecifiedSubstance extends _IngredientSpecifiedSubstance {
   _$_IngredientSpecifiedSubstance(
       {this.id,
@@ -8835,9 +8818,8 @@ class __$ManufacturedItemDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   _$_ManufacturedItemDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
@@ -9417,9 +9399,8 @@ class __$ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ManufacturedItemDefinitionProperty
     extends _ManufacturedItemDefinitionProperty {
   _$_ManufacturedItemDefinitionProperty(
@@ -10575,9 +10556,8 @@ class __$MedicinalProductDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   _$_MedicinalProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
@@ -11246,9 +11226,8 @@ class __$MedicinalProductDefinitionContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicinalProductDefinitionContact
     extends _MedicinalProductDefinitionContact {
   _$_MedicinalProductDefinitionContact(
@@ -11598,9 +11577,8 @@ class __$MedicinalProductDefinitionNameCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicinalProductDefinitionName
     extends _MedicinalProductDefinitionName {
   _$_MedicinalProductDefinitionName(
@@ -11949,9 +11927,8 @@ class __$MedicinalProductDefinitionNamePartCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicinalProductDefinitionNamePart
     extends _MedicinalProductDefinitionNamePart {
   _$_MedicinalProductDefinitionNamePart(
@@ -12292,9 +12269,8 @@ class __$MedicinalProductDefinitionCountryLanguageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicinalProductDefinitionCountryLanguage
     extends _MedicinalProductDefinitionCountryLanguage {
   _$_MedicinalProductDefinitionCountryLanguage(
@@ -12644,9 +12620,8 @@ class __$MedicinalProductDefinitionCrossReferenceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicinalProductDefinitionCrossReference
     extends _MedicinalProductDefinitionCrossReference {
   _$_MedicinalProductDefinitionCrossReference(
@@ -13093,9 +13068,8 @@ class __$MedicinalProductDefinitionManufacturingBusinessOperationCopyWithImpl<
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MedicinalProductDefinitionManufacturingBusinessOperation
     extends _MedicinalProductDefinitionManufacturingBusinessOperation {
   _$_MedicinalProductDefinitionManufacturingBusinessOperation(
@@ -13995,9 +13969,8 @@ class __$PackagedProductDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   _$_PackagedProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
@@ -14566,9 +14539,8 @@ class __$PackagedProductDefinitionBatchIdentifierCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PackagedProductDefinitionBatchIdentifier
     extends _PackagedProductDefinitionBatchIdentifier {
   _$_PackagedProductDefinitionBatchIdentifier(
@@ -15014,9 +14986,8 @@ class __$PackagedProductDefinitionPackageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PackagedProductDefinitionPackage
     extends _PackagedProductDefinitionPackage {
   _$_PackagedProductDefinitionPackage(
@@ -15559,9 +15530,8 @@ class __$PackagedProductDefinitionPropertyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PackagedProductDefinitionProperty
     extends _PackagedProductDefinitionProperty {
   _$_PackagedProductDefinitionProperty(
@@ -15963,9 +15933,8 @@ class __$PackagedProductDefinitionContainedItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PackagedProductDefinitionContainedItem
     extends _PackagedProductDefinitionContainedItem {
   _$_PackagedProductDefinitionContainedItem(
@@ -16888,9 +16857,8 @@ class __$RegulatedAuthorizationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   _$_RegulatedAuthorization(
       {@JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
@@ -17491,9 +17459,8 @@ class __$RegulatedAuthorizationRelatedDateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RegulatedAuthorizationRelatedDate
     extends _RegulatedAuthorizationRelatedDate {
   _$_RegulatedAuthorizationRelatedDate(
@@ -17934,9 +17901,8 @@ class __$RegulatedAuthorizationCaseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
   _$_RegulatedAuthorizationCase(
       {this.id,
@@ -18971,9 +18937,8 @@ class __$SubstanceDefinitionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinition extends _SubstanceDefinition {
   _$_SubstanceDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
@@ -19828,9 +19793,8 @@ class __$SubstanceDefinitionMoietyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
   _$_SubstanceDefinitionMoiety(
       {this.id,
@@ -20460,9 +20424,8 @@ class __$SubstanceDefinitionPropertyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
   _$_SubstanceDefinitionProperty(
       {this.id,
@@ -21054,9 +21017,8 @@ class __$SubstanceDefinitionStructureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
   _$_SubstanceDefinitionStructure(
       {this.id,
@@ -21548,9 +21510,8 @@ class __$SubstanceDefinitionIsotopeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionIsotope extends _SubstanceDefinitionIsotope {
   _$_SubstanceDefinitionIsotope(
       {this.id,
@@ -21909,9 +21870,8 @@ class __$SubstanceDefinitionMolecularWeightCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionMolecularWeight
     extends _SubstanceDefinitionMolecularWeight {
   _$_SubstanceDefinitionMolecularWeight(
@@ -22296,9 +22256,8 @@ class __$SubstanceDefinitionRepresentationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionRepresentation
     extends _SubstanceDefinitionRepresentation {
   _$_SubstanceDefinitionRepresentation(
@@ -22703,9 +22662,8 @@ class __$SubstanceDefinitionCodeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionCode extends _SubstanceDefinitionCode {
   _$_SubstanceDefinitionCode(
       {this.id,
@@ -23235,9 +23193,8 @@ class __$SubstanceDefinitionNameCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
   _$_SubstanceDefinitionName(
       {this.id,
@@ -23691,9 +23648,8 @@ class __$SubstanceDefinitionOfficialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionOfficial extends _SubstanceDefinitionOfficial {
   _$_SubstanceDefinitionOfficial(
       {this.id,
@@ -24298,9 +24254,8 @@ class __$SubstanceDefinitionRelationshipCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceDefinitionRelationship
     extends _SubstanceDefinitionRelationship {
   _$_SubstanceDefinitionRelationship(
@@ -25013,9 +24968,8 @@ class __$SubstanceNucleicAcidCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
   _$_SubstanceNucleicAcid(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
@@ -25662,9 +25616,8 @@ class __$SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
   _$_SubstanceNucleicAcidSubunit(
       {this.id,
@@ -26164,9 +26117,8 @@ class __$SubstanceNucleicAcidLinkageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
   _$_SubstanceNucleicAcidLinkage(
       {this.id,
@@ -26578,9 +26530,8 @@ class __$SubstanceNucleicAcidSugarCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
   _$_SubstanceNucleicAcidSugar(
       {this.id,
@@ -27227,9 +27178,8 @@ class __$SubstancePolymerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstancePolymer extends _SubstancePolymer {
   _$_SubstancePolymer(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
@@ -27671,9 +27621,8 @@ class __$SubstancePolymerMonomerSetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstancePolymerMonomerSet extends _SubstancePolymerMonomerSet {
   _$_SubstancePolymerMonomerSet(
       {this.id,
@@ -28047,9 +27996,8 @@ class __$SubstancePolymerStartingMaterialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstancePolymerStartingMaterial
     extends _SubstancePolymerStartingMaterial {
   _$_SubstancePolymerStartingMaterial(
@@ -28417,9 +28365,8 @@ class __$SubstancePolymerRepeatCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
   _$_SubstancePolymerRepeat(
       {this.id,
@@ -28843,9 +28790,8 @@ class __$SubstancePolymerRepeatUnitCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
   _$_SubstancePolymerRepeatUnit(
       {this.id,
@@ -29309,9 +29255,8 @@ class __$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstancePolymerDegreeOfPolymerisation
     extends _SubstancePolymerDegreeOfPolymerisation {
   _$_SubstancePolymerDegreeOfPolymerisation(
@@ -29747,9 +29692,8 @@ class __$SubstancePolymerStructuralRepresentationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstancePolymerStructuralRepresentation
     extends _SubstancePolymerStructuralRepresentation {
   _$_SubstancePolymerStructuralRepresentation(
@@ -30338,9 +30282,8 @@ class __$SubstanceProteinCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceProtein extends _SubstanceProtein {
   _$_SubstanceProtein(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
@@ -31052,9 +30995,8 @@ class __$SubstanceProteinSubunitCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
   _$_SubstanceProteinSubunit(
       {this.id,
@@ -31716,9 +31658,8 @@ class __$SubstanceReferenceInformationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
   _$_SubstanceReferenceInformation(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
@@ -32161,9 +32102,8 @@ class __$SubstanceReferenceInformationGeneCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceReferenceInformationGene
     extends _SubstanceReferenceInformationGene {
   _$_SubstanceReferenceInformationGene(
@@ -32494,9 +32434,8 @@ class __$SubstanceReferenceInformationGeneElementCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceReferenceInformationGeneElement
     extends _SubstanceReferenceInformationGeneElement {
   _$_SubstanceReferenceInformationGeneElement(
@@ -33043,9 +32982,8 @@ class __$SubstanceReferenceInformationTargetCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceReferenceInformationTarget
     extends _SubstanceReferenceInformationTarget {
   _$_SubstanceReferenceInformationTarget(
@@ -33926,9 +33864,8 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   _$_SubstanceSourceMaterial(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
@@ -34491,9 +34428,8 @@ class __$SubstanceSourceMaterialFractionDescriptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceSourceMaterialFractionDescription
     extends _SubstanceSourceMaterialFractionDescription {
   _$_SubstanceSourceMaterialFractionDescription(
@@ -35001,9 +34937,8 @@ class __$SubstanceSourceMaterialOrganismCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceSourceMaterialOrganism
     extends _SubstanceSourceMaterialOrganism {
   _$_SubstanceSourceMaterialOrganism(
@@ -35400,9 +35335,8 @@ class __$SubstanceSourceMaterialAuthorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
   _$_SubstanceSourceMaterialAuthor(
       {this.id,
@@ -35885,9 +35819,8 @@ class __$SubstanceSourceMaterialHybridCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
   _$_SubstanceSourceMaterialHybrid(
       {this.id,
@@ -36339,9 +36272,8 @@ class __$SubstanceSourceMaterialOrganismGeneralCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceSourceMaterialOrganismGeneral
     extends _SubstanceSourceMaterialOrganismGeneral {
   _$_SubstanceSourceMaterialOrganismGeneral(
@@ -36668,9 +36600,8 @@ class __$SubstanceSourceMaterialPartDescriptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceSourceMaterialPartDescription
     extends _SubstanceSourceMaterialPartDescription {
   _$_SubstanceSourceMaterialPartDescription(

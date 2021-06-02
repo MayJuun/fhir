@@ -1,11 +1,15 @@
 import 'package:antlr4/antlr4.dart';
-import 'fhirpathParser.dart';
+
 import 'fhirpathLexer.dart';
+import 'fhirpathParser.dart';
 
 class TreeShapeListener implements ParseTreeListener {
   @override
   void enterEveryRule(ParserRuleContext ctx) {
+    print('************************');
+    print(ctx.depth());
     print(ctx.text);
+    print('************************');
   }
 
   @override

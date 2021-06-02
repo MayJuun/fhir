@@ -823,9 +823,8 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Device extends _Device {
   _$_Device(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
@@ -1746,9 +1745,8 @@ class __$DeviceComponentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceComponent extends _DeviceComponent {
   _$_DeviceComponent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
@@ -2226,9 +2224,8 @@ class __$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceComponentProductionSpecification
     extends _DeviceComponentProductionSpecification {
   _$_DeviceComponentProductionSpecification(
@@ -3006,9 +3003,8 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
@@ -3622,9 +3618,8 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   _$_DeviceMetricCalibration(
       {this.id,

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:html' as html;
 import 'dart:math';
 
 import 'package:flutter/services.dart';
@@ -7,6 +6,7 @@ import 'package:collection/collection.dart';
 import 'package:fhir/r4.dart';
 import 'package:http/http.dart' as http;
 import 'package:oauth2/oauth2.dart' as oauth2;
+import 'package:universal_html/html.dart' as html;
 
 import '../../r4.dart';
 

@@ -792,9 +792,8 @@ class __$ResearchStudyCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchStudy extends _ResearchStudy {
   _$_ResearchStudy(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
@@ -1392,9 +1391,8 @@ class __$ResearchStudyArmCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchStudyArm extends _ResearchStudyArm {
   _$_ResearchStudyArm(
       {this.name,
@@ -2100,9 +2098,8 @@ class __$ResearchSubjectCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ResearchSubject extends _ResearchSubject {
   _$_ResearchSubject(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)

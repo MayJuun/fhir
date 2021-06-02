@@ -268,9 +268,9 @@ class fhirpathParser extends Parser {
     var _prevctx = _localctx;
     var _startState = 0;
     enterRecursionRule(_localctx, 0, RULE_expression, _p);
-    int _la;
+    int? _la;
     try {
-      int _alt;
+      int? _alt;
       enterOuterAlt(_localctx, 1);
       state = 32;
       errorHandler.sync(this);
@@ -307,7 +307,7 @@ class fhirpathParser extends Parser {
           context = _localctx;
           _prevctx = _localctx;
           state = 30;
-          _la = tokenStream.LA(1)!;
+          _la = tokenStream.LA(1);
           if (!(_la == TOKEN_T__3 || _la == TOKEN_T__4)) {
             errorHandler.recoverInline(this);
           } else {
@@ -324,14 +324,14 @@ class fhirpathParser extends Parser {
       context!.stop = tokenStream.LT(-1);
       state = 74;
       errorHandler.sync(this);
-      _alt = interpreter!.adaptivePredict(tokenStream, 2, context);
+      _alt = interpreter?.adaptivePredict(tokenStream, 2, context);
       while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
         if (_alt == 1) {
           if (parseListeners != null) triggerExitRuleEvent();
           _prevctx = _localctx;
           state = 72;
           errorHandler.sync(this);
-          switch (interpreter!.adaptivePredict(tokenStream, 1, context)) {
+          switch (interpreter?.adaptivePredict(tokenStream, 1, context)) {
             case 1:
               _localctx = MultiplicativeExpressionContext(
                   new ExpressionContext(_parentctx, _parentState));
@@ -341,9 +341,9 @@ class fhirpathParser extends Parser {
                 throw FailedPredicateException(this, "precpred(context, 10)");
               }
               state = 35;
-              _la = tokenStream.LA(1)!;
-              if (!((((_la) & ~0x3f) == 0 &&
-                  ((BigInt.one << _la) &
+              _la = tokenStream.LA(1);
+              if (!((((_la ?? 0) & ~0x3f) == 0 &&
+                  ((BigInt.one << (_la ?? 0)) &
                           ((BigInt.one << TOKEN_T__5) |
                               (BigInt.one << TOKEN_T__6) |
                               (BigInt.one << TOKEN_T__7) |
@@ -367,9 +367,9 @@ class fhirpathParser extends Parser {
                 throw FailedPredicateException(this, "precpred(context, 9)");
               }
               state = 38;
-              _la = tokenStream.LA(1)!;
-              if (!((((_la) & ~0x3f) == 0 &&
-                  ((BigInt.one << _la) &
+              _la = tokenStream.LA(1);
+              if (!((((_la ?? 0) & ~0x3f) == 0 &&
+                  ((BigInt.one << (_la ?? 0)) &
                           ((BigInt.one << TOKEN_T__3) |
                               (BigInt.one << TOKEN_T__4) |
                               (BigInt.one << TOKEN_T__9))) !=
@@ -405,9 +405,9 @@ class fhirpathParser extends Parser {
                 throw FailedPredicateException(this, "precpred(context, 6)");
               }
               state = 44;
-              _la = tokenStream.LA(1)!;
-              if (!((((_la) & ~0x3f) == 0 &&
-                  ((BigInt.one << _la) &
+              _la = tokenStream.LA(1);
+              if (!((((_la ?? 0) & ~0x3f) == 0 &&
+                  ((BigInt.one << (_la ?? 0)) &
                           ((BigInt.one << TOKEN_T__13) |
                               (BigInt.one << TOKEN_T__14) |
                               (BigInt.one << TOKEN_T__15) |
@@ -431,9 +431,9 @@ class fhirpathParser extends Parser {
                 throw FailedPredicateException(this, "precpred(context, 5)");
               }
               state = 47;
-              _la = tokenStream.LA(1)!;
-              if (!((((_la) & ~0x3f) == 0 &&
-                  ((BigInt.one << _la) &
+              _la = tokenStream.LA(1);
+              if (!((((_la ?? 0) & ~0x3f) == 0 &&
+                  ((BigInt.one << (_la ?? 0)) &
                           ((BigInt.one << TOKEN_T__17) |
                               (BigInt.one << TOKEN_T__18) |
                               (BigInt.one << TOKEN_T__19) |
@@ -457,7 +457,7 @@ class fhirpathParser extends Parser {
                 throw FailedPredicateException(this, "precpred(context, 4)");
               }
               state = 50;
-              _la = tokenStream.LA(1)!;
+              _la = tokenStream.LA(1);
               if (!(_la == TOKEN_T__21 || _la == TOKEN_T__22)) {
                 errorHandler.recoverInline(this);
               } else {
@@ -490,7 +490,7 @@ class fhirpathParser extends Parser {
                 throw FailedPredicateException(this, "precpred(context, 2)");
               }
               state = 56;
-              _la = tokenStream.LA(1)!;
+              _la = tokenStream.LA(1);
               if (!(_la == TOKEN_T__24 || _la == TOKEN_T__25)) {
                 errorHandler.recoverInline(this);
               } else {
@@ -551,7 +551,7 @@ class fhirpathParser extends Parser {
                 throw FailedPredicateException(this, "precpred(context, 8)");
               }
               state = 70;
-              _la = tokenStream.LA(1)!;
+              _la = tokenStream.LA(1);
               if (!(_la == TOKEN_T__10 || _la == TOKEN_T__11)) {
                 errorHandler.recoverInline(this);
               } else {
@@ -566,7 +566,7 @@ class fhirpathParser extends Parser {
         }
         state = 76;
         errorHandler.sync(this);
-        _alt = interpreter!.adaptivePredict(tokenStream, 2, context);
+        _alt = interpreter?.adaptivePredict(tokenStream, 2, context);
       }
     } on RecognitionException catch (re) {
       _localctx.exception = re;
@@ -648,7 +648,7 @@ class fhirpathParser extends Parser {
     try {
       state = 95;
       errorHandler.sync(this);
-      switch (interpreter!.adaptivePredict(tokenStream, 4, context)) {
+      switch (interpreter?.adaptivePredict(tokenStream, 4, context)) {
         case 1:
           _localctx = NullLiteralContext(_localctx);
           enterOuterAlt(_localctx, 1);
@@ -759,7 +759,7 @@ class fhirpathParser extends Parser {
     try {
       state = 107;
       errorHandler.sync(this);
-      switch (interpreter!.adaptivePredict(tokenStream, 6, context)) {
+      switch (interpreter?.adaptivePredict(tokenStream, 6, context)) {
         case 1:
           _localctx = MemberInvocationContext(_localctx);
           enterOuterAlt(_localctx, 1);
@@ -804,7 +804,7 @@ class fhirpathParser extends Parser {
   FunctionContext function() {
     dynamic _localctx = FunctionContext(context, state);
     enterRule(_localctx, 10, RULE_function);
-    int _la;
+    int? _la;
     try {
       enterOuterAlt(_localctx, 1);
       state = 109;
@@ -813,9 +813,9 @@ class fhirpathParser extends Parser {
       match(TOKEN_T__27);
       state = 112;
       errorHandler.sync(this);
-      _la = tokenStream.LA(1)!;
-      if ((((_la) & ~0x3f) == 0 &&
-          ((BigInt.one << _la) &
+      _la = tokenStream.LA(1);
+      if ((((_la ?? 0) & ~0x3f) == 0 &&
+          ((BigInt.one << (_la ?? 0)) &
                   ((BigInt.one << TOKEN_T__3) |
                       (BigInt.one << TOKEN_T__4) |
                       (BigInt.one << TOKEN_T__10) |
@@ -854,7 +854,7 @@ class fhirpathParser extends Parser {
     return _localctx;
   }
 
-  ParamListContext paramList() {
+  ParamListContext? paramList() {
     dynamic _localctx = ParamListContext(context, state);
     enterRule(_localctx, 12, RULE_paramList);
     int? _la;
@@ -893,7 +893,7 @@ class fhirpathParser extends Parser {
       match(TOKEN_NUMBER);
       state = 126;
       errorHandler.sync(this);
-      switch (interpreter!.adaptivePredict(tokenStream, 9, context)) {
+      switch (interpreter?.adaptivePredict(tokenStream, 9, context)) {
         case 1:
           state = 125;
           unit();
@@ -961,13 +961,13 @@ class fhirpathParser extends Parser {
   DateTimePrecisionContext dateTimePrecision() {
     dynamic _localctx = DateTimePrecisionContext(context, state);
     enterRule(_localctx, 18, RULE_dateTimePrecision);
-    int _la;
+    int? _la;
     try {
       enterOuterAlt(_localctx, 1);
       state = 133;
-      _la = tokenStream.LA(1)!;
-      if (!((((_la) & ~0x3f) == 0 &&
-          ((BigInt.one << _la) &
+      _la = tokenStream.LA(1);
+      if (!((((_la ?? 0) & ~0x3f) == 0 &&
+          ((BigInt.one << (_la ?? 0)) &
                   ((BigInt.one << TOKEN_T__38) |
                       (BigInt.one << TOKEN_T__39) |
                       (BigInt.one << TOKEN_T__40) |
@@ -996,13 +996,13 @@ class fhirpathParser extends Parser {
   PluralDateTimePrecisionContext pluralDateTimePrecision() {
     dynamic _localctx = PluralDateTimePrecisionContext(context, state);
     enterRule(_localctx, 20, RULE_pluralDateTimePrecision);
-    int _la;
+    int? _la;
     try {
       enterOuterAlt(_localctx, 1);
       state = 135;
-      _la = tokenStream.LA(1)!;
-      if (!((((_la) & ~0x3f) == 0 &&
-          ((BigInt.one << _la) &
+      _la = tokenStream.LA(1);
+      if (!((((_la ?? 0) & ~0x3f) == 0 &&
+          ((BigInt.one << (_la ?? 0)) &
                   ((BigInt.one << TOKEN_T__46) |
                       (BigInt.one << TOKEN_T__47) |
                       (BigInt.one << TOKEN_T__48) |
@@ -1055,7 +1055,7 @@ class fhirpathParser extends Parser {
       identifier();
       state = 144;
       errorHandler.sync(this);
-      _alt = interpreter!.adaptivePredict(tokenStream, 11, context);
+      _alt = interpreter?.adaptivePredict(tokenStream, 11, context);
       while (_alt != 2 && _alt != ATN.INVALID_ALT_NUMBER) {
         if (_alt == 1) {
           state = 140;
@@ -1065,7 +1065,7 @@ class fhirpathParser extends Parser {
         }
         state = 146;
         errorHandler.sync(this);
-        _alt = interpreter!.adaptivePredict(tokenStream, 11, context);
+        _alt = interpreter?.adaptivePredict(tokenStream, 11, context);
       }
     } on RecognitionException catch (re) {
       _localctx.exception = re;
@@ -1077,16 +1077,16 @@ class fhirpathParser extends Parser {
     return _localctx;
   }
 
-  IdentifierContext identifier() {
+  IdentifierContext? identifier() {
     dynamic _localctx = IdentifierContext(context, state);
     enterRule(_localctx, 26, RULE_identifier);
-    int _la;
+    int? _la;
     try {
       enterOuterAlt(_localctx, 1);
       state = 147;
-      _la = tokenStream.LA(1)!;
-      if (!((((_la) & ~0x3f) == 0 &&
-          ((BigInt.one << _la) &
+      _la = tokenStream.LA(1);
+      if (!((((_la ?? 0) & ~0x3f) == 0 &&
+          ((BigInt.one << (_la ?? 0)) &
                   ((BigInt.one << TOKEN_T__10) |
                       (BigInt.one << TOKEN_T__11) |
                       (BigInt.one << TOKEN_T__21) |

@@ -760,9 +760,8 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Composition extends _Composition {
   _$_Composition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
@@ -1377,9 +1376,8 @@ class __$CompositionAttesterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompositionAttester extends _CompositionAttester {
   _$_CompositionAttester(
       {this.id,
@@ -1703,9 +1701,8 @@ class __$CompositionEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompositionEvent extends _CompositionEvent {
   _$_CompositionEvent(
       {this.id,
@@ -2198,9 +2195,8 @@ class __$CompositionSectionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompositionSection extends _CompositionSection {
   _$_CompositionSection(
       {this.id,
@@ -3076,9 +3072,8 @@ class __$DocumentManifestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
@@ -3617,9 +3612,8 @@ class __$DocumentManifestContentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentManifestContent extends _DocumentManifestContent {
   _$_DocumentManifestContent(
       {this.id,
@@ -3913,9 +3907,8 @@ class __$DocumentManifestRelatedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   _$_DocumentManifestRelated(
       {this.id,
@@ -4812,9 +4805,8 @@ class __$DocumentReferenceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
@@ -5403,9 +5395,8 @@ class __$DocumentReferenceRelatesToCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   _$_DocumentReferenceRelatesTo(
       {this.id,
@@ -5696,9 +5687,8 @@ class __$DocumentReferenceContentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   _$_DocumentReferenceContent(
       {this.id,
@@ -6109,9 +6099,8 @@ class __$DocumentReferenceContextCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   _$_DocumentReferenceContext(
       {this.id,
@@ -6458,9 +6447,8 @@ class __$DocumentReferenceContextRelatedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReferenceContextRelated
     extends _DocumentReferenceContextRelated {
   _$_DocumentReferenceContextRelated(
@@ -7299,9 +7287,8 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_List_ extends _List_ {
   _$_List_(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
@@ -7943,9 +7930,8 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ListEntry extends _ListEntry {
   _$_ListEntry(
       {this.id,

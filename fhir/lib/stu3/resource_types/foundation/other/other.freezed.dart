@@ -475,9 +475,8 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Basic extends _Basic {
   _$_Basic(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
@@ -1151,9 +1150,8 @@ class __$BinaryCopyWithImpl<$Res> extends _$BinaryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Binary extends _Binary {
   _$_Binary(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
@@ -1882,9 +1880,8 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Bundle extends _Bundle {
   _$_Bundle(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
@@ -2311,9 +2308,8 @@ class __$BundleLinkCopyWithImpl<$Res> extends _$BundleLinkCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleLink extends _BundleLink {
   _$_BundleLink(
       {this.relation,
@@ -2650,9 +2646,8 @@ class __$BundleEntryCopyWithImpl<$Res> extends _$BundleEntryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleEntry extends _BundleEntry {
   _$_BundleEntry(
       {this.link,
@@ -2944,9 +2939,8 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleSearch extends _BundleSearch {
   _$_BundleSearch(
       {this.mode,
@@ -3392,9 +3386,8 @@ class __$BundleRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleRequest extends _BundleRequest {
   _$_BundleRequest(
       {this.method,
@@ -3854,9 +3847,8 @@ class __$BundleResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BundleResponse extends _BundleResponse {
   _$_BundleResponse(
       {this.status,
@@ -4408,9 +4400,8 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Linkage extends _Linkage {
   _$_Linkage(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
@@ -4776,9 +4767,8 @@ class __$LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_LinkageItem extends _LinkageItem {
   _$_LinkageItem(
       {this.type,
@@ -5783,9 +5773,8 @@ class __$MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Media extends _Media {
   _$_Media(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Media)
@@ -6862,9 +6851,8 @@ class __$MessageHeaderCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeader extends _MessageHeader {
   _$_MessageHeader(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
@@ -7372,9 +7360,8 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeaderDestination extends _MessageHeaderDestination {
   _$_MessageHeaderDestination(
       {this.name,
@@ -7771,9 +7758,8 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeaderSource extends _MessageHeaderSource {
   _$_MessageHeaderSource(
       {this.name,
@@ -8126,9 +8112,8 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeaderResponse extends _MessageHeaderResponse {
   _$_MessageHeaderResponse(
       {this.identifier,
@@ -8568,9 +8553,8 @@ class __$OperationOutcomeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationOutcome extends _OperationOutcome {
   _$_OperationOutcome(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
@@ -9065,9 +9049,8 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   _$_OperationOutcomeIssue(
       {this.severity,
@@ -9574,9 +9557,8 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Parameters extends _Parameters {
   _$_Parameters(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
@@ -11744,9 +11726,8 @@ class __$ParametersParameterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ParametersParameter extends _ParametersParameter {
   _$_ParametersParameter(
       {this.name,
@@ -13106,9 +13087,8 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Subscription extends _Subscription {
   _$_Subscription(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
@@ -13677,9 +13657,8 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubscriptionChannel extends _SubscriptionChannel {
   _$_SubscriptionChannel(
       {this.type,

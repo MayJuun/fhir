@@ -991,9 +991,8 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEvent extends _AdverseEvent {
   _$_AdverseEvent(
       {@JsonKey(unknownEnumValue: R5ResourceType.AdverseEvent)
@@ -1639,9 +1638,8 @@ class __$AdverseEventParticipantCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEventParticipant extends _AdverseEventParticipant {
   _$_AdverseEventParticipant(
       {this.id,
@@ -1965,9 +1963,8 @@ class __$AdverseEventSuspectEntityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEventSuspectEntity extends _AdverseEventSuspectEntity {
   _$_AdverseEventSuspectEntity(
       {this.id,
@@ -2302,9 +2299,8 @@ class __$AdverseEventCausalityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEventCausality extends _AdverseEventCausality {
   _$_AdverseEventCausality(
       {this.id,
@@ -2612,9 +2608,8 @@ class __$AdverseEventContributingFactorCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEventContributingFactor
     extends _AdverseEventContributingFactor {
   _$_AdverseEventContributingFactor(
@@ -2917,9 +2912,8 @@ class __$AdverseEventPreventiveActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEventPreventiveAction extends _AdverseEventPreventiveAction {
   _$_AdverseEventPreventiveAction(
       {this.id,
@@ -3219,9 +3213,8 @@ class __$AdverseEventMitigatingActionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEventMitigatingAction extends _AdverseEventMitigatingAction {
   _$_AdverseEventMitigatingAction(
       {this.id,
@@ -3519,9 +3512,8 @@ class __$AdverseEventSupportingInfoCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AdverseEventSupportingInfo extends _AdverseEventSupportingInfo {
   _$_AdverseEventSupportingInfo(
       {this.id,
@@ -4611,9 +4603,8 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AllergyIntolerance extends _AllergyIntolerance {
   _$_AllergyIntolerance(
       {@JsonKey(unknownEnumValue: R5ResourceType.AllergyIntolerance)
@@ -5440,9 +5431,8 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
   _$_AllergyIntoleranceReaction(
       {this.id,
@@ -6515,9 +6505,8 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalImpression extends _ClinicalImpression {
   _$_ClinicalImpression(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalImpression)
@@ -7177,9 +7166,8 @@ class __$ClinicalImpressionFindingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
   _$_ClinicalImpressionFinding(
       {this.id,
@@ -8355,9 +8343,8 @@ class __$ConditionCopyWithImpl<$Res> extends _$ConditionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Condition extends _Condition {
   _$_Condition(
       {@JsonKey(unknownEnumValue: R5ResourceType.Condition)
@@ -9018,9 +9005,8 @@ class __$ConditionStageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConditionStage extends _ConditionStage {
   _$_ConditionStage(
       {this.id,
@@ -9290,9 +9276,8 @@ class __$ConditionEvidenceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ConditionEvidence extends _ConditionEvidence {
   _$_ConditionEvidence(
       {this.id,
@@ -10136,9 +10121,8 @@ class __$DetectedIssueCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DetectedIssue extends _DetectedIssue {
   _$_DetectedIssue(
       {@JsonKey(unknownEnumValue: R5ResourceType.DetectedIssue)
@@ -10665,9 +10649,8 @@ class __$DetectedIssueEvidenceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DetectedIssueEvidence extends _DetectedIssueEvidence {
   _$_DetectedIssueEvidence(
       {this.id,
@@ -11000,9 +10983,8 @@ class __$DetectedIssueMitigationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
   _$_DetectedIssueMitigation(
       {this.id,
@@ -12311,9 +12293,8 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   _$_FamilyMemberHistory(
       {@JsonKey(unknownEnumValue: R5ResourceType.FamilyMemberHistory)
@@ -13241,9 +13222,8 @@ class __$FamilyMemberHistoryConditionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
   _$_FamilyMemberHistoryCondition(
       {this.id,
@@ -13858,9 +13838,8 @@ class __$FamilyMemberHistoryProcedureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_FamilyMemberHistoryProcedure extends _FamilyMemberHistoryProcedure {
   _$_FamilyMemberHistoryProcedure(
       {this.id,
@@ -15235,9 +15214,8 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Procedure extends _Procedure {
   _$_Procedure(
       {@JsonKey(unknownEnumValue: R5ResourceType.Procedure)
@@ -15987,9 +15965,8 @@ class __$ProcedurePerformerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcedurePerformer extends _ProcedurePerformer {
   _$_ProcedurePerformer(
       {this.id,
@@ -16285,9 +16262,8 @@ class __$ProcedureFocalDeviceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
   _$_ProcedureFocalDevice(
       {this.id,

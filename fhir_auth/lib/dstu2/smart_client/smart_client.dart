@@ -5,7 +5,7 @@ import '../fhir_client.dart';
 
 import 'smart_client_stub.dart' // Stub implementation
     if (dart.library.io) 'smart_mobile_client.dart' // dart:io implementation
-    if (dart.library.html) 'smart_web_client.dart'; // dart:html implementation
+    if (dart.library.html) 'smart_web_client.dart'; // universal_html implementation
 
 abstract class SmartClient extends FhirClient {
   // Return the correct implementation

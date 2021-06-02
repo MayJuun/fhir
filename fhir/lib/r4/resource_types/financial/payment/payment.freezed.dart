@@ -715,9 +715,8 @@ class __$PaymentNoticeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
@@ -1861,9 +1860,8 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
@@ -2688,9 +2686,8 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   _$_PaymentReconciliationDetail(
       {this.id,
@@ -3123,9 +3120,8 @@ class __$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentReconciliationProcessNote
     extends _PaymentReconciliationProcessNote {
   _$_PaymentReconciliationProcessNote(

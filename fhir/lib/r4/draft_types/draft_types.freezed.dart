@@ -289,9 +289,8 @@ class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Population extends _Population {
   _$_Population(
       {this.id,
@@ -648,9 +647,8 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProductShelfLife extends _ProductShelfLife {
   _$_ProductShelfLife(
       {this.id,
@@ -1230,9 +1228,8 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProdCharacteristic extends _ProdCharacteristic {
   _$_ProdCharacteristic(
       {this.id,
@@ -1732,9 +1729,8 @@ class __$MarketingStatusCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MarketingStatus extends _MarketingStatus {
   _$_MarketingStatus(
       {this.id,
@@ -2217,9 +2213,8 @@ class __$SubstanceAmountCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceAmount extends _SubstanceAmount {
   _$_SubstanceAmount(
       {this.id,
@@ -2580,9 +2575,8 @@ class __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
   _$_SubstanceAmountReferenceRange(
       {this.id,

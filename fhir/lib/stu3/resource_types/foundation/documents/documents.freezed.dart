@@ -772,9 +772,8 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Composition extends _Composition {
   _$_Composition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
@@ -1333,9 +1332,8 @@ class __$CompositionAttesterCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompositionAttester extends _CompositionAttester {
   _$_CompositionAttester(
       {this.mode,
@@ -1624,9 +1622,8 @@ class __$CompositionRelatesToCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompositionRelatesTo extends _CompositionRelatesTo {
   _$_CompositionRelatesTo(
       {this.code,
@@ -1855,9 +1852,8 @@ class __$CompositionEventCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompositionEvent extends _CompositionEvent {
   _$_CompositionEvent({this.code, this.period, this.detail}) : super._();
 
@@ -2250,9 +2246,8 @@ class __$CompositionSectionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CompositionSection extends _CompositionSection {
   _$_CompositionSection(
       {this.title,
@@ -3078,9 +3073,8 @@ class __$DocumentManifestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
@@ -3563,9 +3557,8 @@ class __$DocumentManifestContentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentManifestContent extends _DocumentManifestContent {
   _$_DocumentManifestContent({this.pAttachment, this.pReference}) : super._();
 
@@ -3771,9 +3764,8 @@ class __$DocumentManifestRelatedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   _$_DocumentManifestRelated({this.identifier, this.ref}) : super._();
 
@@ -4682,9 +4674,8 @@ class __$DocumentReferenceCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
@@ -5243,9 +5234,8 @@ class __$DocumentReferenceRelatesToCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   _$_DocumentReferenceRelatesTo(
       {this.code,
@@ -5462,9 +5452,8 @@ class __$DocumentReferenceContentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   _$_DocumentReferenceContent({required this.attachment, this.format})
       : super._();
@@ -5794,9 +5783,8 @@ class __$DocumentReferenceContextCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   _$_DocumentReferenceContext(
       {this.encounter,
@@ -6053,9 +6041,8 @@ class __$DocumentReferenceRelatedCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_DocumentReferenceRelated extends _DocumentReferenceRelated {
   _$_DocumentReferenceRelated({this.identifier, this.ref}) : super._();
 

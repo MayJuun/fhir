@@ -669,9 +669,8 @@ class __$PaymentNoticeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
@@ -1732,9 +1731,8 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
@@ -2388,9 +2386,8 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   _$_PaymentReconciliationDetail(
       {required this.type,
@@ -2684,9 +2681,8 @@ class __$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentReconciliationProcessNote
     extends _PaymentReconciliationProcessNote {
   _$_PaymentReconciliationProcessNote(
