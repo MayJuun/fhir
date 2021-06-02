@@ -5,8 +5,6 @@ import 'dart:io';
 
 import 'fhirpathListener.dart';
 import 'fhirpathBaseListener.dart';
-import 'fhirpathVisitor.dart';
-import 'fhirpathBaseVisitor.dart';
 
 const int RULE_expression = 0,
     RULE_term = 1,
@@ -344,7 +342,7 @@ class fhirpathParser extends Parser {
               }
               state = 35;
               _la = tokenStream.LA(1);
-              if (!((((_la) == null ? ~0x3f : (_la) & ~0x3f) == 0 &&
+              if (!((((_la ?? 0) & ~0x3f) == 0 &&
                   ((BigInt.one << (_la ?? 0)) &
                           ((BigInt.one << TOKEN_T__5) |
                               (BigInt.one << TOKEN_T__6) |
@@ -370,7 +368,7 @@ class fhirpathParser extends Parser {
               }
               state = 38;
               _la = tokenStream.LA(1);
-              if (!((((_la) == null ? ~0x3f : (_la) & ~0x3f) == 0 &&
+              if (!((((_la ?? 0) & ~0x3f) == 0 &&
                   ((BigInt.one << (_la ?? 0)) &
                           ((BigInt.one << TOKEN_T__3) |
                               (BigInt.one << TOKEN_T__4) |
@@ -408,7 +406,7 @@ class fhirpathParser extends Parser {
               }
               state = 44;
               _la = tokenStream.LA(1);
-              if (!((((_la) == null ? ~0x3f : (_la) & ~0x3f) == 0 &&
+              if (!((((_la ?? 0) & ~0x3f) == 0 &&
                   ((BigInt.one << (_la ?? 0)) &
                           ((BigInt.one << TOKEN_T__13) |
                               (BigInt.one << TOKEN_T__14) |
@@ -434,7 +432,7 @@ class fhirpathParser extends Parser {
               }
               state = 47;
               _la = tokenStream.LA(1);
-              if (!((((_la) == null ? ~0x3f : (_la) & ~0x3f) == 0 &&
+              if (!((((_la ?? 0) & ~0x3f) == 0 &&
                   ((BigInt.one << (_la ?? 0)) &
                           ((BigInt.one << TOKEN_T__17) |
                               (BigInt.one << TOKEN_T__18) |
@@ -816,7 +814,7 @@ class fhirpathParser extends Parser {
       state = 112;
       errorHandler.sync(this);
       _la = tokenStream.LA(1);
-      if ((((_la) == null ? ~0x3f : (_la) & ~0x3f) == 0 &&
+      if ((((_la ?? 0) & ~0x3f) == 0 &&
           ((BigInt.one << (_la ?? 0)) &
                   ((BigInt.one << TOKEN_T__3) |
                       (BigInt.one << TOKEN_T__4) |
@@ -856,7 +854,7 @@ class fhirpathParser extends Parser {
     return _localctx;
   }
 
-  ParamListContext paramList() {
+  ParamListContext? paramList() {
     dynamic _localctx = ParamListContext(context, state);
     enterRule(_localctx, 12, RULE_paramList);
     int? _la;
@@ -968,7 +966,7 @@ class fhirpathParser extends Parser {
       enterOuterAlt(_localctx, 1);
       state = 133;
       _la = tokenStream.LA(1);
-      if (!((((_la) == null ? ~0x3f : (_la) & ~0x3f) == 0 &&
+      if (!((((_la ?? 0) & ~0x3f) == 0 &&
           ((BigInt.one << (_la ?? 0)) &
                   ((BigInt.one << TOKEN_T__38) |
                       (BigInt.one << TOKEN_T__39) |
@@ -1003,7 +1001,7 @@ class fhirpathParser extends Parser {
       enterOuterAlt(_localctx, 1);
       state = 135;
       _la = tokenStream.LA(1);
-      if (!((((_la) == null ? ~0x3f : (_la) & ~0x3f) == 0 &&
+      if (!((((_la ?? 0) & ~0x3f) == 0 &&
           ((BigInt.one << (_la ?? 0)) &
                   ((BigInt.one << TOKEN_T__46) |
                       (BigInt.one << TOKEN_T__47) |
@@ -1079,7 +1077,7 @@ class fhirpathParser extends Parser {
     return _localctx;
   }
 
-  IdentifierContext identifier() {
+  IdentifierContext? identifier() {
     dynamic _localctx = IdentifierContext(context, state);
     enterRule(_localctx, 26, RULE_identifier);
     int? _la;
@@ -1087,7 +1085,7 @@ class fhirpathParser extends Parser {
       enterOuterAlt(_localctx, 1);
       state = 147;
       _la = tokenStream.LA(1);
-      if (!((((_la) == null ? ~0x3f : (_la) & ~0x3f) == 0 &&
+      if (!((((_la ?? 0) & ~0x3f) == 0 &&
           ((BigInt.one << (_la ?? 0)) &
                   ((BigInt.one << TOKEN_T__10) |
                       (BigInt.one << TOKEN_T__11) |
@@ -1316,15 +1314,6 @@ class ExternalConstantContext extends ParserRuleContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitExternalConstant(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitExternalConstant(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class InvocationContext extends ParserRuleContext {
@@ -1355,15 +1344,6 @@ class FunctionContext extends ParserRuleContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitFunction(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitFunction(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class ParamListContext extends ParserRuleContext {
@@ -1382,15 +1362,6 @@ class ParamListContext extends ParserRuleContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitParamList(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitParamList(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class QuantityContext extends ParserRuleContext {
@@ -1408,15 +1379,6 @@ class QuantityContext extends ParserRuleContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitQuantity(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitQuantity(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1439,15 +1401,6 @@ class UnitContext extends ParserRuleContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitUnit(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitUnit(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class DateTimePrecisionContext extends ParserRuleContext {
@@ -1463,15 +1416,6 @@ class DateTimePrecisionContext extends ParserRuleContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitDateTimePrecision(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitDateTimePrecision(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1492,15 +1436,6 @@ class PluralDateTimePrecisionContext extends ParserRuleContext {
     if (listener is fhirpathListener)
       listener.exitPluralDateTimePrecision(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitPluralDateTimePrecision(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class TypeSpecifierContext extends ParserRuleContext {
@@ -1519,15 +1454,6 @@ class TypeSpecifierContext extends ParserRuleContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitTypeSpecifier(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitTypeSpecifier(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class QualifiedIdentifierContext extends ParserRuleContext {
@@ -1545,15 +1471,6 @@ class QualifiedIdentifierContext extends ParserRuleContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitQualifiedIdentifier(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitQualifiedIdentifier(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1574,15 +1491,6 @@ class IdentifierContext extends ParserRuleContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitIdentifier(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitIdentifier(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class IndexerExpressionContext extends ExpressionContext {
@@ -1600,15 +1508,6 @@ class IndexerExpressionContext extends ExpressionContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitIndexerExpression(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitIndexerExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class PolarityExpressionContext extends ExpressionContext {
@@ -1624,15 +1523,6 @@ class PolarityExpressionContext extends ExpressionContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitPolarityExpression(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitPolarityExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1650,15 +1540,6 @@ class AdditiveExpressionContext extends ExpressionContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitAdditiveExpression(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitAdditiveExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1679,15 +1560,6 @@ class MultiplicativeExpressionContext extends ExpressionContext {
     if (listener is fhirpathListener)
       listener.exitMultiplicativeExpression(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitMultiplicativeExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class UnionExpressionContext extends ExpressionContext {
@@ -1704,15 +1576,6 @@ class UnionExpressionContext extends ExpressionContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitUnionExpression(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitUnionExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1731,15 +1594,6 @@ class OrExpressionContext extends ExpressionContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitOrExpression(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitOrExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class AndExpressionContext extends ExpressionContext {
@@ -1756,15 +1610,6 @@ class AndExpressionContext extends ExpressionContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitAndExpression(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitAndExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1783,15 +1628,6 @@ class MembershipExpressionContext extends ExpressionContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitMembershipExpression(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitMembershipExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class InequalityExpressionContext extends ExpressionContext {
@@ -1808,15 +1644,6 @@ class InequalityExpressionContext extends ExpressionContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitInequalityExpression(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitInequalityExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1835,15 +1662,6 @@ class InvocationExpressionContext extends ExpressionContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitInvocationExpression(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitInvocationExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class EqualityExpressionContext extends ExpressionContext {
@@ -1860,15 +1678,6 @@ class EqualityExpressionContext extends ExpressionContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitEqualityExpression(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitEqualityExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1887,15 +1696,6 @@ class ImpliesExpressionContext extends ExpressionContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitImpliesExpression(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitImpliesExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class TermExpressionContext extends ExpressionContext {
@@ -1911,15 +1711,6 @@ class TermExpressionContext extends ExpressionContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitTermExpression(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitTermExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -1939,15 +1730,6 @@ class TypeExpressionContext extends ExpressionContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitTypeExpression(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitTypeExpression(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class ExternalConstantTermContext extends TermContext {
@@ -1965,15 +1747,6 @@ class ExternalConstantTermContext extends TermContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitExternalConstantTerm(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitExternalConstantTerm(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class LiteralTermContext extends TermContext {
@@ -1989,15 +1762,6 @@ class LiteralTermContext extends TermContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitLiteralTerm(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitLiteralTerm(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -2015,15 +1779,6 @@ class ParenthesizedTermContext extends TermContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitParenthesizedTerm(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitParenthesizedTerm(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class InvocationTermContext extends TermContext {
@@ -2039,15 +1794,6 @@ class InvocationTermContext extends TermContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitInvocationTerm(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitInvocationTerm(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -2065,15 +1811,6 @@ class TimeLiteralContext extends LiteralContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitTimeLiteral(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitTimeLiteral(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class NullLiteralContext extends LiteralContext {
@@ -2088,15 +1825,6 @@ class NullLiteralContext extends LiteralContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitNullLiteral(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitNullLiteral(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -2114,15 +1842,6 @@ class DateTimeLiteralContext extends LiteralContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitDateTimeLiteral(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitDateTimeLiteral(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class StringLiteralContext extends LiteralContext {
@@ -2138,15 +1857,6 @@ class StringLiteralContext extends LiteralContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitStringLiteral(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitStringLiteral(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -2164,15 +1874,6 @@ class DateLiteralContext extends LiteralContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitDateLiteral(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitDateLiteral(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class BooleanLiteralContext extends LiteralContext {
@@ -2187,15 +1888,6 @@ class BooleanLiteralContext extends LiteralContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitBooleanLiteral(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitBooleanLiteral(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -2213,15 +1905,6 @@ class NumberLiteralContext extends LiteralContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitNumberLiteral(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitNumberLiteral(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class QuantityLiteralContext extends LiteralContext {
@@ -2238,15 +1921,6 @@ class QuantityLiteralContext extends LiteralContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitQuantityLiteral(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitQuantityLiteral(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class TotalInvocationContext extends InvocationContext {
@@ -2261,15 +1935,6 @@ class TotalInvocationContext extends InvocationContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitTotalInvocation(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitTotalInvocation(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -2286,15 +1951,6 @@ class ThisInvocationContext extends InvocationContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitThisInvocation(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitThisInvocation(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class IndexInvocationContext extends InvocationContext {
@@ -2309,15 +1965,6 @@ class IndexInvocationContext extends InvocationContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitIndexInvocation(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitIndexInvocation(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
 
@@ -2335,15 +1982,6 @@ class FunctionInvocationContext extends InvocationContext {
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitFunctionInvocation(this);
   }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitFunctionInvocation(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
-  }
 }
 
 class MemberInvocationContext extends InvocationContext {
@@ -2359,14 +1997,5 @@ class MemberInvocationContext extends InvocationContext {
   @override
   void exitRule(ParseTreeListener listener) {
     if (listener is fhirpathListener) listener.exitMemberInvocation(this);
-  }
-
-  @override
-  T? accept<T>(ParseTreeVisitor<T> visitor) {
-    if (visitor is fhirpathVisitor<T>) {
-      return visitor.visitMemberInvocation(this);
-    } else {
-      return visitor.visitChildren(this);
-    }
   }
 }
