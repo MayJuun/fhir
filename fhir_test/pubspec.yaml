@@ -1,0 +1,11 @@
+name: fhir_test
+
+environment:
+  sdk: '>=2.13.0 <3.0.0'
+
+dependencies:
+  fhir: 
+    path: ../fhir
+
+dev_dependencies:
+  test: ^1.17.5
