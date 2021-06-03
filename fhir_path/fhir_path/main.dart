@@ -11,23 +11,29 @@ void main() {
     var andOrXor = andOrXorList(path);
     var finalList = operationsList(andOrXor);
     removeResourceType(finalList);
+    // print(finalList);
     // finalList.forEach((element) {
     //   print('${" " * int.parse(element[0]) * 3}$element');
     // });
-    print(applyFunctions(finalList, resource));
+    print(applyFunctions(finalList, [resource.toJson()]));
   }
 }
 
 final pathStrings = [
-  'Patient.name.exists()',
-  'Patient.identifier.exists(use = "official")',
-  'Patient.telecom.exists(system = "phone" and use = "mobile")',
-  'Patient.generalPractitioner.exists(\$this is Practitioner)',
-  'Appointment.minutesDuration / 60 > 5',
-  'MedicationAdministration.wasNotGiven implies MedicationAdministration.reasonNotGiven.exists()',
-  'name.given | name.family',
-  "'sir ' + name.given",
+  'Patient.name.given.last()',
+  // 'Patient.name.family',
+  // 'name.family',
+  // 'name.period.empty()',
+  // 'Patient.name.exists()',
+  // 'Patient.identifier.exists(use = "official")',
+  // 'Patient.telecom.exists(system = "phone" and use = "mobile")',
+  // 'Patient.generalPractitioner.exists(\$this is Practitioner)',
+  // 'Appointment.minutesDuration / 60 > 5',
+  // 'MedicationAdministration.wasNotGiven implies MedicationAdministration.reasonNotGiven.exists()',
+  // 'name.given | name.family',
+  // "'sir ' + name.given",
 ];
+
 final resource = Patient(
   name: [
     HumanName(
@@ -36,7 +42,7 @@ final resource = Patient(
     ),
     HumanName(
       family: 'Smith',
-      given: ['John'],
+      given: ['John','Jacob', 'Jingleheimer'],
     ),
     HumanName(
       family: 'Smith',
