@@ -1,5 +1,9 @@
+import 'package:fhir/primitive_types/primitive_types.dart';
+
 abstract class FhirClient {
   Future<void> login();
+
+  late FhirUri fhirUrl;
 
   bool isLoggedIn = false;
 

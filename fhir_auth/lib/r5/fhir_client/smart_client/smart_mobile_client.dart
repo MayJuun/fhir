@@ -8,7 +8,7 @@ import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
 
-import '../../../r5.dart';
+import '../../../r4.dart';
 
 SmartClient getSmartClient({
   required FhirUri fhirUrl,
@@ -20,6 +20,7 @@ SmartClient getSmartClient({
   FhirUri? authUrl,
   FhirUri? tokenUrl,
   String? secret,
+  required bool isLoggedIn,
 }) =>
     SmartMobileClient(
       fhirUrl: fhirUrl,
@@ -31,7 +32,7 @@ SmartClient getSmartClient({
       authUrl: authUrl,
       tokenUrl: tokenUrl,
       secret: secret,
-      isLoggedIn: false,
+      isLoggedIn: isLoggedIn,
     );
 
 /// the star of our show, who you've all come to see, the Smart object who

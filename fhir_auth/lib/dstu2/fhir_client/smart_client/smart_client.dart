@@ -36,24 +36,19 @@ abstract class SmartClient extends FhirClient {
 
     /// this is for testing, you shouldn't store the secret in the object
     String? secret,
-  }) {
-    fhirUrl = fhirUrl;
-    return getSmartClient(
-      fhirUrl: fhirUrl,
-      clientId: clientId,
-      redirectUri: redirectUri,
-      launch: launch,
-      scopes: scopes,
-      additionalParameters: additionalParameters,
-      authUrl: authUrl,
-      tokenUrl: tokenUrl,
-      secret: secret,
-    );
-  }
-
-  late FhirUri fhirUrl;
-  @override
-  bool isLoggedIn = false;
+  }) =>
+      getSmartClient(
+        fhirUrl: fhirUrl,
+        clientId: clientId,
+        redirectUri: redirectUri,
+        launch: launch,
+        scopes: scopes,
+        additionalParameters: additionalParameters,
+        authUrl: authUrl,
+        tokenUrl: tokenUrl,
+        secret: secret,
+        isLoggedIn: false,
+      );
 
   @override
   Future<void> login();

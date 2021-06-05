@@ -12,5 +12,6 @@ SmartClient getSmartClient({
   FhirUri? authUrl,
   FhirUri? tokenUrl,
   String? secret,
+  bool? isLoggedIn,
 }) =>
     throw UnsupportedError('Cannot create an auth manager');
