@@ -20,6 +20,7 @@ SmartClient getSmartClient({
   FhirUri? authUrl,
   FhirUri? tokenUrl,
   String? secret,
+  required bool isLoggedIn,
 }) =>
     SmartWebClient(
       fhirUrl: fhirUrl,
@@ -31,7 +32,7 @@ SmartClient getSmartClient({
       authUrl: authUrl,
       tokenUrl: tokenUrl,
       secret: secret,
-      isLoggedIn: false,
+      isLoggedIn: isLoggedIn,
     );
 
 /// the star of our show, who you've all come to see, the Smart object who

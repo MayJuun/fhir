@@ -13,6 +13,7 @@ class GcsClient extends FhirClient {
     googleSignIn = GoogleSignIn(clientId: clientId, scopes: scopes ?? []);
   }
 
+  @override
   FhirUri fhirUrl;
   late GoogleSignIn googleSignIn;
   @override
