@@ -6,10 +6,10 @@ homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_at_rest
 
 environment:
-  sdk: '>=2.13.1 <3.0.0'
+  sdk: '>=2.13.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.4.6
+  fhir: ^0.4.7
   freezed_annotation: ^0.14.2
   http: ^0.13.3
 
