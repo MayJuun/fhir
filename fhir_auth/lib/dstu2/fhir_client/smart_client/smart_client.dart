@@ -52,6 +52,7 @@ abstract class SmartClient extends FhirClient {
   }
 
   late FhirUri fhirUrl;
+  @override
   bool isLoggedIn = false;
 
   @override

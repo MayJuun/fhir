@@ -1,11 +1,10 @@
-import 'package:fhir/r5.dart';
+import 'package:fhir/stu3.dart';
 
-import '../../r5.dart';
-import '../fhir_client.dart';
+import '../../../stu3.dart';
 
 import 'smart_client_stub.dart' // Stub implementation
-    if (dart.library.io) 'smart_mobile_client.dart' // dart:io implementation
-    if (dart.library.html) 'smart_web_client.dart'; // // universal_html implementation
+    if (dart.library.html) 'smart_web_client.dart' // universal_html implementation
+    if (dart.library.io) 'smart_mobile_client.dart'; // dart:io implementation
 
 abstract class SmartClient extends FhirClient {
   // Return the correct implementation
@@ -53,6 +52,7 @@ abstract class SmartClient extends FhirClient {
   }
 
   late FhirUri fhirUrl;
+  @override
   bool isLoggedIn = false;
 
   @override

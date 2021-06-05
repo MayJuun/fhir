@@ -15,6 +15,7 @@ class GcsClient extends FhirClient {
 
   FhirUri fhirUrl;
   late GoogleSignIn googleSignIn;
+  @override
   bool isLoggedIn = false;
 
   @override

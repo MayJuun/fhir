@@ -1,7 +1,6 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 
-import '../../r5.dart';
-import 'smart_client.dart';
+import '../../../r5.dart';
 
 SmartClient getSmartClient({
   required FhirUri fhirUrl,

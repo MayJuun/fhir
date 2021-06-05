@@ -2,13 +2,13 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:fhir/stu3.dart';
+import 'package:fhir/r5.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
 
-import '../../stu3.dart';
+import '../../../r5.dart';
 
 SmartClient getSmartClient({
   required FhirUri fhirUrl,

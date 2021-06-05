@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 import 'package:oauth2/oauth2.dart' as oauth2;
 import 'package:universal_html/html.dart' as html;
 
-import '../../dstu2.dart';
+import '../../../dstu2.dart';
 
 SmartClient getSmartClient({
   required FhirUri fhirUrl,
