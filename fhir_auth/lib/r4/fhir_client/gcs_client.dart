@@ -2,7 +2,7 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import 'fhir_client.dart';
+import '../fhir_client/fhir_client.dart';
 
 class GcsClient extends FhirClient {
   GcsClient({

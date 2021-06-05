@@ -1,4 +1,4 @@
-// import 'package:petitparser/petitparser.dart';
+import 'package:petitparser/petitparser.dart';
 
 // void main() {
 //   final definition = FhirPathDefinition();
@@ -23,15 +23,29 @@
 //   'Message.`PID-1`',
 // ];
 
-// class FhirPathDefinition extends GrammarDefinition {
-//   Parser start() => ref0(term).end();
-//   Parser term() => (ref0(paren) | ref0(field)).plus();
-//   Parser paren() => char('(') & ref0(field) & char(')');
-//   Parser field() =>
-//       ref0(path) | ref0(simpleIdentifier) | ref0(delimitedIdentifier);
-//   Parser path() =>
-//       char('.') & (ref0(simpleIdentifier) | ref0(delimitedIdentifier));
-//   Parser simpleIdentifier() => (word() | char('_')).plus().flatten();
-//   Parser delimitedIdentifier() =>
-//       (char('`') & char('`').neg().plus().flatten() & char('`')).flatten();
-// }
+class FhirPathDefinition extends GrammarDefinition {
+  Parser start() => ref0(expression).end();
+  Parser expression() =>
+      ref0(term) |
+      (ref0(expression) & char('.') & ref0(invocation)) |
+      (ref0(expression) & char('[') & ref0(expression) & char(']')) |
+      ((char('+') | char('-')) & ref0(expression)) |
+      (ref0(expression) &
+          (char('*') | char('/') | string('div') | string('mod')) &
+          ref0(expression)) |
+      (ref0(expression) &
+          (char('+') | char('-') | char('&')) &
+          ref0(expression));
+  Parser invocation() => char(':');
+  Parser term() =>
+      ref0(invocation) | (char('(') & ref0(expression) & char(')'));
+}
+
+//         | expression ('is' | 'as') typeSpecifier                    #typeExpression
+//         | expression '|' expression                                 #unionExpression
+//         | expression ('<=' | '<' | '>' | '>=') expression           #inequalityExpression
+//         | expression ('=' | '~' | '!=' | '!~') expression           #equalityExpression
+//         | expression ('in' | 'contains') expression                 #membershipExpression
+//         | expression 'and' expression                               #andExpression
+//         | expression ('or' | 'xor') expression                      #orExpression
+//         | expression 'implies' expression                           #impliesExpression
