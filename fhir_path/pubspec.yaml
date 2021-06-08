@@ -1,14 +1,9 @@
 name: fhir_path
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.13.0 <3.0.0'
 
 dependencies:
-  antlr4: 
-    git: 
-      url: git://github.com/antlr/antlr4.git
-      path: runtime/Dart
   rfc_6901: ^0.1.0
   petitparser: ^4.0.0
-  fhir:
-    path: ../fhir
+  fhir: ^0.4.7

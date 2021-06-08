@@ -1,1 +1,0 @@
-Patient.telecom.where(use = 'official').union(Patient.contact.telecom.where(use = 'official')).exists().not()
