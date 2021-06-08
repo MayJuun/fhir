@@ -1,12 +1,21 @@
+import 'package:fhir/r4.dart';
+import 'package:fhir/r4/resource/resource.dart';
+
 class Node {
   Node(this.value);
 
-  static Node build(List<String> tokens) {
-    final root = Node(r'');
+  /// Builds the AST from the list of tokens
+  static Node build(List<String> tokens, R4ResourceType baseResource) {
+    final baseResourceString =
+        ResourceUtils.resourceTypeToStringMap[baseResource]!;
+    final root = Node(baseResourceString);
     if (tokens.isEmpty) {
       return root;
     }
     final reversed = [...tokens.reversed];
+    if (reversed.last == baseResourceString) {
+      reversed.removeLast();
+    }
     final stack = <Node>[root];
     while (reversed.isNotEmpty) {
       final token = reversed.removeLast();
@@ -21,7 +30,7 @@ class Node {
           children.add(stack.removeLast());
         }
         final brackets = stack.removeLast();
-        brackets.children.addAll(children);
+        brackets.children.addAll(children.reversed);
         stack.last.children.add(brackets);
         continue;
       }
@@ -32,4 +41,6 @@ class Node {
 
   final String value;
   final children = <Node>[];
+
+  bool get isNumber => RegExp(r'^-?\d+$').hasMatch(value);
 }

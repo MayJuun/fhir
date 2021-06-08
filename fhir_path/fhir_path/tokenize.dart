@@ -1,3 +1,4 @@
+/// Parses a FHIRPath expression into a list of tokens
 List<String> tokenize(String expr) {
   final tokens = <String>[];
   var pos = 0;
