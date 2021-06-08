@@ -1,28 +1,30 @@
 import 'package:fhir/r4.dart';
 
+import 'fhir_path.dart';
 import 'field.dart';
 import 'index.dart';
+import 'tokenize.dart';
 
 void main() {
-  var patient = Patient(
-    name: [
-      HumanName(
-        family: 'Smith',
-        given: ['John'],
-      ),
-      HumanName(
-        family: 'Smith',
-        given: ['John', 'Jacob'],
-      ),
-      HumanName(
-        family: 'Smith',
-        given: ['John', 'Jacob', 'Jingleheimer'],
-      ),
-    ],
-  );
-
-  final path = Field('name') | Field('family');
-
-  print(path.filter(patient.toJson()).single);
+  final path = FhirPath('name[0].family');
   print(path.toString());
+  print(tokenize('name[0].family').join());
+  print(path.filter(patient.toJson()).toList());
 }
+
+var patient = Patient(
+  name: [
+    HumanName(
+      family: 'Smith',
+      given: ['John'],
+    ),
+    HumanName(
+      family: 'Smith',
+      given: ['John', 'Jacob'],
+    ),
+    HumanName(
+      family: 'Smith',
+      given: ['John', 'Jacob', 'Jingleheimer'],
+    ),
+  ],
+);

@@ -1,32 +1,28 @@
-abstract class FhirPath {
-  /// Applies this JSONPath to the [nodes]
-  Iterable call(Iterable nodes);
+import 'filter.dart';
+import 'match.dart';
+import 'node.dart';
+import 'root.dart';
+import 'state.dart';
+import 'tokenize.dart';
 
-  /// The string expression without leading `$`
-  @override
-  String toString();
+class FhirPath {
+  factory FhirPath(String expression) {
+    State state = Ready(Root());
+    for (final node in Node.build(tokenize(expression)).children) {
+      print(node);
+      state = state.process(node);
+    }
+    return FhirPath._(state.filter);
+  }
 
-  /// A shortcut for `then()`
-  FhirPath operator |(FhirPath other) => then(other);
+  FhirPath._(this._filter);
 
-  /// Combines this expression with the [other]
-  FhirPath then(FhirPath other) => _Chain(this, other);
+  final Filter _filter;
 
-  /// Filters the given nodes.
+  /// Filters the given [json].
   /// Returns an Iterable of all elements found
-  Iterable filter(dynamic node) => call([node]);
-}
-
-class _Chain extends FhirPath {
-  _Chain(this.first, this.second);
-
-  final FhirPath first;
-
-  final FhirPath second;
+  Iterable<PathMatch> filter(json) => _filter.call([PathMatch(json, '')]);
 
   @override
-  Iterable call(Iterable nodes) => second(first(nodes));
-
-  @override
-  String toString() => '$first$second';
+  String toString() => _filter.toString();
 }
