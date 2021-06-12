@@ -7,6 +7,7 @@ dependencies:
   rfc_6901: ^0.1.0
   petitparser: ^4.0.0
   fhir: ^0.4.7
+  antlr4: ^4.9.2
 
 dev_dependencies:
   test: ^1.9.0
