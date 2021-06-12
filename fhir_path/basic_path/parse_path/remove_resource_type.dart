@@ -2,7 +2,7 @@ import 'package:fhir/r4.dart';
 
 import '../functions/function_names.dart';
 
-void removeResourceType(List<String> finalList) {
+List<String> removeResourceType(List<String> finalList) {
   if (finalList[0].length > 3) {
     final maybeResourceType = finalList[0].substring(3, finalList[0].length);
     if (maybeResourceType[0] == '.' &&
@@ -14,4 +14,5 @@ void removeResourceType(List<String> finalList) {
       finalList.removeAt(0);
     }
   }
+  return finalList;
 }
