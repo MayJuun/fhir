@@ -1,15 +1,23 @@
-// Generated from fhirpath.g4 by ANTLR 4.9
+// Generated from FHIRPath.g4 by ANTLR 4.9
 // ignore_for_file: unused_import, unused_local_variable, prefer_single_quotes
 import 'package:antlr4/antlr4.dart';
 
-import 'fhirpathParser.dart';
-import 'fhirpathListener.dart';
+import 'FHIRPathParser.dart';
+import 'FHIRPathListener.dart';
 
 
-/// This class provides an empty implementation of [fhirpathListener],
+/// This class provides an empty implementation of [FHIRPathListener],
 /// which can be extended to create a listener which only needs to handle
 /// a subset of the available methods.
-class fhirpathBaseListener implements fhirpathListener {
+class FHIRPathBaseListener implements FHIRPathListener {
+  /// The default implementation does nothing.
+  @override
+  void enterEntireExpression(EntireExpressionContext ctx) {}
+
+  /// The default implementation does nothing.
+  @override
+  void exitEntireExpression(EntireExpressionContext ctx) {}
+
   /// The default implementation does nothing.
   @override
   void enterIndexerExpression(IndexerExpressionContext ctx) {}
@@ -188,14 +196,6 @@ class fhirpathBaseListener implements fhirpathListener {
 
   /// The default implementation does nothing.
   @override
-  void enterDateLiteral(DateLiteralContext ctx) {}
-
-  /// The default implementation does nothing.
-  @override
-  void exitDateLiteral(DateLiteralContext ctx) {}
-
-  /// The default implementation does nothing.
-  @override
   void enterDateTimeLiteral(DateTimeLiteralContext ctx) {}
 
   /// The default implementation does nothing.
@@ -268,11 +268,11 @@ class fhirpathBaseListener implements fhirpathListener {
 
   /// The default implementation does nothing.
   @override
-  void enterFunction(FunctionContext ctx) {}
+  void enterFunctn(FunctnContext ctx) {}
 
   /// The default implementation does nothing.
   @override
-  void exitFunction(FunctionContext ctx) {}
+  void exitFunctn(FunctnContext ctx) {}
 
   /// The default implementation does nothing.
   @override
