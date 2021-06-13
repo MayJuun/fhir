@@ -7,12 +7,13 @@ List<String> pathList(List<String> initialList) {
     final tempList = restOfList.split('.');
     final oldNumber = number;
     tempList.forEach((v) {
+      var vdot = tempList.indexOf(v) == 0 ? v : '.$v';
       if (v != '') {
         if (v != ')' && number > 0) {
-          finalList.add('${number}: .$v');
+          finalList.add('${number}: $vdot');
           number++;
         } else {
-          finalList.add('${oldNumber}: $v');
+          finalList.add('${oldNumber}: $vdot');
         }
       }
     });
