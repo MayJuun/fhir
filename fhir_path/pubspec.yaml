@@ -4,7 +4,6 @@ environment:
   sdk: '>=2.13.0 <3.0.0'
 
 dependencies:
-  antlr4: ^4.9.2
   fhir: ^0.4.7
   petitparser: ^4.2.0
 
