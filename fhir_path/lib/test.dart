@@ -2,7 +2,7 @@ import 'lexer/lexer.dart';
 
 void main() {
   for (var test in testList) {
-    print(lexer.parse(test).isSuccess);
+    print(lexer.parse(test));
   }
 }
 
