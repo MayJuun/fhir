@@ -1,6 +1,6 @@
 import 'package:petitparser/petitparser.dart';
 
-final fpSymbols = fpComparisons | fpIndex | fpComma | fpDot | fpEmpty;
+final fpSymbols = fpDot | fpComparisons | fpIndex | fpComma | fpDot | fpEmpty;
 
 final fpDot = char('.').flatten().token();
 

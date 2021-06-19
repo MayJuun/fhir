@@ -12,19 +12,15 @@ final fpDelimitedIdentifier =
         .flatten()
         .token();
 
-final fpString = (char("'") & (fpEsc | char("'").neg()).star() & char("'"))
+final fpString = (char("'") & (fpEsc | char("'").neg()).plus() & char("'"))
     .flatten()
     .token();
-
-final fpHex = pattern('0-9a-fA-F').flatten().token();
-
-final fpUnicode = (char('u') & fpHex & fpHex & fpHex & fpHex).flatten().token();
 
 final fpEsc = (char(r'\') &
         (char('`') |
             char("'") |
             char(r'\') |
-            char(r'/') |
+            char('/') |
             char('f') |
             char('n') |
             char('r') |
@@ -32,3 +28,7 @@ final fpEsc = (char(r'\') &
             fpUnicode))
     .flatten()
     .token();
+
+final fpUnicode = (char('u') & fpHex & fpHex & fpHex & fpHex).flatten().token();
+
+final fpHex = pattern('0-9a-fA-F').flatten().token();

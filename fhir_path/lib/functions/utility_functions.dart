@@ -1,10 +1,10 @@
 import 'package:petitparser/petitparser.dart';
 
-final fpNow = string('now()').token();
+final fpNow = string('.now()').token();
 
-final fpTimeOfDay = string('timeOfDate()').token();
+final fpTimeOfDay = string('.timeOfDate()').token();
 
-final fpToday = string('today()').token();
+final fpToday = string('.today()').token();
 
-final fpTrace = string('trace(').token();
+final fpTrace = string('.trace(').token();
 

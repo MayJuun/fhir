@@ -8,15 +8,16 @@ import 'fp_strings.dart';
 import 'fp_symbols.dart';
 import 'fp_white_space.dart';
 
-final lexer = (tokenizer | withoutParen).plus().end();
+final lexer = tokenizer.token().plus().end();
 
-final tokenizer =
-    ((char('(') | fpArgumentFunctions) & withoutParen.optional() & char(')'));
+final tokenizer = 
+withoutParen |
+    ((fpArgumentFunctions | char('(').token()) & withoutParen.plus().optional() & char(')').token());
 
-final withoutParen = (fpWhiteSpace |
-    fpSymbols |
-    fpKeywords |
-    fpNoArgumentFunctions |
+final withoutParen = fpNoArgumentFunctions |
+    fpDateTimes |
+    fpWhiteSpace |
     fpStrings |
+    fpSymbols |
     fpNumbers |
-    fpDateTimes);
+    fpKeywords;
