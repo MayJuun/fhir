@@ -27,7 +27,7 @@ abstract class FhirNumber {
   bool operator >(Object o) => value == null ||
           (o is! FhirNumber && o is! num) ||
           (o is FhirNumber && o.value == null)
-      ? throw Exception('One of the values is not valid or null\n'
+      ? throw ArgumentError('One of the values is not valid or null\n'
           'This number is: ${toString()}, compared number is ${o.toString()}')
       : o is FhirNumber
           ? value! > o.value!
@@ -38,7 +38,7 @@ abstract class FhirNumber {
   bool operator <(Object o) => value == null ||
           (o is! FhirNumber && o is! num) ||
           (o is FhirNumber && o.value == null)
-      ? throw Exception('One of the values is not valid or null\n'
+      ? throw ArgumentError('One of the values is not valid or null\n'
           'This number is: ${toString()}, compared number is ${o.toString()}')
       : o is FhirNumber
           ? value! < o.value!

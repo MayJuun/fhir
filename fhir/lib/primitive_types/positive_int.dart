@@ -4,7 +4,7 @@ import 'package:yaml/yaml.dart';
 
 import 'fhir_number.dart';
 
-class PositiveInt extends FhirNumber{
+class PositiveInt extends FhirNumber {
   const PositiveInt._(
       this.valueString, this.valueNumber, this.isValid, this.isString);
 
