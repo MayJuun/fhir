@@ -4,7 +4,12 @@ environment:
   sdk: '>=2.13.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.4.7
+  antlr4: ^4.9.2
+  collection: ^1.15.0
+  fhir: 
+    path: ../fhir
+  equatable: ^2.0.3
+  js: ^0.6.3
   petitparser: ^4.2.0
 
 dev_dependencies:
