@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'support.dart';
 
@@ -779,7 +779,7 @@ class _$_Coverage extends _Coverage {
       : super._();
 
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageFromJson(json);
+      _$$_CoverageFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
@@ -966,7 +966,7 @@ class _$_Coverage extends _Coverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageToJson(this);
+    return _$$_CoverageToJson(this);
   }
 }
 
@@ -1644,7 +1644,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       : super._();
 
   factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_EligibilityRequestFromJson(json);
+      _$$_EligibilityRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
@@ -1784,7 +1784,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EligibilityRequestToJson(this);
+    return _$$_EligibilityRequestToJson(this);
   }
 }
 
@@ -2570,7 +2570,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
       : super._();
 
   factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_EligibilityResponseFromJson(json);
+      _$$_EligibilityResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
@@ -2743,7 +2743,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EligibilityResponseToJson(this);
+    return _$$_EligibilityResponseToJson(this);
   }
 }
 
@@ -3490,7 +3490,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       : super._();
 
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentRequestFromJson(json);
+      _$$_EnrollmentRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
@@ -3648,7 +3648,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentRequestToJson(this);
+    return _$$_EnrollmentRequestToJson(this);
   }
 }
 
@@ -4442,7 +4442,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       : super._();
 
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentResponseFromJson(json);
+      _$$_EnrollmentResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
@@ -4614,7 +4614,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentResponseToJson(this);
+    return _$$_EnrollmentResponseToJson(this);
   }
 }
 

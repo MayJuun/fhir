@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'workflow.dart';
 
@@ -1059,7 +1059,7 @@ class _$_Appointment extends _Appointment {
       : super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
-      _$_$_AppointmentFromJson(json);
+      _$$_AppointmentFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
@@ -1309,7 +1309,7 @@ class _$_Appointment extends _Appointment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AppointmentToJson(this);
+    return _$$_AppointmentToJson(this);
   }
 }
 
@@ -1824,7 +1824,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       : super._();
 
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
-      _$_$_AppointmentParticipantFromJson(json);
+      _$$_AppointmentParticipantFromJson(json);
 
   @override
   final String? id;
@@ -1912,7 +1912,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AppointmentParticipantToJson(this);
+    return _$$_AppointmentParticipantToJson(this);
   }
 }
 
@@ -2613,7 +2613,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       : super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_AppointmentResponseFromJson(json);
+      _$$_AppointmentResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
@@ -2781,7 +2781,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AppointmentResponseToJson(this);
+    return _$$_AppointmentResponseToJson(this);
   }
 }
 
@@ -3438,7 +3438,7 @@ class _$_Schedule extends _Schedule {
       : super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
-      _$_$_ScheduleFromJson(json);
+      _$$_ScheduleFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
@@ -3590,7 +3590,7 @@ class _$_Schedule extends _Schedule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ScheduleToJson(this);
+    return _$$_ScheduleToJson(this);
   }
 }
 
@@ -4402,8 +4402,7 @@ class _$_Slot extends _Slot {
           this.commentElement})
       : super._();
 
-  factory _$_Slot.fromJson(Map<String, dynamic> json) =>
-      _$_$_SlotFromJson(json);
+  factory _$_Slot.fromJson(Map<String, dynamic> json) => _$$_SlotFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
@@ -4589,7 +4588,7 @@ class _$_Slot extends _Slot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SlotToJson(this);
+    return _$$_SlotToJson(this);
   }
 }
 
@@ -5998,8 +5997,7 @@ class _$_Task extends _Task {
       this.output})
       : super._();
 
-  factory _$_Task.fromJson(Map<String, dynamic> json) =>
-      _$_$_TaskFromJson(json);
+  factory _$_Task.fromJson(Map<String, dynamic> json) => _$$_TaskFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
@@ -6276,7 +6274,7 @@ class _$_Task extends _Task {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TaskToJson(this);
+    return _$$_TaskToJson(this);
   }
 }
 
@@ -6704,7 +6702,7 @@ class _$_TaskRestriction extends _TaskRestriction {
       : super._();
 
   factory _$_TaskRestriction.fromJson(Map<String, dynamic> json) =>
-      _$_$_TaskRestrictionFromJson(json);
+      _$$_TaskRestrictionFromJson(json);
 
   @override
   final String? id;
@@ -6771,7 +6769,7 @@ class _$_TaskRestriction extends _TaskRestriction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TaskRestrictionToJson(this);
+    return _$$_TaskRestrictionToJson(this);
   }
 }
 
@@ -8809,7 +8807,7 @@ class _$_TaskInput extends _TaskInput {
       : super._();
 
   factory _$_TaskInput.fromJson(Map<String, dynamic> json) =>
-      _$_$_TaskInputFromJson(json);
+      _$$_TaskInputFromJson(json);
 
   @override
   final String? id;
@@ -9179,7 +9177,7 @@ class _$_TaskInput extends _TaskInput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TaskInputToJson(this);
+    return _$$_TaskInputToJson(this);
   }
 }
 
@@ -11440,7 +11438,7 @@ class _$_TaskOutput extends _TaskOutput {
       : super._();
 
   factory _$_TaskOutput.fromJson(Map<String, dynamic> json) =>
-      _$_$_TaskOutputFromJson(json);
+      _$$_TaskOutputFromJson(json);
 
   @override
   final String? id;
@@ -11810,7 +11808,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TaskOutputToJson(this);
+    return _$$_TaskOutputToJson(this);
   }
 }
 
@@ -12879,7 +12877,7 @@ class _$_VerificationResult extends _VerificationResult {
       : super._();
 
   factory _$_VerificationResult.fromJson(Map<String, dynamic> json) =>
-      _$_$_VerificationResultFromJson(json);
+      _$$_VerificationResultFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
@@ -13075,7 +13073,7 @@ class _$_VerificationResult extends _VerificationResult {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_VerificationResultToJson(this);
+    return _$$_VerificationResultToJson(this);
   }
 }
 
@@ -13544,7 +13542,7 @@ class _$_VerificationResultPrimarySource
 
   factory _$_VerificationResultPrimarySource.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_VerificationResultPrimarySourceFromJson(json);
+      _$$_VerificationResultPrimarySourceFromJson(json);
 
   @override
   final String? id;
@@ -13635,7 +13633,7 @@ class _$_VerificationResultPrimarySource
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_VerificationResultPrimarySourceToJson(this);
+    return _$$_VerificationResultPrimarySourceToJson(this);
   }
 }
 
@@ -14157,7 +14155,7 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
 
   factory _$_VerificationResultAttestation.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_VerificationResultAttestationFromJson(json);
+      _$$_VerificationResultAttestationFromJson(json);
 
   @override
   final String? id;
@@ -14273,7 +14271,7 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_VerificationResultAttestationToJson(this);
+    return _$$_VerificationResultAttestationToJson(this);
   }
 }
 
@@ -14602,7 +14600,7 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
       : super._();
 
   factory _$_VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
-      _$_$_VerificationResultValidatorFromJson(json);
+      _$$_VerificationResultValidatorFromJson(json);
 
   @override
   final String? id;
@@ -14673,7 +14671,7 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_VerificationResultValidatorToJson(this);
+    return _$$_VerificationResultValidatorToJson(this);
   }
 }
 

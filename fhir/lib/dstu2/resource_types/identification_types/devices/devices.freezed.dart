@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'devices.dart';
 
@@ -874,7 +874,7 @@ class _$_Device extends _Device {
       : super._();
 
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceFromJson(json);
+      _$$_DeviceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
@@ -1084,7 +1084,7 @@ class _$_Device extends _Device {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceToJson(this);
+    return _$$_DeviceToJson(this);
   }
 }
 
@@ -1776,7 +1776,7 @@ class _$_DeviceComponent extends _DeviceComponent {
       : super._();
 
   factory _$_DeviceComponent.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceComponentFromJson(json);
+      _$$_DeviceComponentFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
@@ -1920,7 +1920,7 @@ class _$_DeviceComponent extends _DeviceComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceComponentToJson(this);
+    return _$$_DeviceComponentToJson(this);
   }
 }
 
@@ -2239,7 +2239,7 @@ class _$_DeviceComponentProductionSpecification
 
   factory _$_DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_DeviceComponentProductionSpecificationFromJson(json);
+      _$$_DeviceComponentProductionSpecificationFromJson(json);
 
   @override
   final Id? id;
@@ -2302,7 +2302,7 @@ class _$_DeviceComponentProductionSpecification
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceComponentProductionSpecificationToJson(this);
+    return _$$_DeviceComponentProductionSpecificationToJson(this);
   }
 }
 
@@ -3044,7 +3044,7 @@ class _$_DeviceMetric extends _DeviceMetric {
       : super._();
 
   factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceMetricFromJson(json);
+      _$$_DeviceMetricFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
@@ -3216,7 +3216,7 @@ class _$_DeviceMetric extends _DeviceMetric {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceMetricToJson(this);
+    return _$$_DeviceMetricToJson(this);
   }
 }
 
@@ -3634,7 +3634,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
       : super._();
 
   factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceMetricCalibrationFromJson(json);
+      _$$_DeviceMetricCalibrationFromJson(json);
 
   @override
   final Id? id;
@@ -3716,7 +3716,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceMetricCalibrationToJson(this);
+    return _$$_DeviceMetricCalibrationToJson(this);
   }
 }
 

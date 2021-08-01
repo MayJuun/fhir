@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'support.dart';
 
@@ -920,7 +920,7 @@ class _$_Coverage extends _Coverage {
       : super._();
 
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageFromJson(json);
+      _$$_CoverageFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
@@ -1135,7 +1135,7 @@ class _$_Coverage extends _Coverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageToJson(this);
+    return _$$_CoverageToJson(this);
   }
 }
 
@@ -1540,7 +1540,7 @@ class _$_CoverageClass extends _CoverageClass {
       : super._();
 
   factory _$_CoverageClass.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageClassFromJson(json);
+      _$$_CoverageClassFromJson(json);
 
   @override
   final String? id;
@@ -1612,7 +1612,7 @@ class _$_CoverageClass extends _CoverageClass {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageClassToJson(this);
+    return _$$_CoverageClassToJson(this);
   }
 }
 
@@ -1908,7 +1908,7 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
       : super._();
 
   factory _$_CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageCostToBeneficiaryFromJson(json);
+      _$$_CoverageCostToBeneficiaryFromJson(json);
 
   @override
   final String? id;
@@ -1976,7 +1976,7 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageCostToBeneficiaryToJson(this);
+    return _$$_CoverageCostToBeneficiaryToJson(this);
   }
 }
 
@@ -2215,7 +2215,7 @@ class _$_CoverageException extends _CoverageException {
       : super._();
 
   factory _$_CoverageException.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageExceptionFromJson(json);
+      _$$_CoverageExceptionFromJson(json);
 
   @override
   final String? id;
@@ -2268,7 +2268,7 @@ class _$_CoverageException extends _CoverageException {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageExceptionToJson(this);
+    return _$$_CoverageExceptionToJson(this);
   }
 }
 
@@ -3112,7 +3112,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       : super._();
 
   factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestFromJson(json);
+      _$$_CoverageEligibilityRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
@@ -3309,7 +3309,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestToJson(this);
+    return _$$_CoverageEligibilityRequestToJson(this);
   }
 }
 
@@ -3713,7 +3713,7 @@ class _$_CoverageEligibilityRequestSupportingInfo
 
   factory _$_CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestSupportingInfoFromJson(json);
+      _$$_CoverageEligibilityRequestSupportingInfoFromJson(json);
 
   @override
   final String? id;
@@ -3790,7 +3790,7 @@ class _$_CoverageEligibilityRequestSupportingInfo
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestSupportingInfoToJson(this);
+    return _$$_CoverageEligibilityRequestSupportingInfoToJson(this);
   }
 }
 
@@ -4120,7 +4120,7 @@ class _$_CoverageEligibilityRequestInsurance
 
   factory _$_CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestInsuranceFromJson(json);
+      _$$_CoverageEligibilityRequestInsuranceFromJson(json);
 
   @override
   final String? id;
@@ -4198,7 +4198,7 @@ class _$_CoverageEligibilityRequestInsurance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestInsuranceToJson(this);
+    return _$$_CoverageEligibilityRequestInsuranceToJson(this);
   }
 }
 
@@ -4673,7 +4673,7 @@ class _$_CoverageEligibilityRequestItem
 
   factory _$_CoverageEligibilityRequestItem.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestItemFromJson(json);
+      _$$_CoverageEligibilityRequestItemFromJson(json);
 
   @override
   final String? id;
@@ -4785,7 +4785,7 @@ class _$_CoverageEligibilityRequestItem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestItemToJson(this);
+    return _$$_CoverageEligibilityRequestItemToJson(this);
   }
 }
 
@@ -5067,7 +5067,7 @@ class _$_CoverageEligibilityRequestDiagnosis
 
   factory _$_CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestDiagnosisFromJson(json);
+      _$$_CoverageEligibilityRequestDiagnosisFromJson(json);
 
   @override
   final String? id;
@@ -5126,7 +5126,7 @@ class _$_CoverageEligibilityRequestDiagnosis
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestDiagnosisToJson(this);
+    return _$$_CoverageEligibilityRequestDiagnosisToJson(this);
   }
 }
 
@@ -6084,7 +6084,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       : super._();
 
   factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseFromJson(json);
+      _$$_CoverageEligibilityResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
@@ -6301,7 +6301,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseToJson(this);
+    return _$$_CoverageEligibilityResponseToJson(this);
   }
 }
 
@@ -6723,7 +6723,7 @@ class _$_CoverageEligibilityResponseInsurance
 
   factory _$_CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseInsuranceFromJson(json);
+      _$$_CoverageEligibilityResponseInsuranceFromJson(json);
 
   @override
   final String? id;
@@ -6798,7 +6798,7 @@ class _$_CoverageEligibilityResponseInsurance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseInsuranceToJson(this);
+    return _$$_CoverageEligibilityResponseInsuranceToJson(this);
   }
 }
 
@@ -7489,7 +7489,7 @@ class _$_CoverageEligibilityResponseItem
 
   factory _$_CoverageEligibilityResponseItem.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseItemFromJson(json);
+      _$$_CoverageEligibilityResponseItemFromJson(json);
 
   @override
   final String? id;
@@ -7650,7 +7650,7 @@ class _$_CoverageEligibilityResponseItem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseItemToJson(this);
+    return _$$_CoverageEligibilityResponseItemToJson(this);
   }
 }
 
@@ -8177,7 +8177,7 @@ class _$_CoverageEligibilityResponseBenefit
 
   factory _$_CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseBenefitFromJson(json);
+      _$$_CoverageEligibilityResponseBenefitFromJson(json);
 
   @override
   final String? id;
@@ -8293,7 +8293,7 @@ class _$_CoverageEligibilityResponseBenefit
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseBenefitToJson(this);
+    return _$$_CoverageEligibilityResponseBenefitToJson(this);
   }
 }
 
@@ -8538,7 +8538,7 @@ class _$_CoverageEligibilityResponseError
 
   factory _$_CoverageEligibilityResponseError.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseErrorFromJson(json);
+      _$$_CoverageEligibilityResponseErrorFromJson(json);
 
   @override
   final String? id;
@@ -8587,7 +8587,7 @@ class _$_CoverageEligibilityResponseError
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseErrorToJson(this);
+    return _$$_CoverageEligibilityResponseErrorToJson(this);
   }
 }
 
@@ -9203,7 +9203,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       : super._();
 
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentRequestFromJson(json);
+      _$$_EnrollmentRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
@@ -9350,7 +9350,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentRequestToJson(this);
+    return _$$_EnrollmentRequestToJson(this);
   }
 }
 
@@ -10101,7 +10101,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       : super._();
 
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentResponseFromJson(json);
+      _$$_EnrollmentResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
@@ -10269,7 +10269,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentResponseToJson(this);
+    return _$$_EnrollmentResponseToJson(this);
   }
 }
 

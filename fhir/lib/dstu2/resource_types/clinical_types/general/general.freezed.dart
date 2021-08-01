@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'general.dart';
 
@@ -877,7 +877,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
       : super._();
 
   factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
-      _$_$_AllergyIntoleranceFromJson(json);
+      _$$_AllergyIntoleranceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AllergyIntolerance)
@@ -1083,7 +1083,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AllergyIntoleranceToJson(this);
+    return _$$_AllergyIntoleranceToJson(this);
   }
 }
 
@@ -1708,7 +1708,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
       : super._();
 
   factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
-      _$_$_AllergyIntoleranceReactionFromJson(json);
+      _$$_AllergyIntoleranceReactionFromJson(json);
 
   @override
   final Id? id;
@@ -1835,7 +1835,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AllergyIntoleranceReactionToJson(this);
+    return _$$_AllergyIntoleranceReactionToJson(this);
   }
 }
 
@@ -3020,7 +3020,7 @@ class _$_Condition extends _Condition {
       : super._();
 
   factory _$_Condition.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConditionFromJson(json);
+      _$$_ConditionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Condition)
@@ -3264,7 +3264,7 @@ class _$_Condition extends _Condition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConditionToJson(this);
+    return _$$_ConditionToJson(this);
   }
 }
 
@@ -3636,7 +3636,7 @@ class _$_ConditionStage extends _ConditionStage {
       : super._();
 
   factory _$_ConditionStage.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConditionStageFromJson(json);
+      _$$_ConditionStageFromJson(json);
 
   @override
   final Id? id;
@@ -3698,7 +3698,7 @@ class _$_ConditionStage extends _ConditionStage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConditionStageToJson(this);
+    return _$$_ConditionStageToJson(this);
   }
 }
 
@@ -3942,7 +3942,7 @@ class _$_ConditionEvidence extends _ConditionEvidence {
       : super._();
 
   factory _$_ConditionEvidence.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConditionEvidenceFromJson(json);
+      _$$_ConditionEvidenceFromJson(json);
 
   @override
   final Id? id;
@@ -4002,7 +4002,7 @@ class _$_ConditionEvidence extends _ConditionEvidence {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConditionEvidenceToJson(this);
+    return _$$_ConditionEvidenceToJson(this);
   }
 }
 
@@ -4960,7 +4960,7 @@ class _$_Procedure extends _Procedure {
       : super._();
 
   factory _$_Procedure.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcedureFromJson(json);
+      _$$_ProcedureFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Procedure)
@@ -5178,7 +5178,7 @@ class _$_Procedure extends _Procedure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcedureToJson(this);
+    return _$$_ProcedureToJson(this);
   }
 }
 
@@ -5541,7 +5541,7 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
       : super._();
 
   factory _$_ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcedurePerformerFromJson(json);
+      _$$_ProcedurePerformerFromJson(json);
 
   @override
   final Id? id;
@@ -5601,7 +5601,7 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcedurePerformerToJson(this);
+    return _$$_ProcedurePerformerToJson(this);
   }
 }
 
@@ -5838,7 +5838,7 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
       : super._();
 
   factory _$_ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcedureFocalDeviceFromJson(json);
+      _$$_ProcedureFocalDeviceFromJson(json);
 
   @override
   final Id? id;
@@ -5893,7 +5893,7 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcedureFocalDeviceToJson(this);
+    return _$$_ProcedureFocalDeviceToJson(this);
   }
 }
 
@@ -6798,7 +6798,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
       : super._();
 
   factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClinicalImpressionFromJson(json);
+      _$$_ClinicalImpressionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ClinicalImpression)
@@ -7011,7 +7011,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClinicalImpressionToJson(this);
+    return _$$_ClinicalImpressionToJson(this);
   }
 }
 
@@ -7348,7 +7348,7 @@ class _$_ClinicalImpressionInvestigations
 
   factory _$_ClinicalImpressionInvestigations.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ClinicalImpressionInvestigationsFromJson(json);
+      _$$_ClinicalImpressionInvestigationsFromJson(json);
 
   @override
   final Id? id;
@@ -7402,7 +7402,7 @@ class _$_ClinicalImpressionInvestigations
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClinicalImpressionInvestigationsToJson(this);
+    return _$$_ClinicalImpressionInvestigationsToJson(this);
   }
 }
 
@@ -7624,7 +7624,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
       : super._();
 
   factory _$_ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClinicalImpressionFindingFromJson(json);
+      _$$_ClinicalImpressionFindingFromJson(json);
 
   @override
   final Id? id;
@@ -7679,7 +7679,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClinicalImpressionFindingToJson(this);
+    return _$$_ClinicalImpressionFindingToJson(this);
   }
 }
 
@@ -7901,7 +7901,7 @@ class _$_ClinicalImpressionRuledOut extends _ClinicalImpressionRuledOut {
       : super._();
 
   factory _$_ClinicalImpressionRuledOut.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClinicalImpressionRuledOutFromJson(json);
+      _$$_ClinicalImpressionRuledOutFromJson(json);
 
   @override
   final Id? id;
@@ -7955,7 +7955,7 @@ class _$_ClinicalImpressionRuledOut extends _ClinicalImpressionRuledOut {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClinicalImpressionRuledOutToJson(this);
+    return _$$_ClinicalImpressionRuledOutToJson(this);
   }
 }
 
@@ -9086,7 +9086,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
       : super._();
 
   factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
-      _$_$_FamilyMemberHistoryFromJson(json);
+      _$$_FamilyMemberHistoryFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.FamilyMemberHistory)
@@ -9330,7 +9330,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FamilyMemberHistoryToJson(this);
+    return _$$_FamilyMemberHistoryToJson(this);
   }
 }
 
@@ -9870,7 +9870,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
       : super._();
 
   factory _$_FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
-      _$_$_FamilyMemberHistoryConditionFromJson(json);
+      _$$_FamilyMemberHistoryConditionFromJson(json);
 
   @override
   final Id? id;
@@ -9961,7 +9961,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FamilyMemberHistoryConditionToJson(this);
+    return _$$_FamilyMemberHistoryConditionToJson(this);
   }
 }
 
@@ -10641,7 +10641,7 @@ class _$_RiskAssessment extends _RiskAssessment {
       : super._();
 
   factory _$_RiskAssessment.fromJson(Map<String, dynamic> json) =>
-      _$_$_RiskAssessmentFromJson(json);
+      _$$_RiskAssessmentFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.RiskAssessment)
@@ -10797,7 +10797,7 @@ class _$_RiskAssessment extends _RiskAssessment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskAssessmentToJson(this);
+    return _$$_RiskAssessmentToJson(this);
   }
 }
 
@@ -11326,7 +11326,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
       : super._();
 
   factory _$_RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
-      _$_$_RiskAssessmentPredictionFromJson(json);
+      _$$_RiskAssessmentPredictionFromJson(json);
 
   @override
   final Id? id;
@@ -11442,7 +11442,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskAssessmentPredictionToJson(this);
+    return _$$_RiskAssessmentPredictionToJson(this);
   }
 }
 
@@ -12184,7 +12184,7 @@ class _$_DetectedIssue extends _DetectedIssue {
       : super._();
 
   factory _$_DetectedIssue.fromJson(Map<String, dynamic> json) =>
-      _$_$_DetectedIssueFromJson(json);
+      _$$_DetectedIssueFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DetectedIssue)
@@ -12355,7 +12355,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DetectedIssueToJson(this);
+    return _$$_DetectedIssueToJson(this);
   }
 }
 
@@ -12679,7 +12679,7 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
       : super._();
 
   factory _$_DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
-      _$_$_DetectedIssueMitigationFromJson(json);
+      _$$_DetectedIssueMitigationFromJson(json);
 
   @override
   final Id? id;
@@ -12738,7 +12738,7 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DetectedIssueMitigationToJson(this);
+    return _$$_DetectedIssueMitigationToJson(this);
   }
 }
 

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'general_types.dart';
 
@@ -306,7 +306,7 @@ class _$_Annotation extends _Annotation {
       : super._();
 
   factory _$_Annotation.fromJson(Map<String, dynamic> json) =>
-      _$_$_AnnotationFromJson(json);
+      _$$_AnnotationFromJson(json);
 
   @override
   final String? id;
@@ -386,7 +386,7 @@ class _$_Annotation extends _Annotation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AnnotationToJson(this);
+    return _$$_AnnotationToJson(this);
   }
 }
 
@@ -933,7 +933,7 @@ class _$_Attachment extends _Attachment {
       : super._();
 
   factory _$_Attachment.fromJson(Map<String, dynamic> json) =>
-      _$_$_AttachmentFromJson(json);
+      _$$_AttachmentFromJson(json);
 
   @override
   final String? id;
@@ -1069,7 +1069,7 @@ class _$_Attachment extends _Attachment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AttachmentToJson(this);
+    return _$$_AttachmentToJson(this);
   }
 }
 
@@ -1504,7 +1504,7 @@ class _$_Identifier extends _Identifier {
       : super._();
 
   factory _$_Identifier.fromJson(Map<String, dynamic> json) =>
-      _$_$_IdentifierFromJson(json);
+      _$$_IdentifierFromJson(json);
 
   @override
   final String? id;
@@ -1594,7 +1594,7 @@ class _$_Identifier extends _Identifier {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_IdentifierToJson(this);
+    return _$$_IdentifierToJson(this);
   }
 }
 
@@ -1838,7 +1838,7 @@ class _$_CodeableConcept extends _CodeableConcept {
       : super._();
 
   factory _$_CodeableConcept.fromJson(Map<String, dynamic> json) =>
-      _$_$_CodeableConceptFromJson(json);
+      _$$_CodeableConceptFromJson(json);
 
   @override
   final String? id;
@@ -1892,7 +1892,7 @@ class _$_CodeableConcept extends _CodeableConcept {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CodeableConceptToJson(this);
+    return _$$_CodeableConceptToJson(this);
   }
 }
 
@@ -2280,7 +2280,7 @@ class _$_Coding extends _Coding {
       : super._();
 
   factory _$_Coding.fromJson(Map<String, dynamic> json) =>
-      _$_$_CodingFromJson(json);
+      _$$_CodingFromJson(json);
 
   @override
   final String? id;
@@ -2380,7 +2380,7 @@ class _$_Coding extends _Coding {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CodingToJson(this);
+    return _$$_CodingToJson(this);
   }
 }
 
@@ -2815,7 +2815,7 @@ class _$_Quantity extends _Quantity {
       : super._();
 
   factory _$_Quantity.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuantityFromJson(json);
+      _$$_QuantityFromJson(json);
 
   @override
   final String? id;
@@ -2914,7 +2914,7 @@ class _$_Quantity extends _Quantity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuantityToJson(this);
+    return _$$_QuantityToJson(this);
   }
 }
 
@@ -3361,7 +3361,7 @@ class _$_FhirDuration extends _FhirDuration {
       : super._();
 
   factory _$_FhirDuration.fromJson(Map<String, dynamic> json) =>
-      _$_$_FhirDurationFromJson(json);
+      _$$_FhirDurationFromJson(json);
 
   @override
   final String? id;
@@ -3460,7 +3460,7 @@ class _$_FhirDuration extends _FhirDuration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FhirDurationToJson(this);
+    return _$$_FhirDurationToJson(this);
   }
 }
 
@@ -3904,7 +3904,7 @@ class _$_Distance extends _Distance {
       : super._();
 
   factory _$_Distance.fromJson(Map<String, dynamic> json) =>
-      _$_$_DistanceFromJson(json);
+      _$$_DistanceFromJson(json);
 
   @override
   final String? id;
@@ -4003,7 +4003,7 @@ class _$_Distance extends _Distance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DistanceToJson(this);
+    return _$$_DistanceToJson(this);
   }
 }
 
@@ -4445,7 +4445,7 @@ class _$_Count extends _Count {
       : super._();
 
   factory _$_Count.fromJson(Map<String, dynamic> json) =>
-      _$_$_CountFromJson(json);
+      _$$_CountFromJson(json);
 
   @override
   final String? id;
@@ -4544,7 +4544,7 @@ class _$_Count extends _Count {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CountToJson(this);
+    return _$$_CountToJson(this);
   }
 }
 
@@ -4822,7 +4822,7 @@ class _$_Money extends _Money {
       : super._();
 
   factory _$_Money.fromJson(Map<String, dynamic> json) =>
-      _$_$_MoneyFromJson(json);
+      _$$_MoneyFromJson(json);
 
   @override
   final String? id;
@@ -4884,7 +4884,7 @@ class _$_Money extends _Money {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MoneyToJson(this);
+    return _$$_MoneyToJson(this);
   }
 }
 
@@ -5295,7 +5295,7 @@ class _$_Age extends _Age {
       @JsonKey(name: '_code') this.codeElement})
       : super._();
 
-  factory _$_Age.fromJson(Map<String, dynamic> json) => _$_$_AgeFromJson(json);
+  factory _$_Age.fromJson(Map<String, dynamic> json) => _$$_AgeFromJson(json);
 
   @override
   final String? id;
@@ -5394,7 +5394,7 @@ class _$_Age extends _Age {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AgeToJson(this);
+    return _$$_AgeToJson(this);
   }
 }
 
@@ -5638,7 +5638,7 @@ class _$_Range extends _Range {
       : super._();
 
   factory _$_Range.fromJson(Map<String, dynamic> json) =>
-      _$_$_RangeFromJson(json);
+      _$$_RangeFromJson(json);
 
   @override
   final String? id;
@@ -5685,7 +5685,7 @@ class _$_Range extends _Range {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RangeToJson(this);
+    return _$$_RangeToJson(this);
   }
 }
 
@@ -5926,7 +5926,7 @@ class _$_Period extends _Period {
       : super._();
 
   factory _$_Period.fromJson(Map<String, dynamic> json) =>
-      _$_$_PeriodFromJson(json);
+      _$$_PeriodFromJson(json);
 
   @override
   final String? id;
@@ -5987,7 +5987,7 @@ class _$_Period extends _Period {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PeriodToJson(this);
+    return _$$_PeriodToJson(this);
   }
 }
 
@@ -6202,7 +6202,7 @@ class _$_Ratio extends _Ratio {
       : super._();
 
   factory _$_Ratio.fromJson(Map<String, dynamic> json) =>
-      _$_$_RatioFromJson(json);
+      _$$_RatioFromJson(json);
 
   @override
   final String? id;
@@ -6251,7 +6251,7 @@ class _$_Ratio extends _Ratio {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RatioToJson(this);
+    return _$$_RatioToJson(this);
   }
 }
 
@@ -6711,7 +6711,7 @@ class _$_SampledData extends _SampledData {
       : super._();
 
   factory _$_SampledData.fromJson(Map<String, dynamic> json) =>
-      _$_$_SampledDataFromJson(json);
+      _$$_SampledDataFromJson(json);
 
   @override
   final String? id;
@@ -6828,7 +6828,7 @@ class _$_SampledData extends _SampledData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SampledDataToJson(this);
+    return _$$_SampledDataToJson(this);
   }
 }
 
@@ -7278,7 +7278,7 @@ class _$_Signature extends _Signature {
       : super._();
 
   factory _$_Signature.fromJson(Map<String, dynamic> json) =>
-      _$_$_SignatureFromJson(json);
+      _$$_SignatureFromJson(json);
 
   @override
   final String? id;
@@ -7381,7 +7381,7 @@ class _$_Signature extends _Signature {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SignatureToJson(this);
+    return _$$_SignatureToJson(this);
   }
 }
 
@@ -7834,7 +7834,7 @@ class _$_HumanName extends _HumanName {
       : super._();
 
   factory _$_HumanName.fromJson(Map<String, dynamic> json) =>
-      _$_$_HumanNameFromJson(json);
+      _$$_HumanNameFromJson(json);
 
   @override
   final String? id;
@@ -7949,7 +7949,7 @@ class _$_HumanName extends _HumanName {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HumanNameToJson(this);
+    return _$$_HumanNameToJson(this);
   }
 }
 
@@ -8579,7 +8579,7 @@ class _$_Address extends _Address {
       : super._();
 
   factory _$_Address.fromJson(Map<String, dynamic> json) =>
-      _$_$_AddressFromJson(json);
+      _$$_AddressFromJson(json);
 
   @override
   final String? id;
@@ -8734,7 +8734,7 @@ class _$_Address extends _Address {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AddressToJson(this);
+    return _$$_AddressToJson(this);
   }
 }
 
@@ -9190,7 +9190,7 @@ class _$_ContactPoint extends _ContactPoint {
       : super._();
 
   factory _$_ContactPoint.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContactPointFromJson(json);
+      _$$_ContactPointFromJson(json);
 
   @override
   final String? id;
@@ -9282,7 +9282,7 @@ class _$_ContactPoint extends _ContactPoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContactPointToJson(this);
+    return _$$_ContactPointToJson(this);
   }
 }
 
@@ -9575,7 +9575,7 @@ class _$_Timing extends _Timing {
       : super._();
 
   factory _$_Timing.fromJson(Map<String, dynamic> json) =>
-      _$_$_TimingFromJson(json);
+      _$$_TimingFromJson(json);
 
   @override
   final String? id;
@@ -9640,7 +9640,7 @@ class _$_Timing extends _Timing {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TimingToJson(this);
+    return _$$_TimingToJson(this);
   }
 }
 
@@ -10597,7 +10597,7 @@ class _$_TimingRepeat extends _TimingRepeat {
       : super._();
 
   factory _$_TimingRepeat.fromJson(Map<String, dynamic> json) =>
-      _$_$_TimingRepeatFromJson(json);
+      _$$_TimingRepeatFromJson(json);
 
   @override
   final String? id;
@@ -10818,7 +10818,7 @@ class _$_TimingRepeat extends _TimingRepeat {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TimingRepeatToJson(this);
+    return _$$_TimingRepeatToJson(this);
   }
 }
 

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'diagnostics.dart';
 
@@ -1338,7 +1338,7 @@ class _$_Observation extends _Observation {
       : super._();
 
   factory _$_Observation.fromJson(Map<String, dynamic> json) =>
-      _$_$_ObservationFromJson(json);
+      _$$_ObservationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
@@ -1609,7 +1609,7 @@ class _$_Observation extends _Observation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ObservationToJson(this);
+    return _$$_ObservationToJson(this);
   }
 }
 
@@ -2127,7 +2127,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
       : super._();
 
   factory _$_ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
-      _$_$_ObservationReferenceRangeFromJson(json);
+      _$$_ObservationReferenceRangeFromJson(json);
 
   @override
   final Id? id;
@@ -2212,7 +2212,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ObservationReferenceRangeToJson(this);
+    return _$$_ObservationReferenceRangeToJson(this);
   }
 }
 
@@ -2467,7 +2467,7 @@ class _$_ObservationRelated extends _ObservationRelated {
       : super._();
 
   factory _$_ObservationRelated.fromJson(Map<String, dynamic> json) =>
-      _$_$_ObservationRelatedFromJson(json);
+      _$$_ObservationRelatedFromJson(json);
 
   @override
   final Id? id;
@@ -2528,7 +2528,7 @@ class _$_ObservationRelated extends _ObservationRelated {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ObservationRelatedToJson(this);
+    return _$$_ObservationRelatedToJson(this);
   }
 }
 
@@ -3153,7 +3153,7 @@ class _$_ObservationComponent extends _ObservationComponent {
       : super._();
 
   factory _$_ObservationComponent.fromJson(Map<String, dynamic> json) =>
-      _$_$_ObservationComponentFromJson(json);
+      _$$_ObservationComponentFromJson(json);
 
   @override
   final Id? id;
@@ -3302,7 +3302,7 @@ class _$_ObservationComponent extends _ObservationComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ObservationComponentToJson(this);
+    return _$$_ObservationComponentToJson(this);
   }
 }
 
@@ -4240,7 +4240,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       : super._();
 
   factory _$_DiagnosticReport.fromJson(Map<String, dynamic> json) =>
-      _$_$_DiagnosticReportFromJson(json);
+      _$$_DiagnosticReportFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
@@ -4448,7 +4448,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DiagnosticReportToJson(this);
+    return _$$_DiagnosticReportToJson(this);
   }
 }
 
@@ -4801,7 +4801,7 @@ class _$_DiagnosticReportImage extends _DiagnosticReportImage {
       : super._();
 
   factory _$_DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
-      _$_$_DiagnosticReportImageFromJson(json);
+      _$$_DiagnosticReportImageFromJson(json);
 
   @override
   final Id? id;
@@ -4863,7 +4863,7 @@ class _$_DiagnosticReportImage extends _DiagnosticReportImage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DiagnosticReportImageToJson(this);
+    return _$$_DiagnosticReportImageToJson(this);
   }
 }
 
@@ -5418,7 +5418,7 @@ class _$_DiagnosticOrder extends _DiagnosticOrder {
       : super._();
 
   factory _$_DiagnosticOrder.fromJson(Map<String, dynamic> json) =>
-      _$_$_DiagnosticOrderFromJson(json);
+      _$$_DiagnosticOrderFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
@@ -5565,7 +5565,7 @@ class _$_DiagnosticOrder extends _DiagnosticOrder {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DiagnosticOrderToJson(this);
+    return _$$_DiagnosticOrderToJson(this);
   }
 }
 
@@ -5893,7 +5893,7 @@ class _$_DiagnosticOrderEvent extends _DiagnosticOrderEvent {
       : super._();
 
   factory _$_DiagnosticOrderEvent.fromJson(Map<String, dynamic> json) =>
-      _$_$_DiagnosticOrderEventFromJson(json);
+      _$$_DiagnosticOrderEventFromJson(json);
 
   @override
   final Id? id;
@@ -5960,7 +5960,7 @@ class _$_DiagnosticOrderEvent extends _DiagnosticOrderEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DiagnosticOrderEventToJson(this);
+    return _$$_DiagnosticOrderEventToJson(this);
   }
 }
 
@@ -6251,7 +6251,7 @@ class _$_DiagnosticOrderItem extends _DiagnosticOrderItem {
       : super._();
 
   factory _$_DiagnosticOrderItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_DiagnosticOrderItemFromJson(json);
+      _$$_DiagnosticOrderItemFromJson(json);
 
   @override
   final Id? id;
@@ -6323,7 +6323,7 @@ class _$_DiagnosticOrderItem extends _DiagnosticOrderItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DiagnosticOrderItemToJson(this);
+    return _$$_DiagnosticOrderItemToJson(this);
   }
 }
 
@@ -6994,7 +6994,7 @@ class _$_Specimen extends _Specimen {
       : super._();
 
   factory _$_Specimen.fromJson(Map<String, dynamic> json) =>
-      _$_$_SpecimenFromJson(json);
+      _$$_SpecimenFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
@@ -7158,7 +7158,7 @@ class _$_Specimen extends _Specimen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SpecimenToJson(this);
+    return _$$_SpecimenToJson(this);
   }
 }
 
@@ -7631,7 +7631,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
       : super._();
 
   factory _$_SpecimenCollection.fromJson(Map<String, dynamic> json) =>
-      _$_$_SpecimenCollectionFromJson(json);
+      _$$_SpecimenCollectionFromJson(json);
 
   @override
   final Id? id;
@@ -7731,7 +7731,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SpecimenCollectionToJson(this);
+    return _$$_SpecimenCollectionToJson(this);
   }
 }
 
@@ -7993,7 +7993,7 @@ class _$_SpecimenTreatment extends _SpecimenTreatment {
       : super._();
 
   factory _$_SpecimenTreatment.fromJson(Map<String, dynamic> json) =>
-      _$_$_SpecimenTreatmentFromJson(json);
+      _$$_SpecimenTreatmentFromJson(json);
 
   @override
   final Id? id;
@@ -8054,7 +8054,7 @@ class _$_SpecimenTreatment extends _SpecimenTreatment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SpecimenTreatmentToJson(this);
+    return _$$_SpecimenTreatmentToJson(this);
   }
 }
 
@@ -8449,7 +8449,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
       : super._();
 
   factory _$_SpecimenContainer.fromJson(Map<String, dynamic> json) =>
-      _$_$_SpecimenContainerFromJson(json);
+      _$$_SpecimenContainerFromJson(json);
 
   @override
   final Id? id;
@@ -8541,7 +8541,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SpecimenContainerToJson(this);
+    return _$$_SpecimenContainerToJson(this);
   }
 }
 
@@ -8985,7 +8985,7 @@ class _$_BodySite extends _BodySite {
       : super._();
 
   factory _$_BodySite.fromJson(Map<String, dynamic> json) =>
-      _$_$_BodySiteFromJson(json);
+      _$$_BodySiteFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
@@ -9097,7 +9097,7 @@ class _$_BodySite extends _BodySite {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BodySiteToJson(this);
+    return _$$_BodySiteToJson(this);
   }
 }
 
@@ -9961,7 +9961,7 @@ class _$_ImagingStudy extends _ImagingStudy {
       : super._();
 
   factory _$_ImagingStudy.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingStudyFromJson(json);
+      _$$_ImagingStudyFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
@@ -10161,7 +10161,7 @@ class _$_ImagingStudy extends _ImagingStudy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingStudyToJson(this);
+    return _$$_ImagingStudyToJson(this);
   }
 }
 
@@ -10826,7 +10826,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
       : super._();
 
   factory _$_ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingStudySeriesFromJson(json);
+      _$$_ImagingStudySeriesFromJson(json);
 
   @override
   final Id? id;
@@ -10970,7 +10970,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingStudySeriesToJson(this);
+    return _$$_ImagingStudySeriesToJson(this);
   }
 }
 
@@ -11395,7 +11395,7 @@ class _$_ImagingStudySeriesInstance extends _ImagingStudySeriesInstance {
       : super._();
 
   factory _$_ImagingStudySeriesInstance.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingStudySeriesInstanceFromJson(json);
+      _$$_ImagingStudySeriesInstanceFromJson(json);
 
   @override
   final Id? id;
@@ -11491,7 +11491,7 @@ class _$_ImagingStudySeriesInstance extends _ImagingStudySeriesInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingStudySeriesInstanceToJson(this);
+    return _$$_ImagingStudySeriesInstanceToJson(this);
   }
 }
 
@@ -11974,7 +11974,7 @@ class _$_ImagingObjectSelection extends _ImagingObjectSelection {
       : super._();
 
   factory _$_ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingObjectSelectionFromJson(json);
+      _$$_ImagingObjectSelectionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
@@ -12091,7 +12091,7 @@ class _$_ImagingObjectSelection extends _ImagingObjectSelection {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingObjectSelectionToJson(this);
+    return _$$_ImagingObjectSelectionToJson(this);
   }
 }
 
@@ -12393,7 +12393,7 @@ class _$_ImagingObjectSelectionStudy extends _ImagingObjectSelectionStudy {
       : super._();
 
   factory _$_ImagingObjectSelectionStudy.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingObjectSelectionStudyFromJson(json);
+      _$$_ImagingObjectSelectionStudyFromJson(json);
 
   @override
   final Id? id;
@@ -12459,7 +12459,7 @@ class _$_ImagingObjectSelectionStudy extends _ImagingObjectSelectionStudy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingObjectSelectionStudyToJson(this);
+    return _$$_ImagingObjectSelectionStudyToJson(this);
   }
 }
 
@@ -12710,7 +12710,7 @@ class _$_ImagingObjectSelectionStudySeries
 
   factory _$_ImagingObjectSelectionStudySeries.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImagingObjectSelectionStudySeriesFromJson(json);
+      _$$_ImagingObjectSelectionStudySeriesFromJson(json);
 
   @override
   final Id? id;
@@ -12772,7 +12772,7 @@ class _$_ImagingObjectSelectionStudySeries
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingObjectSelectionStudySeriesToJson(this);
+    return _$$_ImagingObjectSelectionStudySeriesToJson(this);
   }
 }
 
@@ -13032,7 +13032,7 @@ class _$_ImagingObjectSelectionSeriesInstance
 
   factory _$_ImagingObjectSelectionSeriesInstance.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImagingObjectSelectionSeriesInstanceFromJson(json);
+      _$$_ImagingObjectSelectionSeriesInstanceFromJson(json);
 
   @override
   final Id? id;
@@ -13098,7 +13098,7 @@ class _$_ImagingObjectSelectionSeriesInstance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingObjectSelectionSeriesInstanceToJson(this);
+    return _$$_ImagingObjectSelectionSeriesInstanceToJson(this);
   }
 }
 
@@ -13340,7 +13340,7 @@ class _$_ImagingObjectSelectionInstanceFrames
 
   factory _$_ImagingObjectSelectionInstanceFrames.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImagingObjectSelectionInstanceFramesFromJson(json);
+      _$$_ImagingObjectSelectionInstanceFramesFromJson(json);
 
   @override
   final Id? id;
@@ -13396,7 +13396,7 @@ class _$_ImagingObjectSelectionInstanceFrames
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingObjectSelectionInstanceFramesToJson(this);
+    return _$$_ImagingObjectSelectionInstanceFramesToJson(this);
   }
 }
 

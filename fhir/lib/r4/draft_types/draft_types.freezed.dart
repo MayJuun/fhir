@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'draft_types.dart';
 
@@ -304,7 +304,7 @@ class _$_Population extends _Population {
       : super._();
 
   factory _$_Population.fromJson(Map<String, dynamic> json) =>
-      _$_$_PopulationFromJson(json);
+      _$$_PopulationFromJson(json);
 
   @override
   final String? id;
@@ -375,7 +375,7 @@ class _$_Population extends _Population {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PopulationToJson(this);
+    return _$$_PopulationToJson(this);
   }
 }
 
@@ -661,7 +661,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
       : super._();
 
   factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProductShelfLifeFromJson(json);
+      _$$_ProductShelfLifeFromJson(json);
 
   @override
   final String? id;
@@ -728,7 +728,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProductShelfLifeToJson(this);
+    return _$$_ProductShelfLifeToJson(this);
   }
 }
 
@@ -1252,7 +1252,7 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
       : super._();
 
   factory _$_ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProdCharacteristicFromJson(json);
+      _$$_ProdCharacteristicFromJson(json);
 
   @override
   final String? id;
@@ -1374,7 +1374,7 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProdCharacteristicToJson(this);
+    return _$$_ProdCharacteristicToJson(this);
   }
 }
 
@@ -1745,7 +1745,7 @@ class _$_MarketingStatus extends _MarketingStatus {
       : super._();
 
   factory _$_MarketingStatus.fromJson(Map<String, dynamic> json) =>
-      _$_$_MarketingStatusFromJson(json);
+      _$$_MarketingStatusFromJson(json);
 
   @override
   final String? id;
@@ -1824,7 +1824,7 @@ class _$_MarketingStatus extends _MarketingStatus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MarketingStatusToJson(this);
+    return _$$_MarketingStatusToJson(this);
   }
 }
 
@@ -2231,7 +2231,7 @@ class _$_SubstanceAmount extends _SubstanceAmount {
       : super._();
 
   factory _$_SubstanceAmount.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceAmountFromJson(json);
+      _$$_SubstanceAmountFromJson(json);
 
   @override
   final String? id;
@@ -2324,7 +2324,7 @@ class _$_SubstanceAmount extends _SubstanceAmount {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceAmountToJson(this);
+    return _$$_SubstanceAmountToJson(this);
   }
 }
 
@@ -2588,7 +2588,7 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
 
   factory _$_SubstanceAmountReferenceRange.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_SubstanceAmountReferenceRangeFromJson(json);
+      _$$_SubstanceAmountReferenceRangeFromJson(json);
 
   @override
   final String? id;
@@ -2644,7 +2644,7 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceAmountReferenceRangeToJson(this);
+    return _$$_SubstanceAmountReferenceRangeToJson(this);
   }
 }
 

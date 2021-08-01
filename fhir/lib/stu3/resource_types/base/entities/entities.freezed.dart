@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'entities.dart';
 
@@ -973,7 +973,7 @@ class _$_Device extends _Device {
       : super._();
 
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceFromJson(json);
+      _$$_DeviceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Device)
@@ -1196,7 +1196,7 @@ class _$_Device extends _Device {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceToJson(this);
+    return _$$_DeviceToJson(this);
   }
 }
 
@@ -1761,7 +1761,7 @@ class _$_DeviceUdi extends _DeviceUdi {
       : super._();
 
   factory _$_DeviceUdi.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceUdiFromJson(json);
+      _$$_DeviceUdiFromJson(json);
 
   @override
   final String? deviceIdentifier;
@@ -1876,7 +1876,7 @@ class _$_DeviceUdi extends _DeviceUdi {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceUdiToJson(this);
+    return _$$_DeviceUdiToJson(this);
   }
 }
 
@@ -2598,7 +2598,7 @@ class _$_DeviceComponent extends _DeviceComponent {
       : super._();
 
   factory _$_DeviceComponent.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceComponentFromJson(json);
+      _$$_DeviceComponentFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
@@ -2760,7 +2760,7 @@ class _$_DeviceComponent extends _DeviceComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceComponentToJson(this);
+    return _$$_DeviceComponentToJson(this);
   }
 }
 
@@ -3074,7 +3074,7 @@ class _$_DeviceComponentProductionSpecification
 
   factory _$_DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_DeviceComponentProductionSpecificationFromJson(json);
+      _$$_DeviceComponentProductionSpecificationFromJson(json);
 
   @override
   final CodeableConcept? specType;
@@ -3126,7 +3126,7 @@ class _$_DeviceComponentProductionSpecification
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceComponentProductionSpecificationToJson(this);
+    return _$$_DeviceComponentProductionSpecificationToJson(this);
   }
 }
 
@@ -3847,7 +3847,7 @@ class _$_DeviceMetric extends _DeviceMetric {
       : super._();
 
   factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceMetricFromJson(json);
+      _$$_DeviceMetricFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceMetric)
@@ -4016,7 +4016,7 @@ class _$_DeviceMetric extends _DeviceMetric {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceMetricToJson(this);
+    return _$$_DeviceMetricToJson(this);
   }
 }
 
@@ -4358,7 +4358,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
       : super._();
 
   factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceMetricCalibrationFromJson(json);
+      _$$_DeviceMetricCalibrationFromJson(json);
 
   @override
   final DeviceMetricCalibrationType? type;
@@ -4420,7 +4420,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceMetricCalibrationToJson(this);
+    return _$$_DeviceMetricCalibrationToJson(this);
   }
 }
 
@@ -5161,7 +5161,7 @@ class _$_Endpoint extends _Endpoint {
       : super._();
 
   factory _$_Endpoint.fromJson(Map<String, dynamic> json) =>
-      _$_$_EndpointFromJson(json);
+      _$$_EndpointFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
@@ -5345,7 +5345,7 @@ class _$_Endpoint extends _Endpoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EndpointToJson(this);
+    return _$$_EndpointToJson(this);
   }
 }
 
@@ -6521,7 +6521,7 @@ class _$_HealthcareService extends _HealthcareService {
       : super._();
 
   factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceFromJson(json);
+      _$$_HealthcareServiceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
@@ -6773,7 +6773,7 @@ class _$_HealthcareService extends _HealthcareService {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceToJson(this);
+    return _$$_HealthcareServiceToJson(this);
   }
 }
 
@@ -7226,7 +7226,7 @@ class _$_HealthcareServiceAvailableTime
 
   factory _$_HealthcareServiceAvailableTime.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceAvailableTimeFromJson(json);
+      _$$_HealthcareServiceAvailableTimeFromJson(json);
 
   @override
   final List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek;
@@ -7306,7 +7306,7 @@ class _$_HealthcareServiceAvailableTime
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceAvailableTimeToJson(this);
+    return _$$_HealthcareServiceAvailableTimeToJson(this);
   }
 }
 
@@ -7534,7 +7534,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
   factory _$_HealthcareServiceNotAvailable.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceNotAvailableFromJson(json);
+      _$$_HealthcareServiceNotAvailableFromJson(json);
 
   @override
   final String? description;
@@ -7578,7 +7578,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceNotAvailableToJson(this);
+    return _$$_HealthcareServiceNotAvailableToJson(this);
   }
 }
 
@@ -8445,7 +8445,7 @@ class _$_Location extends _Location {
       : super._();
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
-      _$_$_LocationFromJson(json);
+      _$$_LocationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Location)
@@ -8646,7 +8646,7 @@ class _$_Location extends _Location {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LocationToJson(this);
+    return _$$_LocationToJson(this);
   }
 }
 
@@ -9008,7 +9008,7 @@ class _$_LocationPosition extends _LocationPosition {
       : super._();
 
   factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
-      _$_$_LocationPositionFromJson(json);
+      _$$_LocationPositionFromJson(json);
 
   @override
   final Decimal? longitude;
@@ -9072,7 +9072,7 @@ class _$_LocationPosition extends _LocationPosition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LocationPositionToJson(this);
+    return _$$_LocationPositionToJson(this);
   }
 }
 
@@ -9720,7 +9720,7 @@ class _$_Organization extends _Organization {
       : super._();
 
   factory _$_Organization.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrganizationFromJson(json);
+      _$$_OrganizationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
@@ -9888,7 +9888,7 @@ class _$_Organization extends _Organization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrganizationToJson(this);
+    return _$$_OrganizationToJson(this);
   }
 }
 
@@ -10187,7 +10187,7 @@ class _$_OrganizationContact extends _OrganizationContact {
       : super._();
 
   factory _$_OrganizationContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrganizationContactFromJson(json);
+      _$$_OrganizationContactFromJson(json);
 
   @override
   final CodeableConcept? purpose;
@@ -10235,7 +10235,7 @@ class _$_OrganizationContact extends _OrganizationContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrganizationContactToJson(this);
+    return _$$_OrganizationContactToJson(this);
   }
 }
 
@@ -10798,7 +10798,7 @@ class _$_Substance extends _Substance {
       : super._();
 
   factory _$_Substance.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceFromJson(json);
+      _$$_SubstanceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
@@ -10944,7 +10944,7 @@ class _$_Substance extends _Substance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceToJson(this);
+    return _$$_SubstanceToJson(this);
   }
 }
 
@@ -11235,7 +11235,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
       : super._();
 
   factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceInstanceFromJson(json);
+      _$$_SubstanceInstanceFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -11284,7 +11284,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceInstanceToJson(this);
+    return _$$_SubstanceInstanceToJson(this);
   }
 }
 
@@ -11497,7 +11497,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
       : super._();
 
   factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceIngredientFromJson(json);
+      _$$_SubstanceIngredientFromJson(json);
 
   @override
   final Ratio? quantity;
@@ -11543,7 +11543,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceIngredientToJson(this);
+    return _$$_SubstanceIngredientToJson(this);
   }
 }
 

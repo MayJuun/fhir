@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'entities.dart';
 
@@ -778,7 +778,7 @@ class _$_Location extends _Location {
       : super._();
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
-      _$_$_LocationFromJson(json);
+      _$$_LocationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
@@ -964,7 +964,7 @@ class _$_Location extends _Location {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LocationToJson(this);
+    return _$$_LocationToJson(this);
   }
 }
 
@@ -1366,7 +1366,7 @@ class _$_LocationPosition extends _LocationPosition {
       : super._();
 
   factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
-      _$_$_LocationPositionFromJson(json);
+      _$$_LocationPositionFromJson(json);
 
   @override
   final Id? id;
@@ -1448,7 +1448,7 @@ class _$_LocationPosition extends _LocationPosition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LocationPositionToJson(this);
+    return _$$_LocationPositionToJson(this);
   }
 }
 
@@ -1981,7 +1981,7 @@ class _$_Substance extends _Substance {
       : super._();
 
   factory _$_Substance.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceFromJson(json);
+      _$$_SubstanceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
@@ -2115,7 +2115,7 @@ class _$_Substance extends _Substance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceToJson(this);
+    return _$$_SubstanceToJson(this);
   }
 }
 
@@ -2448,7 +2448,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
       : super._();
 
   factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceInstanceFromJson(json);
+      _$$_SubstanceInstanceFromJson(json);
 
   @override
   final Id? id;
@@ -2515,7 +2515,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceInstanceToJson(this);
+    return _$$_SubstanceInstanceToJson(this);
   }
 }
 
@@ -2755,7 +2755,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
       : super._();
 
   factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceIngredientFromJson(json);
+      _$$_SubstanceIngredientFromJson(json);
 
   @override
   final Id? id;
@@ -2811,7 +2811,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceIngredientToJson(this);
+    return _$$_SubstanceIngredientToJson(this);
   }
 }
 
@@ -3482,7 +3482,7 @@ class _$_Person extends _Person {
       : super._();
 
   factory _$_Person.fromJson(Map<String, dynamic> json) =>
-      _$_$_PersonFromJson(json);
+      _$$_PersonFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
@@ -3651,7 +3651,7 @@ class _$_Person extends _Person {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PersonToJson(this);
+    return _$$_PersonToJson(this);
   }
 }
 
@@ -3978,7 +3978,7 @@ class _$_PersonLink extends _PersonLink {
       : super._();
 
   factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
-      _$_$_PersonLinkFromJson(json);
+      _$$_PersonLinkFromJson(json);
 
   @override
   final Id? id;
@@ -4040,7 +4040,7 @@ class _$_PersonLink extends _PersonLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PersonLinkToJson(this);
+    return _$$_PersonLinkToJson(this);
   }
 }
 
@@ -4832,7 +4832,7 @@ class _$_Contract extends _Contract {
       : super._();
 
   factory _$_Contract.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractFromJson(json);
+      _$$_ContractFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
@@ -5029,7 +5029,7 @@ class _$_Contract extends _Contract {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContractToJson(this);
+    return _$$_ContractToJson(this);
   }
 }
 
@@ -5335,7 +5335,7 @@ class _$_ContractActor extends _ContractActor {
       : super._();
 
   factory _$_ContractActor.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractActorFromJson(json);
+      _$$_ContractActorFromJson(json);
 
   @override
   final Id? id;
@@ -5388,7 +5388,7 @@ class _$_ContractActor extends _ContractActor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContractActorToJson(this);
+    return _$$_ContractActorToJson(this);
   }
 }
 
@@ -5905,7 +5905,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
       : super._();
 
   factory _$_ContractValuedItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractValuedItemFromJson(json);
+      _$$_ContractValuedItemFromJson(json);
 
   @override
   final Id? id;
@@ -6028,7 +6028,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContractValuedItemToJson(this);
+    return _$$_ContractValuedItemToJson(this);
   }
 }
 
@@ -6311,7 +6311,7 @@ class _$_ContractSigner extends _ContractSigner {
       : super._();
 
   factory _$_ContractSigner.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractSignerFromJson(json);
+      _$$_ContractSignerFromJson(json);
 
   @override
   final Id? id;
@@ -6370,7 +6370,7 @@ class _$_ContractSigner extends _ContractSigner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContractSignerToJson(this);
+    return _$$_ContractSignerToJson(this);
   }
 }
 
@@ -6873,7 +6873,7 @@ class _$_ContractTerm extends _ContractTerm {
       : super._();
 
   factory _$_ContractTerm.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractTermFromJson(json);
+      _$$_ContractTermFromJson(json);
 
   @override
   final Id? id;
@@ -6996,7 +6996,7 @@ class _$_ContractTerm extends _ContractTerm {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContractTermToJson(this);
+    return _$$_ContractTermToJson(this);
   }
 }
 
@@ -7254,7 +7254,7 @@ class _$_ContractTermActor extends _ContractTermActor {
       : super._();
 
   factory _$_ContractTermActor.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractTermActorFromJson(json);
+      _$$_ContractTermActorFromJson(json);
 
   @override
   final Id? id;
@@ -7307,7 +7307,7 @@ class _$_ContractTermActor extends _ContractTermActor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContractTermActorToJson(this);
+    return _$$_ContractTermActorToJson(this);
   }
 }
 
@@ -7544,7 +7544,7 @@ class _$_ContractFriendly extends _ContractFriendly {
       : super._();
 
   factory _$_ContractFriendly.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractFriendlyFromJson(json);
+      _$$_ContractFriendlyFromJson(json);
 
   @override
   final Id? id;
@@ -7599,7 +7599,7 @@ class _$_ContractFriendly extends _ContractFriendly {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContractFriendlyToJson(this);
+    return _$$_ContractFriendlyToJson(this);
   }
 }
 
@@ -7836,7 +7836,7 @@ class _$_ContractLegal extends _ContractLegal {
       : super._();
 
   factory _$_ContractLegal.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractLegalFromJson(json);
+      _$$_ContractLegalFromJson(json);
 
   @override
   final Id? id;
@@ -7890,7 +7890,7 @@ class _$_ContractLegal extends _ContractLegal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContractLegalToJson(this);
+    return _$$_ContractLegalToJson(this);
   }
 }
 
@@ -8125,7 +8125,7 @@ class _$_ContractRule extends _ContractRule {
       : super._();
 
   factory _$_ContractRule.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContractRuleFromJson(json);
+      _$$_ContractRuleFromJson(json);
 
   @override
   final Id? id;
@@ -8180,7 +8180,7 @@ class _$_ContractRule extends _ContractRule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContractRuleToJson(this);
+    return _$$_ContractRuleToJson(this);
   }
 }
 

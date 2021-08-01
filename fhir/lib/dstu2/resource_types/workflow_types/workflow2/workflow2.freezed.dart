@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'workflow2.dart';
 
@@ -661,7 +661,7 @@ class _$_ProcessRequest extends _ProcessRequest {
       : super._();
 
   factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessRequestFromJson(json);
+      _$$_ProcessRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
@@ -832,7 +832,7 @@ class _$_ProcessRequest extends _ProcessRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcessRequestToJson(this);
+    return _$$_ProcessRequestToJson(this);
   }
 }
 
@@ -1088,7 +1088,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
       : super._();
 
   factory _$_ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessRequestItemFromJson(json);
+      _$$_ProcessRequestItemFromJson(json);
 
   @override
   final Id? id;
@@ -1137,7 +1137,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcessRequestItemToJson(this);
+    return _$$_ProcessRequestItemToJson(this);
   }
 }
 
@@ -1764,7 +1764,7 @@ class _$_ProcessResponse extends _ProcessResponse {
       : super._();
 
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessResponseFromJson(json);
+      _$$_ProcessResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
@@ -1917,7 +1917,7 @@ class _$_ProcessResponse extends _ProcessResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcessResponseToJson(this);
+    return _$$_ProcessResponseToJson(this);
   }
 }
 
@@ -2194,7 +2194,7 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
       : super._();
 
   factory _$_ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessResponseNotesFromJson(json);
+      _$$_ProcessResponseNotesFromJson(json);
 
   @override
   final Id? id;
@@ -2248,7 +2248,7 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcessResponseNotesToJson(this);
+    return _$$_ProcessResponseNotesToJson(this);
   }
 }
 
@@ -2958,7 +2958,7 @@ class _$_SupplyRequest extends _SupplyRequest {
       : super._();
 
   factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_SupplyRequestFromJson(json);
+      _$$_SupplyRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
@@ -3119,7 +3119,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SupplyRequestToJson(this);
+    return _$$_SupplyRequestToJson(this);
   }
 }
 
@@ -3422,7 +3422,7 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
       : super._();
 
   factory _$_SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
-      _$_$_SupplyRequestWhenFromJson(json);
+      _$$_SupplyRequestWhenFromJson(json);
 
   @override
   final Id? id;
@@ -3476,7 +3476,7 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SupplyRequestWhenToJson(this);
+    return _$$_SupplyRequestWhenToJson(this);
   }
 }
 
@@ -4184,7 +4184,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       : super._();
 
   factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
-      _$_$_SupplyDeliveryFromJson(json);
+      _$$_SupplyDeliveryFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
@@ -4347,7 +4347,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SupplyDeliveryToJson(this);
+    return _$$_SupplyDeliveryToJson(this);
   }
 }
 

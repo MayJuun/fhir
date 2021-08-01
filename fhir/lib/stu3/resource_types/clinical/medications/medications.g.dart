@@ -6,115 +6,117 @@ part of 'medications.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Immunization _$_$_ImmunizationFromJson(Map<String, dynamic> json) {
-  return _$_Immunization(
-    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Stu3ResourceType.Immunization),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    status: json['status'] as String?,
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    notGiven:
-        json['notGiven'] == null ? null : Boolean.fromJson(json['notGiven']),
-    notGivenElement: json['_notGiven'] == null
-        ? null
-        : Element.fromJson(json['_notGiven'] as Map<String, dynamic>),
-    vaccineCode:
-        CodeableConcept.fromJson(json['vaccineCode'] as Map<String, dynamic>),
-    patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    encounter: json['encounter'] == null
-        ? null
-        : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date']),
-    dateElement: json['_date'] == null
-        ? null
-        : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    primarySource: json['primarySource'] == null
-        ? null
-        : Boolean.fromJson(json['primarySource']),
-    primarySourceElement: json['_primarySource'] == null
-        ? null
-        : Element.fromJson(json['_primarySource'] as Map<String, dynamic>),
-    reportOrigin: json['reportOrigin'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['reportOrigin'] as Map<String, dynamic>),
-    location: json['location'] == null
-        ? null
-        : Reference.fromJson(json['location'] as Map<String, dynamic>),
-    manufacturer: json['manufacturer'] == null
-        ? null
-        : Reference.fromJson(json['manufacturer'] as Map<String, dynamic>),
-    lotNumber: json['lotNumber'] as String?,
-    lotNumberElement: json['_lotNumber'] == null
-        ? null
-        : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
-    expirationDate: json['expirationDate'] == null
-        ? null
-        : Date.fromJson(json['expirationDate']),
-    expirationDateElement: json['_expirationDate'] == null
-        ? null
-        : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
-    site: json['site'] == null
-        ? null
-        : CodeableConcept.fromJson(json['site'] as Map<String, dynamic>),
-    route: json['route'] == null
-        ? null
-        : CodeableConcept.fromJson(json['route'] as Map<String, dynamic>),
-    doseQuantity: json['doseQuantity'] == null
-        ? null
-        : Quantity.fromJson(json['doseQuantity'] as Map<String, dynamic>),
-    practitioner: (json['practitioner'] as List<dynamic>?)
-        ?.map(
-            (e) => ImmunizationPractitioner.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    explanation: json['explanation'] == null
-        ? null
-        : ImmunizationExplanation.fromJson(
-            json['explanation'] as Map<String, dynamic>),
-    reaction: (json['reaction'] as List<dynamic>?)
-        ?.map((e) => ImmunizationReaction.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    vaccinationProtocol: (json['vaccinationProtocol'] as List<dynamic>?)
-        ?.map((e) =>
-            ImmunizationVaccinationProtocol.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
+    _$_Immunization(
+      resourceType: _$enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Stu3ResourceType.Immunization) ??
+          Stu3ResourceType.Immunization,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: json['status'] as String?,
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      notGiven:
+          json['notGiven'] == null ? null : Boolean.fromJson(json['notGiven']),
+      notGivenElement: json['_notGiven'] == null
+          ? null
+          : Element.fromJson(json['_notGiven'] as Map<String, dynamic>),
+      vaccineCode:
+          CodeableConcept.fromJson(json['vaccineCode'] as Map<String, dynamic>),
+      patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
+      encounter: json['encounter'] == null
+          ? null
+          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      dateElement: json['_date'] == null
+          ? null
+          : Element.fromJson(json['_date'] as Map<String, dynamic>),
+      primarySource: json['primarySource'] == null
+          ? null
+          : Boolean.fromJson(json['primarySource']),
+      primarySourceElement: json['_primarySource'] == null
+          ? null
+          : Element.fromJson(json['_primarySource'] as Map<String, dynamic>),
+      reportOrigin: json['reportOrigin'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['reportOrigin'] as Map<String, dynamic>),
+      location: json['location'] == null
+          ? null
+          : Reference.fromJson(json['location'] as Map<String, dynamic>),
+      manufacturer: json['manufacturer'] == null
+          ? null
+          : Reference.fromJson(json['manufacturer'] as Map<String, dynamic>),
+      lotNumber: json['lotNumber'] as String?,
+      lotNumberElement: json['_lotNumber'] == null
+          ? null
+          : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
+      expirationDate: json['expirationDate'] == null
+          ? null
+          : Date.fromJson(json['expirationDate']),
+      expirationDateElement: json['_expirationDate'] == null
+          ? null
+          : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
+      site: json['site'] == null
+          ? null
+          : CodeableConcept.fromJson(json['site'] as Map<String, dynamic>),
+      route: json['route'] == null
+          ? null
+          : CodeableConcept.fromJson(json['route'] as Map<String, dynamic>),
+      doseQuantity: json['doseQuantity'] == null
+          ? null
+          : Quantity.fromJson(json['doseQuantity'] as Map<String, dynamic>),
+      practitioner: (json['practitioner'] as List<dynamic>?)
+          ?.map((e) =>
+              ImmunizationPractitioner.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      explanation: json['explanation'] == null
+          ? null
+          : ImmunizationExplanation.fromJson(
+              json['explanation'] as Map<String, dynamic>),
+      reaction: (json['reaction'] as List<dynamic>?)
+          ?.map((e) => ImmunizationReaction.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      vaccinationProtocol: (json['vaccinationProtocol'] as List<dynamic>?)
+          ?.map((e) => ImmunizationVaccinationProtocol.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_ImmunizationToJson(_$_Immunization instance) {
+Map<String, dynamic> _$$_ImmunizationToJson(_$_Immunization instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
   };
@@ -195,6 +197,17 @@ K _$enumDecode<K, V>(
       return MapEntry(unknownValue, enumValues.values.first);
     },
   ).key;
+}
+
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -317,17 +330,16 @@ const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_ImmunizationPractitioner _$_$_ImmunizationPractitionerFromJson(
-    Map<String, dynamic> json) {
-  return _$_ImmunizationPractitioner(
-    role: json['role'] == null
-        ? null
-        : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
-    actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
-  );
-}
+_$_ImmunizationPractitioner _$$_ImmunizationPractitionerFromJson(
+        Map<String, dynamic> json) =>
+    _$_ImmunizationPractitioner(
+      role: json['role'] == null
+          ? null
+          : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
+      actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_ImmunizationPractitionerToJson(
+Map<String, dynamic> _$$_ImmunizationPractitionerToJson(
     _$_ImmunizationPractitioner instance) {
   final val = <String, dynamic>{};
 
@@ -342,19 +354,18 @@ Map<String, dynamic> _$_$_ImmunizationPractitionerToJson(
   return val;
 }
 
-_$_ImmunizationExplanation _$_$_ImmunizationExplanationFromJson(
-    Map<String, dynamic> json) {
-  return _$_ImmunizationExplanation(
-    reason: (json['reason'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    reasonNotGiven: (json['reasonNotGiven'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_ImmunizationExplanation _$$_ImmunizationExplanationFromJson(
+        Map<String, dynamic> json) =>
+    _$_ImmunizationExplanation(
+      reason: (json['reason'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reasonNotGiven: (json['reasonNotGiven'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_ImmunizationExplanationToJson(
+Map<String, dynamic> _$$_ImmunizationExplanationToJson(
     _$_ImmunizationExplanation instance) {
   final val = <String, dynamic>{};
 
@@ -370,25 +381,24 @@ Map<String, dynamic> _$_$_ImmunizationExplanationToJson(
   return val;
 }
 
-_$_ImmunizationReaction _$_$_ImmunizationReactionFromJson(
-    Map<String, dynamic> json) {
-  return _$_ImmunizationReaction(
-    date: json['date'] == null ? null : Date.fromJson(json['date']),
-    dateElement: json['_date'] == null
-        ? null
-        : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    detail: json['detail'] == null
-        ? null
-        : Reference.fromJson(json['detail'] as Map<String, dynamic>),
-    reported:
-        json['reported'] == null ? null : Boolean.fromJson(json['reported']),
-    reportedElement: json['_reported'] == null
-        ? null
-        : Element.fromJson(json['_reported'] as Map<String, dynamic>),
-  );
-}
+_$_ImmunizationReaction _$$_ImmunizationReactionFromJson(
+        Map<String, dynamic> json) =>
+    _$_ImmunizationReaction(
+      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      dateElement: json['_date'] == null
+          ? null
+          : Element.fromJson(json['_date'] as Map<String, dynamic>),
+      detail: json['detail'] == null
+          ? null
+          : Reference.fromJson(json['detail'] as Map<String, dynamic>),
+      reported:
+          json['reported'] == null ? null : Boolean.fromJson(json['reported']),
+      reportedElement: json['_reported'] == null
+          ? null
+          : Element.fromJson(json['_reported'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_ImmunizationReactionToJson(
+Map<String, dynamic> _$$_ImmunizationReactionToJson(
     _$_ImmunizationReaction instance) {
   final val = <String, dynamic>{};
 
@@ -406,45 +416,44 @@ Map<String, dynamic> _$_$_ImmunizationReactionToJson(
   return val;
 }
 
-_$_ImmunizationVaccinationProtocol _$_$_ImmunizationVaccinationProtocolFromJson(
-    Map<String, dynamic> json) {
-  return _$_ImmunizationVaccinationProtocol(
-    doseSequence: json['doseSequence'] == null
-        ? null
-        : Decimal.fromJson(json['doseSequence']),
-    doseSequenceElement: json['_doseSequence'] == null
-        ? null
-        : Element.fromJson(json['_doseSequence'] as Map<String, dynamic>),
-    description: json['description'] as String?,
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    authority: json['authority'] == null
-        ? null
-        : Reference.fromJson(json['authority'] as Map<String, dynamic>),
-    series: json['series'] as String?,
-    seriesElement: json['_series'] == null
-        ? null
-        : Element.fromJson(json['_series'] as Map<String, dynamic>),
-    seriesDoses: json['seriesDoses'] == null
-        ? null
-        : Decimal.fromJson(json['seriesDoses']),
-    seriesDosesElement: json['_seriesDoses'] == null
-        ? null
-        : Element.fromJson(json['_seriesDoses'] as Map<String, dynamic>),
-    targetDisease: (json['targetDisease'] as List<dynamic>)
-        .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    doseStatus:
-        CodeableConcept.fromJson(json['doseStatus'] as Map<String, dynamic>),
-    doseStatusReason: json['doseStatusReason'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['doseStatusReason'] as Map<String, dynamic>),
-  );
-}
+_$_ImmunizationVaccinationProtocol _$$_ImmunizationVaccinationProtocolFromJson(
+        Map<String, dynamic> json) =>
+    _$_ImmunizationVaccinationProtocol(
+      doseSequence: json['doseSequence'] == null
+          ? null
+          : Decimal.fromJson(json['doseSequence']),
+      doseSequenceElement: json['_doseSequence'] == null
+          ? null
+          : Element.fromJson(json['_doseSequence'] as Map<String, dynamic>),
+      description: json['description'] as String?,
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+      authority: json['authority'] == null
+          ? null
+          : Reference.fromJson(json['authority'] as Map<String, dynamic>),
+      series: json['series'] as String?,
+      seriesElement: json['_series'] == null
+          ? null
+          : Element.fromJson(json['_series'] as Map<String, dynamic>),
+      seriesDoses: json['seriesDoses'] == null
+          ? null
+          : Decimal.fromJson(json['seriesDoses']),
+      seriesDosesElement: json['_seriesDoses'] == null
+          ? null
+          : Element.fromJson(json['_seriesDoses'] as Map<String, dynamic>),
+      targetDisease: (json['targetDisease'] as List<dynamic>)
+          .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      doseStatus:
+          CodeableConcept.fromJson(json['doseStatus'] as Map<String, dynamic>),
+      doseStatusReason: json['doseStatusReason'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['doseStatusReason'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_ImmunizationVaccinationProtocolToJson(
+Map<String, dynamic> _$$_ImmunizationVaccinationProtocolToJson(
     _$_ImmunizationVaccinationProtocol instance) {
   final val = <String, dynamic>{};
 
@@ -469,49 +478,51 @@ Map<String, dynamic> _$_$_ImmunizationVaccinationProtocolToJson(
   return val;
 }
 
-_$_ImmunizationRecommendation _$_$_ImmunizationRecommendationFromJson(
-    Map<String, dynamic> json) {
-  return _$_ImmunizationRecommendation(
-    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Stu3ResourceType.ImmunizationRecommendation),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    recommendation: (json['recommendation'] as List<dynamic>)
-        .map((e) => ImmunizationRecommendationRecommendation.fromJson(
-            e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
+        Map<String, dynamic> json) =>
+    _$_ImmunizationRecommendation(
+      resourceType: _$enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Stu3ResourceType.ImmunizationRecommendation) ??
+          Stu3ResourceType.ImmunizationRecommendation,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
+      recommendation: (json['recommendation'] as List<dynamic>)
+          .map((e) => ImmunizationRecommendationRecommendation.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_ImmunizationRecommendationToJson(
+Map<String, dynamic> _$$_ImmunizationRecommendationToJson(
     _$_ImmunizationRecommendation instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
@@ -545,47 +556,48 @@ Map<String, dynamic> _$_$_ImmunizationRecommendationToJson(
 }
 
 _$_ImmunizationRecommendationRecommendation
-    _$_$_ImmunizationRecommendationRecommendationFromJson(
-        Map<String, dynamic> json) {
-  return _$_ImmunizationRecommendationRecommendation(
-    date: json['date'] == null ? null : Date.fromJson(json['date']),
-    dateElement: json['_date'] == null
-        ? null
-        : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    vaccineCode: json['vaccineCode'] == null
-        ? null
-        : CodeableConcept.fromJson(json['vaccineCode'] as Map<String, dynamic>),
-    targetDisease: json['targetDisease'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['targetDisease'] as Map<String, dynamic>),
-    doseNumber: json['doseNumber'] == null
-        ? null
-        : Decimal.fromJson(json['doseNumber']),
-    doseNumberElement: json['_doseNumber'] == null
-        ? null
-        : Element.fromJson(json['_doseNumber'] as Map<String, dynamic>),
-    forecastStatus: CodeableConcept.fromJson(
-        json['forecastStatus'] as Map<String, dynamic>),
-    dateCriterion: (json['dateCriterion'] as List<dynamic>?)
-        ?.map((e) => ImmunizationRecommendationDateCriterion.fromJson(
-            e as Map<String, dynamic>))
-        .toList(),
-    protocol: json['protocol'] == null
-        ? null
-        : ImmunizationRecommendationProtocol.fromJson(
-            json['protocol'] as Map<String, dynamic>),
-    supportingImmunization: (json['supportingImmunization'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    supportingPatientInformation:
-        (json['supportingPatientInformation'] as List<dynamic>?)
-            ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-            .toList(),
-  );
-}
+    _$$_ImmunizationRecommendationRecommendationFromJson(
+            Map<String, dynamic> json) =>
+        _$_ImmunizationRecommendationRecommendation(
+          date: json['date'] == null ? null : Date.fromJson(json['date']),
+          dateElement: json['_date'] == null
+              ? null
+              : Element.fromJson(json['_date'] as Map<String, dynamic>),
+          vaccineCode: json['vaccineCode'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['vaccineCode'] as Map<String, dynamic>),
+          targetDisease: json['targetDisease'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['targetDisease'] as Map<String, dynamic>),
+          doseNumber: json['doseNumber'] == null
+              ? null
+              : Decimal.fromJson(json['doseNumber']),
+          doseNumberElement: json['_doseNumber'] == null
+              ? null
+              : Element.fromJson(json['_doseNumber'] as Map<String, dynamic>),
+          forecastStatus: CodeableConcept.fromJson(
+              json['forecastStatus'] as Map<String, dynamic>),
+          dateCriterion: (json['dateCriterion'] as List<dynamic>?)
+              ?.map((e) => ImmunizationRecommendationDateCriterion.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
+          protocol: json['protocol'] == null
+              ? null
+              : ImmunizationRecommendationProtocol.fromJson(
+                  json['protocol'] as Map<String, dynamic>),
+          supportingImmunization:
+              (json['supportingImmunization'] as List<dynamic>?)
+                  ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+                  .toList(),
+          supportingPatientInformation:
+              (json['supportingPatientInformation'] as List<dynamic>?)
+                  ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+                  .toList(),
+        );
 
-Map<String, dynamic> _$_$_ImmunizationRecommendationRecommendationToJson(
+Map<String, dynamic> _$$_ImmunizationRecommendationRecommendationToJson(
     _$_ImmunizationRecommendationRecommendation instance) {
   final val = <String, dynamic>{};
 
@@ -613,18 +625,17 @@ Map<String, dynamic> _$_$_ImmunizationRecommendationRecommendationToJson(
 }
 
 _$_ImmunizationRecommendationDateCriterion
-    _$_$_ImmunizationRecommendationDateCriterionFromJson(
-        Map<String, dynamic> json) {
-  return _$_ImmunizationRecommendationDateCriterion(
-    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    value: json['value'] as String?,
-    valueElement: json['_value'] == null
-        ? null
-        : Element.fromJson(json['_value'] as Map<String, dynamic>),
-  );
-}
+    _$$_ImmunizationRecommendationDateCriterionFromJson(
+            Map<String, dynamic> json) =>
+        _$_ImmunizationRecommendationDateCriterion(
+          code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+          value: json['value'] as String?,
+          valueElement: json['_value'] == null
+              ? null
+              : Element.fromJson(json['_value'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$_$_ImmunizationRecommendationDateCriterionToJson(
+Map<String, dynamic> _$$_ImmunizationRecommendationDateCriterionToJson(
     _$_ImmunizationRecommendationDateCriterion instance) {
   final val = <String, dynamic>{
     'code': instance.code.toJson(),
@@ -642,29 +653,28 @@ Map<String, dynamic> _$_$_ImmunizationRecommendationDateCriterionToJson(
 }
 
 _$_ImmunizationRecommendationProtocol
-    _$_$_ImmunizationRecommendationProtocolFromJson(Map<String, dynamic> json) {
-  return _$_ImmunizationRecommendationProtocol(
-    doseSequence: json['doseSequence'] == null
-        ? null
-        : Decimal.fromJson(json['doseSequence']),
-    doseSequenceElement: json['_doseSequence'] == null
-        ? null
-        : Element.fromJson(json['_doseSequence'] as Map<String, dynamic>),
-    description: json['description'] as String?,
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    authority: json['authority'] == null
-        ? null
-        : Reference.fromJson(json['authority'] as Map<String, dynamic>),
-    series: json['series'] as String?,
-    seriesElement: json['_series'] == null
-        ? null
-        : Element.fromJson(json['_series'] as Map<String, dynamic>),
-  );
-}
+    _$$_ImmunizationRecommendationProtocolFromJson(Map<String, dynamic> json) =>
+        _$_ImmunizationRecommendationProtocol(
+          doseSequence: json['doseSequence'] == null
+              ? null
+              : Decimal.fromJson(json['doseSequence']),
+          doseSequenceElement: json['_doseSequence'] == null
+              ? null
+              : Element.fromJson(json['_doseSequence'] as Map<String, dynamic>),
+          description: json['description'] as String?,
+          descriptionElement: json['_description'] == null
+              ? null
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          authority: json['authority'] == null
+              ? null
+              : Reference.fromJson(json['authority'] as Map<String, dynamic>),
+          series: json['series'] as String?,
+          seriesElement: json['_series'] == null
+              ? null
+              : Element.fromJson(json['_series'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$_$_ImmunizationRecommendationProtocolToJson(
+Map<String, dynamic> _$$_ImmunizationRecommendationProtocolToJson(
     _$_ImmunizationRecommendationProtocol instance) {
   final val = <String, dynamic>{};
 
@@ -684,72 +694,75 @@ Map<String, dynamic> _$_$_ImmunizationRecommendationProtocolToJson(
   return val;
 }
 
-_$_Medication _$_$_MedicationFromJson(Map<String, dynamic> json) {
-  return _$_Medication(
-    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Stu3ResourceType.Medication),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(_$MedicationStatusEnumMap, json['status']),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    isBrand: json['isBrand'] == null ? null : Boolean.fromJson(json['isBrand']),
-    isBrandElement: json['_isBrand'] == null
-        ? null
-        : Element.fromJson(json['_isBrand'] as Map<String, dynamic>),
-    isOverTheCounter: json['isOverTheCounter'] == null
-        ? null
-        : Boolean.fromJson(json['isOverTheCounter']),
-    isOverTheCounterElement: json['_isOverTheCounter'] == null
-        ? null
-        : Element.fromJson(json['_isOverTheCounter'] as Map<String, dynamic>),
-    manufacturer: json['manufacturer'] == null
-        ? null
-        : Reference.fromJson(json['manufacturer'] as Map<String, dynamic>),
-    form: json['form'] == null
-        ? null
-        : CodeableConcept.fromJson(json['form'] as Map<String, dynamic>),
-    ingredient: (json['ingredient'] as List<dynamic>?)
-        ?.map((e) => MedicationIngredient.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    package: json['package'] == null
-        ? null
-        : MedicationPackage.fromJson(json['package'] as Map<String, dynamic>),
-    image: (json['image'] as List<dynamic>?)
-        ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
+    _$_Medication(
+      resourceType: _$enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Stu3ResourceType.Medication) ??
+          Stu3ResourceType.Medication,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      code: json['code'] == null
+          ? null
+          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      status: _$enumDecodeNullable(_$MedicationStatusEnumMap, json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      isBrand:
+          json['isBrand'] == null ? null : Boolean.fromJson(json['isBrand']),
+      isBrandElement: json['_isBrand'] == null
+          ? null
+          : Element.fromJson(json['_isBrand'] as Map<String, dynamic>),
+      isOverTheCounter: json['isOverTheCounter'] == null
+          ? null
+          : Boolean.fromJson(json['isOverTheCounter']),
+      isOverTheCounterElement: json['_isOverTheCounter'] == null
+          ? null
+          : Element.fromJson(json['_isOverTheCounter'] as Map<String, dynamic>),
+      manufacturer: json['manufacturer'] == null
+          ? null
+          : Reference.fromJson(json['manufacturer'] as Map<String, dynamic>),
+      form: json['form'] == null
+          ? null
+          : CodeableConcept.fromJson(json['form'] as Map<String, dynamic>),
+      ingredient: (json['ingredient'] as List<dynamic>?)
+          ?.map((e) => MedicationIngredient.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      package: json['package'] == null
+          ? null
+          : MedicationPackage.fromJson(json['package'] as Map<String, dynamic>),
+      image: (json['image'] as List<dynamic>?)
+          ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_MedicationToJson(_$_Medication instance) {
+Map<String, dynamic> _$$_MedicationToJson(_$_Medication instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
   };
@@ -789,17 +802,6 @@ Map<String, dynamic> _$_$_MedicationToJson(_$_Medication instance) {
   return val;
 }
 
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$MedicationStatusEnumMap = {
   MedicationStatus.active: 'active',
   MedicationStatus.inactive: 'inactive',
@@ -807,28 +809,27 @@ const _$MedicationStatusEnumMap = {
   MedicationStatus.unknown: 'unknown',
 };
 
-_$_MedicationIngredient _$_$_MedicationIngredientFromJson(
-    Map<String, dynamic> json) {
-  return _$_MedicationIngredient(
-    itemCodeableConcept: json['itemCodeableConcept'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['itemCodeableConcept'] as Map<String, dynamic>),
-    itemReference: json['itemReference'] == null
-        ? null
-        : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
-    isActive:
-        json['isActive'] == null ? null : Boolean.fromJson(json['isActive']),
-    isActiveElement: json['_isActive'] == null
-        ? null
-        : Element.fromJson(json['_isActive'] as Map<String, dynamic>),
-    amount: json['amount'] == null
-        ? null
-        : Ratio.fromJson(json['amount'] as Map<String, dynamic>),
-  );
-}
+_$_MedicationIngredient _$$_MedicationIngredientFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationIngredient(
+      itemCodeableConcept: json['itemCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['itemCodeableConcept'] as Map<String, dynamic>),
+      itemReference: json['itemReference'] == null
+          ? null
+          : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
+      isActive:
+          json['isActive'] == null ? null : Boolean.fromJson(json['isActive']),
+      isActiveElement: json['_isActive'] == null
+          ? null
+          : Element.fromJson(json['_isActive'] as Map<String, dynamic>),
+      amount: json['amount'] == null
+          ? null
+          : Ratio.fromJson(json['amount'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_MedicationIngredientToJson(
+Map<String, dynamic> _$$_MedicationIngredientToJson(
     _$_MedicationIngredient instance) {
   final val = <String, dynamic>{};
 
@@ -846,21 +847,20 @@ Map<String, dynamic> _$_$_MedicationIngredientToJson(
   return val;
 }
 
-_$_MedicationPackage _$_$_MedicationPackageFromJson(Map<String, dynamic> json) {
-  return _$_MedicationPackage(
-    container: json['container'] == null
-        ? null
-        : CodeableConcept.fromJson(json['container'] as Map<String, dynamic>),
-    content: (json['content'] as List<dynamic>?)
-        ?.map((e) => MedicationContent.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    batch: (json['batch'] as List<dynamic>?)
-        ?.map((e) => MedicationBatch.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_MedicationPackage _$$_MedicationPackageFromJson(Map<String, dynamic> json) =>
+    _$_MedicationPackage(
+      container: json['container'] == null
+          ? null
+          : CodeableConcept.fromJson(json['container'] as Map<String, dynamic>),
+      content: (json['content'] as List<dynamic>?)
+          ?.map((e) => MedicationContent.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      batch: (json['batch'] as List<dynamic>?)
+          ?.map((e) => MedicationBatch.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_MedicationPackageToJson(
+Map<String, dynamic> _$$_MedicationPackageToJson(
     _$_MedicationPackage instance) {
   final val = <String, dynamic>{};
 
@@ -876,22 +876,21 @@ Map<String, dynamic> _$_$_MedicationPackageToJson(
   return val;
 }
 
-_$_MedicationContent _$_$_MedicationContentFromJson(Map<String, dynamic> json) {
-  return _$_MedicationContent(
-    itemCodeableConcept: json['itemCodeableConcept'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['itemCodeableConcept'] as Map<String, dynamic>),
-    itemReference: json['itemReference'] == null
-        ? null
-        : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
-    amount: json['amount'] == null
-        ? null
-        : Quantity.fromJson(json['amount'] as Map<String, dynamic>),
-  );
-}
+_$_MedicationContent _$$_MedicationContentFromJson(Map<String, dynamic> json) =>
+    _$_MedicationContent(
+      itemCodeableConcept: json['itemCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['itemCodeableConcept'] as Map<String, dynamic>),
+      itemReference: json['itemReference'] == null
+          ? null
+          : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
+      amount: json['amount'] == null
+          ? null
+          : Quantity.fromJson(json['amount'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_MedicationContentToJson(
+Map<String, dynamic> _$$_MedicationContentToJson(
     _$_MedicationContent instance) {
   final val = <String, dynamic>{};
 
@@ -907,22 +906,21 @@ Map<String, dynamic> _$_$_MedicationContentToJson(
   return val;
 }
 
-_$_MedicationBatch _$_$_MedicationBatchFromJson(Map<String, dynamic> json) {
-  return _$_MedicationBatch(
-    lotNumber: json['lotNumber'] as String?,
-    lotNumberElement: json['_lotNumber'] == null
-        ? null
-        : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
-    expirationDate: json['expirationDate'] == null
-        ? null
-        : Date.fromJson(json['expirationDate']),
-    expirationDateElement: json['_expirationDate'] == null
-        ? null
-        : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
-  );
-}
+_$_MedicationBatch _$$_MedicationBatchFromJson(Map<String, dynamic> json) =>
+    _$_MedicationBatch(
+      lotNumber: json['lotNumber'] as String?,
+      lotNumberElement: json['_lotNumber'] == null
+          ? null
+          : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
+      expirationDate: json['expirationDate'] == null
+          ? null
+          : Date.fromJson(json['expirationDate']),
+      expirationDateElement: json['_expirationDate'] == null
+          ? null
+          : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_MedicationBatchToJson(_$_MedicationBatch instance) {
+Map<String, dynamic> _$$_MedicationBatchToJson(_$_MedicationBatch instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -938,116 +936,119 @@ Map<String, dynamic> _$_$_MedicationBatchToJson(_$_MedicationBatch instance) {
   return val;
 }
 
-_$_MedicationAdministration _$_$_MedicationAdministrationFromJson(
-    Map<String, dynamic> json) {
-  return _$_MedicationAdministration(
-    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Stu3ResourceType.MedicationAdministration),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    definition: (json['definition'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    partOf: (json['partOf'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    status: _$enumDecodeNullable(
-        _$MedicationAdministrationStatusEnumMap, json['status']),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    category: json['category'] == null
-        ? null
-        : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-    medicationCodeableConcept: json['medicationCodeableConcept'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['medicationCodeableConcept'] as Map<String, dynamic>),
-    medicationReference: json['medicationReference'] == null
-        ? null
-        : Reference.fromJson(
-            json['medicationReference'] as Map<String, dynamic>),
-    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    context: json['context'] == null
-        ? null
-        : Reference.fromJson(json['context'] as Map<String, dynamic>),
-    supportingInformation: (json['supportingInformation'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    effectiveDateTime: json['effectiveDateTime'] == null
-        ? null
-        : FhirDateTime.fromJson(json['effectiveDateTime']),
-    effectiveDateTimeElement: json['_effectiveDateTime'] == null
-        ? null
-        : Element.fromJson(json['_effectiveDateTime'] as Map<String, dynamic>),
-    effectivePeriod: json['effectivePeriod'] == null
-        ? null
-        : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    performer: (json['performer'] as List<dynamic>?)
-        ?.map((e) => MedicationAdministrationPerformer.fromJson(
-            e as Map<String, dynamic>))
-        .toList(),
-    notGiven:
-        json['notGiven'] == null ? null : Boolean.fromJson(json['notGiven']),
-    notGivenElement: json['_notGiven'] == null
-        ? null
-        : Element.fromJson(json['_notGiven'] as Map<String, dynamic>),
-    reasonNotGiven: (json['reasonNotGiven'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    reasonCode: (json['reasonCode'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    reasonReference: (json['reasonReference'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    prescription: json['prescription'] == null
-        ? null
-        : Reference.fromJson(json['prescription'] as Map<String, dynamic>),
-    device: (json['device'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    dosage: json['dosage'] == null
-        ? null
-        : MedicationAdministrationDosage.fromJson(
-            json['dosage'] as Map<String, dynamic>),
-    eventHistory: (json['eventHistory'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_MedicationAdministration _$$_MedicationAdministrationFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationAdministration(
+      resourceType: _$enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Stu3ResourceType.MedicationAdministration) ??
+          Stu3ResourceType.MedicationAdministration,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      definition: (json['definition'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      partOf: (json['partOf'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: _$enumDecodeNullable(
+          _$MedicationAdministrationStatusEnumMap, json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      category: json['category'] == null
+          ? null
+          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
+      medicationCodeableConcept: json['medicationCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['medicationCodeableConcept'] as Map<String, dynamic>),
+      medicationReference: json['medicationReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['medicationReference'] as Map<String, dynamic>),
+      subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      context: json['context'] == null
+          ? null
+          : Reference.fromJson(json['context'] as Map<String, dynamic>),
+      supportingInformation: (json['supportingInformation'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      effectiveDateTime: json['effectiveDateTime'] == null
+          ? null
+          : FhirDateTime.fromJson(json['effectiveDateTime']),
+      effectiveDateTimeElement: json['_effectiveDateTime'] == null
+          ? null
+          : Element.fromJson(
+              json['_effectiveDateTime'] as Map<String, dynamic>),
+      effectivePeriod: json['effectivePeriod'] == null
+          ? null
+          : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
+      performer: (json['performer'] as List<dynamic>?)
+          ?.map((e) => MedicationAdministrationPerformer.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+      notGiven:
+          json['notGiven'] == null ? null : Boolean.fromJson(json['notGiven']),
+      notGivenElement: json['_notGiven'] == null
+          ? null
+          : Element.fromJson(json['_notGiven'] as Map<String, dynamic>),
+      reasonNotGiven: (json['reasonNotGiven'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reasonCode: (json['reasonCode'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reasonReference: (json['reasonReference'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      prescription: json['prescription'] == null
+          ? null
+          : Reference.fromJson(json['prescription'] as Map<String, dynamic>),
+      device: (json['device'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      dosage: json['dosage'] == null
+          ? null
+          : MedicationAdministrationDosage.fromJson(
+              json['dosage'] as Map<String, dynamic>),
+      eventHistory: (json['eventHistory'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_MedicationAdministrationToJson(
+Map<String, dynamic> _$$_MedicationAdministrationToJson(
     _$_MedicationAdministration instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
@@ -1121,16 +1122,15 @@ const _$MedicationAdministrationStatusEnumMap = {
 };
 
 _$_MedicationAdministrationPerformer
-    _$_$_MedicationAdministrationPerformerFromJson(Map<String, dynamic> json) {
-  return _$_MedicationAdministrationPerformer(
-    actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
-    onBehalfOf: json['onBehalfOf'] == null
-        ? null
-        : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
-  );
-}
+    _$$_MedicationAdministrationPerformerFromJson(Map<String, dynamic> json) =>
+        _$_MedicationAdministrationPerformer(
+          actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
+          onBehalfOf: json['onBehalfOf'] == null
+              ? null
+              : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$_$_MedicationAdministrationPerformerToJson(
+Map<String, dynamic> _$$_MedicationAdministrationPerformerToJson(
     _$_MedicationAdministrationPerformer instance) {
   final val = <String, dynamic>{
     'actor': instance.actor.toJson(),
@@ -1146,35 +1146,35 @@ Map<String, dynamic> _$_$_MedicationAdministrationPerformerToJson(
   return val;
 }
 
-_$_MedicationAdministrationDosage _$_$_MedicationAdministrationDosageFromJson(
-    Map<String, dynamic> json) {
-  return _$_MedicationAdministrationDosage(
-    text: json['text'] as String?,
-    textElement: json['_text'] == null
-        ? null
-        : Element.fromJson(json['_text'] as Map<String, dynamic>),
-    site: json['site'] == null
-        ? null
-        : CodeableConcept.fromJson(json['site'] as Map<String, dynamic>),
-    route: json['route'] == null
-        ? null
-        : CodeableConcept.fromJson(json['route'] as Map<String, dynamic>),
-    method: json['method'] == null
-        ? null
-        : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
-    dose: json['dose'] == null
-        ? null
-        : Quantity.fromJson(json['dose'] as Map<String, dynamic>),
-    rateRatio: json['rateRatio'] == null
-        ? null
-        : Ratio.fromJson(json['rateRatio'] as Map<String, dynamic>),
-    rateSimpleQuantity: json['rateSimpleQuantity'] == null
-        ? null
-        : Quantity.fromJson(json['rateSimpleQuantity'] as Map<String, dynamic>),
-  );
-}
+_$_MedicationAdministrationDosage _$$_MedicationAdministrationDosageFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationAdministrationDosage(
+      text: json['text'] as String?,
+      textElement: json['_text'] == null
+          ? null
+          : Element.fromJson(json['_text'] as Map<String, dynamic>),
+      site: json['site'] == null
+          ? null
+          : CodeableConcept.fromJson(json['site'] as Map<String, dynamic>),
+      route: json['route'] == null
+          ? null
+          : CodeableConcept.fromJson(json['route'] as Map<String, dynamic>),
+      method: json['method'] == null
+          ? null
+          : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
+      dose: json['dose'] == null
+          ? null
+          : Quantity.fromJson(json['dose'] as Map<String, dynamic>),
+      rateRatio: json['rateRatio'] == null
+          ? null
+          : Ratio.fromJson(json['rateRatio'] as Map<String, dynamic>),
+      rateSimpleQuantity: json['rateSimpleQuantity'] == null
+          ? null
+          : Quantity.fromJson(
+              json['rateSimpleQuantity'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_MedicationAdministrationDosageToJson(
+Map<String, dynamic> _$$_MedicationAdministrationDosageToJson(
     _$_MedicationAdministrationDosage instance) {
   final val = <String, dynamic>{};
 
@@ -1195,130 +1195,134 @@ Map<String, dynamic> _$_$_MedicationAdministrationDosageToJson(
   return val;
 }
 
-_$_MedicationDispense _$_$_MedicationDispenseFromJson(
-    Map<String, dynamic> json) {
-  return _$_MedicationDispense(
-    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Stu3ResourceType.MedicationDispense),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    partOf: (json['partOf'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    status:
-        _$enumDecodeNullable(_$MedicationDispenseStatusEnumMap, json['status']),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    category: json['category'] == null
-        ? null
-        : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-    medicationCodeableConcept: json['medicationCodeableConcept'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['medicationCodeableConcept'] as Map<String, dynamic>),
-    medicationReference: json['medicationReference'] == null
-        ? null
-        : Reference.fromJson(
-            json['medicationReference'] as Map<String, dynamic>),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    context: json['context'] == null
-        ? null
-        : Reference.fromJson(json['context'] as Map<String, dynamic>),
-    supportingInformation: (json['supportingInformation'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    performer: (json['performer'] as List<dynamic>?)
-        ?.map((e) =>
-            MedicationDispensePerformer.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    authorizingPrescription: (json['authorizingPrescription'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    quantity: json['quantity'] == null
-        ? null
-        : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-    daysSupply: json['daysSupply'] == null
-        ? null
-        : Quantity.fromJson(json['daysSupply'] as Map<String, dynamic>),
-    whenPrepared: json['whenPrepared'] as String?,
-    whenPreparedElement: json['_whenPrepared'] == null
-        ? null
-        : Element.fromJson(json['_whenPrepared'] as Map<String, dynamic>),
-    whenHandedOver: json['whenHandedOver'] as String?,
-    whenHandedOverElement: json['_whenHandedOver'] == null
-        ? null
-        : Element.fromJson(json['_whenHandedOver'] as Map<String, dynamic>),
-    destination: json['destination'] == null
-        ? null
-        : Reference.fromJson(json['destination'] as Map<String, dynamic>),
-    receiver: (json['receiver'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    dosageInstruction: (json['dosageInstruction'] as List<dynamic>?)
-        ?.map((e) => Dosage.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    substitution: json['substitution'] == null
-        ? null
-        : MedicationDispenseSubstitution.fromJson(
-            json['substitution'] as Map<String, dynamic>),
-    detectedIssue: (json['detectedIssue'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    notDone: json['notDone'] == null ? null : Boolean.fromJson(json['notDone']),
-    notDoneElement: json['_notDone'] == null
-        ? null
-        : Element.fromJson(json['_notDone'] as Map<String, dynamic>),
-    notDoneReasonCodeableConcept: json['notDoneReasonCodeableConcept'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['notDoneReasonCodeableConcept'] as Map<String, dynamic>),
-    notDoneReasonReference: json['notDoneReasonReference'] == null
-        ? null
-        : Reference.fromJson(
-            json['notDoneReasonReference'] as Map<String, dynamic>),
-    eventHistory: (json['eventHistory'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_MedicationDispense _$$_MedicationDispenseFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationDispense(
+      resourceType: _$enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Stu3ResourceType.MedicationDispense) ??
+          Stu3ResourceType.MedicationDispense,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      partOf: (json['partOf'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: _$enumDecodeNullable(
+          _$MedicationDispenseStatusEnumMap, json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      category: json['category'] == null
+          ? null
+          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
+      medicationCodeableConcept: json['medicationCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['medicationCodeableConcept'] as Map<String, dynamic>),
+      medicationReference: json['medicationReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['medicationReference'] as Map<String, dynamic>),
+      subject: json['subject'] == null
+          ? null
+          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      context: json['context'] == null
+          ? null
+          : Reference.fromJson(json['context'] as Map<String, dynamic>),
+      supportingInformation: (json['supportingInformation'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      performer: (json['performer'] as List<dynamic>?)
+          ?.map((e) =>
+              MedicationDispensePerformer.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      authorizingPrescription:
+          (json['authorizingPrescription'] as List<dynamic>?)
+              ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      type: json['type'] == null
+          ? null
+          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      quantity: json['quantity'] == null
+          ? null
+          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+      daysSupply: json['daysSupply'] == null
+          ? null
+          : Quantity.fromJson(json['daysSupply'] as Map<String, dynamic>),
+      whenPrepared: json['whenPrepared'] as String?,
+      whenPreparedElement: json['_whenPrepared'] == null
+          ? null
+          : Element.fromJson(json['_whenPrepared'] as Map<String, dynamic>),
+      whenHandedOver: json['whenHandedOver'] as String?,
+      whenHandedOverElement: json['_whenHandedOver'] == null
+          ? null
+          : Element.fromJson(json['_whenHandedOver'] as Map<String, dynamic>),
+      destination: json['destination'] == null
+          ? null
+          : Reference.fromJson(json['destination'] as Map<String, dynamic>),
+      receiver: (json['receiver'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      dosageInstruction: (json['dosageInstruction'] as List<dynamic>?)
+          ?.map((e) => Dosage.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      substitution: json['substitution'] == null
+          ? null
+          : MedicationDispenseSubstitution.fromJson(
+              json['substitution'] as Map<String, dynamic>),
+      detectedIssue: (json['detectedIssue'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      notDone:
+          json['notDone'] == null ? null : Boolean.fromJson(json['notDone']),
+      notDoneElement: json['_notDone'] == null
+          ? null
+          : Element.fromJson(json['_notDone'] as Map<String, dynamic>),
+      notDoneReasonCodeableConcept: json['notDoneReasonCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['notDoneReasonCodeableConcept'] as Map<String, dynamic>),
+      notDoneReasonReference: json['notDoneReasonReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['notDoneReasonReference'] as Map<String, dynamic>),
+      eventHistory: (json['eventHistory'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_MedicationDispenseToJson(
+Map<String, dynamic> _$$_MedicationDispenseToJson(
     _$_MedicationDispense instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
@@ -1396,17 +1400,16 @@ const _$MedicationDispenseStatusEnumMap = {
   MedicationDispenseStatus.unknown: 'unknown',
 };
 
-_$_MedicationDispensePerformer _$_$_MedicationDispensePerformerFromJson(
-    Map<String, dynamic> json) {
-  return _$_MedicationDispensePerformer(
-    actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
-    onBehalfOf: json['onBehalfOf'] == null
-        ? null
-        : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
-  );
-}
+_$_MedicationDispensePerformer _$$_MedicationDispensePerformerFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationDispensePerformer(
+      actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
+      onBehalfOf: json['onBehalfOf'] == null
+          ? null
+          : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_MedicationDispensePerformerToJson(
+Map<String, dynamic> _$$_MedicationDispensePerformerToJson(
     _$_MedicationDispensePerformer instance) {
   final val = <String, dynamic>{
     'actor': instance.actor.toJson(),
@@ -1422,28 +1425,27 @@ Map<String, dynamic> _$_$_MedicationDispensePerformerToJson(
   return val;
 }
 
-_$_MedicationDispenseSubstitution _$_$_MedicationDispenseSubstitutionFromJson(
-    Map<String, dynamic> json) {
-  return _$_MedicationDispenseSubstitution(
-    wasSubstituted: json['wasSubstituted'] == null
-        ? null
-        : Boolean.fromJson(json['wasSubstituted']),
-    wasSubstitutedElement: json['_wasSubstituted'] == null
-        ? null
-        : Element.fromJson(json['_wasSubstituted'] as Map<String, dynamic>),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    reason: (json['reason'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    responsibleParty: (json['responsibleParty'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_MedicationDispenseSubstitution _$$_MedicationDispenseSubstitutionFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationDispenseSubstitution(
+      wasSubstituted: json['wasSubstituted'] == null
+          ? null
+          : Boolean.fromJson(json['wasSubstituted']),
+      wasSubstitutedElement: json['_wasSubstituted'] == null
+          ? null
+          : Element.fromJson(json['_wasSubstituted'] as Map<String, dynamic>),
+      type: json['type'] == null
+          ? null
+          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      reason: (json['reason'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      responsibleParty: (json['responsibleParty'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_MedicationDispenseSubstitutionToJson(
+Map<String, dynamic> _$$_MedicationDispenseSubstitutionToJson(
     _$_MedicationDispenseSubstitution instance) {
   final val = <String, dynamic>{};
 
@@ -1462,125 +1464,129 @@ Map<String, dynamic> _$_$_MedicationDispenseSubstitutionToJson(
   return val;
 }
 
-_$_MedicationRequest _$_$_MedicationRequestFromJson(Map<String, dynamic> json) {
-  return _$_MedicationRequest(
-    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Stu3ResourceType.MedicationRequest),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    definition: (json['definition'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    basedOn: (json['basedOn'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    groupIdentifier: json['groupIdentifier'] == null
-        ? null
-        : Identifier.fromJson(json['groupIdentifier'] as Map<String, dynamic>),
-    status:
-        _$enumDecodeNullable(_$MedicationRequestStatusEnumMap, json['status']),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    intent:
-        _$enumDecodeNullable(_$MedicationRequestIntentEnumMap, json['intent']),
-    intentElement: json['_intent'] == null
-        ? null
-        : Element.fromJson(json['_intent'] as Map<String, dynamic>),
-    category: json['category'] == null
-        ? null
-        : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-    priority: _$enumDecodeNullable(
-        _$MedicationRequestPriorityEnumMap, json['priority']),
-    priorityElement: json['_priority'] == null
-        ? null
-        : Element.fromJson(json['_priority'] as Map<String, dynamic>),
-    medicationCodeableConcept: json['medicationCodeableConcept'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['medicationCodeableConcept'] as Map<String, dynamic>),
-    medicationReference: json['medicationReference'] == null
-        ? null
-        : Reference.fromJson(
-            json['medicationReference'] as Map<String, dynamic>),
-    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    context: json['context'] == null
-        ? null
-        : Reference.fromJson(json['context'] as Map<String, dynamic>),
-    supportingInformation: (json['supportingInformation'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    authoredOn: json['authoredOn'] as String?,
-    authoredOnElement: json['_authoredOn'] == null
-        ? null
-        : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
-    requester: json['requester'] == null
-        ? null
-        : MedicationRequestRequester.fromJson(
-            json['requester'] as Map<String, dynamic>),
-    recorder: json['recorder'] == null
-        ? null
-        : Reference.fromJson(json['recorder'] as Map<String, dynamic>),
-    reasonCode: (json['reasonCode'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    reasonReference: (json['reasonReference'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    dosageInstruction: (json['dosageInstruction'] as List<dynamic>?)
-        ?.map((e) => Dosage.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    dispenseRequest: json['dispenseRequest'] == null
-        ? null
-        : MedicationRequestDispenseRequest.fromJson(
-            json['dispenseRequest'] as Map<String, dynamic>),
-    substitution: json['substitution'] == null
-        ? null
-        : MedicationRequestSubstitution.fromJson(
-            json['substitution'] as Map<String, dynamic>),
-    priorPrescription: json['priorPrescription'] == null
-        ? null
-        : Reference.fromJson(json['priorPrescription'] as Map<String, dynamic>),
-    detectedIssue: (json['detectedIssue'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    eventHistory: (json['eventHistory'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
+    _$_MedicationRequest(
+      resourceType: _$enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Stu3ResourceType.MedicationRequest) ??
+          Stu3ResourceType.MedicationRequest,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      definition: (json['definition'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      basedOn: (json['basedOn'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      groupIdentifier: json['groupIdentifier'] == null
+          ? null
+          : Identifier.fromJson(
+              json['groupIdentifier'] as Map<String, dynamic>),
+      status: _$enumDecodeNullable(
+          _$MedicationRequestStatusEnumMap, json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      intent: _$enumDecodeNullable(
+          _$MedicationRequestIntentEnumMap, json['intent']),
+      intentElement: json['_intent'] == null
+          ? null
+          : Element.fromJson(json['_intent'] as Map<String, dynamic>),
+      category: json['category'] == null
+          ? null
+          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
+      priority: _$enumDecodeNullable(
+          _$MedicationRequestPriorityEnumMap, json['priority']),
+      priorityElement: json['_priority'] == null
+          ? null
+          : Element.fromJson(json['_priority'] as Map<String, dynamic>),
+      medicationCodeableConcept: json['medicationCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['medicationCodeableConcept'] as Map<String, dynamic>),
+      medicationReference: json['medicationReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['medicationReference'] as Map<String, dynamic>),
+      subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      context: json['context'] == null
+          ? null
+          : Reference.fromJson(json['context'] as Map<String, dynamic>),
+      supportingInformation: (json['supportingInformation'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      authoredOn: json['authoredOn'] as String?,
+      authoredOnElement: json['_authoredOn'] == null
+          ? null
+          : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
+      requester: json['requester'] == null
+          ? null
+          : MedicationRequestRequester.fromJson(
+              json['requester'] as Map<String, dynamic>),
+      recorder: json['recorder'] == null
+          ? null
+          : Reference.fromJson(json['recorder'] as Map<String, dynamic>),
+      reasonCode: (json['reasonCode'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reasonReference: (json['reasonReference'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      dosageInstruction: (json['dosageInstruction'] as List<dynamic>?)
+          ?.map((e) => Dosage.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      dispenseRequest: json['dispenseRequest'] == null
+          ? null
+          : MedicationRequestDispenseRequest.fromJson(
+              json['dispenseRequest'] as Map<String, dynamic>),
+      substitution: json['substitution'] == null
+          ? null
+          : MedicationRequestSubstitution.fromJson(
+              json['substitution'] as Map<String, dynamic>),
+      priorPrescription: json['priorPrescription'] == null
+          ? null
+          : Reference.fromJson(
+              json['priorPrescription'] as Map<String, dynamic>),
+      detectedIssue: (json['detectedIssue'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      eventHistory: (json['eventHistory'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_MedicationRequestToJson(
+Map<String, dynamic> _$$_MedicationRequestToJson(
     _$_MedicationRequest instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],
@@ -1674,17 +1680,16 @@ const _$MedicationRequestPriorityEnumMap = {
   MedicationRequestPriority.unknown: 'unknown',
 };
 
-_$_MedicationRequestRequester _$_$_MedicationRequestRequesterFromJson(
-    Map<String, dynamic> json) {
-  return _$_MedicationRequestRequester(
-    agent: Reference.fromJson(json['agent'] as Map<String, dynamic>),
-    onBehalfOf: json['onBehalfOf'] == null
-        ? null
-        : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
-  );
-}
+_$_MedicationRequestRequester _$$_MedicationRequestRequesterFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationRequestRequester(
+      agent: Reference.fromJson(json['agent'] as Map<String, dynamic>),
+      onBehalfOf: json['onBehalfOf'] == null
+          ? null
+          : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_MedicationRequestRequesterToJson(
+Map<String, dynamic> _$$_MedicationRequestRequesterToJson(
     _$_MedicationRequestRequester instance) {
   final val = <String, dynamic>{
     'agent': instance.agent.toJson(),
@@ -1701,32 +1706,31 @@ Map<String, dynamic> _$_$_MedicationRequestRequesterToJson(
 }
 
 _$_MedicationRequestDispenseRequest
-    _$_$_MedicationRequestDispenseRequestFromJson(Map<String, dynamic> json) {
-  return _$_MedicationRequestDispenseRequest(
-    validityPeriod: json['validityPeriod'] == null
-        ? null
-        : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
-    numberOfRepeatsAllowed: json['numberOfRepeatsAllowed'] == null
-        ? null
-        : Decimal.fromJson(json['numberOfRepeatsAllowed']),
-    numberOfRepeatsAllowedElement: json['_numberOfRepeatsAllowed'] == null
-        ? null
-        : Element.fromJson(
-            json['_numberOfRepeatsAllowed'] as Map<String, dynamic>),
-    quantity: json['quantity'] == null
-        ? null
-        : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-    expectedSupplyDuration: json['expectedSupplyDuration'] == null
-        ? null
-        : FhirDuration.fromJson(
-            json['expectedSupplyDuration'] as Map<String, dynamic>),
-    performer: json['performer'] == null
-        ? null
-        : Reference.fromJson(json['performer'] as Map<String, dynamic>),
-  );
-}
+    _$$_MedicationRequestDispenseRequestFromJson(Map<String, dynamic> json) =>
+        _$_MedicationRequestDispenseRequest(
+          validityPeriod: json['validityPeriod'] == null
+              ? null
+              : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
+          numberOfRepeatsAllowed: json['numberOfRepeatsAllowed'] == null
+              ? null
+              : Decimal.fromJson(json['numberOfRepeatsAllowed']),
+          numberOfRepeatsAllowedElement: json['_numberOfRepeatsAllowed'] == null
+              ? null
+              : Element.fromJson(
+                  json['_numberOfRepeatsAllowed'] as Map<String, dynamic>),
+          quantity: json['quantity'] == null
+              ? null
+              : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+          expectedSupplyDuration: json['expectedSupplyDuration'] == null
+              ? null
+              : FhirDuration.fromJson(
+                  json['expectedSupplyDuration'] as Map<String, dynamic>),
+          performer: json['performer'] == null
+              ? null
+              : Reference.fromJson(json['performer'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$_$_MedicationRequestDispenseRequestToJson(
+Map<String, dynamic> _$$_MedicationRequestDispenseRequestToJson(
     _$_MedicationRequestDispenseRequest instance) {
   final val = <String, dynamic>{};
 
@@ -1748,20 +1752,20 @@ Map<String, dynamic> _$_$_MedicationRequestDispenseRequestToJson(
   return val;
 }
 
-_$_MedicationRequestSubstitution _$_$_MedicationRequestSubstitutionFromJson(
-    Map<String, dynamic> json) {
-  return _$_MedicationRequestSubstitution(
-    allowed: json['allowed'] == null ? null : Boolean.fromJson(json['allowed']),
-    allowedElement: json['_allowed'] == null
-        ? null
-        : Element.fromJson(json['_allowed'] as Map<String, dynamic>),
-    reason: json['reason'] == null
-        ? null
-        : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
-  );
-}
+_$_MedicationRequestSubstitution _$$_MedicationRequestSubstitutionFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationRequestSubstitution(
+      allowed:
+          json['allowed'] == null ? null : Boolean.fromJson(json['allowed']),
+      allowedElement: json['_allowed'] == null
+          ? null
+          : Element.fromJson(json['_allowed'] as Map<String, dynamic>),
+      reason: json['reason'] == null
+          ? null
+          : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_MedicationRequestSubstitutionToJson(
+Map<String, dynamic> _$$_MedicationRequestSubstitutionToJson(
     _$_MedicationRequestSubstitution instance) {
   final val = <String, dynamic>{};
 
@@ -1777,111 +1781,115 @@ Map<String, dynamic> _$_$_MedicationRequestSubstitutionToJson(
   return val;
 }
 
-_$_MedicationStatement _$_$_MedicationStatementFromJson(
-    Map<String, dynamic> json) {
-  return _$_MedicationStatement(
-    resourceType: _$enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Stu3ResourceType.MedicationStatement),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    basedOn: (json['basedOn'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    partOf: (json['partOf'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    context: json['context'] == null
-        ? null
-        : Reference.fromJson(json['context'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(
-        _$MedicationStatementStatusEnumMap, json['status']),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    category: json['category'] == null
-        ? null
-        : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-    medicationCodeableConcept: json['medicationCodeableConcept'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['medicationCodeableConcept'] as Map<String, dynamic>),
-    medicationReference: json['medicationReference'] == null
-        ? null
-        : Reference.fromJson(
-            json['medicationReference'] as Map<String, dynamic>),
-    effectiveDateTime: json['effectiveDateTime'] == null
-        ? null
-        : FhirDateTime.fromJson(json['effectiveDateTime']),
-    effectiveDateTimeElement: json['_effectiveDateTime'] == null
-        ? null
-        : Element.fromJson(json['_effectiveDateTime'] as Map<String, dynamic>),
-    effectivePeriod: json['effectivePeriod'] == null
-        ? null
-        : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    dateAsserted: json['dateAsserted'] == null
-        ? null
-        : Date.fromJson(json['dateAsserted']),
-    dateAssertedElement: json['_dateAsserted'] == null
-        ? null
-        : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),
-    informationSource: json['informationSource'] == null
-        ? null
-        : Reference.fromJson(json['informationSource'] as Map<String, dynamic>),
-    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    derivedFrom: (json['derivedFrom'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    taken:
-        _$enumDecodeNullable(_$MedicationStatementTakenEnumMap, json['taken']),
-    takenElement: json['_taken'] == null
-        ? null
-        : Element.fromJson(json['_taken'] as Map<String, dynamic>),
-    reasonNotTaken: (json['reasonNotTaken'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    reasonCode: (json['reasonCode'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    reasonReference: (json['reasonReference'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    dosage: (json['dosage'] as List<dynamic>?)
-        ?.map((e) => Dosage.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_MedicationStatement _$$_MedicationStatementFromJson(
+        Map<String, dynamic> json) =>
+    _$_MedicationStatement(
+      resourceType: _$enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Stu3ResourceType.MedicationStatement) ??
+          Stu3ResourceType.MedicationStatement,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      basedOn: (json['basedOn'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      partOf: (json['partOf'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      context: json['context'] == null
+          ? null
+          : Reference.fromJson(json['context'] as Map<String, dynamic>),
+      status: _$enumDecodeNullable(
+          _$MedicationStatementStatusEnumMap, json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      category: json['category'] == null
+          ? null
+          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
+      medicationCodeableConcept: json['medicationCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['medicationCodeableConcept'] as Map<String, dynamic>),
+      medicationReference: json['medicationReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['medicationReference'] as Map<String, dynamic>),
+      effectiveDateTime: json['effectiveDateTime'] == null
+          ? null
+          : FhirDateTime.fromJson(json['effectiveDateTime']),
+      effectiveDateTimeElement: json['_effectiveDateTime'] == null
+          ? null
+          : Element.fromJson(
+              json['_effectiveDateTime'] as Map<String, dynamic>),
+      effectivePeriod: json['effectivePeriod'] == null
+          ? null
+          : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
+      dateAsserted: json['dateAsserted'] == null
+          ? null
+          : Date.fromJson(json['dateAsserted']),
+      dateAssertedElement: json['_dateAsserted'] == null
+          ? null
+          : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),
+      informationSource: json['informationSource'] == null
+          ? null
+          : Reference.fromJson(
+              json['informationSource'] as Map<String, dynamic>),
+      subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      derivedFrom: (json['derivedFrom'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      taken: _$enumDecodeNullable(
+          _$MedicationStatementTakenEnumMap, json['taken']),
+      takenElement: json['_taken'] == null
+          ? null
+          : Element.fromJson(json['_taken'] as Map<String, dynamic>),
+      reasonNotTaken: (json['reasonNotTaken'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reasonCode: (json['reasonCode'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reasonReference: (json['reasonReference'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      dosage: (json['dosage'] as List<dynamic>?)
+          ?.map((e) => Dosage.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_MedicationStatementToJson(
+Map<String, dynamic> _$$_MedicationStatementToJson(
     _$_MedicationStatement instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType],

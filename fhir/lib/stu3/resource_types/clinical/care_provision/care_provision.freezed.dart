@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'care_provision.dart';
 
@@ -749,7 +749,7 @@ class _$_VisionPrescriptionDispense extends _VisionPrescriptionDispense {
       : super._();
 
   factory _$_VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =>
-      _$_$_VisionPrescriptionDispenseFromJson(json);
+      _$$_VisionPrescriptionDispenseFromJson(json);
 
   @override
   final CodeableConcept? product;
@@ -938,7 +938,7 @@ class _$_VisionPrescriptionDispense extends _VisionPrescriptionDispense {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_VisionPrescriptionDispenseToJson(this);
+    return _$$_VisionPrescriptionDispenseToJson(this);
   }
 }
 
@@ -1887,7 +1887,7 @@ class _$_CarePlan extends _CarePlan {
       : super._();
 
   factory _$_CarePlan.fromJson(Map<String, dynamic> json) =>
-      _$_$_CarePlanFromJson(json);
+      _$$_CarePlanFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
@@ -2103,7 +2103,7 @@ class _$_CarePlan extends _CarePlan {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CarePlanToJson(this);
+    return _$$_CarePlanToJson(this);
   }
 }
 
@@ -2443,7 +2443,7 @@ class _$_CarePlanActivity extends _CarePlanActivity {
       : super._();
 
   factory _$_CarePlanActivity.fromJson(Map<String, dynamic> json) =>
-      _$_$_CarePlanActivityFromJson(json);
+      _$$_CarePlanActivityFromJson(json);
 
   @override
   final List<CodeableConcept>? outcomeCodeableConcept;
@@ -2497,7 +2497,7 @@ class _$_CarePlanActivity extends _CarePlanActivity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CarePlanActivityToJson(this);
+    return _$$_CarePlanActivityToJson(this);
   }
 }
 
@@ -3224,7 +3224,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
       : super._();
 
   factory _$_CarePlanDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_CarePlanDetailFromJson(json);
+      _$$_CarePlanDetailFromJson(json);
 
   @override
   final CodeableConcept? category;
@@ -3392,7 +3392,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CarePlanDetailToJson(this);
+    return _$$_CarePlanDetailToJson(this);
   }
 }
 
@@ -4134,7 +4134,7 @@ class _$_CareTeam extends _CareTeam {
       : super._();
 
   factory _$_CareTeam.fromJson(Map<String, dynamic> json) =>
-      _$_$_CareTeamFromJson(json);
+      _$$_CareTeamFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
@@ -4307,7 +4307,7 @@ class _$_CareTeam extends _CareTeam {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CareTeamToJson(this);
+    return _$$_CareTeamToJson(this);
   }
 }
 
@@ -4622,7 +4622,7 @@ class _$_CareTeamParticipant extends _CareTeamParticipant {
       : super._();
 
   factory _$_CareTeamParticipant.fromJson(Map<String, dynamic> json) =>
-      _$_$_CareTeamParticipantFromJson(json);
+      _$$_CareTeamParticipantFromJson(json);
 
   @override
   final CodeableConcept? role;
@@ -4669,7 +4669,7 @@ class _$_CareTeamParticipant extends _CareTeamParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CareTeamParticipantToJson(this);
+    return _$$_CareTeamParticipantToJson(this);
   }
 }
 
@@ -5514,8 +5514,7 @@ class _$_Goal extends _Goal {
       this.outcomeReference})
       : super._();
 
-  factory _$_Goal.fromJson(Map<String, dynamic> json) =>
-      _$_$_GoalFromJson(json);
+  factory _$_Goal.fromJson(Map<String, dynamic> json) => _$$_GoalFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
@@ -5714,7 +5713,7 @@ class _$_Goal extends _Goal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GoalToJson(this);
+    return _$$_GoalToJson(this);
   }
 }
 
@@ -6129,7 +6128,7 @@ class _$_GoalTarget extends _GoalTarget {
       : super._();
 
   factory _$_GoalTarget.fromJson(Map<String, dynamic> json) =>
-      _$_$_GoalTargetFromJson(json);
+      _$$_GoalTargetFromJson(json);
 
   @override
   final CodeableConcept? measure;
@@ -6197,7 +6196,7 @@ class _$_GoalTarget extends _GoalTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GoalTargetToJson(this);
+    return _$$_GoalTargetToJson(this);
   }
 }
 
@@ -6916,7 +6915,7 @@ class _$_NutritionOrder extends _NutritionOrder {
       : super._();
 
   factory _$_NutritionOrder.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionOrderFromJson(json);
+      _$$_NutritionOrderFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
@@ -7089,7 +7088,7 @@ class _$_NutritionOrder extends _NutritionOrder {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionOrderToJson(this);
+    return _$$_NutritionOrderToJson(this);
   }
 }
 
@@ -7422,7 +7421,7 @@ class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
       : super._();
 
   factory _$_NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionOrderOralDietFromJson(json);
+      _$$_NutritionOrderOralDietFromJson(json);
 
   @override
   final List<CodeableConcept>? type;
@@ -7490,7 +7489,7 @@ class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionOrderOralDietToJson(this);
+    return _$$_NutritionOrderOralDietToJson(this);
   }
 }
 
@@ -7678,7 +7677,7 @@ class _$_NutritionOrderNutrient extends _NutritionOrderNutrient {
   _$_NutritionOrderNutrient({this.modifier, this.amount}) : super._();
 
   factory _$_NutritionOrderNutrient.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionOrderNutrientFromJson(json);
+      _$$_NutritionOrderNutrientFromJson(json);
 
   @override
   final CodeableConcept? modifier;
@@ -7715,7 +7714,7 @@ class _$_NutritionOrderNutrient extends _NutritionOrderNutrient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionOrderNutrientToJson(this);
+    return _$$_NutritionOrderNutrientToJson(this);
   }
 }
 
@@ -7884,7 +7883,7 @@ class _$_NutritionOrderTexture extends _NutritionOrderTexture {
   _$_NutritionOrderTexture({this.modifier, this.foodType}) : super._();
 
   factory _$_NutritionOrderTexture.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionOrderTextureFromJson(json);
+      _$$_NutritionOrderTextureFromJson(json);
 
   @override
   final CodeableConcept? modifier;
@@ -7922,7 +7921,7 @@ class _$_NutritionOrderTexture extends _NutritionOrderTexture {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionOrderTextureToJson(this);
+    return _$$_NutritionOrderTextureToJson(this);
   }
 }
 
@@ -8210,7 +8209,7 @@ class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
       : super._();
 
   factory _$_NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionOrderSupplementFromJson(json);
+      _$$_NutritionOrderSupplementFromJson(json);
 
   @override
   final CodeableConcept? type;
@@ -8279,7 +8278,7 @@ class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionOrderSupplementToJson(this);
+    return _$$_NutritionOrderSupplementToJson(this);
   }
 }
 
@@ -8746,7 +8745,7 @@ class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
       : super._();
 
   factory _$_NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionOrderEnteralFormulaFromJson(json);
+      _$$_NutritionOrderEnteralFormulaFromJson(json);
 
   @override
   final CodeableConcept? baseFormulaType;
@@ -8851,7 +8850,7 @@ class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionOrderEnteralFormulaToJson(this);
+    return _$$_NutritionOrderEnteralFormulaToJson(this);
   }
 }
 
@@ -9131,7 +9130,7 @@ class _$_NutritionOrderAdministration extends _NutritionOrderAdministration {
       : super._();
 
   factory _$_NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionOrderAdministrationFromJson(json);
+      _$$_NutritionOrderAdministrationFromJson(json);
 
   @override
   final Timing? schedule;
@@ -9181,7 +9180,7 @@ class _$_NutritionOrderAdministration extends _NutritionOrderAdministration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionOrderAdministrationToJson(this);
+    return _$$_NutritionOrderAdministrationToJson(this);
   }
 }
 
@@ -10401,7 +10400,7 @@ class _$_ProcedureRequest extends _ProcedureRequest {
       : super._();
 
   factory _$_ProcedureRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcedureRequestFromJson(json);
+      _$$_ProcedureRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
@@ -10668,7 +10667,7 @@ class _$_ProcedureRequest extends _ProcedureRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcedureRequestToJson(this);
+    return _$$_ProcedureRequestToJson(this);
   }
 }
 
@@ -10995,7 +10994,7 @@ class _$_ProcedureRequestRequester extends _ProcedureRequestRequester {
       : super._();
 
   factory _$_ProcedureRequestRequester.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcedureRequestRequesterFromJson(json);
+      _$$_ProcedureRequestRequesterFromJson(json);
 
   @override
   final Reference agent;
@@ -11033,7 +11032,7 @@ class _$_ProcedureRequestRequester extends _ProcedureRequestRequester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcedureRequestRequesterToJson(this);
+    return _$$_ProcedureRequestRequesterToJson(this);
   }
 }
 
@@ -12091,7 +12090,7 @@ class _$_ReferralRequest extends _ReferralRequest {
       : super._();
 
   factory _$_ReferralRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_ReferralRequestFromJson(json);
+      _$$_ReferralRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
@@ -12333,7 +12332,7 @@ class _$_ReferralRequest extends _ReferralRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ReferralRequestToJson(this);
+    return _$$_ReferralRequestToJson(this);
   }
 }
 
@@ -12639,7 +12638,7 @@ class _$_ReferralRequestRequester extends _ReferralRequestRequester {
       : super._();
 
   factory _$_ReferralRequestRequester.fromJson(Map<String, dynamic> json) =>
-      _$_$_ReferralRequestRequesterFromJson(json);
+      _$$_ReferralRequestRequesterFromJson(json);
 
   @override
   final Reference agent;
@@ -12676,7 +12675,7 @@ class _$_ReferralRequestRequester extends _ReferralRequestRequester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ReferralRequestRequesterToJson(this);
+    return _$$_ReferralRequestRequesterToJson(this);
   }
 }
 
@@ -13644,7 +13643,7 @@ class _$_RiskAssessment extends _RiskAssessment {
       : super._();
 
   factory _$_RiskAssessment.fromJson(Map<String, dynamic> json) =>
-      _$_$_RiskAssessmentFromJson(json);
+      _$$_RiskAssessmentFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
@@ -13851,7 +13850,7 @@ class _$_RiskAssessment extends _RiskAssessment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskAssessmentToJson(this);
+    return _$$_RiskAssessmentToJson(this);
   }
 }
 
@@ -14368,7 +14367,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
       : super._();
 
   factory _$_RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
-      _$_$_RiskAssessmentPredictionFromJson(json);
+      _$$_RiskAssessmentPredictionFromJson(json);
 
   @override
   final CodeableConcept outcome;
@@ -14465,7 +14464,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskAssessmentPredictionToJson(this);
+    return _$$_RiskAssessmentPredictionToJson(this);
   }
 }
 
@@ -15154,7 +15153,7 @@ class _$_VisionPrescription extends _VisionPrescription {
       : super._();
 
   factory _$_VisionPrescription.fromJson(Map<String, dynamic> json) =>
-      _$_$_VisionPrescriptionFromJson(json);
+      _$$_VisionPrescriptionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)
@@ -15313,7 +15312,7 @@ class _$_VisionPrescription extends _VisionPrescription {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_VisionPrescriptionToJson(this);
+    return _$$_VisionPrescriptionToJson(this);
   }
 }
 

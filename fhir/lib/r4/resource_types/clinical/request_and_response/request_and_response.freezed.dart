@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'request_and_response.dart';
 
@@ -959,7 +959,7 @@ class _$_Communication extends _Communication {
       : super._();
 
   factory _$_Communication.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunicationFromJson(json);
+      _$$_CommunicationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Communication)
@@ -1191,7 +1191,7 @@ class _$_Communication extends _Communication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunicationToJson(this);
+    return _$$_CommunicationToJson(this);
   }
 }
 
@@ -1596,7 +1596,7 @@ class _$_CommunicationPayload extends _CommunicationPayload {
       : super._();
 
   factory _$_CommunicationPayload.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunicationPayloadFromJson(json);
+      _$$_CommunicationPayloadFromJson(json);
 
   @override
   final String? id;
@@ -1665,7 +1665,7 @@ class _$_CommunicationPayload extends _CommunicationPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunicationPayloadToJson(this);
+    return _$$_CommunicationPayloadToJson(this);
   }
 }
 
@@ -2694,7 +2694,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       : super._();
 
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunicationRequestFromJson(json);
+      _$$_CommunicationRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
@@ -2928,7 +2928,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunicationRequestToJson(this);
+    return _$$_CommunicationRequestToJson(this);
   }
 }
 
@@ -3337,7 +3337,7 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
       : super._();
 
   factory _$_CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunicationRequestPayloadFromJson(json);
+      _$$_CommunicationRequestPayloadFromJson(json);
 
   @override
   final String? id;
@@ -3406,7 +3406,7 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunicationRequestPayloadToJson(this);
+    return _$$_CommunicationRequestPayloadToJson(this);
   }
 }
 
@@ -4562,7 +4562,7 @@ class _$_DeviceRequest extends _DeviceRequest {
       : super._();
 
   factory _$_DeviceRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceRequestFromJson(json);
+      _$$_DeviceRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
@@ -4815,7 +4815,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceRequestToJson(this);
+    return _$$_DeviceRequestToJson(this);
   }
 }
 
@@ -5302,7 +5302,7 @@ class _$_DeviceRequestParameter extends _DeviceRequestParameter {
       : super._();
 
   factory _$_DeviceRequestParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceRequestParameterFromJson(json);
+      _$$_DeviceRequestParameterFromJson(json);
 
   @override
   final String? id;
@@ -5382,7 +5382,7 @@ class _$_DeviceRequestParameter extends _DeviceRequestParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceRequestParameterToJson(this);
+    return _$$_DeviceRequestParameterToJson(this);
   }
 }
 
@@ -6203,7 +6203,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       : super._();
 
   factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceUseStatementFromJson(json);
+      _$$_DeviceUseStatementFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
@@ -6394,7 +6394,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceUseStatementToJson(this);
+    return _$$_DeviceUseStatementToJson(this);
   }
 }
 
@@ -7379,7 +7379,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       : super._();
 
   factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_GuidanceResponseFromJson(json);
+      _$$_GuidanceResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
@@ -7583,7 +7583,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GuidanceResponseToJson(this);
+    return _$$_GuidanceResponseToJson(this);
   }
 }
 
@@ -8446,7 +8446,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       : super._();
 
   factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
-      _$_$_SupplyDeliveryFromJson(json);
+      _$$_SupplyDeliveryFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
@@ -8624,7 +8624,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SupplyDeliveryToJson(this);
+    return _$$_SupplyDeliveryToJson(this);
   }
 }
 
@@ -8972,7 +8972,7 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
       : super._();
 
   factory _$_SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_SupplyDeliverySuppliedItemFromJson(json);
+      _$$_SupplyDeliverySuppliedItemFromJson(json);
 
   @override
   final String? id;
@@ -9034,7 +9034,7 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SupplyDeliverySuppliedItemToJson(this);
+    return _$$_SupplyDeliverySuppliedItemToJson(this);
   }
 }
 
@@ -9975,7 +9975,7 @@ class _$_SupplyRequest extends _SupplyRequest {
       : super._();
 
   factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_SupplyRequestFromJson(json);
+      _$$_SupplyRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
@@ -10183,7 +10183,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SupplyRequestToJson(this);
+    return _$$_SupplyRequestToJson(this);
   }
 }
 
@@ -10633,7 +10633,7 @@ class _$_SupplyRequestParameter extends _SupplyRequestParameter {
       : super._();
 
   factory _$_SupplyRequestParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_SupplyRequestParameterFromJson(json);
+      _$$_SupplyRequestParameterFromJson(json);
 
   @override
   final String? id;
@@ -10713,7 +10713,7 @@ class _$_SupplyRequestParameter extends _SupplyRequestParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SupplyRequestParameterToJson(this);
+    return _$$_SupplyRequestParameterToJson(this);
   }
 }
 

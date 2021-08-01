@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'operations_control.dart';
 
@@ -774,7 +774,7 @@ class _$_Conformance extends _Conformance {
       : super._();
 
   factory _$_Conformance.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceFromJson(json);
+      _$$_ConformanceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
@@ -982,7 +982,7 @@ class _$_Conformance extends _Conformance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceToJson(this);
+    return _$$_ConformanceToJson(this);
   }
 }
 
@@ -1883,7 +1883,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       : super._();
 
   factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementFromJson(json);
+      _$$_CapabilityStatementFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
@@ -2092,7 +2092,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementToJson(this);
+    return _$$_CapabilityStatementToJson(this);
   }
 }
 
@@ -2401,7 +2401,7 @@ class _$_ConformanceContact extends _ConformanceContact {
       : super._();
 
   factory _$_ConformanceContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceContactFromJson(json);
+      _$$_ConformanceContactFromJson(json);
 
   @override
   final Id? id;
@@ -2454,7 +2454,7 @@ class _$_ConformanceContact extends _ConformanceContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceContactToJson(this);
+    return _$$_ConformanceContactToJson(this);
   }
 }
 
@@ -2677,7 +2677,7 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
       : super._();
 
   factory _$_ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceSoftwareFromJson(json);
+      _$$_ConformanceSoftwareFromJson(json);
 
   @override
   final Id? id;
@@ -2738,7 +2738,7 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceSoftwareToJson(this);
+    return _$$_ConformanceSoftwareToJson(this);
   }
 }
 
@@ -2950,7 +2950,7 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
       : super._();
 
   factory _$_ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceImplementationFromJson(json);
+      _$$_ConformanceImplementationFromJson(json);
 
   @override
   final Id? id;
@@ -3006,7 +3006,7 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceImplementationToJson(this);
+    return _$$_ConformanceImplementationToJson(this);
   }
 }
 
@@ -3416,7 +3416,7 @@ class _$_ConformanceRest extends _ConformanceRest {
       : super._();
 
   factory _$_ConformanceRest.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceRestFromJson(json);
+      _$$_ConformanceRestFromJson(json);
 
   @override
   final Id? id;
@@ -3528,7 +3528,7 @@ class _$_ConformanceRest extends _ConformanceRest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceRestToJson(this);
+    return _$$_ConformanceRestToJson(this);
   }
 }
 
@@ -3827,7 +3827,7 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
       : super._();
 
   factory _$_ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceMessagingFromJson(json);
+      _$$_ConformanceMessagingFromJson(json);
 
   @override
   final Id? id;
@@ -3901,7 +3901,7 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceMessagingToJson(this);
+    return _$$_ConformanceMessagingToJson(this);
   }
 }
 
@@ -4170,7 +4170,7 @@ class _$_ConformanceDocument extends _ConformanceDocument {
       : super._();
 
   factory _$_ConformanceDocument.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceDocumentFromJson(json);
+      _$$_ConformanceDocumentFromJson(json);
 
   @override
   final Id? id;
@@ -4238,7 +4238,7 @@ class _$_ConformanceDocument extends _ConformanceDocument {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceDocumentToJson(this);
+    return _$$_ConformanceDocumentToJson(this);
   }
 }
 
@@ -4524,7 +4524,7 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
       : super._();
 
   factory _$_ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceRestSecurityFromJson(json);
+      _$$_ConformanceRestSecurityFromJson(json);
 
   @override
   final Id? id;
@@ -4598,7 +4598,7 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceRestSecurityToJson(this);
+    return _$$_ConformanceRestSecurityToJson(this);
   }
 }
 
@@ -5178,7 +5178,7 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
       : super._();
 
   factory _$_ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceRestResourceFromJson(json);
+      _$$_ConformanceRestResourceFromJson(json);
 
   @override
   final Id? id;
@@ -5333,7 +5333,7 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceRestResourceToJson(this);
+    return _$$_ConformanceRestResourceToJson(this);
   }
 }
 
@@ -5623,7 +5623,7 @@ class _$_ConformanceResourceInteraction
 
   factory _$_ConformanceResourceInteraction.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ConformanceResourceInteractionFromJson(json);
+      _$$_ConformanceResourceInteractionFromJson(json);
 
   @override
   final Id? id;
@@ -5679,7 +5679,7 @@ class _$_ConformanceResourceInteraction
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceResourceInteractionToJson(this);
+    return _$$_ConformanceResourceInteractionToJson(this);
   }
 }
 
@@ -5921,7 +5921,7 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
       : super._();
 
   factory _$_ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceRestOperationFromJson(json);
+      _$$_ConformanceRestOperationFromJson(json);
 
   @override
   final Id? id;
@@ -5983,7 +5983,7 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceRestOperationToJson(this);
+    return _$$_ConformanceRestOperationToJson(this);
   }
 }
 
@@ -6242,7 +6242,7 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
       : super._();
 
   factory _$_ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceMessagingEndpointFromJson(json);
+      _$$_ConformanceMessagingEndpointFromJson(json);
 
   @override
   final Id? id;
@@ -6305,7 +6305,7 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceMessagingEndpointToJson(this);
+    return _$$_ConformanceMessagingEndpointToJson(this);
   }
 }
 
@@ -6665,7 +6665,7 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
       : super._();
 
   factory _$_ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceMessagingEventFromJson(json);
+      _$$_ConformanceMessagingEventFromJson(json);
 
   @override
   final Id? id;
@@ -6758,7 +6758,7 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceMessagingEventToJson(this);
+    return _$$_ConformanceMessagingEventToJson(this);
   }
 }
 
@@ -7027,7 +7027,7 @@ class _$_ConformanceSecurityCertificate
 
   factory _$_ConformanceSecurityCertificate.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ConformanceSecurityCertificateFromJson(json);
+      _$$_ConformanceSecurityCertificateFromJson(json);
 
   @override
   final Id? id;
@@ -7088,7 +7088,7 @@ class _$_ConformanceSecurityCertificate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceSecurityCertificateToJson(this);
+    return _$$_ConformanceSecurityCertificateToJson(this);
   }
 }
 
@@ -7313,7 +7313,7 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
       : super._();
 
   factory _$_ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConformanceRestInteractionFromJson(json);
+      _$$_ConformanceRestInteractionFromJson(json);
 
   @override
   final Id? id;
@@ -7369,7 +7369,7 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceRestInteractionToJson(this);
+    return _$$_ConformanceRestInteractionToJson(this);
   }
 }
 
@@ -7688,7 +7688,7 @@ class _$_ConformanceResourceSearchParam
 
   factory _$_ConformanceResourceSearchParam.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ConformanceResourceSearchParamFromJson(json);
+      _$$_ConformanceResourceSearchParamFromJson(json);
 
   @override
   final Id? id;
@@ -7778,7 +7778,7 @@ class _$_ConformanceResourceSearchParam
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConformanceResourceSearchParamToJson(this);
+    return _$$_ConformanceResourceSearchParamToJson(this);
   }
 }
 
@@ -8443,7 +8443,7 @@ class _$_OperationDefinition extends _OperationDefinition {
       : super._();
 
   factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationDefinitionFromJson(json);
+      _$$_OperationDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
@@ -8628,7 +8628,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationDefinitionToJson(this);
+    return _$$_OperationDefinitionToJson(this);
   }
 }
 
@@ -8916,7 +8916,7 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
       : super._();
 
   factory _$_OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationDefinitionContactFromJson(json);
+      _$$_OperationDefinitionContactFromJson(json);
 
   @override
   final Id? id;
@@ -8970,7 +8970,7 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationDefinitionContactToJson(this);
+    return _$$_OperationDefinitionContactToJson(this);
   }
 }
 
@@ -9350,7 +9350,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
       : super._();
 
   factory _$_OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationDefinitionParameterFromJson(json);
+      _$$_OperationDefinitionParameterFromJson(json);
 
   @override
   final Id? id;
@@ -9451,7 +9451,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationDefinitionParameterToJson(this);
+    return _$$_OperationDefinitionParameterToJson(this);
   }
 }
 
@@ -9759,7 +9759,7 @@ class _$_OperationDefinitionParameterBinding
 
   factory _$_OperationDefinitionParameterBinding.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_OperationDefinitionParameterBindingFromJson(json);
+      _$$_OperationDefinitionParameterBindingFromJson(json);
 
   @override
   final Id? id;
@@ -9826,7 +9826,7 @@ class _$_OperationDefinitionParameterBinding
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationDefinitionParameterBindingToJson(this);
+    return _$$_OperationDefinitionParameterBindingToJson(this);
   }
 }
 
@@ -10444,7 +10444,7 @@ class _$_SearchParameter extends _SearchParameter {
       : super._();
 
   factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchParameterFromJson(json);
+      _$$_SearchParameterFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
@@ -10613,7 +10613,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SearchParameterToJson(this);
+    return _$$_SearchParameterToJson(this);
   }
 }
 
@@ -10894,7 +10894,7 @@ class _$_SearchParameterContact extends _SearchParameterContact {
       : super._();
 
   factory _$_SearchParameterContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchParameterContactFromJson(json);
+      _$$_SearchParameterContactFromJson(json);
 
   @override
   final Id? id;
@@ -10948,7 +10948,7 @@ class _$_SearchParameterContact extends _SearchParameterContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SearchParameterContactToJson(this);
+    return _$$_SearchParameterContactToJson(this);
   }
 }
 

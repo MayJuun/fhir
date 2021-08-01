@@ -6,90 +6,91 @@ part of 'devices.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
-  return _$_Device(
-    resourceType: _$enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Dstu2ResourceType.Device),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
-        unknownValue: DeviceStatus.unknown),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    manufacturer: json['manufacturer'] as String?,
-    manufacturerElement: json['_manufacturer'] == null
-        ? null
-        : Element.fromJson(json['_manufacturer'] as Map<String, dynamic>),
-    model: json['model'] as String?,
-    version: json['version'] as String?,
-    manufactureDate: json['manufactureDate'] == null
-        ? null
-        : FhirDateTime.fromJson(json['manufactureDate']),
-    manufactureDateElement: json['_manufactureDate'] == null
-        ? null
-        : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
-    expiry:
-        json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
-    udi: json['udi'] as String?,
-    udiElement: json['_udi'] == null
-        ? null
-        : Element.fromJson(json['_udi'] as Map<String, dynamic>),
-    lotNumber: json['lotNumber'] as String?,
-    lotNumberElement: json['_lotNumber'] == null
-        ? null
-        : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
-    owner: json['owner'] == null
-        ? null
-        : Reference.fromJson(json['owner'] as Map<String, dynamic>),
-    location: json['location'] == null
-        ? null
-        : Reference.fromJson(json['location'] as Map<String, dynamic>),
-    patient: json['patient'] == null
-        ? null
-        : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
-    urlElement: json['_url'] == null
-        ? null
-        : Element.fromJson(json['_url'] as Map<String, dynamic>),
-  );
-}
+_$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
+      resourceType: _$enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Dstu2ResourceType.Device) ??
+          Dstu2ResourceType.Device,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
+          unknownValue: DeviceStatus.unknown),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      manufacturer: json['manufacturer'] as String?,
+      manufacturerElement: json['_manufacturer'] == null
+          ? null
+          : Element.fromJson(json['_manufacturer'] as Map<String, dynamic>),
+      model: json['model'] as String?,
+      version: json['version'] as String?,
+      manufactureDate: json['manufactureDate'] == null
+          ? null
+          : FhirDateTime.fromJson(json['manufactureDate']),
+      manufactureDateElement: json['_manufactureDate'] == null
+          ? null
+          : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
+      expiry:
+          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
+      udi: json['udi'] as String?,
+      udiElement: json['_udi'] == null
+          ? null
+          : Element.fromJson(json['_udi'] as Map<String, dynamic>),
+      lotNumber: json['lotNumber'] as String?,
+      lotNumberElement: json['_lotNumber'] == null
+          ? null
+          : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
+      owner: json['owner'] == null
+          ? null
+          : Reference.fromJson(json['owner'] as Map<String, dynamic>),
+      location: json['location'] == null
+          ? null
+          : Reference.fromJson(json['location'] as Map<String, dynamic>),
+      patient: json['patient'] == null
+          ? null
+          : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+      contact: (json['contact'] as List<dynamic>?)
+          ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
+      urlElement: json['_url'] == null
+          ? null
+          : Element.fromJson(json['_url'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
+Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
   };
@@ -163,6 +164,17 @@ K _$enumDecode<K, V>(
       return MapEntry(unknownValue, enumValues.values.first);
     },
   ).key;
+}
+
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -263,17 +275,6 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$DeviceStatusEnumMap = {
   DeviceStatus.available: 'available',
   DeviceStatus.not_available: 'not-available',
@@ -281,65 +282,69 @@ const _$DeviceStatusEnumMap = {
   DeviceStatus.unknown: 'unknown',
 };
 
-_$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
-  return _$_DeviceComponent(
-    resourceType: _$enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Dstu2ResourceType.DeviceComponent),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    idElement: json['_id'] == null
-        ? null
-        : Element.fromJson(json['_id'] as Map<String, dynamic>),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    identifier: Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    lastSystemChange: Instant.fromJson(json['lastSystemChange']),
-    source: json['source'] == null
-        ? null
-        : Reference.fromJson(json['source'] as Map<String, dynamic>),
-    parent: json['parent'] == null
-        ? null
-        : Reference.fromJson(json['parent'] as Map<String, dynamic>),
-    operationalStatus: (json['operationalStatus'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    parameterGroup: json['parameterGroup'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['parameterGroup'] as Map<String, dynamic>),
-    measurementPrinciple: _$enumDecodeNullable(
-        _$DeviceComponentMeasurementPrincipleEnumMap,
-        json['measurementPrinciple'],
-        unknownValue: DeviceComponentMeasurementPrinciple.unknown),
-    productionSpecification: (json['productionSpecification'] as List<dynamic>?)
-        ?.map((e) => DeviceComponentProductionSpecification.fromJson(
-            e as Map<String, dynamic>))
-        .toList(),
-    languageCode: json['languageCode'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['languageCode'] as Map<String, dynamic>),
-  );
-}
+_$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
+    _$_DeviceComponent(
+      resourceType: _$enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Dstu2ResourceType.DeviceComponent) ??
+          Dstu2ResourceType.DeviceComponent,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      idElement: json['_id'] == null
+          ? null
+          : Element.fromJson(json['_id'] as Map<String, dynamic>),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      identifier:
+          Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      lastSystemChange: Instant.fromJson(json['lastSystemChange']),
+      source: json['source'] == null
+          ? null
+          : Reference.fromJson(json['source'] as Map<String, dynamic>),
+      parent: json['parent'] == null
+          ? null
+          : Reference.fromJson(json['parent'] as Map<String, dynamic>),
+      operationalStatus: (json['operationalStatus'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      parameterGroup: json['parameterGroup'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['parameterGroup'] as Map<String, dynamic>),
+      measurementPrinciple: _$enumDecodeNullable(
+          _$DeviceComponentMeasurementPrincipleEnumMap,
+          json['measurementPrinciple'],
+          unknownValue: DeviceComponentMeasurementPrinciple.unknown),
+      productionSpecification:
+          (json['productionSpecification'] as List<dynamic>?)
+              ?.map((e) => DeviceComponentProductionSpecification.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
+      languageCode: json['languageCode'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['languageCode'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
+Map<String, dynamic> _$$_DeviceComponentToJson(_$_DeviceComponent instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
   };
@@ -396,27 +401,28 @@ const _$DeviceComponentMeasurementPrincipleEnumMap = {
 };
 
 _$_DeviceComponentProductionSpecification
-    _$_$_DeviceComponentProductionSpecificationFromJson(
-        Map<String, dynamic> json) {
-  return _$_DeviceComponentProductionSpecification(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    specType: json['specType'] == null
-        ? null
-        : CodeableConcept.fromJson(json['specType'] as Map<String, dynamic>),
-    componentId: json['componentId'] == null
-        ? null
-        : Identifier.fromJson(json['componentId'] as Map<String, dynamic>),
-    productionSpec: json['productionSpec'] as String?,
-  );
-}
+    _$$_DeviceComponentProductionSpecificationFromJson(
+            Map<String, dynamic> json) =>
+        _$_DeviceComponentProductionSpecification(
+          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          specType: json['specType'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['specType'] as Map<String, dynamic>),
+          componentId: json['componentId'] == null
+              ? null
+              : Identifier.fromJson(
+                  json['componentId'] as Map<String, dynamic>),
+          productionSpec: json['productionSpec'] as String?,
+        );
 
-Map<String, dynamic> _$_$_DeviceComponentProductionSpecificationToJson(
+Map<String, dynamic> _$$_DeviceComponentProductionSpecificationToJson(
     _$_DeviceComponentProductionSpecification instance) {
   final val = <String, dynamic>{};
 
@@ -437,74 +443,78 @@ Map<String, dynamic> _$_$_DeviceComponentProductionSpecificationToJson(
   return val;
 }
 
-_$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
-  return _$_DeviceMetric(
-    resourceType: _$enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Dstu2ResourceType.DeviceMetric),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    identifier: Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    unit: json['unit'] == null
-        ? null
-        : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
-    source: json['source'] == null
-        ? null
-        : Reference.fromJson(json['source'] as Map<String, dynamic>),
-    parent: json['parent'] == null
-        ? null
-        : Reference.fromJson(json['parent'] as Map<String, dynamic>),
-    operationalStatus: _$enumDecodeNullable(
-        _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus'],
-        unknownValue: DeviceMetricOperationalStatus.unknown),
-    operationalStatusElement: json['_operationalStatus'] == null
-        ? null
-        : Element.fromJson(json['_operationalStatus'] as Map<String, dynamic>),
-    color: _$enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color'],
-        unknownValue: DeviceMetricColor.unknown),
-    colorElement: json['_color'] == null
-        ? null
-        : Element.fromJson(json['_color'] as Map<String, dynamic>),
-    category: _$enumDecode(_$DeviceMetricCategoryEnumMap, json['category'],
-        unknownValue: DeviceMetricCategory.unknown),
-    categoryElement: json['_category'] == null
-        ? null
-        : Element.fromJson(json['_category'] as Map<String, dynamic>),
-    measurementPeriod: json['measurementPeriod'] == null
-        ? null
-        : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
-    calibration: (json['calibration'] as List<dynamic>?)
-        ?.map(
-            (e) => DeviceMetricCalibration.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
+    _$_DeviceMetric(
+      resourceType: _$enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Dstu2ResourceType.DeviceMetric) ??
+          Dstu2ResourceType.DeviceMetric,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      identifier:
+          Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      unit: json['unit'] == null
+          ? null
+          : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
+      source: json['source'] == null
+          ? null
+          : Reference.fromJson(json['source'] as Map<String, dynamic>),
+      parent: json['parent'] == null
+          ? null
+          : Reference.fromJson(json['parent'] as Map<String, dynamic>),
+      operationalStatus: _$enumDecodeNullable(
+          _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus'],
+          unknownValue: DeviceMetricOperationalStatus.unknown),
+      operationalStatusElement: json['_operationalStatus'] == null
+          ? null
+          : Element.fromJson(
+              json['_operationalStatus'] as Map<String, dynamic>),
+      color: _$enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color'],
+          unknownValue: DeviceMetricColor.unknown),
+      colorElement: json['_color'] == null
+          ? null
+          : Element.fromJson(json['_color'] as Map<String, dynamic>),
+      category: _$enumDecode(_$DeviceMetricCategoryEnumMap, json['category'],
+          unknownValue: DeviceMetricCategory.unknown),
+      categoryElement: json['_category'] == null
+          ? null
+          : Element.fromJson(json['_category'] as Map<String, dynamic>),
+      measurementPeriod: json['measurementPeriod'] == null
+          ? null
+          : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
+      calibration: (json['calibration'] as List<dynamic>?)
+          ?.map((e) =>
+              DeviceMetricCalibration.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
+Map<String, dynamic> _$$_DeviceMetricToJson(_$_DeviceMetric instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
   };
@@ -574,34 +584,33 @@ const _$DeviceMetricCategoryEnumMap = {
   DeviceMetricCategory.unknown: 'unknown',
 };
 
-_$_DeviceMetricCalibration _$_$_DeviceMetricCalibrationFromJson(
-    Map<String, dynamic> json) {
-  return _$_DeviceMetricCalibration(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    type: _$enumDecodeNullable(_$CalibrationTypeEnumMap, json['type'],
-        unknownValue: CalibrationType.unknown),
-    typeElement: json['_type'] == null
-        ? null
-        : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    state: _$enumDecodeNullable(_$CalibrationStateEnumMap, json['state'],
-        unknownValue: CalibrationState.unknown),
-    stateElement: json['_state'] == null
-        ? null
-        : Element.fromJson(json['_state'] as Map<String, dynamic>),
-    time: json['time'] == null ? null : Instant.fromJson(json['time']),
-    timeElement: json['_time'] == null
-        ? null
-        : Element.fromJson(json['_time'] as Map<String, dynamic>),
-  );
-}
+_$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
+        Map<String, dynamic> json) =>
+    _$_DeviceMetricCalibration(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: _$enumDecodeNullable(_$CalibrationTypeEnumMap, json['type'],
+          unknownValue: CalibrationType.unknown),
+      typeElement: json['_type'] == null
+          ? null
+          : Element.fromJson(json['_type'] as Map<String, dynamic>),
+      state: _$enumDecodeNullable(_$CalibrationStateEnumMap, json['state'],
+          unknownValue: CalibrationState.unknown),
+      stateElement: json['_state'] == null
+          ? null
+          : Element.fromJson(json['_state'] as Map<String, dynamic>),
+      time: json['time'] == null ? null : Instant.fromJson(json['time']),
+      timeElement: json['_time'] == null
+          ? null
+          : Element.fromJson(json['_time'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_DeviceMetricCalibrationToJson(
+Map<String, dynamic> _$$_DeviceMetricCalibrationToJson(
     _$_DeviceMetricCalibration instance) {
   final val = <String, dynamic>{};
 

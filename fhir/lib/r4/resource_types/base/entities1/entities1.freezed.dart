@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'entities1.dart';
 
@@ -719,7 +719,7 @@ class _$_Endpoint extends _Endpoint {
       : super._();
 
   factory _$_Endpoint.fromJson(Map<String, dynamic> json) =>
-      _$_$_EndpointFromJson(json);
+      _$$_EndpointFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
@@ -904,7 +904,7 @@ class _$_Endpoint extends _Endpoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EndpointToJson(this);
+    return _$$_EndpointToJson(this);
   }
 }
 
@@ -2000,7 +2000,7 @@ class _$_HealthcareService extends _HealthcareService {
       : super._();
 
   factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceFromJson(json);
+      _$$_HealthcareServiceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
@@ -2242,7 +2242,7 @@ class _$_HealthcareService extends _HealthcareService {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceToJson(this);
+    return _$$_HealthcareServiceToJson(this);
   }
 }
 
@@ -2636,7 +2636,7 @@ class _$_HealthcareServiceEligibility extends _HealthcareServiceEligibility {
       : super._();
 
   factory _$_HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceEligibilityFromJson(json);
+      _$$_HealthcareServiceEligibilityFromJson(json);
 
   @override
   final String? id;
@@ -2698,7 +2698,7 @@ class _$_HealthcareServiceEligibility extends _HealthcareServiceEligibility {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceEligibilityToJson(this);
+    return _$$_HealthcareServiceEligibilityToJson(this);
   }
 }
 
@@ -3064,7 +3064,7 @@ class _$_HealthcareServiceAvailableTime
 
   factory _$_HealthcareServiceAvailableTime.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceAvailableTimeFromJson(json);
+      _$$_HealthcareServiceAvailableTimeFromJson(json);
 
   @override
   final String? id;
@@ -3162,7 +3162,7 @@ class _$_HealthcareServiceAvailableTime
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceAvailableTimeToJson(this);
+    return _$$_HealthcareServiceAvailableTimeToJson(this);
   }
 }
 
@@ -3452,7 +3452,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
   factory _$_HealthcareServiceNotAvailable.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceNotAvailableFromJson(json);
+      _$$_HealthcareServiceNotAvailableFromJson(json);
 
   @override
   final String? id;
@@ -3514,7 +3514,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceNotAvailableToJson(this);
+    return _$$_HealthcareServiceNotAvailableToJson(this);
   }
 }
 
@@ -4458,7 +4458,7 @@ class _$_Location extends _Location {
       : super._();
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
-      _$_$_LocationFromJson(json);
+      _$$_LocationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Location)
@@ -4674,7 +4674,7 @@ class _$_Location extends _Location {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LocationToJson(this);
+    return _$$_LocationToJson(this);
   }
 }
 
@@ -5103,7 +5103,7 @@ class _$_LocationPosition extends _LocationPosition {
       : super._();
 
   factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
-      _$_$_LocationPositionFromJson(json);
+      _$$_LocationPositionFromJson(json);
 
   @override
   final String? id;
@@ -5185,7 +5185,7 @@ class _$_LocationPosition extends _LocationPosition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LocationPositionToJson(this);
+    return _$$_LocationPositionToJson(this);
   }
 }
 
@@ -5554,7 +5554,7 @@ class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
       : super._();
 
   factory _$_LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =>
-      _$_$_LocationHoursOfOperationFromJson(json);
+      _$$_LocationHoursOfOperationFromJson(json);
 
   @override
   final String? id;
@@ -5649,7 +5649,7 @@ class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LocationHoursOfOperationToJson(this);
+    return _$$_LocationHoursOfOperationToJson(this);
   }
 }
 
@@ -6315,7 +6315,7 @@ class _$_Organization extends _Organization {
       : super._();
 
   factory _$_Organization.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrganizationFromJson(json);
+      _$$_OrganizationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Organization)
@@ -6483,7 +6483,7 @@ class _$_Organization extends _Organization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrganizationToJson(this);
+    return _$$_OrganizationToJson(this);
   }
 }
 
@@ -6836,7 +6836,7 @@ class _$_OrganizationContact extends _OrganizationContact {
       : super._();
 
   factory _$_OrganizationContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrganizationContactFromJson(json);
+      _$$_OrganizationContactFromJson(json);
 
   @override
   final String? id;
@@ -6902,7 +6902,7 @@ class _$_OrganizationContact extends _OrganizationContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrganizationContactToJson(this);
+    return _$$_OrganizationContactToJson(this);
   }
 }
 
@@ -7560,7 +7560,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
       : super._();
 
   factory _$_OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrganizationAffiliationFromJson(json);
+      _$$_OrganizationAffiliationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
@@ -7728,7 +7728,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrganizationAffiliationToJson(this);
+    return _$$_OrganizationAffiliationToJson(this);
   }
 }
 

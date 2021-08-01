@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'conformance.dart';
 
@@ -1400,7 +1400,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       : super._();
 
   factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementFromJson(json);
+      _$$_CapabilityStatementFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
@@ -1715,7 +1715,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementToJson(this);
+    return _$$_CapabilityStatementToJson(this);
   }
 }
 
@@ -2190,7 +2190,7 @@ class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
       : super._();
 
   factory _$_CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementSoftwareFromJson(json);
+      _$$_CapabilityStatementSoftwareFromJson(json);
 
   @override
   final String? name;
@@ -2254,7 +2254,7 @@ class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementSoftwareToJson(this);
+    return _$$_CapabilityStatementSoftwareToJson(this);
   }
 }
 
@@ -2489,7 +2489,7 @@ class _$_CapabilityStatementImplementation
 
   factory _$_CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementImplementationFromJson(json);
+      _$$_CapabilityStatementImplementationFromJson(json);
 
   @override
   final String? description;
@@ -2541,7 +2541,7 @@ class _$_CapabilityStatementImplementation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementImplementationToJson(this);
+    return _$$_CapabilityStatementImplementationToJson(this);
   }
 }
 
@@ -2898,7 +2898,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
       : super._();
 
   factory _$_CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementRestFromJson(json);
+      _$$_CapabilityStatementRestFromJson(json);
 
   @override
   final CapabilityStatementRestMode? mode;
@@ -2992,7 +2992,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementRestToJson(this);
+    return _$$_CapabilityStatementRestToJson(this);
   }
 }
 
@@ -3293,7 +3293,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
       : super._();
 
   factory _$_CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementSecurityFromJson(json);
+      _$$_CapabilityStatementSecurityFromJson(json);
 
   @override
   @JsonKey(name: 'extension')
@@ -3363,7 +3363,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementSecurityToJson(this);
+    return _$$_CapabilityStatementSecurityToJson(this);
   }
 }
 
@@ -3602,7 +3602,7 @@ class _$_CapabilityStatementCertificate
 
   factory _$_CapabilityStatementCertificate.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementCertificateFromJson(json);
+      _$$_CapabilityStatementCertificateFromJson(json);
 
   @override
   final String? type;
@@ -3652,7 +3652,7 @@ class _$_CapabilityStatementCertificate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementCertificateToJson(this);
+    return _$$_CapabilityStatementCertificateToJson(this);
   }
 }
 
@@ -4412,7 +4412,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
       : super._();
 
   factory _$_CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementResourceFromJson(json);
+      _$$_CapabilityStatementResourceFromJson(json);
 
   @override
   final String? type;
@@ -4597,7 +4597,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementResourceToJson(this);
+    return _$$_CapabilityStatementResourceToJson(this);
   }
 }
 
@@ -4926,7 +4926,7 @@ class _$_CapabilityStatementInteraction
 
   factory _$_CapabilityStatementInteraction.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementInteractionFromJson(json);
+      _$$_CapabilityStatementInteractionFromJson(json);
 
   @override
   final CapabilityStatementInteractionCode? code;
@@ -4977,7 +4977,7 @@ class _$_CapabilityStatementInteraction
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementInteractionToJson(this);
+    return _$$_CapabilityStatementInteractionToJson(this);
   }
 }
 
@@ -5301,7 +5301,7 @@ class _$_CapabilityStatementSearchParam
 
   factory _$_CapabilityStatementSearchParam.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementSearchParamFromJson(json);
+      _$$_CapabilityStatementSearchParamFromJson(json);
 
   @override
   final String? name;
@@ -5377,7 +5377,7 @@ class _$_CapabilityStatementSearchParam
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementSearchParamToJson(this);
+    return _$$_CapabilityStatementSearchParamToJson(this);
   }
 }
 
@@ -5621,7 +5621,7 @@ class _$_CapabilityStatementInteraction1
 
   factory _$_CapabilityStatementInteraction1.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementInteraction1FromJson(json);
+      _$$_CapabilityStatementInteraction1FromJson(json);
 
   @override
   final CapabilityStatementInteraction1Code? code;
@@ -5672,7 +5672,7 @@ class _$_CapabilityStatementInteraction1
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementInteraction1ToJson(this);
+    return _$$_CapabilityStatementInteraction1ToJson(this);
   }
 }
 
@@ -5877,7 +5877,7 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
       : super._();
 
   factory _$_CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementOperationFromJson(json);
+      _$$_CapabilityStatementOperationFromJson(json);
 
   @override
   final String? name;
@@ -5921,7 +5921,7 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementOperationToJson(this);
+    return _$$_CapabilityStatementOperationToJson(this);
   }
 }
 
@@ -6192,7 +6192,7 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
       : super._();
 
   factory _$_CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementMessagingFromJson(json);
+      _$$_CapabilityStatementMessagingFromJson(json);
 
   @override
   final List<CapabilityStatementEndpoint>? endpoint;
@@ -6261,7 +6261,7 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementMessagingToJson(this);
+    return _$$_CapabilityStatementMessagingToJson(this);
   }
 }
 
@@ -6476,7 +6476,7 @@ class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
       : super._();
 
   factory _$_CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementEndpointFromJson(json);
+      _$$_CapabilityStatementEndpointFromJson(json);
 
   @override
   final Coding protocol;
@@ -6521,7 +6521,7 @@ class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementEndpointToJson(this);
+    return _$$_CapabilityStatementEndpointToJson(this);
   }
 }
 
@@ -6726,7 +6726,7 @@ class _$_CapabilityStatementSupportedMessage
 
   factory _$_CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementSupportedMessageFromJson(json);
+      _$$_CapabilityStatementSupportedMessageFromJson(json);
 
   @override
   final CapabilityStatementSupportedMessageMode? mode;
@@ -6771,7 +6771,7 @@ class _$_CapabilityStatementSupportedMessage
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementSupportedMessageToJson(this);
+    return _$$_CapabilityStatementSupportedMessageToJson(this);
   }
 }
 
@@ -7164,7 +7164,7 @@ class _$_CapabilityStatementEvent extends _CapabilityStatementEvent {
       : super._();
 
   factory _$_CapabilityStatementEvent.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementEventFromJson(json);
+      _$$_CapabilityStatementEventFromJson(json);
 
   @override
   final Coding code;
@@ -7257,7 +7257,7 @@ class _$_CapabilityStatementEvent extends _CapabilityStatementEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementEventToJson(this);
+    return _$$_CapabilityStatementEventToJson(this);
   }
 }
 
@@ -7532,7 +7532,7 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
       : super._();
 
   factory _$_CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
-      _$_$_CapabilityStatementDocumentFromJson(json);
+      _$$_CapabilityStatementDocumentFromJson(json);
 
   @override
   final CapabilityStatementDocumentMode? mode;
@@ -7588,7 +7588,7 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CapabilityStatementDocumentToJson(this);
+    return _$$_CapabilityStatementDocumentToJson(this);
   }
 }
 
@@ -8598,7 +8598,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
       : super._();
 
   factory _$_CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompartmentDefinitionFromJson(json);
+      _$$_CompartmentDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
@@ -8830,7 +8830,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompartmentDefinitionToJson(this);
+    return _$$_CompartmentDefinitionToJson(this);
   }
 }
 
@@ -9217,7 +9217,7 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
 
   factory _$_CompartmentDefinitionResource.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CompartmentDefinitionResourceFromJson(json);
+      _$$_CompartmentDefinitionResourceFromJson(json);
 
   @override
   final Code? code;
@@ -9280,7 +9280,7 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompartmentDefinitionResourceToJson(this);
+    return _$$_CompartmentDefinitionResourceToJson(this);
   }
 }
 
@@ -10270,7 +10270,7 @@ class _$_DataElement extends _DataElement {
       : super._();
 
   factory _$_DataElement.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataElementFromJson(json);
+      _$$_DataElementFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
@@ -10500,7 +10500,7 @@ class _$_DataElement extends _DataElement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataElementToJson(this);
+    return _$$_DataElementToJson(this);
   }
 }
 
@@ -10938,7 +10938,7 @@ class _$_DataElementMapping extends _DataElementMapping {
       : super._();
 
   factory _$_DataElementMapping.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataElementMappingFromJson(json);
+      _$$_DataElementMappingFromJson(json);
 
   @override
   final Id? identity;
@@ -11013,7 +11013,7 @@ class _$_DataElementMapping extends _DataElementMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataElementMappingToJson(this);
+    return _$$_DataElementMappingToJson(this);
   }
 }
 
@@ -12030,7 +12030,7 @@ class _$_GraphDefinition extends _GraphDefinition {
       : super._();
 
   factory _$_GraphDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_GraphDefinitionFromJson(json);
+      _$$_GraphDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
@@ -12261,7 +12261,7 @@ class _$_GraphDefinition extends _GraphDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GraphDefinitionToJson(this);
+    return _$$_GraphDefinitionToJson(this);
   }
 }
 
@@ -12764,7 +12764,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
       : super._();
 
   factory _$_GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
-      _$_$_GraphDefinitionLinkFromJson(json);
+      _$$_GraphDefinitionLinkFromJson(json);
 
   @override
   final String? path;
@@ -12857,7 +12857,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GraphDefinitionLinkToJson(this);
+    return _$$_GraphDefinitionLinkToJson(this);
   }
 }
 
@@ -13133,7 +13133,7 @@ class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
       : super._();
 
   factory _$_GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
-      _$_$_GraphDefinitionTargetFromJson(json);
+      _$$_GraphDefinitionTargetFromJson(json);
 
   @override
   final String? type;
@@ -13195,7 +13195,7 @@ class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GraphDefinitionTargetToJson(this);
+    return _$$_GraphDefinitionTargetToJson(this);
   }
 }
 
@@ -13518,7 +13518,7 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
       : super._();
 
   factory _$_GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
-      _$_$_GraphDefinitionCompartmentFromJson(json);
+      _$$_GraphDefinitionCompartmentFromJson(json);
 
   @override
   final Code? code;
@@ -13594,7 +13594,7 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GraphDefinitionCompartmentToJson(this);
+    return _$$_GraphDefinitionCompartmentToJson(this);
   }
 }
 
@@ -14663,7 +14663,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
       : super._();
 
   factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuideFromJson(json);
+      _$$_ImplementationGuideFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
@@ -14907,7 +14907,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuideToJson(this);
+    return _$$_ImplementationGuideToJson(this);
   }
 }
 
@@ -15272,7 +15272,7 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
 
   factory _$_ImplementationGuideDependency.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImplementationGuideDependencyFromJson(json);
+      _$$_ImplementationGuideDependencyFromJson(json);
 
   @override
   final ImplementationGuideDependencyType? type;
@@ -15322,7 +15322,7 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuideDependencyToJson(this);
+    return _$$_ImplementationGuideDependencyToJson(this);
   }
 }
 
@@ -15563,7 +15563,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
       : super._();
 
   factory _$_ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuidePackageFromJson(json);
+      _$$_ImplementationGuidePackageFromJson(json);
 
   @override
   final String? name;
@@ -15620,7 +15620,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuidePackageToJson(this);
+    return _$$_ImplementationGuidePackageToJson(this);
   }
 }
 
@@ -16049,7 +16049,7 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
       : super._();
 
   factory _$_ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuideResourceFromJson(json);
+      _$$_ImplementationGuideResourceFromJson(json);
 
   @override
   final Boolean? example;
@@ -16151,7 +16151,7 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuideResourceToJson(this);
+    return _$$_ImplementationGuideResourceToJson(this);
   }
 }
 
@@ -16378,7 +16378,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
       : super._();
 
   factory _$_ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuideGlobalFromJson(json);
+      _$$_ImplementationGuideGlobalFromJson(json);
 
   @override
   final String? type;
@@ -16422,7 +16422,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuideGlobalToJson(this);
+    return _$$_ImplementationGuideGlobalToJson(this);
   }
 }
 
@@ -16814,7 +16814,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
       : super._();
 
   factory _$_ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuidePageFromJson(json);
+      _$$_ImplementationGuidePageFromJson(json);
 
   @override
   final String? source;
@@ -16918,7 +16918,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuidePageToJson(this);
+    return _$$_ImplementationGuidePageToJson(this);
   }
 }
 
@@ -18188,7 +18188,7 @@ class _$_MessageDefinition extends _MessageDefinition {
       : super._();
 
   factory _$_MessageDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageDefinitionFromJson(json);
+      _$$_MessageDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
@@ -18461,7 +18461,7 @@ class _$_MessageDefinition extends _MessageDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageDefinitionToJson(this);
+    return _$$_MessageDefinitionToJson(this);
   }
 }
 
@@ -18921,7 +18921,7 @@ class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
       : super._();
 
   factory _$_MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageDefinitionFocusFromJson(json);
+      _$$_MessageDefinitionFocusFromJson(json);
 
   @override
   final Code? code;
@@ -18989,7 +18989,7 @@ class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageDefinitionFocusToJson(this);
+    return _$$_MessageDefinitionFocusToJson(this);
   }
 }
 
@@ -19204,7 +19204,7 @@ class _$_MessageDefinitionAllowedResponse
 
   factory _$_MessageDefinitionAllowedResponse.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_MessageDefinitionAllowedResponseFromJson(json);
+      _$$_MessageDefinitionAllowedResponseFromJson(json);
 
   @override
   final Reference message;
@@ -19249,7 +19249,7 @@ class _$_MessageDefinitionAllowedResponse
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageDefinitionAllowedResponseToJson(this);
+    return _$$_MessageDefinitionAllowedResponseToJson(this);
   }
 }
 
@@ -20589,7 +20589,7 @@ class _$_OperationDefinition extends _OperationDefinition {
       : super._();
 
   factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationDefinitionFromJson(json);
+      _$$_OperationDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
@@ -20883,7 +20883,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationDefinitionToJson(this);
+    return _$$_OperationDefinitionToJson(this);
   }
 }
 
@@ -21605,7 +21605,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
       : super._();
 
   factory _$_OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationDefinitionParameterFromJson(json);
+      _$$_OperationDefinitionParameterFromJson(json);
 
   @override
   final String? name;
@@ -21735,7 +21735,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationDefinitionParameterToJson(this);
+    return _$$_OperationDefinitionParameterToJson(this);
   }
 }
 
@@ -22054,7 +22054,7 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
       : super._();
 
   factory _$_OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationDefinitionBindingFromJson(json);
+      _$$_OperationDefinitionBindingFromJson(json);
 
   @override
   @JsonKey(name: 'extension')
@@ -22119,7 +22119,7 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationDefinitionBindingToJson(this);
+    return _$$_OperationDefinitionBindingToJson(this);
   }
 }
 
@@ -22337,7 +22337,7 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
       : super._();
 
   factory _$_OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationDefinitionOverloadFromJson(json);
+      _$$_OperationDefinitionOverloadFromJson(json);
 
   @override
   final List<String>? parameterName;
@@ -22389,7 +22389,7 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationDefinitionOverloadToJson(this);
+    return _$$_OperationDefinitionOverloadToJson(this);
   }
 }
 
@@ -23787,7 +23787,7 @@ class _$_SearchParameter extends _SearchParameter {
       : super._();
 
   factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchParameterFromJson(json);
+      _$$_SearchParameterFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
@@ -24099,7 +24099,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SearchParameterToJson(this);
+    return _$$_SearchParameterToJson(this);
   }
 }
 
@@ -24502,7 +24502,7 @@ class _$_SearchParameterComponent extends _SearchParameterComponent {
       : super._();
 
   factory _$_SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchParameterComponentFromJson(json);
+      _$$_SearchParameterComponentFromJson(json);
 
   @override
   final Reference definition;
@@ -24547,7 +24547,7 @@ class _$_SearchParameterComponent extends _SearchParameterComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SearchParameterComponentToJson(this);
+    return _$$_SearchParameterComponentToJson(this);
   }
 }
 
@@ -26082,7 +26082,7 @@ class _$_StructureDefinition extends _StructureDefinition {
       : super._();
 
   factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureDefinitionFromJson(json);
+      _$$_StructureDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
@@ -26412,7 +26412,7 @@ class _$_StructureDefinition extends _StructureDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureDefinitionToJson(this);
+    return _$$_StructureDefinitionToJson(this);
   }
 }
 
@@ -26947,7 +26947,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
       : super._();
 
   factory _$_StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureDefinitionMappingFromJson(json);
+      _$$_StructureDefinitionMappingFromJson(json);
 
   @override
   final Id? identity;
@@ -27023,7 +27023,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureDefinitionMappingToJson(this);
+    return _$$_StructureDefinitionMappingToJson(this);
   }
 }
 
@@ -27177,7 +27177,7 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
   _$_StructureDefinitionSnapshot({required this.element}) : super._();
 
   factory _$_StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureDefinitionSnapshotFromJson(json);
+      _$$_StructureDefinitionSnapshotFromJson(json);
 
   @override
   final List<ElementDefinition> element;
@@ -27207,7 +27207,7 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureDefinitionSnapshotToJson(this);
+    return _$$_StructureDefinitionSnapshotToJson(this);
   }
 }
 
@@ -27340,7 +27340,7 @@ class _$_StructureDefinitionDifferential
 
   factory _$_StructureDefinitionDifferential.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_StructureDefinitionDifferentialFromJson(json);
+      _$$_StructureDefinitionDifferentialFromJson(json);
 
   @override
   final List<ElementDefinition> element;
@@ -27370,7 +27370,7 @@ class _$_StructureDefinitionDifferential
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureDefinitionDifferentialToJson(this);
+    return _$$_StructureDefinitionDifferentialToJson(this);
   }
 }
 
@@ -28436,7 +28436,7 @@ class _$_StructureMap extends _StructureMap {
       : super._();
 
   factory _$_StructureMap.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureMapFromJson(json);
+      _$$_StructureMapFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
@@ -28685,7 +28685,7 @@ class _$_StructureMap extends _StructureMap {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureMapToJson(this);
+    return _$$_StructureMapToJson(this);
   }
 }
 
@@ -29143,7 +29143,7 @@ class _$_StructureMapStructure extends _StructureMapStructure {
       : super._();
 
   factory _$_StructureMapStructure.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureMapStructureFromJson(json);
+      _$$_StructureMapStructureFromJson(json);
 
   @override
   final String? url;
@@ -29218,7 +29218,7 @@ class _$_StructureMapStructure extends _StructureMapStructure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureMapStructureToJson(this);
+    return _$$_StructureMapStructureToJson(this);
   }
 }
 
@@ -29578,7 +29578,7 @@ class _$_StructureMapGroup extends _StructureMapGroup {
       : super._();
 
   factory _$_StructureMapGroup.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureMapGroupFromJson(json);
+      _$$_StructureMapGroupFromJson(json);
 
   @override
   final String? name;
@@ -29665,7 +29665,7 @@ class _$_StructureMapGroup extends _StructureMapGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureMapGroupToJson(this);
+    return _$$_StructureMapGroupToJson(this);
   }
 }
 
@@ -29998,7 +29998,7 @@ class _$_StructureMapInput extends _StructureMapInput {
       : super._();
 
   factory _$_StructureMapInput.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureMapInputFromJson(json);
+      _$$_StructureMapInputFromJson(json);
 
   @override
   final String? name;
@@ -30072,7 +30072,7 @@ class _$_StructureMapInput extends _StructureMapInput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureMapInputToJson(this);
+    return _$$_StructureMapInputToJson(this);
   }
 }
 
@@ -30370,7 +30370,7 @@ class _$_StructureMapRule extends _StructureMapRule {
       : super._();
 
   factory _$_StructureMapRule.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureMapRuleFromJson(json);
+      _$$_StructureMapRuleFromJson(json);
 
   @override
   final String? name;
@@ -30441,7 +30441,7 @@ class _$_StructureMapRule extends _StructureMapRule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureMapRuleToJson(this);
+    return _$$_StructureMapRuleToJson(this);
   }
 }
 
@@ -33022,7 +33022,7 @@ class _$_StructureMapSource extends _StructureMapSource {
       : super._();
 
   factory _$_StructureMapSource.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureMapSourceFromJson(json);
+      _$$_StructureMapSourceFromJson(json);
 
   @override
   final String? context;
@@ -33460,7 +33460,7 @@ class _$_StructureMapSource extends _StructureMapSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureMapSourceToJson(this);
+    return _$$_StructureMapSourceToJson(this);
   }
 }
 
@@ -34241,7 +34241,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
       : super._();
 
   factory _$_StructureMapTarget.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureMapTargetFromJson(json);
+      _$$_StructureMapTargetFromJson(json);
 
   @override
   final String? context;
@@ -34363,7 +34363,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureMapTargetToJson(this);
+    return _$$_StructureMapTargetToJson(this);
   }
 }
 
@@ -34765,7 +34765,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
       : super._();
 
   factory _$_StructureMapParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureMapParameterFromJson(json);
+      _$$_StructureMapParameterFromJson(json);
 
   @override
   final Id? valueId;
@@ -34856,7 +34856,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureMapParameterToJson(this);
+    return _$$_StructureMapParameterToJson(this);
   }
 }
 
@@ -35083,7 +35083,7 @@ class _$_StructureMapDependent extends _StructureMapDependent {
       : super._();
 
   factory _$_StructureMapDependent.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureMapDependentFromJson(json);
+      _$$_StructureMapDependentFromJson(json);
 
   @override
   final String? name;
@@ -35134,7 +35134,7 @@ class _$_StructureMapDependent extends _StructureMapDependent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureMapDependentToJson(this);
+    return _$$_StructureMapDependentToJson(this);
   }
 }
 

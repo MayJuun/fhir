@@ -7,6 +7,7 @@ void main() {
       HumanName(family: 'Faulkenberry'),
       HumanName(given: ['Jason', 'Grey'])
     ]);
+    print(pat1.toJson());
 
     expect(pat1.name?[0].family, 'Faulkenberry');
     expect(pat1.name?[1].given?[1], 'Grey');

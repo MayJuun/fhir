@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'information_tracking.dart';
 
@@ -697,7 +697,7 @@ class _$_Questionnaire extends _Questionnaire {
       : super._();
 
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireFromJson(json);
+      _$$_QuestionnaireFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
@@ -876,7 +876,7 @@ class _$_Questionnaire extends _Questionnaire {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireToJson(this);
+    return _$$_QuestionnaireToJson(this);
   }
 }
 
@@ -1343,7 +1343,7 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
       : super._();
 
   factory _$_QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireGroupFromJson(json);
+      _$$_QuestionnaireGroupFromJson(json);
 
   @override
   final Id? id;
@@ -1452,7 +1452,7 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireGroupToJson(this);
+    return _$$_QuestionnaireGroupToJson(this);
   }
 }
 
@@ -1872,7 +1872,7 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
       : super._();
 
   factory _$_QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireGroupQuestionFromJson(json);
+      _$$_QuestionnaireGroupQuestionFromJson(json);
 
   @override
   final Id? id;
@@ -1981,7 +1981,7 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireGroupQuestionToJson(this);
+    return _$$_QuestionnaireGroupQuestionToJson(this);
   }
 }
 
@@ -2747,7 +2747,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
       : super._();
 
   factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireResponseFromJson(json);
+      _$$_QuestionnaireResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
@@ -2913,7 +2913,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireResponseToJson(this);
+    return _$$_QuestionnaireResponseToJson(this);
   }
 }
 
@@ -3354,7 +3354,7 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
       : super._();
 
   factory _$_QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireResponseGroupFromJson(json);
+      _$$_QuestionnaireResponseGroupFromJson(json);
 
   @override
   final Id? id;
@@ -3451,7 +3451,7 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireResponseGroupToJson(this);
+    return _$$_QuestionnaireResponseGroupToJson(this);
   }
 }
 
@@ -3761,7 +3761,7 @@ class _$_QuestionnaireResponseGroupQuestion
 
   factory _$_QuestionnaireResponseGroupQuestion.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_QuestionnaireResponseGroupQuestionFromJson(json);
+      _$$_QuestionnaireResponseGroupQuestionFromJson(json);
 
   @override
   final Id? id;
@@ -3835,7 +3835,7 @@ class _$_QuestionnaireResponseGroupQuestion
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireResponseGroupQuestionToJson(this);
+    return _$$_QuestionnaireResponseGroupQuestionToJson(this);
   }
 }
 
@@ -4614,7 +4614,7 @@ class _$_QuestionnaireResponseQuestionAnswer
 
   factory _$_QuestionnaireResponseQuestionAnswer.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_QuestionnaireResponseQuestionAnswerFromJson(json);
+      _$$_QuestionnaireResponseQuestionAnswerFromJson(json);
 
   @override
   final Id? id;
@@ -4803,7 +4803,7 @@ class _$_QuestionnaireResponseQuestionAnswer
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireResponseQuestionAnswerToJson(this);
+    return _$$_QuestionnaireResponseQuestionAnswerToJson(this);
   }
 }
 
@@ -5519,7 +5519,7 @@ class _$_Provenance extends _Provenance {
       : super._();
 
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceFromJson(json);
+      _$$_ProvenanceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
@@ -5679,7 +5679,7 @@ class _$_Provenance extends _Provenance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceToJson(this);
+    return _$$_ProvenanceToJson(this);
   }
 }
 
@@ -6041,7 +6041,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
       : super._();
 
   factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceAgentFromJson(json);
+      _$$_ProvenanceAgentFromJson(json);
 
   @override
   final Id? id;
@@ -6112,7 +6112,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceAgentToJson(this);
+    return _$$_ProvenanceAgentToJson(this);
   }
 }
 
@@ -6484,7 +6484,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       : super._();
 
   factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceEntityFromJson(json);
+      _$$_ProvenanceEntityFromJson(json);
 
   @override
   final Id? id;
@@ -6576,7 +6576,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceEntityToJson(this);
+    return _$$_ProvenanceEntityToJson(this);
   }
 }
 
@@ -6822,7 +6822,7 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
       : super._();
 
   factory _$_ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceAgentRelatedAgentFromJson(json);
+      _$$_ProvenanceAgentRelatedAgentFromJson(json);
 
   @override
   final Id? id;
@@ -6876,7 +6876,7 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceAgentRelatedAgentToJson(this);
+    return _$$_ProvenanceAgentRelatedAgentToJson(this);
   }
 }
 
@@ -7339,7 +7339,7 @@ class _$_AuditEvent extends _AuditEvent {
       : super._();
 
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventFromJson(json);
+      _$$_AuditEventFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
@@ -7452,7 +7452,7 @@ class _$_AuditEvent extends _AuditEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventToJson(this);
+    return _$$_AuditEventToJson(this);
   }
 }
 
@@ -7789,7 +7789,7 @@ class _$_AuditEventEvent extends _AuditEventEvent {
       : super._();
 
   factory _$_AuditEventEvent.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventEventFromJson(json);
+      _$$_AuditEventEventFromJson(json);
 
   @override
   final Id? id;
@@ -7872,7 +7872,7 @@ class _$_AuditEventEvent extends _AuditEventEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventEventToJson(this);
+    return _$$_AuditEventEventToJson(this);
   }
 }
 
@@ -8344,7 +8344,7 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
       : super._();
 
   factory _$_AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventParticipantFromJson(json);
+      _$$_AuditEventParticipantFromJson(json);
 
   @override
   final Id? id;
@@ -8455,7 +8455,7 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventParticipantToJson(this);
+    return _$$_AuditEventParticipantToJson(this);
   }
 }
 
@@ -8753,7 +8753,7 @@ class _$_AuditEventSource extends _AuditEventSource {
       : super._();
 
   factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventSourceFromJson(json);
+      _$$_AuditEventSourceFromJson(json);
 
   @override
   final Id? id;
@@ -8819,7 +8819,7 @@ class _$_AuditEventSource extends _AuditEventSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventSourceToJson(this);
+    return _$$_AuditEventSourceToJson(this);
   }
 }
 
@@ -9265,7 +9265,7 @@ class _$_AuditEventObject extends _AuditEventObject {
       : super._();
 
   factory _$_AuditEventObject.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventObjectFromJson(json);
+      _$$_AuditEventObjectFromJson(json);
 
   @override
   final Id? id;
@@ -9370,7 +9370,7 @@ class _$_AuditEventObject extends _AuditEventObject {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventObjectToJson(this);
+    return _$$_AuditEventObjectToJson(this);
   }
 }
 
@@ -9675,7 +9675,7 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
       : super._();
 
   factory _$_AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventParticipantNetworkFromJson(json);
+      _$$_AuditEventParticipantNetworkFromJson(json);
 
   @override
   final Id? id;
@@ -9744,7 +9744,7 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventParticipantNetworkToJson(this);
+    return _$$_AuditEventParticipantNetworkToJson(this);
   }
 }
 
@@ -9995,7 +9995,7 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
       : super._();
 
   factory _$_AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventObjectDetailFromJson(json);
+      _$$_AuditEventObjectDetailFromJson(json);
 
   @override
   final Id? id;
@@ -10056,7 +10056,7 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventObjectDetailToJson(this);
+    return _$$_AuditEventObjectDetailToJson(this);
   }
 }
 

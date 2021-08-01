@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'evidence_based_medicine.dart';
 
@@ -1381,7 +1381,7 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
       : super._();
 
   factory _$_EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
-      _$_$_EffectEvidenceSynthesisFromJson(json);
+      _$$_EffectEvidenceSynthesisFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
@@ -1686,7 +1686,7 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EffectEvidenceSynthesisToJson(this);
+    return _$$_EffectEvidenceSynthesisToJson(this);
   }
 }
 
@@ -2213,7 +2213,7 @@ class _$_EffectEvidenceSynthesisSampleSize
 
   factory _$_EffectEvidenceSynthesisSampleSize.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EffectEvidenceSynthesisSampleSizeFromJson(json);
+      _$$_EffectEvidenceSynthesisSampleSizeFromJson(json);
 
   @override
   final String? id;
@@ -2299,7 +2299,7 @@ class _$_EffectEvidenceSynthesisSampleSize
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EffectEvidenceSynthesisSampleSizeToJson(this);
+    return _$$_EffectEvidenceSynthesisSampleSizeToJson(this);
   }
 }
 
@@ -2690,7 +2690,7 @@ class _$_EffectEvidenceSynthesisResultsByExposure
 
   factory _$_EffectEvidenceSynthesisResultsByExposure.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EffectEvidenceSynthesisResultsByExposureFromJson(json);
+      _$$_EffectEvidenceSynthesisResultsByExposureFromJson(json);
 
   @override
   final String? id;
@@ -2776,7 +2776,7 @@ class _$_EffectEvidenceSynthesisResultsByExposure
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EffectEvidenceSynthesisResultsByExposureToJson(this);
+    return _$$_EffectEvidenceSynthesisResultsByExposureToJson(this);
   }
 }
 
@@ -3192,7 +3192,7 @@ class _$_EffectEvidenceSynthesisEffectEstimate
 
   factory _$_EffectEvidenceSynthesisEffectEstimate.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EffectEvidenceSynthesisEffectEstimateFromJson(json);
+      _$$_EffectEvidenceSynthesisEffectEstimateFromJson(json);
 
   @override
   final String? id;
@@ -3285,7 +3285,7 @@ class _$_EffectEvidenceSynthesisEffectEstimate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EffectEvidenceSynthesisEffectEstimateToJson(this);
+    return _$$_EffectEvidenceSynthesisEffectEstimateToJson(this);
   }
 }
 
@@ -3670,7 +3670,7 @@ class _$_EffectEvidenceSynthesisPrecisionEstimate
 
   factory _$_EffectEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EffectEvidenceSynthesisPrecisionEstimateFromJson(json);
+      _$$_EffectEvidenceSynthesisPrecisionEstimateFromJson(json);
 
   @override
   final String? id;
@@ -3756,7 +3756,7 @@ class _$_EffectEvidenceSynthesisPrecisionEstimate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EffectEvidenceSynthesisPrecisionEstimateToJson(this);
+    return _$$_EffectEvidenceSynthesisPrecisionEstimateToJson(this);
   }
 }
 
@@ -4013,7 +4013,7 @@ class _$_EffectEvidenceSynthesisCertainty
 
   factory _$_EffectEvidenceSynthesisCertainty.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EffectEvidenceSynthesisCertaintyFromJson(json);
+      _$$_EffectEvidenceSynthesisCertaintyFromJson(json);
 
   @override
   final String? id;
@@ -4074,7 +4074,7 @@ class _$_EffectEvidenceSynthesisCertainty
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EffectEvidenceSynthesisCertaintyToJson(this);
+    return _$$_EffectEvidenceSynthesisCertaintyToJson(this);
   }
 }
 
@@ -4332,7 +4332,7 @@ class _$_EffectEvidenceSynthesisCertaintySubcomponent
 
   factory _$_EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EffectEvidenceSynthesisCertaintySubcomponentFromJson(json);
+      _$$_EffectEvidenceSynthesisCertaintySubcomponentFromJson(json);
 
   @override
   final String? id;
@@ -4393,7 +4393,7 @@ class _$_EffectEvidenceSynthesisCertaintySubcomponent
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EffectEvidenceSynthesisCertaintySubcomponentToJson(this);
+    return _$$_EffectEvidenceSynthesisCertaintySubcomponentToJson(this);
   }
 }
 
@@ -5707,7 +5707,7 @@ class _$_Evidence extends _Evidence {
       : super._();
 
   factory _$_Evidence.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceFromJson(json);
+      _$$_EvidenceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
@@ -6001,7 +6001,7 @@ class _$_Evidence extends _Evidence {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceToJson(this);
+    return _$$_EvidenceToJson(this);
   }
 }
 
@@ -7505,7 +7505,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       : super._();
 
   factory _$_EvidenceVariable.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceVariableFromJson(json);
+      _$$_EvidenceVariableFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
@@ -7801,7 +7801,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceVariableToJson(this);
+    return _$$_EvidenceVariableToJson(this);
   }
 }
 
@@ -8742,7 +8742,7 @@ class _$_EvidenceVariableCharacteristic
 
   factory _$_EvidenceVariableCharacteristic.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EvidenceVariableCharacteristicFromJson(json);
+      _$$_EvidenceVariableCharacteristicFromJson(json);
 
   @override
   final String? id;
@@ -8899,7 +8899,7 @@ class _$_EvidenceVariableCharacteristic
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceVariableCharacteristicToJson(this);
+    return _$$_EvidenceVariableCharacteristicToJson(this);
   }
 }
 
@@ -10602,7 +10602,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
       : super._();
 
   factory _$_ResearchDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_ResearchDefinitionFromJson(json);
+      _$$_ResearchDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
@@ -10945,7 +10945,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ResearchDefinitionToJson(this);
+    return _$$_ResearchDefinitionToJson(this);
   }
 }
 
@@ -12812,7 +12812,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
       : super._();
 
   factory _$_ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_ResearchElementDefinitionFromJson(json);
+      _$$_ResearchElementDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
@@ -13165,7 +13165,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ResearchElementDefinitionToJson(this);
+    return _$$_ResearchElementDefinitionToJson(this);
   }
 }
 
@@ -14473,7 +14473,7 @@ class _$_ResearchElementDefinitionCharacteristic
 
   factory _$_ResearchElementDefinitionCharacteristic.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ResearchElementDefinitionCharacteristicFromJson(json);
+      _$$_ResearchElementDefinitionCharacteristicFromJson(json);
 
   @override
   final String? id;
@@ -14677,7 +14677,7 @@ class _$_ResearchElementDefinitionCharacteristic
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ResearchElementDefinitionCharacteristicToJson(this);
+    return _$$_ResearchElementDefinitionCharacteristicToJson(this);
   }
 }
 
@@ -16192,7 +16192,7 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
       : super._();
 
   factory _$_RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
-      _$_$_RiskEvidenceSynthesisFromJson(json);
+      _$$_RiskEvidenceSynthesisFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
@@ -16489,7 +16489,7 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskEvidenceSynthesisToJson(this);
+    return _$$_RiskEvidenceSynthesisToJson(this);
   }
 }
 
@@ -17008,7 +17008,7 @@ class _$_RiskEvidenceSynthesisSampleSize
 
   factory _$_RiskEvidenceSynthesisSampleSize.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_RiskEvidenceSynthesisSampleSizeFromJson(json);
+      _$$_RiskEvidenceSynthesisSampleSizeFromJson(json);
 
   @override
   final String? id;
@@ -17093,7 +17093,7 @@ class _$_RiskEvidenceSynthesisSampleSize
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskEvidenceSynthesisSampleSizeToJson(this);
+    return _$$_RiskEvidenceSynthesisSampleSizeToJson(this);
   }
 }
 
@@ -17565,7 +17565,7 @@ class _$_RiskEvidenceSynthesisRiskEstimate
 
   factory _$_RiskEvidenceSynthesisRiskEstimate.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_RiskEvidenceSynthesisRiskEstimateFromJson(json);
+      _$$_RiskEvidenceSynthesisRiskEstimateFromJson(json);
 
   @override
   final String? id;
@@ -17679,7 +17679,7 @@ class _$_RiskEvidenceSynthesisRiskEstimate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskEvidenceSynthesisRiskEstimateToJson(this);
+    return _$$_RiskEvidenceSynthesisRiskEstimateToJson(this);
   }
 }
 
@@ -18074,7 +18074,7 @@ class _$_RiskEvidenceSynthesisPrecisionEstimate
 
   factory _$_RiskEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_RiskEvidenceSynthesisPrecisionEstimateFromJson(json);
+      _$$_RiskEvidenceSynthesisPrecisionEstimateFromJson(json);
 
   @override
   final String? id;
@@ -18160,7 +18160,7 @@ class _$_RiskEvidenceSynthesisPrecisionEstimate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskEvidenceSynthesisPrecisionEstimateToJson(this);
+    return _$$_RiskEvidenceSynthesisPrecisionEstimateToJson(this);
   }
 }
 
@@ -18415,7 +18415,7 @@ class _$_RiskEvidenceSynthesisCertainty
 
   factory _$_RiskEvidenceSynthesisCertainty.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_RiskEvidenceSynthesisCertaintyFromJson(json);
+      _$$_RiskEvidenceSynthesisCertaintyFromJson(json);
 
   @override
   final String? id;
@@ -18475,7 +18475,7 @@ class _$_RiskEvidenceSynthesisCertainty
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskEvidenceSynthesisCertaintyToJson(this);
+    return _$$_RiskEvidenceSynthesisCertaintyToJson(this);
   }
 }
 
@@ -18733,7 +18733,7 @@ class _$_RiskEvidenceSynthesisCertaintySubcomponent
 
   factory _$_RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_RiskEvidenceSynthesisCertaintySubcomponentFromJson(json);
+      _$$_RiskEvidenceSynthesisCertaintySubcomponentFromJson(json);
 
   @override
   final String? id;
@@ -18793,7 +18793,7 @@ class _$_RiskEvidenceSynthesisCertaintySubcomponent
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RiskEvidenceSynthesisCertaintySubcomponentToJson(this);
+    return _$$_RiskEvidenceSynthesisCertaintySubcomponentToJson(this);
   }
 }
 

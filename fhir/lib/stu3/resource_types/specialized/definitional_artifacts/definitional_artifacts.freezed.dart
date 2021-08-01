@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'definitional_artifacts.dart';
 
@@ -1676,7 +1676,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       : super._();
 
   factory _$_ActivityDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_ActivityDefinitionFromJson(json);
+      _$$_ActivityDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
@@ -2025,7 +2025,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ActivityDefinitionToJson(this);
+    return _$$_ActivityDefinitionToJson(this);
   }
 }
 
@@ -2459,7 +2459,7 @@ class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
 
   factory _$_ActivityDefinitionParticipant.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ActivityDefinitionParticipantFromJson(json);
+      _$$_ActivityDefinitionParticipantFromJson(json);
 
   @override
   final String? type;
@@ -2502,7 +2502,7 @@ class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ActivityDefinitionParticipantToJson(this);
+    return _$$_ActivityDefinitionParticipantToJson(this);
   }
 }
 
@@ -2819,7 +2819,7 @@ class _$_ActivityDefinitionDynamicValue
 
   factory _$_ActivityDefinitionDynamicValue.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ActivityDefinitionDynamicValueFromJson(json);
+      _$$_ActivityDefinitionDynamicValueFromJson(json);
 
   @override
   final String? description;
@@ -2896,7 +2896,7 @@ class _$_ActivityDefinitionDynamicValue
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ActivityDefinitionDynamicValueToJson(this);
+    return _$$_ActivityDefinitionDynamicValueToJson(this);
   }
 }
 
@@ -4229,7 +4229,7 @@ class _$_PlanDefinition extends _PlanDefinition {
       : super._();
 
   factory _$_PlanDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_PlanDefinitionFromJson(json);
+      _$$_PlanDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
@@ -4520,7 +4520,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PlanDefinitionToJson(this);
+    return _$$_PlanDefinitionToJson(this);
   }
 }
 
@@ -4988,7 +4988,7 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
       : super._();
 
   factory _$_PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
-      _$_$_PlanDefinitionGoalFromJson(json);
+      _$$_PlanDefinitionGoalFromJson(json);
 
   @override
   final CodeableConcept? category;
@@ -5053,7 +5053,7 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PlanDefinitionGoalToJson(this);
+    return _$$_PlanDefinitionGoalToJson(this);
   }
 }
 
@@ -5337,7 +5337,7 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
       : super._();
 
   factory _$_PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
-      _$_$_PlanDefinitionTargetFromJson(json);
+      _$$_PlanDefinitionTargetFromJson(json);
 
   @override
   final CodeableConcept? measure;
@@ -5392,7 +5392,7 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PlanDefinitionTargetToJson(this);
+    return _$$_PlanDefinitionTargetToJson(this);
   }
 }
 
@@ -6451,7 +6451,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       : super._();
 
   factory _$_PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
-      _$_$_PlanDefinitionActionFromJson(json);
+      _$$_PlanDefinitionActionFromJson(json);
 
   @override
   final String? label;
@@ -6690,7 +6690,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PlanDefinitionActionToJson(this);
+    return _$$_PlanDefinitionActionToJson(this);
   }
 }
 
@@ -7143,7 +7143,7 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
       : super._();
 
   factory _$_PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
-      _$_$_PlanDefinitionConditionFromJson(json);
+      _$$_PlanDefinitionConditionFromJson(json);
 
   @override
   final PlanDefinitionConditionKind? kind;
@@ -7220,7 +7220,7 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PlanDefinitionConditionToJson(this);
+    return _$$_PlanDefinitionConditionToJson(this);
   }
 }
 
@@ -7519,7 +7519,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
       : super._();
 
   factory _$_PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
-      _$_$_PlanDefinitionRelatedActionFromJson(json);
+      _$$_PlanDefinitionRelatedActionFromJson(json);
 
   @override
   final Id? actionId;
@@ -7583,7 +7583,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PlanDefinitionRelatedActionToJson(this);
+    return _$$_PlanDefinitionRelatedActionToJson(this);
   }
 }
 
@@ -7792,7 +7792,7 @@ class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
       : super._();
 
   factory _$_PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
-      _$_$_PlanDefinitionParticipantFromJson(json);
+      _$$_PlanDefinitionParticipantFromJson(json);
 
   @override
   final PlanDefinitionParticipantType? type;
@@ -7836,7 +7836,7 @@ class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PlanDefinitionParticipantToJson(this);
+    return _$$_PlanDefinitionParticipantToJson(this);
   }
 }
 
@@ -8147,7 +8147,7 @@ class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
       : super._();
 
   factory _$_PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
-      _$_$_PlanDefinitionDynamicValueFromJson(json);
+      _$$_PlanDefinitionDynamicValueFromJson(json);
 
   @override
   final String? description;
@@ -8224,7 +8224,7 @@ class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PlanDefinitionDynamicValueToJson(this);
+    return _$$_PlanDefinitionDynamicValueToJson(this);
   }
 }
 
@@ -9442,7 +9442,7 @@ class _$_Questionnaire extends _Questionnaire {
       : super._();
 
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireFromJson(json);
+      _$$_QuestionnaireFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
@@ -9712,7 +9712,7 @@ class _$_Questionnaire extends _Questionnaire {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireToJson(this);
+    return _$$_QuestionnaireToJson(this);
   }
 }
 
@@ -11029,7 +11029,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
       : super._();
 
   factory _$_QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireItemFromJson(json);
+      _$$_QuestionnaireItemFromJson(json);
 
   @override
   final String? linkId;
@@ -11292,7 +11292,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireItemToJson(this);
+    return _$$_QuestionnaireItemToJson(this);
   }
 }
 
@@ -12146,7 +12146,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
       : super._();
 
   factory _$_QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireEnableWhenFromJson(json);
+      _$$_QuestionnaireEnableWhenFromJson(json);
 
   @override
   final String? question;
@@ -12320,7 +12320,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireEnableWhenToJson(this);
+    return _$$_QuestionnaireEnableWhenToJson(this);
   }
 }
 
@@ -12730,7 +12730,7 @@ class _$_QuestionnaireOption extends _QuestionnaireOption {
       : super._();
 
   factory _$_QuestionnaireOption.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireOptionFromJson(json);
+      _$$_QuestionnaireOptionFromJson(json);
 
   @override
   final Decimal? valueInteger;
@@ -12814,7 +12814,7 @@ class _$_QuestionnaireOption extends _QuestionnaireOption {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireOptionToJson(this);
+    return _$$_QuestionnaireOptionToJson(this);
   }
 }
 
@@ -14128,7 +14128,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
       : super._();
 
   factory _$_ServiceDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_ServiceDefinitionFromJson(json);
+      _$$_ServiceDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
@@ -14414,7 +14414,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ServiceDefinitionToJson(this);
+    return _$$_ServiceDefinitionToJson(this);
   }
 }
 

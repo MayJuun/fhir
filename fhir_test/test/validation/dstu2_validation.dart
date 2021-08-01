@@ -6,19 +6,15 @@ Future<List<String>> dstu2Validation() async {
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
     var resource = dstu2.Resource.fromJson(jsonDecode(contents));
-    var result = await checkMapEquality(
-        jsonDecode(contents), resource.toJson(), file.toString());
-    if (result != '') {
-      string.add(result);
+    print(contents);
+    print(resource);
+    if (!DeepCollectionEquality()
+        .equals(resource.toJson(), jsonDecode(contents))) {
+      string.add(file.path);
     }
-  }
-  for (var file in await dir.list().toList()) {
-    var contents = await File(file.path).readAsString();
-    var resource = dstu2.Resource.fromJson(jsonDecode(contents));
-    var result = await checkMapEquality(
-        resource.toJson(), jsonDecode(contents), file.toString());
-    if (result != '') {
-      string.add(result);
+    if (!DeepCollectionEquality()
+        .equals(jsonDecode(contents), resource.toJson())) {
+      string.add(file.path);
     }
   }
   return string;

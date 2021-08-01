@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'security.dart';
 
@@ -716,7 +716,7 @@ class _$_AuditEvent extends _AuditEvent {
       : super._();
 
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventFromJson(json);
+      _$$_AuditEventFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
@@ -898,7 +898,7 @@ class _$_AuditEvent extends _AuditEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventToJson(this);
+    return _$$_AuditEventToJson(this);
   }
 }
 
@@ -1514,7 +1514,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
       : super._();
 
   factory _$_AuditEventAgent.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventAgentFromJson(json);
+      _$$_AuditEventAgentFromJson(json);
 
   @override
   final String? id;
@@ -1644,7 +1644,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventAgentToJson(this);
+    return _$$_AuditEventAgentToJson(this);
   }
 }
 
@@ -1971,7 +1971,7 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
       : super._();
 
   factory _$_AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventNetworkFromJson(json);
+      _$$_AuditEventNetworkFromJson(json);
 
   @override
   final String? id;
@@ -2040,7 +2040,7 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventNetworkToJson(this);
+    return _$$_AuditEventNetworkToJson(this);
   }
 }
 
@@ -2319,7 +2319,7 @@ class _$_AuditEventSource extends _AuditEventSource {
       : super._();
 
   factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventSourceFromJson(json);
+      _$$_AuditEventSourceFromJson(json);
 
   @override
   final String? id;
@@ -2385,7 +2385,7 @@ class _$_AuditEventSource extends _AuditEventSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventSourceToJson(this);
+    return _$$_AuditEventSourceToJson(this);
   }
 }
 
@@ -2862,7 +2862,7 @@ class _$_AuditEventEntity extends _AuditEventEntity {
       : super._();
 
   factory _$_AuditEventEntity.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventEntityFromJson(json);
+      _$$_AuditEventEntityFromJson(json);
 
   @override
   final String? id;
@@ -2974,7 +2974,7 @@ class _$_AuditEventEntity extends _AuditEventEntity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventEntityToJson(this);
+    return _$$_AuditEventEntityToJson(this);
   }
 }
 
@@ -3325,7 +3325,7 @@ class _$_AuditEventDetail extends _AuditEventDetail {
       : super._();
 
   factory _$_AuditEventDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventDetailFromJson(json);
+      _$$_AuditEventDetailFromJson(json);
 
   @override
   final String? id;
@@ -3407,7 +3407,7 @@ class _$_AuditEventDetail extends _AuditEventDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventDetailToJson(this);
+    return _$$_AuditEventDetailToJson(this);
   }
 }
 
@@ -4179,7 +4179,7 @@ class _$_Consent extends _Consent {
       : super._();
 
   factory _$_Consent.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentFromJson(json);
+      _$$_ConsentFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
@@ -4362,7 +4362,7 @@ class _$_Consent extends _Consent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentToJson(this);
+    return _$$_ConsentToJson(this);
   }
 }
 
@@ -4712,7 +4712,7 @@ class _$_ConsentPolicy extends _ConsentPolicy {
       : super._();
 
   factory _$_ConsentPolicy.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentPolicyFromJson(json);
+      _$$_ConsentPolicyFromJson(json);
 
   @override
   final String? id;
@@ -4780,7 +4780,7 @@ class _$_ConsentPolicy extends _ConsentPolicy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentPolicyToJson(this);
+    return _$$_ConsentPolicyToJson(this);
   }
 }
 
@@ -5089,7 +5089,7 @@ class _$_ConsentVerification extends _ConsentVerification {
       : super._();
 
   factory _$_ConsentVerification.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentVerificationFromJson(json);
+      _$$_ConsentVerificationFromJson(json);
 
   @override
   final String? id;
@@ -5166,7 +5166,7 @@ class _$_ConsentVerification extends _ConsentVerification {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentVerificationToJson(this);
+    return _$$_ConsentVerificationToJson(this);
   }
 }
 
@@ -5606,7 +5606,7 @@ class _$_ConsentProvision extends _ConsentProvision {
       : super._();
 
   factory _$_ConsentProvision.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentProvisionFromJson(json);
+      _$$_ConsentProvisionFromJson(json);
 
   @override
   final String? id;
@@ -5717,7 +5717,7 @@ class _$_ConsentProvision extends _ConsentProvision {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentProvisionToJson(this);
+    return _$$_ConsentProvisionToJson(this);
   }
 }
 
@@ -5981,7 +5981,7 @@ class _$_ConsentActor extends _ConsentActor {
       : super._();
 
   factory _$_ConsentActor.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentActorFromJson(json);
+      _$$_ConsentActorFromJson(json);
 
   @override
   final String? id;
@@ -6035,7 +6035,7 @@ class _$_ConsentActor extends _ConsentActor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentActorToJson(this);
+    return _$$_ConsentActorToJson(this);
   }
 }
 
@@ -6293,7 +6293,7 @@ class _$_ConsentData extends _ConsentData {
       : super._();
 
   factory _$_ConsentData.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentDataFromJson(json);
+      _$$_ConsentDataFromJson(json);
 
   @override
   final String? id;
@@ -6356,7 +6356,7 @@ class _$_ConsentData extends _ConsentData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentDataToJson(this);
+    return _$$_ConsentDataToJson(this);
   }
 }
 
@@ -7050,7 +7050,7 @@ class _$_Provenance extends _Provenance {
       : super._();
 
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceFromJson(json);
+      _$$_ProvenanceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
@@ -7222,7 +7222,7 @@ class _$_Provenance extends _Provenance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceToJson(this);
+    return _$$_ProvenanceToJson(this);
   }
 }
 
@@ -7574,7 +7574,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
       : super._();
 
   factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceAgentFromJson(json);
+      _$$_ProvenanceAgentFromJson(json);
 
   @override
   final String? id;
@@ -7638,7 +7638,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceAgentToJson(this);
+    return _$$_ProvenanceAgentToJson(this);
   }
 }
 
@@ -7920,7 +7920,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       : super._();
 
   factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceEntityFromJson(json);
+      _$$_ProvenanceEntityFromJson(json);
 
   @override
   final String? id;
@@ -7986,7 +7986,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceEntityToJson(this);
+    return _$$_ProvenanceEntityToJson(this);
   }
 }
 

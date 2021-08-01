@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'special_types.dart';
 
@@ -206,7 +206,7 @@ class _$_Narrative extends _Narrative {
       : super._();
 
   factory _$_Narrative.fromJson(Map<String, dynamic> json) =>
-      _$_$_NarrativeFromJson(json);
+      _$$_NarrativeFromJson(json);
 
   @override
   final String? id;
@@ -261,7 +261,7 @@ class _$_Narrative extends _Narrative {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NarrativeToJson(this);
+    return _$$_NarrativeToJson(this);
   }
 }
 
@@ -591,7 +591,7 @@ class _$_Reference extends _Reference {
       : super._();
 
   factory _$_Reference.fromJson(Map<String, dynamic> json) =>
-      _$_$_ReferenceFromJson(json);
+      _$$_ReferenceFromJson(json);
 
   @override
   final String? id;
@@ -672,7 +672,7 @@ class _$_Reference extends _Reference {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ReferenceToJson(this);
+    return _$$_ReferenceToJson(this);
   }
 }
 
@@ -1027,8 +1027,7 @@ class _$_Meta extends _Meta {
       this.tag})
       : super._();
 
-  factory _$_Meta.fromJson(Map<String, dynamic> json) =>
-      _$_$_MetaFromJson(json);
+  factory _$_Meta.fromJson(Map<String, dynamic> json) => _$$_MetaFromJson(json);
 
   @override
   final String? id;
@@ -1120,7 +1119,7 @@ class _$_Meta extends _Meta {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MetaToJson(this);
+    return _$$_MetaToJson(this);
   }
 }
 
@@ -1772,7 +1771,7 @@ class _$_Dosage extends _Dosage {
       : super._();
 
   factory _$_Dosage.fromJson(Map<String, dynamic> json) =>
-      _$_$_DosageFromJson(json);
+      _$$_DosageFromJson(json);
 
   @override
   final String? id;
@@ -1921,7 +1920,7 @@ class _$_Dosage extends _Dosage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DosageToJson(this);
+    return _$$_DosageToJson(this);
   }
 }
 
@@ -2331,7 +2330,7 @@ class _$_DosageDoseAndRate extends _DosageDoseAndRate {
       : super._();
 
   factory _$_DosageDoseAndRate.fromJson(Map<String, dynamic> json) =>
-      _$_$_DosageDoseAndRateFromJson(json);
+      _$$_DosageDoseAndRateFromJson(json);
 
   @override
   final String? id;
@@ -2409,7 +2408,7 @@ class _$_DosageDoseAndRate extends _DosageDoseAndRate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DosageDoseAndRateToJson(this);
+    return _$$_DosageDoseAndRateToJson(this);
   }
 }
 
@@ -10434,7 +10433,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       : super._();
 
   factory _$_ElementDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionFromJson(json);
+      _$$_ElementDefinitionFromJson(json);
 
   @override
   final String? id;
@@ -11769,7 +11768,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionToJson(this);
+    return _$$_ElementDefinitionToJson(this);
   }
 }
 
@@ -13218,7 +13217,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
       : super._();
 
   factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionSlicingFromJson(json);
+      _$$_ElementDefinitionSlicingFromJson(json);
 
   @override
   final String? id;
@@ -13307,7 +13306,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionSlicingToJson(this);
+    return _$$_ElementDefinitionSlicingToJson(this);
   }
 }
 
@@ -13630,7 +13629,7 @@ class _$_ElementDefinitionDiscriminator
 
   factory _$_ElementDefinitionDiscriminator.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionDiscriminatorFromJson(json);
+      _$$_ElementDefinitionDiscriminatorFromJson(json);
 
   @override
   final String? id;
@@ -13699,7 +13698,7 @@ class _$_ElementDefinitionDiscriminator
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionDiscriminatorToJson(this);
+    return _$$_ElementDefinitionDiscriminatorToJson(this);
   }
 }
 
@@ -14033,7 +14032,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
       : super._();
 
   factory _$_ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionBaseFromJson(json);
+      _$$_ElementDefinitionBaseFromJson(json);
 
   @override
   final String? id;
@@ -14113,7 +14112,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionBaseToJson(this);
+    return _$$_ElementDefinitionBaseToJson(this);
   }
 }
 
@@ -14509,7 +14508,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
       : super._();
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionTypeFromJson(json);
+      _$$_ElementDefinitionTypeFromJson(json);
 
   @override
   final String? id;
@@ -14611,7 +14610,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionTypeToJson(this);
+    return _$$_ElementDefinitionTypeToJson(this);
   }
 }
 
@@ -16704,7 +16703,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       : super._();
 
   factory _$_ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionExampleFromJson(json);
+      _$$_ElementDefinitionExampleFromJson(json);
 
   @override
   final String? id;
@@ -17081,7 +17080,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionExampleToJson(this);
+    return _$$_ElementDefinitionExampleToJson(this);
   }
 }
 
@@ -17827,7 +17826,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
       : super._();
 
   factory _$_ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionConstraintFromJson(json);
+      _$$_ElementDefinitionConstraintFromJson(json);
 
   @override
   final String? id;
@@ -17952,7 +17951,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionConstraintToJson(this);
+    return _$$_ElementDefinitionConstraintToJson(this);
   }
 }
 
@@ -18309,7 +18308,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
       : super._();
 
   factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionBindingFromJson(json);
+      _$$_ElementDefinitionBindingFromJson(json);
 
   @override
   final String? id;
@@ -18386,7 +18385,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionBindingToJson(this);
+    return _$$_ElementDefinitionBindingToJson(this);
   }
 }
 
@@ -18770,7 +18769,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
       : super._();
 
   factory _$_ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionMappingFromJson(json);
+      _$$_ElementDefinitionMappingFromJson(json);
 
   @override
   final String? id;
@@ -18865,7 +18864,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionMappingToJson(this);
+    return _$$_ElementDefinitionMappingToJson(this);
   }
 }
 

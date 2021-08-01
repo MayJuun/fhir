@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'individuals.dart';
 
@@ -985,7 +985,7 @@ class _$_Patient extends _Patient {
       : super._();
 
   factory _$_Patient.fromJson(Map<String, dynamic> json) =>
-      _$_$_PatientFromJson(json);
+      _$$_PatientFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
@@ -1217,7 +1217,7 @@ class _$_Patient extends _Patient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PatientToJson(this);
+    return _$$_PatientToJson(this);
   }
 }
 
@@ -1720,7 +1720,7 @@ class _$_PatientContact extends _PatientContact {
       : super._();
 
   factory _$_PatientContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_PatientContactFromJson(json);
+      _$$_PatientContactFromJson(json);
 
   @override
   final Id? id;
@@ -1810,7 +1810,7 @@ class _$_PatientContact extends _PatientContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PatientContactToJson(this);
+    return _$$_PatientContactToJson(this);
   }
 }
 
@@ -2093,7 +2093,7 @@ class _$_PatientAnimal extends _PatientAnimal {
       : super._();
 
   factory _$_PatientAnimal.fromJson(Map<String, dynamic> json) =>
-      _$_$_PatientAnimalFromJson(json);
+      _$$_PatientAnimalFromJson(json);
 
   @override
   final Id? id;
@@ -2153,7 +2153,7 @@ class _$_PatientAnimal extends _PatientAnimal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PatientAnimalToJson(this);
+    return _$$_PatientAnimalToJson(this);
   }
 }
 
@@ -2406,7 +2406,7 @@ class _$_PatientCommunication extends _PatientCommunication {
       : super._();
 
   factory _$_PatientCommunication.fromJson(Map<String, dynamic> json) =>
-      _$_$_PatientCommunicationFromJson(json);
+      _$$_PatientCommunicationFromJson(json);
 
   @override
   final Id? id;
@@ -2469,7 +2469,7 @@ class _$_PatientCommunication extends _PatientCommunication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PatientCommunicationToJson(this);
+    return _$$_PatientCommunicationToJson(this);
   }
 }
 
@@ -2723,7 +2723,7 @@ class _$_PatientLink extends _PatientLink {
       : super._();
 
   factory _$_PatientLink.fromJson(Map<String, dynamic> json) =>
-      _$_$_PatientLinkFromJson(json);
+      _$$_PatientLinkFromJson(json);
 
   @override
   final Id? id;
@@ -2785,7 +2785,7 @@ class _$_PatientLink extends _PatientLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PatientLinkToJson(this);
+    return _$$_PatientLinkToJson(this);
   }
 }
 
@@ -3471,7 +3471,7 @@ class _$_Practitioner extends _Practitioner {
       : super._();
 
   factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
-      _$_$_PractitionerFromJson(json);
+      _$$_PractitionerFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
@@ -3647,7 +3647,7 @@ class _$_Practitioner extends _Practitioner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PractitionerToJson(this);
+    return _$$_PractitionerToJson(this);
   }
 }
 
@@ -4062,7 +4062,7 @@ class _$_PractitionerPractitionerRole extends _PractitionerPractitionerRole {
       : super._();
 
   factory _$_PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =>
-      _$_$_PractitionerPractitionerRoleFromJson(json);
+      _$$_PractitionerPractitionerRoleFromJson(json);
 
   @override
   final Id? id;
@@ -4147,7 +4147,7 @@ class _$_PractitionerPractitionerRole extends _PractitionerPractitionerRole {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PractitionerPractitionerRoleToJson(this);
+    return _$$_PractitionerPractitionerRoleToJson(this);
   }
 }
 
@@ -4445,7 +4445,7 @@ class _$_PractitionerQualification extends _PractitionerQualification {
       : super._();
 
   factory _$_PractitionerQualification.fromJson(Map<String, dynamic> json) =>
-      _$_$_PractitionerQualificationFromJson(json);
+      _$$_PractitionerQualificationFromJson(json);
 
   @override
   final Id? id;
@@ -4511,7 +4511,7 @@ class _$_PractitionerQualification extends _PractitionerQualification {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PractitionerQualificationToJson(this);
+    return _$$_PractitionerQualificationToJson(this);
   }
 }
 
@@ -5184,7 +5184,7 @@ class _$_RelatedPerson extends _RelatedPerson {
       : super._();
 
   factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
-      _$_$_RelatedPersonFromJson(json);
+      _$$_RelatedPersonFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
@@ -5347,7 +5347,7 @@ class _$_RelatedPerson extends _RelatedPerson {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RelatedPersonToJson(this);
+    return _$$_RelatedPersonToJson(this);
   }
 }
 

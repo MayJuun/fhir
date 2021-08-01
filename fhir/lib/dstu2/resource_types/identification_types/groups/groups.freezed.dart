@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'groups.dart';
 
@@ -582,7 +582,7 @@ class _$_Organization extends _Organization {
       : super._();
 
   factory _$_Organization.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrganizationFromJson(json);
+      _$$_OrganizationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
@@ -731,7 +731,7 @@ class _$_Organization extends _Organization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrganizationToJson(this);
+    return _$$_OrganizationToJson(this);
   }
 }
 
@@ -1090,7 +1090,7 @@ class _$_OrganizationContact extends _OrganizationContact {
       : super._();
 
   factory _$_OrganizationContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrganizationContactFromJson(json);
+      _$$_OrganizationContactFromJson(json);
 
   @override
   final Id? id;
@@ -1163,7 +1163,7 @@ class _$_OrganizationContact extends _OrganizationContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrganizationContactToJson(this);
+    return _$$_OrganizationContactToJson(this);
   }
 }
 
@@ -2119,7 +2119,7 @@ class _$_HealthcareService extends _HealthcareService {
       : super._();
 
   factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceFromJson(json);
+      _$$_HealthcareServiceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
@@ -2343,7 +2343,7 @@ class _$_HealthcareService extends _HealthcareService {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceToJson(this);
+    return _$$_HealthcareServiceToJson(this);
   }
 }
 
@@ -2685,7 +2685,7 @@ class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
       : super._();
 
   factory _$_HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceServiceTypeFromJson(json);
+      _$$_HealthcareServiceServiceTypeFromJson(json);
 
   @override
   final Id? id;
@@ -2740,7 +2740,7 @@ class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceServiceTypeToJson(this);
+    return _$$_HealthcareServiceServiceTypeToJson(this);
   }
 }
 
@@ -3115,7 +3115,7 @@ class _$_HealthcareServiceAvailableTime
 
   factory _$_HealthcareServiceAvailableTime.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceAvailableTimeFromJson(json);
+      _$$_HealthcareServiceAvailableTimeFromJson(json);
 
   @override
   final Id? id;
@@ -3213,7 +3213,7 @@ class _$_HealthcareServiceAvailableTime
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceAvailableTimeToJson(this);
+    return _$$_HealthcareServiceAvailableTimeToJson(this);
   }
 }
 
@@ -3503,7 +3503,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
   factory _$_HealthcareServiceNotAvailable.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_HealthcareServiceNotAvailableFromJson(json);
+      _$$_HealthcareServiceNotAvailableFromJson(json);
 
   @override
   final Id? id;
@@ -3565,7 +3565,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HealthcareServiceNotAvailableToJson(this);
+    return _$$_HealthcareServiceNotAvailableToJson(this);
   }
 }
 
@@ -4231,7 +4231,7 @@ class _$_Group extends _Group {
       : super._();
 
   factory _$_Group.fromJson(Map<String, dynamic> json) =>
-      _$_$_GroupFromJson(json);
+      _$$_GroupFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
@@ -4395,7 +4395,7 @@ class _$_Group extends _Group {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GroupToJson(this);
+    return _$$_GroupToJson(this);
   }
 }
 
@@ -4853,7 +4853,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
       : super._();
 
   factory _$_GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$_$_GroupCharacteristicFromJson(json);
+      _$$_GroupCharacteristicFromJson(json);
 
   @override
   final Id? id;
@@ -4944,7 +4944,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GroupCharacteristicToJson(this);
+    return _$$_GroupCharacteristicToJson(this);
   }
 }
 
@@ -5242,7 +5242,7 @@ class _$_GroupMember extends _GroupMember {
       : super._();
 
   factory _$_GroupMember.fromJson(Map<String, dynamic> json) =>
-      _$_$_GroupMemberFromJson(json);
+      _$$_GroupMemberFromJson(json);
 
   @override
   final Id? id;
@@ -5308,7 +5308,7 @@ class _$_GroupMember extends _GroupMember {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GroupMemberToJson(this);
+    return _$$_GroupMemberToJson(this);
   }
 }
 

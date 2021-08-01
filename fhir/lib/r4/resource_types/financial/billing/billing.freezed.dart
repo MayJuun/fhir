@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'billing.dart';
 
@@ -1102,7 +1102,7 @@ class _$_Claim extends _Claim {
       : super._();
 
   factory _$_Claim.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimFromJson(json);
+      _$$_ClaimFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Claim)
@@ -1342,7 +1342,7 @@ class _$_Claim extends _Claim {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimToJson(this);
+    return _$$_ClaimToJson(this);
   }
 }
 
@@ -1729,7 +1729,7 @@ class _$_ClaimRelated extends _ClaimRelated {
       : super._();
 
   factory _$_ClaimRelated.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimRelatedFromJson(json);
+      _$$_ClaimRelatedFromJson(json);
 
   @override
   final String? id;
@@ -1789,7 +1789,7 @@ class _$_ClaimRelated extends _ClaimRelated {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimRelatedToJson(this);
+    return _$$_ClaimRelatedToJson(this);
   }
 }
 
@@ -2022,7 +2022,7 @@ class _$_ClaimPayee extends _ClaimPayee {
       : super._();
 
   factory _$_ClaimPayee.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimPayeeFromJson(json);
+      _$$_ClaimPayeeFromJson(json);
 
   @override
   final String? id;
@@ -2075,7 +2075,7 @@ class _$_ClaimPayee extends _ClaimPayee {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimPayeeToJson(this);
+    return _$$_ClaimPayeeToJson(this);
   }
 }
 
@@ -2432,7 +2432,7 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
       : super._();
 
   factory _$_ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimCareTeamFromJson(json);
+      _$$_ClaimCareTeamFromJson(json);
 
   @override
   final String? id;
@@ -2518,7 +2518,7 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimCareTeamToJson(this);
+    return _$$_ClaimCareTeamToJson(this);
   }
 }
 
@@ -3106,7 +3106,7 @@ class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
       : super._();
 
   factory _$_ClaimSupportingInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimSupportingInfoFromJson(json);
+      _$$_ClaimSupportingInfoFromJson(json);
 
   @override
   final String? id;
@@ -3242,7 +3242,7 @@ class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimSupportingInfoToJson(this);
+    return _$$_ClaimSupportingInfoToJson(this);
   }
 }
 
@@ -3647,7 +3647,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
       : super._();
 
   factory _$_ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimDiagnosisFromJson(json);
+      _$$_ClaimDiagnosisFromJson(json);
 
   @override
   final String? id;
@@ -3734,7 +3734,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimDiagnosisToJson(this);
+    return _$$_ClaimDiagnosisToJson(this);
   }
 }
 
@@ -4116,7 +4116,7 @@ class _$_ClaimProcedure extends _ClaimProcedure {
       : super._();
 
   factory _$_ClaimProcedure.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimProcedureFromJson(json);
+      _$$_ClaimProcedureFromJson(json);
 
   @override
   final String? id;
@@ -4208,7 +4208,7 @@ class _$_ClaimProcedure extends _ClaimProcedure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimProcedureToJson(this);
+    return _$$_ClaimProcedureToJson(this);
   }
 }
 
@@ -4681,7 +4681,7 @@ class _$_ClaimInsurance extends _ClaimInsurance {
       : super._();
 
   factory _$_ClaimInsurance.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimInsuranceFromJson(json);
+      _$$_ClaimInsuranceFromJson(json);
 
   @override
   final String? id;
@@ -4795,7 +4795,7 @@ class _$_ClaimInsurance extends _ClaimInsurance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimInsuranceToJson(this);
+    return _$$_ClaimInsuranceToJson(this);
   }
 }
 
@@ -5145,7 +5145,7 @@ class _$_ClaimAccident extends _ClaimAccident {
       : super._();
 
   factory _$_ClaimAccident.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimAccidentFromJson(json);
+      _$$_ClaimAccidentFromJson(json);
 
   @override
   final String? id;
@@ -5217,7 +5217,7 @@ class _$_ClaimAccident extends _ClaimAccident {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimAccidentToJson(this);
+    return _$$_ClaimAccidentToJson(this);
   }
 }
 
@@ -6127,7 +6127,7 @@ class _$_ClaimItem extends _ClaimItem {
       : super._();
 
   factory _$_ClaimItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimItemFromJson(json);
+      _$$_ClaimItemFromJson(json);
 
   @override
   final String? id;
@@ -6327,7 +6327,7 @@ class _$_ClaimItem extends _ClaimItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimItemToJson(this);
+    return _$$_ClaimItemToJson(this);
   }
 }
 
@@ -6946,7 +6946,7 @@ class _$_ClaimDetail extends _ClaimDetail {
       : super._();
 
   factory _$_ClaimDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimDetailFromJson(json);
+      _$$_ClaimDetailFromJson(json);
 
   @override
   final String? id;
@@ -7072,7 +7072,7 @@ class _$_ClaimDetail extends _ClaimDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimDetailToJson(this);
+    return _$$_ClaimDetailToJson(this);
   }
 }
 
@@ -7605,7 +7605,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
       : super._();
 
   factory _$_ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimSubDetailFromJson(json);
+      _$$_ClaimSubDetailFromJson(json);
 
   @override
   final String? id;
@@ -7725,7 +7725,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimSubDetailToJson(this);
+    return _$$_ClaimSubDetailToJson(this);
   }
 }
 
@@ -8942,7 +8942,7 @@ class _$_ClaimResponse extends _ClaimResponse {
       : super._();
 
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseFromJson(json);
+      _$$_ClaimResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
@@ -9196,7 +9196,7 @@ class _$_ClaimResponse extends _ClaimResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseToJson(this);
+    return _$$_ClaimResponseToJson(this);
   }
 }
 
@@ -9626,7 +9626,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
       : super._();
 
   factory _$_ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseItemFromJson(json);
+      _$$_ClaimResponseItemFromJson(json);
 
   @override
   final String? id;
@@ -9706,7 +9706,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseItemToJson(this);
+    return _$$_ClaimResponseItemToJson(this);
   }
 }
 
@@ -10033,7 +10033,7 @@ class _$_ClaimResponseAdjudication extends _ClaimResponseAdjudication {
       : super._();
 
   factory _$_ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseAdjudicationFromJson(json);
+      _$$_ClaimResponseAdjudicationFromJson(json);
 
   @override
   final String? id;
@@ -10106,7 +10106,7 @@ class _$_ClaimResponseAdjudication extends _ClaimResponseAdjudication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseAdjudicationToJson(this);
+    return _$$_ClaimResponseAdjudicationToJson(this);
   }
 }
 
@@ -10408,7 +10408,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
       : super._();
 
   factory _$_ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseDetailFromJson(json);
+      _$$_ClaimResponseDetailFromJson(json);
 
   @override
   final String? id;
@@ -10490,7 +10490,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseDetailToJson(this);
+    return _$$_ClaimResponseDetailToJson(this);
   }
 }
 
@@ -10781,7 +10781,7 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
       : super._();
 
   factory _$_ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseSubDetailFromJson(json);
+      _$$_ClaimResponseSubDetailFromJson(json);
 
   @override
   final String? id;
@@ -10859,7 +10859,7 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseSubDetailToJson(this);
+    return _$$_ClaimResponseSubDetailToJson(this);
   }
 }
 
@@ -11664,7 +11664,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
       : super._();
 
   factory _$_ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseAddItemFromJson(json);
+      _$$_ClaimResponseAddItemFromJson(json);
 
   @override
   final String? id;
@@ -11854,7 +11854,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseAddItemToJson(this);
+    return _$$_ClaimResponseAddItemToJson(this);
   }
 }
 
@@ -12370,7 +12370,7 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
       : super._();
 
   factory _$_ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseDetail1FromJson(json);
+      _$$_ClaimResponseDetail1FromJson(json);
 
   @override
   final String? id;
@@ -12480,7 +12480,7 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseDetail1ToJson(this);
+    return _$$_ClaimResponseDetail1ToJson(this);
   }
 }
 
@@ -12919,7 +12919,7 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
       : super._();
 
   factory _$_ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseSubDetail1FromJson(json);
+      _$$_ClaimResponseSubDetail1FromJson(json);
 
   @override
   final String? id;
@@ -13023,7 +13023,7 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseSubDetail1ToJson(this);
+    return _$$_ClaimResponseSubDetail1ToJson(this);
   }
 }
 
@@ -13280,7 +13280,7 @@ class _$_ClaimResponseTotal extends _ClaimResponseTotal {
       : super._();
 
   factory _$_ClaimResponseTotal.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseTotalFromJson(json);
+      _$$_ClaimResponseTotalFromJson(json);
 
   @override
   final String? id;
@@ -13334,7 +13334,7 @@ class _$_ClaimResponseTotal extends _ClaimResponseTotal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseTotalToJson(this);
+    return _$$_ClaimResponseTotalToJson(this);
   }
 }
 
@@ -13700,7 +13700,7 @@ class _$_ClaimResponsePayment extends _ClaimResponsePayment {
       : super._();
 
   factory _$_ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponsePaymentFromJson(json);
+      _$$_ClaimResponsePaymentFromJson(json);
 
   @override
   final String? id;
@@ -13784,7 +13784,7 @@ class _$_ClaimResponsePayment extends _ClaimResponsePayment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponsePaymentToJson(this);
+    return _$$_ClaimResponsePaymentToJson(this);
   }
 }
 
@@ -14171,7 +14171,7 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
       : super._();
 
   factory _$_ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseProcessNoteFromJson(json);
+      _$$_ClaimResponseProcessNoteFromJson(json);
 
   @override
   final String? id;
@@ -14258,7 +14258,7 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseProcessNoteToJson(this);
+    return _$$_ClaimResponseProcessNoteToJson(this);
   }
 }
 
@@ -14669,7 +14669,7 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
       : super._();
 
   factory _$_ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseInsuranceFromJson(json);
+      _$$_ClaimResponseInsuranceFromJson(json);
 
   @override
   final String? id;
@@ -14765,7 +14765,7 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseInsuranceToJson(this);
+    return _$$_ClaimResponseInsuranceToJson(this);
   }
 }
 
@@ -15134,7 +15134,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
       : super._();
 
   factory _$_ClaimResponseError.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClaimResponseErrorFromJson(json);
+      _$$_ClaimResponseErrorFromJson(json);
 
   @override
   final String? id;
@@ -15223,7 +15223,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClaimResponseErrorToJson(this);
+    return _$$_ClaimResponseErrorToJson(this);
   }
 }
 
@@ -16115,7 +16115,7 @@ class _$_Invoice extends _Invoice {
       : super._();
 
   factory _$_Invoice.fromJson(Map<String, dynamic> json) =>
-      _$_$_InvoiceFromJson(json);
+      _$$_InvoiceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
@@ -16315,7 +16315,7 @@ class _$_Invoice extends _Invoice {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_InvoiceToJson(this);
+    return _$$_InvoiceToJson(this);
   }
 }
 
@@ -16644,7 +16644,7 @@ class _$_InvoiceParticipant extends _InvoiceParticipant {
       : super._();
 
   factory _$_InvoiceParticipant.fromJson(Map<String, dynamic> json) =>
-      _$_$_InvoiceParticipantFromJson(json);
+      _$$_InvoiceParticipantFromJson(json);
 
   @override
   final String? id;
@@ -16697,7 +16697,7 @@ class _$_InvoiceParticipant extends _InvoiceParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_InvoiceParticipantToJson(this);
+    return _$$_InvoiceParticipantToJson(this);
   }
 }
 
@@ -17000,7 +17000,7 @@ class _$_InvoiceLineItem extends _InvoiceLineItem {
       : super._();
 
   factory _$_InvoiceLineItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_InvoiceLineItemFromJson(json);
+      _$$_InvoiceLineItemFromJson(json);
 
   @override
   final String? id;
@@ -17076,7 +17076,7 @@ class _$_InvoiceLineItem extends _InvoiceLineItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_InvoiceLineItemToJson(this);
+    return _$$_InvoiceLineItemToJson(this);
   }
 }
 
@@ -17433,7 +17433,7 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
       : super._();
 
   factory _$_InvoicePriceComponent.fromJson(Map<String, dynamic> json) =>
-      _$_$_InvoicePriceComponentFromJson(json);
+      _$$_InvoicePriceComponentFromJson(json);
 
   @override
   final String? id;
@@ -17512,7 +17512,7 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_InvoicePriceComponentToJson(this);
+    return _$$_InvoicePriceComponentToJson(this);
   }
 }
 
