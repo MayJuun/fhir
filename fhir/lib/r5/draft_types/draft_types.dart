@@ -149,7 +149,9 @@ class MarketingStatus with _$MarketingStatus {
 class Citation with _$Citation {
   Citation._();
   factory Citation({
-    @Default('Citation') String resourceType,
+    @Default(R5ResourceType.Citation)
+    @JsonKey(unknownEnumValue: R5ResourceType.Citation)
+        R5ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -1089,7 +1091,9 @@ class CitationRelatedArticle with _$CitationRelatedArticle {
 class EvidenceReport with _$EvidenceReport {
   EvidenceReport._();
   factory EvidenceReport({
-    @Default('EvidenceReport') String resourceType,
+    @Default(R5ResourceType.EvidenceReport)
+    @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+        R5ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

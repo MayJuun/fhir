@@ -6,56 +6,53 @@ part of 'resource.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Resource _$ResourceFromJson(Map<String, dynamic> json) {
-  return Resource()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'])
-    ..resourceType =
-        _$enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType'])
-    ..meta = json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>)
-    ..implicitRules = json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'])
-    ..language =
-        json['language'] == null ? null : Code.fromJson(json['language'])
-    ..text = json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>)
-    ..contained = (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList()
-    ..extension_ = (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList()
-    ..modifierExtension = (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList();
+Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource()
+  ..id = json['id'] == null ? null : Id.fromJson(json['id'])
+  ..resourceType =
+      _$enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType'])
+  ..meta = json['meta'] == null
+      ? null
+      : Meta.fromJson(json['meta'] as Map<String, dynamic>)
+  ..implicitRules = json['implicitRules'] == null
+      ? null
+      : FhirUri.fromJson(json['implicitRules'])
+  ..language = json['language'] == null ? null : Code.fromJson(json['language'])
+  ..text = json['text'] == null
+      ? null
+      : Narrative.fromJson(json['text'] as Map<String, dynamic>)
+  ..contained = (json['contained'] as List<dynamic>?)
+      ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+      .toList()
+  ..extension_ = (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList()
+  ..modifierExtension = (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList();
+
+Map<String, dynamic> _$ResourceToJson(Resource instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  return val;
 }
-
-// Map<String, dynamic> _$ResourceToJson(Resource instance) {
-//   final val = <String, dynamic>{};
-
-//   void writeNotNull(String key, dynamic value) {
-//     if (value != null) {
-//       val[key] = value;
-//     }
-//   }
-
-//   writeNotNull('id', instance.id?.toJson());
-//   writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
-//   writeNotNull('meta', instance.meta?.toJson());
-//   writeNotNull('implicitRules', instance.implicitRules?.toJson());
-//   writeNotNull('language', instance.language?.toJson());
-//   writeNotNull('text', instance.text?.toJson());
-//   writeNotNull(
-//       'contained', instance.contained?.map((e) => e.toJson()).toList());
-//   writeNotNull(
-//       'extension', instance.extension_?.map((e) => e.toJson()).toList());
-//   writeNotNull('modifierExtension',
-//       instance.modifierExtension?.map((e) => e.toJson()).toList());
-//   return val;
-// }
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -114,6 +111,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
@@ -147,6 +145,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.EpisodeOfCare: 'EpisodeOfCare',
   R5ResourceType.EventDefinition: 'EventDefinition',
   R5ResourceType.Evidence: 'Evidence',
+  R5ResourceType.EvidenceReport: 'EvidenceReport',
   R5ResourceType.EvidenceVariable: 'EvidenceVariable',
   R5ResourceType.ExampleScenario: 'ExampleScenario',
   R5ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',

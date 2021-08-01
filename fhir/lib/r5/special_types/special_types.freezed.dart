@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'special_types.dart';
 
@@ -206,7 +206,7 @@ class _$_Narrative extends _Narrative {
       : super._();
 
   factory _$_Narrative.fromJson(Map<String, dynamic> json) =>
-      _$_$_NarrativeFromJson(json);
+      _$$_NarrativeFromJson(json);
 
   @override
   final String? id;
@@ -261,7 +261,7 @@ class _$_Narrative extends _Narrative {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NarrativeToJson(this);
+    return _$$_NarrativeToJson(this);
   }
 }
 
@@ -485,7 +485,7 @@ class _$_CodeableReference extends _CodeableReference {
       : super._();
 
   factory _$_CodeableReference.fromJson(Map<String, dynamic> json) =>
-      _$_$_CodeableReferenceFromJson(json);
+      _$$_CodeableReferenceFromJson(json);
 
   @override
   final String? id;
@@ -534,7 +534,7 @@ class _$_CodeableReference extends _CodeableReference {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CodeableReferenceToJson(this);
+    return _$$_CodeableReferenceToJson(this);
   }
 }
 
@@ -856,7 +856,7 @@ class _$_Reference extends _Reference {
       : super._();
 
   factory _$_Reference.fromJson(Map<String, dynamic> json) =>
-      _$_$_ReferenceFromJson(json);
+      _$$_ReferenceFromJson(json);
 
   @override
   final String? id;
@@ -937,7 +937,7 @@ class _$_Reference extends _Reference {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ReferenceToJson(this);
+    return _$$_ReferenceToJson(this);
   }
 }
 
@@ -1357,7 +1357,7 @@ class _$_Statistic extends _Statistic {
       : super._();
 
   factory _$_Statistic.fromJson(Map<String, dynamic> json) =>
-      _$_$_StatisticFromJson(json);
+      _$$_StatisticFromJson(json);
 
   @override
   final String? id;
@@ -1461,7 +1461,7 @@ class _$_Statistic extends _Statistic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StatisticToJson(this);
+    return _$$_StatisticToJson(this);
   }
 }
 
@@ -1886,7 +1886,7 @@ class _$_StatisticSampleSize extends _StatisticSampleSize {
       : super._();
 
   factory _$_StatisticSampleSize.fromJson(Map<String, dynamic> json) =>
-      _$_$_StatisticSampleSizeFromJson(json);
+      _$$_StatisticSampleSizeFromJson(json);
 
   @override
   final String? id;
@@ -1989,7 +1989,7 @@ class _$_StatisticSampleSize extends _StatisticSampleSize {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StatisticSampleSizeToJson(this);
+    return _$$_StatisticSampleSizeToJson(this);
   }
 }
 
@@ -2417,7 +2417,7 @@ class _$_StatisticAttributeEstimate extends _StatisticAttributeEstimate {
       : super._();
 
   factory _$_StatisticAttributeEstimate.fromJson(Map<String, dynamic> json) =>
-      _$_$_StatisticAttributeEstimateFromJson(json);
+      _$$_StatisticAttributeEstimateFromJson(json);
 
   @override
   final String? id;
@@ -2513,7 +2513,7 @@ class _$_StatisticAttributeEstimate extends _StatisticAttributeEstimate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StatisticAttributeEstimateToJson(this);
+    return _$$_StatisticAttributeEstimateToJson(this);
   }
 }
 
@@ -2920,7 +2920,7 @@ class _$_StatisticAttributeEstimate1 extends _StatisticAttributeEstimate1 {
       : super._();
 
   factory _$_StatisticAttributeEstimate1.fromJson(Map<String, dynamic> json) =>
-      _$_$_StatisticAttributeEstimate1FromJson(json);
+      _$$_StatisticAttributeEstimate1FromJson(json);
 
   @override
   final String? id;
@@ -3010,7 +3010,7 @@ class _$_StatisticAttributeEstimate1 extends _StatisticAttributeEstimate1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StatisticAttributeEstimate1ToJson(this);
+    return _$$_StatisticAttributeEstimate1ToJson(this);
   }
 }
 
@@ -3398,7 +3398,7 @@ class _$_StatisticModelCharacteristic extends _StatisticModelCharacteristic {
       : super._();
 
   factory _$_StatisticModelCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$_$_StatisticModelCharacteristicFromJson(json);
+      _$$_StatisticModelCharacteristicFromJson(json);
 
   @override
   final String? id;
@@ -3484,7 +3484,7 @@ class _$_StatisticModelCharacteristic extends _StatisticModelCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StatisticModelCharacteristicToJson(this);
+    return _$$_StatisticModelCharacteristicToJson(this);
   }
 }
 
@@ -3801,7 +3801,7 @@ class _$_StatisticVariable extends _StatisticVariable {
       : super._();
 
   factory _$_StatisticVariable.fromJson(Map<String, dynamic> json) =>
-      _$_$_StatisticVariableFromJson(json);
+      _$$_StatisticVariableFromJson(json);
 
   @override
   final String? id;
@@ -3881,7 +3881,7 @@ class _$_StatisticVariable extends _StatisticVariable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StatisticVariableToJson(this);
+    return _$$_StatisticVariableToJson(this);
   }
 }
 
@@ -4259,7 +4259,7 @@ class _$_OrderedDistribution extends _OrderedDistribution {
       : super._();
 
   factory _$_OrderedDistribution.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrderedDistributionFromJson(json);
+      _$$_OrderedDistributionFromJson(json);
 
   @override
   final String? id;
@@ -4354,7 +4354,7 @@ class _$_OrderedDistribution extends _OrderedDistribution {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrderedDistributionToJson(this);
+    return _$$_OrderedDistributionToJson(this);
   }
 }
 
@@ -4620,7 +4620,7 @@ class _$_OrderedDistributionInterval extends _OrderedDistributionInterval {
       : super._();
 
   factory _$_OrderedDistributionInterval.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrderedDistributionIntervalFromJson(json);
+      _$$_OrderedDistributionIntervalFromJson(json);
 
   @override
   final String? id;
@@ -4683,7 +4683,7 @@ class _$_OrderedDistributionInterval extends _OrderedDistributionInterval {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrderedDistributionIntervalToJson(this);
+    return _$$_OrderedDistributionIntervalToJson(this);
   }
 }
 
@@ -5029,8 +5029,7 @@ class _$_Meta extends _Meta {
       this.tag})
       : super._();
 
-  factory _$_Meta.fromJson(Map<String, dynamic> json) =>
-      _$_$_MetaFromJson(json);
+  factory _$_Meta.fromJson(Map<String, dynamic> json) => _$$_MetaFromJson(json);
 
   @override
   final String? id;
@@ -5122,7 +5121,7 @@ class _$_Meta extends _Meta {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MetaToJson(this);
+    return _$$_MetaToJson(this);
   }
 }
 
@@ -5774,7 +5773,7 @@ class _$_Dosage extends _Dosage {
       : super._();
 
   factory _$_Dosage.fromJson(Map<String, dynamic> json) =>
-      _$_$_DosageFromJson(json);
+      _$$_DosageFromJson(json);
 
   @override
   final String? id;
@@ -5923,7 +5922,7 @@ class _$_Dosage extends _Dosage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DosageToJson(this);
+    return _$$_DosageToJson(this);
   }
 }
 
@@ -6333,7 +6332,7 @@ class _$_DosageDoseAndRate extends _DosageDoseAndRate {
       : super._();
 
   factory _$_DosageDoseAndRate.fromJson(Map<String, dynamic> json) =>
-      _$_$_DosageDoseAndRateFromJson(json);
+      _$$_DosageDoseAndRateFromJson(json);
 
   @override
   final String? id;
@@ -6411,7 +6410,7 @@ class _$_DosageDoseAndRate extends _DosageDoseAndRate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DosageDoseAndRateToJson(this);
+    return _$$_DosageDoseAndRateToJson(this);
   }
 }
 
@@ -14693,7 +14692,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       : super._();
 
   factory _$_ElementDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionFromJson(json);
+      _$$_ElementDefinitionFromJson(json);
 
   @override
   final String? id;
@@ -16073,7 +16072,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionToJson(this);
+    return _$$_ElementDefinitionToJson(this);
   }
 }
 
@@ -17563,7 +17562,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
       : super._();
 
   factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionSlicingFromJson(json);
+      _$$_ElementDefinitionSlicingFromJson(json);
 
   @override
   final String? id;
@@ -17652,7 +17651,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionSlicingToJson(this);
+    return _$$_ElementDefinitionSlicingToJson(this);
   }
 }
 
@@ -17975,7 +17974,7 @@ class _$_ElementDefinitionDiscriminator
 
   factory _$_ElementDefinitionDiscriminator.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionDiscriminatorFromJson(json);
+      _$$_ElementDefinitionDiscriminatorFromJson(json);
 
   @override
   final String? id;
@@ -18044,7 +18043,7 @@ class _$_ElementDefinitionDiscriminator
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionDiscriminatorToJson(this);
+    return _$$_ElementDefinitionDiscriminatorToJson(this);
   }
 }
 
@@ -18378,7 +18377,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
       : super._();
 
   factory _$_ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionBaseFromJson(json);
+      _$$_ElementDefinitionBaseFromJson(json);
 
   @override
   final String? id;
@@ -18458,7 +18457,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionBaseToJson(this);
+    return _$$_ElementDefinitionBaseToJson(this);
   }
 }
 
@@ -18833,7 +18832,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
       : super._();
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionTypeFromJson(json);
+      _$$_ElementDefinitionTypeFromJson(json);
 
   @override
   final String? id;
@@ -18928,7 +18927,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionTypeToJson(this);
+    return _$$_ElementDefinitionTypeToJson(this);
   }
 }
 
@@ -21063,7 +21062,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       : super._();
 
   factory _$_ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionExampleFromJson(json);
+      _$$_ElementDefinitionExampleFromJson(json);
 
   @override
   final String? id;
@@ -21449,7 +21448,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionExampleToJson(this);
+    return _$$_ElementDefinitionExampleToJson(this);
   }
 }
 
@@ -22202,7 +22201,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
       : super._();
 
   factory _$_ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionConstraintFromJson(json);
+      _$$_ElementDefinitionConstraintFromJson(json);
 
   @override
   final String? id;
@@ -22327,7 +22326,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionConstraintToJson(this);
+    return _$$_ElementDefinitionConstraintToJson(this);
   }
 }
 
@@ -22684,7 +22683,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
       : super._();
 
   factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionBindingFromJson(json);
+      _$$_ElementDefinitionBindingFromJson(json);
 
   @override
   final String? id;
@@ -22761,7 +22760,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionBindingToJson(this);
+    return _$$_ElementDefinitionBindingToJson(this);
   }
 }
 
@@ -23145,7 +23144,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
       : super._();
 
   factory _$_ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementDefinitionMappingFromJson(json);
+      _$$_ElementDefinitionMappingFromJson(json);
 
   @override
   final String? id;
@@ -23240,7 +23239,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementDefinitionMappingToJson(this);
+    return _$$_ElementDefinitionMappingToJson(this);
   }
 }
 

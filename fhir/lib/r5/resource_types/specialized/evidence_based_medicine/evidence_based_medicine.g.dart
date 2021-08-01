@@ -6,161 +6,164 @@ part of 'evidence_based_medicine.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
-  return _$_Evidence(
-    resourceType: _$enumDecode(_$R5ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: R5ResourceType.Evidence),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
-    urlElement: json['_url'] == null
-        ? null
-        : Element.fromJson(json['_url'] as Map<String, dynamic>),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    version: json['version'] as String?,
-    versionElement: json['_version'] == null
-        ? null
-        : Element.fromJson(json['_version'] as Map<String, dynamic>),
-    name: json['name'] as String?,
-    nameElement: json['_name'] == null
-        ? null
-        : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    title: json['title'] as String?,
-    titleElement: json['_title'] == null
-        ? null
-        : Element.fromJson(json['_title'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(_$EvidenceStatusEnumMap, json['status'],
-        unknownValue: EvidenceStatus.unknown),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    experimental: json['experimental'] == null
-        ? null
-        : Boolean.fromJson(json['experimental']),
-    experimentalElement: json['_experimental'] == null
-        ? null
-        : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
-    dateElement: json['_date'] == null
-        ? null
-        : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    publisher: json['publisher'] as String?,
-    publisherElement: json['_publisher'] == null
-        ? null
-        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
-    contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    description: json['description'] == null
-        ? null
-        : Markdown.fromJson(json['description']),
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    useContext: (json['useContext'] as List<dynamic>?)
-        ?.map((e) => UsageContext.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    jurisdiction: (json['jurisdiction'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    purpose:
-        json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
-    purposeElement: json['_purpose'] == null
-        ? null
-        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
-    copyright:
-        json['copyright'] == null ? null : Markdown.fromJson(json['copyright']),
-    copyrightElement: json['_copyright'] == null
-        ? null
-        : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
-    approvalDate: json['approvalDate'] == null
-        ? null
-        : Date.fromJson(json['approvalDate']),
-    approvalDateElement: json['_approvalDate'] == null
-        ? null
-        : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
-    lastReviewDate: json['lastReviewDate'] == null
-        ? null
-        : Date.fromJson(json['lastReviewDate']),
-    lastReviewDateElement: json['_lastReviewDate'] == null
-        ? null
-        : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
-    effectivePeriod: json['effectivePeriod'] == null
-        ? null
-        : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    author: (json['author'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    editor: (json['editor'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    reviewer: (json['reviewer'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    endorser: (json['endorser'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
-        ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    assertion:
-        json['assertion'] == null ? null : Markdown.fromJson(json['assertion']),
-    assertionElement: json['_assertion'] == null
-        ? null
-        : Element.fromJson(json['_assertion'] as Map<String, dynamic>),
-    note: json['note'] == null
-        ? null
-        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
-    variableDefinition: (json['variableDefinition'] as List<dynamic>)
-        .map((e) =>
-            EvidenceVariableDefinition.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    synthesisType: json['synthesisType'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['synthesisType'] as Map<String, dynamic>),
-    studyType: json['studyType'] == null
-        ? null
-        : CodeableConcept.fromJson(json['studyType'] as Map<String, dynamic>),
-    statistic: (json['statistic'] as List<dynamic>?)
-        ?.map((e) => Statistic.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    distribution: (json['distribution'] as List<dynamic>?)
-        ?.map((e) => OrderedDistribution.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    certainty: (json['certainty'] as List<dynamic>?)
-        ?.map((e) => EvidenceCertainty.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
+      resourceType: _$enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.Evidence) ??
+          R5ResourceType.Evidence,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
+      urlElement: json['_url'] == null
+          ? null
+          : Element.fromJson(json['_url'] as Map<String, dynamic>),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      version: json['version'] as String?,
+      versionElement: json['_version'] == null
+          ? null
+          : Element.fromJson(json['_version'] as Map<String, dynamic>),
+      name: json['name'] as String?,
+      nameElement: json['_name'] == null
+          ? null
+          : Element.fromJson(json['_name'] as Map<String, dynamic>),
+      title: json['title'] as String?,
+      titleElement: json['_title'] == null
+          ? null
+          : Element.fromJson(json['_title'] as Map<String, dynamic>),
+      status: _$enumDecodeNullable(_$EvidenceStatusEnumMap, json['status'],
+          unknownValue: EvidenceStatus.unknown),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      experimental: json['experimental'] == null
+          ? null
+          : Boolean.fromJson(json['experimental']),
+      experimentalElement: json['_experimental'] == null
+          ? null
+          : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      dateElement: json['_date'] == null
+          ? null
+          : Element.fromJson(json['_date'] as Map<String, dynamic>),
+      publisher: json['publisher'] as String?,
+      publisherElement: json['_publisher'] == null
+          ? null
+          : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
+      contact: (json['contact'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] == null
+          ? null
+          : Markdown.fromJson(json['description']),
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+      useContext: (json['useContext'] as List<dynamic>?)
+          ?.map((e) => UsageContext.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      jurisdiction: (json['jurisdiction'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      purpose:
+          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purposeElement: json['_purpose'] == null
+          ? null
+          : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+      copyright: json['copyright'] == null
+          ? null
+          : Markdown.fromJson(json['copyright']),
+      copyrightElement: json['_copyright'] == null
+          ? null
+          : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+      approvalDate: json['approvalDate'] == null
+          ? null
+          : Date.fromJson(json['approvalDate']),
+      approvalDateElement: json['_approvalDate'] == null
+          ? null
+          : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
+      lastReviewDate: json['lastReviewDate'] == null
+          ? null
+          : Date.fromJson(json['lastReviewDate']),
+      lastReviewDateElement: json['_lastReviewDate'] == null
+          ? null
+          : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
+      effectivePeriod: json['effectivePeriod'] == null
+          ? null
+          : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
+      author: (json['author'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      editor: (json['editor'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reviewer: (json['reviewer'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      endorser: (json['endorser'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
+          ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      assertion: json['assertion'] == null
+          ? null
+          : Markdown.fromJson(json['assertion']),
+      assertionElement: json['_assertion'] == null
+          ? null
+          : Element.fromJson(json['_assertion'] as Map<String, dynamic>),
+      note: json['note'] == null
+          ? null
+          : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+      variableDefinition: (json['variableDefinition'] as List<dynamic>)
+          .map((e) =>
+              EvidenceVariableDefinition.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      synthesisType: json['synthesisType'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['synthesisType'] as Map<String, dynamic>),
+      studyType: json['studyType'] == null
+          ? null
+          : CodeableConcept.fromJson(json['studyType'] as Map<String, dynamic>),
+      statistic: (json['statistic'] as List<dynamic>?)
+          ?.map((e) => Statistic.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      distribution: (json['distribution'] as List<dynamic>?)
+          ?.map((e) => OrderedDistribution.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      certainty: (json['certainty'] as List<dynamic>?)
+          ?.map((e) => EvidenceCertainty.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_EvidenceToJson(_$_Evidence instance) {
+Map<String, dynamic> _$$_EvidenceToJson(_$_Evidence instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
   };
@@ -266,6 +269,17 @@ K _$enumDecode<K, V>(
   ).key;
 }
 
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
+}
+
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
@@ -286,6 +300,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CatalogEntry: 'CatalogEntry',
   R5ResourceType.ChargeItem: 'ChargeItem',
   R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R5ResourceType.Citation: 'Citation',
   R5ResourceType.Claim: 'Claim',
   R5ResourceType.ClaimResponse: 'ClaimResponse',
   R5ResourceType.ClinicalImpression: 'ClinicalImpression',
@@ -319,6 +334,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.EpisodeOfCare: 'EpisodeOfCare',
   R5ResourceType.EventDefinition: 'EventDefinition',
   R5ResourceType.Evidence: 'Evidence',
+  R5ResourceType.EvidenceReport: 'EvidenceReport',
   R5ResourceType.EvidenceVariable: 'EvidenceVariable',
   R5ResourceType.ExampleScenario: 'ExampleScenario',
   R5ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
@@ -415,17 +431,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$EvidenceStatusEnumMap = {
   EvidenceStatus.draft: 'draft',
   EvidenceStatus.active: 'active',
@@ -433,41 +438,40 @@ const _$EvidenceStatusEnumMap = {
   EvidenceStatus.unknown: 'unknown',
 };
 
-_$_EvidenceVariableDefinition _$_$_EvidenceVariableDefinitionFromJson(
-    Map<String, dynamic> json) {
-  return _$_EvidenceVariableDefinition(
-    id: json['id'] as String?,
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    description: json['description'] == null
-        ? null
-        : Markdown.fromJson(json['description']),
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    variableRole:
-        CodeableConcept.fromJson(json['variableRole'] as Map<String, dynamic>),
-    observed: json['observed'] == null
-        ? null
-        : Reference.fromJson(json['observed'] as Map<String, dynamic>),
-    intended: json['intended'] == null
-        ? null
-        : Reference.fromJson(json['intended'] as Map<String, dynamic>),
-    directnessMatch: json['directnessMatch'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['directnessMatch'] as Map<String, dynamic>),
-  );
-}
+_$_EvidenceVariableDefinition _$$_EvidenceVariableDefinitionFromJson(
+        Map<String, dynamic> json) =>
+    _$_EvidenceVariableDefinition(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] == null
+          ? null
+          : Markdown.fromJson(json['description']),
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      variableRole: CodeableConcept.fromJson(
+          json['variableRole'] as Map<String, dynamic>),
+      observed: json['observed'] == null
+          ? null
+          : Reference.fromJson(json['observed'] as Map<String, dynamic>),
+      intended: json['intended'] == null
+          ? null
+          : Reference.fromJson(json['intended'] as Map<String, dynamic>),
+      directnessMatch: json['directnessMatch'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['directnessMatch'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_EvidenceVariableDefinitionToJson(
+Map<String, dynamic> _$$_EvidenceVariableDefinitionToJson(
     _$_EvidenceVariableDefinition instance) {
   final val = <String, dynamic>{};
 
@@ -492,33 +496,32 @@ Map<String, dynamic> _$_$_EvidenceVariableDefinitionToJson(
   return val;
 }
 
-_$_EvidenceCertainty _$_$_EvidenceCertaintyFromJson(Map<String, dynamic> json) {
-  return _$_EvidenceCertainty(
-    id: json['id'] as String?,
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    description: json['description'] as String?,
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    note: json['note'] == null
-        ? null
-        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
-    rating: (json['rating'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    certaintySubcomponent: (json['certaintySubcomponent'] as List<dynamic>?)
-        ?.map((e) =>
-            EvidenceCertaintySubcomponent.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_EvidenceCertainty _$$_EvidenceCertaintyFromJson(Map<String, dynamic> json) =>
+    _$_EvidenceCertainty(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] as String?,
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+      note: json['note'] == null
+          ? null
+          : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+      rating: (json['rating'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      certaintySubcomponent: (json['certaintySubcomponent'] as List<dynamic>?)
+          ?.map((e) =>
+              EvidenceCertaintySubcomponent.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_EvidenceCertaintyToJson(
+Map<String, dynamic> _$$_EvidenceCertaintyToJson(
     _$_EvidenceCertainty instance) {
   final val = <String, dynamic>{};
 
@@ -542,33 +545,32 @@ Map<String, dynamic> _$_$_EvidenceCertaintyToJson(
   return val;
 }
 
-_$_EvidenceCertaintySubcomponent _$_$_EvidenceCertaintySubcomponentFromJson(
-    Map<String, dynamic> json) {
-  return _$_EvidenceCertaintySubcomponent(
-    id: json['id'] as String?,
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    description: json['description'] as String?,
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    note: json['note'] == null
-        ? null
-        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
-    type: (json['type'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    rating: (json['rating'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_EvidenceCertaintySubcomponent _$$_EvidenceCertaintySubcomponentFromJson(
+        Map<String, dynamic> json) =>
+    _$_EvidenceCertaintySubcomponent(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] as String?,
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+      note: json['note'] == null
+          ? null
+          : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+      type: (json['type'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      rating: (json['rating'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_EvidenceCertaintySubcomponentToJson(
+Map<String, dynamic> _$$_EvidenceCertaintySubcomponentToJson(
     _$_EvidenceCertaintySubcomponent instance) {
   final val = <String, dynamic>{};
 
@@ -591,171 +593,175 @@ Map<String, dynamic> _$_$_EvidenceCertaintySubcomponentToJson(
   return val;
 }
 
-_$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
-  return _$_EvidenceVariable(
-    resourceType: _$enumDecode(_$R5ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: R5ResourceType.EvidenceVariable),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
-    urlElement: json['_url'] == null
-        ? null
-        : Element.fromJson(json['_url'] as Map<String, dynamic>),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    version: json['version'] as String?,
-    versionElement: json['_version'] == null
-        ? null
-        : Element.fromJson(json['_version'] as Map<String, dynamic>),
-    name: json['name'] as String?,
-    nameElement: json['_name'] == null
-        ? null
-        : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    title: json['title'] as String?,
-    titleElement: json['_title'] == null
-        ? null
-        : Element.fromJson(json['_title'] as Map<String, dynamic>),
-    status: _$enumDecodeNullable(
-        _$EvidenceVariableStatusEnumMap, json['status'],
-        unknownValue: EvidenceVariableStatus.unknown),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    experimental: json['experimental'] == null
-        ? null
-        : Boolean.fromJson(json['experimental']),
-    experimentalElement: json['_experimental'] == null
-        ? null
-        : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
-    dateElement: json['_date'] == null
-        ? null
-        : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    publisher: json['publisher'] as String?,
-    publisherElement: json['_publisher'] == null
-        ? null
-        : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
-    contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    description: json['description'] == null
-        ? null
-        : Markdown.fromJson(json['description']),
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    useContext: (json['useContext'] as List<dynamic>?)
-        ?.map((e) => UsageContext.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    jurisdiction: (json['jurisdiction'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    purpose:
-        json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
-    purposeElement: json['_purpose'] == null
-        ? null
-        : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
-    copyright:
-        json['copyright'] == null ? null : Markdown.fromJson(json['copyright']),
-    copyrightElement: json['_copyright'] == null
-        ? null
-        : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
-    approvalDate: json['approvalDate'] == null
-        ? null
-        : Date.fromJson(json['approvalDate']),
-    approvalDateElement: json['_approvalDate'] == null
-        ? null
-        : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
-    lastReviewDate: json['lastReviewDate'] == null
-        ? null
-        : Date.fromJson(json['lastReviewDate']),
-    lastReviewDateElement: json['_lastReviewDate'] == null
-        ? null
-        : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
-    effectivePeriod: json['effectivePeriod'] == null
-        ? null
-        : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    shortTitle: json['shortTitle'] as String?,
-    shortTitleElement: json['_shortTitle'] == null
-        ? null
-        : Element.fromJson(json['_shortTitle'] as Map<String, dynamic>),
-    subtitle: json['subtitle'] as String?,
-    subtitleElement: json['_subtitle'] == null
-        ? null
-        : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-    note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    author: (json['author'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    editor: (json['editor'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    reviewer: (json['reviewer'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    endorser: (json['endorser'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
-        ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    actual: json['actual'] == null ? null : Boolean.fromJson(json['actual']),
-    actualElement: json['_actual'] == null
-        ? null
-        : Element.fromJson(json['_actual'] as Map<String, dynamic>),
-    characteristicCombination: _$enumDecodeNullable(
-        _$EvidenceVariableCharacteristicCombinationEnumMap,
-        json['characteristicCombination'],
-        unknownValue: EvidenceVariableCharacteristicCombination.unknown),
-    characteristicCombinationElement: json['_characteristicCombination'] == null
-        ? null
-        : Element.fromJson(
-            json['_characteristicCombination'] as Map<String, dynamic>),
-    characteristic: (json['characteristic'] as List<dynamic>?)
-        ?.map((e) =>
-            EvidenceVariableCharacteristic.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    handling: _$enumDecodeNullable(
-        _$EvidenceVariableHandlingEnumMap, json['handling'],
-        unknownValue: EvidenceVariableHandling.unknown),
-    handlingElement: json['_handling'] == null
-        ? null
-        : Element.fromJson(json['_handling'] as Map<String, dynamic>),
-    category: (json['category'] as List<dynamic>?)
-        ?.map(
-            (e) => EvidenceVariableCategory.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
+    _$_EvidenceVariable(
+      resourceType: _$enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.EvidenceVariable) ??
+          R5ResourceType.EvidenceVariable,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
+      urlElement: json['_url'] == null
+          ? null
+          : Element.fromJson(json['_url'] as Map<String, dynamic>),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      version: json['version'] as String?,
+      versionElement: json['_version'] == null
+          ? null
+          : Element.fromJson(json['_version'] as Map<String, dynamic>),
+      name: json['name'] as String?,
+      nameElement: json['_name'] == null
+          ? null
+          : Element.fromJson(json['_name'] as Map<String, dynamic>),
+      title: json['title'] as String?,
+      titleElement: json['_title'] == null
+          ? null
+          : Element.fromJson(json['_title'] as Map<String, dynamic>),
+      status: _$enumDecodeNullable(
+          _$EvidenceVariableStatusEnumMap, json['status'],
+          unknownValue: EvidenceVariableStatus.unknown),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      experimental: json['experimental'] == null
+          ? null
+          : Boolean.fromJson(json['experimental']),
+      experimentalElement: json['_experimental'] == null
+          ? null
+          : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      dateElement: json['_date'] == null
+          ? null
+          : Element.fromJson(json['_date'] as Map<String, dynamic>),
+      publisher: json['publisher'] as String?,
+      publisherElement: json['_publisher'] == null
+          ? null
+          : Element.fromJson(json['_publisher'] as Map<String, dynamic>),
+      contact: (json['contact'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] == null
+          ? null
+          : Markdown.fromJson(json['description']),
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+      useContext: (json['useContext'] as List<dynamic>?)
+          ?.map((e) => UsageContext.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      jurisdiction: (json['jurisdiction'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      purpose:
+          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purposeElement: json['_purpose'] == null
+          ? null
+          : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
+      copyright: json['copyright'] == null
+          ? null
+          : Markdown.fromJson(json['copyright']),
+      copyrightElement: json['_copyright'] == null
+          ? null
+          : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
+      approvalDate: json['approvalDate'] == null
+          ? null
+          : Date.fromJson(json['approvalDate']),
+      approvalDateElement: json['_approvalDate'] == null
+          ? null
+          : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
+      lastReviewDate: json['lastReviewDate'] == null
+          ? null
+          : Date.fromJson(json['lastReviewDate']),
+      lastReviewDateElement: json['_lastReviewDate'] == null
+          ? null
+          : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
+      effectivePeriod: json['effectivePeriod'] == null
+          ? null
+          : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
+      shortTitle: json['shortTitle'] as String?,
+      shortTitleElement: json['_shortTitle'] == null
+          ? null
+          : Element.fromJson(json['_shortTitle'] as Map<String, dynamic>),
+      subtitle: json['subtitle'] as String?,
+      subtitleElement: json['_subtitle'] == null
+          ? null
+          : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      author: (json['author'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      editor: (json['editor'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reviewer: (json['reviewer'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      endorser: (json['endorser'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
+          ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      actual: json['actual'] == null ? null : Boolean.fromJson(json['actual']),
+      actualElement: json['_actual'] == null
+          ? null
+          : Element.fromJson(json['_actual'] as Map<String, dynamic>),
+      characteristicCombination: _$enumDecodeNullable(
+          _$EvidenceVariableCharacteristicCombinationEnumMap,
+          json['characteristicCombination'],
+          unknownValue: EvidenceVariableCharacteristicCombination.unknown),
+      characteristicCombinationElement:
+          json['_characteristicCombination'] == null
+              ? null
+              : Element.fromJson(
+                  json['_characteristicCombination'] as Map<String, dynamic>),
+      characteristic: (json['characteristic'] as List<dynamic>?)
+          ?.map((e) => EvidenceVariableCharacteristic.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+      handling: _$enumDecodeNullable(
+          _$EvidenceVariableHandlingEnumMap, json['handling'],
+          unknownValue: EvidenceVariableHandling.unknown),
+      handlingElement: json['_handling'] == null
+          ? null
+          : Element.fromJson(json['_handling'] as Map<String, dynamic>),
+      category: (json['category'] as List<dynamic>?)
+          ?.map((e) =>
+              EvidenceVariableCategory.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_EvidenceVariableToJson(_$_EvidenceVariable instance) {
+Map<String, dynamic> _$$_EvidenceVariableToJson(_$_EvidenceVariable instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
   };
@@ -862,64 +868,64 @@ const _$EvidenceVariableHandlingEnumMap = {
   EvidenceVariableHandling.unknown: 'unknown',
 };
 
-_$_EvidenceVariableCharacteristic _$_$_EvidenceVariableCharacteristicFromJson(
-    Map<String, dynamic> json) {
-  return _$_EvidenceVariableCharacteristic(
-    id: json['id'] as String?,
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    description: json['description'] as String?,
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    definitionReference: json['definitionReference'] == null
-        ? null
-        : Reference.fromJson(
-            json['definitionReference'] as Map<String, dynamic>),
-    definitionCanonical: json['definitionCanonical'] == null
-        ? null
-        : Canonical.fromJson(json['definitionCanonical']),
-    definitionCanonicalElement: json['_definitionCanonical'] == null
-        ? null
-        : Element.fromJson(
-            json['_definitionCanonical'] as Map<String, dynamic>),
-    definitionCodeableConcept: json['definitionCodeableConcept'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['definitionCodeableConcept'] as Map<String, dynamic>),
-    definitionExpression: json['definitionExpression'] == null
-        ? null
-        : Expression.fromJson(
-            json['definitionExpression'] as Map<String, dynamic>),
-    method: json['method'] == null
-        ? null
-        : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
-    device: json['device'] == null
-        ? null
-        : Reference.fromJson(json['device'] as Map<String, dynamic>),
-    exclude: json['exclude'] == null ? null : Boolean.fromJson(json['exclude']),
-    excludeElement: json['_exclude'] == null
-        ? null
-        : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
-    timeFromStart: json['timeFromStart'] == null
-        ? null
-        : EvidenceVariableTimeFromStart.fromJson(
-            json['timeFromStart'] as Map<String, dynamic>),
-    groupMeasure: _$enumDecodeNullable(
-        _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
-        json['groupMeasure'],
-        unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),
-    groupMeasureElement: json['_groupMeasure'] == null
-        ? null
-        : Element.fromJson(json['_groupMeasure'] as Map<String, dynamic>),
-  );
-}
+_$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
+        Map<String, dynamic> json) =>
+    _$_EvidenceVariableCharacteristic(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] as String?,
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+      definitionReference: json['definitionReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['definitionReference'] as Map<String, dynamic>),
+      definitionCanonical: json['definitionCanonical'] == null
+          ? null
+          : Canonical.fromJson(json['definitionCanonical']),
+      definitionCanonicalElement: json['_definitionCanonical'] == null
+          ? null
+          : Element.fromJson(
+              json['_definitionCanonical'] as Map<String, dynamic>),
+      definitionCodeableConcept: json['definitionCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['definitionCodeableConcept'] as Map<String, dynamic>),
+      definitionExpression: json['definitionExpression'] == null
+          ? null
+          : Expression.fromJson(
+              json['definitionExpression'] as Map<String, dynamic>),
+      method: json['method'] == null
+          ? null
+          : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
+      device: json['device'] == null
+          ? null
+          : Reference.fromJson(json['device'] as Map<String, dynamic>),
+      exclude:
+          json['exclude'] == null ? null : Boolean.fromJson(json['exclude']),
+      excludeElement: json['_exclude'] == null
+          ? null
+          : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
+      timeFromStart: json['timeFromStart'] == null
+          ? null
+          : EvidenceVariableTimeFromStart.fromJson(
+              json['timeFromStart'] as Map<String, dynamic>),
+      groupMeasure: _$enumDecodeNullable(
+          _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
+          json['groupMeasure'],
+          unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),
+      groupMeasureElement: json['_groupMeasure'] == null
+          ? null
+          : Element.fromJson(json['_groupMeasure'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_EvidenceVariableCharacteristicToJson(
+Map<String, dynamic> _$$_EvidenceVariableCharacteristicToJson(
     _$_EvidenceVariableCharacteristic instance) {
   final val = <String, dynamic>{};
 
@@ -967,33 +973,32 @@ const _$EvidenceVariableCharacteristicGroupMeasureEnumMap = {
   EvidenceVariableCharacteristicGroupMeasure.unknown: 'unknown',
 };
 
-_$_EvidenceVariableTimeFromStart _$_$_EvidenceVariableTimeFromStartFromJson(
-    Map<String, dynamic> json) {
-  return _$_EvidenceVariableTimeFromStart(
-    id: json['id'] as String?,
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    description: json['description'] as String?,
-    descriptionElement: json['_description'] == null
-        ? null
-        : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    quantity: json['quantity'] == null
-        ? null
-        : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-    range: json['range'] == null
-        ? null
-        : Range.fromJson(json['range'] as Map<String, dynamic>),
-    note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_EvidenceVariableTimeFromStart _$$_EvidenceVariableTimeFromStartFromJson(
+        Map<String, dynamic> json) =>
+    _$_EvidenceVariableTimeFromStart(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] as String?,
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+      quantity: json['quantity'] == null
+          ? null
+          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+      range: json['range'] == null
+          ? null
+          : Range.fromJson(json['range'] as Map<String, dynamic>),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_EvidenceVariableTimeFromStartToJson(
+Map<String, dynamic> _$$_EvidenceVariableTimeFromStartToJson(
     _$_EvidenceVariableTimeFromStart instance) {
   final val = <String, dynamic>{};
 
@@ -1016,34 +1021,33 @@ Map<String, dynamic> _$_$_EvidenceVariableTimeFromStartToJson(
   return val;
 }
 
-_$_EvidenceVariableCategory _$_$_EvidenceVariableCategoryFromJson(
-    Map<String, dynamic> json) {
-  return _$_EvidenceVariableCategory(
-    id: json['id'] as String?,
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    name: json['name'] as String?,
-    nameElement: json['_name'] == null
-        ? null
-        : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    valueCodeableConcept: json['valueCodeableConcept'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['valueCodeableConcept'] as Map<String, dynamic>),
-    valueQuantity: json['valueQuantity'] == null
-        ? null
-        : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
-    valueRange: json['valueRange'] == null
-        ? null
-        : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
-  );
-}
+_$_EvidenceVariableCategory _$$_EvidenceVariableCategoryFromJson(
+        Map<String, dynamic> json) =>
+    _$_EvidenceVariableCategory(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      name: json['name'] as String?,
+      nameElement: json['_name'] == null
+          ? null
+          : Element.fromJson(json['_name'] as Map<String, dynamic>),
+      valueCodeableConcept: json['valueCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['valueCodeableConcept'] as Map<String, dynamic>),
+      valueQuantity: json['valueQuantity'] == null
+          ? null
+          : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+      valueRange: json['valueRange'] == null
+          ? null
+          : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_EvidenceVariableCategoryToJson(
+Map<String, dynamic> _$$_EvidenceVariableCategoryToJson(
     _$_EvidenceVariableCategory instance) {
   final val = <String, dynamic>{};
 

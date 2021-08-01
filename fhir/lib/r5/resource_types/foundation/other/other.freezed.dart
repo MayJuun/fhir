@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'other.dart';
 
@@ -504,7 +504,7 @@ class _$_Basic extends _Basic {
       : super._();
 
   factory _$_Basic.fromJson(Map<String, dynamic> json) =>
-      _$_$_BasicFromJson(json);
+      _$$_BasicFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Basic)
@@ -631,7 +631,7 @@ class _$_Basic extends _Basic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BasicToJson(this);
+    return _$$_BasicToJson(this);
   }
 }
 
@@ -1095,7 +1095,7 @@ class _$_Binary extends _Binary {
       : super._();
 
   factory _$_Binary.fromJson(Map<String, dynamic> json) =>
-      _$_$_BinaryFromJson(json);
+      _$$_BinaryFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Binary)
@@ -1194,7 +1194,7 @@ class _$_Binary extends _Binary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BinaryToJson(this);
+    return _$$_BinaryToJson(this);
   }
 }
 
@@ -1760,7 +1760,7 @@ class _$_Bundle extends _Bundle {
       : super._();
 
   factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleFromJson(json);
+      _$$_BundleFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
@@ -1888,7 +1888,7 @@ class _$_Bundle extends _Bundle {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleToJson(this);
+    return _$$_BundleToJson(this);
   }
 }
 
@@ -2202,7 +2202,7 @@ class _$_BundleLink extends _BundleLink {
       : super._();
 
   factory _$_BundleLink.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleLinkFromJson(json);
+      _$$_BundleLinkFromJson(json);
 
   @override
   final String? id;
@@ -2270,7 +2270,7 @@ class _$_BundleLink extends _BundleLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleLinkToJson(this);
+    return _$$_BundleLinkToJson(this);
   }
 }
 
@@ -2622,7 +2622,7 @@ class _$_BundleEntry extends _BundleEntry {
       : super._();
 
   factory _$_BundleEntry.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleEntryFromJson(json);
+      _$$_BundleEntryFromJson(json);
 
   @override
   final String? id;
@@ -2706,7 +2706,7 @@ class _$_BundleEntry extends _BundleEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleEntryToJson(this);
+    return _$$_BundleEntryToJson(this);
   }
 }
 
@@ -3004,7 +3004,7 @@ class _$_BundleSearch extends _BundleSearch {
       : super._();
 
   factory _$_BundleSearch.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleSearchFromJson(json);
+      _$$_BundleSearchFromJson(json);
 
   @override
   final String? id;
@@ -3072,7 +3072,7 @@ class _$_BundleSearch extends _BundleSearch {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleSearchToJson(this);
+    return _$$_BundleSearchToJson(this);
   }
 }
 
@@ -3569,7 +3569,7 @@ class _$_BundleRequest extends _BundleRequest {
       : super._();
 
   factory _$_BundleRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleRequestFromJson(json);
+      _$$_BundleRequestFromJson(json);
 
   @override
   final String? id;
@@ -3689,7 +3689,7 @@ class _$_BundleRequest extends _BundleRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleRequestToJson(this);
+    return _$$_BundleRequestToJson(this);
   }
 }
 
@@ -4115,7 +4115,7 @@ class _$_BundleResponse extends _BundleResponse {
       : super._();
 
   factory _$_BundleResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleResponseFromJson(json);
+      _$$_BundleResponseFromJson(json);
 
   @override
   final String? id;
@@ -4213,7 +4213,7 @@ class _$_BundleResponse extends _BundleResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleResponseToJson(this);
+    return _$$_BundleResponseToJson(this);
   }
 }
 
@@ -4708,7 +4708,7 @@ class _$_Linkage extends _Linkage {
       : super._();
 
   factory _$_Linkage.fromJson(Map<String, dynamic> json) =>
-      _$_$_LinkageFromJson(json);
+      _$$_LinkageFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
@@ -4822,7 +4822,7 @@ class _$_Linkage extends _Linkage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LinkageToJson(this);
+    return _$$_LinkageToJson(this);
   }
 }
 
@@ -5109,7 +5109,7 @@ class _$_LinkageItem extends _LinkageItem {
       : super._();
 
   factory _$_LinkageItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_LinkageItemFromJson(json);
+      _$$_LinkageItemFromJson(json);
 
   @override
   final String? id;
@@ -5171,7 +5171,7 @@ class _$_LinkageItem extends _LinkageItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LinkageItemToJson(this);
+    return _$$_LinkageItemToJson(this);
   }
 }
 
@@ -5892,7 +5892,7 @@ class _$_MessageHeader extends _MessageHeader {
       : super._();
 
   factory _$_MessageHeader.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderFromJson(json);
+      _$$_MessageHeaderFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
@@ -6058,7 +6058,7 @@ class _$_MessageHeader extends _MessageHeader {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderToJson(this);
+    return _$$_MessageHeaderToJson(this);
   }
 }
 
@@ -6458,7 +6458,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
       : super._();
 
   factory _$_MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderDestinationFromJson(json);
+      _$$_MessageHeaderDestinationFromJson(json);
 
   @override
   final String? id;
@@ -6538,7 +6538,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderDestinationToJson(this);
+    return _$$_MessageHeaderDestinationToJson(this);
   }
 }
 
@@ -6947,7 +6947,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
       : super._();
 
   factory _$_MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderSourceFromJson(json);
+      _$$_MessageHeaderSourceFromJson(json);
 
   @override
   final String? id;
@@ -7048,7 +7048,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderSourceToJson(this);
+    return _$$_MessageHeaderSourceToJson(this);
   }
 }
 
@@ -7389,7 +7389,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
       : super._();
 
   factory _$_MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderResponseFromJson(json);
+      _$$_MessageHeaderResponseFromJson(json);
 
   @override
   final String? id;
@@ -7464,7 +7464,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderResponseToJson(this);
+    return _$$_MessageHeaderResponseToJson(this);
   }
 }
 
@@ -7876,7 +7876,7 @@ class _$_OperationOutcome extends _OperationOutcome {
       : super._();
 
   factory _$_OperationOutcome.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationOutcomeFromJson(json);
+      _$$_OperationOutcomeFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
@@ -7973,7 +7973,7 @@ class _$_OperationOutcome extends _OperationOutcome {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationOutcomeToJson(this);
+    return _$$_OperationOutcomeToJson(this);
   }
 }
 
@@ -8451,7 +8451,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
       : super._();
 
   factory _$_OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationOutcomeIssueFromJson(json);
+      _$$_OperationOutcomeIssueFromJson(json);
 
   @override
   final String? id;
@@ -8567,7 +8567,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationOutcomeIssueToJson(this);
+    return _$$_OperationOutcomeIssueToJson(this);
   }
 }
 
@@ -8920,7 +8920,7 @@ class _$_Parameters extends _Parameters {
       : super._();
 
   factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
-      _$_$_ParametersFromJson(json);
+      _$$_ParametersFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
@@ -8994,7 +8994,7 @@ class _$_Parameters extends _Parameters {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ParametersToJson(this);
+    return _$$_ParametersToJson(this);
   }
 }
 
@@ -11145,7 +11145,7 @@ class _$_ParametersParameter extends _ParametersParameter {
       : super._();
 
   factory _$_ParametersParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_ParametersParameterFromJson(json);
+      _$$_ParametersParameterFromJson(json);
 
   @override
   final String? id;
@@ -11540,7 +11540,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ParametersParameterToJson(this);
+    return _$$_ParametersParameterToJson(this);
   }
 }
 
@@ -12789,7 +12789,7 @@ class _$_Subscription extends _Subscription {
       : super._();
 
   factory _$_Subscription.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionFromJson(json);
+      _$$_SubscriptionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
@@ -13016,7 +13016,7 @@ class _$_Subscription extends _Subscription {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionToJson(this);
+    return _$$_SubscriptionToJson(this);
   }
 }
 
@@ -13457,7 +13457,7 @@ class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
       : super._();
 
   factory _$_SubscriptionFilterBy.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionFilterByFromJson(json);
+      _$$_SubscriptionFilterByFromJson(json);
 
   @override
   final String? id;
@@ -13539,7 +13539,7 @@ class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionFilterByToJson(this);
+    return _$$_SubscriptionFilterByToJson(this);
   }
 }
 
@@ -14208,7 +14208,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
       : super._();
 
   factory _$_SubscriptionStatus.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionStatusFromJson(json);
+      _$$_SubscriptionStatusFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
@@ -14367,7 +14367,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionStatusToJson(this);
+    return _$$_SubscriptionStatusToJson(this);
   }
 }
 
@@ -15573,7 +15573,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
       : super._();
 
   factory _$_SubscriptionTopic.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionTopicFromJson(json);
+      _$$_SubscriptionTopicFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
@@ -15825,7 +15825,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionTopicToJson(this);
+    return _$$_SubscriptionTopicToJson(this);
   }
 }
 
@@ -16349,7 +16349,7 @@ class _$_SubscriptionTopicResourceTrigger
 
   factory _$_SubscriptionTopicResourceTrigger.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_SubscriptionTopicResourceTriggerFromJson(json);
+      _$$_SubscriptionTopicResourceTriggerFromJson(json);
 
   @override
   final String? id;
@@ -16452,7 +16452,7 @@ class _$_SubscriptionTopicResourceTrigger
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionTopicResourceTriggerToJson(this);
+    return _$$_SubscriptionTopicResourceTriggerToJson(this);
   }
 }
 
@@ -16813,7 +16813,7 @@ class _$_SubscriptionTopicQueryCriteria
 
   factory _$_SubscriptionTopicQueryCriteria.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_SubscriptionTopicQueryCriteriaFromJson(json);
+      _$$_SubscriptionTopicQueryCriteriaFromJson(json);
 
   @override
   final String? id;
@@ -16896,7 +16896,7 @@ class _$_SubscriptionTopicQueryCriteria
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionTopicQueryCriteriaToJson(this);
+    return _$$_SubscriptionTopicQueryCriteriaToJson(this);
   }
 }
 
@@ -17223,7 +17223,7 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
       : super._();
 
   factory _$_SubscriptionTopicCanFilterBy.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionTopicCanFilterByFromJson(json);
+      _$$_SubscriptionTopicCanFilterByFromJson(json);
 
   @override
   final String? id;
@@ -17306,7 +17306,7 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionTopicCanFilterByToJson(this);
+    return _$$_SubscriptionTopicCanFilterByToJson(this);
   }
 }
 

@@ -1,5 +1,11 @@
 # fhir
 
+## [0.4.8]
+* Created a FhirNumber class
+* Created FhirDateTimeBase class
+* Created extra operators for Dates, DateTimes, Times, Decimal, Integers
+* These operators follow general rules on comparisons, but some may be specific to FHIRPath. If these cause issues for anyone, please let me know.
+
 ## [0.4.7]
 * Updated dependencies
 * reran code genderation

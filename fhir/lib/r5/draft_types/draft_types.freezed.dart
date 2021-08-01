@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'draft_types.dart';
 
@@ -304,7 +304,7 @@ class _$_Population extends _Population {
       : super._();
 
   factory _$_Population.fromJson(Map<String, dynamic> json) =>
-      _$_$_PopulationFromJson(json);
+      _$$_PopulationFromJson(json);
 
   @override
   final String? id;
@@ -375,7 +375,7 @@ class _$_Population extends _Population {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PopulationToJson(this);
+    return _$$_PopulationToJson(this);
   }
 }
 
@@ -686,7 +686,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
       : super._();
 
   factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProductShelfLifeFromJson(json);
+      _$$_ProductShelfLifeFromJson(json);
 
   @override
   final String? id;
@@ -761,7 +761,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProductShelfLifeToJson(this);
+    return _$$_ProductShelfLifeToJson(this);
   }
 }
 
@@ -1289,7 +1289,7 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
       : super._();
 
   factory _$_ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProdCharacteristicFromJson(json);
+      _$$_ProdCharacteristicFromJson(json);
 
   @override
   final String? id;
@@ -1411,7 +1411,7 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProdCharacteristicToJson(this);
+    return _$$_ProdCharacteristicToJson(this);
   }
 }
 
@@ -1790,7 +1790,7 @@ class _$_MarketingStatus extends _MarketingStatus {
       : super._();
 
   factory _$_MarketingStatus.fromJson(Map<String, dynamic> json) =>
-      _$_$_MarketingStatusFromJson(json);
+      _$$_MarketingStatusFromJson(json);
 
   @override
   final String? id;
@@ -1869,7 +1869,7 @@ class _$_MarketingStatus extends _MarketingStatus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MarketingStatusToJson(this);
+    return _$$_MarketingStatusToJson(this);
   }
 }
 
@@ -1926,65 +1926,88 @@ class _$CitationTearOff {
   const _$CitationTearOff();
 
   _Citation call(
-      {String resourceType = 'Citation',
+      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
+          R5ResourceType resourceType = R5ResourceType.Citation,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      @JsonKey(unknownEnumValue: CitationStatus.unknown) CitationStatus? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          CitationStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<Identifier>? relatedIdentifier,
       List<CitationSummary>? summary,
       FhirDateTime? dateCited,
-      @JsonKey(name: '_dateCited') Element? dateCitedElement,
+      @JsonKey(name: '_dateCited')
+          Element? dateCitedElement,
       CitationVariantCitation? variantCitation,
       CodeableConcept? publishingModel,
       CitationJournal? journal,
       CitationPublicationInfo? publicationInfo,
       Markdown? articleTitle,
-      @JsonKey(name: '_articleTitle') Element? articleTitleElement,
+      @JsonKey(name: '_articleTitle')
+          Element? articleTitleElement,
       List<CitationAlternativeTitle>? alternativeTitle,
       CitationPagination? pagination,
       List<CitationArticleUrl>? articleUrl,
-      @JsonKey(name: 'abstract') Markdown? abstract_,
-      @JsonKey(name: '_abstract') Element? abstractElement,
+      @JsonKey(name: 'abstract')
+          Markdown? abstract_,
+      @JsonKey(name: '_abstract')
+          Element? abstractElement,
       Markdown? abstractCopyright,
-      @JsonKey(name: '_abstractCopyright') Element? abstractCopyrightElement,
+      @JsonKey(name: '_abstractCopyright')
+          Element? abstractCopyrightElement,
       List<CitationAlternativeAbstract>? alternativeAbstract,
       CitationContributorship? contributorship,
       CodeableConcept? articleLanguage,
@@ -2076,7 +2099,8 @@ const $Citation = _$CitationTearOff();
 
 /// @nodoc
 mixin _$Citation {
-  String get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R5ResourceType.Citation)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
@@ -2189,65 +2213,88 @@ abstract class $CitationCopyWith<$Res> {
   factory $CitationCopyWith(Citation value, $Res Function(Citation) then) =
       _$CitationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      @JsonKey(unknownEnumValue: CitationStatus.unknown) CitationStatus? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          CitationStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<Identifier>? relatedIdentifier,
       List<CitationSummary>? summary,
       FhirDateTime? dateCited,
-      @JsonKey(name: '_dateCited') Element? dateCitedElement,
+      @JsonKey(name: '_dateCited')
+          Element? dateCitedElement,
       CitationVariantCitation? variantCitation,
       CodeableConcept? publishingModel,
       CitationJournal? journal,
       CitationPublicationInfo? publicationInfo,
       Markdown? articleTitle,
-      @JsonKey(name: '_articleTitle') Element? articleTitleElement,
+      @JsonKey(name: '_articleTitle')
+          Element? articleTitleElement,
       List<CitationAlternativeTitle>? alternativeTitle,
       CitationPagination? pagination,
       List<CitationArticleUrl>? articleUrl,
-      @JsonKey(name: 'abstract') Markdown? abstract_,
-      @JsonKey(name: '_abstract') Element? abstractElement,
+      @JsonKey(name: 'abstract')
+          Markdown? abstract_,
+      @JsonKey(name: '_abstract')
+          Element? abstractElement,
       Markdown? abstractCopyright,
-      @JsonKey(name: '_abstractCopyright') Element? abstractCopyrightElement,
+      @JsonKey(name: '_abstractCopyright')
+          Element? abstractCopyrightElement,
       List<CitationAlternativeAbstract>? alternativeAbstract,
       CitationContributorship? contributorship,
       CodeableConcept? articleLanguage,
@@ -2373,7 +2420,7 @@ class _$CitationCopyWithImpl<$Res> implements $CitationCopyWith<$Res> {
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as R5ResourceType,
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2985,65 +3032,88 @@ abstract class _$CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
       __$CitationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      @JsonKey(unknownEnumValue: CitationStatus.unknown) CitationStatus? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          CitationStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<Identifier>? relatedIdentifier,
       List<CitationSummary>? summary,
       FhirDateTime? dateCited,
-      @JsonKey(name: '_dateCited') Element? dateCitedElement,
+      @JsonKey(name: '_dateCited')
+          Element? dateCitedElement,
       CitationVariantCitation? variantCitation,
       CodeableConcept? publishingModel,
       CitationJournal? journal,
       CitationPublicationInfo? publicationInfo,
       Markdown? articleTitle,
-      @JsonKey(name: '_articleTitle') Element? articleTitleElement,
+      @JsonKey(name: '_articleTitle')
+          Element? articleTitleElement,
       List<CitationAlternativeTitle>? alternativeTitle,
       CitationPagination? pagination,
       List<CitationArticleUrl>? articleUrl,
-      @JsonKey(name: 'abstract') Markdown? abstract_,
-      @JsonKey(name: '_abstract') Element? abstractElement,
+      @JsonKey(name: 'abstract')
+          Markdown? abstract_,
+      @JsonKey(name: '_abstract')
+          Element? abstractElement,
       Markdown? abstractCopyright,
-      @JsonKey(name: '_abstractCopyright') Element? abstractCopyrightElement,
+      @JsonKey(name: '_abstractCopyright')
+          Element? abstractCopyrightElement,
       List<CitationAlternativeAbstract>? alternativeAbstract,
       CitationContributorship? contributorship,
       CodeableConcept? articleLanguage,
@@ -3200,7 +3270,7 @@ class __$CitationCopyWithImpl<$Res> extends _$CitationCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as R5ResourceType,
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3477,65 +3547,88 @@ class __$CitationCopyWithImpl<$Res> extends _$CitationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Citation extends _Citation {
   _$_Citation(
-      {this.resourceType = 'Citation',
+      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
+          this.resourceType = R5ResourceType.Citation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
-      @JsonKey(unknownEnumValue: CitationStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.effectivePeriod,
       this.relatedIdentifier,
       this.summary,
       this.dateCited,
-      @JsonKey(name: '_dateCited') this.dateCitedElement,
+      @JsonKey(name: '_dateCited')
+          this.dateCitedElement,
       this.variantCitation,
       this.publishingModel,
       this.journal,
       this.publicationInfo,
       this.articleTitle,
-      @JsonKey(name: '_articleTitle') this.articleTitleElement,
+      @JsonKey(name: '_articleTitle')
+          this.articleTitleElement,
       this.alternativeTitle,
       this.pagination,
       this.articleUrl,
-      @JsonKey(name: 'abstract') this.abstract_,
-      @JsonKey(name: '_abstract') this.abstractElement,
+      @JsonKey(name: 'abstract')
+          this.abstract_,
+      @JsonKey(name: '_abstract')
+          this.abstractElement,
       this.abstractCopyright,
-      @JsonKey(name: '_abstractCopyright') this.abstractCopyrightElement,
+      @JsonKey(name: '_abstractCopyright')
+          this.abstractCopyrightElement,
       this.alternativeAbstract,
       this.contributorship,
       this.articleLanguage,
@@ -3548,11 +3641,11 @@ class _$_Citation extends _Citation {
       : super._();
 
   factory _$_Citation.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationFromJson(json);
+      _$$_CitationFromJson(json);
 
-  @JsonKey(defaultValue: 'Citation')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Citation)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -3911,71 +4004,94 @@ class _$_Citation extends _Citation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationToJson(this);
+    return _$$_CitationToJson(this);
   }
 }
 
 abstract class _Citation extends Citation {
   factory _Citation(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      @JsonKey(unknownEnumValue: CitationStatus.unknown) CitationStatus? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          CitationStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<Identifier>? relatedIdentifier,
       List<CitationSummary>? summary,
       FhirDateTime? dateCited,
-      @JsonKey(name: '_dateCited') Element? dateCitedElement,
+      @JsonKey(name: '_dateCited')
+          Element? dateCitedElement,
       CitationVariantCitation? variantCitation,
       CodeableConcept? publishingModel,
       CitationJournal? journal,
       CitationPublicationInfo? publicationInfo,
       Markdown? articleTitle,
-      @JsonKey(name: '_articleTitle') Element? articleTitleElement,
+      @JsonKey(name: '_articleTitle')
+          Element? articleTitleElement,
       List<CitationAlternativeTitle>? alternativeTitle,
       CitationPagination? pagination,
       List<CitationArticleUrl>? articleUrl,
-      @JsonKey(name: 'abstract') Markdown? abstract_,
-      @JsonKey(name: '_abstract') Element? abstractElement,
+      @JsonKey(name: 'abstract')
+          Markdown? abstract_,
+      @JsonKey(name: '_abstract')
+          Element? abstractElement,
       Markdown? abstractCopyright,
-      @JsonKey(name: '_abstractCopyright') Element? abstractCopyrightElement,
+      @JsonKey(name: '_abstractCopyright')
+          Element? abstractCopyrightElement,
       List<CitationAlternativeAbstract>? alternativeAbstract,
       CitationContributorship? contributorship,
       CodeableConcept? articleLanguage,
@@ -3990,7 +4106,8 @@ abstract class _Citation extends Citation {
   factory _Citation.fromJson(Map<String, dynamic> json) = _$_Citation.fromJson;
 
   @override
-  String get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R5ResourceType.Citation)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
   Id? get id => throw _privateConstructorUsedError;
   @override
@@ -4384,7 +4501,7 @@ class _$_CitationSummary extends _CitationSummary {
       : super._();
 
   factory _$_CitationSummary.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationSummaryFromJson(json);
+      _$$_CitationSummaryFromJson(json);
 
   @override
   final String? id;
@@ -4444,7 +4561,7 @@ class _$_CitationSummary extends _CitationSummary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationSummaryToJson(this);
+    return _$$_CitationSummaryToJson(this);
   }
 }
 
@@ -4734,7 +4851,7 @@ class _$_CitationVariantCitation extends _CitationVariantCitation {
       : super._();
 
   factory _$_CitationVariantCitation.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationVariantCitationFromJson(json);
+      _$$_CitationVariantCitationFromJson(json);
 
   @override
   final String? id;
@@ -4801,7 +4918,7 @@ class _$_CitationVariantCitation extends _CitationVariantCitation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationVariantCitationToJson(this);
+    return _$$_CitationVariantCitationToJson(this);
   }
 }
 
@@ -5125,7 +5242,7 @@ class _$_CitationJournal extends _CitationJournal {
       : super._();
 
   factory _$_CitationJournal.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationJournalFromJson(json);
+      _$$_CitationJournalFromJson(json);
 
   @override
   final String? id;
@@ -5205,7 +5322,7 @@ class _$_CitationJournal extends _CitationJournal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationJournalToJson(this);
+    return _$$_CitationJournalToJson(this);
   }
 }
 
@@ -5552,7 +5669,7 @@ class _$_CitationJournalIssue extends _CitationJournalIssue {
       : super._();
 
   factory _$_CitationJournalIssue.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationJournalIssueFromJson(json);
+      _$$_CitationJournalIssueFromJson(json);
 
   @override
   final String? id;
@@ -5632,7 +5749,7 @@ class _$_CitationJournalIssue extends _CitationJournalIssue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationJournalIssueToJson(this);
+    return _$$_CitationJournalIssueToJson(this);
   }
 }
 
@@ -6108,7 +6225,7 @@ class _$_CitationPublicationDate extends _CitationPublicationDate {
       : super._();
 
   factory _$_CitationPublicationDate.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationPublicationDateFromJson(json);
+      _$$_CitationPublicationDateFromJson(json);
 
   @override
   final String? id;
@@ -6224,7 +6341,7 @@ class _$_CitationPublicationDate extends _CitationPublicationDate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationPublicationDateToJson(this);
+    return _$$_CitationPublicationDateToJson(this);
   }
 }
 
@@ -6611,7 +6728,7 @@ class _$_CitationPublicationInfo extends _CitationPublicationInfo {
       : super._();
 
   factory _$_CitationPublicationInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationPublicationInfoFromJson(json);
+      _$$_CitationPublicationInfoFromJson(json);
 
   @override
   final String? id;
@@ -6700,7 +6817,7 @@ class _$_CitationPublicationInfo extends _CitationPublicationInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationPublicationInfoToJson(this);
+    return _$$_CitationPublicationInfoToJson(this);
   }
 }
 
@@ -7113,7 +7230,7 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
       : super._();
 
   factory _$_CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationPublishedInFromJson(json);
+      _$$_CitationPublishedInFromJson(json);
 
   @override
   final String? id;
@@ -7214,7 +7331,7 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationPublishedInToJson(this);
+    return _$$_CitationPublishedInToJson(this);
   }
 }
 
@@ -7528,7 +7645,7 @@ class _$_CitationAlternativeTitle extends _CitationAlternativeTitle {
       : super._();
 
   factory _$_CitationAlternativeTitle.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationAlternativeTitleFromJson(json);
+      _$$_CitationAlternativeTitleFromJson(json);
 
   @override
   final String? id;
@@ -7595,7 +7712,7 @@ class _$_CitationAlternativeTitle extends _CitationAlternativeTitle {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationAlternativeTitleToJson(this);
+    return _$$_CitationAlternativeTitleToJson(this);
   }
 }
 
@@ -7921,7 +8038,7 @@ class _$_CitationPagination extends _CitationPagination {
       : super._();
 
   factory _$_CitationPagination.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationPaginationFromJson(json);
+      _$$_CitationPaginationFromJson(json);
 
   @override
   final String? id;
@@ -8003,7 +8120,7 @@ class _$_CitationPagination extends _CitationPagination {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationPaginationToJson(this);
+    return _$$_CitationPaginationToJson(this);
   }
 }
 
@@ -8273,7 +8390,7 @@ class _$_CitationArticleUrl extends _CitationArticleUrl {
       : super._();
 
   factory _$_CitationArticleUrl.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationArticleUrlFromJson(json);
+      _$$_CitationArticleUrlFromJson(json);
 
   @override
   final String? id;
@@ -8333,7 +8450,7 @@ class _$_CitationArticleUrl extends _CitationArticleUrl {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationArticleUrlToJson(this);
+    return _$$_CitationArticleUrlToJson(this);
   }
 }
 
@@ -8674,7 +8791,7 @@ class _$_CitationAlternativeAbstract extends _CitationAlternativeAbstract {
       : super._();
 
   factory _$_CitationAlternativeAbstract.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationAlternativeAbstractFromJson(json);
+      _$$_CitationAlternativeAbstractFromJson(json);
 
   @override
   final String? id;
@@ -8757,7 +8874,7 @@ class _$_CitationAlternativeAbstract extends _CitationAlternativeAbstract {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationAlternativeAbstractToJson(this);
+    return _$$_CitationAlternativeAbstractToJson(this);
   }
 }
 
@@ -9035,7 +9152,7 @@ class _$_CitationContributorship extends _CitationContributorship {
       : super._();
 
   factory _$_CitationContributorship.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationContributorshipFromJson(json);
+      _$$_CitationContributorshipFromJson(json);
 
   @override
   final String? id;
@@ -9102,7 +9219,7 @@ class _$_CitationContributorship extends _CitationContributorship {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationContributorshipToJson(this);
+    return _$$_CitationContributorshipToJson(this);
   }
 }
 
@@ -9650,7 +9767,7 @@ class _$_CitationEntry extends _CitationEntry {
       : super._();
 
   factory _$_CitationEntry.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationEntryFromJson(json);
+      _$$_CitationEntryFromJson(json);
 
   @override
   final String? id;
@@ -9795,7 +9912,7 @@ class _$_CitationEntry extends _CitationEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationEntryToJson(this);
+    return _$$_CitationEntryToJson(this);
   }
 }
 
@@ -10138,7 +10255,7 @@ class _$_CitationAffiliationInfo extends _CitationAffiliationInfo {
       : super._();
 
   factory _$_CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationAffiliationInfoFromJson(json);
+      _$$_CitationAffiliationInfoFromJson(json);
 
   @override
   final String? id;
@@ -10213,7 +10330,7 @@ class _$_CitationAffiliationInfo extends _CitationAffiliationInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationAffiliationInfoToJson(this);
+    return _$$_CitationAffiliationInfoToJson(this);
   }
 }
 
@@ -10538,7 +10655,7 @@ class _$_CitationSummary1 extends _CitationSummary1 {
       : super._();
 
   factory _$_CitationSummary1.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationSummary1FromJson(json);
+      _$$_CitationSummary1FromJson(json);
 
   @override
   final String? id;
@@ -10608,7 +10725,7 @@ class _$_CitationSummary1 extends _CitationSummary1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationSummary1ToJson(this);
+    return _$$_CitationSummary1ToJson(this);
   }
 }
 
@@ -10949,7 +11066,7 @@ class _$_CitationAlternativeForm extends _CitationAlternativeForm {
       : super._();
 
   factory _$_CitationAlternativeForm.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationAlternativeFormFromJson(json);
+      _$$_CitationAlternativeFormFromJson(json);
 
   @override
   final String? id;
@@ -11023,7 +11140,7 @@ class _$_CitationAlternativeForm extends _CitationAlternativeForm {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationAlternativeFormToJson(this);
+    return _$$_CitationAlternativeFormToJson(this);
   }
 }
 
@@ -11367,7 +11484,7 @@ class _$_CitationJournalIssue1 extends _CitationJournalIssue1 {
       : super._();
 
   factory _$_CitationJournalIssue1.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationJournalIssue1FromJson(json);
+      _$$_CitationJournalIssue1FromJson(json);
 
   @override
   final String? id;
@@ -11447,7 +11564,7 @@ class _$_CitationJournalIssue1 extends _CitationJournalIssue1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationJournalIssue1ToJson(this);
+    return _$$_CitationJournalIssue1ToJson(this);
   }
 }
 
@@ -11923,7 +12040,7 @@ class _$_CitationPublicationDate1 extends _CitationPublicationDate1 {
       : super._();
 
   factory _$_CitationPublicationDate1.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationPublicationDate1FromJson(json);
+      _$$_CitationPublicationDate1FromJson(json);
 
   @override
   final String? id;
@@ -12039,7 +12156,7 @@ class _$_CitationPublicationDate1 extends _CitationPublicationDate1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationPublicationDate1ToJson(this);
+    return _$$_CitationPublicationDate1ToJson(this);
   }
 }
 
@@ -12394,7 +12511,7 @@ class _$_CitationPagination1 extends _CitationPagination1 {
       : super._();
 
   factory _$_CitationPagination1.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationPagination1FromJson(json);
+      _$$_CitationPagination1FromJson(json);
 
   @override
   final String? id;
@@ -12477,7 +12594,7 @@ class _$_CitationPagination1 extends _CitationPagination1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationPagination1ToJson(this);
+    return _$$_CitationPagination1ToJson(this);
   }
 }
 
@@ -12843,7 +12960,7 @@ class _$_CitationPublicationInfo1 extends _CitationPublicationInfo1 {
       : super._();
 
   factory _$_CitationPublicationInfo1.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationPublicationInfo1FromJson(json);
+      _$$_CitationPublicationInfo1FromJson(json);
 
   @override
   final String? id;
@@ -12932,7 +13049,7 @@ class _$_CitationPublicationInfo1 extends _CitationPublicationInfo1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationPublicationInfo1ToJson(this);
+    return _$$_CitationPublicationInfo1ToJson(this);
   }
 }
 
@@ -13329,7 +13446,7 @@ class _$_CitationPublishedIn1 extends _CitationPublishedIn1 {
       : super._();
 
   factory _$_CitationPublishedIn1.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationPublishedIn1FromJson(json);
+      _$$_CitationPublishedIn1FromJson(json);
 
   @override
   final String? id;
@@ -13424,7 +13541,7 @@ class _$_CitationPublishedIn1 extends _CitationPublishedIn1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationPublishedIn1ToJson(this);
+    return _$$_CitationPublishedIn1ToJson(this);
   }
 }
 
@@ -13689,7 +13806,7 @@ class _$_CitationKeywordList extends _CitationKeywordList {
       : super._();
 
   factory _$_CitationKeywordList.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationKeywordListFromJson(json);
+      _$$_CitationKeywordListFromJson(json);
 
   @override
   final String? id;
@@ -13750,7 +13867,7 @@ class _$_CitationKeywordList extends _CitationKeywordList {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationKeywordListToJson(this);
+    return _$$_CitationKeywordListToJson(this);
   }
 }
 
@@ -14025,7 +14142,7 @@ class _$_CitationKeyword extends _CitationKeyword {
       : super._();
 
   factory _$_CitationKeyword.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationKeywordFromJson(json);
+      _$$_CitationKeywordFromJson(json);
 
   @override
   final String? id;
@@ -14093,7 +14210,7 @@ class _$_CitationKeyword extends _CitationKeyword {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationKeywordToJson(this);
+    return _$$_CitationKeywordToJson(this);
   }
 }
 
@@ -14638,7 +14755,7 @@ class _$_CitationMedlinePubMed extends _CitationMedlinePubMed {
       : super._();
 
   factory _$_CitationMedlinePubMed.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationMedlinePubMedFromJson(json);
+      _$$_CitationMedlinePubMedFromJson(json);
 
   @override
   final String? id;
@@ -14775,7 +14892,7 @@ class _$_CitationMedlinePubMed extends _CitationMedlinePubMed {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationMedlinePubMedToJson(this);
+    return _$$_CitationMedlinePubMedToJson(this);
   }
 }
 
@@ -15076,7 +15193,7 @@ class _$_CitationPubMedPubDate extends _CitationPubMedPubDate {
       : super._();
 
   factory _$_CitationPubMedPubDate.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationPubMedPubDateFromJson(json);
+      _$$_CitationPubMedPubDateFromJson(json);
 
   @override
   final String? id;
@@ -15138,7 +15255,7 @@ class _$_CitationPubMedPubDate extends _CitationPubMedPubDate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationPubMedPubDateToJson(this);
+    return _$$_CitationPubMedPubDateToJson(this);
   }
 }
 
@@ -15413,7 +15530,7 @@ class _$_CitationRelatedArticle extends _CitationRelatedArticle {
       : super._();
 
   factory _$_CitationRelatedArticle.fromJson(Map<String, dynamic> json) =>
-      _$_$_CitationRelatedArticleFromJson(json);
+      _$$_CitationRelatedArticleFromJson(json);
 
   @override
   final String? id;
@@ -15483,7 +15600,7 @@ class _$_CitationRelatedArticle extends _CitationRelatedArticle {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CitationRelatedArticleToJson(this);
+    return _$$_CitationRelatedArticleToJson(this);
   }
 }
 
@@ -15533,7 +15650,8 @@ class _$EvidenceReportTearOff {
   const _$EvidenceReportTearOff();
 
   _EvidenceReport call(
-      {String resourceType = 'EvidenceReport',
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+          R5ResourceType resourceType = R5ResourceType.EvidenceReport,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -15672,7 +15790,8 @@ const $EvidenceReport = _$EvidenceReportTearOff();
 
 /// @nodoc
 mixin _$EvidenceReport {
-  String get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
@@ -15760,7 +15879,8 @@ abstract class $EvidenceReportCopyWith<$Res> {
           EvidenceReport value, $Res Function(EvidenceReport) then) =
       _$EvidenceReportCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -15925,7 +16045,7 @@ class _$EvidenceReportCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as R5ResourceType,
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -16377,7 +16497,8 @@ abstract class _$EvidenceReportCopyWith<$Res>
       __$EvidenceReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -16565,7 +16686,7 @@ class __$EvidenceReportCopyWithImpl<$Res>
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as R5ResourceType,
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -16786,47 +16907,65 @@ class __$EvidenceReportCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EvidenceReport extends _EvidenceReport {
   _$_EvidenceReport(
-      {this.resourceType = 'EvidenceReport',
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+          this.resourceType = R5ResourceType.EvidenceReport,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
-      @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.effectivePeriod,
       this.relatedIdentifier,
       this.citeAs,
@@ -16843,11 +16982,11 @@ class _$_EvidenceReport extends _EvidenceReport {
       : super._();
 
   factory _$_EvidenceReport.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceReportFromJson(json);
+      _$$_EvidenceReportFromJson(json);
 
-  @JsonKey(defaultValue: 'EvidenceReport')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -17145,13 +17284,14 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceReportToJson(this);
+    return _$$_EvidenceReportToJson(this);
   }
 }
 
 abstract class _EvidenceReport extends EvidenceReport {
   factory _EvidenceReport(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -17228,7 +17368,8 @@ abstract class _EvidenceReport extends EvidenceReport {
       _$_EvidenceReport.fromJson;
 
   @override
-  String get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
   Id? get id => throw _privateConstructorUsedError;
   @override
@@ -17537,7 +17678,7 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
       : super._();
 
   factory _$_EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceReportSubjectFromJson(json);
+      _$$_EvidenceReportSubjectFromJson(json);
 
   @override
   final String? id;
@@ -17592,7 +17733,7 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceReportSubjectToJson(this);
+    return _$$_EvidenceReportSubjectToJson(this);
   }
 }
 
@@ -18047,7 +18188,7 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
       : super._();
 
   factory _$_EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceReportCharacteristicFromJson(json);
+      _$$_EvidenceReportCharacteristicFromJson(json);
 
   @override
   final String? id;
@@ -18151,7 +18292,7 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceReportCharacteristicToJson(this);
+    return _$$_EvidenceReportCharacteristicToJson(this);
   }
 }
 
@@ -18475,7 +18616,7 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
       : super._();
 
   factory _$_EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceReportRelatesToFromJson(json);
+      _$$_EvidenceReportRelatesToFromJson(json);
 
   @override
   final String? id;
@@ -18544,7 +18685,7 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceReportRelatesToToJson(this);
+    return _$$_EvidenceReportRelatesToToJson(this);
   }
 }
 
@@ -19043,7 +19184,7 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
       : super._();
 
   factory _$_EvidenceReportSection.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceReportSectionFromJson(json);
+      _$$_EvidenceReportSectionFromJson(json);
 
   @override
   final String? id;
@@ -19161,7 +19302,7 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceReportSectionToJson(this);
+    return _$$_EvidenceReportSectionToJson(this);
   }
 }
 
