@@ -1,15 +1,17 @@
 import 'primitive_types.dart';
 
 abstract class FhirDateTimeBase {
-  const FhirDateTimeBase();
+  const FhirDateTimeBase(this.valueString, this.valueDateTime, this.isValid, this.parseError);
 
-  final String valueString = '';
-  final bool isValid = true;
-  final DateTime? valueDateTime = null;
-  final Exception? parseError = null;
+  final String valueString;
+  final bool isValid;
+  final DateTime? valueDateTime;
+  final Exception? parseError;
 
   int get hashCode => valueString.hashCode;
   DateTime? get value => valueDateTime;
+
+  String? get iso8601String => valueDateTime?.toIso8601String();
 
   String toString() => valueString;
   String toJson() => valueString;
