@@ -5,7 +5,7 @@ class Time {
   const Time._(this._valueString, this._valueTime, this._isValid);
 
   factory Time(String inValue) =>
-      RegExp(r'^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$')
+      RegExp(r'^([01][0-9]|2[0-3])(:([0-5][0-9])(:([0-5][0-9]|60)(\.[0-9]+)?)?)?$')
               .hasMatch(inValue)
           ? Time._(inValue, inValue, true)
           : Time._(inValue, null, false);
@@ -31,11 +31,91 @@ class Time {
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is Time
-          ? o.value == _valueTime
-          : o is String
-              ? o == _valueString
-              : false;
+  bool operator ==(Object o) {
+    if (identical(this, o)) {
+      return true;
+    } else if (!isValid ||
+        (o is Time && !o.isValid) ||
+        (o is String && !Time(o).isValid)) {
+      throw Exception(
+          'Two values were passed to the time ">" comparison operator, but were not both valid\n'
+          'Argument 1: $value\nArgument 2: $o');
+    } else {
+      final compareTime = o is Time ? o.value : Time(o as String).value;
+      final thisList = value!.split(':');
+      final compareList = compareTime!.split(':');
+      if (thisList.length != compareList.length) {
+        throw Exception(
+            'Two values were passed to the time ">" comparison operator without equal precisions\n'
+            'Argument 1: $value\nArgument 2: $o');
+      } else {
+        for (var i = 0; i < thisList.length; i++) {
+          if (num.parse(thisList[i]) != num.parse(compareList[i])) {
+            return false;
+          }
+        }
+        return true;
+      }
+    }
+  }
+
+  bool operator >(Object o) {
+    if (identical(this, o)) {
+      return false;
+    } else if (!isValid ||
+        (o is Time && !o.isValid) ||
+        (o is String && !Time(o).isValid)) {
+      throw Exception(
+          'Two values were passed to the time ">" comparison operator, but were not both valid\n'
+          'Argument 1: $value\nArgument 2: $o');
+    } else {
+      final compareTime = o is Time ? o.value : Time(o as String).value;
+      final thisList = value!.split(':');
+      final compareList = compareTime!.split(':');
+      if (thisList.length != compareList.length) {
+        throw Exception(
+            'Two values were passed to the time ">" comparison operator without equal precisions\n'
+            'Argument 1: $value\nArgument 2: $o');
+      } else {
+        for (var i = 0; i < thisList.length; i++) {
+          if (num.parse(thisList[i]) != num.parse(compareList[i])) {
+            return num.parse(thisList[i]) > num.parse(compareList[i]);
+          }
+        }
+        return false;
+      }
+    }
+  }
+
+  bool operator >=(Object o) => this == o || this > o;
+
+  bool operator <(Object o) {
+    if (identical(this, o)) {
+      return false;
+    } else if (!isValid ||
+        (o is Time && !o.isValid) ||
+        (o is String && !Time(o).isValid)) {
+      throw Exception(
+          'Two values were passed to the time "<" comparison operator, but were not both valid\n'
+          'Argument 1: $value\nArgument 2: $o');
+    } else {
+      final compareTime = o is Time ? o.value : Time(o as String).value;
+      final thisList = value!.split(':');
+      final compareList = compareTime!.split(':');
+      if (thisList.length != compareList.length) {
+        throw Exception(
+            'Two values were passed to the time "<" comparison operator without equal precisions\n'
+            'Argument 1: $value\nArgument 2: $o');
+      } else {
+        for (var i = 0; i < thisList.length; i++) {
+          if (num.parse(thisList[i]) != num.parse(compareList[i])) {
+            return num.parse(thisList[i]) < num.parse(compareList[i]);
+          }
+        }
+        return false;
+      }
+    }
+  }
+
+  bool operator <=(Object o) => this == o || this < o;
 }

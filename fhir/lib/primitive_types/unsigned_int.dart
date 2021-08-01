@@ -1,9 +1,11 @@
 import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
-class UnsignedInt {
+import 'fhir_number.dart';
+
+class UnsignedInt extends FhirNumber{
   const UnsignedInt._(
-      this._valueString, this._valueUnsignedInt, this._isValid, this._isString);
+      this.valueString, this.valueNumber, this.isValid, this.isString);
 
   factory UnsignedInt(dynamic inValue) {
     if (inValue is int) {
@@ -30,24 +32,9 @@ class UnsignedInt {
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String _valueString;
-  final int? _valueUnsignedInt;
-  final bool _isValid;
-  final bool _isString;
+  final String valueString;
+  final int? valueNumber;
+  final bool isValid;
+  final bool isString;
 
-  bool get isValid => _isValid;
-  int get hashCode => _valueString.hashCode;
-  int? get value => _valueUnsignedInt;
-
-  String toString() => _valueString;
-  dynamic toJson() => _isValid && !_isString ? _valueUnsignedInt : _valueString;
-  dynamic toYaml() => _isValid && !_isString ? _valueUnsignedInt : _valueString;
-
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is UnsignedInt
-          ? o.value == _valueUnsignedInt
-          : o is String
-              ? o == _valueString
-              : false;
 }

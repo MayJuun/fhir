@@ -1,9 +1,11 @@
 import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
-class Decimal {
-  const Decimal._(this._valueString, this._valueDecimal, this._isValid,
-      this._isInt, this._isString);
+import 'fhir_number.dart';
+
+class Decimal extends FhirNumber {
+  const Decimal._(this.valueString, this.valueNumber, this.isValid,
+      this.isInt, this.isString);
 
   factory Decimal(dynamic inValue) {
     if (inValue is num) {
@@ -31,33 +33,21 @@ class Decimal {
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String _valueString;
-  final double? _valueDecimal;
-  final bool _isValid;
-  final bool _isInt;
-  final bool _isString;
+  final String valueString;
+  final double? valueNumber;
+  final bool isValid;
+  final bool isInt;
+  final bool isString;
 
-  bool get isValid => _isValid;
-  int get hashCode => _valueString.hashCode;
-  double? get value => _valueDecimal;
+  dynamic toJson() => isInt
+      ? valueNumber?.toInt()
+      : isValid && !isString
+          ? valueNumber
+          : valueString;
+  dynamic toYaml() => isInt
+      ? valueNumber?.toInt()
+      : isValid && !isString
+          ? valueNumber
+          : valueString;
 
-  String toString() => _valueString;
-  dynamic toJson() => _isInt
-      ? _valueDecimal?.toInt()
-      : _isValid && !_isString
-          ? _valueDecimal
-          : _valueString;
-  dynamic toYaml() => _isInt
-      ? _valueDecimal?.toInt()
-      : _isValid && !_isString
-          ? _valueDecimal
-          : _valueString;
-
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is Decimal
-          ? o.value == _valueDecimal
-          : o is String
-              ? o == _valueString
-              : false;
 }

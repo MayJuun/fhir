@@ -3,9 +3,11 @@ import 'dart:math';
 
 import 'package:yaml/yaml.dart';
 
-class Integer64 {
+import 'fhir_number.dart';
+
+class Integer64 extends FhirNumber{
   const Integer64._(
-      this._valueString, this._valueInteger64, this._isValid, this._isString);
+      this.valueString, this.valueNumber, this.isValid, this.isString);
 
   factory Integer64(dynamic inValue) {
     if (inValue is int) {
@@ -32,24 +34,8 @@ class Integer64 {
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String _valueString;
-  final int? _valueInteger64;
-  final bool _isValid;
-  final bool _isString;
-
-  bool get isValid => _isValid;
-  int get hashCode => _valueString.hashCode;
-  int? get value => _valueInteger64;
-
-  String toString() => _valueString;
-  dynamic toJson() => _isValid && !_isString ? _valueInteger64 : _valueString;
-  dynamic toYaml() => _isValid && !_isString ? _valueInteger64 : _valueString;
-
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is Integer64
-          ? o.value == _valueInteger64
-          : o is String
-              ? o == _valueString
-              : false;
+  final String valueString;
+  final int? valueNumber;
+  final bool isValid;
+  final bool isString;
 }

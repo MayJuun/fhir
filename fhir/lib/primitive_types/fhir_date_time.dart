@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 import 'date.dart';
+import 'fhir_date_time_base.dart';
 
 enum DateTimePrecision {
   YYYY,
@@ -12,9 +13,9 @@ enum DateTimePrecision {
   INVALID,
 }
 
-class FhirDateTime {
-  const FhirDateTime._(this._valueString, this._valueDateTime, this._isValid,
-      this._precision, this._parseError);
+class FhirDateTime extends FhirDateTimeBase {
+  const FhirDateTime._(this.valueString, this.valueDateTime, this.isValid,
+      this._precision, this.parseError);
 
   factory FhirDateTime(dynamic inValue) {
     if (inValue is DateTime) {
@@ -60,7 +61,9 @@ class FhirDateTime {
           dateTimeString.substring(0, len), dateTime, true, precision, null);
     } else {
       return FhirDateTime._(
-          '${dateTimeString}${dateTime.timeZoneOffset.isNegative ? '-' : '+'}${(dateTime.timeZoneOffset.abs().inMinutes / 60).round().toString().padLeft(2, "0")}:${(dateTime.timeZoneOffset.inMinutes % 60).toString().padLeft(2, "0")}',
+          '${dateTimeString}${dateTime.timeZoneOffset.isNegative ? '-' : '+'}'
+          '${(dateTime.timeZoneOffset.abs().inMinutes / 60).round().toString().padLeft(2, "0")}:'
+          '${(dateTime.timeZoneOffset.inMinutes % 60).toString().padLeft(2, "0")}',
           dateTime,
           true,
           precision,
@@ -77,31 +80,14 @@ class FhirDateTime {
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String _valueString;
-  final DateTime? _valueDateTime;
-  final bool _isValid;
+  final String valueString;
+  final DateTime? valueDateTime;
+  final bool isValid;
   final DateTimePrecision _precision;
-  final Exception? _parseError;
+  final Exception? parseError;
+  String? get iso8601String => valueDateTime?.toIso8601String();
 
-  bool get isValid => _isValid;
-  int get hashCode => _valueString.hashCode;
-  DateTime? get value => _valueDateTime;
-  Exception? get parseError => _parseError;
   DateTimePrecision get precision => _precision;
-
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is FhirDateTime
-          ? o.value == value
-          : o is DateTime
-              ? o == _valueDateTime
-              : o is String
-                  ? o == _valueString
-                  : false;
-
-  String toString() => _valueString;
-  String toJson() => _valueString;
-  String toYaml() => _valueString;
 
   static final _dateTimeYYYYExp =
       RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');
