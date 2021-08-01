@@ -5,9 +5,10 @@ import 'package:yaml/yaml.dart';
 
 import 'fhir_number.dart';
 
-class Integer64 extends FhirNumber{
+class Integer64 extends FhirNumber {
   const Integer64._(
-      this.valueString, this.valueNumber, this.isValid, this.isString);
+      String valueString, int? valueNumber, bool isValid, bool isString)
+      : super(valueString, valueNumber, isValid, isString);
 
   factory Integer64(dynamic inValue) {
     if (inValue is int) {
@@ -34,8 +35,5 @@ class Integer64 extends FhirNumber{
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String valueString;
-  final int? valueNumber;
-  final bool isValid;
-  final bool isString;
+  int? get value => valueNumber as int?;
 }
