@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:yaml/yaml.dart';
 
+import 'fhir_date_time_base.dart';
+
 enum DatePrecision {
   YYYY,
   YYYYMM,
@@ -9,9 +11,10 @@ enum DatePrecision {
   INVALID,
 }
 
-class Date {
-  const Date._(this._valueString, this._valueDateTime, this._isValid,
-      this._precision, this._parseError);
+/// ToDo: Does not accept 'YYYY-MM'
+class Date extends FhirDateTimeBase{
+  const Date._(this.valueString, this.valueDateTime, this.isValid,
+      this._precision, this.parseError);
 
   factory Date(inValue) {
     if (inValue is DateTime) {
@@ -47,31 +50,14 @@ class Date {
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String _valueString;
-  final DateTime? _valueDateTime;
-  final bool _isValid;
+  final String valueString;
+  final DateTime? valueDateTime;
+  final bool isValid;
   final DatePrecision _precision;
-  final Exception? _parseError;
+  final Exception? parseError;
 
-  bool get isValid => _isValid;
-  int get hashCode => _valueString.hashCode;
-  DateTime? get value => _valueDateTime;
-  Exception? get parseError => _parseError;
+
   DatePrecision get precision => _precision;
-
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is Date
-          ? o.value == value
-          : o is DateTime
-              ? o == _valueDateTime
-              : o is String
-                  ? o == _valueString
-                  : false;
-
-  String toString() => _valueString;
-  String toJson() => _valueString;
-  String toYaml() => _valueString;
 
   static final _dateYYYYExp =
       RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');

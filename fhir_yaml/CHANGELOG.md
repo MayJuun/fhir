@@ -1,3 +1,10 @@
+## [0.4.2]
+* Wrong Dart Version defined, now fixed
+
+## [0.4.1]
+* Updated dependencies
+* Removed test_coverage
+
 ## [0.4.0]
 * Stable(ish) & null safe!
 
