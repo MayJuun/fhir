@@ -17,7 +17,6 @@ Future main() async {
         '\n****Json has been Validated****',
         () async {
           var testList = await jsonValidation();
-          print(testList);
 
           print(
               'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');

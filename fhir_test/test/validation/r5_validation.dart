@@ -6,21 +6,13 @@ Future<List<String>> r5Validation() async {
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
     var resource = r5.Resource.fromJson(jsonDecode(contents));
-
-    var result = await checkMapEquality(
-        jsonDecode(contents), resource.toJson(), file.toString());
-    if (result != '') {
-      string.add(result);
+    if (!DeepCollectionEquality()
+        .equals(resource.toJson(), jsonDecode(contents))) {
+      string.add(file.path);
     }
-  }
-  for (var file in await dir.list().toList()) {
-    var contents = await File(file.path).readAsString();
-    var resource = r5.Resource.fromJson(jsonDecode(contents));
-
-    var result = await checkMapEquality(
-        resource.toJson(), jsonDecode(contents), file.toString());
-    if (result != '') {
-      string.add(result);
+    if (!DeepCollectionEquality()
+        .equals(jsonDecode(contents), resource.toJson())) {
+      string.add(file.path);
     }
   }
   return string;
@@ -33,22 +25,13 @@ Future<List<String>> r5ValidationYaml() async {
     var contents = await File(file.path).readAsString();
     final tempResource = r5.Resource.fromJson(jsonDecode(contents));
     var resource = r5.Resource.fromYaml(tempResource.toYaml());
-
-    var result = await checkMapEquality(
-        jsonDecode(contents), resource.toJson(), file.toString());
-    if (result != '') {
-      string.add(result);
+    if (!DeepCollectionEquality()
+        .equals(resource.toJson(), jsonDecode(contents))) {
+      string.add(file.path);
     }
-  }
-  for (var file in await dir.list().toList()) {
-    var contents = await File(file.path).readAsString();
-    final tempResource = r5.Resource.fromJson(jsonDecode(contents));
-    var resource = r5.Resource.fromYaml(tempResource.toYaml());
-
-    var result = await checkMapEquality(
-        resource.toJson(), jsonDecode(contents), file.toString());
-    if (result != '') {
-      string.add(result);
+    if (!DeepCollectionEquality()
+        .equals(jsonDecode(contents), resource.toJson())) {
+      string.add(file.path);
     }
   }
   return string;

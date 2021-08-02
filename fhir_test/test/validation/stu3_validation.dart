@@ -5,26 +5,16 @@ Future<List<String>> stu3Validation() async {
   var string = <String>[];
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
-    var resource;
-    try {
-      resource = stu3.Resource.fromJson(jsonDecode(contents));
-    } catch (e) {
-      string.add(
-          'JSON example file ${file.path} could not be parsed: ${e.toString()}');
-      continue;
+    var resource = stu3.Resource.fromJson(jsonDecode(contents));
+    if (!DeepCollectionEquality()
+        .equals(resource.toJson(), jsonDecode(contents))) {
+      string.add(file.path);
     }
-    var resultDecode = await checkMapEquality(
-        jsonDecode(contents), resource.toJson(), file.toString());
-    if (resultDecode != '') {
-      string.add(resultDecode);
-    }
-    var resultToJson = await checkMapEquality(
-        resource.toJson(), jsonDecode(contents), file.toString());
-    if (resultToJson != '') {
-      string.add(resultToJson);
+    if (!DeepCollectionEquality()
+        .equals(jsonDecode(contents), resource.toJson())) {
+      string.add(file.path);
     }
   }
-
   return string;
 }
 
@@ -33,26 +23,15 @@ Future<List<String>> stu3ValidationYaml() async {
   var string = <String>[];
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
-    var tempResource;
-    try {
-      tempResource = stu3.Resource.fromJson(jsonDecode(contents));
-    } catch (e) {
-      string.add(
-          'JSON example file ${file.path} could not be parsed: ${e.toString()}');
-      continue;
-    }
-
+    final tempResource = stu3.Resource.fromJson(jsonDecode(contents));
     var resource = stu3.Resource.fromYaml(tempResource.toYaml());
-
-    var resultDecode = await checkMapEquality(
-        jsonDecode(contents), resource.toJson(), file.toString());
-    if (resultDecode != '') {
-      string.add(resultDecode);
+    if (!DeepCollectionEquality()
+        .equals(resource.toJson(), jsonDecode(contents))) {
+      string.add(file.path);
     }
-    var resultToJson = await checkMapEquality(
-        resource.toJson(), jsonDecode(contents), file.toString());
-    if (resultToJson != '') {
-      string.add(resultToJson);
+    if (!DeepCollectionEquality()
+        .equals(jsonDecode(contents), resource.toJson())) {
+      string.add(file.path);
     }
   }
   return string;
