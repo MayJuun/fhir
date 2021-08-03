@@ -37,8 +37,7 @@ class _$EndpointTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       required Coding connectionType,
@@ -51,13 +50,13 @@ class _$EndpointTearOff {
       required List<CodeableConcept> payloadType,
       List<Code>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
-          List<Element?>? payloadMimeTypeElement,
+          List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
       @JsonKey(name: '_address')
           Element? addressElement,
       List<String>? header,
       @JsonKey(name: '_header')
-          List<Element?>? headerElement}) {
+          List<Element>? headerElement}) {
     return _Endpoint(
       resourceType: resourceType,
       id: id,
@@ -116,8 +115,7 @@ mixin _$Endpoint {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  EndpointStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Coding get connectionType => throw _privateConstructorUsedError;
@@ -130,14 +128,14 @@ mixin _$Endpoint {
   List<CodeableConcept> get payloadType => throw _privateConstructorUsedError;
   List<Code>? get payloadMimeType => throw _privateConstructorUsedError;
   @JsonKey(name: '_payloadMimeType')
-  List<Element?>? get payloadMimeTypeElement =>
+  List<Element>? get payloadMimeTypeElement =>
       throw _privateConstructorUsedError;
   FhirUrl? get address => throw _privateConstructorUsedError;
   @JsonKey(name: '_address')
   Element? get addressElement => throw _privateConstructorUsedError;
   List<String>? get header => throw _privateConstructorUsedError;
   @JsonKey(name: '_header')
-  List<Element?>? get headerElement => throw _privateConstructorUsedError;
+  List<Element>? get headerElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -166,8 +164,7 @@ abstract class $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding connectionType,
@@ -180,13 +177,13 @@ abstract class $EndpointCopyWith<$Res> {
       List<CodeableConcept> payloadType,
       List<Code>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
-          List<Element?>? payloadMimeTypeElement,
+          List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
       @JsonKey(name: '_address')
           Element? addressElement,
       List<String>? header,
       @JsonKey(name: '_header')
-          List<Element?>? headerElement});
+          List<Element>? headerElement});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -290,7 +287,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EndpointStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -330,7 +327,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       payloadMimeTypeElement: payloadMimeTypeElement == freezed
           ? _value.payloadMimeTypeElement
           : payloadMimeTypeElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -346,7 +343,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       headerElement: headerElement == freezed
           ? _value.headerElement
           : headerElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 
@@ -479,8 +476,7 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding connectionType,
@@ -493,13 +489,13 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       List<CodeableConcept> payloadType,
       List<Code>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
-          List<Element?>? payloadMimeTypeElement,
+          List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
       @JsonKey(name: '_address')
           Element? addressElement,
       List<String>? header,
       @JsonKey(name: '_header')
-          List<Element?>? headerElement});
+          List<Element>? headerElement});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -614,7 +610,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EndpointStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -654,7 +650,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       payloadMimeTypeElement: payloadMimeTypeElement == freezed
           ? _value.payloadMimeTypeElement
           : payloadMimeTypeElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -670,7 +666,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       headerElement: headerElement == freezed
           ? _value.headerElement
           : headerElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 }
@@ -695,8 +691,7 @@ class _$_Endpoint extends _Endpoint {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       required this.connectionType,
@@ -750,8 +745,7 @@ class _$_Endpoint extends _Endpoint {
   @override
   final List<Identifier>? identifier;
   @override
-  @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  final EndpointStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -774,7 +768,7 @@ class _$_Endpoint extends _Endpoint {
   final List<Code>? payloadMimeType;
   @override
   @JsonKey(name: '_payloadMimeType')
-  final List<Element?>? payloadMimeTypeElement;
+  final List<Element>? payloadMimeTypeElement;
   @override
   final FhirUrl? address;
   @override
@@ -784,7 +778,7 @@ class _$_Endpoint extends _Endpoint {
   final List<String>? header;
   @override
   @JsonKey(name: '_header')
-  final List<Element?>? headerElement;
+  final List<Element>? headerElement;
 
   @override
   String toString() {
@@ -926,8 +920,7 @@ abstract class _Endpoint extends Endpoint {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       required Coding connectionType,
@@ -940,13 +933,13 @@ abstract class _Endpoint extends Endpoint {
       required List<CodeableConcept> payloadType,
       List<Code>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
-          List<Element?>? payloadMimeTypeElement,
+          List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
       @JsonKey(name: '_address')
           Element? addressElement,
       List<String>? header,
       @JsonKey(name: '_header')
-          List<Element?>? headerElement}) = _$_Endpoint;
+          List<Element>? headerElement}) = _$_Endpoint;
   _Endpoint._() : super._();
 
   factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
@@ -981,8 +974,7 @@ abstract class _Endpoint extends Endpoint {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  EndpointStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1005,7 +997,7 @@ abstract class _Endpoint extends Endpoint {
   List<Code>? get payloadMimeType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_payloadMimeType')
-  List<Element?>? get payloadMimeTypeElement =>
+  List<Element>? get payloadMimeTypeElement =>
       throw _privateConstructorUsedError;
   @override
   FhirUrl? get address => throw _privateConstructorUsedError;
@@ -1016,7 +1008,7 @@ abstract class _Endpoint extends Endpoint {
   List<String>? get header => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_header')
-  List<Element?>? get headerElement => throw _privateConstructorUsedError;
+  List<Element>? get headerElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$EndpointCopyWith<_Endpoint> get copyWith =>
@@ -2751,8 +2743,8 @@ class _$HealthcareServiceAvailableTimeTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+      List<Code>? daysOfWeek,
+      @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
@@ -2790,10 +2782,9 @@ mixin _$HealthcareServiceAvailableTime {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  List<HealthcareServiceAvailableTimeDaysOfWeek>? get daysOfWeek =>
-      throw _privateConstructorUsedError;
+  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
   @JsonKey(name: '_daysOfWeek')
-  List<Element?>? get daysOfWeekElement => throw _privateConstructorUsedError;
+  List<Element>? get daysOfWeekElement => throw _privateConstructorUsedError;
   Boolean? get allDay => throw _privateConstructorUsedError;
   @JsonKey(name: '_allDay')
   Element? get allDayElement => throw _privateConstructorUsedError;
@@ -2820,8 +2811,8 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+      List<Code>? daysOfWeek,
+      @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
@@ -2873,11 +2864,11 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: daysOfWeek == freezed
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<HealthcareServiceAvailableTimeDaysOfWeek>?,
+              as List<Code>?,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       allDay: allDay == freezed
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
@@ -2951,8 +2942,8 @@ abstract class _$HealthcareServiceAvailableTimeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+      List<Code>? daysOfWeek,
+      @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
@@ -3011,11 +3002,11 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: daysOfWeek == freezed
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<HealthcareServiceAvailableTimeDaysOfWeek>?,
+              as List<Code>?,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       allDay: allDay == freezed
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
@@ -3074,10 +3065,10 @@ class _$_HealthcareServiceAvailableTime
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek;
+  final List<Code>? daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  final List<Element?>? daysOfWeekElement;
+  final List<Element>? daysOfWeekElement;
   @override
   final Boolean? allDay;
   @override
@@ -3173,9 +3164,9 @@ abstract class _HealthcareServiceAvailableTime
           @JsonKey(name: 'extension')
               List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
-          List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+          List<Code>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
-              List<Element?>? daysOfWeekElement,
+              List<Element>? daysOfWeekElement,
           Boolean? allDay,
           @JsonKey(name: '_allDay')
               Element? allDayElement,
@@ -3200,11 +3191,10 @@ abstract class _HealthcareServiceAvailableTime
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  List<HealthcareServiceAvailableTimeDaysOfWeek>? get daysOfWeek =>
-      throw _privateConstructorUsedError;
+  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_daysOfWeek')
-  List<Element?>? get daysOfWeekElement => throw _privateConstructorUsedError;
+  List<Element>? get daysOfWeekElement => throw _privateConstructorUsedError;
   @override
   Boolean? get allDay => throw _privateConstructorUsedError;
   @override
@@ -3578,8 +3568,7 @@ class _$LocationTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -3588,12 +3577,11 @@ class _$LocationTearOff {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -3673,8 +3661,7 @@ mixin _$Location {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Coding? get operationalStatus => throw _privateConstructorUsedError;
@@ -3683,12 +3670,11 @@ mixin _$Location {
   Element? get nameElement => throw _privateConstructorUsedError;
   List<String>? get alias => throw _privateConstructorUsedError;
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: LocationMode.unknown)
-  LocationMode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
@@ -3733,8 +3719,7 @@ abstract class $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -3743,12 +3728,11 @@ abstract class $LocationCopyWith<$Res> {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -3878,7 +3862,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as LocationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3902,7 +3886,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -3914,7 +3898,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as LocationMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -4155,8 +4139,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -4165,12 +4148,11 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -4316,7 +4298,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as LocationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4340,7 +4322,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -4352,7 +4334,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as LocationMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -4425,8 +4407,7 @@ class _$_Location extends _Location {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.operationalStatus,
@@ -4439,8 +4420,7 @@ class _$_Location extends _Location {
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          this.mode,
+      this.mode,
       @JsonKey(name: '_mode')
           this.modeElement,
       this.type,
@@ -4489,8 +4469,7 @@ class _$_Location extends _Location {
   @override
   final List<Identifier>? identifier;
   @override
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  final LocationStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -4505,15 +4484,14 @@ class _$_Location extends _Location {
   final List<String>? alias;
   @override
   @JsonKey(name: '_alias')
-  final List<Element?>? aliasElement;
+  final List<Element>? aliasElement;
   @override
   final String? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  @JsonKey(unknownEnumValue: LocationMode.unknown)
-  final LocationMode? mode;
+  final Code? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -4696,8 +4674,7 @@ abstract class _Location extends Location {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -4706,12 +4683,11 @@ abstract class _Location extends Location {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -4760,8 +4736,7 @@ abstract class _Location extends Location {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -4776,15 +4751,14 @@ abstract class _Location extends Location {
   List<String>? get alias => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: LocationMode.unknown)
-  LocationMode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -5249,7 +5223,7 @@ class _$LocationHoursOfOperationTearOff {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? openingTime,
@@ -5288,7 +5262,7 @@ mixin _$LocationHoursOfOperation {
       throw _privateConstructorUsedError;
   List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
   @JsonKey(name: '_daysOfWeek')
-  List<Element?>? get daysOfWeekElement => throw _privateConstructorUsedError;
+  List<Element>? get daysOfWeekElement => throw _privateConstructorUsedError;
   Boolean? get allDay => throw _privateConstructorUsedError;
   @JsonKey(name: '_allDay')
   Element? get allDayElement => throw _privateConstructorUsedError;
@@ -5315,7 +5289,7 @@ abstract class $LocationHoursOfOperationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? openingTime,
@@ -5371,7 +5345,7 @@ class _$LocationHoursOfOperationCopyWithImpl<$Res>
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       allDay: allDay == freezed
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
@@ -5445,7 +5419,7 @@ abstract class _$LocationHoursOfOperationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? openingTime,
@@ -5507,7 +5481,7 @@ class __$LocationHoursOfOperationCopyWithImpl<$Res>
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       allDay: allDay == freezed
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
@@ -5567,7 +5541,7 @@ class _$_LocationHoursOfOperation extends _LocationHoursOfOperation {
   final List<Code>? daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  final List<Element?>? daysOfWeekElement;
+  final List<Element>? daysOfWeekElement;
   @override
   final Boolean? allDay;
   @override
@@ -5659,7 +5633,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
           List<Code>? daysOfWeek,
-          @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+          @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
           Boolean? allDay,
           @JsonKey(name: '_allDay') Element? allDayElement,
           Time? openingTime,
@@ -5684,7 +5658,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
   List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_daysOfWeek')
-  List<Element?>? get daysOfWeekElement => throw _privateConstructorUsedError;
+  List<Element>? get daysOfWeekElement => throw _privateConstructorUsedError;
   @override
   Boolean? get allDay => throw _privateConstructorUsedError;
   @override
@@ -5740,7 +5714,7 @@ class _$OrganizationTearOff {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
@@ -5810,7 +5784,7 @@ mixin _$Organization {
   Element? get nameElement => throw _privateConstructorUsedError;
   List<String>? get alias => throw _privateConstructorUsedError;
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   List<Address>? get address => throw _privateConstructorUsedError;
   Reference? get partOf => throw _privateConstructorUsedError;
@@ -5854,7 +5828,7 @@ abstract class $OrganizationCopyWith<$Res> {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
@@ -5981,7 +5955,7 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       telecom: telecom == freezed
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
@@ -6116,7 +6090,7 @@ abstract class _$OrganizationCopyWith<$Res>
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
@@ -6252,7 +6226,7 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       telecom: telecom == freezed
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
@@ -6361,7 +6335,7 @@ class _$_Organization extends _Organization {
   final List<String>? alias;
   @override
   @JsonKey(name: '_alias')
-  final List<Element?>? aliasElement;
+  final List<Element>? aliasElement;
   @override
   final List<ContactPoint>? telecom;
   @override
@@ -6514,7 +6488,7 @@ abstract class _Organization extends Organization {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
@@ -6570,7 +6544,7 @@ abstract class _Organization extends Organization {
   List<String>? get alias => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   @override
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override

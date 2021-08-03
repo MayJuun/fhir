@@ -57,8 +57,7 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$EvidenceStatusEnumMap, json['status'],
-          unknownValue: EvidenceStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -117,6 +116,9 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
       effectivePeriod: json['effectivePeriod'] == null
           ? null
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
+      topic: (json['topic'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
       author: (json['author'] as List<dynamic>?)
           ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -132,15 +134,24 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
+      citeAsReference: json['citeAsReference'] == null
+          ? null
+          : Reference.fromJson(json['citeAsReference'] as Map<String, dynamic>),
+      citeAsMarkdown: json['citeAsMarkdown'] == null
+          ? null
+          : Markdown.fromJson(json['citeAsMarkdown']),
+      citeAsMarkdownElement: json['_citeAsMarkdown'] == null
+          ? null
+          : Element.fromJson(json['_citeAsMarkdown'] as Map<String, dynamic>),
       assertion: json['assertion'] == null
           ? null
           : Markdown.fromJson(json['assertion']),
       assertionElement: json['_assertion'] == null
           ? null
           : Element.fromJson(json['_assertion'] as Map<String, dynamic>),
-      note: json['note'] == null
-          ? null
-          : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
       variableDefinition: (json['variableDefinition'] as List<dynamic>)
           .map((e) =>
               EvidenceVariableDefinition.fromJson(e as Map<String, dynamic>))
@@ -197,7 +208,7 @@ Map<String, dynamic> _$$_EvidenceToJson(_$_Evidence instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', _$EvidenceStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -221,15 +232,19 @@ Map<String, dynamic> _$$_EvidenceToJson(_$_Evidence instance) {
   writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
   writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
+  writeNotNull('topic', instance.topic?.map((e) => e.toJson()).toList());
   writeNotNull('author', instance.author?.map((e) => e.toJson()).toList());
   writeNotNull('editor', instance.editor?.map((e) => e.toJson()).toList());
   writeNotNull('reviewer', instance.reviewer?.map((e) => e.toJson()).toList());
   writeNotNull('endorser', instance.endorser?.map((e) => e.toJson()).toList());
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e.toJson()).toList());
+  writeNotNull('citeAsReference', instance.citeAsReference?.toJson());
+  writeNotNull('citeAsMarkdown', instance.citeAsMarkdown?.toJson());
+  writeNotNull('_citeAsMarkdown', instance.citeAsMarkdownElement?.toJson());
   writeNotNull('assertion', instance.assertion?.toJson());
   writeNotNull('_assertion', instance.assertionElement?.toJson());
-  writeNotNull('note', instance.note?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   val['variableDefinition'] =
       instance.variableDefinition.map((e) => e.toJson()).toList();
   writeNotNull('synthesisType', instance.synthesisType?.toJson());
@@ -431,13 +446,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-const _$EvidenceStatusEnumMap = {
-  EvidenceStatus.draft: 'draft',
-  EvidenceStatus.active: 'active',
-  EvidenceStatus.retired: 'retired',
-  EvidenceStatus.unknown: 'unknown',
-};
-
 _$_EvidenceVariableDefinition _$$_EvidenceVariableDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_EvidenceVariableDefinition(
@@ -509,15 +517,21 @@ _$_EvidenceCertainty _$$_EvidenceCertaintyFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      note: json['note'] == null
-          ? null
-          : Annotation.fromJson(json['note'] as Map<String, dynamic>),
-      rating: (json['rating'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
           .toList(),
-      certaintySubcomponent: (json['certaintySubcomponent'] as List<dynamic>?)
-          ?.map((e) =>
-              EvidenceCertaintySubcomponent.fromJson(e as Map<String, dynamic>))
+      type: json['type'] == null
+          ? null
+          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      rating: json['rating'] == null
+          ? null
+          : CodeableConcept.fromJson(json['rating'] as Map<String, dynamic>),
+      rater: json['rater'] as String?,
+      raterElement: json['_rater'] == null
+          ? null
+          : Element.fromJson(json['_rater'] as Map<String, dynamic>),
+      subcomponent: (json['subcomponent'] as List<dynamic>?)
+          ?.map((e) => EvidenceCertainty.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -538,58 +552,13 @@ Map<String, dynamic> _$$_EvidenceCertaintyToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('note', instance.note?.toJson());
-  writeNotNull('rating', instance.rating?.map((e) => e.toJson()).toList());
-  writeNotNull('certaintySubcomponent',
-      instance.certaintySubcomponent?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_EvidenceCertaintySubcomponent _$$_EvidenceCertaintySubcomponentFromJson(
-        Map<String, dynamic> json) =>
-    _$_EvidenceCertaintySubcomponent(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      note: json['note'] == null
-          ? null
-          : Annotation.fromJson(json['note'] as Map<String, dynamic>),
-      type: (json['type'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      rating: (json['rating'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$_EvidenceCertaintySubcomponentToJson(
-    _$_EvidenceCertaintySubcomponent instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('rating', instance.rating?.toJson());
+  writeNotNull('rater', instance.rater);
+  writeNotNull('_rater', instance.raterElement?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('note', instance.note?.toJson());
-  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  writeNotNull('rating', instance.rating?.map((e) => e.toJson()).toList());
+      'subcomponent', instance.subcomponent?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -645,9 +614,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
-          _$EvidenceVariableStatusEnumMap, json['status'],
-          unknownValue: EvidenceVariableStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -706,16 +673,8 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       effectivePeriod: json['effectivePeriod'] == null
           ? null
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-      shortTitle: json['shortTitle'] as String?,
-      shortTitleElement: json['_shortTitle'] == null
-          ? null
-          : Element.fromJson(json['_shortTitle'] as Map<String, dynamic>),
-      subtitle: json['subtitle'] as String?,
-      subtitleElement: json['_subtitle'] == null
-          ? null
-          : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-      note: (json['note'] as List<dynamic>?)
-          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+      topic: (json['topic'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       author: (json['author'] as List<dynamic>?)
           ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
@@ -732,14 +691,24 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
+      shortTitle: json['shortTitle'] as String?,
+      shortTitleElement: json['_shortTitle'] == null
+          ? null
+          : Element.fromJson(json['_shortTitle'] as Map<String, dynamic>),
+      subtitle: json['subtitle'] as String?,
+      subtitleElement: json['_subtitle'] == null
+          ? null
+          : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
       actual: json['actual'] == null ? null : Boolean.fromJson(json['actual']),
       actualElement: json['_actual'] == null
           ? null
           : Element.fromJson(json['_actual'] as Map<String, dynamic>),
-      characteristicCombination: _$enumDecodeNullable(
-          _$EvidenceVariableCharacteristicCombinationEnumMap,
-          json['characteristicCombination'],
-          unknownValue: EvidenceVariableCharacteristicCombination.unknown),
+      characteristicCombination: json['characteristicCombination'] == null
+          ? null
+          : Code.fromJson(json['characteristicCombination']),
       characteristicCombinationElement:
           json['_characteristicCombination'] == null
               ? null
@@ -749,9 +718,8 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
           ?.map((e) => EvidenceVariableCharacteristic.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      handling: _$enumDecodeNullable(
-          _$EvidenceVariableHandlingEnumMap, json['handling'],
-          unknownValue: EvidenceVariableHandling.unknown),
+      handling:
+          json['handling'] == null ? null : Code.fromJson(json['handling']),
       handlingElement: json['_handling'] == null
           ? null
           : Element.fromJson(json['_handling'] as Map<String, dynamic>),
@@ -795,7 +763,7 @@ Map<String, dynamic> _$$_EvidenceVariableToJson(_$_EvidenceVariable instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', _$EvidenceVariableStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -819,54 +787,31 @@ Map<String, dynamic> _$$_EvidenceVariableToJson(_$_EvidenceVariable instance) {
   writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
   writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull('shortTitle', instance.shortTitle);
-  writeNotNull('_shortTitle', instance.shortTitleElement?.toJson());
-  writeNotNull('subtitle', instance.subtitle);
-  writeNotNull('_subtitle', instance.subtitleElement?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  writeNotNull('topic', instance.topic?.map((e) => e.toJson()).toList());
   writeNotNull('author', instance.author?.map((e) => e.toJson()).toList());
   writeNotNull('editor', instance.editor?.map((e) => e.toJson()).toList());
   writeNotNull('reviewer', instance.reviewer?.map((e) => e.toJson()).toList());
   writeNotNull('endorser', instance.endorser?.map((e) => e.toJson()).toList());
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e.toJson()).toList());
+  writeNotNull('shortTitle', instance.shortTitle);
+  writeNotNull('_shortTitle', instance.shortTitleElement?.toJson());
+  writeNotNull('subtitle', instance.subtitle);
+  writeNotNull('_subtitle', instance.subtitleElement?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull('actual', instance.actual?.toJson());
   writeNotNull('_actual', instance.actualElement?.toJson());
-  writeNotNull(
-      'characteristicCombination',
-      _$EvidenceVariableCharacteristicCombinationEnumMap[
-          instance.characteristicCombination]);
+  writeNotNull('characteristicCombination',
+      instance.characteristicCombination?.toJson());
   writeNotNull('_characteristicCombination',
       instance.characteristicCombinationElement?.toJson());
   writeNotNull('characteristic',
       instance.characteristic?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'handling', _$EvidenceVariableHandlingEnumMap[instance.handling]);
+  writeNotNull('handling', instance.handling?.toJson());
   writeNotNull('_handling', instance.handlingElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$EvidenceVariableStatusEnumMap = {
-  EvidenceVariableStatus.draft: 'draft',
-  EvidenceVariableStatus.active: 'active',
-  EvidenceVariableStatus.retired: 'retired',
-  EvidenceVariableStatus.unknown: 'unknown',
-};
-
-const _$EvidenceVariableCharacteristicCombinationEnumMap = {
-  EvidenceVariableCharacteristicCombination.intersection: 'intersection',
-  EvidenceVariableCharacteristicCombination.union: 'union',
-  EvidenceVariableCharacteristicCombination.unknown: 'unknown',
-};
-
-const _$EvidenceVariableHandlingEnumMap = {
-  EvidenceVariableHandling.continuous: 'continuous',
-  EvidenceVariableHandling.dichotomous: 'dichotomous',
-  EvidenceVariableHandling.ordinal: 'ordinal',
-  EvidenceVariableHandling.polychotomous: 'polychotomous',
-  EvidenceVariableHandling.unknown: 'unknown',
-};
 
 _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
         Map<String, dynamic> json) =>
@@ -916,10 +861,9 @@ _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
           ? null
           : EvidenceVariableTimeFromStart.fromJson(
               json['timeFromStart'] as Map<String, dynamic>),
-      groupMeasure: _$enumDecodeNullable(
-          _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
-          json['groupMeasure'],
-          unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),
+      groupMeasure: json['groupMeasure'] == null
+          ? null
+          : Code.fromJson(json['groupMeasure']),
       groupMeasureElement: json['_groupMeasure'] == null
           ? null
           : Element.fromJson(json['_groupMeasure'] as Map<String, dynamic>),
@@ -954,24 +898,10 @@ Map<String, dynamic> _$$_EvidenceVariableCharacteristicToJson(
   writeNotNull('exclude', instance.exclude?.toJson());
   writeNotNull('_exclude', instance.excludeElement?.toJson());
   writeNotNull('timeFromStart', instance.timeFromStart?.toJson());
-  writeNotNull(
-      'groupMeasure',
-      _$EvidenceVariableCharacteristicGroupMeasureEnumMap[
-          instance.groupMeasure]);
+  writeNotNull('groupMeasure', instance.groupMeasure?.toJson());
   writeNotNull('_groupMeasure', instance.groupMeasureElement?.toJson());
   return val;
 }
-
-const _$EvidenceVariableCharacteristicGroupMeasureEnumMap = {
-  EvidenceVariableCharacteristicGroupMeasure.mean: 'mean',
-  EvidenceVariableCharacteristicGroupMeasure.median: 'median',
-  EvidenceVariableCharacteristicGroupMeasure.mean_of_mean: 'mean-of-mean',
-  EvidenceVariableCharacteristicGroupMeasure.mean_of_median: 'mean-of-median',
-  EvidenceVariableCharacteristicGroupMeasure.median_of_mean: 'median-of-mean',
-  EvidenceVariableCharacteristicGroupMeasure.median_of_median:
-      'median-of-median',
-  EvidenceVariableCharacteristicGroupMeasure.unknown: 'unknown',
-};
 
 _$_EvidenceVariableTimeFromStart _$$_EvidenceVariableTimeFromStartFromJson(
         Map<String, dynamic> json) =>

@@ -29,8 +29,7 @@ class Appointment with Resource, _$Appointment {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-        AppointmentStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? cancelationReason,
     List<CodeableConcept>? serviceCategory,
@@ -38,8 +37,7 @@ class Appointment with Resource, _$Appointment {
     List<CodeableConcept>? specialty,
     CodeableConcept? appointmentType,
     List<CodeableReference>? reason,
-    UnsignedInt? priority,
-    @JsonKey(name: '_priority') Element? priorityElement,
+    CodeableConcept? priority,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Reference>? supportingInformation,
@@ -87,11 +85,9 @@ class AppointmentParticipant with _$AppointmentParticipant {
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
     Reference? actor,
-    @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
-        AppointmentParticipantRequired? required_,
+    @JsonKey(name: 'required') Code? required_,
     @JsonKey(name: '_required') Element? requiredElement,
-    @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-        AppointmentParticipantStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
   }) = _AppointmentParticipant;
@@ -230,7 +226,7 @@ class Slot with Resource, _$Slot {
     List<CodeableConcept>? specialty,
     CodeableConcept? appointmentType,
     required Reference schedule,
-    @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Instant? start,
     @JsonKey(name: '_start') Element? startElement,
@@ -282,11 +278,11 @@ class Task with Resource, _$Task {
     List<Reference>? basedOn,
     Identifier? groupIdentifier,
     List<Reference>? partOf,
-    @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
     CodeableConcept? businessStatus,
-    @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent? intent,
+    Code? intent,
     @JsonKey(name: '_intent') Element? intentElement,
     Code? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -576,7 +572,7 @@ class VerificationResult with Resource, _$VerificationResult {
     List<FhirExtension>? modifierExtension,
     List<Reference>? target,
     List<String>? targetLocation,
-    @JsonKey(name: '_targetLocation') List<Element?>? targetLocationElement,
+    @JsonKey(name: '_targetLocation') List<Element>? targetLocationElement,
     CodeableConcept? need,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -642,7 +638,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'VerificationResultPrimarySource cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =>

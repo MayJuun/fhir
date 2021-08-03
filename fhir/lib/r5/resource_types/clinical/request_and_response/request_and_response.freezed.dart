@@ -40,7 +40,7 @@ class _$CommunicationTearOff {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element?>? instantiatesUriElement,
+          List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
@@ -141,7 +141,7 @@ mixin _$Communication {
       throw _privateConstructorUsedError;
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesUri')
-  List<Element?>? get instantiatesUriElement =>
+  List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
@@ -202,7 +202,7 @@ abstract class $CommunicationCopyWith<$Res> {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element?>? instantiatesUriElement,
+          List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
@@ -356,7 +356,7 @@ class _$CommunicationCopyWithImpl<$Res>
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       basedOn: basedOn == freezed
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -623,7 +623,7 @@ abstract class _$CommunicationCopyWith<$Res>
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element?>? instantiatesUriElement,
+          List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
@@ -792,7 +792,7 @@ class __$CommunicationCopyWithImpl<$Res>
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       basedOn: basedOn == freezed
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -979,7 +979,7 @@ class _$_Communication extends _Communication {
   final List<FhirUri>? instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element?>? instantiatesUriElement;
+  final List<Element>? instantiatesUriElement;
   @override
   final List<Reference>? basedOn;
   @override
@@ -1196,7 +1196,7 @@ abstract class _Communication extends Communication {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element?>? instantiatesUriElement,
+          List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
@@ -1265,7 +1265,7 @@ abstract class _Communication extends Communication {
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_instantiatesUri')
-  List<Element?>? get instantiatesUriElement =>
+  List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
   @override
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
@@ -1690,6 +1690,9 @@ class _$CommunicationRequestTearOff {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
+      Code? intent,
+      @JsonKey(name: '_intent')
+          Element? intentElement,
       List<CodeableConcept>? category,
       Code? priority,
       @JsonKey(name: '_priority')
@@ -1733,6 +1736,8 @@ class _$CommunicationRequestTearOff {
       status: status,
       statusElement: statusElement,
       statusReason: statusReason,
+      intent: intent,
+      intentElement: intentElement,
       category: category,
       priority: priority,
       priorityElement: priorityElement,
@@ -1790,6 +1795,9 @@ mixin _$CommunicationRequest {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  Code? get intent => throw _privateConstructorUsedError;
+  @JsonKey(name: '_intent')
+  Element? get intentElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
   Code? get priority => throw _privateConstructorUsedError;
   @JsonKey(name: '_priority')
@@ -1852,6 +1860,9 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
+      Code? intent,
+      @JsonKey(name: '_intent')
+          Element? intentElement,
       List<CodeableConcept>? category,
       Code? priority,
       @JsonKey(name: '_priority')
@@ -1884,6 +1895,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
   $IdentifierCopyWith<$Res>? get groupIdentifier;
   $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get statusReason;
+  $ElementCopyWith<$Res>? get intentElement;
   $ElementCopyWith<$Res>? get priorityElement;
   $ElementCopyWith<$Res>? get doNotPerformElement;
   $ReferenceCopyWith<$Res>? get subject;
@@ -1923,6 +1935,8 @@ class _$CommunicationRequestCopyWithImpl<$Res>
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? statusReason = freezed,
+    Object? intent = freezed,
+    Object? intentElement = freezed,
     Object? category = freezed,
     Object? priority = freezed,
     Object? priorityElement = freezed,
@@ -2017,6 +2031,14 @@ class _$CommunicationRequestCopyWithImpl<$Res>
           ? _value.statusReason
           : statusReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      intentElement: intentElement == freezed
+          ? _value.intentElement
+          : intentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       category: category == freezed
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -2178,6 +2200,17 @@ class _$CommunicationRequestCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get intentElement {
+    if (_value.intentElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.intentElement!, (value) {
+      return _then(_value.copyWith(intentElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get priorityElement {
     if (_value.priorityElement == null) {
       return null;
@@ -2297,6 +2330,9 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
+      Code? intent,
+      @JsonKey(name: '_intent')
+          Element? intentElement,
       List<CodeableConcept>? category,
       Code? priority,
       @JsonKey(name: '_priority')
@@ -2336,6 +2372,8 @@ abstract class _$CommunicationRequestCopyWith<$Res>
   $ElementCopyWith<$Res>? get statusElement;
   @override
   $CodeableConceptCopyWith<$Res>? get statusReason;
+  @override
+  $ElementCopyWith<$Res>? get intentElement;
   @override
   $ElementCopyWith<$Res>? get priorityElement;
   @override
@@ -2385,6 +2423,8 @@ class __$CommunicationRequestCopyWithImpl<$Res>
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? statusReason = freezed,
+    Object? intent = freezed,
+    Object? intentElement = freezed,
     Object? category = freezed,
     Object? priority = freezed,
     Object? priorityElement = freezed,
@@ -2479,6 +2519,14 @@ class __$CommunicationRequestCopyWithImpl<$Res>
           ? _value.statusReason
           : statusReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      intentElement: intentElement == freezed
+          ? _value.intentElement
+          : intentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       category: category == freezed
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -2590,6 +2638,9 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       @JsonKey(name: '_status')
           this.statusElement,
       this.statusReason,
+      this.intent,
+      @JsonKey(name: '_intent')
+          this.intentElement,
       this.category,
       this.priority,
       @JsonKey(name: '_priority')
@@ -2661,6 +2712,11 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   @override
   final CodeableConcept? statusReason;
   @override
+  final Code? intent;
+  @override
+  @JsonKey(name: '_intent')
+  final Element? intentElement;
+  @override
   final List<CodeableConcept>? category;
   @override
   final Code? priority;
@@ -2707,7 +2763,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
   @override
   String toString() {
-    return 'CommunicationRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, replaces: $replaces, groupIdentifier: $groupIdentifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, category: $category, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, medium: $medium, subject: $subject, about: $about, encounter: $encounter, payload: $payload, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, recipient: $recipient, informationProvider: $informationProvider, reason: $reason, note: $note)';
+    return 'CommunicationRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, replaces: $replaces, groupIdentifier: $groupIdentifier, status: $status, statusElement: $statusElement, statusReason: $statusReason, intent: $intent, intentElement: $intentElement, category: $category, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, medium: $medium, subject: $subject, about: $about, encounter: $encounter, payload: $payload, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, recipient: $recipient, informationProvider: $informationProvider, reason: $reason, note: $note)';
   }
 
   @override
@@ -2764,6 +2820,11 @@ class _$_CommunicationRequest extends _CommunicationRequest {
             (identical(other.statusReason, statusReason) ||
                 const DeepCollectionEquality()
                     .equals(other.statusReason, statusReason)) &&
+            (identical(other.intent, intent) ||
+                const DeepCollectionEquality().equals(other.intent, intent)) &&
+            (identical(other.intentElement, intentElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.intentElement, intentElement)) &&
             (identical(other.category, category) ||
                 const DeepCollectionEquality()
                     .equals(other.category, category)) &&
@@ -2776,11 +2837,8 @@ class _$_CommunicationRequest extends _CommunicationRequest {
             (identical(other.doNotPerform, doNotPerform) ||
                 const DeepCollectionEquality()
                     .equals(other.doNotPerform, doNotPerform)) &&
-            (identical(other.doNotPerformElement, doNotPerformElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.doNotPerformElement, doNotPerformElement)) &&
-            (identical(other.medium, medium) ||
-                const DeepCollectionEquality().equals(other.medium, medium)) &&
+            (identical(other.doNotPerformElement, doNotPerformElement) || const DeepCollectionEquality().equals(other.doNotPerformElement, doNotPerformElement)) &&
+            (identical(other.medium, medium) || const DeepCollectionEquality().equals(other.medium, medium)) &&
             (identical(other.subject, subject) || const DeepCollectionEquality().equals(other.subject, subject)) &&
             (identical(other.about, about) || const DeepCollectionEquality().equals(other.about, about)) &&
             (identical(other.encounter, encounter) || const DeepCollectionEquality().equals(other.encounter, encounter)) &&
@@ -2818,6 +2876,8 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(statusReason) ^
+      const DeepCollectionEquality().hash(intent) ^
+      const DeepCollectionEquality().hash(intentElement) ^
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(priority) ^
       const DeepCollectionEquality().hash(priorityElement) ^
@@ -2876,6 +2936,9 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
+      Code? intent,
+      @JsonKey(name: '_intent')
+          Element? intentElement,
       List<CodeableConcept>? category,
       Code? priority,
       @JsonKey(name: '_priority')
@@ -2947,6 +3010,11 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  @override
+  Code? get intent => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_intent')
+  Element? get intentElement => throw _privateConstructorUsedError;
   @override
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
   @override
@@ -3369,7 +3437,7 @@ class _$DeviceRequestTearOff {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element?>? instantiatesUriElement,
+          List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
@@ -3382,8 +3450,14 @@ class _$DeviceRequestTearOff {
       Code? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
+      Boolean? doNotPerform,
+      @JsonKey(name: '_doNotPerform')
+          Element? doNotPerformElement,
       CodeableConcept? codeCodeableConcept,
       Reference? codeReference,
+      Integer? quantity,
+      @JsonKey(name: '_quantity')
+          Element? quantityElement,
       List<DeviceRequestParameter>? parameter,
       required Reference subject,
       Reference? encounter,
@@ -3428,8 +3502,12 @@ class _$DeviceRequestTearOff {
       intentElement: intentElement,
       priority: priority,
       priorityElement: priorityElement,
+      doNotPerform: doNotPerform,
+      doNotPerformElement: doNotPerformElement,
       codeCodeableConcept: codeCodeableConcept,
       codeReference: codeReference,
+      quantity: quantity,
+      quantityElement: quantityElement,
       parameter: parameter,
       subject: subject,
       encounter: encounter,
@@ -3481,7 +3559,7 @@ mixin _$DeviceRequest {
       throw _privateConstructorUsedError;
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_instantiatesUri')
-  List<Element?>? get instantiatesUriElement =>
+  List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   List<Reference>? get priorRequest => throw _privateConstructorUsedError;
@@ -3495,9 +3573,15 @@ mixin _$DeviceRequest {
   Code? get priority => throw _privateConstructorUsedError;
   @JsonKey(name: '_priority')
   Element? get priorityElement => throw _privateConstructorUsedError;
+  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  @JsonKey(name: '_doNotPerform')
+  Element? get doNotPerformElement => throw _privateConstructorUsedError;
   CodeableConcept? get codeCodeableConcept =>
       throw _privateConstructorUsedError;
   Reference? get codeReference => throw _privateConstructorUsedError;
+  Integer? get quantity => throw _privateConstructorUsedError;
+  @JsonKey(name: '_quantity')
+  Element? get quantityElement => throw _privateConstructorUsedError;
   List<DeviceRequestParameter>? get parameter =>
       throw _privateConstructorUsedError;
   Reference get subject => throw _privateConstructorUsedError;
@@ -3550,7 +3634,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element?>? instantiatesUriElement,
+          List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
@@ -3563,8 +3647,14 @@ abstract class $DeviceRequestCopyWith<$Res> {
       Code? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
+      Boolean? doNotPerform,
+      @JsonKey(name: '_doNotPerform')
+          Element? doNotPerformElement,
       CodeableConcept? codeCodeableConcept,
       Reference? codeReference,
+      Integer? quantity,
+      @JsonKey(name: '_quantity')
+          Element? quantityElement,
       List<DeviceRequestParameter>? parameter,
       Reference subject,
       Reference? encounter,
@@ -3593,8 +3683,10 @@ abstract class $DeviceRequestCopyWith<$Res> {
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get intentElement;
   $ElementCopyWith<$Res>? get priorityElement;
+  $ElementCopyWith<$Res>? get doNotPerformElement;
   $CodeableConceptCopyWith<$Res>? get codeCodeableConcept;
   $ReferenceCopyWith<$Res>? get codeReference;
+  $ElementCopyWith<$Res>? get quantityElement;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get encounter;
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement;
@@ -3641,8 +3733,12 @@ class _$DeviceRequestCopyWithImpl<$Res>
     Object? intentElement = freezed,
     Object? priority = freezed,
     Object? priorityElement = freezed,
+    Object? doNotPerform = freezed,
+    Object? doNotPerformElement = freezed,
     Object? codeCodeableConcept = freezed,
     Object? codeReference = freezed,
+    Object? quantity = freezed,
+    Object? quantityElement = freezed,
     Object? parameter = freezed,
     Object? subject = freezed,
     Object? encounter = freezed,
@@ -3721,7 +3817,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       basedOn: basedOn == freezed
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -3758,6 +3854,14 @@ class _$DeviceRequestCopyWithImpl<$Res>
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      doNotPerform: doNotPerform == freezed
+          ? _value.doNotPerform
+          : doNotPerform // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      doNotPerformElement: doNotPerformElement == freezed
+          ? _value.doNotPerformElement
+          : doNotPerformElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       codeCodeableConcept: codeCodeableConcept == freezed
           ? _value.codeCodeableConcept
           : codeCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -3766,6 +3870,14 @@ class _$DeviceRequestCopyWithImpl<$Res>
           ? _value.codeReference
           : codeReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      quantityElement: quantityElement == freezed
+          ? _value.quantityElement
+          : quantityElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       parameter: parameter == freezed
           ? _value.parameter
           : parameter // ignore: cast_nullable_to_non_nullable
@@ -3926,6 +4038,17 @@ class _$DeviceRequestCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get doNotPerformElement {
+    if (_value.doNotPerformElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.doNotPerformElement!, (value) {
+      return _then(_value.copyWith(doNotPerformElement: value));
+    });
+  }
+
+  @override
   $CodeableConceptCopyWith<$Res>? get codeCodeableConcept {
     if (_value.codeCodeableConcept == null) {
       return null;
@@ -3944,6 +4067,17 @@ class _$DeviceRequestCopyWithImpl<$Res>
 
     return $ReferenceCopyWith<$Res>(_value.codeReference!, (value) {
       return _then(_value.copyWith(codeReference: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get quantityElement {
+    if (_value.quantityElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.quantityElement!, (value) {
+      return _then(_value.copyWith(quantityElement: value));
     });
   }
 
@@ -4070,7 +4204,7 @@ abstract class _$DeviceRequestCopyWith<$Res>
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element?>? instantiatesUriElement,
+          List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
@@ -4083,8 +4217,14 @@ abstract class _$DeviceRequestCopyWith<$Res>
       Code? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
+      Boolean? doNotPerform,
+      @JsonKey(name: '_doNotPerform')
+          Element? doNotPerformElement,
       CodeableConcept? codeCodeableConcept,
       Reference? codeReference,
+      Integer? quantity,
+      @JsonKey(name: '_quantity')
+          Element? quantityElement,
       List<DeviceRequestParameter>? parameter,
       Reference subject,
       Reference? encounter,
@@ -4122,9 +4262,13 @@ abstract class _$DeviceRequestCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get priorityElement;
   @override
+  $ElementCopyWith<$Res>? get doNotPerformElement;
+  @override
   $CodeableConceptCopyWith<$Res>? get codeCodeableConcept;
   @override
   $ReferenceCopyWith<$Res>? get codeReference;
+  @override
+  $ElementCopyWith<$Res>? get quantityElement;
   @override
   $ReferenceCopyWith<$Res> get subject;
   @override
@@ -4182,8 +4326,12 @@ class __$DeviceRequestCopyWithImpl<$Res>
     Object? intentElement = freezed,
     Object? priority = freezed,
     Object? priorityElement = freezed,
+    Object? doNotPerform = freezed,
+    Object? doNotPerformElement = freezed,
     Object? codeCodeableConcept = freezed,
     Object? codeReference = freezed,
+    Object? quantity = freezed,
+    Object? quantityElement = freezed,
     Object? parameter = freezed,
     Object? subject = freezed,
     Object? encounter = freezed,
@@ -4262,7 +4410,7 @@ class __$DeviceRequestCopyWithImpl<$Res>
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
           : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       basedOn: basedOn == freezed
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -4299,6 +4447,14 @@ class __$DeviceRequestCopyWithImpl<$Res>
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      doNotPerform: doNotPerform == freezed
+          ? _value.doNotPerform
+          : doNotPerform // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      doNotPerformElement: doNotPerformElement == freezed
+          ? _value.doNotPerformElement
+          : doNotPerformElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       codeCodeableConcept: codeCodeableConcept == freezed
           ? _value.codeCodeableConcept
           : codeCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -4307,6 +4463,14 @@ class __$DeviceRequestCopyWithImpl<$Res>
           ? _value.codeReference
           : codeReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      quantityElement: quantityElement == freezed
+          ? _value.quantityElement
+          : quantityElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       parameter: parameter == freezed
           ? _value.parameter
           : parameter // ignore: cast_nullable_to_non_nullable
@@ -4415,8 +4579,14 @@ class _$_DeviceRequest extends _DeviceRequest {
       this.priority,
       @JsonKey(name: '_priority')
           this.priorityElement,
+      this.doNotPerform,
+      @JsonKey(name: '_doNotPerform')
+          this.doNotPerformElement,
       this.codeCodeableConcept,
       this.codeReference,
+      this.quantity,
+      @JsonKey(name: '_quantity')
+          this.quantityElement,
       this.parameter,
       required this.subject,
       this.encounter,
@@ -4475,7 +4645,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   final List<FhirUri>? instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element?>? instantiatesUriElement;
+  final List<Element>? instantiatesUriElement;
   @override
   final List<Reference>? basedOn;
   @override
@@ -4498,9 +4668,19 @@ class _$_DeviceRequest extends _DeviceRequest {
   @JsonKey(name: '_priority')
   final Element? priorityElement;
   @override
+  final Boolean? doNotPerform;
+  @override
+  @JsonKey(name: '_doNotPerform')
+  final Element? doNotPerformElement;
+  @override
   final CodeableConcept? codeCodeableConcept;
   @override
   final Reference? codeReference;
+  @override
+  final Integer? quantity;
+  @override
+  @JsonKey(name: '_quantity')
+  final Element? quantityElement;
   @override
   final List<DeviceRequestParameter>? parameter;
   @override
@@ -4540,7 +4720,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   @override
   String toString() {
-    return 'DeviceRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, priorRequest: $priorRequest, groupIdentifier: $groupIdentifier, status: $status, statusElement: $statusElement, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, codeCodeableConcept: $codeCodeableConcept, codeReference: $codeReference, parameter: $parameter, subject: $subject, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, performerType: $performerType, performer: $performer, reason: $reason, insurance: $insurance, supportingInfo: $supportingInfo, note: $note, relevantHistory: $relevantHistory)';
+    return 'DeviceRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, priorRequest: $priorRequest, groupIdentifier: $groupIdentifier, status: $status, statusElement: $statusElement, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, codeCodeableConcept: $codeCodeableConcept, codeReference: $codeReference, quantity: $quantity, quantityElement: $quantityElement, parameter: $parameter, subject: $subject, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, performerType: $performerType, performer: $performer, reason: $reason, insurance: $insurance, supportingInfo: $supportingInfo, note: $note, relevantHistory: $relevantHistory)';
   }
 
   @override
@@ -4613,8 +4793,12 @@ class _$_DeviceRequest extends _DeviceRequest {
                     .equals(other.priority, priority)) &&
             (identical(other.priorityElement, priorityElement) ||
                 const DeepCollectionEquality().equals(other.priorityElement, priorityElement)) &&
+            (identical(other.doNotPerform, doNotPerform) || const DeepCollectionEquality().equals(other.doNotPerform, doNotPerform)) &&
+            (identical(other.doNotPerformElement, doNotPerformElement) || const DeepCollectionEquality().equals(other.doNotPerformElement, doNotPerformElement)) &&
             (identical(other.codeCodeableConcept, codeCodeableConcept) || const DeepCollectionEquality().equals(other.codeCodeableConcept, codeCodeableConcept)) &&
             (identical(other.codeReference, codeReference) || const DeepCollectionEquality().equals(other.codeReference, codeReference)) &&
+            (identical(other.quantity, quantity) || const DeepCollectionEquality().equals(other.quantity, quantity)) &&
+            (identical(other.quantityElement, quantityElement) || const DeepCollectionEquality().equals(other.quantityElement, quantityElement)) &&
             (identical(other.parameter, parameter) || const DeepCollectionEquality().equals(other.parameter, parameter)) &&
             (identical(other.subject, subject) || const DeepCollectionEquality().equals(other.subject, subject)) &&
             (identical(other.encounter, encounter) || const DeepCollectionEquality().equals(other.encounter, encounter)) &&
@@ -4661,8 +4845,12 @@ class _$_DeviceRequest extends _DeviceRequest {
       const DeepCollectionEquality().hash(intentElement) ^
       const DeepCollectionEquality().hash(priority) ^
       const DeepCollectionEquality().hash(priorityElement) ^
+      const DeepCollectionEquality().hash(doNotPerform) ^
+      const DeepCollectionEquality().hash(doNotPerformElement) ^
       const DeepCollectionEquality().hash(codeCodeableConcept) ^
       const DeepCollectionEquality().hash(codeReference) ^
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(quantityElement) ^
       const DeepCollectionEquality().hash(parameter) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(encounter) ^
@@ -4713,7 +4901,7 @@ abstract class _DeviceRequest extends DeviceRequest {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element?>? instantiatesUriElement,
+          List<Element>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
@@ -4726,8 +4914,14 @@ abstract class _DeviceRequest extends DeviceRequest {
       Code? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
+      Boolean? doNotPerform,
+      @JsonKey(name: '_doNotPerform')
+          Element? doNotPerformElement,
       CodeableConcept? codeCodeableConcept,
       Reference? codeReference,
+      Integer? quantity,
+      @JsonKey(name: '_quantity')
+          Element? quantityElement,
       List<DeviceRequestParameter>? parameter,
       required Reference subject,
       Reference? encounter,
@@ -4788,7 +4982,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_instantiatesUri')
-  List<Element?>? get instantiatesUriElement =>
+  List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
   @override
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
@@ -4812,10 +5006,20 @@ abstract class _DeviceRequest extends DeviceRequest {
   @JsonKey(name: '_priority')
   Element? get priorityElement => throw _privateConstructorUsedError;
   @override
+  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_doNotPerform')
+  Element? get doNotPerformElement => throw _privateConstructorUsedError;
+  @override
   CodeableConcept? get codeCodeableConcept =>
       throw _privateConstructorUsedError;
   @override
   Reference? get codeReference => throw _privateConstructorUsedError;
+  @override
+  Integer? get quantity => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_quantity')
+  Element? get quantityElement => throw _privateConstructorUsedError;
   @override
   List<DeviceRequestParameter>? get parameter =>
       throw _privateConstructorUsedError;
@@ -6599,8 +6803,7 @@ class _$GuidanceResponseTearOff {
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -6686,8 +6889,7 @@ mixin _$GuidanceResponse {
   Element? get moduleCanonicalElement => throw _privateConstructorUsedError;
   CodeableConcept? get moduleCodeableConcept =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-  GuidanceResponseStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
@@ -6740,8 +6942,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -6893,7 +7094,7 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as GuidanceResponseStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7144,8 +7345,7 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -7314,7 +7514,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as GuidanceResponseStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7395,8 +7595,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       @JsonKey(name: '_moduleCanonical')
           this.moduleCanonicalElement,
       this.moduleCodeableConcept,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.subject,
@@ -7459,8 +7658,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @override
   final CodeableConcept? moduleCodeableConcept;
   @override
-  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-  final GuidanceResponseStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -7644,8 +7842,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-          GuidanceResponseStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -7710,8 +7907,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   CodeableConcept? get moduleCodeableConcept =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-  GuidanceResponseStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -7772,8 +7968,7 @@ class _$SupplyDeliveryTearOff {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -7846,8 +8041,7 @@ mixin _$SupplyDelivery {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-  SupplyDeliveryStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get patient => throw _privateConstructorUsedError;
@@ -7893,8 +8087,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -8022,7 +8215,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SupplyDeliveryStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8241,8 +8434,7 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -8385,7 +8577,7 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SupplyDeliveryStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8456,8 +8648,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       this.identifier,
       this.basedOn,
       this.partOf,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.patient,
@@ -8509,8 +8700,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   @override
   final List<Reference>? partOf;
   @override
-  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-  final SupplyDeliveryStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -8676,8 +8866,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -8730,8 +8919,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @override
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-  SupplyDeliveryStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -9125,8 +9313,7 @@ class _$SupplyRequestTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          SupplyRequestStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
@@ -9213,8 +9400,7 @@ mixin _$SupplyRequest {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-  SupplyRequestStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get category => throw _privateConstructorUsedError;
@@ -9269,8 +9455,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          SupplyRequestStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
@@ -9410,7 +9595,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SupplyRequestStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9698,8 +9883,7 @@ abstract class _$SupplyRequestCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          SupplyRequestStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
@@ -9858,7 +10042,7 @@ class __$SupplyRequestCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as SupplyRequestStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9959,8 +10143,7 @@ class _$_SupplyRequest extends _SupplyRequest {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.category,
@@ -10018,8 +10201,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   @override
   final List<Identifier>? identifier;
   @override
-  @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-  final SupplyRequestStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -10213,8 +10395,7 @@ abstract class _SupplyRequest extends SupplyRequest {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          SupplyRequestStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
@@ -10273,8 +10454,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-  SupplyRequestStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;

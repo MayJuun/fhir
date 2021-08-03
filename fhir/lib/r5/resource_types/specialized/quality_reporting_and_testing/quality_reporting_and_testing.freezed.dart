@@ -49,8 +49,7 @@ class _$MeasureTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-          MeasureStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -81,26 +80,30 @@ class _$MeasureTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      String? subtitle,
-      @JsonKey(name: '_subtitle')
-          Element? subtitleElement,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      String? usage,
-      @JsonKey(name: '_usage')
-          Element? usageElement,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
+      String? subtitle,
+      @JsonKey(name: '_subtitle')
+          Element? subtitleElement,
+      CodeableConcept? subjectCodeableConcept,
+      Reference? subjectReference,
+      Code? basis,
+      @JsonKey(name: '_basis')
+          Element? basisElement,
+      String? usage,
+      @JsonKey(name: '_usage')
+          Element? usageElement,
       @JsonKey(name: 'library')
           List<Canonical>? library_,
       Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
+      CodeableConcept? scoringUnit,
       CodeableConcept? compositeScoring,
       List<CodeableConcept>? type,
       String? riskAdjustment,
@@ -118,7 +121,7 @@ class _$MeasureTearOff {
       CodeableConcept? improvementNotation,
       List<Markdown>? definition,
       @JsonKey(name: '_definition')
-          List<Element?>? definitionElement,
+          List<Element>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -167,22 +170,25 @@ class _$MeasureTearOff {
       lastReviewDate: lastReviewDate,
       lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
-      subtitle: subtitle,
-      subtitleElement: subtitleElement,
-      subjectCodeableConcept: subjectCodeableConcept,
-      subjectReference: subjectReference,
-      usage: usage,
-      usageElement: usageElement,
       topic: topic,
       author: author,
       editor: editor,
       reviewer: reviewer,
       endorser: endorser,
       relatedArtifact: relatedArtifact,
+      subtitle: subtitle,
+      subtitleElement: subtitleElement,
+      subjectCodeableConcept: subjectCodeableConcept,
+      subjectReference: subjectReference,
+      basis: basis,
+      basisElement: basisElement,
+      usage: usage,
+      usageElement: usageElement,
       library_: library_,
       disclaimer: disclaimer,
       disclaimerElement: disclaimerElement,
       scoring: scoring,
+      scoringUnit: scoringUnit,
       compositeScoring: compositeScoring,
       type: type,
       riskAdjustment: riskAdjustment,
@@ -243,8 +249,7 @@ mixin _$Measure {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-  MeasureStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -275,15 +280,6 @@ mixin _$Measure {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
-  String? get subtitle => throw _privateConstructorUsedError;
-  @JsonKey(name: '_subtitle')
-  Element? get subtitleElement => throw _privateConstructorUsedError;
-  CodeableConcept? get subjectCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get subjectReference => throw _privateConstructorUsedError;
-  String? get usage => throw _privateConstructorUsedError;
-  @JsonKey(name: '_usage')
-  Element? get usageElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
@@ -291,12 +287,25 @@ mixin _$Measure {
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+  String? get subtitle => throw _privateConstructorUsedError;
+  @JsonKey(name: '_subtitle')
+  Element? get subtitleElement => throw _privateConstructorUsedError;
+  CodeableConcept? get subjectCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Reference? get subjectReference => throw _privateConstructorUsedError;
+  Code? get basis => throw _privateConstructorUsedError;
+  @JsonKey(name: '_basis')
+  Element? get basisElement => throw _privateConstructorUsedError;
+  String? get usage => throw _privateConstructorUsedError;
+  @JsonKey(name: '_usage')
+  Element? get usageElement => throw _privateConstructorUsedError;
   @JsonKey(name: 'library')
   List<Canonical>? get library_ => throw _privateConstructorUsedError;
   Markdown? get disclaimer => throw _privateConstructorUsedError;
   @JsonKey(name: '_disclaimer')
   Element? get disclaimerElement => throw _privateConstructorUsedError;
   CodeableConcept? get scoring => throw _privateConstructorUsedError;
+  CodeableConcept? get scoringUnit => throw _privateConstructorUsedError;
   CodeableConcept? get compositeScoring => throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   String? get riskAdjustment => throw _privateConstructorUsedError;
@@ -317,7 +326,7 @@ mixin _$Measure {
       throw _privateConstructorUsedError;
   List<Markdown>? get definition => throw _privateConstructorUsedError;
   @JsonKey(name: '_definition')
-  List<Element?>? get definitionElement => throw _privateConstructorUsedError;
+  List<Element>? get definitionElement => throw _privateConstructorUsedError;
   Markdown? get guidance => throw _privateConstructorUsedError;
   @JsonKey(name: '_guidance')
   Element? get guidanceElement => throw _privateConstructorUsedError;
@@ -363,8 +372,7 @@ abstract class $MeasureCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-          MeasureStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -395,26 +403,30 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      String? subtitle,
-      @JsonKey(name: '_subtitle')
-          Element? subtitleElement,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      String? usage,
-      @JsonKey(name: '_usage')
-          Element? usageElement,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
+      String? subtitle,
+      @JsonKey(name: '_subtitle')
+          Element? subtitleElement,
+      CodeableConcept? subjectCodeableConcept,
+      Reference? subjectReference,
+      Code? basis,
+      @JsonKey(name: '_basis')
+          Element? basisElement,
+      String? usage,
+      @JsonKey(name: '_usage')
+          Element? usageElement,
       @JsonKey(name: 'library')
           List<Canonical>? library_,
       Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
+      CodeableConcept? scoringUnit,
       CodeableConcept? compositeScoring,
       List<CodeableConcept>? type,
       String? riskAdjustment,
@@ -432,7 +444,7 @@ abstract class $MeasureCopyWith<$Res> {
       CodeableConcept? improvementNotation,
       List<Markdown>? definition,
       @JsonKey(name: '_definition')
-          List<Element?>? definitionElement,
+          List<Element>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -460,9 +472,11 @@ abstract class $MeasureCopyWith<$Res> {
   $ElementCopyWith<$Res>? get subtitleElement;
   $CodeableConceptCopyWith<$Res>? get subjectCodeableConcept;
   $ReferenceCopyWith<$Res>? get subjectReference;
+  $ElementCopyWith<$Res>? get basisElement;
   $ElementCopyWith<$Res>? get usageElement;
   $ElementCopyWith<$Res>? get disclaimerElement;
   $CodeableConceptCopyWith<$Res>? get scoring;
+  $CodeableConceptCopyWith<$Res>? get scoringUnit;
   $CodeableConceptCopyWith<$Res>? get compositeScoring;
   $ElementCopyWith<$Res>? get riskAdjustmentElement;
   $ElementCopyWith<$Res>? get rateAggregationElement;
@@ -524,22 +538,25 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
-    Object? subtitle = freezed,
-    Object? subtitleElement = freezed,
-    Object? subjectCodeableConcept = freezed,
-    Object? subjectReference = freezed,
-    Object? usage = freezed,
-    Object? usageElement = freezed,
     Object? topic = freezed,
     Object? author = freezed,
     Object? editor = freezed,
     Object? reviewer = freezed,
     Object? endorser = freezed,
     Object? relatedArtifact = freezed,
+    Object? subtitle = freezed,
+    Object? subtitleElement = freezed,
+    Object? subjectCodeableConcept = freezed,
+    Object? subjectReference = freezed,
+    Object? basis = freezed,
+    Object? basisElement = freezed,
+    Object? usage = freezed,
+    Object? usageElement = freezed,
     Object? library_ = freezed,
     Object? disclaimer = freezed,
     Object? disclaimerElement = freezed,
     Object? scoring = freezed,
+    Object? scoringUnit = freezed,
     Object? compositeScoring = freezed,
     Object? type = freezed,
     Object? riskAdjustment = freezed,
@@ -642,7 +659,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as MeasureStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -727,30 +744,6 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      subtitle: subtitle == freezed
-          ? _value.subtitle
-          : subtitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      subtitleElement: subtitleElement == freezed
-          ? _value.subtitleElement
-          : subtitleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      subjectCodeableConcept: subjectCodeableConcept == freezed
-          ? _value.subjectCodeableConcept
-          : subjectCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      subjectReference: subjectReference == freezed
-          ? _value.subjectReference
-          : subjectReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      usage: usage == freezed
-          ? _value.usage
-          : usage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      usageElement: usageElement == freezed
-          ? _value.usageElement
-          : usageElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       topic: topic == freezed
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
@@ -775,6 +768,38 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
+      subtitle: subtitle == freezed
+          ? _value.subtitle
+          : subtitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subjectCodeableConcept: subjectCodeableConcept == freezed
+          ? _value.subjectCodeableConcept
+          : subjectCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      subjectReference: subjectReference == freezed
+          ? _value.subjectReference
+          : subjectReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      basis: basis == freezed
+          ? _value.basis
+          : basis // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      basisElement: basisElement == freezed
+          ? _value.basisElement
+          : basisElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      usage: usage == freezed
+          ? _value.usage
+          : usage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       library_: library_ == freezed
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
@@ -790,6 +815,10 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       scoring: scoring == freezed
           ? _value.scoring
           : scoring // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      scoringUnit: scoringUnit == freezed
+          ? _value.scoringUnit
+          : scoringUnit // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       compositeScoring: compositeScoring == freezed
           ? _value.compositeScoring
@@ -844,7 +873,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       guidance: guidance == freezed
           ? _value.guidance
           : guidance // ignore: cast_nullable_to_non_nullable
@@ -1097,6 +1126,17 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
   }
 
   @override
+  $ElementCopyWith<$Res>? get basisElement {
+    if (_value.basisElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.basisElement!, (value) {
+      return _then(_value.copyWith(basisElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get usageElement {
     if (_value.usageElement == null) {
       return null;
@@ -1126,6 +1166,17 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
 
     return $CodeableConceptCopyWith<$Res>(_value.scoring!, (value) {
       return _then(_value.copyWith(scoring: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get scoringUnit {
+    if (_value.scoringUnit == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.scoringUnit!, (value) {
+      return _then(_value.copyWith(scoringUnit: value));
     });
   }
 
@@ -1243,8 +1294,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-          MeasureStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -1275,26 +1325,30 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      String? subtitle,
-      @JsonKey(name: '_subtitle')
-          Element? subtitleElement,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      String? usage,
-      @JsonKey(name: '_usage')
-          Element? usageElement,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
+      String? subtitle,
+      @JsonKey(name: '_subtitle')
+          Element? subtitleElement,
+      CodeableConcept? subjectCodeableConcept,
+      Reference? subjectReference,
+      Code? basis,
+      @JsonKey(name: '_basis')
+          Element? basisElement,
+      String? usage,
+      @JsonKey(name: '_usage')
+          Element? usageElement,
       @JsonKey(name: 'library')
           List<Canonical>? library_,
       Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
+      CodeableConcept? scoringUnit,
       CodeableConcept? compositeScoring,
       List<CodeableConcept>? type,
       String? riskAdjustment,
@@ -1312,7 +1366,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       CodeableConcept? improvementNotation,
       List<Markdown>? definition,
       @JsonKey(name: '_definition')
-          List<Element?>? definitionElement,
+          List<Element>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -1362,11 +1416,15 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   @override
   $ReferenceCopyWith<$Res>? get subjectReference;
   @override
+  $ElementCopyWith<$Res>? get basisElement;
+  @override
   $ElementCopyWith<$Res>? get usageElement;
   @override
   $ElementCopyWith<$Res>? get disclaimerElement;
   @override
   $CodeableConceptCopyWith<$Res>? get scoring;
+  @override
+  $CodeableConceptCopyWith<$Res>? get scoringUnit;
   @override
   $CodeableConceptCopyWith<$Res>? get compositeScoring;
   @override
@@ -1436,22 +1494,25 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
-    Object? subtitle = freezed,
-    Object? subtitleElement = freezed,
-    Object? subjectCodeableConcept = freezed,
-    Object? subjectReference = freezed,
-    Object? usage = freezed,
-    Object? usageElement = freezed,
     Object? topic = freezed,
     Object? author = freezed,
     Object? editor = freezed,
     Object? reviewer = freezed,
     Object? endorser = freezed,
     Object? relatedArtifact = freezed,
+    Object? subtitle = freezed,
+    Object? subtitleElement = freezed,
+    Object? subjectCodeableConcept = freezed,
+    Object? subjectReference = freezed,
+    Object? basis = freezed,
+    Object? basisElement = freezed,
+    Object? usage = freezed,
+    Object? usageElement = freezed,
     Object? library_ = freezed,
     Object? disclaimer = freezed,
     Object? disclaimerElement = freezed,
     Object? scoring = freezed,
+    Object? scoringUnit = freezed,
     Object? compositeScoring = freezed,
     Object? type = freezed,
     Object? riskAdjustment = freezed,
@@ -1554,7 +1615,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as MeasureStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1639,30 +1700,6 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      subtitle: subtitle == freezed
-          ? _value.subtitle
-          : subtitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      subtitleElement: subtitleElement == freezed
-          ? _value.subtitleElement
-          : subtitleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      subjectCodeableConcept: subjectCodeableConcept == freezed
-          ? _value.subjectCodeableConcept
-          : subjectCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      subjectReference: subjectReference == freezed
-          ? _value.subjectReference
-          : subjectReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      usage: usage == freezed
-          ? _value.usage
-          : usage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      usageElement: usageElement == freezed
-          ? _value.usageElement
-          : usageElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       topic: topic == freezed
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
@@ -1687,6 +1724,38 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
+      subtitle: subtitle == freezed
+          ? _value.subtitle
+          : subtitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subjectCodeableConcept: subjectCodeableConcept == freezed
+          ? _value.subjectCodeableConcept
+          : subjectCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      subjectReference: subjectReference == freezed
+          ? _value.subjectReference
+          : subjectReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      basis: basis == freezed
+          ? _value.basis
+          : basis // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      basisElement: basisElement == freezed
+          ? _value.basisElement
+          : basisElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      usage: usage == freezed
+          ? _value.usage
+          : usage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      usageElement: usageElement == freezed
+          ? _value.usageElement
+          : usageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       library_: library_ == freezed
           ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
@@ -1702,6 +1771,10 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       scoring: scoring == freezed
           ? _value.scoring
           : scoring // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      scoringUnit: scoringUnit == freezed
+          ? _value.scoringUnit
+          : scoringUnit // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       compositeScoring: compositeScoring == freezed
           ? _value.compositeScoring
@@ -1756,7 +1829,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       guidance: guidance == freezed
           ? _value.guidance
           : guidance // ignore: cast_nullable_to_non_nullable
@@ -1809,8 +1882,7 @@ class _$_Measure extends _Measure {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -1841,26 +1913,30 @@ class _$_Measure extends _Measure {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      this.subtitle,
-      @JsonKey(name: '_subtitle')
-          this.subtitleElement,
-      this.subjectCodeableConcept,
-      this.subjectReference,
-      this.usage,
-      @JsonKey(name: '_usage')
-          this.usageElement,
       this.topic,
       this.author,
       this.editor,
       this.reviewer,
       this.endorser,
       this.relatedArtifact,
+      this.subtitle,
+      @JsonKey(name: '_subtitle')
+          this.subtitleElement,
+      this.subjectCodeableConcept,
+      this.subjectReference,
+      this.basis,
+      @JsonKey(name: '_basis')
+          this.basisElement,
+      this.usage,
+      @JsonKey(name: '_usage')
+          this.usageElement,
       @JsonKey(name: 'library')
           this.library_,
       this.disclaimer,
       @JsonKey(name: '_disclaimer')
           this.disclaimerElement,
       this.scoring,
+      this.scoringUnit,
       this.compositeScoring,
       this.type,
       this.riskAdjustment,
@@ -1938,8 +2014,7 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-  final MeasureStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1992,20 +2067,6 @@ class _$_Measure extends _Measure {
   @override
   final Period? effectivePeriod;
   @override
-  final String? subtitle;
-  @override
-  @JsonKey(name: '_subtitle')
-  final Element? subtitleElement;
-  @override
-  final CodeableConcept? subjectCodeableConcept;
-  @override
-  final Reference? subjectReference;
-  @override
-  final String? usage;
-  @override
-  @JsonKey(name: '_usage')
-  final Element? usageElement;
-  @override
   final List<CodeableConcept>? topic;
   @override
   final List<ContactDetail>? author;
@@ -2018,6 +2079,25 @@ class _$_Measure extends _Measure {
   @override
   final List<RelatedArtifact>? relatedArtifact;
   @override
+  final String? subtitle;
+  @override
+  @JsonKey(name: '_subtitle')
+  final Element? subtitleElement;
+  @override
+  final CodeableConcept? subjectCodeableConcept;
+  @override
+  final Reference? subjectReference;
+  @override
+  final Code? basis;
+  @override
+  @JsonKey(name: '_basis')
+  final Element? basisElement;
+  @override
+  final String? usage;
+  @override
+  @JsonKey(name: '_usage')
+  final Element? usageElement;
+  @override
   @JsonKey(name: 'library')
   final List<Canonical>? library_;
   @override
@@ -2027,6 +2107,8 @@ class _$_Measure extends _Measure {
   final Element? disclaimerElement;
   @override
   final CodeableConcept? scoring;
+  @override
+  final CodeableConcept? scoringUnit;
   @override
   final CodeableConcept? compositeScoring;
   @override
@@ -2057,7 +2139,7 @@ class _$_Measure extends _Measure {
   final List<Markdown>? definition;
   @override
   @JsonKey(name: '_definition')
-  final List<Element?>? definitionElement;
+  final List<Element>? definitionElement;
   @override
   final Markdown? guidance;
   @override
@@ -2070,7 +2152,7 @@ class _$_Measure extends _Measure {
 
   @override
   String toString() {
-    return 'Measure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, subtitle: $subtitle, subtitleElement: $subtitleElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, usage: $usage, usageElement: $usageElement, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, group: $group, supplementalData: $supplementalData)';
+    return 'Measure(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, subtitle: $subtitle, subtitleElement: $subtitleElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, basis: $basis, basisElement: $basisElement, usage: $usage, usageElement: $usageElement, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, scoringUnit: $scoringUnit, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, group: $group, supplementalData: $supplementalData)';
   }
 
   @override
@@ -2162,22 +2244,25 @@ class _$_Measure extends _Measure {
             (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
             (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
             (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.subtitle, subtitle) || const DeepCollectionEquality().equals(other.subtitle, subtitle)) &&
-            (identical(other.subtitleElement, subtitleElement) || const DeepCollectionEquality().equals(other.subtitleElement, subtitleElement)) &&
-            (identical(other.subjectCodeableConcept, subjectCodeableConcept) || const DeepCollectionEquality().equals(other.subjectCodeableConcept, subjectCodeableConcept)) &&
-            (identical(other.subjectReference, subjectReference) || const DeepCollectionEquality().equals(other.subjectReference, subjectReference)) &&
-            (identical(other.usage, usage) || const DeepCollectionEquality().equals(other.usage, usage)) &&
-            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
             (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
             (identical(other.author, author) || const DeepCollectionEquality().equals(other.author, author)) &&
             (identical(other.editor, editor) || const DeepCollectionEquality().equals(other.editor, editor)) &&
             (identical(other.reviewer, reviewer) || const DeepCollectionEquality().equals(other.reviewer, reviewer)) &&
             (identical(other.endorser, endorser) || const DeepCollectionEquality().equals(other.endorser, endorser)) &&
             (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
+            (identical(other.subtitle, subtitle) || const DeepCollectionEquality().equals(other.subtitle, subtitle)) &&
+            (identical(other.subtitleElement, subtitleElement) || const DeepCollectionEquality().equals(other.subtitleElement, subtitleElement)) &&
+            (identical(other.subjectCodeableConcept, subjectCodeableConcept) || const DeepCollectionEquality().equals(other.subjectCodeableConcept, subjectCodeableConcept)) &&
+            (identical(other.subjectReference, subjectReference) || const DeepCollectionEquality().equals(other.subjectReference, subjectReference)) &&
+            (identical(other.basis, basis) || const DeepCollectionEquality().equals(other.basis, basis)) &&
+            (identical(other.basisElement, basisElement) || const DeepCollectionEquality().equals(other.basisElement, basisElement)) &&
+            (identical(other.usage, usage) || const DeepCollectionEquality().equals(other.usage, usage)) &&
+            (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
             (identical(other.library_, library_) || const DeepCollectionEquality().equals(other.library_, library_)) &&
             (identical(other.disclaimer, disclaimer) || const DeepCollectionEquality().equals(other.disclaimer, disclaimer)) &&
             (identical(other.disclaimerElement, disclaimerElement) || const DeepCollectionEquality().equals(other.disclaimerElement, disclaimerElement)) &&
             (identical(other.scoring, scoring) || const DeepCollectionEquality().equals(other.scoring, scoring)) &&
+            (identical(other.scoringUnit, scoringUnit) || const DeepCollectionEquality().equals(other.scoringUnit, scoringUnit)) &&
             (identical(other.compositeScoring, compositeScoring) || const DeepCollectionEquality().equals(other.compositeScoring, compositeScoring)) &&
             (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.riskAdjustment, riskAdjustment) || const DeepCollectionEquality().equals(other.riskAdjustment, riskAdjustment)) &&
@@ -2242,22 +2327,25 @@ class _$_Measure extends _Measure {
       const DeepCollectionEquality().hash(lastReviewDate) ^
       const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
-      const DeepCollectionEquality().hash(subtitle) ^
-      const DeepCollectionEquality().hash(subtitleElement) ^
-      const DeepCollectionEquality().hash(subjectCodeableConcept) ^
-      const DeepCollectionEquality().hash(subjectReference) ^
-      const DeepCollectionEquality().hash(usage) ^
-      const DeepCollectionEquality().hash(usageElement) ^
       const DeepCollectionEquality().hash(topic) ^
       const DeepCollectionEquality().hash(author) ^
       const DeepCollectionEquality().hash(editor) ^
       const DeepCollectionEquality().hash(reviewer) ^
       const DeepCollectionEquality().hash(endorser) ^
       const DeepCollectionEquality().hash(relatedArtifact) ^
+      const DeepCollectionEquality().hash(subtitle) ^
+      const DeepCollectionEquality().hash(subtitleElement) ^
+      const DeepCollectionEquality().hash(subjectCodeableConcept) ^
+      const DeepCollectionEquality().hash(subjectReference) ^
+      const DeepCollectionEquality().hash(basis) ^
+      const DeepCollectionEquality().hash(basisElement) ^
+      const DeepCollectionEquality().hash(usage) ^
+      const DeepCollectionEquality().hash(usageElement) ^
       const DeepCollectionEquality().hash(library_) ^
       const DeepCollectionEquality().hash(disclaimer) ^
       const DeepCollectionEquality().hash(disclaimerElement) ^
       const DeepCollectionEquality().hash(scoring) ^
+      const DeepCollectionEquality().hash(scoringUnit) ^
       const DeepCollectionEquality().hash(compositeScoring) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(riskAdjustment) ^
@@ -2318,8 +2406,7 @@ abstract class _Measure extends Measure {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-          MeasureStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -2350,26 +2437,30 @@ abstract class _Measure extends Measure {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      String? subtitle,
-      @JsonKey(name: '_subtitle')
-          Element? subtitleElement,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      String? usage,
-      @JsonKey(name: '_usage')
-          Element? usageElement,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
+      String? subtitle,
+      @JsonKey(name: '_subtitle')
+          Element? subtitleElement,
+      CodeableConcept? subjectCodeableConcept,
+      Reference? subjectReference,
+      Code? basis,
+      @JsonKey(name: '_basis')
+          Element? basisElement,
+      String? usage,
+      @JsonKey(name: '_usage')
+          Element? usageElement,
       @JsonKey(name: 'library')
           List<Canonical>? library_,
       Markdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
+      CodeableConcept? scoringUnit,
       CodeableConcept? compositeScoring,
       List<CodeableConcept>? type,
       String? riskAdjustment,
@@ -2387,7 +2478,7 @@ abstract class _Measure extends Measure {
       CodeableConcept? improvementNotation,
       List<Markdown>? definition,
       @JsonKey(name: '_definition')
-          List<Element?>? definitionElement,
+          List<Element>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -2447,8 +2538,7 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: MeasureStatus.unknown)
-  MeasureStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -2501,21 +2591,6 @@ abstract class _Measure extends Measure {
   @override
   Period? get effectivePeriod => throw _privateConstructorUsedError;
   @override
-  String? get subtitle => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_subtitle')
-  Element? get subtitleElement => throw _privateConstructorUsedError;
-  @override
-  CodeableConcept? get subjectCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Reference? get subjectReference => throw _privateConstructorUsedError;
-  @override
-  String? get usage => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_usage')
-  Element? get usageElement => throw _privateConstructorUsedError;
-  @override
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
   @override
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
@@ -2529,6 +2604,26 @@ abstract class _Measure extends Measure {
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
   @override
+  String? get subtitle => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_subtitle')
+  Element? get subtitleElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get subjectCodeableConcept =>
+      throw _privateConstructorUsedError;
+  @override
+  Reference? get subjectReference => throw _privateConstructorUsedError;
+  @override
+  Code? get basis => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_basis')
+  Element? get basisElement => throw _privateConstructorUsedError;
+  @override
+  String? get usage => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_usage')
+  Element? get usageElement => throw _privateConstructorUsedError;
+  @override
   @JsonKey(name: 'library')
   List<Canonical>? get library_ => throw _privateConstructorUsedError;
   @override
@@ -2538,6 +2633,8 @@ abstract class _Measure extends Measure {
   Element? get disclaimerElement => throw _privateConstructorUsedError;
   @override
   CodeableConcept? get scoring => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get scoringUnit => throw _privateConstructorUsedError;
   @override
   CodeableConcept? get compositeScoring => throw _privateConstructorUsedError;
   @override
@@ -2571,7 +2668,7 @@ abstract class _Measure extends Measure {
   List<Markdown>? get definition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_definition')
-  List<Element?>? get definitionElement => throw _privateConstructorUsedError;
+  List<Element>? get definitionElement => throw _privateConstructorUsedError;
   @override
   Markdown? get guidance => throw _privateConstructorUsedError;
   @override
@@ -2603,6 +2700,12 @@ class _$MeasureGroupTearOff {
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
+      List<CodeableConcept>? type,
+      Code? basis,
+      @JsonKey(name: '_basis') Element? basisElement,
+      CodeableConcept? scoring,
+      CodeableConcept? scoringUnit,
+      CodeableConcept? improvementNotation,
       List<MeasurePopulation>? population,
       List<MeasureStratifier>? stratifier}) {
     return _MeasureGroup(
@@ -2612,6 +2715,12 @@ class _$MeasureGroupTearOff {
       code: code,
       description: description,
       descriptionElement: descriptionElement,
+      type: type,
+      basis: basis,
+      basisElement: basisElement,
+      scoring: scoring,
+      scoringUnit: scoringUnit,
+      improvementNotation: improvementNotation,
       population: population,
       stratifier: stratifier,
     );
@@ -2636,6 +2745,14 @@ mixin _$MeasureGroup {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+  Code? get basis => throw _privateConstructorUsedError;
+  @JsonKey(name: '_basis')
+  Element? get basisElement => throw _privateConstructorUsedError;
+  CodeableConcept? get scoring => throw _privateConstructorUsedError;
+  CodeableConcept? get scoringUnit => throw _privateConstructorUsedError;
+  CodeableConcept? get improvementNotation =>
+      throw _privateConstructorUsedError;
   List<MeasurePopulation>? get population => throw _privateConstructorUsedError;
   List<MeasureStratifier>? get stratifier => throw _privateConstructorUsedError;
 
@@ -2657,11 +2774,21 @@ abstract class $MeasureGroupCopyWith<$Res> {
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
+      List<CodeableConcept>? type,
+      Code? basis,
+      @JsonKey(name: '_basis') Element? basisElement,
+      CodeableConcept? scoring,
+      CodeableConcept? scoringUnit,
+      CodeableConcept? improvementNotation,
       List<MeasurePopulation>? population,
       List<MeasureStratifier>? stratifier});
 
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get descriptionElement;
+  $ElementCopyWith<$Res>? get basisElement;
+  $CodeableConceptCopyWith<$Res>? get scoring;
+  $CodeableConceptCopyWith<$Res>? get scoringUnit;
+  $CodeableConceptCopyWith<$Res>? get improvementNotation;
 }
 
 /// @nodoc
@@ -2680,6 +2807,12 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
     Object? code = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
+    Object? type = freezed,
+    Object? basis = freezed,
+    Object? basisElement = freezed,
+    Object? scoring = freezed,
+    Object? scoringUnit = freezed,
+    Object? improvementNotation = freezed,
     Object? population = freezed,
     Object? stratifier = freezed,
   }) {
@@ -2708,6 +2841,30 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      basis: basis == freezed
+          ? _value.basis
+          : basis // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      basisElement: basisElement == freezed
+          ? _value.basisElement
+          : basisElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      scoring: scoring == freezed
+          ? _value.scoring
+          : scoring // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      scoringUnit: scoringUnit == freezed
+          ? _value.scoringUnit
+          : scoringUnit // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      improvementNotation: improvementNotation == freezed
+          ? _value.improvementNotation
+          : improvementNotation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       population: population == freezed
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
@@ -2740,6 +2897,50 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
       return _then(_value.copyWith(descriptionElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res>? get basisElement {
+    if (_value.basisElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.basisElement!, (value) {
+      return _then(_value.copyWith(basisElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get scoring {
+    if (_value.scoring == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.scoring!, (value) {
+      return _then(_value.copyWith(scoring: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get scoringUnit {
+    if (_value.scoringUnit == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.scoringUnit!, (value) {
+      return _then(_value.copyWith(scoringUnit: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get improvementNotation {
+    if (_value.improvementNotation == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.improvementNotation!, (value) {
+      return _then(_value.copyWith(improvementNotation: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -2756,6 +2957,12 @@ abstract class _$MeasureGroupCopyWith<$Res>
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
+      List<CodeableConcept>? type,
+      Code? basis,
+      @JsonKey(name: '_basis') Element? basisElement,
+      CodeableConcept? scoring,
+      CodeableConcept? scoringUnit,
+      CodeableConcept? improvementNotation,
       List<MeasurePopulation>? population,
       List<MeasureStratifier>? stratifier});
 
@@ -2763,6 +2970,14 @@ abstract class _$MeasureGroupCopyWith<$Res>
   $CodeableConceptCopyWith<$Res>? get code;
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ElementCopyWith<$Res>? get basisElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get scoring;
+  @override
+  $CodeableConceptCopyWith<$Res>? get scoringUnit;
+  @override
+  $CodeableConceptCopyWith<$Res>? get improvementNotation;
 }
 
 /// @nodoc
@@ -2783,6 +2998,12 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
     Object? code = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
+    Object? type = freezed,
+    Object? basis = freezed,
+    Object? basisElement = freezed,
+    Object? scoring = freezed,
+    Object? scoringUnit = freezed,
+    Object? improvementNotation = freezed,
     Object? population = freezed,
     Object? stratifier = freezed,
   }) {
@@ -2811,6 +3032,30 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      basis: basis == freezed
+          ? _value.basis
+          : basis // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      basisElement: basisElement == freezed
+          ? _value.basisElement
+          : basisElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      scoring: scoring == freezed
+          ? _value.scoring
+          : scoring // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      scoringUnit: scoringUnit == freezed
+          ? _value.scoringUnit
+          : scoringUnit // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      improvementNotation: improvementNotation == freezed
+          ? _value.improvementNotation
+          : improvementNotation // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       population: population == freezed
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
@@ -2833,6 +3078,12 @@ class _$_MeasureGroup extends _MeasureGroup {
       this.code,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
+      this.type,
+      this.basis,
+      @JsonKey(name: '_basis') this.basisElement,
+      this.scoring,
+      this.scoringUnit,
+      this.improvementNotation,
       this.population,
       this.stratifier})
       : super._();
@@ -2855,13 +3106,26 @@ class _$_MeasureGroup extends _MeasureGroup {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
+  final List<CodeableConcept>? type;
+  @override
+  final Code? basis;
+  @override
+  @JsonKey(name: '_basis')
+  final Element? basisElement;
+  @override
+  final CodeableConcept? scoring;
+  @override
+  final CodeableConcept? scoringUnit;
+  @override
+  final CodeableConcept? improvementNotation;
+  @override
   final List<MeasurePopulation>? population;
   @override
   final List<MeasureStratifier>? stratifier;
 
   @override
   String toString() {
-    return 'MeasureGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, description: $description, descriptionElement: $descriptionElement, population: $population, stratifier: $stratifier)';
+    return 'MeasureGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, description: $description, descriptionElement: $descriptionElement, type: $type, basis: $basis, basisElement: $basisElement, scoring: $scoring, scoringUnit: $scoringUnit, improvementNotation: $improvementNotation, population: $population, stratifier: $stratifier)';
   }
 
   @override
@@ -2884,6 +3148,22 @@ class _$_MeasureGroup extends _MeasureGroup {
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.basis, basis) ||
+                const DeepCollectionEquality().equals(other.basis, basis)) &&
+            (identical(other.basisElement, basisElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.basisElement, basisElement)) &&
+            (identical(other.scoring, scoring) ||
+                const DeepCollectionEquality()
+                    .equals(other.scoring, scoring)) &&
+            (identical(other.scoringUnit, scoringUnit) ||
+                const DeepCollectionEquality()
+                    .equals(other.scoringUnit, scoringUnit)) &&
+            (identical(other.improvementNotation, improvementNotation) ||
+                const DeepCollectionEquality()
+                    .equals(other.improvementNotation, improvementNotation)) &&
             (identical(other.population, population) ||
                 const DeepCollectionEquality()
                     .equals(other.population, population)) &&
@@ -2901,6 +3181,12 @@ class _$_MeasureGroup extends _MeasureGroup {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(basis) ^
+      const DeepCollectionEquality().hash(basisElement) ^
+      const DeepCollectionEquality().hash(scoring) ^
+      const DeepCollectionEquality().hash(scoringUnit) ^
+      const DeepCollectionEquality().hash(improvementNotation) ^
       const DeepCollectionEquality().hash(population) ^
       const DeepCollectionEquality().hash(stratifier);
 
@@ -2923,6 +3209,12 @@ abstract class _MeasureGroup extends MeasureGroup {
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
+      List<CodeableConcept>? type,
+      Code? basis,
+      @JsonKey(name: '_basis') Element? basisElement,
+      CodeableConcept? scoring,
+      CodeableConcept? scoringUnit,
+      CodeableConcept? improvementNotation,
       List<MeasurePopulation>? population,
       List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
   _MeasureGroup._() : super._();
@@ -2945,6 +3237,20 @@ abstract class _MeasureGroup extends MeasureGroup {
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+  @override
+  Code? get basis => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_basis')
+  Element? get basisElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get scoring => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get scoringUnit => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get improvementNotation =>
+      throw _privateConstructorUsedError;
   @override
   List<MeasurePopulation>? get population => throw _privateConstructorUsedError;
   @override
@@ -2970,7 +3276,10 @@ class _$MeasurePopulationTearOff {
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      required Expression criteria}) {
+      required Expression criteria,
+      String? inputPopulationId,
+      @JsonKey(name: '_inputPopulationId') Element? inputPopulationIdElement,
+      CodeableConcept? aggregateMethod}) {
     return _MeasurePopulation(
       id: id,
       extension_: extension_,
@@ -2979,6 +3288,9 @@ class _$MeasurePopulationTearOff {
       description: description,
       descriptionElement: descriptionElement,
       criteria: criteria,
+      inputPopulationId: inputPopulationId,
+      inputPopulationIdElement: inputPopulationIdElement,
+      aggregateMethod: aggregateMethod,
     );
   }
 
@@ -3002,6 +3314,10 @@ mixin _$MeasurePopulation {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   Expression get criteria => throw _privateConstructorUsedError;
+  String? get inputPopulationId => throw _privateConstructorUsedError;
+  @JsonKey(name: '_inputPopulationId')
+  Element? get inputPopulationIdElement => throw _privateConstructorUsedError;
+  CodeableConcept? get aggregateMethod => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3021,11 +3337,16 @@ abstract class $MeasurePopulationCopyWith<$Res> {
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression criteria});
+      Expression criteria,
+      String? inputPopulationId,
+      @JsonKey(name: '_inputPopulationId') Element? inputPopulationIdElement,
+      CodeableConcept? aggregateMethod});
 
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get descriptionElement;
   $ExpressionCopyWith<$Res> get criteria;
+  $ElementCopyWith<$Res>? get inputPopulationIdElement;
+  $CodeableConceptCopyWith<$Res>? get aggregateMethod;
 }
 
 /// @nodoc
@@ -3046,6 +3367,9 @@ class _$MeasurePopulationCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? criteria = freezed,
+    Object? inputPopulationId = freezed,
+    Object? inputPopulationIdElement = freezed,
+    Object? aggregateMethod = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -3076,6 +3400,18 @@ class _$MeasurePopulationCopyWithImpl<$Res>
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
               as Expression,
+      inputPopulationId: inputPopulationId == freezed
+          ? _value.inputPopulationId
+          : inputPopulationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inputPopulationIdElement: inputPopulationIdElement == freezed
+          ? _value.inputPopulationIdElement
+          : inputPopulationIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      aggregateMethod: aggregateMethod == freezed
+          ? _value.aggregateMethod
+          : aggregateMethod // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
@@ -3107,6 +3443,28 @@ class _$MeasurePopulationCopyWithImpl<$Res>
       return _then(_value.copyWith(criteria: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res>? get inputPopulationIdElement {
+    if (_value.inputPopulationIdElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.inputPopulationIdElement!, (value) {
+      return _then(_value.copyWith(inputPopulationIdElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get aggregateMethod {
+    if (_value.aggregateMethod == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.aggregateMethod!, (value) {
+      return _then(_value.copyWith(aggregateMethod: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -3123,7 +3481,10 @@ abstract class _$MeasurePopulationCopyWith<$Res>
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression criteria});
+      Expression criteria,
+      String? inputPopulationId,
+      @JsonKey(name: '_inputPopulationId') Element? inputPopulationIdElement,
+      CodeableConcept? aggregateMethod});
 
   @override
   $CodeableConceptCopyWith<$Res>? get code;
@@ -3131,6 +3492,10 @@ abstract class _$MeasurePopulationCopyWith<$Res>
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
   $ExpressionCopyWith<$Res> get criteria;
+  @override
+  $ElementCopyWith<$Res>? get inputPopulationIdElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get aggregateMethod;
 }
 
 /// @nodoc
@@ -3153,6 +3518,9 @@ class __$MeasurePopulationCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? criteria = freezed,
+    Object? inputPopulationId = freezed,
+    Object? inputPopulationIdElement = freezed,
+    Object? aggregateMethod = freezed,
   }) {
     return _then(_MeasurePopulation(
       id: id == freezed
@@ -3183,6 +3551,18 @@ class __$MeasurePopulationCopyWithImpl<$Res>
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
               as Expression,
+      inputPopulationId: inputPopulationId == freezed
+          ? _value.inputPopulationId
+          : inputPopulationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inputPopulationIdElement: inputPopulationIdElement == freezed
+          ? _value.inputPopulationIdElement
+          : inputPopulationIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      aggregateMethod: aggregateMethod == freezed
+          ? _value.aggregateMethod
+          : aggregateMethod // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
@@ -3197,7 +3577,10 @@ class _$_MeasurePopulation extends _MeasurePopulation {
       this.code,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      required this.criteria})
+      required this.criteria,
+      this.inputPopulationId,
+      @JsonKey(name: '_inputPopulationId') this.inputPopulationIdElement,
+      this.aggregateMethod})
       : super._();
 
   factory _$_MeasurePopulation.fromJson(Map<String, dynamic> json) =>
@@ -3219,10 +3602,17 @@ class _$_MeasurePopulation extends _MeasurePopulation {
   final Element? descriptionElement;
   @override
   final Expression criteria;
+  @override
+  final String? inputPopulationId;
+  @override
+  @JsonKey(name: '_inputPopulationId')
+  final Element? inputPopulationIdElement;
+  @override
+  final CodeableConcept? aggregateMethod;
 
   @override
   String toString() {
-    return 'MeasurePopulation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, description: $description, descriptionElement: $descriptionElement, criteria: $criteria)';
+    return 'MeasurePopulation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, description: $description, descriptionElement: $descriptionElement, criteria: $criteria, inputPopulationId: $inputPopulationId, inputPopulationIdElement: $inputPopulationIdElement, aggregateMethod: $aggregateMethod)';
   }
 
   @override
@@ -3247,7 +3637,18 @@ class _$_MeasurePopulation extends _MeasurePopulation {
                     .equals(other.descriptionElement, descriptionElement)) &&
             (identical(other.criteria, criteria) ||
                 const DeepCollectionEquality()
-                    .equals(other.criteria, criteria)));
+                    .equals(other.criteria, criteria)) &&
+            (identical(other.inputPopulationId, inputPopulationId) ||
+                const DeepCollectionEquality()
+                    .equals(other.inputPopulationId, inputPopulationId)) &&
+            (identical(
+                    other.inputPopulationIdElement, inputPopulationIdElement) ||
+                const DeepCollectionEquality().equals(
+                    other.inputPopulationIdElement,
+                    inputPopulationIdElement)) &&
+            (identical(other.aggregateMethod, aggregateMethod) ||
+                const DeepCollectionEquality()
+                    .equals(other.aggregateMethod, aggregateMethod)));
   }
 
   @override
@@ -3259,7 +3660,10 @@ class _$_MeasurePopulation extends _MeasurePopulation {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(criteria);
+      const DeepCollectionEquality().hash(criteria) ^
+      const DeepCollectionEquality().hash(inputPopulationId) ^
+      const DeepCollectionEquality().hash(inputPopulationIdElement) ^
+      const DeepCollectionEquality().hash(aggregateMethod);
 
   @JsonKey(ignore: true)
   @override
@@ -3280,7 +3684,10 @@ abstract class _MeasurePopulation extends MeasurePopulation {
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      required Expression criteria}) = _$_MeasurePopulation;
+      required Expression criteria,
+      String? inputPopulationId,
+      @JsonKey(name: '_inputPopulationId') Element? inputPopulationIdElement,
+      CodeableConcept? aggregateMethod}) = _$_MeasurePopulation;
   _MeasurePopulation._() : super._();
 
   factory _MeasurePopulation.fromJson(Map<String, dynamic> json) =
@@ -3303,6 +3710,13 @@ abstract class _MeasurePopulation extends MeasurePopulation {
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
   Expression get criteria => throw _privateConstructorUsedError;
+  @override
+  String? get inputPopulationId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_inputPopulationId')
+  Element? get inputPopulationIdElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get aggregateMethod => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MeasurePopulationCopyWith<_MeasurePopulation> get copyWith =>
@@ -4452,21 +4866,24 @@ class _$MeasureReportTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-          MeasureReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-          MeasureReportType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
+      Code? dataUpdateType,
+      @JsonKey(name: '_dataUpdateType')
+          Element? dataUpdateTypeElement,
       required Canonical measure,
       Reference? subject,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reporter,
+      Reference? reportingVendor,
       required Period period,
+      CodeableConcept? scoring,
       CodeableConcept? improvementNotation,
       List<MeasureReportGroup>? group,
       List<Reference>? evaluatedResource}) {
@@ -4487,12 +4904,16 @@ class _$MeasureReportTearOff {
       statusElement: statusElement,
       type: type,
       typeElement: typeElement,
+      dataUpdateType: dataUpdateType,
+      dataUpdateTypeElement: dataUpdateTypeElement,
       measure: measure,
       subject: subject,
       date: date,
       dateElement: dateElement,
       reporter: reporter,
+      reportingVendor: reportingVendor,
       period: period,
+      scoring: scoring,
       improvementNotation: improvementNotation,
       group: group,
       evaluatedResource: evaluatedResource,
@@ -4526,21 +4947,24 @@ mixin _$MeasureReport {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-  MeasureReportStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-  MeasureReportType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+  Code? get dataUpdateType => throw _privateConstructorUsedError;
+  @JsonKey(name: '_dataUpdateType')
+  Element? get dataUpdateTypeElement => throw _privateConstructorUsedError;
   Canonical get measure => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   Reference? get reporter => throw _privateConstructorUsedError;
+  Reference? get reportingVendor => throw _privateConstructorUsedError;
   Period get period => throw _privateConstructorUsedError;
+  CodeableConcept? get scoring => throw _privateConstructorUsedError;
   CodeableConcept? get improvementNotation =>
       throw _privateConstructorUsedError;
   List<MeasureReportGroup>? get group => throw _privateConstructorUsedError;
@@ -4574,21 +4998,24 @@ abstract class $MeasureReportCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-          MeasureReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-          MeasureReportType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
+      Code? dataUpdateType,
+      @JsonKey(name: '_dataUpdateType')
+          Element? dataUpdateTypeElement,
       Canonical measure,
       Reference? subject,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reporter,
+      Reference? reportingVendor,
       Period period,
+      CodeableConcept? scoring,
       CodeableConcept? improvementNotation,
       List<MeasureReportGroup>? group,
       List<Reference>? evaluatedResource});
@@ -4599,10 +5026,13 @@ abstract class $MeasureReportCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get typeElement;
+  $ElementCopyWith<$Res>? get dataUpdateTypeElement;
   $ReferenceCopyWith<$Res>? get subject;
   $ElementCopyWith<$Res>? get dateElement;
   $ReferenceCopyWith<$Res>? get reporter;
+  $ReferenceCopyWith<$Res>? get reportingVendor;
   $PeriodCopyWith<$Res> get period;
+  $CodeableConceptCopyWith<$Res>? get scoring;
   $CodeableConceptCopyWith<$Res>? get improvementNotation;
 }
 
@@ -4633,12 +5063,16 @@ class _$MeasureReportCopyWithImpl<$Res>
     Object? statusElement = freezed,
     Object? type = freezed,
     Object? typeElement = freezed,
+    Object? dataUpdateType = freezed,
+    Object? dataUpdateTypeElement = freezed,
     Object? measure = freezed,
     Object? subject = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
     Object? reporter = freezed,
+    Object? reportingVendor = freezed,
     Object? period = freezed,
+    Object? scoring = freezed,
     Object? improvementNotation = freezed,
     Object? group = freezed,
     Object? evaluatedResource = freezed,
@@ -4695,7 +5129,7 @@ class _$MeasureReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as MeasureReportStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4703,10 +5137,18 @@ class _$MeasureReportCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MeasureReportType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      dataUpdateType: dataUpdateType == freezed
+          ? _value.dataUpdateType
+          : dataUpdateType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      dataUpdateTypeElement: dataUpdateTypeElement == freezed
+          ? _value.dataUpdateTypeElement
+          : dataUpdateTypeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       measure: measure == freezed
           ? _value.measure
@@ -4728,10 +5170,18 @@ class _$MeasureReportCopyWithImpl<$Res>
           ? _value.reporter
           : reporter // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      reportingVendor: reportingVendor == freezed
+          ? _value.reportingVendor
+          : reportingVendor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       period: period == freezed
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period,
+      scoring: scoring == freezed
+          ? _value.scoring
+          : scoring // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       improvementNotation: improvementNotation == freezed
           ? _value.improvementNotation
           : improvementNotation // ignore: cast_nullable_to_non_nullable
@@ -4814,6 +5264,17 @@ class _$MeasureReportCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get dataUpdateTypeElement {
+    if (_value.dataUpdateTypeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.dataUpdateTypeElement!, (value) {
+      return _then(_value.copyWith(dataUpdateTypeElement: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res>? get subject {
     if (_value.subject == null) {
       return null;
@@ -4847,9 +5308,31 @@ class _$MeasureReportCopyWithImpl<$Res>
   }
 
   @override
+  $ReferenceCopyWith<$Res>? get reportingVendor {
+    if (_value.reportingVendor == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.reportingVendor!, (value) {
+      return _then(_value.copyWith(reportingVendor: value));
+    });
+  }
+
+  @override
   $PeriodCopyWith<$Res> get period {
     return $PeriodCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get scoring {
+    if (_value.scoring == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.scoring!, (value) {
+      return _then(_value.copyWith(scoring: value));
     });
   }
 
@@ -4889,21 +5372,24 @@ abstract class _$MeasureReportCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-          MeasureReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-          MeasureReportType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
+      Code? dataUpdateType,
+      @JsonKey(name: '_dataUpdateType')
+          Element? dataUpdateTypeElement,
       Canonical measure,
       Reference? subject,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reporter,
+      Reference? reportingVendor,
       Period period,
+      CodeableConcept? scoring,
       CodeableConcept? improvementNotation,
       List<MeasureReportGroup>? group,
       List<Reference>? evaluatedResource});
@@ -4921,13 +5407,19 @@ abstract class _$MeasureReportCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get typeElement;
   @override
+  $ElementCopyWith<$Res>? get dataUpdateTypeElement;
+  @override
   $ReferenceCopyWith<$Res>? get subject;
   @override
   $ElementCopyWith<$Res>? get dateElement;
   @override
   $ReferenceCopyWith<$Res>? get reporter;
   @override
+  $ReferenceCopyWith<$Res>? get reportingVendor;
+  @override
   $PeriodCopyWith<$Res> get period;
+  @override
+  $CodeableConceptCopyWith<$Res>? get scoring;
   @override
   $CodeableConceptCopyWith<$Res>? get improvementNotation;
 }
@@ -4961,12 +5453,16 @@ class __$MeasureReportCopyWithImpl<$Res>
     Object? statusElement = freezed,
     Object? type = freezed,
     Object? typeElement = freezed,
+    Object? dataUpdateType = freezed,
+    Object? dataUpdateTypeElement = freezed,
     Object? measure = freezed,
     Object? subject = freezed,
     Object? date = freezed,
     Object? dateElement = freezed,
     Object? reporter = freezed,
+    Object? reportingVendor = freezed,
     Object? period = freezed,
+    Object? scoring = freezed,
     Object? improvementNotation = freezed,
     Object? group = freezed,
     Object? evaluatedResource = freezed,
@@ -5023,7 +5519,7 @@ class __$MeasureReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as MeasureReportStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5031,10 +5527,18 @@ class __$MeasureReportCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as MeasureReportType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      dataUpdateType: dataUpdateType == freezed
+          ? _value.dataUpdateType
+          : dataUpdateType // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      dataUpdateTypeElement: dataUpdateTypeElement == freezed
+          ? _value.dataUpdateTypeElement
+          : dataUpdateTypeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       measure: measure == freezed
           ? _value.measure
@@ -5056,10 +5560,18 @@ class __$MeasureReportCopyWithImpl<$Res>
           ? _value.reporter
           : reporter // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      reportingVendor: reportingVendor == freezed
+          ? _value.reportingVendor
+          : reportingVendor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       period: period == freezed
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period,
+      scoring: scoring == freezed
+          ? _value.scoring
+          : scoring // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       improvementNotation: improvementNotation == freezed
           ? _value.improvementNotation
           : improvementNotation // ignore: cast_nullable_to_non_nullable
@@ -5096,21 +5608,24 @@ class _$_MeasureReport extends _MeasureReport {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-          this.type,
+      this.type,
       @JsonKey(name: '_type')
           this.typeElement,
+      this.dataUpdateType,
+      @JsonKey(name: '_dataUpdateType')
+          this.dataUpdateTypeElement,
       required this.measure,
       this.subject,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
       this.reporter,
+      this.reportingVendor,
       required this.period,
+      this.scoring,
       this.improvementNotation,
       this.group,
       this.evaluatedResource})
@@ -5148,17 +5663,20 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final List<Identifier>? identifier;
   @override
-  @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-  final MeasureReportStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-  final MeasureReportType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
+  @override
+  final Code? dataUpdateType;
+  @override
+  @JsonKey(name: '_dataUpdateType')
+  final Element? dataUpdateTypeElement;
   @override
   final Canonical measure;
   @override
@@ -5171,7 +5689,11 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final Reference? reporter;
   @override
+  final Reference? reportingVendor;
+  @override
   final Period period;
+  @override
+  final CodeableConcept? scoring;
   @override
   final CodeableConcept? improvementNotation;
   @override
@@ -5181,7 +5703,7 @@ class _$_MeasureReport extends _MeasureReport {
 
   @override
   String toString() {
-    return 'MeasureReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, typeElement: $typeElement, measure: $measure, subject: $subject, date: $date, dateElement: $dateElement, reporter: $reporter, period: $period, improvementNotation: $improvementNotation, group: $group, evaluatedResource: $evaluatedResource)';
+    return 'MeasureReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, typeElement: $typeElement, dataUpdateType: $dataUpdateType, dataUpdateTypeElement: $dataUpdateTypeElement, measure: $measure, subject: $subject, date: $date, dateElement: $dateElement, reporter: $reporter, reportingVendor: $reportingVendor, period: $period, scoring: $scoring, improvementNotation: $improvementNotation, group: $group, evaluatedResource: $evaluatedResource)';
   }
 
   @override
@@ -5231,6 +5753,12 @@ class _$_MeasureReport extends _MeasureReport {
             (identical(other.typeElement, typeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.typeElement, typeElement)) &&
+            (identical(other.dataUpdateType, dataUpdateType) ||
+                const DeepCollectionEquality()
+                    .equals(other.dataUpdateType, dataUpdateType)) &&
+            (identical(other.dataUpdateTypeElement, dataUpdateTypeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.dataUpdateTypeElement, dataUpdateTypeElement)) &&
             (identical(other.measure, measure) ||
                 const DeepCollectionEquality()
                     .equals(other.measure, measure)) &&
@@ -5245,16 +5773,14 @@ class _$_MeasureReport extends _MeasureReport {
             (identical(other.reporter, reporter) ||
                 const DeepCollectionEquality()
                     .equals(other.reporter, reporter)) &&
-            (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)) &&
-            (identical(other.improvementNotation, improvementNotation) ||
+            (identical(other.reportingVendor, reportingVendor) ||
                 const DeepCollectionEquality()
-                    .equals(other.improvementNotation, improvementNotation)) &&
-            (identical(other.group, group) ||
-                const DeepCollectionEquality().equals(other.group, group)) &&
-            (identical(other.evaluatedResource, evaluatedResource) ||
-                const DeepCollectionEquality()
-                    .equals(other.evaluatedResource, evaluatedResource)));
+                    .equals(other.reportingVendor, reportingVendor)) &&
+            (identical(other.period, period) || const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.scoring, scoring) || const DeepCollectionEquality().equals(other.scoring, scoring)) &&
+            (identical(other.improvementNotation, improvementNotation) || const DeepCollectionEquality().equals(other.improvementNotation, improvementNotation)) &&
+            (identical(other.group, group) || const DeepCollectionEquality().equals(other.group, group)) &&
+            (identical(other.evaluatedResource, evaluatedResource) || const DeepCollectionEquality().equals(other.evaluatedResource, evaluatedResource)));
   }
 
   @override
@@ -5276,12 +5802,16 @@ class _$_MeasureReport extends _MeasureReport {
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(typeElement) ^
+      const DeepCollectionEquality().hash(dataUpdateType) ^
+      const DeepCollectionEquality().hash(dataUpdateTypeElement) ^
       const DeepCollectionEquality().hash(measure) ^
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(reporter) ^
+      const DeepCollectionEquality().hash(reportingVendor) ^
       const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(scoring) ^
       const DeepCollectionEquality().hash(improvementNotation) ^
       const DeepCollectionEquality().hash(group) ^
       const DeepCollectionEquality().hash(evaluatedResource);
@@ -5315,21 +5845,24 @@ abstract class _MeasureReport extends MeasureReport {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-          MeasureReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-          MeasureReportType? type,
+      Code? type,
       @JsonKey(name: '_type')
           Element? typeElement,
+      Code? dataUpdateType,
+      @JsonKey(name: '_dataUpdateType')
+          Element? dataUpdateTypeElement,
       required Canonical measure,
       Reference? subject,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reporter,
+      Reference? reportingVendor,
       required Period period,
+      CodeableConcept? scoring,
       CodeableConcept? improvementNotation,
       List<MeasureReportGroup>? group,
       List<Reference>? evaluatedResource}) = _$_MeasureReport;
@@ -5368,17 +5901,20 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-  MeasureReportStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-  MeasureReportType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+  @override
+  Code? get dataUpdateType => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_dataUpdateType')
+  Element? get dataUpdateTypeElement => throw _privateConstructorUsedError;
   @override
   Canonical get measure => throw _privateConstructorUsedError;
   @override
@@ -5391,7 +5927,11 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   Reference? get reporter => throw _privateConstructorUsedError;
   @override
+  Reference? get reportingVendor => throw _privateConstructorUsedError;
+  @override
   Period get period => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get scoring => throw _privateConstructorUsedError;
   @override
   CodeableConcept? get improvementNotation =>
       throw _privateConstructorUsedError;
@@ -5415,11 +5955,19 @@ class _$MeasureReportGroupTearOff {
 
   _MeasureReportGroup call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       List<MeasureReportPopulation>? population,
-      Quantity? measureScore,
+      Quantity? measureScoreQuantity,
+      FhirDateTime? measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime')
+          Element? measureScoreDateTimeElement,
+      CodeableConcept? measureScoreCodeableConcept,
+      Period? measureScorePeriod,
+      Range? measureScoreRange,
+      FhirDuration? measureScoreDuration,
       List<MeasureReportStratifier>? stratifier}) {
     return _MeasureReportGroup(
       id: id,
@@ -5427,7 +5975,13 @@ class _$MeasureReportGroupTearOff {
       modifierExtension: modifierExtension,
       code: code,
       population: population,
-      measureScore: measureScore,
+      measureScoreQuantity: measureScoreQuantity,
+      measureScoreDateTime: measureScoreDateTime,
+      measureScoreDateTimeElement: measureScoreDateTimeElement,
+      measureScoreCodeableConcept: measureScoreCodeableConcept,
+      measureScorePeriod: measureScorePeriod,
+      measureScoreRange: measureScoreRange,
+      measureScoreDuration: measureScoreDuration,
       stratifier: stratifier,
     );
   }
@@ -5450,7 +6004,16 @@ mixin _$MeasureReportGroup {
   CodeableConcept? get code => throw _privateConstructorUsedError;
   List<MeasureReportPopulation>? get population =>
       throw _privateConstructorUsedError;
-  Quantity? get measureScore => throw _privateConstructorUsedError;
+  Quantity? get measureScoreQuantity => throw _privateConstructorUsedError;
+  FhirDateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_measureScoreDateTime')
+  Element? get measureScoreDateTimeElement =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get measureScoreCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Period? get measureScorePeriod => throw _privateConstructorUsedError;
+  Range? get measureScoreRange => throw _privateConstructorUsedError;
+  FhirDuration? get measureScoreDuration => throw _privateConstructorUsedError;
   List<MeasureReportStratifier>? get stratifier =>
       throw _privateConstructorUsedError;
 
@@ -5467,15 +6030,28 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
       _$MeasureReportGroupCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       List<MeasureReportPopulation>? population,
-      Quantity? measureScore,
+      Quantity? measureScoreQuantity,
+      FhirDateTime? measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime')
+          Element? measureScoreDateTimeElement,
+      CodeableConcept? measureScoreCodeableConcept,
+      Period? measureScorePeriod,
+      Range? measureScoreRange,
+      FhirDuration? measureScoreDuration,
       List<MeasureReportStratifier>? stratifier});
 
   $CodeableConceptCopyWith<$Res>? get code;
-  $QuantityCopyWith<$Res>? get measureScore;
+  $QuantityCopyWith<$Res>? get measureScoreQuantity;
+  $ElementCopyWith<$Res>? get measureScoreDateTimeElement;
+  $CodeableConceptCopyWith<$Res>? get measureScoreCodeableConcept;
+  $PeriodCopyWith<$Res>? get measureScorePeriod;
+  $RangeCopyWith<$Res>? get measureScoreRange;
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration;
 }
 
 /// @nodoc
@@ -5494,7 +6070,13 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? code = freezed,
     Object? population = freezed,
-    Object? measureScore = freezed,
+    Object? measureScoreQuantity = freezed,
+    Object? measureScoreDateTime = freezed,
+    Object? measureScoreDateTimeElement = freezed,
+    Object? measureScoreCodeableConcept = freezed,
+    Object? measureScorePeriod = freezed,
+    Object? measureScoreRange = freezed,
+    Object? measureScoreDuration = freezed,
     Object? stratifier = freezed,
   }) {
     return _then(_value.copyWith(
@@ -5518,10 +6100,34 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
               as List<MeasureReportPopulation>?,
-      measureScore: measureScore == freezed
-          ? _value.measureScore
-          : measureScore // ignore: cast_nullable_to_non_nullable
+      measureScoreQuantity: measureScoreQuantity == freezed
+          ? _value.measureScoreQuantity
+          : measureScoreQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
+      measureScoreDateTime: measureScoreDateTime == freezed
+          ? _value.measureScoreDateTime
+          : measureScoreDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      measureScoreDateTimeElement: measureScoreDateTimeElement == freezed
+          ? _value.measureScoreDateTimeElement
+          : measureScoreDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      measureScoreCodeableConcept: measureScoreCodeableConcept == freezed
+          ? _value.measureScoreCodeableConcept
+          : measureScoreCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      measureScorePeriod: measureScorePeriod == freezed
+          ? _value.measureScorePeriod
+          : measureScorePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      measureScoreRange: measureScoreRange == freezed
+          ? _value.measureScoreRange
+          : measureScoreRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      measureScoreDuration: measureScoreDuration == freezed
+          ? _value.measureScoreDuration
+          : measureScoreDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
       stratifier: stratifier == freezed
           ? _value.stratifier
           : stratifier // ignore: cast_nullable_to_non_nullable
@@ -5541,13 +6147,69 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
   }
 
   @override
-  $QuantityCopyWith<$Res>? get measureScore {
-    if (_value.measureScore == null) {
+  $QuantityCopyWith<$Res>? get measureScoreQuantity {
+    if (_value.measureScoreQuantity == null) {
       return null;
     }
 
-    return $QuantityCopyWith<$Res>(_value.measureScore!, (value) {
-      return _then(_value.copyWith(measureScore: value));
+    return $QuantityCopyWith<$Res>(_value.measureScoreQuantity!, (value) {
+      return _then(_value.copyWith(measureScoreQuantity: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get measureScoreDateTimeElement {
+    if (_value.measureScoreDateTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.measureScoreDateTimeElement!, (value) {
+      return _then(_value.copyWith(measureScoreDateTimeElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get measureScoreCodeableConcept {
+    if (_value.measureScoreCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.measureScoreCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(measureScoreCodeableConcept: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get measureScorePeriod {
+    if (_value.measureScorePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.measureScorePeriod!, (value) {
+      return _then(_value.copyWith(measureScorePeriod: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res>? get measureScoreRange {
+    if (_value.measureScoreRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.measureScoreRange!, (value) {
+      return _then(_value.copyWith(measureScoreRange: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration {
+    if (_value.measureScoreDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.measureScoreDuration!, (value) {
+      return _then(_value.copyWith(measureScoreDuration: value));
     });
   }
 }
@@ -5561,17 +6223,35 @@ abstract class _$MeasureReportGroupCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       List<MeasureReportPopulation>? population,
-      Quantity? measureScore,
+      Quantity? measureScoreQuantity,
+      FhirDateTime? measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime')
+          Element? measureScoreDateTimeElement,
+      CodeableConcept? measureScoreCodeableConcept,
+      Period? measureScorePeriod,
+      Range? measureScoreRange,
+      FhirDuration? measureScoreDuration,
       List<MeasureReportStratifier>? stratifier});
 
   @override
   $CodeableConceptCopyWith<$Res>? get code;
   @override
-  $QuantityCopyWith<$Res>? get measureScore;
+  $QuantityCopyWith<$Res>? get measureScoreQuantity;
+  @override
+  $ElementCopyWith<$Res>? get measureScoreDateTimeElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get measureScoreCodeableConcept;
+  @override
+  $PeriodCopyWith<$Res>? get measureScorePeriod;
+  @override
+  $RangeCopyWith<$Res>? get measureScoreRange;
+  @override
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration;
 }
 
 /// @nodoc
@@ -5592,7 +6272,13 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? code = freezed,
     Object? population = freezed,
-    Object? measureScore = freezed,
+    Object? measureScoreQuantity = freezed,
+    Object? measureScoreDateTime = freezed,
+    Object? measureScoreDateTimeElement = freezed,
+    Object? measureScoreCodeableConcept = freezed,
+    Object? measureScorePeriod = freezed,
+    Object? measureScoreRange = freezed,
+    Object? measureScoreDuration = freezed,
     Object? stratifier = freezed,
   }) {
     return _then(_MeasureReportGroup(
@@ -5616,10 +6302,34 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
               as List<MeasureReportPopulation>?,
-      measureScore: measureScore == freezed
-          ? _value.measureScore
-          : measureScore // ignore: cast_nullable_to_non_nullable
+      measureScoreQuantity: measureScoreQuantity == freezed
+          ? _value.measureScoreQuantity
+          : measureScoreQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
+      measureScoreDateTime: measureScoreDateTime == freezed
+          ? _value.measureScoreDateTime
+          : measureScoreDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      measureScoreDateTimeElement: measureScoreDateTimeElement == freezed
+          ? _value.measureScoreDateTimeElement
+          : measureScoreDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      measureScoreCodeableConcept: measureScoreCodeableConcept == freezed
+          ? _value.measureScoreCodeableConcept
+          : measureScoreCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      measureScorePeriod: measureScorePeriod == freezed
+          ? _value.measureScorePeriod
+          : measureScorePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      measureScoreRange: measureScoreRange == freezed
+          ? _value.measureScoreRange
+          : measureScoreRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      measureScoreDuration: measureScoreDuration == freezed
+          ? _value.measureScoreDuration
+          : measureScoreDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
       stratifier: stratifier == freezed
           ? _value.stratifier
           : stratifier // ignore: cast_nullable_to_non_nullable
@@ -5637,7 +6347,13 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
       this.modifierExtension,
       this.code,
       this.population,
-      this.measureScore,
+      this.measureScoreQuantity,
+      this.measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime') this.measureScoreDateTimeElement,
+      this.measureScoreCodeableConcept,
+      this.measureScorePeriod,
+      this.measureScoreRange,
+      this.measureScoreDuration,
       this.stratifier})
       : super._();
 
@@ -5656,13 +6372,26 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   @override
   final List<MeasureReportPopulation>? population;
   @override
-  final Quantity? measureScore;
+  final Quantity? measureScoreQuantity;
+  @override
+  final FhirDateTime? measureScoreDateTime;
+  @override
+  @JsonKey(name: '_measureScoreDateTime')
+  final Element? measureScoreDateTimeElement;
+  @override
+  final CodeableConcept? measureScoreCodeableConcept;
+  @override
+  final Period? measureScorePeriod;
+  @override
+  final Range? measureScoreRange;
+  @override
+  final FhirDuration? measureScoreDuration;
   @override
   final List<MeasureReportStratifier>? stratifier;
 
   @override
   String toString() {
-    return 'MeasureReportGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, population: $population, measureScore: $measureScore, stratifier: $stratifier)';
+    return 'MeasureReportGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, population: $population, measureScoreQuantity: $measureScoreQuantity, measureScoreDateTime: $measureScoreDateTime, measureScoreDateTimeElement: $measureScoreDateTimeElement, measureScoreCodeableConcept: $measureScoreCodeableConcept, measureScorePeriod: $measureScorePeriod, measureScoreRange: $measureScoreRange, measureScoreDuration: $measureScoreDuration, stratifier: $stratifier)';
   }
 
   @override
@@ -5682,9 +6411,31 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
             (identical(other.population, population) ||
                 const DeepCollectionEquality()
                     .equals(other.population, population)) &&
-            (identical(other.measureScore, measureScore) ||
+            (identical(other.measureScoreQuantity, measureScoreQuantity) ||
+                const DeepCollectionEquality().equals(
+                    other.measureScoreQuantity, measureScoreQuantity)) &&
+            (identical(other.measureScoreDateTime, measureScoreDateTime) ||
+                const DeepCollectionEquality().equals(
+                    other.measureScoreDateTime, measureScoreDateTime)) &&
+            (identical(other.measureScoreDateTimeElement,
+                    measureScoreDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.measureScoreDateTimeElement,
+                    measureScoreDateTimeElement)) &&
+            (identical(other.measureScoreCodeableConcept,
+                    measureScoreCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.measureScoreCodeableConcept,
+                    measureScoreCodeableConcept)) &&
+            (identical(other.measureScorePeriod, measureScorePeriod) ||
                 const DeepCollectionEquality()
-                    .equals(other.measureScore, measureScore)) &&
+                    .equals(other.measureScorePeriod, measureScorePeriod)) &&
+            (identical(other.measureScoreRange, measureScoreRange) ||
+                const DeepCollectionEquality()
+                    .equals(other.measureScoreRange, measureScoreRange)) &&
+            (identical(other.measureScoreDuration, measureScoreDuration) ||
+                const DeepCollectionEquality().equals(
+                    other.measureScoreDuration, measureScoreDuration)) &&
             (identical(other.stratifier, stratifier) ||
                 const DeepCollectionEquality()
                     .equals(other.stratifier, stratifier)));
@@ -5698,7 +6449,13 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(population) ^
-      const DeepCollectionEquality().hash(measureScore) ^
+      const DeepCollectionEquality().hash(measureScoreQuantity) ^
+      const DeepCollectionEquality().hash(measureScoreDateTime) ^
+      const DeepCollectionEquality().hash(measureScoreDateTimeElement) ^
+      const DeepCollectionEquality().hash(measureScoreCodeableConcept) ^
+      const DeepCollectionEquality().hash(measureScorePeriod) ^
+      const DeepCollectionEquality().hash(measureScoreRange) ^
+      const DeepCollectionEquality().hash(measureScoreDuration) ^
       const DeepCollectionEquality().hash(stratifier);
 
   @JsonKey(ignore: true)
@@ -5715,11 +6472,19 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
 abstract class _MeasureReportGroup extends MeasureReportGroup {
   factory _MeasureReportGroup(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
       List<MeasureReportPopulation>? population,
-      Quantity? measureScore,
+      Quantity? measureScoreQuantity,
+      FhirDateTime? measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime')
+          Element? measureScoreDateTimeElement,
+      CodeableConcept? measureScoreCodeableConcept,
+      Period? measureScorePeriod,
+      Range? measureScoreRange,
+      FhirDuration? measureScoreDuration,
       List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
   _MeasureReportGroup._() : super._();
 
@@ -5740,7 +6505,22 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   List<MeasureReportPopulation>? get population =>
       throw _privateConstructorUsedError;
   @override
-  Quantity? get measureScore => throw _privateConstructorUsedError;
+  Quantity? get measureScoreQuantity => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_measureScoreDateTime')
+  Element? get measureScoreDateTimeElement =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get measureScoreCodeableConcept =>
+      throw _privateConstructorUsedError;
+  @override
+  Period? get measureScorePeriod => throw _privateConstructorUsedError;
+  @override
+  Range? get measureScoreRange => throw _privateConstructorUsedError;
+  @override
+  FhirDuration? get measureScoreDuration => throw _privateConstructorUsedError;
   @override
   List<MeasureReportStratifier>? get stratifier =>
       throw _privateConstructorUsedError;
@@ -6383,20 +7163,45 @@ class _$MeasureReportStratumTearOff {
 
   _MeasureReportStratum call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? value,
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference,
       List<MeasureReportComponent>? component,
       List<MeasureReportPopulation1>? population,
-      Quantity? measureScore}) {
+      Quantity? measureScoreQuantity,
+      FhirDateTime? measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime')
+          Element? measureScoreDateTimeElement,
+      CodeableConcept? measureScoreCodeableConcept,
+      Period? measureScorePeriod,
+      Range? measureScoreRange,
+      FhirDuration? measureScoreDuration}) {
     return _MeasureReportStratum(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      value: value,
+      valueCodeableConcept: valueCodeableConcept,
+      valueBoolean: valueBoolean,
+      valueBooleanElement: valueBooleanElement,
+      valueQuantity: valueQuantity,
+      valueRange: valueRange,
+      valueReference: valueReference,
       component: component,
       population: population,
-      measureScore: measureScore,
+      measureScoreQuantity: measureScoreQuantity,
+      measureScoreDateTime: measureScoreDateTime,
+      measureScoreDateTimeElement: measureScoreDateTimeElement,
+      measureScoreCodeableConcept: measureScoreCodeableConcept,
+      measureScorePeriod: measureScorePeriod,
+      measureScoreRange: measureScoreRange,
+      measureScoreDuration: measureScoreDuration,
     );
   }
 
@@ -6415,12 +7220,28 @@ mixin _$MeasureReportStratum {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  CodeableConcept? get value => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  Reference? get valueReference => throw _privateConstructorUsedError;
   List<MeasureReportComponent>? get component =>
       throw _privateConstructorUsedError;
   List<MeasureReportPopulation1>? get population =>
       throw _privateConstructorUsedError;
-  Quantity? get measureScore => throw _privateConstructorUsedError;
+  Quantity? get measureScoreQuantity => throw _privateConstructorUsedError;
+  FhirDateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_measureScoreDateTime')
+  Element? get measureScoreDateTimeElement =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get measureScoreCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Period? get measureScorePeriod => throw _privateConstructorUsedError;
+  Range? get measureScoreRange => throw _privateConstructorUsedError;
+  FhirDuration? get measureScoreDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6435,15 +7256,38 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
       _$MeasureReportStratumCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? value,
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference,
       List<MeasureReportComponent>? component,
       List<MeasureReportPopulation1>? population,
-      Quantity? measureScore});
+      Quantity? measureScoreQuantity,
+      FhirDateTime? measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime')
+          Element? measureScoreDateTimeElement,
+      CodeableConcept? measureScoreCodeableConcept,
+      Period? measureScorePeriod,
+      Range? measureScoreRange,
+      FhirDuration? measureScoreDuration});
 
-  $CodeableConceptCopyWith<$Res>? get value;
-  $QuantityCopyWith<$Res>? get measureScore;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $ReferenceCopyWith<$Res>? get valueReference;
+  $QuantityCopyWith<$Res>? get measureScoreQuantity;
+  $ElementCopyWith<$Res>? get measureScoreDateTimeElement;
+  $CodeableConceptCopyWith<$Res>? get measureScoreCodeableConcept;
+  $PeriodCopyWith<$Res>? get measureScorePeriod;
+  $RangeCopyWith<$Res>? get measureScoreRange;
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration;
 }
 
 /// @nodoc
@@ -6460,10 +7304,21 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? value = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueReference = freezed,
     Object? component = freezed,
     Object? population = freezed,
-    Object? measureScore = freezed,
+    Object? measureScoreQuantity = freezed,
+    Object? measureScoreDateTime = freezed,
+    Object? measureScoreDateTimeElement = freezed,
+    Object? measureScoreCodeableConcept = freezed,
+    Object? measureScorePeriod = freezed,
+    Object? measureScoreRange = freezed,
+    Object? measureScoreDuration = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -6478,10 +7333,30 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      value: value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       component: component == freezed
           ? _value.component
           : component // ignore: cast_nullable_to_non_nullable
@@ -6490,32 +7365,157 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
               as List<MeasureReportPopulation1>?,
-      measureScore: measureScore == freezed
-          ? _value.measureScore
-          : measureScore // ignore: cast_nullable_to_non_nullable
+      measureScoreQuantity: measureScoreQuantity == freezed
+          ? _value.measureScoreQuantity
+          : measureScoreQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
+      measureScoreDateTime: measureScoreDateTime == freezed
+          ? _value.measureScoreDateTime
+          : measureScoreDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      measureScoreDateTimeElement: measureScoreDateTimeElement == freezed
+          ? _value.measureScoreDateTimeElement
+          : measureScoreDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      measureScoreCodeableConcept: measureScoreCodeableConcept == freezed
+          ? _value.measureScoreCodeableConcept
+          : measureScoreCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      measureScorePeriod: measureScorePeriod == freezed
+          ? _value.measureScorePeriod
+          : measureScorePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      measureScoreRange: measureScoreRange == freezed
+          ? _value.measureScoreRange
+          : measureScoreRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      measureScoreDuration: measureScoreDuration == freezed
+          ? _value.measureScoreDuration
+          : measureScoreDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get value {
-    if (_value.value == null) {
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.value!, (value) {
-      return _then(_value.copyWith(value: value));
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res>? get measureScore {
-    if (_value.measureScore == null) {
+  $ElementCopyWith<$Res>? get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
       return null;
     }
 
-    return $QuantityCopyWith<$Res>(_value.measureScore!, (value) {
-      return _then(_value.copyWith(measureScore: value));
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference {
+    if (_value.valueReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
+      return _then(_value.copyWith(valueReference: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get measureScoreQuantity {
+    if (_value.measureScoreQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.measureScoreQuantity!, (value) {
+      return _then(_value.copyWith(measureScoreQuantity: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get measureScoreDateTimeElement {
+    if (_value.measureScoreDateTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.measureScoreDateTimeElement!, (value) {
+      return _then(_value.copyWith(measureScoreDateTimeElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get measureScoreCodeableConcept {
+    if (_value.measureScoreCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.measureScoreCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(measureScoreCodeableConcept: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get measureScorePeriod {
+    if (_value.measureScorePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.measureScorePeriod!, (value) {
+      return _then(_value.copyWith(measureScorePeriod: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res>? get measureScoreRange {
+    if (_value.measureScoreRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.measureScoreRange!, (value) {
+      return _then(_value.copyWith(measureScoreRange: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration {
+    if (_value.measureScoreDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.measureScoreDuration!, (value) {
+      return _then(_value.copyWith(measureScoreDuration: value));
     });
   }
 }
@@ -6529,17 +7529,49 @@ abstract class _$MeasureReportStratumCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? value,
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference,
       List<MeasureReportComponent>? component,
       List<MeasureReportPopulation1>? population,
-      Quantity? measureScore});
+      Quantity? measureScoreQuantity,
+      FhirDateTime? measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime')
+          Element? measureScoreDateTimeElement,
+      CodeableConcept? measureScoreCodeableConcept,
+      Period? measureScorePeriod,
+      Range? measureScoreRange,
+      FhirDuration? measureScoreDuration});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get value;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
-  $QuantityCopyWith<$Res>? get measureScore;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference;
+  @override
+  $QuantityCopyWith<$Res>? get measureScoreQuantity;
+  @override
+  $ElementCopyWith<$Res>? get measureScoreDateTimeElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get measureScoreCodeableConcept;
+  @override
+  $PeriodCopyWith<$Res>? get measureScorePeriod;
+  @override
+  $RangeCopyWith<$Res>? get measureScoreRange;
+  @override
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration;
 }
 
 /// @nodoc
@@ -6558,10 +7590,21 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? value = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueReference = freezed,
     Object? component = freezed,
     Object? population = freezed,
-    Object? measureScore = freezed,
+    Object? measureScoreQuantity = freezed,
+    Object? measureScoreDateTime = freezed,
+    Object? measureScoreDateTimeElement = freezed,
+    Object? measureScoreCodeableConcept = freezed,
+    Object? measureScorePeriod = freezed,
+    Object? measureScoreRange = freezed,
+    Object? measureScoreDuration = freezed,
   }) {
     return _then(_MeasureReportStratum(
       id: id == freezed
@@ -6576,10 +7619,30 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      value: value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       component: component == freezed
           ? _value.component
           : component // ignore: cast_nullable_to_non_nullable
@@ -6588,10 +7651,34 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
               as List<MeasureReportPopulation1>?,
-      measureScore: measureScore == freezed
-          ? _value.measureScore
-          : measureScore // ignore: cast_nullable_to_non_nullable
+      measureScoreQuantity: measureScoreQuantity == freezed
+          ? _value.measureScoreQuantity
+          : measureScoreQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
+      measureScoreDateTime: measureScoreDateTime == freezed
+          ? _value.measureScoreDateTime
+          : measureScoreDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      measureScoreDateTimeElement: measureScoreDateTimeElement == freezed
+          ? _value.measureScoreDateTimeElement
+          : measureScoreDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      measureScoreCodeableConcept: measureScoreCodeableConcept == freezed
+          ? _value.measureScoreCodeableConcept
+          : measureScoreCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      measureScorePeriod: measureScorePeriod == freezed
+          ? _value.measureScorePeriod
+          : measureScorePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      measureScoreRange: measureScoreRange == freezed
+          ? _value.measureScoreRange
+          : measureScoreRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      measureScoreDuration: measureScoreDuration == freezed
+          ? _value.measureScoreDuration
+          : measureScoreDuration // ignore: cast_nullable_to_non_nullable
+              as FhirDuration?,
     ));
   }
 }
@@ -6603,10 +7690,21 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.value,
+      this.valueCodeableConcept,
+      this.valueBoolean,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueQuantity,
+      this.valueRange,
+      this.valueReference,
       this.component,
       this.population,
-      this.measureScore})
+      this.measureScoreQuantity,
+      this.measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime') this.measureScoreDateTimeElement,
+      this.measureScoreCodeableConcept,
+      this.measureScorePeriod,
+      this.measureScoreRange,
+      this.measureScoreDuration})
       : super._();
 
   factory _$_MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
@@ -6620,17 +7718,41 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final CodeableConcept? value;
+  final CodeableConcept? valueCodeableConcept;
+  @override
+  final Boolean? valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element? valueBooleanElement;
+  @override
+  final Quantity? valueQuantity;
+  @override
+  final Range? valueRange;
+  @override
+  final Reference? valueReference;
   @override
   final List<MeasureReportComponent>? component;
   @override
   final List<MeasureReportPopulation1>? population;
   @override
-  final Quantity? measureScore;
+  final Quantity? measureScoreQuantity;
+  @override
+  final FhirDateTime? measureScoreDateTime;
+  @override
+  @JsonKey(name: '_measureScoreDateTime')
+  final Element? measureScoreDateTimeElement;
+  @override
+  final CodeableConcept? measureScoreCodeableConcept;
+  @override
+  final Period? measureScorePeriod;
+  @override
+  final Range? measureScoreRange;
+  @override
+  final FhirDuration? measureScoreDuration;
 
   @override
   String toString() {
-    return 'MeasureReportStratum(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, value: $value, component: $component, population: $population, measureScore: $measureScore)';
+    return 'MeasureReportStratum(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference, component: $component, population: $population, measureScoreQuantity: $measureScoreQuantity, measureScoreDateTime: $measureScoreDateTime, measureScoreDateTimeElement: $measureScoreDateTimeElement, measureScoreCodeableConcept: $measureScoreCodeableConcept, measureScorePeriod: $measureScorePeriod, measureScoreRange: $measureScoreRange, measureScoreDuration: $measureScoreDuration)';
   }
 
   @override
@@ -6645,17 +7767,54 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.valueCodeableConcept, valueCodeableConcept)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueQuantity, valueQuantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueRange, valueRange) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueRange, valueRange)) &&
+            (identical(other.valueReference, valueReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueReference, valueReference)) &&
             (identical(other.component, component) ||
                 const DeepCollectionEquality()
                     .equals(other.component, component)) &&
             (identical(other.population, population) ||
                 const DeepCollectionEquality()
                     .equals(other.population, population)) &&
-            (identical(other.measureScore, measureScore) ||
+            (identical(other.measureScoreQuantity, measureScoreQuantity) ||
+                const DeepCollectionEquality().equals(
+                    other.measureScoreQuantity, measureScoreQuantity)) &&
+            (identical(other.measureScoreDateTime, measureScoreDateTime) ||
+                const DeepCollectionEquality().equals(
+                    other.measureScoreDateTime, measureScoreDateTime)) &&
+            (identical(other.measureScoreDateTimeElement, measureScoreDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.measureScoreDateTimeElement,
+                    measureScoreDateTimeElement)) &&
+            (identical(other.measureScoreCodeableConcept,
+                    measureScoreCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.measureScoreCodeableConcept,
+                    measureScoreCodeableConcept)) &&
+            (identical(other.measureScorePeriod, measureScorePeriod) ||
                 const DeepCollectionEquality()
-                    .equals(other.measureScore, measureScore)));
+                    .equals(other.measureScorePeriod, measureScorePeriod)) &&
+            (identical(other.measureScoreRange, measureScoreRange) ||
+                const DeepCollectionEquality()
+                    .equals(other.measureScoreRange, measureScoreRange)) &&
+            (identical(other.measureScoreDuration, measureScoreDuration) ||
+                const DeepCollectionEquality()
+                    .equals(other.measureScoreDuration, measureScoreDuration)));
   }
 
   @override
@@ -6664,10 +7823,21 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(valueCodeableConcept) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
+      const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueRange) ^
+      const DeepCollectionEquality().hash(valueReference) ^
       const DeepCollectionEquality().hash(component) ^
       const DeepCollectionEquality().hash(population) ^
-      const DeepCollectionEquality().hash(measureScore);
+      const DeepCollectionEquality().hash(measureScoreQuantity) ^
+      const DeepCollectionEquality().hash(measureScoreDateTime) ^
+      const DeepCollectionEquality().hash(measureScoreDateTimeElement) ^
+      const DeepCollectionEquality().hash(measureScoreCodeableConcept) ^
+      const DeepCollectionEquality().hash(measureScorePeriod) ^
+      const DeepCollectionEquality().hash(measureScoreRange) ^
+      const DeepCollectionEquality().hash(measureScoreDuration);
 
   @JsonKey(ignore: true)
   @override
@@ -6684,12 +7854,26 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
 abstract class _MeasureReportStratum extends MeasureReportStratum {
   factory _MeasureReportStratum(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? value,
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference,
       List<MeasureReportComponent>? component,
       List<MeasureReportPopulation1>? population,
-      Quantity? measureScore}) = _$_MeasureReportStratum;
+      Quantity? measureScoreQuantity,
+      FhirDateTime? measureScoreDateTime,
+      @JsonKey(name: '_measureScoreDateTime')
+          Element? measureScoreDateTimeElement,
+      CodeableConcept? measureScoreCodeableConcept,
+      Period? measureScorePeriod,
+      Range? measureScoreRange,
+      FhirDuration? measureScoreDuration}) = _$_MeasureReportStratum;
   _MeasureReportStratum._() : super._();
 
   factory _MeasureReportStratum.fromJson(Map<String, dynamic> json) =
@@ -6704,7 +7888,19 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get value => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  @override
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  @override
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  @override
+  Range? get valueRange => throw _privateConstructorUsedError;
+  @override
+  Reference? get valueReference => throw _privateConstructorUsedError;
   @override
   List<MeasureReportComponent>? get component =>
       throw _privateConstructorUsedError;
@@ -6712,7 +7908,22 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   List<MeasureReportPopulation1>? get population =>
       throw _privateConstructorUsedError;
   @override
-  Quantity? get measureScore => throw _privateConstructorUsedError;
+  Quantity? get measureScoreQuantity => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get measureScoreDateTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_measureScoreDateTime')
+  Element? get measureScoreDateTimeElement =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get measureScoreCodeableConcept =>
+      throw _privateConstructorUsedError;
+  @override
+  Period? get measureScorePeriod => throw _privateConstructorUsedError;
+  @override
+  Range? get measureScoreRange => throw _privateConstructorUsedError;
+  @override
+  FhirDuration? get measureScoreDuration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MeasureReportStratumCopyWith<_MeasureReportStratum> get copyWith =>
@@ -6733,13 +7944,23 @@ class _$MeasureReportComponentTearOff {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       required CodeableConcept code,
-      required CodeableConcept value}) {
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference}) {
     return _MeasureReportComponent(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
-      value: value,
+      valueCodeableConcept: valueCodeableConcept,
+      valueBoolean: valueBoolean,
+      valueBooleanElement: valueBooleanElement,
+      valueQuantity: valueQuantity,
+      valueRange: valueRange,
+      valueReference: valueReference,
     );
   }
 
@@ -6759,7 +7980,14 @@ mixin _$MeasureReportComponent {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept get code => throw _privateConstructorUsedError;
-  CodeableConcept get value => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  Reference? get valueReference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6777,10 +8005,19 @@ abstract class $MeasureReportComponentCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
-      CodeableConcept value});
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference});
 
   $CodeableConceptCopyWith<$Res> get code;
-  $CodeableConceptCopyWith<$Res> get value;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $ReferenceCopyWith<$Res>? get valueReference;
 }
 
 /// @nodoc
@@ -6798,7 +8035,12 @@ class _$MeasureReportComponentCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = freezed,
-    Object? value = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueReference = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -6817,10 +8059,30 @@ class _$MeasureReportComponentCopyWithImpl<$Res>
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      value: value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -6832,9 +8094,58 @@ class _$MeasureReportComponentCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get value {
-    return $CodeableConceptCopyWith<$Res>(_value.value, (value) {
-      return _then(_value.copyWith(value: value));
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference {
+    if (_value.valueReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
+      return _then(_value.copyWith(valueReference: value));
     });
   }
 }
@@ -6851,12 +8162,25 @@ abstract class _$MeasureReportComponentCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
-      CodeableConcept value});
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference});
 
   @override
   $CodeableConceptCopyWith<$Res> get code;
   @override
-  $CodeableConceptCopyWith<$Res> get value;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference;
 }
 
 /// @nodoc
@@ -6876,7 +8200,12 @@ class __$MeasureReportComponentCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = freezed,
-    Object? value = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueReference = freezed,
   }) {
     return _then(_MeasureReportComponent(
       id: id == freezed
@@ -6895,10 +8224,30 @@ class __$MeasureReportComponentCopyWithImpl<$Res>
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      value: value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -6911,7 +8260,12 @@ class _$_MeasureReportComponent extends _MeasureReportComponent {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.code,
-      required this.value})
+      this.valueCodeableConcept,
+      this.valueBoolean,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueQuantity,
+      this.valueRange,
+      this.valueReference})
       : super._();
 
   factory _$_MeasureReportComponent.fromJson(Map<String, dynamic> json) =>
@@ -6927,11 +8281,22 @@ class _$_MeasureReportComponent extends _MeasureReportComponent {
   @override
   final CodeableConcept code;
   @override
-  final CodeableConcept value;
+  final CodeableConcept? valueCodeableConcept;
+  @override
+  final Boolean? valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element? valueBooleanElement;
+  @override
+  final Quantity? valueQuantity;
+  @override
+  final Range? valueRange;
+  @override
+  final Reference? valueReference;
 
   @override
   String toString() {
-    return 'MeasureReportComponent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, value: $value)';
+    return 'MeasureReportComponent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference)';
   }
 
   @override
@@ -6948,8 +8313,24 @@ class _$_MeasureReportComponent extends _MeasureReportComponent {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
+                const DeepCollectionEquality().equals(
+                    other.valueCodeableConcept, valueCodeableConcept)) &&
+            (identical(other.valueBoolean, valueBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBoolean, valueBoolean)) &&
+            (identical(other.valueBooleanElement, valueBooleanElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueBooleanElement, valueBooleanElement)) &&
+            (identical(other.valueQuantity, valueQuantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueQuantity, valueQuantity)) &&
+            (identical(other.valueRange, valueRange) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueRange, valueRange)) &&
+            (identical(other.valueReference, valueReference) ||
+                const DeepCollectionEquality()
+                    .equals(other.valueReference, valueReference)));
   }
 
   @override
@@ -6959,7 +8340,12 @@ class _$_MeasureReportComponent extends _MeasureReportComponent {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(value);
+      const DeepCollectionEquality().hash(valueCodeableConcept) ^
+      const DeepCollectionEquality().hash(valueBoolean) ^
+      const DeepCollectionEquality().hash(valueBooleanElement) ^
+      const DeepCollectionEquality().hash(valueQuantity) ^
+      const DeepCollectionEquality().hash(valueRange) ^
+      const DeepCollectionEquality().hash(valueReference);
 
   @JsonKey(ignore: true)
   @override
@@ -6979,7 +8365,12 @@ abstract class _MeasureReportComponent extends MeasureReportComponent {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       required CodeableConcept code,
-      required CodeableConcept value}) = _$_MeasureReportComponent;
+      CodeableConcept? valueCodeableConcept,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference}) = _$_MeasureReportComponent;
   _MeasureReportComponent._() : super._();
 
   factory _MeasureReportComponent.fromJson(Map<String, dynamic> json) =
@@ -6996,7 +8387,19 @@ abstract class _MeasureReportComponent extends MeasureReportComponent {
   @override
   CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get value => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  @override
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  @override
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  @override
+  Range? get valueRange => throw _privateConstructorUsedError;
+  @override
+  Reference? get valueReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MeasureReportComponentCopyWith<_MeasureReportComponent> get copyWith =>
@@ -7391,13 +8794,11 @@ class _$TestReportTearOff {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-          TestReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       required Reference testScript,
-      @JsonKey(unknownEnumValue: TestReportResult.unknown)
-          TestReportResult? result,
+      Code? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -7476,13 +8877,11 @@ mixin _$TestReport {
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-  TestReportStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference get testScript => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestReportResult.unknown)
-  TestReportResult? get result => throw _privateConstructorUsedError;
+  Code? get result => throw _privateConstructorUsedError;
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
   Decimal? get score => throw _privateConstructorUsedError;
@@ -7531,13 +8930,11 @@ abstract class $TestReportCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-          TestReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference testScript,
-      @JsonKey(unknownEnumValue: TestReportResult.unknown)
-          TestReportResult? result,
+      Code? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -7670,7 +9067,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as TestReportStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -7682,7 +9079,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as TestReportResult?,
+              as Code?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -7907,13 +9304,11 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-          TestReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference testScript,
-      @JsonKey(unknownEnumValue: TestReportResult.unknown)
-          TestReportResult? result,
+      Code? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -8062,7 +9457,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as TestReportStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8074,7 +9469,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as TestReportResult?,
+              as Code?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -8146,13 +9541,11 @@ class _$_TestReport extends _TestReport {
       this.name,
       @JsonKey(name: '_name')
           this.nameElement,
-      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       required this.testScript,
-      @JsonKey(unknownEnumValue: TestReportResult.unknown)
-          this.result,
+      this.result,
       @JsonKey(name: '_result')
           this.resultElement,
       this.score,
@@ -8207,16 +9600,14 @@ class _$_TestReport extends _TestReport {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-  final TestReportStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
   final Reference testScript;
   @override
-  @JsonKey(unknownEnumValue: TestReportResult.unknown)
-  final TestReportResult? result;
+  final Code? result;
   @override
   @JsonKey(name: '_result')
   final Element? resultElement;
@@ -8392,13 +9783,11 @@ abstract class _TestReport extends TestReport {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-          TestReportStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       required Reference testScript,
-      @JsonKey(unknownEnumValue: TestReportResult.unknown)
-          TestReportResult? result,
+      Code? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -8454,16 +9843,14 @@ abstract class _TestReport extends TestReport {
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-  TestReportStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
   Reference get testScript => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestReportResult.unknown)
-  TestReportResult? get result => throw _privateConstructorUsedError;
+  Code? get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
@@ -8508,19 +9895,14 @@ class _$TestReportParticipantTearOff {
 
   _TestReportParticipant call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-          TestReportParticipantType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri')
-          Element? uriElement,
+      @JsonKey(name: '_uri') Element? uriElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement}) {
+      @JsonKey(name: '_display') Element? displayElement}) {
     return _TestReportParticipant(
       id: id,
       extension_: extension_,
@@ -8549,8 +9931,7 @@ mixin _$TestReportParticipant {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-  TestReportParticipantType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   FhirUri? get uri => throw _privateConstructorUsedError;
@@ -8573,19 +9954,14 @@ abstract class $TestReportParticipantCopyWith<$Res> {
       _$TestReportParticipantCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-          TestReportParticipantType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri')
-          Element? uriElement,
+      @JsonKey(name: '_uri') Element? uriElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement});
+      @JsonKey(name: '_display') Element? displayElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get uriElement;
@@ -8629,7 +10005,7 @@ class _$TestReportParticipantCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as TestReportParticipantType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -8696,19 +10072,14 @@ abstract class _$TestReportParticipantCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-          TestReportParticipantType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri')
-          Element? uriElement,
+      @JsonKey(name: '_uri') Element? uriElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement});
+      @JsonKey(name: '_display') Element? displayElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -8757,7 +10128,7 @@ class __$TestReportParticipantCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as TestReportParticipantType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -8789,7 +10160,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.uri,
       @JsonKey(name: '_uri') this.uriElement,
@@ -8808,8 +10179,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-  final TestReportParticipantType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -8886,20 +10256,16 @@ class _$_TestReportParticipant extends _TestReportParticipant {
 
 abstract class _TestReportParticipant extends TestReportParticipant {
   factory _TestReportParticipant(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-          TestReportParticipantType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      FhirUri? uri,
-      @JsonKey(name: '_uri')
-          Element? uriElement,
-      String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement}) = _$_TestReportParticipant;
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Code? type,
+          @JsonKey(name: '_type') Element? typeElement,
+          FhirUri? uri,
+          @JsonKey(name: '_uri') Element? uriElement,
+          String? display,
+          @JsonKey(name: '_display') Element? displayElement}) =
+      _$_TestReportParticipant;
   _TestReportParticipant._() : super._();
 
   factory _TestReportParticipant.fromJson(Map<String, dynamic> json) =
@@ -8914,8 +10280,7 @@ abstract class _TestReportParticipant extends TestReportParticipant {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-  TestReportParticipantType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -9476,19 +10841,14 @@ class _$TestReportOperationTearOff {
 
   _TestReportOperation call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-          TestReportOperationResult? result,
-      @JsonKey(name: '_result')
-          Element? resultElement,
+      Code? result,
+      @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message')
-          Element? messageElement,
+      @JsonKey(name: '_message') Element? messageElement,
       FhirUri? detail,
-      @JsonKey(name: '_detail')
-          Element? detailElement}) {
+      @JsonKey(name: '_detail') Element? detailElement}) {
     return _TestReportOperation(
       id: id,
       extension_: extension_,
@@ -9517,8 +10877,7 @@ mixin _$TestReportOperation {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-  TestReportOperationResult? get result => throw _privateConstructorUsedError;
+  Code? get result => throw _privateConstructorUsedError;
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
   Markdown? get message => throw _privateConstructorUsedError;
@@ -9541,19 +10900,14 @@ abstract class $TestReportOperationCopyWith<$Res> {
       _$TestReportOperationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-          TestReportOperationResult? result,
-      @JsonKey(name: '_result')
-          Element? resultElement,
+      Code? result,
+      @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message')
-          Element? messageElement,
+      @JsonKey(name: '_message') Element? messageElement,
       FhirUri? detail,
-      @JsonKey(name: '_detail')
-          Element? detailElement});
+      @JsonKey(name: '_detail') Element? detailElement});
 
   $ElementCopyWith<$Res>? get resultElement;
   $ElementCopyWith<$Res>? get messageElement;
@@ -9597,7 +10951,7 @@ class _$TestReportOperationCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as TestReportOperationResult?,
+              as Code?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -9664,19 +11018,14 @@ abstract class _$TestReportOperationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-          TestReportOperationResult? result,
-      @JsonKey(name: '_result')
-          Element? resultElement,
+      Code? result,
+      @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message')
-          Element? messageElement,
+      @JsonKey(name: '_message') Element? messageElement,
       FhirUri? detail,
-      @JsonKey(name: '_detail')
-          Element? detailElement});
+      @JsonKey(name: '_detail') Element? detailElement});
 
   @override
   $ElementCopyWith<$Res>? get resultElement;
@@ -9725,7 +11074,7 @@ class __$TestReportOperationCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as TestReportOperationResult?,
+              as Code?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -9757,7 +11106,7 @@ class _$_TestReportOperation extends _TestReportOperation {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown) this.result,
+      this.result,
       @JsonKey(name: '_result') this.resultElement,
       this.message,
       @JsonKey(name: '_message') this.messageElement,
@@ -9776,8 +11125,7 @@ class _$_TestReportOperation extends _TestReportOperation {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-  final TestReportOperationResult? result;
+  final Code? result;
   @override
   @JsonKey(name: '_result')
   final Element? resultElement;
@@ -9854,20 +11202,16 @@ class _$_TestReportOperation extends _TestReportOperation {
 
 abstract class _TestReportOperation extends TestReportOperation {
   factory _TestReportOperation(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-          TestReportOperationResult? result,
-      @JsonKey(name: '_result')
-          Element? resultElement,
-      Markdown? message,
-      @JsonKey(name: '_message')
-          Element? messageElement,
-      FhirUri? detail,
-      @JsonKey(name: '_detail')
-          Element? detailElement}) = _$_TestReportOperation;
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Code? result,
+          @JsonKey(name: '_result') Element? resultElement,
+          Markdown? message,
+          @JsonKey(name: '_message') Element? messageElement,
+          FhirUri? detail,
+          @JsonKey(name: '_detail') Element? detailElement}) =
+      _$_TestReportOperation;
   _TestReportOperation._() : super._();
 
   factory _TestReportOperation.fromJson(Map<String, dynamic> json) =
@@ -9882,8 +11226,7 @@ abstract class _TestReportOperation extends TestReportOperation {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-  TestReportOperationResult? get result => throw _privateConstructorUsedError;
+  Code? get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
@@ -9913,19 +11256,14 @@ class _$TestReportAssertTearOff {
 
   _TestReportAssert call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-          TestReportAssertResult? result,
-      @JsonKey(name: '_result')
-          Element? resultElement,
+      Code? result,
+      @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message')
-          Element? messageElement,
+      @JsonKey(name: '_message') Element? messageElement,
       String? detail,
-      @JsonKey(name: '_detail')
-          Element? detailElement}) {
+      @JsonKey(name: '_detail') Element? detailElement}) {
     return _TestReportAssert(
       id: id,
       extension_: extension_,
@@ -9954,8 +11292,7 @@ mixin _$TestReportAssert {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-  TestReportAssertResult? get result => throw _privateConstructorUsedError;
+  Code? get result => throw _privateConstructorUsedError;
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
   Markdown? get message => throw _privateConstructorUsedError;
@@ -9978,19 +11315,14 @@ abstract class $TestReportAssertCopyWith<$Res> {
       _$TestReportAssertCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-          TestReportAssertResult? result,
-      @JsonKey(name: '_result')
-          Element? resultElement,
+      Code? result,
+      @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message')
-          Element? messageElement,
+      @JsonKey(name: '_message') Element? messageElement,
       String? detail,
-      @JsonKey(name: '_detail')
-          Element? detailElement});
+      @JsonKey(name: '_detail') Element? detailElement});
 
   $ElementCopyWith<$Res>? get resultElement;
   $ElementCopyWith<$Res>? get messageElement;
@@ -10034,7 +11366,7 @@ class _$TestReportAssertCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as TestReportAssertResult?,
+              as Code?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -10101,19 +11433,14 @@ abstract class _$TestReportAssertCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-          TestReportAssertResult? result,
-      @JsonKey(name: '_result')
-          Element? resultElement,
+      Code? result,
+      @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message')
-          Element? messageElement,
+      @JsonKey(name: '_message') Element? messageElement,
       String? detail,
-      @JsonKey(name: '_detail')
-          Element? detailElement});
+      @JsonKey(name: '_detail') Element? detailElement});
 
   @override
   $ElementCopyWith<$Res>? get resultElement;
@@ -10162,7 +11489,7 @@ class __$TestReportAssertCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as TestReportAssertResult?,
+              as Code?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -10194,7 +11521,7 @@ class _$_TestReportAssert extends _TestReportAssert {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown) this.result,
+      this.result,
       @JsonKey(name: '_result') this.resultElement,
       this.message,
       @JsonKey(name: '_message') this.messageElement,
@@ -10213,8 +11540,7 @@ class _$_TestReportAssert extends _TestReportAssert {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-  final TestReportAssertResult? result;
+  final Code? result;
   @override
   @JsonKey(name: '_result')
   final Element? resultElement;
@@ -10291,19 +11617,14 @@ class _$_TestReportAssert extends _TestReportAssert {
 abstract class _TestReportAssert extends TestReportAssert {
   factory _TestReportAssert(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-          TestReportAssertResult? result,
-      @JsonKey(name: '_result')
-          Element? resultElement,
+      Code? result,
+      @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message')
-          Element? messageElement,
+      @JsonKey(name: '_message') Element? messageElement,
       String? detail,
-      @JsonKey(name: '_detail')
-          Element? detailElement}) = _$_TestReportAssert;
+      @JsonKey(name: '_detail') Element? detailElement}) = _$_TestReportAssert;
   _TestReportAssert._() : super._();
 
   factory _TestReportAssert.fromJson(Map<String, dynamic> json) =
@@ -10318,8 +11639,7 @@ abstract class _TestReportAssert extends TestReportAssert {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-  TestReportAssertResult? get result => throw _privateConstructorUsedError;
+  Code? get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
@@ -11527,8 +12847,7 @@ class _$TestScriptTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -11555,6 +12874,7 @@ class _$TestScriptTearOff {
       List<TestScriptOrigin>? origin,
       List<TestScriptDestination>? destination,
       TestScriptMetadata? metadata,
+      List<TestScriptScope>? scope,
       List<TestScriptFixture>? fixture,
       List<Reference>? profile,
       List<TestScriptVariable>? variable,
@@ -11602,6 +12922,7 @@ class _$TestScriptTearOff {
       origin: origin,
       destination: destination,
       metadata: metadata,
+      scope: scope,
       fixture: fixture,
       profile: profile,
       variable: variable,
@@ -11650,8 +12971,7 @@ mixin _$TestScript {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-  TestScriptStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -11679,6 +12999,7 @@ mixin _$TestScript {
   List<TestScriptDestination>? get destination =>
       throw _privateConstructorUsedError;
   TestScriptMetadata? get metadata => throw _privateConstructorUsedError;
+  List<TestScriptScope>? get scope => throw _privateConstructorUsedError;
   List<TestScriptFixture>? get fixture => throw _privateConstructorUsedError;
   List<Reference>? get profile => throw _privateConstructorUsedError;
   List<TestScriptVariable>? get variable => throw _privateConstructorUsedError;
@@ -11726,8 +13047,7 @@ abstract class $TestScriptCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -11754,6 +13074,7 @@ abstract class $TestScriptCopyWith<$Res> {
       List<TestScriptOrigin>? origin,
       List<TestScriptDestination>? destination,
       TestScriptMetadata? metadata,
+      List<TestScriptScope>? scope,
       List<TestScriptFixture>? fixture,
       List<Reference>? profile,
       List<TestScriptVariable>? variable,
@@ -11832,6 +13153,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
     Object? origin = freezed,
     Object? destination = freezed,
     Object? metadata = freezed,
+    Object? scope = freezed,
     Object? fixture = freezed,
     Object? profile = freezed,
     Object? variable = freezed,
@@ -11923,7 +13245,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as TestScriptStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12000,6 +13322,10 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as TestScriptMetadata?,
+      scope: scope == freezed
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as List<TestScriptScope>?,
       fixture: fixture == freezed
           ? _value.fixture
           : fixture // ignore: cast_nullable_to_non_nullable
@@ -12272,8 +13598,7 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -12300,6 +13625,7 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       List<TestScriptOrigin>? origin,
       List<TestScriptDestination>? destination,
       TestScriptMetadata? metadata,
+      List<TestScriptScope>? scope,
       List<TestScriptFixture>? fixture,
       List<Reference>? profile,
       List<TestScriptVariable>? variable,
@@ -12399,6 +13725,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
     Object? origin = freezed,
     Object? destination = freezed,
     Object? metadata = freezed,
+    Object? scope = freezed,
     Object? fixture = freezed,
     Object? profile = freezed,
     Object? variable = freezed,
@@ -12490,7 +13817,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as TestScriptStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12567,6 +13894,10 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as TestScriptMetadata?,
+      scope: scope == freezed
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as List<TestScriptScope>?,
       fixture: fixture == freezed
           ? _value.fixture
           : fixture // ignore: cast_nullable_to_non_nullable
@@ -12627,8 +13958,7 @@ class _$_TestScript extends _TestScript {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -12655,6 +13985,7 @@ class _$_TestScript extends _TestScript {
       this.origin,
       this.destination,
       this.metadata,
+      this.scope,
       this.fixture,
       this.profile,
       this.variable,
@@ -12715,8 +14046,7 @@ class _$_TestScript extends _TestScript {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-  final TestScriptStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -12763,6 +14093,8 @@ class _$_TestScript extends _TestScript {
   @override
   final TestScriptMetadata? metadata;
   @override
+  final List<TestScriptScope>? scope;
+  @override
   final List<TestScriptFixture>? fixture;
   @override
   final List<Reference>? profile;
@@ -12777,7 +14109,7 @@ class _$_TestScript extends _TestScript {
 
   @override
   String toString() {
-    return 'TestScript(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, origin: $origin, destination: $destination, metadata: $metadata, fixture: $fixture, profile: $profile, variable: $variable, setup: $setup, test: $test, teardown: $teardown)';
+    return 'TestScript(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, origin: $origin, destination: $destination, metadata: $metadata, scope: $scope, fixture: $fixture, profile: $profile, variable: $variable, setup: $setup, test: $test, teardown: $teardown)';
   }
 
   @override
@@ -12867,6 +14199,7 @@ class _$_TestScript extends _TestScript {
             (identical(other.origin, origin) || const DeepCollectionEquality().equals(other.origin, origin)) &&
             (identical(other.destination, destination) || const DeepCollectionEquality().equals(other.destination, destination)) &&
             (identical(other.metadata, metadata) || const DeepCollectionEquality().equals(other.metadata, metadata)) &&
+            (identical(other.scope, scope) || const DeepCollectionEquality().equals(other.scope, scope)) &&
             (identical(other.fixture, fixture) || const DeepCollectionEquality().equals(other.fixture, fixture)) &&
             (identical(other.profile, profile) || const DeepCollectionEquality().equals(other.profile, profile)) &&
             (identical(other.variable, variable) || const DeepCollectionEquality().equals(other.variable, variable)) &&
@@ -12918,6 +14251,7 @@ class _$_TestScript extends _TestScript {
       const DeepCollectionEquality().hash(origin) ^
       const DeepCollectionEquality().hash(destination) ^
       const DeepCollectionEquality().hash(metadata) ^
+      const DeepCollectionEquality().hash(scope) ^
       const DeepCollectionEquality().hash(fixture) ^
       const DeepCollectionEquality().hash(profile) ^
       const DeepCollectionEquality().hash(variable) ^
@@ -12966,8 +14300,7 @@ abstract class _TestScript extends TestScript {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -12994,6 +14327,7 @@ abstract class _TestScript extends TestScript {
       List<TestScriptOrigin>? origin,
       List<TestScriptDestination>? destination,
       TestScriptMetadata? metadata,
+      List<TestScriptScope>? scope,
       List<TestScriptFixture>? fixture,
       List<Reference>? profile,
       List<TestScriptVariable>? variable,
@@ -13055,8 +14389,7 @@ abstract class _TestScript extends TestScript {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-  TestScriptStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -13103,6 +14436,8 @@ abstract class _TestScript extends TestScript {
       throw _privateConstructorUsedError;
   @override
   TestScriptMetadata? get metadata => throw _privateConstructorUsedError;
+  @override
+  List<TestScriptScope>? get scope => throw _privateConstructorUsedError;
   @override
   List<TestScriptFixture>? get fixture => throw _privateConstructorUsedError;
   @override
@@ -14381,11 +15716,11 @@ class _$TestScriptCapabilityTearOff {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Integer>? origin,
-      @JsonKey(name: '_origin') List<Element?>? originElement,
+      @JsonKey(name: '_origin') List<Element>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element?>? linkElement,
+      @JsonKey(name: '_link') List<Element>? linkElement,
       required Canonical capabilities}) {
     return _TestScriptCapability(
       id: id,
@@ -14434,13 +15769,13 @@ mixin _$TestScriptCapability {
   Element? get descriptionElement => throw _privateConstructorUsedError;
   List<Integer>? get origin => throw _privateConstructorUsedError;
   @JsonKey(name: '_origin')
-  List<Element?>? get originElement => throw _privateConstructorUsedError;
+  List<Element>? get originElement => throw _privateConstructorUsedError;
   Integer? get destination => throw _privateConstructorUsedError;
   @JsonKey(name: '_destination')
   Element? get destinationElement => throw _privateConstructorUsedError;
   List<FhirUri>? get link => throw _privateConstructorUsedError;
   @JsonKey(name: '_link')
-  List<Element?>? get linkElement => throw _privateConstructorUsedError;
+  List<Element>? get linkElement => throw _privateConstructorUsedError;
   Canonical get capabilities => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -14465,11 +15800,11 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Integer>? origin,
-      @JsonKey(name: '_origin') List<Element?>? originElement,
+      @JsonKey(name: '_origin') List<Element>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element?>? linkElement,
+      @JsonKey(name: '_link') List<Element>? linkElement,
       Canonical capabilities});
 
   $ElementCopyWith<$Res>? get requiredElement;
@@ -14550,7 +15885,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       originElement: originElement == freezed
           ? _value.originElement
           : originElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       destination: destination == freezed
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
@@ -14566,7 +15901,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       linkElement: linkElement == freezed
           ? _value.linkElement
           : linkElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities // ignore: cast_nullable_to_non_nullable
@@ -14637,11 +15972,11 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Integer>? origin,
-      @JsonKey(name: '_origin') List<Element?>? originElement,
+      @JsonKey(name: '_origin') List<Element>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element?>? linkElement,
+      @JsonKey(name: '_link') List<Element>? linkElement,
       Canonical capabilities});
 
   @override
@@ -14728,7 +16063,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       originElement: originElement == freezed
           ? _value.originElement
           : originElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       destination: destination == freezed
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
@@ -14744,7 +16079,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       linkElement: linkElement == freezed
           ? _value.linkElement
           : linkElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities // ignore: cast_nullable_to_non_nullable
@@ -14805,7 +16140,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final List<Integer>? origin;
   @override
   @JsonKey(name: '_origin')
-  final List<Element?>? originElement;
+  final List<Element>? originElement;
   @override
   final Integer? destination;
   @override
@@ -14815,7 +16150,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final List<FhirUri>? link;
   @override
   @JsonKey(name: '_link')
-  final List<Element?>? linkElement;
+  final List<Element>? linkElement;
   @override
   final Canonical capabilities;
 
@@ -14919,11 +16254,11 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Integer>? origin,
-      @JsonKey(name: '_origin') List<Element?>? originElement,
+      @JsonKey(name: '_origin') List<Element>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element?>? linkElement,
+      @JsonKey(name: '_link') List<Element>? linkElement,
       required Canonical capabilities}) = _$_TestScriptCapability;
   _TestScriptCapability._() : super._();
 
@@ -14958,7 +16293,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   List<Integer>? get origin => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_origin')
-  List<Element?>? get originElement => throw _privateConstructorUsedError;
+  List<Element>? get originElement => throw _privateConstructorUsedError;
   @override
   Integer? get destination => throw _privateConstructorUsedError;
   @override
@@ -14968,12 +16303,328 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   List<FhirUri>? get link => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_link')
-  List<Element?>? get linkElement => throw _privateConstructorUsedError;
+  List<Element>? get linkElement => throw _privateConstructorUsedError;
   @override
   Canonical get capabilities => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TestScriptCapabilityCopyWith<_TestScriptCapability> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TestScriptScope _$TestScriptScopeFromJson(Map<String, dynamic> json) {
+  return _TestScriptScope.fromJson(json);
+}
+
+/// @nodoc
+class _$TestScriptScopeTearOff {
+  const _$TestScriptScopeTearOff();
+
+  _TestScriptScope call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Canonical artifact,
+      CodeableConcept? conformance,
+      CodeableConcept? phase}) {
+    return _TestScriptScope(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      artifact: artifact,
+      conformance: conformance,
+      phase: phase,
+    );
+  }
+
+  TestScriptScope fromJson(Map<String, Object> json) {
+    return TestScriptScope.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $TestScriptScope = _$TestScriptScopeTearOff();
+
+/// @nodoc
+mixin _$TestScriptScope {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Canonical get artifact => throw _privateConstructorUsedError;
+  CodeableConcept? get conformance => throw _privateConstructorUsedError;
+  CodeableConcept? get phase => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TestScriptScopeCopyWith<TestScriptScope> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TestScriptScopeCopyWith<$Res> {
+  factory $TestScriptScopeCopyWith(
+          TestScriptScope value, $Res Function(TestScriptScope) then) =
+      _$TestScriptScopeCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Canonical artifact,
+      CodeableConcept? conformance,
+      CodeableConcept? phase});
+
+  $CodeableConceptCopyWith<$Res>? get conformance;
+  $CodeableConceptCopyWith<$Res>? get phase;
+}
+
+/// @nodoc
+class _$TestScriptScopeCopyWithImpl<$Res>
+    implements $TestScriptScopeCopyWith<$Res> {
+  _$TestScriptScopeCopyWithImpl(this._value, this._then);
+
+  final TestScriptScope _value;
+  // ignore: unused_field
+  final $Res Function(TestScriptScope) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? artifact = freezed,
+    Object? conformance = freezed,
+    Object? phase = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      artifact: artifact == freezed
+          ? _value.artifact
+          : artifact // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      conformance: conformance == freezed
+          ? _value.conformance
+          : conformance // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      phase: phase == freezed
+          ? _value.phase
+          : phase // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get conformance {
+    if (_value.conformance == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.conformance!, (value) {
+      return _then(_value.copyWith(conformance: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get phase {
+    if (_value.phase == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.phase!, (value) {
+      return _then(_value.copyWith(phase: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$TestScriptScopeCopyWith<$Res>
+    implements $TestScriptScopeCopyWith<$Res> {
+  factory _$TestScriptScopeCopyWith(
+          _TestScriptScope value, $Res Function(_TestScriptScope) then) =
+      __$TestScriptScopeCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Canonical artifact,
+      CodeableConcept? conformance,
+      CodeableConcept? phase});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get conformance;
+  @override
+  $CodeableConceptCopyWith<$Res>? get phase;
+}
+
+/// @nodoc
+class __$TestScriptScopeCopyWithImpl<$Res>
+    extends _$TestScriptScopeCopyWithImpl<$Res>
+    implements _$TestScriptScopeCopyWith<$Res> {
+  __$TestScriptScopeCopyWithImpl(
+      _TestScriptScope _value, $Res Function(_TestScriptScope) _then)
+      : super(_value, (v) => _then(v as _TestScriptScope));
+
+  @override
+  _TestScriptScope get _value => super._value as _TestScriptScope;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? artifact = freezed,
+    Object? conformance = freezed,
+    Object? phase = freezed,
+  }) {
+    return _then(_TestScriptScope(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      artifact: artifact == freezed
+          ? _value.artifact
+          : artifact // ignore: cast_nullable_to_non_nullable
+              as Canonical,
+      conformance: conformance == freezed
+          ? _value.conformance
+          : conformance // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      phase: phase == freezed
+          ? _value.phase
+          : phase // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TestScriptScope extends _TestScriptScope {
+  _$_TestScriptScope(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      required this.artifact,
+      this.conformance,
+      this.phase})
+      : super._();
+
+  factory _$_TestScriptScope.fromJson(Map<String, dynamic> json) =>
+      _$$_TestScriptScopeFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Canonical artifact;
+  @override
+  final CodeableConcept? conformance;
+  @override
+  final CodeableConcept? phase;
+
+  @override
+  String toString() {
+    return 'TestScriptScope(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, artifact: $artifact, conformance: $conformance, phase: $phase)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _TestScriptScope &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.artifact, artifact) ||
+                const DeepCollectionEquality()
+                    .equals(other.artifact, artifact)) &&
+            (identical(other.conformance, conformance) ||
+                const DeepCollectionEquality()
+                    .equals(other.conformance, conformance)) &&
+            (identical(other.phase, phase) ||
+                const DeepCollectionEquality().equals(other.phase, phase)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(artifact) ^
+      const DeepCollectionEquality().hash(conformance) ^
+      const DeepCollectionEquality().hash(phase);
+
+  @JsonKey(ignore: true)
+  @override
+  _$TestScriptScopeCopyWith<_TestScriptScope> get copyWith =>
+      __$TestScriptScopeCopyWithImpl<_TestScriptScope>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TestScriptScopeToJson(this);
+  }
+}
+
+abstract class _TestScriptScope extends TestScriptScope {
+  factory _TestScriptScope(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Canonical artifact,
+      CodeableConcept? conformance,
+      CodeableConcept? phase}) = _$_TestScriptScope;
+  _TestScriptScope._() : super._();
+
+  factory _TestScriptScope.fromJson(Map<String, dynamic> json) =
+      _$_TestScriptScope.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Canonical get artifact => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get conformance => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get phase => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$TestScriptScopeCopyWith<_TestScriptScope> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -16653,57 +18304,40 @@ class _$TestScriptOperationTearOff {
 
   _TestScriptOperation call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
+      @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Code? accept,
-      @JsonKey(name: '_accept')
-          Element? acceptElement,
+      @JsonKey(name: '_accept') Element? acceptElement,
       Code? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       Integer? destination,
-      @JsonKey(name: '_destination')
-          Element? destinationElement,
+      @JsonKey(name: '_destination') Element? destinationElement,
       Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl')
-          Element? encodeRequestUrlElement,
-      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-          TestScriptOperationMethod? method,
-      @JsonKey(name: '_method')
-          Element? methodElement,
+      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
+      Code? method,
+      @JsonKey(name: '_method') Element? methodElement,
       Integer? origin,
-      @JsonKey(name: '_origin')
-          Element? originElement,
+      @JsonKey(name: '_origin') Element? originElement,
       String? params,
-      @JsonKey(name: '_params')
-          Element? paramsElement,
+      @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
-      @JsonKey(name: '_requestId')
-          Element? requestIdElement,
+      @JsonKey(name: '_requestId') Element? requestIdElement,
       Id? responseId,
-      @JsonKey(name: '_responseId')
-          Element? responseIdElement,
+      @JsonKey(name: '_responseId') Element? responseIdElement,
       Id? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
+      @JsonKey(name: '_sourceId') Element? sourceIdElement,
       Id? targetId,
-      @JsonKey(name: '_targetId')
-          Element? targetIdElement,
+      @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement}) {
+      @JsonKey(name: '_url') Element? urlElement}) {
     return _TestScriptOperation(
       id: id,
       extension_: extension_,
@@ -16780,8 +18414,7 @@ mixin _$TestScriptOperation {
   Boolean? get encodeRequestUrl => throw _privateConstructorUsedError;
   @JsonKey(name: '_encodeRequestUrl')
   Element? get encodeRequestUrlElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-  TestScriptOperationMethod? get method => throw _privateConstructorUsedError;
+  Code? get method => throw _privateConstructorUsedError;
   @JsonKey(name: '_method')
   Element? get methodElement => throw _privateConstructorUsedError;
   Integer? get origin => throw _privateConstructorUsedError;
@@ -16821,57 +18454,40 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       _$TestScriptOperationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
+      @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Code? accept,
-      @JsonKey(name: '_accept')
-          Element? acceptElement,
+      @JsonKey(name: '_accept') Element? acceptElement,
       Code? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       Integer? destination,
-      @JsonKey(name: '_destination')
-          Element? destinationElement,
+      @JsonKey(name: '_destination') Element? destinationElement,
       Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl')
-          Element? encodeRequestUrlElement,
-      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-          TestScriptOperationMethod? method,
-      @JsonKey(name: '_method')
-          Element? methodElement,
+      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
+      Code? method,
+      @JsonKey(name: '_method') Element? methodElement,
       Integer? origin,
-      @JsonKey(name: '_origin')
-          Element? originElement,
+      @JsonKey(name: '_origin') Element? originElement,
       String? params,
-      @JsonKey(name: '_params')
-          Element? paramsElement,
+      @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
-      @JsonKey(name: '_requestId')
-          Element? requestIdElement,
+      @JsonKey(name: '_requestId') Element? requestIdElement,
       Id? responseId,
-      @JsonKey(name: '_responseId')
-          Element? responseIdElement,
+      @JsonKey(name: '_responseId') Element? responseIdElement,
       Id? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
+      @JsonKey(name: '_sourceId') Element? sourceIdElement,
       Id? targetId,
-      @JsonKey(name: '_targetId')
-          Element? targetIdElement,
+      @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement});
+      @JsonKey(name: '_url') Element? urlElement});
 
   $CodingCopyWith<$Res>? get type;
   $ElementCopyWith<$Res>? get resourceElement;
@@ -17014,7 +18630,7 @@ class _$TestScriptOperationCopyWithImpl<$Res>
       method: method == freezed
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as TestScriptOperationMethod?,
+              as Code?,
       methodElement: methodElement == freezed
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -17268,57 +18884,40 @@ abstract class _$TestScriptOperationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
+      @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Code? accept,
-      @JsonKey(name: '_accept')
-          Element? acceptElement,
+      @JsonKey(name: '_accept') Element? acceptElement,
       Code? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       Integer? destination,
-      @JsonKey(name: '_destination')
-          Element? destinationElement,
+      @JsonKey(name: '_destination') Element? destinationElement,
       Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl')
-          Element? encodeRequestUrlElement,
-      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-          TestScriptOperationMethod? method,
-      @JsonKey(name: '_method')
-          Element? methodElement,
+      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
+      Code? method,
+      @JsonKey(name: '_method') Element? methodElement,
       Integer? origin,
-      @JsonKey(name: '_origin')
-          Element? originElement,
+      @JsonKey(name: '_origin') Element? originElement,
       String? params,
-      @JsonKey(name: '_params')
-          Element? paramsElement,
+      @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
-      @JsonKey(name: '_requestId')
-          Element? requestIdElement,
+      @JsonKey(name: '_requestId') Element? requestIdElement,
       Id? responseId,
-      @JsonKey(name: '_responseId')
-          Element? responseIdElement,
+      @JsonKey(name: '_responseId') Element? responseIdElement,
       Id? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
+      @JsonKey(name: '_sourceId') Element? sourceIdElement,
       Id? targetId,
-      @JsonKey(name: '_targetId')
-          Element? targetIdElement,
+      @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement});
+      @JsonKey(name: '_url') Element? urlElement});
 
   @override
   $CodingCopyWith<$Res>? get type;
@@ -17479,7 +19078,7 @@ class __$TestScriptOperationCopyWithImpl<$Res>
       method: method == freezed
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as TestScriptOperationMethod?,
+              as Code?,
       methodElement: methodElement == freezed
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -17570,7 +19169,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
       @JsonKey(name: '_destination') this.destinationElement,
       this.encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl') this.encodeRequestUrlElement,
-      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown) this.method,
+      this.method,
       @JsonKey(name: '_method') this.methodElement,
       this.origin,
       @JsonKey(name: '_origin') this.originElement,
@@ -17637,8 +19236,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   @JsonKey(name: '_encodeRequestUrl')
   final Element? encodeRequestUrlElement;
   @override
-  @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-  final TestScriptOperationMethod? method;
+  final Code? method;
   @override
   @JsonKey(name: '_method')
   final Element? methodElement;
@@ -17821,57 +19419,40 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 abstract class _TestScriptOperation extends TestScriptOperation {
   factory _TestScriptOperation(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
+      @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Code? accept,
-      @JsonKey(name: '_accept')
-          Element? acceptElement,
+      @JsonKey(name: '_accept') Element? acceptElement,
       Code? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       Integer? destination,
-      @JsonKey(name: '_destination')
-          Element? destinationElement,
+      @JsonKey(name: '_destination') Element? destinationElement,
       Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl')
-          Element? encodeRequestUrlElement,
-      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-          TestScriptOperationMethod? method,
-      @JsonKey(name: '_method')
-          Element? methodElement,
+      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
+      Code? method,
+      @JsonKey(name: '_method') Element? methodElement,
       Integer? origin,
-      @JsonKey(name: '_origin')
-          Element? originElement,
+      @JsonKey(name: '_origin') Element? originElement,
       String? params,
-      @JsonKey(name: '_params')
-          Element? paramsElement,
+      @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
-      @JsonKey(name: '_requestId')
-          Element? requestIdElement,
+      @JsonKey(name: '_requestId') Element? requestIdElement,
       Id? responseId,
-      @JsonKey(name: '_responseId')
-          Element? responseIdElement,
+      @JsonKey(name: '_responseId') Element? responseIdElement,
       Id? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
+      @JsonKey(name: '_sourceId') Element? sourceIdElement,
       Id? targetId,
-      @JsonKey(name: '_targetId')
-          Element? targetIdElement,
+      @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement}) = _$_TestScriptOperation;
+      @JsonKey(name: '_url') Element? urlElement}) = _$_TestScriptOperation;
   _TestScriptOperation._() : super._();
 
   factory _TestScriptOperation.fromJson(Map<String, dynamic> json) =
@@ -17923,8 +19504,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   @JsonKey(name: '_encodeRequestUrl')
   Element? get encodeRequestUrlElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-  TestScriptOperationMethod? get method => throw _privateConstructorUsedError;
+  Code? get method => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_method')
   Element? get methodElement => throw _privateConstructorUsedError;
@@ -18341,8 +19921,7 @@ class _$TestScriptAssertTearOff {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-          TestScriptAssertDirection? direction,
+      Code? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -18369,15 +19948,13 @@ class _$TestScriptAssertTearOff {
       Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
-      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-          TestScriptAssertOperator? operator_,
+      Code? operator,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-          TestScriptAssertRequestMethod? requestMethod,
+      Code? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
@@ -18386,8 +19963,7 @@ class _$TestScriptAssertTearOff {
       Code? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-          TestScriptAssertResponse? response,
+      Code? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -18396,6 +19972,9 @@ class _$TestScriptAssertTearOff {
       Id? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
+      Boolean? stopTestOnFail,
+      @JsonKey(name: '_stopTestOnFail')
+          Element? stopTestOnFailElement,
       Id? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
@@ -18431,7 +20010,7 @@ class _$TestScriptAssertTearOff {
       minimumIdElement: minimumIdElement,
       navigationLinks: navigationLinks,
       navigationLinksElement: navigationLinksElement,
-      operator_: operator_,
+      operator: operator,
       operatorElement: operatorElement,
       path: path,
       pathElement: pathElement,
@@ -18447,6 +20026,8 @@ class _$TestScriptAssertTearOff {
       responseCodeElement: responseCodeElement,
       sourceId: sourceId,
       sourceIdElement: sourceIdElement,
+      stopTestOnFail: stopTestOnFail,
+      stopTestOnFailElement: stopTestOnFailElement,
       validateProfileId: validateProfileId,
       validateProfileIdElement: validateProfileIdElement,
       value: value,
@@ -18477,9 +20058,7 @@ mixin _$TestScriptAssert {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-  TestScriptAssertDirection? get direction =>
-      throw _privateConstructorUsedError;
+  Code? get direction => throw _privateConstructorUsedError;
   @JsonKey(name: '_direction')
   Element? get directionElement => throw _privateConstructorUsedError;
   String? get compareToSourceId => throw _privateConstructorUsedError;
@@ -18507,16 +20086,13 @@ mixin _$TestScriptAssert {
   Boolean? get navigationLinks => throw _privateConstructorUsedError;
   @JsonKey(name: '_navigationLinks')
   Element? get navigationLinksElement => throw _privateConstructorUsedError;
-  @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-  TestScriptAssertOperator? get operator_ => throw _privateConstructorUsedError;
+  Code? get operator => throw _privateConstructorUsedError;
   @JsonKey(name: '_operator')
   Element? get operatorElement => throw _privateConstructorUsedError;
   String? get path => throw _privateConstructorUsedError;
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-  TestScriptAssertRequestMethod? get requestMethod =>
-      throw _privateConstructorUsedError;
+  Code? get requestMethod => throw _privateConstructorUsedError;
   @JsonKey(name: '_requestMethod')
   Element? get requestMethodElement => throw _privateConstructorUsedError;
   String? get requestURL => throw _privateConstructorUsedError;
@@ -18525,8 +20101,7 @@ mixin _$TestScriptAssert {
   Code? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-  TestScriptAssertResponse? get response => throw _privateConstructorUsedError;
+  Code? get response => throw _privateConstructorUsedError;
   @JsonKey(name: '_response')
   Element? get responseElement => throw _privateConstructorUsedError;
   String? get responseCode => throw _privateConstructorUsedError;
@@ -18535,6 +20110,9 @@ mixin _$TestScriptAssert {
   Id? get sourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
+  Boolean? get stopTestOnFail => throw _privateConstructorUsedError;
+  @JsonKey(name: '_stopTestOnFail')
+  Element? get stopTestOnFailElement => throw _privateConstructorUsedError;
   Id? get validateProfileId => throw _privateConstructorUsedError;
   @JsonKey(name: '_validateProfileId')
   Element? get validateProfileIdElement => throw _privateConstructorUsedError;
@@ -18567,8 +20145,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-          TestScriptAssertDirection? direction,
+      Code? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -18595,15 +20172,13 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
-      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-          TestScriptAssertOperator? operator_,
+      Code? operator,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-          TestScriptAssertRequestMethod? requestMethod,
+      Code? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
@@ -18612,8 +20187,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       Code? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-          TestScriptAssertResponse? response,
+      Code? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -18622,6 +20196,9 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       Id? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
+      Boolean? stopTestOnFail,
+      @JsonKey(name: '_stopTestOnFail')
+          Element? stopTestOnFailElement,
       Id? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
@@ -18651,6 +20228,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
   $ElementCopyWith<$Res>? get responseElement;
   $ElementCopyWith<$Res>? get responseCodeElement;
   $ElementCopyWith<$Res>? get sourceIdElement;
+  $ElementCopyWith<$Res>? get stopTestOnFailElement;
   $ElementCopyWith<$Res>? get validateProfileIdElement;
   $ElementCopyWith<$Res>? get valueElement;
   $ElementCopyWith<$Res>? get warningOnlyElement;
@@ -18692,7 +20270,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
     Object? minimumIdElement = freezed,
     Object? navigationLinks = freezed,
     Object? navigationLinksElement = freezed,
-    Object? operator_ = freezed,
+    Object? operator = freezed,
     Object? operatorElement = freezed,
     Object? path = freezed,
     Object? pathElement = freezed,
@@ -18708,6 +20286,8 @@ class _$TestScriptAssertCopyWithImpl<$Res>
     Object? responseCodeElement = freezed,
     Object? sourceId = freezed,
     Object? sourceIdElement = freezed,
+    Object? stopTestOnFail = freezed,
+    Object? stopTestOnFailElement = freezed,
     Object? validateProfileId = freezed,
     Object? validateProfileIdElement = freezed,
     Object? value = freezed,
@@ -18747,7 +20327,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       direction: direction == freezed
           ? _value.direction
           : direction // ignore: cast_nullable_to_non_nullable
-              as TestScriptAssertDirection?,
+              as Code?,
       directionElement: directionElement == freezed
           ? _value.directionElement
           : directionElement // ignore: cast_nullable_to_non_nullable
@@ -18817,10 +20397,10 @@ class _$TestScriptAssertCopyWithImpl<$Res>
           ? _value.navigationLinksElement
           : navigationLinksElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      operator_: operator_ == freezed
-          ? _value.operator_
-          : operator_ // ignore: cast_nullable_to_non_nullable
-              as TestScriptAssertOperator?,
+      operator: operator == freezed
+          ? _value.operator
+          : operator // ignore: cast_nullable_to_non_nullable
+              as Code?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -18836,7 +20416,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       requestMethod: requestMethod == freezed
           ? _value.requestMethod
           : requestMethod // ignore: cast_nullable_to_non_nullable
-              as TestScriptAssertRequestMethod?,
+              as Code?,
       requestMethodElement: requestMethodElement == freezed
           ? _value.requestMethodElement
           : requestMethodElement // ignore: cast_nullable_to_non_nullable
@@ -18860,7 +20440,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       response: response == freezed
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
-              as TestScriptAssertResponse?,
+              as Code?,
       responseElement: responseElement == freezed
           ? _value.responseElement
           : responseElement // ignore: cast_nullable_to_non_nullable
@@ -18880,6 +20460,14 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       sourceIdElement: sourceIdElement == freezed
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      stopTestOnFail: stopTestOnFail == freezed
+          ? _value.stopTestOnFail
+          : stopTestOnFail // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      stopTestOnFailElement: stopTestOnFailElement == freezed
+          ? _value.stopTestOnFailElement
+          : stopTestOnFailElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       validateProfileId: validateProfileId == freezed
           ? _value.validateProfileId
@@ -19119,6 +20707,17 @@ class _$TestScriptAssertCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get stopTestOnFailElement {
+    if (_value.stopTestOnFailElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.stopTestOnFailElement!, (value) {
+      return _then(_value.copyWith(stopTestOnFailElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get validateProfileIdElement {
     if (_value.validateProfileIdElement == null) {
       return null;
@@ -19170,8 +20769,7 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-          TestScriptAssertDirection? direction,
+      Code? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -19198,15 +20796,13 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
-      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-          TestScriptAssertOperator? operator_,
+      Code? operator,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-          TestScriptAssertRequestMethod? requestMethod,
+      Code? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
@@ -19215,8 +20811,7 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       Code? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-          TestScriptAssertResponse? response,
+      Code? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -19225,6 +20820,9 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       Id? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
+      Boolean? stopTestOnFail,
+      @JsonKey(name: '_stopTestOnFail')
+          Element? stopTestOnFailElement,
       Id? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
@@ -19274,6 +20872,8 @@ abstract class _$TestScriptAssertCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get sourceIdElement;
   @override
+  $ElementCopyWith<$Res>? get stopTestOnFailElement;
+  @override
   $ElementCopyWith<$Res>? get validateProfileIdElement;
   @override
   $ElementCopyWith<$Res>? get valueElement;
@@ -19319,7 +20919,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
     Object? minimumIdElement = freezed,
     Object? navigationLinks = freezed,
     Object? navigationLinksElement = freezed,
-    Object? operator_ = freezed,
+    Object? operator = freezed,
     Object? operatorElement = freezed,
     Object? path = freezed,
     Object? pathElement = freezed,
@@ -19335,6 +20935,8 @@ class __$TestScriptAssertCopyWithImpl<$Res>
     Object? responseCodeElement = freezed,
     Object? sourceId = freezed,
     Object? sourceIdElement = freezed,
+    Object? stopTestOnFail = freezed,
+    Object? stopTestOnFailElement = freezed,
     Object? validateProfileId = freezed,
     Object? validateProfileIdElement = freezed,
     Object? value = freezed,
@@ -19374,7 +20976,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       direction: direction == freezed
           ? _value.direction
           : direction // ignore: cast_nullable_to_non_nullable
-              as TestScriptAssertDirection?,
+              as Code?,
       directionElement: directionElement == freezed
           ? _value.directionElement
           : directionElement // ignore: cast_nullable_to_non_nullable
@@ -19444,10 +21046,10 @@ class __$TestScriptAssertCopyWithImpl<$Res>
           ? _value.navigationLinksElement
           : navigationLinksElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      operator_: operator_ == freezed
-          ? _value.operator_
-          : operator_ // ignore: cast_nullable_to_non_nullable
-              as TestScriptAssertOperator?,
+      operator: operator == freezed
+          ? _value.operator
+          : operator // ignore: cast_nullable_to_non_nullable
+              as Code?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -19463,7 +21065,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       requestMethod: requestMethod == freezed
           ? _value.requestMethod
           : requestMethod // ignore: cast_nullable_to_non_nullable
-              as TestScriptAssertRequestMethod?,
+              as Code?,
       requestMethodElement: requestMethodElement == freezed
           ? _value.requestMethodElement
           : requestMethodElement // ignore: cast_nullable_to_non_nullable
@@ -19487,7 +21089,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       response: response == freezed
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
-              as TestScriptAssertResponse?,
+              as Code?,
       responseElement: responseElement == freezed
           ? _value.responseElement
           : responseElement // ignore: cast_nullable_to_non_nullable
@@ -19507,6 +21109,14 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       sourceIdElement: sourceIdElement == freezed
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      stopTestOnFail: stopTestOnFail == freezed
+          ? _value.stopTestOnFail
+          : stopTestOnFail // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      stopTestOnFailElement: stopTestOnFailElement == freezed
+          ? _value.stopTestOnFailElement
+          : stopTestOnFailElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       validateProfileId: validateProfileId == freezed
           ? _value.validateProfileId
@@ -19550,8 +21160,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-          this.direction,
+      this.direction,
       @JsonKey(name: '_direction')
           this.directionElement,
       this.compareToSourceId,
@@ -19578,15 +21187,13 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       this.navigationLinks,
       @JsonKey(name: '_navigationLinks')
           this.navigationLinksElement,
-      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-          this.operator_,
+      this.operator,
       @JsonKey(name: '_operator')
           this.operatorElement,
       this.path,
       @JsonKey(name: '_path')
           this.pathElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-          this.requestMethod,
+      this.requestMethod,
       @JsonKey(name: '_requestMethod')
           this.requestMethodElement,
       this.requestURL,
@@ -19595,8 +21202,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       this.resource,
       @JsonKey(name: '_resource')
           this.resourceElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-          this.response,
+      this.response,
       @JsonKey(name: '_response')
           this.responseElement,
       this.responseCode,
@@ -19605,6 +21211,9 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       this.sourceId,
       @JsonKey(name: '_sourceId')
           this.sourceIdElement,
+      this.stopTestOnFail,
+      @JsonKey(name: '_stopTestOnFail')
+          this.stopTestOnFailElement,
       this.validateProfileId,
       @JsonKey(name: '_validateProfileId')
           this.validateProfileIdElement,
@@ -19637,8 +21246,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-  final TestScriptAssertDirection? direction;
+  final Code? direction;
   @override
   @JsonKey(name: '_direction')
   final Element? directionElement;
@@ -19683,8 +21291,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @JsonKey(name: '_navigationLinks')
   final Element? navigationLinksElement;
   @override
-  @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-  final TestScriptAssertOperator? operator_;
+  final Code? operator;
   @override
   @JsonKey(name: '_operator')
   final Element? operatorElement;
@@ -19694,8 +21301,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-  final TestScriptAssertRequestMethod? requestMethod;
+  final Code? requestMethod;
   @override
   @JsonKey(name: '_requestMethod')
   final Element? requestMethodElement;
@@ -19710,8 +21316,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @JsonKey(name: '_resource')
   final Element? resourceElement;
   @override
-  @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-  final TestScriptAssertResponse? response;
+  final Code? response;
   @override
   @JsonKey(name: '_response')
   final Element? responseElement;
@@ -19725,6 +21330,11 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
+  @override
+  final Boolean? stopTestOnFail;
+  @override
+  @JsonKey(name: '_stopTestOnFail')
+  final Element? stopTestOnFailElement;
   @override
   final Id? validateProfileId;
   @override
@@ -19743,7 +21353,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   @override
   String toString() {
-    return 'TestScriptAssert(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, description: $description, descriptionElement: $descriptionElement, direction: $direction, directionElement: $directionElement, compareToSourceId: $compareToSourceId, compareToSourceIdElement: $compareToSourceIdElement, compareToSourceExpression: $compareToSourceExpression, compareToSourceExpressionElement: $compareToSourceExpressionElement, compareToSourcePath: $compareToSourcePath, compareToSourcePathElement: $compareToSourcePathElement, contentType: $contentType, contentTypeElement: $contentTypeElement, expression: $expression, expressionElement: $expressionElement, headerField: $headerField, headerFieldElement: $headerFieldElement, minimumId: $minimumId, minimumIdElement: $minimumIdElement, navigationLinks: $navigationLinks, navigationLinksElement: $navigationLinksElement, operator_: $operator_, operatorElement: $operatorElement, path: $path, pathElement: $pathElement, requestMethod: $requestMethod, requestMethodElement: $requestMethodElement, requestURL: $requestURL, requestURLElement: $requestURLElement, resource: $resource, resourceElement: $resourceElement, response: $response, responseElement: $responseElement, responseCode: $responseCode, responseCodeElement: $responseCodeElement, sourceId: $sourceId, sourceIdElement: $sourceIdElement, validateProfileId: $validateProfileId, validateProfileIdElement: $validateProfileIdElement, value: $value, valueElement: $valueElement, warningOnly: $warningOnly, warningOnlyElement: $warningOnlyElement)';
+    return 'TestScriptAssert(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, description: $description, descriptionElement: $descriptionElement, direction: $direction, directionElement: $directionElement, compareToSourceId: $compareToSourceId, compareToSourceIdElement: $compareToSourceIdElement, compareToSourceExpression: $compareToSourceExpression, compareToSourceExpressionElement: $compareToSourceExpressionElement, compareToSourcePath: $compareToSourcePath, compareToSourcePathElement: $compareToSourcePathElement, contentType: $contentType, contentTypeElement: $contentTypeElement, expression: $expression, expressionElement: $expressionElement, headerField: $headerField, headerFieldElement: $headerFieldElement, minimumId: $minimumId, minimumIdElement: $minimumIdElement, navigationLinks: $navigationLinks, navigationLinksElement: $navigationLinksElement, operator: $operator, operatorElement: $operatorElement, path: $path, pathElement: $pathElement, requestMethod: $requestMethod, requestMethodElement: $requestMethodElement, requestURL: $requestURL, requestURLElement: $requestURLElement, resource: $resource, resourceElement: $resourceElement, response: $response, responseElement: $responseElement, responseCode: $responseCode, responseCodeElement: $responseCodeElement, sourceId: $sourceId, sourceIdElement: $sourceIdElement, stopTestOnFail: $stopTestOnFail, stopTestOnFailElement: $stopTestOnFailElement, validateProfileId: $validateProfileId, validateProfileIdElement: $validateProfileIdElement, value: $value, valueElement: $valueElement, warningOnly: $warningOnly, warningOnlyElement: $warningOnlyElement)';
   }
 
   @override
@@ -19810,7 +21420,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
             (identical(other.minimumIdElement, minimumIdElement) || const DeepCollectionEquality().equals(other.minimumIdElement, minimumIdElement)) &&
             (identical(other.navigationLinks, navigationLinks) || const DeepCollectionEquality().equals(other.navigationLinks, navigationLinks)) &&
             (identical(other.navigationLinksElement, navigationLinksElement) || const DeepCollectionEquality().equals(other.navigationLinksElement, navigationLinksElement)) &&
-            (identical(other.operator_, operator_) || const DeepCollectionEquality().equals(other.operator_, operator_)) &&
+            (identical(other.operator, operator) || const DeepCollectionEquality().equals(other.operator, operator)) &&
             (identical(other.operatorElement, operatorElement) || const DeepCollectionEquality().equals(other.operatorElement, operatorElement)) &&
             (identical(other.path, path) || const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.pathElement, pathElement) || const DeepCollectionEquality().equals(other.pathElement, pathElement)) &&
@@ -19826,6 +21436,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
             (identical(other.responseCodeElement, responseCodeElement) || const DeepCollectionEquality().equals(other.responseCodeElement, responseCodeElement)) &&
             (identical(other.sourceId, sourceId) || const DeepCollectionEquality().equals(other.sourceId, sourceId)) &&
             (identical(other.sourceIdElement, sourceIdElement) || const DeepCollectionEquality().equals(other.sourceIdElement, sourceIdElement)) &&
+            (identical(other.stopTestOnFail, stopTestOnFail) || const DeepCollectionEquality().equals(other.stopTestOnFail, stopTestOnFail)) &&
+            (identical(other.stopTestOnFailElement, stopTestOnFailElement) || const DeepCollectionEquality().equals(other.stopTestOnFailElement, stopTestOnFailElement)) &&
             (identical(other.validateProfileId, validateProfileId) || const DeepCollectionEquality().equals(other.validateProfileId, validateProfileId)) &&
             (identical(other.validateProfileIdElement, validateProfileIdElement) || const DeepCollectionEquality().equals(other.validateProfileIdElement, validateProfileIdElement)) &&
             (identical(other.value, value) || const DeepCollectionEquality().equals(other.value, value)) &&
@@ -19862,7 +21474,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       const DeepCollectionEquality().hash(minimumIdElement) ^
       const DeepCollectionEquality().hash(navigationLinks) ^
       const DeepCollectionEquality().hash(navigationLinksElement) ^
-      const DeepCollectionEquality().hash(operator_) ^
+      const DeepCollectionEquality().hash(operator) ^
       const DeepCollectionEquality().hash(operatorElement) ^
       const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(pathElement) ^
@@ -19878,6 +21490,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       const DeepCollectionEquality().hash(responseCodeElement) ^
       const DeepCollectionEquality().hash(sourceId) ^
       const DeepCollectionEquality().hash(sourceIdElement) ^
+      const DeepCollectionEquality().hash(stopTestOnFail) ^
+      const DeepCollectionEquality().hash(stopTestOnFailElement) ^
       const DeepCollectionEquality().hash(validateProfileId) ^
       const DeepCollectionEquality().hash(validateProfileIdElement) ^
       const DeepCollectionEquality().hash(value) ^
@@ -19908,8 +21522,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-          TestScriptAssertDirection? direction,
+      Code? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -19936,15 +21549,13 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
-      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-          TestScriptAssertOperator? operator_,
+      Code? operator,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-          TestScriptAssertRequestMethod? requestMethod,
+      Code? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
@@ -19953,8 +21564,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       Code? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-          TestScriptAssertResponse? response,
+      Code? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -19963,6 +21573,9 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       Id? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
+      Boolean? stopTestOnFail,
+      @JsonKey(name: '_stopTestOnFail')
+          Element? stopTestOnFailElement,
       Id? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
@@ -19996,9 +21609,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-  TestScriptAssertDirection? get direction =>
-      throw _privateConstructorUsedError;
+  Code? get direction => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_direction')
   Element? get directionElement => throw _privateConstructorUsedError;
@@ -20044,8 +21655,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_navigationLinks')
   Element? get navigationLinksElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-  TestScriptAssertOperator? get operator_ => throw _privateConstructorUsedError;
+  Code? get operator => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_operator')
   Element? get operatorElement => throw _privateConstructorUsedError;
@@ -20055,9 +21665,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-  TestScriptAssertRequestMethod? get requestMethod =>
-      throw _privateConstructorUsedError;
+  Code? get requestMethod => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requestMethod')
   Element? get requestMethodElement => throw _privateConstructorUsedError;
@@ -20072,8 +21680,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-  TestScriptAssertResponse? get response => throw _privateConstructorUsedError;
+  Code? get response => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_response')
   Element? get responseElement => throw _privateConstructorUsedError;
@@ -20087,6 +21694,11 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @override
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
+  @override
+  Boolean? get stopTestOnFail => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_stopTestOnFail')
+  Element? get stopTestOnFailElement => throw _privateConstructorUsedError;
   @override
   Id? get validateProfileId => throw _privateConstructorUsedError;
   @override

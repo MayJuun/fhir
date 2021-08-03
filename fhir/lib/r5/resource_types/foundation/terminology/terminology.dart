@@ -37,8 +37,7 @@ class CodeSystem with Resource, _$CodeSystem {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-        CodeSystemStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -58,15 +57,13 @@ class CodeSystem with Resource, _$CodeSystem {
     Boolean? caseSensitive,
     @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
     Canonical? valueSet,
-    @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-        CodeSystemHierarchyMeaning? hierarchyMeaning,
+    Code? hierarchyMeaning,
     @JsonKey(name: '_hierarchyMeaning') Element? hierarchyMeaningElement,
     Boolean? compositional,
     @JsonKey(name: '_compositional') Element? compositionalElement,
     Boolean? versionNeeded,
     @JsonKey(name: '_versionNeeded') Element? versionNeededElement,
-    @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-        CodeSystemContent? content,
+    Code? content,
     @JsonKey(name: '_content') Element? contentElement,
     Canonical? supplements,
     UnsignedInt? count,
@@ -104,8 +101,8 @@ class CodeSystemFilter with _$CodeSystemFilter {
     @JsonKey(name: '_code') Element? codeElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(name: 'operator') List<Code>? operator_,
-    @JsonKey(name: '_operator') List<Element?>? operatorElement,
+    List<Code>? operator,
+    @JsonKey(name: '_operator') List<Element>? operatorElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _CodeSystemFilter;
@@ -140,8 +137,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
     @JsonKey(name: '_uri') Element? uriElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-        CodeSystemPropertyType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _CodeSystemProperty;
 
@@ -288,15 +284,14 @@ class ConceptMap with Resource, _$ConceptMap {
     List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    Identifier? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-        ConceptMapStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -348,14 +343,8 @@ class ConceptMapGroup with _$ConceptMapGroup {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    FhirUri? source,
-    @JsonKey(name: '_source') Element? sourceElement,
-    String? sourceVersion,
-    @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
-    FhirUri? target,
-    @JsonKey(name: '_target') Element? targetElement,
-    String? targetVersion,
-    @JsonKey(name: '_targetVersion') Element? targetVersionElement,
+    Canonical? source,
+    Canonical? target,
     required List<ConceptMapElement> element,
     ConceptMapUnmapped? unmapped,
   }) = _ConceptMapGroup;
@@ -421,8 +410,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-        ConceptMapTargetRelationship? relationship,
+    Code? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -487,8 +475,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-        ConceptMapUnmappedMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -540,8 +527,7 @@ class NamingSystem with Resource, _$NamingSystem {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-        NamingSystemStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -558,7 +544,7 @@ class NamingSystem with Resource, _$NamingSystem {
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    @JsonKey(unknownEnumValue: NamingSystemKind.unknown) NamingSystemKind? kind,
+    Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     String? responsible,
     @JsonKey(name: '_responsible') Element? responsibleElement,
@@ -592,8 +578,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-        NamingSystemUniqueIdType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -602,6 +587,8 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     Period? period,
+    Boolean? authoritative,
+    @JsonKey(name: '_authoritative') Element? authoritativeElement,
   }) = _NamingSystemUniqueId;
 
   /// Produces a Yaml formatted String version of the object
@@ -647,8 +634,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-        TerminologyCapabilitiesStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -673,8 +659,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
     List<TerminologyCapabilitiesCodeSystem>? codeSystem,
     TerminologyCapabilitiesExpansion? expansion,
-    @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-        TerminologyCapabilitiesCodeSearch? codeSearch,
+    Code? codeSearch,
     @JsonKey(name: '_codeSearch') Element? codeSearchElement,
     TerminologyCapabilitiesValidateCode? validateCode,
     TerminologyCapabilitiesTranslation? translation,
@@ -724,7 +709,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'TerminologyCapabilitiesSoftware cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesSoftware.fromJson(Map<String, dynamic> json) =>
@@ -758,8 +743,9 @@ class TerminologyCapabilitiesImplementation
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'TerminologyCapabilitiesImplementation cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesImplementation.fromJson(
           Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesImplementationFromJson(json);
@@ -792,8 +778,9 @@ class TerminologyCapabilitiesCodeSystem
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'TerminologyCapabilitiesCodeSystem cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesCodeSystem.fromJson(
           Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesCodeSystemFromJson(json);
@@ -813,10 +800,10 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
     Boolean? compositional,
     @JsonKey(name: '_compositional') Element? compositionalElement,
     List<Code>? language,
-    @JsonKey(name: '_language') List<Element?>? languageElement,
+    @JsonKey(name: '_language') List<Element>? languageElement,
     List<TerminologyCapabilitiesFilter>? filter,
     List<Code>? property,
-    @JsonKey(name: '_property') List<Element?>? propertyElement,
+    @JsonKey(name: '_property') List<Element>? propertyElement,
   }) = _TerminologyCapabilitiesVersion;
 
   /// Produces a Yaml formatted String version of the object
@@ -832,7 +819,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'TerminologyCapabilitiesVersion cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =>
@@ -849,7 +836,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<Code>? op,
-    @JsonKey(name: '_op') List<Element?>? opElement,
+    @JsonKey(name: '_op') List<Element>? opElement,
   }) = _TerminologyCapabilitiesFilter;
 
   /// Produces a Yaml formatted String version of the object
@@ -901,8 +888,9 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'TerminologyCapabilitiesExpansion cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesExpansion.fromJson(
           Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesExpansionFromJson(json);
@@ -934,8 +922,9 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'TerminologyCapabilitiesParameter cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesParameter.fromJson(
           Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesParameterFromJson(json);
@@ -966,8 +955,9 @@ class TerminologyCapabilitiesValidateCode
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'TerminologyCapabilitiesValidateCode cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesValidateCode.fromJson(
           Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesValidateCodeFromJson(json);
@@ -998,8 +988,9 @@ class TerminologyCapabilitiesTranslation
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'TerminologyCapabilitiesTranslation cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesTranslation.fromJson(
           Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesTranslationFromJson(json);
@@ -1029,7 +1020,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'TerminologyCapabilitiesClosure cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json) =>
@@ -1062,7 +1053,7 @@ class ValueSet with Resource, _$ValueSet {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1083,6 +1074,7 @@ class ValueSet with Resource, _$ValueSet {
     @JsonKey(name: '_immutable') Element? immutableElement,
     ValueSetCompose? compose,
     ValueSetExpansion? expansion,
+    ValueSetScope? scope,
   }) = _ValueSet;
 
   /// Produces a Yaml formatted String version of the object
@@ -1116,7 +1108,7 @@ class ValueSetCompose with _$ValueSetCompose {
     required List<ValueSetInclude> include,
     List<ValueSetInclude>? exclude,
     List<String>? property,
-    @JsonKey(name: '_property') List<Element?>? propertyElement,
+    @JsonKey(name: '_property') List<Element>? propertyElement,
   }) = _ValueSetCompose;
 
   /// Produces a Yaml formatted String version of the object
@@ -1150,6 +1142,8 @@ class ValueSetInclude with _$ValueSetInclude {
     List<ValueSetConcept>? concept,
     List<ValueSetFilter>? filter,
     List<Canonical>? valueSet,
+    String? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
   }) = _ValueSetInclude;
 
   /// Produces a Yaml formatted String version of the object
@@ -1240,7 +1234,7 @@ class ValueSetFilter with _$ValueSetFilter {
     List<FhirExtension>? modifierExtension,
     Code? property,
     @JsonKey(name: '_property') Element? propertyElement,
-    @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp? op,
+    Code? op,
     @JsonKey(name: '_op') Element? opElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -1452,4 +1446,36 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetProperty1.fromJson(Map<String, dynamic> json) =>
       _$ValueSetProperty1FromJson(json);
+}
+
+@freezed
+class ValueSetScope with _$ValueSetScope {
+  ValueSetScope._();
+  factory ValueSetScope({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? focus,
+    @JsonKey(name: '_focus') Element? focusElement,
+    String? inclusionCriteria,
+    @JsonKey(name: '_inclusionCriteria') Element? inclusionCriteriaElement,
+    String? exclusionCriteria,
+    @JsonKey(name: '_exclusionCriteria') Element? exclusionCriteriaElement,
+  }) = _ValueSetScope;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ValueSetScope.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetScope.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetScope.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ValueSetScope cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ValueSetScope.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetScopeFromJson(json);
 }

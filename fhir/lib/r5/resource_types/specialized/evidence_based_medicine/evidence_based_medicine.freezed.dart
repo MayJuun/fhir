@@ -49,8 +49,7 @@ class _$EvidenceTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-          EvidenceStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -81,15 +80,20 @@ class _$EvidenceTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
+      Reference? citeAsReference,
+      Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       Markdown? assertion,
       @JsonKey(name: '_assertion')
           Element? assertionElement,
-      Annotation? note,
+      List<Annotation>? note,
       required List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
@@ -139,11 +143,15 @@ class _$EvidenceTearOff {
       lastReviewDate: lastReviewDate,
       lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
+      topic: topic,
       author: author,
       editor: editor,
       reviewer: reviewer,
       endorser: endorser,
       relatedArtifact: relatedArtifact,
+      citeAsReference: citeAsReference,
+      citeAsMarkdown: citeAsMarkdown,
+      citeAsMarkdownElement: citeAsMarkdownElement,
       assertion: assertion,
       assertionElement: assertionElement,
       note: note,
@@ -195,8 +203,7 @@ mixin _$Evidence {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-  EvidenceStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -227,17 +234,21 @@ mixin _$Evidence {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+  Reference? get citeAsReference => throw _privateConstructorUsedError;
+  Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+  @JsonKey(name: '_citeAsMarkdown')
+  Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
   Markdown? get assertion => throw _privateConstructorUsedError;
   @JsonKey(name: '_assertion')
-  Element? get assertionElement => throw _privateConstructorUsedError; // ToDo
-//  List<Annotation> note,
-  Annotation? get note => throw _privateConstructorUsedError;
+  Element? get assertionElement => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   List<EvidenceVariableDefinition> get variableDefinition =>
       throw _privateConstructorUsedError;
   CodeableConcept? get synthesisType => throw _privateConstructorUsedError;
@@ -286,8 +297,7 @@ abstract class $EvidenceCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-          EvidenceStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -318,15 +328,20 @@ abstract class $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
+      Reference? citeAsReference,
+      Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       Markdown? assertion,
       @JsonKey(name: '_assertion')
           Element? assertionElement,
-      Annotation? note,
+      List<Annotation>? note,
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
@@ -352,8 +367,9 @@ abstract class $EvidenceCopyWith<$Res> {
   $ElementCopyWith<$Res>? get approvalDateElement;
   $ElementCopyWith<$Res>? get lastReviewDateElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
+  $ReferenceCopyWith<$Res>? get citeAsReference;
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement;
   $ElementCopyWith<$Res>? get assertionElement;
-  $AnnotationCopyWith<$Res>? get note;
   $CodeableConceptCopyWith<$Res>? get synthesisType;
   $CodeableConceptCopyWith<$Res>? get studyType;
 }
@@ -410,11 +426,15 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
+    Object? topic = freezed,
     Object? author = freezed,
     Object? editor = freezed,
     Object? reviewer = freezed,
     Object? endorser = freezed,
     Object? relatedArtifact = freezed,
+    Object? citeAsReference = freezed,
+    Object? citeAsMarkdown = freezed,
+    Object? citeAsMarkdownElement = freezed,
     Object? assertion = freezed,
     Object? assertionElement = freezed,
     Object? note = freezed,
@@ -509,7 +529,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EvidenceStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -594,6 +614,10 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       author: author == freezed
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -614,6 +638,18 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
+      citeAsReference: citeAsReference == freezed
+          ? _value.citeAsReference
+          : citeAsReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      citeAsMarkdown: citeAsMarkdown == freezed
+          ? _value.citeAsMarkdown
+          : citeAsMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      citeAsMarkdownElement: citeAsMarkdownElement == freezed
+          ? _value.citeAsMarkdownElement
+          : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       assertion: assertion == freezed
           ? _value.assertion
           : assertion // ignore: cast_nullable_to_non_nullable
@@ -625,7 +661,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       note: note == freezed
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as Annotation?,
+              as List<Annotation>?,
       variableDefinition: variableDefinition == freezed
           ? _value.variableDefinition
           : variableDefinition // ignore: cast_nullable_to_non_nullable
@@ -852,6 +888,28 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
   }
 
   @override
+  $ReferenceCopyWith<$Res>? get citeAsReference {
+    if (_value.citeAsReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.citeAsReference!, (value) {
+      return _then(_value.copyWith(citeAsReference: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement {
+    if (_value.citeAsMarkdownElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.citeAsMarkdownElement!, (value) {
+      return _then(_value.copyWith(citeAsMarkdownElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get assertionElement {
     if (_value.assertionElement == null) {
       return null;
@@ -859,17 +917,6 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
 
     return $ElementCopyWith<$Res>(_value.assertionElement!, (value) {
       return _then(_value.copyWith(assertionElement: value));
-    });
-  }
-
-  @override
-  $AnnotationCopyWith<$Res>? get note {
-    if (_value.note == null) {
-      return null;
-    }
-
-    return $AnnotationCopyWith<$Res>(_value.note!, (value) {
-      return _then(_value.copyWith(note: value));
     });
   }
 
@@ -930,8 +977,7 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-          EvidenceStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -962,15 +1008,20 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
+      Reference? citeAsReference,
+      Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       Markdown? assertion,
       @JsonKey(name: '_assertion')
           Element? assertionElement,
-      Annotation? note,
+      List<Annotation>? note,
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
@@ -1015,9 +1066,11 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   @override
   $PeriodCopyWith<$Res>? get effectivePeriod;
   @override
-  $ElementCopyWith<$Res>? get assertionElement;
+  $ReferenceCopyWith<$Res>? get citeAsReference;
   @override
-  $AnnotationCopyWith<$Res>? get note;
+  $ElementCopyWith<$Res>? get citeAsMarkdownElement;
+  @override
+  $ElementCopyWith<$Res>? get assertionElement;
   @override
   $CodeableConceptCopyWith<$Res>? get synthesisType;
   @override
@@ -1077,11 +1130,15 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
+    Object? topic = freezed,
     Object? author = freezed,
     Object? editor = freezed,
     Object? reviewer = freezed,
     Object? endorser = freezed,
     Object? relatedArtifact = freezed,
+    Object? citeAsReference = freezed,
+    Object? citeAsMarkdown = freezed,
+    Object? citeAsMarkdownElement = freezed,
     Object? assertion = freezed,
     Object? assertionElement = freezed,
     Object? note = freezed,
@@ -1176,7 +1233,7 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EvidenceStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1261,6 +1318,10 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       author: author == freezed
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -1281,6 +1342,18 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
+      citeAsReference: citeAsReference == freezed
+          ? _value.citeAsReference
+          : citeAsReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      citeAsMarkdown: citeAsMarkdown == freezed
+          ? _value.citeAsMarkdown
+          : citeAsMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      citeAsMarkdownElement: citeAsMarkdownElement == freezed
+          ? _value.citeAsMarkdownElement
+          : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       assertion: assertion == freezed
           ? _value.assertion
           : assertion // ignore: cast_nullable_to_non_nullable
@@ -1292,7 +1365,7 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       note: note == freezed
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as Annotation?,
+              as List<Annotation>?,
       variableDefinition: variableDefinition == freezed
           ? _value.variableDefinition
           : variableDefinition // ignore: cast_nullable_to_non_nullable
@@ -1353,8 +1426,7 @@ class _$_Evidence extends _Evidence {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -1385,11 +1457,16 @@ class _$_Evidence extends _Evidence {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
+      this.topic,
       this.author,
       this.editor,
       this.reviewer,
       this.endorser,
       this.relatedArtifact,
+      this.citeAsReference,
+      this.citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          this.citeAsMarkdownElement,
       this.assertion,
       @JsonKey(name: '_assertion')
           this.assertionElement,
@@ -1454,8 +1531,7 @@ class _$_Evidence extends _Evidence {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-  final EvidenceStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1508,6 +1584,8 @@ class _$_Evidence extends _Evidence {
   @override
   final Period? effectivePeriod;
   @override
+  final List<CodeableConcept>? topic;
+  @override
   final List<ContactDetail>? author;
   @override
   final List<ContactDetail>? editor;
@@ -1518,13 +1596,19 @@ class _$_Evidence extends _Evidence {
   @override
   final List<RelatedArtifact>? relatedArtifact;
   @override
+  final Reference? citeAsReference;
+  @override
+  final Markdown? citeAsMarkdown;
+  @override
+  @JsonKey(name: '_citeAsMarkdown')
+  final Element? citeAsMarkdownElement;
+  @override
   final Markdown? assertion;
   @override
   @JsonKey(name: '_assertion')
   final Element? assertionElement;
-  @override // ToDo
-//  List<Annotation> note,
-  final Annotation? note;
+  @override
+  final List<Annotation>? note;
   @override
   final List<EvidenceVariableDefinition> variableDefinition;
   @override
@@ -1540,7 +1624,7 @@ class _$_Evidence extends _Evidence {
 
   @override
   String toString() {
-    return 'Evidence(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyType: $studyType, statistic: $statistic, distribution: $distribution, certainty: $certainty)';
+    return 'Evidence(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyType: $studyType, statistic: $statistic, distribution: $distribution, certainty: $certainty)';
   }
 
   @override
@@ -1632,11 +1716,15 @@ class _$_Evidence extends _Evidence {
             (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
             (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
             (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
+            (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
             (identical(other.author, author) || const DeepCollectionEquality().equals(other.author, author)) &&
             (identical(other.editor, editor) || const DeepCollectionEquality().equals(other.editor, editor)) &&
             (identical(other.reviewer, reviewer) || const DeepCollectionEquality().equals(other.reviewer, reviewer)) &&
             (identical(other.endorser, endorser) || const DeepCollectionEquality().equals(other.endorser, endorser)) &&
             (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
+            (identical(other.citeAsReference, citeAsReference) || const DeepCollectionEquality().equals(other.citeAsReference, citeAsReference)) &&
+            (identical(other.citeAsMarkdown, citeAsMarkdown) || const DeepCollectionEquality().equals(other.citeAsMarkdown, citeAsMarkdown)) &&
+            (identical(other.citeAsMarkdownElement, citeAsMarkdownElement) || const DeepCollectionEquality().equals(other.citeAsMarkdownElement, citeAsMarkdownElement)) &&
             (identical(other.assertion, assertion) || const DeepCollectionEquality().equals(other.assertion, assertion)) &&
             (identical(other.assertionElement, assertionElement) || const DeepCollectionEquality().equals(other.assertionElement, assertionElement)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
@@ -1693,11 +1781,15 @@ class _$_Evidence extends _Evidence {
       const DeepCollectionEquality().hash(lastReviewDate) ^
       const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
+      const DeepCollectionEquality().hash(topic) ^
       const DeepCollectionEquality().hash(author) ^
       const DeepCollectionEquality().hash(editor) ^
       const DeepCollectionEquality().hash(reviewer) ^
       const DeepCollectionEquality().hash(endorser) ^
       const DeepCollectionEquality().hash(relatedArtifact) ^
+      const DeepCollectionEquality().hash(citeAsReference) ^
+      const DeepCollectionEquality().hash(citeAsMarkdown) ^
+      const DeepCollectionEquality().hash(citeAsMarkdownElement) ^
       const DeepCollectionEquality().hash(assertion) ^
       const DeepCollectionEquality().hash(assertionElement) ^
       const DeepCollectionEquality().hash(note) ^
@@ -1749,8 +1841,7 @@ abstract class _Evidence extends Evidence {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-          EvidenceStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -1781,15 +1872,20 @@ abstract class _Evidence extends Evidence {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
       List<ContactDetail>? author,
       List<ContactDetail>? editor,
       List<ContactDetail>? reviewer,
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
+      Reference? citeAsReference,
+      Markdown? citeAsMarkdown,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       Markdown? assertion,
       @JsonKey(name: '_assertion')
           Element? assertionElement,
-      Annotation? note,
+      List<Annotation>? note,
       required List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
@@ -1850,8 +1946,7 @@ abstract class _Evidence extends Evidence {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
-  EvidenceStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1904,6 +1999,8 @@ abstract class _Evidence extends Evidence {
   @override
   Period? get effectivePeriod => throw _privateConstructorUsedError;
   @override
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  @override
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
   @override
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
@@ -1915,13 +2012,19 @@ abstract class _Evidence extends Evidence {
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
   @override
+  Reference? get citeAsReference => throw _privateConstructorUsedError;
+  @override
+  Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_citeAsMarkdown')
+  Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+  @override
   Markdown? get assertion => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_assertion')
   Element? get assertionElement => throw _privateConstructorUsedError;
-  @override // ToDo
-//  List<Annotation> note,
-  Annotation? get note => throw _privateConstructorUsedError;
+  @override
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
   List<EvidenceVariableDefinition> get variableDefinition =>
       throw _privateConstructorUsedError;
@@ -2417,9 +2520,12 @@ class _$EvidenceCertaintyTearOff {
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Annotation? note,
-      List<CodeableConcept>? rating,
-      List<EvidenceCertaintySubcomponent>? certaintySubcomponent}) {
+      List<Annotation>? note,
+      CodeableConcept? type,
+      CodeableConcept? rating,
+      String? rater,
+      @JsonKey(name: '_rater') Element? raterElement,
+      List<EvidenceCertainty>? subcomponent}) {
     return _EvidenceCertainty(
       id: id,
       extension_: extension_,
@@ -2427,8 +2533,11 @@ class _$EvidenceCertaintyTearOff {
       description: description,
       descriptionElement: descriptionElement,
       note: note,
+      type: type,
       rating: rating,
-      certaintySubcomponent: certaintySubcomponent,
+      rater: rater,
+      raterElement: raterElement,
+      subcomponent: subcomponent,
     );
   }
 
@@ -2449,11 +2558,14 @@ mixin _$EvidenceCertainty {
       throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError; // ToDo
-// List<Annotation> note,
-  Annotation? get note => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-  List<EvidenceCertaintySubcomponent>? get certaintySubcomponent =>
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get rating => throw _privateConstructorUsedError;
+  String? get rater => throw _privateConstructorUsedError;
+  @JsonKey(name: '_rater')
+  Element? get raterElement => throw _privateConstructorUsedError;
+  List<EvidenceCertainty>? get subcomponent =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2473,12 +2585,17 @@ abstract class $EvidenceCertaintyCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Annotation? note,
-      List<CodeableConcept>? rating,
-      List<EvidenceCertaintySubcomponent>? certaintySubcomponent});
+      List<Annotation>? note,
+      CodeableConcept? type,
+      CodeableConcept? rating,
+      String? rater,
+      @JsonKey(name: '_rater') Element? raterElement,
+      List<EvidenceCertainty>? subcomponent});
 
   $ElementCopyWith<$Res>? get descriptionElement;
-  $AnnotationCopyWith<$Res>? get note;
+  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res>? get rating;
+  $ElementCopyWith<$Res>? get raterElement;
 }
 
 /// @nodoc
@@ -2498,8 +2615,11 @@ class _$EvidenceCertaintyCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? note = freezed,
+    Object? type = freezed,
     Object? rating = freezed,
-    Object? certaintySubcomponent = freezed,
+    Object? rater = freezed,
+    Object? raterElement = freezed,
+    Object? subcomponent = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -2525,15 +2645,27 @@ class _$EvidenceCertaintyCopyWithImpl<$Res>
       note: note == freezed
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as Annotation?,
+              as List<Annotation>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       rating: rating == freezed
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      certaintySubcomponent: certaintySubcomponent == freezed
-          ? _value.certaintySubcomponent
-          : certaintySubcomponent // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceCertaintySubcomponent>?,
+              as CodeableConcept?,
+      rater: rater == freezed
+          ? _value.rater
+          : rater // ignore: cast_nullable_to_non_nullable
+              as String?,
+      raterElement: raterElement == freezed
+          ? _value.raterElement
+          : raterElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subcomponent: subcomponent == freezed
+          ? _value.subcomponent
+          : subcomponent // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceCertainty>?,
     ));
   }
 
@@ -2549,13 +2681,35 @@ class _$EvidenceCertaintyCopyWithImpl<$Res>
   }
 
   @override
-  $AnnotationCopyWith<$Res>? get note {
-    if (_value.note == null) {
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
       return null;
     }
 
-    return $AnnotationCopyWith<$Res>(_value.note!, (value) {
-      return _then(_value.copyWith(note: value));
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get rating {
+    if (_value.rating == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.rating!, (value) {
+      return _then(_value.copyWith(rating: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get raterElement {
+    if (_value.raterElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.raterElement!, (value) {
+      return _then(_value.copyWith(raterElement: value));
     });
   }
 }
@@ -2573,14 +2727,21 @@ abstract class _$EvidenceCertaintyCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Annotation? note,
-      List<CodeableConcept>? rating,
-      List<EvidenceCertaintySubcomponent>? certaintySubcomponent});
+      List<Annotation>? note,
+      CodeableConcept? type,
+      CodeableConcept? rating,
+      String? rater,
+      @JsonKey(name: '_rater') Element? raterElement,
+      List<EvidenceCertainty>? subcomponent});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $AnnotationCopyWith<$Res>? get note;
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $CodeableConceptCopyWith<$Res>? get rating;
+  @override
+  $ElementCopyWith<$Res>? get raterElement;
 }
 
 /// @nodoc
@@ -2602,8 +2763,11 @@ class __$EvidenceCertaintyCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? note = freezed,
+    Object? type = freezed,
     Object? rating = freezed,
-    Object? certaintySubcomponent = freezed,
+    Object? rater = freezed,
+    Object? raterElement = freezed,
+    Object? subcomponent = freezed,
   }) {
     return _then(_EvidenceCertainty(
       id: id == freezed
@@ -2629,15 +2793,27 @@ class __$EvidenceCertaintyCopyWithImpl<$Res>
       note: note == freezed
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
-              as Annotation?,
+              as List<Annotation>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       rating: rating == freezed
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      certaintySubcomponent: certaintySubcomponent == freezed
-          ? _value.certaintySubcomponent
-          : certaintySubcomponent // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceCertaintySubcomponent>?,
+              as CodeableConcept?,
+      rater: rater == freezed
+          ? _value.rater
+          : rater // ignore: cast_nullable_to_non_nullable
+              as String?,
+      raterElement: raterElement == freezed
+          ? _value.raterElement
+          : raterElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subcomponent: subcomponent == freezed
+          ? _value.subcomponent
+          : subcomponent // ignore: cast_nullable_to_non_nullable
+              as List<EvidenceCertainty>?,
     ));
   }
 }
@@ -2652,8 +2828,11 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.note,
+      this.type,
       this.rating,
-      this.certaintySubcomponent})
+      this.rater,
+      @JsonKey(name: '_rater') this.raterElement,
+      this.subcomponent})
       : super._();
 
   factory _$_EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
@@ -2671,17 +2850,23 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  @override // ToDo
-// List<Annotation> note,
-  final Annotation? note;
   @override
-  final List<CodeableConcept>? rating;
+  final List<Annotation>? note;
   @override
-  final List<EvidenceCertaintySubcomponent>? certaintySubcomponent;
+  final CodeableConcept? type;
+  @override
+  final CodeableConcept? rating;
+  @override
+  final String? rater;
+  @override
+  @JsonKey(name: '_rater')
+  final Element? raterElement;
+  @override
+  final List<EvidenceCertainty>? subcomponent;
 
   @override
   String toString() {
-    return 'EvidenceCertainty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, rating: $rating, certaintySubcomponent: $certaintySubcomponent)';
+    return 'EvidenceCertainty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, type: $type, rating: $rating, rater: $rater, raterElement: $raterElement, subcomponent: $subcomponent)';
   }
 
   @override
@@ -2704,11 +2889,18 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
                     .equals(other.descriptionElement, descriptionElement)) &&
             (identical(other.note, note) ||
                 const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.rating, rating) ||
                 const DeepCollectionEquality().equals(other.rating, rating)) &&
-            (identical(other.certaintySubcomponent, certaintySubcomponent) ||
-                const DeepCollectionEquality().equals(
-                    other.certaintySubcomponent, certaintySubcomponent)));
+            (identical(other.rater, rater) ||
+                const DeepCollectionEquality().equals(other.rater, rater)) &&
+            (identical(other.raterElement, raterElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.raterElement, raterElement)) &&
+            (identical(other.subcomponent, subcomponent) ||
+                const DeepCollectionEquality()
+                    .equals(other.subcomponent, subcomponent)));
   }
 
   @override
@@ -2720,8 +2912,11 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(note) ^
+      const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(rating) ^
-      const DeepCollectionEquality().hash(certaintySubcomponent);
+      const DeepCollectionEquality().hash(rater) ^
+      const DeepCollectionEquality().hash(raterElement) ^
+      const DeepCollectionEquality().hash(subcomponent);
 
   @JsonKey(ignore: true)
   @override
@@ -2736,15 +2931,17 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
 
 abstract class _EvidenceCertainty extends EvidenceCertainty {
   factory _EvidenceCertainty(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? description,
-          @JsonKey(name: '_description') Element? descriptionElement,
-          Annotation? note,
-          List<CodeableConcept>? rating,
-          List<EvidenceCertaintySubcomponent>? certaintySubcomponent}) =
-      _$_EvidenceCertainty;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<Annotation>? note,
+      CodeableConcept? type,
+      CodeableConcept? rating,
+      String? rater,
+      @JsonKey(name: '_rater') Element? raterElement,
+      List<EvidenceCertainty>? subcomponent}) = _$_EvidenceCertainty;
   _EvidenceCertainty._() : super._();
 
   factory _EvidenceCertainty.fromJson(Map<String, dynamic> json) =
@@ -2763,396 +2960,24 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  @override // ToDo
-// List<Annotation> note,
-  Annotation? get note => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  List<EvidenceCertaintySubcomponent>? get certaintySubcomponent =>
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get rating => throw _privateConstructorUsedError;
+  @override
+  String? get rater => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_rater')
+  Element? get raterElement => throw _privateConstructorUsedError;
+  @override
+  List<EvidenceCertainty>? get subcomponent =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$EvidenceCertaintyCopyWith<_EvidenceCertainty> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-EvidenceCertaintySubcomponent _$EvidenceCertaintySubcomponentFromJson(
-    Map<String, dynamic> json) {
-  return _EvidenceCertaintySubcomponent.fromJson(json);
-}
-
-/// @nodoc
-class _$EvidenceCertaintySubcomponentTearOff {
-  const _$EvidenceCertaintySubcomponentTearOff();
-
-  _EvidenceCertaintySubcomponent call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Annotation? note,
-      List<CodeableConcept>? type,
-      List<CodeableConcept>? rating}) {
-    return _EvidenceCertaintySubcomponent(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      description: description,
-      descriptionElement: descriptionElement,
-      note: note,
-      type: type,
-      rating: rating,
-    );
-  }
-
-  EvidenceCertaintySubcomponent fromJson(Map<String, Object> json) {
-    return EvidenceCertaintySubcomponent.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $EvidenceCertaintySubcomponent = _$EvidenceCertaintySubcomponentTearOff();
-
-/// @nodoc
-mixin _$EvidenceCertaintySubcomponent {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError; // ToDo
-// List<Annotation> note,
-  Annotation? get note => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EvidenceCertaintySubcomponentCopyWith<EvidenceCertaintySubcomponent>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EvidenceCertaintySubcomponentCopyWith<$Res> {
-  factory $EvidenceCertaintySubcomponentCopyWith(
-          EvidenceCertaintySubcomponent value,
-          $Res Function(EvidenceCertaintySubcomponent) then) =
-      _$EvidenceCertaintySubcomponentCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Annotation? note,
-      List<CodeableConcept>? type,
-      List<CodeableConcept>? rating});
-
-  $ElementCopyWith<$Res>? get descriptionElement;
-  $AnnotationCopyWith<$Res>? get note;
-}
-
-/// @nodoc
-class _$EvidenceCertaintySubcomponentCopyWithImpl<$Res>
-    implements $EvidenceCertaintySubcomponentCopyWith<$Res> {
-  _$EvidenceCertaintySubcomponentCopyWithImpl(this._value, this._then);
-
-  final EvidenceCertaintySubcomponent _value;
-  // ignore: unused_field
-  final $Res Function(EvidenceCertaintySubcomponent) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? note = freezed,
-    Object? type = freezed,
-    Object? rating = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as Annotation?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      rating: rating == freezed
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-    ));
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement {
-    if (_value.descriptionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
-    });
-  }
-
-  @override
-  $AnnotationCopyWith<$Res>? get note {
-    if (_value.note == null) {
-      return null;
-    }
-
-    return $AnnotationCopyWith<$Res>(_value.note!, (value) {
-      return _then(_value.copyWith(note: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$EvidenceCertaintySubcomponentCopyWith<$Res>
-    implements $EvidenceCertaintySubcomponentCopyWith<$Res> {
-  factory _$EvidenceCertaintySubcomponentCopyWith(
-          _EvidenceCertaintySubcomponent value,
-          $Res Function(_EvidenceCertaintySubcomponent) then) =
-      __$EvidenceCertaintySubcomponentCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Annotation? note,
-      List<CodeableConcept>? type,
-      List<CodeableConcept>? rating});
-
-  @override
-  $ElementCopyWith<$Res>? get descriptionElement;
-  @override
-  $AnnotationCopyWith<$Res>? get note;
-}
-
-/// @nodoc
-class __$EvidenceCertaintySubcomponentCopyWithImpl<$Res>
-    extends _$EvidenceCertaintySubcomponentCopyWithImpl<$Res>
-    implements _$EvidenceCertaintySubcomponentCopyWith<$Res> {
-  __$EvidenceCertaintySubcomponentCopyWithImpl(
-      _EvidenceCertaintySubcomponent _value,
-      $Res Function(_EvidenceCertaintySubcomponent) _then)
-      : super(_value, (v) => _then(v as _EvidenceCertaintySubcomponent));
-
-  @override
-  _EvidenceCertaintySubcomponent get _value =>
-      super._value as _EvidenceCertaintySubcomponent;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? description = freezed,
-    Object? descriptionElement = freezed,
-    Object? note = freezed,
-    Object? type = freezed,
-    Object? rating = freezed,
-  }) {
-    return _then(_EvidenceCertaintySubcomponent(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      description: description == freezed
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      descriptionElement: descriptionElement == freezed
-          ? _value.descriptionElement
-          : descriptionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as Annotation?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      rating: rating == freezed
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_EvidenceCertaintySubcomponent extends _EvidenceCertaintySubcomponent {
-  _$_EvidenceCertaintySubcomponent(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      this.note,
-      this.type,
-      this.rating})
-      : super._();
-
-  factory _$_EvidenceCertaintySubcomponent.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_EvidenceCertaintySubcomponentFromJson(json);
-
-  @override
-  final String? id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
-  @override
-  final List<FhirExtension>? modifierExtension;
-  @override
-  final String? description;
-  @override
-  @JsonKey(name: '_description')
-  final Element? descriptionElement;
-  @override // ToDo
-// List<Annotation> note,
-  final Annotation? note;
-  @override
-  final List<CodeableConcept>? type;
-  @override
-  final List<CodeableConcept>? rating;
-
-  @override
-  String toString() {
-    return 'EvidenceCertaintySubcomponent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, type: $type, rating: $rating)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _EvidenceCertaintySubcomponent &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.note, note) ||
-                const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.rating, rating) ||
-                const DeepCollectionEquality().equals(other.rating, rating)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(rating);
-
-  @JsonKey(ignore: true)
-  @override
-  _$EvidenceCertaintySubcomponentCopyWith<_EvidenceCertaintySubcomponent>
-      get copyWith => __$EvidenceCertaintySubcomponentCopyWithImpl<
-          _EvidenceCertaintySubcomponent>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_EvidenceCertaintySubcomponentToJson(this);
-  }
-}
-
-abstract class _EvidenceCertaintySubcomponent
-    extends EvidenceCertaintySubcomponent {
-  factory _EvidenceCertaintySubcomponent(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Annotation? note,
-      List<CodeableConcept>? type,
-      List<CodeableConcept>? rating}) = _$_EvidenceCertaintySubcomponent;
-  _EvidenceCertaintySubcomponent._() : super._();
-
-  factory _EvidenceCertaintySubcomponent.fromJson(Map<String, dynamic> json) =
-      _$_EvidenceCertaintySubcomponent.fromJson;
-
-  @override
-  String? get id => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  @override
-  String? get description => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
-  @override // ToDo
-// List<Annotation> note,
-  Annotation? get note => throw _privateConstructorUsedError;
-  @override
-  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
-  @override
-  List<CodeableConcept>? get rating => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$EvidenceCertaintySubcomponentCopyWith<_EvidenceCertaintySubcomponent>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
@@ -3163,96 +2988,90 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
 class _$EvidenceVariableTearOff {
   const _$EvidenceVariableTearOff();
 
-  _EvidenceVariable
-      call(
-          {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-              R5ResourceType resourceType = R5ResourceType.EvidenceVariable,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element? implicitRulesElement,
-          Code? language,
-          @JsonKey(name: '_language')
-              Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          FhirUri? url,
-          @JsonKey(name: '_url')
-              Element? urlElement,
-          List<Identifier>? identifier,
-          String? version,
-          @JsonKey(name: '_version')
-              Element? versionElement,
-          String? name,
-          @JsonKey(name: '_name')
-              Element? nameElement,
-          String? title,
-          @JsonKey(name: '_title')
-              Element? titleElement,
-          @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-              EvidenceVariableStatus? status,
-          @JsonKey(name: '_status')
-              Element? statusElement,
-          Boolean? experimental,
-          @JsonKey(name: '_experimental')
-              Element? experimentalElement,
-          FhirDateTime? date,
-          @JsonKey(name: '_date')
-              Element? dateElement,
-          String? publisher,
-          @JsonKey(name: '_publisher')
-              Element? publisherElement,
-          List<ContactDetail>? contact,
-          Markdown? description,
-          @JsonKey(name: '_description')
-              Element? descriptionElement,
-          List<UsageContext>? useContext,
-          List<CodeableConcept>? jurisdiction,
-          Markdown? purpose,
-          @JsonKey(name: '_purpose')
-              Element? purposeElement,
-          Markdown? copyright,
-          @JsonKey(name: '_copyright')
-              Element? copyrightElement,
-          Date? approvalDate,
-          @JsonKey(name: '_approvalDate')
-              Element? approvalDateElement,
-          Date? lastReviewDate,
-          @JsonKey(name: '_lastReviewDate')
-              Element? lastReviewDateElement,
-          Period? effectivePeriod,
-          String? shortTitle,
-          @JsonKey(name: '_shortTitle')
-              Element? shortTitleElement,
-          String? subtitle,
-          @JsonKey(name: '_subtitle')
-              Element? subtitleElement,
-          List<Annotation>? note,
-          List<ContactDetail>? author,
-          List<ContactDetail>? editor,
-          List<ContactDetail>? reviewer,
-          List<ContactDetail>? endorser,
-          List<RelatedArtifact>? relatedArtifact,
-          Boolean? actual,
-          @JsonKey(name: '_actual')
-              Element? actualElement,
-          @JsonKey(
-              unknownEnumValue:
-                  EvidenceVariableCharacteristicCombination.unknown)
-              EvidenceVariableCharacteristicCombination?
-                  characteristicCombination,
-          @JsonKey(name: '_characteristicCombination')
-              Element? characteristicCombinationElement,
-          List<EvidenceVariableCharacteristic>? characteristic,
-          @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-              EvidenceVariableHandling? handling,
-          @JsonKey(name: '_handling')
-              Element? handlingElement,
-          List<EvidenceVariableCategory>? category}) {
+  _EvidenceVariable call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
+          R5ResourceType resourceType = R5ResourceType.EvidenceVariable,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      String? title,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date')
+          Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      List<ContactDetail>? contact,
+      Markdown? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
+      String? shortTitle,
+      @JsonKey(name: '_shortTitle')
+          Element? shortTitleElement,
+      String? subtitle,
+      @JsonKey(name: '_subtitle')
+          Element? subtitleElement,
+      List<Annotation>? note,
+      Boolean? actual,
+      @JsonKey(name: '_actual')
+          Element? actualElement,
+      Code? characteristicCombination,
+      @JsonKey(name: '_characteristicCombination')
+          Element? characteristicCombinationElement,
+      List<EvidenceVariableCharacteristic>? characteristic,
+      Code? handling,
+      @JsonKey(name: '_handling')
+          Element? handlingElement,
+      List<EvidenceVariableCategory>? category}) {
     return _EvidenceVariable(
       resourceType: resourceType,
       id: id,
@@ -3296,16 +3115,17 @@ class _$EvidenceVariableTearOff {
       lastReviewDate: lastReviewDate,
       lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
-      shortTitle: shortTitle,
-      shortTitleElement: shortTitleElement,
-      subtitle: subtitle,
-      subtitleElement: subtitleElement,
-      note: note,
+      topic: topic,
       author: author,
       editor: editor,
       reviewer: reviewer,
       endorser: endorser,
       relatedArtifact: relatedArtifact,
+      shortTitle: shortTitle,
+      shortTitleElement: shortTitleElement,
+      subtitle: subtitle,
+      subtitleElement: subtitleElement,
+      note: note,
       actual: actual,
       actualElement: actualElement,
       characteristicCombination: characteristicCombination,
@@ -3356,8 +3176,7 @@ mixin _$EvidenceVariable {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-  EvidenceVariableStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -3388,6 +3207,13 @@ mixin _$EvidenceVariable {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
   String? get shortTitle => throw _privateConstructorUsedError;
   @JsonKey(name: '_shortTitle')
   Element? get shortTitleElement => throw _privateConstructorUsedError;
@@ -3395,25 +3221,16 @@ mixin _$EvidenceVariable {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
-  List<ContactDetail>? get author => throw _privateConstructorUsedError;
-  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
-  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
-  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
-  List<RelatedArtifact>? get relatedArtifact =>
-      throw _privateConstructorUsedError;
   Boolean? get actual => throw _privateConstructorUsedError;
   @JsonKey(name: '_actual')
   Element? get actualElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
-  EvidenceVariableCharacteristicCombination? get characteristicCombination =>
-      throw _privateConstructorUsedError;
+  Code? get characteristicCombination => throw _privateConstructorUsedError;
   @JsonKey(name: '_characteristicCombination')
   Element? get characteristicCombinationElement =>
       throw _privateConstructorUsedError;
   List<EvidenceVariableCharacteristic>? get characteristic =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-  EvidenceVariableHandling? get handling => throw _privateConstructorUsedError;
+  Code? get handling => throw _privateConstructorUsedError;
   @JsonKey(name: '_handling')
   Element? get handlingElement => throw _privateConstructorUsedError;
   List<EvidenceVariableCategory>? get category =>
@@ -3430,96 +3247,90 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   factory $EvidenceVariableCopyWith(
           EvidenceVariable value, $Res Function(EvidenceVariable) then) =
       _$EvidenceVariableCopyWithImpl<$Res>;
-  $Res
-      call(
-          {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-              R5ResourceType resourceType,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element? implicitRulesElement,
-          Code? language,
-          @JsonKey(name: '_language')
-              Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          FhirUri? url,
-          @JsonKey(name: '_url')
-              Element? urlElement,
-          List<Identifier>? identifier,
-          String? version,
-          @JsonKey(name: '_version')
-              Element? versionElement,
-          String? name,
-          @JsonKey(name: '_name')
-              Element? nameElement,
-          String? title,
-          @JsonKey(name: '_title')
-              Element? titleElement,
-          @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-              EvidenceVariableStatus? status,
-          @JsonKey(name: '_status')
-              Element? statusElement,
-          Boolean? experimental,
-          @JsonKey(name: '_experimental')
-              Element? experimentalElement,
-          FhirDateTime? date,
-          @JsonKey(name: '_date')
-              Element? dateElement,
-          String? publisher,
-          @JsonKey(name: '_publisher')
-              Element? publisherElement,
-          List<ContactDetail>? contact,
-          Markdown? description,
-          @JsonKey(name: '_description')
-              Element? descriptionElement,
-          List<UsageContext>? useContext,
-          List<CodeableConcept>? jurisdiction,
-          Markdown? purpose,
-          @JsonKey(name: '_purpose')
-              Element? purposeElement,
-          Markdown? copyright,
-          @JsonKey(name: '_copyright')
-              Element? copyrightElement,
-          Date? approvalDate,
-          @JsonKey(name: '_approvalDate')
-              Element? approvalDateElement,
-          Date? lastReviewDate,
-          @JsonKey(name: '_lastReviewDate')
-              Element? lastReviewDateElement,
-          Period? effectivePeriod,
-          String? shortTitle,
-          @JsonKey(name: '_shortTitle')
-              Element? shortTitleElement,
-          String? subtitle,
-          @JsonKey(name: '_subtitle')
-              Element? subtitleElement,
-          List<Annotation>? note,
-          List<ContactDetail>? author,
-          List<ContactDetail>? editor,
-          List<ContactDetail>? reviewer,
-          List<ContactDetail>? endorser,
-          List<RelatedArtifact>? relatedArtifact,
-          Boolean? actual,
-          @JsonKey(name: '_actual')
-              Element? actualElement,
-          @JsonKey(
-              unknownEnumValue:
-                  EvidenceVariableCharacteristicCombination.unknown)
-              EvidenceVariableCharacteristicCombination?
-                  characteristicCombination,
-          @JsonKey(name: '_characteristicCombination')
-              Element? characteristicCombinationElement,
-          List<EvidenceVariableCharacteristic>? characteristic,
-          @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-              EvidenceVariableHandling? handling,
-          @JsonKey(name: '_handling')
-              Element? handlingElement,
-          List<EvidenceVariableCategory>? category});
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
+          R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      String? title,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date')
+          Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      List<ContactDetail>? contact,
+      Markdown? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
+      String? shortTitle,
+      @JsonKey(name: '_shortTitle')
+          Element? shortTitleElement,
+      String? subtitle,
+      @JsonKey(name: '_subtitle')
+          Element? subtitleElement,
+      List<Annotation>? note,
+      Boolean? actual,
+      @JsonKey(name: '_actual')
+          Element? actualElement,
+      Code? characteristicCombination,
+      @JsonKey(name: '_characteristicCombination')
+          Element? characteristicCombinationElement,
+      List<EvidenceVariableCharacteristic>? characteristic,
+      Code? handling,
+      @JsonKey(name: '_handling')
+          Element? handlingElement,
+      List<EvidenceVariableCategory>? category});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3599,16 +3410,17 @@ class _$EvidenceVariableCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
-    Object? shortTitle = freezed,
-    Object? shortTitleElement = freezed,
-    Object? subtitle = freezed,
-    Object? subtitleElement = freezed,
-    Object? note = freezed,
+    Object? topic = freezed,
     Object? author = freezed,
     Object? editor = freezed,
     Object? reviewer = freezed,
     Object? endorser = freezed,
     Object? relatedArtifact = freezed,
+    Object? shortTitle = freezed,
+    Object? shortTitleElement = freezed,
+    Object? subtitle = freezed,
+    Object? subtitleElement = freezed,
+    Object? note = freezed,
     Object? actual = freezed,
     Object? actualElement = freezed,
     Object? characteristicCombination = freezed,
@@ -3702,7 +3514,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3787,26 +3599,10 @@ class _$EvidenceVariableCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      shortTitle: shortTitle == freezed
-          ? _value.shortTitle
-          : shortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      shortTitleElement: shortTitleElement == freezed
-          ? _value.shortTitleElement
-          : shortTitleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      subtitle: subtitle == freezed
-          ? _value.subtitle
-          : subtitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      subtitleElement: subtitleElement == freezed
-          ? _value.subtitleElement
-          : subtitleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       author: author == freezed
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -3827,6 +3623,26 @@ class _$EvidenceVariableCopyWithImpl<$Res>
           ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
+      shortTitle: shortTitle == freezed
+          ? _value.shortTitle
+          : shortTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shortTitleElement: shortTitleElement == freezed
+          ? _value.shortTitleElement
+          : shortTitleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subtitle: subtitle == freezed
+          ? _value.subtitle
+          : subtitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
       actual: actual == freezed
           ? _value.actual
           : actual // ignore: cast_nullable_to_non_nullable
@@ -3838,7 +3654,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       characteristicCombination: characteristicCombination == freezed
           ? _value.characteristicCombination
           : characteristicCombination // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableCharacteristicCombination?,
+              as Code?,
       characteristicCombinationElement: characteristicCombinationElement ==
               freezed
           ? _value.characteristicCombinationElement
@@ -3851,7 +3667,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       handling: handling == freezed
           ? _value.handling
           : handling // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableHandling?,
+              as Code?,
       handlingElement: handlingElement == freezed
           ? _value.handlingElement
           : handlingElement // ignore: cast_nullable_to_non_nullable
@@ -4125,96 +3941,90 @@ abstract class _$EvidenceVariableCopyWith<$Res>
           _EvidenceVariable value, $Res Function(_EvidenceVariable) then) =
       __$EvidenceVariableCopyWithImpl<$Res>;
   @override
-  $Res
-      call(
-          {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-              R5ResourceType resourceType,
-          Id? id,
-          Meta? meta,
-          FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element? implicitRulesElement,
-          Code? language,
-          @JsonKey(name: '_language')
-              Element? languageElement,
-          Narrative? text,
-          List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          FhirUri? url,
-          @JsonKey(name: '_url')
-              Element? urlElement,
-          List<Identifier>? identifier,
-          String? version,
-          @JsonKey(name: '_version')
-              Element? versionElement,
-          String? name,
-          @JsonKey(name: '_name')
-              Element? nameElement,
-          String? title,
-          @JsonKey(name: '_title')
-              Element? titleElement,
-          @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-              EvidenceVariableStatus? status,
-          @JsonKey(name: '_status')
-              Element? statusElement,
-          Boolean? experimental,
-          @JsonKey(name: '_experimental')
-              Element? experimentalElement,
-          FhirDateTime? date,
-          @JsonKey(name: '_date')
-              Element? dateElement,
-          String? publisher,
-          @JsonKey(name: '_publisher')
-              Element? publisherElement,
-          List<ContactDetail>? contact,
-          Markdown? description,
-          @JsonKey(name: '_description')
-              Element? descriptionElement,
-          List<UsageContext>? useContext,
-          List<CodeableConcept>? jurisdiction,
-          Markdown? purpose,
-          @JsonKey(name: '_purpose')
-              Element? purposeElement,
-          Markdown? copyright,
-          @JsonKey(name: '_copyright')
-              Element? copyrightElement,
-          Date? approvalDate,
-          @JsonKey(name: '_approvalDate')
-              Element? approvalDateElement,
-          Date? lastReviewDate,
-          @JsonKey(name: '_lastReviewDate')
-              Element? lastReviewDateElement,
-          Period? effectivePeriod,
-          String? shortTitle,
-          @JsonKey(name: '_shortTitle')
-              Element? shortTitleElement,
-          String? subtitle,
-          @JsonKey(name: '_subtitle')
-              Element? subtitleElement,
-          List<Annotation>? note,
-          List<ContactDetail>? author,
-          List<ContactDetail>? editor,
-          List<ContactDetail>? reviewer,
-          List<ContactDetail>? endorser,
-          List<RelatedArtifact>? relatedArtifact,
-          Boolean? actual,
-          @JsonKey(name: '_actual')
-              Element? actualElement,
-          @JsonKey(
-              unknownEnumValue:
-                  EvidenceVariableCharacteristicCombination.unknown)
-              EvidenceVariableCharacteristicCombination?
-                  characteristicCombination,
-          @JsonKey(name: '_characteristicCombination')
-              Element? characteristicCombinationElement,
-          List<EvidenceVariableCharacteristic>? characteristic,
-          @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-              EvidenceVariableHandling? handling,
-          @JsonKey(name: '_handling')
-              Element? handlingElement,
-          List<EvidenceVariableCategory>? category});
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
+          R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      FhirUri? url,
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      List<Identifier>? identifier,
+      String? version,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      String? title,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      Code? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      Boolean? experimental,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
+      FhirDateTime? date,
+      @JsonKey(name: '_date')
+          Element? dateElement,
+      String? publisher,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      List<ContactDetail>? contact,
+      Markdown? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
+      Markdown? copyright,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
+      Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
+      String? shortTitle,
+      @JsonKey(name: '_shortTitle')
+          Element? shortTitleElement,
+      String? subtitle,
+      @JsonKey(name: '_subtitle')
+          Element? subtitleElement,
+      List<Annotation>? note,
+      Boolean? actual,
+      @JsonKey(name: '_actual')
+          Element? actualElement,
+      Code? characteristicCombination,
+      @JsonKey(name: '_characteristicCombination')
+          Element? characteristicCombinationElement,
+      List<EvidenceVariableCharacteristic>? characteristic,
+      Code? handling,
+      @JsonKey(name: '_handling')
+          Element? handlingElement,
+      List<EvidenceVariableCategory>? category});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -4319,16 +4129,17 @@ class __$EvidenceVariableCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
-    Object? shortTitle = freezed,
-    Object? shortTitleElement = freezed,
-    Object? subtitle = freezed,
-    Object? subtitleElement = freezed,
-    Object? note = freezed,
+    Object? topic = freezed,
     Object? author = freezed,
     Object? editor = freezed,
     Object? reviewer = freezed,
     Object? endorser = freezed,
     Object? relatedArtifact = freezed,
+    Object? shortTitle = freezed,
+    Object? shortTitleElement = freezed,
+    Object? subtitle = freezed,
+    Object? subtitleElement = freezed,
+    Object? note = freezed,
     Object? actual = freezed,
     Object? actualElement = freezed,
     Object? characteristicCombination = freezed,
@@ -4422,7 +4233,7 @@ class __$EvidenceVariableCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4507,26 +4318,10 @@ class __$EvidenceVariableCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      shortTitle: shortTitle == freezed
-          ? _value.shortTitle
-          : shortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      shortTitleElement: shortTitleElement == freezed
-          ? _value.shortTitleElement
-          : shortTitleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      subtitle: subtitle == freezed
-          ? _value.subtitle
-          : subtitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      subtitleElement: subtitleElement == freezed
-          ? _value.subtitleElement
-          : subtitleElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      note: note == freezed
-          ? _value.note
-          : note // ignore: cast_nullable_to_non_nullable
-              as List<Annotation>?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       author: author == freezed
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -4547,6 +4342,26 @@ class __$EvidenceVariableCopyWithImpl<$Res>
           ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
+      shortTitle: shortTitle == freezed
+          ? _value.shortTitle
+          : shortTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      shortTitleElement: shortTitleElement == freezed
+          ? _value.shortTitleElement
+          : shortTitleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      subtitle: subtitle == freezed
+          ? _value.subtitle
+          : subtitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      subtitleElement: subtitleElement == freezed
+          ? _value.subtitleElement
+          : subtitleElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
       actual: actual == freezed
           ? _value.actual
           : actual // ignore: cast_nullable_to_non_nullable
@@ -4558,7 +4373,7 @@ class __$EvidenceVariableCopyWithImpl<$Res>
       characteristicCombination: characteristicCombination == freezed
           ? _value.characteristicCombination
           : characteristicCombination // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableCharacteristicCombination?,
+              as Code?,
       characteristicCombinationElement: characteristicCombinationElement ==
               freezed
           ? _value.characteristicCombinationElement
@@ -4571,7 +4386,7 @@ class __$EvidenceVariableCopyWithImpl<$Res>
       handling: handling == freezed
           ? _value.handling
           : handling // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableHandling?,
+              as Code?,
       handlingElement: handlingElement == freezed
           ? _value.handlingElement
           : handlingElement // ignore: cast_nullable_to_non_nullable
@@ -4616,8 +4431,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -4648,6 +4462,12 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
+      this.topic,
+      this.author,
+      this.editor,
+      this.reviewer,
+      this.endorser,
+      this.relatedArtifact,
       this.shortTitle,
       @JsonKey(name: '_shortTitle')
           this.shortTitleElement,
@@ -4655,21 +4475,14 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
       this.note,
-      this.author,
-      this.editor,
-      this.reviewer,
-      this.endorser,
-      this.relatedArtifact,
       this.actual,
       @JsonKey(name: '_actual')
           this.actualElement,
-      @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
-          this.characteristicCombination,
+      this.characteristicCombination,
       @JsonKey(name: '_characteristicCombination')
           this.characteristicCombinationElement,
       this.characteristic,
-      @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-          this.handling,
+      this.handling,
       @JsonKey(name: '_handling')
           this.handlingElement,
       this.category})
@@ -4727,8 +4540,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-  final EvidenceVariableStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -4781,6 +4593,18 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @override
   final Period? effectivePeriod;
   @override
+  final List<CodeableConcept>? topic;
+  @override
+  final List<ContactDetail>? author;
+  @override
+  final List<ContactDetail>? editor;
+  @override
+  final List<ContactDetail>? reviewer;
+  @override
+  final List<ContactDetail>? endorser;
+  @override
+  final List<RelatedArtifact>? relatedArtifact;
+  @override
   final String? shortTitle;
   @override
   @JsonKey(name: '_shortTitle')
@@ -4793,31 +4617,19 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @override
   final List<Annotation>? note;
   @override
-  final List<ContactDetail>? author;
-  @override
-  final List<ContactDetail>? editor;
-  @override
-  final List<ContactDetail>? reviewer;
-  @override
-  final List<ContactDetail>? endorser;
-  @override
-  final List<RelatedArtifact>? relatedArtifact;
-  @override
   final Boolean? actual;
   @override
   @JsonKey(name: '_actual')
   final Element? actualElement;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
-  final EvidenceVariableCharacteristicCombination? characteristicCombination;
+  final Code? characteristicCombination;
   @override
   @JsonKey(name: '_characteristicCombination')
   final Element? characteristicCombinationElement;
   @override
   final List<EvidenceVariableCharacteristic>? characteristic;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-  final EvidenceVariableHandling? handling;
+  final Code? handling;
   @override
   @JsonKey(name: '_handling')
   final Element? handlingElement;
@@ -4826,7 +4638,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   @override
   String toString() {
-    return 'EvidenceVariable(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, note: $note, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, actual: $actual, actualElement: $actualElement, characteristicCombination: $characteristicCombination, characteristicCombinationElement: $characteristicCombinationElement, characteristic: $characteristic, handling: $handling, handlingElement: $handlingElement, category: $category)';
+    return 'EvidenceVariable(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, note: $note, actual: $actual, actualElement: $actualElement, characteristicCombination: $characteristicCombination, characteristicCombinationElement: $characteristicCombinationElement, characteristic: $characteristic, handling: $handling, handlingElement: $handlingElement, category: $category)';
   }
 
   @override
@@ -4918,16 +4730,17 @@ class _$_EvidenceVariable extends _EvidenceVariable {
             (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
             (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
             (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.shortTitle, shortTitle) || const DeepCollectionEquality().equals(other.shortTitle, shortTitle)) &&
-            (identical(other.shortTitleElement, shortTitleElement) || const DeepCollectionEquality().equals(other.shortTitleElement, shortTitleElement)) &&
-            (identical(other.subtitle, subtitle) || const DeepCollectionEquality().equals(other.subtitle, subtitle)) &&
-            (identical(other.subtitleElement, subtitleElement) || const DeepCollectionEquality().equals(other.subtitleElement, subtitleElement)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
             (identical(other.author, author) || const DeepCollectionEquality().equals(other.author, author)) &&
             (identical(other.editor, editor) || const DeepCollectionEquality().equals(other.editor, editor)) &&
             (identical(other.reviewer, reviewer) || const DeepCollectionEquality().equals(other.reviewer, reviewer)) &&
             (identical(other.endorser, endorser) || const DeepCollectionEquality().equals(other.endorser, endorser)) &&
             (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
+            (identical(other.shortTitle, shortTitle) || const DeepCollectionEquality().equals(other.shortTitle, shortTitle)) &&
+            (identical(other.shortTitleElement, shortTitleElement) || const DeepCollectionEquality().equals(other.shortTitleElement, shortTitleElement)) &&
+            (identical(other.subtitle, subtitle) || const DeepCollectionEquality().equals(other.subtitle, subtitle)) &&
+            (identical(other.subtitleElement, subtitleElement) || const DeepCollectionEquality().equals(other.subtitleElement, subtitleElement)) &&
+            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
             (identical(other.actual, actual) || const DeepCollectionEquality().equals(other.actual, actual)) &&
             (identical(other.actualElement, actualElement) || const DeepCollectionEquality().equals(other.actualElement, actualElement)) &&
             (identical(other.characteristicCombination, characteristicCombination) || const DeepCollectionEquality().equals(other.characteristicCombination, characteristicCombination)) &&
@@ -4983,16 +4796,17 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       const DeepCollectionEquality().hash(lastReviewDate) ^
       const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
-      const DeepCollectionEquality().hash(shortTitle) ^
-      const DeepCollectionEquality().hash(shortTitleElement) ^
-      const DeepCollectionEquality().hash(subtitle) ^
-      const DeepCollectionEquality().hash(subtitleElement) ^
-      const DeepCollectionEquality().hash(note) ^
+      const DeepCollectionEquality().hash(topic) ^
       const DeepCollectionEquality().hash(author) ^
       const DeepCollectionEquality().hash(editor) ^
       const DeepCollectionEquality().hash(reviewer) ^
       const DeepCollectionEquality().hash(endorser) ^
       const DeepCollectionEquality().hash(relatedArtifact) ^
+      const DeepCollectionEquality().hash(shortTitle) ^
+      const DeepCollectionEquality().hash(shortTitleElement) ^
+      const DeepCollectionEquality().hash(subtitle) ^
+      const DeepCollectionEquality().hash(subtitleElement) ^
+      const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(actual) ^
       const DeepCollectionEquality().hash(actualElement) ^
       const DeepCollectionEquality().hash(characteristicCombination) ^
@@ -5043,8 +4857,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-          EvidenceVariableStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -5075,6 +4888,12 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       String? shortTitle,
       @JsonKey(name: '_shortTitle')
           Element? shortTitleElement,
@@ -5082,21 +4901,14 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       List<Annotation>? note,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
       Boolean? actual,
       @JsonKey(name: '_actual')
           Element? actualElement,
-      @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
-          EvidenceVariableCharacteristicCombination? characteristicCombination,
+      Code? characteristicCombination,
       @JsonKey(name: '_characteristicCombination')
           Element? characteristicCombinationElement,
       List<EvidenceVariableCharacteristic>? characteristic,
-      @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-          EvidenceVariableHandling? handling,
+      Code? handling,
       @JsonKey(name: '_handling')
           Element? handlingElement,
       List<EvidenceVariableCategory>? category}) = _$_EvidenceVariable;
@@ -5155,8 +4967,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-  EvidenceVariableStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -5209,17 +5020,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @override
   Period? get effectivePeriod => throw _privateConstructorUsedError;
   @override
-  String? get shortTitle => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_shortTitle')
-  Element? get shortTitleElement => throw _privateConstructorUsedError;
-  @override
-  String? get subtitle => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_subtitle')
-  Element? get subtitleElement => throw _privateConstructorUsedError;
-  @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
   @override
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
   @override
@@ -5232,14 +5033,24 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
   @override
+  String? get shortTitle => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_shortTitle')
+  Element? get shortTitleElement => throw _privateConstructorUsedError;
+  @override
+  String? get subtitle => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_subtitle')
+  Element? get subtitleElement => throw _privateConstructorUsedError;
+  @override
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  @override
   Boolean? get actual => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_actual')
   Element? get actualElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
-  EvidenceVariableCharacteristicCombination? get characteristicCombination =>
-      throw _privateConstructorUsedError;
+  Code? get characteristicCombination => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_characteristicCombination')
   Element? get characteristicCombinationElement =>
@@ -5248,8 +5059,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   List<EvidenceVariableCharacteristic>? get characteristic =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-  EvidenceVariableHandling? get handling => throw _privateConstructorUsedError;
+  Code? get handling => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_handling')
   Element? get handlingElement => throw _privateConstructorUsedError;
@@ -5271,33 +5081,29 @@ EvidenceVariableCharacteristic _$EvidenceVariableCharacteristicFromJson(
 class _$EvidenceVariableCharacteristicTearOff {
   const _$EvidenceVariableCharacteristicTearOff();
 
-  _EvidenceVariableCharacteristic
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? description,
-          @JsonKey(name: '_description')
-              Element? descriptionElement,
-          Reference? definitionReference,
-          Canonical? definitionCanonical,
-          @JsonKey(name: '_definitionCanonical')
-              Element? definitionCanonicalElement,
-          CodeableConcept? definitionCodeableConcept,
-          Expression? definitionExpression,
-          CodeableConcept? method,
-          Reference? device,
-          Boolean? exclude,
-          @JsonKey(name: '_exclude')
-              Element? excludeElement,
-          EvidenceVariableTimeFromStart? timeFromStart,
-          @JsonKey(
-              unknownEnumValue:
-                  EvidenceVariableCharacteristicGroupMeasure.unknown)
-              EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
-          @JsonKey(name: '_groupMeasure')
-              Element? groupMeasureElement}) {
+  _EvidenceVariableCharacteristic call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      Reference? definitionReference,
+      Canonical? definitionCanonical,
+      @JsonKey(name: '_definitionCanonical')
+          Element? definitionCanonicalElement,
+      CodeableConcept? definitionCodeableConcept,
+      Expression? definitionExpression,
+      CodeableConcept? method,
+      Reference? device,
+      Boolean? exclude,
+      @JsonKey(name: '_exclude')
+          Element? excludeElement,
+      EvidenceVariableTimeFromStart? timeFromStart,
+      Code? groupMeasure,
+      @JsonKey(name: '_groupMeasure')
+          Element? groupMeasureElement}) {
     return _EvidenceVariableCharacteristic(
       id: id,
       extension_: extension_,
@@ -5352,9 +5158,7 @@ mixin _$EvidenceVariableCharacteristic {
   Element? get excludeElement => throw _privateConstructorUsedError;
   EvidenceVariableTimeFromStart? get timeFromStart =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-  EvidenceVariableCharacteristicGroupMeasure? get groupMeasure =>
-      throw _privateConstructorUsedError;
+  Code? get groupMeasure => throw _privateConstructorUsedError;
   @JsonKey(name: '_groupMeasure')
   Element? get groupMeasureElement => throw _privateConstructorUsedError;
 
@@ -5370,33 +5174,29 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
           EvidenceVariableCharacteristic value,
           $Res Function(EvidenceVariableCharacteristic) then) =
       _$EvidenceVariableCharacteristicCopyWithImpl<$Res>;
-  $Res
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? description,
-          @JsonKey(name: '_description')
-              Element? descriptionElement,
-          Reference? definitionReference,
-          Canonical? definitionCanonical,
-          @JsonKey(name: '_definitionCanonical')
-              Element? definitionCanonicalElement,
-          CodeableConcept? definitionCodeableConcept,
-          Expression? definitionExpression,
-          CodeableConcept? method,
-          Reference? device,
-          Boolean? exclude,
-          @JsonKey(name: '_exclude')
-              Element? excludeElement,
-          EvidenceVariableTimeFromStart? timeFromStart,
-          @JsonKey(
-              unknownEnumValue:
-                  EvidenceVariableCharacteristicGroupMeasure.unknown)
-              EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
-          @JsonKey(name: '_groupMeasure')
-              Element? groupMeasureElement});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      Reference? definitionReference,
+      Canonical? definitionCanonical,
+      @JsonKey(name: '_definitionCanonical')
+          Element? definitionCanonicalElement,
+      CodeableConcept? definitionCodeableConcept,
+      Expression? definitionExpression,
+      CodeableConcept? method,
+      Reference? device,
+      Boolean? exclude,
+      @JsonKey(name: '_exclude')
+          Element? excludeElement,
+      EvidenceVariableTimeFromStart? timeFromStart,
+      Code? groupMeasure,
+      @JsonKey(name: '_groupMeasure')
+          Element? groupMeasureElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $ReferenceCopyWith<$Res>? get definitionReference;
@@ -5503,7 +5303,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       groupMeasure: groupMeasure == freezed
           ? _value.groupMeasure
           : groupMeasure // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableCharacteristicGroupMeasure?,
+              as Code?,
       groupMeasureElement: groupMeasureElement == freezed
           ? _value.groupMeasureElement
           : groupMeasureElement // ignore: cast_nullable_to_non_nullable
@@ -5632,33 +5432,29 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
           $Res Function(_EvidenceVariableCharacteristic) then) =
       __$EvidenceVariableCharacteristicCopyWithImpl<$Res>;
   @override
-  $Res
-      call(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? description,
-          @JsonKey(name: '_description')
-              Element? descriptionElement,
-          Reference? definitionReference,
-          Canonical? definitionCanonical,
-          @JsonKey(name: '_definitionCanonical')
-              Element? definitionCanonicalElement,
-          CodeableConcept? definitionCodeableConcept,
-          Expression? definitionExpression,
-          CodeableConcept? method,
-          Reference? device,
-          Boolean? exclude,
-          @JsonKey(name: '_exclude')
-              Element? excludeElement,
-          EvidenceVariableTimeFromStart? timeFromStart,
-          @JsonKey(
-              unknownEnumValue:
-                  EvidenceVariableCharacteristicGroupMeasure.unknown)
-              EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
-          @JsonKey(name: '_groupMeasure')
-              Element? groupMeasureElement});
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      Reference? definitionReference,
+      Canonical? definitionCanonical,
+      @JsonKey(name: '_definitionCanonical')
+          Element? definitionCanonicalElement,
+      CodeableConcept? definitionCodeableConcept,
+      Expression? definitionExpression,
+      CodeableConcept? method,
+      Reference? device,
+      Boolean? exclude,
+      @JsonKey(name: '_exclude')
+          Element? excludeElement,
+      EvidenceVariableTimeFromStart? timeFromStart,
+      Code? groupMeasure,
+      @JsonKey(name: '_groupMeasure')
+          Element? groupMeasureElement});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -5779,7 +5575,7 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       groupMeasure: groupMeasure == freezed
           ? _value.groupMeasure
           : groupMeasure // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableCharacteristicGroupMeasure?,
+              as Code?,
       groupMeasureElement: groupMeasureElement == freezed
           ? _value.groupMeasureElement
           : groupMeasureElement // ignore: cast_nullable_to_non_nullable
@@ -5794,28 +5590,22 @@ class _$_EvidenceVariableCharacteristic
     extends _EvidenceVariableCharacteristic {
   _$_EvidenceVariableCharacteristic(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.definitionReference,
       this.definitionCanonical,
-      @JsonKey(name: '_definitionCanonical')
-          this.definitionCanonicalElement,
+      @JsonKey(name: '_definitionCanonical') this.definitionCanonicalElement,
       this.definitionCodeableConcept,
       this.definitionExpression,
       this.method,
       this.device,
       this.exclude,
-      @JsonKey(name: '_exclude')
-          this.excludeElement,
+      @JsonKey(name: '_exclude') this.excludeElement,
       this.timeFromStart,
-      @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-          this.groupMeasure,
-      @JsonKey(name: '_groupMeasure')
-          this.groupMeasureElement})
+      this.groupMeasure,
+      @JsonKey(name: '_groupMeasure') this.groupMeasureElement})
       : super._();
 
   factory _$_EvidenceVariableCharacteristic.fromJson(
@@ -5857,8 +5647,7 @@ class _$_EvidenceVariableCharacteristic
   @override
   final EvidenceVariableTimeFromStart? timeFromStart;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-  final EvidenceVariableCharacteristicGroupMeasure? groupMeasure;
+  final Code? groupMeasure;
   @override
   @JsonKey(name: '_groupMeasure')
   final Element? groupMeasureElement;
@@ -5979,8 +5768,7 @@ abstract class _EvidenceVariableCharacteristic
       @JsonKey(name: '_exclude')
           Element? excludeElement,
       EvidenceVariableTimeFromStart? timeFromStart,
-      @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-          EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
+      Code? groupMeasure,
       @JsonKey(name: '_groupMeasure')
           Element? groupMeasureElement}) = _$_EvidenceVariableCharacteristic;
   _EvidenceVariableCharacteristic._() : super._();
@@ -6026,9 +5814,7 @@ abstract class _EvidenceVariableCharacteristic
   EvidenceVariableTimeFromStart? get timeFromStart =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-  EvidenceVariableCharacteristicGroupMeasure? get groupMeasure =>
-      throw _privateConstructorUsedError;
+  Code? get groupMeasure => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_groupMeasure')
   Element? get groupMeasureElement => throw _privateConstructorUsedError;

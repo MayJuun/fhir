@@ -37,7 +37,7 @@ class Evidence with Resource, _$Evidence {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: EvidenceStatus.unknown) EvidenceStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -59,16 +59,18 @@ class Evidence with Resource, _$Evidence {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
+    List<CodeableConcept>? topic,
     List<ContactDetail>? author,
     List<ContactDetail>? editor,
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
+    Reference? citeAsReference,
+    Markdown? citeAsMarkdown,
+    @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
     Markdown? assertion,
     @JsonKey(name: '_assertion') Element? assertionElement,
-    // ToDo
-    //  List<Annotation> note,
-    Annotation? note,
+    List<Annotation>? note,
     required List<EvidenceVariableDefinition> variableDefinition,
     CodeableConcept? synthesisType,
     CodeableConcept? studyType,
@@ -137,11 +139,12 @@ class EvidenceCertainty with _$EvidenceCertainty {
     List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    // ToDo
-    // List<Annotation> note,
-    Annotation? note,
-    List<CodeableConcept>? rating,
-    List<EvidenceCertaintySubcomponent>? certaintySubcomponent,
+    List<Annotation>? note,
+    CodeableConcept? type,
+    CodeableConcept? rating,
+    String? rater,
+    @JsonKey(name: '_rater') Element? raterElement,
+    List<EvidenceCertainty>? subcomponent,
   }) = _EvidenceCertainty;
 
   /// Produces a Yaml formatted String version of the object
@@ -159,40 +162,6 @@ class EvidenceCertainty with _$EvidenceCertainty {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
       _$EvidenceCertaintyFromJson(json);
-}
-
-@freezed
-class EvidenceCertaintySubcomponent with _$EvidenceCertaintySubcomponent {
-  EvidenceCertaintySubcomponent._();
-  factory EvidenceCertaintySubcomponent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    // ToDo
-    // List<Annotation> note,
-    Annotation? note,
-    List<CodeableConcept>? type,
-    List<CodeableConcept>? rating,
-  }) = _EvidenceCertaintySubcomponent;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EvidenceCertaintySubcomponent.fromYaml(dynamic yaml) => yaml is String
-      ? EvidenceCertaintySubcomponent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? EvidenceCertaintySubcomponent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw ArgumentError(
-              'EvidenceCertaintySubcomponent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceCertaintySubcomponent.fromJson(Map<String, dynamic> json) =>
-      _$EvidenceCertaintySubcomponentFromJson(json);
 }
 
 @freezed
@@ -221,8 +190,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-        EvidenceVariableStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -244,25 +212,24 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    String? shortTitle,
-    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    String? subtitle,
-    @JsonKey(name: '_subtitle') Element? subtitleElement,
-    List<Annotation>? note,
+    List<CodeableConcept>? topic,
     List<ContactDetail>? author,
     List<ContactDetail>? editor,
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
+    String? shortTitle,
+    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    List<Annotation>? note,
     Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
-    @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
-        EvidenceVariableCharacteristicCombination? characteristicCombination,
+    Code? characteristicCombination,
     @JsonKey(name: '_characteristicCombination')
         Element? characteristicCombinationElement,
     List<EvidenceVariableCharacteristic>? characteristic,
-    @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-        EvidenceVariableHandling? handling,
+    Code? handling,
     @JsonKey(name: '_handling') Element? handlingElement,
     List<EvidenceVariableCategory>? category,
   }) = _EvidenceVariable;
@@ -303,8 +270,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     Boolean? exclude,
     @JsonKey(name: '_exclude') Element? excludeElement,
     EvidenceVariableTimeFromStart? timeFromStart,
-    @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-        EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
+    Code? groupMeasure,
     @JsonKey(name: '_groupMeasure') Element? groupMeasureElement,
   }) = _EvidenceVariableCharacteristic;
 
@@ -321,7 +287,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'EvidenceVariableCharacteristic cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>

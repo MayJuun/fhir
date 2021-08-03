@@ -29,7 +29,7 @@ class Account with Resource, _$Account {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     String? name,
@@ -139,10 +139,9 @@ class ChargeItem with Resource, _$ChargeItem {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     List<FhirUri>? definitionUri,
-    @JsonKey(name: '_definitionUri') List<Element?>? definitionUriElement,
+    @JsonKey(name: '_definitionUri') List<Element>? definitionUriElement,
     List<Canonical>? definitionCanonical,
-    @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
-        ChargeItemStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? partOf,
     required CodeableConcept code,
@@ -246,8 +245,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
-        ChargeItemDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -269,8 +267,14 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
     List<FhirUri>? derivedFromUri,
-    @JsonKey(name: '_derivedFromUri') List<Element?>? derivedFromUriElement,
+    @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
     List<Canonical>? partOf,
     List<Canonical>? replaces,
     CodeableConcept? code,
@@ -325,8 +329,9 @@ class ChargeItemDefinitionApplicability
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ChargeItemDefinitionApplicability cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ChargeItemDefinitionApplicability.fromJson(
           Map<String, dynamic> json) =>
       _$ChargeItemDefinitionApplicabilityFromJson(json);
@@ -357,8 +362,9 @@ class ChargeItemDefinitionPropertyGroup
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ChargeItemDefinitionPropertyGroup cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ChargeItemDefinitionPropertyGroup.fromJson(
           Map<String, dynamic> json) =>
       _$ChargeItemDefinitionPropertyGroupFromJson(json);
@@ -393,8 +399,9 @@ class ChargeItemDefinitionPriceComponent
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ChargeItemDefinitionPriceComponent cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ChargeItemDefinitionPriceComponent.fromJson(
           Map<String, dynamic> json) =>
       _$ChargeItemDefinitionPriceComponentFromJson(json);
@@ -444,7 +451,7 @@ class Contract with Resource, _$Contract {
     String? subtitle,
     @JsonKey(name: '_subtitle') Element? subtitleElement,
     List<String>? alias,
-    @JsonKey(name: '_alias') List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element>? aliasElement,
     Reference? author,
     CodeableConcept? scope,
     CodeableConcept? topicCodeableConcept,
@@ -565,7 +572,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<UnsignedInt>? number,
-    @JsonKey(name: '_number') List<Element?>? numberElement,
+    @JsonKey(name: '_number') List<Element>? numberElement,
     required Coding classification,
     List<Coding>? category,
     List<Coding>? control,
@@ -605,7 +612,7 @@ class ContractOffer with _$ContractOffer {
     String? text,
     @JsonKey(name: '_text') Element? textElement,
     List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    @JsonKey(name: '_linkId') List<Element>? linkIdElement,
     List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
         List<Element>? securityLabelNumberElement,
@@ -723,7 +730,7 @@ class ContractAsset with _$ContractAsset {
     String? text,
     @JsonKey(name: '_text') Element? textElement,
     List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    @JsonKey(name: '_linkId') List<Element>? linkIdElement,
     List<ContractAnswer>? answer,
     List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
@@ -804,7 +811,7 @@ class ContractValuedItem with _$ContractValuedItem {
     Reference? responsible,
     Reference? recipient,
     List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    @JsonKey(name: '_linkId') List<Element>? linkIdElement,
     List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
         List<Element>? securityLabelNumberElement,
@@ -840,26 +847,26 @@ class ContractAction with _$ContractAction {
     List<ContractSubject>? subject,
     required CodeableConcept intent,
     List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    @JsonKey(name: '_linkId') List<Element>? linkIdElement,
     required CodeableConcept status,
     Reference? context,
     List<String>? contextLinkId,
-    @JsonKey(name: '_contextLinkId') List<Element?>? contextLinkIdElement,
+    @JsonKey(name: '_contextLinkId') List<Element>? contextLinkIdElement,
     FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
     Period? occurrencePeriod,
     Timing? occurrenceTiming,
     List<Reference>? requester,
     List<String>? requesterLinkId,
-    @JsonKey(name: '_requesterLinkId') List<Element?>? requesterLinkIdElement,
+    @JsonKey(name: '_requesterLinkId') List<Element>? requesterLinkIdElement,
     List<CodeableConcept>? performerType,
     CodeableConcept? performerRole,
     Reference? performer,
     List<String>? performerLinkId,
-    @JsonKey(name: '_performerLinkId') List<Element?>? performerLinkIdElement,
+    @JsonKey(name: '_performerLinkId') List<Element>? performerLinkIdElement,
     List<CodeableReference>? reason,
     List<String>? reasonLinkId,
-    @JsonKey(name: '_reasonLinkId') List<Element?>? reasonLinkIdElement,
+    @JsonKey(name: '_reasonLinkId') List<Element>? reasonLinkIdElement,
     List<Annotation>? note,
     List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
@@ -1042,8 +1049,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
-        ExplanationOfBenefitStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept type,
     CodeableConcept? subType,
@@ -1072,7 +1078,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
     List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
+    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
     List<Period>? preAuthRefPeriod,
     List<ExplanationOfBenefitCareTeam>? careTeam,
     List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
@@ -1242,8 +1248,9 @@ class ExplanationOfBenefitSupportingInfo
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ExplanationOfBenefitSupportingInfo cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
       _$ExplanationOfBenefitSupportingInfoFromJson(json);
@@ -1329,7 +1336,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
     @JsonKey(name: '_focal') Element? focalElement,
     required Reference coverage,
     List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
+    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
   }) = _ExplanationOfBenefitInsurance;
 
   /// Produces a Yaml formatted String version of the object
@@ -1392,7 +1399,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     PositiveInt? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<PositiveInt>? careTeamSequence,
-    @JsonKey(name: '_careTeamSequence') List<Element?>? careTeamSequenceElement,
+    @JsonKey(name: '_careTeamSequence') List<Element>? careTeamSequenceElement,
     List<PositiveInt>? diagnosisSequence,
     @JsonKey(name: '_diagnosisSequence')
         List<Element>? diagnosisSequenceElement,
@@ -1423,7 +1430,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     List<CodeableConcept>? subSite,
     List<Reference>? encounter,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
     List<ExplanationOfBenefitDetail>? detail,
   }) = _ExplanationOfBenefitItem;
@@ -1473,8 +1480,9 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ExplanationOfBenefitAdjudication cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitAdjudication.fromJson(
           Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAdjudicationFromJson(json);
@@ -1501,7 +1509,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
     Money? net,
     List<Reference>? udi,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
     List<ExplanationOfBenefitSubDetail>? subDetail,
   }) = _ExplanationOfBenefitDetail;
@@ -1545,7 +1553,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
     Money? net,
     List<Reference>? udi,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
   }) = _ExplanationOfBenefitSubDetail;
 
@@ -1575,9 +1583,9 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<PositiveInt>? itemSequence,
-    @JsonKey(name: '_itemSequence') List<Element?>? itemSequenceElement,
+    @JsonKey(name: '_itemSequence') List<Element>? itemSequenceElement,
     List<PositiveInt>? detailSequence,
-    @JsonKey(name: '_detailSequence') List<Element?>? detailSequenceElement,
+    @JsonKey(name: '_detailSequence') List<Element>? detailSequenceElement,
     List<PositiveInt>? subDetailSequence,
     @JsonKey(name: '_subDetailSequence')
         List<Element>? subDetailSequenceElement,
@@ -1599,7 +1607,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     CodeableConcept? bodySite,
     List<CodeableConcept>? subSite,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
     List<ExplanationOfBenefitDetail1>? detail,
   }) = _ExplanationOfBenefitAddItem;
@@ -1637,7 +1645,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
     List<ExplanationOfBenefitSubDetail1>? subDetail,
   }) = _ExplanationOfBenefitDetail1;
@@ -1675,7 +1683,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
   }) = _ExplanationOfBenefitSubDetail1;
 
@@ -1692,7 +1700,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ExplanationOfBenefitSubDetail1 cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitSubDetail1.fromJson(Map<String, dynamic> json) =>
@@ -1771,8 +1779,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
     List<FhirExtension>? modifierExtension,
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
-    @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
-        ExplanationOfBenefitProcessNoteType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -1792,7 +1799,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ExplanationOfBenefitProcessNote cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
@@ -1833,8 +1840,9 @@ class ExplanationOfBenefitBenefitBalance
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ExplanationOfBenefitBenefitBalance cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
       _$ExplanationOfBenefitBenefitBalanceFromJson(json);
@@ -1894,14 +1902,13 @@ class InsurancePlan with Resource, _$InsurancePlan {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
-        InsurancePlanStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? type,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? alias,
-    @JsonKey(name: '_alias') List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element>? aliasElement,
     Period? period,
     Reference? ownedBy,
     Reference? administeredBy,

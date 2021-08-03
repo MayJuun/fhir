@@ -81,7 +81,7 @@ class DataRequirement with _$DataRequirement {
     CodeableConcept? subjectCodeableConcept,
     Reference? subjectReference,
     List<String>? mustSupport,
-    @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+    @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
     List<DataRequirementCodeFilter>? codeFilter,
     List<DataRequirementDateFilter>? dateFilter,
     PositiveInt? limit,

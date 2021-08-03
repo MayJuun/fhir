@@ -434,6 +434,7 @@ const _$QuantityComparatorEnumMap = {
   QuantityComparator.le: '<=',
   QuantityComparator.ge: '>=',
   QuantityComparator.gt: '>',
+  QuantityComparator.ad: 'ad',
   QuantityComparator.unknown: 'unknown',
 };
 
@@ -497,6 +498,7 @@ const _$DurationComparatorEnumMap = {
   DurationComparator.le: '<=',
   DurationComparator.ge: '>=',
   DurationComparator.gt: '>',
+  DurationComparator.ad: 'ad',
   DurationComparator.unknown: 'unknown',
 };
 
@@ -559,6 +561,7 @@ const _$DistanceComparatorEnumMap = {
   DistanceComparator.le: '<=',
   DistanceComparator.ge: '>=',
   DistanceComparator.gt: '>',
+  DistanceComparator.ad: 'ad',
   DistanceComparator.unknown: 'unknown',
 };
 
@@ -621,6 +624,7 @@ const _$CountComparatorEnumMap = {
   CountComparator.le: '<=',
   CountComparator.ge: '>=',
   CountComparator.gt: '>',
+  CountComparator.ad: 'ad',
   CountComparator.unknown: 'unknown',
 };
 
@@ -718,6 +722,7 @@ const _$AgeComparatorEnumMap = {
   AgeComparator.le: '<=',
   AgeComparator.ge: '>=',
   AgeComparator.gt: '>',
+  AgeComparator.ad: 'ad',
   AgeComparator.unknown: 'unknown',
 };
 
@@ -1000,13 +1005,13 @@ Map<String, dynamic> _$$_HumanNameToJson(_$_HumanName instance) {
   writeNotNull('_family', instance.familyElement?.toJson());
   writeNotNull('given', instance.given);
   writeNotNull(
-      '_given', instance.givenElement?.map((e) => e?.toJson()).toList());
+      '_given', instance.givenElement?.map((e) => e.toJson()).toList());
   writeNotNull('prefix', instance.prefix);
   writeNotNull(
-      '_prefix', instance.prefixElement?.map((e) => e?.toJson()).toList());
+      '_prefix', instance.prefixElement?.map((e) => e.toJson()).toList());
   writeNotNull('suffix', instance.suffix);
   writeNotNull(
-      '_suffix', instance.suffixElement?.map((e) => e?.toJson()).toList());
+      '_suffix', instance.suffixElement?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
@@ -1089,7 +1094,7 @@ Map<String, dynamic> _$$_AddressToJson(_$_Address instance) {
   writeNotNull('text', instance.text);
   writeNotNull('_text', instance.textElement?.toJson());
   writeNotNull('line', instance.line);
-  writeNotNull('_line', instance.lineElement?.map((e) => e?.toJson()).toList());
+  writeNotNull('_line', instance.lineElement?.map((e) => e.toJson()).toList());
   writeNotNull('city', instance.city);
   writeNotNull('_city', instance.cityElement?.toJson());
   writeNotNull('district', instance.district);
@@ -1231,7 +1236,7 @@ Map<String, dynamic> _$$_TimingToJson(_$_Timing instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('event', instance.event?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_event', instance.eventElement?.map((e) => e?.toJson()).toList());
+      '_event', instance.eventElement?.map((e) => e.toJson()).toList());
   writeNotNull('repeat', instance.repeat?.toJson());
   writeNotNull('code', instance.code?.toJson());
   return val;
@@ -1377,15 +1382,15 @@ Map<String, dynamic> _$$_TimingRepeatToJson(_$_TimingRepeat instance) {
   writeNotNull('_periodUnit', instance.periodUnitElement?.toJson());
   writeNotNull(
       'dayOfWeek', instance.dayOfWeek?.map((e) => e.toJson()).toList());
-  writeNotNull('_dayOfWeek',
-      instance.dayOfWeekElement?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      '_dayOfWeek', instance.dayOfWeekElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'timeOfDay', instance.timeOfDay?.map((e) => e.toJson()).toList());
-  writeNotNull('_timeOfDay',
-      instance.timeOfDayElement?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      '_timeOfDay', instance.timeOfDayElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'when', instance.when?.map((e) => _$TimingRepeatWhenEnumMap[e]).toList());
-  writeNotNull('_when', instance.whenElement?.map((e) => e?.toJson()).toList());
+  writeNotNull('_when', instance.whenElement?.map((e) => e.toJson()).toList());
   writeNotNull('offset', instance.offset?.toJson());
   writeNotNull('_offset', instance.offsetElement?.toJson());
   return val;
@@ -1426,6 +1431,7 @@ const _$TimingRepeatWhenEnumMap = {
   TimingRepeatWhen.eve_late: 'EVE.late',
   TimingRepeatWhen.night: 'NIGHT',
   TimingRepeatWhen.phs: 'PHS',
+  TimingRepeatWhen.imd: 'IMD',
   TimingRepeatWhen.hs: 'HS',
   TimingRepeatWhen.wake: 'WAKE',
   TimingRepeatWhen.c: 'C',

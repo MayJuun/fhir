@@ -42,8 +42,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$AppointmentStatusEnumMap, json['status'],
-          unknownValue: AppointmentStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -69,10 +68,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           .toList(),
       priority: json['priority'] == null
           ? null
-          : UnsignedInt.fromJson(json['priority']),
-      priorityElement: json['_priority'] == null
-          ? null
-          : Element.fromJson(json['_priority'] as Map<String, dynamic>),
+          : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
       description: json['description'] as String?,
       descriptionElement: json['_description'] == null
           ? null
@@ -150,7 +146,7 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$AppointmentStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('cancelationReason', instance.cancelationReason?.toJson());
   writeNotNull('serviceCategory',
@@ -162,7 +158,6 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('appointmentType', instance.appointmentType?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull('priority', instance.priority?.toJson());
-  writeNotNull('_priority', instance.priorityElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('supportingInformation',
@@ -376,20 +371,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-const _$AppointmentStatusEnumMap = {
-  AppointmentStatus.proposed: 'proposed',
-  AppointmentStatus.pending: 'pending',
-  AppointmentStatus.booked: 'booked',
-  AppointmentStatus.arrived: 'arrived',
-  AppointmentStatus.fulfilled: 'fulfilled',
-  AppointmentStatus.cancelled: 'cancelled',
-  AppointmentStatus.noshow: 'noshow',
-  AppointmentStatus.entered_in_error: 'entered-in-error',
-  AppointmentStatus.checked_in: 'checked-in',
-  AppointmentStatus.waitlist: 'waitlist',
-  AppointmentStatus.unknown: 'unknown',
-};
-
 _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
         Map<String, dynamic> json) =>
     _$_AppointmentParticipant(
@@ -406,15 +387,12 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
       actor: json['actor'] == null
           ? null
           : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-      required_: _$enumDecodeNullable(
-          _$AppointmentParticipantRequiredEnumMap, json['required'],
-          unknownValue: AppointmentParticipantRequired.unknown),
+      required_:
+          json['required'] == null ? null : Code.fromJson(json['required']),
       requiredElement: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
-          _$AppointmentParticipantStatusEnumMap, json['status'],
-          unknownValue: AppointmentParticipantStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -440,30 +418,13 @@ Map<String, dynamic> _$$_AppointmentParticipantToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull('actor', instance.actor?.toJson());
-  writeNotNull(
-      'required', _$AppointmentParticipantRequiredEnumMap[instance.required_]);
+  writeNotNull('required', instance.required_?.toJson());
   writeNotNull('_required', instance.requiredElement?.toJson());
-  writeNotNull(
-      'status', _$AppointmentParticipantStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
-
-const _$AppointmentParticipantRequiredEnumMap = {
-  AppointmentParticipantRequired.required_: 'required',
-  AppointmentParticipantRequired.optional: 'optional',
-  AppointmentParticipantRequired.information_only: 'information-only',
-  AppointmentParticipantRequired.unknown: 'unknown',
-};
-
-const _$AppointmentParticipantStatusEnumMap = {
-  AppointmentParticipantStatus.accepted: 'accepted',
-  AppointmentParticipantStatus.declined: 'declined',
-  AppointmentParticipantStatus.tentative: 'tentative',
-  AppointmentParticipantStatus.needs_action: 'needs-action',
-  AppointmentParticipantStatus.unknown: 'unknown',
-};
 
 _$_AppointmentResponse _$$_AppointmentResponseFromJson(
         Map<String, dynamic> json) =>
@@ -724,8 +685,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           : CodeableConcept.fromJson(
               json['appointmentType'] as Map<String, dynamic>),
       schedule: Reference.fromJson(json['schedule'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$SlotStatusEnumMap, json['status'],
-          unknownValue: SlotStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -783,7 +743,7 @@ Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
       'specialty', instance.specialty?.map((e) => e.toJson()).toList());
   writeNotNull('appointmentType', instance.appointmentType?.toJson());
   val['schedule'] = instance.schedule.toJson();
-  writeNotNull('status', _$SlotStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('start', instance.start?.toJson());
   writeNotNull('_start', instance.startElement?.toJson());
@@ -795,15 +755,6 @@ Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
   writeNotNull('_comment', instance.commentElement?.toJson());
   return val;
 }
-
-const _$SlotStatusEnumMap = {
-  SlotStatus.busy: 'busy',
-  SlotStatus.free: 'free',
-  SlotStatus.busy_unavailable: 'busy-unavailable',
-  SlotStatus.busy_tentative: 'busy-tentative',
-  SlotStatus.entered_in_error: 'entered-in-error',
-  SlotStatus.unknown: 'unknown',
-};
 
 _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
       resourceType: _$enumDecodeNullable(
@@ -859,8 +810,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$TaskStatusEnumMap, json['status'],
-          unknownValue: TaskStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -872,8 +822,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
           ? null
           : CodeableConcept.fromJson(
               json['businessStatus'] as Map<String, dynamic>),
-      intent: _$enumDecodeNullable(_$TaskIntentEnumMap, json['intent'],
-          unknownValue: TaskIntent.unknown),
+      intent: json['intent'] == null ? null : Code.fromJson(json['intent']),
       intentElement: json['_intent'] == null
           ? null
           : Element.fromJson(json['_intent'] as Map<String, dynamic>),
@@ -986,11 +935,11 @@ Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('groupIdentifier', instance.groupIdentifier?.toJson());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$TaskStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('statusReason', instance.statusReason?.toJson());
   writeNotNull('businessStatus', instance.businessStatus?.toJson());
-  writeNotNull('intent', _$TaskIntentEnumMap[instance.intent]);
+  writeNotNull('intent', instance.intent?.toJson());
   writeNotNull('_intent', instance.intentElement?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('_priority', instance.priorityElement?.toJson());
@@ -1022,34 +971,6 @@ Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
   writeNotNull('output', instance.output?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$TaskStatusEnumMap = {
-  TaskStatus.draft: 'draft',
-  TaskStatus.requested: 'requested',
-  TaskStatus.received: 'received',
-  TaskStatus.accepted: 'accepted',
-  TaskStatus.rejected: 'rejected',
-  TaskStatus.ready: 'ready',
-  TaskStatus.cancelled: 'cancelled',
-  TaskStatus.in_progress: 'in-progress',
-  TaskStatus.on_hold: 'on-hold',
-  TaskStatus.failed: 'failed',
-  TaskStatus.completed: 'completed',
-  TaskStatus.entered_in_error: 'entered-in-error',
-  TaskStatus.unknown: 'unknown',
-};
-
-const _$TaskIntentEnumMap = {
-  TaskIntent.unknown: 'unknown',
-  TaskIntent.proposal: 'proposal',
-  TaskIntent.plan: 'plan',
-  TaskIntent.order: 'order',
-  TaskIntent.original_order: 'original-order',
-  TaskIntent.reflex_order: 'reflex-order',
-  TaskIntent.filler_order: 'filler-order',
-  TaskIntent.instance_order: 'instance-order',
-  TaskIntent.option: 'option',
-};
 
 _$_TaskRestriction _$$_TaskRestrictionFromJson(Map<String, dynamic> json) =>
     _$_TaskRestriction(
@@ -1863,7 +1784,7 @@ Map<String, dynamic> _$$_VerificationResultToJson(
   writeNotNull('target', instance.target?.map((e) => e.toJson()).toList());
   writeNotNull('targetLocation', instance.targetLocation);
   writeNotNull('_targetLocation',
-      instance.targetLocationElement?.map((e) => e?.toJson()).toList());
+      instance.targetLocationElement?.map((e) => e.toJson()).toList());
   writeNotNull('need', instance.need?.toJson());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());

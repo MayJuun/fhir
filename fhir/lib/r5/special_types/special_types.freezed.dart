@@ -1001,9 +1001,12 @@ class _$StatisticTearOff {
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation>? note,
       CodeableConcept? statisticType,
+      CodeableConcept? category,
       Quantity? quantity,
-      Integer? numberOfEvents,
+      UnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
+      UnsignedInt? numberAffected,
+      @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       StatisticSampleSize? sampleSize,
       List<StatisticAttributeEstimate>? attributeEstimate,
       List<StatisticModelCharacteristic>? modelCharacteristic}) {
@@ -1015,9 +1018,12 @@ class _$StatisticTearOff {
       descriptionElement: descriptionElement,
       note: note,
       statisticType: statisticType,
+      category: category,
       quantity: quantity,
       numberOfEvents: numberOfEvents,
       numberOfEventsElement: numberOfEventsElement,
+      numberAffected: numberAffected,
+      numberAffectedElement: numberAffectedElement,
       sampleSize: sampleSize,
       attributeEstimate: attributeEstimate,
       modelCharacteristic: modelCharacteristic,
@@ -1044,10 +1050,14 @@ mixin _$Statistic {
   Element? get descriptionElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
   CodeableConcept? get statisticType => throw _privateConstructorUsedError;
+  CodeableConcept? get category => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
-  Integer? get numberOfEvents => throw _privateConstructorUsedError;
+  UnsignedInt? get numberOfEvents => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfEvents')
   Element? get numberOfEventsElement => throw _privateConstructorUsedError;
+  UnsignedInt? get numberAffected => throw _privateConstructorUsedError;
+  @JsonKey(name: '_numberAffected')
+  Element? get numberAffectedElement => throw _privateConstructorUsedError;
   StatisticSampleSize? get sampleSize => throw _privateConstructorUsedError;
   List<StatisticAttributeEstimate>? get attributeEstimate =>
       throw _privateConstructorUsedError;
@@ -1072,17 +1082,22 @@ abstract class $StatisticCopyWith<$Res> {
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation>? note,
       CodeableConcept? statisticType,
+      CodeableConcept? category,
       Quantity? quantity,
-      Integer? numberOfEvents,
+      UnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
+      UnsignedInt? numberAffected,
+      @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       StatisticSampleSize? sampleSize,
       List<StatisticAttributeEstimate>? attributeEstimate,
       List<StatisticModelCharacteristic>? modelCharacteristic});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $CodeableConceptCopyWith<$Res>? get statisticType;
+  $CodeableConceptCopyWith<$Res>? get category;
   $QuantityCopyWith<$Res>? get quantity;
   $ElementCopyWith<$Res>? get numberOfEventsElement;
+  $ElementCopyWith<$Res>? get numberAffectedElement;
   $StatisticSampleSizeCopyWith<$Res>? get sampleSize;
 }
 
@@ -1103,9 +1118,12 @@ class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
     Object? descriptionElement = freezed,
     Object? note = freezed,
     Object? statisticType = freezed,
+    Object? category = freezed,
     Object? quantity = freezed,
     Object? numberOfEvents = freezed,
     Object? numberOfEventsElement = freezed,
+    Object? numberAffected = freezed,
+    Object? numberAffectedElement = freezed,
     Object? sampleSize = freezed,
     Object? attributeEstimate = freezed,
     Object? modelCharacteristic = freezed,
@@ -1139,6 +1157,10 @@ class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
           ? _value.statisticType
           : statisticType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -1146,10 +1168,18 @@ class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
       numberOfEvents: numberOfEvents == freezed
           ? _value.numberOfEvents
           : numberOfEvents // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as UnsignedInt?,
       numberOfEventsElement: numberOfEventsElement == freezed
           ? _value.numberOfEventsElement
           : numberOfEventsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      numberAffected: numberAffected == freezed
+          ? _value.numberAffected
+          : numberAffected // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      numberAffectedElement: numberAffectedElement == freezed
+          ? _value.numberAffectedElement
+          : numberAffectedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       sampleSize: sampleSize == freezed
           ? _value.sampleSize
@@ -1189,6 +1219,17 @@ class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
   }
 
   @override
+  $CodeableConceptCopyWith<$Res>? get category {
+    if (_value.category == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
   $QuantityCopyWith<$Res>? get quantity {
     if (_value.quantity == null) {
       return null;
@@ -1207,6 +1248,17 @@ class _$StatisticCopyWithImpl<$Res> implements $StatisticCopyWith<$Res> {
 
     return $ElementCopyWith<$Res>(_value.numberOfEventsElement!, (value) {
       return _then(_value.copyWith(numberOfEventsElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get numberAffectedElement {
+    if (_value.numberAffectedElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.numberAffectedElement!, (value) {
+      return _then(_value.copyWith(numberAffectedElement: value));
     });
   }
 
@@ -1236,9 +1288,12 @@ abstract class _$StatisticCopyWith<$Res> implements $StatisticCopyWith<$Res> {
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation>? note,
       CodeableConcept? statisticType,
+      CodeableConcept? category,
       Quantity? quantity,
-      Integer? numberOfEvents,
+      UnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
+      UnsignedInt? numberAffected,
+      @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       StatisticSampleSize? sampleSize,
       List<StatisticAttributeEstimate>? attributeEstimate,
       List<StatisticModelCharacteristic>? modelCharacteristic});
@@ -1248,9 +1303,13 @@ abstract class _$StatisticCopyWith<$Res> implements $StatisticCopyWith<$Res> {
   @override
   $CodeableConceptCopyWith<$Res>? get statisticType;
   @override
+  $CodeableConceptCopyWith<$Res>? get category;
+  @override
   $QuantityCopyWith<$Res>? get quantity;
   @override
   $ElementCopyWith<$Res>? get numberOfEventsElement;
+  @override
+  $ElementCopyWith<$Res>? get numberAffectedElement;
   @override
   $StatisticSampleSizeCopyWith<$Res>? get sampleSize;
 }
@@ -1273,9 +1332,12 @@ class __$StatisticCopyWithImpl<$Res> extends _$StatisticCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? note = freezed,
     Object? statisticType = freezed,
+    Object? category = freezed,
     Object? quantity = freezed,
     Object? numberOfEvents = freezed,
     Object? numberOfEventsElement = freezed,
+    Object? numberAffected = freezed,
+    Object? numberAffectedElement = freezed,
     Object? sampleSize = freezed,
     Object? attributeEstimate = freezed,
     Object? modelCharacteristic = freezed,
@@ -1309,6 +1371,10 @@ class __$StatisticCopyWithImpl<$Res> extends _$StatisticCopyWithImpl<$Res>
           ? _value.statisticType
           : statisticType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -1316,10 +1382,18 @@ class __$StatisticCopyWithImpl<$Res> extends _$StatisticCopyWithImpl<$Res>
       numberOfEvents: numberOfEvents == freezed
           ? _value.numberOfEvents
           : numberOfEvents // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as UnsignedInt?,
       numberOfEventsElement: numberOfEventsElement == freezed
           ? _value.numberOfEventsElement
           : numberOfEventsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      numberAffected: numberAffected == freezed
+          ? _value.numberAffected
+          : numberAffected // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      numberAffectedElement: numberAffectedElement == freezed
+          ? _value.numberAffectedElement
+          : numberAffectedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       sampleSize: sampleSize == freezed
           ? _value.sampleSize
@@ -1348,9 +1422,12 @@ class _$_Statistic extends _Statistic {
       @JsonKey(name: '_description') this.descriptionElement,
       this.note,
       this.statisticType,
+      this.category,
       this.quantity,
       this.numberOfEvents,
       @JsonKey(name: '_numberOfEvents') this.numberOfEventsElement,
+      this.numberAffected,
+      @JsonKey(name: '_numberAffected') this.numberAffectedElement,
       this.sampleSize,
       this.attributeEstimate,
       this.modelCharacteristic})
@@ -1376,12 +1453,19 @@ class _$_Statistic extends _Statistic {
   @override
   final CodeableConcept? statisticType;
   @override
+  final CodeableConcept? category;
+  @override
   final Quantity? quantity;
   @override
-  final Integer? numberOfEvents;
+  final UnsignedInt? numberOfEvents;
   @override
   @JsonKey(name: '_numberOfEvents')
   final Element? numberOfEventsElement;
+  @override
+  final UnsignedInt? numberAffected;
+  @override
+  @JsonKey(name: '_numberAffected')
+  final Element? numberAffectedElement;
   @override
   final StatisticSampleSize? sampleSize;
   @override
@@ -1391,7 +1475,7 @@ class _$_Statistic extends _Statistic {
 
   @override
   String toString() {
-    return 'Statistic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, statisticType: $statisticType, quantity: $quantity, numberOfEvents: $numberOfEvents, numberOfEventsElement: $numberOfEventsElement, sampleSize: $sampleSize, attributeEstimate: $attributeEstimate, modelCharacteristic: $modelCharacteristic)';
+    return 'Statistic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, descriptionElement: $descriptionElement, note: $note, statisticType: $statisticType, category: $category, quantity: $quantity, numberOfEvents: $numberOfEvents, numberOfEventsElement: $numberOfEventsElement, numberAffected: $numberAffected, numberAffectedElement: $numberAffectedElement, sampleSize: $sampleSize, attributeEstimate: $attributeEstimate, modelCharacteristic: $modelCharacteristic)';
   }
 
   @override
@@ -1417,6 +1501,9 @@ class _$_Statistic extends _Statistic {
             (identical(other.statisticType, statisticType) ||
                 const DeepCollectionEquality()
                     .equals(other.statisticType, statisticType)) &&
+            (identical(other.category, category) ||
+                const DeepCollectionEquality()
+                    .equals(other.category, category)) &&
             (identical(other.quantity, quantity) ||
                 const DeepCollectionEquality()
                     .equals(other.quantity, quantity)) &&
@@ -1426,6 +1513,12 @@ class _$_Statistic extends _Statistic {
             (identical(other.numberOfEventsElement, numberOfEventsElement) ||
                 const DeepCollectionEquality().equals(
                     other.numberOfEventsElement, numberOfEventsElement)) &&
+            (identical(other.numberAffected, numberAffected) ||
+                const DeepCollectionEquality()
+                    .equals(other.numberAffected, numberAffected)) &&
+            (identical(other.numberAffectedElement, numberAffectedElement) ||
+                const DeepCollectionEquality().equals(
+                    other.numberAffectedElement, numberAffectedElement)) &&
             (identical(other.sampleSize, sampleSize) ||
                 const DeepCollectionEquality()
                     .equals(other.sampleSize, sampleSize)) &&
@@ -1447,9 +1540,12 @@ class _$_Statistic extends _Statistic {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(statisticType) ^
+      const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(quantity) ^
       const DeepCollectionEquality().hash(numberOfEvents) ^
       const DeepCollectionEquality().hash(numberOfEventsElement) ^
+      const DeepCollectionEquality().hash(numberAffected) ^
+      const DeepCollectionEquality().hash(numberAffectedElement) ^
       const DeepCollectionEquality().hash(sampleSize) ^
       const DeepCollectionEquality().hash(attributeEstimate) ^
       const DeepCollectionEquality().hash(modelCharacteristic);
@@ -1474,9 +1570,12 @@ abstract class _Statistic extends Statistic {
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation>? note,
       CodeableConcept? statisticType,
+      CodeableConcept? category,
       Quantity? quantity,
-      Integer? numberOfEvents,
+      UnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
+      UnsignedInt? numberAffected,
+      @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
       StatisticSampleSize? sampleSize,
       List<StatisticAttributeEstimate>? attributeEstimate,
       List<StatisticModelCharacteristic>? modelCharacteristic}) = _$_Statistic;
@@ -1503,12 +1602,19 @@ abstract class _Statistic extends Statistic {
   @override
   CodeableConcept? get statisticType => throw _privateConstructorUsedError;
   @override
+  CodeableConcept? get category => throw _privateConstructorUsedError;
+  @override
   Quantity? get quantity => throw _privateConstructorUsedError;
   @override
-  Integer? get numberOfEvents => throw _privateConstructorUsedError;
+  UnsignedInt? get numberOfEvents => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_numberOfEvents')
   Element? get numberOfEventsElement => throw _privateConstructorUsedError;
+  @override
+  UnsignedInt? get numberAffected => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_numberAffected')
+  Element? get numberAffectedElement => throw _privateConstructorUsedError;
   @override
   StatisticSampleSize? get sampleSize => throw _privateConstructorUsedError;
   @override
@@ -1540,13 +1646,13 @@ class _$StatisticSampleSizeTearOff {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      Integer? numberOfStudies,
+      UnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      Integer? numberOfParticipants,
+      UnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      Integer? knownDataCount,
+      UnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement}) {
     return _StatisticSampleSize(
@@ -1584,14 +1690,14 @@ mixin _$StatisticSampleSize {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
-  Integer? get numberOfStudies => throw _privateConstructorUsedError;
+  UnsignedInt? get numberOfStudies => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfStudies')
   Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
-  Integer? get numberOfParticipants => throw _privateConstructorUsedError;
+  UnsignedInt? get numberOfParticipants => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfParticipants')
   Element? get numberOfParticipantsElement =>
       throw _privateConstructorUsedError;
-  Integer? get knownDataCount => throw _privateConstructorUsedError;
+  UnsignedInt? get knownDataCount => throw _privateConstructorUsedError;
   @JsonKey(name: '_knownDataCount')
   Element? get knownDataCountElement => throw _privateConstructorUsedError;
 
@@ -1615,13 +1721,13 @@ abstract class $StatisticSampleSizeCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      Integer? numberOfStudies,
+      UnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      Integer? numberOfParticipants,
+      UnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      Integer? knownDataCount,
+      UnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement});
 
@@ -1683,7 +1789,7 @@ class _$StatisticSampleSizeCopyWithImpl<$Res>
       numberOfStudies: numberOfStudies == freezed
           ? _value.numberOfStudies
           : numberOfStudies // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as UnsignedInt?,
       numberOfStudiesElement: numberOfStudiesElement == freezed
           ? _value.numberOfStudiesElement
           : numberOfStudiesElement // ignore: cast_nullable_to_non_nullable
@@ -1691,7 +1797,7 @@ class _$StatisticSampleSizeCopyWithImpl<$Res>
       numberOfParticipants: numberOfParticipants == freezed
           ? _value.numberOfParticipants
           : numberOfParticipants // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as UnsignedInt?,
       numberOfParticipantsElement: numberOfParticipantsElement == freezed
           ? _value.numberOfParticipantsElement
           : numberOfParticipantsElement // ignore: cast_nullable_to_non_nullable
@@ -1699,7 +1805,7 @@ class _$StatisticSampleSizeCopyWithImpl<$Res>
       knownDataCount: knownDataCount == freezed
           ? _value.knownDataCount
           : knownDataCount // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as UnsignedInt?,
       knownDataCountElement: knownDataCountElement == freezed
           ? _value.knownDataCountElement
           : knownDataCountElement // ignore: cast_nullable_to_non_nullable
@@ -1768,13 +1874,13 @@ abstract class _$StatisticSampleSizeCopyWith<$Res>
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      Integer? numberOfStudies,
+      UnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      Integer? numberOfParticipants,
+      UnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      Integer? knownDataCount,
+      UnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement});
 
@@ -1842,7 +1948,7 @@ class __$StatisticSampleSizeCopyWithImpl<$Res>
       numberOfStudies: numberOfStudies == freezed
           ? _value.numberOfStudies
           : numberOfStudies // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as UnsignedInt?,
       numberOfStudiesElement: numberOfStudiesElement == freezed
           ? _value.numberOfStudiesElement
           : numberOfStudiesElement // ignore: cast_nullable_to_non_nullable
@@ -1850,7 +1956,7 @@ class __$StatisticSampleSizeCopyWithImpl<$Res>
       numberOfParticipants: numberOfParticipants == freezed
           ? _value.numberOfParticipants
           : numberOfParticipants // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as UnsignedInt?,
       numberOfParticipantsElement: numberOfParticipantsElement == freezed
           ? _value.numberOfParticipantsElement
           : numberOfParticipantsElement // ignore: cast_nullable_to_non_nullable
@@ -1858,7 +1964,7 @@ class __$StatisticSampleSizeCopyWithImpl<$Res>
       knownDataCount: knownDataCount == freezed
           ? _value.knownDataCount
           : knownDataCount // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as UnsignedInt?,
       knownDataCountElement: knownDataCountElement == freezed
           ? _value.knownDataCountElement
           : knownDataCountElement // ignore: cast_nullable_to_non_nullable
@@ -1903,17 +2009,17 @@ class _$_StatisticSampleSize extends _StatisticSampleSize {
   @override
   final List<Annotation>? note;
   @override
-  final Integer? numberOfStudies;
+  final UnsignedInt? numberOfStudies;
   @override
   @JsonKey(name: '_numberOfStudies')
   final Element? numberOfStudiesElement;
   @override
-  final Integer? numberOfParticipants;
+  final UnsignedInt? numberOfParticipants;
   @override
   @JsonKey(name: '_numberOfParticipants')
   final Element? numberOfParticipantsElement;
   @override
-  final Integer? knownDataCount;
+  final UnsignedInt? knownDataCount;
   @override
   @JsonKey(name: '_knownDataCount')
   final Element? knownDataCountElement;
@@ -2003,13 +2109,13 @@ abstract class _StatisticSampleSize extends StatisticSampleSize {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<Annotation>? note,
-      Integer? numberOfStudies,
+      UnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           Element? numberOfStudiesElement,
-      Integer? numberOfParticipants,
+      UnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           Element? numberOfParticipantsElement,
-      Integer? knownDataCount,
+      UnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           Element? knownDataCountElement}) = _$_StatisticSampleSize;
   _StatisticSampleSize._() : super._();
@@ -2033,18 +2139,18 @@ abstract class _StatisticSampleSize extends StatisticSampleSize {
   @override
   List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  Integer? get numberOfStudies => throw _privateConstructorUsedError;
+  UnsignedInt? get numberOfStudies => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_numberOfStudies')
   Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
   @override
-  Integer? get numberOfParticipants => throw _privateConstructorUsedError;
+  UnsignedInt? get numberOfParticipants => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_numberOfParticipants')
   Element? get numberOfParticipantsElement =>
       throw _privateConstructorUsedError;
   @override
-  Integer? get knownDataCount => throw _privateConstructorUsedError;
+  UnsignedInt? get knownDataCount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_knownDataCount')
   Element? get knownDataCountElement => throw _privateConstructorUsedError;
@@ -3078,23 +3184,15 @@ class _$StatisticModelCharacteristicTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Quantity? valueQuantity,
-      Range? valueRange,
+      required CodeableConcept code,
+      Quantity? value,
       List<StatisticVariable>? variable}) {
     return _StatisticModelCharacteristic(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
       code: code,
-      valueCodeableConcept: valueCodeableConcept,
-      valueBoolean: valueBoolean,
-      valueBooleanElement: valueBooleanElement,
-      valueQuantity: valueQuantity,
-      valueRange: valueRange,
+      value: value,
       variable: variable,
     );
   }
@@ -3114,14 +3212,8 @@ mixin _$StatisticModelCharacteristic {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  CodeableConcept? get code => throw _privateConstructorUsedError;
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
-  @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement => throw _privateConstructorUsedError;
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
-  Range? get valueRange => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
+  Quantity? get value => throw _privateConstructorUsedError;
   List<StatisticVariable>? get variable => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3140,19 +3232,12 @@ abstract class $StatisticModelCharacteristicCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Quantity? valueQuantity,
-      Range? valueRange,
+      CodeableConcept code,
+      Quantity? value,
       List<StatisticVariable>? variable});
 
-  $CodeableConceptCopyWith<$Res>? get code;
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-  $ElementCopyWith<$Res>? get valueBooleanElement;
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  $RangeCopyWith<$Res>? get valueRange;
+  $CodeableConceptCopyWith<$Res> get code;
+  $QuantityCopyWith<$Res>? get value;
 }
 
 /// @nodoc
@@ -3170,11 +3255,7 @@ class _$StatisticModelCharacteristicCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = freezed,
-    Object? valueCodeableConcept = freezed,
-    Object? valueBoolean = freezed,
-    Object? valueBooleanElement = freezed,
-    Object? valueQuantity = freezed,
-    Object? valueRange = freezed,
+    Object? value = freezed,
     Object? variable = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3193,27 +3274,11 @@ class _$StatisticModelCharacteristicCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueCodeableConcept: valueCodeableConcept == freezed
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueBoolean: valueBoolean == freezed
-          ? _value.valueBoolean
-          : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
-      valueBooleanElement: valueBooleanElement == freezed
-          ? _value.valueBooleanElement
-          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueQuantity: valueQuantity == freezed
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      valueRange: valueRange == freezed
-          ? _value.valueRange
-          : valueRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
       variable: variable == freezed
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
@@ -3222,58 +3287,20 @@ class _$StatisticModelCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
-    if (_value.valueCodeableConcept == null) {
+  $QuantityCopyWith<$Res>? get value {
+    if (_value.value == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(valueCodeableConcept: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get valueBooleanElement {
-    if (_value.valueBooleanElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
-      return _then(_value.copyWith(valueBooleanElement: value));
-    });
-  }
-
-  @override
-  $QuantityCopyWith<$Res>? get valueQuantity {
-    if (_value.valueQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
-      return _then(_value.copyWith(valueQuantity: value));
-    });
-  }
-
-  @override
-  $RangeCopyWith<$Res>? get valueRange {
-    if (_value.valueRange == null) {
-      return null;
-    }
-
-    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
-      return _then(_value.copyWith(valueRange: value));
+    return $QuantityCopyWith<$Res>(_value.value!, (value) {
+      return _then(_value.copyWith(value: value));
     });
   }
 }
@@ -3290,24 +3317,14 @@ abstract class _$StatisticModelCharacteristicCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Quantity? valueQuantity,
-      Range? valueRange,
+      CodeableConcept code,
+      Quantity? value,
       List<StatisticVariable>? variable});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-  @override
-  $ElementCopyWith<$Res>? get valueBooleanElement;
-  @override
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  @override
-  $RangeCopyWith<$Res>? get valueRange;
+  $QuantityCopyWith<$Res>? get value;
 }
 
 /// @nodoc
@@ -3329,11 +3346,7 @@ class __$StatisticModelCharacteristicCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = freezed,
-    Object? valueCodeableConcept = freezed,
-    Object? valueBoolean = freezed,
-    Object? valueBooleanElement = freezed,
-    Object? valueQuantity = freezed,
-    Object? valueRange = freezed,
+    Object? value = freezed,
     Object? variable = freezed,
   }) {
     return _then(_StatisticModelCharacteristic(
@@ -3352,27 +3365,11 @@ class __$StatisticModelCharacteristicCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueCodeableConcept: valueCodeableConcept == freezed
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueBoolean: valueBoolean == freezed
-          ? _value.valueBoolean
-          : valueBoolean // ignore: cast_nullable_to_non_nullable
-              as Boolean?,
-      valueBooleanElement: valueBooleanElement == freezed
-          ? _value.valueBooleanElement
-          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueQuantity: valueQuantity == freezed
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      valueRange: valueRange == freezed
-          ? _value.valueRange
-          : valueRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
       variable: variable == freezed
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
@@ -3388,12 +3385,8 @@ class _$_StatisticModelCharacteristic extends _StatisticModelCharacteristic {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.code,
-      this.valueCodeableConcept,
-      this.valueBoolean,
-      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
-      this.valueQuantity,
-      this.valueRange,
+      required this.code,
+      this.value,
       this.variable})
       : super._();
 
@@ -3408,24 +3401,15 @@ class _$_StatisticModelCharacteristic extends _StatisticModelCharacteristic {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
-  final CodeableConcept? valueCodeableConcept;
-  @override
-  final Boolean? valueBoolean;
-  @override
-  @JsonKey(name: '_valueBoolean')
-  final Element? valueBooleanElement;
-  @override
-  final Quantity? valueQuantity;
-  @override
-  final Range? valueRange;
+  final Quantity? value;
   @override
   final List<StatisticVariable>? variable;
 
   @override
   String toString() {
-    return 'StatisticModelCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, variable: $variable)';
+    return 'StatisticModelCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, value: $value, variable: $variable)';
   }
 
   @override
@@ -3442,21 +3426,8 @@ class _$_StatisticModelCharacteristic extends _StatisticModelCharacteristic {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.code, code) ||
                 const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.valueCodeableConcept, valueCodeableConcept)) &&
-            (identical(other.valueBoolean, valueBoolean) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueBoolean, valueBoolean)) &&
-            (identical(other.valueBooleanElement, valueBooleanElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueBooleanElement, valueBooleanElement)) &&
-            (identical(other.valueQuantity, valueQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueQuantity, valueQuantity)) &&
-            (identical(other.valueRange, valueRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueRange, valueRange)) &&
+            (identical(other.value, value) ||
+                const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.variable, variable) ||
                 const DeepCollectionEquality()
                     .equals(other.variable, variable)));
@@ -3469,11 +3440,7 @@ class _$_StatisticModelCharacteristic extends _StatisticModelCharacteristic {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(valueCodeableConcept) ^
-      const DeepCollectionEquality().hash(valueBoolean) ^
-      const DeepCollectionEquality().hash(valueBooleanElement) ^
-      const DeepCollectionEquality().hash(valueQuantity) ^
-      const DeepCollectionEquality().hash(valueRange) ^
+      const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(variable);
 
   @JsonKey(ignore: true)
@@ -3494,12 +3461,8 @@ abstract class _StatisticModelCharacteristic
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Quantity? valueQuantity,
-      Range? valueRange,
+      required CodeableConcept code,
+      Quantity? value,
       List<StatisticVariable>? variable}) = _$_StatisticModelCharacteristic;
   _StatisticModelCharacteristic._() : super._();
 
@@ -3515,19 +3478,9 @@ abstract class _StatisticModelCharacteristic
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get code => throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement => throw _privateConstructorUsedError;
-  @override
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
-  @override
-  Range? get valueRange => throw _privateConstructorUsedError;
+  Quantity? get value => throw _privateConstructorUsedError;
   @override
   List<StatisticVariable>? get variable => throw _privateConstructorUsedError;
   @override
@@ -6474,7 +6427,7 @@ class _$ElementDefinitionTearOff {
           Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          List<Element?>? representationElement,
+          List<Element>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
@@ -6500,7 +6453,7 @@ class _$ElementDefinitionTearOff {
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       UnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -6853,7 +6806,7 @@ class _$ElementDefinitionTearOff {
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
-          List<Element?>? conditionElement,
+          List<Element>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -7198,7 +7151,7 @@ mixin _$ElementDefinition {
   List<ElementDefinitionRepresentation>? get representation =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_representation')
-  List<Element?>? get representationElement =>
+  List<Element>? get representationElement =>
       throw _privateConstructorUsedError;
   String? get sliceName => throw _privateConstructorUsedError;
   @JsonKey(name: '_sliceName')
@@ -7225,7 +7178,7 @@ mixin _$ElementDefinition {
   Element? get requirementsElement => throw _privateConstructorUsedError;
   List<String>? get alias => throw _privateConstructorUsedError;
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   UnsignedInt? get min => throw _privateConstructorUsedError;
   @JsonKey(name: '_min')
   Element? get minElement => throw _privateConstructorUsedError;
@@ -7609,7 +7562,7 @@ mixin _$ElementDefinition {
   Element? get maxLengthElement => throw _privateConstructorUsedError;
   List<Id>? get condition => throw _privateConstructorUsedError;
   @JsonKey(name: '_condition')
-  List<Element?>? get conditionElement => throw _privateConstructorUsedError;
+  List<Element>? get conditionElement => throw _privateConstructorUsedError;
   List<ElementDefinitionConstraint>? get constraint =>
       throw _privateConstructorUsedError;
   Boolean? get mustSupport => throw _privateConstructorUsedError;
@@ -7649,7 +7602,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          List<Element?>? representationElement,
+          List<Element>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
@@ -7675,7 +7628,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       UnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -8028,7 +7981,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
-          List<Element?>? conditionElement,
+          List<Element>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -8585,7 +8538,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       representationElement: representationElement == freezed
           ? _value.representationElement
           : representationElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       sliceName: sliceName == freezed
           ? _value.sliceName
           : sliceName // ignore: cast_nullable_to_non_nullable
@@ -8657,7 +8610,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       min: min == freezed
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
@@ -9731,7 +9684,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       constraint: constraint == freezed
           ? _value.constraint
           : constraint // ignore: cast_nullable_to_non_nullable
@@ -11954,7 +11907,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          List<Element?>? representationElement,
+          List<Element>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
@@ -11980,7 +11933,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       UnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -12333,7 +12286,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
-          List<Element?>? conditionElement,
+          List<Element>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -13086,7 +13039,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       representationElement: representationElement == freezed
           ? _value.representationElement
           : representationElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       sliceName: sliceName == freezed
           ? _value.sliceName
           : sliceName // ignore: cast_nullable_to_non_nullable
@@ -13158,7 +13111,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       min: min == freezed
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
@@ -14232,7 +14185,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       constraint: constraint == freezed
           ? _value.constraint
           : constraint // ignore: cast_nullable_to_non_nullable
@@ -14710,7 +14663,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   final List<ElementDefinitionRepresentation>? representation;
   @override
   @JsonKey(name: '_representation')
-  final List<Element?>? representationElement;
+  final List<Element>? representationElement;
   @override
   final String? sliceName;
   @override
@@ -14754,7 +14707,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   final List<String>? alias;
   @override
   @JsonKey(name: '_alias')
-  final List<Element?>? aliasElement;
+  final List<Element>? aliasElement;
   @override
   final UnsignedInt? min;
   @override
@@ -15375,7 +15328,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   final List<Id>? condition;
   @override
   @JsonKey(name: '_condition')
-  final List<Element?>? conditionElement;
+  final List<Element>? conditionElement;
   @override
   final List<ElementDefinitionConstraint>? constraint;
   @override
@@ -16087,7 +16040,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          List<Element?>? representationElement,
+          List<Element>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
@@ -16113,7 +16066,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       UnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -16466,7 +16419,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
-          List<Element?>? conditionElement,
+          List<Element>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -16505,7 +16458,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_representation')
-  List<Element?>? get representationElement =>
+  List<Element>? get representationElement =>
       throw _privateConstructorUsedError;
   @override
   String? get sliceName => throw _privateConstructorUsedError;
@@ -16550,7 +16503,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   List<String>? get alias => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   @override
   UnsignedInt? get min => throw _privateConstructorUsedError;
   @override
@@ -17202,7 +17155,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   List<Id>? get condition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_condition')
-  List<Element?>? get conditionElement => throw _privateConstructorUsedError;
+  List<Element>? get conditionElement => throw _privateConstructorUsedError;
   @override
   List<ElementDefinitionConstraint>? get constraint =>
       throw _privateConstructorUsedError;
@@ -18527,7 +18480,7 @@ class _$ElementDefinitionTypeTearOff {
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          List<Element?>? aggregationElement,
+          List<Element>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
@@ -18570,7 +18523,7 @@ mixin _$ElementDefinitionType {
   List<ElementDefinitionTypeAggregation>? get aggregation =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_aggregation')
-  List<Element?>? get aggregationElement => throw _privateConstructorUsedError;
+  List<Element>? get aggregationElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning? get versioning =>
       throw _privateConstructorUsedError;
@@ -18600,7 +18553,7 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          List<Element?>? aggregationElement,
+          List<Element>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
@@ -18669,7 +18622,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
       aggregationElement: aggregationElement == freezed
           ? _value.aggregationElement
           : aggregationElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning // ignore: cast_nullable_to_non_nullable
@@ -18723,7 +18676,7 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          List<Element?>? aggregationElement,
+          List<Element>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
@@ -18796,7 +18749,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
       aggregationElement: aggregationElement == freezed
           ? _value.aggregationElement
           : aggregationElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning // ignore: cast_nullable_to_non_nullable
@@ -18854,7 +18807,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   final List<ElementDefinitionTypeAggregation>? aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  final List<Element?>? aggregationElement;
+  final List<Element>? aggregationElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   final ElementDefinitionTypeVersioning? versioning;
@@ -18944,7 +18897,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          List<Element?>? aggregationElement,
+          List<Element>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
@@ -18976,7 +18929,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_aggregation')
-  List<Element?>? get aggregationElement => throw _privateConstructorUsedError;
+  List<Element>? get aggregationElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning? get versioning =>

@@ -30,19 +30,17 @@ class AuditEvent with Resource, _$AuditEvent {
     List<FhirExtension>? modifierExtension,
     required Coding type,
     List<Coding>? subtype,
-    @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-        AuditEventAction? action,
+    Code? action,
     @JsonKey(name: '_action') Element? actionElement,
-    @JsonKey(unknownEnumValue: AuditEventSeverity.unknown)
-        AuditEventSeverity? severity,
+    Code? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     Period? period,
     Instant? recorded,
     @JsonKey(name: '_recorded') Element? recordedElement,
-    // ToDo
-    //  CodeableConcept outcome,
-    Integer? outcome,
+    CodeableConcept? outcome,
     List<CodeableConcept>? purposeOfEvent,
+    List<Reference>? basedOn,
+    Reference? encounter,
     required List<AuditEventAgent> agent,
     required AuditEventSource source,
     List<AuditEventEntity>? entity,
@@ -83,7 +81,7 @@ class AuditEventAgent with _$AuditEventAgent {
     @JsonKey(name: '_requestor') Element? requestorElement,
     Reference? location,
     List<FhirUri>? policy,
-    @JsonKey(name: '_policy') List<Element?>? policyElement,
+    @JsonKey(name: '_policy') List<Element>? policyElement,
     Coding? media,
     AuditEventNetwork? network,
     List<CodeableConcept>? purposeOfUse,
@@ -115,8 +113,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
     List<FhirExtension>? modifierExtension,
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
-    @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-        AuditEventNetworkType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _AuditEventNetwork;
 
@@ -253,7 +250,7 @@ class Consent with Resource, _$Consent {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept scope,
     required List<CodeableConcept> category,
@@ -331,7 +328,7 @@ class ConsentVerification with _$ConsentVerification {
     Reference? verifiedBy,
     Reference? verifiedWith,
     List<FhirDateTime>? verificationDate,
-    @JsonKey(name: '_verificationDate') List<Element?>? verificationDateElement,
+    @JsonKey(name: '_verificationDate') List<Element>? verificationDateElement,
   }) = _ConsentVerification;
 
   /// Produces a Yaml formatted String version of the object
@@ -358,8 +355,7 @@ class ConsentProvision with _$ConsentProvision {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-        ConsentProvisionType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Period? period,
     List<ConsentActor>? actor,
@@ -425,8 +421,7 @@ class ConsentData with _$ConsentData {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-        ConsentDataMeaning? meaning,
+    Code? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference reference,
   }) = _ConsentData;
@@ -465,13 +460,12 @@ class Permission with Resource, _$Permission {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: PermissionStatus.unknown)
-        PermissionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? intent,
     Reference? asserter,
     List<FhirDateTime>? assertionDate,
-    @JsonKey(name: '_assertionDate') List<Element?>? assertionDateElement,
+    @JsonKey(name: '_assertionDate') List<Element>? assertionDateElement,
     Period? validity,
     List<CodeableConcept>? purpose,
     List<Expression>? dataScope,
@@ -579,10 +573,12 @@ class Provenance with Resource, _$Provenance {
     Instant? recorded,
     @JsonKey(name: '_recorded') Element? recordedElement,
     List<FhirUri>? policy,
-    @JsonKey(name: '_policy') List<Element?>? policyElement,
+    @JsonKey(name: '_policy') List<Element>? policyElement,
     Reference? location,
     List<CodeableConcept>? reason,
     CodeableConcept? activity,
+    List<Reference>? basedOn,
+    Reference? encounter,
     required List<ProvenanceAgent> agent,
     List<ProvenanceEntity>? entity,
     List<Signature>? signature,
@@ -642,8 +638,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
-        ProvenanceEntityRole? role,
+    Code? role,
     @JsonKey(name: '_role') Element? roleElement,
     required Reference what,
     List<ProvenanceAgent>? agent,

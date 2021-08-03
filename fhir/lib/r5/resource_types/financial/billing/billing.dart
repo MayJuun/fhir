@@ -33,7 +33,7 @@ class Claim with Resource, _$Claim {
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept type,
     CodeableConcept? subType,
-    @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse? use,
+    Code? use,
     @JsonKey(name: '_use') Element? useElement,
     required Reference patient,
     Period? billablePeriod,
@@ -290,7 +290,7 @@ class ClaimInsurance with _$ClaimInsurance {
     String? businessArrangement,
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
     List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
+    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
     Reference? claimResponse,
   }) = _ClaimInsurance;
 
@@ -352,7 +352,7 @@ class ClaimItem with _$ClaimItem {
     PositiveInt? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<PositiveInt>? careTeamSequence,
-    @JsonKey(name: '_careTeamSequence') List<Element?>? careTeamSequenceElement,
+    @JsonKey(name: '_careTeamSequence') List<Element>? careTeamSequenceElement,
     List<PositiveInt>? diagnosisSequence,
     @JsonKey(name: '_diagnosisSequence')
         List<Element>? diagnosisSequenceElement,
@@ -560,7 +560,7 @@ class ClaimResponseItem with _$ClaimResponseItem {
     PositiveInt? itemSequence,
     @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     required List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseDetail>? detail,
   }) = _ClaimResponseItem;
@@ -624,7 +624,7 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
     PositiveInt? detailSequence,
     @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     required List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseSubDetail>? subDetail,
   }) = _ClaimResponseDetail;
@@ -656,7 +656,7 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
     PositiveInt? subDetailSequence,
     @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
   }) = _ClaimResponseSubDetail;
 
@@ -685,9 +685,9 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<PositiveInt>? itemSequence,
-    @JsonKey(name: '_itemSequence') List<Element?>? itemSequenceElement,
+    @JsonKey(name: '_itemSequence') List<Element>? itemSequenceElement,
     List<PositiveInt>? detailSequence,
-    @JsonKey(name: '_detailSequence') List<Element?>? detailSequenceElement,
+    @JsonKey(name: '_detailSequence') List<Element>? detailSequenceElement,
     List<PositiveInt>? subdetailSequence,
     @JsonKey(name: '_subdetailSequence')
         List<Element>? subdetailSequenceElement,
@@ -709,7 +709,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     CodeableConcept? bodySite,
     List<CodeableConcept>? subSite,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     required List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseDetail1>? detail,
   }) = _ClaimResponseAddItem;
@@ -746,7 +746,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     required List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseSubDetail1>? subDetail,
   }) = _ClaimResponseDetail1;
@@ -783,7 +783,7 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
     required List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseSubDetail1;
 
@@ -874,8 +874,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
     List<FhirExtension>? modifierExtension,
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
-    @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-        ClaimResponseProcessNoteType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -985,7 +984,7 @@ class Invoice with Resource, _$Invoice {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: InvoiceStatus.unknown) InvoiceStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? cancelledReason,
     @JsonKey(name: '_cancelledReason') Element? cancelledReasonElement,
@@ -1089,8 +1088,7 @@ class InvoicePriceComponent with _$InvoicePriceComponent {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-        InvoicePriceComponentType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? code,
     Decimal? factor,

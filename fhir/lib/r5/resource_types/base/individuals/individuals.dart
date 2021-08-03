@@ -31,7 +31,7 @@ class Group with Resource, _$Group {
     List<Identifier>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
-    @JsonKey(unknownEnumValue: GroupType.unknown) GroupType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
@@ -149,7 +149,7 @@ class Patient with Resource, _$Patient {
     @JsonKey(name: '_active') Element? activeElement,
     List<HumanName>? name,
     List<ContactPoint>? telecom,
-    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -201,8 +201,7 @@ class PatientContact with _$PatientContact {
     HumanName? name,
     List<ContactPoint>? telecom,
     Address? address,
-    @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-        PatientContactGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Reference? organization,
     Period? period,
@@ -262,7 +261,7 @@ class PatientLink with _$PatientLink {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference other,
-    @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _PatientLink;
 
@@ -303,7 +302,7 @@ class Person with Resource, _$Person {
     List<Identifier>? identifier,
     List<HumanName>? name,
     List<ContactPoint>? telecom,
-    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -339,8 +338,7 @@ class PersonLink with _$PersonLink {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference target,
-    @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-        PersonLinkAssurance? assurance,
+    Code? assurance,
     @JsonKey(name: '_assurance') Element? assuranceElement,
   }) = _PersonLink;
 
@@ -384,8 +382,7 @@ class Practitioner with Resource, _$Practitioner {
     List<HumanName>? name,
     List<ContactPoint>? telecom,
     List<Address>? address,
-    @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-        PractitionerGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -503,7 +500,7 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Code>? daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+    @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
     Time? availableStartTime,
@@ -584,8 +581,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     List<CodeableConcept>? relationship,
     List<HumanName>? name,
     List<ContactPoint>? telecom,
-    @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-        RelatedPersonGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,

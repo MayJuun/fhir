@@ -37,8 +37,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-        ActivityDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -60,18 +59,20 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    String? subtitle,
-    @JsonKey(name: '_subtitle') Element? subtitleElement,
-    CodeableConcept? subjectCodeableConcept,
-    Reference? subjectReference,
-    String? usage,
-    @JsonKey(name: '_usage') Element? usageElement,
     List<CodeableConcept>? topic,
     List<ContactDetail>? author,
     List<ContactDetail>? editor,
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    Canonical? subjectCanonical,
+    @JsonKey(name: '_subjectCanonical') Element? subjectCanonicalElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
     @JsonKey(name: 'library') List<Canonical>? library_,
     Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
@@ -84,13 +85,11 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     Boolean? doNotPerform,
     @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
     Timing? timingTiming,
-    FhirDateTime? timingDateTime,
-    @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
     Age? timingAge,
-    Period? timingPeriod,
     Range? timingRange,
     FhirDuration? timingDuration,
-    Reference? location,
+    CodeableConcept? locationCodeableConcept,
+    Reference? locationReference,
     List<ActivityDefinitionParticipant>? participant,
     Reference? productReference,
     CodeableConcept? productCodeableConcept,
@@ -130,7 +129,9 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
     List<FhirExtension>? modifierExtension,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
+    Reference? typeReference,
     CodeableConcept? role,
+    CodeableConcept? function,
   }) = _ActivityDefinitionParticipant;
 
   /// Produces a Yaml formatted String version of the object
@@ -176,7 +177,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ActivityDefinitionDynamicValue cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
@@ -209,8 +210,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ConditionDefinitionStatus.unknown)
-        ConditionDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -232,6 +232,12 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
     String? subtitle,
     @JsonKey(name: '_subtitle') Element? subtitleElement,
     required CodeableConcept code,
@@ -245,7 +251,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     Boolean? hasStage,
     @JsonKey(name: '_hasStage') Element? hasStageElement,
     List<FhirUri>? definition,
-    @JsonKey(name: '_definition') List<Element?>? definitionElement,
+    @JsonKey(name: '_definition') List<Element>? definitionElement,
     List<ConditionDefinitionObservation>? observation,
     List<ConditionDefinitionMedication>? medication,
     List<ConditionDefinitionPrecondition>? precondition,
@@ -295,7 +301,7 @@ class ConditionDefinitionObservation with _$ConditionDefinitionObservation {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ConditionDefinitionObservation cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionDefinitionObservation.fromJson(Map<String, dynamic> json) =>
@@ -338,8 +344,7 @@ class ConditionDefinitionPrecondition with _$ConditionDefinitionPrecondition {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ConditionDefinitionPreconditionType.unknown)
-        ConditionDefinitionPreconditionType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     required CodeableConcept code,
     CodeableConcept? valueCodeableConcept,
@@ -359,7 +364,7 @@ class ConditionDefinitionPrecondition with _$ConditionDefinitionPrecondition {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ConditionDefinitionPrecondition cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionDefinitionPrecondition.fromJson(Map<String, dynamic> json) =>
@@ -373,8 +378,7 @@ class ConditionDefinitionQuestionnaire with _$ConditionDefinitionQuestionnaire {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ConditionDefinitionQuestionnairePurpose.unknown)
-        ConditionDefinitionQuestionnairePurpose? purpose,
+    Code? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     required Reference reference,
   }) = _ConditionDefinitionQuestionnaire;
@@ -392,8 +396,9 @@ class ConditionDefinitionQuestionnaire with _$ConditionDefinitionQuestionnaire {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ConditionDefinitionQuestionnaire cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionDefinitionQuestionnaire.fromJson(
           Map<String, dynamic> json) =>
       _$ConditionDefinitionQuestionnaireFromJson(json);
@@ -452,10 +457,11 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     List<DeviceDefinitionDeviceName>? deviceName,
     String? modelNumber,
     @JsonKey(name: '_modelNumber') Element? modelNumberElement,
-    CodeableConcept? type,
+    List<CodeableConcept>? type,
     List<DeviceDefinitionSpecialization>? specialization,
-    List<String>? version,
-    @JsonKey(name: '_version') List<Element?>? versionElement,
+    List<DeviceDefinitionHasPart>? hasPart,
+    List<DeviceDefinitionPackaging>? packaging,
+    List<DeviceDefinitionVersion>? version,
     List<CodeableConcept>? safety,
     List<ProductShelfLife>? shelfLifeStorage,
     ProdCharacteristic? physicalCharacteristics,
@@ -467,7 +473,6 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     FhirUri? onlineInformation,
     @JsonKey(name: '_onlineInformation') Element? onlineInformationElement,
     List<Annotation>? note,
-    Quantity? quantity,
     Reference? parentDevice,
     List<DeviceDefinitionMaterial>? material,
   }) = _DeviceDefinition;
@@ -518,8 +523,9 @@ class DeviceDefinitionUdiDeviceIdentifier
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'DeviceDefinitionUdiDeviceIdentifier cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceDefinitionUdiDeviceIdentifier.fromJson(
           Map<String, dynamic> json) =>
       _$DeviceDefinitionUdiDeviceIdentifierFromJson(json);
@@ -534,8 +540,7 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
     List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-        DeviceDefinitionDeviceNameType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDefinitionDeviceName;
 
@@ -583,11 +588,171 @@ class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'DeviceDefinitionSpecialization cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceDefinitionSpecialization.fromJson(Map<String, dynamic> json) =>
       _$DeviceDefinitionSpecializationFromJson(json);
+}
+
+@freezed
+class DeviceDefinitionHasPart with _$DeviceDefinitionHasPart {
+  DeviceDefinitionHasPart._();
+  factory DeviceDefinitionHasPart({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference reference,
+    Integer? count,
+    @JsonKey(name: '_count') Element? countElement,
+  }) = _DeviceDefinitionHasPart;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionHasPart.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDefinitionHasPart.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceDefinitionHasPart.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'DeviceDefinitionHasPart cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionHasPart.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionHasPartFromJson(json);
+}
+
+@freezed
+class DeviceDefinitionPackaging with _$DeviceDefinitionPackaging {
+  DeviceDefinitionPackaging._();
+  factory DeviceDefinitionPackaging({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    CodeableConcept? type,
+    Integer? count,
+    @JsonKey(name: '_count') Element? countElement,
+    List<DeviceDefinitionDistributor>? distributor,
+    List<DeviceDefinitionUdiDeviceIdentifier1>? udiDeviceIdentifier,
+    List<DeviceDefinitionPackaging>? packaging,
+  }) = _DeviceDefinitionPackaging;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionPackaging.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDefinitionPackaging.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceDefinitionPackaging.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'DeviceDefinitionPackaging cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionPackaging.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionPackagingFromJson(json);
+}
+
+@freezed
+class DeviceDefinitionDistributor with _$DeviceDefinitionDistributor {
+  DeviceDefinitionDistributor._();
+  factory DeviceDefinitionDistributor({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    List<Reference>? organizationReference,
+  }) = _DeviceDefinitionDistributor;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionDistributor.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDefinitionDistributor.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceDefinitionDistributor.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'DeviceDefinitionDistributor cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionDistributor.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionDistributorFromJson(json);
+}
+
+@freezed
+class DeviceDefinitionUdiDeviceIdentifier1
+    with _$DeviceDefinitionUdiDeviceIdentifier1 {
+  DeviceDefinitionUdiDeviceIdentifier1._();
+  factory DeviceDefinitionUdiDeviceIdentifier1({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? deviceIdentifier,
+    @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
+    FhirUri? issuer,
+    @JsonKey(name: '_issuer') Element? issuerElement,
+    FhirUri? jurisdiction,
+    @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
+  }) = _DeviceDefinitionUdiDeviceIdentifier1;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionUdiDeviceIdentifier1.fromYaml(dynamic yaml) => yaml
+          is String
+      ? DeviceDefinitionUdiDeviceIdentifier1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceDefinitionUdiDeviceIdentifier1.fromJson(
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'DeviceDefinitionUdiDeviceIdentifier1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionUdiDeviceIdentifier1.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceDefinitionUdiDeviceIdentifier1FromJson(json);
+}
+
+@freezed
+class DeviceDefinitionVersion with _$DeviceDefinitionVersion {
+  DeviceDefinitionVersion._();
+  factory DeviceDefinitionVersion({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    Identifier? component,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
+  }) = _DeviceDefinitionVersion;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory DeviceDefinitionVersion.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceDefinitionVersion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceDefinitionVersion.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'DeviceDefinitionVersion cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceDefinitionVersion.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionVersionFromJson(json);
 }
 
 @freezed
@@ -707,8 +872,7 @@ class EventDefinition with Resource, _$EventDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
-        EventDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -730,18 +894,18 @@ class EventDefinition with Resource, _$EventDefinition {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    String? subtitle,
-    @JsonKey(name: '_subtitle') Element? subtitleElement,
-    CodeableConcept? subjectCodeableConcept,
-    Reference? subjectReference,
-    String? usage,
-    @JsonKey(name: '_usage') Element? usageElement,
     List<CodeableConcept>? topic,
     List<ContactDetail>? author,
     List<ContactDetail>? editor,
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
     required List<TriggerDefinition> trigger,
   }) = _EventDefinition;
 
@@ -784,17 +948,14 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     Identifier? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    List<Canonical>? derivedFromCanonical,
-    List<FhirUri>? derivedFromUri,
-    @JsonKey(name: '_derivedFromUri') List<Element?>? derivedFromUriElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
-    CodeableConcept? subjectCodeableConcept,
-    Reference? subjectReference,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? publisher,
@@ -812,10 +973,14 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
+    List<Canonical>? derivedFromCanonical,
+    List<FhirUri>? derivedFromUri,
+    @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
+    CodeableConcept? subject,
     CodeableConcept? performerType,
     List<CodeableConcept>? category,
     required CodeableConcept code,
-    List<ObservationDefinitionPermittedDataType>? permittedDataType,
+    List<Code>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
         List<Element>? permittedDataTypeElement,
     Boolean? multipleResultsAllowed,
@@ -823,16 +988,12 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
         Element? multipleResultsAllowedElement,
     CodeableConcept? bodySite,
     CodeableConcept? method,
-    Reference? specimen,
-    Reference? device,
+    List<Reference>? specimen,
+    List<Reference>? device,
     String? preferredReportName,
     @JsonKey(name: '_preferredReportName') Element? preferredReportNameElement,
     ObservationDefinitionQuantitativeDetails? quantitativeDetails,
-    List<ObservationDefinitionQualifiedInterval>? qualifiedInterval,
-    Reference? validCodedValueSet,
-    Reference? normalCodedValueSet,
-    Reference? abnormalCodedValueSet,
-    Reference? criticalCodedValueSet,
+    List<ObservationDefinitionQualifiedValue>? qualifiedValue,
     List<Reference>? hasMember,
     List<ObservationDefinitionComponent>? component,
   }) = _ObservationDefinition;
@@ -862,8 +1023,8 @@ class ObservationDefinitionQuantitativeDetails
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableConcept? customaryUnit,
     CodeableConcept? unit,
+    CodeableConcept? customaryUnit,
     Decimal? conversionFactor,
     @JsonKey(name: '_conversionFactor') Element? conversionFactorElement,
     Integer? decimalPrecision,
@@ -883,56 +1044,58 @@ class ObservationDefinitionQuantitativeDetails
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ObservationDefinitionQuantitativeDetails cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ObservationDefinitionQuantitativeDetails.fromJson(
           Map<String, dynamic> json) =>
       _$ObservationDefinitionQuantitativeDetailsFromJson(json);
 }
 
 @freezed
-class ObservationDefinitionQualifiedInterval
-    with _$ObservationDefinitionQualifiedInterval {
-  ObservationDefinitionQualifiedInterval._();
-  factory ObservationDefinitionQualifiedInterval({
+class ObservationDefinitionQualifiedValue
+    with _$ObservationDefinitionQualifiedValue {
+  ObservationDefinitionQualifiedValue._();
+  factory ObservationDefinitionQualifiedValue({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(
-        unknownEnumValue:
-            ObservationDefinitionQualifiedIntervalCategory.unknown)
-        ObservationDefinitionQualifiedIntervalCategory? category,
-    @JsonKey(name: '_category') Element? categoryElement,
-    Range? range,
     CodeableConcept? context,
     List<CodeableConcept>? appliesTo,
-    @JsonKey(unknownEnumValue: ObservationDefinitionQualifiedIntervalGender.unknown)
-        ObservationDefinitionQualifiedIntervalGender? gender,
+    Code? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Range? age,
     Range? gestationalAge,
     String? condition,
     @JsonKey(name: '_condition') Element? conditionElement,
-  }) = _ObservationDefinitionQualifiedInterval;
+    Code? rangeCategory,
+    @JsonKey(name: '_rangeCategory') Element? rangeCategoryElement,
+    Range? range,
+    Canonical? validCodedValueSet,
+    Canonical? normalCodedValueSet,
+    Canonical? abnormalCodedValueSet,
+    Canonical? criticalCodedValueSet,
+  }) = _ObservationDefinitionQualifiedValue;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ObservationDefinitionQualifiedInterval.fromYaml(dynamic yaml) => yaml
+  factory ObservationDefinitionQualifiedValue.fromYaml(dynamic yaml) => yaml
           is String
-      ? ObservationDefinitionQualifiedInterval.fromJson(
+      ? ObservationDefinitionQualifiedValue.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? ObservationDefinitionQualifiedInterval.fromJson(
+          ? ObservationDefinitionQualifiedValue.fromJson(
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
-              'ObservationDefinitionQualifiedInterval cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              'ObservationDefinitionQualifiedValue cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
-  factory ObservationDefinitionQualifiedInterval.fromJson(
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ObservationDefinitionQualifiedValue.fromJson(
           Map<String, dynamic> json) =>
-      _$ObservationDefinitionQualifiedIntervalFromJson(json);
+      _$ObservationDefinitionQualifiedValueFromJson(json);
 }
 
 @freezed
@@ -943,11 +1106,11 @@ class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
-    List<ObservationDefinitionComponentPermittedDataType>? permittedDataType,
+    List<Code>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
         List<Element>? permittedDataTypeElement,
     ObservationDefinitionQuantitativeDetails? quantitativeDetails,
-    List<ObservationDefinitionQualifiedInterval>? qualifiedInterval,
+    List<ObservationDefinitionQualifiedValue>? qualifiedValue,
   }) = _ObservationDefinitionComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -963,7 +1126,7 @@ class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ObservationDefinitionComponent cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ObservationDefinitionComponent.fromJson(Map<String, dynamic> json) =>
@@ -996,8 +1159,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-        PlanDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1019,21 +1181,24 @@ class PlanDefinition with Resource, _$PlanDefinition {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    String? subtitle,
-    @JsonKey(name: '_subtitle') Element? subtitleElement,
-    CodeableConcept? type,
-    CodeableConcept? subjectCodeableConcept,
-    Reference? subjectReference,
-    String? usage,
-    @JsonKey(name: '_usage') Element? usageElement,
     List<CodeableConcept>? topic,
     List<ContactDetail>? author,
     List<ContactDetail>? editor,
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    CodeableConcept? type,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    Canonical? subjectCanonical,
+    @JsonKey(name: '_subjectCanonical') Element? subjectCanonicalElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
     @JsonKey(name: 'library') List<Canonical>? library_,
     List<PlanDefinitionGoal>? goal,
+    List<PlanDefinitionActor>? actor,
     List<PlanDefinitionAction>? action,
   }) = _PlanDefinition;
 
@@ -1119,6 +1284,67 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
 }
 
 @freezed
+class PlanDefinitionActor with _$PlanDefinitionActor {
+  PlanDefinitionActor._();
+  factory PlanDefinitionActor({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required List<PlanDefinitionOption> option,
+  }) = _PlanDefinitionActor;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory PlanDefinitionActor.fromYaml(dynamic yaml) => yaml is String
+      ? PlanDefinitionActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PlanDefinitionActor.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'PlanDefinitionActor cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory PlanDefinitionActor.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionActorFromJson(json);
+}
+
+@freezed
+class PlanDefinitionOption with _$PlanDefinitionOption {
+  PlanDefinitionOption._();
+  factory PlanDefinitionOption({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Reference? typeReference,
+    CodeableConcept? role,
+  }) = _PlanDefinitionOption;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory PlanDefinitionOption.fromYaml(dynamic yaml) => yaml is String
+      ? PlanDefinitionOption.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PlanDefinitionOption.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'PlanDefinitionOption cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory PlanDefinitionOption.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionOptionFromJson(json);
+}
+
+@freezed
 class PlanDefinitionAction with _$PlanDefinitionAction {
   PlanDefinitionAction._();
   factory PlanDefinitionAction({
@@ -1135,41 +1361,37 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     @JsonKey(name: '_textEquivalent') Element? textEquivalentElement,
     Code? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
-    List<CodeableConcept>? code,
+    CodeableConcept? code,
     List<CodeableConcept>? reason,
     List<RelatedArtifact>? documentation,
     List<Id>? goalId,
-    @JsonKey(name: '_goalId') List<Element?>? goalIdElement,
+    @JsonKey(name: '_goalId') List<Element>? goalIdElement,
     CodeableConcept? subjectCodeableConcept,
     Reference? subjectReference,
+    Canonical? subjectCanonical,
+    @JsonKey(name: '_subjectCanonical') Element? subjectCanonicalElement,
     List<TriggerDefinition>? trigger,
     List<PlanDefinitionCondition>? condition,
-    List<DataRequirement>? input,
-    List<DataRequirement>? output,
+    List<PlanDefinitionInput>? input,
+    List<PlanDefinitionOutput>? output,
     List<PlanDefinitionRelatedAction>? relatedAction,
-    FhirDateTime? timingDateTime,
-    @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
     Age? timingAge,
-    Period? timingPeriod,
     FhirDuration? timingDuration,
     Range? timingRange,
     Timing? timingTiming,
+    CodeableConcept? locationCodeableConcept,
+    Reference? locationReference,
     List<PlanDefinitionParticipant>? participant,
     CodeableConcept? type,
-    @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
-        PlanDefinitionActionGroupingBehavior? groupingBehavior,
+    Code? groupingBehavior,
     @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
-    @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
-        PlanDefinitionActionSelectionBehavior? selectionBehavior,
+    Code? selectionBehavior,
     @JsonKey(name: '_selectionBehavior') Element? selectionBehaviorElement,
-    @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
-        PlanDefinitionActionRequiredBehavior? requiredBehavior,
+    Code? requiredBehavior,
     @JsonKey(name: '_requiredBehavior') Element? requiredBehaviorElement,
-    @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
-        PlanDefinitionActionPrecheckBehavior? precheckBehavior,
+    Code? precheckBehavior,
     @JsonKey(name: '_precheckBehavior') Element? precheckBehaviorElement,
-    @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
-        PlanDefinitionActionCardinalityBehavior? cardinalityBehavior,
+    Code? cardinalityBehavior,
     @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
     Canonical? definitionCanonical,
     @JsonKey(name: '_definitionCanonical') Element? definitionCanonicalElement,
@@ -1204,8 +1426,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
-        PlanDefinitionConditionKind? kind,
+    Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Expression? expression,
   }) = _PlanDefinitionCondition;
@@ -1228,16 +1449,77 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
 }
 
 @freezed
+class PlanDefinitionInput with _$PlanDefinitionInput {
+  PlanDefinitionInput._();
+  factory PlanDefinitionInput({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    DataRequirement? requirement,
+    Id? relatedData,
+    @JsonKey(name: '_relatedData') Element? relatedDataElement,
+  }) = _PlanDefinitionInput;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory PlanDefinitionInput.fromYaml(dynamic yaml) => yaml is String
+      ? PlanDefinitionInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PlanDefinitionInput.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'PlanDefinitionInput cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory PlanDefinitionInput.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionInputFromJson(json);
+}
+
+@freezed
+class PlanDefinitionOutput with _$PlanDefinitionOutput {
+  PlanDefinitionOutput._();
+  factory PlanDefinitionOutput({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    DataRequirement? requirement,
+    String? relatedData,
+    @JsonKey(name: '_relatedData') Element? relatedDataElement,
+  }) = _PlanDefinitionOutput;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory PlanDefinitionOutput.fromYaml(dynamic yaml) => yaml is String
+      ? PlanDefinitionOutput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PlanDefinitionOutput.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'PlanDefinitionOutput cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory PlanDefinitionOutput.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionOutputFromJson(json);
+}
+
+@freezed
 class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedAction._();
   factory PlanDefinitionRelatedAction({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Id? actionId,
-    @JsonKey(name: '_actionId') Element? actionIdElement,
-    @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
-        PlanDefinitionRelatedActionRelationship? relationship,
+    Id? targetId,
+    @JsonKey(name: '_targetId') Element? targetIdElement,
+    Code? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     FhirDuration? offsetDuration,
     Range? offsetRange,
@@ -1268,10 +1550,13 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-        PlanDefinitionParticipantType? type,
+    String? actorId,
+    @JsonKey(name: '_actorId') Element? actorIdElement,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
+    Reference? typeReference,
     CodeableConcept? role,
+    CodeableConcept? function,
   }) = _PlanDefinitionParticipant;
 
   /// Produces a Yaml formatted String version of the object
@@ -1348,8 +1633,7 @@ class Questionnaire with Resource, _$Questionnaire {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-        QuestionnaireStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1371,9 +1655,15 @@ class Questionnaire with Resource, _$Questionnaire {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
     List<Canonical>? derivedFrom,
     List<Code>? subjectType,
-    @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
+    @JsonKey(name: '_subjectType') List<Element>? subjectTypeElement,
     List<Coding>? code,
     List<QuestionnaireItem>? item,
   }) = _Questionnaire;
@@ -1409,15 +1699,15 @@ class QuestionnaireItem with _$QuestionnaireItem {
     List<Coding>? code,
     String? prefix,
     @JsonKey(name: '_prefix') Element? prefixElement,
-    String? text,
+    Markdown? text,
     @JsonKey(name: '_text') Element? textElement,
-    @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-        QuestionnaireItemType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<QuestionnaireEnableWhen>? enableWhen,
-    @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
-        QuestionnaireItemEnableBehavior? enableBehavior,
+    Code? enableBehavior,
     @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
+    Code? disabledDisplay,
+    @JsonKey(name: '_disabledDisplay') Element? disabledDisplayElement,
     @JsonKey(name: 'required') Boolean? required_,
     @JsonKey(name: '_required') Element? requiredElement,
     Boolean? repeats,
@@ -1426,6 +1716,8 @@ class QuestionnaireItem with _$QuestionnaireItem {
     @JsonKey(name: '_readOnly') Element? readOnlyElement,
     Integer? maxLength,
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
+    Code? answerConstraint,
+    @JsonKey(name: '_answerConstraint') Element? answerConstraintElement,
     Canonical? answerValueSet,
     List<QuestionnaireAnswerOption>? answerOption,
     List<QuestionnaireInitial>? initial,
@@ -1458,8 +1750,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
     List<FhirExtension>? modifierExtension,
     String? question,
     @JsonKey(name: '_question') Element? questionElement,
-    @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-        QuestionnaireEnableWhenOperator? operator_,
+    Code? operator,
     @JsonKey(name: '_operator') Element? operatorElement,
     Boolean? answerBoolean,
     @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
@@ -1608,7 +1899,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     @JsonKey(name: '_title') Element? titleElement,
     List<Canonical>? derivedFromCanonical,
     List<FhirUri>? derivedFromUri,
-    @JsonKey(name: '_derivedFromUri') List<Element?>? derivedFromUriElement,
+    @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
@@ -1667,8 +1958,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
     Boolean? isDerived,
     @JsonKey(name: '_isDerived') Element? isDerivedElement,
     CodeableConcept? type,
-    @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
-        SpecimenDefinitionTypeTestedPreference? preference,
+    Code? preference,
     @JsonKey(name: '_preference') Element? preferenceElement,
     SpecimenDefinitionContainer? container,
     String? requirement,

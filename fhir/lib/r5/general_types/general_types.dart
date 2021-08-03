@@ -280,7 +280,7 @@ class FhirDuration with _$FhirDuration {
       : yaml is YamlMap
           ? FhirDuration.fromJson(jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
-              'FhirDuration cannot be constructed from input provided,'
+              'Duration cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
@@ -587,11 +587,11 @@ class HumanName with _$HumanName {
     String? family,
     @JsonKey(name: '_family') Element? familyElement,
     List<String>? given,
-    @JsonKey(name: '_given') List<Element?>? givenElement,
+    @JsonKey(name: '_given') List<Element>? givenElement,
     List<String>? prefix,
-    @JsonKey(name: '_prefix') List<Element?>? prefixElement,
+    @JsonKey(name: '_prefix') List<Element>? prefixElement,
     List<String>? suffix,
-    @JsonKey(name: '_suffix') List<Element?>? suffixElement,
+    @JsonKey(name: '_suffix') List<Element>? suffixElement,
     Period? period,
   }) = _HumanName;
 
@@ -625,7 +625,7 @@ class Address with _$Address {
     String? text,
     @JsonKey(name: '_text') Element? textElement,
     List<String>? line,
-    @JsonKey(name: '_line') List<Element?>? lineElement,
+    @JsonKey(name: '_line') List<Element>? lineElement,
     String? city,
     @JsonKey(name: '_city') Element? cityElement,
     String? district,
@@ -699,7 +699,7 @@ class Timing with _$Timing {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<FhirDateTime>? event,
-    @JsonKey(name: '_event') List<Element?>? eventElement,
+    @JsonKey(name: '_event') List<Element>? eventElement,
     TimingRepeat? repeat,
     CodeableConcept? code,
   }) = _Timing;
@@ -753,11 +753,11 @@ class TimingRepeat with _$TimingRepeat {
         TimingRepeatPeriodUnit? periodUnit,
     @JsonKey(name: '_periodUnit') Element? periodUnitElement,
     List<Code>? dayOfWeek,
-    @JsonKey(name: '_dayOfWeek') List<Element?>? dayOfWeekElement,
+    @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
     List<Time>? timeOfDay,
-    @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
+    @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
     List<TimingRepeatWhen>? when,
-    @JsonKey(name: '_when') List<Element?>? whenElement,
+    @JsonKey(name: '_when') List<Element>? whenElement,
     UnsignedInt? offset,
     @JsonKey(name: '_offset') Element? offsetElement,
   }) = _TimingRepeat;

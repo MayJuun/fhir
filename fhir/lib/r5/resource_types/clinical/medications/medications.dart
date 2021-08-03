@@ -30,7 +30,7 @@ class Immunization with Resource, _$Immunization {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -247,15 +247,9 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     @JsonKey(name: '_description') Element? descriptionElement,
     String? series,
     @JsonKey(name: '_series') Element? seriesElement,
-    //ToDo
     String? doseNumber,
-    PositiveInt? doseNumberPositiveInt,
-    String? doseNumberString,
     @JsonKey(name: '_doseNumber') Element? doseNumberElement,
-    //ToDo
     String? seriesDoses,
-    PositiveInt? seriesDosesPositiveInt,
-    String? seriesDosesString,
     @JsonKey(name: '_seriesDoses') Element? seriesDosesElement,
   }) = _ImmunizationEvaluation;
 
@@ -296,7 +290,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     required Reference patient,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -340,15 +334,9 @@ class ImmunizationRecommendationRecommendation
     @JsonKey(name: '_description') Element? descriptionElement,
     String? series,
     @JsonKey(name: '_series') Element? seriesElement,
-    //ToDo
     String? doseNumber,
-    PositiveInt? doseNumberPositiveInt,
-    String? doseNumberString,
     @JsonKey(name: '_doseNumber') Element? doseNumberElement,
-    //ToDo
     String? seriesDoses,
-    PositiveInt? seriesDosesPositiveInt,
-    String? seriesDosesString,
     @JsonKey(name: '_seriesDoses') Element? seriesDosesElement,
     List<Reference>? supportingImmunization,
     List<Reference>? supportingPatientInformation,
@@ -367,8 +355,9 @@ class ImmunizationRecommendationRecommendation
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ImmunizationRecommendationRecommendation cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImmunizationRecommendationRecommendation.fromJson(
           Map<String, dynamic> json) =>
       _$ImmunizationRecommendationRecommendationFromJson(json);
@@ -400,8 +389,9 @@ class ImmunizationRecommendationDateCriterion
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ImmunizationRecommendationDateCriterion cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImmunizationRecommendationDateCriterion.fromJson(
           Map<String, dynamic> json) =>
       _$ImmunizationRecommendationDateCriterionFromJson(json);
@@ -428,7 +418,7 @@ class Medication with Resource, _$Medication {
     CodeableConcept? code,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    Reference? manufacturer,
+    Reference? sponsor,
     CodeableConcept? doseForm,
     Ratio? amount,
     List<MedicationIngredient>? ingredient,
@@ -535,7 +525,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     List<Reference>? partOf,
     Code? status,
@@ -604,8 +594,9 @@ class MedicationAdministrationPerformer
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationAdministrationPerformer cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationAdministrationPerformer.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationAdministrationPerformerFromJson(json);
@@ -641,7 +632,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationAdministrationDosage cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
@@ -773,7 +764,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationDispenseSubstitution cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
@@ -802,11 +793,11 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? author,
-    Reference? manufacturer,
+    Reference? sponsor,
     CodeableConcept? doseForm,
     Quantity? amount,
     List<String>? synonym,
-    @JsonKey(name: '_synonym') List<Element?>? synonymElement,
+    @JsonKey(name: '_synonym') List<Element>? synonymElement,
     List<MedicationKnowledgeRelatedMedicationKnowledge>?
         relatedMedicationKnowledge,
     List<Reference>? associatedMedication,
@@ -821,7 +812,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     List<CodeableConcept>? intendedRoute,
     List<MedicationKnowledgeCost>? cost,
     List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
-    List<MedicationKnowledgeAdministrationGuideline>? administrationGuideline,
+    List<MedicationKnowledgeIndicationGuideline>? indicationGuideline,
     List<MedicationKnowledgeMedicineClassification>? medicineClassification,
     List<MedicationKnowledgePackaging>? packaging,
     List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
@@ -873,8 +864,9 @@ class MedicationKnowledgeRelatedMedicationKnowledge
                   jsonDecode(jsonEncode(yaml)))
               : throw ArgumentError(
                   'MedicationKnowledgeRelatedMedicationKnowledge cannot be constructed from input provided,'
-                  ' it is neither a yaml string or a yaml map.');
+                  ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeRelatedMedicationKnowledge.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationKnowledgeRelatedMedicationKnowledgeFromJson(json);
@@ -918,8 +910,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
-    Boolean? isActive,
-    @JsonKey(name: '_isActive') Element? isActiveElement,
+    CodeableConcept? isActive,
     Ratio? strengthRatio,
     CodeableConcept? strengthCodeableConcept,
     Quantity? strengthQuantity,
@@ -1001,45 +992,80 @@ class MedicationKnowledgeMonitoringProgram
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationKnowledgeMonitoringProgram cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeMonitoringProgram.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationKnowledgeMonitoringProgramFromJson(json);
 }
 
 @freezed
-class MedicationKnowledgeAdministrationGuideline
-    with _$MedicationKnowledgeAdministrationGuideline {
-  MedicationKnowledgeAdministrationGuideline._();
-  factory MedicationKnowledgeAdministrationGuideline({
+class MedicationKnowledgeIndicationGuideline
+    with _$MedicationKnowledgeIndicationGuideline {
+  MedicationKnowledgeIndicationGuideline._();
+  factory MedicationKnowledgeIndicationGuideline({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    List<MedicationKnowledgeDosage>? dosage,
-    CodeableConcept? indicationCodeableConcept,
-    Reference? indicationReference,
-    List<MedicationKnowledgePatientCharacteristic>? patientCharacteristic,
-  }) = _MedicationKnowledgeAdministrationGuideline;
+    List<CodeableReference>? indication,
+    List<MedicationKnowledgeDosingGuideline>? dosingGuideline,
+  }) = _MedicationKnowledgeIndicationGuideline;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory MedicationKnowledgeAdministrationGuideline.fromYaml(dynamic yaml) => yaml
+  factory MedicationKnowledgeIndicationGuideline.fromYaml(dynamic yaml) => yaml
           is String
-      ? MedicationKnowledgeAdministrationGuideline.fromJson(
+      ? MedicationKnowledgeIndicationGuideline.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? MedicationKnowledgeAdministrationGuideline.fromJson(
+          ? MedicationKnowledgeIndicationGuideline.fromJson(
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
-              'MedicationKnowledgeAdministrationGuideline cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              'MedicationKnowledgeIndicationGuideline cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
-  factory MedicationKnowledgeAdministrationGuideline.fromJson(
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MedicationKnowledgeIndicationGuideline.fromJson(
           Map<String, dynamic> json) =>
-      _$MedicationKnowledgeAdministrationGuidelineFromJson(json);
+      _$MedicationKnowledgeIndicationGuidelineFromJson(json);
+}
+
+@freezed
+class MedicationKnowledgeDosingGuideline
+    with _$MedicationKnowledgeDosingGuideline {
+  MedicationKnowledgeDosingGuideline._();
+  factory MedicationKnowledgeDosingGuideline({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? treatmentIntent,
+    List<MedicationKnowledgeDosage>? dosage,
+    CodeableConcept? administrationTreatment,
+    List<MedicationKnowledgePatientCharacteristic>? patientCharacteristic,
+  }) = _MedicationKnowledgeDosingGuideline;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory MedicationKnowledgeDosingGuideline.fromYaml(dynamic yaml) => yaml
+          is String
+      ? MedicationKnowledgeDosingGuideline.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MedicationKnowledgeDosingGuideline.fromJson(
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'MedicationKnowledgeDosingGuideline cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory MedicationKnowledgeDosingGuideline.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicationKnowledgeDosingGuidelineFromJson(json);
 }
 
 @freezed
@@ -1082,6 +1108,7 @@ class MedicationKnowledgePatientCharacteristic
     required CodeableConcept type,
     CodeableConcept? valueCodeableConcept,
     Quantity? valueQuantity,
+    Range? valueRange,
   }) = _MedicationKnowledgePatientCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
@@ -1097,8 +1124,9 @@ class MedicationKnowledgePatientCharacteristic
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationKnowledgePatientCharacteristic cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgePatientCharacteristic.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationKnowledgePatientCharacteristicFromJson(json);
@@ -1129,8 +1157,9 @@ class MedicationKnowledgeMedicineClassification
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationKnowledgeMedicineClassification cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeMedicineClassification.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationKnowledgeMedicineClassificationFromJson(json);
@@ -1201,8 +1230,9 @@ class MedicationKnowledgeDrugCharacteristic
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationKnowledgeDrugCharacteristic cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeDrugCharacteristic.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationKnowledgeDrugCharacteristicFromJson(json);
@@ -1264,7 +1294,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationKnowledgeSubstitution cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeSubstitution.fromJson(Map<String, dynamic> json) =>
@@ -1295,7 +1325,7 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationKnowledgeMaxDispense cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeMaxDispense.fromJson(Map<String, dynamic> json) =>
@@ -1328,8 +1358,9 @@ class MedicationKnowledgeKineticCharacteristic
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationKnowledgeKineticCharacteristic cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeKineticCharacteristic.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationKnowledgeKineticCharacteristicFromJson(json);
@@ -1380,7 +1411,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     List<CodeableReference>? reason,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     Identifier? groupIdentifier,
     CodeableConcept? courseOfTherapyType,
@@ -1430,6 +1461,8 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
     Quantity? quantity,
     FhirDuration? expectedSupplyDuration,
     Reference? dispenser,
+    List<Annotation>? dispenserInstruction,
+    CodeableConcept? doseAdministrationAid,
   }) = _MedicationRequestDispenseRequest;
 
   /// Produces a Yaml formatted String version of the object
@@ -1445,8 +1478,9 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MedicationRequestDispenseRequest cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationRequestDispenseRequest.fromJson(
           Map<String, dynamic> json) =>
       _$MedicationRequestDispenseRequestFromJson(json);
@@ -1553,8 +1587,7 @@ class MedicationUsage with Resource, _$MedicationUsage {
     @JsonKey(name: '_renderedDosageInstruction')
         Element? renderedDosageInstructionElement,
     List<Dosage>? dosage,
-    Boolean? takenAsOrdered,
-    @JsonKey(name: '_takenAsOrdered') Element? takenAsOrderedElement,
+    CodeableConcept? adherence,
   }) = _MedicationUsage;
 
   /// Produces a Yaml formatted String version of the object

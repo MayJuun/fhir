@@ -37,8 +37,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
-        CapabilityStatementStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -55,20 +54,18 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
-        CapabilityStatementKind? kind,
+    Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     List<Canonical>? instantiates,
     List<Canonical>? imports,
     CapabilityStatementSoftware? software,
     CapabilityStatementImplementation? implementation,
-    @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
-        CapabilityStatementFhirVersion? fhirVersion,
+    Code? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<Code>? format,
-    @JsonKey(name: '_format') List<Element?>? formatElement,
+    @JsonKey(name: '_format') List<Element>? formatElement,
     List<Code>? patchFormat,
-    @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
+    @JsonKey(name: '_patchFormat') List<Element>? patchFormatElement,
     List<Canonical>? implementationGuide,
     List<CapabilityStatementRest>? rest,
     List<CapabilityStatementMessaging>? messaging,
@@ -153,8 +150,9 @@ class CapabilityStatementImplementation
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CapabilityStatementImplementation cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatementImplementationFromJson(json);
@@ -167,8 +165,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
-        CapabilityStatementRestMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -243,8 +240,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
     List<CapabilityStatementInteraction>? interaction,
-    @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-        CapabilityStatementResourceVersioning? versioning,
+    Code? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
     Boolean? readHistory,
     @JsonKey(name: '_readHistory') Element? readHistoryElement,
@@ -252,20 +248,18 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
     @JsonKey(name: '_updateCreate') Element? updateCreateElement,
     Boolean? conditionalCreate,
     @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
-    @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-        CapabilityStatementResourceConditionalRead? conditionalRead,
+    Code? conditionalRead,
     @JsonKey(name: '_conditionalRead') Element? conditionalReadElement,
     Boolean? conditionalUpdate,
     @JsonKey(name: '_conditionalUpdate') Element? conditionalUpdateElement,
-    @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-        CapabilityStatementResourceConditionalDelete? conditionalDelete,
+    Code? conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
-    List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
-    @JsonKey(name: '_referencePolicy') List<Element?>? referencePolicyElement,
+    List<Code>? referencePolicy,
+    @JsonKey(name: '_referencePolicy') List<Element>? referencePolicyElement,
     List<String>? searchInclude,
-    @JsonKey(name: '_searchInclude') List<Element?>? searchIncludeElement,
+    @JsonKey(name: '_searchInclude') List<Element>? searchIncludeElement,
     List<String>? searchRevInclude,
-    @JsonKey(name: '_searchRevInclude') List<Element?>? searchRevIncludeElement,
+    @JsonKey(name: '_searchRevInclude') List<Element>? searchRevIncludeElement,
     List<CapabilityStatementSearchParam>? searchParam,
     List<CapabilityStatementOperation>? operation,
   }) = _CapabilityStatementResource;
@@ -295,8 +289,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
-        CapabilityStatementInteractionCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -315,7 +308,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CapabilityStatementInteraction cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
@@ -332,8 +325,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Canonical? definition,
-    @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
-        CapabilityStatementSearchParamType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -352,7 +344,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CapabilityStatementSearchParam cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
@@ -398,8 +390,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
-        CapabilityStatementInteraction1Code? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -418,7 +409,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CapabilityStatementInteraction1 cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
@@ -496,8 +487,7 @@ class CapabilityStatementSupportedMessage
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
-        CapabilityStatementSupportedMessageMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     required Canonical definition,
   }) = _CapabilityStatementSupportedMessage;
@@ -515,8 +505,9 @@ class CapabilityStatementSupportedMessage
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CapabilityStatementSupportedMessage cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatementSupportedMessageFromJson(json);
@@ -529,8 +520,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
-        CapabilityStatementDocumentMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -581,8 +571,7 @@ class CapabilityStatement2 with Resource, _$CapabilityStatement2 {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
-        CapabilityStatement2Status? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -605,13 +594,12 @@ class CapabilityStatement2 with Resource, _$CapabilityStatement2 {
     List<Canonical>? imports,
     CapabilityStatement2Software? software,
     CapabilityStatement2Implementation? implementation,
-    @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
-        CapabilityStatement2FhirVersion? fhirVersion,
+    Code? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<Code>? format,
-    @JsonKey(name: '_format') List<Element?>? formatElement,
+    @JsonKey(name: '_format') List<Element>? formatElement,
     List<Code>? patchFormat,
-    @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
+    @JsonKey(name: '_patchFormat') List<Element>? patchFormatElement,
     List<Canonical>? implementationGuide,
     List<CapabilityStatement2Rest>? rest,
   }) = _CapabilityStatement2;
@@ -694,8 +682,9 @@ class CapabilityStatement2Implementation
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CapabilityStatement2Implementation cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement2Implementation.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatement2ImplementationFromJson(json);
@@ -712,6 +701,7 @@ class CapabilityStatement2Rest with _$CapabilityStatement2Rest {
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
+    List<CapabilityStatement2Feature>? feature,
     List<CapabilityStatement2Resource>? resource,
     List<CapabilityStatement2Interaction1>? interaction,
     List<CapabilityStatement2SearchParam>? searchParam,
@@ -738,6 +728,37 @@ class CapabilityStatement2Rest with _$CapabilityStatement2Rest {
 }
 
 @freezed
+class CapabilityStatement2Feature with _$CapabilityStatement2Feature {
+  CapabilityStatement2Feature._();
+  factory CapabilityStatement2Feature({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    Code? value,
+    @JsonKey(name: '_value') Element? valueElement,
+  }) = _CapabilityStatement2Feature;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CapabilityStatement2Feature.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatement2Feature.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatement2Feature.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatement2Feature cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CapabilityStatement2Feature.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatement2FeatureFromJson(json);
+}
+
+@freezed
 class CapabilityStatement2Resource with _$CapabilityStatement2Resource {
   CapabilityStatement2Resource._();
   factory CapabilityStatement2Resource({
@@ -750,6 +771,7 @@ class CapabilityStatement2Resource with _$CapabilityStatement2Resource {
     List<Canonical>? supportedProfile,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
+    List<CapabilityStatement2Feature>? feature,
     List<CapabilityStatement2Interaction>? interaction,
     List<CapabilityStatement2SearchParam>? searchParam,
     List<CapabilityStatement2Operation>? operation,
@@ -784,6 +806,7 @@ class CapabilityStatement2Interaction with _$CapabilityStatement2Interaction {
     @JsonKey(name: '_code') Element? codeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
+    List<CapabilityStatement2Feature>? feature,
   }) = _CapabilityStatement2Interaction;
 
   /// Produces a Yaml formatted String version of the object
@@ -799,7 +822,7 @@ class CapabilityStatement2Interaction with _$CapabilityStatement2Interaction {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CapabilityStatement2Interaction cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement2Interaction.fromJson(Map<String, dynamic> json) =>
@@ -816,11 +839,11 @@ class CapabilityStatement2SearchParam with _$CapabilityStatement2SearchParam {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Canonical? definition,
-    @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
-        CapabilityStatement2SearchParamType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
+    List<CapabilityStatement2Feature>? feature,
   }) = _CapabilityStatement2SearchParam;
 
   /// Produces a Yaml formatted String version of the object
@@ -836,7 +859,7 @@ class CapabilityStatement2SearchParam with _$CapabilityStatement2SearchParam {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CapabilityStatement2SearchParam cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement2SearchParam.fromJson(Map<String, dynamic> json) =>
@@ -855,6 +878,7 @@ class CapabilityStatement2Operation with _$CapabilityStatement2Operation {
     required Canonical definition,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
+    List<CapabilityStatement2Feature>? feature,
   }) = _CapabilityStatement2Operation;
 
   /// Produces a Yaml formatted String version of the object
@@ -886,6 +910,7 @@ class CapabilityStatement2Interaction1 with _$CapabilityStatement2Interaction1 {
     @JsonKey(name: '_code') Element? codeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
+    List<CapabilityStatement2Feature>? feature,
   }) = _CapabilityStatement2Interaction1;
 
   /// Produces a Yaml formatted String version of the object
@@ -901,8 +926,9 @@ class CapabilityStatement2Interaction1 with _$CapabilityStatement2Interaction1 {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CapabilityStatement2Interaction1 cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement2Interaction1.fromJson(
           Map<String, dynamic> json) =>
       _$CapabilityStatement2Interaction1FromJson(json);
@@ -934,8 +960,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-        CompartmentDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -952,8 +977,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
-        CompartmentDefinitionCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Boolean? search,
     @JsonKey(name: '_search') Element? searchElement,
@@ -987,7 +1011,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<String>? param,
-    @JsonKey(name: '_param') List<Element?>? paramElement,
+    @JsonKey(name: '_param') List<Element>? paramElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _CompartmentDefinitionResource;
@@ -1036,8 +1060,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
-        ExampleScenarioStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1086,8 +1109,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
     List<FhirExtension>? modifierExtension,
     String? actorId,
     @JsonKey(name: '_actorId') Element? actorIdElement,
-    @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
-        ExampleScenarioActorType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -1204,8 +1226,9 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ExampleScenarioContainedInstance cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExampleScenarioContainedInstance.fromJson(
           Map<String, dynamic> json) =>
       _$ExampleScenarioContainedInstanceFromJson(json);
@@ -1380,8 +1403,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-        GraphDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1498,13 +1520,11 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
-        GraphDefinitionCompartmentUse? use,
+    Code? use,
     @JsonKey(name: '_use') Element? useElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-    @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
-        GraphDefinitionCompartmentRule? rule,
+    Code? rule,
     @JsonKey(name: '_rule') Element? ruleElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
@@ -1556,8 +1576,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-        ImplementationGuideStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1576,11 +1595,10 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @JsonKey(name: '_copyright') Element? copyrightElement,
     Id? packageId,
     @JsonKey(name: '_packageId') Element? packageIdElement,
-    @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
-        ImplementationGuideLicense? license,
+    Code? license,
     @JsonKey(name: '_license') Element? licenseElement,
-    List<ImplementationGuideFhirVersion>? fhirVersion,
-    @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
+    List<Code>? fhirVersion,
+    @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
     List<ImplementationGuideDependsOn>? dependsOn,
     List<ImplementationGuideGlobal>? global,
     ImplementationGuideDefinition? definition,
@@ -1737,8 +1755,8 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference reference,
-    List<ImplementationGuideResourceFhirVersion>? fhirVersion,
-    @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
+    List<Code>? fhirVersion,
+    @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
@@ -1781,8 +1799,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
     Reference? nameReference,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
-        ImplementationGuidePageGeneration? generation,
+    Code? generation,
     @JsonKey(name: '_generation') Element? generationElement,
     List<ImplementationGuidePage>? page,
   }) = _ImplementationGuidePage;
@@ -1880,9 +1897,9 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
     required List<ImplementationGuideResource1> resource,
     List<ImplementationGuidePage1>? page,
     List<String>? image,
-    @JsonKey(name: '_image') List<Element?>? imageElement,
+    @JsonKey(name: '_image') List<Element>? imageElement,
     List<String>? other,
-    @JsonKey(name: '_other') List<Element?>? otherElement,
+    @JsonKey(name: '_other') List<Element>? otherElement,
   }) = _ImplementationGuideManifest;
 
   /// Produces a Yaml formatted String version of the object
@@ -1949,7 +1966,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     List<String>? anchor,
-    @JsonKey(name: '_anchor') List<Element?>? anchorElement,
+    @JsonKey(name: '_anchor') List<Element>? anchorElement,
   }) = _ImplementationGuidePage1;
 
   /// Produces a Yaml formatted String version of the object
@@ -1996,8 +2013,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-        MessageDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2020,12 +2036,10 @@ class MessageDefinition with Resource, _$MessageDefinition {
     Coding? eventCoding,
     FhirUri? eventUri,
     @JsonKey(name: '_eventUri') Element? eventUriElement,
-    @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
-        MessageDefinitionCategory? category,
+    Code? category,
     @JsonKey(name: '_category') Element? categoryElement,
     List<MessageDefinitionFocus>? focus,
-    @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
-        MessageDefinitionResponseRequired? responseRequired,
+    Code? responseRequired,
     @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
     List<MessageDefinitionAllowedResponse>? allowedResponse,
     List<Canonical>? graph,
@@ -2106,8 +2120,9 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MessageDefinitionAllowedResponse cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageDefinitionAllowedResponse.fromJson(
           Map<String, dynamic> json) =>
       _$MessageDefinitionAllowedResponseFromJson(json);
@@ -2139,8 +2154,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-        OperationDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2157,8 +2171,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-        OperationDefinitionKind? kind,
+    Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Boolean? affectsState,
     @JsonKey(name: '_affectsState') Element? affectsStateElement,
@@ -2168,7 +2181,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @JsonKey(name: '_comment') Element? commentElement,
     Canonical? base,
     List<Code>? resource,
-    @JsonKey(name: '_resource') List<Element?>? resourceElement,
+    @JsonKey(name: '_resource') List<Element>? resourceElement,
     Boolean? system,
     @JsonKey(name: '_system') Element? systemElement,
     Boolean? type,
@@ -2207,8 +2220,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     List<FhirExtension>? modifierExtension,
     Code? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
-        OperationDefinitionParameterUse? use,
+    Code? use,
     @JsonKey(name: '_use') Element? useElement,
     Integer? min,
     @JsonKey(name: '_min') Element? minElement,
@@ -2219,12 +2231,11 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<Canonical>? targetProfile,
-    @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
-        OperationDefinitionParameterSearchType? searchType,
+    Code? searchType,
     @JsonKey(name: '_searchType') Element? searchTypeElement,
     OperationDefinitionBinding? binding,
     List<OperationDefinitionReferencedFrom>? referencedFrom,
-    @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
+    List<OperationDefinitionParameter>? part,
   }) = _OperationDefinitionParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -2252,8 +2263,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
-        OperationDefinitionBindingStrength? strength,
+    Code? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     required Canonical valueSet,
   }) = _OperationDefinitionBinding;
@@ -2303,8 +2313,9 @@ class OperationDefinitionReferencedFrom
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'OperationDefinitionReferencedFrom cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionReferencedFrom.fromJson(
           Map<String, dynamic> json) =>
       _$OperationDefinitionReferencedFromFromJson(json);
@@ -2318,7 +2329,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<String>? parameterName,
-    @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
+    @JsonKey(name: '_parameterName') List<Element>? parameterNameElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _OperationDefinitionOverload;
@@ -2367,8 +2378,7 @@ class SearchParameter with Resource, _$SearchParameter {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-        SearchParameterStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2389,29 +2399,27 @@ class SearchParameter with Resource, _$SearchParameter {
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<Code>? base,
-    @JsonKey(name: '_base') List<Element?>? baseElement,
-    @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-        SearchParameterType? type,
+    @JsonKey(name: '_base') List<Element>? baseElement,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
     String? xpath,
     @JsonKey(name: '_xpath') Element? xpathElement,
-    @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-        SearchParameterXpathUsage? xpathUsage,
+    Code? xpathUsage,
     @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
     List<Code>? target,
-    @JsonKey(name: '_target') List<Element?>? targetElement,
+    @JsonKey(name: '_target') List<Element>? targetElement,
     Boolean? multipleOr,
     @JsonKey(name: '_multipleOr') Element? multipleOrElement,
     Boolean? multipleAnd,
     @JsonKey(name: '_multipleAnd') Element? multipleAndElement,
-    List<SearchParameterComparator>? comparator,
-    @JsonKey(name: '_comparator') List<Element?>? comparatorElement,
-    List<SearchParameterModifier>? modifier,
-    @JsonKey(name: '_modifier') List<Element?>? modifierElement,
+    List<Code>? comparator,
+    @JsonKey(name: '_comparator') List<Element>? comparatorElement,
+    List<Code>? modifier,
+    @JsonKey(name: '_modifier') List<Element>? modifierElement,
     List<String>? chain,
-    @JsonKey(name: '_chain') List<Element?>? chainElement,
+    @JsonKey(name: '_chain') List<Element>? chainElement,
     List<SearchParameterComponent>? component,
   }) = _SearchParameter;
 
@@ -2488,8 +2496,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-        StructureDefinitionStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2507,23 +2514,20 @@ class StructureDefinition with Resource, _$StructureDefinition {
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     List<Coding>? keyword,
-    @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
-        StructureDefinitionFhirVersion? fhirVersion,
+    Code? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<StructureDefinitionMapping>? mapping,
-    @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-        StructureDefinitionKind? kind,
+    Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     @JsonKey(name: 'abstract') Boolean? abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
     List<StructureDefinitionContext>? context,
     List<String>? contextInvariant,
-    @JsonKey(name: '_contextInvariant') List<Element?>? contextInvariantElement,
+    @JsonKey(name: '_contextInvariant') List<Element>? contextInvariantElement,
     FhirUri? type,
     @JsonKey(name: '_type') Element? typeElement,
     Canonical? baseDefinition,
-    @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
-        StructureDefinitionDerivation? derivation,
+    Code? derivation,
     @JsonKey(name: '_derivation') Element? derivationElement,
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
@@ -2588,8 +2592,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-        StructureDefinitionContextType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
@@ -2664,7 +2667,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'StructureDefinitionDifferential cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
@@ -2697,8 +2700,7 @@ class StructureMap with Resource, _$StructureMap {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-        StructureMapStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2716,7 +2718,7 @@ class StructureMap with Resource, _$StructureMap {
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     List<StructureMapStructure>? structure,
-    @JsonKey(name: 'import') List<Canonical>? import_,
+    List<Canonical>? import,
     required List<StructureMapGroup> group,
   }) = _StructureMap;
 
@@ -2745,8 +2747,7 @@ class StructureMapStructure with _$StructureMapStructure {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Canonical url,
-    @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
-        StructureMapStructureMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? alias,
     @JsonKey(name: '_alias') Element? aliasElement,
@@ -2782,8 +2783,7 @@ class StructureMapGroup with _$StructureMapGroup {
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(name: 'extends') Id? extends_,
     @JsonKey(name: '_extends') Element? extendsElement,
-    @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
-        StructureMapGroupTypeMode? typeMode,
+    Code? typeMode,
     @JsonKey(name: '_typeMode') Element? typeModeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -2819,8 +2819,7 @@ class StructureMapInput with _$StructureMapInput {
     @JsonKey(name: '_name') Element? nameElement,
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
-    @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
-        StructureMapInputMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -2972,8 +2971,7 @@ class StructureMapSource with _$StructureMapSource {
     Meta? defaultValueMeta,
     String? element,
     @JsonKey(name: '_element') Element? elementElement,
-    @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
-        StructureMapSourceListMode? listMode,
+    Code? listMode,
     @JsonKey(name: '_listMode') Element? listModeElement,
     Id? variable,
     @JsonKey(name: '_variable') Element? variableElement,
@@ -3011,19 +3009,15 @@ class StructureMapTarget with _$StructureMapTarget {
     List<FhirExtension>? modifierExtension,
     Id? context,
     @JsonKey(name: '_context') Element? contextElement,
-    @JsonKey(unknownEnumValue: StructureMapTargetContextType.unknown)
-        StructureMapTargetContextType? contextType,
-    @JsonKey(name: '_contextType') Element? contextTypeElement,
     String? element,
     @JsonKey(name: '_element') Element? elementElement,
     Id? variable,
     @JsonKey(name: '_variable') Element? variableElement,
-    List<StructureMapTargetListMode>? listMode,
-    @JsonKey(name: '_listMode') List<Element?>? listModeElement,
+    List<Code>? listMode,
+    @JsonKey(name: '_listMode') List<Element>? listModeElement,
     Id? listRuleId,
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-    @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
-        StructureMapTargetTransform? transform,
+    Code? transform,
     @JsonKey(name: '_transform') Element? transformElement,
     List<StructureMapParameter>? parameter,
   }) = _StructureMapTarget;
@@ -3091,7 +3085,7 @@ class StructureMapDependent with _$StructureMapDependent {
     Id? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? variable,
-    @JsonKey(name: '_variable') List<Element?>? variableElement,
+    @JsonKey(name: '_variable') List<Element>? variableElement,
   }) = _StructureMapDependent;
 
   /// Produces a Yaml formatted String version of the object

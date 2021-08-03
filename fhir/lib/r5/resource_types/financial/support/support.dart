@@ -180,8 +180,8 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? priority,
-    List<CoverageEligibilityRequestPurpose>? purpose,
-    @JsonKey(name: '_purpose') List<Element?>? purposeElement,
+    List<Code>? purpose,
+    @JsonKey(name: '_purpose') List<Element>? purposeElement,
     required Reference patient,
     Date? servicedDate,
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
@@ -243,8 +243,9 @@ class CoverageEligibilityRequestSupportingInfo
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CoverageEligibilityRequestSupportingInfo cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestSupportingInfoFromJson(json);
@@ -278,8 +279,9 @@ class CoverageEligibilityRequestInsurance
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CoverageEligibilityRequestInsurance cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestInsuranceFromJson(json);
@@ -319,7 +321,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CoverageEligibilityRequestItem cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =>
@@ -351,8 +353,9 @@ class CoverageEligibilityRequestDiagnosis
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CoverageEligibilityRequestDiagnosis cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestDiagnosisFromJson(json);
@@ -378,8 +381,8 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     List<Identifier>? identifier,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<CoverageEligibilityResponsePurpose>? purpose,
-    @JsonKey(name: '_purpose') List<Element?>? purposeElement,
+    List<Code>? purpose,
+    @JsonKey(name: '_purpose') List<Element>? purposeElement,
     required Reference patient,
     Date? servicedDate,
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
@@ -388,8 +391,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     @JsonKey(name: '_created') Element? createdElement,
     Reference? requestor,
     required Reference request,
-    @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-        CoverageEligibilityResponseOutcome? outcome,
+    Code? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
@@ -447,8 +449,9 @@ class CoverageEligibilityResponseInsurance
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CoverageEligibilityResponseInsurance cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseInsuranceFromJson(json);
@@ -496,7 +499,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CoverageEligibilityResponseItem cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -537,8 +540,9 @@ class CoverageEligibilityResponseBenefit
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CoverageEligibilityResponseBenefit cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseBenefitFromJson(json);
@@ -567,8 +571,9 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'CoverageEligibilityResponseError cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseError.fromJson(
           Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseErrorFromJson(json);
@@ -640,8 +645,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? request,
-    @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-        EnrollmentResponseOutcome? outcome,
+    Code? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

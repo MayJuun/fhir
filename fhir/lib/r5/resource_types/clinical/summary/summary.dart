@@ -31,8 +31,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
     List<Identifier>? identifier,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
-        AdverseEventActuality? actuality,
+    Code? actuality,
     @JsonKey(name: '_actuality') Element? actualityElement,
     List<CodeableConcept>? category,
     CodeableConcept? code,
@@ -49,7 +48,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
     List<Reference>? resultingCondition,
     Reference? location,
     CodeableConcept? seriousness,
-    CodeableConcept? outcome,
+    List<CodeableConcept>? outcome,
     Reference? recorder,
     List<AdverseEventParticipant>? participant,
     List<AdverseEventSuspectEntity>? suspectEntity,
@@ -188,7 +187,7 @@ class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'AdverseEventContributingFactor cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdverseEventContributingFactor.fromJson(Map<String, dynamic> json) =>
@@ -302,13 +301,11 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     List<Identifier>? identifier,
     CodeableConcept? clinicalStatus,
     CodeableConcept? verificationStatus,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
-        AllergyIntoleranceType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
-    List<AllergyIntoleranceCategory>? category,
-    @JsonKey(name: '_category') List<Element?>? categoryElement,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-        AllergyIntoleranceCriticality? criticality,
+    List<Code>? category,
+    @JsonKey(name: '_category') List<Element>? categoryElement,
+    Code? criticality,
     @JsonKey(name: '_criticality') Element? criticalityElement,
     CodeableConcept? code,
     required Reference patient,
@@ -355,13 +352,12 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? substance,
-    required List<CodeableConcept> manifestation,
+    required List<CodeableReference> manifestation,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     FhirDateTime? onset,
     @JsonKey(name: '_onset') Element? onsetElement,
-    @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
-        AllergyIntoleranceReactionSeverity? severity,
+    Code? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     List<Annotation>? note,
@@ -419,7 +415,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     Reference? previous,
     List<Reference>? problem,
     List<FhirUri>? protocol,
-    @JsonKey(name: '_protocol') List<Element?>? protocolElement,
+    @JsonKey(name: '_protocol') List<Element>? protocolElement,
     String? summary,
     @JsonKey(name: '_summary') Element? summaryElement,
     List<ClinicalImpressionFinding>? finding,
@@ -495,7 +491,7 @@ class Condition with Resource, _$Condition {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    CodeableConcept? clinicalStatus,
+    required CodeableConcept clinicalStatus,
     CodeableConcept? verificationStatus,
     List<CodeableConcept>? category,
     CodeableConcept? severity,
@@ -621,8 +617,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? code,
-    @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
-        DetectedIssueSeverity? severity,
+    Code? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     Reference? patient,
     FhirDateTime? identifiedDateTime,
@@ -733,9 +728,8 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
-    @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
-        FamilyMemberHistoryStatus? status,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? dataAbsentReason,
     required Reference patient,
@@ -883,7 +877,7 @@ class Procedure with Resource, _$Procedure {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     List<Reference>? partOf,
     Code? status,
@@ -919,6 +913,7 @@ class Procedure with Resource, _$Procedure {
     List<Annotation>? note,
     List<ProcedureFocalDevice>? focalDevice,
     List<CodeableReference>? used,
+    List<Reference>? supportingInfo,
   }) = _Procedure;
 
   /// Produces a Yaml formatted String version of the object

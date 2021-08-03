@@ -102,7 +102,7 @@ class Bundle with Resource, _$Bundle {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Identifier? identifier,
-    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Instant? timestamp,
     @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -199,7 +199,7 @@ class BundleSearch with _$BundleSearch {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
@@ -229,8 +229,7 @@ class BundleRequest with _$BundleRequest {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
-        BundleRequestMethod? method,
+    Code? method,
     @JsonKey(name: '_method') Element? methodElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -343,7 +342,7 @@ class LinkageItem with _$LinkageItem {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference resource,
   }) = _LinkageItem;
@@ -491,8 +490,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
     List<FhirExtension>? modifierExtension,
     Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
-    @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
-        MessageHeaderResponseCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Reference? details,
   }) = _MessageHeaderResponse;
@@ -558,19 +556,17 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
-        OperationOutcomeIssueSeverity? severity,
+    Code? severity,
     @JsonKey(name: '_severity') Element? severityElement,
-    @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
-        OperationOutcomeIssueCode? code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     CodeableConcept? details,
     String? diagnostics,
     @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
     List<String>? location,
-    @JsonKey(name: '_location') List<Element?>? locationElement,
+    @JsonKey(name: '_location') List<Element>? locationElement,
     List<String>? expression,
-    @JsonKey(name: '_expression') List<Element?>? expressionElement,
+    @JsonKey(name: '_expression') List<Element>? expressionElement,
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object
@@ -704,7 +700,7 @@ class ParametersParameter with _$ParametersParameter {
     Dosage? valueDosage,
     Meta? valueMeta,
     Resource? resource,
-    @JsonKey(name: 'part') List<ParametersParameter>? part_,
+    List<ParametersParameter>? part,
   }) = _ParametersParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -746,7 +742,7 @@ class Subscription with Resource, _$Subscription {
     @JsonKey(name: '_name') Element? nameElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    required Reference topic,
+    required Canonical topic,
     List<ContactPoint>? contact,
     Instant? end,
     @JsonKey(name: '_end') Element? endElement,
@@ -757,16 +753,20 @@ class Subscription with Resource, _$Subscription {
     FhirUrl? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
     List<String>? header,
-    @JsonKey(name: '_header') List<Element?>? headerElement,
+    @JsonKey(name: '_header') List<Element>? headerElement,
     UnsignedInt? heartbeatPeriod,
     @JsonKey(name: '_heartbeatPeriod') Element? heartbeatPeriodElement,
     UnsignedInt? timeout,
     @JsonKey(name: '_timeout') Element? timeoutElement,
     Code? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
-    @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
-        SubscriptionContent? content,
+    Code? content,
     @JsonKey(name: '_content') Element? contentElement,
+    Code? notificationUrlLocation,
+    @JsonKey(name: '_notificationUrlLocation')
+        Element? notificationUrlLocationElement,
+    PositiveInt? maxCount,
+    @JsonKey(name: '_maxCount') Element? maxCountElement,
   }) = _Subscription;
 
   /// Produces a Yaml formatted String version of the object
@@ -793,6 +793,8 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
+    FhirUri? resourceType,
+    @JsonKey(name: '_resourceType') Element? resourceTypeElement,
     String? searchParamName,
     @JsonKey(name: '_searchParamName') Element? searchParamNameElement,
     Code? searchModifier,
@@ -835,8 +837,9 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
-        SubscriptionStatusType? type,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Integer64? eventsSinceSubscriptionStart,
     @JsonKey(name: '_eventsSinceSubscriptionStart')
@@ -845,8 +848,6 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     @JsonKey(name: '_eventsInNotification')
         Element? eventsInNotificationElement,
     required Reference subscription,
-    Code? status,
-    @JsonKey(name: '_status') Element? statusElement,
     required Canonical topic,
     List<CodeableConcept>? error,
   }) = _SubscriptionStatus;
@@ -893,8 +894,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     List<Canonical>? derivedFrom,
-    @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
-        SubscriptionTopicStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -915,8 +915,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    SubscriptionTopicResourceTrigger? resourceTrigger,
-    List<SubscriptionTopicCanFilterBy>? canFilterBy,
+    List<SubscriptionTopicResourceTrigger>? resourceTrigger,
   }) = _SubscriptionTopic;
 
   /// Produces a Yaml formatted String version of the object
@@ -945,13 +944,14 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
     List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Code>? resourceType,
-    @JsonKey(name: '_resourceType') List<Element?>? resourceTypeElement,
+    FhirUri? resourceType,
+    @JsonKey(name: '_resourceType') Element? resourceTypeElement,
     List<Code>? methodCriteria,
-    @JsonKey(name: '_methodCriteria') List<Element?>? methodCriteriaElement,
+    @JsonKey(name: '_methodCriteria') List<Element>? methodCriteriaElement,
     SubscriptionTopicQueryCriteria? queryCriteria,
     List<String>? fhirPathCriteria,
-    @JsonKey(name: '_fhirPathCriteria') List<Element?>? fhirPathCriteriaElement,
+    @JsonKey(name: '_fhirPathCriteria') List<Element>? fhirPathCriteriaElement,
+    List<SubscriptionTopicCanFilterBy>? canFilterBy,
   }) = _SubscriptionTopicResourceTrigger;
 
   /// Produces a Yaml formatted String version of the object
@@ -967,8 +967,9 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'SubscriptionTopicResourceTrigger cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubscriptionTopicResourceTrigger.fromJson(
           Map<String, dynamic> json) =>
       _$SubscriptionTopicResourceTriggerFromJson(json);
@@ -983,8 +984,12 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
     List<FhirExtension>? modifierExtension,
     String? previous,
     @JsonKey(name: '_previous') Element? previousElement,
+    Code? resultForCreate,
+    @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
     String? current,
     @JsonKey(name: '_current') Element? currentElement,
+    Code? resultForDelete,
+    @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
     Boolean? requireBoth,
     @JsonKey(name: '_requireBoth') Element? requireBothElement,
   }) = _SubscriptionTopicQueryCriteria;
@@ -1002,7 +1007,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'SubscriptionTopicQueryCriteria cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubscriptionTopicQueryCriteria.fromJson(Map<String, dynamic> json) =>
@@ -1019,7 +1024,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
     String? searchParamName,
     @JsonKey(name: '_searchParamName') Element? searchParamNameElement,
     List<Code>? searchModifier,
-    @JsonKey(name: '_searchModifier') List<Element?>? searchModifierElement,
+    @JsonKey(name: '_searchModifier') List<Element>? searchModifierElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _SubscriptionTopicCanFilterBy;

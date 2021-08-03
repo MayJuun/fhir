@@ -37,7 +37,7 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: MeasureStatus.unknown) MeasureStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -59,22 +59,25 @@ class Measure with Resource, _$Measure {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    String? subtitle,
-    @JsonKey(name: '_subtitle') Element? subtitleElement,
-    CodeableConcept? subjectCodeableConcept,
-    Reference? subjectReference,
-    String? usage,
-    @JsonKey(name: '_usage') Element? usageElement,
     List<CodeableConcept>? topic,
     List<ContactDetail>? author,
     List<ContactDetail>? editor,
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    Code? basis,
+    @JsonKey(name: '_basis') Element? basisElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
     @JsonKey(name: 'library') List<Canonical>? library_,
     Markdown? disclaimer,
     @JsonKey(name: '_disclaimer') Element? disclaimerElement,
     CodeableConcept? scoring,
+    CodeableConcept? scoringUnit,
     CodeableConcept? compositeScoring,
     List<CodeableConcept>? type,
     String? riskAdjustment,
@@ -88,7 +91,7 @@ class Measure with Resource, _$Measure {
         Element? clinicalRecommendationStatementElement,
     CodeableConcept? improvementNotation,
     List<Markdown>? definition,
-    @JsonKey(name: '_definition') List<Element?>? definitionElement,
+    @JsonKey(name: '_definition') List<Element>? definitionElement,
     Markdown? guidance,
     @JsonKey(name: '_guidance') Element? guidanceElement,
     List<MeasureGroup>? group,
@@ -122,6 +125,12 @@ class MeasureGroup with _$MeasureGroup {
     CodeableConcept? code,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
+    List<CodeableConcept>? type,
+    Code? basis,
+    @JsonKey(name: '_basis') Element? basisElement,
+    CodeableConcept? scoring,
+    CodeableConcept? scoringUnit,
+    CodeableConcept? improvementNotation,
     List<MeasurePopulation>? population,
     List<MeasureStratifier>? stratifier,
   }) = _MeasureGroup;
@@ -154,6 +163,9 @@ class MeasurePopulation with _$MeasurePopulation {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     required Expression criteria,
+    String? inputPopulationId,
+    @JsonKey(name: '_inputPopulationId') Element? inputPopulationIdElement,
+    CodeableConcept? aggregateMethod,
   }) = _MeasurePopulation;
 
   /// Produces a Yaml formatted String version of the object
@@ -283,18 +295,20 @@ class MeasureReport with Resource, _$MeasureReport {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-        MeasureReportStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-        MeasureReportType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
+    Code? dataUpdateType,
+    @JsonKey(name: '_dataUpdateType') Element? dataUpdateTypeElement,
     required Canonical measure,
     Reference? subject,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? reporter,
+    Reference? reportingVendor,
     required Period period,
+    CodeableConcept? scoring,
     CodeableConcept? improvementNotation,
     List<MeasureReportGroup>? group,
     List<Reference>? evaluatedResource,
@@ -326,7 +340,14 @@ class MeasureReportGroup with _$MeasureReportGroup {
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
     List<MeasureReportPopulation>? population,
-    Quantity? measureScore,
+    Quantity? measureScoreQuantity,
+    FhirDateTime? measureScoreDateTime,
+    @JsonKey(name: '_measureScoreDateTime')
+        Element? measureScoreDateTimeElement,
+    CodeableConcept? measureScoreCodeableConcept,
+    Period? measureScorePeriod,
+    Range? measureScoreRange,
+    FhirDuration? measureScoreDuration,
     List<MeasureReportStratifier>? stratifier,
   }) = _MeasureReportGroup;
 
@@ -412,10 +433,22 @@ class MeasureReportStratum with _$MeasureReportStratum {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableConcept? value,
+    CodeableConcept? valueCodeableConcept,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Reference? valueReference,
     List<MeasureReportComponent>? component,
     List<MeasureReportPopulation1>? population,
-    Quantity? measureScore,
+    Quantity? measureScoreQuantity,
+    FhirDateTime? measureScoreDateTime,
+    @JsonKey(name: '_measureScoreDateTime')
+        Element? measureScoreDateTimeElement,
+    CodeableConcept? measureScoreCodeableConcept,
+    Period? measureScorePeriod,
+    Range? measureScoreRange,
+    FhirDuration? measureScoreDuration,
   }) = _MeasureReportStratum;
 
   /// Produces a Yaml formatted String version of the object
@@ -443,7 +476,12 @@ class MeasureReportComponent with _$MeasureReportComponent {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
-    required CodeableConcept value,
+    CodeableConcept? valueCodeableConcept,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Reference? valueReference,
   }) = _MeasureReportComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -514,12 +552,10 @@ class TestReport with Resource, _$TestReport {
     Identifier? identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-        TestReportStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Reference testScript,
-    @JsonKey(unknownEnumValue: TestReportResult.unknown)
-        TestReportResult? result,
+    Code? result,
     @JsonKey(name: '_result') Element? resultElement,
     Decimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
@@ -557,8 +593,7 @@ class TestReportParticipant with _$TestReportParticipant {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-        TestReportParticipantType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -645,8 +680,7 @@ class TestReportOperation with _$TestReportOperation {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-        TestReportOperationResult? result,
+    Code? result,
     @JsonKey(name: '_result') Element? resultElement,
     Markdown? message,
     @JsonKey(name: '_message') Element? messageElement,
@@ -678,8 +712,7 @@ class TestReportAssert with _$TestReportAssert {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-        TestReportAssertResult? result,
+    Code? result,
     @JsonKey(name: '_result') Element? resultElement,
     Markdown? message,
     @JsonKey(name: '_message') Element? messageElement,
@@ -843,8 +876,7 @@ class TestScript with Resource, _$TestScript {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-        TestScriptStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -864,6 +896,7 @@ class TestScript with Resource, _$TestScript {
     List<TestScriptOrigin>? origin,
     List<TestScriptDestination>? destination,
     TestScriptMetadata? metadata,
+    List<TestScriptScope>? scope,
     List<TestScriptFixture>? fixture,
     List<Reference>? profile,
     List<TestScriptVariable>? variable,
@@ -1019,11 +1052,11 @@ class TestScriptCapability with _$TestScriptCapability {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Integer>? origin,
-    @JsonKey(name: '_origin') List<Element?>? originElement,
+    @JsonKey(name: '_origin') List<Element>? originElement,
     Integer? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
     List<FhirUri>? link,
-    @JsonKey(name: '_link') List<Element?>? linkElement,
+    @JsonKey(name: '_link') List<Element>? linkElement,
     required Canonical capabilities,
   }) = _TestScriptCapability;
 
@@ -1042,6 +1075,35 @@ class TestScriptCapability with _$TestScriptCapability {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
       _$TestScriptCapabilityFromJson(json);
+}
+
+@freezed
+class TestScriptScope with _$TestScriptScope {
+  TestScriptScope._();
+  factory TestScriptScope({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Canonical artifact,
+    CodeableConcept? conformance,
+    CodeableConcept? phase,
+  }) = _TestScriptScope;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory TestScriptScope.fromYaml(dynamic yaml) => yaml is String
+      ? TestScriptScope.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? TestScriptScope.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TestScriptScope cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory TestScriptScope.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptScopeFromJson(json);
 }
 
 @freezed
@@ -1194,8 +1256,7 @@ class TestScriptOperation with _$TestScriptOperation {
     @JsonKey(name: '_destination') Element? destinationElement,
     Boolean? encodeRequestUrl,
     @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-    @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-        TestScriptOperationMethod? method,
+    Code? method,
     @JsonKey(name: '_method') Element? methodElement,
     Integer? origin,
     @JsonKey(name: '_origin') Element? originElement,
@@ -1272,8 +1333,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_label') Element? labelElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-        TestScriptAssertDirection? direction,
+    Code? direction,
     @JsonKey(name: '_direction') Element? directionElement,
     String? compareToSourceId,
     @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
@@ -1292,25 +1352,24 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_minimumId') Element? minimumIdElement,
     Boolean? navigationLinks,
     @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
-    @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-        TestScriptAssertOperator? operator_,
+    Code? operator,
     @JsonKey(name: '_operator') Element? operatorElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-        TestScriptAssertRequestMethod? requestMethod,
+    Code? requestMethod,
     @JsonKey(name: '_requestMethod') Element? requestMethodElement,
     String? requestURL,
     @JsonKey(name: '_requestURL') Element? requestURLElement,
     Code? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
-    @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
-        TestScriptAssertResponse? response,
+    Code? response,
     @JsonKey(name: '_response') Element? responseElement,
     String? responseCode,
     @JsonKey(name: '_responseCode') Element? responseCodeElement,
     Id? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
+    Boolean? stopTestOnFail,
+    @JsonKey(name: '_stopTestOnFail') Element? stopTestOnFailElement,
     Id? validateProfileId,
     @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
     String? value,

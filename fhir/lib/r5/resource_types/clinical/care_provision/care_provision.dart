@@ -31,7 +31,7 @@ class CarePlan with Resource, _$CarePlan {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     List<Reference>? replaces,
     List<Reference>? partOf,
@@ -83,10 +83,10 @@ class CarePlanActivity with _$CarePlanActivity {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    List<CodeableReference>? outcome,
+    List<CodeableReference>? performedActivity,
     List<Annotation>? progress,
-    Reference? reference,
-    CarePlanDetail? detail,
+    Reference? plannedActivityReference,
+    CarePlanPlannedActivityDetail? plannedActivityDetail,
   }) = _CarePlanActivity;
 
   /// Produces a Yaml formatted String version of the object
@@ -107,9 +107,9 @@ class CarePlanActivity with _$CarePlanActivity {
 }
 
 @freezed
-class CarePlanDetail with _$CarePlanDetail {
-  CarePlanDetail._();
-  factory CarePlanDetail({
+class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
+  CarePlanPlannedActivityDetail._();
+  factory CarePlanPlannedActivityDetail({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -117,12 +117,11 @@ class CarePlanDetail with _$CarePlanDetail {
     @JsonKey(name: '_kind') Element? kindElement,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     CodeableConcept? code,
     List<CodeableReference>? reason,
     List<Reference>? goal,
-    @JsonKey(unknownEnumValue: CarePlanDetailStatus.unknown)
-        CarePlanDetailStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
     Boolean? doNotPerform,
@@ -132,7 +131,7 @@ class CarePlanDetail with _$CarePlanDetail {
     String? scheduledString,
     @JsonKey(name: '_scheduledString') Element? scheduledStringElement,
     CodeableConcept? locationCodeableConcept,
-    CodeableReference? location,
+    Reference? locationReference,
     Boolean? reportedBoolean,
     @JsonKey(name: '_reportedBoolean') Element? reportedBooleanElement,
     Reference? reportedReference,
@@ -143,23 +142,24 @@ class CarePlanDetail with _$CarePlanDetail {
     Quantity? quantity,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _CarePlanDetail;
+  }) = _CarePlanPlannedActivityDetail;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CarePlanDetail.fromYaml(dynamic yaml) => yaml is String
-      ? CarePlanDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory CarePlanPlannedActivityDetail.fromYaml(dynamic yaml) => yaml is String
+      ? CarePlanPlannedActivityDetail.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? CarePlanDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CarePlanPlannedActivityDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
-              'CarePlanDetail cannot be constructed from input provided,'
+              'CarePlanPlannedActivityDetail cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>
-      _$CarePlanDetailFromJson(json);
+  factory CarePlanPlannedActivityDetail.fromJson(Map<String, dynamic> json) =>
+      _$CarePlanPlannedActivityDetailFromJson(json);
 }
 
 @freezed
@@ -180,7 +180,7 @@ class CareTeam with Resource, _$CareTeam {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     String? name,
@@ -260,8 +260,7 @@ class Goal with Resource, _$Goal {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
-        GoalLifecycleStatus? lifecycleStatus,
+    Code? lifecycleStatus,
     @JsonKey(name: '_lifecycleStatus') Element? lifecycleStatusElement,
     CodeableConcept? achievementStatus,
     List<CodeableConcept>? category,
@@ -278,7 +277,7 @@ class Goal with Resource, _$Goal {
     @JsonKey(name: '_statusDate') Element? statusDateElement,
     String? statusReason,
     @JsonKey(name: '_statusReason') Element? statusReasonElement,
-    Reference? expressedBy,
+    Reference? source,
     List<Reference>? addresses,
     List<Annotation>? note,
     List<CodeableReference>? outcome,
@@ -360,7 +359,7 @@ class NutritionIntake with Resource, _$NutritionIntake {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     List<Reference>? partOf,
     Code? status,
@@ -464,7 +463,7 @@ class NutritionIntakeIngredientLabel with _$NutritionIntakeIngredientLabel {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'NutritionIntakeIngredientLabel cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionIntakeIngredientLabel.fromJson(Map<String, dynamic> json) =>
@@ -520,9 +519,9 @@ class NutritionOrder with Resource, _$NutritionOrder {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<FhirUri>? instantiates,
-    @JsonKey(name: '_instantiates') List<Element?>? instantiatesElement,
+    @JsonKey(name: '_instantiates') List<Element>? instantiatesElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Code? intent,
@@ -775,7 +774,7 @@ class RequestGroup with Resource, _$RequestGroup {
     @JsonKey(name: '_instantiatesCanonical')
         List<Element>? instantiatesCanonicalElement,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     List<Reference>? replaces,
     Identifier? groupIdentifier,
@@ -841,7 +840,9 @@ class RequestGroupAction with _$RequestGroupAction {
     FhirDuration? timingDuration,
     Range? timingRange,
     Timing? timingTiming,
-    List<Reference>? participant,
+    CodeableConcept? locationCodeableConcept,
+    Reference? locationReference,
+    List<RequestGroupParticipant>? participant,
     CodeableConcept? type,
     Code? groupingBehavior,
     @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
@@ -910,8 +911,8 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Id? actionId,
-    @JsonKey(name: '_actionId') Element? actionIdElement,
+    Id? targetId,
+    @JsonKey(name: '_targetId') Element? targetIdElement,
     Code? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     FhirDuration? offsetDuration,
@@ -934,6 +935,38 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupRelatedActionFromJson(json);
+}
+
+@freezed
+class RequestGroupParticipant with _$RequestGroupParticipant {
+  RequestGroupParticipant._();
+  factory RequestGroupParticipant({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Reference? typeReference,
+    CodeableConcept? role,
+    CodeableConcept? function,
+    Reference? actor,
+  }) = _RequestGroupParticipant;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory RequestGroupParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? RequestGroupParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? RequestGroupParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'RequestGroupParticipant cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory RequestGroupParticipant.fromJson(Map<String, dynamic> json) =>
+      _$RequestGroupParticipantFromJson(json);
 }
 
 @freezed
@@ -1050,7 +1083,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,
     List<Reference>? replaces,
     Identifier? requisition,
@@ -1167,8 +1200,7 @@ class VisionPrescriptionLensSpecification
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept product,
-    @JsonKey(unknownEnumValue: VisionPrescriptionLensSpecificationEye.unknown)
-        VisionPrescriptionLensSpecificationEye? eye,
+    Code? eye,
     @JsonKey(name: '_eye') Element? eyeElement,
     Decimal? sphere,
     @JsonKey(name: '_sphere') Element? sphereElement,
@@ -1206,8 +1238,9 @@ class VisionPrescriptionLensSpecification
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'VisionPrescriptionLensSpecification cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VisionPrescriptionLensSpecification.fromJson(
           Map<String, dynamic> json) =>
       _$VisionPrescriptionLensSpecificationFromJson(json);
@@ -1222,8 +1255,7 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
     List<FhirExtension>? modifierExtension,
     Decimal? amount,
     @JsonKey(name: '_amount') Element? amountElement,
-    @JsonKey(unknownEnumValue: VisionPrescriptionPrismBase.unknown)
-        VisionPrescriptionPrismBase? base,
+    Code? base,
     @JsonKey(name: '_base') Element? baseElement,
   }) = _VisionPrescriptionPrism;
 

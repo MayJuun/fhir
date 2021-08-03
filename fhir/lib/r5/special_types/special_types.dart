@@ -109,9 +109,12 @@ class Statistic with _$Statistic {
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Annotation>? note,
     CodeableConcept? statisticType,
+    CodeableConcept? category,
     Quantity? quantity,
-    Integer? numberOfEvents,
+    UnsignedInt? numberOfEvents,
     @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
+    UnsignedInt? numberAffected,
+    @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
     StatisticSampleSize? sampleSize,
     List<StatisticAttributeEstimate>? attributeEstimate,
     List<StatisticModelCharacteristic>? modelCharacteristic,
@@ -144,12 +147,12 @@ class StatisticSampleSize with _$StatisticSampleSize {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Annotation>? note,
-    Integer? numberOfStudies,
+    UnsignedInt? numberOfStudies,
     @JsonKey(name: '_numberOfStudies') Element? numberOfStudiesElement,
-    Integer? numberOfParticipants,
+    UnsignedInt? numberOfParticipants,
     @JsonKey(name: '_numberOfParticipants')
         Element? numberOfParticipantsElement,
-    Integer? knownDataCount,
+    UnsignedInt? knownDataCount,
     @JsonKey(name: '_knownDataCount') Element? knownDataCountElement,
   }) = _StatisticSampleSize;
 
@@ -248,12 +251,8 @@ class StatisticModelCharacteristic with _$StatisticModelCharacteristic {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    CodeableConcept? valueCodeableConcept,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Quantity? valueQuantity,
-    Range? valueRange,
+    required CodeableConcept code,
+    Quantity? value,
     List<StatisticVariable>? variable,
   }) = _StatisticModelCharacteristic;
 
@@ -489,7 +488,7 @@ class ElementDefinition with _$ElementDefinition {
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     List<ElementDefinitionRepresentation>? representation,
-    @JsonKey(name: '_representation') List<Element?>? representationElement,
+    @JsonKey(name: '_representation') List<Element>? representationElement,
     String? sliceName,
     @JsonKey(name: '_sliceName') Element? sliceNameElement,
     Boolean? sliceIsConstraining,
@@ -507,7 +506,7 @@ class ElementDefinition with _$ElementDefinition {
     Markdown? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
     List<String>? alias,
-    @JsonKey(name: '_alias') List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element>? aliasElement,
     UnsignedInt? min,
     @JsonKey(name: '_min') Element? minElement,
     String? max,
@@ -782,7 +781,7 @@ class ElementDefinition with _$ElementDefinition {
     Integer? maxLength,
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
     List<Id>? condition,
-    @JsonKey(name: '_condition') List<Element?>? conditionElement,
+    @JsonKey(name: '_condition') List<Element>? conditionElement,
     List<ElementDefinitionConstraint>? constraint,
     Boolean? mustSupport,
     @JsonKey(name: '_mustSupport') Element? mustSupportElement,
@@ -875,7 +874,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'ElementDefinitionDiscriminator cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
@@ -926,7 +925,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     List<Canonical>? profile,
     List<Canonical>? targetProfile,
     List<ElementDefinitionTypeAggregation>? aggregation,
-    @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
+    @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
     @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
         ElementDefinitionTypeVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,

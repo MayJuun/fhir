@@ -88,8 +88,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     Reference? paymentIssuer,
     Reference? request,
     Reference? requestor,
-    @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-        PaymentReconciliationOutcome? outcome,
+    Code? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
@@ -164,8 +163,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-        PaymentReconciliationProcessNoteType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -184,8 +182,9 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'PaymentReconciliationProcessNote cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
       _$PaymentReconciliationProcessNoteFromJson(json);

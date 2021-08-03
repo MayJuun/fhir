@@ -29,12 +29,10 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
-        BiologicallyDerivedProductProductCategory? productCategory,
+    Code? productCategory,
     @JsonKey(name: '_productCategory') Element? productCategoryElement,
     CodeableConcept? productCode,
-    @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
-        BiologicallyDerivedProductStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? request,
     Integer? quantity,
@@ -92,8 +90,9 @@ class BiologicallyDerivedProductCollection
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'BiologicallyDerivedProductCollection cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BiologicallyDerivedProductCollection.fromJson(
           Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductCollectionFromJson(json);
@@ -129,8 +128,9 @@ class BiologicallyDerivedProductProcessing
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'BiologicallyDerivedProductProcessing cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BiologicallyDerivedProductProcessing.fromJson(
           Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductProcessingFromJson(json);
@@ -164,8 +164,9 @@ class BiologicallyDerivedProductManipulation
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'BiologicallyDerivedProductManipulation cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BiologicallyDerivedProductManipulation.fromJson(
           Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductManipulationFromJson(json);
@@ -183,8 +184,7 @@ class BiologicallyDerivedProductStorage
     @JsonKey(name: '_description') Element? descriptionElement,
     Decimal? temperature,
     @JsonKey(name: '_temperature') Element? temperatureElement,
-    @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
-        BiologicallyDerivedProductStorageScale? scale,
+    Code? scale,
     @JsonKey(name: '_scale') Element? scaleElement,
     Period? duration,
   }) = _BiologicallyDerivedProductStorage;
@@ -202,8 +202,9 @@ class BiologicallyDerivedProductStorage
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'BiologicallyDerivedProductStorage cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BiologicallyDerivedProductStorage.fromJson(
           Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductStorageFromJson(json);
@@ -231,7 +232,7 @@ class Device with Resource, _$Device {
     @JsonKey(name: '_displayName') Element? displayNameElement,
     Reference? definition,
     List<DeviceUdiCarrier>? udiCarrier,
-    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? statusReason,
     String? distinctIdentifier,
@@ -301,8 +302,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
     String? carrierHRF,
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-    @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
-        DeviceUdiCarrierEntryType? entryType,
+    Code? entryType,
     @JsonKey(name: '_entryType') Element? entryTypeElement,
   }) = _DeviceUdiCarrier;
 
@@ -332,8 +332,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
     List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
-        DeviceDeviceNameType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDeviceName;
 
@@ -421,8 +420,8 @@ class DeviceProperty with _$DeviceProperty {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
-    List<Quantity>? valueQuantity,
-    List<CodeableConcept>? valueCode,
+    Quantity? valueQuantity,
+    CodeableConcept? valueCodeableConcept,
   }) = _DeviceProperty;
 
   /// Produces a Yaml formatted String version of the object
@@ -520,14 +519,11 @@ class DeviceMetric with Resource, _$DeviceMetric {
     CodeableConcept? unit,
     Reference? source,
     Reference? parent,
-    @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-        DeviceMetricOperationalStatus? operationalStatus,
+    Code? operationalStatus,
     @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
-    @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
-        DeviceMetricColor? color,
+    Code? color,
     @JsonKey(name: '_color') Element? colorElement,
-    @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
-        DeviceMetricCategory? category,
+    Code? category,
     @JsonKey(name: '_category') Element? categoryElement,
     Timing? measurementPeriod,
     List<DeviceMetricCalibration>? calibration,
@@ -557,11 +553,9 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
-        DeviceMetricCalibrationType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
-    @JsonKey(unknownEnumValue: DeviceMetricCalibrationState.unknown)
-        DeviceMetricCalibrationState? state,
+    Code? state,
     @JsonKey(name: '_state') Element? stateElement,
     Instant? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -601,8 +595,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
-        NutritionProductStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     CodeableConcept? code,
@@ -725,8 +718,9 @@ class NutritionProductProductCharacteristic
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'NutritionProductProductCharacteristic cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionProductProductCharacteristic.fromJson(
           Map<String, dynamic> json) =>
       _$NutritionProductProductCharacteristicFromJson(json);
@@ -785,13 +779,18 @@ class Substance with Resource, _$Substance {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus? status,
+    Boolean? instance,
+    @JsonKey(name: '_instance') Element? instanceElement,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
-    required CodeableConcept code,
+    CodeableConcept? codeCodeableConcept,
+    Reference? codeReference,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<SubstanceInstance>? instance,
+    FhirDateTime? expiry,
+    @JsonKey(name: '_expiry') Element? expiryElement,
+    Quantity? quantity,
     List<SubstanceIngredient>? ingredient,
   }) = _Substance;
 
@@ -810,36 +809,6 @@ class Substance with Resource, _$Substance {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
-}
-
-@freezed
-class SubstanceInstance with _$SubstanceInstance {
-  SubstanceInstance._();
-  factory SubstanceInstance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    FhirDateTime? expiry,
-    @JsonKey(name: '_expiry') Element? expiryElement,
-    Quantity? quantity,
-  }) = _SubstanceInstance;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
-      ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw ArgumentError(
-              'SubstanceInstance cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
-      _$SubstanceInstanceFromJson(json);
 }
 
 @freezed

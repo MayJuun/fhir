@@ -76,8 +76,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     List<Reference>? basedOn,
-    @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-        DiagnosticReportStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept code,
@@ -94,6 +93,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<Reference>? result,
     List<Reference>? imagingStudy,
     List<DiagnosticReportMedia>? media,
+    Reference? composition,
     String? conclusion,
     @JsonKey(name: '_conclusion') Element? conclusionElement,
     List<CodeableConcept>? conclusionCode,
@@ -164,8 +164,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-        ImagingStudyStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Coding>? modality,
     required Reference subject,
@@ -356,8 +355,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-        MolecularSequenceType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Integer? coordinateSystem,
     @JsonKey(name: '_coordinateSystem') Element? coordinateSystemElement,
@@ -405,15 +403,13 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     CodeableConcept? chromosome,
     String? genomeBuild,
     @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
-    @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-        MolecularSequenceReferenceSeqOrientation? orientation,
+    Code? orientation,
     @JsonKey(name: '_orientation') Element? orientationElement,
     CodeableConcept? referenceSeqId,
     Reference? referenceSeqPointer,
     String? referenceSeqString,
     @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
-    @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-        MolecularSequenceReferenceSeqStrand? strand,
+    Code? strand,
     @JsonKey(name: '_strand') Element? strandElement,
     Integer? windowStart,
     @JsonKey(name: '_windowStart') Element? windowStartElement,
@@ -484,8 +480,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-        MolecularSequenceQualityType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? standardSequence,
     Integer? start,
@@ -539,19 +534,19 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Integer>? score,
-    @JsonKey(name: '_score') List<Element?>? scoreElement,
+    @JsonKey(name: '_score') List<Element>? scoreElement,
     List<Integer>? numTP,
-    @JsonKey(name: '_numTP') List<Element?>? numTPElement,
+    @JsonKey(name: '_numTP') List<Element>? numTPElement,
     List<Integer>? numFP,
-    @JsonKey(name: '_numFP') List<Element?>? numFPElement,
+    @JsonKey(name: '_numFP') List<Element>? numFPElement,
     List<Integer>? numFN,
-    @JsonKey(name: '_numFN') List<Element?>? numFNElement,
+    @JsonKey(name: '_numFN') List<Element>? numFNElement,
     List<Decimal>? precision,
-    @JsonKey(name: '_precision') List<Element?>? precisionElement,
+    @JsonKey(name: '_precision') List<Element>? precisionElement,
     List<Decimal>? sensitivity,
-    @JsonKey(name: '_sensitivity') List<Element?>? sensitivityElement,
+    @JsonKey(name: '_sensitivity') List<Element>? sensitivityElement,
     List<Decimal>? fMeasure,
-    @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement,
+    @JsonKey(name: '_fMeasure') List<Element>? fMeasureElement,
   }) = _MolecularSequenceRoc;
 
   /// Produces a Yaml formatted String version of the object
@@ -578,8 +573,7 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-        MolecularSequenceRepositoryType? type,
+    Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -641,8 +635,9 @@ class MolecularSequenceStructureVariant
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'MolecularSequenceStructureVariant cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequenceStructureVariant.fromJson(
           Map<String, dynamic> json) =>
       _$MolecularSequenceStructureVariantFromJson(json);
@@ -726,10 +721,13 @@ class Observation with Resource, _$Observation {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
+    Canonical? instantiatesCanonical,
+    @JsonKey(name: '_instantiatesCanonical')
+        Element? instantiatesCanonicalElement,
+    Reference? instantiatesReference,
     List<Reference>? basedOn,
     List<Reference>? partOf,
-    @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-        ObservationStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept code,
@@ -894,8 +892,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     List<Reference>? basedOn,
     List<Reference>? partOf,
     Canonical? questionnaire,
-    @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-        QuestionnaireResponseStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? encounter,
@@ -1025,7 +1022,7 @@ class Specimen with Resource, _$Specimen {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     Identifier? accessionIdentifier,
-    @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     Reference? subject,

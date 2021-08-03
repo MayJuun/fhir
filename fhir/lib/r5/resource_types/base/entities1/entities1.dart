@@ -29,7 +29,7 @@ class Endpoint with Resource, _$Endpoint {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: EndpointStatus.unknown) EndpointStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Coding connectionType,
     String? name,
@@ -39,11 +39,11 @@ class Endpoint with Resource, _$Endpoint {
     Period? period,
     required List<CodeableConcept> payloadType,
     List<Code>? payloadMimeType,
-    @JsonKey(name: '_payloadMimeType') List<Element?>? payloadMimeTypeElement,
+    @JsonKey(name: '_payloadMimeType') List<Element>? payloadMimeTypeElement,
     FhirUrl? address,
     @JsonKey(name: '_address') Element? addressElement,
     List<String>? header,
-    @JsonKey(name: '_header') List<Element?>? headerElement,
+    @JsonKey(name: '_header') List<Element>? headerElement,
   }) = _Endpoint;
 
   /// Produces a Yaml formatted String version of the object
@@ -167,8 +167,8 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+    List<Code>? daysOfWeek,
+    @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
     Time? availableStartTime,
@@ -190,7 +190,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
               jsonDecode(jsonEncode(yaml)))
           : throw ArgumentError(
               'HealthcareServiceAvailableTime cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
@@ -245,16 +245,16 @@ class Location with Resource, _$Location {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Coding? operationalStatus,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? alias,
-    @JsonKey(name: '_alias') List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element>? aliasElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     List<CodeableConcept>? type,
     List<ContactPoint>? telecom,
@@ -327,7 +327,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Code>? daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+    @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
     Time? openingTime,
@@ -378,7 +378,7 @@ class Organization with Resource, _$Organization {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? alias,
-    @JsonKey(name: '_alias') List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element>? aliasElement,
     List<ContactPoint>? telecom,
     List<Address>? address,
     Reference? partOf,

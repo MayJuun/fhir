@@ -49,8 +49,7 @@ class _$CodeSystemTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-          CodeSystemStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -78,8 +77,7 @@ class _$CodeSystemTearOff {
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
       Canonical? valueSet,
-      @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-          CodeSystemHierarchyMeaning? hierarchyMeaning,
+      Code? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
       Boolean? compositional,
@@ -88,8 +86,7 @@ class _$CodeSystemTearOff {
       Boolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          CodeSystemContent? content,
+      Code? content,
       @JsonKey(name: '_content')
           Element? contentElement,
       Canonical? supplements,
@@ -196,8 +193,7 @@ mixin _$CodeSystem {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-  CodeSystemStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -225,9 +221,7 @@ mixin _$CodeSystem {
   @JsonKey(name: '_caseSensitive')
   Element? get caseSensitiveElement => throw _privateConstructorUsedError;
   Canonical? get valueSet => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-  CodeSystemHierarchyMeaning? get hierarchyMeaning =>
-      throw _privateConstructorUsedError;
+  Code? get hierarchyMeaning => throw _privateConstructorUsedError;
   @JsonKey(name: '_hierarchyMeaning')
   Element? get hierarchyMeaningElement => throw _privateConstructorUsedError;
   Boolean? get compositional => throw _privateConstructorUsedError;
@@ -236,8 +230,7 @@ mixin _$CodeSystem {
   Boolean? get versionNeeded => throw _privateConstructorUsedError;
   @JsonKey(name: '_versionNeeded')
   Element? get versionNeededElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-  CodeSystemContent? get content => throw _privateConstructorUsedError;
+  Code? get content => throw _privateConstructorUsedError;
   @JsonKey(name: '_content')
   Element? get contentElement => throw _privateConstructorUsedError;
   Canonical? get supplements => throw _privateConstructorUsedError;
@@ -288,8 +281,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-          CodeSystemStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -317,8 +309,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
       Canonical? valueSet,
-      @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-          CodeSystemHierarchyMeaning? hierarchyMeaning,
+      Code? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
       Boolean? compositional,
@@ -327,8 +318,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       Boolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          CodeSystemContent? content,
+      Code? content,
       @JsonKey(name: '_content')
           Element? contentElement,
       Canonical? supplements,
@@ -511,7 +501,7 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as CodeSystemStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -591,7 +581,7 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       hierarchyMeaning: hierarchyMeaning == freezed
           ? _value.hierarchyMeaning
           : hierarchyMeaning // ignore: cast_nullable_to_non_nullable
-              as CodeSystemHierarchyMeaning?,
+              as Code?,
       hierarchyMeaningElement: hierarchyMeaningElement == freezed
           ? _value.hierarchyMeaningElement
           : hierarchyMeaningElement // ignore: cast_nullable_to_non_nullable
@@ -615,7 +605,7 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
       content: content == freezed
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as CodeSystemContent?,
+              as Code?,
       contentElement: contentElement == freezed
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -914,8 +904,7 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-          CodeSystemStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -943,8 +932,7 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
       Canonical? valueSet,
-      @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-          CodeSystemHierarchyMeaning? hierarchyMeaning,
+      Code? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
       Boolean? compositional,
@@ -953,8 +941,7 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       Boolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          CodeSystemContent? content,
+      Code? content,
       @JsonKey(name: '_content')
           Element? contentElement,
       Canonical? supplements,
@@ -1160,7 +1147,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as CodeSystemStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1240,7 +1227,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       hierarchyMeaning: hierarchyMeaning == freezed
           ? _value.hierarchyMeaning
           : hierarchyMeaning // ignore: cast_nullable_to_non_nullable
-              as CodeSystemHierarchyMeaning?,
+              as Code?,
       hierarchyMeaningElement: hierarchyMeaningElement == freezed
           ? _value.hierarchyMeaningElement
           : hierarchyMeaningElement // ignore: cast_nullable_to_non_nullable
@@ -1264,7 +1251,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
       content: content == freezed
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as CodeSystemContent?,
+              as Code?,
       contentElement: contentElement == freezed
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -1329,8 +1316,7 @@ class _$_CodeSystem extends _CodeSystem {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -1358,8 +1344,7 @@ class _$_CodeSystem extends _CodeSystem {
       @JsonKey(name: '_caseSensitive')
           this.caseSensitiveElement,
       this.valueSet,
-      @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-          this.hierarchyMeaning,
+      this.hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           this.hierarchyMeaningElement,
       this.compositional,
@@ -1368,8 +1353,7 @@ class _$_CodeSystem extends _CodeSystem {
       this.versionNeeded,
       @JsonKey(name: '_versionNeeded')
           this.versionNeededElement,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          this.content,
+      this.content,
       @JsonKey(name: '_content')
           this.contentElement,
       this.supplements,
@@ -1433,8 +1417,7 @@ class _$_CodeSystem extends _CodeSystem {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-  final CodeSystemStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1482,8 +1465,7 @@ class _$_CodeSystem extends _CodeSystem {
   @override
   final Canonical? valueSet;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-  final CodeSystemHierarchyMeaning? hierarchyMeaning;
+  final Code? hierarchyMeaning;
   @override
   @JsonKey(name: '_hierarchyMeaning')
   final Element? hierarchyMeaningElement;
@@ -1498,8 +1480,7 @@ class _$_CodeSystem extends _CodeSystem {
   @JsonKey(name: '_versionNeeded')
   final Element? versionNeededElement;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-  final CodeSystemContent? content;
+  final Code? content;
   @override
   @JsonKey(name: '_content')
   final Element? contentElement;
@@ -1724,8 +1705,7 @@ abstract class _CodeSystem extends CodeSystem {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-          CodeSystemStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -1753,8 +1733,7 @@ abstract class _CodeSystem extends CodeSystem {
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
       Canonical? valueSet,
-      @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-          CodeSystemHierarchyMeaning? hierarchyMeaning,
+      Code? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
       Boolean? compositional,
@@ -1763,8 +1742,7 @@ abstract class _CodeSystem extends CodeSystem {
       Boolean? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
-      @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-          CodeSystemContent? content,
+      Code? content,
       @JsonKey(name: '_content')
           Element? contentElement,
       Canonical? supplements,
@@ -1829,8 +1807,7 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-  CodeSystemStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1878,9 +1855,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
   Canonical? get valueSet => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-  CodeSystemHierarchyMeaning? get hierarchyMeaning =>
-      throw _privateConstructorUsedError;
+  Code? get hierarchyMeaning => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_hierarchyMeaning')
   Element? get hierarchyMeaningElement => throw _privateConstructorUsedError;
@@ -1895,8 +1870,7 @@ abstract class _CodeSystem extends CodeSystem {
   @JsonKey(name: '_versionNeeded')
   Element? get versionNeededElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-  CodeSystemContent? get content => throw _privateConstructorUsedError;
+  Code? get content => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_content')
   Element? get contentElement => throw _privateConstructorUsedError;
@@ -1935,8 +1909,8 @@ class _$CodeSystemFilterTearOff {
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      @JsonKey(name: 'operator') List<Code>? operator_,
-      @JsonKey(name: '_operator') List<Element?>? operatorElement,
+      List<Code>? operator,
+      @JsonKey(name: '_operator') List<Element>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement}) {
     return _CodeSystemFilter(
@@ -1947,7 +1921,7 @@ class _$CodeSystemFilterTearOff {
       codeElement: codeElement,
       description: description,
       descriptionElement: descriptionElement,
-      operator_: operator_,
+      operator: operator,
       operatorElement: operatorElement,
       value: value,
       valueElement: valueElement,
@@ -1975,10 +1949,9 @@ mixin _$CodeSystemFilter {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  @JsonKey(name: 'operator')
-  List<Code>? get operator_ => throw _privateConstructorUsedError;
+  List<Code>? get operator => throw _privateConstructorUsedError;
   @JsonKey(name: '_operator')
-  List<Element?>? get operatorElement => throw _privateConstructorUsedError;
+  List<Element>? get operatorElement => throw _privateConstructorUsedError;
   String? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
@@ -2002,8 +1975,8 @@ abstract class $CodeSystemFilterCopyWith<$Res> {
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      @JsonKey(name: 'operator') List<Code>? operator_,
-      @JsonKey(name: '_operator') List<Element?>? operatorElement,
+      List<Code>? operator,
+      @JsonKey(name: '_operator') List<Element>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
 
@@ -2030,7 +2003,7 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
     Object? codeElement = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
-    Object? operator_ = freezed,
+    Object? operator = freezed,
     Object? operatorElement = freezed,
     Object? value = freezed,
     Object? valueElement = freezed,
@@ -2064,14 +2037,14 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      operator_: operator_ == freezed
-          ? _value.operator_
-          : operator_ // ignore: cast_nullable_to_non_nullable
+      operator: operator == freezed
+          ? _value.operator
+          : operator // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       value: value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -2132,8 +2105,8 @@ abstract class _$CodeSystemFilterCopyWith<$Res>
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      @JsonKey(name: 'operator') List<Code>? operator_,
-      @JsonKey(name: '_operator') List<Element?>? operatorElement,
+      List<Code>? operator,
+      @JsonKey(name: '_operator') List<Element>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
 
@@ -2165,7 +2138,7 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
     Object? codeElement = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
-    Object? operator_ = freezed,
+    Object? operator = freezed,
     Object? operatorElement = freezed,
     Object? value = freezed,
     Object? valueElement = freezed,
@@ -2199,14 +2172,14 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      operator_: operator_ == freezed
-          ? _value.operator_
-          : operator_ // ignore: cast_nullable_to_non_nullable
+      operator: operator == freezed
+          ? _value.operator
+          : operator // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       value: value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -2230,7 +2203,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
       @JsonKey(name: '_code') this.codeElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(name: 'operator') this.operator_,
+      this.operator,
       @JsonKey(name: '_operator') this.operatorElement,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
@@ -2257,11 +2230,10 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  @JsonKey(name: 'operator')
-  final List<Code>? operator_;
+  final List<Code>? operator;
   @override
   @JsonKey(name: '_operator')
-  final List<Element?>? operatorElement;
+  final List<Element>? operatorElement;
   @override
   final String? value;
   @override
@@ -2270,7 +2242,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
 
   @override
   String toString() {
-    return 'CodeSystemFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, description: $description, descriptionElement: $descriptionElement, operator_: $operator_, operatorElement: $operatorElement, value: $value, valueElement: $valueElement)';
+    return 'CodeSystemFilter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, description: $description, descriptionElement: $descriptionElement, operator: $operator, operatorElement: $operatorElement, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -2296,9 +2268,9 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.operator_, operator_) ||
+            (identical(other.operator, operator) ||
                 const DeepCollectionEquality()
-                    .equals(other.operator_, operator_)) &&
+                    .equals(other.operator, operator)) &&
             (identical(other.operatorElement, operatorElement) ||
                 const DeepCollectionEquality()
                     .equals(other.operatorElement, operatorElement)) &&
@@ -2319,7 +2291,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(operator_) ^
+      const DeepCollectionEquality().hash(operator) ^
       const DeepCollectionEquality().hash(operatorElement) ^
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
@@ -2344,8 +2316,8 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      @JsonKey(name: 'operator') List<Code>? operator_,
-      @JsonKey(name: '_operator') List<Element?>? operatorElement,
+      List<Code>? operator,
+      @JsonKey(name: '_operator') List<Element>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement}) = _$_CodeSystemFilter;
   _CodeSystemFilter._() : super._();
@@ -2372,11 +2344,10 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'operator')
-  List<Code>? get operator_ => throw _privateConstructorUsedError;
+  List<Code>? get operator => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_operator')
-  List<Element?>? get operatorElement => throw _privateConstructorUsedError;
+  List<Element>? get operatorElement => throw _privateConstructorUsedError;
   @override
   String? get value => throw _privateConstructorUsedError;
   @override
@@ -2398,22 +2369,16 @@ class _$CodeSystemPropertyTearOff {
 
   _CodeSystemProperty call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri')
-          Element? uriElement,
+      @JsonKey(name: '_uri') Element? uriElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-          CodeSystemPropertyType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement}) {
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement}) {
     return _CodeSystemProperty(
       id: id,
       extension_: extension_,
@@ -2453,8 +2418,7 @@ mixin _$CodeSystemProperty {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-  CodeSystemPropertyType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
@@ -2471,22 +2435,16 @@ abstract class $CodeSystemPropertyCopyWith<$Res> {
       _$CodeSystemPropertyCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri')
-          Element? uriElement,
+      @JsonKey(name: '_uri') Element? uriElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-          CodeSystemPropertyType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement});
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get codeElement;
   $ElementCopyWith<$Res>? get uriElement;
@@ -2557,7 +2515,7 @@ class _$CodeSystemPropertyCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as CodeSystemPropertyType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -2619,22 +2577,16 @@ abstract class _$CodeSystemPropertyCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri')
-          Element? uriElement,
+      @JsonKey(name: '_uri') Element? uriElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-          CodeSystemPropertyType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement});
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement});
 
   @override
   $ElementCopyWith<$Res>? get codeElement;
@@ -2711,7 +2663,7 @@ class __$CodeSystemPropertyCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as CodeSystemPropertyType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -2733,7 +2685,7 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
       @JsonKey(name: '_uri') this.uriElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement})
       : super._();
 
@@ -2763,8 +2715,7 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-  final CodeSystemPropertyType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -2838,22 +2789,16 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
 abstract class _CodeSystemProperty extends CodeSystemProperty {
   factory _CodeSystemProperty(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri')
-          Element? uriElement,
+      @JsonKey(name: '_uri') Element? uriElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-          CodeSystemPropertyType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement}) = _$_CodeSystemProperty;
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement}) = _$_CodeSystemProperty;
   _CodeSystemProperty._() : super._();
 
   factory _CodeSystemProperty.fromJson(Map<String, dynamic> json) =
@@ -2883,8 +2828,7 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-  CodeSystemPropertyType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -4522,7 +4466,7 @@ class _$ConceptMapTearOff {
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      Identifier? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -4532,8 +4476,7 @@ class _$ConceptMapTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          ConceptMapStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -4649,7 +4592,7 @@ mixin _$ConceptMap {
   FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
@@ -4659,8 +4602,7 @@ mixin _$ConceptMap {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-  ConceptMapStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -4728,7 +4670,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      Identifier? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -4738,8 +4680,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          ConceptMapStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -4782,7 +4723,6 @@ abstract class $ConceptMapCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
-  $IdentifierCopyWith<$Res>? get identifier;
   $ElementCopyWith<$Res>? get versionElement;
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
@@ -4912,7 +4852,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
-              as Identifier?,
+              as List<Identifier>?,
       version: version == freezed
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -4940,7 +4880,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ConceptMapStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5096,17 +5036,6 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
 
     return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
       return _then(_value.copyWith(urlElement: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res>? get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-
-    return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -5290,7 +5219,7 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      Identifier? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -5300,8 +5229,7 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          ConceptMapStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -5349,8 +5277,6 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   @override
   $ElementCopyWith<$Res>? get urlElement;
-  @override
-  $IdentifierCopyWith<$Res>? get identifier;
   @override
   $ElementCopyWith<$Res>? get versionElement;
   @override
@@ -5496,7 +5422,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
-              as Identifier?,
+              as List<Identifier>?,
       version: version == freezed
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -5524,7 +5450,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ConceptMapStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5661,8 +5587,7 @@ class _$_ConceptMap extends _ConceptMap {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -5736,7 +5661,7 @@ class _$_ConceptMap extends _ConceptMap {
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final Identifier? identifier;
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -5753,8 +5678,7 @@ class _$_ConceptMap extends _ConceptMap {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-  final ConceptMapStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -5998,7 +5922,7 @@ abstract class _ConceptMap extends ConceptMap {
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      Identifier? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -6008,8 +5932,7 @@ abstract class _ConceptMap extends ConceptMap {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-          ConceptMapStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -6084,7 +6007,7 @@ abstract class _ConceptMap extends ConceptMap {
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   String? get version => throw _privateConstructorUsedError;
   @override
@@ -6101,8 +6024,7 @@ abstract class _ConceptMap extends ConceptMap {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-  ConceptMapStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -6182,14 +6104,8 @@ class _$ConceptMapGroupTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? source,
-      @JsonKey(name: '_source') Element? sourceElement,
-      String? sourceVersion,
-      @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
-      FhirUri? target,
-      @JsonKey(name: '_target') Element? targetElement,
-      String? targetVersion,
-      @JsonKey(name: '_targetVersion') Element? targetVersionElement,
+      Canonical? source,
+      Canonical? target,
       required List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped}) {
     return _ConceptMapGroup(
@@ -6197,13 +6113,7 @@ class _$ConceptMapGroupTearOff {
       extension_: extension_,
       modifierExtension: modifierExtension,
       source: source,
-      sourceElement: sourceElement,
-      sourceVersion: sourceVersion,
-      sourceVersionElement: sourceVersionElement,
       target: target,
-      targetElement: targetElement,
-      targetVersion: targetVersion,
-      targetVersionElement: targetVersionElement,
       element: element,
       unmapped: unmapped,
     );
@@ -6224,18 +6134,8 @@ mixin _$ConceptMapGroup {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirUri? get source => throw _privateConstructorUsedError;
-  @JsonKey(name: '_source')
-  Element? get sourceElement => throw _privateConstructorUsedError;
-  String? get sourceVersion => throw _privateConstructorUsedError;
-  @JsonKey(name: '_sourceVersion')
-  Element? get sourceVersionElement => throw _privateConstructorUsedError;
-  FhirUri? get target => throw _privateConstructorUsedError;
-  @JsonKey(name: '_target')
-  Element? get targetElement => throw _privateConstructorUsedError;
-  String? get targetVersion => throw _privateConstructorUsedError;
-  @JsonKey(name: '_targetVersion')
-  Element? get targetVersionElement => throw _privateConstructorUsedError;
+  Canonical? get source => throw _privateConstructorUsedError;
+  Canonical? get target => throw _privateConstructorUsedError;
   List<ConceptMapElement> get element => throw _privateConstructorUsedError;
   ConceptMapUnmapped? get unmapped => throw _privateConstructorUsedError;
 
@@ -6254,21 +6154,11 @@ abstract class $ConceptMapGroupCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? source,
-      @JsonKey(name: '_source') Element? sourceElement,
-      String? sourceVersion,
-      @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
-      FhirUri? target,
-      @JsonKey(name: '_target') Element? targetElement,
-      String? targetVersion,
-      @JsonKey(name: '_targetVersion') Element? targetVersionElement,
+      Canonical? source,
+      Canonical? target,
       List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped});
 
-  $ElementCopyWith<$Res>? get sourceElement;
-  $ElementCopyWith<$Res>? get sourceVersionElement;
-  $ElementCopyWith<$Res>? get targetElement;
-  $ElementCopyWith<$Res>? get targetVersionElement;
   $ConceptMapUnmappedCopyWith<$Res>? get unmapped;
 }
 
@@ -6287,13 +6177,7 @@ class _$ConceptMapGroupCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? source = freezed,
-    Object? sourceElement = freezed,
-    Object? sourceVersion = freezed,
-    Object? sourceVersionElement = freezed,
     Object? target = freezed,
-    Object? targetElement = freezed,
-    Object? targetVersion = freezed,
-    Object? targetVersionElement = freezed,
     Object? element = freezed,
     Object? unmapped = freezed,
   }) {
@@ -6313,35 +6197,11 @@ class _$ConceptMapGroupCopyWithImpl<$Res>
       source: source == freezed
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      sourceElement: sourceElement == freezed
-          ? _value.sourceElement
-          : sourceElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      sourceVersion: sourceVersion == freezed
-          ? _value.sourceVersion
-          : sourceVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sourceVersionElement: sourceVersionElement == freezed
-          ? _value.sourceVersionElement
-          : sourceVersionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as Canonical?,
       target: target == freezed
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      targetElement: targetElement == freezed
-          ? _value.targetElement
-          : targetElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      targetVersion: targetVersion == freezed
-          ? _value.targetVersion
-          : targetVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
-      targetVersionElement: targetVersionElement == freezed
-          ? _value.targetVersionElement
-          : targetVersionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as Canonical?,
       element: element == freezed
           ? _value.element
           : element // ignore: cast_nullable_to_non_nullable
@@ -6351,50 +6211,6 @@ class _$ConceptMapGroupCopyWithImpl<$Res>
           : unmapped // ignore: cast_nullable_to_non_nullable
               as ConceptMapUnmapped?,
     ));
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get sourceElement {
-    if (_value.sourceElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.sourceElement!, (value) {
-      return _then(_value.copyWith(sourceElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get sourceVersionElement {
-    if (_value.sourceVersionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.sourceVersionElement!, (value) {
-      return _then(_value.copyWith(sourceVersionElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get targetElement {
-    if (_value.targetElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.targetElement!, (value) {
-      return _then(_value.copyWith(targetElement: value));
-    });
-  }
-
-  @override
-  $ElementCopyWith<$Res>? get targetVersionElement {
-    if (_value.targetVersionElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.targetVersionElement!, (value) {
-      return _then(_value.copyWith(targetVersionElement: value));
-    });
   }
 
   @override
@@ -6420,25 +6236,11 @@ abstract class _$ConceptMapGroupCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? source,
-      @JsonKey(name: '_source') Element? sourceElement,
-      String? sourceVersion,
-      @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
-      FhirUri? target,
-      @JsonKey(name: '_target') Element? targetElement,
-      String? targetVersion,
-      @JsonKey(name: '_targetVersion') Element? targetVersionElement,
+      Canonical? source,
+      Canonical? target,
       List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped});
 
-  @override
-  $ElementCopyWith<$Res>? get sourceElement;
-  @override
-  $ElementCopyWith<$Res>? get sourceVersionElement;
-  @override
-  $ElementCopyWith<$Res>? get targetElement;
-  @override
-  $ElementCopyWith<$Res>? get targetVersionElement;
   @override
   $ConceptMapUnmappedCopyWith<$Res>? get unmapped;
 }
@@ -6460,13 +6262,7 @@ class __$ConceptMapGroupCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? source = freezed,
-    Object? sourceElement = freezed,
-    Object? sourceVersion = freezed,
-    Object? sourceVersionElement = freezed,
     Object? target = freezed,
-    Object? targetElement = freezed,
-    Object? targetVersion = freezed,
-    Object? targetVersionElement = freezed,
     Object? element = freezed,
     Object? unmapped = freezed,
   }) {
@@ -6486,35 +6282,11 @@ class __$ConceptMapGroupCopyWithImpl<$Res>
       source: source == freezed
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      sourceElement: sourceElement == freezed
-          ? _value.sourceElement
-          : sourceElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      sourceVersion: sourceVersion == freezed
-          ? _value.sourceVersion
-          : sourceVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sourceVersionElement: sourceVersionElement == freezed
-          ? _value.sourceVersionElement
-          : sourceVersionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as Canonical?,
       target: target == freezed
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      targetElement: targetElement == freezed
-          ? _value.targetElement
-          : targetElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      targetVersion: targetVersion == freezed
-          ? _value.targetVersion
-          : targetVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
-      targetVersionElement: targetVersionElement == freezed
-          ? _value.targetVersionElement
-          : targetVersionElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as Canonical?,
       element: element == freezed
           ? _value.element
           : element // ignore: cast_nullable_to_non_nullable
@@ -6535,13 +6307,7 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.source,
-      @JsonKey(name: '_source') this.sourceElement,
-      this.sourceVersion,
-      @JsonKey(name: '_sourceVersion') this.sourceVersionElement,
       this.target,
-      @JsonKey(name: '_target') this.targetElement,
-      this.targetVersion,
-      @JsonKey(name: '_targetVersion') this.targetVersionElement,
       required this.element,
       this.unmapped})
       : super._();
@@ -6557,25 +6323,9 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final FhirUri? source;
+  final Canonical? source;
   @override
-  @JsonKey(name: '_source')
-  final Element? sourceElement;
-  @override
-  final String? sourceVersion;
-  @override
-  @JsonKey(name: '_sourceVersion')
-  final Element? sourceVersionElement;
-  @override
-  final FhirUri? target;
-  @override
-  @JsonKey(name: '_target')
-  final Element? targetElement;
-  @override
-  final String? targetVersion;
-  @override
-  @JsonKey(name: '_targetVersion')
-  final Element? targetVersionElement;
+  final Canonical? target;
   @override
   final List<ConceptMapElement> element;
   @override
@@ -6583,7 +6333,7 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
 
   @override
   String toString() {
-    return 'ConceptMapGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, source: $source, sourceElement: $sourceElement, sourceVersion: $sourceVersion, sourceVersionElement: $sourceVersionElement, target: $target, targetElement: $targetElement, targetVersion: $targetVersion, targetVersionElement: $targetVersionElement, element: $element, unmapped: $unmapped)';
+    return 'ConceptMapGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, source: $source, target: $target, element: $element, unmapped: $unmapped)';
   }
 
   @override
@@ -6600,26 +6350,8 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
                     .equals(other.modifierExtension, modifierExtension)) &&
             (identical(other.source, source) ||
                 const DeepCollectionEquality().equals(other.source, source)) &&
-            (identical(other.sourceElement, sourceElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceElement, sourceElement)) &&
-            (identical(other.sourceVersion, sourceVersion) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceVersion, sourceVersion)) &&
-            (identical(other.sourceVersionElement, sourceVersionElement) ||
-                const DeepCollectionEquality().equals(
-                    other.sourceVersionElement, sourceVersionElement)) &&
             (identical(other.target, target) ||
                 const DeepCollectionEquality().equals(other.target, target)) &&
-            (identical(other.targetElement, targetElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetElement, targetElement)) &&
-            (identical(other.targetVersion, targetVersion) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetVersion, targetVersion)) &&
-            (identical(other.targetVersionElement, targetVersionElement) ||
-                const DeepCollectionEquality().equals(
-                    other.targetVersionElement, targetVersionElement)) &&
             (identical(other.element, element) ||
                 const DeepCollectionEquality()
                     .equals(other.element, element)) &&
@@ -6635,13 +6367,7 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(source) ^
-      const DeepCollectionEquality().hash(sourceElement) ^
-      const DeepCollectionEquality().hash(sourceVersion) ^
-      const DeepCollectionEquality().hash(sourceVersionElement) ^
       const DeepCollectionEquality().hash(target) ^
-      const DeepCollectionEquality().hash(targetElement) ^
-      const DeepCollectionEquality().hash(targetVersion) ^
-      const DeepCollectionEquality().hash(targetVersionElement) ^
       const DeepCollectionEquality().hash(element) ^
       const DeepCollectionEquality().hash(unmapped);
 
@@ -6661,14 +6387,8 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? source,
-      @JsonKey(name: '_source') Element? sourceElement,
-      String? sourceVersion,
-      @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
-      FhirUri? target,
-      @JsonKey(name: '_target') Element? targetElement,
-      String? targetVersion,
-      @JsonKey(name: '_targetVersion') Element? targetVersionElement,
+      Canonical? source,
+      Canonical? target,
       required List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped}) = _$_ConceptMapGroup;
   _ConceptMapGroup._() : super._();
@@ -6685,25 +6405,9 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  FhirUri? get source => throw _privateConstructorUsedError;
+  Canonical? get source => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: '_source')
-  Element? get sourceElement => throw _privateConstructorUsedError;
-  @override
-  String? get sourceVersion => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_sourceVersion')
-  Element? get sourceVersionElement => throw _privateConstructorUsedError;
-  @override
-  FhirUri? get target => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_target')
-  Element? get targetElement => throw _privateConstructorUsedError;
-  @override
-  String? get targetVersion => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_targetVersion')
-  Element? get targetVersionElement => throw _privateConstructorUsedError;
+  Canonical? get target => throw _privateConstructorUsedError;
   @override
   List<ConceptMapElement> get element => throw _privateConstructorUsedError;
   @override
@@ -7161,22 +6865,16 @@ class _$ConceptMapTargetTearOff {
 
   _ConceptMapTarget call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
-      @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-          ConceptMapTargetRelationship? relationship,
-      @JsonKey(name: '_relationship')
-          Element? relationshipElement,
+      @JsonKey(name: '_display') Element? displayElement,
+      Code? relationship,
+      @JsonKey(name: '_relationship') Element? relationshipElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       List<ConceptMapDependsOn>? dependsOn,
       List<ConceptMapDependsOn>? product}) {
     return _ConceptMapTarget(
@@ -7217,9 +6915,7 @@ mixin _$ConceptMapTarget {
   String? get display => throw _privateConstructorUsedError;
   @JsonKey(name: '_display')
   Element? get displayElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-  ConceptMapTargetRelationship? get relationship =>
-      throw _privateConstructorUsedError;
+  Code? get relationship => throw _privateConstructorUsedError;
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
@@ -7242,22 +6938,16 @@ abstract class $ConceptMapTargetCopyWith<$Res> {
       _$ConceptMapTargetCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
-      @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-          ConceptMapTargetRelationship? relationship,
-      @JsonKey(name: '_relationship')
-          Element? relationshipElement,
+      @JsonKey(name: '_display') Element? displayElement,
+      Code? relationship,
+      @JsonKey(name: '_relationship') Element? relationshipElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       List<ConceptMapDependsOn>? dependsOn,
       List<ConceptMapDependsOn>? product});
 
@@ -7324,7 +7014,7 @@ class _$ConceptMapTargetCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as ConceptMapTargetRelationship?,
+              as Code?,
       relationshipElement: relationshipElement == freezed
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -7402,22 +7092,16 @@ abstract class _$ConceptMapTargetCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
-      @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-          ConceptMapTargetRelationship? relationship,
-      @JsonKey(name: '_relationship')
-          Element? relationshipElement,
+      @JsonKey(name: '_display') Element? displayElement,
+      Code? relationship,
+      @JsonKey(name: '_relationship') Element? relationshipElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       List<ConceptMapDependsOn>? dependsOn,
       List<ConceptMapDependsOn>? product});
 
@@ -7490,7 +7174,7 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as ConceptMapTargetRelationship?,
+              as Code?,
       relationshipElement: relationshipElement == freezed
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -7520,22 +7204,16 @@ class __$ConceptMapTargetCopyWithImpl<$Res>
 class _$_ConceptMapTarget extends _ConceptMapTarget {
   _$_ConceptMapTarget(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
-      @JsonKey(name: '_code')
-          this.codeElement,
+      @JsonKey(name: '_code') this.codeElement,
       this.display,
-      @JsonKey(name: '_display')
-          this.displayElement,
-      @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-          this.relationship,
-      @JsonKey(name: '_relationship')
-          this.relationshipElement,
+      @JsonKey(name: '_display') this.displayElement,
+      this.relationship,
+      @JsonKey(name: '_relationship') this.relationshipElement,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement,
+      @JsonKey(name: '_comment') this.commentElement,
       this.dependsOn,
       this.product})
       : super._();
@@ -7561,8 +7239,7 @@ class _$_ConceptMapTarget extends _ConceptMapTarget {
   @JsonKey(name: '_display')
   final Element? displayElement;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-  final ConceptMapTargetRelationship? relationship;
+  final Code? relationship;
   @override
   @JsonKey(name: '_relationship')
   final Element? relationshipElement;
@@ -7654,22 +7331,16 @@ class _$_ConceptMapTarget extends _ConceptMapTarget {
 abstract class _ConceptMapTarget extends ConceptMapTarget {
   factory _ConceptMapTarget(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
-      @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-          ConceptMapTargetRelationship? relationship,
-      @JsonKey(name: '_relationship')
-          Element? relationshipElement,
+      @JsonKey(name: '_display') Element? displayElement,
+      Code? relationship,
+      @JsonKey(name: '_relationship') Element? relationshipElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       List<ConceptMapDependsOn>? dependsOn,
       List<ConceptMapDependsOn>? product}) = _$_ConceptMapTarget;
   _ConceptMapTarget._() : super._();
@@ -7696,9 +7367,7 @@ abstract class _ConceptMapTarget extends ConceptMapTarget {
   @JsonKey(name: '_display')
   Element? get displayElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-  ConceptMapTargetRelationship? get relationship =>
-      throw _privateConstructorUsedError;
+  Code? get relationship => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
@@ -8168,19 +7837,14 @@ class _$ConceptMapUnmappedTearOff {
 
   _ConceptMapUnmapped call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-          ConceptMapUnmappedMode? mode,
-      @JsonKey(name: '_mode')
-          Element? modeElement,
+      Code? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       Canonical? url}) {
     return _ConceptMapUnmapped(
       id: id,
@@ -8211,8 +7875,7 @@ mixin _$ConceptMapUnmapped {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-  ConceptMapUnmappedMode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   Code? get code => throw _privateConstructorUsedError;
@@ -8236,19 +7899,14 @@ abstract class $ConceptMapUnmappedCopyWith<$Res> {
       _$ConceptMapUnmappedCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-          ConceptMapUnmappedMode? mode,
-      @JsonKey(name: '_mode')
-          Element? modeElement,
+      Code? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       Canonical? url});
 
   $ElementCopyWith<$Res>? get modeElement;
@@ -8294,7 +7952,7 @@ class _$ConceptMapUnmappedCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as ConceptMapUnmappedMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -8365,19 +8023,14 @@ abstract class _$ConceptMapUnmappedCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-          ConceptMapUnmappedMode? mode,
-      @JsonKey(name: '_mode')
-          Element? modeElement,
+      Code? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       Canonical? url});
 
   @override
@@ -8428,7 +8081,7 @@ class __$ConceptMapUnmappedCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as ConceptMapUnmappedMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -8464,7 +8117,7 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown) this.mode,
+      this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
@@ -8484,8 +8137,7 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-  final ConceptMapUnmappedMode? mode;
+  final Code? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -8567,19 +8219,14 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
 abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   factory _ConceptMapUnmapped(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-          ConceptMapUnmappedMode? mode,
-      @JsonKey(name: '_mode')
-          Element? modeElement,
+      Code? mode,
+      @JsonKey(name: '_mode') Element? modeElement,
       Code? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       Canonical? url}) = _$_ConceptMapUnmapped;
   _ConceptMapUnmapped._() : super._();
 
@@ -8595,8 +8242,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-  ConceptMapUnmappedMode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -8655,8 +8301,7 @@ class _$NamingSystemTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          NamingSystemStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -8680,8 +8325,7 @@ class _$NamingSystemTearOff {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-          NamingSystemKind? kind,
+      Code? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       String? responsible,
@@ -8780,8 +8424,7 @@ mixin _$NamingSystem {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-  NamingSystemStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -8805,8 +8448,7 @@ mixin _$NamingSystem {
   Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-  NamingSystemKind? get kind => throw _privateConstructorUsedError;
+  Code? get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
   String? get responsible => throw _privateConstructorUsedError;
@@ -8858,8 +8500,7 @@ abstract class $NamingSystemCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          NamingSystemStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -8883,8 +8524,7 @@ abstract class $NamingSystemCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-          NamingSystemKind? kind,
+      Code? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       String? responsible,
@@ -9057,7 +8697,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as NamingSystemStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9125,7 +8765,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as NamingSystemKind?,
+              as Code?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -9403,8 +9043,7 @@ abstract class _$NamingSystemCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          NamingSystemStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -9428,8 +9067,7 @@ abstract class _$NamingSystemCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-          NamingSystemKind? kind,
+      Code? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       String? responsible,
@@ -9623,7 +9261,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as NamingSystemStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9691,7 +9329,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as NamingSystemKind?,
+              as Code?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -9756,8 +9394,7 @@ class _$_NamingSystem extends _NamingSystem {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -9781,8 +9418,7 @@ class _$_NamingSystem extends _NamingSystem {
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-          this.kind,
+      this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
       this.responsible,
@@ -9847,8 +9483,7 @@ class _$_NamingSystem extends _NamingSystem {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-  final NamingSystemStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -9889,8 +9524,7 @@ class _$_NamingSystem extends _NamingSystem {
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-  final NamingSystemKind? kind;
+  final Code? kind;
   @override
   @JsonKey(name: '_kind')
   final Element? kindElement;
@@ -10098,8 +9732,7 @@ abstract class _NamingSystem extends NamingSystem {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-          NamingSystemStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -10123,8 +9756,7 @@ abstract class _NamingSystem extends NamingSystem {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-          NamingSystemKind? kind,
+      Code? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       String? responsible,
@@ -10190,8 +9822,7 @@ abstract class _NamingSystem extends NamingSystem {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-  NamingSystemStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -10232,8 +9863,7 @@ abstract class _NamingSystem extends NamingSystem {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-  NamingSystemKind? get kind => throw _privateConstructorUsedError;
+  Code? get kind => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
@@ -10267,23 +9897,19 @@ class _$NamingSystemUniqueIdTearOff {
 
   _NamingSystemUniqueId call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-          NamingSystemUniqueIdType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
+      @JsonKey(name: '_value') Element? valueElement,
       Boolean? preferred,
-      @JsonKey(name: '_preferred')
-          Element? preferredElement,
+      @JsonKey(name: '_preferred') Element? preferredElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
-      Period? period}) {
+      @JsonKey(name: '_comment') Element? commentElement,
+      Period? period,
+      Boolean? authoritative,
+      @JsonKey(name: '_authoritative') Element? authoritativeElement}) {
     return _NamingSystemUniqueId(
       id: id,
       extension_: extension_,
@@ -10297,6 +9923,8 @@ class _$NamingSystemUniqueIdTearOff {
       comment: comment,
       commentElement: commentElement,
       period: period,
+      authoritative: authoritative,
+      authoritativeElement: authoritativeElement,
     );
   }
 
@@ -10315,8 +9943,7 @@ mixin _$NamingSystemUniqueId {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-  NamingSystemUniqueIdType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   String? get value => throw _privateConstructorUsedError;
@@ -10329,6 +9956,9 @@ mixin _$NamingSystemUniqueId {
   @JsonKey(name: '_comment')
   Element? get commentElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
+  Boolean? get authoritative => throw _privateConstructorUsedError;
+  @JsonKey(name: '_authoritative')
+  Element? get authoritativeElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -10343,29 +9973,26 @@ abstract class $NamingSystemUniqueIdCopyWith<$Res> {
       _$NamingSystemUniqueIdCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-          NamingSystemUniqueIdType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
+      @JsonKey(name: '_value') Element? valueElement,
       Boolean? preferred,
-      @JsonKey(name: '_preferred')
-          Element? preferredElement,
+      @JsonKey(name: '_preferred') Element? preferredElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
-      Period? period});
+      @JsonKey(name: '_comment') Element? commentElement,
+      Period? period,
+      Boolean? authoritative,
+      @JsonKey(name: '_authoritative') Element? authoritativeElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get valueElement;
   $ElementCopyWith<$Res>? get preferredElement;
   $ElementCopyWith<$Res>? get commentElement;
   $PeriodCopyWith<$Res>? get period;
+  $ElementCopyWith<$Res>? get authoritativeElement;
 }
 
 /// @nodoc
@@ -10391,6 +10018,8 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
     Object? comment = freezed,
     Object? commentElement = freezed,
     Object? period = freezed,
+    Object? authoritative = freezed,
+    Object? authoritativeElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -10408,7 +10037,7 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as NamingSystemUniqueIdType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -10441,6 +10070,14 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
+      authoritative: authoritative == freezed
+          ? _value.authoritative
+          : authoritative // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      authoritativeElement: authoritativeElement == freezed
+          ? _value.authoritativeElement
+          : authoritativeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -10498,6 +10135,17 @@ class _$NamingSystemUniqueIdCopyWithImpl<$Res>
       return _then(_value.copyWith(period: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res>? get authoritativeElement {
+    if (_value.authoritativeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.authoritativeElement!, (value) {
+      return _then(_value.copyWith(authoritativeElement: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -10509,23 +10157,19 @@ abstract class _$NamingSystemUniqueIdCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-          NamingSystemUniqueIdType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
+      @JsonKey(name: '_value') Element? valueElement,
       Boolean? preferred,
-      @JsonKey(name: '_preferred')
-          Element? preferredElement,
+      @JsonKey(name: '_preferred') Element? preferredElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
-      Period? period});
+      @JsonKey(name: '_comment') Element? commentElement,
+      Period? period,
+      Boolean? authoritative,
+      @JsonKey(name: '_authoritative') Element? authoritativeElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -10537,6 +10181,8 @@ abstract class _$NamingSystemUniqueIdCopyWith<$Res>
   $ElementCopyWith<$Res>? get commentElement;
   @override
   $PeriodCopyWith<$Res>? get period;
+  @override
+  $ElementCopyWith<$Res>? get authoritativeElement;
 }
 
 /// @nodoc
@@ -10564,6 +10210,8 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
     Object? comment = freezed,
     Object? commentElement = freezed,
     Object? period = freezed,
+    Object? authoritative = freezed,
+    Object? authoritativeElement = freezed,
   }) {
     return _then(_NamingSystemUniqueId(
       id: id == freezed
@@ -10581,7 +10229,7 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as NamingSystemUniqueIdType?,
+              as Code?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -10614,6 +10262,14 @@ class __$NamingSystemUniqueIdCopyWithImpl<$Res>
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
+      authoritative: authoritative == freezed
+          ? _value.authoritative
+          : authoritative // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      authoritativeElement: authoritativeElement == freezed
+          ? _value.authoritativeElement
+          : authoritativeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -10625,7 +10281,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.value,
       @JsonKey(name: '_value') this.valueElement,
@@ -10633,7 +10289,9 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
       @JsonKey(name: '_preferred') this.preferredElement,
       this.comment,
       @JsonKey(name: '_comment') this.commentElement,
-      this.period})
+      this.period,
+      this.authoritative,
+      @JsonKey(name: '_authoritative') this.authoritativeElement})
       : super._();
 
   factory _$_NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
@@ -10647,8 +10305,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-  final NamingSystemUniqueIdType? type;
+  final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -10669,10 +10326,15 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
   final Element? commentElement;
   @override
   final Period? period;
+  @override
+  final Boolean? authoritative;
+  @override
+  @JsonKey(name: '_authoritative')
+  final Element? authoritativeElement;
 
   @override
   String toString() {
-    return 'NamingSystemUniqueId(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, typeElement: $typeElement, value: $value, valueElement: $valueElement, preferred: $preferred, preferredElement: $preferredElement, comment: $comment, commentElement: $commentElement, period: $period)';
+    return 'NamingSystemUniqueId(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, typeElement: $typeElement, value: $value, valueElement: $valueElement, preferred: $preferred, preferredElement: $preferredElement, comment: $comment, commentElement: $commentElement, period: $period, authoritative: $authoritative, authoritativeElement: $authoritativeElement)';
   }
 
   @override
@@ -10710,7 +10372,13 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
                 const DeepCollectionEquality()
                     .equals(other.commentElement, commentElement)) &&
             (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)));
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.authoritative, authoritative) ||
+                const DeepCollectionEquality()
+                    .equals(other.authoritative, authoritative)) &&
+            (identical(other.authoritativeElement, authoritativeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.authoritativeElement, authoritativeElement)));
   }
 
   @override
@@ -10727,7 +10395,9 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
       const DeepCollectionEquality().hash(preferredElement) ^
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement) ^
-      const DeepCollectionEquality().hash(period);
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(authoritative) ^
+      const DeepCollectionEquality().hash(authoritativeElement);
 
   @JsonKey(ignore: true)
   @override
@@ -10743,24 +10413,21 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
 abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   factory _NamingSystemUniqueId(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-          NamingSystemUniqueIdType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
-      Boolean? preferred,
-      @JsonKey(name: '_preferred')
-          Element? preferredElement,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
-      Period? period}) = _$_NamingSystemUniqueId;
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Code? type,
+          @JsonKey(name: '_type') Element? typeElement,
+          String? value,
+          @JsonKey(name: '_value') Element? valueElement,
+          Boolean? preferred,
+          @JsonKey(name: '_preferred') Element? preferredElement,
+          String? comment,
+          @JsonKey(name: '_comment') Element? commentElement,
+          Period? period,
+          Boolean? authoritative,
+          @JsonKey(name: '_authoritative') Element? authoritativeElement}) =
+      _$_NamingSystemUniqueId;
   _NamingSystemUniqueId._() : super._();
 
   factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =
@@ -10775,8 +10442,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-  NamingSystemUniqueIdType? get type => throw _privateConstructorUsedError;
+  Code? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -10797,6 +10463,11 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   Element? get commentElement => throw _privateConstructorUsedError;
   @override
   Period? get period => throw _privateConstructorUsedError;
+  @override
+  Boolean? get authoritative => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_authoritative')
+  Element? get authoritativeElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$NamingSystemUniqueIdCopyWith<_NamingSystemUniqueId> get copyWith =>
@@ -10841,8 +10512,7 @@ class _$TerminologyCapabilitiesTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-          TerminologyCapabilitiesStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -10876,8 +10546,7 @@ class _$TerminologyCapabilitiesTearOff {
           Element? lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem>? codeSystem,
       TerminologyCapabilitiesExpansion? expansion,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-          TerminologyCapabilitiesCodeSearch? codeSearch,
+      Code? codeSearch,
       @JsonKey(name: '_codeSearch')
           Element? codeSearchElement,
       TerminologyCapabilitiesValidateCode? validateCode,
@@ -10976,9 +10645,7 @@ mixin _$TerminologyCapabilities {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-  TerminologyCapabilitiesStatus? get status =>
-      throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -11016,9 +10683,7 @@ mixin _$TerminologyCapabilities {
       throw _privateConstructorUsedError;
   TerminologyCapabilitiesExpansion? get expansion =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-  TerminologyCapabilitiesCodeSearch? get codeSearch =>
-      throw _privateConstructorUsedError;
+  Code? get codeSearch => throw _privateConstructorUsedError;
   @JsonKey(name: '_codeSearch')
   Element? get codeSearchElement => throw _privateConstructorUsedError;
   TerminologyCapabilitiesValidateCode? get validateCode =>
@@ -11068,8 +10733,7 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-          TerminologyCapabilitiesStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -11103,8 +10767,7 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
           Element? lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem>? codeSystem,
       TerminologyCapabilitiesExpansion? expansion,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-          TerminologyCapabilitiesCodeSearch? codeSearch,
+      Code? codeSearch,
       @JsonKey(name: '_codeSearch')
           Element? codeSearchElement,
       TerminologyCapabilitiesValidateCode? validateCode,
@@ -11283,7 +10946,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as TerminologyCapabilitiesStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11383,7 +11046,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
       codeSearch: codeSearch == freezed
           ? _value.codeSearch
           : codeSearch // ignore: cast_nullable_to_non_nullable
-              as TerminologyCapabilitiesCodeSearch?,
+              as Code?,
       codeSearchElement: codeSearchElement == freezed
           ? _value.codeSearchElement
           : codeSearchElement // ignore: cast_nullable_to_non_nullable
@@ -11710,8 +11373,7 @@ abstract class _$TerminologyCapabilitiesCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-          TerminologyCapabilitiesStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -11745,8 +11407,7 @@ abstract class _$TerminologyCapabilitiesCopyWith<$Res>
           Element? lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem>? codeSystem,
       TerminologyCapabilitiesExpansion? expansion,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-          TerminologyCapabilitiesCodeSearch? codeSearch,
+      Code? codeSearch,
       @JsonKey(name: '_codeSearch')
           Element? codeSearchElement,
       TerminologyCapabilitiesValidateCode? validateCode,
@@ -11952,7 +11613,7 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as TerminologyCapabilitiesStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12052,7 +11713,7 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
       codeSearch: codeSearch == freezed
           ? _value.codeSearch
           : codeSearch // ignore: cast_nullable_to_non_nullable
-              as TerminologyCapabilitiesCodeSearch?,
+              as Code?,
       codeSearchElement: codeSearchElement == freezed
           ? _value.codeSearchElement
           : codeSearchElement // ignore: cast_nullable_to_non_nullable
@@ -12105,8 +11766,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -12140,8 +11800,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
           this.lockedDateElement,
       this.codeSystem,
       this.expansion,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-          this.codeSearch,
+      this.codeSearch,
       @JsonKey(name: '_codeSearch')
           this.codeSearchElement,
       this.validateCode,
@@ -12201,8 +11860,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-  final TerminologyCapabilitiesStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -12261,8 +11919,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   @override
   final TerminologyCapabilitiesExpansion? expansion;
   @override
-  @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-  final TerminologyCapabilitiesCodeSearch? codeSearch;
+  final Code? codeSearch;
   @override
   @JsonKey(name: '_codeSearch')
   final Element? codeSearchElement;
@@ -12473,8 +12130,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-          TerminologyCapabilitiesStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -12508,8 +12164,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
           Element? lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem>? codeSystem,
       TerminologyCapabilitiesExpansion? expansion,
-      @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-          TerminologyCapabilitiesCodeSearch? codeSearch,
+      Code? codeSearch,
       @JsonKey(name: '_codeSearch')
           Element? codeSearchElement,
       TerminologyCapabilitiesValidateCode? validateCode,
@@ -12570,9 +12225,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-  TerminologyCapabilitiesStatus? get status =>
-      throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -12635,9 +12288,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   TerminologyCapabilitiesExpansion? get expansion =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-  TerminologyCapabilitiesCodeSearch? get codeSearch =>
-      throw _privateConstructorUsedError;
+  Code? get codeSearch => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_codeSearch')
   Element? get codeSearchElement => throw _privateConstructorUsedError;
@@ -13743,10 +13394,10 @@ class _$TerminologyCapabilitiesVersionTearOff {
       Boolean? compositional,
       @JsonKey(name: '_compositional') Element? compositionalElement,
       List<Code>? language,
-      @JsonKey(name: '_language') List<Element?>? languageElement,
+      @JsonKey(name: '_language') List<Element>? languageElement,
       List<TerminologyCapabilitiesFilter>? filter,
       List<Code>? property,
-      @JsonKey(name: '_property') List<Element?>? propertyElement}) {
+      @JsonKey(name: '_property') List<Element>? propertyElement}) {
     return _TerminologyCapabilitiesVersion(
       id: id,
       extension_: extension_,
@@ -13792,12 +13443,12 @@ mixin _$TerminologyCapabilitiesVersion {
   Element? get compositionalElement => throw _privateConstructorUsedError;
   List<Code>? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  List<Element?>? get languageElement => throw _privateConstructorUsedError;
+  List<Element>? get languageElement => throw _privateConstructorUsedError;
   List<TerminologyCapabilitiesFilter>? get filter =>
       throw _privateConstructorUsedError;
   List<Code>? get property => throw _privateConstructorUsedError;
   @JsonKey(name: '_property')
-  List<Element?>? get propertyElement => throw _privateConstructorUsedError;
+  List<Element>? get propertyElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -13822,10 +13473,10 @@ abstract class $TerminologyCapabilitiesVersionCopyWith<$Res> {
       Boolean? compositional,
       @JsonKey(name: '_compositional') Element? compositionalElement,
       List<Code>? language,
-      @JsonKey(name: '_language') List<Element?>? languageElement,
+      @JsonKey(name: '_language') List<Element>? languageElement,
       List<TerminologyCapabilitiesFilter>? filter,
       List<Code>? property,
-      @JsonKey(name: '_property') List<Element?>? propertyElement});
+      @JsonKey(name: '_property') List<Element>? propertyElement});
 
   $ElementCopyWith<$Res>? get codeElement;
   $ElementCopyWith<$Res>? get isDefaultElement;
@@ -13902,7 +13553,7 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       filter: filter == freezed
           ? _value.filter
           : filter // ignore: cast_nullable_to_non_nullable
@@ -13914,7 +13565,7 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 
@@ -13971,10 +13622,10 @@ abstract class _$TerminologyCapabilitiesVersionCopyWith<$Res>
       Boolean? compositional,
       @JsonKey(name: '_compositional') Element? compositionalElement,
       List<Code>? language,
-      @JsonKey(name: '_language') List<Element?>? languageElement,
+      @JsonKey(name: '_language') List<Element>? languageElement,
       List<TerminologyCapabilitiesFilter>? filter,
       List<Code>? property,
-      @JsonKey(name: '_property') List<Element?>? propertyElement});
+      @JsonKey(name: '_property') List<Element>? propertyElement});
 
   @override
   $ElementCopyWith<$Res>? get codeElement;
@@ -14058,7 +13709,7 @@ class __$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       filter: filter == freezed
           ? _value.filter
           : filter // ignore: cast_nullable_to_non_nullable
@@ -14070,7 +13721,7 @@ class __$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 }
@@ -14126,14 +13777,14 @@ class _$_TerminologyCapabilitiesVersion
   final List<Code>? language;
   @override
   @JsonKey(name: '_language')
-  final List<Element?>? languageElement;
+  final List<Element>? languageElement;
   @override
   final List<TerminologyCapabilitiesFilter>? filter;
   @override
   final List<Code>? property;
   @override
   @JsonKey(name: '_property')
-  final List<Element?>? propertyElement;
+  final List<Element>? propertyElement;
 
   @override
   String toString() {
@@ -14228,10 +13879,10 @@ abstract class _TerminologyCapabilitiesVersion
           Boolean? compositional,
           @JsonKey(name: '_compositional') Element? compositionalElement,
           List<Code>? language,
-          @JsonKey(name: '_language') List<Element?>? languageElement,
+          @JsonKey(name: '_language') List<Element>? languageElement,
           List<TerminologyCapabilitiesFilter>? filter,
           List<Code>? property,
-          @JsonKey(name: '_property') List<Element?>? propertyElement}) =
+          @JsonKey(name: '_property') List<Element>? propertyElement}) =
       _$_TerminologyCapabilitiesVersion;
   _TerminologyCapabilitiesVersion._() : super._();
 
@@ -14265,7 +13916,7 @@ abstract class _TerminologyCapabilitiesVersion
   List<Code>? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  List<Element?>? get languageElement => throw _privateConstructorUsedError;
+  List<Element>? get languageElement => throw _privateConstructorUsedError;
   @override
   List<TerminologyCapabilitiesFilter>? get filter =>
       throw _privateConstructorUsedError;
@@ -14273,7 +13924,7 @@ abstract class _TerminologyCapabilitiesVersion
   List<Code>? get property => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_property')
-  List<Element?>? get propertyElement => throw _privateConstructorUsedError;
+  List<Element>? get propertyElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TerminologyCapabilitiesVersionCopyWith<_TerminologyCapabilitiesVersion>
@@ -14296,7 +13947,7 @@ class _$TerminologyCapabilitiesFilterTearOff {
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<Code>? op,
-      @JsonKey(name: '_op') List<Element?>? opElement}) {
+      @JsonKey(name: '_op') List<Element>? opElement}) {
     return _TerminologyCapabilitiesFilter(
       id: id,
       extension_: extension_,
@@ -14328,7 +13979,7 @@ mixin _$TerminologyCapabilitiesFilter {
   Element? get codeElement => throw _privateConstructorUsedError;
   List<Code>? get op => throw _privateConstructorUsedError;
   @JsonKey(name: '_op')
-  List<Element?>? get opElement => throw _privateConstructorUsedError;
+  List<Element>? get opElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -14349,7 +14000,7 @@ abstract class $TerminologyCapabilitiesFilterCopyWith<$Res> {
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<Code>? op,
-      @JsonKey(name: '_op') List<Element?>? opElement});
+      @JsonKey(name: '_op') List<Element>? opElement});
 
   $ElementCopyWith<$Res>? get codeElement;
 }
@@ -14401,7 +14052,7 @@ class _$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
       opElement: opElement == freezed
           ? _value.opElement
           : opElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 
@@ -14432,7 +14083,7 @@ abstract class _$TerminologyCapabilitiesFilterCopyWith<$Res>
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<Code>? op,
-      @JsonKey(name: '_op') List<Element?>? opElement});
+      @JsonKey(name: '_op') List<Element>? opElement});
 
   @override
   $ElementCopyWith<$Res>? get codeElement;
@@ -14489,7 +14140,7 @@ class __$TerminologyCapabilitiesFilterCopyWithImpl<$Res>
       opElement: opElement == freezed
           ? _value.opElement
           : opElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 }
@@ -14527,7 +14178,7 @@ class _$_TerminologyCapabilitiesFilter extends _TerminologyCapabilitiesFilter {
   final List<Code>? op;
   @override
   @JsonKey(name: '_op')
-  final List<Element?>? opElement;
+  final List<Element>? opElement;
 
   @override
   String toString() {
@@ -14590,7 +14241,7 @@ abstract class _TerminologyCapabilitiesFilter
           Code? code,
           @JsonKey(name: '_code') Element? codeElement,
           List<Code>? op,
-          @JsonKey(name: '_op') List<Element?>? opElement}) =
+          @JsonKey(name: '_op') List<Element>? opElement}) =
       _$_TerminologyCapabilitiesFilter;
   _TerminologyCapabilitiesFilter._() : super._();
 
@@ -14614,7 +14265,7 @@ abstract class _TerminologyCapabilitiesFilter
   List<Code>? get op => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_op')
-  List<Element?>? get opElement => throw _privateConstructorUsedError;
+  List<Element>? get opElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TerminologyCapabilitiesFilterCopyWith<_TerminologyCapabilitiesFilter>
@@ -16419,8 +16070,7 @@ class _$ValueSetTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-          ValueSetStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -16448,7 +16098,8 @@ class _$ValueSetTearOff {
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       ValueSetCompose? compose,
-      ValueSetExpansion? expansion}) {
+      ValueSetExpansion? expansion,
+      ValueSetScope? scope}) {
     return _ValueSet(
       resourceType: resourceType,
       id: id,
@@ -16491,6 +16142,7 @@ class _$ValueSetTearOff {
       immutableElement: immutableElement,
       compose: compose,
       expansion: expansion,
+      scope: scope,
     );
   }
 
@@ -16533,8 +16185,7 @@ mixin _$ValueSet {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-  ValueSetStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -16563,6 +16214,7 @@ mixin _$ValueSet {
   Element? get immutableElement => throw _privateConstructorUsedError;
   ValueSetCompose? get compose => throw _privateConstructorUsedError;
   ValueSetExpansion? get expansion => throw _privateConstructorUsedError;
+  ValueSetScope? get scope => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -16603,8 +16255,7 @@ abstract class $ValueSetCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-          ValueSetStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -16632,7 +16283,8 @@ abstract class $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       ValueSetCompose? compose,
-      ValueSetExpansion? expansion});
+      ValueSetExpansion? expansion,
+      ValueSetScope? scope});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -16652,6 +16304,7 @@ abstract class $ValueSetCopyWith<$Res> {
   $ElementCopyWith<$Res>? get immutableElement;
   $ValueSetComposeCopyWith<$Res>? get compose;
   $ValueSetExpansionCopyWith<$Res>? get expansion;
+  $ValueSetScopeCopyWith<$Res>? get scope;
 }
 
 /// @nodoc
@@ -16705,6 +16358,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     Object? immutableElement = freezed,
     Object? compose = freezed,
     Object? expansion = freezed,
+    Object? scope = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -16790,7 +16444,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ValueSetStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16871,6 +16525,10 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
           ? _value.expansion
           : expansion // ignore: cast_nullable_to_non_nullable
               as ValueSetExpansion?,
+      scope: scope == freezed
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as ValueSetScope?,
     ));
   }
 
@@ -17071,6 +16729,17 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
       return _then(_value.copyWith(expansion: value));
     });
   }
+
+  @override
+  $ValueSetScopeCopyWith<$Res>? get scope {
+    if (_value.scope == null) {
+      return null;
+    }
+
+    return $ValueSetScopeCopyWith<$Res>(_value.scope!, (value) {
+      return _then(_value.copyWith(scope: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -17107,8 +16776,7 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-          ValueSetStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -17136,7 +16804,8 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       ValueSetCompose? compose,
-      ValueSetExpansion? expansion});
+      ValueSetExpansion? expansion,
+      ValueSetScope? scope});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -17174,6 +16843,8 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   $ValueSetComposeCopyWith<$Res>? get compose;
   @override
   $ValueSetExpansionCopyWith<$Res>? get expansion;
+  @override
+  $ValueSetScopeCopyWith<$Res>? get scope;
 }
 
 /// @nodoc
@@ -17228,6 +16899,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
     Object? immutableElement = freezed,
     Object? compose = freezed,
     Object? expansion = freezed,
+    Object? scope = freezed,
   }) {
     return _then(_ValueSet(
       resourceType: resourceType == freezed
@@ -17313,7 +16985,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ValueSetStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -17394,6 +17066,10 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
           ? _value.expansion
           : expansion // ignore: cast_nullable_to_non_nullable
               as ValueSetExpansion?,
+      scope: scope == freezed
+          ? _value.scope
+          : scope // ignore: cast_nullable_to_non_nullable
+              as ValueSetScope?,
     ));
   }
 }
@@ -17430,8 +17106,7 @@ class _$_ValueSet extends _ValueSet {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -17459,7 +17134,8 @@ class _$_ValueSet extends _ValueSet {
       @JsonKey(name: '_immutable')
           this.immutableElement,
       this.compose,
-      this.expansion})
+      this.expansion,
+      this.scope})
       : super._();
 
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
@@ -17514,8 +17190,7 @@ class _$_ValueSet extends _ValueSet {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-  final ValueSetStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -17564,10 +17239,12 @@ class _$_ValueSet extends _ValueSet {
   final ValueSetCompose? compose;
   @override
   final ValueSetExpansion? expansion;
+  @override
+  final ValueSetScope? scope;
 
   @override
   String toString() {
-    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, immutable: $immutable, immutableElement: $immutableElement, compose: $compose, expansion: $expansion)';
+    return 'ValueSet(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, immutable: $immutable, immutableElement: $immutableElement, compose: $compose, expansion: $expansion, scope: $scope)';
   }
 
   @override
@@ -17657,7 +17334,8 @@ class _$_ValueSet extends _ValueSet {
             (identical(other.immutable, immutable) || const DeepCollectionEquality().equals(other.immutable, immutable)) &&
             (identical(other.immutableElement, immutableElement) || const DeepCollectionEquality().equals(other.immutableElement, immutableElement)) &&
             (identical(other.compose, compose) || const DeepCollectionEquality().equals(other.compose, compose)) &&
-            (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)));
+            (identical(other.expansion, expansion) || const DeepCollectionEquality().equals(other.expansion, expansion)) &&
+            (identical(other.scope, scope) || const DeepCollectionEquality().equals(other.scope, scope)));
   }
 
   @override
@@ -17703,7 +17381,8 @@ class _$_ValueSet extends _ValueSet {
       const DeepCollectionEquality().hash(immutable) ^
       const DeepCollectionEquality().hash(immutableElement) ^
       const DeepCollectionEquality().hash(compose) ^
-      const DeepCollectionEquality().hash(expansion);
+      const DeepCollectionEquality().hash(expansion) ^
+      const DeepCollectionEquality().hash(scope);
 
   @JsonKey(ignore: true)
   @override
@@ -17746,8 +17425,7 @@ abstract class _ValueSet extends ValueSet {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-          ValueSetStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -17775,7 +17453,8 @@ abstract class _ValueSet extends ValueSet {
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       ValueSetCompose? compose,
-      ValueSetExpansion? expansion}) = _$_ValueSet;
+      ValueSetExpansion? expansion,
+      ValueSetScope? scope}) = _$_ValueSet;
   _ValueSet._() : super._();
 
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
@@ -17830,8 +17509,7 @@ abstract class _ValueSet extends ValueSet {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-  ValueSetStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -17881,6 +17559,8 @@ abstract class _ValueSet extends ValueSet {
   @override
   ValueSetExpansion? get expansion => throw _privateConstructorUsedError;
   @override
+  ValueSetScope? get scope => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$ValueSetCopyWith<_ValueSet> get copyWith =>
       throw _privateConstructorUsedError;
@@ -17905,7 +17585,7 @@ class _$ValueSetComposeTearOff {
       required List<ValueSetInclude> include,
       List<ValueSetInclude>? exclude,
       List<String>? property,
-      @JsonKey(name: '_property') List<Element?>? propertyElement}) {
+      @JsonKey(name: '_property') List<Element>? propertyElement}) {
     return _ValueSetCompose(
       id: id,
       extension_: extension_,
@@ -17946,7 +17626,7 @@ mixin _$ValueSetCompose {
   List<ValueSetInclude>? get exclude => throw _privateConstructorUsedError;
   List<String>? get property => throw _privateConstructorUsedError;
   @JsonKey(name: '_property')
-  List<Element?>? get propertyElement => throw _privateConstructorUsedError;
+  List<Element>? get propertyElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -17970,7 +17650,7 @@ abstract class $ValueSetComposeCopyWith<$Res> {
       List<ValueSetInclude> include,
       List<ValueSetInclude>? exclude,
       List<String>? property,
-      @JsonKey(name: '_property') List<Element?>? propertyElement});
+      @JsonKey(name: '_property') List<Element>? propertyElement});
 
   $ElementCopyWith<$Res>? get lockedDateElement;
   $ElementCopyWith<$Res>? get inactiveElement;
@@ -18043,7 +17723,7 @@ class _$ValueSetComposeCopyWithImpl<$Res>
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 
@@ -18088,7 +17768,7 @@ abstract class _$ValueSetComposeCopyWith<$Res>
       List<ValueSetInclude> include,
       List<ValueSetInclude>? exclude,
       List<String>? property,
-      @JsonKey(name: '_property') List<Element?>? propertyElement});
+      @JsonKey(name: '_property') List<Element>? propertyElement});
 
   @override
   $ElementCopyWith<$Res>? get lockedDateElement;
@@ -18165,7 +17845,7 @@ class __$ValueSetComposeCopyWithImpl<$Res>
       propertyElement: propertyElement == freezed
           ? _value.propertyElement
           : propertyElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 }
@@ -18215,7 +17895,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
   final List<String>? property;
   @override
   @JsonKey(name: '_property')
-  final List<Element?>? propertyElement;
+  final List<Element>? propertyElement;
 
   @override
   String toString() {
@@ -18298,7 +17978,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
           required List<ValueSetInclude> include,
           List<ValueSetInclude>? exclude,
           List<String>? property,
-          @JsonKey(name: '_property') List<Element?>? propertyElement}) =
+          @JsonKey(name: '_property') List<Element>? propertyElement}) =
       _$_ValueSetCompose;
   _ValueSetCompose._() : super._();
 
@@ -18331,7 +18011,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   List<String>? get property => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_property')
-  List<Element?>? get propertyElement => throw _privateConstructorUsedError;
+  List<Element>? get propertyElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ValueSetComposeCopyWith<_ValueSetCompose> get copyWith =>
@@ -18356,7 +18036,9 @@ class _$ValueSetIncludeTearOff {
       @JsonKey(name: '_version') Element? versionElement,
       List<ValueSetConcept>? concept,
       List<ValueSetFilter>? filter,
-      List<Canonical>? valueSet}) {
+      List<Canonical>? valueSet,
+      String? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement}) {
     return _ValueSetInclude(
       id: id,
       extension_: extension_,
@@ -18368,6 +18050,8 @@ class _$ValueSetIncludeTearOff {
       concept: concept,
       filter: filter,
       valueSet: valueSet,
+      copyright: copyright,
+      copyrightElement: copyrightElement,
     );
   }
 
@@ -18395,6 +18079,9 @@ mixin _$ValueSetInclude {
   List<ValueSetConcept>? get concept => throw _privateConstructorUsedError;
   List<ValueSetFilter>? get filter => throw _privateConstructorUsedError;
   List<Canonical>? get valueSet => throw _privateConstructorUsedError;
+  String? get copyright => throw _privateConstructorUsedError;
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -18417,10 +18104,13 @@ abstract class $ValueSetIncludeCopyWith<$Res> {
       @JsonKey(name: '_version') Element? versionElement,
       List<ValueSetConcept>? concept,
       List<ValueSetFilter>? filter,
-      List<Canonical>? valueSet});
+      List<Canonical>? valueSet,
+      String? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement});
 
   $ElementCopyWith<$Res>? get systemElement;
   $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get copyrightElement;
 }
 
 /// @nodoc
@@ -18444,6 +18134,8 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
     Object? concept = freezed,
     Object? filter = freezed,
     Object? valueSet = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -18486,6 +18178,14 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
@@ -18510,6 +18210,17 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
       return _then(_value.copyWith(versionElement: value));
     });
   }
+
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement {
+    if (_value.copyrightElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightElement!, (value) {
+      return _then(_value.copyWith(copyrightElement: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -18529,12 +18240,16 @@ abstract class _$ValueSetIncludeCopyWith<$Res>
       @JsonKey(name: '_version') Element? versionElement,
       List<ValueSetConcept>? concept,
       List<ValueSetFilter>? filter,
-      List<Canonical>? valueSet});
+      List<Canonical>? valueSet,
+      String? copyright,
+      @JsonKey(name: '_copyright') Element? copyrightElement});
 
   @override
   $ElementCopyWith<$Res>? get systemElement;
   @override
   $ElementCopyWith<$Res>? get versionElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightElement;
 }
 
 /// @nodoc
@@ -18560,6 +18275,8 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
     Object? concept = freezed,
     Object? filter = freezed,
     Object? valueSet = freezed,
+    Object? copyright = freezed,
+    Object? copyrightElement = freezed,
   }) {
     return _then(_ValueSetInclude(
       id: id == freezed
@@ -18602,6 +18319,14 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
+      copyright: copyright == freezed
+          ? _value.copyright
+          : copyright // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightElement: copyrightElement == freezed
+          ? _value.copyrightElement
+          : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
@@ -18619,7 +18344,9 @@ class _$_ValueSetInclude extends _ValueSetInclude {
       @JsonKey(name: '_version') this.versionElement,
       this.concept,
       this.filter,
-      this.valueSet})
+      this.valueSet,
+      this.copyright,
+      @JsonKey(name: '_copyright') this.copyrightElement})
       : super._();
 
   factory _$_ValueSetInclude.fromJson(Map<String, dynamic> json) =>
@@ -18648,10 +18375,15 @@ class _$_ValueSetInclude extends _ValueSetInclude {
   final List<ValueSetFilter>? filter;
   @override
   final List<Canonical>? valueSet;
+  @override
+  final String? copyright;
+  @override
+  @JsonKey(name: '_copyright')
+  final Element? copyrightElement;
 
   @override
   String toString() {
-    return 'ValueSetInclude(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, systemElement: $systemElement, version: $version, versionElement: $versionElement, concept: $concept, filter: $filter, valueSet: $valueSet)';
+    return 'ValueSetInclude(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, system: $system, systemElement: $systemElement, version: $version, versionElement: $versionElement, concept: $concept, filter: $filter, valueSet: $valueSet, copyright: $copyright, copyrightElement: $copyrightElement)';
   }
 
   @override
@@ -18684,7 +18416,13 @@ class _$_ValueSetInclude extends _ValueSetInclude {
                 const DeepCollectionEquality().equals(other.filter, filter)) &&
             (identical(other.valueSet, valueSet) ||
                 const DeepCollectionEquality()
-                    .equals(other.valueSet, valueSet)));
+                    .equals(other.valueSet, valueSet)) &&
+            (identical(other.copyright, copyright) ||
+                const DeepCollectionEquality()
+                    .equals(other.copyright, copyright)) &&
+            (identical(other.copyrightElement, copyrightElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.copyrightElement, copyrightElement)));
   }
 
   @override
@@ -18699,7 +18437,9 @@ class _$_ValueSetInclude extends _ValueSetInclude {
       const DeepCollectionEquality().hash(versionElement) ^
       const DeepCollectionEquality().hash(concept) ^
       const DeepCollectionEquality().hash(filter) ^
-      const DeepCollectionEquality().hash(valueSet);
+      const DeepCollectionEquality().hash(valueSet) ^
+      const DeepCollectionEquality().hash(copyright) ^
+      const DeepCollectionEquality().hash(copyrightElement);
 
   @JsonKey(ignore: true)
   @override
@@ -18714,16 +18454,19 @@ class _$_ValueSetInclude extends _ValueSetInclude {
 
 abstract class _ValueSetInclude extends ValueSetInclude {
   factory _ValueSetInclude(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? system,
-      @JsonKey(name: '_system') Element? systemElement,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      List<ValueSetConcept>? concept,
-      List<ValueSetFilter>? filter,
-      List<Canonical>? valueSet}) = _$_ValueSetInclude;
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          FhirUri? system,
+          @JsonKey(name: '_system') Element? systemElement,
+          String? version,
+          @JsonKey(name: '_version') Element? versionElement,
+          List<ValueSetConcept>? concept,
+          List<ValueSetFilter>? filter,
+          List<Canonical>? valueSet,
+          String? copyright,
+          @JsonKey(name: '_copyright') Element? copyrightElement}) =
+      _$_ValueSetInclude;
   _ValueSetInclude._() : super._();
 
   factory _ValueSetInclude.fromJson(Map<String, dynamic> json) =
@@ -18753,6 +18496,11 @@ abstract class _ValueSetInclude extends ValueSetInclude {
   List<ValueSetFilter>? get filter => throw _privateConstructorUsedError;
   @override
   List<Canonical>? get valueSet => throw _privateConstructorUsedError;
+  @override
+  String? get copyright => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_copyright')
+  Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ValueSetIncludeCopyWith<_ValueSetInclude> get copyWith =>
@@ -19533,7 +19281,7 @@ class _$ValueSetFilterTearOff {
       List<FhirExtension>? modifierExtension,
       Code? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp? op,
+      Code? op,
       @JsonKey(name: '_op') Element? opElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement}) {
@@ -19568,8 +19316,7 @@ mixin _$ValueSetFilter {
   Code? get property => throw _privateConstructorUsedError;
   @JsonKey(name: '_property')
   Element? get propertyElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown)
-  ValueSetFilterOp? get op => throw _privateConstructorUsedError;
+  Code? get op => throw _privateConstructorUsedError;
   @JsonKey(name: '_op')
   Element? get opElement => throw _privateConstructorUsedError;
   String? get value => throw _privateConstructorUsedError;
@@ -19593,7 +19340,7 @@ abstract class $ValueSetFilterCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Code? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp? op,
+      Code? op,
       @JsonKey(name: '_op') Element? opElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -19648,7 +19395,7 @@ class _$ValueSetFilterCopyWithImpl<$Res>
       op: op == freezed
           ? _value.op
           : op // ignore: cast_nullable_to_non_nullable
-              as ValueSetFilterOp?,
+              as Code?,
       opElement: opElement == freezed
           ? _value.opElement
           : opElement // ignore: cast_nullable_to_non_nullable
@@ -19711,7 +19458,7 @@ abstract class _$ValueSetFilterCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Code? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp? op,
+      Code? op,
       @JsonKey(name: '_op') Element? opElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -19771,7 +19518,7 @@ class __$ValueSetFilterCopyWithImpl<$Res>
       op: op == freezed
           ? _value.op
           : op // ignore: cast_nullable_to_non_nullable
-              as ValueSetFilterOp?,
+              as Code?,
       opElement: opElement == freezed
           ? _value.opElement
           : opElement // ignore: cast_nullable_to_non_nullable
@@ -19797,7 +19544,7 @@ class _$_ValueSetFilter extends _ValueSetFilter {
       this.modifierExtension,
       this.property,
       @JsonKey(name: '_property') this.propertyElement,
-      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) this.op,
+      this.op,
       @JsonKey(name: '_op') this.opElement,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
@@ -19819,8 +19566,7 @@ class _$_ValueSetFilter extends _ValueSetFilter {
   @JsonKey(name: '_property')
   final Element? propertyElement;
   @override
-  @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown)
-  final ValueSetFilterOp? op;
+  final Code? op;
   @override
   @JsonKey(name: '_op')
   final Element? opElement;
@@ -19896,7 +19642,7 @@ abstract class _ValueSetFilter extends ValueSetFilter {
       List<FhirExtension>? modifierExtension,
       Code? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp? op,
+      Code? op,
       @JsonKey(name: '_op') Element? opElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement}) = _$_ValueSetFilter;
@@ -19919,8 +19665,7 @@ abstract class _ValueSetFilter extends ValueSetFilter {
   @JsonKey(name: '_property')
   Element? get propertyElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown)
-  ValueSetFilterOp? get op => throw _privateConstructorUsedError;
+  Code? get op => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_op')
   Element? get opElement => throw _privateConstructorUsedError;
@@ -22999,5 +22744,426 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
   @override
   @JsonKey(ignore: true)
   _$ValueSetProperty1CopyWith<_ValueSetProperty1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ValueSetScope _$ValueSetScopeFromJson(Map<String, dynamic> json) {
+  return _ValueSetScope.fromJson(json);
+}
+
+/// @nodoc
+class _$ValueSetScopeTearOff {
+  const _$ValueSetScopeTearOff();
+
+  _ValueSetScope call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? focus,
+      @JsonKey(name: '_focus') Element? focusElement,
+      String? inclusionCriteria,
+      @JsonKey(name: '_inclusionCriteria') Element? inclusionCriteriaElement,
+      String? exclusionCriteria,
+      @JsonKey(name: '_exclusionCriteria') Element? exclusionCriteriaElement}) {
+    return _ValueSetScope(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      focus: focus,
+      focusElement: focusElement,
+      inclusionCriteria: inclusionCriteria,
+      inclusionCriteriaElement: inclusionCriteriaElement,
+      exclusionCriteria: exclusionCriteria,
+      exclusionCriteriaElement: exclusionCriteriaElement,
+    );
+  }
+
+  ValueSetScope fromJson(Map<String, Object> json) {
+    return ValueSetScope.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ValueSetScope = _$ValueSetScopeTearOff();
+
+/// @nodoc
+mixin _$ValueSetScope {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get focus => throw _privateConstructorUsedError;
+  @JsonKey(name: '_focus')
+  Element? get focusElement => throw _privateConstructorUsedError;
+  String? get inclusionCriteria => throw _privateConstructorUsedError;
+  @JsonKey(name: '_inclusionCriteria')
+  Element? get inclusionCriteriaElement => throw _privateConstructorUsedError;
+  String? get exclusionCriteria => throw _privateConstructorUsedError;
+  @JsonKey(name: '_exclusionCriteria')
+  Element? get exclusionCriteriaElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ValueSetScopeCopyWith<ValueSetScope> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ValueSetScopeCopyWith<$Res> {
+  factory $ValueSetScopeCopyWith(
+          ValueSetScope value, $Res Function(ValueSetScope) then) =
+      _$ValueSetScopeCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? focus,
+      @JsonKey(name: '_focus') Element? focusElement,
+      String? inclusionCriteria,
+      @JsonKey(name: '_inclusionCriteria') Element? inclusionCriteriaElement,
+      String? exclusionCriteria,
+      @JsonKey(name: '_exclusionCriteria') Element? exclusionCriteriaElement});
+
+  $ElementCopyWith<$Res>? get focusElement;
+  $ElementCopyWith<$Res>? get inclusionCriteriaElement;
+  $ElementCopyWith<$Res>? get exclusionCriteriaElement;
+}
+
+/// @nodoc
+class _$ValueSetScopeCopyWithImpl<$Res>
+    implements $ValueSetScopeCopyWith<$Res> {
+  _$ValueSetScopeCopyWithImpl(this._value, this._then);
+
+  final ValueSetScope _value;
+  // ignore: unused_field
+  final $Res Function(ValueSetScope) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? focus = freezed,
+    Object? focusElement = freezed,
+    Object? inclusionCriteria = freezed,
+    Object? inclusionCriteriaElement = freezed,
+    Object? exclusionCriteria = freezed,
+    Object? exclusionCriteriaElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as String?,
+      focusElement: focusElement == freezed
+          ? _value.focusElement
+          : focusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      inclusionCriteria: inclusionCriteria == freezed
+          ? _value.inclusionCriteria
+          : inclusionCriteria // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inclusionCriteriaElement: inclusionCriteriaElement == freezed
+          ? _value.inclusionCriteriaElement
+          : inclusionCriteriaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      exclusionCriteria: exclusionCriteria == freezed
+          ? _value.exclusionCriteria
+          : exclusionCriteria // ignore: cast_nullable_to_non_nullable
+              as String?,
+      exclusionCriteriaElement: exclusionCriteriaElement == freezed
+          ? _value.exclusionCriteriaElement
+          : exclusionCriteriaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get focusElement {
+    if (_value.focusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.focusElement!, (value) {
+      return _then(_value.copyWith(focusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get inclusionCriteriaElement {
+    if (_value.inclusionCriteriaElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.inclusionCriteriaElement!, (value) {
+      return _then(_value.copyWith(inclusionCriteriaElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get exclusionCriteriaElement {
+    if (_value.exclusionCriteriaElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.exclusionCriteriaElement!, (value) {
+      return _then(_value.copyWith(exclusionCriteriaElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$ValueSetScopeCopyWith<$Res>
+    implements $ValueSetScopeCopyWith<$Res> {
+  factory _$ValueSetScopeCopyWith(
+          _ValueSetScope value, $Res Function(_ValueSetScope) then) =
+      __$ValueSetScopeCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? focus,
+      @JsonKey(name: '_focus') Element? focusElement,
+      String? inclusionCriteria,
+      @JsonKey(name: '_inclusionCriteria') Element? inclusionCriteriaElement,
+      String? exclusionCriteria,
+      @JsonKey(name: '_exclusionCriteria') Element? exclusionCriteriaElement});
+
+  @override
+  $ElementCopyWith<$Res>? get focusElement;
+  @override
+  $ElementCopyWith<$Res>? get inclusionCriteriaElement;
+  @override
+  $ElementCopyWith<$Res>? get exclusionCriteriaElement;
+}
+
+/// @nodoc
+class __$ValueSetScopeCopyWithImpl<$Res>
+    extends _$ValueSetScopeCopyWithImpl<$Res>
+    implements _$ValueSetScopeCopyWith<$Res> {
+  __$ValueSetScopeCopyWithImpl(
+      _ValueSetScope _value, $Res Function(_ValueSetScope) _then)
+      : super(_value, (v) => _then(v as _ValueSetScope));
+
+  @override
+  _ValueSetScope get _value => super._value as _ValueSetScope;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? focus = freezed,
+    Object? focusElement = freezed,
+    Object? inclusionCriteria = freezed,
+    Object? inclusionCriteriaElement = freezed,
+    Object? exclusionCriteria = freezed,
+    Object? exclusionCriteriaElement = freezed,
+  }) {
+    return _then(_ValueSetScope(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as String?,
+      focusElement: focusElement == freezed
+          ? _value.focusElement
+          : focusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      inclusionCriteria: inclusionCriteria == freezed
+          ? _value.inclusionCriteria
+          : inclusionCriteria // ignore: cast_nullable_to_non_nullable
+              as String?,
+      inclusionCriteriaElement: inclusionCriteriaElement == freezed
+          ? _value.inclusionCriteriaElement
+          : inclusionCriteriaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      exclusionCriteria: exclusionCriteria == freezed
+          ? _value.exclusionCriteria
+          : exclusionCriteria // ignore: cast_nullable_to_non_nullable
+              as String?,
+      exclusionCriteriaElement: exclusionCriteriaElement == freezed
+          ? _value.exclusionCriteriaElement
+          : exclusionCriteriaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ValueSetScope extends _ValueSetScope {
+  _$_ValueSetScope(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.focus,
+      @JsonKey(name: '_focus') this.focusElement,
+      this.inclusionCriteria,
+      @JsonKey(name: '_inclusionCriteria') this.inclusionCriteriaElement,
+      this.exclusionCriteria,
+      @JsonKey(name: '_exclusionCriteria') this.exclusionCriteriaElement})
+      : super._();
+
+  factory _$_ValueSetScope.fromJson(Map<String, dynamic> json) =>
+      _$$_ValueSetScopeFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final String? focus;
+  @override
+  @JsonKey(name: '_focus')
+  final Element? focusElement;
+  @override
+  final String? inclusionCriteria;
+  @override
+  @JsonKey(name: '_inclusionCriteria')
+  final Element? inclusionCriteriaElement;
+  @override
+  final String? exclusionCriteria;
+  @override
+  @JsonKey(name: '_exclusionCriteria')
+  final Element? exclusionCriteriaElement;
+
+  @override
+  String toString() {
+    return 'ValueSetScope(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, focus: $focus, focusElement: $focusElement, inclusionCriteria: $inclusionCriteria, inclusionCriteriaElement: $inclusionCriteriaElement, exclusionCriteria: $exclusionCriteria, exclusionCriteriaElement: $exclusionCriteriaElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ValueSetScope &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.focus, focus) ||
+                const DeepCollectionEquality().equals(other.focus, focus)) &&
+            (identical(other.focusElement, focusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.focusElement, focusElement)) &&
+            (identical(other.inclusionCriteria, inclusionCriteria) ||
+                const DeepCollectionEquality()
+                    .equals(other.inclusionCriteria, inclusionCriteria)) &&
+            (identical(
+                    other.inclusionCriteriaElement, inclusionCriteriaElement) ||
+                const DeepCollectionEquality().equals(
+                    other.inclusionCriteriaElement,
+                    inclusionCriteriaElement)) &&
+            (identical(other.exclusionCriteria, exclusionCriteria) ||
+                const DeepCollectionEquality()
+                    .equals(other.exclusionCriteria, exclusionCriteria)) &&
+            (identical(
+                    other.exclusionCriteriaElement, exclusionCriteriaElement) ||
+                const DeepCollectionEquality().equals(
+                    other.exclusionCriteriaElement, exclusionCriteriaElement)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(focus) ^
+      const DeepCollectionEquality().hash(focusElement) ^
+      const DeepCollectionEquality().hash(inclusionCriteria) ^
+      const DeepCollectionEquality().hash(inclusionCriteriaElement) ^
+      const DeepCollectionEquality().hash(exclusionCriteria) ^
+      const DeepCollectionEquality().hash(exclusionCriteriaElement);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ValueSetScopeCopyWith<_ValueSetScope> get copyWith =>
+      __$ValueSetScopeCopyWithImpl<_ValueSetScope>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ValueSetScopeToJson(this);
+  }
+}
+
+abstract class _ValueSetScope extends ValueSetScope {
+  factory _ValueSetScope(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? focus,
+      @JsonKey(name: '_focus')
+          Element? focusElement,
+      String? inclusionCriteria,
+      @JsonKey(name: '_inclusionCriteria')
+          Element? inclusionCriteriaElement,
+      String? exclusionCriteria,
+      @JsonKey(name: '_exclusionCriteria')
+          Element? exclusionCriteriaElement}) = _$_ValueSetScope;
+  _ValueSetScope._() : super._();
+
+  factory _ValueSetScope.fromJson(Map<String, dynamic> json) =
+      _$_ValueSetScope.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  String? get focus => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_focus')
+  Element? get focusElement => throw _privateConstructorUsedError;
+  @override
+  String? get inclusionCriteria => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_inclusionCriteria')
+  Element? get inclusionCriteriaElement => throw _privateConstructorUsedError;
+  @override
+  String? get exclusionCriteria => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_exclusionCriteria')
+  Element? get exclusionCriteriaElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ValueSetScopeCopyWith<_ValueSetScope> get copyWith =>
       throw _privateConstructorUsedError;
 }
