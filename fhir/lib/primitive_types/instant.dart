@@ -14,7 +14,7 @@ class Instant extends FhirDateTimeBase {
       return Instant._(inValue.toIso8601String(), inValue, true, null);
     } else if (inValue is String) {
       try {
-        final dateTimeValue = _parseDateTime(inValue);
+        final DateTime dateTimeValue = _parseDateTime(inValue);
         return Instant._(inValue, dateTimeValue, true, null);
       } on FormatException catch (e) {
         return Instant._(inValue, null, false, e);
@@ -37,7 +37,7 @@ class Instant extends FhirDateTimeBase {
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  static final _instantExp = RegExp(
+  static final RegExp _instantExp = RegExp(
       r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))');
 
   static DateTime _parseDateTime(String value) {
@@ -46,7 +46,7 @@ class Instant extends FhirDateTimeBase {
       if (_instantExp.hasMatch(value)) {
         return DateTime.parse(value);
       } else {
-        throw FormatException();
+        throw const FormatException();
       }
     } on FormatException {
       throw FormatException(

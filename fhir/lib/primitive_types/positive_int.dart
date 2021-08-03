@@ -15,7 +15,7 @@ class PositiveInt extends FhirNumber {
           ? PositiveInt._(inValue.toString(), inValue, true, false)
           : PositiveInt._(inValue.toString(), null, false, false);
     } else if (inValue is String) {
-      final tempPositiveInt = int.tryParse(inValue);
+      final int? tempPositiveInt = int.tryParse(inValue);
       return tempPositiveInt == null
           ? PositiveInt._(inValue, null, false, true)
           : tempPositiveInt > 0

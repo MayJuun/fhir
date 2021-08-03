@@ -1,3 +1,5 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 abstract class FhirNumber {
   const FhirNumber(
       this.valueString, this.valueNumber, this.isValid, this.isString);
@@ -16,6 +18,7 @@ abstract class FhirNumber {
   dynamic toJson() => isValid && !isString ? valueNumber : valueString;
   dynamic toYaml() => isValid && !isString ? valueNumber : valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirNumber

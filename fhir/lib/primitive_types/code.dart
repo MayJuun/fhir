@@ -1,3 +1,5 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'dart:convert';
 
 import 'package:yaml/yaml.dart';
@@ -7,9 +9,9 @@ class Code {
 
   /// Construct a [Code] constant at compile time
   const Code.asConst(String code)
-      : this._valueString = code,
-        this._valueCode = code,
-        this._isValid = true;
+      : _valueString = code,
+        _valueCode = code,
+        _isValid = true;
 
   factory Code(dynamic inValue) =>
       inValue is String && RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(inValue)
@@ -30,6 +32,7 @@ class Code {
   final bool _isValid;
 
   bool get isValid => _isValid;
+  @override
   int get hashCode => _valueString.hashCode;
   String? get value => _valueCode;
 
@@ -38,6 +41,7 @@ class Code {
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Code

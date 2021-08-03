@@ -1,3 +1,5 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
@@ -24,7 +26,8 @@ class Time {
   final bool _isValid;
 
   bool get isValid => _isValid;
-  int get hashTime => _valueString.hashCode;
+  @override
+  int get hashCode => _valueString.hashCode;
   String? get value => _valueTime;
 
   @override
@@ -32,6 +35,7 @@ class Time {
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
+  @override
   bool operator ==(Object o) {
     if (identical(this, o)) {
       return true;
@@ -42,15 +46,19 @@ class Time {
           'Two values were passed to the time ">" comparison operator, but were not both valid\n'
           'Argument 1: $value\nArgument 2: $o');
     } else {
-      final compareTime = o is Time ? o.value : Time(o as String).value;
-      final thisList = value!.split(':');
-      final compareList = compareTime!.split(':');
+      final String? compareTime = o is Time
+          ? o.value
+          : o is String
+              ? Time(o).value
+              : null;
+      final List<String> thisList = value!.split(':');
+      final List<String> compareList = compareTime!.split(':');
       if (thisList.length != compareList.length) {
         throw Exception(
             'Two values were passed to the time ">" comparison operator without equal precisions\n'
             'Argument 1: $value\nArgument 2: $o');
       } else {
-        for (var i = 0; i < thisList.length; i++) {
+        for (int i = 0; i < thisList.length; i++) {
           if (num.parse(thisList[i]) != num.parse(compareList[i])) {
             return false;
           }
@@ -70,15 +78,15 @@ class Time {
           'Two values were passed to the time ">" comparison operator, but were not both valid\n'
           'Argument 1: $value\nArgument 2: $o');
     } else {
-      final compareTime = o is Time ? o.value : Time(o as String).value;
-      final thisList = value!.split(':');
-      final compareList = compareTime!.split(':');
+      final String? compareTime = o is Time ? o.value : Time(o as String).value;
+      final List<String> thisList = value!.split(':');
+      final List<String> compareList = compareTime!.split(':');
       if (thisList.length != compareList.length) {
         throw Exception(
             'Two values were passed to the time ">" comparison operator without equal precisions\n'
             'Argument 1: $value\nArgument 2: $o');
       } else {
-        for (var i = 0; i < thisList.length; i++) {
+        for (int i = 0; i < thisList.length; i++) {
           if (num.parse(thisList[i]) != num.parse(compareList[i])) {
             return num.parse(thisList[i]) > num.parse(compareList[i]);
           }
@@ -100,15 +108,15 @@ class Time {
           'Two values were passed to the time "<" comparison operator, but were not both valid\n'
           'Argument 1: $value\nArgument 2: $o');
     } else {
-      final compareTime = o is Time ? o.value : Time(o as String).value;
-      final thisList = value!.split(':');
-      final compareList = compareTime!.split(':');
+      final String? compareTime = o is Time ? o.value : Time(o as String).value;
+      final List<String> thisList = value!.split(':');
+      final List<String> compareList = compareTime!.split(':');
       if (thisList.length != compareList.length) {
         throw Exception(
             'Two values were passed to the time "<" comparison operator without equal precisions\n'
             'Argument 1: $value\nArgument 2: $o');
       } else {
-        for (var i = 0; i < thisList.length; i++) {
+        for (int i = 0; i < thisList.length; i++) {
           if (num.parse(thisList[i]) != num.parse(compareList[i])) {
             return num.parse(thisList[i]) < num.parse(compareList[i]);
           }

@@ -1,3 +1,5 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'dart:convert';
 
 import 'package:yaml/yaml.dart';
@@ -24,7 +26,8 @@ class Markdown {
   final bool _isValid;
 
   bool get isValid => _isValid;
-  int get hashMarkdown => _valueString.hashCode;
+  @override
+  int get hashCode => _valueString.hashCode;
   String? get value => _valueMarkdown;
 
   @override
@@ -32,6 +35,7 @@ class Markdown {
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Markdown

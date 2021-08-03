@@ -38,11 +38,14 @@ class Decimal extends FhirNumber {
   final bool isInt;
   double? get value => valueNumber as double?;
 
+  @override
   dynamic toJson() => isInt
       ? valueNumber?.toInt()
       : isValid && !isString
           ? valueNumber
           : valueString;
+
+  @override
   dynamic toYaml() => isInt
       ? valueNumber?.toInt()
       : isValid && !isString

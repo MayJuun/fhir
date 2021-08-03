@@ -14,7 +14,7 @@ class UnsignedInt extends FhirNumber {
           ? UnsignedInt._(inValue.toString(), inValue, true, false)
           : UnsignedInt._(inValue.toString(), null, false, false);
     } else if (inValue is String) {
-      final tempUnsignedInt = int.tryParse(inValue);
+      final int? tempUnsignedInt = int.tryParse(inValue);
       return tempUnsignedInt == null
           ? UnsignedInt._(inValue, null, false, true)
           : tempUnsignedInt >= 0

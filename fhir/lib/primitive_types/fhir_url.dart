@@ -1,3 +1,5 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'dart:convert';
 
 import 'package:yaml/yaml.dart';
@@ -9,7 +11,7 @@ class FhirUrl {
     if (inValue is Uri) {
       return FhirUrl._(inValue.toString(), inValue, true);
     } else if (inValue is String) {
-      final tempUri = Uri.tryParse(inValue);
+      final Uri? tempUri = Uri.tryParse(inValue);
       return FhirUrl._(inValue, tempUri, tempUri != null);
     }
     throw ArgumentError('FhirUrl cannot be constructed from $inValue.');
@@ -38,6 +40,7 @@ class FhirUrl {
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirUrl
