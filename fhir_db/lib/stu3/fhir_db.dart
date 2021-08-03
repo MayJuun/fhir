@@ -46,6 +46,18 @@ class FhirDb {
     return _dbOpenCompleter!.future;
   }
 
+  Future<void> deleteDatabase(String password) async {
+    var db = await _getDb('fhir.db', password);
+    await db.close();
+
+    final _appDocDir = await getApplicationDocumentsDirectory();
+    await File(join(_appDocDir.path, 'fhir.db')).delete();
+
+    // Setting the completer to null will lead to
+    // creating a new database the next time we try to access it.
+    _dbOpenCompleter = null;
+  }
+
   Future _openDatabase(String? pw) async {
     /// Get the actual db
     final database = await _getDb('fhir.db', pw);
