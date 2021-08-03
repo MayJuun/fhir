@@ -12,11 +12,12 @@ enum DatePrecision {
 }
 
 /// ToDo: Does not accept 'YYYY-MM'
-class Date extends FhirDateTimeBase{
+class Date extends FhirDateTimeBase {
   const Date._(String valueString, DateTime? valueDateTime, bool isValid,
-      this._precision, Exception? parseError) : super(valueString, valueDateTime, isValid, parseError);
+      this._precision, Exception? parseError)
+      : super(valueString, valueDateTime, isValid, parseError);
 
-  factory Date(inValue) {
+  factory Date(dynamic inValue) {
     if (inValue is DateTime) {
       return Date.fromDateTime(inValue, DatePrecision.YYYYMMDD);
     } else if (inValue is String) {

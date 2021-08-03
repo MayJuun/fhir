@@ -6,9 +6,10 @@ import 'fhir_date_time_base.dart';
 
 class Instant extends FhirDateTimeBase {
   const Instant._(String valueString, DateTime? valueDateTime, bool isValid,
-      Exception? parseError) : super(valueString, valueDateTime, isValid, parseError);
+      Exception? parseError)
+      : super(valueString, valueDateTime, isValid, parseError);
 
-  factory Instant(inValue) {
+  factory Instant(dynamic inValue) {
     if (inValue is DateTime) {
       return Instant._(inValue.toIso8601String(), inValue, true, null);
     } else if (inValue is String) {
